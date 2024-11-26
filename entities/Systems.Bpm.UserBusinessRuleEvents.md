@@ -94,6 +94,7 @@ _Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Mem
 | COMMITTED | COMMITTED value. Stored as 'COMMITTED'. <br /> _Database Value:_ 'COMMITTED' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'COMMITTED' |
 | CLIENTCOMMITTED | CLIENTCOMMITTED value. Stored as 'CLIENTCOMMITTED'. <br /> _Database Value:_ 'CLIENTCOMMITTED' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'CLIENTCOMMITTED' |
 | AGGREGATECLIENTCOMMITTED | AGGREGATECLIENTCOMMITTED value. Stored as 'AGGREGATECLIENTCOMMITTED'. <br /> _Database Value:_ 'AGGREGATECLIENTCOMMITTED' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'AGGREGATECLIENTCOMMITTED' |
+| BEFORERECALCULATE | The event occurs before every recalculation of the amounts in the document for each object in the document aggregate. . Stored as 'BEFORERECALCULATE '. <br /> _Database Value:_ 'BEFORERECALCULATE ' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'BEFORERECALCULATE' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

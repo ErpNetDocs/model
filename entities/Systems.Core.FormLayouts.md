@@ -59,6 +59,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccessKey](Systems.Core.FormLayouts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the layout view. `Filter(multi eq)` |
+| [InheritFormLayout](Systems.Core.FormLayouts.md#inheritformlayout) | [FormLayouts](Systems.Core.FormLayouts.md) (nullable) | Specified when the current layout inherits from another layout. `Filter(multi eq)` |
 | [Role](Systems.Core.FormLayouts.md#role) | [Roles](Systems.Security.Roles.md) (nullable) | The role, for which the layout is applied. `Filter(multi eq)` |
 
 
@@ -234,6 +235,15 @@ Supported permissions
 | Update | - |
 | Delete | - |
 | Administer (manage security)| - |
+### InheritFormLayout
+
+Specified when the current layout inherits from another layout. `Filter(multi eq)`
+
+_Type_: **[FormLayouts](Systems.Core.FormLayouts.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
 ### Role
 
 The role, for which the layout is applied. `Filter(multi eq)`

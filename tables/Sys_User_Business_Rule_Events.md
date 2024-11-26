@@ -16,7 +16,7 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 | Name | Type | Description |
 | - | - | --- |
 |[Event_Parameter](#event_parameter)|`nvarchar(128)` |Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.|
-|[Event_Type](#event_type)|`nvarchar(64)` Allowed: `AGGREGATECLIENTCOMMIT`, `ATTRIBUTECHANGED`, `ATTRIBUTECHANGING`, `CLIENTCOMMIT`, `COMMIT`, `STATECHANGED`, `STATECHANGING`, `VOIDING`, `CREATENEW`, `COMMITTED`, `CLIENTCOMMITTED`, `AGGREGATECLIENTCOMMITTED`|The event for which to register the business rule.|
+|[Event_Type](#event_type)|`nvarchar(64)` Allowed: `AGGREGATECLIENTCOMMIT`, `ATTRIBUTECHANGED`, `ATTRIBUTECHANGING`, `CLIENTCOMMIT`, `COMMIT`, `STATECHANGED`, `STATECHANGING`, `VOIDING`, `CREATENEW`, `COMMITTED`, `CLIENTCOMMITTED`, `AGGREGATECLIENTCOMMITTED`, `BEFORERECALCULATE `|The event for which to register the business rule.|
 |[Execution_Priority](#execution_priority)|`int` Allowed: `30`, `50`, `70`|Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.|
 |[Layer](#layer)|`nvarchar(3)` Allowed: `FTE`, `BKE`|Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -62,7 +62,7 @@ The event for which to register the business rule.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`AGGREGATECLIENTCOMMIT`, `ATTRIBUTECHANGED`, `ATTRIBUTECHANGING`, `CLIENTCOMMIT`, `COMMIT`, `STATECHANGED`, `STATECHANGING`, `VOIDING`, `CREATENEW`, `COMMITTED`, `CLIENTCOMMITTED`, `AGGREGATECLIENTCOMMITTED`|
+|Allowed Values|`AGGREGATECLIENTCOMMIT`, `ATTRIBUTECHANGED`, `ATTRIBUTECHANGING`, `CLIENTCOMMIT`, `COMMIT`, `STATECHANGED`, `STATECHANGING`, `VOIDING`, `CREATENEW`, `COMMITTED`, `CLIENTCOMMITTED`, `AGGREGATECLIENTCOMMITTED`, `BEFORERECALCULATE `|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

@@ -16,6 +16,7 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 |[Category](#category)|`nvarchar(36)` |The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type.|
 |[Form_Layout_Id](#form_layout_id)|`uniqueidentifier` `PK`||
 |[Form_Name](#form_name)|`nvarchar(128)` |The form, for which the layout is applied.|
+|[Inherit_Form_Layout_Id](#inherit_form_layout_id)|`uniqueidentifier` |Specified when the current layout inherits from another layout|
 |[Layout](#layout)|`varbinary` |The byte storage of the layout.|
 |[Layout_Format](#layout_format)|`nvarchar(1)` Allowed: `D`, `L`, `U`|The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.|
 |[Layout_Name](#layout_name)|`nvarchar(64)` |The name of a named layout. Standard layouts have empty string names.|
@@ -206,6 +207,43 @@ The form, for which the layout is applied.
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
 |Like|None|no|no|
+
+### Inherit_Form_Layout_Id
+
+
+Specified when the current layout inherits from another layout
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Sys_Form_Layouts](Sys_Form_Layouts.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Inherit_Form_Layout_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Layout
 
