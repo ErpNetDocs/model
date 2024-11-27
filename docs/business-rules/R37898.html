@@ -115,11 +115,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>If (PropertyValue.PropertyValueField!= null &amp;&amp; CustomProperties.PropertyType==N) Validate that: PropertyValueField ....................</td>
+<td>If (PropertyValue.PropertyValueField != null &amp;&amp; CustomProperties.PropertyType == number) Validate that: PropertyValueField can be successfully converted to a number.</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>If the field 'PropertyValueField' is filled in and the Property Type is a number, check that the field contains only numeric symbols.</td>
+<td>If the field 'PropertyValueField' is filled in and the Property Type is a number, check that the field contains only numeric symbols. The only exceptions are the comma (,) and dot (.) for use as separators (e.g., decimals or thousands).</td>
 </tr>
 <tr>
 <td>Message</td>
