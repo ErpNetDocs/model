@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R37610 SalesOrder - Set Discounts Document Amounts | ERP.net Domain Model </title>
+      <title>R37166 SecurityGroup – Power Users Update Not Allowed | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R37610 SalesOrder - Set Discounts Document Amounts | ERP.net Domain Model ">
+      <meta name="title" content="R37166 SecurityGroup – Power Users Update Not Allowed | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37610.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37166.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -71,31 +71,27 @@
         </div>
 
         <article data-uid="">
-<h1 id="r37610-salesorder---set-discounts-document-amounts">R37610 SalesOrder - Set Discounts Document Amounts</h1>
+<h1 id="r37166-securitygroup--power-users-update-not-allowed">R37166 SecurityGroup – Power Users Update Not Allowed</h1>
 
 <table>
-<col style="width:18.8%">
-<col style="width:81.2%">
+<col style="width:23.08%">
+<col style="width:76.92%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R37610</td>
+<td>R37166</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Crm.Sales.SalesOrderLines.html">Crm.Sales.SalesOrderLines Entity</a></td>
+<td><a class="xref" href="../entities/Systems.Security.Groups.html">Systems.Security.Groups Entity</a></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>SetDiscountsDocumentAmounts</td>
+<td>PowerUsersUpdateNotAllowed</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>
-<ul>
-<li></li>
-</ul>
-</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -106,8 +102,12 @@
 <td>Commit</td>
 </tr>
 <tr>
+<td><strong>Record State</strong></td>
+<td>Updated</td>
+</tr>
+<tr>
 <td><strong>Priority</strong></td>
-<td>Early</td>
+<td>Normal</td>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
@@ -121,37 +121,24 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Get all DocumentAmountTypes from the definitions specified in the &quot;Level 1 Discount&quot;,
-&quot;Level 2 Discount&quot;, &quot;Level 3 Discount&quot;, &quot;Bonus Program&quot;, and &quot;Promotional Package&quot; fields.
-For each distinct value, create new records in DocumentAmounts, but only for those
-DocumentAmountTypes that do not already have a corresponding record.
-The new records should have InputAmount = NULL and InputPercent = 100%.</td>
+<td>If GroupType = Power Users, then FAIL</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule creates records in DocumentAmounts for all Document Amount Types that are specified
-in the definitions of the level discounts, the bonus program, and the promotional package,
-that have been applied to the Sales Order Lines.                                               |
-This will trigger the calculation of the Discount Level amounts and their recording in the
-Document Distributed Amounts. Those records can be used for reporting and posting purposes.</td>
+<td>The rule prevents any modifications to the attributes of the 'Power Users' system group
+from being made by users.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>
-<ul>
-<li></li>
-</ul>
-</td>
+<td>System group 'Power Users' cannot be modified by users.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 25
-<br><br>
-Updated: -</td>
+<td>v.25</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
-<td>YES</td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
@@ -161,7 +148,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sys
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37610.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37166.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
