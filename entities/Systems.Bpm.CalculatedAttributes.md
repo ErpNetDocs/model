@@ -9,7 +9,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name}_  
+_{Caption:T} _  
 Default Search Members:  
 _Name_  
 Name Data Member:  
