@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R37166 SecurityGroup – Power Users Update Not Allowed | ERP.net Domain Model </title>
+      <title>R37166 SecurityGroup – System Group Update Not Allowed | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R37166 SecurityGroup – Power Users Update Not Allowed | ERP.net Domain Model ">
+      <meta name="title" content="R37166 SecurityGroup – System Group Update Not Allowed | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -71,7 +71,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r37166-securitygroup--power-users-update-not-allowed">R37166 SecurityGroup – Power Users Update Not Allowed</h1>
+<h1 id="r37166-securitygroup--system-group-update-not-allowed">R37166 SecurityGroup – System Group Update Not Allowed</h1>
 
 <table>
 <col style="width:23.08%">
@@ -87,7 +87,7 @@
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>PowerUsersUpdateNotAllowed</td>
+<td>SystemGroupUpdateNotAllowed                                                               |</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
@@ -121,16 +121,15 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If GroupType = Power Users, then FAIL</td>
+<td>If GroupType &lt;&gt; Normal User Group, then FAIL</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule prevents any modifications to the attributes of the 'Power Users' system group
-from being made by users.</td>
+<td>This rule ensures that the attributes of system groups cannot be changed by users.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>System group 'Power Users' cannot be modified by users.</td>
+<td>System group 'Group.Name' cannot be modified by users.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
