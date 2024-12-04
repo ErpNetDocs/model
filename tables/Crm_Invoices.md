@@ -782,7 +782,7 @@ Description of the payment type. Initially copied from the name of the Payment T
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254) (MultiLanguage)|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

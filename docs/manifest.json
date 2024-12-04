@@ -15262,6 +15262,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Inventory.BalancesAtDate.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Inventory.BalancesAtDate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Inventory.CostCorrectionLines.md",
       "output": {
         ".html": {
@@ -23105,6 +23115,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Inv.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Inv_Balances_At_Date.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Inv_Balances_At_Date.html"
         }
       },
       "version": ""

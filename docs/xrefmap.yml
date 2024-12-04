@@ -1375,6 +1375,9 @@ references:
 - uid: Logistics.Inventory
   name: Logistics.Inventory Namespace
   href: entities/Logistics.Inventory.html
+- uid: Logistics.Inventory.BalancesAtDate
+  name: Logistics.Inventory.BalancesAtDate View
+  href: entities/Logistics.Inventory.BalancesAtDate.html
 - uid: Logistics.Inventory.CostCorrectionLines
   name: Logistics.Inventory.CostCorrectionLines Entity
   href: entities/Logistics.Inventory.CostCorrectionLines.html

@@ -218,7 +218,7 @@ _Allowed Values (Systems.Documents.DocumentAmountTypesRepository.DistributeBy En
 | Measurement | Measurement value. Stored as 'MEASUREMENT'. <br /> _Database Value:_ 'MEASUREMENT' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Measurement' |
 | ProductDefinition | ProductDefinition value. Stored as 'PRODUCT DEFINITION'. <br /> _Database Value:_ 'PRODUCT DEFINITION' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ProductDefinition' |
 | DealType | DealType value. Stored as 'DEAL TYPE'. <br /> _Database Value:_ 'DEAL TYPE' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'DealType' |
-| LineDiscount | LineDiscount value. Stored as 'LINE DISCOUNT'. <br /> _Database Value:_ 'LINE DISCOUNT' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'LineDiscount' |
+| LineDiscount | Distributes the amount of the applied line discounts from this category to the corresponding line.. Stored as 'LINE DISCOUNT'. <br /> _Database Value:_ 'LINE DISCOUNT' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'LineDiscount' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  

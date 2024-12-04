@@ -705,6 +705,8 @@
 - name: Inv
   href: Inv.md
   items:
+  - name: Inv_Balances_At_Date
+    href: Inv_Balances_At_Date.md
   - name: Inv_Cost_Correction_Lines
     href: Inv_Cost_Correction_Lines.md
   - name: Inv_Cost_Corrections

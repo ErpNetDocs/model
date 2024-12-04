@@ -767,6 +767,8 @@
   - name: Inventory
     href: Logistics.Inventory.md
     items:
+    - name: BalancesAtDate
+      href: Logistics.Inventory.BalancesAtDate.md
     - name: CostCorrectionLines
       href: Logistics.Inventory.CostCorrectionLines.md
     - name: CostCorrections

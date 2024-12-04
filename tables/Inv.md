@@ -1,5 +1,6 @@
 # Inv
 
+* [Inv_Balances_At_Date](Inv_Balances_At_Date.md)
 * [Inv_Cost_Correction_Lines](Inv_Cost_Correction_Lines.md)
 * [Inv_Cost_Corrections](Inv_Cost_Corrections.md)
 * [Inv_Cost_Corrections_Options](Inv_Cost_Corrections_Options.md)

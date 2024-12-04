@@ -47,8 +47,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>AuthorPublicUser</s>](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | **OBSOLETE! Do not use!** The author of the news article. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.47` `Obsolete` |
-| [<s>NewsWebModule</s>](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | **OBSOLETE! Do not use!** The News Web Module, to which the current article is added. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.47` `Obsolete` |
+| [<s>AuthorPublicUser</s>](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | **OBSOLETE! Do not use!** The author of the news article. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete` |
+| [<s>NewsWebModule</s>](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | **OBSOLETE! Do not use!** The News Web Module, to which the current article is added. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete` |
 
 
 ## Attribute Details
@@ -131,7 +131,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AuthorPublicUser
 
-**OBSOLETE! Do not use!** The author of the news article. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.47` `Obsolete`
+**OBSOLETE! Do not use!** The author of the news article. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete`
 
 _Type_: **[PublicUsers](Systems.External.PublicUsers.md)**  
 _Category_: **System**  
@@ -140,7 +140,7 @@ _Show in UI_: **ShownByDefault**
 
 ### NewsWebModule
 
-**OBSOLETE! Do not use!** The News Web Module, to which the current article is added. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.47` `Obsolete`
+**OBSOLETE! Do not use!** The News Web Module, to which the current article is added. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete`
 
 _Type_: **[NewsWebModules](Applications.Cms.NewsWebModules.md)**  
 _Category_: **System**  

@@ -6,6 +6,7 @@ uid: Logistics.Inventory
 - [DemandManagement](Logistics.Inventory.DemandManagement.md)  
 
 ## Entities
+- [BalancesAtDate](Logistics.Inventory.BalancesAtDate.md)  
 - [CostCorrectionLines](Logistics.Inventory.CostCorrectionLines.md)  
 - [CostCorrections](Logistics.Inventory.CostCorrections.md)  
 - [CostCorrectionsOptions](Logistics.Inventory.CostCorrectionsOptions.md)  

@@ -72,7 +72,7 @@ Aggregate Tree
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PaymentDueDate](Crm.Invoicing.Invoices.md#paymentduedate) | datetime __nullable__ | When not null specifies due date for the payment. `Filter(ge;le)` 
 | [PaymentDueStartDate](Crm.Invoicing.Invoices.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. `Filter(ge;le)` 
-| [PaymentTypeDescription](Crm.Invoicing.Invoices.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type. `Required` 
+| [PaymentTypeDescription](Crm.Invoicing.Invoices.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the payment type. Initially copied from the name of the Payment Type. 
 | [PlanningOnly](Crm.Invoicing.Invoices.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Invoicing.Invoices.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Crm.Invoicing.Invoices.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -515,9 +515,9 @@ _Front-End Recalc Expressions:_
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))`
 ### PaymentTypeDescription
 
-Description of the payment type. Initially copied from the name of the Payment Type. `Required`
+Description of the payment type. Initially copied from the name of the Payment Type.
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
