@@ -12,7 +12,7 @@ The inventory balances at specific date, grouped by storage key (Store, Product,
 | Name | Type | Description |
 | - | - | --- |
 |[Base_Cost](#base_cost)|`decimal(38, 2)` |The cost of the inventory in base currency of the enterprise company.|
-|[Date](#date)|`date` |The date parameter used to compute the balaces. In the result it is always NULL.|
+|[Date](#date)|`date` |The date parameter used to compute the balances.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |If non-null, contains the specific lot to use for the movement|
 |[Product_Cost](#product_cost)|`decimal(38, 2)` |The cost of the inventory in the products currency.|
@@ -59,7 +59,7 @@ The cost of the inventory in base currency of the enterprise company.
 ### Date
 
 
-The date parameter used to compute the balaces. In the result it is always NULL.
+The date parameter used to compute the balances.
 
 | Property | Value |
 | - | - |

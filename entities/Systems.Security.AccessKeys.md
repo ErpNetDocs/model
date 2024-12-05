@@ -131,9 +131,10 @@ _Allowed Values (Systems.Security.AccessKeysRepository.ShareLevel Enum Members)_
 | Value | Description |
 | ---- | --- |
 | Private | The key is private to the entity.. Stored as 'PRI'. <br /> _Database Value:_ 'PRI' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Private' |
-| Referenceable | The key can be referenced from other entities.. Stored as 'REF'. <br /> _Database Value:_ 'REF' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Referenceable' |
-| Inheritable | The key can be inherited from child entities.. Stored as 'INH'. <br /> _Database Value:_ 'INH' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Inheritable' |
-| Public | The key is public and is not specific to any entity.. Stored as 'PUB'. <br /> _Database Value:_ 'PUB' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Public' |
+| Referenceable | The key can be referenced from other entities.. Stored as 'RFA'. <br /> _Database Value:_ 'RFA' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Referenceable' |
+| Referencing | The access permissions of the selected object are applied.. Stored as 'RFI'. <br /> _Database Value:_ 'RFI' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Referencing' |
+| Inheriting | The access permissions of the parent object are inherited.. Stored as 'IHI'. <br /> _Database Value:_ 'IHI' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Inheriting' |
+| Shared | The key is not specific to any entity.. Stored as 'SHA'. <br /> _Database Value:_ 'SHA' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Shared' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  

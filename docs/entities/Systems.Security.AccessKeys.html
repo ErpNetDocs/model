@@ -235,15 +235,19 @@ Allowed values for the <code>ShareLevel</code>(Systems.Security.AccessKeys.md#sh
 </tr>
 <tr>
 <td>Referenceable</td>
-<td>The key can be referenced from other entities.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Referenceable'</td>
+<td>The key can be referenced from other entities.. Stored as 'RFA'. <br> <em>Database Value:</em> 'RFA' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Referenceable'</td>
 </tr>
 <tr>
-<td>Inheritable</td>
-<td>The key can be inherited from child entities.. Stored as 'INH'. <br> <em>Database Value:</em> 'INH' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Inheritable'</td>
+<td>Referencing</td>
+<td>The access permissions of the selected object are applied.. Stored as 'RFI'. <br> <em>Database Value:</em> 'RFI' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Referencing'</td>
 </tr>
 <tr>
-<td>Public</td>
-<td>The key is public and is not specific to any entity.. Stored as 'PUB'. <br> <em>Database Value:</em> 'PUB' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Public'</td>
+<td>Inheriting</td>
+<td>The access permissions of the parent object are inherited.. Stored as 'IHI'. <br> <em>Database Value:</em> 'IHI' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Inheriting'</td>
+</tr>
+<tr>
+<td>Shared</td>
+<td>The key is not specific to any entity.. Stored as 'SHA'. <br> <em>Database Value:</em> 'SHA' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Shared'</td>
 </tr>
 </tbody>
 </table>
