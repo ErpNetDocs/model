@@ -304,6 +304,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>When not null, specifies that the bonus should be applied only to the specified target customer group. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#documentamounttype">DocumentAmountType</a></td>
+<td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
+<td>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount that comes from the bonus program in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.66</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
 <td>When set, specifies that the sales document must be of the specified enterprise company. <code>Filter(multi eq)</code></td>
@@ -605,6 +610,12 @@ Allowed values for the <code>Priority</code>(Crm.Pricing.BonusPrograms.md#priori
 <h3 id="conditiontargetgroup">ConditionTargetGroup</h3>
 <p>When not null, specifies that the bonus should be applied only to the specified target customer group. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="documentamounttype">DocumentAmountType</h3>
+<p>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount that comes from the bonus program in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.66</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

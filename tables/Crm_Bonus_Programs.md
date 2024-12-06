@@ -41,6 +41,7 @@ Bonus programs allow automatic adding of new line with bonus product or automati
 |[Condition_Ship_To_Customer_Id](#condition_ship_to_customer_id)|`uniqueidentifier` |When not NULL, specifies that the bonus should be applied only when shipping to the specified customer|
 |[Condition_Target_Group_Id](#condition_target_group_id)|`uniqueidentifier` |When not NULL, specifies that the bonus should be applied only to the specified target customer group|
 |[Condition_To_Date](#condition_to_date)|`datetime` |Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction|
+|[Document_Amount_Type_Id](#document_amount_type_id)|`uniqueidentifier` |The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount that comes from the bonus program in the Document Distributed Amounts panel in sales orders.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When set, specifies that the sales document must be of the specified enterprise company.|
 |[Priority](#priority)|`tinyint` Allowed: `0`, `1`, `2`, `3`, `4`|Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -1103,6 +1104,43 @@ Ending date (inclusive) of the bonus. NULL means that there is no ending date re
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|yes|no|
+
+### Document_Amount_Type_Id
+
+
+The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount that comes from the bonus program in the Document Distributed Amounts panel in sales orders.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Document_Amount_Types](Gen_Document_Amount_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Document_Amount_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
 

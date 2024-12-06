@@ -219,6 +219,8 @@ _Allowed Values (Systems.Documents.DocumentAmountTypesRepository.DistributeBy En
 | ProductDefinition | ProductDefinition value. Stored as 'PRODUCT DEFINITION'. <br /> _Database Value:_ 'PRODUCT DEFINITION' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ProductDefinition' |
 | DealType | DealType value. Stored as 'DEAL TYPE'. <br /> _Database Value:_ 'DEAL TYPE' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'DealType' |
 | LineDiscount | Distributes the amount of the applied line discounts from this category to the corresponding line.. Stored as 'LINE DISCOUNT'. <br /> _Database Value:_ 'LINE DISCOUNT' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'LineDiscount' |
+| BonusProgram | Distributes the discount amount of the bonus programs from this category to the corresponding line.. Stored as 'BONUS PROGRAM'. <br /> _Database Value:_ 'BONUS PROGRAM' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'BonusProgram' |
+| PromotionalPackage | Distributes the discount amount of the promotional package from this category to the corresponding line.. Stored as 'PROMOTIONAL PACKAGE'. <br /> _Database Value:_ 'PROMOTIONAL PACKAGE' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'PromotionalPackage' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  

@@ -21,7 +21,7 @@ Represents the different types of additional amounts which are calculated for th
 |[Base_On_Lines](#base_on_lines)|`bit` |1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts|
 |[Default_Percent](#default_percent)|`decimal(7, 6)` |Default percent for amounts for which percent input is allowed; NULL otherwise|
 |[Description](#description)|`nvarchar(254)` ||
-|[Distribute_By](#distribute_by)|`nvarchar(20)` Allowed: `AMOUNT`, `MEASUREMENT`, `PRODUCT DEFINITION`, `DEAL TYPE`, `LINE DISCOUNT`|Determines how the amount will be distributed among the document lines.|
+|[Distribute_By](#distribute_by)|`nvarchar(20)` Allowed: `AMOUNT`, `MEASUREMENT`, `PRODUCT DEFINITION`, `DEAL TYPE`, `LINE DISCOUNT`, `BONUS PROGRAM`, `PROMOTIONAL PACKAGE`|Determines how the amount will be distributed among the document lines.|
 |[Distribute_By_Measurement_Category_Id](#distribute_by_measurement_category_id)|`uniqueidentifier` |Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'|
 |[Document_Amount_Type_Id](#document_amount_type_id)|`uniqueidentifier` `PK`||
 |[Is_Active](#is_active)|`bit` |1 when the amount type is active for new records; 0 - otherwise|
@@ -362,7 +362,7 @@ Determines how the amount will be distributed among the document lines.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`AMOUNT`, `MEASUREMENT`, `PRODUCT DEFINITION`, `DEAL TYPE`, `LINE DISCOUNT`|
+|Allowed Values|`AMOUNT`, `MEASUREMENT`, `PRODUCT DEFINITION`, `DEAL TYPE`, `LINE DISCOUNT`, `BONUS PROGRAM`, `PROMOTIONAL PACKAGE`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|AMOUNT|

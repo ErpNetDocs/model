@@ -247,12 +247,18 @@ StoreOrder.ToParty = TransferOrder.FromStore
 <td style="text-align: left;">IssueStoreTransactionLineToStoreOrderLine</td>
 <td style="text-align: center;">MLineCost</td>
 <td style="text-align: center;">StoreTransactionLine.Document.EnterpriseCompany.BaseCurrency</td>
-<td style="text-align: left;">StoreTransactionLine.LineBaseCost</td>
+<td style="text-align: left;">StoreTransactionLine.LineBaseCost + TransferOrderLine.DistributedAmounts*</td>
 <td style="text-align: left;">StoreOrderLine.LineCost</td>
-<td style="text-align: left;">NO</td>
+<td style="text-align: left;">YES</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>DistributedAmounts</strong> in the <strong>MLineCost</strong> metric is the sum of all Document Distributed Amounts distributed to the parent <em>Transfer Order Line</em>, where the 'Add To Line' property in the <em>DocumentAmountType</em> definition is set to 'true'.
+<br>The additional amount calculated for the line is distributed as follows:
+<br><br>    If TransferOrderLine.StandardQuantityBase.Value == 0, then the entire amount is added directly to the line’s total.
+<br><br>    Otherwise, the amount is adjusted using the formula <em>distributedAmount × (CurrentStoreTransactionLine.StandardQuantityBase.Value / CurrentTransferOrderLine.StandardQuantityBase.Value)</em></li>
+</ul>
 <p><strong>The lines of the new SO are created as follows:</strong></p>
 <pre><code>StoreOrderLine.LineNo = autonumber 10, 20, 30
 
