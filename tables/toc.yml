@@ -1195,6 +1195,10 @@
     href: Sys_Calculated_Attributes.md
   - name: Sys_Characteristic_Types
     href: Sys_Characteristic_Types.md
+  - name: Sys_Data_Exchange_Objects
+    href: Sys_Data_Exchange_Objects.md
+  - name: Sys_Data_Exchanges
+    href: Sys_Data_Exchanges.md
   - name: Sys_Data_Source_Queries
     href: Sys_Data_Source_Queries.md
   - name: Sys_Data_Sources

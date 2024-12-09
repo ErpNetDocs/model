@@ -649,6 +649,8 @@
 * [Sys_Calculated_Attribute_Expressions](Sys_Calculated_Attribute_Expressions.md)
 * [Sys_Calculated_Attributes](Sys_Calculated_Attributes.md)
 * [Sys_Characteristic_Types](Sys_Characteristic_Types.md)
+* [Sys_Data_Exchange_Objects](Sys_Data_Exchange_Objects.md)
+* [Sys_Data_Exchanges](Sys_Data_Exchanges.md)
 * [Sys_Data_Source_Queries](Sys_Data_Source_Queries.md)
 * [Sys_Data_Sources](Sys_Data_Sources.md)
 * [Sys_Default_Values](Sys_Default_Values.md)

@@ -1227,6 +1227,13 @@
       href: Systems.Documents.SequenceGenerators.md
     - name: Sequences
       href: Systems.Documents.Sequences.md
+  - name: Exchange
+    href: Systems.Exchange.md
+    items:
+    - name: DataExchangeObjects
+      href: Systems.Exchange.DataExchangeObjects.md
+    - name: DataExchanges
+      href: Systems.Exchange.DataExchanges.md
   - name: External
     href: Systems.External.md
     items:

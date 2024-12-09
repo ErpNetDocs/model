@@ -2299,6 +2299,15 @@ references:
 - uid: Systems.Documents.Sequences
   name: Systems.Documents.Sequences Entity
   href: entities/Systems.Documents.Sequences.html
+- uid: Systems.Exchange
+  name: Systems.Exchange Namespace
+  href: entities/Systems.Exchange.html
+- uid: Systems.Exchange.DataExchangeObjects
+  name: Systems.Exchange.DataExchangeObjects Entity
+  href: entities/Systems.Exchange.DataExchangeObjects.html
+- uid: Systems.Exchange.DataExchanges
+  name: Systems.Exchange.DataExchanges Entity
+  href: entities/Systems.Exchange.DataExchanges.html
 - uid: Systems.External
   name: Systems.External Namespace
   href: entities/Systems.External.html

@@ -18362,6 +18362,36 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Exchange.DataExchangeObjects.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Exchange.DataExchangeObjects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Exchange.DataExchanges.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Exchange.DataExchanges.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Exchange.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Exchange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.External.PublicUserLists.md",
       "output": {
         ".html": {
@@ -25495,6 +25525,26 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sys_Characteristic_Types.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sys_Data_Exchange_Objects.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sys_Data_Exchange_Objects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sys_Data_Exchanges.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sys_Data_Exchanges.html"
         }
       },
       "version": ""
