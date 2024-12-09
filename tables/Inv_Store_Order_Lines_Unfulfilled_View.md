@@ -12,9 +12,9 @@ Returns the remaining (unfulfilled) quantity and cost for each Store Order Line 
 | Name | Type | Description |
 | - | - | --- |
 |[Document_Date](#document_date)|`datetime` |The date on which the document was issued.|
-|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company which issued the document. |
-|[Is_Fulfilled](#is_fulfilled)|`int` |Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.|
-|[Is_QuantityFulfilled](#is_quantityfulfilled)|`int` |Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.|
+|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company which issued the document.|
+|[Is_Fulfilled](#is_fulfilled)|`bit` |Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.|
+|[Is_QuantityFulfilled](#is_quantityfulfilled)|`bit` |Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |If non-null, contains the specific lot to use for the movement|
 |[Movement_Type](#movement_type)|`nvarchar(1)` Allowed: `I`, `R`|Store order movement type. R=RECEIPT, I=ISSUE|
 |[Order_Remaining_Line_Cost](#order_remaining_line_cost)|`decimal(38, 2)` |The remaining (unfulfilled) line cost of the order line.|
@@ -68,7 +68,7 @@ The date on which the document was issued.
 ### Enterprise_Company_Id
 
 
-The enterprise company which issued the document. 
+The enterprise company which issued the document.
 
 | Property | Value |
 | - | - |
@@ -126,7 +126,7 @@ Returns 1/true when both the Quantity and Cost are fulfilled or only negligible 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|int|
+|Type|bit|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -162,7 +162,7 @@ Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.00
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|int|
+|Type|bit|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

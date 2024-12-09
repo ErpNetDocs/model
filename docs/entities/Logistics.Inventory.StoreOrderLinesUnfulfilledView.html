@@ -119,13 +119,13 @@ Show in UI:  <em>ShownByDefault</em></p>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#isfulfilled">IsFulfilled</a></td>
-<td>int32</td>
-<td>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>boolean</td>
+<td>Returns true/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#isquantityfulfilled">IsQuantityFulfilled</a></td>
-<td>int32</td>
-<td>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>boolean</td>
+<td>Returns true/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#movementtype">MovementType</a></td>
@@ -207,15 +207,15 @@ Show in UI:  <em>ShownByDefault</em></p>
 <em>Default Value</em>: <strong>CurrentDate</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="isfulfilled">IsFulfilled</h3>
-<p>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
+<p>Returns true/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="isquantityfulfilled">IsQuantityFulfilled</h3>
-<p>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
+<p>Returns true/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
