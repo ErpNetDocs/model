@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#createdon">CreatedOn</a></td>
 <td>datetime</td>
-<td>The time when object is created. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The time (in UTC) when the object is created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#displaytext">DisplayText</a></td>
@@ -135,7 +135,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#exchangeresult">ExchangeResult</a></td>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#exchangeresult">ExchangeResult</a></td>
-<td>Transfer status. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Transfer status. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#id">Id</a></td>
@@ -145,12 +145,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#mode">Mode</a></td>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#mode">Mode</a></td>
-<td>Operation mode for the object when transferring. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Operation mode for the object when transferring. <code>Required</code> <code>Default(&quot;MER&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes. <code>Filter(like)</code></td>
+<td>Notes for the exchanged object. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#objectversion">ObjectVersion</a></td>
@@ -177,7 +177,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#dataexchange">DataExchange</a></td>
 <td><a href="Systems.Exchange.DataExchanges.html">DataExchanges</a></td>
-<td>The data exchange. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The exchange of the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#dataobject">DataObject</a></td>
@@ -188,12 +188,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdon">CreatedOn</h3>
-<p>The time when object is created. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The time (in UTC) when the object is created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>DateTime.UtcNow</code></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -210,7 +212,7 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2147483647</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="exchangeresult">ExchangeResult</h3>
-<p>Transfer status. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Transfer status. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Exchange.DataExchangeObjects.html#exchangeresult">ExchangeResult</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>ExchangeResult</code>(Systems.Exchange.DataExchangeObjects.md#exchangeresult) data attribute<br>
@@ -239,6 +241,7 @@ Allowed values for the <code>ExchangeResult</code>(Systems.Exchange.DataExchange
 </table>
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>NotStarted</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
@@ -248,7 +251,7 @@ Allowed values for the <code>ExchangeResult</code>(Systems.Exchange.DataExchange
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="mode">Mode</h3>
-<p>Operation mode for the object when transferring. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Operation mode for the object when transferring. <code>Required</code> <code>Default(&quot;MER&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Exchange.DataExchangeObjects.html#mode">Mode</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>Mode</code>(Systems.Exchange.DataExchangeObjects.md#mode) data attribute<br>
@@ -273,9 +276,10 @@ Allowed values for the <code>Mode</code>(Systems.Exchange.DataExchangeObjects.md
 </table>
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Merge</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes. <code>Filter(like)</code></p>
+<p>Notes for the exchanged object. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
@@ -327,8 +331,9 @@ Allowed values for the <code>Reason</code>(Systems.Exchange.DataExchangeObjects.
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataexchange">DataExchange</h3>
-<p>The data exchange. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The exchange of the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Exchange.DataExchanges.html">DataExchanges</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
@@ -336,6 +341,7 @@ Allowed values for the <code>Reason</code>(Systems.Exchange.DataExchangeObjects.
 <h3 id="dataobject">DataObject</h3>
 <p>The data object which will be transferred. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

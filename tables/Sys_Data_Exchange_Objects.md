@@ -15,14 +15,14 @@ Individual aggregate root objects transferred within the data exchange. Only agg
 
 | Name | Type | Description |
 | - | - | --- |
-|[Created_On](#created_on)|`datetime` |The time when object is created.|
-|[Data_Exchange_Id](#data_exchange_id)|`uniqueidentifier` |The data exchange|
+|[Created_On](#created_on)|`datetime` Readonly|The time (in UTC) when the object is created.|
+|[Data_Exchange_Id](#data_exchange_id)|`uniqueidentifier` |The exchange of the object.|
 |[Data_Exchange_Object_Id](#data_exchange_object_id)|`uniqueidentifier` `PK`||
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The data object which will be transferred.|
 |[Exchange_Message](#exchange_message)|`nvarchar(max)` |Status message for this object after the last exchange attempt.|
 |[Exchange_Result](#exchange_result)|`nvarchar(1)` Allowed: `N`, `S`, `F`|Transfer status.|
 |[Mode](#mode)|`nvarchar(3)` Allowed: `MER`, `ADD`|Operation mode for the object when transferring.|
-|[Notes](#notes)|`nvarchar(max)` |Notes|
+|[Notes](#notes)|`nvarchar(max)` |Notes for the exchanged object|
 |[Reason](#reason)|`nvarchar(1)` Allowed: `C`, `R`, `O`, `U`|Reason for adding the object.|
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -31,7 +31,7 @@ Individual aggregate root objects transferred within the data exchange. Only agg
 ### Created_On
 
 
-The time when object is created.
+The time (in UTC) when the object is created.
 
 | Property | Value |
 | - | - |
@@ -47,7 +47,7 @@ The time when object is created.
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -67,7 +67,7 @@ The time when object is created.
 ### Data_Exchange_Id
 
 
-The data exchange
+The exchange of the object.
 
 | Property | Value |
 | - | - |
@@ -217,7 +217,7 @@ Transfer status.
 |Allowed Values|`N`, `S`, `F`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|N|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -254,7 +254,7 @@ Operation mode for the object when transferring.
 |Allowed Values|`MER`, `ADD`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|MER|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -284,7 +284,7 @@ Operation mode for the object when transferring.
 ### Notes
 
 
-Notes
+Notes for the exchanged object
 
 | Property | Value |
 | - | - |

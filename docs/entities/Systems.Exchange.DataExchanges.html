@@ -124,7 +124,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#createdon">CreatedOn</a></td>
 <td>datetime</td>
-<td>The time when the exchange is created. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The time (in UTC) when the exchange is created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#displaytext">DisplayText</a></td>
@@ -139,7 +139,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#exchangedon">ExchangedOn</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time of the exchange. <code>Filter(ge;le)</code></td>
+<td>The time (in UTC) of the exchange. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#exchangelog">ExchangeLog</a></td>
@@ -174,7 +174,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes. <code>Filter(like)</code></td>
+<td>Notes for the exchange. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#objectversion">ObjectVersion</a></td>
@@ -201,12 +201,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#createdbyuser">CreatedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user who created the exchange. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user who created the exchange. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#exchangedbyuser">ExchangedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>User. <code>Filter(multi eq)</code></td>
+<td>The user who made the exchange. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -229,12 +229,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdon">CreatedOn</h3>
-<p>The time when the exchange is created. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The time (in UTC) when the exchange is created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>DateTime.UtcNow</code></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -252,7 +254,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Default Value</em>: <strong>JSON_FILE</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="exchangedon">ExchangedOn</h3>
-<p>The time of the exchange. <code>Filter(ge;le)</code></p>
+<p>The time (in UTC) of the exchange. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
@@ -288,6 +290,8 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>DateTime.Now.AddMonths( 3).Date</code></p>
 <h3 id="mode">Mode</h3>
 <p>Operation mode of the exchange. <code>Required</code> <code>Default(&quot;E&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Exchange.DataExchanges.html#mode">Mode</a></strong><br>
@@ -325,7 +329,7 @@ Allowed values for the <code>Mode</code>(Systems.Exchange.DataExchanges.md#mode)
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes. <code>Filter(like)</code></p>
+<p>Notes for the exchange. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
@@ -385,14 +389,18 @@ Allowed values for the <code>State</code>(Systems.Exchange.DataExchanges.md#stat
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="createdbyuser">CreatedByUser</h3>
-<p>The user who created the exchange. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user who created the exchange. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Transaction.CurrentUser.ToSecurityUser( )</code></p>
 <h3 id="exchangedbyuser">ExchangedByUser</h3>
-<p>User. <code>Filter(multi eq)</code></p>
+<p>The user who made the exchange. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

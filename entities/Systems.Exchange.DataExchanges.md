@@ -32,17 +32,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedOn](Systems.Exchange.DataExchanges.md#createdon) | datetime | The time when the exchange is created. `Required` `Filter(ge;le)` 
+| [CreatedOn](Systems.Exchange.DataExchanges.md#createdon) | datetime | The time (in UTC) when the exchange is created. `Required` `Filter(ge;le)` `ReadOnly` 
 | [DisplayText](Systems.Exchange.DataExchanges.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DriverName](Systems.Exchange.DataExchanges.md#drivername) | string (64) __nullable__ | The name of the exchange program/procedure, which actuates the exchange operation. `Default("JSON_FILE")` `Filter(eq)` 
-| [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time of the exchange. `Filter(ge;le)` 
+| [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time (in UTC) of the exchange. `Filter(ge;le)` 
 | [ExchangeLog](Systems.Exchange.DataExchanges.md#exchangelog) | string (max) __nullable__ | General log of the last transfer attempt. Messages for the individual objects are kept with the objects. `Filter(like)` 
 | [ExternalAddress](Systems.Exchange.DataExchanges.md#externaladdress) | string (254) __nullable__ | Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver. `Filter(like)` 
 | [Id](Systems.Exchange.DataExchanges.md#id) | guid |  
 | [KeepUntil](Systems.Exchange.DataExchanges.md#keepuntil) | date | Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted). `Required` `Filter(ge;le)` 
 | [Mode](Systems.Exchange.DataExchanges.md#mode) | [Mode](Systems.Exchange.DataExchanges.md#mode) | Operation mode of the exchange. `Required` `Default("E")` `Filter(eq)` 
 | [Name](Systems.Exchange.DataExchanges.md#name) | string (64) __nullable__ | The name of the package. Can be empty if naming is not important. `Filter(eq;like)` 
-| [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
+| [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes for the exchange. `Filter(like)` 
 | [ObjectVersion](Systems.Exchange.DataExchanges.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [State](Systems.Exchange.DataExchanges.md#state) | [State](Systems.Exchange.DataExchanges.md#state) | State of the exchange. `Required` `Default("PRE")` `Filter(eq)` 
 
@@ -50,8 +50,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedByUser](Systems.Exchange.DataExchanges.md#createdbyuser) | [Users](Systems.Security.Users.md) | The user who created the exchange. `Required` `Filter(multi eq)` |
-| [ExchangedByUser](Systems.Exchange.DataExchanges.md#exchangedbyuser) | [Users](Systems.Security.Users.md) (nullable) | User. `Filter(multi eq)` |
+| [CreatedByUser](Systems.Exchange.DataExchanges.md#createdbyuser) | [Users](Systems.Security.Users.md) | The user who created the exchange. `Required` `Filter(multi eq)` `ReadOnly` |
+| [ExchangedByUser](Systems.Exchange.DataExchanges.md#exchangedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who made the exchange. `Filter(multi eq)` |
 
 ## Child Collections
 
@@ -64,13 +64,16 @@ Aggregate Tree
 
 ### CreatedOn
 
-The time when the exchange is created. `Required` `Filter(ge;le)`
+The time (in UTC) when the exchange is created. `Required` `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime**  
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`DateTime.UtcNow`
 
 ### DisplayText
 
@@ -96,7 +99,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ExchangedOn
 
-The time of the exchange. `Filter(ge;le)`
+The time (in UTC) of the exchange. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
 _Category_: **System**  
@@ -145,6 +148,9 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Back-End Default Expression:_  
+`DateTime.Now.AddMonths( 3).Date`
+
 ### Mode
 
 Operation mode of the exchange. `Required` `Default("E")` `Filter(eq)`
@@ -177,7 +183,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Notes
 
-Notes. `Filter(like)`
+Notes for the exchange. `Filter(like)`
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  
@@ -224,18 +230,23 @@ _Show in UI_: **ShownByDefault**
 
 ### CreatedByUser
 
-The user who created the exchange. `Required` `Filter(multi eq)`
+The user who created the exchange. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
+_Back-End Default Expression:_  
+`obj.Transaction.CurrentUser.ToSecurityUser( )`
+
 ### ExchangedByUser
 
-User. `Filter(multi eq)`
+The user who made the exchange. `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

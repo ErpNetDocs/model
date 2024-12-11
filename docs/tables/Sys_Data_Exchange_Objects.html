@@ -106,13 +106,13 @@
 <tbody>
 <tr>
 <td><a href="#created_on">Created_On</a></td>
-<td><code>datetime</code></td>
-<td>The time when object is created.</td>
+<td><code>datetime</code> Readonly</td>
+<td>The time (in UTC) when the object is created.</td>
 </tr>
 <tr>
 <td><a href="#data_exchange_id">Data_Exchange_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>The data exchange</td>
+<td>The exchange of the object.</td>
 </tr>
 <tr>
 <td><a href="#data_exchange_object_id">Data_Exchange_Object_Id</a></td>
@@ -142,7 +142,7 @@
 <tr>
 <td><a href="#notes">Notes</a></td>
 <td><code>nvarchar(max)</code></td>
-<td>Notes</td>
+<td>Notes for the exchanged object</td>
 </tr>
 <tr>
 <td><a href="#reason">Reason</a></td>
@@ -158,7 +158,7 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="created_on">Created_On</h3>
-<p>The time when object is created.</p>
+<p>The time (in UTC) when the object is created.</p>
 <table>
 <thead>
 <tr>
@@ -217,7 +217,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -277,7 +277,7 @@
 </tbody>
 </table>
 <h3 id="data_exchange_id">Data_Exchange_Id</h3>
-<p>The data exchange</p>
+<p>The exchange of the object.</p>
 <table>
 <thead>
 <tr>
@@ -783,7 +783,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>None</td>
+<td>N</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -906,7 +906,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>None</td>
+<td>MER</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -1006,7 +1006,7 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
+<p>Notes for the exchanged object</p>
 <table>
 <thead>
 <tr>

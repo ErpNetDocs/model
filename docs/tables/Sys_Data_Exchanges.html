@@ -102,13 +102,13 @@
 <tbody>
 <tr>
 <td><a href="#created_by_user_id">Created_By_User_Id</a></td>
-<td><code>uniqueidentifier</code></td>
+<td><code>uniqueidentifier</code> Readonly</td>
 <td>The user who created the exchange.</td>
 </tr>
 <tr>
 <td><a href="#created_on">Created_On</a></td>
-<td><code>datetime</code></td>
-<td>The time when the exchange is created.</td>
+<td><code>datetime</code> Readonly</td>
+<td>The time (in UTC) when the exchange is created.</td>
 </tr>
 <tr>
 <td><a href="#data_exchange_id">Data_Exchange_Id</a></td>
@@ -128,12 +128,12 @@
 <tr>
 <td><a href="#exchanged_by_user_id">Exchanged_By_User_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>User</td>
+<td>The user who made the exchange.</td>
 </tr>
 <tr>
 <td><a href="#exchanged_on">Exchanged_On</a></td>
 <td><code>datetime</code></td>
-<td>the time of the exchange.</td>
+<td>The time (in UTC) of the exchange.</td>
 </tr>
 <tr>
 <td><a href="#external_address">External_Address</a></td>
@@ -158,7 +158,7 @@
 <tr>
 <td><a href="#notes">Notes</a></td>
 <td><code>nvarchar(max)</code></td>
-<td>Notes.</td>
+<td>Notes for the exchange.</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -233,7 +233,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Referenced Table</td>
@@ -297,7 +297,7 @@
 </tbody>
 </table>
 <h3 id="created_on">Created_On</h3>
-<p>The time when the exchange is created.</p>
+<p>The time (in UTC) when the exchange is created.</p>
 <table>
 <thead>
 <tr>
@@ -356,7 +356,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -772,7 +772,7 @@
 </tbody>
 </table>
 <h3 id="exchanged_by_user_id">Exchanged_By_User_Id</h3>
-<p>User</p>
+<p>The user who made the exchange.</p>
 <table>
 <thead>
 <tr>
@@ -895,7 +895,7 @@
 </tbody>
 </table>
 <h3 id="exchanged_on">Exchanged_On</h3>
-<p>the time of the exchange.</p>
+<p>The time (in UTC) of the exchange.</p>
 <table>
 <thead>
 <tr>
@@ -1500,7 +1500,7 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes.</p>
+<p>Notes for the exchange.</p>
 <table>
 <thead>
 <tr>

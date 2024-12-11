@@ -33,13 +33,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedOn](Systems.Exchange.DataExchangeObjects.md#createdon) | datetime | The time when object is created. `Required` `Filter(ge;le)` 
+| [CreatedOn](Systems.Exchange.DataExchangeObjects.md#createdon) | datetime | The time (in UTC) when the object is created. `Required` `Filter(ge;le)` `ReadOnly` 
 | [DisplayText](Systems.Exchange.DataExchangeObjects.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExchangeMessage](Systems.Exchange.DataExchangeObjects.md#exchangemessage) | string (max) __nullable__ | Status message for this object after the last exchange attempt. `Filter(like)` 
-| [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status. `Required` `Filter(eq)` 
+| [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status. `Required` `Default("N")` `Filter(eq)` 
 | [Id](Systems.Exchange.DataExchangeObjects.md#id) | guid |  
-| [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring. `Required` `Filter(eq)` 
-| [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
+| [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring. `Required` `Default("MER")` `Filter(eq)` 
+| [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes for the exchanged object. `Filter(like)` 
 | [ObjectVersion](Systems.Exchange.DataExchangeObjects.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | Reason for adding the object. `Required` `Default("C")` `Filter(eq)` 
 
@@ -47,7 +47,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataExchange](Systems.Exchange.DataExchangeObjects.md#dataexchange) | [DataExchanges](Systems.Exchange.DataExchanges.md) | The data exchange. `Required` `Filter(multi eq)` `Owner` |
+| [DataExchange](Systems.Exchange.DataExchangeObjects.md#dataexchange) | [DataExchanges](Systems.Exchange.DataExchanges.md) | The exchange of the object. `Required` `Filter(multi eq)` `Owner` |
 | [DataObject](Systems.Exchange.DataExchangeObjects.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The data object which will be transferred. `Required` `Filter(multi eq)` |
 
 
@@ -55,13 +55,16 @@ Aggregate Root:
 
 ### CreatedOn
 
-The time when object is created. `Required` `Filter(ge;le)`
+The time (in UTC) when the object is created. `Required` `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime**  
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`DateTime.UtcNow`
 
 ### DisplayText
 
@@ -86,7 +89,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ExchangeResult
 
-Transfer status. `Required` `Filter(eq)`
+Transfer status. `Required` `Default("N")` `Filter(eq)`
 
 _Type_: **[ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult)**  
 _Category_: **System**  
@@ -101,6 +104,7 @@ _Allowed Values (Systems.Exchange.DataExchangeObjectsRepository.ExchangeResult E
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Default Value_: **NotStarted**  
 _Show in UI_: **ShownByDefault**  
 
 ### Id
@@ -114,7 +118,7 @@ _Show in UI_: **CannotBeShown**
 
 ### Mode
 
-Operation mode for the object when transferring. `Required` `Filter(eq)`
+Operation mode for the object when transferring. `Required` `Default("MER")` `Filter(eq)`
 
 _Type_: **[Mode](Systems.Exchange.DataExchangeObjects.md#mode)**  
 _Category_: **System**  
@@ -128,11 +132,12 @@ _Allowed Values (Systems.Exchange.DataExchangeObjectsRepository.Mode Enum Member
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Default Value_: **Merge**  
 _Show in UI_: **ShownByDefault**  
 
 ### Notes
 
-Notes. `Filter(like)`
+Notes for the exchanged object. `Filter(like)`
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  
@@ -177,9 +182,10 @@ _Show in UI_: **ShownByDefault**
 
 ### DataExchange
 
-The data exchange. `Required` `Filter(multi eq)` `Owner`
+The exchange of the object. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DataExchanges](Systems.Exchange.DataExchanges.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
@@ -190,6 +196,7 @@ _Show in UI_: **ShownByDefault**
 The data object which will be transferred. `Required` `Filter(multi eq)`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

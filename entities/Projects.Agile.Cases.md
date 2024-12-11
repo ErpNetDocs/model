@@ -12,7 +12,7 @@ Default Display Text Format:
 _{Number}: {Title:T}_  
 Default Search Members:  
 __  
-Category:  _Definitions_  
+Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
 Layout category attribute:  _CaseCategoryId_  
 

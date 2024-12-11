@@ -11,18 +11,18 @@ Denotes a data exchange (import, export, etc.) operation with detailed info abou
 
 | Name | Type | Description |
 | - | - | --- |
-|[Created_By_User_Id](#created_by_user_id)|`uniqueidentifier` |The user who created the exchange.|
-|[Created_On](#created_on)|`datetime` |The time when the exchange is created.|
+|[Created_By_User_Id](#created_by_user_id)|`uniqueidentifier` Readonly|The user who created the exchange.|
+|[Created_On](#created_on)|`datetime` Readonly|The time (in UTC) when the exchange is created.|
 |[Data_Exchange_Id](#data_exchange_id)|`uniqueidentifier` `PK`||
 |[Driver_Name](#driver_name)|`nvarchar(64)` |The name of the exchange program/procedure, which actuates the exchange operation.|
 |[Exchange_Log](#exchange_log)|`nvarchar(max)` |General log of the last transfer attempt. Messages for the individual objects are kept with the objects.|
-|[Exchanged_By_User_Id](#exchanged_by_user_id)|`uniqueidentifier` |User|
-|[Exchanged_On](#exchanged_on)|`datetime` |the time of the exchange.|
+|[Exchanged_By_User_Id](#exchanged_by_user_id)|`uniqueidentifier` |The user who made the exchange.|
+|[Exchanged_On](#exchanged_on)|`datetime` |The time (in UTC) of the exchange.|
 |[External_Address](#external_address)|`nvarchar(254)` |Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.|
 |[Keep_Until](#keep_until)|`date` |Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).|
 |[Mode](#mode)|`nvarchar(1)` Allowed: `E`, `I`|Operation mode of the exchange.|
 |[Name](#name)|`nvarchar(64)` |The name of the package. Can be empty if naming is not important.|
-|[Notes](#notes)|`nvarchar(max)` |Notes.|
+|[Notes](#notes)|`nvarchar(max)` |Notes for the exchange.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[State](#state)|`nvarchar(3)` Allowed: `PRE`, `RED`, `FSC`, `FFL`, `CSC`, `CFL`|State of the exchange.|
 
@@ -47,7 +47,7 @@ The user who created the exchange.
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |RTF|no|
 |Sortable|no|
@@ -68,7 +68,7 @@ The user who created the exchange.
 ### Created_On
 
 
-The time when the exchange is created.
+The time (in UTC) when the exchange is created.
 
 | Property | Value |
 | - | - |
@@ -84,7 +84,7 @@ The time when the exchange is created.
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -209,7 +209,7 @@ General log of the last transfer attempt. Messages for the individual objects ar
 ### Exchanged_By_User_Id
 
 
-User
+The user who made the exchange.
 
 | Property | Value |
 | - | - |
@@ -246,7 +246,7 @@ User
 ### Exchanged_On
 
 
-the time of the exchange.
+The time (in UTC) of the exchange.
 
 | Property | Value |
 | - | - |
@@ -428,7 +428,7 @@ The name of the package. Can be empty if naming is not important.
 ### Notes
 
 
-Notes.
+Notes for the exchange.
 
 | Property | Value |
 | - | - |
