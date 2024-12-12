@@ -12,6 +12,7 @@ Contains the managed assets. The management of assets include maintenance planni
 | Name | Type | Description |
 | - | - | --- |
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which the managed asset belongs.|
+|[Is_Active](#is_active)|`bit` |Indicates whether the current Managed Asset is active.|
 |[Managed_Asset_Code](#managed_asset_code)|`nvarchar(16)` |Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.|
 |[Managed_Asset_Group_Id](#managed_asset_group_id)|`uniqueidentifier` |The organizational group of the asset. Used for organizational purposes only.|
 |[Managed_Asset_Id](#managed_asset_id)|`uniqueidentifier` `PK`||
@@ -37,7 +38,7 @@ The enterprise company to which the managed asset belongs.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -60,6 +61,42 @@ The enterprise company to which the managed asset belongs.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Is_Active
+
+
+Indicates whether the current Managed Asset is active.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Managed_Asset_Code
 
 
@@ -74,7 +111,7 @@ Unique code of the managed asset. The code is unique among all managed assets in
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|16|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -111,7 +148,7 @@ The organizational group of the asset. Used for organizational purposes only.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -145,7 +182,7 @@ The organizational group of the asset. Used for organizational purposes only.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -181,7 +218,7 @@ Name of the managed asset (multi-language).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -218,7 +255,7 @@ The type of the asset. Determines the tracked parameters for the asset, the appl
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -253,7 +290,7 @@ The type of the asset. Determines the tracked parameters for the asset, the appl
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -283,7 +320,7 @@ Registration number of the asset with the national registration authorities. NUL
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|32|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -317,7 +354,7 @@ Registration number of the asset with the national registration authorities. NUL
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
