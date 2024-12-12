@@ -278,10 +278,10 @@ StoreOrderLine.QuantityBase = StoreTransactionLine.REMAINING(MQuantityBase)
 
 StoreOrderLine.StandardQuantityBase = StoreTransactionLine.REMAINING(MStandardQuantityBase)
 
-StoreOrderLine.LineCost = CONVERT(StoreOrderLine.Document.DocumentCurrency, StoreTransactionLine.REMAINING(MUnitCost)
+StoreOrderLine.LineCost = CONVERT(StoreOrderLine.Document.DocumentCurrency, StoreTransactionLine.REMAINING(MLineCost)
 
 StoreOrderLine.UnitCost =
-                 if (StoreOrderLine.LineCost != 0.00), then StoreOrderLine.CONVERT(StoreOrderLine.Document.DocumentCurrency, StoreTransactionLine.REMAINING(MUnitCost)/Quantity
+                 if (StoreOrderLine.LineCost != 0.00), then StoreOrderLine.CONVERT(StoreOrderLine.Document.DocumentCurrency, StoreTransactionLine.REMAINING(MLineCost)/Quantity
 
                  else 0.00
                          
