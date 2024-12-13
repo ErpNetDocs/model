@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R37966 StoreOrder – Check Is Fulfilled For Completion | ERP.net Domain Model </title>
+      <title>R37971 Managed Asset - Set Managed Asset Of The Fixed Asset | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R37966 StoreOrder – Check Is Fulfilled For Completion | ERP.net Domain Model ">
+      <meta name="title" content="R37971 Managed Asset - Set Managed Asset Of The Fixed Asset | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37966.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37971.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -71,84 +71,75 @@
         </div>
 
         <article data-uid="">
-<h1 id="r37966-storeorder--check-is-fulfilled-for-completion">R37966 StoreOrder – Check Is Fulfilled For Completion</h1>
+<h1 id="r37971-managed-asset---set-managed-asset-of-the-fixed-asset">R37971 Managed Asset - Set Managed Asset Of The Fixed Asset</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td><strong>Code</strong></td>
-<td>R37966</td>
+<td>Code</td>
+<td>R37971</td>
 </tr>
 <tr>
-<td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Logistics.Inventory.StoreOrders.html">Logistics.Inventory.StoreOrders Entity</a></td>
+<td>Entity</td>
+<td><a class="xref" href="../entities/Applications.AssetManagement.ManagedAssets.html">Applications.AssetManagement.ManagedAssets Entity</a></td>
 </tr>
 <tr>
-<td><strong>Name</strong></td>
-<td>CheckIsFulfilledForCompletion</td>
+<td>Name</td>
+<td>SetManagedAssetOfTheFixedAsset</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
-<td>StoreOrderLinesUnfulfilledView.IsFulfilled</td>
+<td>Attribute</td>
+<td>FixedAsset</td>
 </tr>
 <tr>
-<td><strong>Layer</strong></td>
+<td>Layer</td>
 <td>Back-End</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
-<td>Completing +</td>
+<td>Events</td>
+<td>Commit</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
+<td>Priority</td>
 <td>Normal</td>
 </tr>
 <tr>
-<td><strong>Modify</strong></td>
-<td>NO</td>
-</tr>
-<tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
-needed</a></td>
-</tr>
-<tr>
-<td><strong>Action</strong></td>
-<td>For all records in StoreOrderLinesUnfulfilledView where
-StoreOrder == current StoreOrder <br><br>
-, validate that:
-<br><br>
-IsFulfilled == True.</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>The store order can not be completed, if any of its lines is not fulfilled.</td>
-</tr>
-<tr>
-<td><strong>Message</strong></td>
-<td>Store order '{DisplayText}' cannot be completed because it has not been fulfilled.
-<br><br>
-Ensure that all lines are fulfilled and try again.</td>
-</tr>
-<tr>
-<td><strong>Version</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Revocable</strong></td>
+<td>Modify</td>
 <td>YES</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Sets the current Managed asset in the definition of the chosen Asset, provided that both fields &quot;ManagedAsset.FixedAsset&quot; and &quot;FinanceAssetsAsset.ManagedAsset&quot; are initially NULL. If the Asset is already linked to another Managed Asset (not the current), throw an error</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The rule helps seamless linkage of Assets from the module Finance (Fixed Asset) with the Managed Asset.</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>The selected Fixed Asset '{FixedAsset.DisplayText}' is already associated with another Managed Asset '{FixedAsset.ManagedAsset.DisplayText}'. Select a Fixed Asset, that is not already associated with another Managed Asset.</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>Introduced:</td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37966.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37971.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
