@@ -11,7 +11,9 @@ Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81
 Default Display Text Format:  
 _{Case.Number}: {ActionDescription} by {CreationUser} {CreationTimeUtc}_  
 Default Search Members:  
-__  
+_Case_  
+Name Data Member:  
+_Case_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 
@@ -22,8 +24,10 @@ Max level:  _4 - Track object attribute and blob changes_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Projects.Agile.CaseDevelopments](Projects.Agile.CaseDevelopments.md)  
+Aggregate Parent:  
+[Projects.Agile.Cases](Projects.Agile.Cases.md)  
+Aggregate Root:  
+[Projects.Agile.Cases](Projects.Agile.Cases.md)  
 
 ## Attributes
 
@@ -43,7 +47,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AssignedToUser](Projects.Agile.CaseDevelopments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)` |
-| [Case](Projects.Agile.CaseDevelopments.md#case) | [Cases](Projects.Agile.Cases.md) | The case of the case development. `Required` `Filter(multi eq)` |
+| [Case](Projects.Agile.CaseDevelopments.md#case) | [Cases](Projects.Agile.Cases.md) | The case of the case development. `Required` `Filter(multi eq)` `Owner` |
 | [CreationUser](Projects.Agile.CaseDevelopments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the development. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
@@ -171,12 +175,13 @@ _Show in UI_: **ShownByDefault**
 
 ### Case
 
-The case of the case development. `Required` `Filter(multi eq)`
+The case of the case development. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Cases](Projects.Agile.Cases.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### CreationUser

@@ -105,7 +105,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Projects.Agile.CaseCategories.html">Projects.Agile.CaseCategories</a></li>
+<li><a href="Projects.Agile.CaseCategories.html">Projects.Agile.CaseCategories</a>
+<ul>
+<li><a href="Projects.Agile.UserStates.html">Projects.Agile.UserStates</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -156,6 +160,23 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Projects.Agile.CaseCategories.html#ord">Ord</a></td>
 <td>int32</td>
 <td>Display order of the category relative to other categories within the project type. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserStates</td>
+<td><a href="Projects.Agile.UserStates.html">UserStates</a></td>
+<td>List of <code>UserState</code>(Projects.Agile.UserStates.md) child objects, based on the <code>Projects.Agile.UserState.CaseCategory</code>(Projects.Agile.UserStates.md#casecategory) back reference</td>
 </tr>
 </tbody>
 </table>

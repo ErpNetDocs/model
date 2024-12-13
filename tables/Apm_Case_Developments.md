@@ -7,6 +7,10 @@ Entity: [Projects.Agile.CaseDevelopments](~/entities/Projects.Agile.CaseDevelopm
 
 Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81)
 
+## Owner Tables Hierarchy
+
+* [Apm_Cases](Apm_Cases.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -111,7 +115,7 @@ The case of the case development
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

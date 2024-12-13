@@ -93,7 +93,9 @@
 <p>Default Display Text Format:<br>
 <em>{Case.Number}: {ActionDescription} by {CreationUser} {CreationTimeUtc}</em><br>
 Default Search Members:<br>
-__<br>
+<em>Case</em><br>
+Name Data Member:<br>
+<em>Case</em><br>
 Category:  <em>Definitions</em><br>
 Show in UI:  <em>ShownByDefault</em></p>
 <h2 id="track-changes">Track Changes</h2>
@@ -101,10 +103,10 @@ Show in UI:  <em>ShownByDefault</em></p>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Projects.Agile.CaseDevelopments.html">Projects.Agile.CaseDevelopments</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="Projects.Agile.Cases.html">Projects.Agile.Cases</a><br>
+Aggregate Root:<br>
+<a href="Projects.Agile.Cases.html">Projects.Agile.Cases</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -175,7 +177,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#case">Case</a></td>
 <td><a href="Projects.Agile.Cases.html">Cases</a></td>
-<td>The case of the case development. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The case of the case development. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#creationuser">CreationUser</a></td>
@@ -326,11 +328,12 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="case">Case</h3>
-<p>The case of the case development. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The case of the case development. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.Cases.html">Cases</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>The user, who created the development. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>

@@ -7,6 +7,10 @@ Entity: [Projects.Agile.UserStates](~/entities/Projects.Agile.UserStates.md)
 
 Workflow states for the case categories. Entity: Apm_User_States (Introduced in version 25.1.0.96)
 
+## Owner Tables Hierarchy
+
+* [Apm_Case_Categories](Apm_Case_Categories.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -35,7 +39,7 @@ The category for which the user state is defined.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

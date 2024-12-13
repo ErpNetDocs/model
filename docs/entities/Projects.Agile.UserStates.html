@@ -103,10 +103,10 @@ Show in UI:  <em>ShownByDefault</em></p>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Projects.Agile.UserStates.html">Projects.Agile.UserStates</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="Projects.Agile.CaseCategories.html">Projects.Agile.CaseCategories</a><br>
+Aggregate Root:<br>
+<a href="Projects.Agile.CaseCategories.html">Projects.Agile.CaseCategories</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -167,7 +167,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#casecategory">CaseCategory</a></td>
 <td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The category for which the user state is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The category for which the user state is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -268,10 +268,11 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="casecategory">CaseCategory</h3>
-<p>The category for which the user state is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The category for which the user state is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

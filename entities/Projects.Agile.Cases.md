@@ -25,6 +25,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Agile.Cases](Projects.Agile.Cases.md)  
+  * [Projects.Agile.CaseDevelopments](Projects.Agile.CaseDevelopments.md)  
 
 ## Attributes
 
@@ -62,6 +63,12 @@ Aggregate Tree
 | [ProjectMilestone](Projects.Agile.Cases.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | Determines the milestone for which the case must be resolved. `Filter(multi eq)` |
 | [SocialGroup](Projects.Agile.Cases.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Specified, when the case is assigned to a group of users. `Filter(multi eq)` |
 | [UserState](Projects.Agile.Cases.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user-defined sub-state of the case. `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.0.97` |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Developments | [CaseDevelopments](Projects.Agile.CaseDevelopments.md) | List of `CaseDevelopment`(Projects.Agile.CaseDevelopments.md) child objects, based on the `Projects.Agile.CaseDevelopment.Case`(Projects.Agile.CaseDevelopments.md#case) back reference 
 
 
 ## Attribute Details

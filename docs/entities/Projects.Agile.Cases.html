@@ -104,7 +104,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Projects.Agile.Cases.html">Projects.Agile.Cases</a></li>
+<li><a href="Projects.Agile.Cases.html">Projects.Agile.Cases</a>
+<ul>
+<li><a href="Projects.Agile.CaseDevelopments.html">Projects.Agile.CaseDevelopments</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -262,6 +266,23 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Projects.Agile.Cases.html#userstate">UserState</a></td>
 <td><a href="Projects.Agile.UserStates.html">UserStates</a> (nullable)</td>
 <td>The user-defined sub-state of the case. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.97</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Developments</td>
+<td><a href="Projects.Agile.CaseDevelopments.html">CaseDevelopments</a></td>
+<td>List of <code>CaseDevelopment</code>(Projects.Agile.CaseDevelopments.md) child objects, based on the <code>Projects.Agile.CaseDevelopment.Case</code>(Projects.Agile.CaseDevelopments.md#case) back reference</td>
 </tr>
 </tbody>
 </table>

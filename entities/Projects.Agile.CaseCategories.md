@@ -26,6 +26,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Agile.CaseCategories](Projects.Agile.CaseCategories.md)  
+  * [Projects.Agile.UserStates](Projects.Agile.UserStates.md)  
 
 ## Attributes
 
@@ -39,6 +40,12 @@ Aggregate Tree
 | [Notes](Projects.Agile.CaseCategories.md#notes) | string (max) __nullable__ | Notes for this CaseCategory. 
 | [ObjectVersion](Projects.Agile.CaseCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Ord](Projects.Agile.CaseCategories.md#ord) | int32 | Display order of the category relative to other categories within the project type. `Required` `Default(1)` `Filter(eq)` 
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| UserStates | [UserStates](Projects.Agile.UserStates.md) | List of `UserState`(Projects.Agile.UserStates.md) child objects, based on the `Projects.Agile.UserState.CaseCategory`(Projects.Agile.UserStates.md#casecategory) back reference 
 
 
 ## Attribute Details
