@@ -406,10 +406,10 @@ _Default Value_: **0**
 _Show in UI_: **HiddenByDefault**  
 
 _Back-End Default Expression:_  
-`obj.DetermineLineStandardDiscountPercent( obj.Product, obj.LineDiscount, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine, obj.Level1Discount, obj.Level2Discount, obj.Level3Discount)`
+`obj.DetermineLineStandardDiscountPercent( obj.Product, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine, obj.Level1Discount, obj.Level2Discount, obj.Level3Discount)`
 
 _Front-End Recalc Expressions:_  
-`obj.DetermineLineStandardDiscountPercent( obj.Product, obj.LineDiscount, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine, obj.Level1Discount, obj.Level2Discount, obj.Level3Discount)`
+`obj.DetermineLineStandardDiscountPercent( obj.Product, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine, obj.Level1Discount, obj.Level2Discount, obj.Level3Discount)`
 ### LineToDate
 
 When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. `Filter(ge;le)` `Introduced in version 20.1`

@@ -247,18 +247,31 @@ StoreOrder.ToParty = TransferOrder.FromStore
 <td style="text-align: left;">IssueStoreTransactionLineToStoreOrderLine</td>
 <td style="text-align: center;">MLineCost</td>
 <td style="text-align: center;">StoreTransactionLine.Document.EnterpriseCompany.BaseCurrency</td>
-<td style="text-align: left;">StoreTransactionLine.LineBaseCost + TransferOrderLine.DistributedAmounts*</td>
+<td style="text-align: left;">StoreTransactionLine.LineBaseCost + the relative part of TransferOrderLine.DistributedAmounts*</td>
 <td style="text-align: left;">StoreOrderLine.LineCost</td>
 <td style="text-align: left;">YES</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>DistributedAmounts</strong> in the <strong>MLineCost</strong> metric is the sum of all Document Distributed Amounts distributed to the parent <em>Transfer Order Line</em>, where the 'Add To Line' property in the <em>DocumentAmountType</em> definition is set to 'true'.
-<br>The additional amount calculated for the line is distributed as follows:
-<br><br>    If TransferOrderLine.StandardQuantityBase.Value == 0, then the entire amount is added directly to the line’s total.
-<br><br>    Otherwise, the amount is adjusted using the formula <em>distributedAmount × (CurrentStoreTransactionLine.StandardQuantityBase.Value / CurrentTransferOrderLine.StandardQuantityBase.Value)</em></li>
+<li><strong>The relative part of`TransferOrderLine.DistributedAmounts</strong> in the <strong>MLineCost</strong> metric is calculated as follows:</li>
 </ul>
+<ol>
+<li>Calculate the total Distributed Amounts:<br>
+Sum all <strong>Document Distributed Amounts</strong> that are allocated to the parent <em>Transfer Order Line</em>, where the 'Add To Line' property in the <em>DocumentAmountType</em> definition is set to 'true'.</li>
+<li>Determine the relative part:
+<ul>
+<li>If <code>TransferOrderLine.StandardQuantityBase.Value == 0</code>, the entire amount is added directly to the line’s total.</li>
+<li>Otherwise, the amount is adjusted using the formula:
+<pre><code>distributedAmount × (CurrentStoreTransactionLine.StandardQuantityBase.Value / CurrentTransferOrderLine.StandardQuantityBase.Value)  
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Important Note:</strong><br>
+This generation supports both the use of <em>Additional Amounts</em> and <em>partial execution</em> with multiple StoreTransactionLine entries. However, using both simultaneously may result in rounding differences up to <strong>0.01</strong> per StoreTransactionLine.</p>
+<br>
 <p><strong>The lines of the new SO are created as follows:</strong></p>
 <pre><code>StoreOrderLine.LineNo = autonumber 10, 20, 30
 
