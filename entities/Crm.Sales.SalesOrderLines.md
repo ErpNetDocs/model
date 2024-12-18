@@ -31,6 +31,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [BonusProgramAmount](Crm.Sales.SalesOrderLines.md#bonusprogramamount) | [Amount](../data-types.md#amount) | The amount of the discount from the bonus program. 
 | [CurrentBalanceBase](Crm.Sales.SalesOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
 | [DeliveryTermsCode](Crm.Sales.SalesOrderLines.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrderLines.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
 | [DisplayText](Crm.Sales.SalesOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
@@ -58,6 +59,7 @@ Aggregate Root:
 | [ParentLineNo](Crm.Sales.SalesOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
 | [PersistLot](Crm.Sales.SalesOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
 | [ProductDescription](Crm.Sales.SalesOrderLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the sold product at the time the sale was made. `Required` `Filter(like)` 
+| [PromotionalPackageAmount](Crm.Sales.SalesOrderLines.md#promotionalpackageamount) | [Amount](../data-types.md#amount) | The amount of the discount from the relative promotional package line. 
 | [Quantity](Crm.Sales.SalesOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityBase](Crm.Sales.SalesOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 | [RequestedQuantity](Crm.Sales.SalesOrderLines.md#requestedquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | Quantity requested by customer. `Unit: QuantityUnit` 
@@ -96,6 +98,16 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### BonusProgramAmount
+
+The amount of the discount from the bonus program.
+
+_Type_: **[Amount](../data-types.md#amount)**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### CurrentBalanceBase
 
@@ -487,6 +499,16 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `obj.Product.Name`
+### PromotionalPackageAmount
+
+The amount of the discount from the relative promotional package line.
+
+_Type_: **[Amount](../data-types.md#amount)**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### Quantity
 
 The quantity sold. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`

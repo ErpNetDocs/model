@@ -116,6 +116,11 @@ Aggregate Root:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Crm.Sales.SalesOrderLines.html#bonusprogramamount">BonusProgramAmount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The amount of the discount from the bonus program.</td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#currentbalancebase">CurrentBalanceBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity</a></td>
 <td>The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly.</td>
@@ -249,6 +254,11 @@ Aggregate Root:<br>
 <td><a href="Crm.Sales.SalesOrderLines.html#productdescription">ProductDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
 <td>The name of the sold product at the time the sale was made. <code>Required</code> <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderLines.html#promotionalpackageamount">PromotionalPackageAmount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The amount of the discount from the relative promotional package line.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#quantity">Quantity</a></td>
@@ -415,6 +425,13 @@ Aggregate Root:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="bonusprogramamount">BonusProgramAmount</h3>
+<p>The amount of the discount from the bonus program.</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="currentbalancebase">CurrentBalanceBase</h3>
 <p>The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
@@ -850,6 +867,13 @@ Generic enum type for TransportMode properties<br>
 <code>obj.Product.Name</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.Name</code></p>
+<h3 id="promotionalpackageamount">PromotionalPackageAmount</h3>
+<p>The amount of the discount from the relative promotional package line.</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity sold. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
