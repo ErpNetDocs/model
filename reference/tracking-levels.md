@@ -29,6 +29,7 @@ The following table contains default system-specified tracking levels:
 | General.Products.Products | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.Stores | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.Suppliers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Projects.Agile.Cases | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CalculatedAttributes | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CustomProperties | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.PropertyValues | 0 - Do not track changes | 0 - Do not track changes |
