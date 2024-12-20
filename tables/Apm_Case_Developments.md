@@ -15,14 +15,14 @@ Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81
 
 | Name | Type | Description |
 | - | - | --- |
-|[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |When the development incurred re-assignment, specifies the new user, to which the case is assigned.|
+|[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` Readonly|When the development incurred re-assignment, specifies the new user, to which the case is assigned.|
 |[Case_Development_Id](#case_development_id)|`uniqueidentifier` `PK`|Case Development|
 |[Case_Id](#case_id)|`uniqueidentifier` |The case of the case development|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|The exact date and time (in UTC) when the development was created|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` Readonly|The user, who created the development.|
 |[Description](#description)|`nvarchar(max)` |Detailed description of the development.|
-|[Development_Type](#development_type)|`nvarchar(3)` Allowed: `EDT`, `ASN`, `STA`, `ASH`, `STH`, Readonly|Type of the development - Edit, Assignment, Resolve, etc.|
-|[New_System_State](#new_system_state)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`|When the development incurred changing the state of the case, contains the new state.|
+|[Development_Type](#development_type)|`nvarchar(3)` Allowed: `EDT`, `ASN`, `STA`, `ASH`, `STH`, `CRT`, Readonly|Type of the development - Edit, Assignment, Resolve, etc.|
+|[New_System_State](#new_system_state)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, Readonly|When the development incurred changing the state of the case, contains the new state.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -46,7 +46,7 @@ When the development incurred re-assignment, specifies the new user, to which th
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |RTF|no|
 |Sortable|no|
@@ -253,7 +253,7 @@ Type of the development - Edit, Assignment, Resolve, etc.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`EDT`, `ASN`, `STA`, `ASH`, `STH`|
+|Allowed Values|`EDT`, `ASN`, `STA`, `ASH`, `STH`, `CRT`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|EDT|
@@ -303,7 +303,7 @@ When the development incurred changing the state of the case, contains the new s
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

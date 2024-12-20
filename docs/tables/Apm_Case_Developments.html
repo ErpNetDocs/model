@@ -106,7 +106,7 @@
 <tbody>
 <tr>
 <td><a href="#assigned_to_user_id">Assigned_To_User_Id</a></td>
-<td><code>uniqueidentifier</code></td>
+<td><code>uniqueidentifier</code> Readonly</td>
 <td>When the development incurred re-assignment, specifies the new user, to which the case is assigned.</td>
 </tr>
 <tr>
@@ -136,12 +136,12 @@
 </tr>
 <tr>
 <td><a href="#development_type">Development_Type</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>EDT</code>, <code>ASN</code>, <code>STA</code>, <code>ASH</code>, <code>STH</code>, Readonly</td>
+<td><code>nvarchar(3)</code> Allowed: <code>EDT</code>, <code>ASN</code>, <code>STA</code>, <code>ASH</code>, <code>STH</code>, <code>CRT</code>, Readonly</td>
 <td>Type of the development - Edit, Assignment, Resolve, etc.</td>
 </tr>
 <tr>
 <td><a href="#new_system_state">New_System_State</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code></td>
+<td><code>nvarchar(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, Readonly</td>
 <td>When the development incurred changing the state of the case, contains the new state.</td>
 </tr>
 <tr>
@@ -212,7 +212,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Referenced Table</td>
@@ -890,7 +890,7 @@
 <tbody>
 <tr>
 <td>Allowed Values</td>
-<td><code>EDT</code>, <code>ASN</code>, <code>STA</code>, <code>ASH</code>, <code>STH</code></td>
+<td><code>EDT</code>, <code>ASN</code>, <code>STA</code>, <code>ASH</code>, <code>STH</code>, <code>CRT</code></td>
 </tr>
 <tr>
 <td>Auto Complete</td>
@@ -1065,7 +1065,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>

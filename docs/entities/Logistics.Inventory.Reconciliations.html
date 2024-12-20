@@ -235,7 +235,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#reconciliationtype">ReconciliationType</a></td>
 <td><a href="Logistics.Inventory.Reconciliations.html#reconciliationtype">ReconciliationType</a> <strong>nullable</strong></td>
-<td>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. <code>Filter(eq)</code> <code>Introduced in version 24.1.3.67</code></td>
+<td>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.3.67</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#referencedate">ReferenceDate</a></td>
@@ -648,7 +648,7 @@ Relationship between parent and child documents<br>
 <em>Default Value</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="reconciliationtype">ReconciliationType</h3>
-<p>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. <code>Filter(eq)</code> <code>Introduced in version 24.1.3.67</code></p>
+<p>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.3.67</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Reconciliations.html#reconciliationtype">ReconciliationType</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>ReconciliationType</code>(Logistics.Inventory.Reconciliations.md#reconciliationtype) data attribute<br>
@@ -671,7 +671,7 @@ Allowed values for the <code>ReconciliationType</code>(Logistics.Inventory.Recon
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="referencedate">ReferenceDate</h3>

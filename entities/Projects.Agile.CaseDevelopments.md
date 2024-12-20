@@ -9,7 +9,7 @@ Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81
 
 ## Default Visualization
 Default Display Text Format:  
-_{Case.Number}: {ActionDescription} by {CreationUser} {CreationTimeUtc}_  
+_{ActionDescription} by {CreationUser} {CreationTimeUtc}_  
 Default Search Members:  
 _Case_  
 Name Data Member:  
@@ -39,14 +39,14 @@ Aggregate Root:
 | [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | Type of the development - Edit, Assignment, Resolve, etc. `Required` `Default("EDT")` `Filter(multi eq)` `ReadOnly` 
 | [DisplayText](Projects.Agile.CaseDevelopments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Projects.Agile.CaseDevelopments.md#id) | guid |  
-| [NewSystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) | [SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__ | When the development incurred changing the state of the case, contains the new state. `Filter(multi eq)` 
+| [NewSystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) | [SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__ | When the development incurred changing the state of the case, contains the new state. `Filter(multi eq)` `ReadOnly` 
 | [ObjectVersion](Projects.Agile.CaseDevelopments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignedToUser](Projects.Agile.CaseDevelopments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)` |
+| [AssignedToUser](Projects.Agile.CaseDevelopments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)` `ReadOnly` |
 | [Case](Projects.Agile.CaseDevelopments.md#case) | [Cases](Projects.Agile.Cases.md) | The case of the case development. `Required` `Filter(multi eq)` `Owner` |
 | [CreationUser](Projects.Agile.CaseDevelopments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the development. `Required` `Filter(multi eq)` `ReadOnly` |
 
@@ -102,6 +102,7 @@ _Allowed Values (Projects.Agile.CaseDevelopmentsRepository.DevelopmentType Enum 
 | ChangeState | Change state. Stored as 'STA'. <br /> _Database Value:_ 'STA' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ChangeState' |
 | AssignmentH | Assignment. Stored as 'ASH'. <br /> _Database Value:_ 'ASH' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'AssignmentH' |
 | ChangeStateH | Change state. Stored as 'STH'. <br /> _Database Value:_ 'STH' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'ChangeStateH' |
+| Create | Create. Stored as 'CRT'. <br /> _Database Value:_ 'CRT' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Create' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
@@ -129,7 +130,7 @@ _Show in UI_: **CannotBeShown**
 
 ### NewSystemState
 
-When the development incurred changing the state of the case, contains the new state. `Filter(multi eq)`
+When the development incurred changing the state of the case, contains the new state. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__**  
 _Category_: **System**  
@@ -165,7 +166,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### AssignedToUser
 
-When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)`
+When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Indexed_: **True**  

@@ -64,7 +64,7 @@ Aggregate Tree
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.Reconciliations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.Reconciliations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.Reconciliations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.Reconciliations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) | [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) __nullable__ | Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. `Filter(eq)` `Introduced in version 24.1.3.67` 
+| [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) | [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) __nullable__ | Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. `Filter(multi eq)` `Introduced in version 24.1.3.67` 
 | [ReferenceDate](Logistics.Inventory.Reconciliations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Logistics.Inventory.Reconciliations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Logistics.Inventory.Reconciliations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -337,7 +337,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### ReconciliationType
 
-Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. `Filter(eq)` `Introduced in version 24.1.3.67`
+Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. `Filter(multi eq)` `Introduced in version 24.1.3.67`
 
 _Type_: **[ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) __nullable__**  
 _Category_: **System**  
@@ -349,7 +349,7 @@ _Allowed Values (Logistics.Inventory.ReconciliationsRepository.ReconciliationTyp
 | Full | Full. Stored as 'F'. <br /> _Database Value:_ 'F' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Full' |
 | Partial | Partial. Stored as 'P'. <br /> _Database Value:_ 'P' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Partial' |
 
-_Supported Filters_: **Equals**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 

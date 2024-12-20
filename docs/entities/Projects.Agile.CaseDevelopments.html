@@ -91,7 +91,7 @@
 <p>Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Case.Number}: {ActionDescription} by {CreationUser} {CreationTimeUtc}</em><br>
+<em>{ActionDescription} by {CreationUser} {CreationTimeUtc}</em><br>
 Default Search Members:<br>
 <em>Case</em><br>
 Name Data Member:<br>
@@ -150,7 +150,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">NewSystemState</a></td>
 <td><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></td>
-<td>When the development incurred changing the state of the case, contains the new state. <code>Filter(multi eq)</code></td>
+<td>When the development incurred changing the state of the case, contains the new state. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#objectversion">ObjectVersion</a></td>
@@ -172,7 +172,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>When the development incurred re-assignment, specifies the new user, to which the case is assigned. <code>Filter(multi eq)</code></td>
+<td>When the development incurred re-assignment, specifies the new user, to which the case is assigned. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#case">Case</a></td>
@@ -245,6 +245,10 @@ Allowed values for the <code>DevelopmentType</code>(Projects.Agile.CaseDevelopme
 <td>ChangeStateH</td>
 <td>Change state. Stored as 'STH'. <br> <em>Database Value:</em> 'STH' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'ChangeStateH'</td>
 </tr>
+<tr>
+<td>Create</td>
+<td>Create. Stored as 'CRT'. <br> <em>Database Value:</em> 'CRT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Create'</td>
+</tr>
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -266,7 +270,7 @@ Allowed values for the <code>DevelopmentType</code>(Projects.Agile.CaseDevelopme
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="newsystemstate">NewSystemState</h3>
-<p>When the development incurred changing the state of the case, contains the new state. <code>Filter(multi eq)</code></p>
+<p>When the development incurred changing the state of the case, contains the new state. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
@@ -321,7 +325,7 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assignedtouser">AssignedToUser</h3>
-<p>When the development incurred re-assignment, specifies the new user, to which the case is assigned. <code>Filter(multi eq)</code></p>
+<p>When the development incurred re-assignment, specifies the new user, to which the case is assigned. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
