@@ -19101,16 +19101,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "entities/renames.md",
-      "output": {
-        ".html": {
-          "relative_path": "entities/renames.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "entities/toc.yml",
       "output": {
