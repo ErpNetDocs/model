@@ -2,4 +2,4 @@
 
 This is an old version of the ERP.net entity renames list.
 
-Please use the latest version, which is located at [https://docs.erp.net/model/reference/renames.html].
+Please use the latest version, which is located at [this link](https://docs.erp.net/model/reference/renames.html)
