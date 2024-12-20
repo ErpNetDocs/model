@@ -103,7 +103,7 @@
 </tr>
 <tr>
 <td><strong>Record State</strong></td>
-<td>Updated</td>
+<td>Inserted, Updated</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -115,15 +115,26 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If the System state field has been changed<br>
+<td>On Insert:<br>                                                                         |
+Create a new CaseDevelopment record where DevelopmentType = Create, NewSystemState = Case.SystemState, AssignedToUser = Case.AssignedToUser, Description = Case.Description<br>
+<br>
+If the Case.Description field has a value<br>
+, then Case.Description = NULL<br>
+<br>
+On Update:<br>
+If the System state field has been changed<br>
 , then create a new CaseDevelopment record where DevelopmentType = State change/STH and NewSystemState = Case.SystemState<br>
 <br>
 If the Assigned To User field has been changed<br>
-, then create a new CaseDevelopment record where DevelopmentType = Assignment/ASH and AssignedToUser = Case.AssignedToUser<br></td>
+, then create a new CaseDevelopment record where DevelopmentType = Assignment/ASH and AssignedToUser = Case.AssignedToUser<br>
+<br>
+If the Description field differs from null<br>
+, then create a new CaseDevelopment record where DevelopmentType = Edit and Description = Case.Description<br>
+, then Case.Description = NULL<br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule ensures that the history of state changes and assignments for a given case will be tracked by creating new case developments containing this information.</td>
+<td>The rule ensures that the history of creation, state changes, assignments, and the addition of new descriptions for a given case will be tracked by creating new case developments containing this information.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
