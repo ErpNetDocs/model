@@ -12,6 +12,7 @@ Contains the managed assets. The management of assets include maintenance planni
 | Name | Type | Description |
 | - | - | --- |
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which the managed asset belongs.|
+|[Fixed_Asset_Id](#fixed_asset_id)|`uniqueidentifier` |The fixed asset associated with the managed asset. NULL indicates that no fixed asset is associated to the managed asset, or that they are more than one.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current Managed Asset is active.|
 |[Managed_Asset_Code](#managed_asset_code)|`nvarchar(16)` |Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.|
 |[Managed_Asset_Group_Id](#managed_asset_group_id)|`uniqueidentifier` |The organizational group of the asset. Used for organizational purposes only.|
@@ -60,6 +61,43 @@ The enterprise company to which the managed asset belongs.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Fixed_Asset_Id
+
+
+The fixed asset associated with the managed asset. NULL indicates that no fixed asset is associated to the managed asset, or that they are more than one.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|10|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Ast_Assets](Ast_Assets.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Fixed_Asset_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
 
