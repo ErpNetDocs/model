@@ -38,7 +38,7 @@ Aggregate Root:
 | [Id](Applications.Service.ServiceAgreementServices.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceAgreementServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
 | [ObjectVersion](Applications.Service.ServiceAgreementServices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed service or product. `Unit: QuantityUnit` `Required` 
+| [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed servcice or product. `Unit: QuantityUnit` `Required` 
 | [StartDate](Applications.Service.ServiceAgreementServices.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. `Filter(ge;le)` 
 
 ## References
