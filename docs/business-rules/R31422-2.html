@@ -120,20 +120,18 @@ Legislations</strong></td>
 <td><strong>Action</strong></td>
 <td>if( oldTotalAmountCurrency != newTotalAmountCurrency AND CurrencyDirectory != null)
 <br><br>
-TotalAmount = new Amount(TotalAmount.Value, oldTotalAmountCurrency
-).ConvertTo(newTotalAmountCurrency, CurrencyDirectory);
+TotalAmount = TotalAmount.ConvertTo(TotalAmountCurrency, CurrencyDirectory);
 <br><br>
 foreach (Lines)
 {
-line.Amount = new Amount(line.Amount.Value,
-oldTotalAmountCurrency).ConvertTo(newTotalAmountCurrency, CurrencyDirectory);
+Line.Amount = Line.Amount.ConvertTo(TotalAmountCurrency, CurrencyDirectory);
 }</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>When Total Amount Currency is changed, if the previous currency is different from the new
 currency, Total Amount should be converted from the old currency to the new currency and
-Amount in all lines should be converted, too.</td>
+Amount in all lines should be converted too.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -142,7 +140,7 @@ Amount in all lines should be converted, too.</td>
 <tr>
 <td><strong>Version</strong></td>
 <td>Introduced: 21
-<br><br>
+Updated: v.24 SP7- Calculation according to the real current value of Amount (which may be changed by other rules).
 <br><br></td>
 </tr>
 <tr>
