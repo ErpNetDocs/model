@@ -185,7 +185,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>Base personal record. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Base personal record. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#salespersongroup">SalesPersonGroup</a></td>
@@ -265,11 +265,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>Base personal record. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Base personal record. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="salespersongroup">SalesPersonGroup</h3>
 <p>The sales person group to which this sales person is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
