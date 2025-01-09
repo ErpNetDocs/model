@@ -26,6 +26,7 @@ Leads are potential customers for your products. Because leads are usually proce
 |[Marketing_Industry_Id](#marketing_industry_id)|`uniqueidentifier` |The industry (for marketing purposes) of the lead.|
 |[Marketing_Solution_Id](#marketing_solution_id)|`uniqueidentifier` |The marketing solution, in which the lead is interested or which generated the lead.|
 |[MQL_Timestamp_Utc](#mql_timestamp_utc)|`datetime` Readonly|System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).|
+|[Notes](#notes)|`nvarchar(max)` |Additional information or comments.|
 |[Owner_User_Id](#owner_user_id)|`uniqueidentifier` |The user, responsible for this record.|
 |[Person_Email](#person_email)|`nvarchar(64)` |The email address of the sales lead person.|
 |[Person_First_Name](#person_first_name)|`nvarchar(64)` |The first name of the person, representing the sales lead.|
@@ -590,6 +591,42 @@ System assigned date and time (in UTC), when the lead was first promoted to Mark
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Notes
+
+
+Additional information or comments.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Notes - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Owner_User_Id
 

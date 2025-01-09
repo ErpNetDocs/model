@@ -143,6 +143,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.Leads.html#notes">Notes</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Additional information or comments. <code>Filter(like)</code> <code>Introduced in version 25.1.2.6</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.Leads.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
@@ -314,6 +319,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Additional information or comments. <code>Filter(like)</code> <code>Introduced in version 25.1.2.6</code></p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>

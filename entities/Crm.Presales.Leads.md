@@ -36,6 +36,7 @@ Aggregate Tree
 | [DisplayText](Crm.Presales.Leads.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Presales.Leads.md#id) | guid |  
 | [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly` 
+| [Notes](Crm.Presales.Leads.md#notes) | string (max) __nullable__ | Additional information or comments. `Filter(like)` `Introduced in version 25.1.2.6` 
 | [ObjectVersion](Crm.Presales.Leads.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person. `Filter(eq;like)` 
 | [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead. `Filter(eq;like)` 
@@ -120,6 +121,17 @@ _Type_: **datetime __nullable__**
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
+### Notes
+
+Additional information or comments. `Filter(like)` `Introduced in version 25.1.2.6`
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 _Show in UI_: **ShownByDefault**  
 
 ### ObjectVersion
