@@ -166,19 +166,19 @@ _Allowed Values (Systems.Config.WebSitesRepository.WebSiteType Enum Members)_
 
 | Value | Description |
 | ---- | --- |
-| API | Allows external applications to access the ERP resources using REST API.. Stored as 'API'. <br /> _Database Value:_ 'API' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'API' |
+| DomainAPI | DomainAPI value. Stored as 'API'. <br /> _Database Value:_ 'API' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'DomainAPI' |
 | ClientCenter | Allows community users to access ERP resources. Requires working ID site.. Stored as 'CC'. <br /> _Database Value:_ 'CC' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ClientCenter' |
 | ECommerce | ECommerce value. Stored as 'EC'. <br /> _Database Value:_ 'EC' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ECommerce' |
-| LEGALBG | LEGALBG value. Stored as 'LEG'. <br /> _Database Value:_ 'LEG' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'LEGALBG' |
+| LegalBG | LegalBG value. Stored as 'LEG'. <br /> _Database Value:_ 'LEG' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'LegalBG' |
 | SocialInteractions | SocialInteractions value. Stored as 'SI'. <br /> _Database Value:_ 'SI' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'SocialInteractions' |
 | DigitalMarketplace | DigitalMarketplace value. Stored as 'DM'. <br /> _Database Value:_ 'DM' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'DigitalMarketplace' |
-| WebClientApplication | WebClientApplication value. Stored as 'APP'. <br /> _Database Value:_ 'APP' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'WebClientApplication' |
+| WebClient | WebClient value. Stored as 'APP'. <br /> _Database Value:_ 'APP' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'WebClient' |
 | TableAPI | TableAPI value. Stored as 'TAP'. <br /> _Database Value:_ 'TAP' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'TableAPI' |
 | DataAccessAPI | DataAccessAPI value. Stored as 'DAP'. <br /> _Database Value:_ 'DAP' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'DataAccessAPI' |
-| LEGALUK | LEGALUK value. Stored as 'LUK'. <br /> _Database Value:_ 'LUK' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'LEGALUK' |
+| LegalUK | LegalUK value. Stored as 'LUK'. <br /> _Database Value:_ 'LUK' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'LegalUK' |
 | OLAP | OLAP value. Stored as 'OLP'. <br /> _Database Value:_ 'OLP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'OLAP' |
 | MicrosoftSync | MicrosoftSync value. Stored as 'MSS'. <br /> _Database Value:_ 'MSS' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'MicrosoftSync' |
-| VideoConferenceApplication | VideoConferenceApplication value. Stored as 'VDC'. <br /> _Database Value:_ 'VDC' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'VideoConferenceApplication' |
+| VideoConferencing | VideoConferencing value. Stored as 'VDC'. <br /> _Database Value:_ 'VDC' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'VideoConferencing' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
