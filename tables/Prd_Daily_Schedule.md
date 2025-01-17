@@ -10,7 +10,7 @@
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Priority](#priority)|`smallint` |Priority of the allocation. 1=Lowest ... 5=Highest|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Time_Type](#time_type)|`nvarchar(1)` |S=Setup; R=Run; W=Wait; M=Move|
+|[Time_Type](#time_type)|`char(1)` |S=Setup; R=Run; W=Wait; M=Move|
 |[Usage_End_Time](#usage_end_time)|`datetime` |Time of day when the operation is expected to cease utilising the resource|
 |[Usage_Quantity](#usage_quantity)|`decimal(9, 0)` |Quantity of the resource, which will be used for production|
 |[Usage_Start_Time](#usage_start_time)|`datetime` |Time of day when the operation is expected to start utilising the resource|
@@ -194,7 +194,7 @@ S=Setup; R=Run; W=Wait; M=Move
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

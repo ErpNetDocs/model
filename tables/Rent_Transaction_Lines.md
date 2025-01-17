@@ -25,7 +25,7 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 |[Rental_Asset_Id](#rental_asset_id)|`uniqueidentifier` |Rental asset|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Transaction_Timestamp](#transaction_timestamp)|`datetime` |Transaction Timestamp|
-|[Transaction_Type](#transaction_type)|`nvarchar(1)` Allowed: `D`, `R`, `W`, `S`|Transaction Type|
+|[Transaction_Type](#transaction_type)|`char(1)` Allowed: `D`, `R`, `W`, `S`|Transaction Type|
 
 ## Columns
 
@@ -363,7 +363,7 @@ Transaction Type
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

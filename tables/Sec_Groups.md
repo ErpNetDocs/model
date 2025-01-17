@@ -15,7 +15,7 @@ Groups of users. Used for providing group access to secured data. Entity: Sec_Gr
 |[Group_For_User_Id](#group_for_user_id)|`uniqueidentifier` Readonly|When Group_Type=U, contains the user for which the group is defined, NULL otherwise|
 |[Group_Id](#group_id)|`uniqueidentifier` `PK`||
 |[Group_Name](#group_name)|`nvarchar(254)` `ML`||
-|[Group_Type](#group_type)|`nvarchar(1)` Allowed: `G`, `U`, `A`, `E`, `P`, Readonly|Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody|
+|[Group_Type](#group_type)|`char(1)` Allowed: `G`, `U`, `A`, `E`, `P`, Readonly|Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -179,7 +179,7 @@ Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

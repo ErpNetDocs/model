@@ -19,7 +19,7 @@ Asset purchase or sales order. Entity: Ast_Asset_Orders
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
-|[Operation](#operation)|`nvarchar(3)` Allowed: `PUR`, `SLS`|Operation performed with this order: PUR = Purchase, SLS = Sale|
+|[Operation](#operation)|`char(3)` Allowed: `PUR`, `SLS`|Operation performed with this order: PUR = Purchase, SLS = Sale|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -188,7 +188,7 @@ Operation performed with this order: PUR = Purchase, SLS = Sale
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

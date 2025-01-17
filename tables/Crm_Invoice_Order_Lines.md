@@ -16,7 +16,7 @@ Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 
 | Name | Type | Description |
 | - | - | --- |
-|[Business_Reason](#business_reason)|`nvarchar(1)` Allowed: `P`, `S`|Business reason for invoicing of this product or service. S=Shipment, P=Payment|
+|[Business_Reason](#business_reason)|`char(1)` Allowed: `P`, `S`|Business reason for invoicing of this product or service. S=Shipment, P=Payment|
 |[Invoice_Order_Id](#invoice_order_id)|`uniqueidentifier` ||
 |[Invoice_Order_Line_Id](#invoice_order_line_id)|`uniqueidentifier` `PK`||
 |[Line_Amount](#line_amount)|`decimal(14, 2)` |Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.|
@@ -66,7 +66,7 @@ Business reason for invoicing of this product or service. S=Shipment, P=Payment
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

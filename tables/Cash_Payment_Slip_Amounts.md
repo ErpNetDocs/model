@@ -17,7 +17,7 @@ Mass payment amount. Each record generates one payment transaction. Entity: Cash
 | Name | Type | Description |
 | - | - | --- |
 |[Description](#description)|`nvarchar(254)` |Description of the payed amount. The numbers of the documents which are payed for example.|
-|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|'I' for Payment issue, 'R' for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|'I' for Payment issue, 'R' for payment receipt|
 |[Is_Party_Payment](#is_party_payment)|`bit` |Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.)|
 |[Line_No](#line_no)|`int` |The number of the line within the payment|
 |[Party_Id](#party_id)|`uniqueidentifier` |The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet.|
@@ -86,7 +86,7 @@ Description of the payed amount. The numbers of the documents which are payed fo
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

@@ -13,12 +13,12 @@ Represents processes, which process personal data, regulated by GDPR and other a
 | - | - | --- |
 |[Code](#code)|`nvarchar(16)` |Unique process code.|
 |[Contains_Sensitive_Data](#contains_sensitive_data)|`bit` |True if sensitive personal data is processed (racial, political, criminal, biometric, etc).|
-|[Data_Subject_Category](#data_subject_category)|`nvarchar(3)` Allowed: `EMP`, `JOB`, `CON`, `CUS`, `SUP`, `PAR`, `OTH`|The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other.|
+|[Data_Subject_Category](#data_subject_category)|`char(3)` Allowed: `EMP`, `JOB`, `CON`, `CUS`, `SUP`, `PAR`, `OTH`|The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other.|
 |[Description](#description)|`nvarchar(max)` |Description of the process.|
 |[Discontinuation_Date](#discontinuation_date)|`date` |The date on which the process was discontinued. Null if the process is still active.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company, which owns the process.|
 |[Establish_Date](#establish_date)|`date` |The data on which the process was established and started functioning.|
-|[Legal_Basis_For_Processing](#legal_basis_for_processing)|`nvarchar(3)` Allowed: `INT`, `CST`, `CTR`, `LEG`, `VIT`, `PUB`|The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;|
+|[Legal_Basis_For_Processing](#legal_basis_for_processing)|`char(3)` Allowed: `INT`, `CST`, `CTR`, `LEG`, `VIT`, `PUB`|The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;|
 |[List_Of_Data_Categories](#list_of_data_categories)|`nvarchar(254)` |Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc.|
 |[List_Of_Data_Recipient_Categories](#list_of_data_recipient_categories)|`nvarchar(254)` |Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc.|
 |[List_Of_Processing_Purposes](#list_of_processing_purposes)|`nvarchar(254)` |Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc.|
@@ -29,7 +29,7 @@ Represents processes, which process personal data, regulated by GDPR and other a
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Personal_Data_Process_Id](#personal_data_process_id)|`uniqueidentifier` `PK`|Personal Data Management Process|
 |[Process_Owner_Person_Id](#process_owner_person_id)|`uniqueidentifier` |The owner and responsible person for the process.|
-|[Processing_Role](#processing_role)|`nvarchar(1)` Allowed: `C`, `P`|The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. |
+|[Processing_Role](#processing_role)|`char(1)` Allowed: `C`, `P`|The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. |
 |[Retention_Period_Months](#retention_period_months)|`int` |The period in months, for which the data is kept. Null when the period is unknown or N/A.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Third_Country_Transfers_Safeguards](#third_country_transfers_safeguards)|`nvarchar(254)` |Description of safeguards, taken to protect personal data in case of third country transfers.|
@@ -134,7 +134,7 @@ The category of data subjects (persons), whose data is processed. EMP=Employees;
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -306,7 +306,7 @@ The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -700,7 +700,7 @@ The role of the enterprise company in the process - Controller or Processor. The
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

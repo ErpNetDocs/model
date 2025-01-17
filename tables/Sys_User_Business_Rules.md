@@ -13,7 +13,7 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 | - | - | --- |
 |[Icon](#icon)|`varbinary` |Visual icon of the rule in .PNG format.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the rule is activated.|
-|[Layer](#layer)|`nvarchar(3)` Allowed: `FTE`, `BKE`, `COM`|Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).|
+|[Layer](#layer)|`char(3)` Allowed: `FTE`, `BKE`, `COM`|Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Repository_Name](#repository_name)|`nvarchar(128)` |The name of the repository, for which this business rule is defined.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -117,7 +117,7 @@ Specifies in which layers the rule will be available. The available events and a
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

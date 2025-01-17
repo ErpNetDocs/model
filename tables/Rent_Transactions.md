@@ -23,7 +23,7 @@ Contains all transactions of Record of Handover / Handing-Over Record . Entity: 
 |[Rent_Transaction_Id](#rent_transaction_id)|`uniqueidentifier` `PK`|Rent Transaction PK|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Transaction_Timestamp](#transaction_timestamp)|`datetime` |Transaction Timestamp|
-|[Transaction_Type](#transaction_type)|`nvarchar(1)` Allowed: `D`, `R`, `W`, `S`|Transaction Type|
+|[Transaction_Type](#transaction_type)|`char(1)` Allowed: `D`, `R`, `W`, `S`|Transaction Type|
 
 ## Columns
 
@@ -335,7 +335,7 @@ Transaction Type
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

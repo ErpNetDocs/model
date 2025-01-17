@@ -20,7 +20,7 @@ Pictures of products. Entity: Gen_Product_Pictures
 |[Last_Update_Time](#last_update_time)|`datetime` Readonly|The exact server time, when the picture was last updated. Set automatically.|
 |[Picture](#picture)|`varbinary` |The actual product picture. Can be NULL if we insert only some comments|
 |[Picture_No](#picture_no)|`int` |Unique picture number within the product. Also used for sorting|
-|[Picture_Size_Class](#picture_size_class)|`nvarchar(1)` Allowed: `S`, `L`|Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified.|
+|[Picture_Size_Class](#picture_size_class)|`char(1)` Allowed: `S`, `L`|Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified.|
 |[Product_Id](#product_id)|`uniqueidentifier` ||
 |[Product_Picture_Id](#product_picture_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -219,7 +219,7 @@ Specifies the relative picture size and usage. S=Small picture (thumbnail), L=La
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

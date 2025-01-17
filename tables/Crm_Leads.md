@@ -39,7 +39,7 @@ Leads are potential customers for your products. Because leads are usually proce
 |[Row_Version](#row_version)|`timestamp` ||
 |[Sales_Area_Id](#sales_area_id)|`uniqueidentifier` |The sales area, where the lead is located, when it is identified. This should also indicate the Time Zone.|
 |[SQL_Timestamp_Utc](#sql_timestamp_utc)|`datetime` Readonly|System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.|
-|[System_Stage](#system_stage)|`nvarchar(3)` Allowed: `NEW`, `QUA`, `MQL`, `SQL`, `CLO`, Readonly|The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)|
+|[System_Stage](#system_stage)|`char(3)` Allowed: `NEW`, `QUA`, `MQL`, `SQL`, `CLO`, Readonly|The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)|
 
 ## Columns
 
@@ -1083,7 +1083,7 @@ The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

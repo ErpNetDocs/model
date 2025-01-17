@@ -20,10 +20,10 @@ Individual aggregate root objects transferred within the data exchange. Only agg
 |[Data_Exchange_Object_Id](#data_exchange_object_id)|`uniqueidentifier` `PK`||
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The data object which will be transferred.|
 |[Exchange_Message](#exchange_message)|`nvarchar(max)` |Status message for this object after the last exchange attempt.|
-|[Exchange_Result](#exchange_result)|`nvarchar(1)` Allowed: `N`, `S`, `F`|Transfer status.|
-|[Mode](#mode)|`nvarchar(3)` Allowed: `MER`, `ADD`|Operation mode for the object when transferring.|
+|[Exchange_Result](#exchange_result)|`char(1)` Allowed: `N`, `S`, `F`|Transfer status.|
+|[Mode](#mode)|`char(3)` Allowed: `MER`, `ADD`|Operation mode for the object when transferring.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the exchanged object|
-|[Reason](#reason)|`nvarchar(1)` Allowed: `C`, `R`, `O`, `U`|Reason for adding the object.|
+|[Reason](#reason)|`char(1)` Allowed: `C`, `R`, `O`, `U`|Reason for adding the object.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -232,7 +232,7 @@ Transfer status.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -269,7 +269,7 @@ Operation mode for the object when transferring.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -342,7 +342,7 @@ Reason for adding the object.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

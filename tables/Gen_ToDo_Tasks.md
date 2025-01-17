@@ -14,13 +14,13 @@ Represents a task, such as a piece of work or personal item, that can be tracked
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The user, to whom the todo is assigned.|
 |[Completed_Date_Time_Utc](#completed_date_time_utc)|`datetime` Readonly|Indicates (in UTC) when the task was completed.|
 |[Due_Date](#due_date)|`date` |Indicates when the task should be finished.|
-|[Importance](#importance)|`nvarchar(1)` Allowed: `L`, `N`, `H`|The importance of the task.|
+|[Importance](#importance)|`char(1)` Allowed: `L`, `N`, `H`|The importance of the task.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Owner_User_Id](#owner_user_id)|`uniqueidentifier` |The user, who created the todo and owns it.|
 |[Remind_Time_Utc](#remind_time_utc)|`datetime` |When to remind the assigned user for the task (in UTC).|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |When not null, indicates that the todo is contained in and managed by the specified social group.|
-|[State](#state)|`nvarchar(1)` Allowed: `N`, `P`, `W`, `C`|Indicates the current task state.|
+|[State](#state)|`char(1)` Allowed: `N`, `P`, `W`, `C`|Indicates the current task state.|
 |[Title](#title)|`nvarchar(254)` |A brief description of the task.|
 |[Todo_Task_Id](#todo_task_id)|`uniqueidentifier` `PK`||
 
@@ -162,7 +162,7 @@ The importance of the task.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -365,7 +365,7 @@ Indicates the current task state.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

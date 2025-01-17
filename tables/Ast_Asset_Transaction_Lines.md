@@ -23,7 +23,7 @@ Asset value transaction lines. Each line changes the values of one asset in one 
 |[Depreciation_Value_Base](#depreciation_value_base)|`decimal(14, 2)` |Change in the depreciation value of the asset (in the currency of the enterprise company).|
 |[Negative_Reserve_Value](#negative_reserve_value)|`decimal(14, 2)` |Change in the value of the negative reserve after asset valuations (in the currency of the asset).|
 |[Negative_Reserve_Value_Base](#negative_reserve_value_base)|`decimal(14, 2)` |Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company).|
-|[Operation_Type](#operation_type)|`nvarchar(3)` Allowed: `ADJ`, `DEP`, `PUR`, `SLS`, `REV`|Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation|
+|[Operation_Type](#operation_type)|`char(3)` Allowed: `ADJ`, `DEP`, `PUR`, `SLS`, `REV`|Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation|
 |[Positive_Reserve_Value](#positive_reserve_value)|`decimal(14, 2)` |Change in the value of the positive reserve after asset valuations (in the currency of the asset).|
 |[Positive_Reserve_Value_Base](#positive_reserve_value_base)|`decimal(14, 2)` |Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company).|
 |[Purchase_Value](#purchase_value)|`decimal(14, 2)` |Change in the purchase value of the asset (in the currency of the asset).|
@@ -291,7 +291,7 @@ Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciat
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

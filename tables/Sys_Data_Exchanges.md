@@ -20,11 +20,11 @@ Denotes a data exchange (import, export, etc.) operation with detailed info abou
 |[Exchanged_On](#exchanged_on)|`datetime` |The time (in UTC) of the exchange.|
 |[External_Address](#external_address)|`nvarchar(254)` |Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.|
 |[Keep_Until](#keep_until)|`date` |Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).|
-|[Mode](#mode)|`nvarchar(1)` Allowed: `E`, `I`|Operation mode of the exchange.|
+|[Mode](#mode)|`char(1)` Allowed: `E`, `I`|Operation mode of the exchange.|
 |[Name](#name)|`nvarchar(64)` |The name of the package. Can be empty if naming is not important.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the exchange.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[State](#state)|`nvarchar(3)` Allowed: `PRE`, `RED`, `FSC`, `FFL`, `CSC`, `CFL`|State of the exchange.|
+|[State](#state)|`char(3)` Allowed: `PRE`, `RED`, `FSC`, `FFL`, `CSC`, `CFL`|State of the exchange.|
 
 ## Columns
 
@@ -376,7 +376,7 @@ Operation mode of the exchange.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -513,7 +513,7 @@ State of the exchange.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

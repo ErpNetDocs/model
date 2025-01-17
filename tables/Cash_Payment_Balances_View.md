@@ -12,7 +12,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 | Name | Type | Description |
 | - | - | --- |
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of amounts.|
-|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
 |[Due_Date](#due_date)|`datetime` |The due date of the payment. NULL means there is no due date|
 |[Due_Start_Date](#due_start_date)|`date` |The date at which the payment becomes executable. NULL means the payment is executable at all times.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
@@ -96,7 +96,7 @@ I for Payment issue, R for payment receipt
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

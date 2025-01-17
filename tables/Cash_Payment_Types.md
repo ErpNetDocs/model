@@ -18,7 +18,7 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` `PK`||
 |[Payment_Type_Name](#payment_type_name)|`nvarchar(254)` `ML`||
 |[Row_Version](#row_version)|`timestamp` ||
-|[System_Type](#system_type)|`nvarchar(2)` Allowed: `CH`, `CD`, `BT`, `TK`, `CK`, `U1`, `U2`, `U3`, `PK`, `IU`, `DG`, `OT`|Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer|
+|[System_Type](#system_type)|`char(2)` Allowed: `CH`, `CD`, `BT`, `TK`, `CK`, `U1`, `U2`, `U3`, `PK`, `IU`, `DG`, `OT`|Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer|
 
 ## Columns
 
@@ -284,7 +284,7 @@ Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card;
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2) (Allows NULL)|
+|Type|char(2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

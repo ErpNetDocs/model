@@ -18,7 +18,7 @@ User-defined stages of the lead processing workflow. Entity: Crm_Lead_User_Stage
 |[Name](#name)|`nvarchar(254)` `ML`|Multi-language name of the user stage.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
-|[System_Stage](#system_stage)|`nvarchar(3)` Allowed: `NEW`, `QUA`, `MQL`, `SQL`, `CLO`|The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)|
+|[System_Stage](#system_stage)|`char(3)` Allowed: `NEW`, `QUA`, `MQL`, `SQL`, `CLO`|The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)|
 
 ## Columns
 
@@ -274,7 +274,7 @@ The system stage, on which the user stage is based. System stages are New, Quali
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

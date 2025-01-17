@@ -11,7 +11,7 @@ Product Category is defined by the taxation and customs authorities. Also specif
 
 | Name | Type | Description |
 | - | - | --- |
-|[Calculation_Algorithm](#calculation_algorithm)|`nvarchar(3)` Allowed: `NOP`, `QTY`, `QAS`, `QAP`|The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100.|
+|[Calculation_Algorithm](#calculation_algorithm)|`char(3)` Allowed: `NOP`, `QTY`, `QAS`, `QAP`|The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100.|
 |[Code](#code)|`nvarchar(32)` |For EU, the product category code is a single character - B,E,I,S,T or W.|
 |[Excise_Product_Category_Id](#excise_product_category_id)|`uniqueidentifier` `PK`||
 |[Name](#name)|`nvarchar(254)` `ML`|Multilanguage String|
@@ -44,7 +44,7 @@ The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

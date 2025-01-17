@@ -34,7 +34,7 @@ Generic activity. Provides task management functionality. Activity can be one of
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |Associates the activity with the specified social group. NULL means that this event is not related to a social group and might be publicly visible (can still be marked as private).|
 |[Start_Time](#start_time)|`datetime` |Currently planned starting time of the task|
 |[Subject](#subject)|`nvarchar(254)` |Task primary subject (required)|
-|[System_Type](#system_type)|`nvarchar(1)` Allowed: `C`, `M`, `T`|T=Task; C=Communication; M=Meeting|
+|[System_Type](#system_type)|`char(1)` Allowed: `C`, `M`, `T`|T=Task; C=Communication; M=Meeting|
 |[Target_Party_Id](#target_party_id)|`uniqueidentifier` |External participant or target of the task|
 
 ## Columns
@@ -728,7 +728,7 @@ T=Task; C=Communication; M=Meeting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

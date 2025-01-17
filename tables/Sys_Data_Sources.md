@@ -14,7 +14,7 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 |[Base_Query_Name](#base_query_name)|`nvarchar(128)` |The name of the query or table that is used for root reference point of the loaded data.|
 |[Data_Source_Id](#data_source_id)|`uniqueidentifier` `PK`||
 |[Data_Source_Name](#data_source_name)|`nvarchar(64)` |The name of the data source.|
-|[Data_Source_Type](#data_source_type)|`nvarchar(1)` Allowed: `M`, `D`, `S`|'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE |
+|[Data_Source_Type](#data_source_type)|`char(1)` Allowed: `M`, `D`, `S`|'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE |
 |[Row_Version](#row_version)|`timestamp` ||
 |[Show_Parent_Tables](#show_parent_tables)|`bit` |Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.|
 
@@ -152,7 +152,7 @@ The name of the data source.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

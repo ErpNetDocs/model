@@ -20,7 +20,7 @@ Personal records. Requires related party record. Entity: Cm_Persons (Introduced 
 |[Creation_Time](#creation_time)|`datetime` Readonly||
 |[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
 |[First_Name](#first_name)|`nvarchar(64)` `ML`|First name of the person.|
-|[Gender](#gender)|`nvarchar(1)` Allowed: `F`, `M`, `O`, `N`|Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided|
+|[Gender](#gender)|`char(1)` Allowed: `F`, `M`, `O`, `N`|Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided|
 |[Last_Name](#last_name)|`nvarchar(64)` `ML`|Last name of the person.|
 |[Middle_Name](#middle_name)|`nvarchar(64)` `ML`|Middle name of the person.|
 |[National_Number](#national_number)|`nvarchar(16)` |Government assigned unique personal number. NULL means unknown|
@@ -237,7 +237,7 @@ Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not pr
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

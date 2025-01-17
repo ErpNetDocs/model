@@ -13,9 +13,9 @@ Product catalogs serve to organize the products for display primarily in web pag
 | - | - | --- |
 |[Background_Color](#background_color)|`int` |When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.|
 |[Background_Image](#background_image)|`varbinary` |The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.|
-|[Background_Position_Horizontal](#background_position_horizontal)|`nvarchar(1)` Allowed: `L`, `C`, `R`|Horizontal position of the Background Image. L=Left, C=Center, R=Right.|
-|[Background_Position_Vertical](#background_position_vertical)|`nvarchar(1)` Allowed: `T`, `C`, `B`|Vertical position of the Background Image. T=Top, C=Center, B=Bottom.|
-|[Background_Repeat](#background_repeat)|`nvarchar(1)` Allowed: `R`, `X`, `Y`, `N`|Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.|
+|[Background_Position_Horizontal](#background_position_horizontal)|`char(1)` Allowed: `L`, `C`, `R`|Horizontal position of the Background Image. L=Left, C=Center, R=Right.|
+|[Background_Position_Vertical](#background_position_vertical)|`char(1)` Allowed: `T`, `C`, `B`|Vertical position of the Background Image. T=Top, C=Center, B=Bottom.|
+|[Background_Repeat](#background_repeat)|`char(1)` Allowed: `R`, `X`, `Y`, `N`|Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.|
 |[Footer_Html](#footer_html)|`nvarchar(max)` |The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.|
 |[Header_Html](#header_html)|`nvarchar(max)` |The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.|
 |[Logo](#logo)|`varbinary` |The logo of the product catalog. Used for web and other visualization of the catalog.|
@@ -114,7 +114,7 @@ Horizontal position of the Background Image. L=Left, C=Center, R=Right.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -145,7 +145,7 @@ Vertical position of the Background Image. T=Top, C=Center, B=Bottom.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -176,7 +176,7 @@ Specifies if and how the background image will be repeated. R=Repeat both vertic
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

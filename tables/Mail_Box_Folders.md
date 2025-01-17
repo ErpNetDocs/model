@@ -23,7 +23,7 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 |[Row_Version](#row_version)|`timestamp` ||
 |[Server_Folder_ID](#server_folder_id)|`nvarchar(256)` |ID of the folder on the mail server in the format of the mail server|
 |[Sync_State](#sync_state)|`nvarchar(max)` |The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState.|
-|[System_Purpose](#system_purpose)|`nvarchar(1)` Allowed: `M`, `I`, `D`, `O`, `S`, `T`, Readonly|When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.|
+|[System_Purpose](#system_purpose)|`char(1)` Allowed: `M`, `I`, `D`, `O`, `S`, `T`, Readonly|When not NULL means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash.|
 
 ## Columns
 
@@ -322,7 +322,7 @@ When not NULL means that the folder has special system designation. Designations
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

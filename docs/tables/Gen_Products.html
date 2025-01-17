@@ -102,7 +102,7 @@
 <tbody>
 <tr>
 <td><a href="#abc_class">ABC_Class</a></td>
-<td><code>nvarchar(2)</code> Allowed: <code>A </code>, <code>B </code>, <code>C </code></td>
+<td><code>char(2)</code> Allowed: <code>A </code>, <code>B </code>, <code>C </code></td>
 <td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.</td>
 </tr>
 <tr>
@@ -137,7 +137,7 @@
 </tr>
 <tr>
 <td><a href="#costing_method">Costing_Method</a></td>
-<td><code>nvarchar(4)</code> Allowed: <code>AVG</code>, <code>EXP</code>, <code>BLD</code></td>
+<td><code>char(4)</code> Allowed: <code>AVG</code>, <code>EXP</code>, <code>BLD</code></td>
 <td>Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost</td>
 </tr>
 <tr>
@@ -172,7 +172,7 @@
 </tr>
 <tr>
 <td><a href="#flushing_method">Flushing_Method</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>B</code>, <code>F</code>, <code>M</code></td>
+<td><code>char(1)</code> Allowed: <code>B</code>, <code>F</code>, <code>M</code></td>
 <td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)</td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@
 </tr>
 <tr>
 <td><a href="#lots_issue">Lots_Issue</a></td>
-<td><code>nvarchar(4)</code> Allowed: <code>FIFO</code>, <code>FEFO</code>, <code>LIFO</code></td>
+<td><code>char(4)</code> Allowed: <code>FIFO</code>, <code>FEFO</code>, <code>LIFO</code></td>
 <td>Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).</td>
 </tr>
 <tr>
@@ -327,7 +327,7 @@
 </tr>
 <tr>
 <td><a href="#use_lots">Use_Lots</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>A</code>, <code>N</code>, <code>R</code></td>
+<td><code>char(1)</code> Allowed: <code>A</code>, <code>N</code>, <code>R</code></td>
 <td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.</td>
 </tr>
 <tr>
@@ -422,7 +422,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(2)</td>
+<td>char(2)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1252,7 +1252,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(4) (Allows NULL)</td>
+<td>char(4) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2038,7 +2038,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1)</td>
+<td>char(1)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2847,7 +2847,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(4) (Allows NULL)</td>
+<td>char(4) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -5522,7 +5522,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1)</td>
+<td>char(1)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

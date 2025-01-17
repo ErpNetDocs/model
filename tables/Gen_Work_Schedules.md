@@ -13,7 +13,7 @@ Represents the different working schedules, used by the employees and resources.
 | - | - | --- |
 |[Id](#id)|`uniqueidentifier` `PK`|work schedule id|
 |[Number_Of_Days](#number_of_days)|`smallint` |Number of days in a recurring period. Valid only when Recurrence_Type=D|
-|[Recurrence_Type](#recurrence_type)|`nvarchar(1)` Allowed: `D`, `M`, `W`|D=recurring each X days; W=recurring each week; M=recurring each month|
+|[Recurrence_Type](#recurrence_type)|`char(1)` Allowed: `D`, `M`, `W`|D=recurring each X days; W=recurring each week; M=recurring each month|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Work_Schedule_Name](#work_schedule_name)|`nvarchar(64)` ||
 
@@ -110,7 +110,7 @@ D=recurring each X days; W=recurring each week; M=recurring each month
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

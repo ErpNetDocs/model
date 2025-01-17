@@ -15,7 +15,7 @@ Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Change_Type](#change_type)|`nvarchar(1)` Allowed: `C`, `U`, `D`|Type of change - Create, Update or Delete.|
+|[Change_Type](#change_type)|`char(1)` Allowed: `C`, `U`, `D`|Type of change - Create, Update or Delete.|
 |[Changes_Json_Compressed](#changes_json_compressed)|`varbinary` |Contains JSON formatted attribute values. GZip compressed.|
 |[Entity_Item_Id](#entity_item_id)|`uniqueidentifier` |The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.|
 |[Object_Change_Id](#object_change_id)|`uniqueidentifier` `PK`||
@@ -52,7 +52,7 @@ Type of change - Create, Update or Delete.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

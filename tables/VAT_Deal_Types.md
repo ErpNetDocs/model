@@ -15,10 +15,10 @@ Contains deal types supported by the system as well as user-defined types. Entit
 |[Deal_Type_Code](#deal_type_code)|`nvarchar(32)` |Code of the deal type.|
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` `PK`|Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.|
 |[Deal_Type_Name](#deal_type_name)|`nvarchar(254)` |Description of the deal type.|
-|[Entry_Type](#entry_type)|`nvarchar(1)` Allowed: `P`, `S`|Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.|
+|[Entry_Type](#entry_type)|`char(1)` Allowed: `P`, `S`|Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.|
 |[Is_System](#is_system)|`bit` Readonly|Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Tax_Code](#tax_code)|`nvarchar(3)` Allowed: `STD`, `RED`, `SPR`, `INT`, `EXM`, `NS `|VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).|
+|[Tax_Code](#tax_code)|`char(3)` Allowed: `STD`, `RED`, `SPR`, `INT`, `EXM`, `NS `|VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).|
 
 ## Columns
 
@@ -194,7 +194,7 @@ Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -294,7 +294,7 @@ VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduc
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -17,12 +17,12 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 | Name | Type | Description |
 | - | - | --- |
 |[Administrative_Region_Id](#administrative_region_id)|`uniqueidentifier` |Administrative region of the enterprise company at the time of the declaration|
-|[Delivery_Terms](#delivery_terms)|`nvarchar(3)` Allowed: `EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|Delivery terms - classification according to Intrastat (which uses the common abbreviations)|
+|[Delivery_Terms](#delivery_terms)|`char(3)` Allowed: `EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|Delivery terms - classification according to Intrastat (which uses the common abbreviations)|
 |[Intrastat_Commodity_Code_Id](#intrastat_commodity_code_id)|`uniqueidentifier` |The commodity code of the goods, according to the Intrastat commodity classification|
 |[Intrastat_Declaration_Id](#intrastat_declaration_id)|`uniqueidentifier` |The intrastat declaration, to which this line belongs|
 |[Intrastat_Declaration_Line_Id](#intrastat_declaration_line_id)|`uniqueidentifier` `PK`|The unique id of the line|
 |[Invoiced_Value_Amount_Base](#invoiced_value_amount_base)|`decimal(10, 0)` |Invoiced value of the goods in the base currency|
-|[Line_Action](#line_action)|`nvarchar(3)` Allowed: `NEW`, `EDN`, `EDO`, `DEL`|Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted|
+|[Line_Action](#line_action)|`char(3)` Allowed: `NEW`, `EDN`, `EDO`, `DEL`|Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted|
 |[Line_No](#line_no)|`int` |Consequtive line number within the intrastat declaration|
 |[Net_Mass_Kg](#net_mass_kg)|`decimal(14, 3)` |Net mass of the goods in kg|
 |[Origin_Country_Id](#origin_country_id)|`uniqueidentifier` |The country of origin of the goods. NULL for outbound declarations|
@@ -31,9 +31,9 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 |[Quantity_Supplementary_Unit](#quantity_supplementary_unit)|`decimal(10, 0)` |Quantity of the goods in the supplementary unit. NULL when no supplementary unit is specified|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Statistical_Value_Amount_Base](#statistical_value_amount_base)|`decimal(10, 0)` |Statistical value of the goods in the base currency|
-|[Transaction_Nature](#transaction_nature)|`nvarchar(2)` Allowed: `11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|Transaction nature, according to the Intrastat classification|
+|[Transaction_Nature](#transaction_nature)|`char(2)` Allowed: `11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|Transaction nature, according to the Intrastat classification|
 |[Transport_Country_Id](#transport_country_id)|`uniqueidentifier` |The country of the transportation company|
-|[Transport_Mode](#transport_mode)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`|Transportation mode - type of transportation used|
+|[Transport_Mode](#transport_mode)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`|Transportation mode - type of transportation used|
 
 ## Columns
 
@@ -99,7 +99,7 @@ Delivery terms - classification according to Intrastat (which uses the common ab
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -270,7 +270,7 @@ Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Delet
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -572,7 +572,7 @@ Transaction nature, according to the Intrastat classification
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -640,7 +640,7 @@ Transportation mode - type of transportation used
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

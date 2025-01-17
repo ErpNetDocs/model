@@ -15,7 +15,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 |[Catch_Quantity_Unit_Id](#catch_quantity_unit_id)|`uniqueidentifier` |The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The creation time in UTC.|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The creation user.|
-|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `O`|Direction of the transaction - I=IN, O=OUT.|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `O`|Direction of the transaction - I=IN, O=OUT.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot which was transacted. NULL when the transaction was not for a specific lot.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which was transacted.|
@@ -26,7 +26,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number which was transacted. NULL when the transaction was not for a specific serial number.|
 |[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.|
-|[Task_Type](#task_type)|`nvarchar(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|The type of the task (operation), which was transacted.|
+|[Task_Type](#task_type)|`char(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|The type of the task (operation), which was transacted.|
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse in which the transaction occurred.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |The warehouse location, where the transaction occurred.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` |The order which created this transaction. NULL when this transaction was not based on order.|
@@ -208,7 +208,7 @@ Direction of the transaction - I=IN, O=OUT.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -591,7 +591,7 @@ The type of the task (operation), which was transacted.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

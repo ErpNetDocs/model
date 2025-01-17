@@ -10,7 +10,7 @@
 | Name | Type | Description |
 | - | - | --- |
 |[Instructions_Html](#instructions_html)|`nvarchar(max)` |Detailed instructions to the executor in HTML format.|
-|[Node_Type](#node_type)|`nvarchar(1)` Allowed: `A`, `E`, `G`, `C`|Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process.|
+|[Node_Type](#node_type)|`char(1)` Allowed: `A`, `E`, `G`, `C`|Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process.|
 |[Process_Id](#process_id)|`uniqueidentifier` |The process, to which this Node belongs.|
 |[Process_Lane_Id](#process_lane_id)|`uniqueidentifier` |The process lane to which this Node belongs.|
 |[Process_Node_Code](#process_node_code)|`nvarchar(16)` |Node code, unique within the process. Used as ID for XML serialization purposes.|
@@ -82,7 +82,7 @@ Type of the node. A=Text Annotation; E=Event; G=Gateway; T=Task; P=Sub-Process.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

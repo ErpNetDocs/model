@@ -16,7 +16,7 @@ Depreciation documents contain actual depreciation values for one or more assets
 | Name | Type | Description |
 | - | - | --- |
 |[Depreciation_Id](#depreciation_id)|`uniqueidentifier` `PK`||
-|[Depreciation_Range](#depreciation_range)|`nvarchar(1)` Allowed: `A`, `S`|Determines whether all assets in the system will be depreciated or only the assets specified in the current document will be depreciated. A = 'All assets', S = 'Specified assets'|
+|[Depreciation_Range](#depreciation_range)|`char(1)` Allowed: `A`, `S`|Determines whether all assets in the system will be depreciated or only the assets specified in the current document will be depreciated. A = 'All assets', S = 'Specified assets'|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[End_Date](#end_date)|`datetime` |End date of the depreciation period accounted with this document|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
@@ -84,7 +84,7 @@ Determines whether all assets in the system will be depreciated or only the asse
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

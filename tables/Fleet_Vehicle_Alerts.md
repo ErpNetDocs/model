@@ -14,7 +14,7 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 |[Alert_Type](#alert_type)|`nvarchar(3)` |The type of the alert. The type is specfic to the Source.|
 |[Description](#description)|`nvarchar(254)` |Description of the alert (Multilanguage).|
 |[Is_Hidden](#is_hidden)|`bit` |Specifies, whether the alert is hidden (e.g. managed by the responsible person).|
-|[Source](#source)|`nvarchar(1)` |The source of the alert. G=GPS, O=OBD, M=Maintenance.|
+|[Source](#source)|`char(1)` |The source of the alert. G=GPS, O=OBD, M=Maintenance.|
 |[Time](#time)|`datetime` |The time of the alert.|
 |[Vehicle_Alert_Id](#vehicle_alert_id)|`uniqueidentifier` `PK`||
 |[Vehicle_Id](#vehicle_id)|`uniqueidentifier` |The vehicle, for which is the alert.|
@@ -135,7 +135,7 @@ The source of the alert. G=GPS, O=OBD, M=Maintenance.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

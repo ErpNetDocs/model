@@ -142,7 +142,7 @@
 </tr>
 <tr>
 <td><a href="#manufacturing_policy">Manufacturing_Policy</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>ATO</code>, <code>MTO</code>, <code>MTS</code>, <code>ETO</code></td>
+<td><code>char(3)</code> Allowed: <code>ATO</code>, <code>MTO</code>, <code>MTS</code>, <code>ETO</code></td>
 <td>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order</td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@
 </tr>
 <tr>
 <td><a href="#order_lot_sizing_method">Order_Lot_Sizing_Method</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>EOQ</code>, <code>FOQ</code>, <code>LFL</code>, <code>LFP</code>, <code>ROP</code>, <code>ROT</code></td>
+<td><code>char(3)</code> Allowed: <code>EOQ</code>, <code>FOQ</code>, <code>LFL</code>, <code>LFP</code>, <code>ROP</code>, <code>ROT</code></td>
 <td>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;</td>
 </tr>
 <tr>
@@ -187,7 +187,7 @@
 </tr>
 <tr>
 <td><a href="#order_policy">Order_Policy</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>MRP</code>, <code>OPS</code>, <code>OPT</code>, <code>PRS</code></td>
+<td><code>char(3)</code> Allowed: <code>MRP</code>, <code>OPS</code>, <code>OPT</code>, <code>PRS</code></td>
 <td>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning</td>
 </tr>
 <tr>
@@ -242,7 +242,7 @@
 </tr>
 <tr>
 <td><a href="#procurement_type">Procurement_Type</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>B</code>, <code>M</code>, <code>T</code></td>
+<td><code>char(1)</code> Allowed: <code>B</code>, <code>M</code>, <code>T</code></td>
 <td>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought</td>
 </tr>
 <tr>
@@ -1296,7 +1296,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1519,7 +1519,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2311,7 +2311,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3461,7 +3461,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1)</td>
+<td>char(1)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

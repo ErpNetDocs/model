@@ -24,8 +24,8 @@ List of user-defined document types. Each type has associated system entity (obj
 |[Row_Version](#row_version)|`timestamp` ||
 |[Schema_XML](#schema_xml)|`nvarchar(max)` |Obsolete. Not used.|
 |[Sequence_Id](#sequence_id)|`uniqueidentifier` |The sequence that will be used to give new numbers to the documents of this type|
-|[Track_Attribute_Changes](#track_attribute_changes)|`nvarchar(3)` Allowed: `DEF`, `ENA`, `DIS`|Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.|
-|[Track_Print_Images](#track_print_images)|`nvarchar(3)` Allowed: `DNT`, `SDC`|Enable/disable print images tracking for documents from this type.|
+|[Track_Attribute_Changes](#track_attribute_changes)|`char(3)` Allowed: `DEF`, `ENA`, `DIS`|Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.|
+|[Track_Print_Images](#track_print_images)|`char(3)` Allowed: `DNT`, `SDC`|Enable/disable print images tracking for documents from this type.|
 |[Transitional_Document](#transitional_document)|`bit` |If checked determines that the documents from this type are automatically managed by the system and don't require management from the users|
 |[Type_Name](#type_name)|`nvarchar(254)` `ML`|Description of the document type|
 
@@ -475,7 +475,7 @@ Enable/disable attributes change tracking for documents from this type. "Default
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -512,7 +512,7 @@ Enable/disable print images tracking for documents from this type.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

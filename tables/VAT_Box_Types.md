@@ -13,7 +13,7 @@ The types of boxes in a VAT declaration. . Entity: VAT_Box_Types (Introduced in 
 | - | - | --- |
 |[Box_Type_Id](#box_type_id)|`uniqueidentifier` `PK`|The type of box in a VAT declaration.|
 |[Calculated_Attribute_Id](#calculated_attribute_id)|`uniqueidentifier` |The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute".|
-|[Calculation_Type](#calculation_type)|`nvarchar(2)` Allowed: `DT`, `CA`|Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field.|
+|[Calculation_Type](#calculation_type)|`char(2)` Allowed: `DT`, `CA`|Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field.|
 |[Code](#code)|`nvarchar(32)` ||
 |[Country_Id](#country_id)|`uniqueidentifier` |The Country for which this type of box is declared.|
 |[Name](#name)|`nvarchar(254)` `ML`|The name for this box type. (Miltilanguage string)|
@@ -120,7 +120,7 @@ Determines the source of amounts of the current Box Type. Sources can be the Vat
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

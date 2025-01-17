@@ -18,7 +18,7 @@ Default payment plan for new documents of the specified document type. Entity: C
 |[Amount_Percent](#amount_percent)|`decimal(7, 6)` |Percent of the sales order amount to be payed.|
 |[Default_Sales_Order_Payment_Plan_Id](#default_sales_order_payment_plan_id)|`uniqueidentifier` `PK`||
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` ||
-|[Due_Date_Form_Method](#due_date_form_method)|`nvarchar(3)` Allowed: `EXP`, `INV`, `SLS`, `SDD`, `IDD`|Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date|
+|[Due_Date_Form_Method](#due_date_form_method)|`char(3)` Allowed: `EXP`, `INV`, `SLS`, `SDD`, `IDD`|Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies.|
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations.|
 |[Installment_Number](#installment_number)|`int` |Consequtive installment number. Used for identifying different payments generated according this payment plan.|
@@ -153,7 +153,7 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Long|
 |User Login|no|

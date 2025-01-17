@@ -18,7 +18,7 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 |[Form_Name](#form_name)|`nvarchar(128)` |The form, for which the layout is applied.|
 |[Inherit_Form_Layout_Id](#inherit_form_layout_id)|`uniqueidentifier` |Specified when the current layout inherits from another layout|
 |[Layout](#layout)|`varbinary` |The byte storage of the layout.|
-|[Layout_Format](#layout_format)|`nvarchar(1)` Allowed: `D`, `L`, `U`|The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.|
+|[Layout_Format](#layout_format)|`char(1)` Allowed: `D`, `L`, `U`|The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.|
 |[Layout_Name](#layout_name)|`nvarchar(64)` |The name of a named layout. Standard layouts have empty string names.|
 |[Layout_Xml](#layout_xml)|`nvarchar(max)` |Layout xml - not used.|
 |[Machine_Name](#machine_name)|`nvarchar(128)` |The machine name - not used.|
@@ -300,7 +300,7 @@ The format of the data in the Layout column. Values can be: 'U' - uncompressed; 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

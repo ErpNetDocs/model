@@ -21,10 +21,10 @@ Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced 
 |[Document_Fulfillment_Id](#document_fulfillment_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` |The Document, which is fulfilled.|
 |[Document_Line_Id](#document_line_id)|`uniqueidentifier` |The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type.|
-|[Fulfillment_Type](#fulfillment_type)|`nvarchar(1)` Allowed: `P`, `C`|Type of fulfillment: P=Planned; C=Completed.|
+|[Fulfillment_Type](#fulfillment_type)|`char(1)` Allowed: `P`, `C`|Type of fulfillment: P=Planned; C=Completed.|
 |[Is_Final](#is_final)|`bit` |Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.|
 |[Line_No](#line_no)|`int` |Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.|
-|[Line_Type](#line_type)|`nvarchar(1)` |Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.|
+|[Line_Type](#line_type)|`char(1)` |Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot, which was fulfilled. NULL when the fulfillment was not for a specific lot.|
 |[Parent_Fulfillment_Id](#parent_fulfillment_id)|`uniqueidentifier` |The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which is fulfilled.|
@@ -276,7 +276,7 @@ Type of fulfillment: P=Planned; C=Completed.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -385,7 +385,7 @@ Detail (line) type, for example materials, services, etc. L=Line. Other values a
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

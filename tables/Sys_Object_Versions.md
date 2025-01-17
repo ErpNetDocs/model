@@ -23,7 +23,7 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 |[User_Id](#user_id)|`uniqueidentifier` |The user, which saved the version.|
 |[Version](#version)|`int` |The version number of the version, stored in the current row, starting from 1.|
 |[Version_Time](#version_time)|`datetime` |The timestamp when the version was saved.|
-|[Version_Type](#version_type)|`nvarchar(1)` Allowed: `C`, `U`|Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.|
+|[Version_Type](#version_type)|`char(1)` Allowed: `C`, `U`|Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.|
 
 ## Columns
 
@@ -319,7 +319,7 @@ Specifies the action, which occurred on the actual object, referred by the syste
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -13,7 +13,7 @@ Summary with the social reactions per comment and dataobject. Entity: Cmm_Social
 | - | - | --- |
 |[Cnt](#cnt)|`bigint` |Count of social reactions.|
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The extensible data object.|
-|[Reaction_Type](#reaction_type)|`nvarchar(3)` Allowed: `LIK`, `LOV`, `HAH`, `WOW`, `SAD`, `ANG`|The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.|
+|[Reaction_Type](#reaction_type)|`char(3)` Allowed: `LIK`, `LOV`, `HAH`, `WOW`, `SAD`, `ANG`|The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.|
 |[Social_Comment_Id](#social_comment_id)|`uniqueidentifier` |The social comment.|
 
 ## Columns
@@ -110,7 +110,7 @@ The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = S
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

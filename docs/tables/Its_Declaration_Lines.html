@@ -112,7 +112,7 @@
 </tr>
 <tr>
 <td><a href="#delivery_terms">Delivery_Terms</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+<td><code>char(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
 <td>Delivery terms - classification according to Intrastat (which uses the common abbreviations)</td>
 </tr>
 <tr>
@@ -137,7 +137,7 @@
 </tr>
 <tr>
 <td><a href="#line_action">Line_Action</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>NEW</code>, <code>EDN</code>, <code>EDO</code>, <code>DEL</code></td>
+<td><code>char(3)</code> Allowed: <code>NEW</code>, <code>EDN</code>, <code>EDO</code>, <code>DEL</code></td>
 <td>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted</td>
 </tr>
 <tr>
@@ -182,7 +182,7 @@
 </tr>
 <tr>
 <td><a href="#transaction_nature">Transaction_Nature</a></td>
-<td><code>nvarchar(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+<td><code>char(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
 <td>Transaction nature, according to the Intrastat classification</td>
 </tr>
 <tr>
@@ -192,7 +192,7 @@
 </tr>
 <tr>
 <td><a href="#transport_mode">Transport_Mode</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+<td><code>char(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
 <td>Transportation mode - type of transportation used</td>
 </tr>
 </tbody>
@@ -405,7 +405,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -974,7 +974,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1988,7 +1988,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(2)</td>
+<td>char(2)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2215,7 +2215,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1)</td>
+<td>char(1)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

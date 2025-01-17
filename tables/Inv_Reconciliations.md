@@ -23,7 +23,7 @@ Store reconciliations (physical counting). Usefull for real-world reconciliation
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Reconciliation_Id](#reconciliation_id)|`uniqueidentifier` `PK`||
-|[Reconciliation_Type](#reconciliation_type)|`nvarchar(1)` Allowed: `F`, `P`|Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled.|
+|[Reconciliation_Type](#reconciliation_type)|`char(1)` Allowed: `F`, `P`|Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -337,7 +337,7 @@ Specifies how to treat the data in the Counted table, when creating the reconcil
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

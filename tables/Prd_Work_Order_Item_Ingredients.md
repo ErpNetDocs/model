@@ -16,7 +16,7 @@ The materials consumed in the production order operations. Entity: Prd_Work_Orde
 
 | Name | Type | Description |
 | - | - | --- |
-|[Distribute_By](#distribute_by)|`nvarchar(2)` Allowed: `SP`, `MC`, `SC`|Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price|
+|[Distribute_By](#distribute_by)|`char(2)` Allowed: `SP`, `MC`, `SC`|Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price|
 |[Distribute_By_Measurement_Category_Id](#distribute_by_measurement_category_id)|`uniqueidentifier` |Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT NULL iif Distribute_By = MC.|
 |[Fixed_Scrap_Quantity](#fixed_scrap_quantity)|`decimal(18, 3)` |The quantity of the material, which will be used for setup.|
 |[Id](#id)|`uniqueidentifier` `PK`|The Id of the production order operation|
@@ -65,7 +65,7 @@ Distribution method in case the materials from the line are distributed amongst 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2) (Allows NULL)|
+|Type|char(2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

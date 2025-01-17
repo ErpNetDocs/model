@@ -15,7 +15,7 @@ Represents actual payments, which increase or decrease the balance of a payment 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
 |[Document_Id](#document_id)|`uniqueidentifier` |The document data of the payment transaction|
 |[Fiscal_Printer_Pos_Device_Id](#fiscal_printer_pos_device_id)|`uniqueidentifier` |For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
@@ -33,7 +33,7 @@ Represents actual payments, which increase or decrease the balance of a payment 
 |[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.|
 |[Pos_Operator_Id](#pos_operator_id)|`uniqueidentifier` |For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.|
 |[Requires_Allocation](#requires_allocation)|`bit` |1=The total amount should be allocated to payment orders; 0=Payment orders are not required|
-|[Reversal_Reason](#reversal_reason)|`nvarchar(3)` Allowed: `OPE`, `TBR`, `REF`|The reason for the reversal of the payment.|
+|[Reversal_Reason](#reversal_reason)|`char(3)` Allowed: `OPE`, `TBR`, `REF`|The reason for the reversal of the payment.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Total_Amount](#total_amount)|`decimal(18, 2)` |The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines|
 |[Total_Amount_Currency_Id](#total_amount_currency_id)|`uniqueidentifier` |The currency of the total amount|
@@ -65,7 +65,7 @@ I for Payment issue, R for payment receipt
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
@@ -714,7 +714,7 @@ The reason for the reversal of the payment.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3) (Allows NULL)|
+|Type|char(3) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

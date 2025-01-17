@@ -22,7 +22,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 |[Uin](#uin)|`nvarchar(64)` |For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance. |
 |[Web_Host_Id](#web_host_id)|`uniqueidentifier` |The web host in which to host the site.|
 |[Web_Site_Id](#web_site_id)|`uniqueidentifier` `PK`||
-|[Web_Site_Type](#web_site_type)|`nvarchar(3)` Allowed: `API`, `CC`, `EC`, `LEG`, `SI`, `DM`, `APP`, `TAP`, `DAP`, `LUK`, `OLP`, `MSS`, `VDC`|The type of web site - Api, Client Center, Id, etc.|
+|[Web_Site_Type](#web_site_type)|`char(3)` Allowed: `API`, `CC`, `EC`, `LEG`, `SI`, `DM`, `APP`, `TAP`, `DAP`, `LUK`, `OLP`, `MSS`, `VDC`|The type of web site - Api, Client Center, Id, etc.|
 
 ## Columns
 
@@ -413,7 +413,7 @@ The type of web site - Api, Client Center, Id, etc.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

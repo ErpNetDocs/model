@@ -20,7 +20,7 @@ Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Status](#status)|`nvarchar(1)` |N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed|
+|[Status](#status)|`char(1)` |N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed|
 |[Work_Order_Id](#work_order_id)|`uniqueidentifier` |The Work Order for which this Output Order is storing data.|
 
 ## Columns
@@ -215,7 +215,7 @@ N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

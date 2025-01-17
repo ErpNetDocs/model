@@ -22,13 +22,13 @@ Orders for store transactions. After an order is executed, store transaction is 
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Issued_By_Party_Id](#issued_by_party_id)|`uniqueidentifier` |The party, which issued the goods.|
-|[Movement_Type](#movement_type)|`nvarchar(1)` Allowed: `I`, `R`|Store order movement type. R=RECEIPT, I=ISSUE|
+|[Movement_Type](#movement_type)|`char(1)` Allowed: `I`, `R`|Store order movement type. R=RECEIPT, I=ISSUE|
 |[Ordering_Person_Id](#ordering_person_id)|`uniqueidentifier` |The person, which ordered the operation.|
 |[Planned_Completion_Date](#planned_completion_date)|`datetime` |Date, when the quantities are expected to be completely issued/received|
 |[Planned_Release_Date](#planned_release_date)|`datetime` |Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.|
 |[Received_By_Party_Id](#received_by_party_id)|`uniqueidentifier` |The party, which received the goods.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Status](#status)|`nvarchar(1)` |P=Planned; F=Firm planned; R=Released; C=Completed|
+|[Status](#status)|`char(1)` |P=Planned; F=Firm planned; R=Released; C=Completed|
 |[Store_Id](#store_id)|`uniqueidentifier` |The designated warehouse for the operation|
 |[Store_Order_Id](#store_order_id)|`uniqueidentifier` `PK`||
 |[Temp_Transport_Company_Name](#temp_transport_company_name)|`nvarchar(64)` |Obsolete. Not used.|
@@ -310,7 +310,7 @@ Store order movement type. R=RECEIPT, I=ISSUE
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -519,7 +519,7 @@ P=Planned; F=Firm planned; R=Released; C=Completed
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

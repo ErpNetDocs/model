@@ -17,7 +17,7 @@ Access keys provide the basic locking mechanism for data security. Each record c
 |[Entity_Id](#entity_id)|`uniqueidentifier` |The field stores the Id of the entity that the key was created from.|
 |[Entity_Name](#entity_name)|`nvarchar(64)` |What entitity the key secures. Can be null for private, legacy keys|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Share_Level](#share_level)|`nvarchar(3)` Allowed: `PRI`, `RFA`, `RFI`, `IHI`, `SHA`|Specifies the extent to which the key can be shared among multiple entities.|
+|[Share_Level](#share_level)|`char(3)` Allowed: `PRI`, `RFA`, `RFI`, `IHI`, `SHA`|Specifies the extent to which the key can be shared among multiple entities.|
 
 ## Columns
 
@@ -253,7 +253,7 @@ Specifies the extent to which the key can be shared among multiple entities.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

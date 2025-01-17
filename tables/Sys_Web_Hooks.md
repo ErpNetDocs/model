@@ -17,7 +17,7 @@ Webhook templates. Activated by business rules or other means. Entity: Sys_Web_H
 |[Name](#name)|`nvarchar(254)` `ML`|Webhook name (multi-language).|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Repository_Name](#repository_name)|`nvarchar(128)` |The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.|
-|[Retry_Logic](#retry_logic)|`nvarchar(1)` Allowed: `0`, `3`|0=Don't retry (default); 3=Retry up to 3 times|
+|[Retry_Logic](#retry_logic)|`char(1)` Allowed: `0`, `3`|0=Don't retry (default); 3=Retry up to 3 times|
 |[Row_Version](#row_version)|`timestamp` ||
 |[URL](#url)|`nvarchar(2000)` |The destination URL, which should be called by the webhook (interpolated string).|
 |[Web_Hook_Id](#web_hook_id)|`uniqueidentifier` `PK`||
@@ -246,7 +246,7 @@ The name of the repository for which the webhook is setup. All interpolated stri
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -21,7 +21,7 @@ Provides notification addresses to be notified upon occurrence of different docu
 |[Filter_XML](#filter_xml)|`nvarchar(max)` |Filtering condition for the document. Only documents which match the filter will trigger the event|
 |[Row_Version](#row_version)|`timestamp` ||
 |[State_Bit_Mask](#state_bit_mask)|`int` |The document states that will trigger the event|
-|[Status_Change_Direction](#status_change_direction)|`nvarchar(1)` Allowed: `*`, `0`, `+`, `-`|Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'|
+|[Status_Change_Direction](#status_change_direction)|`char(1)` Allowed: `*`, `0`, `+`, `-`|Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'|
 |[To_Email_Address_List](#to_email_address_list)|`nvarchar(2048)` |List of email addressess to be notified|
 |[User_Status_Id](#user_status_id)|`uniqueidentifier` |When not NULL, specifies that the event will be triggered only on this user status|
 
@@ -248,7 +248,7 @@ Direction of status change. Positive when the new status is greater than the pre
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

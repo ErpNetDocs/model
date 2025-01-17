@@ -11,14 +11,14 @@ Contains rules for automated assignment of sales persons for customers, sales or
 
 | Name | Type | Description |
 | - | - | --- |
-|[Apply_To](#apply_to)|`nvarchar(1)` Allowed: `C`, `D`|Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.|
+|[Apply_To](#apply_to)|`char(1)` Allowed: `C`, `D`|Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.|
 |[Company_Division_Id](#company_division_id)|`uniqueidentifier` |Our division, which is in charge of the deal.|
 |[Customer_Type_Id](#customer_type_id)|`uniqueidentifier` |The type of the customer.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company for which the rule applies.|
 |[From_Date](#from_date)|`datetime` |Starting date of rule validity. NULL means no from date restriction.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current rule is active.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information or comments related to the rule.|
-|[Priority](#priority)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`|Priority when multiple rules match the criteria.|
+|[Priority](#priority)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`|Priority when multiple rules match the criteria.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Rule_No](#rule_no)|`int` |Consecutive number of the rule within the selected enterprise company.|
 |[Sales_Area_Id](#sales_area_id)|`uniqueidentifier` |The sales area, where the customer is located.|
@@ -53,7 +53,7 @@ Determines whether the rule is applied to customers' definitions (customers and 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -310,7 +310,7 @@ Priority when multiple rules match the criteria.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -15,7 +15,7 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Declarer_Type](#declarer_type)|`nvarchar(1)` Allowed: `A`, `R`|Type of the declaring person. A=Attorney, R=Representative.|
+|[Declarer_Type](#declarer_type)|`char(1)` Allowed: `A`, `R`|Type of the declaring person. A=Attorney, R=Representative.|
 |[Declaring_Person_Address](#declaring_person_address)|`nvarchar(150)` |Address for correspondence of the declaring person.|
 |[Declaring_Person_City](#declaring_person_city)|`nvarchar(50)` |City from the address for correspondence of the declaring person.|
 |[Declaring_Person_Id](#declaring_person_id)|`uniqueidentifier` `PK`|Unique identification of the declaring person.|
@@ -53,7 +53,7 @@ Type of the declaring person. A=Attorney, R=Representative.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

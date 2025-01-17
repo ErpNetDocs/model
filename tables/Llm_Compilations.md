@@ -20,7 +20,7 @@ Compilation is created, when a Model is being compiled through the AI provider i
 |[Model_Id](#model_id)|`uniqueidentifier` Readonly|The model, on which the compilation is based.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Start_Time_Utc](#start_time_utc)|`datetime` Readonly|The time, when the compilation was started.|
-|[Status](#status)|`nvarchar(1)` Allowed: `N`, `R`, `C`, `D`, Readonly|The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.|
+|[Status](#status)|`char(1)` Allowed: `N`, `R`, `C`, `D`, Readonly|The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.|
 |[User_Id](#user_id)|`uniqueidentifier` Readonly|The user, who started the compilation.|
 
 ## Columns
@@ -354,7 +354,7 @@ The status of the build job of the compilation. Building the compilation runs th
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

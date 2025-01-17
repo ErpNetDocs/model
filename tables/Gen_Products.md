@@ -11,28 +11,28 @@ Products are the different items in the enterprise, which can be purchased, stor
 
 | Name | Type | Description |
 | - | - | --- |
-|[ABC_Class](#abc_class)|`nvarchar(2)` Allowed: `A `, `B `, `C `|Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.|
+|[ABC_Class](#abc_class)|`char(2)` Allowed: `A `, `B `, `C `|Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.|
 |[Active](#active)|`bit` |1 if the product is active, 0 - not to list in combo boxes for choosing in new documents|
 |[Allow_Variable_Measurement_Ratios](#allow_variable_measurement_ratios)|`bit` |Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit.|
 |[Base_Measurement_Category_Id](#base_measurement_category_id)|`uniqueidentifier` |The base measurement category for quantities of this product.|
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` |Specifies what type of cargo this product is. Required when generating transportation requisitions. NULL means unspecified.|
 |[Catalog_Description_Html](#catalog_description_html)|`nvarchar(max)` |Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.|
 |[Costing_Currency_Id](#costing_currency_id)|`uniqueidentifier` |Specifies the currency to use for cost calculations for the product. When NULL, the base currency for the enterprise company should be used|
-|[Costing_Method](#costing_method)|`nvarchar(4)` Allowed: `AVG`, `EXP`, `BLD`|Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost|
+|[Costing_Method](#costing_method)|`char(4)` Allowed: `AVG`, `EXP`, `BLD`|Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost|
 |[Creation_Time](#creation_time)|`datetime` Readonly||
 |[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
 |[Description](#description)|`nvarchar(max)` `ML`|The description of the product|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When not NULL, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company.|
 |[Excise_Product_Type_Id](#excise_product_type_id)|`uniqueidentifier` |Specifies the basic excise attributes of the product.|
 |[Expiry_Period_Days](#expiry_period_days)|`int` |Total default expiry period for the product (in days) from the date of production to the date of expiry|
-|[Flushing_Method](#flushing_method)|`nvarchar(1)` Allowed: `B`, `F`, `M`|Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)|
+|[Flushing_Method](#flushing_method)|`char(1)` Allowed: `B`, `F`, `M`|Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique id of the item|
 |[Intrastat_Commodity_Code_Id](#intrastat_commodity_code_id)|`uniqueidentifier` |Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise.|
 |[Intrastat_Supplementary_Unit_Id](#intrastat_supplementary_unit_id)|`uniqueidentifier` ||
 |[Is_Featured](#is_featured)|`bit` ||
 |[Is_Serialized](#is_serialized)|`bit` |1 if the parts use/require serial numbers|
-|[Lots_Issue](#lots_issue)|`nvarchar(4)` Allowed: `FIFO`, `FEFO`, `LIFO`|Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).|
+|[Lots_Issue](#lots_issue)|`char(4)` Allowed: `FIFO`, `FEFO`, `LIFO`|Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).|
 |[Manufacturing_Policy](#manufacturing_policy)|`nvarchar(3)` |Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order|
 |[Measurement_Unit_Id](#measurement_unit_id)|`uniqueidentifier` |Default measurement unit, when creating new documents with this product.|
 |[Minimal_Sales_Price_Per_Lot](#minimal_sales_price_per_lot)|`decimal(18, 4)` |Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.|
@@ -56,7 +56,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Supply_Schema_Id](#supply_schema_id)|`uniqueidentifier` |The supply schema to use for the distribution of the product among warehouses|
 |[Update_Time](#update_time)|`datetime` Readonly||
 |[Update_User](#update_user)|`nvarchar(64)` Readonly||
-|[Use_Lots](#use_lots)|`nvarchar(1)` Allowed: `A`, `N`, `R`|Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.|
+|[Use_Lots](#use_lots)|`char(1)` Allowed: `A`, `N`, `R`|Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.|
 |[Valuation_Group_Id](#valuation_group_id)|`uniqueidentifier` |Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect.|
 
 ## Columns
@@ -86,7 +86,7 @@ Product importance classification, where A are the most important and C - the le
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|50|
 |User Login|no|
@@ -336,7 +336,7 @@ Specifies the costing method for the product. NULL means to use the Enterprise C
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(4) (Allows NULL)|
+|Type|char(4) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -567,7 +567,7 @@ Consumption method for work orders. M=Manual, using Consuption Journals, F=Forwa
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|50|
 |User Login|no|
@@ -805,7 +805,7 @@ Determines the method by which the lots are automatically issued. The method det
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(4) (Allows NULL)|
+|Type|char(4) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1599,7 +1599,7 @@ Specifies whether the use of lots for this product in store documents is require
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

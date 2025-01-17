@@ -12,7 +12,7 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 | Name | Type | Description |
 | - | - | --- |
 |[Document_Data](#document_data)|`varbinary` |Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).|
-|[Document_Data_Format](#document_data_format)|`nvarchar(1)` |The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.|
+|[Document_Data_Format](#document_data_format)|`char(1)` |The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.|
 |[Document_Data_XML](#document_data_xml)|`nvarchar(max)` |The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).|
 |[Document_Id](#document_id)|`uniqueidentifier` |The document whoose version is stored in this row|
 |[Document_Version_Id](#document_version_id)|`uniqueidentifier` `PK`||
@@ -78,7 +78,7 @@ The format of the saved document data. 'U' - uncompressed and stored in Document
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

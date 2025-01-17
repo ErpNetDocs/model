@@ -18,7 +18,7 @@ Contains the business process diagrams. Entity: Wf_Processes
 |[Process_Id](#process_id)|`uniqueidentifier` `PK`||
 |[Process_Name](#process_name)|`nvarchar(128)` `ML`||
 |[Row_Version](#row_version)|`timestamp` ||
-|[Schema_Format](#schema_format)|`nvarchar(1)` |Application specific format of the Schema Layout.|
+|[Schema_Format](#schema_format)|`char(1)` |Application specific format of the Schema Layout.|
 |[Schema_Layout](#schema_layout)|`nvarchar(max)` |Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.|
 |[Start_Event](#start_event)|`nvarchar(3)` |USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process|
 |[Start_Role_Id](#start_role_id)|`uniqueidentifier` |When Start_Event='USR' then specifies the role which the user must play in order to start the process. NULL when Start_Event<>'USR'|
@@ -264,7 +264,7 @@ Application specific format of the Schema Layout.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

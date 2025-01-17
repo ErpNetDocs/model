@@ -22,7 +22,7 @@ The abstract basic building block of web sites. Each module can render multiple 
 |[Is_Published](#is_published)|`bit` |Specifies whether the module is published and will be showed in the web site.|
 |[Local_Url](#local_url)|`nvarchar(128)` |The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.|
 |[Module_Picture](#module_picture)|`varbinary` |Default picture. Used for picture links, small module icons, etc. PNG format is suggested.|
-|[Module_Type](#module_type)|`nvarchar(3)` Allowed: `CAT`, `STA`, `NEW`|Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.|
+|[Module_Type](#module_type)|`char(3)` Allowed: `CAT`, `STA`, `NEW`|Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.|
 |[Parent_Web_Module_Id](#parent_web_module_id)|`uniqueidentifier` |The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Web_Module_Id](#web_module_id)|`uniqueidentifier` `PK`||
@@ -158,7 +158,7 @@ Specifies the content handler. The content handler is responsible for generating
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

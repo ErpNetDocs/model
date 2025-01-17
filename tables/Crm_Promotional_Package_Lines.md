@@ -22,7 +22,7 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 |[Promotional_Package_Line_Id](#promotional_package_line_id)|`uniqueidentifier` `PK`||
 |[Quantity](#quantity)|`decimal(9, 3)` |The quantity of the product in the package in the base measurement unit of the Product.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Standard_Discount_Adjust_Or_Replace](#standard_discount_adjust_or_replace)|`nvarchar(1)` Allowed: `A`, `R`, `M`|Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount|
+|[Standard_Discount_Adjust_Or_Replace](#standard_discount_adjust_or_replace)|`char(1)` Allowed: `A`, `R`, `M`|Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount|
 |[Standard_Discount_Percent_Adjust](#standard_discount_percent_adjust)|`decimal(7, 6)` |The value of change (in percents) for the standard discount|
 |[Unit_Price](#unit_price)|`decimal(13, 5)` |When not null specifies directly unit price for the product. When NULL, the package specifies only discount|
 |[Unit_Price_Currency_Id](#unit_price_currency_id)|`uniqueidentifier` |Currency of the unit price. NULL if the package specifies only discount|
@@ -290,7 +290,7 @@ Specifies standard discount change action: A=ADD, M=Mark down - apply after stan
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

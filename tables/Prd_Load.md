@@ -22,7 +22,7 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Priority](#priority)|`smallint` Allowed: `1`, `2`, `3`, `4`, `5`|Priority of the allocation. 1=Lowest ... 5=Highest|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Time_Type](#time_type)|`nvarchar(1)` Allowed: `M`, `R`, `S`, `W`|S=Setup; R=Run; W=Wait; M=Move|
+|[Time_Type](#time_type)|`char(1)` Allowed: `M`, `R`, `S`, `W`|S=Setup; R=Run; W=Wait; M=Move|
 |[Usage_End_Time](#usage_end_time)|`datetime` |The ending time of the planned usage.|
 |[Usage_Quantity](#usage_quantity)|`decimal(9, 0)` |Quantity of the resource, which will be used for production|
 |[Usage_Start_Time](#usage_start_time)|`datetime` |The starting time of the planned usage.|
@@ -184,7 +184,7 @@ S=Setup; R=Run; W=Wait; M=Move
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

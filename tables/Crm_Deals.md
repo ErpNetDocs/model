@@ -17,7 +17,7 @@ Potential deals (Opportunities). Entity: Crm_Deals
 | - | - | --- |
 |[Campaign_Id](#campaign_id)|`uniqueidentifier` |The marketing campaign to which this opportunity belongs.|
 |[Deal_Id](#deal_id)|`uniqueidentifier` `PK`||
-|[Deal_Status](#deal_status)|`nvarchar(3)` Allowed: `INP`, `SUC`, `UNS`|Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress|
+|[Deal_Status](#deal_status)|`char(3)` Allowed: `INP`, `SUC`, `UNS`|Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress|
 |[Dealer_Id](#dealer_id)|`uniqueidentifier` |The external dealer, which provided the opportunity|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Expected_Revenue](#expected_revenue)|`decimal(18, 2)` |Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.|
@@ -131,7 +131,7 @@ Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = I
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

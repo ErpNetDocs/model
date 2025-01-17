@@ -11,9 +11,9 @@ Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Opera
 
 | Name | Type | Description |
 | - | - | --- |
-|[Box_1_Effect](#box_1_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
-|[Box_2_Effect](#box_2_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
-|[Box_3_Effect](#box_3_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
+|[Box_1_Effect](#box_1_effect)|`char(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
+|[Box_2_Effect](#box_2_effect)|`char(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
+|[Box_3_Effect](#box_3_effect)|`char(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
 |[Code](#code)|`nvarchar(32)` ||
 |[Excise_Stamp_Operation_Type_Id](#excise_stamp_operation_type_id)|`uniqueidentifier` `PK`||
 |[Is_Whole_Lot](#is_whole_lot)|`bit` |Specifies for this Excise Stamp Operation Type, that when selecting a Excise Stamp Lot within the Excise Stamp Operation line, the entire quantity from the chosen Excise Stamp Lot is copied.|
@@ -49,7 +49,7 @@ Specifies how the operation changes the Excise Stamp availability in the corresp
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -80,7 +80,7 @@ Specifies how the operation changes the Excise Stamp availability in the corresp
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -111,7 +111,7 @@ Specifies how the operation changes the Excise Stamp availability in the corresp
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -9,8 +9,8 @@
 
 | Name | Type | Description |
 | - | - | --- |
-|[Element_Subtype](#element_subtype)|`nvarchar(3)` Allowed: `ATU`, `ATM`, `ATV`, `ATC`, `ATB`, `ATS`, `ATR`, `ES1`, `ES2`, `ES4`, `EE1`, `EE2`, `EE5`, `EE9`, `EI1`, `EI2`, `EI3`, `EI4`, `GEX`, `GIN`, `CAT`, `CGP`|Subtype of the element. Each type allows only certain types of sub-types.|
-|[Element_Type](#element_type)|`nvarchar(1)` Allowed: `A`, `E`, `G`, `C`|Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.|
+|[Element_Subtype](#element_subtype)|`char(3)` Allowed: `ATU`, `ATM`, `ATV`, `ATC`, `ATB`, `ATS`, `ATR`, `ES1`, `ES2`, `ES4`, `EE1`, `EE2`, `EE5`, `EE9`, `EI1`, `EI2`, `EI3`, `EI4`, `GEX`, `GIN`, `CAT`, `CGP`|Subtype of the element. Each type allows only certain types of sub-types.|
+|[Element_Type](#element_type)|`char(1)` Allowed: `A`, `E`, `G`, `C`|Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.|
 |[Instructions_Html](#instructions_html)|`nvarchar(max)` |Detailed instructions to the executor in HTML format.|
 |[Process_Element_Code](#process_element_code)|`nvarchar(16)` |Element code, unique within the process. Used as ID for XML serialization purposes.|
 |[Process_Element_Id](#process_element_id)|`uniqueidentifier` `PK`||
@@ -46,7 +46,7 @@ Subtype of the element. Each type allows only certain types of sub-types.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -84,7 +84,7 @@ Basic type of the element. A=Activity; E=Event; G=Gateway; C=Artifact.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

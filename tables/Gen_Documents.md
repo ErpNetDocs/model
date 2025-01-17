@@ -34,7 +34,7 @@ Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 |[Master_Document_Id](#master_document_id)|`uniqueidentifier` |In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |In a multi-document tree, this is the direct parent document. If this is the root it is NULL|
-|[Parent_Document_Relationship_Type](#parent_document_relationship_type)|`nvarchar(1)` Allowed: `S`, `N`, `I`, Readonly|Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.|
+|[Parent_Document_Relationship_Type](#parent_document_relationship_type)|`char(1)` Allowed: `S`, `N`, `I`, Readonly|Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.|
 |[Planning_Only](#planning_only)|`bit` Readonly|Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)|
 |[Prime_Cause_Document_Id](#prime_cause_document_id)|`uniqueidentifier` |The document that is the prime cause for creation of the current document|
 |[Read_Only](#read_only)|`bit` Readonly|1 - the document is read only; 0 - the document is not read only|
@@ -900,7 +900,7 @@ Type of relationship between the current document and the parent document(s). Af
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

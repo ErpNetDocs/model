@@ -32,7 +32,7 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 |[Product_Group_Name](#product_group_name)|`nvarchar(180)` `ML`|Group name should be unique among the other groups within the same parent|
 |[Product_Name_Mask](#product_name_mask)|`nvarchar(1000)` `ML`|When not NULL specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Use_Lots](#use_lots)|`nvarchar(1)` Allowed: `A`, `N`, `R`|Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.|
+|[Use_Lots](#use_lots)|`char(1)` Allowed: `A`, `N`, `R`|Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.|
 
 ## Columns
 
@@ -773,7 +773,7 @@ Specifies whether for the products from this group and its sub-groups the use of
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

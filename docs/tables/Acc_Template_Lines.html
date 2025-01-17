@@ -113,7 +113,7 @@
 </tr>
 <tr>
 <td><a href="#amount_condition">Amount_Condition</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>+</code>, <code>-</code></td>
+<td><code>char(1)</code> Allowed: <code>+</code>, <code>-</code></td>
 <td>Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.</td>
 </tr>
 <tr>
@@ -378,7 +378,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1) (Allows NULL)</td>
+<td>char(1) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

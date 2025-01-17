@@ -22,7 +22,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 |[Geo_Point_Id](#geo_point_id)|`uniqueidentifier` |The geographic point, where the operation is executed.|
 |[Line_No](#line_no)|`int` |Consecutive line number within this execution.|
 |[Notes](#notes)|`nvarchar(max)` ||
-|[Operation_Type](#operation_type)|`nvarchar(1)` Allowed: `L`, `U`, `O`|The type of operation being executed. L=Loading; U=Unloading; O=Other.|
+|[Operation_Type](#operation_type)|`char(1)` Allowed: `L`, `U`, `O`|The type of operation being executed. L=Loading; U=Unloading; O=Other.|
 |[Pallet_Number](#pallet_number)|`nvarchar(32)` |Pallet number, when applicable. NULL when unknown or not applicable.|
 |[Pallets_Count](#pallets_count)|`int` |Number of pallets affected by this operation. NULL when unknown or N/A.|
 |[Transportation_Execution_Id](#transportation_execution_id)|`uniqueidentifier` ||
@@ -261,7 +261,7 @@ The type of operation being executed. L=Loading; U=Unloading; O=Other.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -15,7 +15,7 @@ Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependanci
 
 | Name | Type | Description |
 | - | - | --- |
-|[Dependancy_Type](#dependancy_type)|`nvarchar(2)` Allowed: `FS`, `SS`, `FF`, `SF`, `SY`|FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)|
+|[Dependancy_Type](#dependancy_type)|`char(2)` Allowed: `FS`, `SS`, `FF`, `SF`, `SY`|FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)|
 |[Depends_On_Task_Id](#depends_on_task_id)|`uniqueidentifier` |The task on which Project_Task depends|
 |[Project_Task_Dependancy_Id](#project_task_dependancy_id)|`uniqueidentifier` `PK`||
 |[Project_Task_Id](#project_task_id)|`uniqueidentifier` |The task which depends on another task|
@@ -48,7 +48,7 @@ FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=S
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

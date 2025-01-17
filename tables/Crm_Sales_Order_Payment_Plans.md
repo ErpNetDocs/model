@@ -18,7 +18,7 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 | - | - | --- |
 |[Amount](#amount)|`decimal(14, 2)` |Amount to be payed.|
 |[Amount_Percent](#amount_percent)|`decimal(7, 6)` |Percent of the sales order amount to be payed.|
-|[Due_Date_Form_Method](#due_date_form_method)|`nvarchar(3)` Allowed: `EXP`, `INV`, `SLS`, `SDD`, `IDD`|Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date|
+|[Due_Date_Form_Method](#due_date_form_method)|`char(3)` Allowed: `EXP`, `INV`, `SLS`, `SDD`, `IDD`|Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date|
 |[Explicit_Payment_Due_Date](#explicit_payment_due_date)|`datetime` |Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'|
 |[Explicit_Payment_Due_Start_Date](#explicit_payment_due_start_date)|`date` |Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.|
 |[Installment_Number](#installment_number)|`int` |Consequtive installment number. Used for identifying different payments generated according this payment plan.|
@@ -121,7 +121,7 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Long|
 |User Login|no|

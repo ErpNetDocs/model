@@ -11,7 +11,7 @@ Price Lists are used to manage multiple price records, assign to customers, etc.
 
 | Name | Type | Description |
 | - | - | --- |
-|[Auto_Apply_Discount_Level](#auto_apply_discount_level)|`nvarchar(1)` Allowed: `1`, `2`, `3`|Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated.|
+|[Auto_Apply_Discount_Level](#auto_apply_discount_level)|`char(1)` Allowed: `1`, `2`, `3`|Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated.|
 |[Description](#description)|`nvarchar(max)` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[From_Date](#from_date)|`datetime` |Starting validity of the price list|
@@ -48,7 +48,7 @@ Indicates the level to which discounts are applied automatically. Increasing the
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

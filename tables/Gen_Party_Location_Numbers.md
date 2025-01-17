@@ -15,7 +15,7 @@ Location numbers for a party. Depending on the partner with which we are doing a
 
 | Name | Type | Description |
 | - | - | --- |
-|[Location_Coding_System](#location_coding_system)|`nvarchar(3)` Allowed: `GLN`, `INT`|The coding system for which we are defining the location number.|
+|[Location_Coding_System](#location_coding_system)|`char(3)` Allowed: `GLN`, `INT`|The coding system for which we are defining the location number.|
 |[Location_Number](#location_number)|`nvarchar(16)` |The location number of Party.|
 |[Partner_Location_Number](#partner_location_number)|`nvarchar(16)` |The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.|
 |[Partner_Party_Id](#partner_party_id)|`uniqueidentifier` |The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party.|
@@ -51,7 +51,7 @@ The coding system for which we are defining the location number.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

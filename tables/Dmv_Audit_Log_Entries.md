@@ -14,7 +14,7 @@ Information about the count and the size of audit log entries, grouped by applic
 |[Application_Name](#application_name)|`nvarchar(64)` |The client application that triggered the events. Null when unknown or N/A.|
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The entity, which is being referenced by the events. Null when unknown or N/A.|
 |[Entries_Count](#entries_count)|`int` |Total number of audit log entries.|
-|[Event_Class](#event_class)|`nvarchar(1)` Allowed: `E`, `A`, `S`|The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.|
+|[Event_Class](#event_class)|`char(1)` Allowed: `E`, `A`, `S`|The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.|
 |[Total_Size_MB](#total_size_mb)|`decimal(12, 3)` |Total size of the audit log entries in megabytes.|
 |[Year](#year)|`nvarchar(30)` |Year when the events occurred.|
 
@@ -157,7 +157,7 @@ The event primary classification, which shows the source of the event. E=Entity 
 |Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

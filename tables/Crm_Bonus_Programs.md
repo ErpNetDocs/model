@@ -12,7 +12,7 @@ Bonus programs allow automatic adding of new line with bonus product or automati
 | Name | Type | Description |
 | - | - | --- |
 |[Active](#active)|`bit` |General condition if the bonus is active. The other conditions are verified only for active bonus programs|
-|[Bonus_Action](#bonus_action)|`nvarchar(1)` Allowed: `P`, `D`, `C`|If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.|
+|[Bonus_Action](#bonus_action)|`char(1)` Allowed: `P`, `D`, `C`|If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.|
 |[Bonus_Document_Amount_Percent](#bonus_document_amount_percent)|`decimal(7, 6)` |The percent of the document amount that is rewarded. Should be NULL if and only if the bonus document amount is NULL|
 |[Bonus_Document_Amount_Type_Id](#bonus_document_amount_type_id)|`uniqueidentifier` |When not NULL specifies that a document amount should be added to the order when the bonus conditions are met. NULL means that the bonus reward is not a document amount|
 |[Bonus_Line_Discount_Percent](#bonus_line_discount_percent)|`decimal(7, 6)` |The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)|
@@ -109,7 +109,7 @@ If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

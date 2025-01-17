@@ -16,7 +16,7 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 | Name | Type | Description |
 | - | - | --- |
 |[Device_Registration_No](#device_registration_no)|`nvarchar(32)` |The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.|
-|[Device_Type](#device_type)|`nvarchar(3)` Allowed: `PAY`, `CSH`, `FIP`, `OTH`|Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.|
+|[Device_Type](#device_type)|`char(3)` Allowed: `PAY`, `CSH`, `FIP`, `OTH`|Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.|
 |[Electronic_Address](#electronic_address)|`nvarchar(254)` |The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the device is currently active and can be choosen from drop-downs in new records.|
 |[Pos_Device_Id](#pos_device_id)|`uniqueidentifier` `PK`||
@@ -89,7 +89,7 @@ Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printe
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -8,7 +8,7 @@
 |[Description](#description)|`nvarchar(max)` ||
 |[Is_Executable](#is_executable)|`bit` |Specifies whether the process is executable. In order to be executable, a process must contain enough execution details. Note, that some processes are only for documentation purposes and are not intended to be executed.|
 |[Is_Published](#is_published)|`bit` |Specifies whether the process is currently published for new instances.|
-|[Locality](#locality)|`nvarchar(1)` Allowed: `P`, `L`, `C`, `I`|Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.|
+|[Locality](#locality)|`char(1)` Allowed: `P`, `L`, `C`, `I`|Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.|
 |[Process_Code](#process_code)|`nvarchar(16)` |Unique process code.|
 |[Process_Group_Id](#process_group_id)|`uniqueidentifier` |The process group, to which this process belongs.|
 |[Process_Id](#process_id)|`uniqueidentifier` `PK`||
@@ -148,7 +148,7 @@ Process execution locality. Represents where the execution takes place and influ
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

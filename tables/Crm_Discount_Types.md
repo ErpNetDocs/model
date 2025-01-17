@@ -11,8 +11,8 @@ Contains the different types of discounts, which can be applied to sales lines. 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Action_Type](#action_type)|`nvarchar(1)` Allowed: `A`, `R`, `M`|Specifies the way the discount is applied over the previous discounts.|
-|[Calculation_Method](#calculation_method)|`nvarchar(1)` Allowed: `S`, `P`, `B`|Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.|
+|[Action_Type](#action_type)|`char(1)` Allowed: `A`, `R`, `M`|Specifies the way the discount is applied over the previous discounts.|
+|[Calculation_Method](#calculation_method)|`char(1)` Allowed: `S`, `P`, `B`|Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.|
 |[Discount_Type_Code](#discount_type_code)|`nvarchar(32)` ||
 |[Discount_Type_Id](#discount_type_id)|`uniqueidentifier` `PK`||
 |[Discount_Type_Name](#discount_type_name)|`nvarchar(254)` ||
@@ -48,7 +48,7 @@ Specifies the way the discount is applied over the previous discounts.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -85,7 +85,7 @@ Specifies whether the calculation method of the discount is based on a standard 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

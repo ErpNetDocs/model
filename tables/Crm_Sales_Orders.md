@@ -22,7 +22,7 @@ Sales order document headers. Entity: Crm_Sales_Orders
 |[Deal_Id](#deal_id)|`uniqueidentifier` |The opportunity (deal) on which this order is based|
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` |Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.|
 |[Dealer_Id](#dealer_id)|`uniqueidentifier` |The external dealer, associated with the sales order|
-|[Delivery_Terms_Code](#delivery_terms_code)|`nvarchar(3)` Allowed: `EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting|
+|[Delivery_Terms_Code](#delivery_terms_code)|`char(3)` Allowed: `EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting|
 |[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |The distribution channel, that is used to deliver the products|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the document; e.g. the currency of the amounts in the document|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -30,9 +30,9 @@ Sales order document headers. Entity: Crm_Sales_Orders
 |[Fiscal_Printer_Pos_Device_Id](#fiscal_printer_pos_device_id)|`uniqueidentifier` |For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.|
 |[Fiscal_Sales_Number](#fiscal_sales_number)|`nvarchar(32)` Readonly|Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.|
 |[From_Date](#from_date)|`date` |When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.|
-|[Intrastat_Transaction_Nature_Code](#intrastat_transaction_nature_code)|`nvarchar(2)` Allowed: `11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|Transaction nature; used for Intrastat reporting|
+|[Intrastat_Transaction_Nature_Code](#intrastat_transaction_nature_code)|`char(2)` Allowed: `11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|Transaction nature; used for Intrastat reporting|
 |[Intrastat_Transport_Country_Id](#intrastat_transport_country_id)|`uniqueidentifier` |Country of origin of the transport company; used for Intrastat reporting|
-|[Intrastat_Transport_Mode_Code](#intrastat_transport_mode_code)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`|Transport mode; used for Intrastat reporting|
+|[Intrastat_Transport_Mode_Code](#intrastat_transport_mode_code)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`|Transport mode; used for Intrastat reporting|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[IsValid](#isvalid)|`bit` |1 when the order is valid (e.g. released and not void). Used for internal processing.|
@@ -340,7 +340,7 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3) (Allows NULL)|
+|Type|char(3) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -626,7 +626,7 @@ Transaction nature; used for Intrastat reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2) (Allows NULL)|
+|Type|char(2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -694,7 +694,7 @@ Transport mode; used for Intrastat reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

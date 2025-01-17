@@ -16,7 +16,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |[Base_Currency_Id](#base_currency_id)|`uniqueidentifier` |The base currency for summary reporting for this company.|
 |[BI_Start_Date](#bi_start_date)|`datetime` |Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date"|
 |[Company_Id](#company_id)|`uniqueidentifier` |Contains the base company data on which this enterprise company is based.|
-|[Default_Costing_Method](#default_costing_method)|`nvarchar(4)` Allowed: `AVG`, `EXP`, `BLD`|Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost|
+|[Default_Costing_Method](#default_costing_method)|`char(4)` Allowed: `AVG`, `EXP`, `BLD`|Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost|
 |[Default_Customer_Credit_Limit_Base](#default_customer_credit_limit_base)|`decimal(18, 2)` ||
 |[Default_Language](#default_language)|`nvarchar(10)` Allowed: `bg`, `en`|The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).|
 |[Edit_Period_Start_Date](#edit_period_start_date)|`datetime` |Start date of the priod when the documents can be edited|
@@ -238,7 +238,7 @@ Default method for cost evaluation (if not specified in the product). Currently 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(4)|
+|Type|char(4)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

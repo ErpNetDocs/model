@@ -19,7 +19,7 @@ Templates for customizing the printouts of fiscal receipts. Entity: Pos_Fiscal_R
 |[Print_System_Header](#print_system_header)|`bit` |Denotes whether to print the system-defined header for the document.|
 |[Print_System_Row_Header](#print_system_row_header)|`bit` |Denotes whether to print the system-defined header for each row.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Template_Kind](#template_kind)|`nvarchar(1)` Allowed: `S`, `I`, `P`|Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.|
+|[Template_Kind](#template_kind)|`char(1)` Allowed: `S`, `I`, `P`|Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.|
 |[Template_Name](#template_name)|`nvarchar(64)` |The unique name of the printing template.|
 
 ## Columns
@@ -305,7 +305,7 @@ Specifies the entity type, for which the template can be used. Template strings 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

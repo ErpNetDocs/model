@@ -18,7 +18,7 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 |[Event_Parameter](#event_parameter)|`nvarchar(128)` |Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.|
 |[Event_Type](#event_type)|`nvarchar(64)` Allowed: `AGGREGATECLIENTCOMMIT`, `ATTRIBUTECHANGED`, `ATTRIBUTECHANGING`, `CLIENTCOMMIT`, `COMMIT`, `STATECHANGED`, `STATECHANGING`, `VOIDING`, `CREATENEW`, `COMMITTED`, `CLIENTCOMMITTED`, `AGGREGATECLIENTCOMMITTED`, `BEFORERECALCULATE `|The event for which to register the business rule.|
 |[Execution_Priority](#execution_priority)|`int` Allowed: `30`, `50`, `70`|Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.|
-|[Layer](#layer)|`nvarchar(3)` Allowed: `FTE`, `BKE`|Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.|
+|[Layer](#layer)|`char(3)` Allowed: `FTE`, `BKE`|Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[User_Business_Rule_Event_Id](#user_business_rule_event_id)|`uniqueidentifier` `PK`||
 |[User_Business_Rule_Id](#user_business_rule_id)|`uniqueidentifier` |The rule, which will be registered for the event.|
@@ -142,7 +142,7 @@ Specifies the layer on which to register the event. Allowed values = FTE-FrontEn
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

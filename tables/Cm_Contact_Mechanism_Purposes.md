@@ -13,7 +13,7 @@ Contains user-defined purposes for processing contact mechanisms. Used for perso
 | - | - | --- |
 |[Code](#code)|`nvarchar(16)` ||
 |[Contact_Mechanism_Purpose_Id](#contact_mechanism_purpose_id)|`uniqueidentifier` `PK`||
-|[Contact_Mechanism_Type](#contact_mechanism_type)|`nvarchar(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`, `P`, `X`|When specified, allows the purpose to be specified only for contact mechanisms of the specified type.|
+|[Contact_Mechanism_Type](#contact_mechanism_type)|`char(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`, `P`, `X`|When specified, allows the purpose to be specified only for contact mechanisms of the specified type.|
 |[Description](#description)|`nvarchar(max)` ||
 |[Name](#name)|`nvarchar(254)` `ML`|Name of the contact mechanism purpose (Multilanguage).|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -112,7 +112,7 @@ When specified, allows the purpose to be specified only for contact mechanisms o
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

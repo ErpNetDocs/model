@@ -19,7 +19,7 @@ Specifies additional options for document routes, generating Rental Transactions
 |[Rent_Transaction_Template_Id](#rent_transaction_template_id)|`uniqueidentifier` `PK`||
 |[Route_Id](#route_id)|`uniqueidentifier` |The route for which the transaction template is defined.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Transaction_Type](#transaction_type)|`nvarchar(1)` Allowed: `D`, `R`, `W`, `S`||
+|[Transaction_Type](#transaction_type)|`char(1)` Allowed: `D`, `R`, `W`, `S`||
 
 ## Columns
 
@@ -142,7 +142,7 @@ The route for which the transaction template is defined.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

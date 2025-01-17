@@ -13,7 +13,7 @@ The different types of excise products. Excise product types are differentiated 
 | - | - | --- |
 |[Alcoholic_Strength](#alcoholic_strength)|`decimal(5, 2)` |Percentage of pure alcohol used in excise duty reporting.|
 |[Capacity](#capacity)|`decimal(6, 4)` |Package capacity - number of cigarettes or volume of alcohol in liters.|
-|[Category](#category)|`nvarchar(2)` Allowed: `TT`, `AA`, `DF`|Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.|
+|[Category](#category)|`char(2)` Allowed: `TT`, `AA`, `DF`|Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.|
 |[Code](#code)|`nvarchar(32)` ||
 |[Commodity_Code_Id](#commodity_code_id)|`uniqueidentifier` |Code from The Combined Nomenclature used within the European Union countries.|
 |[Excise_Amount_Per_Stamp](#excise_amount_per_stamp)|`decimal(10, 6)` |The excise duty, which is charged with one excise label.|
@@ -112,7 +112,7 @@ Specifies the excise product category of the excise stamp - alcohol, tobacco, an
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

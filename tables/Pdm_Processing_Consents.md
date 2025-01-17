@@ -18,7 +18,7 @@ Consents of data subjects for processing of their personal data. Entity: Pdm_Pro
 |[Allow_Phone](#allow_phone)|`bit` |Allows the processing of the telephone number.|
 |[Consent_Image](#consent_image)|`varbinary` |If not null, it is a graphical image, containing additional information for the consent.|
 |[Consent_Text](#consent_text)|`nvarchar(max)` |The actual text of the consent.|
-|[Consent_Type](#consent_type)|`nvarchar(1)` Allowed: `O`, `I`, `V`, `W`, `E`, `T`|The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).|
+|[Consent_Type](#consent_type)|`char(1)` Allowed: `O`, `I`, `V`, `W`, `E`, `T`|The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).|
 |[Given_On_Utc](#given_on_utc)|`datetime` |The date and time (in Utc), when the consent was given.|
 |[Is_Active](#is_active)|`bit` |Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.|
 |[Is_Child](#is_child)|`bit` |Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.|
@@ -307,7 +307,7 @@ The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Emai
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

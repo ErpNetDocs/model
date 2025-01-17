@@ -16,7 +16,7 @@ Contains user-defined translations for non-english languages of the user interfa
 |[Creation_Time](#creation_time)|`datetime` Readonly|Timestamp when the translation was first created|
 |[Language](#language)|`nvarchar(8)` |The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian.|
 |[Resource_Id](#resource_id)|`nvarchar(800)` |The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code|
-|[Resource_Type](#resource_type)|`nvarchar(1)` Allowed: `T`, `C`, `H`, `R`, `E`, `M`, `S`|T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String|
+|[Resource_Type](#resource_type)|`char(1)` Allowed: `T`, `C`, `H`, `R`, `E`, `M`, `S`|T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Translation](#translation)|`nvarchar(max)` |The translated text|
 |[Translation_Id](#translation_id)|`uniqueidentifier` `PK`||
@@ -230,7 +230,7 @@ T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

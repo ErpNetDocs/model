@@ -18,7 +18,7 @@ Contains request for warehouse operation created from another module. Entity: Wm
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Expected_Date](#expected_date)|`date` |Date, when the requisition is expected to be fulfilled.|
 |[Expected_Time](#expected_time)|`time` |Time, when the requisition is expected to be executed. NULL when the time is unknown.|
-|[Requisition_Type](#requisition_type)|`nvarchar(1)` Allowed: `I`, `O`|The type of the requisition. I=Inbound; O=Outbound.|
+|[Requisition_Type](#requisition_type)|`char(1)` Allowed: `I`, `O`|The type of the requisition. I=Inbound; O=Outbound.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, for which the operation is requested.|
 |[Warehouse_Requisition_Id](#warehouse_requisition_id)|`uniqueidentifier` `PK`||
@@ -158,7 +158,7 @@ The type of the requisition. I=Inbound; O=Outbound.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -12,7 +12,7 @@ Contains call detail records. Calls are phone calls, video calls and SMS message
 | Name | Type | Description |
 | - | - | --- |
 |[Call_Detail_Record_Id](#call_detail_record_id)|`uniqueidentifier` `PK`||
-|[Call_Type](#call_type)|`nvarchar(1)` Allowed: `P`, `V`, `M`|P=Phone; V=Video; M=Message/SMS|
+|[Call_Type](#call_type)|`char(1)` Allowed: `P`, `V`, `M`|P=Phone; V=Video; M=Message/SMS|
 |[Call_Unique_Id](#call_unique_id)|`nvarchar(32)` |The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes|
 |[Called_Party_Id](#called_party_id)|`uniqueidentifier` |The party, which received the call. NULL when the party was not determined successfully|
 |[Called_Party_Number](#called_party_number)|`nvarchar(80)` |The voice number of the party, which received the call|
@@ -84,7 +84,7 @@ P=Phone; V=Video; M=Message/SMS
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

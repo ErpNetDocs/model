@@ -26,7 +26,7 @@ User logins. Entity: Sec_Users
 |[Model_Id](#model_id)|`uniqueidentifier` |The AI model associated with the user for their interactions. NULL means that this user has no AI model associated.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Password](#password)|`nvarchar(64)` Readonly|The password hash of the user, stored in the format, specified in Password Format.|
-|[Password_Format](#password_format)|`nvarchar(3)` Allowed: `MD5`, `AN3`|The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.|
+|[Password_Format](#password_format)|`char(3)` Allowed: `MD5`, `AN3`|The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.|
 |[Person_Id](#person_id)|`uniqueidentifier` |The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.|
 |[Phone_Number](#phone_number)|`nvarchar(64)` |Used only for two-factor authentication. NULL when phone-based two-factor is not used.|
 |[Phone_Number_Confirmed](#phone_number_confirmed)|`bit` |Indicates whether the Phone Number has been verified.|
@@ -35,7 +35,7 @@ User logins. Entity: Sec_Users
 |[Two_Factor_Enabled](#two_factor_enabled)|`bit` |Indicates whether two-factor authentication has been enabled.|
 |[User_Id](#user_id)|`uniqueidentifier` `PK`||
 |[User_Name](#user_name)|`nvarchar(254)` `ML`|The full name of the user|
-|[User_Type](#user_type)|`nvarchar(3)` Allowed: `INT`, `EXT`, `VIR`, `SYS`, `APP`, `INI`, `INE`|Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login).|
+|[User_Type](#user_type)|`char(3)` Allowed: `INT`, `EXT`, `VIR`, `SYS`, `APP`, `INI`, `INE`|Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login).|
 |[Voice_Extension_Numbers](#voice_extension_numbers)|`nvarchar(254)` |Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration|
 |[Windows_User_Name](#windows_user_name)|`nvarchar(128)` |The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.|
 
@@ -593,7 +593,7 @@ The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -902,7 +902,7 @@ Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

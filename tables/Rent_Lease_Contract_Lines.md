@@ -26,7 +26,7 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 |[Rental_Asset_Id](#rental_asset_id)|`uniqueidentifier` |The asset which is rented with the current contract.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Start_Date](#start_date)|`date` |Starting date of lease for this asset|
-|[Time_Period_Type](#time_period_type)|`nvarchar(1)` Allowed: `D`, `M`, `F`, `H`|Specifies the unit by which the periods of renting of this asset are measured.|
+|[Time_Period_Type](#time_period_type)|`char(1)` Allowed: `D`, `M`, `F`, `H`|Specifies the unit by which the periods of renting of this asset are measured.|
 
 ## Columns
 
@@ -393,7 +393,7 @@ Specifies the unit by which the periods of renting of this asset are measured.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

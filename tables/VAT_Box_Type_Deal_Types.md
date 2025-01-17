@@ -11,7 +11,7 @@ Determines the Amount Category which will be accumulated in the Box Type accordi
 
 | Name | Type | Description |
 | - | - | --- |
-|[Amount_Category](#amount_category)|`nvarchar(1)` Allowed: `V`, `B`, `T`|Specifies the amount type from the Vat Entry which will be accumulated|
+|[Amount_Category](#amount_category)|`char(1)` Allowed: `V`, `B`, `T`|Specifies the amount type from the Vat Entry which will be accumulated|
 |[Box_Type_Deal_Type_Id](#box_type_deal_type_id)|`uniqueidentifier` `PK`||
 |[Box_Type_Id](#box_type_id)|`uniqueidentifier` |The type of box in a VAT declaration.|
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` |Deal Type for the box.|
@@ -45,7 +45,7 @@ Specifies the amount type from the Vat Entry which will be accumulated
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

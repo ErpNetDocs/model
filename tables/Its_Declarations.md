@@ -16,10 +16,10 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 | Name | Type | Description |
 | - | - | --- |
 |[Authorized_Person_Id](#authorized_person_id)|`uniqueidentifier` |The authorized person who submits the intrastat declaration.|
-|[Declaration_Function](#declaration_function)|`nvarchar(1)` Allowed: `R`, `C`|Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective|
+|[Declaration_Function](#declaration_function)|`char(1)` Allowed: `R`, `C`|Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective|
 |[Declare_Statistical_Values](#declare_statistical_values)|`bit` |Does the declaration contain statistical values? 1=Yes; 0=No|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[Goods_Flow_Direction](#goods_flow_direction)|`nvarchar(1)` Allowed: `A`, `D`|The flow direction of the goods. A=Arrival, D=Dispatch|
+|[Goods_Flow_Direction](#goods_flow_direction)|`char(1)` Allowed: `A`, `D`|The flow direction of the goods. A=Arrival, D=Dispatch|
 |[Intrastat_Declaration_Id](#intrastat_declaration_id)|`uniqueidentifier` `PK`|Intrastat declaration id|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
@@ -93,7 +93,7 @@ Specifies whether this is a regular or corrective declaration. R=Regular, C=Corr
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -200,7 +200,7 @@ The flow direction of the goods. A=Arrival, D=Dispatch
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

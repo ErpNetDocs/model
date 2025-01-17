@@ -10,10 +10,10 @@
 | Name | Type | Description |
 | - | - | --- |
 |[Assign_By_Instance_Property_Id](#assign_by_instance_property_id)|`uniqueidentifier` |When set, the user, specified in the instance property will be assigned the task. Mutually exclusive with Assign To User.|
-|[Assign_By_User_Condition](#assign_by_user_condition)|`nvarchar(1)` Allowed: `N`, `R`, `L`|Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.|
+|[Assign_By_User_Condition](#assign_by_user_condition)|`char(1)` Allowed: `N`, `R`, `L`|Specifies direct assign action, based on User Condition. N=No direct assignment, only offer to users; R=Assign to random user; L=User with least tasks assigned.|
 |[Assign_To_User_Id](#assign_to_user_id)|`uniqueidentifier` |When set, specifies that tasks from the lane are always assigned to specific user.|
 |[Is_System_Executed](#is_system_executed)|`bit` |When set, specifies that the lane allows only system executed tasks and will never have human user as executor.|
-|[Locality](#locality)|`nvarchar(1)` Allowed: `P`, `L`, `C`, `I`|Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.|
+|[Locality](#locality)|`char(1)` Allowed: `P`, `L`, `C`, `I`|Process execution locality. Represents where the execution takes place and influences the selection of possible executors. For example, when L, the execution is private to the location, where the process originated. P=Same as parent; L=Location; C=Company; I=Intra-company.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Offer_To_Role_Id](#offer_to_role_id)|`uniqueidentifier` |When set, the tasks from the lane are offered for assignment to the users with the specified role and the same locality as the process instance.|
 |[Process_Id](#process_id)|`uniqueidentifier` |The process to which this lane belongs|
@@ -87,7 +87,7 @@ Specifies direct assign action, based on User Condition. N=No direct assignment,
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -198,7 +198,7 @@ Process execution locality. Represents where the execution takes place and influ
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

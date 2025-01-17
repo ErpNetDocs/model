@@ -15,7 +15,7 @@ One piece of training data for fine-tuning AI models. Entity: Llm_Training_Conve
 |[Last_Update_Time_Utc](#last_update_time_utc)|`datetime` Readonly|Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate.|
 |[Model_Id](#model_id)|`uniqueidentifier` |The model, which is being trained.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for this training conversation|
-|[Origin](#origin)|`nvarchar(3)` Allowed: `USR`, `CHT`, `CAL`, `CAS`, `TOD`, Readonly|Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.|
+|[Origin](#origin)|`char(3)` Allowed: `USR`, `CHT`, `CAL`, `CAS`, `TOD`, Readonly|Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.|
 |[Origin_Data_Object_Id](#origin_data_object_id)|`uniqueidentifier` Readonly|The object, whose data was used to initially create the conversation. NULL means the object is unknown or not a data object.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Training_Conversation_Id](#training_conversation_id)|`uniqueidentifier` `PK`||
@@ -186,7 +186,7 @@ Denotes how (based on what other object) was the conversation initially created.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

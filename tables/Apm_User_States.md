@@ -18,7 +18,7 @@ Workflow states for the case categories. Entity: Apm_User_States (Introduced in 
 |[Case_Category_Id](#case_category_id)|`uniqueidentifier` |The category for which the user state is defined.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the user state can be set to cases.|
 |[Ord](#ord)|`int` |Unique ordinal position of the state within the system state.|
-|[System_State](#system_state)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`|The system state, which this state extends.|
+|[System_State](#system_state)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`|The system state, which this state extends.|
 |[User_State_Id](#user_state_id)|`uniqueidentifier` `PK`||
 |[User_State_Name](#user_state_name)|`nvarchar(256)` `ML`|Multi-language name of the user state.|
 
@@ -159,7 +159,7 @@ The system state, which this state extends.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

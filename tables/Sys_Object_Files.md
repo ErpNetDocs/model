@@ -15,8 +15,8 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 | Name | Type | Description |
 | - | - | --- |
-|[Access_Permission](#access_permission)|`nvarchar(2)` Allowed: `CU`, `IN`, `EX`|Indicates who has permission to access this file.|
-|[Content_Location](#content_location)|`nvarchar(3)` Allowed: `EMB`, `URL`, `FSL`|The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.|
+|[Access_Permission](#access_permission)|`char(2)` Allowed: `CU`, `IN`, `EX`|Indicates who has permission to access this file.|
+|[Content_Location](#content_location)|`char(3)` Allowed: `EMB`, `URL`, `FSL`|The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |Time (in UTC), when the file was created.|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The user, who created the file record. NULL if it is unknown.|
 |[Embedded_File_Contents](#embedded_file_contents)|`varbinary` |Contains the contents of the file, when it is embedded in the database. NULL for linked files|
@@ -63,7 +63,7 @@ Indicates who has permission to access this file.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -100,7 +100,7 @@ The location of the file contents. EMB=Embedded in the database; URL=Internet UR
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

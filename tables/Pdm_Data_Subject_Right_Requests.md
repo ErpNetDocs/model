@@ -19,9 +19,9 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company, to which the request was made.|
 |[Notes](#notes)|`nvarchar(max)` |This should usually contain detailed implementation notes.|
 |[Person_Id](#person_id)|`uniqueidentifier` |The person, whose data will be corrected with the request. |
-|[Requested_Right](#requested_right)|`nvarchar(3)` Allowed: `REC`, `ERA`, `RES`, `POR`, `OBJ`, `OTH`|The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.|
+|[Requested_Right](#requested_right)|`char(3)` Allowed: `REC`, `ERA`, `RES`, `POR`, `OBJ`, `OTH`|The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Status](#status)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`|The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.|
+|[Status](#status)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`|The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.|
 
 ## Columns
 
@@ -333,7 +333,7 @@ The requested right, according to GDPR and other personal data regulations.  REC
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -397,7 +397,7 @@ The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented;
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

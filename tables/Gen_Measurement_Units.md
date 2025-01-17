@@ -24,7 +24,7 @@ Contains all measurement units, grouped in categories. Each category has one bas
 |[Measurement_Unit_Name](#measurement_unit_name)|`nvarchar(64)` `ML`|Name of the measurement unit|
 |[Multiplier](#multiplier)|`decimal(9, 3)` |Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)|
 |[Row_Version](#row_version)|`timestamp` ||
-|[System_Unit](#system_unit)|`nvarchar(1)` Allowed: `G`, `H`, `L`, `N`, `P`, `V`, `W`, `T`|Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH|
+|[System_Unit](#system_unit)|`char(1)` Allowed: `G`, `H`, `L`, `N`, `P`, `V`, `W`, `T`|Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH|
 
 ## Columns
 
@@ -353,7 +353,7 @@ Not NULL only when this is one of the system measurement units. N=NetKG; G=Gross
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

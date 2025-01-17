@@ -17,7 +17,7 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 | - | - | --- |
 |[Join_Time_Utc](#join_time_utc)|`datetime` |The exact server time (in UTC), when the user joined the group.|
 |[LastSeenTimeUtc](#lastseentimeutc)|`datetime` Readonly|The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.|
-|[Role](#role)|`nvarchar(1)` Allowed: `M`, `A`, `O`|Member role in a group. Defaults to member.|
+|[Role](#role)|`char(1)` Allowed: `M`, `A`, `O`|Member role in a group. Defaults to member.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |The group in which the user participates.|
 |[Social_Group_Member_Id](#social_group_member_id)|`uniqueidentifier` `PK`||
@@ -122,7 +122,7 @@ Member role in a group. Defaults to member.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

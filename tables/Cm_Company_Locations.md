@@ -16,7 +16,7 @@ Stores company locations. The locations are parties and as such, can be organize
 | Name | Type | Description |
 | - | - | --- |
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` ||
-|[Bill_To](#bill_to)|`nvarchar(1)` Allowed: `C`, `L`|If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified|
+|[Bill_To](#bill_to)|`char(1)` Allowed: `C`, `L`|If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified|
 |[Company_Id](#company_id)|`uniqueidentifier` |The company to which this location belongs.|
 |[Company_Location_Id](#company_location_id)|`uniqueidentifier` `PK`||
 |[Location_Name](#location_name)|`nvarchar(64)` `ML`|The name of the company location.|
@@ -85,7 +85,7 @@ If filled indicates which party is billed for the amounts from documents that re
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

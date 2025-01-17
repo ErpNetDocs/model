@@ -15,7 +15,7 @@ Executed store-receipts(in) and store-issues(out). Store-issues are recorded wit
 
 | Name | Type | Description |
 | - | - | --- |
-|[Cost_Source](#cost_source)|`nvarchar(1)` Allowed: `S`, `D`, `A`, Readonly|Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document|
+|[Cost_Source](#cost_source)|`char(1)` Allowed: `S`, `D`, `A`, Readonly|Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency in which the document amounts are recorded.|
 |[Document_Id](#document_id)|`uniqueidentifier` |The main document data of the transaction|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
@@ -23,7 +23,7 @@ Executed store-receipts(in) and store-issues(out). Store-issues are recorded wit
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Issuing_Person_Id](#issuing_person_id)|`uniqueidentifier` |The person, responsible for the issuing of the document.|
 |[IsValid](#isvalid)|`bit` |Managed by the system and used only for integrity purposes. Do not use.|
-|[Movement_Type](#movement_type)|`nvarchar(1)` Allowed: `I`, `R`|Transaction movement type. R=RECEIPT, I=ISSUE|
+|[Movement_Type](#movement_type)|`char(1)` Allowed: `I`, `R`|Transaction movement type. R=RECEIPT, I=ISSUE|
 |[Parent_Store_Order_Id](#parent_store_order_id)|`uniqueidentifier` |The parent (generating) store order. Deprecated, use the Parent Document reference.|
 |[Receiving_Person_Id](#receiving_person_id)|`uniqueidentifier` |The person, to which the document was sent.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -58,7 +58,7 @@ Determines whether the cost in the transaction is taken from the store current a
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|
@@ -338,7 +338,7 @@ Transaction movement type. R=RECEIPT, I=ISSUE
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

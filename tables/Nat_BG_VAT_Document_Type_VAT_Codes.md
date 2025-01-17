@@ -11,11 +11,11 @@ Contains the VAT codes, which should be used, when reporting VAT for the differe
 
 | Name | Type | Description |
 | - | - | --- |
-|[Cash_Reporting_VAT_Code](#cash_reporting_vat_code)|`nvarchar(2)` Allowed: `01`, `02`, `03`, `04`, `05`, `07`, `09`, `11`, `12`, `13`, `23`, `29`, `50`, `81`, `82`, `83`, `84`, `85`, `91`, `92`, `93`, `94`|VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.|
+|[Cash_Reporting_VAT_Code](#cash_reporting_vat_code)|`char(2)` Allowed: `01`, `02`, `03`, `04`, `05`, `07`, `09`, `11`, `12`, `13`, `23`, `29`, `50`, `81`, `82`, `83`, `84`, `85`, `91`, `92`, `93`, `94`|VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |Document type that generates VAT entries.|
 |[Document_Type_VAT_Code_Id](#document_type_vat_code_id)|`uniqueidentifier` `PK`|Unique identification of the record.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[VAT_Code](#vat_code)|`nvarchar(2)` Allowed: `01`, `02`, `03`, `04`, `05`, `07`, `09`, `11`, `12`, `13`, `23`, `29`, `50`, `81`, `82`, `83`, `84`, `85`, `91`, `92`, `93`, `94`|VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.|
+|[VAT_Code](#vat_code)|`char(2)` Allowed: `01`, `02`, `03`, `04`, `05`, `07`, `09`, `11`, `12`, `13`, `23`, `29`, `50`, `81`, `82`, `83`, `84`, `85`, `91`, `92`, `93`, `94`|VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values.|
 
 ## Columns
 
@@ -44,7 +44,7 @@ VAT code, which will be used when Cash Reporting mode is used for the entry. All
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2) (Allows NULL)|
+|Type|char(2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -175,7 +175,7 @@ VAT code to use when creating VAT export files for the specified Document Type. 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2) (Allows NULL)|
+|Type|char(2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Long|
 |User Login|no|

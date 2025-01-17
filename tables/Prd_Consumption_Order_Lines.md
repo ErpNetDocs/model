@@ -21,7 +21,7 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 |[Consumed_Quantity_Unit_Id](#consumed_quantity_unit_id)|`uniqueidentifier` |Measurement unit of the requested quantity.|
 |[Consumed_Standard_Quantity_Base](#consumed_standard_quantity_base)|`decimal(18, 3)` Readonly|The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.|
 |[Consumption_Order_Id](#consumption_order_id)|`uniqueidentifier` ||
-|[Consumption_Type](#consumption_type)|`nvarchar(1)` Allowed: `S`, `A`, Readonly|Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).|
+|[Consumption_Type](#consumption_type)|`char(1)` Allowed: `S`, `A`, Readonly|Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique order lline Id|
 |[Line_Ord](#line_ord)|`int` |Non-unique line number within the order|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |If not NULL, specifies that the material has to be consumed from specific lot|
@@ -228,7 +228,7 @@ Determines whether the material cost is distributed among all produced products,
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

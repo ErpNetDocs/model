@@ -31,7 +31,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number of the product, which should be used. NULL for operations, which are not serial number-specific, or when any serial number can be used.|
 |[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.|
-|[Task_Type](#task_type)|`nvarchar(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.|
+|[Task_Type](#task_type)|`char(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.|
 |[To_Warehouse_Location_Id](#to_warehouse_location_id)|`uniqueidentifier` |Destination warehouse location. NULL for operations, which do not specify destination location.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |Location, where the opeartion should be performed. NULL for operations, which do not require location.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` ||
@@ -594,7 +594,7 @@ The type of the task (operation), which should be performed. REC=Receive; DIS=Di
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

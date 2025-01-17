@@ -18,7 +18,7 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 |[Green_Zone_Spread_Percent](#green_zone_spread_percent)|`decimal(3, 2)` |The plus or minus percent, by which the goal can be missed, but still considered achieved.|
 |[Horizontal_Trend_Spread_Percent](#horizontal_trend_spread_percent)|`decimal(3, 2)` |The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.|
 |[Notes](#notes)|`nvarchar(max)` ||
-|[Period](#period)|`nvarchar(1)` Allowed: `D`, `M`, `Q`, `Y`|The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.|
+|[Period](#period)|`char(1)` Allowed: `D`, `M`, `Q`, `Y`|The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.|
 
 ## Columns
 
@@ -290,7 +290,7 @@ The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -17,7 +17,7 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 |[Account_Name](#account_name)|`nvarchar(254)` `ML`|The account name|
 |[Account_Number](#account_number)|`nvarchar(30)` |The number of the account, unique within the account group|
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed|
-|[Currency_Valuation_Method](#currency_valuation_method)|`nvarchar(3)` Allowed: `ACB`, `DCD`, `BRD`|Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document|
+|[Currency_Valuation_Method](#currency_valuation_method)|`char(3)` Allowed: `ACB`, `DCD`, `BRD`|Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document|
 |[Description](#description)|`nvarchar(254)` ||
 |[Discontinued](#discontinued)|`bit` |1 means that the account won't be used any more and should not appear in combo boxes|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
@@ -265,7 +265,7 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

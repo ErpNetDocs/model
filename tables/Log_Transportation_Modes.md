@@ -12,7 +12,7 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 | Name | Type | Description |
 | - | - | --- |
 |[Row_Version](#row_version)|`timestamp` ||
-|[System_Icon](#system_icon)|`nvarchar(1)` |Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.|
+|[System_Icon](#system_icon)|`char(1)` |Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.|
 |[Transportation_Mode_Code](#transportation_mode_code)|`nvarchar(8)` |Unique transportation mode code.|
 |[Transportation_Mode_Id](#transportation_mode_id)|`uniqueidentifier` `PK`||
 |[Transportation_Mode_Name](#transportation_mode_name)|`nvarchar(254)` |Multilanguage name of the mode of transportation.|
@@ -70,7 +70,7 @@ Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=O
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

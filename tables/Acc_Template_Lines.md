@@ -18,7 +18,7 @@ Each template line contains the posting to a single set of debit and credit acco
 | Name | Type | Description |
 | - | - | --- |
 |[Amount_Column_Name](#amount_column_name)|`nvarchar(64)` |The name of the column within the amount rowset where the amount is located|
-|[Amount_Condition](#amount_condition)|`nvarchar(1)` Allowed: `+`, `-`|Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.|
+|[Amount_Condition](#amount_condition)|`char(1)` Allowed: `+`, `-`|Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.|
 |[Amount_Row_Id](#amount_row_id)|`uniqueidentifier` |The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset|
 |[Amount_Row_Name](#amount_row_name)|`nvarchar(254)` |The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name|
 |[Amount_Source_Filter](#amount_source_filter)|`nvarchar(max)` |Filter that further specifies which rows from the amount rowset determine the amount|
@@ -92,7 +92,7 @@ Condition for the amount. The line is accounted only when the condition is match
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1) (Allows NULL)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

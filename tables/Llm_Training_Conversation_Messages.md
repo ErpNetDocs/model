@@ -19,7 +19,7 @@ Message in a training conversation. Entity: Llm_Training_Conversation_Messages (
 |[Message_No](#message_no)|`int` |Message number within the conversation.|
 |[Message_Time_Utc](#message_time_utc)|`datetime` |Date and time, when the message was originally typed (or created).|
 |[Participant_Name](#participant_name)|`nvarchar(64)` |Name of the participant, who created the message. Name is optional, but gives more context to the message.|
-|[Participant_Role](#participant_role)|`nvarchar(1)` Allowed: `S`, `U`, `A`|Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.|
+|[Participant_Role](#participant_role)|`char(1)` Allowed: `S`, `U`, `A`|Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Training_Conversation_Id](#training_conversation_id)|`uniqueidentifier` ||
 |[Training_Conversation_Message_Id](#training_conversation_message_id)|`uniqueidentifier` `PK`||
@@ -184,7 +184,7 @@ Role of the participant. Can be System - for system mood messages; User - for us
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

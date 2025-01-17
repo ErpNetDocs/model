@@ -107,12 +107,12 @@
 <tbody>
 <tr>
 <td><a href="#business_reason">Business_Reason</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>P</code>, <code>S</code></td>
+<td><code>char(1)</code> Allowed: <code>P</code>, <code>S</code></td>
 <td>Business reason for invoicing of this product or service. S=Shipment, P=Payment</td>
 </tr>
 <tr>
 <td><a href="#delivery_terms_code">Delivery_Terms_Code</a></td>
-<td><code>nvarchar(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+<td><code>char(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
 <td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</td>
 </tr>
 <tr>
@@ -122,7 +122,7 @@
 </tr>
 <tr>
 <td><a href="#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
-<td><code>nvarchar(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+<td><code>char(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
 <td>Transaction nature; used for Intrastat reporting</td>
 </tr>
 <tr>
@@ -132,7 +132,7 @@
 </tr>
 <tr>
 <td><a href="#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+<td><code>char(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
 <td>Transport mode; used for Intrastat reporting</td>
 </tr>
 <tr>
@@ -352,7 +352,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1)</td>
+<td>char(1)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -456,7 +456,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3) (Allows NULL)</td>
+<td>char(3) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -679,7 +679,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(2) (Allows NULL)</td>
+<td>char(2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -906,7 +906,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1) (Allows NULL)</td>
+<td>char(1) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

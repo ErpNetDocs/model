@@ -107,7 +107,7 @@
 <tbody>
 <tr>
 <td><a href="#distribute_by">Distribute_By</a></td>
-<td><code>nvarchar(2)</code> Allowed: <code>SP</code>, <code>MC</code>, <code>SC</code></td>
+<td><code>char(2)</code> Allowed: <code>SP</code>, <code>MC</code>, <code>SC</code></td>
 <td>Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT NULL iif Work_Order_Item_Id is NULL. MC=Measurement, SP=Standard_Price</td>
 </tr>
 <tr>
@@ -297,7 +297,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(2) (Allows NULL)</td>
+<td>char(2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

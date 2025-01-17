@@ -14,7 +14,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 |[Application_Secret_Hash](#application_secret_hash)|`nvarchar(250)` |Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.|
 |[Application_Uri](#application_uri)|`nvarchar(254)` |Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".|
 |[Basic_Authentication_Allowed](#basic_authentication_allowed)|`bit` |If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.|
-|[Client_Type](#client_type)|`nvarchar(1)` Allowed: `C`, `P`|Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).|
+|[Client_Type](#client_type)|`char(1)` Allowed: `C`, `P`|Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |Date and time (in UTC) when the application was registered.|
 |[Impersonate_As_Community_User_Allowed](#impersonate_as_community_user_allowed)|`bit` |Allows the application to request login from external users and operate on their behalf.|
 |[Impersonate_As_Internal_User_Allowed](#impersonate_as_internal_user_allowed)|`bit` |Allows the application to request login from internal users and operate on their behalf.|
@@ -159,7 +159,7 @@ Specifies the client type, according to RFC 6749, e.g. the confidentiality of th
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

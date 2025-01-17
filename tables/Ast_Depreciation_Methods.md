@@ -11,13 +11,13 @@ Depreciation methods. Contains both system-defined and user-defined methods. Ent
 
 | Name | Type | Description |
 | - | - | --- |
-|[Depreciation_Function](#depreciation_function)|`nvarchar(3)` Allowed: `FAC`, `STL`, `SYD`, `TAB`|Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table|
+|[Depreciation_Function](#depreciation_function)|`char(3)` Allowed: `FAC`, `STL`, `SYD`, `TAB`|Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table|
 |[Depreciation_Method_Id](#depreciation_method_id)|`uniqueidentifier` `PK`||
 |[Depreciation_Method_Name](#depreciation_method_name)|`nvarchar(254)` `ML`|Multilanguage string|
 |[Factor](#factor)|`decimal(5, 3)` |Factor used in factor depreciation function. Factor < 1 means declining depreciation; >1 - increasing. The depreciation is multiplied for each period by the factor|
 |[Is_System](#is_system)|`bit` Readonly|Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.|
 |[Months_In_A_Period](#months_in_a_period)|`int` |Number of equal valued months calculated with single application of the function|
-|[Period_Determination_Method](#period_determination_method)|`nvarchar(2)` Allowed: `NM`, `CM`, `BD`|Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days|
+|[Period_Determination_Method](#period_determination_method)|`char(2)` Allowed: `NM`, `CM`, `BD`|Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Start_From_Next_Month](#start_from_next_month)|`bit` |When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.|
 
@@ -48,7 +48,7 @@ Basic mathematical depreciation function used to calculate asset depreciation. S
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -245,7 +245,7 @@ Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Curr
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(2)|
+|Type|char(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

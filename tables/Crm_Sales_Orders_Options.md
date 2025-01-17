@@ -15,7 +15,7 @@ Options for sales orders of specific user defined document type. Entity: Crm_Sal
 
 | Name | Type | Description |
 | - | - | --- |
-|[Allowed_Directions](#allowed_directions)|`nvarchar(1)` Allowed: `S`, `R`, `*`, `A`|Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)|
+|[Allowed_Directions](#allowed_directions)|`char(1)` Allowed: `S`, `R`, `*`, `A`|Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)|
 |[Available_Quantity_Only](#available_quantity_only)|`bit` |When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)|
 |[Deal_Document_Type_Id](#deal_document_type_id)|`uniqueidentifier` |If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The document type for which the sales order option applies.|
@@ -23,7 +23,7 @@ Options for sales orders of specific user defined document type. Entity: Crm_Sal
 |[Minimum_Amount_Currency_Id](#minimum_amount_currency_id)|`uniqueidentifier` |The currency of Minimal Amount|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Sales_Order_Option_Id](#sales_order_option_id)|`uniqueidentifier` `PK`||
-|[Shipment_Allowance](#shipment_allowance)|`nvarchar(1)` Allowed: `A`, `P`, `W`|Terms on which the shipment of the products in the sales order is allowed.|
+|[Shipment_Allowance](#shipment_allowance)|`char(1)` Allowed: `A`, `P`, `W`|Terms on which the shipment of the products in the sales order is allowed.|
 |[VAT_Deviation_Document_Amount_Type_Id](#vat_deviation_document_amount_type_id)|`uniqueidentifier` |Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT|
 
 ## Columns
@@ -53,7 +53,7 @@ Allowed directions (return or normal sale) for the sales orders of this document
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -327,7 +327,7 @@ Terms on which the shipment of the products in the sales order is allowed.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

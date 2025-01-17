@@ -13,7 +13,7 @@ Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. C
 | - | - | --- |
 |[Administrative_Region_Id](#administrative_region_id)|`uniqueidentifier` |The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A.|
 |[Contact_Mechanism_Name](#contact_mechanism_name)|`nvarchar(254)` |Contact mechanism description|
-|[Contact_Mechanism_Type](#contact_mechanism_type)|`nvarchar(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`, `P`, `X`|A=Address; E=e-mail; T=Telephone|
+|[Contact_Mechanism_Type](#contact_mechanism_type)|`char(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`, `P`, `X`|A=Address; E=e-mail; T=Telephone|
 |[Geo_Point_Id](#geo_point_id)|`uniqueidentifier` |The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A.|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique contact mechanism Id|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -119,7 +119,7 @@ A=Address; E=e-mail; T=Telephone
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

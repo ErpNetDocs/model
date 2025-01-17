@@ -20,7 +20,7 @@ When specified for a product group, provides a way for automatical creation of n
 |[Property_Id](#property_id)|`uniqueidentifier` |The property whose values will be altered.|
 |[Property_Values_List](#property_values_list)|`nvarchar(max)` |Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).|
 |[Range_Property_Id](#range_property_id)|`uniqueidentifier` `PK`||
-|[Range_Type](#range_type)|`nvarchar(1)` Allowed: `R`, `L`|Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;|
+|[Range_Type](#range_type)|`char(1)` Allowed: `R`, `L`|Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;|
 |[Row_Version](#row_version)|`timestamp` ||
 |[To_Property_Value](#to_property_value)|`nvarchar(254)` |Ending value of the range of alternative values. Used only when Rage Type = R (range).|
 
@@ -215,7 +215,7 @@ Specifies the method of the creation of the value set: R - by range from-to; E -
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -20,8 +20,8 @@
 |[Quantity](#quantity)|`decimal(18, 3)` |The quantity that should be produced|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of Quantity|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Schedule_Basis](#schedule_basis)|`nvarchar(1)` |M=MPS; F=FAS|
-|[Status](#status)|`nvarchar(1)` |P=Planned; R=Released to manufacturing (e.g. history record)|
+|[Schedule_Basis](#schedule_basis)|`char(1)` |M=MPS; F=FAS|
+|[Status](#status)|`char(1)` |P=Planned; R=Released to manufacturing (e.g. history record)|
 |[Store_Id](#store_id)|`uniqueidentifier` |The store where the product must be finished|
 |[Workgroup_Id](#workgroup_id)|`uniqueidentifier` |The workgroup, which is scheduled|
 
@@ -405,7 +405,7 @@ M=MPS; F=FAS
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
@@ -435,7 +435,7 @@ P=Planned; R=Released to manufacturing (e.g. history record)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

@@ -111,12 +111,12 @@
 </tr>
 <tr>
 <td><a href="#bill_to">Bill_To</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>C</code>, <code>L</code></td>
+<td><code>char(1)</code> Allowed: <code>C</code>, <code>L</code></td>
 <td>If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified</td>
 </tr>
 <tr>
 <td><a href="#direction">Direction</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>I</code>, <code>R</code></td>
+<td><code>char(1)</code> Allowed: <code>I</code>, <code>R</code></td>
 <td>I for Payment issue, R for payment receipt</td>
 </tr>
 <tr>
@@ -465,7 +465,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1) (Allows NULL)</td>
+<td>char(1) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -588,7 +588,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(1)</td>
+<td>char(1)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

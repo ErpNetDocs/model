@@ -14,7 +14,7 @@ Transaction of product input or output, measured with specialized measuring devi
 |[Alcohol_Degree](#alcohol_degree)|`decimal(5, 2)` |For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.|
 |[Alcohol_Density](#alcohol_density)|`int` |For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.|
 |[Alcohol_Temperature](#alcohol_temperature)|`int` |For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.|
-|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `O`|The direction of the transaction - IN/OUT.|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `O`|The direction of the transaction - IN/OUT.|
 |[End_Time_Utc](#end_time_utc)|`datetime` |Ending time of the transaction (in UTC time).|
 |[Measuring_Device_Code](#measuring_device_code)|`nvarchar(32)` |The code of the measuring device, used to measure the transaction.|
 |[Measuring_Transaction_Id](#measuring_transaction_id)|`uniqueidentifier` `PK`||
@@ -167,7 +167,7 @@ The direction of the transaction - IN/OUT.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1)|
+|Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
