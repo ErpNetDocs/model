@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R26466 CurrencyDirectory - Validate Document Making Void | ERP.net Domain Model </title>
+      <title>R23171-1 SalesOrders - Product Minimal Quantity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R26466 CurrencyDirectory - Validate Document Making Void | ERP.net Domain Model ">
+      <meta name="title" content="R23171-1 SalesOrders - Product Minimal Quantity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R26466.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R23171-1.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -71,35 +71,39 @@
         </div>
 
         <article data-uid="">
-<h1 id="r26466-currencydirectory---validate-document-making-void">R26466 CurrencyDirectory - Validate Document Making Void</h1>
+<h1 id="r23171-1-salesorders---product-minimal-quantity">R23171-1 SalesOrders - Product Minimal Quantity</h1>
 
 <table>
-<col style="width:16.24%">
-<col style="width:83.76%">
+<col style="width:25%">
+<col style="width:75%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>26466</td>
-</tr>
-<tr>
-<td><strong>Name</strong></td>
-<td>ValidateDocumentMakingVoid</td>
+<td>R23171-1</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/General.Currencies.CurrencyDirectories.html">General.Currencies.CurrencyDirectories Entity</a></td>
+<td><a class="xref" href="../entities/Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders Entity</a> Entity</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>ProductMinimalQuantity</td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td>Product, QuantityBase</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
 <td>Back-End</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
-<td>--</td>
+<td><strong>Events</strong></td>
+<td>Releasing +</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
-<td>DocumentMakingVoid</td>
+<td><strong>Priority</strong></td>
+<td>Normal</td>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
@@ -107,38 +111,38 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>ValidateDocumentMakingVoid() = true if there are no other non-voided documents using it.</td>
+<td>For all lines, where Product and Quantity fields are not null and Product's
+MinimalSalesQuantityBase has value - the rule validates that the sum of QuantityBase
+values for lines with the same product is greater than or equal to
+MinimalSalesQuantityBase of the Product.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If there is a non-voided document in the database, using the same CurrencyDirectory, then the
-CurrencyDirectory cannot be voided.</td>
+<td>Sales below the minimal quantity, specified in the product are not allowed.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>&quot;Currency directory {0} can't be void because it is used by other documents that aren't void.
-The documents that use that currency directory are
-{ListOfDocumentsUsingTheCurrencyDirectory[0-n]}.&quot;, DocumentText,
-ListOfDocumentsUsingTheCurrencyDirectory[]</td>
+<td>Product '{Product.Name}' has a Minimal Sales Quantity.
+The quantity in the current document lines is less than the minimal sales quantity.
+The state of document {DocumentNo} cannot be changed to 'Released'.</td>
 </tr>
 <tr>
-<td><strong>Introduced In
-Version</strong></td>
-<td>2017</td>
+<td><strong>Version</strong></td>
+<td>2016</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
-<td>NO</td>
+<td>YES</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R26466.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R23171-1.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

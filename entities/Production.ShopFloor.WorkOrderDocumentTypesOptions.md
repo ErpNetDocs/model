@@ -9,7 +9,7 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 
 ## Renames
 
-Old name: **Prodution.WorkOrderDocumentTypesOptions**  
+Old name: **Production.WorkOrderDocumentTypesOptions**  
 New name: **Production.ShopFloor.WorkOrderDocumentTypesOptions**  
 Version: **25.1.0.64**  
 Case: **37169**  

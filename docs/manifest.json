@@ -352,6 +352,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R23171-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R23171-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R23171-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R23171-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R24875-1.md",
       "output": {
         ".html": {

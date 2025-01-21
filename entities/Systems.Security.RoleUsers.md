@@ -7,6 +7,15 @@ uid: Systems.Security.RoleUsers
 
 The roles "played" by the security users. Entity: Wf_Role_Users
 
+## Renames
+
+Old name: **Systems.Workflow.RoleUsers**  
+New name: **Systems.Security.RoleUsers**  
+Version: **24.1.101.1**  
+Case: **36967**  
+
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{User.Name:T}_  

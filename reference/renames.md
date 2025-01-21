@@ -90,7 +90,7 @@ New name: **Crm.SalesForce.SalesPersonGroups**
 Version: **25.1.1.36**  
 Case: **37717**  
 
-Old name: **Prodution.WorkOrderDocumentTypesOptions**  
+Old name: **Production.WorkOrderDocumentTypesOptions**  
 New name: **Production.ShopFloor.WorkOrderDocumentTypesOptions**  
 Version: **25.1.0.64**  
 Case: **37169**  
@@ -256,7 +256,7 @@ Version: **25.1.0.64**
 Case: **37169**  
 
 Old name: **Systems.Workflow.RoleUsers**  
-New name: **Systems.Documents.RoleUsers**  
+New name: **Systems.Security.RoleUsers**  
 Version: **24.1.101.1**  
 Case: **36967**  
 
@@ -540,7 +540,7 @@ New name: **Systems.Config.Jobs**
 Version: **24.1.5.35**  
 Case: **35911**  
 
-Old name: **Systems.Config.Config**  
+Old name: **Systems.Core.Config**  
 New name: **Systems.Config.Config**  
 Version: **24.1.5.35**  
 Case: **35911**  
