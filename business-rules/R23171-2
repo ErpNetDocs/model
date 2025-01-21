@@ -1,0 +1,43 @@
+---
+erp.type: business-rule
+erp.entity: Crm.Sales.SalesOrders
+---
+
+# R23171-2 SalesOrders - Distribution Channel Minimal Quantity
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Code**                    | R23171-2                                                                              |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Entity**                  | @Crm.Sales.SalesOrders Entity                                                         |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Name**                    | DistributionChannelMinimalQuantity                                                    |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Attribute**               | Product, Quantity                                                                     |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Layer**                   | Back-End                                                                              |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Events**                  | Releasing +                                                                           |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Priority**                | Normal                                                                                |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Modify**                  | NO                                                                                    |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Action**                  | For all lines, where Product and Quantity fields are not null and Product has         |
+|                             | DistributionChannels - the rule validates that all Product's DistributionChannels     |
+|                             | that has DistributionChannel equal to the DistributionChannel of the Sales Order,     |
+|                             | the MinimalSalesQuantityBase of ProductDistributionChannels has value and the sum of  |
+|                             | QuantityBase values for lines with the same product is greater than or equal to       |
+|                             | MinimalSalesQuantityBase of Product's DistributionChannel.                            |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Description**             | Cannot sell below the minimal quantity, specified in the distribution channel.        |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Message**                 | Product '{Product.Name}' has a Minimal Sales Quantity.                                |
+|                             | The quantity in the current document lines is less than the minimal sales quantity.   |
+|                             | The state of document {DocumentNo} cannot be changed to 'Released'.                   |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Version**                 | 2016                                                                                  |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Revocable**               | YES                                                                                   |
++-----------------------------+---------------------------------------------------------------------------------------+
+
+*\* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic [System Business Rules](../templates/template-description-system-business-rules.md).*
