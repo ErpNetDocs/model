@@ -50,7 +50,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>WebSite</s>](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete` `Owner` |
+| [<s>WebSite</s>](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.2.22` `Obsolete` `Owner` |
 
 
 ## Attribute Details
@@ -122,7 +122,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### WebSite
 
-**OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete` `Owner`
+**OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.2.22` `Obsolete` `Owner`
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Category_: **System**  

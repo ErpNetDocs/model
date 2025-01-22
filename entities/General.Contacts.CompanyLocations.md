@@ -63,7 +63,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.Contacts.CompanyLocations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this CompanyLocation. Null means that all users have unlimited permissions. `Filter(multi eq)` |
+| [AccessKey](General.Contacts.CompanyLocations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this CompanyLocation. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [AdministrativeRegion](General.Contacts.CompanyLocations.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Area](General.Contacts.CompanyLocations.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Company](General.Contacts.CompanyLocations.md#company) | [Companies](General.Contacts.Companies.md) | The company to which this location belongs. `Required` `Filter(multi eq)` |
@@ -292,7 +292,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this CompanyLocation. Null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the permissions for this CompanyLocation. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Category_: **System**  

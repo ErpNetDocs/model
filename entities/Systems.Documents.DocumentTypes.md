@@ -89,7 +89,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Documents.DocumentTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this DocumentType. Null means that all users have unlimited permissions. `Filter(multi eq)` |
+| [AccessKey](Systems.Documents.DocumentTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this DocumentType. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [Sequence](Systems.Documents.DocumentTypes.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` |
 
 ## Child Collections
@@ -317,7 +317,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this DocumentType. Null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the permissions for this DocumentType. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Category_: **System**  

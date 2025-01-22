@@ -67,7 +67,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Documents.DocumentAmountTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this DocumentAmountType. Null means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.1.24` |
+| [AccessKey](Systems.Documents.DocumentAmountTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this DocumentAmountType. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.1.24` |
 | [DistributeByMeasurement<br />Category](Systems.Documents.DocumentAmountTypes.md#distributebymeasurementcategory) | [MeasurementCategories](General.Products.MeasurementCategories.md) (nullable) | Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. `Filter(multi eq)` |
 
 ## Child Collections
@@ -294,7 +294,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this DocumentAmountType. Null means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.1.24`
+The access key, containing the permissions for this DocumentAmountType. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.1.24`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Indexed_: **True**  

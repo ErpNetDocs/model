@@ -26,7 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
-| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balaces. In the result it is always null. `Required` `Filter(eq)` 
+| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances. `Required` `Filter(eq)` 
 | [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required` 
 | [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 | [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required` 
@@ -58,11 +58,11 @@ _Show in UI_: **ShownByDefault**
 
 ### Date
 
-The date parameter used to compute the balaces. In the result it is always null. `Required` `Filter(eq)`
+The date parameter used to compute the balances. `Required` `Filter(eq)`
 
 _Type_: **date**  
 _Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 

@@ -126,7 +126,7 @@ _Allowed Values (Systems.Bpm.UserBusinessRulesRepository.Layer Enum Members)_
 | ---- | --- |
 | FrontEnd | The rule is registered for front-end applications.. Stored as 'FTE'. <br /> _Database Value:_ 'FTE' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'FrontEnd' |
 | BackEnd | The rule is registered for server execution.. Stored as 'BKE'. <br /> _Database Value:_ 'BKE' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'BackEnd' |
-| Common | Front-End + Back-End. Stored as 'COM'. <br /> _Database Value:_ 'COM' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Common' |
+| Common | The rule is registered both for server and client.. Stored as 'COM'. <br /> _Database Value:_ 'COM' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Common' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  

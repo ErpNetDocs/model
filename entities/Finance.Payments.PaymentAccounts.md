@@ -44,7 +44,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Finance.Payments.PaymentAccounts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this PaymentAccount. Null means that all users have unlimited permissions. `Filter(multi eq)` |
+| [AccessKey](Finance.Payments.PaymentAccounts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this PaymentAccount. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [BankAccount](Finance.Payments.PaymentAccounts.md#bankaccount) | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) (nullable) | The bank account, which is represented by this payment account. `Filter(multi eq)` |
 | [Currency](Finance.Payments.PaymentAccounts.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the movements for this payment account will be recorded. `Required` `Filter(multi eq)` |
 | [EnterpriseCompany](Finance.Payments.PaymentAccounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PaymentAccount applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
@@ -124,7 +124,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this PaymentAccount. Null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the permissions for this PaymentAccount. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Category_: **System**  

@@ -57,7 +57,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.UserAccessKeys.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the user permissions for this UserAccessKey. Null means that all users have unlimited permissions. `Required` `Filter(multi eq)` |
+| [AccessKey](Systems.Security.UserAccessKeys.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the permissions for this UserAccessKey. An empty value means that all users have unlimited permissions. `Required` `Filter(multi eq)` |
 | [User](Systems.Security.UserAccessKeys.md#user) | [Users](Systems.Security.Users.md) | Obsolete. Not used. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -227,7 +227,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this UserAccessKey. Null means that all users have unlimited permissions. `Required` `Filter(multi eq)`
+The access key, containing the permissions for this UserAccessKey. An empty value means that all users have unlimited permissions. `Required` `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 _Category_: **System**  

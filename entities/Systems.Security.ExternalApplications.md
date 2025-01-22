@@ -58,7 +58,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.ExternalApplications.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. `Filter(multi eq)` |
+| [AccessKey](Systems.Security.ExternalApplications.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this ExternalApplication. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -226,7 +226,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the permissions for this ExternalApplication. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Category_: **System**  

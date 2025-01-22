@@ -73,7 +73,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Inventory.Stores.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. `Filter(multi eq)` |
+| [AccessKey](Logistics.Inventory.Stores.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this Store. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [AdministrativeRegion](Logistics.Inventory.Stores.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Area](Logistics.Inventory.Stores.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Currency](Logistics.Inventory.Stores.md#currency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. `Filter(multi eq)` |
@@ -392,7 +392,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this Store. Null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the permissions for this Store. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Category_: **System**  

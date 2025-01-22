@@ -56,7 +56,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.EnterpriseCompanies.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. `Filter(multi eq)` |
+| [AccessKey](General.EnterpriseCompanies.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this EnterpriseCompany. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [AdvanceProduct](General.EnterpriseCompanies.md#advanceproduct) | [Products](General.Products.Products.md) (nullable) | Product that is used for handling advances in trade documents. `Filter(multi eq)` |
 | [BaseCurrency](General.EnterpriseCompanies.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for this company. `Required` `Filter(multi eq)` |
 | [Company](General.EnterpriseCompanies.md#company) | [Companies](General.Contacts.Companies.md) | Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` |
@@ -212,7 +212,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the permissions for this EnterpriseCompany. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 _Category_: **System**  

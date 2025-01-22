@@ -5,7 +5,7 @@
 
 Entity: [Systems.Security.AccessKeys](~/entities/Systems.Security.AccessKeys.md)
 
-Access keys provide the basic locking mechanism for data security. Each record can be secured by specifying an access key. Then the users are given access to access keys through groups. Entity: Sec_Access_Keys
+An Access key defines a set of access permissions to one or more entities. Access keys can be private, securing only one entity, or shared between more entities (of the same data type). The actual permissions are specified for security groups. Each group can have different specific permissions. Entity: Sec_Access_Keys
 
 ## Summary
 

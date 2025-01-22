@@ -47,7 +47,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [InvoiceDocument](Finance.Payments.InvoiceReconciliationLines.md#invoicedocument) | [Documents](General.Documents.Documents.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
-| [<s>InvoiceReconciliation</s>](Finance.Payments.InvoiceReconciliationLines.md#invoicereconciliation) | [InvoiceReconciliations](Finance.Payments.InvoiceReconciliations.md) | **OBSOLETE! Do not use!** The <see cref="InvoiceReconciliatio<br />n"/> to which this InvoiceReconciliationLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete` `Owner` |
+| [<s>InvoiceReconciliation</s>](Finance.Payments.InvoiceReconciliationLines.md#invoicereconciliation) | [InvoiceReconciliations](Finance.Payments.InvoiceReconciliations.md) | **OBSOLETE! Do not use!** The <see cref="InvoiceReconciliatio<br />n"/> to which this InvoiceReconciliationLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.2.22` `Obsolete` `Owner` |
 | [PaymentTransactionDocument](Finance.Payments.InvoiceReconciliationLines.md#paymenttransactiondocument) | [Documents](General.Documents.Documents.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
 
 
@@ -108,7 +108,7 @@ _Show in UI_: **ShownByDefault**
 
 ### InvoiceReconciliation
 
-**OBSOLETE! Do not use!** The <see cref="InvoiceReconciliation"/> to which this InvoiceReconciliationLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.1.64` `Obsolete` `Owner`
+**OBSOLETE! Do not use!** The <see cref="InvoiceReconciliation"/> to which this InvoiceReconciliationLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 25.1.2.22` `Obsolete` `Owner`
 
 _Type_: **[InvoiceReconciliations](Finance.Payments.InvoiceReconciliations.md)**  
 _Indexed_: **True**  
