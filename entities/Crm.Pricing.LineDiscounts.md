@@ -9,7 +9,7 @@ Discount policies for sales documents. Entity: Crm_Line_Discounts
 
 ## Renames
 
-Old name: **Crm.LineDiscounts **  
+Old name: **Crm.LineDiscounts**  
 New name: **Crm.Pricing.LineDiscounts**  
 Version: **25.1.1.36**  
 Case: **37717**  

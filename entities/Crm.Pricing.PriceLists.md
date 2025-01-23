@@ -9,7 +9,7 @@ Price Lists are used to manage multiple price records, assign to customers, etc.
 
 ## Renames
 
-Old name: **Crm.PriceLists **  
+Old name: **Crm.PriceLists**  
 New name: **Crm.Pricing.PriceLists**  
 Version: **25.1.1.36**  
 Case: **37717**  

@@ -55,12 +55,12 @@ New name: **Crm.Pricing.PriceTypes**
 Version: **25.1.1.36**  
 Case: **37717**  
 
-Old name: **Crm.PriceLists **  
+Old name: **Crm.PriceLists**  
 New name: **Crm.Pricing.PriceLists**  
 Version: **25.1.1.36**  
 Case: **37717**  
 
-Old name: **Crm.LineDiscounts **  
+Old name: **Crm.LineDiscounts**  
 New name: **Crm.Pricing.LineDiscounts**  
 Version: **25.1.1.36**  
 Case: **37717**  
