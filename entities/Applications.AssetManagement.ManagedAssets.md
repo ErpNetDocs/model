@@ -51,7 +51,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the managed asset belongs. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which the managed asset belongs. `Filter(multi eq)` |
 | [FixedAsset](Applications.AssetManagement.ManagedAssets.md#fixedasset) | [Assets](Finance.Assets.Assets.md) (nullable) | The fixed asset associated with the managed asset. null indicates that no fixed asset is associated to the managed asset, or that they are more than one. `Filter(multi eq)` `Introduced in version 25.1.1.93` |
 | [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#managedassetgroup) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. `Required` `Filter(multi eq)` |
 | [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. `Required` `Filter(multi eq)` |
@@ -156,9 +156,9 @@ _Show in UI_: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company to which the managed asset belongs. `Required` `Filter(multi eq)`
+The enterprise company to which the managed asset belongs. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
