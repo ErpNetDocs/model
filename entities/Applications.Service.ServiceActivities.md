@@ -100,7 +100,7 @@ Aggregate Tree
 | [AssignedToUser](Applications.Service.ServiceActivities.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ContactPerson](Applications.Service.ServiceActivities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [CurrencyDirectory](Applications.Service.ServiceActivities.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Applications.Service.ServiceActivities.md#customer) | [Customers](Crm.Customers.md) | The receiver of the work. `Required` `Filter(multi eq)` |
+| [Customer](Applications.Service.ServiceActivities.md#customer) | [Customers](Crm.Sales.Customers.md) | The receiver of the work. `Required` `Filter(multi eq)` |
 | [DefaultServiceObject](Applications.Service.ServiceActivities.md#defaultserviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | Default service object for materials and services lines. `Filter(multi eq)` |
 | [DocumentType](Applications.Service.ServiceActivities.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Applications.Service.ServiceActivities.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -119,7 +119,7 @@ Aggregate Tree
 | [ReverseOfDocument](Applications.Service.ServiceActivities.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Applications.Service.ServiceActivities.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ServiceAgreement](Applications.Service.ServiceActivities.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | The service agreement under which the work was done. `Filter(multi eq)` |
-| [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. `Filter(multi eq)` |
+| [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. `Filter(multi eq)` |
 | [SocialGroup](Applications.Service.ServiceActivities.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). `Filter(multi eq)` `Introduced in version 23.1.1.3` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [Store](Applications.Service.ServiceActivities.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which materials are taken. `Filter(multi eq)` |
 | [TargetParty](Applications.Service.ServiceActivities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
@@ -687,7 +687,7 @@ _Show in UI_: **HiddenByDefault**
 
 The receiver of the work. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -870,7 +870,7 @@ _Show in UI_: **ShownByDefault**
 
 Specific customer location of the main customer that receives the work. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

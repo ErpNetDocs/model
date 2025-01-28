@@ -84,7 +84,7 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 _Type_: **[PaymentPlanDueDateSource](Crm.Sales.DefaultSalesOrderPaymentPlans.md#duedateformmethod)**  
 _Category_: **System**  
 Generic enum type for PaymentPlanDueDateSource properties  
-_Allowed Values (Crm.PaymentPlanDueDateSource Enum Members)_  
+_Allowed Values (Crm.Sales.PaymentPlanDueDateSource Enum Members)_  
 
 | Value | Description |
 | ---- | --- |

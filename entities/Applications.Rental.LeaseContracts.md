@@ -91,7 +91,7 @@ Aggregate Tree
 | [EnterpriseCompanyLocation](Applications.Rental.LeaseContracts.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Applications.Rental.LeaseContracts.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Applications.Rental.LeaseContracts.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [LesseeCustomer](Applications.Rental.LeaseContracts.md#lesseecustomer) | [Customers](Crm.Customers.md) | The customer record of the lessee. `Required` `Filter(multi eq)` |
+| [LesseeCustomer](Applications.Rental.LeaseContracts.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) | The customer record of the lessee. `Required` `Filter(multi eq)` |
 | [MasterDocument](Applications.Rental.LeaseContracts.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Applications.Rental.LeaseContracts.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PaymentAccount](Applications.Rental.LeaseContracts.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Payment account that is to be used for the receiving and returning guarantee payments. `Filter(multi eq)` |
@@ -590,7 +590,7 @@ _Show in UI_: **HiddenByDefault**
 
 The customer record of the lessee. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

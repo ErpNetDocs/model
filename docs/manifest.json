@@ -12622,6 +12622,46 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.CustomerProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.CustomerProducts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.CustomerTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.CustomerTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.Customers.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.Customers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.Dealers.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.Dealers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Sales.DefaultSalesOrderDocumentProperties.md",
       "output": {
         ".html": {
@@ -12636,6 +12676,26 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.DefaultSalesOrderPaymentPlans.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.DiscountTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.DiscountTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.Distributors.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.Distributors.html"
         }
       },
       "version": ""

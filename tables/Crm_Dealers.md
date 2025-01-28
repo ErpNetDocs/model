@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.Dealers](~/entities/Crm.Dealers.md)
+Entity: [Crm.Sales.Dealers](~/entities/Crm.Sales.Dealers.md)
 
 External dealers. Entity: Crm_Dealers
 

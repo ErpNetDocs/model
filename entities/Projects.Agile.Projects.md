@@ -47,7 +47,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
+| [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
 | [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. `Required` `Filter(multi eq)` |
 | [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. `Required` `Filter(multi eq)` |
 
@@ -172,7 +172,7 @@ _Show in UI_: **CannotBeShown**
 
 Specified, when the project is for a customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  

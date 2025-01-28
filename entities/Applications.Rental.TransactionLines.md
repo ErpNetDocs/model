@@ -46,7 +46,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. `Required` `Filter(multi eq)` |
-| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Customers](Crm.Customers.md) | Lessee Customer. `Required` `Filter(multi eq)` |
+| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) | Lessee Customer. `Required` `Filter(multi eq)` |
 | [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | Rental asset. `Required` `Filter(multi eq)` |
 | [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Transactions](Applications.Rental.Transactions.md) | The <see cref="Transaction"/> to which this TransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -151,7 +151,7 @@ _Show in UI_: **ShownByDefault**
 
 Lessee Customer. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

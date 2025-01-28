@@ -47,14 +47,14 @@ Aggregate Tree
 | [BonusLineDiscountPercent](Crm.Pricing.BonusPrograms.md#bonuslinediscountpercent) | decimal (7, 6) | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount). `Required` `Default(0)` 
 | [BonusProductQuantity](Crm.Pricing.BonusPrograms.md#bonusproductquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Unit: BonusProductQuantityUnit` 
 | [BonusProductQuantity<br />MultiplierForEach<br />LotSize](Crm.Pricing.BonusPrograms.md#bonusproductquantitymultiplierforeachlotsize) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` 
-| [ConditionCustomerFilterXML](Crm.Pricing.BonusPrograms.md#conditioncustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. `Unit: CustomersRepository.TableName` 
+| [ConditionCustomerFilterXML](Crm.Pricing.BonusPrograms.md#conditioncustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. `Unit: Crm.Sales.CustomersRepository.TableName` 
 | [ConditionDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.BonusPrograms.md#conditiondistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics. `Unit: Marketing.DistributionChannels<br />Repository.TableName` 
 | [ConditionFromDate](Crm.Pricing.BonusPrograms.md#conditionfromdate) | datetime __nullable__ | Starting date of the bonus. null means that there is no starting date restriction. `Filter(eq;ge;le)` 
 | [ConditionMaxAmount](Crm.Pricing.BonusPrograms.md#conditionmaxamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
 | [ConditionMaxQuantity](Crm.Pricing.BonusPrograms.md#conditionmaxquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
 | [ConditionMinAmount](Crm.Pricing.BonusPrograms.md#conditionminamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
 | [ConditionMinQuantity](Crm.Pricing.BonusPrograms.md#conditionminquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
-| [ConditionShipTo<br />CustomerFilter<br />XML](Crm.Pricing.BonusPrograms.md#conditionshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. `Unit: CustomersRepository.TableName` 
+| [ConditionShipTo<br />CustomerFilter<br />XML](Crm.Pricing.BonusPrograms.md#conditionshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. `Unit: Crm.Sales.CustomersRepository.TableName` 
 | [ConditionToDate](Crm.Pricing.BonusPrograms.md#conditiontodate) | datetime __nullable__ | Ending date (inclusive) of the bonus. null means that there is no ending date restriction. `Filter(eq;ge;le)` 
 | [DisplayText](Crm.Pricing.BonusPrograms.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Pricing.BonusPrograms.md#id) | guid |  
@@ -71,13 +71,13 @@ Aggregate Tree
 | [BonusProductQuantityUnit](Crm.Pricing.BonusPrograms.md#bonusproductquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Filter(multi eq)` |
 | [Campaign](Crm.Pricing.BonusPrograms.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
 | [CompanyLocation](Crm.Pricing.BonusPrograms.md#companylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)` |
-| [ConditionCustomer](Crm.Pricing.BonusPrograms.md#conditioncustomer) | [Customers](Crm.Customers.md) (nullable) | When not null, specifies that the bonus should be applied only to the specified customer. `Filter(multi eq)` |
+| [ConditionCustomer](Crm.Pricing.BonusPrograms.md#conditioncustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the bonus should be applied only to the specified customer. `Filter(multi eq)` |
 | [ConditionDistribution<br />Channel](Crm.Pricing.BonusPrograms.md#conditiondistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | When not null, specifies that the bonus should be applied only when the specified channel is used. `Filter(multi eq)` |
 | [ConditionDocumentCurrency](Crm.Pricing.BonusPrograms.md#conditiondocumentcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Condition for the document amount. Should be not null if any of the amount conditions are not null. `Filter(multi eq)` |
 | [ConditionPriceList](Crm.Pricing.BonusPrograms.md#conditionpricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. `Filter(multi eq)` |
 | [ConditionProduct](Crm.Pricing.BonusPrograms.md#conditionproduct) | [Products](General.Products.Products.md) (nullable) | When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. `Filter(multi eq)` |
 | [ConditionProductGroup](Crm.Pricing.BonusPrograms.md#conditionproductgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. `Filter(multi eq)` |
-| [ConditionShipToCustomer](Crm.Pricing.BonusPrograms.md#conditionshiptocustomer) | [Customers](Crm.Customers.md) (nullable) | When not null, specifies that the bonus should be applied only when shipping to the specified customer. `Filter(multi eq)` |
+| [ConditionShipToCustomer](Crm.Pricing.BonusPrograms.md#conditionshiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the bonus should be applied only when shipping to the specified customer. `Filter(multi eq)` |
 | [ConditionTargetGroup](Crm.Pricing.BonusPrograms.md#conditiontargetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, specifies that the bonus should be applied only to the specified target customer group. `Filter(multi eq)` |
 | [DocumentAmountType](Crm.Pricing.BonusPrograms.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount that comes from the bonus program in the Document Distributed Amounts panel in sales orders. `Filter(multi eq)` `Introduced in version 25.1.1.66` |
 | [EnterpriseCompany](Crm.Pricing.BonusPrograms.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When set, specifies that the sales document must be of the specified enterprise company. `Filter(multi eq)` |
@@ -165,7 +165,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ConditionCustomerFilterXML
 
-When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. `Unit: CustomersRepository.TableName`
+When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. `Unit: Crm.Sales.CustomersRepository.TableName`
 
 _Type_: **dataaccessfilter __nullable__**  
 _Category_: **System**  
@@ -235,7 +235,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ConditionShipToCustomerFilterXML
 
-When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. `Unit: CustomersRepository.TableName`
+When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. `Unit: Crm.Sales.CustomersRepository.TableName`
 
 _Type_: **dataaccessfilter __nullable__**  
 _Category_: **System**  
@@ -366,7 +366,7 @@ _Show in UI_: **ShownByDefault**
 
 When not null, specifies that the bonus should be applied only to the specified customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -421,7 +421,7 @@ _Show in UI_: **ShownByDefault**
 
 When not null, specifies that the bonus should be applied only when shipping to the specified customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

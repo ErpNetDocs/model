@@ -54,7 +54,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CompanyDivision](Crm.SalesForce.SalesPersonAssignmentRules.md#companydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | Our division, which is in charge of the deal. `Filter(multi eq)` |
-| [CustomerType](Crm.SalesForce.SalesPersonAssignmentRules.md#customertype) | [CustomerTypes](Crm.CustomerTypes.md) (nullable) | The type of the customer. `Filter(multi eq)` |
+| [CustomerType](Crm.SalesForce.SalesPersonAssignmentRules.md#customertype) | [CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable) | The type of the customer. `Filter(multi eq)` |
 | [EnterpriseCompany](Crm.SalesForce.SalesPersonAssignmentRules.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the rule applies. `Required` `Filter(multi eq)` |
 | [SalesArea](Crm.SalesForce.SalesPersonAssignmentRules.md#salesarea) | [Areas](General.Geography.Areas.md) (nullable) | The sales area, where the customer is located. `Filter(multi eq)` |
 | [SalesPerson](Crm.SalesForce.SalesPersonAssignmentRules.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | The sales person to be assigned by the rule. `Required` `Filter(multi eq)` |
@@ -205,7 +205,7 @@ _Show in UI_: **ShownByDefault**
 
 The type of the customer. `Filter(multi eq)`
 
-_Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
+_Type_: **[CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

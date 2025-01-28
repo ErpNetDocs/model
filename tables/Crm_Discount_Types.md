@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.DiscountTypes](~/entities/Crm.DiscountTypes.md)
+Entity: [Crm.Sales.DiscountTypes](~/entities/Crm.Sales.DiscountTypes.md)
 
 Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line. Entity: Crm_Discount_Types
 

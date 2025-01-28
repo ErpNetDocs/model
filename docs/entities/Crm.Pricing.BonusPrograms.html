@@ -159,7 +159,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditioncustomerfilterxml">ConditionCustomerFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. <code>Unit: CustomersRepository.TableName</code></td>
+<td>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditiondistributionchannelfilterxml">ConditionDistribution<br>ChannelFilterX<br>ML</a></td>
@@ -194,7 +194,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionshiptocustomerfilterxml">ConditionShipTo<br>CustomerFilter<br>XML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. <code>Unit: CustomersRepository.TableName</code></td>
+<td>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditiontodate">ConditionToDate</a></td>
@@ -265,7 +265,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditioncustomer">ConditionCustomer</a></td>
-<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
+<td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, specifies that the bonus should be applied only to the specified customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -295,7 +295,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionshiptocustomer">ConditionShipToCustomer</a></td>
-<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
+<td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, specifies that the bonus should be applied only when shipping to the specified customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -403,7 +403,7 @@ Allowed values for the <code>BonusAction</code>(Crm.Pricing.BonusPrograms.md#bon
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="conditioncustomerfilterxml">ConditionCustomerFilterXML</h3>
-<p>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. <code>Unit: CustomersRepository.TableName</code></p>
+<p>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
 <p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -452,7 +452,7 @@ Allowed values for the <code>BonusAction</code>(Crm.Pricing.BonusPrograms.md#bon
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="conditionshiptocustomerfilterxml">ConditionShipToCustomerFilterXML</h3>
-<p>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. <code>Unit: CustomersRepository.TableName</code></p>
+<p>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
 <p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -566,7 +566,7 @@ Allowed values for the <code>Priority</code>(Crm.Pricing.BonusPrograms.md#priori
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="conditioncustomer">ConditionCustomer</h3>
 <p>When not null, specifies that the bonus should be applied only to the specified customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
@@ -603,7 +603,7 @@ Allowed values for the <code>Priority</code>(Crm.Pricing.BonusPrograms.md#priori
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="conditionshiptocustomer">ConditionShipToCustomer</h3>
 <p>When not null, specifies that the bonus should be applied only when shipping to the specified customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

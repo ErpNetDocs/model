@@ -4,8 +4,14 @@ uid: Crm.Sales
 # Crm.Sales Namespace
 
 ## Entities
+- [CustomerProducts](Crm.Sales.CustomerProducts.md)  
+- [Customers](Crm.Sales.Customers.md)  
+- [CustomerTypes](Crm.Sales.CustomerTypes.md)  
+- [Dealers](Crm.Sales.Dealers.md)  
 - [DefaultSalesOrderDocumentProperties](Crm.Sales.DefaultSalesOrderDocumentProperties.md)  
 - [DefaultSalesOrderPaymentPlans](Crm.Sales.DefaultSalesOrderPaymentPlans.md)  
+- [DiscountTypes](Crm.Sales.DiscountTypes.md)  
+- [Distributors](Crm.Sales.Distributors.md)  
 - [DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md)  
 - [ForecastItems](Crm.Sales.ForecastItems.md)  
 - [SalesOrderLines](Crm.Sales.SalesOrderLines.md)  

@@ -56,8 +56,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Campaign](Crm.Pricing.LineDiscounts.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
-| [Customer](Crm.Pricing.LineDiscounts.md#customer) | [Customers](Crm.Customers.md) (nullable) | Apply the discount only if this is the customer. `Filter(multi eq)` |
-| [CustomerType](Crm.Pricing.LineDiscounts.md#customertype) | [CustomerTypes](Crm.CustomerTypes.md) (nullable) | Apply the discount only if the customer is of this customer type. `Filter(multi eq)` |
+| [Customer](Crm.Pricing.LineDiscounts.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Apply the discount only if this is the customer. `Filter(multi eq)` |
+| [CustomerType](Crm.Pricing.LineDiscounts.md#customertype) | [CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable) | Apply the discount only if the customer is of this customer type. `Filter(multi eq)` |
 | [DistributionChannel](Crm.Pricing.LineDiscounts.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Apply the discount only when the sales document is on the specified channel. `Filter(multi eq)` |
 | [DocumentAmountType](Crm.Pricing.LineDiscounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount type that is used as category for this discount. When specified, triggers the recording of the applied discount amount in the Document Distributed Amounts panel in sales orders. `Filter(multi eq)` `Introduced in version 25.1.1.26` |
 | [EnterpriseCompany](Crm.Pricing.LineDiscounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, the policy is applied only for documents of the specified enterprise company . `Filter(multi eq)` |
@@ -231,7 +231,7 @@ _Show in UI_: **ShownByDefault**
 
 Apply the discount only if this is the customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -241,7 +241,7 @@ _Show in UI_: **ShownByDefault**
 
 Apply the discount only if the customer is of this customer type. `Filter(multi eq)`
 
-_Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
+_Type_: **[CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

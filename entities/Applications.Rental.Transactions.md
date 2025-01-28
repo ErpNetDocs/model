@@ -89,7 +89,7 @@ Aggregate Tree
 | [FromCompanyDivision](Applications.Rental.Transactions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Applications.Rental.Transactions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [LeaseContract](Applications.Rental.Transactions.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) (nullable) | Lease Contract. `Filter(multi eq)` |
-| [LesseeCustomer](Applications.Rental.Transactions.md#lesseecustomer) | [Customers](Crm.Customers.md) (nullable) | Lessee Customer. `Filter(multi eq)` |
+| [LesseeCustomer](Applications.Rental.Transactions.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Lessee Customer. `Filter(multi eq)` |
 | [MasterDocument](Applications.Rental.Transactions.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Applications.Rental.Transactions.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Applications.Rental.Transactions.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -582,7 +582,7 @@ _Show in UI_: **ShownByDefault**
 
 Lessee Customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

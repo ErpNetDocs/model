@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.Customers](~/entities/Crm.Customers.md)
+Entity: [Crm.Sales.Customers](~/entities/Crm.Sales.Customers.md)
 
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
 

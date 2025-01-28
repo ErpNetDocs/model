@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.Distributors](~/entities/Crm.Distributors.md)
+Entity: [Crm.Sales.Distributors](~/entities/Crm.Sales.Distributors.md)
 
 Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
 

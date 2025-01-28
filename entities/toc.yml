@@ -213,18 +213,6 @@
 - name: Crm
   href: Crm.md
   items:
-  - name: CustomerProducts
-    href: Crm.CustomerProducts.md
-  - name: Customers
-    href: Crm.Customers.md
-  - name: CustomerTypes
-    href: Crm.CustomerTypes.md
-  - name: Dealers
-    href: Crm.Dealers.md
-  - name: DiscountTypes
-    href: Crm.DiscountTypes.md
-  - name: Distributors
-    href: Crm.Distributors.md
   - name: Invoicing
     href: Crm.Invoicing.md
     items:
@@ -333,10 +321,22 @@
   - name: Sales
     href: Crm.Sales.md
     items:
+    - name: CustomerProducts
+      href: Crm.Sales.CustomerProducts.md
+    - name: Customers
+      href: Crm.Sales.Customers.md
+    - name: CustomerTypes
+      href: Crm.Sales.CustomerTypes.md
+    - name: Dealers
+      href: Crm.Sales.Dealers.md
     - name: DefaultSalesOrderDocumentProperties
       href: Crm.Sales.DefaultSalesOrderDocumentProperties.md
     - name: DefaultSalesOrderPaymentPlans
       href: Crm.Sales.DefaultSalesOrderPaymentPlans.md
+    - name: DiscountTypes
+      href: Crm.Sales.DiscountTypes.md
+    - name: Distributors
+      href: Crm.Sales.Distributors.md
     - name: DocumentTypePaymentOptions
       href: Crm.Sales.DocumentTypePaymentOptions.md
     - name: ForecastItems

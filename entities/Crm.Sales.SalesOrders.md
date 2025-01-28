@@ -97,9 +97,9 @@ Aggregate Tree
 | [AdjustedDocument](Crm.Sales.SalesOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Crm.Sales.SalesOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Crm.Sales.SalesOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Crm.Sales.SalesOrders.md#customer) | [Customers](Crm.Customers.md) | The primary customer, which placed the sales order. `Required` `Filter(multi eq)` |
+| [Customer](Crm.Sales.SalesOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer, which placed the sales order. `Required` `Filter(multi eq)` |
 | [Deal](Crm.Sales.SalesOrders.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this order is based. `Filter(multi eq)` |
-| [Dealer](Crm.Sales.SalesOrders.md#dealer) | [Dealers](Crm.Dealers.md) (nullable) | The external dealer, associated with the sales order. `Filter(multi eq)` |
+| [Dealer](Crm.Sales.SalesOrders.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, associated with the sales order. `Filter(multi eq)` |
 | [DealType](Crm.Sales.SalesOrders.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
 | [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The distribution channel, that is used to deliver the products. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document. `Required` `Filter(multi eq)` |
@@ -126,7 +126,7 @@ Aggregate Tree
 | [ReverseOfDocument](Crm.Sales.SalesOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [SalesPerson](Crm.Sales.SalesOrders.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Internal company sales person. `Filter(multi eq)` |
 | [Sequence](Crm.Sales.SalesOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ShipToCustomer](Crm.Sales.SalesOrders.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)` |
+| [ShipToCustomer](Crm.Sales.SalesOrders.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)` |
 | [ShipToPartyContact<br />Mechanism](Crm.Sales.SalesOrders.md#shiptopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The contact mechanism (address) to whih to ship the sales order. `Filter(multi eq)` |
 | [Store](Crm.Sales.SalesOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. `Filter(multi eq)` |
 | [ToCompanyDivision](Crm.Sales.SalesOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -751,7 +751,7 @@ _Show in UI_: **HiddenByDefault**
 
 The primary customer, which placed the sales order. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -770,7 +770,7 @@ _Show in UI_: **HiddenByDefault**
 
 The external dealer, associated with the sales order. `Filter(multi eq)`
 
-_Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
+_Type_: **[Dealers](Crm.Sales.Dealers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  
@@ -1042,7 +1042,7 @@ _Show in UI_: **HiddenByDefault**
 
 The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  

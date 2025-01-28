@@ -553,12 +553,30 @@ references:
 - uid: Crm.Sales
   name: Crm.Sales Namespace
   href: entities/Crm.Sales.html
+- uid: Crm.Sales.CustomerProducts
+  name: Crm.Sales.CustomerProducts Entity
+  href: entities/Crm.Sales.CustomerProducts.html
+- uid: Crm.Sales.CustomerTypes
+  name: Crm.Sales.CustomerTypes Entity
+  href: entities/Crm.Sales.CustomerTypes.html
+- uid: Crm.Sales.Customers
+  name: Crm.Sales.Customers Entity
+  href: entities/Crm.Sales.Customers.html
+- uid: Crm.Sales.Dealers
+  name: Crm.Sales.Dealers Entity
+  href: entities/Crm.Sales.Dealers.html
 - uid: Crm.Sales.DefaultSalesOrderDocumentProperties
   name: Crm.Sales.DefaultSalesOrderDocumentProperties Entity
   href: entities/Crm.Sales.DefaultSalesOrderDocumentProperties.html
 - uid: Crm.Sales.DefaultSalesOrderPaymentPlans
   name: Crm.Sales.DefaultSalesOrderPaymentPlans Entity
   href: entities/Crm.Sales.DefaultSalesOrderPaymentPlans.html
+- uid: Crm.Sales.DiscountTypes
+  name: Crm.Sales.DiscountTypes Entity
+  href: entities/Crm.Sales.DiscountTypes.html
+- uid: Crm.Sales.Distributors
+  name: Crm.Sales.Distributors Entity
+  href: entities/Crm.Sales.Distributors.html
 - uid: Crm.Sales.DocumentTypePaymentOptions
   name: Crm.Sales.DocumentTypePaymentOptions Entity
   href: entities/Crm.Sales.DocumentTypePaymentOptions.html

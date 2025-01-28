@@ -86,7 +86,7 @@ Aggregate Tree
 | [AdjustedDocument](Crm.Presales.Offers.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Crm.Presales.Offers.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Crm.Presales.Offers.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Crm.Presales.Offers.md#customer) | [Customers](Crm.Customers.md) | The customer to which the products are offered. `Required` `Filter(multi eq)` |
+| [Customer](Crm.Presales.Offers.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer to which the products are offered. `Required` `Filter(multi eq)` |
 | [Deal](Crm.Presales.Offers.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this offer is based. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Presales.Offers.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Presales.Offers.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -105,7 +105,7 @@ Aggregate Tree
 | [ReverseOfDocument](Crm.Presales.Offers.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [SalesPerson](Crm.Presales.Offers.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Responsible sales person. null when no sales person was assigned. `Filter(multi eq)` |
 | [Sequence](Crm.Presales.Offers.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ShipToCustomer](Crm.Presales.Offers.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)` |
+| [ShipToCustomer](Crm.Presales.Offers.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)` |
 | [Store](Crm.Presales.Offers.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store, from which the products will be sold. When null, the store is unknown or N/A. `Filter(multi eq)` |
 | [ToCompanyDivision](Crm.Presales.Offers.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.Presales.Offers.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -563,7 +563,7 @@ _Show in UI_: **HiddenByDefault**
 
 The customer to which the products are offered. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -750,7 +750,7 @@ _Show in UI_: **HiddenByDefault**
 
 The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

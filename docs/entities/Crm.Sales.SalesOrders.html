@@ -382,7 +382,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#customer">Customer</a></td>
-<td><a href="Crm.Customers.html">Customers</a></td>
+<td><a href="Crm.Sales.Customers.html">Customers</a></td>
 <td>The primary customer, which placed the sales order. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -392,7 +392,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#dealer">Dealer</a></td>
-<td><a href="Crm.Dealers.html">Dealers</a> (nullable)</td>
+<td><a href="Crm.Sales.Dealers.html">Dealers</a> (nullable)</td>
 <td>The external dealer, associated with the sales order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -527,7 +527,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#shiptocustomer">ShipToCustomer</a></td>
-<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
+<td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
 <td>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -1279,7 +1279,7 @@ Supported permissions</p>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
 <p>The primary customer, which placed the sales order. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a></strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -1292,7 +1292,7 @@ Supported permissions</p>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="dealer">Dealer</h3>
 <p>The external dealer, associated with the sales order. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Dealers.html">Dealers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Dealers.html">Dealers</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
@@ -1482,7 +1482,7 @@ Supported permissions</p>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
 <p>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>

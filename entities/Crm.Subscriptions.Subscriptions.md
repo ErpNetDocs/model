@@ -42,7 +42,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BillingCycle](Crm.Subscriptions.Subscriptions.md#billingcycle) | [BillingCycles](Crm.Subscriptions.BillingCycles.md) (nullable) | The cycle which to use for billing purposes. null means that there would be no automatic billing for this subscription. `Filter(multi eq)` |
-| [Customer](Crm.Subscriptions.Subscriptions.md#customer) | [Customers](Crm.Customers.md) | The customer of the subscription. `Required` `Filter(multi eq)` |
+| [Customer](Crm.Subscriptions.Subscriptions.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer of the subscription. `Required` `Filter(multi eq)` |
 | [EnterpriseCompany](Crm.Subscriptions.Subscriptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which issues the subscription. `Required` `Filter(multi eq)` |
 
 ## Child Collections
@@ -131,7 +131,7 @@ _Show in UI_: **ShownByDefault**
 
 The customer of the subscription. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  

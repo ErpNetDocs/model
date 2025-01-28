@@ -91,7 +91,7 @@ Aggregate Tree
 | [CreditNoteOriginalInvoice](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When the order is for credit note, may contain the original Invoice. null for normal orders or when the original document is unknown. `Filter(multi eq)` |
 | [CreditNoteOriginal<br />InvoiceOrder](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) (nullable) | When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. `Filter(multi eq)` |
 | [CurrencyDirectory](Crm.Invoicing.InvoiceOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Crm.Invoicing.InvoiceOrders.md#customer) | [Customers](Crm.Customers.md) | The primary customer to whom to invoice. `Required` `Filter(multi eq)` |
+| [Customer](Crm.Invoicing.InvoiceOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer to whom to invoice. `Required` `Filter(multi eq)` |
 | [DealType](Crm.Invoicing.InvoiceOrders.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Invoicing.InvoiceOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Invoicing.InvoiceOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -606,7 +606,7 @@ _Show in UI_: **HiddenByDefault**
 
 The primary customer to whom to invoice. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md)**  
+_Type_: **[Customers](Crm.Sales.Customers.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

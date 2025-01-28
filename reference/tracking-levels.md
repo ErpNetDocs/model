@@ -11,12 +11,12 @@ The following table contains default system-specified tracking levels:
 |---|---|---|
 | Applications.Mail.BoxFolders | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Applications.Mail.Messages | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Crm.Customers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Locations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.Operators | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.Roles | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.Sequences | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.Terminals | 2 - Track object changes | 4 - Track object attribute and blob changes |
+| Crm.Sales.Customers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Finance.Payments.PaymentAccounts | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Finance.Payments.PaymentTypes | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | General.Contacts.Companies | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

@@ -50,8 +50,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Country](Crm.Sales.ForecastItems.md#country) | [Countries](General.Geography.Countries.md) (nullable) | The country for which the forecast is made. When null, the forecast is country neutral. `Filter(multi eq)` |
-| [Customer](Crm.Sales.ForecastItems.md#customer) | [Customers](Crm.Customers.md) (nullable) | The customer for which the forecast is made. When null, the forecast is not for any specfic customer. `Filter(multi eq)` |
-| [Dealer](Crm.Sales.ForecastItems.md#dealer) | [Dealers](Crm.Dealers.md) (nullable) | The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. `Filter(multi eq)` |
+| [Customer](Crm.Sales.ForecastItems.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer for which the forecast is made. When null, the forecast is not for any specfic customer. `Filter(multi eq)` |
+| [Dealer](Crm.Sales.ForecastItems.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. `Filter(multi eq)` |
 | [Product](Crm.Sales.ForecastItems.md#product) | [Products](General.Products.Products.md) | The product for which the forecast is made. `Required` `Filter(multi eq)` |
 | [SalesPerson](Crm.Sales.ForecastItems.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. `Filter(multi eq)` |
 | [Store](Crm.Sales.ForecastItems.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which is expected to sell the products. `Required` `Filter(multi eq)` |
@@ -136,7 +136,7 @@ _Show in UI_: **ShownByDefault**
 
 The customer for which the forecast is made. When null, the forecast is not for any specfic customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -145,7 +145,7 @@ _Show in UI_: **ShownByDefault**
 
 The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. `Filter(multi eq)`
 
-_Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
+_Type_: **[Dealers](Crm.Sales.Dealers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

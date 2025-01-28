@@ -87,7 +87,7 @@ Aggregate Tree
 | [AssignedToUser](Crm.Presales.Deals.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Campaign](Crm.Presales.Deals.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | The marketing campaign to which this opportunity belongs. `Filter(multi eq)` `Introduced in version 24.1.0.67` |
 | [CurrencyDirectory](Crm.Presales.Deals.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Dealer](Crm.Presales.Deals.md#dealer) | [Dealers](Crm.Dealers.md) (nullable) | The external dealer, which provided the opportunity. `Filter(multi eq)` |
+| [Dealer](Crm.Presales.Deals.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, which provided the opportunity. `Filter(multi eq)` |
 | [DocumentType](Crm.Presales.Deals.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Crm.Presales.Deals.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Crm.Presales.Deals.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -580,7 +580,7 @@ _Show in UI_: **HiddenByDefault**
 
 The external dealer, which provided the opportunity. `Filter(multi eq)`
 
-_Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
+_Type_: **[Dealers](Crm.Sales.Dealers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  

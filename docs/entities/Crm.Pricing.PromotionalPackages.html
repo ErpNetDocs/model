@@ -161,7 +161,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforcustomerfilterxml">ValidForCustomerFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, the package is valid only for the customers, that match the filter. <code>Unit: CustomersRepository.TableName</code></td>
+<td>When not null, the package is valid only for the customers, that match the filter. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfordistributionchannelfilterxml">ValidForDistribution<br>ChannelFilterX<br>ML</a></td>
@@ -171,7 +171,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforshiptocustomerfilterxml">ValidForShipTo<br>CustomerFilter<br>XML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, specifies validity condition for the Ship To Customer of the sales document. <code>Unit: CustomersRepository.TableName</code></td>
+<td>When not null, specifies validity condition for the Ship To Customer of the sales document. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfromdate">ValidFromDate</a></td>
@@ -217,7 +217,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforcustomer">ValidForCustomer</a></td>
-<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
+<td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, the package is valid only for the specified customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -232,7 +232,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforshiptocustomer">ValidForShipToCustomer</a></td>
-<td><a href="Crm.Customers.html">Customers</a> (nullable)</td>
+<td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
 <td>When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
@@ -310,7 +310,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="validforcustomerfilterxml">ValidForCustomerFilterXML</h3>
-<p>When not null, the package is valid only for the customers, that match the filter. <code>Unit: CustomersRepository.TableName</code></p>
+<p>When not null, the package is valid only for the customers, that match the filter. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
 <p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -324,7 +324,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="validforshiptocustomerfilterxml">ValidForShipToCustomerFilterXML</h3>
-<p>When not null, specifies validity condition for the Ship To Customer of the sales document. <code>Unit: CustomersRepository.TableName</code></p>
+<p>When not null, specifies validity condition for the Ship To Customer of the sales document. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
 <p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -371,7 +371,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="validforcustomer">ValidForCustomer</h3>
 <p>When not null, the package is valid only for the specified customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
@@ -389,7 +389,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="validforshiptocustomer">ValidForShipToCustomer</h3>
 <p>When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Customers.html">Customers</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

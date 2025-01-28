@@ -5,6 +5,36 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Crm.Distributors**  
+New name: **Crm.Sales.Distributors**  
+Version: **25.1.2.28**  
+Case: **38176**  
+
+Old name: **Crm.DiscountTypes**  
+New name: **Crm.Sales.DiscountTypes**  
+Version: **25.1.2.28**  
+Case: **38176**  
+
+Old name: **Crm.Dealers**  
+New name: **Crm.Sales.Dealers**  
+Version: **25.1.2.28**  
+Case: **38176**  
+
+Old name: **Crm.CustomerTypes**  
+New name: **Crm.Sales.CustomerTypes**  
+Version: **25.1.2.28**  
+Case: **38176**  
+
+Old name: **Crm.Customers**  
+New name: **Crm.Sales.Customers**  
+Version: **25.1.2.28**  
+Case: **38176**  
+
+Old name: **Crm.CustomerProducts**  
+New name: **Crm.Sales.CustomerProducts**  
+Version: **25.1.2.28**  
+Case: **38176**  
+
 Old name: **General.Products.ProductSupply**  
 New name: **Logistics.Procurement.ProductSupply**  
 Version: **25.1.1.48**  

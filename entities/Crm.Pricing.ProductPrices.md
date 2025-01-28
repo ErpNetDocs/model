@@ -57,7 +57,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Campaign](Crm.Pricing.ProductPrices.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
 | [Currency](Crm.Pricing.ProductPrices.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the price. `Required` `Filter(multi eq)` |
-| [Customer](Crm.Pricing.ProductPrices.md#customer) | [Customers](Crm.Customers.md) (nullable) | When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)` |
+| [Customer](Crm.Pricing.ProductPrices.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)` |
 | [DistributionChannel](Crm.Pricing.ProductPrices.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Use the price only when selling through the specified channel. `Filter(multi eq)` |
 | [EnterpriseCompany](Crm.Pricing.ProductPrices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the sales document must be in the specified enterprise company. `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](Crm.Pricing.ProductPrices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)` |
@@ -65,7 +65,7 @@ Aggregate Tree
 | [PriceQuantityMeasurement<br />Unit](Crm.Pricing.ProductPrices.md#pricequantitymeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Price_Quantity. `Required` `Filter(multi eq)` |
 | [PriceType](Crm.Pricing.ProductPrices.md#pricetype) | [PriceTypes](Crm.Pricing.PriceTypes.md) (nullable) | Price type of the current product price. The price types are used to set additional priority condition for the prices. `Filter(multi eq)` |
 | [Product](Crm.Pricing.ProductPrices.md#product) | [Products](General.Products.Products.md) | The product for which a price will be defined. `Required` `Filter(multi eq)` `FilterableReference` |
-| [ShipToCustomer](Crm.Pricing.ProductPrices.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. `Filter(multi eq)` |
+| [ShipToCustomer](Crm.Pricing.ProductPrices.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. `Filter(multi eq)` |
 | [TargetGroup](Crm.Pricing.ProductPrices.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. `Filter(multi eq)` |
 
 
@@ -231,7 +231,7 @@ _Show in UI_: **ShownByDefault**
 
 When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
@@ -311,7 +311,7 @@ _Show in UI_: **ShownByDefault**
 
 When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

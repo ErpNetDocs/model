@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.CustomerProducts](~/entities/Crm.CustomerProducts.md)
+Entity: [Crm.Sales.CustomerProducts](~/entities/Crm.Sales.CustomerProducts.md)
 
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products (Introduced in version 22.1.6.42)
 
@@ -20,7 +20,7 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Customer, for which the product is listed|
 |[Customer_Product_Id](#customer_product_id)|`uniqueidentifier` `PK`|Customer Product listing|
 |[From_Date](#from_date)|`date` |The initial date of the listing. NULL when the initial date is unknown|
-|[In_Store_Location](#in_store_location)|`nvarchar(32)` ||
+|[In_Store_Location](#in_store_location)|`nvarchar(32)` |Location in store, like row, stand, etc.|
 |[In_Store_Max_Quantity](#in_store_max_quantity)|`decimal(10, 3)` |Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit|
 |[In_Store_Min_Quantity](#in_store_min_quantity)|`decimal(10, 3)` |Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit|
 |[In_Store_Quantity_Unit_Id](#in_store_quantity_unit_id)|`uniqueidentifier` |Location in store, like row, stand, etc.|
@@ -218,6 +218,9 @@ The initial date of the listing. NULL when the initial date is unknown
 |GreaterThanOrLessThan|None|no|no|
 
 ### In_Store_Location
+
+
+Location in store, like row, stand, etc.
 
 | Property | Value |
 | - | - |
