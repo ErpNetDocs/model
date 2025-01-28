@@ -107,25 +107,25 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If Vehicle.EnterpriseCompany != Null AND Vehicle.ManageAsset != Null, <br>
-validate that Vehicle.EnterpriseCompany == ManageAsset.EnterpriseCompany.</td>
+<td>If Vehicle.EnterpriseCompany != Null AND Vehicle.ManagedAsset != Null, <br>
+and ManagedAsset.EnterpriseCompany != Null <br>
+validate that Vehicle.EnterpriseCompany == ManagedAsset.EnterpriseCompany.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>The rule validates that the selected managed asset has the same enterprise company <br>
-as the vehicle.</td>
+as the vehicle, and does not throw an error if ManagedAsset.EnterpriseCompany is NULL.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The Enterprise Company of the vehicle '{Vehicle.RegistrationNumber}' <br>
-differs from that of the selected managed asset '{ManagedAsset.Name}'. <br>
-Please select a managed asset with an Enterprise Company that equals <br>
-the Enterprise Company of the vehicle.</td>
+<td>The Enterprise Company of the selected managed asset '{ManagedAsset.Name} is different from <br>
+that of the vehicle '{Fleet.Vehicle.RegistrationNumber}'.<br>
+Please, select a managed asset with an Enterprise Company that is the same as the<br>
+Enterprise Company of the vehicle, or is not specified.</td>
 </tr>
 <tr>
-<td><strong>Introduced In
-Version</strong></td>
-<td>Introduced: v.24</td>
+<td><strong>Introduced</strong></td>
+<td>v.24</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

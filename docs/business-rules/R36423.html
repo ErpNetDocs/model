@@ -107,25 +107,24 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If ManagedAsset !=Null, validate that <br>
+<td>If ManagedAsset !=Null, and ManagedAsset.EnterpriseCompany is not NULL validate that <br>
 Finance.Assets.Asset.EnterpriseCompany == ManagedAsset.EnterpriseCompany.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>The rule validates that the selected managed asset has the same enterprise company <br>
-as the fixed asset.</td>
+as the fixed asset, and does not throw an error if ManagedAsset.EnterpriseCompany is empty</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The Enterprise Company of the fixed asset '{Finance.Assets.Asset.Name}' <br>
-differs from that of the selected managed asset '{ManagedAsset.Name}'. <br>
-Please select a managed asset with an Enterprise Company that equals <br>
-the Enterprise Company of the fixed asset.</td>
+<td>The Enterprise Company of the selected managed asset '{ManagedAsset.Name} is different from <br>
+that of the fixed asset '{Finance.Assets.Asset.Name }'. <br>
+Please, select a managed asset with an Enterprise Company that is the same as the <br>
+Enterprise Company of the fixed asset, or is not specified.'</td>
 </tr>
 <tr>
-<td><strong>Introduced In
-Version</strong></td>
-<td>Introduced: v.24</td>
+<td><strong>Introduced</strong></td>
+<td>v.24</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
