@@ -108,7 +108,8 @@
 <tr>
 <td><strong>Action</strong></td>
 <td>If ServiceObject.EnterpriseCompany != Null AND ServiceObject.ManageAsset != Null, <br>
-validate that ServiceObject.EnterpriseCompany == ManageAsset.EnterpriseCompany.</td>
+and ManagedAsset.EnterpriseCompany != Null <br>
+validate that ServiceObject.EnterpriseCompany == ManagedAsset.EnterpriseCompany.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -117,15 +118,14 @@ as the service object.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The Enterprise Company of  the service object '{ServiceObject.Name }' <br>
-differs from that of the selected managed asset '{ManagedAsset.Name}'. <br>
-Please select a managed asset with an Enterprise Company that equals <br>
-the Enterprise Company of the service object.</td>
+<td>The Enterprise Company of the selected managed asset '{ManagedAsset.Name}' is different <br>
+from that of the service object '{ServiceObject.Name}'. <br>
+Please, select a managed asset with an Enterprise Company that is the same as the Enterprise <br>
+Company of the service object, or is not specified.</td>
 </tr>
 <tr>
-<td><strong>Introduced In
-Version</strong></td>
-<td>Introduced: v.24</td>
+<td><strong>Introduced</strong></td>
+<td>v.24</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
