@@ -107,8 +107,8 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If Vehicle.EnterpriseCompany != Null AND Vehicle.ManagedAsset != Null, <br>
-and Vehicle.ManagedAsset.EnterpriseCompany != Null <br>                                                |
+<td>If Vehicle.EnterpriseCompany != Null AND Vehicle.ManagedAsset != Null  <br>
+AND Vehicle.ManagedAsset.EnterpriseCompany != Null <br>
 validate that Vehicle.EnterpriseCompany == ManagedAsset.EnterpriseCompany.</td>
 </tr>
 <tr>
@@ -118,10 +118,8 @@ as the vehicle, and does not throw an error if ManagedAsset.EnterpriseCompany is
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The Enterprise Company of the selected managed asset'{ManagedAsset.Name}' is different from <br>
-that of the vehicle '{Fleet.Vehicle.RegistrationNumber}'.<br>
-Please, select a managed asset with an Enterprise Company that is the same as the<br>
-Enterprise Company of the vehicle, or is not specified.</td>
+<td>The Enterprise Company for the selected managed asset '{ManagedAsset.Code}: {ManagedAsset.Name}' and the current vehicle '{Fleet.Vehicle.RegistrationNumber}' are
+different.<br>Please, select a managed asset whose Enterprise Company is the same as the one of the vehicle, or is not specified.</td>
 </tr>
 <tr>
 <td><strong>Introduced</strong></td>

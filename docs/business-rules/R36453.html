@@ -107,21 +107,20 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If ServiceObject.EnterpriseCompany != Null AND ServiceObject.ManageAsset != Null, <br>
-and ManagedAsset.EnterpriseCompany != Null <br>
+<td>If ServiceObject.EnterpriseCompany != Null AND ServiceObject.ManageAsset != Null <br>
+AND ServiceObject.ManagedAsset.EnterpriseCompany != Null, <br>
 validate that ServiceObject.EnterpriseCompany == ManagedAsset.EnterpriseCompany.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>The rule validates that the selected managed asset has the same enterprise company <br>
-as the service object.</td>
+as the service object and does not throw an error if ManagedAsset.EnterpriseCompany is empty.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The Enterprise Company of the selected managed asset '{ManagedAsset.Name}' is different <br>
-from that of the service object '{ServiceObject.Name}'. <br>
-Please, select a managed asset with an Enterprise Company that is the same as the Enterprise <br>
-Company of the service object, or is not specified.</td>
+<td>The Enterprise Company for the selected managed asset '{ManagedAsset.Code}: {ManagedAsset.Name}' and the current service object '{ServiceObject.Name}'
+are different.<br>
+Please, select a managed asset with an Enterprise Company that is the same as the Enterprise Company of the service object, or is not specified.</td>
 </tr>
 <tr>
 <td><strong>Introduced</strong></td>
