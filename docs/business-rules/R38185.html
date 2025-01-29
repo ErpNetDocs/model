@@ -118,16 +118,28 @@
 <td>Deletes the current Fixed asset from the definition of the Managed asset, to indicate that it is not currenly managed.</td>
 </tr>
 <tr>
+<td></td>
+<td>If Asset.ManagedAsset.DatabaseValue != NULL AND Asset.ManagedAsset !=  Asset.ManagedAsset.DatabaseValue <br></td>
+</tr>
+<tr>
+<td></td>
+<td>then if Asset.ManagedAsset.DatabaseValue(.FixedAsset) = current.Asset <br></td>
+</tr>
+<tr>
+<td></td>
+<td>set  ManagedAsset.FixedAsset = NULL</td>
+</tr>
+<tr>
 <td>Description</td>
-<td>The rule cancels any linkage between the Fixed asset and the Managed asset.</td>
+<td>The rule cancels any linkage between the Fixed asset and the its former Managed asset.</td>
 </tr>
 <tr>
 <td>Message</td>
 <td>/-</td>
 </tr>
 <tr>
-<td>Version</td>
-<td>Introduced:</td>
+<td>Introduced</td>
+<td>v.</td>
 </tr>
 <tr>
 <td>Revocable</td>
