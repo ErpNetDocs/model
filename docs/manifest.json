@@ -12632,6 +12632,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.CustomerClientCenterPermissions.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.CustomerClientCenterPermissions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Sales.CustomerProducts.md",
       "output": {
         ".html": {
@@ -21155,6 +21165,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Competitors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Customer_Client_Center_Permissions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Customer_Client_Center_Permissions.html"
         }
       },
       "version": ""

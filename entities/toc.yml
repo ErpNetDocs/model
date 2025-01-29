@@ -321,6 +321,8 @@
   - name: Sales
     href: Crm.Sales.md
     items:
+    - name: CustomerClientCenterPermissions
+      href: Crm.Sales.CustomerClientCenterPermissions.md
     - name: CustomerProducts
       href: Crm.Sales.CustomerProducts.md
     - name: Customers

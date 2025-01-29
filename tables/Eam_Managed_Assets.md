@@ -12,7 +12,7 @@ Contains the managed assets. The management of assets include maintenance planni
 | Name | Type | Description |
 | - | - | --- |
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which the managed asset belongs.|
-|[Fixed_Asset_Id](#fixed_asset_id)|`uniqueidentifier` |The fixed asset associated with the managed asset. NULL indicates that no fixed asset is associated to the managed asset, or that they are more than one.|
+|[Fixed_Asset_Id](#fixed_asset_id)|`uniqueidentifier` |The currently managed fixed asset. NULL means that no fixed asset is currently managed.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current Managed Asset is active.|
 |[Managed_Asset_Code](#managed_asset_code)|`nvarchar(16)` |Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.|
 |[Managed_Asset_Group_Id](#managed_asset_group_id)|`uniqueidentifier` |The organizational group of the asset. Used for organizational purposes only.|
@@ -65,7 +65,7 @@ The enterprise company to which the managed asset belongs.
 ### Fixed_Asset_Id
 
 
-The fixed asset associated with the managed asset. NULL indicates that no fixed asset is associated to the managed asset, or that they are more than one.
+The currently managed fixed asset. NULL means that no fixed asset is currently managed.
 
 | Property | Value |
 | - | - |

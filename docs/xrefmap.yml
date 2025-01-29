@@ -553,6 +553,9 @@ references:
 - uid: Crm.Sales
   name: Crm.Sales Namespace
   href: entities/Crm.Sales.html
+- uid: Crm.Sales.CustomerClientCenterPermissions
+  name: Crm.Sales.CustomerClientCenterPermissions Entity
+  href: entities/Crm.Sales.CustomerClientCenterPermissions.html
 - uid: Crm.Sales.CustomerProducts
   name: Crm.Sales.CustomerProducts Entity
   href: entities/Crm.Sales.CustomerProducts.html

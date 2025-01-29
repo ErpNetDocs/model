@@ -4,6 +4,7 @@ uid: Crm.Sales
 # Crm.Sales Namespace
 
 ## Entities
+- [CustomerClientCenterPermissions](Crm.Sales.CustomerClientCenterPermissions.md)  
 - [CustomerProducts](Crm.Sales.CustomerProducts.md)  
 - [Customers](Crm.Sales.Customers.md)  
 - [CustomerTypes](Crm.Sales.CustomerTypes.md)  
