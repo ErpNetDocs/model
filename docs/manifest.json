@@ -10792,6 +10792,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R38205.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R38205.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -19062,6 +19072,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Security.UserDevices.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Security.UserDevices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Security.UserGroups.md",
       "output": {
         ".html": {
@@ -25305,6 +25325,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sec_User_Access_Keys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sec_User_Devices.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sec_User_Devices.html"
         }
       },
       "version": ""

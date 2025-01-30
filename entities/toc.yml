@@ -1315,6 +1315,8 @@
       href: Systems.Security.TrustedApplications.md
     - name: UserAccessKeys
       href: Systems.Security.UserAccessKeys.md
+    - name: UserDevices
+      href: Systems.Security.UserDevices.md
     - name: UserGroups
       href: Systems.Security.UserGroups.md
     - name: UserProviderLogins

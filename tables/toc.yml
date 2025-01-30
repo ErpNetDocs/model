@@ -1124,6 +1124,8 @@
     href: Sec_Trusted_Applications.md
   - name: Sec_User_Access_Keys
     href: Sec_User_Access_Keys.md
+  - name: Sec_User_Devices
+    href: Sec_User_Devices.md
   - name: Sec_User_Groups
     href: Sec_User_Groups.md
   - name: Sec_User_Provider_Logins

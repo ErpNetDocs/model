@@ -9,6 +9,7 @@
 * [Sec_Trusted_Application_Authorizations](Sec_Trusted_Application_Authorizations.md)
 * [Sec_Trusted_Applications](Sec_Trusted_Applications.md)
 * [Sec_User_Access_Keys](Sec_User_Access_Keys.md)
+* [Sec_User_Devices](Sec_User_Devices.md)
 * [Sec_User_Groups](Sec_User_Groups.md)
 * [Sec_User_Provider_Logins](Sec_User_Provider_Logins.md)
 * [Sec_User_Provider_Tokens](Sec_User_Provider_Tokens.md)

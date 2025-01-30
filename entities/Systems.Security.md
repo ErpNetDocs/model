@@ -18,6 +18,7 @@ uid: Systems.Security
 - [TrustedApplicationAuthorizations](Systems.Security.TrustedApplicationAuthorizations.md)  
 - [TrustedApplications](Systems.Security.TrustedApplications.md)  
 - [UserAccessKeys](Systems.Security.UserAccessKeys.md)  
+- [UserDevices](Systems.Security.UserDevices.md)  
 - [UserGroups](Systems.Security.UserGroups.md)  
 - [UserProviderLogins](Systems.Security.UserProviderLogins.md)  
 - [UserProviderTokens](Systems.Security.UserProviderTokens.md)  

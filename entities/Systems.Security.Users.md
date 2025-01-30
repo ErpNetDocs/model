@@ -32,6 +32,7 @@ Aggregate Tree
   * [Systems.Security.UserGroups](Systems.Security.UserGroups.md)  
   * [Systems.Security.UserProviderLogins](Systems.Security.UserProviderLogins.md)  
   * [Systems.Security.UserProviderTokens](Systems.Security.UserProviderTokens.md)  
+  * [Systems.Security.UserDevices](Systems.Security.UserDevices.md)  
   * [Systems.Security.RoleUsers](Systems.Security.RoleUsers.md)  
 
 ## Attributes
@@ -77,6 +78,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | AccessKeys | [UserAccessKeys](Systems.Security.UserAccessKeys.md) | List of `UserAccessKey`(Systems.Security.UserAccessKeys.md) child objects, based on the `Systems.Security.UserAccessKey.User`(Systems.Security.UserAccessKeys.md#user) back reference 
+| Devices | [UserDevices](Systems.Security.UserDevices.md) | List of `UserDevice`(Systems.Security.UserDevices.md) child objects, based on the `Systems.Security.UserDevice.User`(Systems.Security.UserDevices.md#user) back reference 
 | Groups | [UserGroups](Systems.Security.UserGroups.md) | List of `UserGroup`(Systems.Security.UserGroups.md) child objects, based on the `Systems.Security.UserGroup.User`(Systems.Security.UserGroups.md#user) back reference 
 | ProviderLogins | [UserProviderLogins](Systems.Security.UserProviderLogins.md) | List of `UserProviderLogin`(Systems.Security.UserProviderLogins.md) child objects, based on the `Systems.Security.UserProviderLogin.User`(Systems.Security.UserProviderLogins.md#user) back reference 
 | ProviderTokens | [UserProviderTokens](Systems.Security.UserProviderTokens.md) | List of `UserProviderToken`(Systems.Security.UserProviderTokens.md) child objects, based on the `Systems.Security.UserProviderToken.User`(Systems.Security.UserProviderTokens.md#user) back reference 

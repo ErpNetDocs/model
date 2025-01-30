@@ -2497,6 +2497,9 @@ references:
 - uid: Systems.Security.UserAccessKeys
   name: Systems.Security.UserAccessKeys Entity
   href: entities/Systems.Security.UserAccessKeys.html
+- uid: Systems.Security.UserDevices
+  name: Systems.Security.UserDevices Entity
+  href: entities/Systems.Security.UserDevices.html
 - uid: Systems.Security.UserGroups
   name: Systems.Security.UserGroups Entity
   href: entities/Systems.Security.UserGroups.html
