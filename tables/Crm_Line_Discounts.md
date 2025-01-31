@@ -14,7 +14,7 @@ Discount policies for sales documents. Entity: Crm_Line_Discounts
 |[Campaign_Id](#campaign_id)|`uniqueidentifier` |Тhe marketing campaign to which the current definition belongs.|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Apply the discount only if this is the customer|
 |[Customer_Type_Id](#customer_type_id)|`uniqueidentifier` |Apply the discount only if the customer is of this customer type|
-|[Description](#description)|`nvarchar(50)` |The description of the discount that is shown to the operator when he/she should choose between different discounts|
+|[Description](#description)|`nvarchar(50)` |The description of the discount that is shown to the operator when they should choose between different discounts|
 |[Discount_Level](#discount_level)|`char(1)` Allowed: `1`, `2`, `3`|Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.|
 |[Discount_Percent](#discount_percent)|`decimal(7, 6)` |The discount percent that should be applied if all the matching criteria are met.|
 |[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |Apply the discount only when the sales document is on the specified channel|
@@ -150,7 +150,7 @@ Apply the discount only if the customer is of this customer type
 ### Description
 
 
-The description of the discount that is shown to the operator when he/she should choose between different discounts
+The description of the discount that is shown to the operator when they should choose between different discounts
 
 | Property | Value |
 | - | - |
