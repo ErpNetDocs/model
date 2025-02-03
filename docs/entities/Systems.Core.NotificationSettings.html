@@ -141,6 +141,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
+<td><a href="Systems.Core.NotificationSettings.html#receivedevicenotification">ReceiveDeviceNotification</a></td>
+<td>boolean</td>
+<td>True if the user should receive device notification. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.34</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.NotificationSettings.html#receivemail">ReceiveMail</a></td>
 <td>boolean</td>
 <td>True if the user should receive mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -204,6 +209,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="receivedevicenotification">ReceiveDeviceNotification</h3>
+<p>True if the user should receive device notification. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.34</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="receivemail">ReceiveMail</h3>
 <p>True if the user should receive mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

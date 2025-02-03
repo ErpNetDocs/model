@@ -97,7 +97,7 @@ Default Search Members:<br>
 Name Data Member:<br>
 <em>DeviceName</em><br>
 Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
+Show in UI:  <em>CannotBeShown</em></p>
 <h2 id="track-changes">Track Changes</h2>
 <p>Min level:  <em>0 - Do not track changes</em><br>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
@@ -125,7 +125,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#devicefingerprint">DeviceFingerprint</a></td>
 <td>string (2048) <strong>nullable</strong></td>
-<td>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></td>
+<td>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. <code>Filter(eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.UserDevices.html#deviceinfo">DeviceInfo</a></td>
+<td>string (4092) <strong>nullable</strong></td>
+<td>Shows basic information about your device. <code>ReadOnly</code> <code>Introduced in version 25.1.2.34</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#devicename">DeviceName</a></td>
@@ -145,7 +150,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#lastlogintimeutc">LastLoginTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC) when the device was last used to sign in. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></td>
+<td>The exact server time (in UTC) when the device was last used to sign in. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationsallowed">NotificationsAllowed</a></td>
@@ -196,12 +201,20 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="devicefingerprint">DeviceFingerprint</h3>
-<p>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></p>
+<p>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. <code>Filter(eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></p>
 <p><em>Type</em>: <strong>string (2048) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2048</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="deviceinfo">DeviceInfo</h3>
+<p>Shows basic information about your device. <code>ReadOnly</code> <code>Introduced in version 25.1.2.34</code></p>
+<p><em>Type</em>: <strong>string (4092) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2048</strong><br>
+<em>Maximum Length</em>: <strong>4092</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="devicename">DeviceName</h3>
 <p>The name of the device, such as the model or a custom name given by the user. <code>Required</code> <code>Introduced in version 25.1.2.30</code></p>
@@ -225,11 +238,11 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="lastlogintimeutc">LastLoginTimeUtc</h3>
-<p>The exact server time (in UTC) when the device was last used to sign in. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></p>
+<p>The exact server time (in UTC) when the device was last used to sign in. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notificationsallowed">NotificationsAllowed</h3>

@@ -42,6 +42,7 @@ Aggregate Tree
 | [Id](Systems.Core.NotificationSettings.md#id) | guid |  
 | [NotificationClass](Systems.Core.NotificationSettings.md#notificationclass) | string (64) __nullable__ | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)` 
 | [ObjectVersion](Systems.Core.NotificationSettings.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ReceiveDeviceNotification](Systems.Core.NotificationSettings.md#receivedevicenotification) | boolean | True if the user should receive device notification. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.34` 
 | [ReceiveMail](Systems.Core.NotificationSettings.md#receivemail) | boolean | True if the user should receive mail. `Required` `Default(false)` `Filter(eq)` 
 | [ReceiveNotification](Systems.Core.NotificationSettings.md#receivenotification) | boolean | True if the user should receive internal notification. `Required` `Default(true)` `Filter(eq)` 
 | [ReceiveSms](Systems.Core.NotificationSettings.md#receivesms) | boolean | True if the user should receive SMS. `Required` `Default(false)` `Filter(eq)` 
@@ -94,6 +95,17 @@ _Category_: **Extensible Data Object**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### ReceiveDeviceNotification
+
+True if the user should receive device notification. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.34`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
 
 ### ReceiveMail
 

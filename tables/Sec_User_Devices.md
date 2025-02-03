@@ -17,6 +17,7 @@ Information about devices linked to users, including login activity, and notific
 | - | - | --- |
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|The exact server time (in UTC), when the device was registered.|
 |[Device_Fingerprint](#device_fingerprint)|`nvarchar(2048)` Readonly|A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.|
+|[Device_Info](#device_info)|`nvarchar(4092)` Readonly|Shows basic information about your device.|
 |[Device_Name](#device_name)|`nvarchar(256)` |The name of the device, such as the model or a custom name given by the user.|
 |[Last_Login_Time_Utc](#last_login_time_utc)|`datetime` Readonly|The exact server time (in UTC) when the device was last used to sign in.|
 |[Notifications_Allowed](#notifications_allowed)|`bit` |Тhe device is allowed to receive notifications from the system.|
@@ -94,6 +95,42 @@ A unique identifier for the device based on its fingerprint, used to track devic
 |User Login|no|
 |Visible|yes|
 
+#### Device_Fingerprint - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Device_Info
+
+
+Shows basic information about your device.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|4092|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(4092) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Device_Name
 
 
@@ -145,7 +182,7 @@ The exact server time (in UTC) when the device was last used to sign in.
 |Primary Key|no|
 |Readonly|yes|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|datetime|

@@ -15,7 +15,7 @@ _DeviceName_
 Name Data Member:  
 _DeviceName_  
 Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
+Show in UI:  _CannotBeShown_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  
@@ -34,11 +34,12 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Systems.Security.UserDevices.md#creationtimeutc) | datetime | The exact server time (in UTC), when the device was registered. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.2.30` 
-| [DeviceFingerprint](Systems.Security.UserDevices.md#devicefingerprint) | string (2048) __nullable__ | A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. `ReadOnly` `Introduced in version 25.1.2.30` 
+| [DeviceFingerprint](Systems.Security.UserDevices.md#devicefingerprint) | string (2048) __nullable__ | A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. `Filter(eq)` `ReadOnly` `Introduced in version 25.1.2.30` 
+| [DeviceInfo](Systems.Security.UserDevices.md#deviceinfo) | string (4092) __nullable__ | Shows basic information about your device. `ReadOnly` `Introduced in version 25.1.2.34` 
 | [DeviceName](Systems.Security.UserDevices.md#devicename) | string (256) | The name of the device, such as the model or a custom name given by the user. `Required` `Introduced in version 25.1.2.30` 
 | [DisplayText](Systems.Security.UserDevices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Security.UserDevices.md#id) | guid |  
-| [LastLoginTimeUtc](Systems.Security.UserDevices.md#lastlogintimeutc) | datetime | The exact server time (in UTC) when the device was last used to sign in. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.2.30` 
+| [LastLoginTimeUtc](Systems.Security.UserDevices.md#lastlogintimeutc) | datetime | The exact server time (in UTC) when the device was last used to sign in. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` `Introduced in version 25.1.2.30` 
 | [NotificationsAllowed](Systems.Security.UserDevices.md#notificationsallowed) | boolean | Тhe device is allowed to receive notifications from the system. `Required` `Default(true)` `Introduced in version 25.1.2.30` 
 | [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). `Required` `ReadOnly` `Introduced in version 25.1.2.30` 
 | [NotificationsToken](Systems.Security.UserDevices.md#notificationstoken) | string (2048) __nullable__ | A token used for sending notifications to the device, such as a push notification token. null if not applicable. `ReadOnly` `Introduced in version 25.1.2.30` 
@@ -66,13 +67,24 @@ _Show in UI_: **ShownByDefault**
 
 ### DeviceFingerprint
 
-A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. `ReadOnly` `Introduced in version 25.1.2.30`
+A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be null if not provided. `Filter(eq)` `ReadOnly` `Introduced in version 25.1.2.30`
 
 _Type_: **string (2048) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  
+_Show in UI_: **ShownByDefault**  
+
+### DeviceInfo
+
+Shows basic information about your device. `ReadOnly` `Introduced in version 25.1.2.34`
+
+_Type_: **string (4092) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **4092**  
 _Show in UI_: **ShownByDefault**  
 
 ### DeviceName
@@ -106,12 +118,12 @@ _Show in UI_: **ShownByDefault**
 
 ### LastLoginTimeUtc
 
-The exact server time (in UTC) when the device was last used to sign in. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.2.30`
+The exact server time (in UTC) when the device was last used to sign in. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` `Introduced in version 25.1.2.30`
 
 _Type_: **datetime**  
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Default Value_: **CurrentDateTimeUtc**  
 _Show in UI_: **ShownByDefault**  
 
