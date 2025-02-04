@@ -16892,6 +16892,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Projects.Agile.CaseCategoryRelationships.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Projects.Agile.CaseCategoryRelationships.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Projects.Agile.CaseDevelopments.md",
       "output": {
         ".html": {
@@ -20055,6 +20065,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Apm_Case_Categories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Apm_Case_Category_Relationships.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Apm_Case_Category_Relationships.html"
         }
       },
       "version": ""

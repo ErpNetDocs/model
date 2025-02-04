@@ -26,6 +26,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Agile.CaseCategories](Projects.Agile.CaseCategories.md)  
+  * [Projects.Agile.CaseCategoryRelationships](Projects.Agile.CaseCategoryRelationships.md)  
   * [Projects.Agile.UserStates](Projects.Agile.UserStates.md)  
 
 ## Attributes
@@ -45,6 +46,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| Relationships | [CaseCategoryRelationships](Projects.Agile.CaseCategoryRelationships.md) | List of `CaseCategoryRelationship`(Projects.Agile.CaseCategoryRelationships.md) child objects, based on the `Projects.Agile.CaseCategoryRelationship.ChildCaseCategory`(Projects.Agile.CaseCategoryRelationships.md#childcasecategory) back reference 
 | UserStates | [UserStates](Projects.Agile.UserStates.md) | List of `UserState`(Projects.Agile.UserStates.md) child objects, based on the `Projects.Agile.UserState.CaseCategory`(Projects.Agile.UserStates.md#casecategory) back reference 
 
 

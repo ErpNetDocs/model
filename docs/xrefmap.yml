@@ -1843,6 +1843,9 @@ references:
 - uid: Projects.Agile.CaseCategories
   name: Projects.Agile.CaseCategories Entity
   href: entities/Projects.Agile.CaseCategories.html
+- uid: Projects.Agile.CaseCategoryRelationships
+  name: Projects.Agile.CaseCategoryRelationships Entity
+  href: entities/Projects.Agile.CaseCategoryRelationships.html
 - uid: Projects.Agile.CaseDevelopments
   name: Projects.Agile.CaseDevelopments Entity
   href: entities/Projects.Agile.CaseDevelopments.html
