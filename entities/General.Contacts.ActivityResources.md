@@ -6,6 +6,10 @@ uid: General.Contacts.ActivityResources
 **Namespace:** [General.Contacts](General.Contacts.md)  
 
 Contains the resources, allocated to the activities. Entity: Cm_Activity_Resources
+## Renamed
+**New name:** [General.Activities.ActivityResources](General.Activities.ActivityResources.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: Crm.Distribution.SalesPersonGroups
 **Namespace:** [Crm.Distribution](Crm.Distribution.md)  
 
 Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
+## Renamed
+**New name:** [Crm.SalesForce.SalesPersonGroups](Crm.SalesForce.SalesPersonGroups.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

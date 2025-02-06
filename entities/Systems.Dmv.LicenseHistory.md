@@ -6,6 +6,10 @@ uid: Systems.Dmv.LicenseHistory
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Historical licensing events for the instance. Entity: Dmv_License_History (Introduced in version 24.1.3.88)
+## Renamed
+**New name:** [Systems.Monitoring.LicenseHistory](Systems.Monitoring.LicenseHistory.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

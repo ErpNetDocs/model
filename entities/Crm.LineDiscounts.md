@@ -6,6 +6,10 @@ uid: Crm.LineDiscounts
 **Namespace:** [Crm](Crm.md)  
 
 Discount policies for sales documents. Entity: Crm_Line_Discounts
+## Renamed
+**New name:** [Crm.Pricing.LineDiscounts](Crm.Pricing.LineDiscounts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

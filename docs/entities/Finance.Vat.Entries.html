@@ -263,7 +263,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Finance.Vat.Entries.html#referencedocumentno">ReferenceDocumentNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.Entries.html#registrationnumber">RegistrationNumber</a></td>
@@ -740,7 +740,7 @@ Relationship between parent and child documents<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.Parent.IsDocumentTypeEntityInvoice( ), obj.Parent.DocumentNo, obj.ReferencedDocumentNo)</code></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
-<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
+<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. <code>Filter(eq;like)</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>

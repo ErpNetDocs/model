@@ -6,6 +6,10 @@ uid: Systems.Dmv.WebSites
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Web sites dynamic management view. Entity: Dmv_Web_Sites (Introduced in version 23.1.1.43)
+## Renamed
+**New name:** [Systems.Monitoring.WebSites](Systems.Monitoring.WebSites.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

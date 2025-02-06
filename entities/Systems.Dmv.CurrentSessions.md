@@ -6,6 +6,10 @@ uid: Systems.Dmv.CurrentSessions
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Sessions dynamic management view. Entity: Dmv_Current_Sessions (Introduced in version 23.1.1.52)
+## Renamed
+**New name:** [Systems.Monitoring.CurrentSessions](Systems.Monitoring.CurrentSessions.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

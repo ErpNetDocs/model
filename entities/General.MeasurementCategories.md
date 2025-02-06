@@ -6,6 +6,10 @@ uid: General.MeasurementCategories
 **Namespace:** [General](General.md)  
 
 Categories of measurement units. The units within a category are directly convertable to each other. Each category contains one base unit and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Categories
+## Renamed
+**New name:** [General.Products.MeasurementCategories](General.Products.MeasurementCategories.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

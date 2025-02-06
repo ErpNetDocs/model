@@ -6,6 +6,10 @@ uid: Systems.Dmv.TableInfo
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Information about the tables in the database. Entity: Dmv_Table_Info (Introduced in version 23.1.2.43)
+## Renamed
+**New name:** [Systems.Monitoring.TableInfo](Systems.Monitoring.TableInfo.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

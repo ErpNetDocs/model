@@ -6,6 +6,10 @@ uid: General.SequenceGenerators
 **Namespace:** [General](General.md)  
 
 Contains one or more sequence generators for each sequence. Many sequence generators for one sequence are used when the generators must be selected conditionally or when more generators are needed for parallel numbering. Entity: Gen_Sequence_Generators
+## Renamed
+**New name:** [Systems.Documents.SequenceGenerators](Systems.Documents.SequenceGenerators.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

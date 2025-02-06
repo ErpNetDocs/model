@@ -6,6 +6,10 @@ uid: General.DocumentTypeEnterpriseCompanies
 **Namespace:** [General](General.md)  
 
 Specifies the visibility (availability) of the document type for the different enterprise companies. Entity: Gen_Document_Type_Enterprise_Companies
+## Renamed
+**New name:** [Systems.Documents.DocumentTypeEnterpriseCompanies](Systems.Documents.DocumentTypeEnterpriseCompanies.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

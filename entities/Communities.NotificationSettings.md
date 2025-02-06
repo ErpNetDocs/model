@@ -6,6 +6,10 @@ uid: Communities.NotificationSettings
 **Namespace:** [Communities](Communities.md)  
 
 User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1)
+## Renamed
+**New name:** [Systems.Core.NotificationSettings](Systems.Core.NotificationSettings.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

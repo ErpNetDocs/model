@@ -6,6 +6,10 @@ uid: General.PartyApplicableLegislations
 **Namespace:** [General](General.md)  
 
 Specifies a legislation, which is applicable for a party. A single party can have more than one applicable legislations. Entity: Gen_Party_Applicable_Legislations (Introduced in version 19.1)
+## Renamed
+**New name:** [General.Contacts.PartyApplicableLegislations](General.Contacts.PartyApplicableLegislations.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

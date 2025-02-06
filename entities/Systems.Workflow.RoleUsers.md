@@ -6,6 +6,10 @@ uid: Systems.Workflow.RoleUsers
 **Namespace:** [Systems.Workflow](Systems.Workflow.md)  
 
 The roles "played" by the security users. Entity: Wf_Role_Users
+## Renamed
+**New name:** [Systems.Security.RoleUsers](Systems.Security.RoleUsers.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

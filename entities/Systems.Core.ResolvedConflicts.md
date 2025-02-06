@@ -6,6 +6,10 @@ uid: Systems.Core.ResolvedConflicts
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains records of conflicts, which were automatically resolved by update procedures. Entity: Sys_Resolved_Conflicts
+## Renamed
+**New name:** [Systems.Monitoring.ResolvedConflicts](Systems.Monitoring.ResolvedConflicts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

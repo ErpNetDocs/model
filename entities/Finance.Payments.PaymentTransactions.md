@@ -67,7 +67,7 @@ Aggregate Tree
 | [PlanningOnly](Finance.Payments.PaymentTransactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Finance.Payments.PaymentTransactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Finance.Payments.PaymentTransactions.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReferenceDocumentNo](Finance.Payments.PaymentTransactions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ReferenceDocumentNo](Finance.Payments.PaymentTransactions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Finance.Payments.PaymentTransactions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | True=The total amount should be allocated to payment orders; false=Payment orders are not required. `Required` `Default(true)` `Filter(eq)` 
 | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment. `Introduced in version 20.1` 
@@ -399,7 +399,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
 
 _Type_: **string (20) __nullable__**  
 _Category_: **System**  

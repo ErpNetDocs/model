@@ -6,6 +6,10 @@ uid: Crm.Marketing.BonusPrograms
 **Namespace:** [Crm.Marketing](Crm.Marketing.md)  
 
 Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs
+## Renamed
+**New name:** [Crm.Pricing.BonusPrograms](Crm.Pricing.BonusPrograms.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

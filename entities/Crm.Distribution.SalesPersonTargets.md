@@ -7,6 +7,10 @@ uid: Crm.Distribution.SalesPersonTargets
 **Inherited From:** [General.Documents.Documents](General.Documents.Documents.md)  
 
 Sales person targets document header. Targets are expressed in amount or other numeric objectives and are tracked in achieved percentages. Entity: Crm_Sales_Person_Targets
+## Renamed
+**New name:** [Crm.SalesForce.SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

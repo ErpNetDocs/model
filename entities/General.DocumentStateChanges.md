@@ -6,6 +6,10 @@ uid: General.DocumentStateChanges
 **Namespace:** [General](General.md)  
 
 History of document state changes. Entity: Gen_Document_State_Changes
+## Renamed
+**New name:** [General.Documents.DocumentStateChanges](General.Documents.DocumentStateChanges.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

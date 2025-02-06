@@ -10,6 +10,10 @@ Obsolete. Not used. Entity: Gen_Document_Links (Obsoleted in version 22.1.6.60)
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   
 
+## Renamed
+**New name:** [General.Documents.DocumentLinks](General.Documents.DocumentLinks.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

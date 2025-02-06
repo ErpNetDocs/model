@@ -68,7 +68,7 @@ Aggregate Tree
 | [ReadOnly](Finance.Vat.Entries.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Finance.Vat.Entries.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferencedDocumentNo](Finance.Vat.Entries.md#referenceddocumentno) | string (20) | Number of the document that represents the operation that caused this entry. `Required` `Filter(eq)` 
-| [ReferenceDocumentNo](Finance.Vat.Entries.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ReferenceDocumentNo](Finance.Vat.Entries.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [RegistrationNumber](Finance.Vat.Entries.md#registrationnumber) | string (16) __nullable__ | Identification code (IC) for the party specified by Party_Id. 
 | [RegistrationVATNumber](Finance.Vat.Entries.md#registrationvatnumber) | string (16) | VAT number by registration (or national number) for the party specified by Party_Id. `Required` `Filter(eq)` 
 | [ReleaseTime](Finance.Vat.Entries.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -420,7 +420,7 @@ _Front-End Recalc Expressions:_
 `IIF( obj.Parent.IsDocumentTypeEntityInvoice( ), obj.Parent.DocumentNo, obj.ReferencedDocumentNo)`
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
 
 _Type_: **string (20) __nullable__**  
 _Category_: **System**  

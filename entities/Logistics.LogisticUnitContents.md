@@ -6,6 +6,10 @@ uid: Logistics.LogisticUnitContents
 **Namespace:** [Logistics](Logistics.md)  
 
 Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Contents (Introduced in version 21.1.0.77)
+## Renamed
+**New name:** [Logistics.Common.LogisticUnitContents](Logistics.Common.LogisticUnitContents.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

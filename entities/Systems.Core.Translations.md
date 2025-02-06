@@ -6,6 +6,10 @@ uid: Systems.Core.Translations
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains user-defined translations for non-english languages of the user interface and program messages. Entity: Sys_Translations
+## Renamed
+**New name:** [Systems.Config.Translations](Systems.Config.Translations.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: General.DocumentVersions
 **Namespace:** [General](General.md)  
 
 History of each saved version of each document. Entity: Gen_Document_Versions
+## Renamed
+**New name:** [Systems.Core.DocumentVersions](Systems.Core.DocumentVersions.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

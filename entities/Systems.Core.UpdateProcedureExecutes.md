@@ -6,6 +6,10 @@ uid: Systems.Core.UpdateProcedureExecutes
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes
+## Renamed
+**New name:** [Systems.Monitoring.UpdateProcedureExecutes](Systems.Monitoring.UpdateProcedureExecutes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

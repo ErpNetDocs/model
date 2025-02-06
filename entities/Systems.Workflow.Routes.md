@@ -6,6 +6,10 @@ uid: Systems.Workflow.Routes
 **Namespace:** [Systems.Workflow](Systems.Workflow.md)  
 
 Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes
+## Renamed
+**New name:** [Systems.Documents.Routes](Systems.Documents.Routes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

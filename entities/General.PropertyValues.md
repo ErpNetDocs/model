@@ -6,6 +6,10 @@ uid: General.PropertyValues
 **Namespace:** [General](General.md)  
 
 The actual values of the user-defined properties for each actual entity. Entity: Gen_Property_Values
+## Renamed
+**New name:** [Systems.Bpm.PropertyValues](Systems.Bpm.PropertyValues.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

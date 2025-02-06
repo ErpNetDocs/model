@@ -6,6 +6,10 @@ uid: Crm.PromotionalPackages
 **Namespace:** [Crm](Crm.md)  
 
 Promotional packages are packages of products, which are sold together at a special pricing and discount conditions. Entity: Crm_Promotional_Packages
+## Renamed
+**New name:** [Crm.Pricing.PromotionalPackages](Crm.Pricing.PromotionalPackages.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

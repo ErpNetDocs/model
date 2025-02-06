@@ -6,6 +6,10 @@ uid: Systems.Core.AuditLogEntries
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)
+## Renamed
+**New name:** [Systems.Monitoring.AuditLogEntries](Systems.Monitoring.AuditLogEntries.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

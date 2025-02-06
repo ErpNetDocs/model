@@ -6,6 +6,10 @@ uid: General.DocumentTypeNotifications
 **Namespace:** [General](General.md)  
 
 Provides notification addresses to be notified upon occurrence of different document events. Entity: Gen_Document_Type_Notifications
+## Renamed
+**New name:** [Systems.Documents.DocumentTypeNotifications](Systems.Documents.DocumentTypeNotifications.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

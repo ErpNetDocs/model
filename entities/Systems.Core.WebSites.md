@@ -6,6 +6,10 @@ uid: Systems.Core.WebSites
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
+## Renamed
+**New name:** [Systems.Config.WebSites](Systems.Config.WebSites.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

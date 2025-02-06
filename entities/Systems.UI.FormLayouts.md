@@ -6,6 +6,10 @@ uid: Systems.UI.FormLayouts
 **Namespace:** [Systems.UI](Systems.UI.md)  
 
 Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
+## Renamed
+**New name:** [Systems.Core.FormLayouts](Systems.Core.FormLayouts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

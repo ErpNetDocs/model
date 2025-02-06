@@ -6,6 +6,10 @@ uid: Crm.PriceLists
 **Namespace:** [Crm](Crm.md)  
 
 Price Lists are used to manage multiple price records, assign to customers, etc. Entity: Crm_Price_Lists
+## Renamed
+**New name:** [Crm.Pricing.PriceLists](Crm.Pricing.PriceLists.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

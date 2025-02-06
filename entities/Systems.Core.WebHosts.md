@@ -6,6 +6,10 @@ uid: Systems.Core.WebHosts
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains the names and https certificates of the different host names used to host sites. Entity: Sys_Web_Hosts (Introduced in version 19.1)
+## Renamed
+**New name:** [Systems.Config.WebHosts](Systems.Config.WebHosts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

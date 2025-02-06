@@ -39,7 +39,7 @@ Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 |[Prime_Cause_Document_Id](#prime_cause_document_id)|`uniqueidentifier` |The document that is the prime cause for creation of the current document|
 |[Read_Only](#read_only)|`bit` Readonly|1 - the document is read only; 0 - the document is not read only|
 |[Reference_Date](#reference_date)|`datetime` |Indicates the date, when the event, described by the document, actually occurred.<br>Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.<br>So, generally: Reference Date <= DocumentDate <= CreationTime.|
-|[Reference_Document_No](#reference_document_no)|`nvarchar(20)` |The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents|
+|[Reference_Document_No](#reference_document_no)|`nvarchar(20)` |The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents|
 |[Release_Time](#release_time)|`datetime` Readonly|Date and time when the document was released (State set to Released).|
 |[Responsible_Person_Id](#responsible_person_id)|`uniqueidentifier` |The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.|
 |[Reverse_Of_Document_Id](#reverse_of_document_id)|`uniqueidentifier` Readonly|The document which the current document is reverse of|
@@ -1044,7 +1044,7 @@ So, generally: Reference Date <= DocumentDate <= CreationTime.
 ### Reference_Document_No
 
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents
 
 | Property | Value |
 | - | - |

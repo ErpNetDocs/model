@@ -6,6 +6,10 @@ uid: Systems.Core.Sequences
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Provides numbering sequences, applicable for use in a multi-threaded environment. Entity: Gen_Sequences
+## Renamed
+**New name:** [Systems.Documents.Sequences](Systems.Documents.Sequences.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

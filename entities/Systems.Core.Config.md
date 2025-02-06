@@ -6,6 +6,10 @@ uid: Systems.Core.Config
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Hierarchical repository of configuration options. Entity: Gen_Config
+## Renamed
+**New name:** [Systems.Config.Config](Systems.Config.Config.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

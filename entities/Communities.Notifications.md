@@ -6,6 +6,10 @@ uid: Communities.Notifications
 **Namespace:** [Communities](Communities.md)  
 
 A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1)
+## Renamed
+**New name:** [Systems.Core.Notifications](Systems.Core.Notifications.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: Crm.ProductPrices
 **Namespace:** [Crm](Crm.md)  
 
 Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices
+## Renamed
+**New name:** [Crm.Pricing.ProductPrices](Crm.Pricing.ProductPrices.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

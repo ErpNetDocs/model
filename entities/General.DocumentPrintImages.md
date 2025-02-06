@@ -6,6 +6,10 @@ uid: General.DocumentPrintImages
 **Namespace:** [General](General.md)  
 
 Contains the data of a printout of a document as it was obtained from the data source in the moment of printing. Entity: Gen_Document_Print_Images
+## Renamed
+**New name:** [Systems.Core.DocumentPrintImages](Systems.Core.DocumentPrintImages.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

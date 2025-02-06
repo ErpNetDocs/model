@@ -6,6 +6,10 @@ uid: General.DocumentAmounts
 **Namespace:** [General](General.md)  
 
 Contains a specific instance of an additional amount for a specific document. Entity: Gen_Document_Amounts
+## Renamed
+**New name:** [General.Documents.DocumentAmounts](General.Documents.DocumentAmounts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

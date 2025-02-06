@@ -6,6 +6,10 @@ uid: General.DocumentPrints
 **Namespace:** [General](General.md)  
 
 Contains the history of each document print or export. Entity: Gen_Document_Prints
+## Renamed
+**New name:** [General.Documents.DocumentPrints](General.Documents.DocumentPrints.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

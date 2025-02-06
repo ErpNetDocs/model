@@ -6,6 +6,10 @@ uid: Logistics.Shipment.TransportationExecutionLines
 **Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
 
 Contains details of executions of transportation order lines. Entity: Log_Transportation_Execution_Lines (Introduced in version 18.2)
+## Renamed
+**New name:** [Logistics.Transportation.TransportationExecutionLines](Logistics.Transportation.TransportationExecutionLines.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

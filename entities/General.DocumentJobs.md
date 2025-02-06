@@ -7,6 +7,10 @@ uid: General.DocumentJobs
 **Inherited From:** [Systems.Core.Jobs](Systems.Core.Jobs.md)  
 
 Represents jobs, which change state of documents. Entity: Gen_Document_Jobs (Introduced in version 20.1)
+## Renamed
+**New name:** [Systems.Core.DocumentJobs](Systems.Core.DocumentJobs.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

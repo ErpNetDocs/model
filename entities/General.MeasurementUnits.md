@@ -6,6 +6,10 @@ uid: General.MeasurementUnits
 **Namespace:** [General](General.md)  
 
 Contains all measurement units, grouped in categories. Each category has one base unit (with ratio 1/1) and unlimited number of derived units with fixed ratio to the base unit. Entity: Gen_Measurement_Units
+## Renamed
+**New name:** [General.Products.MeasurementUnits](General.Products.MeasurementUnits.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

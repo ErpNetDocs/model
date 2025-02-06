@@ -10,6 +10,10 @@ Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts (Obsoleted i
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   
 
+## Renamed
+**New name:** [General.Documents.DocumentManualDistributedAmounts](General.Documents.DocumentManualDistributedAmounts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

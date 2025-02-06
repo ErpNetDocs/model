@@ -7,6 +7,10 @@ uid: Logistics.Shipment.TransportationOrders
 **Inherited From:** [General.Documents](General.Documents.md)  
 
 Transportation ordered to specific carrier or vehicle. Entity: Log_Transportation_Orders
+## Renamed
+**New name:** [Logistics.Transportation.TransportationOrders](Logistics.Transportation.TransportationOrders.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

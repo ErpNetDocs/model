@@ -6,6 +6,10 @@ uid: General.DocumentTypeUserStatuses
 **Namespace:** [General](General.md)  
 
 User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
+## Renamed
+**New name:** [Systems.Documents.DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

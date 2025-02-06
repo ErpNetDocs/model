@@ -6,6 +6,10 @@ uid: Crm.PromotionalPackageLines
 **Namespace:** [Crm](Crm.md)  
 
 Detail records (lines) of promotional package definition. Entity: Crm_Promotional_Package_Lines
+## Renamed
+**New name:** [Crm.Pricing.PromotionalPackageLines](Crm.Pricing.PromotionalPackageLines.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

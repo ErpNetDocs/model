@@ -6,6 +6,10 @@ uid: General.DocumentParties
 **Namespace:** [General](General.md)  
 
 Represents a party associated to a document. Entity: Gen_Document_Parties (Introduced in version 22.1.4.46)
+## Renamed
+**New name:** [General.Documents.DocumentParties](General.Documents.DocumentParties.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

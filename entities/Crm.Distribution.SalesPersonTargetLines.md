@@ -6,6 +6,10 @@ uid: Crm.Distribution.SalesPersonTargetLines
 **Namespace:** [Crm.Distribution](Crm.Distribution.md)  
 
 Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Target_Lines
+## Renamed
+**New name:** [Crm.SalesForce.SalesPersonTargetLines](Crm.SalesForce.SalesPersonTargetLines.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

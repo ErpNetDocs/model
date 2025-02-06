@@ -6,6 +6,10 @@ uid: General.DocumentDistributedAmounts
 **Namespace:** [General](General.md)  
 
 Contains the amounts which are distributed by the system over the document lines as a result of additional amount calculations. Entity: Gen_Document_Distributed_Amounts
+## Renamed
+**New name:** [General.Documents.DocumentDistributedAmounts](General.Documents.DocumentDistributedAmounts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

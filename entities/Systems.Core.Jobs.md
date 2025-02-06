@@ -6,6 +6,10 @@ uid: Systems.Core.Jobs
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in version 20.1)
+## Renamed
+**New name:** [Systems.Config.Jobs](Systems.Config.Jobs.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

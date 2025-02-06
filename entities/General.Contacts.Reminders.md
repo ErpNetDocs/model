@@ -6,6 +6,10 @@ uid: General.Contacts.Reminders
 **Namespace:** [General.Contacts](General.Contacts.md)  
 
 Reminders for activities. The reminders are alarms, which can be turned off. Each activity can have multiple reminders. Entity: Cm_Reminders
+## Renamed
+**New name:** [General.Activities.Reminders](General.Activities.Reminders.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

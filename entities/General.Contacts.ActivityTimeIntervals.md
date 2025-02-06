@@ -6,6 +6,10 @@ uid: General.Contacts.ActivityTimeIntervals
 **Namespace:** [General.Contacts](General.Contacts.md)  
 
 History of work efforts for executing activities (timesheet). Entity: Cm_Activity_Time_Intervals
+## Renamed
+**New name:** [General.Activities.ActivityTimeIntervals](General.Activities.ActivityTimeIntervals.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: Crm.Dealers
 **Namespace:** [Crm](Crm.md)  
 
 External dealers. Entity: Crm_Dealers
+## Renamed
+**New name:** [Crm.Sales.Dealers](Crm.Sales.Dealers.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

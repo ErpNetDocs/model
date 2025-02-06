@@ -6,6 +6,10 @@ uid: Systems.Dmv.ObjectFiles
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Information about object file sizes, grouped by entity type and creation time. Entity: Dmv_Object_Files (Introduced in version 24.1.3.46)
+## Renamed
+**New name:** [Systems.Monitoring.ObjectFiles](Systems.Monitoring.ObjectFiles.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

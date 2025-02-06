@@ -6,6 +6,10 @@ uid: Crm.SalesPersons
 **Namespace:** [Crm](Crm.md)  
 
 Sales persons (or representatives) are sellers inside the enterprise company who sell the products to customers. Entity: Crm_Sales_Persons
+## Renamed
+**New name:** [Crm.SalesForce.SalesPersons](Crm.SalesForce.SalesPersons.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

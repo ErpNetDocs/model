@@ -6,6 +6,10 @@ uid: General.DocumentTypeProperties
 **Namespace:** [General](General.md)  
 
 Default user-defined properties, which should be added to new documents. Entity: Gen_Document_Type_Properties
+## Renamed
+**New name:** [Systems.Documents.DocumentTypeProperties](Systems.Documents.DocumentTypeProperties.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

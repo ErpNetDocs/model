@@ -6,6 +6,10 @@ uid: Systems.Core.EntitySettings
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains entities, which have secured access. Entity: Sys_Entities
+## Renamed
+**New name:** [Systems.Security.EntitySettings](Systems.Security.EntitySettings.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

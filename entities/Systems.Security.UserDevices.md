@@ -40,8 +40,8 @@ Aggregate Root:
 | [DisplayText](Systems.Security.UserDevices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Security.UserDevices.md#id) | guid |  
 | [LastLoginTimeUtc](Systems.Security.UserDevices.md#lastlogintimeutc) | datetime | The exact server time (in UTC) when the device was last used to sign in. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` `Introduced in version 25.1.2.30` 
-| [NotificationsAllowed](Systems.Security.UserDevices.md#notificationsallowed) | boolean | Тhe device is allowed to receive notifications from the system. `Required` `Default(true)` `Introduced in version 25.1.2.30` 
-| [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). `Required` `ReadOnly` `Introduced in version 25.1.2.30` 
+| [NotificationsAllowed](Systems.Security.UserDevices.md#notificationsallowed) | boolean | Тhe device is allowed to receive notifications from the system. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.30` 
+| [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). `Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.2.30` 
 | [NotificationsToken](Systems.Security.UserDevices.md#notificationstoken) | string (2048) __nullable__ | A token used for sending notifications to the device, such as a push notification token. null if not applicable. `ReadOnly` `Introduced in version 25.1.2.30` 
 | [ObjectVersion](Systems.Security.UserDevices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -129,18 +129,18 @@ _Show in UI_: **ShownByDefault**
 
 ### NotificationsAllowed
 
-Тhe device is allowed to receive notifications from the system. `Required` `Default(true)` `Introduced in version 25.1.2.30`
+Тhe device is allowed to receive notifications from the system. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.30`
 
 _Type_: **boolean**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### NotificationsSystem
 
-The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). `Required` `ReadOnly` `Introduced in version 25.1.2.30`
+The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). `Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.2.30`
 
 _Type_: **[NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem)**  
 _Category_: **System**  
@@ -153,7 +153,7 @@ _Allowed Values (Systems.Security.UserDevicesRepository.NotificationsSystem Enum
 | FirebaseCloudMessaging | Google service for sending notifications across platforms.. Stored as 'FCM'. <br /> _Database Value:_ 'FCM' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'FirebaseCloudMessaging' |
 | WebPushAPI | Push notifications for web browsers.. Stored as 'WPUSH'. <br /> _Database Value:_ 'WPUSH' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'WebPushAPI' |
 
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 

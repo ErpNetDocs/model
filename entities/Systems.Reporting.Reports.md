@@ -6,6 +6,10 @@ uid: Systems.Reporting.Reports
 **Namespace:** [Systems.Reporting](Systems.Reporting.md)  
 
 User-defined reports. Reports retrieve data from data sources and present it in a user-defined layout. Entity: Sys_Reports
+## Renamed
+**New name:** [Systems.Core.Reports](Systems.Core.Reports.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

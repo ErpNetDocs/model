@@ -6,6 +6,10 @@ uid: General.DocumentAmountTypes
 **Namespace:** [General](General.md)  
 
 Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
+## Renamed
+**New name:** [Systems.Documents.DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

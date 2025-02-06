@@ -6,6 +6,10 @@ uid: Logistics.Shipment.TransportationOrderLines
 **Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
 
 Different cargoes of a transportation order. Entity: Log_Transportation_Order_Lines
+## Renamed
+**New name:** [Logistics.Transportation.TransportationOrderLines](Logistics.Transportation.TransportationOrderLines.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

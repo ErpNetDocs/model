@@ -6,6 +6,10 @@ uid: General.DocumentLineAmounts
 **Namespace:** [General](General.md)  
 
 Specifies user-defined input percentages by lines for the document amounts. Entity: Gen_Document_Line_Amounts
+## Renamed
+**New name:** [General.Documents.DocumentLineAmounts](General.Documents.DocumentLineAmounts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -7,6 +7,10 @@ uid: Logistics.Shipment.TransportationRequisitions
 **Inherited From:** [General.Documents](General.Documents.md)  
 
 Client requisition for transportation. Entity: Log_Transportation_Requisitions
+## Renamed
+**New name:** [Logistics.Transportation.TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

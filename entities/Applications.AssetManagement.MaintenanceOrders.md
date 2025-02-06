@@ -73,7 +73,7 @@ Aggregate Tree
 | [Private](Applications.AssetManagement.MaintenanceOrders.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [ReadOnly](Applications.AssetManagement.MaintenanceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Applications.AssetManagement.MaintenanceOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReferenceDocumentNo](Applications.AssetManagement.MaintenanceOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ReferenceDocumentNo](Applications.AssetManagement.MaintenanceOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Applications.AssetManagement.MaintenanceOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReminderTime](Applications.AssetManagement.MaintenanceOrders.md#remindertime) | datetime __nullable__ | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [StartTime](Applications.AssetManagement.MaintenanceOrders.md#starttime) | datetime | Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
@@ -440,7 +440,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
 
 _Type_: **string (20) __nullable__**  
 _Category_: **System**  

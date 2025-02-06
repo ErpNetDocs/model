@@ -6,6 +6,10 @@ uid: Logistics.Shipment.TransportationRequisitionLines
 **Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
 
 One line in a client requisition for transportation. Different lines usually represent requisitions for different cargo types. Entity: Log_Transportation_Requisition_Lines
+## Renamed
+**New name:** [Logistics.Transportation.TransportationRequisitionLines](Logistics.Transportation.TransportationRequisitionLines.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

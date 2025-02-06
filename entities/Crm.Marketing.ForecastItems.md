@@ -6,6 +6,10 @@ uid: Crm.Marketing.ForecastItems
 **Namespace:** [Crm.Marketing](Crm.Marketing.md)  
 
 Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
+## Renamed
+**New name:** [Crm.Sales.ForecastItems](Crm.Sales.ForecastItems.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

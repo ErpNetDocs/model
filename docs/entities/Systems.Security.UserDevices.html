@@ -155,12 +155,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationsallowed">NotificationsAllowed</a></td>
 <td>boolean</td>
-<td>Тhe device is allowed to receive notifications from the system. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 25.1.2.30</code></td>
+<td>Тhe device is allowed to receive notifications from the system. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.30</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationssystem">NotificationsSystem</a></td>
 <td><a href="Systems.Security.UserDevices.html#notificationssystem">NotificationsSystem</a></td>
-<td>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></td>
+<td>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationstoken">NotificationsToken</a></td>
@@ -246,15 +246,15 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notificationsallowed">NotificationsAllowed</h3>
-<p>Тhe device is allowed to receive notifications from the system. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 25.1.2.30</code></p>
+<p>Тhe device is allowed to receive notifications from the system. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.30</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notificationssystem">NotificationsSystem</h3>
-<p>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></p>
+<p>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.). <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.2.30</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.UserDevices.html#notificationssystem">NotificationsSystem</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>NotificationsSystem</code>(Systems.Security.UserDevices.md#notificationssystem) data attribute<br>
@@ -281,7 +281,7 @@ Allowed values for the <code>NotificationsSystem</code>(Systems.Security.UserDev
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notificationstoken">NotificationsToken</h3>

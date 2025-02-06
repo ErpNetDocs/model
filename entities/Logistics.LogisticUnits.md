@@ -6,6 +6,10 @@ uid: Logistics.LogisticUnits
 **Namespace:** [Logistics](Logistics.md)  
 
 Composition of products established for transport and/or storage which needs to be managed through the supply chain. Entity: Log_Logistic_Units (Introduced in version 21.1.0.77)
+## Renamed
+**New name:** [Logistics.Common.LogisticUnits](Logistics.Common.LogisticUnits.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

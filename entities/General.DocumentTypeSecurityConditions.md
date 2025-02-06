@@ -6,6 +6,10 @@ uid: General.DocumentTypeSecurityConditions
 **Namespace:** [General](General.md)  
 
 Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions
+## Renamed
+**New name:** [Systems.Documents.DocumentTypeSecurityConditions](Systems.Documents.DocumentTypeSecurityConditions.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

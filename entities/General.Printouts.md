@@ -6,6 +6,10 @@ uid: General.Printouts
 **Namespace:** [General](General.md)  
 
 Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts
+## Renamed
+**New name:** [Systems.Documents.Printouts](Systems.Documents.Printouts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

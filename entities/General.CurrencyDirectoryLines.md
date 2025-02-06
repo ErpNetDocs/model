@@ -6,6 +6,10 @@ uid: General.CurrencyDirectoryLines
 **Namespace:** [General](General.md)  
 
 Contains exchange rate for a currency against the main currency of currency directory. Entity: Gen_Currency_Directory_Lines
+## Renamed
+**New name:** [General.Currencies.CurrencyDirectoryLines](General.Currencies.CurrencyDirectoryLines.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

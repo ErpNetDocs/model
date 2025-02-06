@@ -6,6 +6,10 @@ uid: General.PartyLocationNumbers
 **Namespace:** [General](General.md)  
 
 Location numbers for a party. Depending on the partner with which we are doing an exchange, our location number might be different. Entity: Gen_Party_Location_Numbers (Introduced in version 19.1)
+## Renamed
+**New name:** [General.Contacts.PartyLocationNumbers](General.Contacts.PartyLocationNumbers.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

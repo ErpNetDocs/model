@@ -6,6 +6,10 @@ uid: Systems.Dmv.ProcedureStatusInfo
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Dynamic management view for long running procedures. Entity: Dmv_Procedure_Status_Info (Introduced in version 23.1.1.53)
+## Renamed
+**New name:** [Systems.Monitoring.ProcedureStatusInfo](Systems.Monitoring.ProcedureStatusInfo.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

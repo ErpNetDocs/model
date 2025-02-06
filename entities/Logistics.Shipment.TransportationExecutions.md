@@ -7,6 +7,10 @@ uid: Logistics.Shipment.TransportationExecutions
 **Inherited From:** [General.Documents](General.Documents.md)  
 
 Contains executions (loading, unloading or other operations) of the transportation orders. Entity: Log_Transportation_Executions (Introduced in version 18.2)
+## Renamed
+**New name:** [Logistics.Transportation.TransportationExecutions](Logistics.Transportation.TransportationExecutions.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

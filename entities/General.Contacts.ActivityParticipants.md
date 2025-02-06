@@ -6,6 +6,10 @@ uid: General.Contacts.ActivityParticipants
 **Namespace:** [General.Contacts](General.Contacts.md)  
 
 Contains the additional participants in the activities. These are the participating users, besides the user to which the activitiy is assigned. Entity: Cm_Activity_Participants
+## Renamed
+**New name:** [General.Activities.ActivityParticipants](General.Activities.ActivityParticipants.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

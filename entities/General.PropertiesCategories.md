@@ -6,6 +6,10 @@ uid: General.PropertiesCategories
 **Namespace:** [General](General.md)  
 
 Categories of properties. Entity: Gen_Properties_Categories
+## Renamed
+**New name:** [Systems.Bpm.PropertiesCategories](Systems.Bpm.PropertiesCategories.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

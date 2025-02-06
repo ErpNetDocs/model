@@ -6,6 +6,10 @@ uid: Logistics.CompositeProductComponents
 **Namespace:** [Logistics](Logistics.md)  
 
 Separate components of a product which are packaged and stored individually. Used when a single product is stored in multiple packages. Entity: Log_Composite_Product_Components (Introduced in version 23.1.0.15)
+## Renamed
+**New name:** [General.Products.CompositeProductComponents](General.Products.CompositeProductComponents.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: General.DocumentTypes
 **Namespace:** [General](General.md)  
 
 List of user-defined document types. Each type has associated system entity (object class). Entity: Gen_Document_Types
+## Renamed
+**New name:** [Systems.Documents.DocumentTypes](Systems.Documents.DocumentTypes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

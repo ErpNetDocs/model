@@ -10,6 +10,10 @@ Contains user comments for documents. Entity: Gen_Document_Comments (Obsoleted i
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   
 
+## Renamed
+**New name:** [General.Documents.DocumentComments](General.Documents.DocumentComments.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

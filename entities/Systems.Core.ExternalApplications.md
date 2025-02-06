@@ -6,6 +6,10 @@ uid: Systems.Core.ExternalApplications
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 List of external applications. Used to run external applications. Entity: Sys_External_Applications
+## Renamed
+**New name:** [Systems.Security.ExternalApplications](Systems.Security.ExternalApplications.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

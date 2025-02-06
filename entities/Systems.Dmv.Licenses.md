@@ -6,6 +6,10 @@ uid: Systems.Dmv.Licenses
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 The currently active licenses for the instance. Entity: Dmv_Licenses (Introduced in version 24.1.3.66)
+## Renamed
+**New name:** [Systems.Monitoring.Licenses](Systems.Monitoring.Licenses.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

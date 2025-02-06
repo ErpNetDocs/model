@@ -6,6 +6,10 @@ uid: Crm.CustomerTypes
 **Namespace:** [Crm](Crm.md)  
 
 User defined customer type. Primarily used for customer definition security, because it has record level security, which is also applied to the individual customer definitions. Entity: Crm_Customer_Types
+## Renamed
+**New name:** [Crm.Sales.CustomerTypes](Crm.Sales.CustomerTypes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

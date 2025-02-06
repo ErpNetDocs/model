@@ -6,6 +6,10 @@ uid: General.DocumentAmountTypeDependencies
 **Namespace:** [General](General.md)  
 
 Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Amount_Type_Dependencies
+## Renamed
+**New name:** [Systems.Documents.DocumentAmountTypeDependencies](Systems.Documents.DocumentAmountTypeDependencies.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

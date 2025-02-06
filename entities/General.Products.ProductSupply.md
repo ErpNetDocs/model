@@ -6,6 +6,10 @@ uid: General.Products.ProductSupply
 **Namespace:** [General.Products](General.Products.md)  
 
 Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply
+## Renamed
+**New name:** [Logistics.Procurement.ProductSupply](Logistics.Procurement.ProductSupply.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

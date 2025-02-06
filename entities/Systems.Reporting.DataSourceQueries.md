@@ -6,6 +6,10 @@ uid: Systems.Reporting.DataSourceQueries
 **Namespace:** [Systems.Reporting](Systems.Reporting.md)  
 
 Represents a query within a data source. Entity: Sys_Data_Source_Queries
+## Renamed
+**New name:** [Systems.Documents.DataSourceQueries](Systems.Documents.DataSourceQueries.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

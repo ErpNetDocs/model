@@ -6,6 +6,10 @@ uid: Systems.Workflow.Processes
 **Namespace:** [Systems.Workflow](Systems.Workflow.md)  
 
 Contains the business process diagrams. Entity: Wf_Processes
+## Renamed
+**New name:** [Systems.Bpm.Processes](Systems.Bpm.Processes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

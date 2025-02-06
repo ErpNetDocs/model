@@ -6,6 +6,10 @@ uid: General.Contacts.ActivityTemplates
 **Namespace:** [General.Contacts](General.Contacts.md)  
 
 Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates
+## Renamed
+**New name:** [General.Activities.ActivityTemplates](General.Activities.ActivityTemplates.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: Systems.Dmv.AuditLogEntries
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Information about the count and the size of audit log entries, grouped by application name, event class, entity name and event time. Entity: Dmv_Audit_Log_Entries (Introduced in version 24.1.3.48)
+## Renamed
+**New name:** [Systems.Monitoring.AuditLogSummary](Systems.Monitoring.AuditLogSummary.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

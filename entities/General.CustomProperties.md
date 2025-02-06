@@ -6,6 +6,10 @@ uid: General.CustomProperties
 **Namespace:** [General](General.md)  
 
 User-defined properties, which can supplement the system properties of almost all entities in the system. Entity: Gen_Properties
+## Renamed
+**New name:** [Systems.Bpm.CustomProperties](Systems.Bpm.CustomProperties.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

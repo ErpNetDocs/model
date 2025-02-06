@@ -6,6 +6,10 @@ uid: Crm.PriceTypes
 **Namespace:** [Crm](Crm.md)  
 
 Price types. Entity: Crm_Price_Types
+## Renamed
+**New name:** [Crm.Pricing.PriceTypes](Crm.Pricing.PriceTypes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

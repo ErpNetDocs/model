@@ -6,6 +6,10 @@ uid: General.PropertyEnterpriseCompanyFilters
 **Namespace:** [General](General.md)  
 
 Provides a way to apply different filtering of the property allowed values for the different enterprise companies. Entity: Gen_Property_Enterprise_Company_Filters
+## Renamed
+**New name:** [Systems.Bpm.PropertyEnterpriseCompanyFilters](Systems.Bpm.PropertyEnterpriseCompanyFilters.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

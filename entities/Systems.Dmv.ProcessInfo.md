@@ -6,6 +6,10 @@ uid: Systems.Dmv.ProcessInfo
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Process information dynamic management view. Entity: Dmv_Process_Info (Introduced in version 24.1.4.36)
+## Renamed
+**New name:** [Systems.Monitoring.ProcessInfo](Systems.Monitoring.ProcessInfo.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

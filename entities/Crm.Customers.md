@@ -6,6 +6,10 @@ uid: Crm.Customers
 **Namespace:** [Crm](Crm.md)  
 
 Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
+## Renamed
+**New name:** [Crm.Sales.Customers](Crm.Sales.Customers.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

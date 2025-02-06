@@ -6,6 +6,10 @@ uid: General.DocumentTypeAmounts
 **Namespace:** [General](General.md)  
 
 Specifies amount types, that should be automatically added to documents of a given type. Entity: Gen_Document_Type_Amounts
+## Renamed
+**New name:** [Systems.Documents.DocumentTypeAmounts](Systems.Documents.DocumentTypeAmounts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

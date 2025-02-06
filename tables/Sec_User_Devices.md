@@ -227,6 +227,12 @@ The exact server time (in UTC) when the device was last used to sign in.
 |User Login|no|
 |Visible|yes|
 
+#### Notifications_Allowed - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Notifications_System
 
 
@@ -251,12 +257,18 @@ The type or system of notifications allowed on the device, typically referring t
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Notifications_System - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Notifications_Token
 

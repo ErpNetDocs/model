@@ -6,6 +6,10 @@ uid: General.ReportQueries
 **Namespace:** [General](General.md)  
 
 Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
+## Renamed
+**New name:** [Systems.Core.ReportQueries](Systems.Core.ReportQueries.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

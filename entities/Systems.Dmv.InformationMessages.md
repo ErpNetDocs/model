@@ -6,6 +6,10 @@ uid: Systems.Dmv.InformationMessages
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Information abount types of information messages. Entity: Dmv_Information_Messages (Introduced in version 24.1.1.68)
+## Renamed
+**New name:** [Systems.Monitoring.InformationMessagesSummary](Systems.Monitoring.InformationMessagesSummary.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

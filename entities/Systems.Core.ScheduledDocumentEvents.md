@@ -6,6 +6,10 @@ uid: Systems.Core.ScheduledDocumentEvents
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events
+## Renamed
+**New name:** [Systems.Monitoring.ScheduledDocumentEvents](Systems.Monitoring.ScheduledDocumentEvents.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

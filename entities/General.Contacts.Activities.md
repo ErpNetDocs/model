@@ -7,6 +7,10 @@ uid: General.Contacts.Activities
 **Inherited From:** [General.Documents](General.Documents.md)  
 
 Generic activity. Provides task management functionality. Activity can be one of Task, Communication or Meeting. Entity: Cm_Activities
+## Renamed
+**New name:** [General.Activities.Activities](General.Activities.Activities.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

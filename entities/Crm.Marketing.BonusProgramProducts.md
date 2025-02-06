@@ -6,6 +6,10 @@ uid: Crm.Marketing.BonusProgramProducts
 **Namespace:** [Crm.Marketing](Crm.Marketing.md)  
 
 Provides a way to specify additional (to the one specified in Bonus Program.Conditional Product) products, which will be used to evaluate bonus program conditions. When any of the products exists in the sales document, the conditions are satisfied and the program is applied. When the conditional products list for a bonus program is empty, it is considered that the program is valid for all products. Entity: Crm_Bonus_Program_Products
+## Renamed
+**New name:** [Crm.Pricing.BonusProgramProducts](Crm.Pricing.BonusProgramProducts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

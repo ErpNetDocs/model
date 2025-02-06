@@ -6,6 +6,10 @@ uid: Systems.Reporting.DataSources
 **Namespace:** [Systems.Reporting](Systems.Reporting.md)  
 
 Contains user-defined data sources, which retrieve rows from multiple queries. Entity: Sys_Data_Sources
+## Renamed
+**New name:** [Systems.Documents.DataSources](Systems.Documents.DataSources.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

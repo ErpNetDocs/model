@@ -6,6 +6,10 @@ uid: Systems.Dmv.InstanceParameters
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
 Parameters for this instance. Entity: Dmv_Instance_Parameters (Introduced in version 24.1.1.68)
+## Renamed
+**New name:** [Systems.Monitoring.InstanceParameters](Systems.Monitoring.InstanceParameters.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

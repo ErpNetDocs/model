@@ -6,6 +6,10 @@ uid: General.CustomPropertyAllowedValues
 **Namespace:** [General](General.md)  
 
 User-defined properties allowed values. Can be specified only for properties with unbound allowed values (e.g. for which Allowed Values Entity is not set). Entity: Gen_Property_Allowed_Values
+## Renamed
+**New name:** [Systems.Bpm.CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

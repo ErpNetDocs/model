@@ -6,6 +6,10 @@ uid: General.DocumentFulfillments
 **Namespace:** [General](General.md)  
 
 Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced in version 20.1)
+## Renamed
+**New name:** [General.Documents.DocumentFulfillments](General.Documents.DocumentFulfillments.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

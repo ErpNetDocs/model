@@ -6,6 +6,10 @@ uid: Crm.CustomerProducts
 **Namespace:** [Crm](Crm.md)  
 
 Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products (Introduced in version 22.1.6.42)
+## Renamed
+**New name:** [Crm.Sales.CustomerProducts](Crm.Sales.CustomerProducts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

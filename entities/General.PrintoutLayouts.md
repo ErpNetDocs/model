@@ -6,6 +6,10 @@ uid: General.PrintoutLayouts
 **Namespace:** [General](General.md)  
 
 Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
+## Renamed
+**New name:** [Systems.Documents.PrintoutLayouts](Systems.Documents.PrintoutLayouts.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

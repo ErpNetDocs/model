@@ -6,6 +6,10 @@ uid: Systems.Core.WebHooks
 **Namespace:** [Systems.Core](Systems.Core.md)  
 
 Webhook templates. Activated by business rules or other means. Entity: Sys_Web_Hooks (Introduced in version 22.1.5.8)
+## Renamed
+**New name:** [Systems.Config.WebHooks](Systems.Config.WebHooks.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

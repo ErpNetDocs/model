@@ -6,6 +6,10 @@ uid: Production.WorkOrderDocumentTypesOptions
 **Namespace:** [Production](Production.md)  
 
 Options for user-defined Work Order document types. Entity: Prd_Work_Order_Document_Types_Options
+## Renamed
+**New name:** [Production.ShopFloor.WorkOrderDocumentTypesOptions](Production.ShopFloor.WorkOrderDocumentTypesOptions.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -6,6 +6,10 @@ uid: Logistics.Shipment.TransportationModes
 **Namespace:** [Logistics.Shipment](Logistics.Shipment.md)  
 
 Represents a mode of transportation, like water, air, road, etc. Entity: Log_Transportation_Modes
+## Renamed
+**New name:** [Logistics.Transportation.TransportationModes](Logistics.Transportation.TransportationModes.md)  
+
+
 
 ## Default Visualization
 Default Display Text Format:  
