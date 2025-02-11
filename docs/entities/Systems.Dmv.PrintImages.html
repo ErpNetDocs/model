@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.PrintImages View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.PrintImages Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.PrintImages View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.PrintImages Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,131 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.PrintImages">
-<h1 id="systemsdmvprintimages-view">Systems.Dmv.PrintImages View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringprintimages-entity">Systems.Monitoring.PrintImages Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Information about print sizes, grouped by document type and print type. Entity: Dmv_Print_Images (Introduced in version 24.1.0.15)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.PrintImages.html">Systems.Monitoring.PrintImages</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{PrintoutLayoutName}: {TypeName}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.PrintImages.html">Systems.Dmv.PrintImages</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#documententityname">DocumentEntityName</a></td>
-<td>string (64)</td>
-<td>The entity name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#printoutlayoutname">PrintoutLayoutName</a></td>
-<td>string (64)</td>
-<td>Printout layout name. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#printscount">PrintsCount</a></td>
-<td>int32</td>
-<td>Total number of prints. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#sizemb">SizeMB</a></td>
-<td>decimal (12, 3)</td>
-<td>Total size of the print in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#typename">TypeName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#unitsizemb">UnitSizeMB</a></td>
-<td>decimal (12, 3)</td>
-<td>Average print size in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.PrintImages.html#year">Year</a></td>
-<td>string (30)</td>
-<td>The year to which the current data refers. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>Introduced in version 24.1.3.32</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="documententityname">DocumentEntityName</h3>
-<p>The entity name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="printoutlayoutname">PrintoutLayoutName</h3>
-<p>Printout layout name. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="printscount">PrintsCount</h3>
-<p>Total number of prints. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="sizemb">SizeMB</h3>
-<p>Total size of the print in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="typename">TypeName</h3>
-<p>Name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="unitsizemb">UnitSizeMB</h3>
-<p>Average print size in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="year">Year</h3>
-<p>The year to which the current data refers. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>Introduced in version 24.1.3.32</code></p>
-<p><em>Type</em>: <strong>string (30)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>30</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_PrintImages?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_PrintImages?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_PrintImages?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_PrintImages?$top=10</a></p>
 
 </article>
 

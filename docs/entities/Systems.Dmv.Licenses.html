@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.Licenses View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.Licenses Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.Licenses View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.Licenses Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,95 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.Licenses">
-<h1 id="systemsdmvlicenses-view">Systems.Dmv.Licenses View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringlicenses-entity">Systems.Monitoring.Licenses Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>The currently active licenses for the instance. Entity: Dmv_Licenses (Introduced in version 24.1.3.66)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.Licenses.html">Systems.Monitoring.Licenses</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{LicenseCode}: {LicenseDescription}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>CannotBeShown</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.Licenses.html">Systems.Dmv.Licenses</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.Licenses.html#licensecode">LicenseCode</a></td>
-<td>string (64)</td>
-<td>The code of the module or functionality, which is licensed. <code>Required</code> <code>Filter(multi eq;like)</code> <code>Introduced in version 24.1.3.88</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.Licenses.html#licensecount">LicenseCount</a></td>
-<td>int32</td>
-<td>The current count (as of now) of active licenses. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 24.1.3.88</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.Licenses.html#licensedescription">LicenseDescription</a></td>
-<td>string (max)</td>
-<td>Description of the license code. <code>Required</code> <code>Introduced in version 24.1.3.88</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.Licenses.html#licensescaletype">LicenseScaleType</a></td>
-<td>string (64)</td>
-<td>Denotes whether the license supports counts, different from 0 and 1. <code>Required</code> <code>Introduced in version 24.1.3.88</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="licensecode">LicenseCode</h3>
-<p>The code of the module or functionality, which is licensed. <code>Required</code> <code>Filter(multi eq;like)</code> <code>Introduced in version 24.1.3.88</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensecount">LicenseCount</h3>
-<p>The current count (as of now) of active licenses. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 24.1.3.88</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensedescription">LicenseDescription</h3>
-<p>Description of the license code. <code>Required</code> <code>Introduced in version 24.1.3.88</code></p>
-<p><em>Type</em>: <strong>string (max)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensescaletype">LicenseScaleType</h3>
-<p>Denotes whether the license supports counts, different from 0 and 1. <code>Required</code> <code>Introduced in version 24.1.3.88</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_Licenses?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_Licenses?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_Licenses?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_Licenses?$top=10</a></p>
 
 </article>
 

@@ -271,12 +271,6 @@ references:
 - uid: Communities
   name: Communities Namespace
   href: entities/Communities.html
-- uid: Communities.NotificationSettings
-  name: Communities.NotificationSettings Entity
-  href: entities/Communities.NotificationSettings.html
-- uid: Communities.Notifications
-  name: Communities.Notifications Entity
-  href: entities/Communities.Notifications.html
 - uid: Communities.Social
   name: Communities.Social Namespace
   href: entities/Communities.Social.html
@@ -334,39 +328,12 @@ references:
 - uid: Crm
   name: Crm Namespace
   href: entities/Crm.html
-- uid: Crm.CustomerProducts
-  name: Crm.CustomerProducts Entity
-  href: entities/Crm.CustomerProducts.html
-- uid: Crm.CustomerTypes
-  name: Crm.CustomerTypes Entity
-  href: entities/Crm.CustomerTypes.html
-- uid: Crm.Customers
-  name: Crm.Customers Entity
-  href: entities/Crm.Customers.html
 - uid: Crm.DealLines
   name: Crm.DealLines Entity
   href: entities/Crm.DealLines.html
-- uid: Crm.Dealers
-  name: Crm.Dealers Entity
-  href: entities/Crm.Dealers.html
-- uid: Crm.DiscountTypes
-  name: Crm.DiscountTypes Entity
-  href: entities/Crm.DiscountTypes.html
 - uid: Crm.Distribution
   name: Crm.Distribution Namespace
   href: entities/Crm.Distribution.html
-- uid: Crm.Distribution.SalesPersonGroups
-  name: Crm.Distribution.SalesPersonGroups Entity
-  href: entities/Crm.Distribution.SalesPersonGroups.html
-- uid: Crm.Distribution.SalesPersonTargetLines
-  name: Crm.Distribution.SalesPersonTargetLines Entity
-  href: entities/Crm.Distribution.SalesPersonTargetLines.html
-- uid: Crm.Distribution.SalesPersonTargets
-  name: Crm.Distribution.SalesPersonTargets Entity
-  href: entities/Crm.Distribution.SalesPersonTargets.html
-- uid: Crm.Distributors
-  name: Crm.Distributors Entity
-  href: entities/Crm.Distributors.html
 - uid: Crm.Invoicing
   name: Crm.Invoicing Namespace
   href: entities/Crm.Invoicing.html
@@ -388,18 +355,9 @@ references:
 - uid: Crm.Invoicing.InvoicesOptions
   name: Crm.Invoicing.InvoicesOptions Entity
   href: entities/Crm.Invoicing.InvoicesOptions.html
-- uid: Crm.LineDiscounts
-  name: Crm.LineDiscounts Entity
-  href: entities/Crm.LineDiscounts.html
 - uid: Crm.Marketing
   name: Crm.Marketing Namespace
   href: entities/Crm.Marketing.html
-- uid: Crm.Marketing.BonusProgramProducts
-  name: Crm.Marketing.BonusProgramProducts Entity
-  href: entities/Crm.Marketing.BonusProgramProducts.html
-- uid: Crm.Marketing.BonusPrograms
-  name: Crm.Marketing.BonusPrograms Entity
-  href: entities/Crm.Marketing.BonusPrograms.html
 - uid: Crm.Marketing.Campaigns
   name: Crm.Marketing.Campaigns Entity
   href: entities/Crm.Marketing.Campaigns.html
@@ -415,9 +373,6 @@ references:
 - uid: Crm.Marketing.DistributionChannels
   name: Crm.Marketing.DistributionChannels Entity
   href: entities/Crm.Marketing.DistributionChannels.html
-- uid: Crm.Marketing.ForecastItems
-  name: Crm.Marketing.ForecastItems Entity
-  href: entities/Crm.Marketing.ForecastItems.html
 - uid: Crm.Marketing.Industries
   name: Crm.Marketing.Industries Entity
   href: entities/Crm.Marketing.Industries.html
@@ -493,12 +448,6 @@ references:
 - uid: Crm.Presales.OffersOptions
   name: Crm.Presales.OffersOptions Entity
   href: entities/Crm.Presales.OffersOptions.html
-- uid: Crm.PriceLists
-  name: Crm.PriceLists Entity
-  href: entities/Crm.PriceLists.html
-- uid: Crm.PriceTypes
-  name: Crm.PriceTypes Entity
-  href: entities/Crm.PriceTypes.html
 - uid: Crm.Pricing
   name: Crm.Pricing Namespace
   href: entities/Crm.Pricing.html
@@ -541,15 +490,6 @@ references:
 - uid: Crm.Pricing.PromotionalPackages
   name: Crm.Pricing.PromotionalPackages Entity
   href: entities/Crm.Pricing.PromotionalPackages.html
-- uid: Crm.ProductPrices
-  name: Crm.ProductPrices Entity
-  href: entities/Crm.ProductPrices.html
-- uid: Crm.PromotionalPackageLines
-  name: Crm.PromotionalPackageLines Entity
-  href: entities/Crm.PromotionalPackageLines.html
-- uid: Crm.PromotionalPackages
-  name: Crm.PromotionalPackages Entity
-  href: entities/Crm.PromotionalPackages.html
 - uid: Crm.Sales
   name: Crm.Sales Namespace
   href: entities/Crm.Sales.html
@@ -622,12 +562,6 @@ references:
 - uid: Crm.SalesForce.SalesPersons
   name: Crm.SalesForce.SalesPersons Entity
   href: entities/Crm.SalesForce.SalesPersons.html
-- uid: Crm.SalesPersonAssignmentRules
-  name: Crm.SalesPersonAssignmentRules Entity
-  href: entities/Crm.SalesPersonAssignmentRules.html
-- uid: Crm.SalesPersons
-  name: Crm.SalesPersons Entity
-  href: entities/Crm.SalesPersons.html
 - uid: Crm.Subscriptions
   name: Crm.Subscriptions Namespace
   href: entities/Crm.Subscriptions.html
@@ -976,21 +910,6 @@ references:
 - uid: General.Contacts
   name: General.Contacts Namespace
   href: entities/General.Contacts.html
-- uid: General.Contacts.Activities
-  name: General.Contacts.Activities Entity
-  href: entities/General.Contacts.Activities.html
-- uid: General.Contacts.ActivityParticipants
-  name: General.Contacts.ActivityParticipants Entity
-  href: entities/General.Contacts.ActivityParticipants.html
-- uid: General.Contacts.ActivityResources
-  name: General.Contacts.ActivityResources Entity
-  href: entities/General.Contacts.ActivityResources.html
-- uid: General.Contacts.ActivityTemplates
-  name: General.Contacts.ActivityTemplates Entity
-  href: entities/General.Contacts.ActivityTemplates.html
-- uid: General.Contacts.ActivityTimeIntervals
-  name: General.Contacts.ActivityTimeIntervals Entity
-  href: entities/General.Contacts.ActivityTimeIntervals.html
 - uid: General.Contacts.Companies
   name: General.Contacts.Companies Entity
   href: entities/General.Contacts.Companies.html
@@ -1039,9 +958,6 @@ references:
 - uid: General.Contacts.Persons
   name: General.Contacts.Persons Entity
   href: entities/General.Contacts.Persons.html
-- uid: General.Contacts.Reminders
-  name: General.Contacts.Reminders Entity
-  href: entities/General.Contacts.Reminders.html
 - uid: General.Currencies
   name: General.Currencies Namespace
   href: entities/General.Currencies.html
@@ -1054,93 +970,9 @@ references:
 - uid: General.Currencies.CurrencyDirectoryLines
   name: General.Currencies.CurrencyDirectoryLines Entity
   href: entities/General.Currencies.CurrencyDirectoryLines.html
-- uid: General.CurrencyDirectories
-  name: General.CurrencyDirectories Entity
-  href: entities/General.CurrencyDirectories.html
-- uid: General.CurrencyDirectoryLines
-  name: General.CurrencyDirectoryLines Entity
-  href: entities/General.CurrencyDirectoryLines.html
-- uid: General.CustomProperties
-  name: General.CustomProperties Entity
-  href: entities/General.CustomProperties.html
-- uid: General.CustomPropertyAllowedValues
-  name: General.CustomPropertyAllowedValues Entity
-  href: entities/General.CustomPropertyAllowedValues.html
 - uid: General.DocumentAmountReferencedDocuments
   name: General.DocumentAmountReferencedDocuments Entity
   href: entities/General.DocumentAmountReferencedDocuments.html
-- uid: General.DocumentAmountTypeDependencies
-  name: General.DocumentAmountTypeDependencies Entity
-  href: entities/General.DocumentAmountTypeDependencies.html
-- uid: General.DocumentAmountTypes
-  name: General.DocumentAmountTypes Entity
-  href: entities/General.DocumentAmountTypes.html
-- uid: General.DocumentAmounts
-  name: General.DocumentAmounts Entity
-  href: entities/General.DocumentAmounts.html
-- uid: General.DocumentComments
-  name: General.DocumentComments Entity
-  href: entities/General.DocumentComments.html
-- uid: General.DocumentDistributedAmounts
-  name: General.DocumentDistributedAmounts Entity
-  href: entities/General.DocumentDistributedAmounts.html
-- uid: General.DocumentFileAttachments
-  name: General.DocumentFileAttachments Entity
-  href: entities/General.DocumentFileAttachments.html
-- uid: General.DocumentFulfillments
-  name: General.DocumentFulfillments Entity
-  href: entities/General.DocumentFulfillments.html
-- uid: General.DocumentJobs
-  name: General.DocumentJobs Entity
-  href: entities/General.DocumentJobs.html
-- uid: General.DocumentLineAmounts
-  name: General.DocumentLineAmounts Entity
-  href: entities/General.DocumentLineAmounts.html
-- uid: General.DocumentLinks
-  name: General.DocumentLinks Entity
-  href: entities/General.DocumentLinks.html
-- uid: General.DocumentManualDistributedAmounts
-  name: General.DocumentManualDistributedAmounts Entity
-  href: entities/General.DocumentManualDistributedAmounts.html
-- uid: General.DocumentParties
-  name: General.DocumentParties Entity
-  href: entities/General.DocumentParties.html
-- uid: General.DocumentPartyRoles
-  name: General.DocumentPartyRoles Entity
-  href: entities/General.DocumentPartyRoles.html
-- uid: General.DocumentPrintImages
-  name: General.DocumentPrintImages Entity
-  href: entities/General.DocumentPrintImages.html
-- uid: General.DocumentPrints
-  name: General.DocumentPrints Entity
-  href: entities/General.DocumentPrints.html
-- uid: General.DocumentStateChanges
-  name: General.DocumentStateChanges Entity
-  href: entities/General.DocumentStateChanges.html
-- uid: General.DocumentTypeAmounts
-  name: General.DocumentTypeAmounts Entity
-  href: entities/General.DocumentTypeAmounts.html
-- uid: General.DocumentTypeEnterpriseCompanies
-  name: General.DocumentTypeEnterpriseCompanies Entity
-  href: entities/General.DocumentTypeEnterpriseCompanies.html
-- uid: General.DocumentTypeNotifications
-  name: General.DocumentTypeNotifications Entity
-  href: entities/General.DocumentTypeNotifications.html
-- uid: General.DocumentTypeProperties
-  name: General.DocumentTypeProperties Entity
-  href: entities/General.DocumentTypeProperties.html
-- uid: General.DocumentTypeSecurityConditions
-  name: General.DocumentTypeSecurityConditions Entity
-  href: entities/General.DocumentTypeSecurityConditions.html
-- uid: General.DocumentTypeUserStatuses
-  name: General.DocumentTypeUserStatuses Entity
-  href: entities/General.DocumentTypeUserStatuses.html
-- uid: General.DocumentTypes
-  name: General.DocumentTypes Entity
-  href: entities/General.DocumentTypes.html
-- uid: General.DocumentVersions
-  name: General.DocumentVersions Entity
-  href: entities/General.DocumentVersions.html
 - uid: General.Documents
   name: General.Documents Namespace
   href: entities/General.Documents.html
@@ -1216,27 +1048,6 @@ references:
 - uid: General.Geography.MapPoints
   name: General.Geography.MapPoints Entity
   href: entities/General.Geography.MapPoints.html
-- uid: General.LinkTypes
-  name: General.LinkTypes Entity
-  href: entities/General.LinkTypes.html
-- uid: General.MeasurementCategories
-  name: General.MeasurementCategories Entity
-  href: entities/General.MeasurementCategories.html
-- uid: General.MeasurementUnits
-  name: General.MeasurementUnits Entity
-  href: entities/General.MeasurementUnits.html
-- uid: General.PartyApplicableLegislations
-  name: General.PartyApplicableLegislations Entity
-  href: entities/General.PartyApplicableLegislations.html
-- uid: General.PartyLocationNumbers
-  name: General.PartyLocationNumbers Entity
-  href: entities/General.PartyLocationNumbers.html
-- uid: General.PrintoutLayouts
-  name: General.PrintoutLayouts Entity
-  href: entities/General.PrintoutLayouts.html
-- uid: General.Printouts
-  name: General.Printouts Entity
-  href: entities/General.Printouts.html
 - uid: General.ProductCatalogs
   name: General.ProductCatalogs Entity
   href: entities/General.ProductCatalogs.html
@@ -1285,9 +1096,6 @@ references:
 - uid: General.Products.ProductPictures
   name: General.Products.ProductPictures Entity
   href: entities/General.Products.ProductPictures.html
-- uid: General.Products.ProductSupply
-  name: General.Products.ProductSupply Entity
-  href: entities/General.Products.ProductSupply.html
 - uid: General.Products.ProductTypePurchaseInvoiceLineProperties
   name: General.Products.ProductTypePurchaseInvoiceLineProperties Entity
   href: entities/General.Products.ProductTypePurchaseInvoiceLineProperties.html
@@ -1309,18 +1117,6 @@ references:
 - uid: General.Products.VariantStyles
   name: General.Products.VariantStyles Entity
   href: entities/General.Products.VariantStyles.html
-- uid: General.PropertiesCategories
-  name: General.PropertiesCategories Entity
-  href: entities/General.PropertiesCategories.html
-- uid: General.PropertyEnterpriseCompanyFilters
-  name: General.PropertyEnterpriseCompanyFilters Entity
-  href: entities/General.PropertyEnterpriseCompanyFilters.html
-- uid: General.PropertyValues
-  name: General.PropertyValues Entity
-  href: entities/General.PropertyValues.html
-- uid: General.ReportQueries
-  name: General.ReportQueries Entity
-  href: entities/General.ReportQueries.html
 - uid: General.Reports
   name: General.Reports Entity
   href: entities/General.Reports.html
@@ -1351,9 +1147,6 @@ references:
 - uid: General.ScheduledDocumentEvents
   name: General.ScheduledDocumentEvents Entity
   href: entities/General.ScheduledDocumentEvents.html
-- uid: General.SequenceGenerators
-  name: General.SequenceGenerators Entity
-  href: entities/General.SequenceGenerators.html
 - uid: General.Sequences
   name: General.Sequences Entity
   href: entities/General.Sequences.html
@@ -1390,9 +1183,6 @@ references:
 - uid: Logistics.Common.LogisticUnits
   name: Logistics.Common.LogisticUnits Entity
   href: entities/Logistics.Common.LogisticUnits.html
-- uid: Logistics.CompositeProductComponents
-  name: Logistics.CompositeProductComponents Entity
-  href: entities/Logistics.CompositeProductComponents.html
 - uid: Logistics.Inventory
   name: Logistics.Inventory Namespace
   href: entities/Logistics.Inventory.html
@@ -1504,18 +1294,6 @@ references:
 - uid: Logistics.Inventory.TransferOrdersOptions
   name: Logistics.Inventory.TransferOrdersOptions Entity
   href: entities/Logistics.Inventory.TransferOrdersOptions.html
-- uid: Logistics.LogisticUnitContents
-  name: Logistics.LogisticUnitContents Entity
-  href: entities/Logistics.LogisticUnitContents.html
-- uid: Logistics.LogisticUnitSpecifications
-  name: Logistics.LogisticUnitSpecifications Entity
-  href: entities/Logistics.LogisticUnitSpecifications.html
-- uid: Logistics.LogisticUnitTypes
-  name: Logistics.LogisticUnitTypes Entity
-  href: entities/Logistics.LogisticUnitTypes.html
-- uid: Logistics.LogisticUnits
-  name: Logistics.LogisticUnits Entity
-  href: entities/Logistics.LogisticUnits.html
 - uid: Logistics.Procurement
   name: Logistics.Procurement Namespace
   href: entities/Logistics.Procurement.html
@@ -1591,30 +1369,6 @@ references:
 - uid: Logistics.Shipment.Shipments
   name: Logistics.Shipment.Shipments Entity
   href: entities/Logistics.Shipment.Shipments.html
-- uid: Logistics.Shipment.TransportationExecutionLines
-  name: Logistics.Shipment.TransportationExecutionLines Entity
-  href: entities/Logistics.Shipment.TransportationExecutionLines.html
-- uid: Logistics.Shipment.TransportationExecutions
-  name: Logistics.Shipment.TransportationExecutions Entity
-  href: entities/Logistics.Shipment.TransportationExecutions.html
-- uid: Logistics.Shipment.TransportationModes
-  name: Logistics.Shipment.TransportationModes Entity
-  href: entities/Logistics.Shipment.TransportationModes.html
-- uid: Logistics.Shipment.TransportationOrderLines
-  name: Logistics.Shipment.TransportationOrderLines Entity
-  href: entities/Logistics.Shipment.TransportationOrderLines.html
-- uid: Logistics.Shipment.TransportationOrders
-  name: Logistics.Shipment.TransportationOrders Entity
-  href: entities/Logistics.Shipment.TransportationOrders.html
-- uid: Logistics.Shipment.TransportationRequisitionLines
-  name: Logistics.Shipment.TransportationRequisitionLines Entity
-  href: entities/Logistics.Shipment.TransportationRequisitionLines.html
-- uid: Logistics.Shipment.TransportationRequisitions
-  name: Logistics.Shipment.TransportationRequisitions Entity
-  href: entities/Logistics.Shipment.TransportationRequisitions.html
-- uid: Logistics.Shipment.TransportationVehicles
-  name: Logistics.Shipment.TransportationVehicles Entity
-  href: entities/Logistics.Shipment.TransportationVehicles.html
 - uid: Logistics.Transportation
   name: Logistics.Transportation Namespace
   href: entities/Logistics.Transportation.html
@@ -1798,9 +1552,6 @@ references:
 - uid: Production.Technologies.Recipes
   name: Production.Technologies.Recipes Entity
   href: entities/Production.Technologies.Recipes.html
-- uid: Production.WorkOrderDocumentTypesOptions
-  name: Production.WorkOrderDocumentTypesOptions Entity
-  href: entities/Production.WorkOrderDocumentTypesOptions.html
 - uid: Projects
   name: Projects Namespace
   href: entities/Projects.html
@@ -2128,12 +1879,6 @@ references:
 - uid: Systems.Core.AttributeChangesHistory
   name: Systems.Core.AttributeChangesHistory View
   href: entities/Systems.Core.AttributeChangesHistory.html
-- uid: Systems.Core.AuditLogEntries
-  name: Systems.Core.AuditLogEntries Entity
-  href: entities/Systems.Core.AuditLogEntries.html
-- uid: Systems.Core.Config
-  name: Systems.Core.Config Entity
-  href: entities/Systems.Core.Config.html
 - uid: Systems.Core.DataEntryDefaultValues
   name: Systems.Core.DataEntryDefaultValues Entity
   href: entities/Systems.Core.DataEntryDefaultValues.html
@@ -2146,24 +1891,12 @@ references:
 - uid: Systems.Core.DocumentVersions
   name: Systems.Core.DocumentVersions Entity
   href: entities/Systems.Core.DocumentVersions.html
-- uid: Systems.Core.EntitySettings
-  name: Systems.Core.EntitySettings Entity
-  href: entities/Systems.Core.EntitySettings.html
 - uid: Systems.Core.ExtensibleDataObjects
   name: Systems.Core.ExtensibleDataObjects Entity
   href: entities/Systems.Core.ExtensibleDataObjects.html
-- uid: Systems.Core.ExternalApplications
-  name: Systems.Core.ExternalApplications Entity
-  href: entities/Systems.Core.ExternalApplications.html
 - uid: Systems.Core.FormLayouts
   name: Systems.Core.FormLayouts Entity
   href: entities/Systems.Core.FormLayouts.html
-- uid: Systems.Core.InformationMessages
-  name: Systems.Core.InformationMessages Entity
-  href: entities/Systems.Core.InformationMessages.html
-- uid: Systems.Core.Jobs
-  name: Systems.Core.Jobs Entity
-  href: entities/Systems.Core.Jobs.html
 - uid: Systems.Core.NotificationSettings
   name: Systems.Core.NotificationSettings Entity
   href: entities/Systems.Core.NotificationSettings.html
@@ -2191,81 +1924,18 @@ references:
 - uid: Systems.Core.Reports
   name: Systems.Core.Reports Entity
   href: entities/Systems.Core.Reports.html
-- uid: Systems.Core.ResolvedConflicts
-  name: Systems.Core.ResolvedConflicts Entity
-  href: entities/Systems.Core.ResolvedConflicts.html
-- uid: Systems.Core.ScheduledDocumentEvents
-  name: Systems.Core.ScheduledDocumentEvents Entity
-  href: entities/Systems.Core.ScheduledDocumentEvents.html
-- uid: Systems.Core.Sequences
-  name: Systems.Core.Sequences Entity
-  href: entities/Systems.Core.Sequences.html
 - uid: Systems.Core.TextTranslations
   name: Systems.Core.TextTranslations Entity
   href: entities/Systems.Core.TextTranslations.html
-- uid: Systems.Core.Translations
-  name: Systems.Core.Translations Entity
-  href: entities/Systems.Core.Translations.html
-- uid: Systems.Core.UpdateProcedureExecutes
-  name: Systems.Core.UpdateProcedureExecutes Entity
-  href: entities/Systems.Core.UpdateProcedureExecutes.html
-- uid: Systems.Core.WebHooks
-  name: Systems.Core.WebHooks Entity
-  href: entities/Systems.Core.WebHooks.html
-- uid: Systems.Core.WebHosts
-  name: Systems.Core.WebHosts Entity
-  href: entities/Systems.Core.WebHosts.html
-- uid: Systems.Core.WebSites
-  name: Systems.Core.WebSites Entity
-  href: entities/Systems.Core.WebSites.html
 - uid: Systems.Dmv
   name: Systems.Dmv Namespace
   href: entities/Systems.Dmv.html
-- uid: Systems.Dmv.AuditLogEntries
-  name: Systems.Dmv.AuditLogEntries View
-  href: entities/Systems.Dmv.AuditLogEntries.html
 - uid: Systems.Dmv.CurrentLicense
   name: Systems.Dmv.CurrentLicense View
   href: entities/Systems.Dmv.CurrentLicense.html
-- uid: Systems.Dmv.CurrentSessions
-  name: Systems.Dmv.CurrentSessions View
-  href: entities/Systems.Dmv.CurrentSessions.html
 - uid: Systems.Dmv.DatabaseInfo
   name: Systems.Dmv.DatabaseInfo View
   href: entities/Systems.Dmv.DatabaseInfo.html
-- uid: Systems.Dmv.ExecStats
-  name: Systems.Dmv.ExecStats View
-  href: entities/Systems.Dmv.ExecStats.html
-- uid: Systems.Dmv.InformationMessages
-  name: Systems.Dmv.InformationMessages View
-  href: entities/Systems.Dmv.InformationMessages.html
-- uid: Systems.Dmv.InstanceParameters
-  name: Systems.Dmv.InstanceParameters View
-  href: entities/Systems.Dmv.InstanceParameters.html
-- uid: Systems.Dmv.LicenseHistory
-  name: Systems.Dmv.LicenseHistory View
-  href: entities/Systems.Dmv.LicenseHistory.html
-- uid: Systems.Dmv.Licenses
-  name: Systems.Dmv.Licenses View
-  href: entities/Systems.Dmv.Licenses.html
-- uid: Systems.Dmv.ObjectFiles
-  name: Systems.Dmv.ObjectFiles View
-  href: entities/Systems.Dmv.ObjectFiles.html
-- uid: Systems.Dmv.PrintImages
-  name: Systems.Dmv.PrintImages View
-  href: entities/Systems.Dmv.PrintImages.html
-- uid: Systems.Dmv.ProcedureStatusInfo
-  name: Systems.Dmv.ProcedureStatusInfo View
-  href: entities/Systems.Dmv.ProcedureStatusInfo.html
-- uid: Systems.Dmv.ProcessInfo
-  name: Systems.Dmv.ProcessInfo View
-  href: entities/Systems.Dmv.ProcessInfo.html
-- uid: Systems.Dmv.TableInfo
-  name: Systems.Dmv.TableInfo View
-  href: entities/Systems.Dmv.TableInfo.html
-- uid: Systems.Dmv.WebSites
-  name: Systems.Dmv.WebSites View
-  href: entities/Systems.Dmv.WebSites.html
 - uid: Systems.Documents
   name: Systems.Documents Namespace
   href: entities/Systems.Documents.html
@@ -2446,15 +2116,6 @@ references:
 - uid: Systems.Reporting
   name: Systems.Reporting Namespace
   href: entities/Systems.Reporting.html
-- uid: Systems.Reporting.DataSourceQueries
-  name: Systems.Reporting.DataSourceQueries Entity
-  href: entities/Systems.Reporting.DataSourceQueries.html
-- uid: Systems.Reporting.DataSources
-  name: Systems.Reporting.DataSources Entity
-  href: entities/Systems.Reporting.DataSources.html
-- uid: Systems.Reporting.Reports
-  name: Systems.Reporting.Reports Entity
-  href: entities/Systems.Reporting.Reports.html
 - uid: Systems.Security
   name: Systems.Security Namespace
   href: entities/Systems.Security.html
@@ -2521,24 +2182,12 @@ references:
 - uid: Systems.UI
   name: Systems.UI Namespace
   href: entities/Systems.UI.html
-- uid: Systems.UI.FormLayouts
-  name: Systems.UI.FormLayouts Entity
-  href: entities/Systems.UI.FormLayouts.html
 - uid: Systems.Workflow
   name: Systems.Workflow Namespace
   href: entities/Systems.Workflow.html
-- uid: Systems.Workflow.Processes
-  name: Systems.Workflow.Processes Entity
-  href: entities/Systems.Workflow.Processes.html
-- uid: Systems.Workflow.RoleUsers
-  name: Systems.Workflow.RoleUsers Entity
-  href: entities/Systems.Workflow.RoleUsers.html
 - uid: Systems.Workflow.Roles
   name: Systems.Workflow.Roles Entity
   href: entities/Systems.Workflow.Roles.html
-- uid: Systems.Workflow.Routes
-  name: Systems.Workflow.Routes Entity
-  href: entities/Systems.Workflow.Routes.html
 - uid: all-entities
   name: All entities
   href: reference/common-business-rules/all-entities.html

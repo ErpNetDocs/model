@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.ProcedureStatusInfo View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.ProcedureStatusInfo Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.ProcedureStatusInfo View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.ProcedureStatusInfo Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,159 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.ProcedureStatusInfo">
-<h1 id="systemsdmvprocedurestatusinfo-view">Systems.Dmv.ProcedureStatusInfo View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringprocedurestatusinfo-entity">Systems.Monitoring.ProcedureStatusInfo Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Dynamic management view for long running procedures. Entity: Dmv_Procedure_Status_Info (Introduced in version 23.1.1.53)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.ProcedureStatusInfo.html">Systems.Monitoring.ProcedureStatusInfo</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{StartTime}: {User}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.ProcedureStatusInfo.html">Systems.Dmv.ProcedureStatusInfo</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#completed">Completed</a></td>
-<td>boolean</td>
-<td>True if the procedure is completed. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#elapsedmin">ElapsedMin</a></td>
-<td>string (64)</td>
-<td>The elapsed minutes of the procedure at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#elapsedpercent">ElapsedPercent</a></td>
-<td>double</td>
-<td>The elapsed percent of the procedure at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#endtime">EndTime</a></td>
-<td>string (64)</td>
-<td>The end time of the procedure. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#error">Error</a></td>
-<td>string (128)</td>
-<td>If not null, this is the text of the exception that occured during the procedure execution. <code>Required</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#procedure">Procedure</a></td>
-<td>string (128)</td>
-<td>The name of the procedure. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#properties">Properties</a></td>
-<td>string (128)</td>
-<td>List of procedure status properties. <code>Required</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#starttime">StartTime</a></td>
-<td>string (64)</td>
-<td>The start time of the procedure. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcedureStatusInfo.html#user">User</a></td>
-<td>string (128)</td>
-<td>The user started the procedure. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="completed">Completed</h3>
-<p>True if the procedure is completed. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="elapsedmin">ElapsedMin</h3>
-<p>The elapsed minutes of the procedure at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="elapsedpercent">ElapsedPercent</h3>
-<p>The elapsed percent of the procedure at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="endtime">EndTime</h3>
-<p>The end time of the procedure. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="error">Error</h3>
-<p>If not null, this is the text of the exception that occured during the procedure execution. <code>Required</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="procedure">Procedure</h3>
-<p>The name of the procedure. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="properties">Properties</h3>
-<p>List of procedure status properties. <code>Required</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="starttime">StartTime</h3>
-<p>The start time of the procedure. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="user">User</h3>
-<p>The user started the procedure. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_ProcedureStatusInfo?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_ProcedureStatusInfo?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_ProcedureStatusInfo?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_ProcedureStatusInfo?$top=10</a></p>
 
 </article>
 

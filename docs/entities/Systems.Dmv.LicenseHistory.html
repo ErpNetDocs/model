@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.LicenseHistory View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.LicenseHistory Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.LicenseHistory View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.LicenseHistory Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,144 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.LicenseHistory">
-<h1 id="systemsdmvlicensehistory-view">Systems.Dmv.LicenseHistory View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringlicensehistory-entity">Systems.Monitoring.LicenseHistory Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Historical licensing events for the instance. Entity: Dmv_License_History (Introduced in version 24.1.3.88)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.LicenseHistory.html">Systems.Monitoring.LicenseHistory</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{LicensingEvent}: {LicensingDate}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>CannotBeShown</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.LicenseHistory.html">Systems.Dmv.LicenseHistory</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensecode">LicenseCode</a></td>
-<td>string (64)</td>
-<td>The code of the module or functionality, which is licensed. <code>Required</code> <code>Filter(multi eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensecount">LicenseCount</a></td>
-<td>int32</td>
-<td>The number of licenses given (+) or taken (-). <code>Required</code> <code>Filter(eq;ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensedescription">LicenseDescription</a></td>
-<td>string (max)</td>
-<td>Description of the license code. <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licenseenddate">LicenseEndDate</a></td>
-<td>date</td>
-<td>The date (inclusive), until the license is active. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensescaletype">LicenseScaleType</a></td>
-<td>string (64)</td>
-<td>Denotes whether the license supports counts, different from 0 and 1. <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensestartdate">LicenseStartDate</a></td>
-<td>date</td>
-<td>The date (inclusive), from which the license is active. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensingdate">LicensingDate</a></td>
-<td>date</td>
-<td>The date, when the license was issued. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.LicenseHistory.html#licensingevent">LicensingEvent</a></td>
-<td>string (128)</td>
-<td>Unique licensing event key. Can be used to group all license codes given with a single licensing event. <code>Required</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="licensecode">LicenseCode</h3>
-<p>The code of the module or functionality, which is licensed. <code>Required</code> <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensecount">LicenseCount</h3>
-<p>The number of licenses given (+) or taken (-). <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensedescription">LicenseDescription</h3>
-<p>Description of the license code. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (max)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licenseenddate">LicenseEndDate</h3>
-<p>The date (inclusive), until the license is active. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensescaletype">LicenseScaleType</h3>
-<p>Denotes whether the license supports counts, different from 0 and 1. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensestartdate">LicenseStartDate</h3>
-<p>The date (inclusive), from which the license is active. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensingdate">LicensingDate</h3>
-<p>The date, when the license was issued. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="licensingevent">LicensingEvent</h3>
-<p>Unique licensing event key. Can be used to group all license codes given with a single licensing event. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_LicenseHistory?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_LicenseHistory?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_LicenseHistory?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_LicenseHistory?$top=10</a></p>
 
 </article>
 

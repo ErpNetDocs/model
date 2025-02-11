@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.ProcessInfo View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.ProcessInfo Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.ProcessInfo View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.ProcessInfo Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,93 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.ProcessInfo">
-<h1 id="systemsdmvprocessinfo-view">Systems.Dmv.ProcessInfo View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringprocessinfo-entity">Systems.Monitoring.ProcessInfo Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Process information dynamic management view. Entity: Dmv_Process_Info (Introduced in version 24.1.4.36)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.ProcessInfo.html">Systems.Monitoring.ProcessInfo</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{ProcessId}: {ProcessName}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.ProcessInfo.html">Systems.Dmv.ProcessInfo</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.ProcessInfo.html#cpuutilization">CPUUtilization</a></td>
-<td>double</td>
-<td>CPU utilization by the process in percents. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcessInfo.html#memorymb">MemoryMB</a></td>
-<td>decimal (12, 3)</td>
-<td>The memory used by the process in Megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcessInfo.html#processid">ProcessId</a></td>
-<td>int32</td>
-<td>The id of process. <code>Required</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ProcessInfo.html#processname">ProcessName</a></td>
-<td>string (256)</td>
-<td>The name of process. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="cpuutilization">CPUUtilization</h3>
-<p>CPU utilization by the process in percents. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="memorymb">MemoryMB</h3>
-<p>The memory used by the process in Megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="processid">ProcessId</h3>
-<p>The id of process. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="processname">ProcessName</h3>
-<p>The name of process. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (256)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>256</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_ProcessInfo?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_ProcessInfo?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_ProcessInfo?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_ProcessInfo?$top=10</a></p>
 
 </article>
 

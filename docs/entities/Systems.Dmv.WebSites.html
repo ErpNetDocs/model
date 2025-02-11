@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.WebSites View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.WebSites Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.WebSites View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.WebSites Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,112 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.WebSites">
-<h1 id="systemsdmvwebsites-view">Systems.Dmv.WebSites View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringwebsites-entity">Systems.Monitoring.WebSites Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Web sites dynamic management view. Entity: Dmv_Web_Sites (Introduced in version 23.1.1.43)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.WebSites.html">Systems.Monitoring.WebSites</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{RootUrl}: {Type}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.WebSites.html">Systems.Dmv.WebSites</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.WebSites.html#issystemsite">IsSystemSite</a></td>
-<td>boolean</td>
-<td>Indicates whether this website is a system website. <code>Required</code> <code>Introduced in version 24.1.0.3</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.WebSites.html#rooturl">RootUrl</a></td>
-<td>string (256)</td>
-<td>The root URL of the web site. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.WebSites.html#status">Status</a></td>
-<td>string (10)</td>
-<td>The current status of the web site. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.WebSites.html#type">Type</a></td>
-<td>string (64)</td>
-<td>The site type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="issystemsite">IsSystemSite</h3>
-<p>Indicates whether this website is a system website. <code>Required</code> <code>Introduced in version 24.1.0.3</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="rooturl">RootUrl</h3>
-<p>The root URL of the web site. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (256)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>256</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="status">Status</h3>
-<p>The current status of the web site. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (10)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>10</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="type">Type</h3>
-<p>The site type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api-methods">API Methods</h2>
-<p>Methods that can be invoked in public APIs.</p>
-<h3 id="start">Start</h3>
-<p>Start web site<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Dmv.WebSites.html">WebSites</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
-<h3 id="stop">Stop</h3>
-<p>Stop web site<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Dmv.WebSites.html">WebSites</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
-<h3 id="restart">Restart</h3>
-<p>Restart web site<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Dmv.WebSites.html">WebSites</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_WebSites?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_WebSites?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_WebSites?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_WebSites?$top=10</a></p>
 
 </article>
 

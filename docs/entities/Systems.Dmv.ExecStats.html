@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.ExecStats View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.ExecStats Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.ExecStats View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.ExecStats Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,168 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.ExecStats">
-<h1 id="systemsdmvexecstats-view">Systems.Dmv.ExecStats View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringexecstats-entity">Systems.Monitoring.ExecStats Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Execution statistics dynamic management view. Entity: Dmv_Exec_Stats (Introduced in version 23.1.0.19)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.ExecStats.html">Systems.Monitoring.ExecStats</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{Application}: {Database}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.ExecStats.html">Systems.Dmv.ExecStats</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#application">Application</a></td>
-<td>string (64)</td>
-<td>The name of the application that executes the operation. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#avgtimems">AvgTimeMs</a></td>
-<td>double</td>
-<td>Average time of operation execution. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#count">Count</a></td>
-<td>int32</td>
-<td>The number of times the operation is executed since last statistics reset. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#database">Database</a></td>
-<td>string (64)</td>
-<td>The database in which the operation is executed. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#islongpolling">IsLongPolling</a></td>
-<td>boolean</td>
-<td>True if the operation is long polling. <code>Required</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#kind">Kind</a></td>
-<td>string (64)</td>
-<td>The operation kind. Various operation kinds exist, e.g. Db, Long Procs etc. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#maxtimems">MaxTimeMs</a></td>
-<td>double</td>
-<td>The maximum time of one operation execution. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#operation">Operation</a></td>
-<td>string (128)</td>
-<td>The operation name. <code>Required</code> <code>Filter(like)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#statisticssince">StatisticsSince</a></td>
-<td>datetime</td>
-<td>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.ExecStats.html#totaltimems">TotalTimeMs</a></td>
-<td>double</td>
-<td>Total time spent for the operation. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="application">Application</h3>
-<p>The name of the application that executes the operation. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="avgtimems">AvgTimeMs</h3>
-<p>Average time of operation execution. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="count">Count</h3>
-<p>The number of times the operation is executed since last statistics reset. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="database">Database</h3>
-<p>The database in which the operation is executed. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="islongpolling">IsLongPolling</h3>
-<p>True if the operation is long polling. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="kind">Kind</h3>
-<p>The operation kind. Various operation kinds exist, e.g. Db, Long Procs etc. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="maxtimems">MaxTimeMs</h3>
-<p>The maximum time of one operation execution. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="operation">Operation</h3>
-<p>The operation name. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="statisticssince">StatisticsSince</h3>
-<p>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="totaltimems">TotalTimeMs</h3>
-<p>Total time spent for the operation. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_ExecStats?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_ExecStats?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_ExecStats?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_ExecStats?$top=10</a></p>
 
 </article>
 

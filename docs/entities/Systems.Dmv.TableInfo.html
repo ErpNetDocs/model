@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.TableInfo View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.TableInfo Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.TableInfo View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.TableInfo Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,81 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.TableInfo">
-<h1 id="systemsdmvtableinfo-view">Systems.Dmv.TableInfo View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringtableinfo-entity">Systems.Monitoring.TableInfo Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Information about the tables in the database. Entity: Dmv_Table_Info (Introduced in version 23.1.2.43)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.TableInfo.html">Systems.Monitoring.TableInfo</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{TableName}: {SizeMB}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.TableInfo.html">Systems.Dmv.TableInfo</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.TableInfo.html#rowcount">RowCount</a></td>
-<td>int64</td>
-<td>Total number of rows. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.TableInfo.html#sizemb">SizeMB</a></td>
-<td>decimal (12, 3)</td>
-<td>Total used size of the table in Megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.TableInfo.html#tablename">TableName</a></td>
-<td>string (128)</td>
-<td>The name of the table, for which we provide the data. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="rowcount">RowCount</h3>
-<p>Total number of rows. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>int64</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="sizemb">SizeMB</h3>
-<p>Total used size of the table in Megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="tablename">TableName</h3>
-<p>The name of the table, for which we provide the data. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_TableInfo?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_TableInfo?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_TableInfo?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_TableInfo?$top=10</a></p>
 
 </article>
 

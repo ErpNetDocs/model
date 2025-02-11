@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Dmv.AuditLogEntries View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.AuditLogSummary Entity | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Dmv.AuditLogEntries View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.AuditLogSummary Entity | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,144 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Systems.Dmv.AuditLogEntries">
-<h1 id="systemsdmvauditlogentries-view">Systems.Dmv.AuditLogEntries View</h1>
+        <article data-uid="">
+<h1 id="systemsmonitoringauditlogsummary-entity">Systems.Monitoring.AuditLogSummary Entity</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Dmv.html">Systems.Dmv</a></p>
-<p>Information about the count and the size of audit log entries, grouped by application name, event class, entity name and event time. Entity: Dmv_Audit_Log_Entries (Introduced in version 24.1.3.48)</p>
-<h2 id="renamed">Renamed</h2>
+<h2 id="renamed-entity">Renamed entity</h2>
+<p>This entity was renamed (in v.24).</p>
 <p><strong>New name:</strong> <a href="Systems.Monitoring.AuditLogSummary.html">Systems.Monitoring.AuditLogSummary</a></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{ApplicationName}: {EventClass}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Systems.Dmv.AuditLogEntries.html">Systems.Dmv.AuditLogEntries</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Systems.Dmv.AuditLogEntries.html#applicationname">ApplicationName</a></td>
-<td>string (64)</td>
-<td>The client application that triggered the events. Null when unknown or N/A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.AuditLogEntries.html#entityname">EntityName</a></td>
-<td>string (64)</td>
-<td>The entity, which is being referenced by the events. Null when unknown or N/A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.AuditLogEntries.html#entriescount">EntriesCount</a></td>
-<td>int32</td>
-<td>Total number of audit log entries. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.AuditLogEntries.html#eventclass">EventClass</a></td>
-<td><a href="Systems.Dmv.AuditLogEntries.html#eventclass">EventClass</a></td>
-<td>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Inherited from Sys_Audit_Log_&lt;br /&gt;Entries_Table.Event_Class</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.AuditLogEntries.html#totalsizemb">TotalSizeMB</a></td>
-<td>decimal (12, 3)</td>
-<td>Total size of the audit log entries in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Dmv.AuditLogEntries.html#year">Year</a></td>
-<td>string (30)</td>
-<td>Year when the events occurred. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="applicationname">ApplicationName</h3>
-<p>The client application that triggered the events. Null when unknown or N/A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="entityname">EntityName</h3>
-<p>The entity, which is being referenced by the events. Null when unknown or N/A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="entriescount">EntriesCount</h3>
-<p>Total number of audit log entries. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="eventclass">EventClass</h3>
-<p>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code> <code>Inherited from Sys_Audit_Log_Entries_Table.Event_Class</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Dmv.AuditLogEntries.html#eventclass">EventClass</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-Allowed values for the <code>EventClass</code>(Systems.Core.AuditLogEntries.md#eventclass) data attribute<br>
-<em>Allowed Values (Systems.Core.AuditLogEntriesRepository.EventClass Enum Members)</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Entity</td>
-<td>Entity value. Stored as 'E'. <br> <em>Database Value:</em> 'E' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Entity'</td>
-</tr>
-<tr>
-<td>Authentication</td>
-<td>Authentication value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Authentication'</td>
-</tr>
-<tr>
-<td>Server</td>
-<td>Server value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Server'</td>
-</tr>
-</tbody>
-</table>
-<p><em>Inherited From</em>: <strong>Sys_Audit_Log_Entries_Table.Event_Class</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="totalsizemb">TotalSizeMB</h3>
-<p>Total size of the audit log entries in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="year">Year</h3>
-<p>Year when the events occurred. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (30)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>30</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_AuditLogEntries?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Dmv_AuditLogEntries?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_AuditLogEntries?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Systems_Dmv_AuditLogEntries?$top=10</a></p>
 
 </article>
 
