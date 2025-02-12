@@ -1,4 +1,4 @@
-# Crm.Pricing.LineDiscounts Entity
+# Crm.LineDiscounts Entity
 
 ## Renamed entity
 

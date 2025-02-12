@@ -1,4 +1,4 @@
-# Systems.Security.ExternalApplications Entity
+# Systems.Core.ExternalApplications Entity
 
 ## Renamed entity
 

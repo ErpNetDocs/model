@@ -1,4 +1,4 @@
-# Systems.Monitoring.InformationMessages Entity
+# Systems.Core.InformationMessages Entity
 
 ## Renamed entity
 

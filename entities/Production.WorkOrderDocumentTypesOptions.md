@@ -1,4 +1,4 @@
-# Production.ShopFloor.WorkOrderDocumentTypesOptions Entity
+# Production.WorkOrderDocumentTypesOptions Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Crm.Pricing.PriceLists Entity
+# Crm.PriceLists Entity
 
 ## Renamed entity
 

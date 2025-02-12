@@ -1,4 +1,4 @@
-# Crm.Sales.DiscountTypes Entity
+# Crm.DiscountTypes Entity
 
 ## Renamed entity
 

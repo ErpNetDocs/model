@@ -1,4 +1,4 @@
-# Systems.Core.DocumentPrintImages Entity
+# General.DocumentPrintImages Entity
 
 ## Renamed entity
 

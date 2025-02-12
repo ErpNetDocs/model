@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentPartyRoles Entity
+# General.DocumentPartyRoles Entity
 
 ## Renamed entity
 

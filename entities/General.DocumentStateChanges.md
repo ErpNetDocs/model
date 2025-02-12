@@ -1,4 +1,4 @@
-# General.Documents.DocumentStateChanges Entity
+# General.DocumentStateChanges Entity
 
 ## Renamed entity
 

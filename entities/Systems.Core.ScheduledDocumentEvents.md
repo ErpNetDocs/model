@@ -1,4 +1,4 @@
-# Systems.Monitoring.ScheduledDocumentEvents Entity
+# Systems.Core.ScheduledDocumentEvents Entity
 
 ## Renamed entity
 

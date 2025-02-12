@@ -1,4 +1,4 @@
-# Logistics.Procurement.ProductSupply Entity
+# General.Products.ProductSupply Entity
 
 ## Renamed entity
 

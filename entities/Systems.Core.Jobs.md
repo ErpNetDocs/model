@@ -1,4 +1,4 @@
-# Systems.Config.Jobs Entity
+# Systems.Core.Jobs Entity
 
 ## Renamed entity
 

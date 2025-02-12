@@ -1,4 +1,4 @@
-# Systems.Documents.Printouts Entity
+# General.Printouts Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Systems.Documents.SequenceGenerators Entity
+# General.SequenceGenerators Entity
 
 ## Renamed entity
 

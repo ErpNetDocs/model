@@ -1,4 +1,4 @@
-# General.Products.MeasurementCategories Entity
+# General.MeasurementCategories Entity
 
 ## Renamed entity
 

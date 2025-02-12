@@ -1,4 +1,4 @@
-# Systems.Core.Reports Entity
+# Systems.Reporting.Reports Entity
 
 ## Renamed entity
 

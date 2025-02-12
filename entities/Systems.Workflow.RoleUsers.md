@@ -1,4 +1,4 @@
-# Systems.Security.RoleUsers Entity
+# Systems.Workflow.RoleUsers Entity
 
 ## Renamed entity
 

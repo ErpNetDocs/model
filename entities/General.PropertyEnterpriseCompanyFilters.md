@@ -1,4 +1,4 @@
-# Systems.Bpm.PropertyEnterpriseCompanyFilters Entity
+# General.PropertyEnterpriseCompanyFilters Entity
 
 ## Renamed entity
 

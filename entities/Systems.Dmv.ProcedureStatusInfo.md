@@ -1,4 +1,4 @@
-# Systems.Monitoring.ProcedureStatusInfo Entity
+# Systems.Dmv.ProcedureStatusInfo Entity
 
 ## Renamed entity
 

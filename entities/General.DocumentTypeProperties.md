@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentTypeProperties Entity
+# General.DocumentTypeProperties Entity
 
 ## Renamed entity
 

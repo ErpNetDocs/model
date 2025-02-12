@@ -1,4 +1,4 @@
-# General.Documents.DocumentFulfillments Entity
+# General.DocumentFulfillments Entity
 
 ## Renamed entity
 

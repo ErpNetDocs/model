@@ -1,4 +1,4 @@
-# General.Activities.ActivityParticipants Entity
+# General.Contacts.ActivityParticipants Entity
 
 ## Renamed entity
 

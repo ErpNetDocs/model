@@ -1,4 +1,4 @@
-# Systems.Monitoring.InstanceParameters Entity
+# Systems.Dmv.InstanceParameters Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Systems.Config.Config Entity
+# Systems.Core.Config Entity
 
 ## Renamed entity
 

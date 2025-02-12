@@ -1,4 +1,4 @@
-# Systems.Config.Translations Entity
+# Systems.Core.Translations Entity
 
 ## Renamed entity
 

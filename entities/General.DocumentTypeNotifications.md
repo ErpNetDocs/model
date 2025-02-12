@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentTypeNotifications Entity
+# General.DocumentTypeNotifications Entity
 
 ## Renamed entity
 

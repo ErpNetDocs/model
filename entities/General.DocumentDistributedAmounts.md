@@ -1,4 +1,4 @@
-# General.Documents.DocumentDistributedAmounts Entity
+# General.DocumentDistributedAmounts Entity
 
 ## Renamed entity
 

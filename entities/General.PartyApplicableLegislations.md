@@ -1,4 +1,4 @@
-# General.Contacts.PartyApplicableLegislations Entity
+# General.PartyApplicableLegislations Entity
 
 ## Renamed entity
 

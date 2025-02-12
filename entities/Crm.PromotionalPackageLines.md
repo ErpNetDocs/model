@@ -1,4 +1,4 @@
-# Crm.Pricing.PromotionalPackageLines Entity
+# Crm.PromotionalPackageLines Entity
 
 ## Renamed entity
 

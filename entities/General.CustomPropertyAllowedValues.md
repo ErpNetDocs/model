@@ -1,4 +1,4 @@
-# Systems.Bpm.CustomPropertyAllowedValues Entity
+# General.CustomPropertyAllowedValues Entity
 
 ## Renamed entity
 

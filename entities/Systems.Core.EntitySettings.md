@@ -1,4 +1,4 @@
-# Systems.Security.EntitySettings Entity
+# Systems.Core.EntitySettings Entity
 
 ## Renamed entity
 

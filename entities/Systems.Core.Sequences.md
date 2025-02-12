@@ -1,4 +1,4 @@
-# Systems.Documents.Sequences Entity
+# Systems.Core.Sequences Entity
 
 ## Renamed entity
 

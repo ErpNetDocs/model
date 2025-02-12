@@ -1,4 +1,4 @@
-# Systems.Config.WebHooks Entity
+# Systems.Core.WebHooks Entity
 
 ## Renamed entity
 

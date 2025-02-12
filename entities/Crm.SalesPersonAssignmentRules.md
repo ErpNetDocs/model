@@ -1,4 +1,4 @@
-# Crm.SalesForce.SalesPersonAssignmentRules Entity
+# Crm.SalesPersonAssignmentRules Entity
 
 ## Renamed entity
 

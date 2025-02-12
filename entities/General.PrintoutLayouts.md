@@ -1,4 +1,4 @@
-# Systems.Documents.PrintoutLayouts Entity
+# General.PrintoutLayouts Entity
 
 ## Renamed entity
 

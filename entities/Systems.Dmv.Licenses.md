@@ -1,4 +1,4 @@
-# Systems.Monitoring.Licenses Entity
+# Systems.Dmv.Licenses Entity
 
 ## Renamed entity
 

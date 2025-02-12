@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentTypeAmounts Entity
+# General.DocumentTypeAmounts Entity
 
 ## Renamed entity
 

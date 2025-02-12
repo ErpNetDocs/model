@@ -1,4 +1,4 @@
-# General.Activities.Reminders Entity
+# General.Contacts.Reminders Entity
 
 ## Renamed entity
 

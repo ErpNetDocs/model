@@ -1,4 +1,4 @@
-# Logistics.Transportation.TransportationRequisitionLines Entity
+# Logistics.Shipment.TransportationRequisitionLines Entity
 
 ## Renamed entity
 

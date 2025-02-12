@@ -1,4 +1,4 @@
-# Systems.Monitoring.CurrentSessions Entity
+# Systems.Dmv.CurrentSessions Entity
 
 ## Renamed entity
 

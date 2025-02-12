@@ -1,4 +1,4 @@
-# General.Activities.ActivityTemplates Entity
+# General.Contacts.ActivityTemplates Entity
 
 ## Renamed entity
 

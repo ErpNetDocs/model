@@ -1,4 +1,4 @@
-# General.Documents.DocumentFileAttachments Entity
+# General.DocumentFileAttachments Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Systems.Core.DocumentJobs Entity
+# General.DocumentJobs Entity
 
 ## Renamed entity
 

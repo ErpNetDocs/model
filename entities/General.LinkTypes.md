@@ -1,4 +1,4 @@
-# Systems.Documents.LinkTypes Entity
+# General.LinkTypes Entity
 
 ## Renamed entity
 

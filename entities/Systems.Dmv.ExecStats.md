@@ -1,4 +1,4 @@
-# Systems.Monitoring.ExecStats Entity
+# Systems.Dmv.ExecStats Entity
 
 ## Renamed entity
 

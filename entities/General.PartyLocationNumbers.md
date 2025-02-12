@@ -1,4 +1,4 @@
-# General.Contacts.PartyLocationNumbers Entity
+# General.PartyLocationNumbers Entity
 
 ## Renamed entity
 

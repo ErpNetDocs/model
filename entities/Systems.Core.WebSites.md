@@ -1,4 +1,4 @@
-# Systems.Config.WebSites Entity
+# Systems.Core.WebSites Entity
 
 ## Renamed entity
 

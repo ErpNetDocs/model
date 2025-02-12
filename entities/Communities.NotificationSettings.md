@@ -1,4 +1,4 @@
-# Systems.Core.NotificationSettings Entity
+# Communities.NotificationSettings Entity
 
 ## Renamed entity
 

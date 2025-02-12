@@ -1,4 +1,4 @@
-# General.Products.CompositeProductComponents Entity
+# Logistics.CompositeProductComponents Entity
 
 ## Renamed entity
 

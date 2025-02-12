@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentTypeUserStatuses Entity
+# General.DocumentTypeUserStatuses Entity
 
 ## Renamed entity
 

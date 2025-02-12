@@ -1,4 +1,4 @@
-# Systems.Bpm.PropertiesCategories Entity
+# General.PropertiesCategories Entity
 
 ## Renamed entity
 

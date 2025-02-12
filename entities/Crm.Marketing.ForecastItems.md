@@ -1,4 +1,4 @@
-# Crm.Sales.ForecastItems Entity
+# Crm.Marketing.ForecastItems Entity
 
 ## Renamed entity
 

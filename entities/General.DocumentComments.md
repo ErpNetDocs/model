@@ -1,4 +1,4 @@
-# General.Documents.DocumentComments Entity
+# General.DocumentComments Entity
 
 ## Renamed entity
 

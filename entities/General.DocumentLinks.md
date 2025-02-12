@@ -1,4 +1,4 @@
-# General.Documents.DocumentLinks Entity
+# General.DocumentLinks Entity
 
 ## Renamed entity
 

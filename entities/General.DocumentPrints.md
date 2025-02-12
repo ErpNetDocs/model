@@ -1,4 +1,4 @@
-# General.Documents.DocumentPrints Entity
+# General.DocumentPrints Entity
 
 ## Renamed entity
 

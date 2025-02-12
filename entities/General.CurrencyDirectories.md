@@ -1,4 +1,4 @@
-# General.Currencies.CurrencyDirectories Entity
+# General.CurrencyDirectories Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Systems.Bpm.Processes Entity
+# Systems.Workflow.Processes Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Systems.Monitoring.ObjectFiles Entity
+# Systems.Dmv.ObjectFiles Entity
 
 ## Renamed entity
 

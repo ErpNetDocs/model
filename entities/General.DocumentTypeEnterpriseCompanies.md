@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentTypeEnterpriseCompanies Entity
+# General.DocumentTypeEnterpriseCompanies Entity
 
 ## Renamed entity
 

@@ -1,4 +1,4 @@
-# Crm.Pricing.BonusProgramProducts Entity
+# Crm.Marketing.BonusProgramProducts Entity
 
 ## Renamed entity
 

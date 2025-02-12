@@ -1,4 +1,4 @@
-# Systems.Monitoring.ResolvedConflicts Entity
+# Systems.Core.ResolvedConflicts Entity
 
 ## Renamed entity
 

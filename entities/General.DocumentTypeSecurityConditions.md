@@ -1,4 +1,4 @@
-# Systems.Documents.DocumentTypeSecurityConditions Entity
+# General.DocumentTypeSecurityConditions Entity
 
 ## Renamed entity
 

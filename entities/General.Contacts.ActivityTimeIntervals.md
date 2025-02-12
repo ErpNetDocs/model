@@ -1,4 +1,4 @@
-# General.Activities.ActivityTimeIntervals Entity
+# General.Contacts.ActivityTimeIntervals Entity
 
 ## Renamed entity
 

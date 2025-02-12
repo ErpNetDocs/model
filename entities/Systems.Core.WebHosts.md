@@ -1,4 +1,4 @@
-# Systems.Config.WebHosts Entity
+# Systems.Core.WebHosts Entity
 
 ## Renamed entity
 

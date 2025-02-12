@@ -1,4 +1,4 @@
-# Logistics.Transportation.TransportationVehicles Entity
+# Logistics.Shipment.TransportationVehicles Entity
 
 ## Renamed entity
 

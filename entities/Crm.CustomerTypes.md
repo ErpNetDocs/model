@@ -1,4 +1,4 @@
-# Crm.Sales.CustomerTypes Entity
+# Crm.CustomerTypes Entity
 
 ## Renamed entity
 

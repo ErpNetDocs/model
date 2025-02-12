@@ -1,4 +1,4 @@
-# Systems.Core.DocumentVersions Entity
+# General.DocumentVersions Entity
 
 ## Renamed entity
 

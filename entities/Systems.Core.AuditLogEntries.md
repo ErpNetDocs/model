@@ -1,4 +1,4 @@
-# Systems.Monitoring.AuditLogEntries Entity
+# Systems.Core.AuditLogEntries Entity
 
 ## Renamed entity
 

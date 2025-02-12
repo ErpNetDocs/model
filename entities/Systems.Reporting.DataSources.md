@@ -1,4 +1,4 @@
-# Systems.Documents.DataSources Entity
+# Systems.Reporting.DataSources Entity
 
 ## Renamed entity
 

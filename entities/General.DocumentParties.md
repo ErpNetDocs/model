@@ -1,4 +1,4 @@
-# General.Documents.DocumentParties Entity
+# General.DocumentParties Entity
 
 ## Renamed entity
 

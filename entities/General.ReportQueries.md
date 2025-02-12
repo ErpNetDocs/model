@@ -1,4 +1,4 @@
-# Systems.Core.ReportQueries Entity
+# General.ReportQueries Entity
 
 ## Renamed entity
 

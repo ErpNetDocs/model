@@ -1,4 +1,4 @@
-# Logistics.Common.LogisticUnitSpecifications Entity
+# Logistics.LogisticUnitSpecifications Entity
 
 ## Renamed entity
 

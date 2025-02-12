@@ -1,4 +1,4 @@
-# Systems.Monitoring.TableInfo Entity
+# Systems.Dmv.TableInfo Entity
 
 ## Renamed entity
 
