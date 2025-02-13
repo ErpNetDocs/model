@@ -150,7 +150,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#systemstate">SystemState</a></td>
 <td><a href="Projects.Agile.UserStates.html#systemstate">SystemState</a></td>
-<td>The system state, which this state extends. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The system state, which this state extends. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.SetUserStateOrd( obj.SystemState)</code></p>
 <h3 id="systemstate">SystemState</h3>
-<p>The system state, which this state extends. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The system state, which this state extends. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.UserStates.html#systemstate">SystemState</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
@@ -264,7 +264,7 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="casecategory">CaseCategory</h3>

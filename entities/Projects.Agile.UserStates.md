@@ -39,7 +39,7 @@ Aggregate Root:
 | [Name](Projects.Agile.UserStates.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the user state. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Projects.Agile.UserStates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Ord](Projects.Agile.UserStates.md#ord) | int32 | Unique ordinal position of the state within the system state. `Required` `Filter(eq;ge;le)` `ORD` 
-| [SystemState](Projects.Agile.UserStates.md#systemstate) | [SystemState](Projects.Agile.UserStates.md#systemstate) | The system state, which this state extends. `Required` `Filter(multi eq)` 
+| [SystemState](Projects.Agile.UserStates.md#systemstate) | [SystemState](Projects.Agile.UserStates.md#systemstate) | The system state, which this state extends. `Required` `Filter(multi eq)` `ORD` 
 
 ## References
 
@@ -117,7 +117,7 @@ _Front-End Recalc Expressions:_
 `obj.SetUserStateOrd( obj.SystemState)`
 ### SystemState
 
-The system state, which this state extends. `Required` `Filter(multi eq)`
+The system state, which this state extends. `Required` `Filter(multi eq)` `ORD`
 
 _Type_: **[SystemState](Projects.Agile.UserStates.md#systemstate)**  
 _Category_: **System**  
@@ -135,7 +135,7 @@ _Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)_
 | CLOSED | CLOSED. Stored as '7'. <br /> _Database Value:_ '7' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'CLOSED' |
 
 _Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 

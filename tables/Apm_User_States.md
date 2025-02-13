@@ -156,7 +156,7 @@ The system state, which this state extends.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
 |Type|char(1)|
