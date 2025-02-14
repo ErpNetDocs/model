@@ -203,7 +203,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
-<td>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#title">Title</a></td>
@@ -443,7 +443,7 @@ Allowed values for the <code>Priority</code>(Projects.Agile.Cases.md#priority) d
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="systemstate">SystemState</h3>
-<p>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
@@ -486,7 +486,7 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>BACKLOG</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
