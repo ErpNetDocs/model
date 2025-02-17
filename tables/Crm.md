@@ -8,6 +8,7 @@
 * [Crm_Competitor_Solutions](Crm_Competitor_Solutions.md)
 * [Crm_Competitors](Crm_Competitors.md)
 * [Crm_Customer_Client_Center_Permissions](Crm_Customer_Client_Center_Permissions.md)
+* [Crm_Customer_External_Access](Crm_Customer_External_Access.md)
 * [Crm_Customer_Products](Crm_Customer_Products.md)
 * [Crm_Customer_Types](Crm_Customer_Types.md)
 * [Crm_Customers](Crm_Customers.md)

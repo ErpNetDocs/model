@@ -5,6 +5,7 @@ uid: Crm.Sales
 
 ## Entities
 - [CustomerClientCenterPermissions](Crm.Sales.CustomerClientCenterPermissions.md)  
+- [CustomerExternalAccess](Crm.Sales.CustomerExternalAccess.md)  
 - [CustomerProducts](Crm.Sales.CustomerProducts.md)  
 - [Customers](Crm.Sales.Customers.md)  
 - [CustomerTypes](Crm.Sales.CustomerTypes.md)  

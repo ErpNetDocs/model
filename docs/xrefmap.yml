@@ -496,6 +496,9 @@ references:
 - uid: Crm.Sales.CustomerClientCenterPermissions
   name: Crm.Sales.CustomerClientCenterPermissions Entity
   href: entities/Crm.Sales.CustomerClientCenterPermissions.html
+- uid: Crm.Sales.CustomerExternalAccess
+  name: Crm.Sales.CustomerExternalAccess Entity
+  href: entities/Crm.Sales.CustomerExternalAccess.html
 - uid: Crm.Sales.CustomerProducts
   name: Crm.Sales.CustomerProducts Entity
   href: entities/Crm.Sales.CustomerProducts.html
@@ -2107,6 +2110,9 @@ references:
 - uid: Systems.Monitoring.UpdateProcedureExecutes
   name: Systems.Monitoring.UpdateProcedureExecutes Entity
   href: entities/Systems.Monitoring.UpdateProcedureExecutes.html
+- uid: Systems.Monitoring.UserPresence
+  name: Systems.Monitoring.UserPresence View
+  href: entities/Systems.Monitoring.UserPresence.html
 - uid: Systems.Monitoring.WaitStats
   name: Systems.Monitoring.WaitStats View
   href: entities/Systems.Monitoring.WaitStats.html

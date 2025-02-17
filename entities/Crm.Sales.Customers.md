@@ -39,6 +39,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Tree  
 * [Crm.Sales.Customers](Crm.Sales.Customers.md)  
   * [Crm.Sales.CustomerClientCenterPermissions](Crm.Sales.CustomerClientCenterPermissions.md)  
+  * [Crm.Sales.CustomerExternalAccess](Crm.Sales.CustomerExternalAccess.md)  
   * [Crm.Sales.CustomerProducts](Crm.Sales.CustomerProducts.md)  
 
 ## Attributes
@@ -86,6 +87,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | ClientCenterPermissions | [CustomerClientCenterPermissions](Crm.Sales.CustomerClientCenterPermissions.md) | List of `CustomerClient<br />CenterPermission`(Crm.Sales.CustomerClient<br />CenterPermissions.md) child objects, based on the `Crm.Sales.CustomerClient<br />CenterPermission.Customer`(Crm.Sales.CustomerClient<br />CenterPermissions.md#customer) back reference 
+| ExternalAccess | [CustomerExternalAccess](Crm.Sales.CustomerExternalAccess.md) | List of `CustomerExternalAcces`(Crm.Sales.CustomerExternalAccess.md) child objects, based on the `Crm.Sales.CustomerExternalAcces.Customer`(Crm.Sales.CustomerExternalAccess.md#customer) back reference 
 | Products | [CustomerProducts](Crm.Sales.CustomerProducts.md) | List of `CustomerProduct`(Crm.Sales.CustomerProducts.md) child objects, based on the `Crm.Sales.CustomerProduct.Customer`(Crm.Sales.CustomerProducts.md#customer) back reference 
 
 

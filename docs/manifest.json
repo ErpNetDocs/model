@@ -12672,6 +12672,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.CustomerExternalAccess.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.CustomerExternalAccess.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Sales.CustomerProducts.md",
       "output": {
         ".html": {
@@ -18892,6 +18902,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Monitoring.UserPresence.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Monitoring.UserPresence.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Monitoring.WaitStats.md",
       "output": {
         ".html": {
@@ -21241,6 +21261,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Customer_External_Access.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Customer_External_Access.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Crm_Customer_Products.md",
       "output": {
         ".html": {
@@ -21875,6 +21905,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Dmv_Table_Info.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Dmv_User_Presence.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Dmv_User_Presence.html"
         }
       },
       "version": ""

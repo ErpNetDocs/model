@@ -278,6 +278,8 @@
     href: Crm_Competitors.md
   - name: Crm_Customer_Client_Center_Permissions
     href: Crm_Customer_Client_Center_Permissions.md
+  - name: Crm_Customer_External_Access
+    href: Crm_Customer_External_Access.md
   - name: Crm_Customer_Products
     href: Crm_Customer_Products.md
   - name: Crm_Customer_Types
@@ -407,6 +409,8 @@
     href: Dmv_Process_Info.md
   - name: Dmv_Table_Info
     href: Dmv_Table_Info.md
+  - name: Dmv_User_Presence
+    href: Dmv_User_Presence.md
   - name: Dmv_Wait_Stats
     href: Dmv_Wait_Stats.md
   - name: Dmv_Web_Sites

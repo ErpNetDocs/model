@@ -323,6 +323,8 @@
     items:
     - name: CustomerClientCenterPermissions
       href: Crm.Sales.CustomerClientCenterPermissions.md
+    - name: CustomerExternalAccess
+      href: Crm.Sales.CustomerExternalAccess.md
     - name: CustomerProducts
       href: Crm.Sales.CustomerProducts.md
     - name: Customers
@@ -1282,6 +1284,8 @@
       href: Systems.Monitoring.TableInfo.md
     - name: UpdateProcedureExecutes
       href: Systems.Monitoring.UpdateProcedureExecutes.md
+    - name: UserPresence
+      href: Systems.Monitoring.UserPresence.md
     - name: WaitStats
       href: Systems.Monitoring.WaitStats.md
     - name: WebSites
