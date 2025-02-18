@@ -115,49 +115,100 @@ Show in UI:  <em>ShownByDefault</em></p>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime</td>
-<td>Timestamp (UTC) of the last status update. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+<td>Timestamp (UTC) of the last status update. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#status">Status</a></td>
-<td>string (5)</td>
-<td>The user's current presence status. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="Systems.Monitoring.UserPresence.html#status">Status</a></td>
+<td>The user's current presence status. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#userid">UserId</a></td>
 <td>guid</td>
-<td>Unique identifier for the user. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Unique identifier for the user. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#userlogin">UserLogin</a></td>
 <td>string (64)</td>
-<td>The username used to log in. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+<td>The username used to log in. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
-<p>Timestamp (UTC) of the last status update. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
+<p>Timestamp (UTC) of the last status update. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>The user's current presence status. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>string (5)</strong><br>
+<p>The user's current presence status. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Monitoring.UserPresence.html#status">Status</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+Allowed values for the <code>Status</code>(Systems.Monitoring.UserPresence.md#status) data attribute<br>
+<em>Allowed Values (Systems.Monitoring.UserPresenceRepository.Status Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offline</td>
+<td>The user is not logged into the system.. Stored as 'OFFLN'. <br> <em>Database Value:</em> 'OFFLN' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Offline'</td>
+</tr>
+<tr>
+<td>Available</td>
+<td>The user is available and does not fall into any other category.. Stored as 'AVLB'. <br> <em>Database Value:</em> 'AVLB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Available'</td>
+</tr>
+<tr>
+<td>Away</td>
+<td>The user is logged in but has been inactive for the last 5 minutes.. Stored as 'AWAY'. <br> <em>Database Value:</em> 'AWAY' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Away'</td>
+</tr>
+<tr>
+<td>InCall</td>
+<td>The user is currently in a video call.. Stored as 'CALL'. <br> <em>Database Value:</em> 'CALL' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'InCall'</td>
+</tr>
+<tr>
+<td>InMeeting</td>
+<td>The user is in a scheduled meeting as per the calendar. Stored as 'MEET'. <br> <em>Database Value:</em> 'MEET' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'InMeeting'</td>
+</tr>
+<tr>
+<td>Busy</td>
+<td>The user has a scheduled meeting in the calendar for this period. Can also be set manually.. Stored as 'BUSY'. <br> <em>Database Value:</em> 'BUSY' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Busy'</td>
+</tr>
+<tr>
+<td>DoNotDisturb</td>
+<td>The user has manually set their status to 'Do Not Disturb'.. Stored as 'DND'. <br> <em>Database Value:</em> 'DND' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'DoNotDisturb'</td>
+</tr>
+<tr>
+<td>Presenting</td>
+<td>The user is actively sharing their screen.. Stored as 'PRSNT'. <br> <em>Database Value:</em> 'PRSNT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'Presenting'</td>
+</tr>
+<tr>
+<td>BeRightBack</td>
+<td>The user has manually set their status to 'Be Right Back'.. Stored as 'BRB'. <br> <em>Database Value:</em> 'BRB' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'BeRightBack'</td>
+</tr>
+<tr>
+<td>OutOfOffice</td>
+<td>OutOfOffice. Stored as 'OOO'. <br> <em>Database Value:</em> 'OOO' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'OutOfOffice'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>5</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="userid">UserId</h3>
-<p>Unique identifier for the user. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Unique identifier for the user. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="userlogin">UserLogin</h3>
-<p>The username used to log in. <code>Required</code> <code>Filter(multi eq;like)</code></p>
+<p>The username used to log in. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
