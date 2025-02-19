@@ -16,6 +16,7 @@ Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 
 | Name | Type | Description |
 | - | - | --- |
+|[Apply_Trade_Conditions](#apply_trade_conditions)|`bit` |Specifies whether the system should apply standard pricing and discounts to this line.|
 |[Bonus_Program_Id](#bonus_program_id)|`uniqueidentifier` |The bonus program, based on which the line was automatically added. NULL when the line was not added for bonus program.|
 |[Delivery_Terms_Code](#delivery_terms_code)|`char(3)` Allowed: `EXW`, `FCA`, `FAS`, `FOB`, `CFR`, `CIF`, `CPT`, `CIP`, `DAP`, `DAT`, `DDP`, `DPU`|Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Guarantee period in days for the offered product. NULL for non-serviced products|
@@ -69,6 +70,42 @@ Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 |[Unit_Price](#unit_price)|`decimal(14, 5)` |Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId|
 
 ## Columns
+
+### Apply_Trade_Conditions
+
+
+Specifies whether the system should apply standard pricing and discounts to this line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|51|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Apply_Trade_Conditions - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
 
 ### Bonus_Program_Id
 

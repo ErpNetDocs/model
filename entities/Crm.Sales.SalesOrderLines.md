@@ -31,6 +31,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [ApplyTradeConditions](Crm.Sales.SalesOrderLines.md#applytradeconditions) | boolean | Specifies whether the system should apply standard pricing and discounts to this line. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53` 
 | [BonusProgramAmount](Crm.Sales.SalesOrderLines.md#bonusprogramamount) | [Amount](../data-types.md#amount) | The amount of the discount from the bonus program. 
 | [CurrentBalanceBase](Crm.Sales.SalesOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
 | [DeliveryTermsCode](Crm.Sales.SalesOrderLines.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrderLines.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
@@ -99,6 +100,22 @@ Aggregate Root:
 
 ## Attribute Details
 
+### ApplyTradeConditions
+
+Specifies whether the system should apply standard pricing and discounts to this line. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`obj.SalesOrder.ApplyTradeConditions`
+
+_Front-End Recalc Expressions:_  
+`obj.SalesOrder.ApplyTradeConditions`
 ### BonusProgramAmount
 
 The amount of the discount from the bonus program.

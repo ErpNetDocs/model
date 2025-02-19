@@ -102,22 +102,22 @@
 <tbody>
 <tr>
 <td><a href="#last_update_time_utc">Last_Update_Time_Utc</a></td>
-<td><code>datetime</code></td>
+<td><code>datetime</code> Readonly</td>
 <td>Timestamp (UTC) of the last status update.</td>
 </tr>
 <tr>
 <td><a href="#status">Status</a></td>
-<td><code>nvarchar(5)</code> Allowed: <code>OFFLN</code>, <code>AVLB</code>, <code>AWAY</code>, <code>CALL</code>, <code>MEET</code>, <code>BUSY</code>, <code>DND</code>, <code>PRSNT</code>, <code>BRB</code>, <code>OOO</code></td>
+<td><code>nvarchar(5)</code> Allowed: <code>OFFLN</code>, <code>AVLB</code>, <code>AWAY</code>, <code>CALL</code>, <code>MEET</code>, <code>BUSY</code>, <code>DND</code>, <code>PRSNT</code>, <code>BRB</code>, <code>OOO</code>, Readonly</td>
 <td>The user's current presence status.</td>
 </tr>
 <tr>
 <td><a href="#user_id">User_Id</a></td>
-<td><code>uniqueidentifier</code></td>
+<td><code>uniqueidentifier</code> Readonly</td>
 <td>Unique identifier for the user.</td>
 </tr>
 <tr>
 <td><a href="#user_login">User_Login</a></td>
-<td><code>nvarchar(64)</code></td>
+<td><code>nvarchar(64)</code> Readonly</td>
 <td>The username used to log in.</td>
 </tr>
 </tbody>
@@ -183,7 +183,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -306,7 +306,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -425,7 +425,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -544,7 +544,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>RTF</td>

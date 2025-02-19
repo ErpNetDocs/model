@@ -15,6 +15,7 @@ Sales order document headers. Entity: Crm_Sales_Orders
 
 | Name | Type | Description |
 | - | - | --- |
+|[Apply_Trade_Conditions](#apply_trade_conditions)|`bit` |Specifies whether the system should apply standard pricing and discounts to this document.|
 |[Credit_Limit_Override](#credit_limit_override)|`bit` |Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The primary customer, which placed the sales order|
 |[Customer_Purchase_Order_Date](#customer_purchase_order_date)|`date` |Issue date of the referent customer purchase order|
@@ -57,6 +58,42 @@ Sales order document headers. Entity: Crm_Sales_Orders
 |[To_Date](#to_date)|`date` |When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.|
 
 ## Columns
+
+### Apply_Trade_Conditions
+
+
+Specifies whether the system should apply standard pricing and discounts to this document.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|40|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Apply_Trade_Conditions - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
 
 ### Credit_Limit_Override
 

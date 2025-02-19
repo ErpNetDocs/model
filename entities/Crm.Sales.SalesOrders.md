@@ -49,6 +49,7 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Sales.SalesOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Sales.SalesOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Sales.SalesOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ApplyTradeConditions](Crm.Sales.SalesOrders.md#applytradeconditions) | boolean __nullable__ | Specifies whether the system should apply standard pricing and discounts to this document. `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53` 
 | [CompleteTime](Crm.Sales.SalesOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Sales.SalesOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Sales.SalesOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -185,6 +186,19 @@ _Supports Order By_: **False**
 _Maximum Length_: **64**  
 _Show in UI_: **HiddenByDefault**  
 
+### ApplyTradeConditions
+
+Specifies whether the system should apply standard pricing and discounts to this document. `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53`
+
+_Type_: **boolean __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => SalesOrderLinesRepository.ApplyTradeConditionsAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### CompleteTime
 
 Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
