@@ -119,20 +119,20 @@
 , then create CaseDevelopment records as follows:
 <br></p>
 <ul>
-<li>for the current Case – a new CaseDevelopment where
+<li>for the current Case – a new CaseDevelopment where<br>
 DevelopmentType = Edit and Description = Parent set to case {Parent.Number} (on insert) or {Parent.DatabaseValue.Number} to case {Parent.Number} (on update)
 <br></li>
-<li>for the new Parent case (if the new Parent field value differs from null) – a new CaseDevelopment where
+<li>for the new Parent case (if the new Parent field value differs from null) – a new CaseDevelopment where<br>
 DevelopmentType  = Edit and Description = Added sub case {Case.Number}
 <br></li>
-<li>for the old Parent case (if the old Parent field value differs from null) – a new CaseDevelopment where
+<li>for the old Parent case (if the old Parent field value differs from null) – a new CaseDevelopment where<br>
 DevelopmentType = Edit and Description = Removed sub case {Case.Number}<br></li>
 </ul>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule ensures the change of the parent case will be tracked by creating new case developments for the old parent, the new parent, and the current case.</td>
+<td>The rule ensures that the change of the parent case will be tracked by creating new case developments for the old parent, the new parent, and the current case.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
