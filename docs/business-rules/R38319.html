@@ -120,13 +120,13 @@
 <br></p>
 <ul>
 <li>for the current Case – a new CaseDevelopment where<br>
-DevelopmentType = Edit and Description = Parent set to case {Parent.Number} (on insert) or {Parent.DatabaseValue.Number} to case {Parent.Number} (on update)
+DevelopmentType = Edit and Description = &quot;Parent set to case {Parent.Number}&quot; (on insert) or Description = &quot;{Parent.DatabaseValue.Number} to case {Parent.Number}&quot; (on update)
 <br></li>
 <li>for the new Parent case (if the new Parent field value differs from null) – a new CaseDevelopment where<br>
-DevelopmentType  = Edit and Description = Added sub case {Case.Number}
+DevelopmentType  = Edit and Description = &quot;Added sub case {Case.Number}&quot;
 <br></li>
 <li>for the old Parent case (if the old Parent field value differs from null) – a new CaseDevelopment where<br>
-DevelopmentType = Edit and Description = Removed sub case {Case.Number}<br></li>
+DevelopmentType = Edit and Description = &quot;Removed sub case {Case.Number}&quot;<br></li>
 </ul>
 </td>
 </tr>
