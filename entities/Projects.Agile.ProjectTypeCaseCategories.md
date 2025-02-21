@@ -5,15 +5,15 @@ uid: Projects.Agile.ProjectTypeCaseCategories
 
 **Namespace:** [Projects.Agile](Projects.Agile.md)  
 
-Indicates for each project type what case categories are allowed. Entity: Apm_Project_Type_Case_Categories (Introduced in version 25.1.1.51)
+Indicates for each case category which project types it is allowed to be used in. Entity: Apm_Project_Type_Case_Categories (Introduced in version 25.1.1.51)
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectType.Name:T}_  
+_{CaseCategory.Name:T}_  
 Default Search Members:  
-_ProjectType.Name_  
+_CaseCategory.Name_  
 Name Data Member:  
-_ProjectType.Name_  
+_CaseCategory.Name_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 
@@ -25,9 +25,9 @@ Max level:  _4 - Track object attribute and blob changes_
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
 Aggregate Parent:  
-[Projects.Agile.ProjectTypes](Projects.Agile.ProjectTypes.md)  
+[Projects.Agile.CaseCategories](Projects.Agile.CaseCategories.md)  
 Aggregate Root:  
-[Projects.Agile.ProjectTypes](Projects.Agile.ProjectTypes.md)  
+[Projects.Agile.CaseCategories](Projects.Agile.CaseCategories.md)  
 
 ## Attributes
 
@@ -41,8 +41,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CaseCategory](Projects.Agile.ProjectTypeCaseCategories.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The case category that а project with this type can have. `Required` `Filter(multi eq)` |
-| [ProjectType](Projects.Agile.ProjectTypeCaseCategories.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | The project type for which we specify the case category. `Required` `Filter(multi eq)` `Owner` |
+| [CaseCategory](Projects.Agile.ProjectTypeCaseCategories.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The case category that а project with this type can have. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectType](Projects.Agile.ProjectTypeCaseCategories.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | The project type for which we specify the case category. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -81,23 +81,23 @@ _Show in UI_: **HiddenByDefault**
 
 ### CaseCategory
 
-The case category that а project with this type can have. `Required` `Filter(multi eq)`
+The case category that а project with this type can have. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### ProjectType
 
-The project type for which we specify the case category. `Required` `Filter(multi eq)` `Owner`
+The project type for which we specify the case category. `Required` `Filter(multi eq)`
 
 _Type_: **[ProjectTypes](Projects.Agile.ProjectTypes.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 

@@ -5,11 +5,11 @@
 
 Entity: [Projects.Agile.ProjectTypeCaseCategories](~/entities/Projects.Agile.ProjectTypeCaseCategories.md)
 
-Indicates for each project type what case categories are allowed. Entity: Apm_Project_Type_Case_Categories (Introduced in version 25.1.1.51)
+Indicates for each case category which project types it is allowed to be used in. Entity: Apm_Project_Type_Case_Categories (Introduced in version 25.1.1.51)
 
 ## Owner Tables Hierarchy
 
-* [Apm_Project_Types](Apm_Project_Types.md)
+* [Apm_Case_Categories](Apm_Case_Categories.md)
 
 ## Summary
 
@@ -37,7 +37,7 @@ The case category that а project with this type can have.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
@@ -107,7 +107,7 @@ The project type for which we specify the case category.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

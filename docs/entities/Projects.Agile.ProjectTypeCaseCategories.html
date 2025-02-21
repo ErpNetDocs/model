@@ -88,14 +88,14 @@
 <h1 id="projectsagileprojecttypecasecategories-entity">Projects.Agile.ProjectTypeCaseCategories Entity</h1>
 
 <p><strong>Namespace:</strong> <a href="Projects.Agile.html">Projects.Agile</a></p>
-<p>Indicates for each project type what case categories are allowed. Entity: Apm_Project_Type_Case_Categories (Introduced in version 25.1.1.51)</p>
+<p>Indicates for each case category which project types it is allowed to be used in. Entity: Apm_Project_Type_Case_Categories (Introduced in version 25.1.1.51)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{ProjectType.Name:T}</em><br>
+<em>{CaseCategory.Name:T}</em><br>
 Default Search Members:<br>
-<em>ProjectType.Name</em><br>
+<em>CaseCategory.Name</em><br>
 Name Data Member:<br>
-<em>ProjectType.Name</em><br>
+<em>CaseCategory.Name</em><br>
 Category:  <em>Definitions</em><br>
 Show in UI:  <em>ShownByDefault</em></p>
 <h2 id="track-changes">Track Changes</h2>
@@ -104,9 +104,9 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
-<a href="Projects.Agile.ProjectTypes.html">Projects.Agile.ProjectTypes</a><br>
+<a href="Projects.Agile.CaseCategories.html">Projects.Agile.CaseCategories</a><br>
 Aggregate Root:<br>
-<a href="Projects.Agile.ProjectTypes.html">Projects.Agile.ProjectTypes</a></p>
+<a href="Projects.Agile.CaseCategories.html">Projects.Agile.CaseCategories</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -147,12 +147,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.ProjectTypeCaseCategories.html#casecategory">CaseCategory</a></td>
 <td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The case category that а project with this type can have. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The case category that а project with this type can have. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectTypeCaseCategories.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.Agile.ProjectTypes.html">ProjectTypes</a></td>
-<td>The project type for which we specify the case category. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The project type for which we specify the case category. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -180,19 +180,19 @@ Aggregate Root:<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="casecategory">CaseCategory</h3>
-<p>The case category that а project with this type can have. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The case category that а project with this type can have. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="projecttype">ProjectType</h3>
-<p>The project type for which we specify the case category. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The project type for which we specify the case category. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.ProjectTypes.html">ProjectTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

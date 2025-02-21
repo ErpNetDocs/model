@@ -26,7 +26,6 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Agile.ProjectTypes](Projects.Agile.ProjectTypes.md)  
-  * [Projects.Agile.ProjectTypeCaseCategories](Projects.Agile.ProjectTypeCaseCategories.md)  
 
 ## Attributes
 
@@ -38,12 +37,6 @@ Aggregate Tree
 | [IsActive](Projects.Agile.ProjectTypes.md#isactive) | boolean | Specifies whether the project type is active for new projects. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Projects.Agile.ProjectTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the project type. `Required` `Filter(like)` 
 | [ObjectVersion](Projects.Agile.ProjectTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-
-## Child Collections
-
-| Name | Type | Description |
-| ---- | ---- | --- |
-| CaseCategories | [ProjectTypeCaseCategories](Projects.Agile.ProjectTypeCaseCategories.md) | List of `ProjectTypeCaseCategory`(Projects.Agile.ProjectTypeCaseCategories.md) child objects, based on the `Projects.Agile.ProjectTypeCaseCategory.ProjectType`(Projects.Agile.ProjectTypeCaseCategories.md#projecttype) back reference 
 
 
 ## Attribute Details
