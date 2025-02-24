@@ -32,7 +32,7 @@ Defines the users permissions to specific customer data. Entity: Crm_Customer_Ex
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|NewGuid|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
