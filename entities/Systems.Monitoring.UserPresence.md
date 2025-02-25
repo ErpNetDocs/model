@@ -54,16 +54,11 @@ _Allowed Values (Systems.Monitoring.UserPresenceRepository.Status Enum Members)_
 
 | Value | Description |
 | ---- | --- |
-| Offline | The user is not logged into the system.. Stored as 'OFFLN'. <br /> _Database Value:_ 'OFFLN' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Offline' |
-| Available | The user is available and does not fall into any other category.. Stored as 'AVLB'. <br /> _Database Value:_ 'AVLB' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Available' |
-| Away | The user is logged in but has been inactive for the last 5 minutes.. Stored as 'AWAY'. <br /> _Database Value:_ 'AWAY' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Away' |
-| InCall | The user is currently in a video call.. Stored as 'CALL'. <br /> _Database Value:_ 'CALL' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'InCall' |
-| InMeeting | The user is in a scheduled meeting as per the calendar. Stored as 'MEET'. <br /> _Database Value:_ 'MEET' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'InMeeting' |
-| Busy | The user has a scheduled meeting in the calendar for this period. Can also be set manually.. Stored as 'BUSY'. <br /> _Database Value:_ 'BUSY' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Busy' |
-| DoNotDisturb | The user has manually set their status to 'Do Not Disturb'.. Stored as 'DND'. <br /> _Database Value:_ 'DND' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'DoNotDisturb' |
-| Presenting | The user is actively sharing their screen.. Stored as 'PRSNT'. <br /> _Database Value:_ 'PRSNT' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'Presenting' |
-| BeRightBack | The user has manually set their status to 'Be Right Back'.. Stored as 'BRB'. <br /> _Database Value:_ 'BRB' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'BeRightBack' |
-| OutOfOffice | OutOfOffice. Stored as 'OOO'. <br /> _Database Value:_ 'OOO' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'OutOfOffice' |
+| Available | The user is available and does not fall into any other category.. Stored as 'AVLB'. <br /> _Database Value:_ 'AVLB' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Available' |
+| DoNotDisturb | The user has manually set their status to 'Do Not Disturb'.. Stored as 'DND'. <br /> _Database Value:_ 'DND' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'DoNotDisturb' |
+| Busy | The user has a scheduled meeting in the calendar for this period. Can also be set manually.. Stored as 'BUSY'. <br /> _Database Value:_ 'BUSY' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Busy' |
+| Away | The user is logged in but has been inactive for the last 5 minutes.. Stored as 'AWAY'. <br /> _Database Value:_ 'AWAY' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Away' |
+| Offline | The user is not logged into the system.. Stored as 'OFFLN'. <br /> _Database Value:_ 'OFFLN' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Offline' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  

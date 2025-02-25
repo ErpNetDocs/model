@@ -18,7 +18,7 @@ Case: **37717**
 
 ## Default Visualization
 Default Display Text Format:  
-_{Person.PartyName:T} _  
+_{Person.PartyName:T}_  
 Default Search Members:  
 __  
 Category:  _Definitions_  

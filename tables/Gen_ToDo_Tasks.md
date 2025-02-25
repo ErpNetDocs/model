@@ -13,6 +13,7 @@ Represents a task, such as a piece of work or personal item, that can be tracked
 | - | - | --- |
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The user, to whom the todo is assigned.|
 |[Completed_Date_Time_Utc](#completed_date_time_utc)|`datetime` Readonly|Indicates (in UTC) when the task was completed.|
+|[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The object for which this is a to-do item.|
 |[Due_Date](#due_date)|`date` |Indicates when the task should be finished.|
 |[Importance](#importance)|`char(1)` Allowed: `L`, `N`, `H`|The importance of the task.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -99,6 +100,43 @@ Indicates (in UTC) when the task was completed.
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
+
+### Data_Object_Id
+
+
+The object for which this is a to-do item.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Sys_Objects](Sys_Objects.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Data_Object_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Due_Date
 

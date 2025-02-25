@@ -12,7 +12,7 @@ Tracks user availability and status changes in real time. Entity: Dmv_User_Prese
 | Name | Type | Description |
 | - | - | --- |
 |[Last_Update_Time_Utc](#last_update_time_utc)|`datetime` Readonly|Timestamp (UTC) of the last status update.|
-|[Status](#status)|`nvarchar(5)` Allowed: `OFFLN`, `AVLB`, `AWAY`, `CALL`, `MEET`, `BUSY`, `DND`, `PRSNT`, `BRB`, `OOO`, Readonly|The user's current presence status.|
+|[Status](#status)|`nvarchar(5)` Allowed: `AVLB`, `DND`, `BUSY`, `AWAY`, `OFFLN`, Readonly|The user's current presence status.|
 |[User_Id](#user_id)|`uniqueidentifier` Readonly|Unique identifier for the user.|
 |[User_Login](#user_login)|`nvarchar(64)` Readonly|The username used to log in.|
 
@@ -61,7 +61,7 @@ The user's current presence status.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`OFFLN`, `AVLB`, `AWAY`, `CALL`, `MEET`, `BUSY`, `DND`, `PRSNT`, `BRB`, `OOO`|
+|Allowed Values|`AVLB`, `DND`, `BUSY`, `AWAY`, `OFFLN`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

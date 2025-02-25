@@ -187,6 +187,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The user, to whom the todo is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Todo.Tasks.html#dataobject">DataObject</a></td>
+<td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</td>
+<td>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Todo.Tasks.html#owneruser">OwnerUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
 <td>The user, who created the todo and owns it. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -344,6 +349,13 @@ Allowed values for the <code>State</code>(Projects.Todo.Tasks.md#state) data att
 <h3 id="assignedtouser">AssignedToUser</h3>
 <p>The user, to whom the todo is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="dataobject">DataObject</h3>
+<p>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

@@ -46,6 +46,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AssignedToUser](Projects.Todo.Tasks.md#assignedtouser) | [Users](Systems.Security.Users.md) | The user, to whom the todo is assigned. `Required` `Filter(multi eq)` |
+| [DataObject](Projects.Todo.Tasks.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable) | The object for which this is a to-do item. `Filter(multi eq)` `Introduced in version 25.1.2.60` |
 | [OwnerUser](Projects.Todo.Tasks.md#owneruser) | [Users](Systems.Security.Users.md) | The user, who created the todo and owns it. `Required` `Filter(multi eq)` |
 | [SocialGroup](Projects.Todo.Tasks.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | When not null, indicates that the todo is contained in and managed by the specified social group. `Filter(multi eq)` |
 
@@ -185,6 +186,16 @@ _Show in UI_: **ShownByDefault**
 The user, to whom the todo is assigned. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### DataObject
+
+The object for which this is a to-do item. `Filter(multi eq)` `Introduced in version 25.1.2.60`
+
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
