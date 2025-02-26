@@ -9,7 +9,7 @@ Defines the users permissions to specific customer data. Entity: Crm_Customer_Ex
 
 ## Default Visualization
 Default Display Text Format:  
-_{CustomerId} - {ShipToCustomerId} - {UserId}_  
+_{Customer} - {ShipToCustomer} - {User}_  
 Default Search Members:  
 _Customer.Party.PartyName_  
 Name Data Member:  
