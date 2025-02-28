@@ -174,6 +174,23 @@ _Domain API Request_: **POST**
     The notification subject.  
     _Type_: string  
 
+  * **priority**  
+    The notification priority.  
+    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
+    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+
+    | Value | Description |
+    | ---- | --- |
+    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
+    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
+    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+
+     _Optional_: True  
+    _Default Value_: Normal  
+
 
 ### CreateCopy
 

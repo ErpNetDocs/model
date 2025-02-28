@@ -199,6 +199,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Projects.Agile.ProjectTypes.html">ProjectTypes</a></td>
 <td>Specifies what kind of project is this. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Projects.Agile.Projects.html#socialgroup">SocialGroup</a></td>
+<td><a href="Communities.Social.Groups.html">Groups</a> (nullable)</td>
+<td>When specified, restricts the visibility of the cases within the project to the members of the social group. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.63</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -303,6 +308,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="socialgroup">SocialGroup</h3>
+<p>When specified, restricts the visibility of the cases within the project to the members of the social group. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.63</code></p>
+<p><em>Type</em>: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
@@ -365,6 +376,44 @@ The notification class.<br>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
 <em>Type</em>: string</p>
+</li>
+<li><p><strong>priority</strong><br>
+The notification priority.<br>
+<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
+<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+</tr>
+<tr>
+<td>High</td>
+<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+</tr>
+<tr>
+<td>Urgent</td>
+<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional</em>: True<br>
+<em>Default Value</em>: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>

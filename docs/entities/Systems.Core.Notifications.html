@@ -156,6 +156,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
+<td><a href="Systems.Core.Notifications.html#priority">Priority</a></td>
+<td><a href="Systems.Core.Notifications.html#priority">Priority</a></td>
+<td>Indicates the importance level of the notification, helping determine its order of attention or urgency. <code>Required</code> <code>Default(3)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.63</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.Notifications.html#subject">Subject</a></td>
 <td>string (256) <strong>nullable</strong></td>
 <td>The short subject of the notification (in the Default Culture of the user). <code>Filter(eq;like)</code></td>
@@ -238,6 +243,46 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="priority">Priority</h3>
+<p>Indicates the importance level of the notification, helping determine its order of attention or urgency. <code>Required</code> <code>Default(3)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.63</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Core.Notifications.html#priority">Priority</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
+<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td>Background value. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Low value. Stored as 2. <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal value. Stored as 3. <br> <em>Database Value:</em> 3 <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+</tr>
+<tr>
+<td>High</td>
+<td>High value. Stored as 4. <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+</tr>
+<tr>
+<td>Urgent</td>
+<td>Urgent value. Stored as 5. <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>3</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="subject">Subject</h3>
 <p>The short subject of the notification (in the Default Culture of the user). <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
@@ -322,6 +367,44 @@ The notification class.<br>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
 <em>Type</em>: string</p>
+</li>
+<li><p><strong>priority</strong><br>
+The notification priority.<br>
+<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
+<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+</tr>
+<tr>
+<td>High</td>
+<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+</tr>
+<tr>
+<td>Urgent</td>
+<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional</em>: True<br>
+<em>Default Value</em>: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>

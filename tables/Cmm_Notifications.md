@@ -17,6 +17,7 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 |[Is_Read](#is_read)|`bit` |Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.|
 |[Notification_Class](#notification_class)|`nvarchar(64)` |The class of the notification from a predefined list of system classes.|
 |[Notification_Id](#notification_id)|`uniqueidentifier` `PK`||
+|[Priority](#priority)|`tinyint` Allowed: `1`, `2`, `3`, `4`, `5`|Indicates the importance level of the notification, helping determine its order of attention or urgency.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Subject](#subject)|`nvarchar(256)` |The short subject of the notification (in the Default Culture of the user).|
 |[User_Id](#user_id)|`uniqueidentifier` |The user, who is notified.|
@@ -230,6 +231,44 @@ The class of the notification from a predefined list of system classes.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Priority
+
+
+Indicates the importance level of the notification, helping determine its order of attention or urgency.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`1`, `2`, `3`, `4`, `5`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|3|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|tinyint|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Priority - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
 
 ### Row_Version
 

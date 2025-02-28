@@ -355,6 +355,44 @@ The notification class.<br>
 The notification subject.<br>
 <em>Type</em>: string</p>
 </li>
+<li><p><strong>priority</strong><br>
+The notification priority.<br>
+<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
+<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+</tr>
+<tr>
+<td>High</td>
+<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+</tr>
+<tr>
+<td>Urgent</td>
+<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional</em>: True<br>
+<em>Default Value</em>: Normal</p>
+</li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>

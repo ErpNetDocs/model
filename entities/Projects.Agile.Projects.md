@@ -50,6 +50,7 @@ Aggregate Tree
 | [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
 | [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. `Required` `Filter(multi eq)` |
 | [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. `Required` `Filter(multi eq)` |
+| [SocialGroup](Projects.Agile.Projects.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | When specified, restricts the visibility of the cases within the project to the members of the social group. `Filter(multi eq)` `Introduced in version 25.1.2.63` |
 
 
 ## Attribute Details
@@ -198,6 +199,15 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
+### SocialGroup
+
+When specified, restricts the visibility of the cases within the project to the members of the social group. `Filter(multi eq)` `Introduced in version 25.1.2.63`
+
+_Type_: **[Groups](Communities.Social.Groups.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
 
 ## API Methods
 
@@ -265,6 +275,23 @@ _Domain API Request_: **POST**
   * **subject**  
     The notification subject.  
     _Type_: string  
+
+  * **priority**  
+    The notification priority.  
+    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
+    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+
+    | Value | Description |
+    | ---- | --- |
+    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
+    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
+    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+
+     _Optional_: True  
+    _Default Value_: Normal  
 
 
 ### CreateCopy

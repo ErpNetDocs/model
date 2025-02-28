@@ -45,6 +45,7 @@ Aggregate Tree
 | [IsRead](Systems.Core.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. `Required` `Default(false)` `Filter(eq)` 
 | [NotificationClass](Systems.Core.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes. `Required` `Filter(multi eq)` 
 | [ObjectVersion](Systems.Core.Notifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [Priority](Systems.Core.Notifications.md#priority) | [Priority](Systems.Core.Notifications.md#priority) | Indicates the importance level of the notification, helping determine its order of attention or urgency. `Required` `Default(3)` `Filter(eq;ge;le)` `Introduced in version 25.1.2.63` 
 | [Subject](Systems.Core.Notifications.md#subject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)` 
 
 ## References
@@ -129,6 +130,28 @@ _Category_: **Extensible Data Object**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### Priority
+
+Indicates the importance level of the notification, helping determine its order of attention or urgency. `Required` `Default(3)` `Filter(eq;ge;le)` `Introduced in version 25.1.2.63`
+
+_Type_: **[Priority](Systems.Core.Notifications.md#priority)**  
+_Category_: **System**  
+Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
+_Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Background | Background value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
+| Low | Low value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
+| Normal | Normal value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
+| High | High value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
+| Urgent | Urgent value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Default Value_: **3**  
+_Show in UI_: **ShownByDefault**  
 
 ### Subject
 
@@ -230,6 +253,23 @@ _Domain API Request_: **POST**
   * **subject**  
     The notification subject.  
     _Type_: string  
+
+  * **priority**  
+    The notification priority.  
+    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
+    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+
+    | Value | Description |
+    | ---- | --- |
+    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
+    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
+    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+
+     _Optional_: True  
+    _Default Value_: Normal  
 
 
 ### CreateCopy

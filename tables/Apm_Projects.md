@@ -23,6 +23,7 @@ Agile project, used to logically group cases. Entity: Apm_Projects (Introduced i
 |[Project_Type_Id](#project_type_id)|`uniqueidentifier` |Specifies what kind of project is this.|
 |[Ready_Wip_Limit](#ready_wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Social_Group_Id](#social_group_id)|`uniqueidentifier` |When specified, restricts the visibility of the cases within the project to the members of the social group.|
 |[Wip_Limit](#wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state|
 
 ## Columns
@@ -452,6 +453,43 @@ When set, specifies the work-in-progress (WIP) limit. The limit is for number of
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Social_Group_Id
+
+
+When specified, restricts the visibility of the cases within the project to the members of the social group.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|13|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cmm_Social_Groups](Cmm_Social_Groups.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Social_Group_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Wip_Limit
 
