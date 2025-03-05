@@ -9,6 +9,7 @@ uid: Applications.AssetManagement
 - [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)  
 - [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)  
 - [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)  
+- [ManagedAssetLinks](Applications.AssetManagement.ManagedAssetLinks.md)  
 - [ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md)  
 - [ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md)  
 - [ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md)  

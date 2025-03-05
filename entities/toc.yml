@@ -16,6 +16,8 @@
       href: Applications.AssetManagement.MaintenanceTypes.md
     - name: ManagedAssetGroups
       href: Applications.AssetManagement.ManagedAssetGroups.md
+    - name: ManagedAssetLinks
+      href: Applications.AssetManagement.ManagedAssetLinks.md
     - name: ManagedAssetLocations
       href: Applications.AssetManagement.ManagedAssetLocations.md
     - name: ManagedAssetMaintenanceSchedules

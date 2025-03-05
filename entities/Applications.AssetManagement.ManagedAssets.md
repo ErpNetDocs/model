@@ -29,6 +29,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Applications.AssetManagement.ManagedAssets](Applications.AssetManagement.ManagedAssets.md)  
+  * [Applications.AssetManagement.ManagedAssetLinks](Applications.AssetManagement.ManagedAssetLinks.md)  
   * [Applications.AssetManagement.ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md)  
   * [Applications.AssetManagement.ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md)  
   * [Applications.AssetManagement.ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md)  
@@ -60,6 +61,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| Links | [ManagedAssetLinks](Applications.AssetManagement.ManagedAssetLinks.md) | List of `ManagedAssetLink`(Applications.AssetManagement.ManagedAssetLinks.md) child objects, based on the `Applications.AssetManagement.ManagedAssetLink.ManagedAsset`(Applications.AssetManagement.ManagedAssetLinks.md#managedasset) back reference 
 | Locations | [ManagedAssetLocations](Applications.AssetManagement.ManagedAssetLocations.md) | List of `ManagedAssetLocation`(Applications.AssetManagement.ManagedAssetLocations.md) child objects, based on the `Applications.AssetManagement.ManagedAssetLocation.ManagedAsset`(Applications.AssetManagement.ManagedAssetLocations.md#managedasset) back reference 
 | MaintenanceSchedules | [ManagedAssetMaintenanceSchedules](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md) | List of `ManagedAssetMaintenance<br />Schedule`(Applications.AssetManagement.ManagedAssetMaintenance<br />Schedules.md) child objects, based on the `Applications.AssetManagement.ManagedAssetMaintenance<br />Schedule.ManagedAsset`(Applications.AssetManagement.ManagedAssetMaintenance<br />Schedules.md#managedasset) back reference 
 | ParameterValues | [ManagedAssetParameterValues](Applications.AssetManagement.ManagedAssetParameterValues.md) | List of `ManagedAssetParameter<br />Value`(Applications.AssetManagement.ManagedAssetParameter<br />Values.md) child objects, based on the `Applications.AssetManagement.ManagedAssetParameterValue.ManagedAsset`(Applications.AssetManagement.ManagedAssetParameter<br />Values.md#managedasset) back reference 

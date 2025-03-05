@@ -22,6 +22,9 @@ references:
 - uid: Applications.AssetManagement.ManagedAssetGroups
   name: Applications.AssetManagement.ManagedAssetGroups Entity
   href: entities/Applications.AssetManagement.ManagedAssetGroups.html
+- uid: Applications.AssetManagement.ManagedAssetLinks
+  name: Applications.AssetManagement.ManagedAssetLinks Entity
+  href: entities/Applications.AssetManagement.ManagedAssetLinks.html
 - uid: Applications.AssetManagement.ManagedAssetLocations
   name: Applications.AssetManagement.ManagedAssetLocations Entity
   href: entities/Applications.AssetManagement.ManagedAssetLocations.html

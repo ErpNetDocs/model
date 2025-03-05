@@ -10952,6 +10952,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Applications.AssetManagement.ManagedAssetLinks.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Applications.AssetManagement.ManagedAssetLinks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Applications.AssetManagement.ManagedAssetLocations.md",
       "output": {
         ".html": {
@@ -22095,6 +22105,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Eam_Managed_Asset_Groups.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Eam_Managed_Asset_Links.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Eam_Managed_Asset_Links.html"
         }
       },
       "version": ""

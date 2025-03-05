@@ -437,6 +437,8 @@
     href: Eam_Maintenance_Types.md
   - name: Eam_Managed_Asset_Groups
     href: Eam_Managed_Asset_Groups.md
+  - name: Eam_Managed_Asset_Links
+    href: Eam_Managed_Asset_Links.md
   - name: Eam_Managed_Asset_Locations
     href: Eam_Managed_Asset_Locations.md
   - name: Eam_Managed_Asset_Maintenance_Schedules
