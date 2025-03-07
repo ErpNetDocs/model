@@ -18,7 +18,7 @@ Case: **35911**
 
 ## Default Visualization
 Default Display Text Format:  
-_{MachineName}_  
+_{InformationMessageType} - {ProcessDescription}_  
 Default Search Members:  
 _MachineName_  
 Name Data Member:  

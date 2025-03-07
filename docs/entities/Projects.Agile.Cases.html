@@ -263,6 +263,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Specified, when the case is assigned to a group of users. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.Cases.html#stakeholderparty">StakeholderParty</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
+<td>The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.70</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Cases.html#userstate">UserState</a></td>
 <td><a href="Projects.Agile.UserStates.html">UserStates</a> (nullable)</td>
 <td>The user-defined sub-state of the case. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.97</code></td>
@@ -552,6 +557,12 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <p>Specified, when the case is assigned to a group of users. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="stakeholderparty">StakeholderParty</h3>
+<p>The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.70</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
