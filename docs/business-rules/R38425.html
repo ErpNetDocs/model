@@ -119,11 +119,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>IF DataObject.ExtensibleDataObject.EntityType == Cmm_Social_Groups, then SET Group.LastInteractionTimeUtc = NOW(UTC) <br> WHERE Group.Id = DataObject.ExtensibleDataObject.EntityItemId</td>
+<td>If Task.SocialGroup has value or changes, then SET Group.LastInteractionTimeUtc = NOW(UTC) <br></td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When in SocialGroup is specified in a Task, the current time in UTC is set in the LastInteractionTimeUtc field of that Group.</td>
+<td>When a SocialGroup is specified in a Task, the current time in UTC is set in the LastInteractionTimeUtc field of that Group.</td>
 </tr>
 <tr>
 <td>Message</td>
