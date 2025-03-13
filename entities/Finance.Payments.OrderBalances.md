@@ -28,6 +28,7 @@ Aggregate Tree
 | [Direction](Finance.Payments.OrderBalances.md#direction) | [Direction](Finance.Payments.OrderBalances.md#direction) | I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction` 
 | [DueDate](Finance.Payments.OrderBalances.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date` 
 | [DueStartDate](Finance.Payments.OrderBalances.md#duestartdate) | date __nullable__ | The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date` 
+| [DueStatus](Finance.Payments.OrderBalances.md#duestatus) | [DueStatus](Finance.Payments.OrderBalances.md#duestatus) | Due status of requested payment. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.74` 
 | [IsInvoiced](Finance.Payments.OrderBalances.md#isinvoiced) | boolean | When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. `Required` `Filter(multi eq)` 
 | [OrderAmount](Finance.Payments.OrderBalances.md#orderamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount of the payment order. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount` 
 | [PaidAmount](Finance.Payments.OrderBalances.md#paidamount) | [Amount (38, 2)](../data-types.md#amount) | The paid amount. Taken from released payment transactions. `Currency: Currency` `Required` 
@@ -59,8 +60,8 @@ I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq
 
 _Type_: **[Direction](Finance.Payments.OrderBalances.md#direction)**  
 _Category_: **System**  
-Allowed values for the `Direction`(Finance.Payments.PaymentOrders.md#direction) data attribute  
-_Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)_  
+Allowed values for the `Direction`(Finance.Payments.OrderBalances.md#direction) data attribute  
+_Allowed Values (Finance.Payments.OrderBalancesRepository.Direction Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -92,6 +93,27 @@ _Type_: **date __nullable__**
 _Category_: **System**  
 _Inherited From_: **Cash_Payment_Orders_Table.Due_Start_Date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
+### DueStatus
+
+Due status of requested payment. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.74`
+
+_Type_: **[DueStatus](Finance.Payments.OrderBalances.md#duestatus)**  
+_Category_: **System**  
+Allowed values for the `DueStatus`(Finance.Payments.OrderBalances.md#duestatus) data attribute  
+_Allowed Values (Finance.Payments.OrderBalancesRepository.DueStatus Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Scheduled | Payment is not yet applicable (before due start date).. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Scheduled' |
+| Due | Payment is now payable and should be made before the due date.. Stored as 'D'. <br /> _Database Value:_ 'D' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Due' |
+| GracePeriod | Due date has passed, but still within the grace period (no penalties yet).. Stored as 'G'. <br /> _Database Value:_ 'G' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'GracePeriod' |
+| Overdue | Grace period has ended, and payment is now late.. Stored as 'O'. <br /> _Database Value:_ 'O' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Overdue' |
+| NotApplicable | Not Applicable for payment. Stored as 'N'. <br /> _Database Value:_ 'N' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'NotApplicable' |
+
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 

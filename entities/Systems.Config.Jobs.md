@@ -100,6 +100,7 @@ _Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)_
 | DeleteOldDocumentVersions | Delete old document versions. Stored as 'DDV'. <br /> _Database Value:_ 'DDV' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'DeleteOldDocumentVersions' |
 | DeleteOldInformation<br />Messages | Delete old information messages. Stored as 'DIM'. <br /> _Database Value:_ 'DIM' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'DeleteOldInformation<br />Messages' |
 | DeleteAttribute<br />ChangesHistory | Delete attribute changes history. Stored as 'DAC'. <br /> _Database Value:_ 'DAC' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'DeleteAttribute<br />ChangesHistory' |
+| DeleteOldAuditLogs | Delete Old Audit Logs. Stored as 'DAL'. <br /> _Database Value:_ 'DAL' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'DeleteOldAuditLogs' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  

@@ -128,6 +128,11 @@ Show in UI:  <em>ShownByDefault</em></p>
 <td>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Payments.OrderBalances.html#duestatus">DueStatus</a></td>
+<td><a href="Finance.Payments.OrderBalances.html#duestatus">DueStatus</a></td>
+<td>Due status of requested payment. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.74</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Payments.OrderBalances.html#isinvoiced">IsInvoiced</a></td>
 <td>boolean</td>
 <td>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -226,8 +231,8 @@ Show in UI:  <em>ShownByDefault</em></p>
 <p>I for Payment issue, R for payment receipt. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Direction</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.OrderBalances.html#direction">Direction</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#direction) data attribute<br>
-<em>Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)</em></p>
+Allowed values for the <code>Direction</code>(Finance.Payments.OrderBalances.md#direction) data attribute<br>
+<em>Allowed Values (Finance.Payments.OrderBalancesRepository.Direction Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -265,6 +270,45 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Start_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="duestatus">DueStatus</h3>
+<p>Due status of requested payment. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.74</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Payments.OrderBalances.html#duestatus">DueStatus</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>DueStatus</code>(Finance.Payments.OrderBalances.md#duestatus) data attribute<br>
+<em>Allowed Values (Finance.Payments.OrderBalancesRepository.DueStatus Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scheduled</td>
+<td>Payment is not yet applicable (before due start date).. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Scheduled'</td>
+</tr>
+<tr>
+<td>Due</td>
+<td>Payment is now payable and should be made before the due date.. Stored as 'D'. <br> <em>Database Value:</em> 'D' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Due'</td>
+</tr>
+<tr>
+<td>GracePeriod</td>
+<td>Due date has passed, but still within the grace period (no penalties yet).. Stored as 'G'. <br> <em>Database Value:</em> 'G' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'GracePeriod'</td>
+</tr>
+<tr>
+<td>Overdue</td>
+<td>Grace period has ended, and payment is now late.. Stored as 'O'. <br> <em>Database Value:</em> 'O' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Overdue'</td>
+</tr>
+<tr>
+<td>NotApplicable</td>
+<td>Not Applicable for payment. Stored as 'N'. <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'NotApplicable'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="isinvoiced">IsInvoiced</h3>

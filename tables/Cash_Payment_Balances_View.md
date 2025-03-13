@@ -15,6 +15,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 |[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
 |[Due_Date](#due_date)|`datetime` |The due date of the payment. NULL means there is no due date|
 |[Due_Start_Date](#due_start_date)|`date` |The date at which the payment becomes executable. NULL means the payment is executable at all times.|
+|[Due_Status](#due_status)|`char(1)` Allowed: `S`, `D`, `G`, `O`, `N`|Due status of requested payment|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Is_Invoiced](#is_invoiced)|`bit` |When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.|
 |[Location_Party_Id](#location_party_id)|`uniqueidentifier` |Location or sub-party of the Party_Id in the order|
@@ -181,6 +182,43 @@ The date at which the payment becomes executable. NULL means the payment is exec
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
 |GreaterThanOrLessThan|None|no|no|
+
+### Due_Status
+
+
+Due status of requested payment
+
+| Property | Value |
+| - | - |
+|Allowed Values|`S`, `D`, `G`, `O`, `N`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(1)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Due_Status - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Enterprise_Company_Id
 
@@ -465,7 +503,6 @@ The date of the original document. NULL means that it is unknown
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
-|GreaterThanOrLessThan|None|no|no|
 
 ### Ref_Document_Id
 

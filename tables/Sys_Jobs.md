@@ -14,7 +14,7 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 |[Is_Active](#is_active)|`bit` |Specifies whether the job is active and ready for running.|
 |[Job_Id](#job_id)|`uniqueidentifier` `PK`||
 |[Job_Name](#job_name)|`nvarchar(254)` |The name of the job.|
-|[Job_Type](#job_type)|`char(3)` Allowed: `DOC`, `POS`, `DNT`, `DPI`, `DDV`, `DIM`, `DAC`|The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.|
+|[Job_Type](#job_type)|`char(3)` Allowed: `DOC`, `POS`, `DNT`, `DPI`, `DDV`, `DIM`, `DAC`, `DAL`|The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Run_On_Idle](#run_on_idle)|`bit` |Specifies whether to automatically run the job when the server is idle.|
@@ -134,7 +134,7 @@ The system type of the job. DOC=Document Change State, POS=Run Postponed Events,
 
 | Property | Value |
 | - | - |
-|Allowed Values|`DOC`, `POS`, `DNT`, `DPI`, `DDV`, `DIM`, `DAC`|
+|Allowed Values|`DOC`, `POS`, `DNT`, `DPI`, `DDV`, `DIM`, `DAC`, `DAL`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

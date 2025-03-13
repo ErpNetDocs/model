@@ -181,6 +181,7 @@ _Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventType Enum Mem
 | ChangePassword | ChangePassword value. Stored as 'APW'. <br /> _Database Value:_ 'APW' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'ChangePassword' |
 | OtherAuthEvent | OtherAuthEvent value. Stored as 'ATH'. <br /> _Database Value:_ 'ATH' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'OtherAuthEvent' |
 | OtherServerEvent | OtherServerEvent value. Stored as 'STH'. <br /> _Database Value:_ 'STH' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'OtherServerEvent' |
+| AuthPresenceChange | AuthPresenceChange value. Stored as 'APC'. <br /> _Database Value:_ 'APC' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'AuthPresenceChange' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
