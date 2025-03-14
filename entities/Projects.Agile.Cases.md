@@ -57,6 +57,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AssignedToUser](Projects.Agile.Cases.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The internal user to which the case is assigned. `Filter(multi eq)` |
 | [CaseCategory](Projects.Agile.Cases.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category of the case. This also determines the workflow for the case. `Required` `Filter(multi eq)` |
+| [OwnerUser](Projects.Agile.Cases.md#owneruser) | [Users](Systems.Security.Users.md) | The user responsible for managing and overseeing the case. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76` |
 | [Parent](Projects.Agile.Cases.md#parent) | [Cases](Projects.Agile.Cases.md) (nullable) | Specified when this is a sub-case to another case. `Filter(multi eq)` |
 | [Project](Projects.Agile.Cases.md#project) | [Projects](Projects.Agile.Projects.md) | The project to which the case is assigned. `Required` `Filter(multi eq)` |
 | [ProjectArea](Projects.Agile.Cases.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The are to which the case is assigned. `Filter(multi eq)` |
@@ -313,6 +314,15 @@ The category of the case. This also determines the workflow for the case. `Requi
 
 _Type_: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### OwnerUser
+
+The user responsible for managing and overseeing the case. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76`
+
+_Type_: **[Users](Systems.Security.Users.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

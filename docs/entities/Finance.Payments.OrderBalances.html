@@ -148,6 +148,11 @@ Show in UI:  <em>ShownByDefault</em></p>
 <td>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Payments.OrderBalances.html#paymentstatus">PaymentStatus</a></td>
+<td><a href="Finance.Payments.OrderBalances.html#paymentstatus">PaymentStatus</a></td>
+<td>Payment Status	. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocumentdate">RefDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>The date of the original document. null means that it is unknown. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></td>
@@ -332,6 +337,41 @@ Allowed values for the <code>DueStatus</code>(Finance.Payments.OrderBalances.md#
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="paymentstatus">PaymentStatus</h3>
+<p>Payment Status	. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Payments.OrderBalances.html#paymentstatus">PaymentStatus</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>PaymentStatus</code>(Finance.Payments.OrderBalances.md#paymentstatus) data attribute<br>
+<em>Allowed Values (Finance.Payments.OrderBalancesRepository.PaymentStatus Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unpaid</td>
+<td>No payment has been made yet.. Stored as 'UN'. <br> <em>Database Value:</em> 'UN' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Unpaid'</td>
+</tr>
+<tr>
+<td>PartiallyPaid</td>
+<td>A partial payment has been made, but the full amount is still outstanding.. Stored as 'PP'. <br> <em>Database Value:</em> 'PP' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'PartiallyPaid'</td>
+</tr>
+<tr>
+<td>Paid</td>
+<td>The full payment has been completed.. Stored as 'PA'. <br> <em>Database Value:</em> 'PA' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Paid'</td>
+</tr>
+<tr>
+<td>Overpaid</td>
+<td>More than the required amount has been paid.. Stored as 'OV'. <br> <em>Database Value:</em> 'OV' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Overpaid'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>

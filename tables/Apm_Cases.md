@@ -23,6 +23,7 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 |[Due_Time](#due_time)|`time` |Specified when the case has specific due time.|
 |[Estimated_Time_Hours](#estimated_time_hours)|`decimal(8, 2)` |Estimation of the required work effort in hours.|
 |[In_Progress_Time_UTC](#in_progress_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has changed to in-progress state.|
+|[Owner_User](#owner_user)|`uniqueidentifier` |The user responsible for managing and overseeing the case.|
 |[Parent_Case_Id](#parent_case_id)|`uniqueidentifier` |Specified when this is a sub-case to another case.|
 |[Priority](#priority)|`tinyint` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`|Priority of the case, on a scale from 1 (highest) to 7 (lowest).|
 |[Project_Area_Id](#project_area_id)|`uniqueidentifier` |The are to which the case is assigned.|
@@ -461,6 +462,43 @@ Indicates the time (in UTC) when the case has changed to in-progress state.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Owner_User
+
+
+The user responsible for managing and overseeing the case.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Owner_User - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Parent_Case_Id
 

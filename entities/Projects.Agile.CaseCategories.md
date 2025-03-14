@@ -34,6 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DescriptionTemplate](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Description field when creating new cases of this category. `Filter(like)` `Introduced in version 25.1.2.76` 
 | [DisplayText](Projects.Agile.CaseCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Icon](Projects.Agile.CaseCategories.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
 | [Id](Projects.Agile.CaseCategories.md#id) | guid |  
@@ -53,6 +54,17 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DescriptionTemplate
+
+Interpolated string that sets a value for the Description field when creating new cases of this category. `Filter(like)` `Introduced in version 25.1.2.76`
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
+_Show in UI_: **ShownByDefault**  
 
 ### DisplayText
 

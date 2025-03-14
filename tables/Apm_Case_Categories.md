@@ -13,6 +13,7 @@ Determines the type and workflow of the cases. Entity: Apm_Case_Categories (Intr
 | - | - | --- |
 |[Case_Category_Id](#case_category_id)|`uniqueidentifier` `PK`||
 |[Case_Category_Name](#case_category_name)|`nvarchar(256)` `ML`|Use short, singular phrase to describe a category of cases|
+|[Description_Template](#description_template)|`nvarchar(max)` |Interpolated string that sets a value for the Description field when creating new cases of this category.|
 |[Icon](#icon)|`nvarchar(128)` |Icon name from the Font Awesome icon set.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the category is active for new cases.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -85,6 +86,42 @@ Use short, singular phrase to describe a category of cases
 |Visible|yes|
 
 #### Case_Category_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
+### Description_Template
+
+
+Interpolated string that sets a value for the Description field when creating new cases of this category.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|8|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Description_Template - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

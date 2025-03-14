@@ -238,6 +238,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The category of the case. This also determines the workflow for the case. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.Cases.html#owneruser">OwnerUser</a></td>
+<td><a href="Systems.Security.Users.html">Users</a></td>
+<td>The user responsible for managing and overseeing the case. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Cases.html#parent">Parent</a></td>
 <td><a href="Projects.Agile.Cases.html">Cases</a> (nullable)</td>
 <td>Specified when this is a sub-case to another case. <code>Filter(multi eq)</code></td>
@@ -522,6 +527,12 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <p>The category of the case. This also determines the workflow for the case. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="owneruser">OwnerUser</h3>
+<p>The user responsible for managing and overseeing the case. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

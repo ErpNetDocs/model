@@ -22,7 +22,7 @@ _{Id}: {UserId}_
 Default Search Members:  
 _Subject_  
 Category:  _Definitions_  
-Show in UI:  _CannotBeShown_  
+Show in UI:  _HiddenByDefault_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  
