@@ -1034,6 +1034,8 @@
       href: Projects.Agile.ProjectTypeCaseCategories.md
     - name: ProjectTypes
       href: Projects.Agile.ProjectTypes.md
+    - name: TimeEntries
+      href: Projects.Agile.TimeEntries.md
     - name: UserStates
       href: Projects.Agile.UserStates.md
   - name: AI
