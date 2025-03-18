@@ -29,13 +29,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(ge;le)` 
+| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(eq;ge;le)` 
 | [DisplayText](Projects.Agile.TimeEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(ge;le)` 
 | [Id](Projects.Agile.TimeEntries.md#id) | guid |  
 | [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
 | [ObjectVersion](Projects.Agile.TimeEntries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [StartTime](Projects.Agile.TimeEntries.md#starttime) | time | The start time of the logged work. Stored in the local time zone of the user. `Required` `Filter(ge;le)` 
+| [StartTime](Projects.Agile.TimeEntries.md#starttime) | time | The start time of the logged work. Stored in the local time zone of the user. `Required` `Filter(eq;ge;le)` `ORD` 
 
 ## References
 
@@ -49,11 +49,11 @@ Aggregate Tree
 
 ### Date
 
-The date for which the time entry is created. `Required` `Filter(ge;le)`
+The date for which the time entry is created. `Required` `Filter(eq;ge;le)`
 
 _Type_: **date**  
 _Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
@@ -108,12 +108,12 @@ _Show in UI_: **HiddenByDefault**
 
 ### StartTime
 
-The start time of the logged work. Stored in the local time zone of the user. `Required` `Filter(ge;le)`
+The start time of the logged work. Stored in the local time zone of the user. `Required` `Filter(eq;ge;le)` `ORD`
 
 _Type_: **time**  
 _Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 

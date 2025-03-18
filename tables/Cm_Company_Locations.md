@@ -19,7 +19,7 @@ Stores company locations. The locations are parties and as such, can be organize
 |[Bill_To](#bill_to)|`char(1)` Allowed: `C`, `L`|If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, NULL = unidentified|
 |[Company_Id](#company_id)|`uniqueidentifier` |The company to which this location belongs.|
 |[Company_Location_Id](#company_location_id)|`uniqueidentifier` `PK`||
-|[Location_Name](#location_name)|`nvarchar(64)` `ML`|The name of the company location.|
+|[Location_Name](#location_name)|`nvarchar(254)` `ML`|The name of the company location.|
 |[Party_Id](#party_id)|`uniqueidentifier` |The party of the company location.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Working_Time](#working_time)|`nvarchar(254)` |Textual representation of the working time of the location.|
@@ -174,7 +174,7 @@ The name of the company location.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|64|
+|Max Length|254|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -185,7 +185,7 @@ The name of the company location.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64) (MultiLanguage)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

@@ -46,7 +46,7 @@ Aggregate Tree
 | [GLN](General.Contacts.CompanyLocations.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Id](General.Contacts.CompanyLocations.md#id) | guid |  
 | [IsActive](General.Contacts.CompanyLocations.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of the company location. `Required` `Filter(eq;like)` 
+| [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the company location. `Required` `Filter(eq;like)` 
 | [ObjectVersion](General.Contacts.CompanyLocations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PartyCode](General.Contacts.CompanyLocations.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyLocations.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -148,7 +148,7 @@ _Show in UI_: **ShownByDefault**
 
 The name of the company location. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

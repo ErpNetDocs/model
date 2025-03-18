@@ -93,6 +93,7 @@ The date for which the time entry is created.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### End_Time
@@ -215,7 +216,7 @@ The start time of the logged work. Stored in the local time zone of the user.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|time|
@@ -228,6 +229,7 @@ The start time of the logged work. Stored in the local time zone of the user.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Time_Entry_Id

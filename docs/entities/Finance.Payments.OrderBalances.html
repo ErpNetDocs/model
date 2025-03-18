@@ -145,7 +145,7 @@ Show in UI:  <em>ShownByDefault</em></p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#paidamount">PaidAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code></td>
+<td>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#paymentstatus">PaymentStatus</a></td>
@@ -171,6 +171,11 @@ Show in UI:  <em>ShownByDefault</em></p>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
 <td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.OrderBalances.html#remainingamount">RemainingAmount</a></td>
+<td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
+<td>The amount that remains to be paid. <code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.79</code></td>
 </tr>
 </tbody>
 </table>
@@ -333,10 +338,10 @@ Allowed values for the <code>DueStatus</code>(Finance.Payments.OrderBalances.md#
 <em>Default Value</em>: <strong>Constant</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="paidamount">PaidAmount</h3>
-<p>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code></p>
+<p>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="paymentstatus">PaymentStatus</h3>
@@ -424,6 +429,13 @@ Allowed values for the <code>PaymentStatus</code>(Finance.Payments.OrderBalances
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
+<h3 id="remainingamount">RemainingAmount</h3>
+<p>The amount that remains to be paid. <code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.79</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currency">Currency</h3>
 <p>The currency of amounts. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id</code></p>
