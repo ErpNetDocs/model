@@ -119,7 +119,7 @@
 </tr>
 <tr>
 <td>Description</td>
-<td>When new party is created, the PartyName is automatically filled as follows:<br><br>-   if the party is a Company - its PartyName is the Comapny's Name;<br>-   if the party is a Person - its PartyName is the Person's full name (first, middle and last name);<br>-   if the party is a Store - its PartyName is the Store's Name;<br>-   if the party is a Company Location - its PartyName is the Location's LocationName;<br>-   if the party is a Company Division - its PartyName is the Division's Name;<br>-   in all other cases the PartyName is null.</td>
+<td>When the new party is created, the PartyName is automatically filled as follows:<br><br>-   if the party is a Company - its PartyName is the Company's Name. If the BranchNumber is 0, it is ignored. Otherwise, the BranchNumber is appended in square brackets. Example: &quot;TechCorp&quot; or &quot;TechCorp [3]&quot;; <br><br>-   if the party is a Person - its PartyName is the Person's full name i.e. is created by concatenating FirstName, MiddleName, and LastName. Example: &quot;John Michael Doe&quot;; <br><br>-   if the party is a Store - its PartyName is the Store's Name. Example: &quot;SuperMart&quot;; <br><br>-   if the party is a Company Location - The name is formed by combining the Company.Name and the LocationName, separated by a comma. Example: &quot;TechCorp, New York Office&quot;; <br><br>-   if the party is a Company Division - its PartyName is the Division's Name. Example: &quot;Sales Division&quot;; <br><br>-   in all other cases the PartyName is null.</td>
 </tr>
 <tr>
 <td>Message</td>
