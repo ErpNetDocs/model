@@ -115,7 +115,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>If (Party.PartyType == Company)<br>Party.PartyName = Company.Name<br><br>else if (Party.PartyType == Person)<br>Party.PartyName = Person.FirstName + Person.MiddleName + Person.LastName<br><br>else if (Party.PartyType == Store)<br>Party.PartyName = Store.Name<br><br>else if (Party.PartyType == Company Location)<br>Party.PartyName = CompanyLocation.LocationName<br><br>else if (Party.PartyType == Division)<br>Party.PartyName = CompanyDivision.Name<br><br>else<br>Party.PartyName = null</td>
+<td>If (Party.PartyType == Company)<br>Party.PartyName =  Company.Name + IF(BranchNumber = 0, '' ,  '[' + BranchNumber + ']')<br><br>else if (Party.PartyType == Person)<br>Party.PartyName = Person.FirstName + Person.MiddleName + Person.LastName<br><br>else if (Party.PartyType == Store)<br>Party.PartyName = Store.Name<br><br>else if (Party.PartyType == Company Location)<br>Party.PartyName = CompanyLocation.Company.Name + ', ' + CompanyLocation.LocationName<br><br>else if (Party.PartyType == Division)<br>Party.PartyName = CompanyDivision.Name<br><br>else<br>Party.PartyName = null</td>
 </tr>
 <tr>
 <td>Description</td>
