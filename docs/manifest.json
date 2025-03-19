@@ -10882,16 +10882,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "business-rules/R38425.md",
-      "output": {
-        ".html": {
-          "relative_path": "business-rules/R38425.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "business-rules/R38449.md",
       "output": {
         ".html": {
@@ -10916,6 +10906,16 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R38488.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R38508.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R38508.html"
         }
       },
       "version": ""
