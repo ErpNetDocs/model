@@ -18,7 +18,7 @@ Contains entries about the time spent working on cases. Entity: Apm_Time_Entries
 |[Row_Version](#row_version)|`timestamp` ||
 |[Start_Time](#start_time)|`time` |The start time of the logged work. Stored in the local time zone of the user.|
 |[Time_Entry_Id](#time_entry_id)|`uniqueidentifier` `PK`||
-|[User_Id](#user_id)|`uniqueidentifier` |The user for whom the time is recorded.|
+|[User_Id](#user_id)|`uniqueidentifier` Readonly|The user for whom the time is recorded.|
 
 ## Columns
 
@@ -284,7 +284,7 @@ The user for whom the time is recorded.
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |Referenced Table|[Sec_Users](Sec_Users.md)|
 |RTF|no|
 |Sortable|no|

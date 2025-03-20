@@ -9,7 +9,7 @@ Contains entries about the time spent working on cases. Entity: Apm_Time_Entries
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {CaseId}_  
+_{Date:d} {StartTime:hh\:mm} - {EndTime:hh\:mm}_  
 Default Search Members:  
 __  
 Category:  _Views_  
@@ -42,7 +42,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Case](Projects.Agile.TimeEntries.md#case) | [Cases](Projects.Agile.Cases.md) | The case for which the time is recorded. `Required` `Filter(multi eq)` |
-| [User](Projects.Agile.TimeEntries.md#user) | [Users](Systems.Security.Users.md) | The user for whom the time is recorded. `Required` `Filter(multi eq)` |
+| [User](Projects.Agile.TimeEntries.md#user) | [Users](Systems.Security.Users.md) | The user for whom the time is recorded. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
 ## Attribute Details
@@ -130,7 +130,7 @@ _Show in UI_: **ShownByDefault**
 
 ### User
 
-The user for whom the time is recorded. `Required` `Filter(multi eq)`
+The user for whom the time is recorded. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Category_: **System**  

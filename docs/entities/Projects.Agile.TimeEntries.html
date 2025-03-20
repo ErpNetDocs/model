@@ -91,7 +91,7 @@
 <p>Contains entries about the time spent working on cases. Entity: Apm_Time_Entries (Introduced in version 25.1.2.78)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {CaseId}</em><br>
+<em>{Date:d} {StartTime:hh:mm} - {EndTime:hh:mm}</em><br>
 Default Search Members:<br>
 __<br>
 Category:  <em>Views</em><br>
@@ -170,7 +170,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user for whom the time is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user for whom the time is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -232,7 +232,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user for whom the time is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user for whom the time is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
