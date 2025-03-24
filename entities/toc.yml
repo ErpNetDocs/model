@@ -536,10 +536,10 @@
       href: Finance.Payments.InvoiceReconciliationLines.md
     - name: InvoiceReconciliations
       href: Finance.Payments.InvoiceReconciliations.md
-    - name: OrderBalances
-      href: Finance.Payments.OrderBalances.md
     - name: PaymentAccounts
       href: Finance.Payments.PaymentAccounts.md
+    - name: PaymentBalances
+      href: Finance.Payments.PaymentBalances.md
     - name: PaymentOrders
       href: Finance.Payments.PaymentOrders.md
     - name: PaymentReasons

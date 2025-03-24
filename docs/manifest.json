@@ -13902,6 +13902,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Payments.PaymentBalances.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Payments.PaymentBalances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Payments.PaymentOrders.md",
       "output": {
         ".html": {

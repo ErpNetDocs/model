@@ -5,6 +5,11 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Finance.Payments.OrderBalances**  
+New name: **Finance.Payments.PaymentBalances**  
+Version: **25.1.2.86**  
+Case: **38515**  
+
 Old name: **Crm.Distributors**  
 New name: **Crm.Sales.Distributors**  
 Version: **25.1.2.28**  

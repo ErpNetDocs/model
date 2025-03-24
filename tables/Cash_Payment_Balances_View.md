@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Payments.OrderBalances](~/entities/Finance.Payments.OrderBalances.md)
+Entity: [Finance.Payments.PaymentBalances](~/entities/Finance.Payments.PaymentBalances.md)
 
 Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View (Introduced in version 23.1.0.79)
 

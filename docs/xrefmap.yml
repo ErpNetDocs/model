@@ -814,12 +814,12 @@ references:
 - uid: Finance.Payments.InvoiceReconciliations
   name: Finance.Payments.InvoiceReconciliations Entity
   href: entities/Finance.Payments.InvoiceReconciliations.html
-- uid: Finance.Payments.OrderBalances
-  name: Finance.Payments.OrderBalances View
-  href: entities/Finance.Payments.OrderBalances.html
 - uid: Finance.Payments.PaymentAccounts
   name: Finance.Payments.PaymentAccounts Entity
   href: entities/Finance.Payments.PaymentAccounts.html
+- uid: Finance.Payments.PaymentBalances
+  name: Finance.Payments.PaymentBalances View
+  href: entities/Finance.Payments.PaymentBalances.html
 - uid: Finance.Payments.PaymentOrders
   name: Finance.Payments.PaymentOrders Entity
   href: entities/Finance.Payments.PaymentOrders.html

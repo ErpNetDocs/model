@@ -91,7 +91,6 @@ The date parameter used to compute the balances.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-|GreaterThanOrLessThan|None|no|no|
 
 ### Enterprise_Company_Id
 
