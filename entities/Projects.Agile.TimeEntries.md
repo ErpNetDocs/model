@@ -29,7 +29,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(eq;ge;le)` 
+| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(eq;ge;le)` `ORD` 
 | [DisplayText](Projects.Agile.TimeEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(ge;le)` 
 | [Id](Projects.Agile.TimeEntries.md#id) | guid |  
@@ -49,12 +49,12 @@ Aggregate Tree
 
 ### Date
 
-The date for which the time entry is created. `Required` `Filter(eq;ge;le)`
+The date for which the time entry is created. `Required` `Filter(eq;ge;le)` `ORD`
 
 _Type_: **date**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### DisplayText
