@@ -12,14 +12,14 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 | Name | Type | Description |
 | - | - | --- |
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of amounts.|
-|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for Payment receipt|
 |[Due_Date](#due_date)|`datetime` |The due date of the payment. NULL means there is no due date|
 |[Due_Start_Date](#due_start_date)|`date` |The date at which the payment becomes executable. NULL means the payment is executable at all times.|
 |[Due_Status](#due_status)|`char(1)` Allowed: `S`, `D`, `G`, `O`, `N`|Due status of requested payment|
-|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
+|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company which issued the document.|
 |[Is_Invoiced](#is_invoiced)|`bit` |When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.|
 |[Location_Party_Id](#location_party_id)|`uniqueidentifier` |Location or sub-party of the Party_Id in the order|
-|[Order_Amount](#order_amount)|`decimal(18, 2)` |The total amount of the payment order.|
+|[Order_Amount](#order_amount)|`decimal(18, 2)` |The total amount that should be paid.|
 |[Paid_Amount](#paid_amount)|`decimal(38, 2)` |The paid amount. Taken from released payment transactions.|
 |[Party_Id](#party_id)|`uniqueidentifier` |The party which is to pay or receive the amount|
 |[Payment_Order_Id](#payment_order_id)|`uniqueidentifier` |The payment order.|
@@ -77,7 +77,7 @@ The currency of amounts.
 ### Direction
 
 
-I for Payment issue, R for payment receipt
+I for Payment issue, R for Payment receipt
 
 | Property | Value |
 | - | - |
@@ -224,6 +224,9 @@ Due status of requested payment
 
 ### Enterprise_Company_Id
 
+
+The enterprise company which issued the document.
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -332,7 +335,7 @@ Location or sub-party of the Party_Id in the order
 ### Order_Amount
 
 
-The total amount of the payment order.
+The total amount that should be paid.
 
 | Property | Value |
 | - | - |

@@ -126,6 +126,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.TimeEntries.html#durationhours">DurationHours</a></td>
+<td>decimal (0, 0)</td>
+<td>Total duration of the logged time (in hours). [ReadOnly]</td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.TimeEntries.html#endtime">EndTime</a></td>
 <td>time <strong>nullable</strong></td>
 <td>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(ge;le)</code></td>
@@ -189,6 +194,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="durationhours">DurationHours</h3>
+<p>Total duration of the logged time (in hours). [ReadOnly]</p>
+<p><em>Type</em>: <strong>decimal (0, 0)</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
 <p>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>time <strong>nullable</strong></strong><br>

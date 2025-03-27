@@ -34,12 +34,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Direction](Finance.Payments.PaymentBalances.md#direction) | [Direction](Finance.Payments.PaymentBalances.md#direction) | I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction` 
+| [Direction](Finance.Payments.PaymentBalances.md#direction) | [Direction](Finance.Payments.PaymentBalances.md#direction) | I for Payment issue, R for Payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction` 
 | [DueDate](Finance.Payments.PaymentBalances.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date` 
 | [DueStartDate](Finance.Payments.PaymentBalances.md#duestartdate) | date __nullable__ | The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date` 
 | [DueStatus](Finance.Payments.PaymentBalances.md#duestatus) | [DueStatus](Finance.Payments.PaymentBalances.md#duestatus) | Due status of requested payment. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.74` 
 | [IsInvoiced](Finance.Payments.PaymentBalances.md#isinvoiced) | boolean | When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. `Required` `Filter(multi eq)` 
-| [OrderAmount](Finance.Payments.PaymentBalances.md#orderamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount of the payment order. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount` 
+| [OrderAmount](Finance.Payments.PaymentBalances.md#orderamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount that should be paid. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount` 
 | [PaidAmount](Finance.Payments.PaymentBalances.md#paidamount) | [Amount (38, 2)](../data-types.md#amount) | The paid amount. Taken from released payment transactions. `Currency: Currency` `Required` `Filter(eq;ge;le)` 
 | [PaymentStatus](Finance.Payments.PaymentBalances.md#paymentstatus) | [PaymentStatus](Finance.Payments.PaymentBalances.md#paymentstatus) | Payment Status	. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76` 
 | [RefDocumentDate](Finance.Payments.PaymentBalances.md#refdocumentdate) | datetime __nullable__ | The date of the original document. null means that it is unknown. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Date` 
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### Direction
 
-I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction`
+I for Payment issue, R for Payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction`
 
 _Type_: **[Direction](Finance.Payments.PaymentBalances.md#direction)**  
 _Category_: **System**  
@@ -140,7 +140,7 @@ _Show in UI_: **ShownByDefault**
 
 ### OrderAmount
 
-The total amount of the payment order. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount`
+The total amount that should be paid. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Category_: **System**  

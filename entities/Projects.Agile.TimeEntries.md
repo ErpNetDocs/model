@@ -31,6 +31,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(eq;ge;le)` `ORD` 
 | [DisplayText](Projects.Agile.TimeEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [DurationHours](Projects.Agile.TimeEntries.md#durationhours) | decimal (0, 0) | Total duration of the logged time (in hours). [ReadOnly] 
 | [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(ge;le)` 
 | [Id](Projects.Agile.TimeEntries.md#id) | guid |  
 | [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
@@ -66,6 +67,16 @@ _Category_: **Calculated Attributes**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### DurationHours
+
+Total duration of the logged time (in hours). [ReadOnly]
+
+_Type_: **decimal (0, 0)**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **ShownByDefault**  
 
 ### EndTime
 

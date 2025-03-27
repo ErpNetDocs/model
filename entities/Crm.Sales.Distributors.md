@@ -5,7 +5,11 @@ uid: Crm.Sales.Distributors
 
 **Namespace:** [Crm.Sales](Crm.Sales.md)  
 
-Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors
+Distributors are external for the enterprise persons or companies who obtain sales orders from end-customers in benefit of the enterprise. Entity: Crm_Distributors (Obsoleted in version 25.1.2.87)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Renames
 

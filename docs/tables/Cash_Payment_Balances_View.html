@@ -108,7 +108,7 @@
 <tr>
 <td><a href="#direction">Direction</a></td>
 <td><code>char(1)</code> Allowed: <code>I</code>, <code>R</code></td>
-<td>I for Payment issue, R for payment receipt</td>
+<td>I for Payment issue, R for Payment receipt</td>
 </tr>
 <tr>
 <td><a href="#due_date">Due_Date</a></td>
@@ -128,7 +128,7 @@
 <tr>
 <td><a href="#enterprise_company_id">Enterprise_Company_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td></td>
+<td>The enterprise company which issued the document.</td>
 </tr>
 <tr>
 <td><a href="#is_invoiced">Is_Invoiced</a></td>
@@ -143,7 +143,7 @@
 <tr>
 <td><a href="#order_amount">Order_Amount</a></td>
 <td><code>decimal(18, 2)</code></td>
-<td>The total amount of the payment order.</td>
+<td>The total amount that should be paid.</td>
 </tr>
 <tr>
 <td><a href="#paid_amount">Paid_Amount</a></td>
@@ -341,7 +341,7 @@
 </tbody>
 </table>
 <h3 id="direction">Direction</h3>
-<p>I for Payment issue, R for payment receipt</p>
+<p>I for Payment issue, R for Payment receipt</p>
 <table>
 <thead>
 <tr>
@@ -837,6 +837,7 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_id">Enterprise_Company_Id</h3>
+<p>The enterprise company which issued the document.</p>
 <table>
 <thead>
 <tr>
@@ -1201,7 +1202,7 @@
 </tbody>
 </table>
 <h3 id="order_amount">Order_Amount</h3>
-<p>The total amount of the payment order.</p>
+<p>The total amount that should be paid.</p>
 <table>
 <thead>
 <tr>

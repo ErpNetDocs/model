@@ -22,9 +22,11 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 |[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` |The cost center to which this cost is related|
 |[Credit](#credit)|`decimal(18, 2)` |The amount of the credit in the currency of the account. 0 means that the account is not credited|
 |[Credit_Base](#credit_base)|`decimal(18, 2)` |The amount of credit in base currency|
+|[Credit_Reporting](#credit_reporting)|`decimal(18, 2)` |The amount of credit in reporting currency.|
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.|
 |[Debit](#debit)|`decimal(18, 2)` |The amount of the debit in the currency of the account. 0 means that the account is not debited|
 |[Debit_Base](#debit_base)|`decimal(18, 2)` |The amount of debit in base currency|
+|[Debit_Reporting](#debit_reporting)|`decimal(18, 2)` |The amount of debit in reporting currency.|
 |[Item_Key](#item_key)|`nvarchar(64)` |The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.|
 |[Line_No](#line_no)|`int` |Consecutive number of the line within the voucher|
 |[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` |The profit center to which this revenue is related|
@@ -232,6 +234,36 @@ The amount of credit in base currency
 |User Login|no|
 |Visible|no|
 
+### Credit_Reporting
+
+
+The amount of credit in reporting currency.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 2) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Currency_Id
 
 
@@ -328,6 +360,36 @@ The amount of debit in base currency
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Debit_Reporting
+
+
+The amount of debit in reporting currency.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 2) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Item_Key
 
