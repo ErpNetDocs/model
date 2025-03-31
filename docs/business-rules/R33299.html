@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -54,7 +54,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -115,27 +115,27 @@
 <br><br>
 If (OldState &lt; 30 &amp;&amp; NewState &gt;= 30)
 <br><br>
-ExciseDeclarations[ToDate &gt;= DocumentDate &amp;&amp; FromDate &lt;= DocumentDate, Void == false, |
-DocumentState &gt;= 30, ExciseDeclaration.EnterpriseCompany ==                                   |
-ExciseAdministrativeDocument.EnterpriseCompany].Count()== 0                                                         |</td>
+ExciseDeclarations[ToDate &gt;= DocumentDate &amp;&amp; FromDate &lt;= DocumentDate, Void == false,
+DocumentState &gt;= 30, ExciseDeclaration.EnterpriseCompany ==
+ExciseAdministrativeDocument.EnterpriseCompany].Count()== 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If a Excise Declaration is released for a certain period, than the user cannot release entries  |
+<td>If a Excise Declaration is released for a certain period, than the user cannot release entries
 which are part of the period of the declaration. The releasing of the declaration shows that
-this is the final version of the declaration and it is sent to the Customs.   |
-No entries must be added to such period.                                                  |</td>
+this is the final version of the declaration and it is sent to the Customs.
+No entries must be added to such period.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>ExciseAdministrativeDocument '{DocumentText}' can't be released because there are released Excise Declaration   |
-for periods that include the document date of the entry.                                     |</td>
+<td>ExciseAdministrativeDocument '{DocumentText}' can't be released because there are released Excise Declaration
+for periods that include the document date of the entry.</td>
 </tr>
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
 <td>
-<pre><code>      2022                                                                                     |
+<pre><code>      2022
 </code></pre>
 </td>
 </tr>

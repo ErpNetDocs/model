@@ -1,8 +1,11 @@
+pdf: true
+pdfFileName: Model.pdf
+items:
 - name: Domain Model
-  href: entities/
+  href: entities/toc.yml
 - name: Table Model
-  href: tables/
+  href: tables/toc.yml
 - name: Reference
-  href: reference/
+  href: reference/toc.yml
 - name: Return to DOCS ⏶
   href: https://docs.erp.net/

@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/TFSAgent15/_work/22/s",
+  "source_base_path": "C:/Users/peter/projects/erp/docs/model",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -23481,20 +23481,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Gen_Todo_Task_Items.md",
+      "source_relative_path": "tables/Gen_ToDo_Tasks.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Gen_Todo_Task_Items.html"
+          "relative_path": "tables/Gen_ToDo_Tasks.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Gen_Todo_Tasks.md",
+      "source_relative_path": "tables/Gen_Todo_Task_Items.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Gen_Todo_Tasks.html"
+          "relative_path": "tables/Gen_Todo_Task_Items.html"
         }
       },
       "version": ""

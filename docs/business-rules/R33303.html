@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -54,7 +54,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -83,15 +83,15 @@
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Finance.Excise.ExciseAdministrativeDocuments.html">Finance.Excise.ExciseAdministrativeDocuments Entity</a>                                                                          |</td>
+<td><a class="xref" href="../entities/Finance.Excise.ExciseAdministrativeDocuments.html">Finance.Excise.ExciseAdministrativeDocuments Entity</a></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>DocumentDateOnVoidNotInClosedPeriod                                                              |</td>
+<td>DocumentDateOnVoidNotInClosedPeriod</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>DocumentDate                                                                                     |</td>
+<td>DocumentDate</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -111,24 +111,24 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If (ExciseAdministrativeDocument.State &gt;= 30)                                                                        |
+<td>If (ExciseAdministrativeDocument.State &gt;= 30)
 <br><br>
 Validate that:
 <br><br>
-ExciseDeclaration [ToDate &gt;= ExciseAdministrativeDocument.DocumentDate &amp;&amp; FromDate &lt;= ExciseAdministrativeDocument.DocumentDate,      |
-Void == false, State &gt;= 30, ExciseDeclaration.EnterpriseCompany ==                             |
+ExciseDeclaration [ToDate &gt;= ExciseAdministrativeDocument.DocumentDate &amp;&amp; FromDate &lt;= ExciseAdministrativeDocument.DocumentDate,
+Void == false, State &gt;= 30, ExciseDeclaration.EnterpriseCompany ==
 Entry.EnterpriseCompany].Count() == 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If a ExciseDeclaration is released for a certain period, than the user cannot void entries that |
+<td>If a ExciseDeclaration is released for a certain period, than the user cannot void entries that
 are part of the period of the declaration. The releasing of the declaration shows that
-that this is the final version of the declaration and it is sent to the Customs.      |
+that this is the final version of the declaration and it is sent to the Customs.
 No entries must be voided in such period.                                         |</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>ExciseAdministrativeDocument '{DocumentText}' cannot be voided because the entry is included in released      |
+<td>ExciseAdministrativeDocument '{DocumentText}' cannot be voided because the entry is included in released
 ExciseDeclaration (i.e. there are declarations for periods that include the apply date         |
 of the entry).</td>
 </tr>

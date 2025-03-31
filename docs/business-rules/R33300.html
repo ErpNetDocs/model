@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -54,7 +54,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -78,55 +78,55 @@
 <col style="width:81.2%">
 <tbody>
 <tr>
-<td colspan="2"><strong>Code</strong>                 | R33300                                                                                                       |</td>
+<td colspan="2"><strong>Code</strong>                 | R33300</td>
 </tr>
 <tr>
-<td colspan="2"><strong>Entity</strong>               | <a class="xref" href="../entities/Finance.Excise.ExciseAdministrativeDocuments.html">Finance.Excise.ExciseAdministrativeDocuments Entity</a>                             |</td>
+<td colspan="2"><strong>Entity</strong>               | <a class="xref" href="../entities/Finance.Excise.ExciseAdministrativeDocuments.html">Finance.Excise.ExciseAdministrativeDocuments Entity</a></td>
 </tr>
 <tr>
-<td colspan="2"><strong>Name</strong>               | NewDocumentDateIsNotPartOfReleasedExciseDeclarationPeriod |</td>
+<td colspan="2"><strong>Name</strong>               | NewDocumentDateIsNotPartOfReleasedExciseDeclarationPeriod</td>
 </tr>
 <tr>
-<td colspan="2"><strong>Attribute</strong>         | DocumentDate                                                                                         |</td>
+<td colspan="2"><strong>Attribute</strong>         | DocumentDate</td>
 </tr>
 <tr>
-<td colspan="2"><strong>Layer</strong>                | Back-End                                                                                                    |</td>
+<td colspan="2"><strong>Layer</strong>                | Back-End</td>
 </tr>
 <tr>
-<td colspan="2"><strong>Events</strong>              | Releasing +                                                                                                |</td>
+<td colspan="2"><strong>Events</strong>              | Releasing +</td>
 </tr>
 <tr>
-<td colspan="2"><strong>Priority</strong>            | Normal                                                                                                       |</td>
+<td colspan="2"><strong>Priority</strong>            | Normal</td>
 </tr>
 <tr>
-<td colspan="2"><strong>Modify</strong>             | NO                                                                                                               |</td>
+<td colspan="2"><strong>Modify</strong>             | NO</td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Validate that:                                                                                                |
+<td>Validate that:
 <br><br>
-If (AdjustedDocument != null &amp;&amp; oldDocumentDate) != newDocumentDate)                                |
+If (AdjustedDocument != null &amp;&amp; oldDocumentDate) != newDocumentDate)
 <br><br>
-ExciseDeclaration[ToDate &gt;= newDocumentDate &amp;&amp; FromDate &lt;= newDocumentDate, Void ==  |
-false, DocumentState &gt;= 30, ExciseDeclaration.EnterpriseCompany ==                            |
+ExciseDeclaration[ToDate &gt;= newDocumentDate &amp;&amp; FromDate &lt;= newDocumentDate, Void ==
+false, DocumentState &gt;= 30, ExciseDeclaration.EnterpriseCompany ==
 Entry.EnterpriseCompany].Count()== 0</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If a ExciseDeclaration is released for a certain period, than the user cannot release entries  |
+<td>If a ExciseDeclaration is released for a certain period, than the user cannot release entries
 which are part of the period of the declaration. The releasing of the declaration shows that
-this is the final version of the declaration and it is sent to the Customs.   |
-No entries must be added to such period.                                                  |</td>
+this is the final version of the declaration and it is sent to the Customs.
+No entries must be added to such period.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The new DocumentDate attribute of ExciseAdministrativeDocument '{DocumentText}' can't be {DocumentDate} because     |
-there are released ExciseDeclarations for periods that include that date.                   |</td>
+<td>The new DocumentDate attribute of ExciseAdministrativeDocument '{DocumentText}' can't be {DocumentDate} because
+there are released ExciseDeclarations for periods that include that date.</td>
 </tr>
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2022                                                                                              |</td>
+<td>2022</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
