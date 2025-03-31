@@ -9,6 +9,7 @@
 * [Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md)
 * [Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md)
 * [Acc_Financial_Statements](Acc_Financial_Statements.md)
+* [Acc_Historical_Balances](Acc_Historical_Balances.md)
 * [Acc_Operations](Acc_Operations.md)
 * [Acc_Profit_Centers](Acc_Profit_Centers.md)
 * [Acc_Template_Line_Properties](Acc_Template_Line_Properties.md)

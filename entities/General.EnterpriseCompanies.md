@@ -62,6 +62,7 @@ Aggregate Tree
 | [Company](General.EnterpriseCompanies.md#company) | [Companies](General.Contacts.Companies.md) | Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` |
 | [ExchangeDifference<br />CreditAccount](General.EnterpriseCompanies.md#exchangedifferencecreditaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with credit difference due to currency exchanges. `Filter(multi eq)` |
 | [ExchangeDifference<br />DebitAccount](General.EnterpriseCompanies.md#exchangedifferencedebitaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)` |
+| [ReportingCurrency](General.EnterpriseCompanies.md#reportingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93` |
 | [VATDocumentAmountType](General.EnterpriseCompanies.md#vatdocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount that is used to determine the amount of the VAT entries when they are generated. `Filter(multi eq)` |
 
 ## Child Collections
@@ -270,6 +271,15 @@ _Show in UI_: **ShownByDefault**
 Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### ReportingCurrency
+
+Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

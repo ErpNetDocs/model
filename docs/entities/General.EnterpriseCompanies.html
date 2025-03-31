@@ -233,6 +233,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Account for balancing accounting vouchers with debit difference due to currency exchanges. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="General.EnterpriseCompanies.html#reportingcurrency">ReportingCurrency</a></td>
+<td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
+<td>Used for preparing accounting reports in a currency required for internal or external reporting purposes. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.93</code></td>
+</tr>
+<tr>
 <td><a href="General.EnterpriseCompanies.html#vatdocumentamounttype">VATDocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
 <td>The document amount that is used to determine the amount of the VAT entries when they are generated. <code>Filter(multi eq)</code></td>
@@ -461,6 +466,12 @@ Supported permissions</p>
 <h3 id="exchangedifferencedebitaccount">ExchangeDifferenceDebitAccount</h3>
 <p>Account for balancing accounting vouchers with debit difference due to currency exchanges. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="reportingcurrency">ReportingCurrency</h3>
+<p>Used for preparing accounting reports in a currency required for internal or external reporting purposes. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.93</code></p>
+<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

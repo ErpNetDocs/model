@@ -13,6 +13,7 @@ uid: Finance.Accounting
 - [FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md)  
 - [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)  
 - [FinancialStatements](Finance.Accounting.FinancialStatements.md)  
+- [HistoricalBalances](Finance.Accounting.HistoricalBalances.md)  
 - [Operations](Finance.Accounting.Operations.md)  
 - [ProfitCenters](Finance.Accounting.ProfitCenters.md)  
 - [TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md)  

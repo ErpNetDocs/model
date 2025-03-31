@@ -619,6 +619,9 @@ references:
 - uid: Finance.Accounting.FinancialStatements
   name: Finance.Accounting.FinancialStatements Entity
   href: entities/Finance.Accounting.FinancialStatements.html
+- uid: Finance.Accounting.HistoricalBalances
+  name: Finance.Accounting.HistoricalBalances View
+  href: entities/Finance.Accounting.HistoricalBalances.html
 - uid: Finance.Accounting.Operations
   name: Finance.Accounting.Operations Entity
   href: entities/Finance.Accounting.Operations.html

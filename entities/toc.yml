@@ -405,6 +405,8 @@
       href: Finance.Accounting.FinancialStatementNodes.md
     - name: FinancialStatements
       href: Finance.Accounting.FinancialStatements.md
+    - name: HistoricalBalances
+      href: Finance.Accounting.HistoricalBalances.md
     - name: Operations
       href: Finance.Accounting.Operations.md
     - name: ProfitCenters

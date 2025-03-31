@@ -25,6 +25,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |[Exchange_Difference_Debit_Account_Id](#exchange_difference_debit_account_id)|`uniqueidentifier` |Account for balancing accounting vouchers with debit difference due to currency exchanges|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current Enterprise company  is active.|
 |[Print_Images_Retention_Months](#print_images_retention_months)|`int` |A period of months for which the printed images of the documents will be kept.|
+|[Reporting_Currency_Id](#reporting_currency_id)|`uniqueidentifier` |Used for preparing accounting reports in a currency required for internal or external reporting purposes.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[UI_Base_Color](#ui_base_color)|`int` |When not NULL, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format.|
 |[VAT_Document_Amount_Type_Id](#vat_document_amount_type_id)|`uniqueidentifier` |The document amount that is used to determine the amount of the VAT entries when they are generated.|
@@ -42,7 +43,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|12|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -153,7 +154,7 @@ Defines the period for which BI extracts data. BI includes documents with "Docum
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|11|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -255,7 +256,7 @@ Default method for cost evaluation (if not specified in the product). Currently 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|13|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -323,7 +324,7 @@ Start date of the priod when the documents can be edited
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|14|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -466,7 +467,7 @@ Indicates whether the current Enterprise company  is active.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -502,7 +503,7 @@ A period of months for which the printed images of the documents will be kept.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|15|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -525,6 +526,43 @@ A period of months for which the printed images of the documents will be kept.
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
+### Reporting_Currency_Id
+
+
+Used for preparing accounting reports in a currency required for internal or external reporting purposes.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|17|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Reporting_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
+
 ### Row_Version
 
 | Property | Value |
@@ -536,7 +574,7 @@ A period of months for which the printed images of the documents will be kept.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|16|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -566,7 +604,7 @@ When not NULL, specifies the background color to use for visualization of the UI
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

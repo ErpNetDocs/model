@@ -35,10 +35,10 @@ Aggregate Root:
 | [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (18, 2) __nullable__ | The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). `ReadOnly` 
 | [Credit](Finance.Accounting.AccountingVoucherLines.md#credit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited. `Currency: Currency` `Required` `Default(0)` 
 | [CreditBase](Finance.Accounting.AccountingVoucherLines.md#creditbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of credit in base currency. `Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [CreditReporting](Finance.Accounting.AccountingVoucherLines.md#creditreporting) | decimal (18, 2) __nullable__ | The amount of credit in reporting currency. `Introduced in version 25.1.2.88` 
+| [CreditReporting](Finance.Accounting.AccountingVoucherLines.md#creditreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of credit in reporting currency. `Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` 
 | [Debit](Finance.Accounting.AccountingVoucherLines.md#debit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the debit in the currency of the account. 0 means that the account is not debited. `Currency: Currency` `Required` `Default(0)` 
 | [DebitBase](Finance.Accounting.AccountingVoucherLines.md#debitbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of debit in base currency. `Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [DebitReporting](Finance.Accounting.AccountingVoucherLines.md#debitreporting) | decimal (18, 2) __nullable__ | The amount of debit in reporting currency. `Introduced in version 25.1.2.88` 
+| [DebitReporting](Finance.Accounting.AccountingVoucherLines.md#debitreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of debit in reporting currency. `Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` 
 | [DisplayText](Finance.Accounting.AccountingVoucherLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Accounting.AccountingVoucherLines.md#id) | guid |  
 | [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string (64) __nullable__ | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. `Filter(eq;like)` 
@@ -107,9 +107,9 @@ _Show in UI_: **HiddenByDefault**
 
 ### CreditReporting
 
-The amount of credit in reporting currency. `Introduced in version 25.1.2.88`
+The amount of credit in reporting currency. `Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88`
 
-_Type_: **decimal (18, 2) __nullable__**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -139,9 +139,9 @@ _Show in UI_: **HiddenByDefault**
 
 ### DebitReporting
 
-The amount of debit in reporting currency. `Introduced in version 25.1.2.88`
+The amount of debit in reporting currency. `Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88`
 
-_Type_: **decimal (18, 2) __nullable__**  
+_Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

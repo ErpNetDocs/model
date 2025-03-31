@@ -13252,6 +13252,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Accounting.HistoricalBalances.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Accounting.HistoricalBalances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Accounting.Operations.md",
       "output": {
         ".html": {
@@ -20175,6 +20185,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Acc_Financial_Statements.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Acc_Historical_Balances.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Acc_Historical_Balances.html"
         }
       },
       "version": ""
