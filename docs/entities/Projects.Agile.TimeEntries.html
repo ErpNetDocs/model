@@ -133,7 +133,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#endtime">EndTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(ge;le)</code></td>
+<td>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#id">Id</a></td>
@@ -202,10 +202,10 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(ge;le)</code></p>
+<p>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>time <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>

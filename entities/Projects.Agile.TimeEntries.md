@@ -32,7 +32,7 @@ Aggregate Tree
 | [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(eq;ge;le)` `ORD` 
 | [DisplayText](Projects.Agile.TimeEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DurationHours](Projects.Agile.TimeEntries.md#durationhours) | decimal (0, 0) | Total duration of the logged time (in hours). [ReadOnly] 
-| [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(ge;le)` 
+| [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(eq;ge;le)` 
 | [Id](Projects.Agile.TimeEntries.md#id) | guid |  
 | [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
 | [ObjectVersion](Projects.Agile.TimeEntries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -80,11 +80,11 @@ _Show in UI_: **ShownByDefault**
 
 ### EndTime
 
-The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(ge;le)`
+The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(eq;ge;le)`
 
 _Type_: **time __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 

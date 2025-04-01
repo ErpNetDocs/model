@@ -35,7 +35,7 @@ Aggregate Tree
 | [DisplayText](Communities.Social.Groups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Communities.Social.Groups.md#id) | guid |  
 | [LastInteractionTimeUtc](Communities.Social.Groups.md#lastinteractiontimeutc) | datetime __nullable__ | The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. null means the group did not have any interactions yet. `Filter(ge;le)` `ORD` `ReadOnly` `Introduced in version 22.1.6.61` 
-| [Name](Communities.Social.Groups.md#name) | string (256) | Multilanguage name of the group. `Required` 
+| [Name](Communities.Social.Groups.md#name) | string (256) | Multilanguage name of the group. `Required` `Filter(like)` 
 | [Notes](Communities.Social.Groups.md#notes) | string (max) __nullable__ | Notes for this Group. 
 | [ObjectVersion](Communities.Social.Groups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -80,11 +80,11 @@ _Show in UI_: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the group. `Required`
+Multilanguage name of the group. `Required` `Filter(like)`
 
 _Type_: **string (256)**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
 _Show in UI_: **ShownByDefault**  

@@ -180,6 +180,7 @@ The category of the case. This also determines the workflow for the case.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Closed_Time_UTC
 

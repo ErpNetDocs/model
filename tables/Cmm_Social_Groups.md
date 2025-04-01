@@ -172,4 +172,10 @@ Multilanguage name of the group.
 |User Login|no|
 |Visible|yes|
 
+#### Social_Group_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 

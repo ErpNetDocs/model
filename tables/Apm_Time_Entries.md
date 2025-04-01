@@ -130,6 +130,7 @@ The ending time of the logged work. Stored in the local time zone of the user. E
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Notes
