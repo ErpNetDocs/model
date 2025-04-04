@@ -45,7 +45,6 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Customer](Crm.Sales.CustomerExternalAccess.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer whose data is being accessed. `Required` `Filter(multi eq)` `Owner` |
-| [ShipToCustomer](Crm.Sales.CustomerExternalAccess.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customers location, whose data is being accessed. `Filter(multi eq)` |
 | [User](Crm.Sales.CustomerExternalAccess.md#user) | [Users](Systems.Security.Users.md) | The user to whom the access is granted. `Required` `Filter(multi eq)` |
 
 
@@ -136,15 +135,6 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### ShipToCustomer
-
-The customers location, whose data is being accessed. `Filter(multi eq)`
-
-_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
 ### User

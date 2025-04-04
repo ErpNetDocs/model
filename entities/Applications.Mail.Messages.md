@@ -9,7 +9,7 @@ Represents email messages. Entity: Mail_Messages
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {MailBoxFolderId}_  
+_{CreationDateTime:d} : {Subject}_  
 Default Search Members:  
 __  
 Category:  _Definitions_  

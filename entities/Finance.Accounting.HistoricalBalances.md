@@ -27,7 +27,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the original accounting currency as of the selected date. `Currency: Currency` `Required` 
 | [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the company’s base currency as of the selected date. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
-| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | decimal (19, 2) | Account balance in the reporting currency as of the selected date. `Required` 
+| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the reporting currency as of the selected date. `Currency: EnterpriseCompany.ReportingCurrency` `Required` 
 | [Date](Finance.Accounting.HistoricalBalances.md#date) | date | The report shows balances as of this date. This is a required filter; if not set, the view returns no data. `Required` `Filter(eq)` 
 | [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) | Combined analytical dimensions key used for grouping and filtering account balances. `Required` `Filter(eq;like)` 
 
@@ -66,9 +66,9 @@ _Show in UI_: **ShownByDefault**
 
 ### BalanceReporting
 
-Account balance in the reporting currency as of the selected date. `Required`
+Account balance in the reporting currency as of the selected date. `Currency: EnterpriseCompany.ReportingCurrency` `Required`
 
-_Type_: **decimal (19, 2)**  
+_Type_: **[Amount (19, 2)](../data-types.md#amount)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

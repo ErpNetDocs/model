@@ -21,7 +21,6 @@ Defines the users permissions to specific customer data. Entity: Crm_Customer_Ex
 |[Notes](#notes)|`nvarchar(max)` |Notes for this External Access.|
 |[Role](#role)|`char(3)` Allowed: `L10`, `L20`, `L30`, `L80`, `L90`|The role of the user, defines the granted access.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Ship_To_Customer_Id](#ship_to_customer_id)|`uniqueidentifier` |The customers location, whose data is being accessed.|
 |[User_Id](#user_id)|`uniqueidentifier` |The user to whom the access is granted.|
 
 ## Columns
@@ -226,43 +225,6 @@ The role of the user, defines the granted access.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
-
-### Ship_To_Customer_Id
-
-
-The customers location, whose data is being accessed.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Crm_Customers](Crm_Customers.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Ship_To_Customer_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### User_Id
 

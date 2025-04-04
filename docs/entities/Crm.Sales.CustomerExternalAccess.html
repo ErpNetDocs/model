@@ -165,11 +165,6 @@ Aggregate Root:<br>
 <td>The customer whose data is being accessed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.CustomerExternalAccess.html#shiptocustomer">ShipToCustomer</a></td>
-<td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>The customers location, whose data is being accessed. <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
 <td>The user to whom the access is granted. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -262,12 +257,6 @@ Allowed values for the <code>Role</code>(Crm.Sales.CustomerExternalAccess.md#rol
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="shiptocustomer">ShipToCustomer</h3>
-<p>The customers location, whose data is being accessed. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
 <p>The user to whom the access is granted. <code>Required</code> <code>Filter(multi eq)</code></p>
