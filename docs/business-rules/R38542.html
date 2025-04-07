@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R35940 Document - Notify Assigned To User For Update | ERP.net Domain Model </title>
+      <title>R38425 GroupMember - System Comment On Member Added | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R35940 Document - Notify Assigned To User For Update | ERP.net Domain Model ">
+      <meta name="title" content="R38425 GroupMember - System Comment On Member Added | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R35940.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38542.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,79 +85,83 @@
         </div>
 
         <article data-uid="">
-<h1 id="r35940-document---notify-assigned-to-user-for-update">R35940 Document - Notify Assigned To User For Update</h1>
+<h1 id="r38425-groupmember---system-comment-on-member-added">R38425 GroupMember - System Comment On Member Added</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td><strong>Code</strong></td>
-<td>R35940</td>
+<td>Code</td>
+<td>R38542</td>
 </tr>
 <tr>
-<td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/General.Documents.Documents.html">General.Documents.Documents Entity</a></td>
+<td>Entity</td>
+<td>@Communities.Social.GroupMember</td>
 </tr>
 <tr>
-<td><strong>Name</strong></td>
-<td>NotifyAssignedToUserForUpdate</td>
+<td>Name</td>
+<td>SystemCommentOnMemberAdded</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
+<td>Attribute</td>
 <td>-</td>
 </tr>
 <tr>
-<td><strong>Layer</strong></td>
+<td>Layer</td>
 <td>Back-End</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
-<td>Aggregate Commit, Aggregate Commited</td>
+<td>Events</td>
+<td>Commit</td>
 </tr>
 <tr>
-<td><strong>Record State</strong></td>
-<td>Updated</td>
+<td>Record State</td>
+<td>Insert</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
+<td>Priority</td>
 <td>Late</td>
 </tr>
 <tr>
-<td><strong>Modify</strong></td>
+<td>Modify</td>
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Action</strong></td>
-<td>On aggregate commit – the rule checks if the user set in the Assigned To User field is different than the current user, and the Assigned To User and the State fields are not edited <br>
-On aggregate committed – if the above conditions are met, the rule creates a notification to the assigned user through the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.</td>
+<td>Applicable Legislations</td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
-<td><strong>Description</strong></td>
-<td>The rule ensures that the user assigned as responsible for the document will be
-promptly notified in case the document is edited.</td>
+<td>Action</td>
+<td>On insert GroupMember, create a record in Group.Social.Comments</td>
 </tr>
 <tr>
-<td><strong>Message</strong></td>
-<td>'{DisplayText}' assigned to you has been edited.</td>
+<td>Description</td>
+<td>The rule creates a system comment in the group when a user is added to it as a member.</td>
 </tr>
 <tr>
-<td><strong>Version</strong></td>
-<td>Introduced: v.24</td>
+<td>Message</td>
+<td>'{GroupMember.User.Name}' was added to the group.</td>
 </tr>
 <tr>
-<td><strong>Revocable</strong></td>
-<td>YES</td>
+<td>Introduced</td>
+<td>v.</td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R35940.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38542.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
