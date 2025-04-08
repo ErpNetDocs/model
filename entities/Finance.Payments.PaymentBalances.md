@@ -76,13 +76,13 @@ _Allowed Values (Finance.Payments.PaymentBalancesRepository.Direction Enum Membe
 
 | Value | Description |
 | ---- | --- |
-| Expense | Expense value. Stored as 'I'. <br /> _Database Value:_ 'I' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Expense' |
-| Income | Income value. Stored as 'R'. <br /> _Database Value:_ 'R' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Income' |
+| Outgoing | Outgoing value. Stored as 'I'. <br /> _Database Value:_ 'I' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Outgoing' |
+| Incoming | Incoming value. Stored as 'R'. <br /> _Database Value:_ 'R' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Incoming' |
 
 _Inherited From_: **Cash_Payment_Orders_Table.Direction**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
-_Default Value_: **Expense**  
+_Default Value_: **Outgoing**  
 _Show in UI_: **ShownByDefault**  
 
 ### DueDate

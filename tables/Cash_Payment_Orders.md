@@ -17,7 +17,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 | - | - | --- |
 |[Allow_Close_Not_Paid](#allow_close_not_paid)|`bit` |1 to allow closing of payment orders, that are not fully paid|
 |[Bill_To](#bill_to)|`char(1)` Allowed: `C`, `L`|If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified|
-|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).|
 |[Document_Id](#document_id)|`uniqueidentifier` |The document data of the payment order itself|
 |[Due_Date](#due_date)|`datetime` |The due date of the payment. NULL means there is no due date|
 |[Due_Start_Date](#due_start_date)|`date` |The date at which the payment becomes executable. NULL means the payment is executable at all times.|
@@ -125,7 +125,7 @@ If filled indicates which party is billed for the total amount. Possible values:
 ### Direction
 
 
-I for Payment issue, R for payment receipt
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
 
 | Property | Value |
 | - | - |
