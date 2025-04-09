@@ -21491,16 +21491,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Crm_Customer_Client_Center_Permissions.md",
-      "output": {
-        ".html": {
-          "relative_path": "tables/Crm_Customer_Client_Center_Permissions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "tables/Crm_Customer_External_Access.md",
       "output": {
         ".html": {

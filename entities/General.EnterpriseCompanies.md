@@ -50,6 +50,7 @@ Aggregate Tree
 | [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1` 
 | [ObjectVersion](General.EnterpriseCompanies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1` 
+| [ReportingCurrencyStartDate](General.EnterpriseCompanies.md#reportingcurrencystartdate) | date __nullable__ | Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. `Filter(eq;ge;le)` `Introduced in version 25.1.3.2` 
 | [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2` 
 
 ## References
@@ -196,6 +197,16 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **60**  
+_Show in UI_: **ShownByDefault**  
+
+### ReportingCurrencyStartDate
+
+Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. `Filter(eq;ge;le)` `Introduced in version 25.1.3.2`
+
+_Type_: **date __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
 ### UIBaseColor

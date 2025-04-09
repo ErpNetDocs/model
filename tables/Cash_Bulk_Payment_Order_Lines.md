@@ -19,7 +19,7 @@ Bulk payment order document line. Each line usually creates one payment order. E
 |[Bill_To](#bill_to)|`char(1)` Allowed: `C`, `L`|If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified|
 |[Bulk_Payment_Order_Id](#bulk_payment_order_id)|`uniqueidentifier` ||
 |[Bulk_Payment_Order_Line_Id](#bulk_payment_order_line_id)|`uniqueidentifier` `PK`||
-|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).|
 |[Due_Date](#due_date)|`datetime` |The due date of the payment. NULL means there is no due date|
 |[Installment_Number](#installment_number)|`int` |Consequtive installment number. Used for identifying the payment when using payment plans. NULL means that the payment is not part of a payment plan|
 |[Invoice_Amount](#invoice_amount)|`decimal(18, 2)` |The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)|
@@ -144,7 +144,7 @@ If filled indicates which party is billed for the total amount. Possible values:
 ### Direction
 
 
-I for Payment issue, R for payment receipt
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
 
 | Property | Value |
 | - | - |

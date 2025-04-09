@@ -12,7 +12,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 | Name | Type | Description |
 | - | - | --- |
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of amounts.|
-|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for Payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).|
 |[Due_Date](#due_date)|`datetime` |The due date of the payment. NULL means there is no due date|
 |[Due_Start_Date](#due_start_date)|`date` |The date at which the payment becomes executable. NULL means the payment is executable at all times.|
 |[Due_Status](#due_status)|`char(1)` Allowed: `S`, `D`, `G`, `O`, `N`|Due status of requested payment|
@@ -77,7 +77,7 @@ The currency of amounts.
 ### Direction
 
 
-I for Payment issue, R for Payment receipt
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
 
 | Property | Value |
 | - | - |

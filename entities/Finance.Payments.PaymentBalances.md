@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Direction](Finance.Payments.PaymentBalances.md#direction) | [Direction](Finance.Payments.PaymentBalances.md#direction) | I for Payment issue, R for Payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction` 
+| [Direction](Finance.Payments.PaymentBalances.md#direction) | [Direction](Finance.Payments.PaymentBalances.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction` 
 | [DueDate](Finance.Payments.PaymentBalances.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date` 
 | [DueStartDate](Finance.Payments.PaymentBalances.md#duestartdate) | date __nullable__ | The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date` 
 | [DueStatus](Finance.Payments.PaymentBalances.md#duestatus) | [DueStatus](Finance.Payments.PaymentBalances.md#duestatus) | Due status of requested payment. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.74` 
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### Direction
 
-I for Payment issue, R for Payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction`
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction`
 
 _Type_: **[Direction](Finance.Payments.PaymentBalances.md#direction)**  
 _Category_: **System**  

@@ -34,7 +34,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) | [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) __nullable__ | If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. 
-| [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)` 
+| [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)` 
 | [DisplayText](Finance.Payments.BulkPaymentOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DueDate](Finance.Payments.BulkPaymentOrderLines.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(ge;le)` 
 | [Id](Finance.Payments.BulkPaymentOrderLines.md#id) | guid |  
@@ -87,7 +87,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### Direction
 
-I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)`
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.BulkPaymentOrderLines.md#direction)**  
 _Category_: **System**  

@@ -34,7 +34,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string (254) __nullable__ | Description of the payed amount. The numbers of the documents which are payed for example. 
-| [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | 'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)` 
+| [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Filter(eq)` 
 | [DisplayText](Finance.Payments.PaymentSlipAmounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Payments.PaymentSlipAmounts.md#id) | guid |  
 | [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)` 
@@ -74,7 +74,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Direction
 
-'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)`
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.PaymentSlipAmounts.md#direction)**  
 _Category_: **System**  

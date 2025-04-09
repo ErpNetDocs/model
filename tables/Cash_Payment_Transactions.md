@@ -15,7 +15,7 @@ Represents actual payments, which increase or decrease the balance of a payment 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|I for Payment issue, R for payment receipt|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `R`|Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).|
 |[Document_Id](#document_id)|`uniqueidentifier` |The document data of the payment transaction|
 |[Fiscal_Printer_Pos_Device_Id](#fiscal_printer_pos_device_id)|`uniqueidentifier` |For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
@@ -43,7 +43,7 @@ Represents actual payments, which increase or decrease the balance of a payment 
 ### Direction
 
 
-I for Payment issue, R for payment receipt
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
 
 | Property | Value |
 | - | - |

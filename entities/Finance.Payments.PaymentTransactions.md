@@ -50,7 +50,7 @@ Aggregate Tree
 | [CompleteTime](Finance.Payments.PaymentTransactions.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Finance.Payments.PaymentTransactions.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Finance.Payments.PaymentTransactions.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Direction](Finance.Payments.PaymentTransactions.md#direction) | [Direction](Finance.Payments.PaymentTransactions.md#direction) | I for Payment issue, R for payment receipt. `Required` `Default("R")` `Filter(eq)` 
+| [Direction](Finance.Payments.PaymentTransactions.md#direction) | [Direction](Finance.Payments.PaymentTransactions.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("R")` `Filter(eq)` 
 | [DisplayText](Finance.Payments.PaymentTransactions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DocumentDate](Finance.Payments.PaymentTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Finance.Payments.PaymentTransactions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -197,7 +197,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### Direction
 
-I for Payment issue, R for payment receipt. `Required` `Default("R")` `Filter(eq)`
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("R")` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.PaymentTransactions.md#direction)**  
 _Category_: **System**  

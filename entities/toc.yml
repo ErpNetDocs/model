@@ -323,8 +323,6 @@
   - name: Sales
     href: Crm.Sales.md
     items:
-    - name: CustomerClientCenterPermissions
-      href: Crm.Sales.CustomerClientCenterPermissions.md
     - name: CustomerExternalAccess
       href: Crm.Sales.CustomerExternalAccess.md
     - name: CustomerProducts
