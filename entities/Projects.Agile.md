@@ -4,6 +4,7 @@ uid: Projects.Agile
 # Projects.Agile Namespace
 
 ## Entities
+- [CaseAssignmentRules](Projects.Agile.CaseAssignmentRules.md)  
 - [CaseCategories](Projects.Agile.CaseCategories.md)  
 - [CaseCategoryRelationships](Projects.Agile.CaseCategoryRelationships.md)  
 - [CaseDevelopments](Projects.Agile.CaseDevelopments.md)  

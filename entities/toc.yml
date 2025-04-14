@@ -1016,6 +1016,8 @@
   - name: Agile
     href: Projects.Agile.md
     items:
+    - name: CaseAssignmentRules
+      href: Projects.Agile.CaseAssignmentRules.md
     - name: CaseCategories
       href: Projects.Agile.CaseCategories.md
     - name: CaseCategoryRelationships

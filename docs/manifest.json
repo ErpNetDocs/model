@@ -11002,6 +11002,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R38648.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R38648.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -17122,6 +17132,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Projects.Agile.CaseAssignmentRules.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Projects.Agile.CaseAssignmentRules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Projects.Agile.CaseCategories.md",
       "output": {
         ".html": {
@@ -20325,6 +20345,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Apm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Apm_Case_Assignment_Rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Apm_Case_Assignment_Rules.html"
         }
       },
       "version": ""

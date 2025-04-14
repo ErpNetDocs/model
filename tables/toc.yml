@@ -40,6 +40,8 @@
 - name: Apm
   href: Apm.md
   items:
+  - name: Apm_Case_Assignment_Rules
+    href: Apm_Case_Assignment_Rules.md
   - name: Apm_Case_Categories
     href: Apm_Case_Categories.md
   - name: Apm_Case_Category_Relationships

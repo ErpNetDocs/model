@@ -176,6 +176,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Indicates the time (in UTC) when the case has changed to in-progress state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.Cases.html#loggedtime">LoggedTime</a></td>
+<td>decimal (0, 0)</td>
+<td>Total duration of the logged time for the case (in hours). [ReadOnly]</td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Cases.html#number">Number</a></td>
 <td>int32</td>
 <td>The unique number of the Case. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 24.1.3.86</code></td>
@@ -376,6 +381,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="loggedtime">LoggedTime</h3>
+<p>Total duration of the logged time for the case (in hours). [ReadOnly]</p>
+<p><em>Type</em>: <strong>decimal (0, 0)</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="number">Number</h3>
 <p>The unique number of the Case. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 24.1.3.86</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
