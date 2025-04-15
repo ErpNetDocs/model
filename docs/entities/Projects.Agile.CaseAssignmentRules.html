@@ -91,7 +91,7 @@
 <p>Contains rules for automatically assigning cases to users based on the values of the case fields, such as project, project area, case category, system state, user state, etc. Entity: Apm_Case_Assignment_Rules (Introduced in version 25.1.3.5)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{RuleNoAttribute} - {AssignToUserIdAttribute}</em><br>
+<em>{RuleNo} - {AssignToUser}</em><br>
 Default Search Members:<br>
 __<br>
 Category:  <em>Settings</em><br>
@@ -302,6 +302,7 @@ Allowed values for the <code>Priority</code>(Projects.Agile.CaseAssignmentRules.
 <h3 id="ruleno">RuleNo</h3>
 <p>Consecutive number of the rule. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
@@ -314,8 +315,8 @@ Allowed values for the <code>Priority</code>(Projects.Agile.CaseAssignmentRules.
 <p>The system state to which the rule applies. null means the rule applies to all user states. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.CaseAssignmentRules.html#systemstate">SystemState</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-Allowed values for the <code>SystemState</code>(Projects.Agile.CaseAssignmentRules.md#systemstate) data attribute<br>
-<em>Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.SystemState Enum Members)</em></p>
+Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
+<em>Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)</em></p>
 <table>
 <thead>
 <tr>

@@ -9,7 +9,7 @@ Contains rules for automatically assigning cases to users based on the values of
 
 ## Default Visualization
 Default Display Text Format:  
-_{RuleNoAttribute} - {AssignToUserIdAttribute}_  
+_{RuleNo} - {AssignToUser}_  
 Default Search Members:  
 __  
 Category:  _Settings_  
@@ -143,6 +143,7 @@ _Show in UI_: **ShownByDefault**
 Consecutive number of the rule. `Required` `Filter(eq)` `ORD`
 
 _Type_: **int32**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
@@ -159,8 +160,8 @@ The system state to which the rule applies. null means the rule applies to all u
 
 _Type_: **[SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__**  
 _Category_: **System**  
-Allowed values for the `SystemState`(Projects.Agile.CaseAssignmentRules.md#systemstate) data attribute  
-_Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.SystemState Enum Members)_  
+Allowed values for the `SystemState`(Projects.Agile.Cases.md#systemstate) data attribute  
+_Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
