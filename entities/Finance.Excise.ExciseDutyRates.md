@@ -34,6 +34,8 @@ Aggregate Tree
 | [Id](Finance.Excise.ExciseDutyRates.md#id) | guid |  
 | [Notes](Finance.Excise.ExciseDutyRates.md#notes) | string (max) __nullable__ | Notes for this ExciseDutyRate. 
 | [ObjectVersion](Finance.Excise.ExciseDutyRates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ValidFrom](Finance.Excise.ExciseDutyRates.md#validfrom) | date __nullable__ | The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7` 
+| [ValidTo](Finance.Excise.ExciseDutyRates.md#validto) | date __nullable__ | Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7` 
 
 ## References
 
@@ -97,6 +99,26 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
 
+### ValidFrom
+
+The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7`
+
+_Type_: **date __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
+### ValidTo
+
+Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7`
+
+_Type_: **date __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
 
 ## Reference Details
 
@@ -114,6 +136,7 @@ _Show in UI_: **ShownByDefault**
 The excise product for which the rate is applied. `Required` `Filter(multi eq)`
 
 _Type_: **[ExciseProducts](Finance.Excise.ExciseProducts.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

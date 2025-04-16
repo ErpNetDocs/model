@@ -26,6 +26,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |[Is_Active](#is_active)|`bit` |Indicates whether the current Enterprise company  is active.|
 |[Print_Images_Retention_Months](#print_images_retention_months)|`int` |A period of months for which the printed images of the documents will be kept.|
 |[Reporting_Currency_Id](#reporting_currency_id)|`uniqueidentifier` |Used for preparing accounting reports in a currency required for internal or external reporting purposes.|
+|[Reporting_Currency_Rate](#reporting_currency_rate)|`decimal(12, 3)` |Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).|
 |[Reporting_Currency_Start_Date](#reporting_currency_start_date)|`date` |Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[UI_Base_Color](#ui_base_color)|`int` |When not NULL, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format.|
@@ -563,6 +564,42 @@ Used for preparing accounting reports in a currency required for internal or ext
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
+
+### Reporting_Currency_Rate
+
+
+Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|19|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Reporting_Currency_Rate - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Reporting_Currency_Start_Date
 

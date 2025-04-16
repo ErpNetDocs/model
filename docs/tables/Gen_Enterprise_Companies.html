@@ -176,6 +176,11 @@
 <td>Used for preparing accounting reports in a currency required for internal or external reporting purposes.</td>
 </tr>
 <tr>
+<td><a href="#reporting_currency_rate">Reporting_Currency_Rate</a></td>
+<td><code>decimal(12, 3)</code></td>
+<td>Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).</td>
+</tr>
+<tr>
 <td><a href="#reporting_currency_start_date">Reporting_Currency_Start_Date</a></td>
 <td><code>date</code></td>
 <td>Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.</td>
@@ -1993,6 +1998,125 @@
 <td><code>NULL</code></td>
 <td>yes</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting_currency_rate">Reporting_Currency_Rate</h3>
+<p>Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(12, 3) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reporting_currency_rate---supported-filters">Reporting_Currency_Rate - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

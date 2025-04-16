@@ -18,6 +18,8 @@ Duty rates are specified by the taxation and customs authorities. They are the b
 |[Excise_Purpose_Code_Id](#excise_purpose_code_id)|`uniqueidentifier` |The purpose for which the rate is applied.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
+|[Valid_From](#valid_from)|`date` |The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended.|
+|[Valid_To](#valid_to)|`date` |Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed.|
 
 ## Columns
 
@@ -241,7 +243,7 @@ The purpose for which the rate is applied.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -256,5 +258,79 @@ The purpose for which the rate is applied.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Valid_From
+
+
+The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|7|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Valid_From - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|yes|no|
+
+### Valid_To
+
+
+Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|8|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Valid_To - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|yes|no|
 
 
