@@ -52,7 +52,7 @@ Aggregate Root:
 | [ObjectVersion](Systems.Bpm.CustomPropertyAllowedValues.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentAllowedValueId](Systems.Bpm.CustomPropertyAllowedValues.md#parentallowedvalueid) | guid __nullable__ | The value of the parent property, for which this allowed value is valid. `Filter(multi eq)` 
 | [Picture](Systems.Bpm.CustomPropertyAllowedValues.md#picture) | byte[] __nullable__ | When not null, specifies a picture representation of the allowed value. 
-| [PropertyAllowedValueField](Systems.Bpm.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string (254) | The actual allowed value. `Required` `Filter(eq;like)` 
+| [PropertyAllowedValueField](Systems.Bpm.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string (254) | The actual allowed value. `Required` `Filter(eq;like)` `ORD` 
 
 ## References
 
@@ -146,12 +146,12 @@ _Show in UI_: **ShownByDefault**
 
 ### PropertyAllowedValueField
 
-The actual allowed value. `Required` `Filter(eq;like)`
+The actual allowed value. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (254)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
 

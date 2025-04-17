@@ -535,6 +535,8 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DetermineAssignToUser( obj.SystemState, obj.Project, obj.CaseCategory, obj.ProjectArea, obj.ProjectMilestone, obj.StakeholderParty, obj.UserState).IfNullThen( obj.AssignedToUser)</code></p>
 <h3 id="casecategory">CaseCategory</h3>
 <p>The category of the case. This also determines the workflow for the case. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
@@ -725,6 +727,7 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <li><a href="../business-rules/R38463.html">R38463 Case - Set Description By Template</a></li>
 <li><a href="../business-rules/R38563.html">R38563 Case - Set Owner User</a></li>
 <li><a href="../business-rules/R38593.html">R38593 Case - Set Social Group</a></li>
+<li><a href="../business-rules/R38667.html">R38667 Case - Set Assigned To User (Recalc)</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:

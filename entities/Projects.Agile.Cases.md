@@ -319,6 +319,8 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
+_Front-End Recalc Expressions:_  
+`obj.DetermineAssignToUser( obj.SystemState, obj.Project, obj.CaseCategory, obj.ProjectArea, obj.ProjectMilestone, obj.StakeholderParty, obj.UserState).IfNullThen( obj.AssignedToUser)`
 ### CaseCategory
 
 The category of the case. This also determines the workflow for the case. `Required` `Filter(multi eq)`
