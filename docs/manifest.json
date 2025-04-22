@@ -19062,6 +19062,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Monitoring.InstanceStatistics.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Monitoring.InstanceStatistics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Monitoring.LicenseHistory.md",
       "output": {
         ".html": {
@@ -26175,6 +26185,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sys_Information_Messages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sys_Instance_Statistics.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sys_Instance_Statistics.html"
         }
       },
       "version": ""

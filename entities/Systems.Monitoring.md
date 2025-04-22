@@ -11,6 +11,7 @@ uid: Systems.Monitoring
 - [InformationMessages](Systems.Monitoring.InformationMessages.md)  
 - [InformationMessagesSummary](Systems.Monitoring.InformationMessagesSummary.md)  
 - [InstanceParameters](Systems.Monitoring.InstanceParameters.md)  
+- [InstanceStatistics](Systems.Monitoring.InstanceStatistics.md)  
 - [LicenseHistory](Systems.Monitoring.LicenseHistory.md)  
 - [Licenses](Systems.Monitoring.Licenses.md)  
 - [ObjectFiles](Systems.Monitoring.ObjectFiles.md)  

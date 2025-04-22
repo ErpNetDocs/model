@@ -2092,6 +2092,9 @@ references:
 - uid: Systems.Monitoring.InstanceParameters
   name: Systems.Monitoring.InstanceParameters View
   href: entities/Systems.Monitoring.InstanceParameters.html
+- uid: Systems.Monitoring.InstanceStatistics
+  name: Systems.Monitoring.InstanceStatistics Entity
+  href: entities/Systems.Monitoring.InstanceStatistics.html
 - uid: Systems.Monitoring.LicenseHistory
   name: Systems.Monitoring.LicenseHistory View
   href: entities/Systems.Monitoring.LicenseHistory.html

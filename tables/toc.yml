@@ -1235,6 +1235,8 @@
     href: Sys_Form_Layouts.md
   - name: Sys_Information_Messages
     href: Sys_Information_Messages.md
+  - name: Sys_Instance_Statistics
+    href: Sys_Instance_Statistics.md
   - name: Sys_Jobs
     href: Sys_Jobs.md
   - name: Sys_Numbers

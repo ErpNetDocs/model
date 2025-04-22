@@ -1270,6 +1270,8 @@
       href: Systems.Monitoring.InformationMessagesSummary.md
     - name: InstanceParameters
       href: Systems.Monitoring.InstanceParameters.md
+    - name: InstanceStatistics
+      href: Systems.Monitoring.InstanceStatistics.md
     - name: LicenseHistory
       href: Systems.Monitoring.LicenseHistory.md
     - name: Licenses
