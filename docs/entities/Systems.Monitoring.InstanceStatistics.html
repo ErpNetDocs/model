@@ -148,6 +148,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Monitoring.InstanceStatistics.html#instancename">InstanceName</a></td>
+<td>string (128)</td>
+<td>The name of the instance to which this statistic applies. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Monitoring.InstanceStatistics.html#max">Max</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>The max value of the stat within the time period. <code>Filter(ge;le)</code></td>
@@ -241,6 +246,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="instancename">InstanceName</h3>
+<p>The name of the instance to which this statistic applies. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p><em>Type</em>: <strong>string (128)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="max">Max</h3>
 <p>The max value of the stat within the time period. <code>Filter(ge;le)</code></p>

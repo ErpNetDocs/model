@@ -15,6 +15,7 @@ Logs time-windowed performance metrics for the monitored system instance across 
 |[Avg](#avg)|`int` |The avg value of the stat for the time period.|
 |[Count](#count)|`int` |Number of occurrences.|
 |[Exclude_From_Summary](#exclude_from_summary)|`bit` |Denotes that the stat should be excluded from summarization queries (for example long polling requests).|
+|[Instance_Name](#instance_name)|`nvarchar(128)` |The name of the instance to which this statistic applies.|
 |[Instance_Statistic_Id](#instance_statistic_id)|`uniqueidentifier` `PK`||
 |[Max](#max)|`int` |The max value of the stat within the time period.|
 |[Object_Name](#object_name)|`nvarchar(256)` |Name of the object or operation (depending on the statistic type).|
@@ -167,6 +168,43 @@ Denotes that the stat should be excluded from summarization queries (for example
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Instance_Name
+
+
+The name of the instance to which this statistic applies.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|128|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(128)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Instance_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Instance_Statistic_Id
 

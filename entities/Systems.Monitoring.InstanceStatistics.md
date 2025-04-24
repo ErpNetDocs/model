@@ -37,6 +37,7 @@ Aggregate Tree
 | [DisplayText](Systems.Monitoring.InstanceStatistics.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExcludeFromSummary](Systems.Monitoring.InstanceStatistics.md#excludefromsummary) | boolean | Denotes that the stat should be excluded from summarization queries (for example long polling requests). `Required` 
 | [Id](Systems.Monitoring.InstanceStatistics.md#id) | guid |  
+| [InstanceName](Systems.Monitoring.InstanceStatistics.md#instancename) | string (128) | The name of the instance to which this statistic applies. `Required` `Filter(eq;like)` 
 | [Max](Systems.Monitoring.InstanceStatistics.md#max) | int32 __nullable__ | The max value of the stat within the time period. `Filter(ge;le)` 
 | [ObjectName](Systems.Monitoring.InstanceStatistics.md#objectname) | string (256) __nullable__ | Name of the object or operation (depending on the statistic type). 
 | [ObjectVersion](Systems.Monitoring.InstanceStatistics.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -108,6 +109,17 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### InstanceName
+
+The name of the instance to which this statistic applies. `Required` `Filter(eq;like)`
+
+_Type_: **string (128)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **128**  
 _Show in UI_: **ShownByDefault**  
 
 ### Max
