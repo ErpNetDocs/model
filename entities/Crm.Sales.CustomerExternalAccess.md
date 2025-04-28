@@ -114,13 +114,14 @@ _Allowed Values (Crm.Sales.CustomerExternalAccessRepository.Role Enum Members)_
 | ---- | --- |
 | Basic | Basic. Stored as 'L10'. <br /> _Database Value:_ 'L10' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Basic' |
 | Orders | Orders. Stored as 'L20'. <br /> _Database Value:_ 'L20' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Orders' |
-| OrdersBilling | Orders & Billing. Stored as 'L30'. <br /> _Database Value:_ 'L30' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'OrdersBilling' |
-| Admin | Admin. Stored as 'L80'. <br /> _Database Value:_ 'L80' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Admin' |
-| Owner | Owner. Stored as 'L90'. <br /> _Database Value:_ 'L90' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Owner' |
+| OrdersWithPrices | Orders with prices. Stored as 'L30'. <br /> _Database Value:_ 'L30' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'OrdersWithPrices' |
+| Billing | Billing. Stored as 'L40'. <br /> _Database Value:_ 'L40' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Billing' |
+| Admin | Admin. Stored as 'L80'. <br /> _Database Value:_ 'L80' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Admin' |
+| Owner | Owner. Stored as 'L90'. <br /> _Database Value:_ 'L90' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Owner' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
-_Default Value_: **OrdersBilling**  
+_Default Value_: **OrdersWithPrices**  
 _Show in UI_: **ShownByDefault**  
 
 

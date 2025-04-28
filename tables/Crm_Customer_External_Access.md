@@ -19,7 +19,7 @@ Defines the users permissions to specific customer data. Entity: Crm_Customer_Ex
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The customer whose data is being accessed.|
 |[Days_Back_Access](#days_back_access)|`int` |The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for this External Access.|
-|[Role](#role)|`char(3)` Allowed: `L10`, `L20`, `L30`, `L80`, `L90`|The role of the user, defines the granted access.|
+|[Role](#role)|`char(3)` Allowed: `L10`, `L20`, `L30`, `L40`, `L80`, `L90`|The role of the user, defines the granted access.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[User_Id](#user_id)|`uniqueidentifier` |The user to whom the access is granted.|
 
@@ -169,7 +169,7 @@ The role of the user, defines the granted access.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`L10`, `L20`, `L30`, `L80`, `L90`|
+|Allowed Values|`L10`, `L20`, `L30`, `L40`, `L80`, `L90`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|L30|
