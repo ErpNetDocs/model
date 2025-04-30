@@ -45,6 +45,7 @@ Aggregate Tree
 | [FilterXml](Systems.Core.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed. `Unit: obj.DocumentType.EntityName` `Required` 
 | [Id](Systems.Core.DocumentJobs.md#id) | guid |  
 | [IsActive](Systems.Core.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
+| [JobConfigurations](Systems.Core.DocumentJobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [JobType](Systems.Core.DocumentJobs.md#jobtype) | [JobType](Systems.Core.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [Name](Systems.Core.DocumentJobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [NewState](Systems.Core.DocumentJobs.md#newstate) | [DocumentState](Systems.Core.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter. `Required` 
@@ -100,6 +101,17 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### JobConfigurations
+
+The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15` (Inherited from [Jobs](Systems.Config.Jobs.md))
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 _Show in UI_: **ShownByDefault**  
 
 ### JobType

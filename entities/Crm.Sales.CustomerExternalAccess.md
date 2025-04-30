@@ -114,7 +114,7 @@ _Allowed Values (Crm.Sales.CustomerExternalAccessRepository.Role Enum Members)_
 | ---- | --- |
 | Basic | Basic. Stored as 'L10'. <br /> _Database Value:_ 'L10' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Basic' |
 | Orders | Orders. Stored as 'L20'. <br /> _Database Value:_ 'L20' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Orders' |
-| OrdersWithPrices | Orders with prices. Stored as 'L30'. <br /> _Database Value:_ 'L30' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'OrdersWithPrices' |
+| OrdersWithPrices | Orders with Prices. Stored as 'L30'. <br /> _Database Value:_ 'L30' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'OrdersWithPrices' |
 | Billing | Billing. Stored as 'L40'. <br /> _Database Value:_ 'L40' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Billing' |
 | Admin | Admin. Stored as 'L80'. <br /> _Database Value:_ 'L80' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Admin' |
 | Owner | Owner. Stored as 'L90'. <br /> _Database Value:_ 'L90' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Owner' |

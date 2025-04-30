@@ -12,6 +12,7 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 | Name | Type | Description |
 | - | - | --- |
 |[Is_Active](#is_active)|`bit` |Specifies whether the job is active and ready for running.|
+|[Job_Configurations](#job_configurations)|`nvarchar(max)` |The field specifies additional parameters for the execution of the Job in JSON format. NULL means that there are no specific parameters.|
 |[Job_Id](#job_id)|`uniqueidentifier` `PK`||
 |[Job_Name](#job_name)|`nvarchar(254)` |The name of the job.|
 |[Job_Type](#job_type)|`char(3)` Allowed: `DOC`, `POS`, `DNT`, `DPI`, `DDV`, `DIM`, `DAC`, `DAL`, `CTE`|The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.|
@@ -35,7 +36,7 @@ Specifies whether the job is active and ready for running.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -57,6 +58,42 @@ Specifies whether the job is active and ready for running.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Job_Configurations
+
+
+The field specifies additional parameters for the execution of the Job in JSON format. NULL means that there are no specific parameters.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|7|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|yes|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Job_Configurations - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Job_Id
 
 | Property | Value |
@@ -68,7 +105,7 @@ Specifies whether the job is active and ready for running.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -104,7 +141,7 @@ The name of the job.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -142,7 +179,7 @@ The system type of the job. DOC=Document Change State, POS=Run Postponed Events,
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -175,7 +212,7 @@ The system type of the job. DOC=Document Change State, POS=Run Postponed Events,
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -202,7 +239,7 @@ The system type of the job. DOC=Document Change State, POS=Run Postponed Events,
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -232,7 +269,7 @@ Specifies whether to automatically run the job when the server is idle.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

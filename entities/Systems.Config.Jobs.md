@@ -43,6 +43,7 @@ Aggregate Tree
 | [DisplayText](Systems.Config.Jobs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Config.Jobs.md#id) | guid |  
 | [IsActive](Systems.Config.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` 
+| [JobConfigurations](Systems.Config.Jobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15` 
 | [JobType](Systems.Config.Jobs.md#jobtype) | [JobType](Systems.Config.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. `Required` `Filter(multi eq)` 
 | [Name](Systems.Config.Jobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Config.Jobs.md#notes) | string (max) __nullable__ | Notes for this Job. 
@@ -80,6 +81,17 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### JobConfigurations
+
+The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15`
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 _Show in UI_: **ShownByDefault**  
 
 ### JobType

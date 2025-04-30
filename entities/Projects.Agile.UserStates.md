@@ -111,10 +111,10 @@ _Supports Order By_: **True**
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`obj.SetUserStateOrd( obj.SystemState)`
+`obj.SetUserStateOrd( obj.SystemState, obj.CaseCategory)`
 
 _Front-End Recalc Expressions:_  
-`obj.SetUserStateOrd( obj.SystemState)`
+`obj.SetUserStateOrd( obj.SystemState, obj.CaseCategory)`
 ### SystemState
 
 The system state, which this state extends. `Required` `Filter(multi eq)` `ORD`
