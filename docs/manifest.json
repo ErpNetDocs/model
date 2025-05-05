@@ -20361,6 +20361,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Acc_Trial_Balance_Detailed.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Acc_Trial_Balance_Detailed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Acc_Voucher_Correspondances.md",
       "output": {
         ".html": {
