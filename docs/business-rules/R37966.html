@@ -144,7 +144,16 @@ IsFulfilled == True.</td>
 <td><strong>Message</strong></td>
 <td>Store order '{DisplayText}' cannot be completed because it has not been fulfilled.
 <br><br>
-Ensure that all lines are fulfilled and try again.</td>
+For line number {StoreOrderLine.LineNo}, the quantity and/or cost are not fully
+fulfilled.
+<br><br>
+Order Remaining Quantity Base is {StoreOrderLinesUnfulfilledView.OrderRemainingQuantityBase}'
+<br><br>
+Order Remaining Line Cost is '{StoreOrderLinesUnfulfilledView.OrderRemainingLineCost}'
+<br><br>
+Ensure that all lines are fulfilled and try again.
+// Sort Messages By Attribute: The first 5 errors are listed, sorted ascending by line
+number.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
