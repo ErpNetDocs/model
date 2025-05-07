@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Finance.Accounting.TrialBalanceDetailed View | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Finance.Accounting.TrialBalanceDetailed View | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/entities/Finance.Accounting.TrialBalanceDetailed.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Finance.Accounting.TrialBalanceDetailed">
+<h1 id="financeaccountingtrialbalancedetailed-view">Finance.Accounting.TrialBalanceDetailed View</h1>
+
+<p><strong>Namespace:</strong> <a href="Finance.Accounting.html">Finance.Accounting</a></p>
+<p>Shows debit and credit turnovers and balances per account, broken down by analytical dimensions, cost and profit centers. Designed for detailed analysis and managerial reporting. Entity: Acc_Trial_Balance_Detailed (Introduced in version 25.1.3.22)</p>
+<h2 id="default-visualization">Default Visualization</h2>
+<p>Default Display Text Format:<br>
+<em>{FromDate}: {ToDate}</em><br>
+Default Search Members:<br>
+__<br>
+Category:  <em>Views</em><br>
+Show in UI:  <em>ShownByDefault</em></p>
+<h2 id="aggregate">Aggregate</h2>
+<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Finance.Accounting.TrialBalanceDetailed.html">Finance.Accounting.TrialBalanceDetailed</a></li>
+</ul>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closing">Closing</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closingbase">ClosingBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closingcredit">ClosingCredit</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing Credit. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closingcreditbase">ClosingCreditBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing Credit Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closingdebit">ClosingDebit</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing Debit. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closingdebitbase">ClosingDebitBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing Debit Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#closingreporting">ClosingReporting</a></td>
+<td>decimal (38, 2)</td>
+<td>Closing Reporting. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#credit">Credit</a></td>
+<td>decimal (38, 2)</td>
+<td>Credit. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#creditbase">CreditBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Credit Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#creditreporting">CreditReporting</a></td>
+<td>decimal (38, 2)</td>
+<td>Credit Reporting. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#debit">Debit</a></td>
+<td>decimal (38, 2)</td>
+<td>Debit. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#debitbase">DebitBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Debit Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#debitreporting">DebitReporting</a></td>
+<td>decimal (38, 2)</td>
+<td>Debit Reporting. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#fromdate">FromDate</a></td>
+<td>date</td>
+<td>Period Start Date - Should be filtered with exact date. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkey">ItemKey</a></td>
+<td>string (64)</td>
+<td>Item Key. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel1code">ItemKeyLevel1Code</a></td>
+<td>string (40)</td>
+<td>Item Key Level 1 Code. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel1name">ItemKeyLevel1Name</a></td>
+<td>string (254)</td>
+<td>Item Key Level 1 Name. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel2code">ItemKeyLevel2Code</a></td>
+<td>string (40)</td>
+<td>Item Key Level 2 Code. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel2name">ItemKeyLevel2Name</a></td>
+<td>string (254)</td>
+<td>Item Key Level 2 Name. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel3code">ItemKeyLevel3Code</a></td>
+<td>string (40)</td>
+<td>Item Key Level 3 Code. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel3name">ItemKeyLevel3Name</a></td>
+<td>string (254)</td>
+<td>Item Key Level 3 Name. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel4code">ItemKeyLevel4Code</a></td>
+<td>string (40)</td>
+<td>Item Key Level 4 Code. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel4name">ItemKeyLevel4Name</a></td>
+<td>string (254)</td>
+<td>Item Key Level 4 Name. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel5code">ItemKeyLevel5Code</a></td>
+<td>string (40)</td>
+<td>Item Key Level 5 Code. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#itemkeylevel5name">ItemKeyLevel5Name</a></td>
+<td>string (254)</td>
+<td>Item Key Level 5 Name. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#opening">Opening</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#openingbase">OpeningBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#openingcredit">OpeningCredit</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening Credit. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#openingcreditbase">OpeningCreditBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening Credit Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#openingdebit">OpeningDebit</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening Debit. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#openingdebitbase">OpeningDebitBase</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening Debit Base. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#openingrepoirting">OpeningRepoirting</a></td>
+<td>decimal (38, 2)</td>
+<td>Opening Repoirting. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#todate">ToDate</a></td>
+<td>date</td>
+<td>Period End Date - Should be filtered with exact date. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#account">Account</a></td>
+<td><a href="Finance.Accounting.Accounts.html">Accounts</a></td>
+<td>Account. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Accounts_Table.Account_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#costcenter">CostCenter</a></td>
+<td><a href="Finance.Accounting.CostCenters.html">CostCenters</a></td>
+<td>Cost Center. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Cost_Centers_Table.Cost_Center_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#currency">Currency</a></td>
+<td><a href="General.Currencies.Currencies.html">Currencies</a></td>
+<td>Currency. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#enterprisecompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
+<td>Enterprise Company. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_&lt;br /&gt;Companies_Table.Enterprise_Company_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
+<td>Enterprise Company Location. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#examplevoucherline">ExampleVoucherLine</a></td>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html">AccountingVoucherLines</a></td>
+<td>This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Voucher_Lines_Table.Voucher_Line_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level1accountgroup">Level1AccountGroup</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
+<td>Level 1 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level1accountproperty">Level1AccountProperty</a></td>
+<td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
+<td>Level 1 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level2accountgroup">Level2AccountGroup</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
+<td>Level 2 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level2accountproperty">Level2AccountProperty</a></td>
+<td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
+<td>Level 2 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level3accountgroup">Level3AccountGroup</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
+<td>Level 3 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level3accountproperty">Level3AccountProperty</a></td>
+<td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
+<td>Level 3 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level4accountgroup">Level4AccountGroup</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
+<td>Level 4 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level4accountproperty">Level4AccountProperty</a></td>
+<td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
+<td>Level 4 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level5accountgroup">Level5AccountGroup</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
+<td>Level 5 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level5accountproperty">Level5AccountProperty</a></td>
+<td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
+<td>Level 5 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#level6accountgroup">Level6AccountGroup</a></td>
+<td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
+<td>Level 6 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.TrialBalanceDetailed.html#profitcenter">ProfitCenter</a></td>
+<td><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a></td>
+<td>Profit Center. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Profit_Centers_Table.Profit_Center_Id</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="closing">Closing</h3>
+<p>Closing. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="closingbase">ClosingBase</h3>
+<p>Closing Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="closingcredit">ClosingCredit</h3>
+<p>Closing Credit. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="closingcreditbase">ClosingCreditBase</h3>
+<p>Closing Credit Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="closingdebit">ClosingDebit</h3>
+<p>Closing Debit. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="closingdebitbase">ClosingDebitBase</h3>
+<p>Closing Debit Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="closingreporting">ClosingReporting</h3>
+<p>Closing Reporting. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="credit">Credit</h3>
+<p>Credit. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="creditbase">CreditBase</h3>
+<p>Credit Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="creditreporting">CreditReporting</h3>
+<p>Credit Reporting. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="debit">Debit</h3>
+<p>Debit. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="debitbase">DebitBase</h3>
+<p>Debit Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="debitreporting">DebitReporting</h3>
+<p>Debit Reporting. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="fromdate">FromDate</h3>
+<p>Period Start Date - Should be filtered with exact date. <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong>date</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkey">ItemKey</h3>
+<p>Item Key. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p><em>Type</em>: <strong>string (64)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel1code">ItemKeyLevel1Code</h3>
+<p>Item Key Level 1 Code. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (40)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>40</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel1name">ItemKeyLevel1Name</h3>
+<p>Item Key Level 1 Name. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel2code">ItemKeyLevel2Code</h3>
+<p>Item Key Level 2 Code. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (40)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>40</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel2name">ItemKeyLevel2Name</h3>
+<p>Item Key Level 2 Name. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel3code">ItemKeyLevel3Code</h3>
+<p>Item Key Level 3 Code. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (40)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>40</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel3name">ItemKeyLevel3Name</h3>
+<p>Item Key Level 3 Name. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel4code">ItemKeyLevel4Code</h3>
+<p>Item Key Level 4 Code. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (40)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>40</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel4name">ItemKeyLevel4Name</h3>
+<p>Item Key Level 4 Name. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel5code">ItemKeyLevel5Code</h3>
+<p>Item Key Level 5 Code. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (40)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>40</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="itemkeylevel5name">ItemKeyLevel5Name</h3>
+<p>Item Key Level 5 Name. <code>Required</code></p>
+<p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="opening">Opening</h3>
+<p>Opening. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="openingbase">OpeningBase</h3>
+<p>Opening Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="openingcredit">OpeningCredit</h3>
+<p>Opening Credit. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="openingcreditbase">OpeningCreditBase</h3>
+<p>Opening Credit Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="openingdebit">OpeningDebit</h3>
+<p>Opening Debit. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="openingdebitbase">OpeningDebitBase</h3>
+<p>Opening Debit Base. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="openingrepoirting">OpeningRepoirting</h3>
+<p>Opening Repoirting. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="todate">ToDate</h3>
+<p>Period End Date - Should be filtered with exact date. <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong>date</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="account">Account</h3>
+<p>Account. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Accounts_Table.Account_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Accounts_Table.Account_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="costcenter">CostCenter</h3>
+<p>Cost Center. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Cost_Centers_Table.Cost_Center_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Cost_Centers_Table.Cost_Center_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="currency">Currency</h3>
+<p>Currency. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<p>Enterprise Company. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<p>Enterprise Company Location. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="examplevoucherline">ExampleVoucherLine</h3>
+<p>This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Voucher_Lines_Table.Voucher_Line_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVoucherLines.html">AccountingVoucherLines</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Voucher_Lines_Table.Voucher_Line_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level1accountgroup">Level1AccountGroup</h3>
+<p>Level 1 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Account_Groups_Table.Account_Group_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level1accountproperty">Level1AccountProperty</h3>
+<p>Level 1 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Properties_Table.Property_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level2accountgroup">Level2AccountGroup</h3>
+<p>Level 2 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Account_Groups_Table.Account_Group_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level2accountproperty">Level2AccountProperty</h3>
+<p>Level 2 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Properties_Table.Property_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level3accountgroup">Level3AccountGroup</h3>
+<p>Level 3 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Account_Groups_Table.Account_Group_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level3accountproperty">Level3AccountProperty</h3>
+<p>Level 3 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Properties_Table.Property_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level4accountgroup">Level4AccountGroup</h3>
+<p>Level 4 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Account_Groups_Table.Account_Group_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level4accountproperty">Level4AccountProperty</h3>
+<p>Level 4 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Properties_Table.Property_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level5accountgroup">Level5AccountGroup</h3>
+<p>Level 5 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Account_Groups_Table.Account_Group_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level5accountproperty">Level5AccountProperty</h3>
+<p>Level 5 Account Property. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Properties_Table.Property_Id</code> <code>Introduced in version 25.1.3.24</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Properties_Table.Property_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level6accountgroup">Level6AccountGroup</h3>
+<p>Level 6 Account Group. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Account_Groups_Table.Account_Group_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Account_Groups_Table.Account_Group_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="profitcenter">ProfitCenter</h3>
+<p>Profit Center. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Profit_Centers_Table.Profit_Center_Id</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Acc_Profit_Centers_Table.Profit_Center_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_TrialBalanceDetailed?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_TrialBalanceDetailed?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TrialBalanceDetailed?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TrialBalanceDetailed?$top=10</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Finance.Accounting.TrialBalanceDetailed.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

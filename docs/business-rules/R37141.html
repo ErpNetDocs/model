@@ -129,19 +129,38 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>On GroupMember Add:<br>
-NT_SOC_GROUP_MEMBER_ADDED
+<td>
+<ol>
+<li>Create notifications:</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td colspan="2">On GroupMember Add:<br></td>
+</tr>
+<tr>
+<td></td>
+<td><p>NT_SOC_GROUP_MEMBER_ADDED
 <br><br>
 Оn GroupMember Delete:<br>
-NT_SOC_GROUP_MEMBER_REMOVED</td>
+NT_SOC_GROUP_MEMBER_REMOVED</p>
+<ol start="2">
+<li>Create comments in Chat on behalf of System User:
+On GroupMember Add:<br>
+NT_SOC_GROUP_MEMBERSHIP_ADDED
+<br><br>
+Оn GroupMember Delete:<br>
+NT_SOC_GROUP_MEMBERSHIP_REMOVED</li>
+</ol>
+</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>The rule ensures that a proper notification is created for the user when they are
-added to or removed from a social group.</td>
+added to or removed from a social group. It also creates system comments in the chats.</td>
 </tr>
 <tr>
-<td><strong>Message</strong></td>
+<td><strong>Messages</strong></td>
 <td>You were added to the group '{Group.Name}'.
 You were removed from the group '{Group.Name}'.</td>
 </tr>

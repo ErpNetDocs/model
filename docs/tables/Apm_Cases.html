@@ -151,6 +151,11 @@
 <td>Specified when the case has specific due time.</td>
 </tr>
 <tr>
+<td><a href="#duplicate_of_case_id">Duplicate_Of_Case_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.</td>
+</tr>
+<tr>
 <td><a href="#estimated_time_hours">Estimated_Time_Hours</a></td>
 <td><code>decimal(8, 2)</code></td>
 <td>Estimation of the required work effort in hours.</td>
@@ -1440,6 +1445,129 @@
 </tr>
 </tbody>
 </table>
+<h3 id="duplicate_of_case_id">Duplicate_Of_Case_Id</h3>
+<p>References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Apm_Cases.html">Apm_Cases</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="duplicate_of_case_id---supported-filters">Duplicate_Of_Case_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="estimated_time_hours">Estimated_Time_Hours</h3>
 <p>Estimation of the required work effort in hours.</p>
 <table>
@@ -1699,7 +1827,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>26</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>

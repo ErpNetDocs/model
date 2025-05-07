@@ -58,6 +58,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AssignedToUser](Projects.Agile.Cases.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The internal user to which the case is assigned. `Filter(multi eq)` |
 | [CaseCategory](Projects.Agile.Cases.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category of the case. This also determines the workflow for the case. `Required` `Filter(multi eq)` |
+| [DuplicateOfCase](Projects.Agile.Cases.md#duplicateofcase) | [Cases](Projects.Agile.Cases.md) (nullable) | References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. `Filter(multi eq)` `Introduced in version 25.1.3.24` |
 | [OwnerUser](Projects.Agile.Cases.md#owneruser) | [Users](Systems.Security.Users.md) | The user responsible for managing and overseeing the case. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76` |
 | [Parent](Projects.Agile.Cases.md#parent) | [Cases](Projects.Agile.Cases.md) (nullable) | Specified when this is a sub-case to another case. `Filter(multi eq)` |
 | [Project](Projects.Agile.Cases.md#project) | [Projects](Projects.Agile.Projects.md) | The project to which the case is assigned. `Required` `Filter(multi eq)` |
@@ -330,6 +331,15 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
+
+### DuplicateOfCase
+
+References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. `Filter(multi eq)` `Introduced in version 25.1.3.24`
+
+_Type_: **[Cases](Projects.Agile.Cases.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **HiddenByDefault**  
 
 ### OwnerUser
 

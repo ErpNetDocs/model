@@ -417,6 +417,8 @@
       href: Finance.Accounting.TemplateRouteLinks.md
     - name: Templates
       href: Finance.Accounting.Templates.md
+    - name: TrialBalanceDetailed
+      href: Finance.Accounting.TrialBalanceDetailed.md
     - name: VoucherCorrespondances
       href: Finance.Accounting.VoucherCorrespondances.md
   - name: Assets

@@ -640,6 +640,9 @@ references:
 - uid: Finance.Accounting.Templates
   name: Finance.Accounting.Templates Entity
   href: entities/Finance.Accounting.Templates.html
+- uid: Finance.Accounting.TrialBalanceDetailed
+  name: Finance.Accounting.TrialBalanceDetailed View
+  href: entities/Finance.Accounting.TrialBalanceDetailed.html
 - uid: Finance.Accounting.VoucherCorrespondances
   name: Finance.Accounting.VoucherCorrespondances Entity
   href: entities/Finance.Accounting.VoucherCorrespondances.html

@@ -13402,6 +13402,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Accounting.TrialBalanceDetailed.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Accounting.TrialBalanceDetailed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Accounting.VoucherCorrespondances.md",
       "output": {
         ".html": {

@@ -21,6 +21,7 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 |[Description](#description)|`nvarchar(max)` |Description of the required work.|
 |[Due_Date](#due_date)|`date` |Specified when the case has specific due date.|
 |[Due_Time](#due_time)|`time` |Specified when the case has specific due time.|
+|[Duplicate_Of_Case_Id](#duplicate_of_case_id)|`uniqueidentifier` |References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.|
 |[Estimated_Time_Hours](#estimated_time_hours)|`decimal(8, 2)` |Estimation of the required work effort in hours.|
 |[In_Progress_Time_UTC](#in_progress_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has changed to in-progress state.|
 |[Owner_User](#owner_user)|`uniqueidentifier` |The user responsible for managing and overseeing the case.|
@@ -398,6 +399,43 @@ Specified when the case has specific due time.
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
+### Duplicate_Of_Case_Id
+
+
+References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|27|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Apm_Cases](Apm_Cases.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Duplicate_Of_Case_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Estimated_Time_Hours
 
 
@@ -478,7 +516,7 @@ The user responsible for managing and overseeing the case.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|26|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

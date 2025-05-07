@@ -1,6 +1,12 @@
 # View Acc_Trial_Balance_Detailed
 
 
+## Entity
+
+Entity: [Finance.Accounting.TrialBalanceDetailed](~/entities/Finance.Accounting.TrialBalanceDetailed.md)
+
+Shows debit and credit turnovers and balances per account, broken down by analytical dimensions, cost and profit centers. Designed for detailed analysis and managerial reporting. Entity: Acc_Trial_Balance_Detailed (Introduced in version 25.1.3.22)
+
 ## Summary
 
 | Name | Type | Description |
@@ -37,15 +43,15 @@
 |[Item_Key_Level_5_Code](#item_key_level_5_code)|`nvarchar(40)` |Item Key Level 5 Code|
 |[Item_Key_Level_5_Name](#item_key_level_5_name)|`nvarchar(254)` |Item Key Level 5 Name|
 |[Level_1_Account_Group_Id](#level_1_account_group_id)|`uniqueidentifier` |Level 1 Account Group|
-|[Level_1_Account_Propoerty_Id](#level_1_account_propoerty_id)|`uniqueidentifier` |Level 1 Account Propoerty|
+|[Level_1_Account_Property_Id](#level_1_account_property_id)|`uniqueidentifier` |Level 1 Account Property|
 |[Level_2_Account_Group_Id](#level_2_account_group_id)|`uniqueidentifier` |Level 2 Account Group|
-|[Level_2_Account_Propoerty_Id](#level_2_account_propoerty_id)|`uniqueidentifier` |Level 2 Account Propoerty|
+|[Level_2_Account_Property_Id](#level_2_account_property_id)|`uniqueidentifier` |Level 2 Account Property|
 |[Level_3_Account_Group_Id](#level_3_account_group_id)|`uniqueidentifier` |Level 3 Account Group|
-|[Level_3_Account_Propoerty_Id](#level_3_account_propoerty_id)|`uniqueidentifier` |Level 3 Account Propoerty|
+|[Level_3_Account_Property_Id](#level_3_account_property_id)|`uniqueidentifier` |Level 3 Account Property|
 |[Level_4_Account_Group_Id](#level_4_account_group_id)|`uniqueidentifier` |Level 4 Account Group|
-|[Level_4_Account_Propoerty_Id](#level_4_account_propoerty_id)|`uniqueidentifier` |Level 4 Account Propoerty|
+|[Level_4_Account_Property_Id](#level_4_account_property_id)|`uniqueidentifier` |Level 4 Account Property|
 |[Level_5_Account_Group_Id](#level_5_account_group_id)|`uniqueidentifier` |Level 5 Account Group|
-|[Level_5_Account_Propoerty_Id](#level_5_account_propoerty_id)|`uniqueidentifier` |Level 5 Account Propoerty|
+|[Level_5_Account_Property_Id](#level_5_account_property_id)|`uniqueidentifier` |Level 5 Account Property|
 |[Level_6_Account_Group_Id](#level_6_account_group_id)|`uniqueidentifier` |Level 6 Account Group|
 |[Opening](#opening)|`decimal(38, 2)` |Opening|
 |[Opening_Base](#opening_base)|`decimal(38, 2)` |Opening Base|
@@ -1077,10 +1083,10 @@ Level 1 Account Group
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Level_1_Account_Propoerty_Id
+### Level_1_Account_Property_Id
 
 
-Level 1 Account Propoerty
+Level 1 Account Property
 
 | Property | Value |
 | - | - |
@@ -1108,7 +1114,7 @@ Level 1 Account Propoerty
 |User Login|no|
 |Visible|yes|
 
-#### Level_1_Account_Propoerty_Id - Supported Filters
+#### Level_1_Account_Property_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
@@ -1151,10 +1157,10 @@ Level 2 Account Group
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Level_2_Account_Propoerty_Id
+### Level_2_Account_Property_Id
 
 
-Level 2 Account Propoerty
+Level 2 Account Property
 
 | Property | Value |
 | - | - |
@@ -1182,7 +1188,7 @@ Level 2 Account Propoerty
 |User Login|no|
 |Visible|yes|
 
-#### Level_2_Account_Propoerty_Id - Supported Filters
+#### Level_2_Account_Property_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
@@ -1225,10 +1231,10 @@ Level 3 Account Group
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Level_3_Account_Propoerty_Id
+### Level_3_Account_Property_Id
 
 
-Level 3 Account Propoerty
+Level 3 Account Property
 
 | Property | Value |
 | - | - |
@@ -1256,7 +1262,7 @@ Level 3 Account Propoerty
 |User Login|no|
 |Visible|yes|
 
-#### Level_3_Account_Propoerty_Id - Supported Filters
+#### Level_3_Account_Property_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
@@ -1299,10 +1305,10 @@ Level 4 Account Group
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Level_4_Account_Propoerty_Id
+### Level_4_Account_Property_Id
 
 
-Level 4 Account Propoerty
+Level 4 Account Property
 
 | Property | Value |
 | - | - |
@@ -1330,7 +1336,7 @@ Level 4 Account Propoerty
 |User Login|no|
 |Visible|yes|
 
-#### Level_4_Account_Propoerty_Id - Supported Filters
+#### Level_4_Account_Property_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
@@ -1373,10 +1379,10 @@ Level 5 Account Group
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Level_5_Account_Propoerty_Id
+### Level_5_Account_Property_Id
 
 
-Level 5 Account Propoerty
+Level 5 Account Property
 
 | Property | Value |
 | - | - |
@@ -1404,7 +1410,7 @@ Level 5 Account Propoerty
 |User Login|no|
 |Visible|yes|
 
-#### Level_5_Account_Propoerty_Id - Supported Filters
+#### Level_5_Account_Property_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
