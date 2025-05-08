@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R38742 Case Category - Nested Inheritance Levels Limit | ERP.net Domain Model </title>
+      <title>R38742 Case Category - Check Inheritance Chain | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R38742 Case Category - Nested Inheritance Levels Limit | ERP.net Domain Model ">
+      <meta name="title" content="R38742 Case Category - Check Inheritance Chain | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r38742-case-category---nested-inheritance-levels-limit">R38742 Case Category - Nested Inheritance Levels Limit</h1>
+<h1 id="r38742-case-category---check-inheritance-chain">R38742 Case Category - Check Inheritance Chain</h1>
 
 <table>
 <col style="width:25%">
@@ -101,7 +101,7 @@
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>NestedInheritanceLevelsLimit</td>
+<td>CheckInheritanceChain</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
@@ -125,23 +125,29 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If InheritFrom field has a value
+<td><p>If InheritFrom field has a value
 <br><br>
-Validate that:<br>
-The number of nested InheritFrom references is less than or equal to 10.</td>
+Validate that:<br></p>
+<ol>
+<li>The number of nested InheritFrom references, including the current Category, is less than or equal to 10.</li>
+<li>The current Category does not appear in its own inheritance chain (no circular reference is allowed).</li>
+</ol>
+</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>This rule ensures that the inheritance chain of Case Categories does not exceed 10 nested levels, including the current category.</td>
+<td>This rule prevents invalid inheritance scenarios by:
+- limiting the inheritance chain to a maximum of 10 nested levels
+- preventing circular inheritance (i.e. a category referencing itself directly or indirectly)</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>Nested inheritance levels limit exceeded.
+<td>Invalid category inheritance.
 <br><br>
 The category '{DisplayText}' cannot inherit from '{InheritFrom.DisplayText}', because
-this would result in more than 10 nested inheritance levels.
+this would create a circular dependency or exceed the allowed limit of 10 nested levels.
 <br><br>
-Please review the inheritance chain and ensure it complies with the limit.</td>
+Please review the inheritance chain and ensure it complies with the defined constraints.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
