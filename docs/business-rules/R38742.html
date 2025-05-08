@@ -130,13 +130,13 @@
 Validate that:<br></p>
 <ol>
 <li>The number of nested InheritFrom references, including the current Category, is less than or equal to 10.</li>
-<li>The current Category does not appear in its own inheritance chain (no circular reference is allowed).</li>
+<li>The inheritance chain must not contain circular references – i.e. no category in the chain may appear more than once.</li>
 </ol>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>This rule prevents invalid inheritance scenarios by:
+<td>This rule prevents invalid inheritance scenarios by:<br>
 - limiting the inheritance chain to a maximum of 10 nested levels<br>
 - preventing circular inheritance (i.e. a category referencing itself directly or indirectly)</td>
 </tr>
