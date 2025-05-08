@@ -257,7 +257,7 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **HiddenByDefault**  
 
 _Front-End Recalc Expressions:_  
-`obj.DetermineExciseDutyRate( obj.ExciseProduct, obj.ExcisePurposeCode)`
+`obj.DetermineExciseDutyRate( obj.ExciseProduct, obj.ExcisePurposeCode, obj.ExciseAdministrativeDocument.DocumentDate)`
 ### ExciseProduct
 
 The Excise product code defined by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97`

@@ -44,6 +44,12 @@ Aggregate Tree
 | [ObjectVersion](Projects.Agile.CaseCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Ord](Projects.Agile.CaseCategories.md#ord) | int32 | Display order of the category relative to other categories within the project type. `Required` `Default(1)` `Filter(eq)` 
 
+## References
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [InheritFrom](Projects.Agile.CaseCategories.md#inheritfrom) | [CaseCategories](Projects.Agile.CaseCategories.md) (nullable) | Specified when the current category inherits from another category. User states are inherited, along with other settings related to the category. `Filter(multi eq)` `Introduced in version 25.1.3.25` |
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -147,6 +153,18 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+_Show in UI_: **ShownByDefault**  
+
+
+## Reference Details
+
+### InheritFrom
+
+Specified when the current category inherits from another category. User states are inherited, along with other settings related to the category. `Filter(multi eq)` `Introduced in version 25.1.3.25`
+
+_Type_: **[CaseCategories](Projects.Agile.CaseCategories.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
 

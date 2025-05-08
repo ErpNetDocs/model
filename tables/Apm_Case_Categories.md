@@ -15,6 +15,7 @@ Determines the type and workflow of the cases. Entity: Apm_Case_Categories (Intr
 |[Case_Category_Name](#case_category_name)|`nvarchar(256)` `ML`|Use short, singular phrase to describe a category of cases|
 |[Description_Template](#description_template)|`nvarchar(max)` |Interpolated string that sets a value for the Description field when creating new cases of this category.|
 |[Icon](#icon)|`nvarchar(128)` |Icon name from the Font Awesome icon set.|
+|[Inherit_From](#inherit_from)|`uniqueidentifier` |Specified when the current category inherits from another category. User states are inherited, along with other settings related to the category.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the category is active for new cases.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Ord](#ord)|`int` |Display order of the category relative to other categories within the project type.|
@@ -157,6 +158,43 @@ Icon name from the Font Awesome icon set.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Inherit_From
+
+
+Specified when the current category inherits from another category. User states are inherited, along with other settings related to the category.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Apm_Case_Categories](Apm_Case_Categories.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Inherit_From - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
 

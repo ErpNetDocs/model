@@ -41,15 +41,15 @@ Aggregate Tree
 | [FromDate](Finance.Accounting.TrialBalanceDetailed.md#fromdate) | date | Period Start Date - Should be filtered with exact date. `Required` `Filter(eq)` 
 | [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) | Item Key. `Required` `Filter(eq;like)` 
 | [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) | Item Key Level 1 Code. `Required` 
-| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | string (254) | Item Key Level 1 Name. `Required` 
+| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 1 Name. `Required` 
 | [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) | Item Key Level 2 Code. `Required` 
-| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | string (254) | Item Key Level 2 Name. `Required` 
+| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 2 Name. `Required` 
 | [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) | Item Key Level 3 Code. `Required` 
-| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | string (254) | Item Key Level 3 Name. `Required` 
+| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 3 Name. `Required` 
 | [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) | Item Key Level 4 Code. `Required` 
-| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | string (254) | Item Key Level 4 Name. `Required` 
+| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 4 Name. `Required` 
 | [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) | Item Key Level 5 Code. `Required` 
-| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | string (254) | Item Key Level 5 Name. `Required` 
+| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 5 Name. `Required` 
 | [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (38, 2) | Opening. `Required` 
 | [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (38, 2) | Opening Base. `Required` 
 | [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (38, 2) | Opening Credit. `Required` 
@@ -251,11 +251,10 @@ _Show in UI_: **ShownByDefault**
 
 Item Key Level 1 Name. `Required`
 
-_Type_: **string (254)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
 
 ### ItemKeyLevel2Code
@@ -273,11 +272,10 @@ _Show in UI_: **ShownByDefault**
 
 Item Key Level 2 Name. `Required`
 
-_Type_: **string (254)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
 
 ### ItemKeyLevel3Code
@@ -295,11 +293,10 @@ _Show in UI_: **ShownByDefault**
 
 Item Key Level 3 Name. `Required`
 
-_Type_: **string (254)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
 
 ### ItemKeyLevel4Code
@@ -317,11 +314,10 @@ _Show in UI_: **ShownByDefault**
 
 Item Key Level 4 Name. `Required`
 
-_Type_: **string (254)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
 
 ### ItemKeyLevel5Code
@@ -339,11 +335,10 @@ _Show in UI_: **ShownByDefault**
 
 Item Key Level 5 Name. `Required`
 
-_Type_: **string (254)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
 
 ### Opening

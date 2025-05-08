@@ -33,15 +33,15 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item Key|
 |[Item_Key_Level_1_Code](#item_key_level_1_code)|`nvarchar(40)` |Item Key Level 1 Code|
-|[Item_Key_Level_1_Name](#item_key_level_1_name)|`nvarchar(254)` |Item Key Level 1 Name|
+|[Item_Key_Level_1_Name](#item_key_level_1_name)|`nvarchar(254)` `ML`|Item Key Level 1 Name|
 |[Item_Key_Level_2_Code](#item_key_level_2_code)|`nvarchar(40)` |Item Key Level 2 Code|
-|[Item_Key_Level_2_Name](#item_key_level_2_name)|`nvarchar(254)` |Item Key Level 2 Name|
+|[Item_Key_Level_2_Name](#item_key_level_2_name)|`nvarchar(254)` `ML`|Item Key Level 2 Name|
 |[Item_Key_Level_3_Code](#item_key_level_3_code)|`nvarchar(40)` |Item Key Level 3 Code|
-|[Item_Key_Level_3_Name](#item_key_level_3_name)|`nvarchar(254)` |Item Key Level 3 Name|
+|[Item_Key_Level_3_Name](#item_key_level_3_name)|`nvarchar(254)` `ML`|Item Key Level 3 Name|
 |[Item_Key_Level_4_Code](#item_key_level_4_code)|`nvarchar(40)` |Item Key Level 4 Code|
-|[Item_Key_Level_4_Name](#item_key_level_4_name)|`nvarchar(254)` |Item Key Level 4 Name|
+|[Item_Key_Level_4_Name](#item_key_level_4_name)|`nvarchar(254)` `ML`|Item Key Level 4 Name|
 |[Item_Key_Level_5_Code](#item_key_level_5_code)|`nvarchar(40)` |Item Key Level 5 Code|
-|[Item_Key_Level_5_Name](#item_key_level_5_name)|`nvarchar(254)` |Item Key Level 5 Name|
+|[Item_Key_Level_5_Name](#item_key_level_5_name)|`nvarchar(254)` `ML`|Item Key Level 5 Name|
 |[Level_1_Account_Group_Id](#level_1_account_group_id)|`uniqueidentifier` |Level 1 Account Group|
 |[Level_1_Account_Property_Id](#level_1_account_property_id)|`uniqueidentifier` |Level 1 Account Property|
 |[Level_2_Account_Group_Id](#level_2_account_group_id)|`uniqueidentifier` |Level 2 Account Group|
@@ -800,7 +800,7 @@ Item Key Level 1 Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -860,7 +860,7 @@ Item Key Level 2 Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -920,7 +920,7 @@ Item Key Level 3 Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -980,7 +980,7 @@ Item Key Level 4 Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1040,7 +1040,7 @@ Item Key Level 5 Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
