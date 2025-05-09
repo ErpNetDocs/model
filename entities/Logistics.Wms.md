@@ -4,7 +4,7 @@ uid: Logistics.Wms
 # Logistics.Wms Namespace
 
 ## Entities
-- [WarehouseAvailabilityView](Logistics.Wms.WarehouseAvailabilityView.md)  
+- [WarehouseAvailability](Logistics.Wms.WarehouseAvailability.md)  
 - [WarehouseLocations](Logistics.Wms.WarehouseLocations.md)  
 - [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)  
 - [WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  

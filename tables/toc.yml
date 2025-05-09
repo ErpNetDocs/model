@@ -1320,8 +1320,8 @@
 - name: Wms
   href: Wms.md
   items:
-  - name: Wms_Warehouse_Availability_Indexed_View
-    href: Wms_Warehouse_Availability_Indexed_View.md
+  - name: Wms_Warehouse_Availability
+    href: Wms_Warehouse_Availability.md
   - name: Wms_Warehouse_Locations
     href: Wms_Warehouse_Locations.md
   - name: Wms_Warehouse_Order_Lines

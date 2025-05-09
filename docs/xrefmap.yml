@@ -1417,6 +1417,9 @@ references:
 - uid: Logistics.Wms.CompositeProducts
   name: Logistics.Wms.CompositeProducts Entity
   href: entities/Logistics.Wms.CompositeProducts.html
+- uid: Logistics.Wms.WarehouseAvailability
+  name: Logistics.Wms.WarehouseAvailability View
+  href: entities/Logistics.Wms.WarehouseAvailability.html
 - uid: Logistics.Wms.WarehouseAvailabilityView
   name: Logistics.Wms.WarehouseAvailabilityView View
   href: entities/Logistics.Wms.WarehouseAvailabilityView.html

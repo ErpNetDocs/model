@@ -16562,6 +16562,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Wms.WarehouseAvailability.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Wms.WarehouseAvailability.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Wms.WarehouseAvailabilityView.md",
       "output": {
         ".html": {
@@ -26641,10 +26651,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Wms_Warehouse_Availability_Indexed_View.md",
+      "source_relative_path": "tables/Wms_Warehouse_Availability.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Wms_Warehouse_Availability_Indexed_View.html"
+          "relative_path": "tables/Wms_Warehouse_Availability.html"
         }
       },
       "version": ""

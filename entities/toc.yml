@@ -918,8 +918,8 @@
   - name: Wms
     href: Logistics.Wms.md
     items:
-    - name: WarehouseAvailabilityView
-      href: Logistics.Wms.WarehouseAvailabilityView.md
+    - name: WarehouseAvailability
+      href: Logistics.Wms.WarehouseAvailability.md
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
     - name: WarehouseOrderLines
