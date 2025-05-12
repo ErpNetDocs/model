@@ -130,8 +130,11 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Convert(IIF((Activity.PlannedDurationMinutes == Convert(0, Nullable<code>1)), 0, Min(0.9, Round(Max(0, (Transaction.Clone().Query().Where(ti =&gt; (ti.Activity == Activity)).ToList(). Where(ti =&gt; ((ti != obj) AndAlso (ti.Date.Add(ti.EndTime) &lt;= Date.Add(EndTime)))). OrderBy(ti =&gt; ti.Date.Add(ti.EndTime)).Select(ti =&gt; ti.ExecutionCompletePercent). LastOrDefault() + Convert((Convert((EndTime - StartTime).TotalMinutes, Nullable</code>1) /
-Convert(Activity.PlannedDurationMinutes, Nullable`1)), Decimal))), 2))), Object)</td>
+<td>Convert(IIF(((Activity.PlannedDurationMinutes ?? 0) == 0), 0, Min(0.9, Round(Max(0,
+(Transaction.Clone().Query().Where(ti =&gt; (ti.Activity == Activity)).ToList().Where(ti =&gt;
+((ti != obj) AndAlso (ti.Date.Add(ti.EndTime) &lt;= Date.Add(EndTime)))).OrderBy(ti =&gt; ti.Date.
+Add(ti.EndTime)).Select(ti =&gt; ti.ExecutionCompletePercent).LastOrDefault() +
+Convert((Convert((EndTime - StartTime).TotalMinutes, Nullable<code>1) / Convert(Activity. PlannedDurationMinutes, Nullable</code>1)), Decimal))), 2))), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

@@ -225,7 +225,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Default Value</em>: <strong>0</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( obj.Activity.PlannedDurationMinutes == Convert( 0, Nullable</code>1)), 0, Min( 0.9, Round( Max( 0, ( obj.Transaction.Clone( ).Query( ).Where( ti =&gt; ( ti.Activity == obj.Activity)).ToList( ).Where( ti =&gt; ( ( ti != obj) AndAlso ( ti.Date.Add( ti.EndTime) &lt;= obj.Date.Add( obj.EndTime)))).OrderBy( ti =&gt; ti.Date.Add( ti.EndTime)).Select( ti =&gt; ti.ExecutionCompletePercent).LastOrDefault( ) + Convert( ( Convert( ( obj.EndTime - obj.StartTime).TotalMinutes, Nullable<code>1) / Convert( obj.Activity.PlannedDurationMinutes, Nullable</code>1)), Decimal))), 2)))`</p>
+<code>IIF( ( ( obj.Activity.PlannedDurationMinutes ?? 0) == 0), 0, Min( 0.9, Round( Max( 0, ( obj.Transaction.Clone( ).Query( ).Where( ti =&gt; ( ti.Activity == obj.Activity)).ToList( ).Where( ti =&gt; ( ( ti != obj) AndAlso ( ti.Date.Add( ti.EndTime) &lt;= obj.Date.Add( obj.EndTime)))).OrderBy( ti =&gt; ti.Date.Add( ti.EndTime)).Select( ti =&gt; ti.ExecutionCompletePercent).LastOrDefault( ) + Convert( ( Convert( ( obj.EndTime - obj.StartTime).TotalMinutes, Nullable</code>1) / Convert( obj.Activity.PlannedDurationMinutes, Nullable<code>1)), Decimal))), 2)))</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

@@ -5,7 +5,7 @@ uid: Communities.Social.FollowedEntities
 
 **Namespace:** [Communities.Social](Communities.Social.md)  
 
-Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities_Indexed_View (Introduced in version 22.1.6.3)
+Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities (Introduced in version 22.1.6.3)
 
 ## Default Visualization
 Default Display Text Format:  
@@ -43,7 +43,6 @@ Aggregate Tree
 The followed entity item. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -78,7 +77,6 @@ _Show in UI_: **ShownByDefault**
 The user which follows the entity. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sec_Users_Table.User_Id`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Inherited From_: **Sec_Users_Table.User_Id**  
 _Supported Filters_: **Equals, EqualsIn**  

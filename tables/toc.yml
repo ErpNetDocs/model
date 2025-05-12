@@ -33,6 +33,8 @@
     href: Acc_Templates.md
   - name: Acc_Trial_Balance_Detailed
     href: Acc_Trial_Balance_Detailed.md
+  - name: Acc_Trial_Balance_Summary
+    href: Acc_Trial_Balance_Summary.md
   - name: Acc_Voucher_Correspondances
     href: Acc_Voucher_Correspondances.md
   - name: Acc_Voucher_Lines
@@ -207,8 +209,8 @@
     href: Cmm_Notifications_Summary_View.md
   - name: Cmm_Social_Comments
     href: Cmm_Social_Comments.md
-  - name: Cmm_Social_Followed_Entities_Indexed_View
-    href: Cmm_Social_Followed_Entities_Indexed_View.md
+  - name: Cmm_Social_Followed_Entities
+    href: Cmm_Social_Followed_Entities.md
   - name: Cmm_Social_Follows
     href: Cmm_Social_Follows.md
   - name: Cmm_Social_Group_Members
@@ -219,8 +221,8 @@
     href: Cmm_Social_Posts.md
   - name: Cmm_Social_Reactions
     href: Cmm_Social_Reactions.md
-  - name: Cmm_Social_Reactions_Summary_Indexed_View
-    href: Cmm_Social_Reactions_Summary_Indexed_View.md
+  - name: Cmm_Social_Reactions_Summary
+    href: Cmm_Social_Reactions_Summary.md
 - name: Cms
   href: Cms.md
   items:

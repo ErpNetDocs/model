@@ -21,5 +21,6 @@ uid: Finance.Accounting
 - [TemplateRouteLinks](Finance.Accounting.TemplateRouteLinks.md)  
 - [Templates](Finance.Accounting.Templates.md)  
 - [TrialBalanceDetailed](Finance.Accounting.TrialBalanceDetailed.md)  
+- [TrialBalanceSummary](Finance.Accounting.TrialBalanceSummary.md)  
 - [VoucherCorrespondances](Finance.Accounting.VoucherCorrespondances.md)  
 

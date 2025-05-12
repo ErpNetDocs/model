@@ -11,14 +11,14 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`uniqueidentifier` |Account|
-|[Closing](#closing)|`decimal(38, 2)` |Closing|
-|[Closing_Base](#closing_base)|`decimal(38, 2)` |Closing Base|
-|[Closing_Credit](#closing_credit)|`decimal(38, 2)` |Closing Credit|
-|[Closing_Credit_Base](#closing_credit_base)|`decimal(38, 2)` |Closing Credit Base|
-|[Closing_Debit](#closing_debit)|`decimal(38, 2)` |Closing Debit|
-|[Closing_Debit_Base](#closing_debit_base)|`decimal(38, 2)` |Closing Debit Base|
-|[Closing_Reporting](#closing_reporting)|`decimal(38, 2)` |Closing Reporting|
+|[Account_Id](#account_id)|`uniqueidentifier` |General Ledger Account|
+|[Closing](#closing)|`decimal(38, 2)` |Closing Balance (debit balance is positive, credit - negative)|
+|[Closing_Base](#closing_base)|`decimal(38, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
+|[Closing_Credit](#closing_credit)|`decimal(38, 2)` |Closing balance when it is credit|
+|[Closing_Credit_Base](#closing_credit_base)|`decimal(38, 2)` |Closing balance in base currency when it is credit|
+|[Closing_Debit](#closing_debit)|`decimal(38, 2)` |Closing balance when it is debit|
+|[Closing_Debit_Base](#closing_debit_base)|`decimal(38, 2)` |Closing balance in base currency when it is debit|
+|[Closing_Reporting](#closing_reporting)|`decimal(38, 2)` |Closing balance in reporting currency|
 |[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` |Cost Center|
 |[Credit](#credit)|`decimal(38, 2)` |Credit|
 |[Credit_Base](#credit_base)|`decimal(38, 2)` |Credit Base|
@@ -28,7 +28,7 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 |[Debit_Base](#debit_base)|`decimal(38, 2)` |Debit Base|
 |[Debit_Reporting](#debit_reporting)|`decimal(38, 2)` |Debit Reporting|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise Company|
-|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Enterprise Company Location|
+|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Company Location / Branch|
 |[Example_Voucher_Line_Id](#example_voucher_line_id)|`uniqueidentifier` |This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line.|
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item Key|
@@ -53,13 +53,13 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 |[Level_5_Account_Group_Id](#level_5_account_group_id)|`uniqueidentifier` |Level 5 Account Group|
 |[Level_5_Account_Property_Id](#level_5_account_property_id)|`uniqueidentifier` |Level 5 Account Property|
 |[Level_6_Account_Group_Id](#level_6_account_group_id)|`uniqueidentifier` |Level 6 Account Group|
-|[Opening](#opening)|`decimal(38, 2)` |Opening|
-|[Opening_Base](#opening_base)|`decimal(38, 2)` |Opening Base|
-|[Opening_Credit](#opening_credit)|`decimal(38, 2)` |Opening Credit|
-|[Opening_Credit_Base](#opening_credit_base)|`decimal(38, 2)` |Opening Credit Base|
-|[Opening_Debit](#opening_debit)|`decimal(38, 2)` |Opening Debit|
-|[Opening_Debit_Base](#opening_debit_base)|`decimal(38, 2)` |Opening Debit Base|
-|[Opening_Repoirting](#opening_repoirting)|`decimal(38, 2)` |Opening Repoirting|
+|[Opening](#opening)|`decimal(38, 2)` |Opening balance (debit balance is positive, credit - negative)|
+|[Opening_Base](#opening_base)|`decimal(38, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
+|[Opening_Credit](#opening_credit)|`decimal(38, 2)` |Opening balance when it is credit|
+|[Opening_Credit_Base](#opening_credit_base)|`decimal(38, 2)` |Opening balance in base currency when it is credit|
+|[Opening_Debit](#opening_debit)|`decimal(38, 2)` |Opening balance when it is debit|
+|[Opening_Debit_Base](#opening_debit_base)|`decimal(38, 2)` |Opening balance in base currency when it is debit|
+|[Opening_Repoirting](#opening_repoirting)|`decimal(38, 2)` |Opening balance in reporting currency|
 |[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` |Profit Center|
 |[To_Date](#to_date)|`date` |Period End Date - Should be filtered with exact date|
 
@@ -68,7 +68,7 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 ### Account_Id
 
 
-Account
+General Ledger Account
 
 | Property | Value |
 | - | - |
@@ -104,7 +104,7 @@ Account
 ### Closing
 
 
-Closing
+Closing Balance (debit balance is positive, credit - negative)
 
 | Property | Value |
 | - | - |
@@ -134,7 +134,7 @@ Closing
 ### Closing_Base
 
 
-Closing Base
+Closing balance in base currency (debit balance is positive, credit - negative)
 
 | Property | Value |
 | - | - |
@@ -164,7 +164,7 @@ Closing Base
 ### Closing_Credit
 
 
-Closing Credit
+Closing balance when it is credit
 
 | Property | Value |
 | - | - |
@@ -194,7 +194,7 @@ Closing Credit
 ### Closing_Credit_Base
 
 
-Closing Credit Base
+Closing balance in base currency when it is credit
 
 | Property | Value |
 | - | - |
@@ -224,7 +224,7 @@ Closing Credit Base
 ### Closing_Debit
 
 
-Closing Debit
+Closing balance when it is debit
 
 | Property | Value |
 | - | - |
@@ -254,7 +254,7 @@ Closing Debit
 ### Closing_Debit_Base
 
 
-Closing Debit Base
+Closing balance in base currency when it is debit
 
 | Property | Value |
 | - | - |
@@ -284,7 +284,7 @@ Closing Debit Base
 ### Closing_Reporting
 
 
-Closing Reporting
+Closing balance in reporting currency
 
 | Property | Value |
 | - | - |
@@ -602,7 +602,7 @@ Enterprise Company
 ### Enterprise_Company_Location_Id
 
 
-Enterprise Company Location
+Company Location / Branch
 
 | Property | Value |
 | - | - |
@@ -1456,7 +1456,7 @@ Level 6 Account Group
 ### Opening
 
 
-Opening
+Opening balance (debit balance is positive, credit - negative)
 
 | Property | Value |
 | - | - |
@@ -1486,7 +1486,7 @@ Opening
 ### Opening_Base
 
 
-Opening Base
+Opening balance in base currency (debit balance is positive, credit - negative)
 
 | Property | Value |
 | - | - |
@@ -1516,7 +1516,7 @@ Opening Base
 ### Opening_Credit
 
 
-Opening Credit
+Opening balance when it is credit
 
 | Property | Value |
 | - | - |
@@ -1546,7 +1546,7 @@ Opening Credit
 ### Opening_Credit_Base
 
 
-Opening Credit Base
+Opening balance in base currency when it is credit
 
 | Property | Value |
 | - | - |
@@ -1576,7 +1576,7 @@ Opening Credit Base
 ### Opening_Debit
 
 
-Opening Debit
+Opening balance when it is debit
 
 | Property | Value |
 | - | - |
@@ -1606,7 +1606,7 @@ Opening Debit
 ### Opening_Debit_Base
 
 
-Opening Debit Base
+Opening balance in base currency when it is debit
 
 | Property | Value |
 | - | - |
@@ -1636,7 +1636,7 @@ Opening Debit Base
 ### Opening_Repoirting
 
 
-Opening Repoirting
+Opening balance in reporting currency
 
 | Property | Value |
 | - | - |

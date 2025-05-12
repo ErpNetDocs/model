@@ -88,7 +88,7 @@
 <h1 id="communitiessocialfollowedentities-view">Communities.Social.FollowedEntities View</h1>
 
 <p><strong>Namespace:</strong> <a href="Communities.Social.html">Communities.Social</a></p>
-<p>Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities_Indexed_View (Introduced in version 22.1.6.3)</p>
+<p>Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities (Introduced in version 22.1.6.3)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
 <em>{UserId}: {DataObjectId}</em><br>
@@ -150,7 +150,6 @@ Show in UI:  <em>CannotBeShown</em></p>
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The followed entity item. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
@@ -174,7 +173,6 @@ Show in UI:  <em>CannotBeShown</em></p>
 <h3 id="user">User</h3>
 <p>The user which follows the entity. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.User_Id</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Sec_Users_Table.User_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

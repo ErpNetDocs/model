@@ -17,6 +17,7 @@
 * [Acc_Template_Route_Links](Acc_Template_Route_Links.md)
 * [Acc_Templates](Acc_Templates.md)
 * [Acc_Trial_Balance_Detailed](Acc_Trial_Balance_Detailed.md)
+* [Acc_Trial_Balance_Summary](Acc_Trial_Balance_Summary.md)
 * [Acc_Voucher_Correspondances](Acc_Voucher_Correspondances.md)
 * [Acc_Voucher_Lines](Acc_Voucher_Lines.md)
 * [Acc_Vouchers](Acc_Vouchers.md)
@@ -113,13 +114,13 @@
 * [Cmm_Notifications](Cmm_Notifications.md)
 * [Cmm_Notifications_Summary_View](Cmm_Notifications_Summary_View.md)
 * [Cmm_Social_Comments](Cmm_Social_Comments.md)
-* [Cmm_Social_Followed_Entities_Indexed_View](Cmm_Social_Followed_Entities_Indexed_View.md)
+* [Cmm_Social_Followed_Entities](Cmm_Social_Followed_Entities.md)
 * [Cmm_Social_Follows](Cmm_Social_Follows.md)
 * [Cmm_Social_Group_Members](Cmm_Social_Group_Members.md)
 * [Cmm_Social_Groups](Cmm_Social_Groups.md)
 * [Cmm_Social_Posts](Cmm_Social_Posts.md)
 * [Cmm_Social_Reactions](Cmm_Social_Reactions.md)
-* [Cmm_Social_Reactions_Summary_Indexed_View](Cmm_Social_Reactions_Summary_Indexed_View.md)
+* [Cmm_Social_Reactions_Summary](Cmm_Social_Reactions_Summary.md)
 
 ## [Cms](Cms.md)
 

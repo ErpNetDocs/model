@@ -13422,6 +13422,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Accounting.TrialBalanceSummary.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Accounting.TrialBalanceSummary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Accounting.VoucherCorrespondances.md",
       "output": {
         ".html": {
@@ -20401,6 +20411,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Acc_Trial_Balance_Summary.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Acc_Trial_Balance_Summary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Acc_Voucher_Correspondances.md",
       "output": {
         ".html": {
@@ -21241,10 +21261,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Cmm_Social_Followed_Entities_Indexed_View.md",
+      "source_relative_path": "tables/Cmm_Social_Followed_Entities.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Cmm_Social_Followed_Entities_Indexed_View.html"
+          "relative_path": "tables/Cmm_Social_Followed_Entities.html"
         }
       },
       "version": ""
@@ -21301,10 +21321,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Cmm_Social_Reactions_Summary_Indexed_View.md",
+      "source_relative_path": "tables/Cmm_Social_Reactions_Summary.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Cmm_Social_Reactions_Summary_Indexed_View.html"
+          "relative_path": "tables/Cmm_Social_Reactions_Summary.html"
         }
       },
       "version": ""

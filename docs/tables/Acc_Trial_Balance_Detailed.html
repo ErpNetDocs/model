@@ -103,42 +103,42 @@
 <tr>
 <td><a href="#account_id">Account_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Account</td>
+<td>General Ledger Account</td>
 </tr>
 <tr>
 <td><a href="#closing">Closing</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing</td>
+<td>Closing Balance (debit balance is positive, credit - negative)</td>
 </tr>
 <tr>
 <td><a href="#closing_base">Closing_Base</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing Base</td>
+<td>Closing balance in base currency (debit balance is positive, credit - negative)</td>
 </tr>
 <tr>
 <td><a href="#closing_credit">Closing_Credit</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing Credit</td>
+<td>Closing balance when it is credit</td>
 </tr>
 <tr>
 <td><a href="#closing_credit_base">Closing_Credit_Base</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing Credit Base</td>
+<td>Closing balance in base currency when it is credit</td>
 </tr>
 <tr>
 <td><a href="#closing_debit">Closing_Debit</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing Debit</td>
+<td>Closing balance when it is debit</td>
 </tr>
 <tr>
 <td><a href="#closing_debit_base">Closing_Debit_Base</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing Debit Base</td>
+<td>Closing balance in base currency when it is debit</td>
 </tr>
 <tr>
 <td><a href="#closing_reporting">Closing_Reporting</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Closing Reporting</td>
+<td>Closing balance in reporting currency</td>
 </tr>
 <tr>
 <td><a href="#cost_center_id">Cost_Center_Id</a></td>
@@ -188,7 +188,7 @@
 <tr>
 <td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Enterprise Company Location</td>
+<td>Company Location / Branch</td>
 </tr>
 <tr>
 <td><a href="#example_voucher_line_id">Example_Voucher_Line_Id</a></td>
@@ -313,37 +313,37 @@
 <tr>
 <td><a href="#opening">Opening</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening</td>
+<td>Opening balance (debit balance is positive, credit - negative)</td>
 </tr>
 <tr>
 <td><a href="#opening_base">Opening_Base</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening Base</td>
+<td>Opening balance in base currency (debit balance is positive, credit - negative)</td>
 </tr>
 <tr>
 <td><a href="#opening_credit">Opening_Credit</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening Credit</td>
+<td>Opening balance when it is credit</td>
 </tr>
 <tr>
 <td><a href="#opening_credit_base">Opening_Credit_Base</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening Credit Base</td>
+<td>Opening balance in base currency when it is credit</td>
 </tr>
 <tr>
 <td><a href="#opening_debit">Opening_Debit</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening Debit</td>
+<td>Opening balance when it is debit</td>
 </tr>
 <tr>
 <td><a href="#opening_debit_base">Opening_Debit_Base</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening Debit Base</td>
+<td>Opening balance in base currency when it is debit</td>
 </tr>
 <tr>
 <td><a href="#opening_repoirting">Opening_Repoirting</a></td>
 <td><code>decimal(38, 2)</code></td>
-<td>Opening Repoirting</td>
+<td>Opening balance in reporting currency</td>
 </tr>
 <tr>
 <td><a href="#profit_center_id">Profit_Center_Id</a></td>
@@ -359,7 +359,7 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="account_id">Account_Id</h3>
-<p>Account</p>
+<p>General Ledger Account</p>
 <table>
 <thead>
 <tr>
@@ -478,7 +478,7 @@
 </tbody>
 </table>
 <h3 id="closing">Closing</h3>
-<p>Closing</p>
+<p>Closing Balance (debit balance is positive, credit - negative)</p>
 <table>
 <thead>
 <tr>
@@ -578,7 +578,7 @@
 </tbody>
 </table>
 <h3 id="closing_base">Closing_Base</h3>
-<p>Closing Base</p>
+<p>Closing balance in base currency (debit balance is positive, credit - negative)</p>
 <table>
 <thead>
 <tr>
@@ -678,7 +678,7 @@
 </tbody>
 </table>
 <h3 id="closing_credit">Closing_Credit</h3>
-<p>Closing Credit</p>
+<p>Closing balance when it is credit</p>
 <table>
 <thead>
 <tr>
@@ -778,7 +778,7 @@
 </tbody>
 </table>
 <h3 id="closing_credit_base">Closing_Credit_Base</h3>
-<p>Closing Credit Base</p>
+<p>Closing balance in base currency when it is credit</p>
 <table>
 <thead>
 <tr>
@@ -878,7 +878,7 @@
 </tbody>
 </table>
 <h3 id="closing_debit">Closing_Debit</h3>
-<p>Closing Debit</p>
+<p>Closing balance when it is debit</p>
 <table>
 <thead>
 <tr>
@@ -978,7 +978,7 @@
 </tbody>
 </table>
 <h3 id="closing_debit_base">Closing_Debit_Base</h3>
-<p>Closing Debit Base</p>
+<p>Closing balance in base currency when it is debit</p>
 <table>
 <thead>
 <tr>
@@ -1078,7 +1078,7 @@
 </tbody>
 </table>
 <h3 id="closing_reporting">Closing_Reporting</h3>
-<p>Closing Reporting</p>
+<p>Closing balance in reporting currency</p>
 <table>
 <thead>
 <tr>
@@ -2135,7 +2135,7 @@
 </tbody>
 </table>
 <h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
-<p>Enterprise Company Location</p>
+<p>Company Location / Branch</p>
 <table>
 <thead>
 <tr>
@@ -4978,7 +4978,7 @@
 </tbody>
 </table>
 <h3 id="opening">Opening</h3>
-<p>Opening</p>
+<p>Opening balance (debit balance is positive, credit - negative)</p>
 <table>
 <thead>
 <tr>
@@ -5078,7 +5078,7 @@
 </tbody>
 </table>
 <h3 id="opening_base">Opening_Base</h3>
-<p>Opening Base</p>
+<p>Opening balance in base currency (debit balance is positive, credit - negative)</p>
 <table>
 <thead>
 <tr>
@@ -5178,7 +5178,7 @@
 </tbody>
 </table>
 <h3 id="opening_credit">Opening_Credit</h3>
-<p>Opening Credit</p>
+<p>Opening balance when it is credit</p>
 <table>
 <thead>
 <tr>
@@ -5278,7 +5278,7 @@
 </tbody>
 </table>
 <h3 id="opening_credit_base">Opening_Credit_Base</h3>
-<p>Opening Credit Base</p>
+<p>Opening balance in base currency when it is credit</p>
 <table>
 <thead>
 <tr>
@@ -5378,7 +5378,7 @@
 </tbody>
 </table>
 <h3 id="opening_debit">Opening_Debit</h3>
-<p>Opening Debit</p>
+<p>Opening balance when it is debit</p>
 <table>
 <thead>
 <tr>
@@ -5478,7 +5478,7 @@
 </tbody>
 </table>
 <h3 id="opening_debit_base">Opening_Debit_Base</h3>
-<p>Opening Debit Base</p>
+<p>Opening balance in base currency when it is debit</p>
 <table>
 <thead>
 <tr>
@@ -5578,7 +5578,7 @@
 </tbody>
 </table>
 <h3 id="opening_repoirting">Opening_Repoirting</h3>
-<p>Opening Repoirting</p>
+<p>Opening balance in reporting currency</p>
 <table>
 <thead>
 <tr>

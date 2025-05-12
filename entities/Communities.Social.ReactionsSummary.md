@@ -5,7 +5,7 @@ uid: Communities.Social.ReactionsSummary
 
 **Namespace:** [Communities.Social](Communities.Social.md)  
 
-Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary_Indexed_View (Introduced in version 22.1.6.73)
+Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary (Introduced in version 22.1.6.73)
 
 ## Default Visualization
 Default Display Text Format:  
@@ -78,7 +78,6 @@ _Show in UI_: **ShownByDefault**
 The extensible data object. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Inherited From_: **Sys_Objects_Table.Object_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
