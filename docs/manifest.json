@@ -13322,6 +13322,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Accounting.CurrentBalances.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Accounting.CurrentBalances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Accounting.FinancialStatementNodeCorrespondances.md",
       "output": {
         ".html": {
@@ -20305,6 +20315,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Acc_Cost_Centers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Acc_Current_Balances.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Acc_Current_Balances.html"
         }
       },
       "version": ""

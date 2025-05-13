@@ -11,6 +11,7 @@ User-classified project type. Entity: Apm_Project_Types (Introduced in version 2
 
 | Name | Type | Description |
 | - | - | --- |
+|[Description](#description)|`nvarchar(254)` `ML`|Description of the project type.|
 |[Icon](#icon)|`nvarchar(128)` |Icon name from the Font Awesome icon set.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the project type is active for new projects.|
 |[Project_Type_Id](#project_type_id)|`uniqueidentifier` `PK`||
@@ -18,6 +19,42 @@ User-classified project type. Entity: Apm_Project_Types (Introduced in version 2
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### Description
+
+
+Description of the project type.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|5|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Description - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Icon
 

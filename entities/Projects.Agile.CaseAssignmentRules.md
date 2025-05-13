@@ -29,6 +29,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29` 
 | [DisplayText](Projects.Agile.CaseAssignmentRules.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)` 
 | [Id](Projects.Agile.CaseAssignmentRules.md#id) | guid |  
@@ -44,7 +45,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignToUser](Projects.Agile.CaseAssignmentRules.md#assigntouser) | [Users](Systems.Security.Users.md) | The user who will be automatically assigned to the case when the rule conditions are matched. `Required` `Filter(multi eq)` |
+| [AssignToUser](Projects.Agile.CaseAssignmentRules.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | The user who will be automatically assigned to the case when the rule conditions are matched. `Filter(multi eq)` |
 | [CaseCategory](Projects.Agile.CaseAssignmentRules.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) (nullable) | The case category to which the rule applies. null means the rule applies to all categories. `Filter(multi eq)` |
 | [Project](Projects.Agile.CaseAssignmentRules.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | The project to which the rule applies. null means the rule applies to all projects. `Filter(multi eq)` |
 | [ProjectArea](Projects.Agile.CaseAssignmentRules.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The project area to which the rule applies. null means the rule applies to all project areas. `Filter(multi eq)` |
@@ -54,6 +55,28 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AssignmentKind
+
+Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29`
+
+_Type_: **[AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind)**  
+_Category_: **System**  
+Allowed values for the `AssignmentKind`(Projects.Agile.CaseAssignmentRules.md#assignmentkind) data attribute  
+_Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.AssignmentKind Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| AreaResponsible | Area Responsible. Stored as 'ARS'. <br /> _Database Value:_ 'ARS' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AreaResponsible' |
+| ProjectResponsible | Project Responsible. Stored as 'PRS'. <br /> _Database Value:_ 'PRS' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ProjectResponsible' |
+| CaseOwner | Case Owner. Stored as 'COW'. <br /> _Database Value:_ 'COW' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'CaseOwner' |
+| CurrentUser | Current User. Stored as 'CUS'. <br /> _Database Value:_ 'CUS' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CurrentUser' |
+| SpecificUser | Specific User. Stored as 'SUS'. <br /> _Database Value:_ 'SUS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'SpecificUser' |
+
+_Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **SpecificUser**  
+_Show in UI_: **ShownByDefault**  
 
 ### DisplayText
 
@@ -192,9 +215,9 @@ _Show in UI_: **ShownByDefault**
 
 ### AssignToUser
 
-The user who will be automatically assigned to the case when the rule conditions are matched. `Required` `Filter(multi eq)`
+The user who will be automatically assigned to the case when the rule conditions are matched. `Filter(multi eq)`
 
-_Type_: **[Users](Systems.Security.Users.md)**  
+_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

@@ -11,6 +11,8 @@
     href: Acc_Accounts.md
   - name: Acc_Cost_Centers
     href: Acc_Cost_Centers.md
+  - name: Acc_Current_Balances
+    href: Acc_Current_Balances.md
   - name: Acc_Financial_Statement_Node_Correspondances
     href: Acc_Financial_Statement_Node_Correspondances.md
   - name: Acc_Financial_Statement_Nodes

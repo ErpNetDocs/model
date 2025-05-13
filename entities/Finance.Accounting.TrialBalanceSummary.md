@@ -45,7 +45,7 @@ Aggregate Tree
 | [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (38, 2) | Opening balance in base currency when it is credit. `Required` 
 | [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (38, 2) | Opening balance when it is debit. `Required` 
 | [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (38, 2) | Opening balance in base currency when it is debit. `Required` 
-| [OpeningRepoirting](Finance.Accounting.TrialBalanceSummary.md#openingrepoirting) | decimal (38, 2) | Opening balance in reporting currency. `Required` 
+| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (38, 2) | Opening Reporting. `Required` 
 | [ToDate](Finance.Accounting.TrialBalanceSummary.md#todate) | date | Period End Date - Should be filtered with exact date. `Required` `Filter(eq)` 
 
 ## References
@@ -266,9 +266,9 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
-### OpeningRepoirting
+### OpeningReporting
 
-Opening balance in reporting currency. `Required`
+Opening Reporting. `Required`
 
 _Type_: **decimal (38, 2)**  
 _Category_: **System**  

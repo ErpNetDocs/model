@@ -116,6 +116,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
+<td><a href="Projects.Agile.CaseAssignmentRules.html#assignmentkind">AssignmentKind</a></td>
+<td><a href="Projects.Agile.CaseAssignmentRules.html#assignmentkind">AssignmentKind</a></td>
+<td>Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. <code>Required</code> <code>Default(&quot;SUS&quot;)</code> <code>Filter(multi eq;like)</code> <code>Introduced in version 25.1.3.29</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.CaseAssignmentRules.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
@@ -179,8 +184,8 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tbody>
 <tr>
 <td><a href="Projects.Agile.CaseAssignmentRules.html#assigntouser">AssignToUser</a></td>
-<td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user who will be automatically assigned to the case when the rule conditions are matched. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
+<td>The user who will be automatically assigned to the case when the rule conditions are matched. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseAssignmentRules.html#casecategory">CaseCategory</a></td>
@@ -215,6 +220,46 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="assignmentkind">AssignmentKind</h3>
+<p>Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. <code>Required</code> <code>Default(&quot;SUS&quot;)</code> <code>Filter(multi eq;like)</code> <code>Introduced in version 25.1.3.29</code></p>
+<p><em>Type</em>: <strong><a href="Projects.Agile.CaseAssignmentRules.html#assignmentkind">AssignmentKind</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>AssignmentKind</code>(Projects.Agile.CaseAssignmentRules.md#assignmentkind) data attribute<br>
+<em>Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.AssignmentKind Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AreaResponsible</td>
+<td>Area Responsible. Stored as 'ARS'. <br> <em>Database Value:</em> 'ARS' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AreaResponsible'</td>
+</tr>
+<tr>
+<td>ProjectResponsible</td>
+<td>Project Responsible. Stored as 'PRS'. <br> <em>Database Value:</em> 'PRS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ProjectResponsible'</td>
+</tr>
+<tr>
+<td>CaseOwner</td>
+<td>Case Owner. Stored as 'COW'. <br> <em>Database Value:</em> 'COW' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'CaseOwner'</td>
+</tr>
+<tr>
+<td>CurrentUser</td>
+<td>Current User. Stored as 'CUS'. <br> <em>Database Value:</em> 'CUS' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'CurrentUser'</td>
+</tr>
+<tr>
+<td>SpecificUser</td>
+<td>Specific User. Stored as 'SUS'. <br> <em>Database Value:</em> 'SUS' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'SpecificUser'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>SpecificUser</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -367,8 +412,8 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assigntouser">AssignToUser</h3>
-<p>The user who will be automatically assigned to the case when the rule conditions are matched. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<p>The user who will be automatically assigned to the case when the rule conditions are matched. <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

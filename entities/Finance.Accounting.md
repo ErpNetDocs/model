@@ -10,6 +10,7 @@ uid: Finance.Accounting
 - [AccountRequiredProperties](Finance.Accounting.AccountRequiredProperties.md)  
 - [Accounts](Finance.Accounting.Accounts.md)  
 - [CostCenters](Finance.Accounting.CostCenters.md)  
+- [CurrentBalances](Finance.Accounting.CurrentBalances.md)  
 - [FinancialStatementNodeCorrespondances](Finance.Accounting.FinancialStatementNodeCorrespondances.md)  
 - [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md)  
 - [FinancialStatements](Finance.Accounting.FinancialStatements.md)  

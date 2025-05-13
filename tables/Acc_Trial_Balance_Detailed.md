@@ -59,7 +59,7 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 |[Opening_Credit_Base](#opening_credit_base)|`decimal(38, 2)` |Opening balance in base currency when it is credit|
 |[Opening_Debit](#opening_debit)|`decimal(38, 2)` |Opening balance when it is debit|
 |[Opening_Debit_Base](#opening_debit_base)|`decimal(38, 2)` |Opening balance in base currency when it is debit|
-|[Opening_Repoirting](#opening_repoirting)|`decimal(38, 2)` |Opening balance in reporting currency|
+|[Opening_Reporting](#opening_reporting)|`decimal(38, 2)` |Opening balance in reporting currency|
 |[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` |Profit Center|
 |[To_Date](#to_date)|`date` |Period End Date - Should be filtered with exact date|
 
@@ -1633,7 +1633,7 @@ Opening balance in base currency when it is debit
 |User Login|no|
 |Visible|yes|
 
-### Opening_Repoirting
+### Opening_Reporting
 
 
 Opening balance in reporting currency

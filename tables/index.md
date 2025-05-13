@@ -6,6 +6,7 @@
 * [Acc_Account_Required_Properties](Acc_Account_Required_Properties.md)
 * [Acc_Accounts](Acc_Accounts.md)
 * [Acc_Cost_Centers](Acc_Cost_Centers.md)
+* [Acc_Current_Balances](Acc_Current_Balances.md)
 * [Acc_Financial_Statement_Node_Correspondances](Acc_Financial_Statement_Node_Correspondances.md)
 * [Acc_Financial_Statement_Nodes](Acc_Financial_Statement_Nodes.md)
 * [Acc_Financial_Statements](Acc_Financial_Statements.md)

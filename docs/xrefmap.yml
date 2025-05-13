@@ -610,6 +610,9 @@ references:
 - uid: Finance.Accounting.CostCenters
   name: Finance.Accounting.CostCenters Entity
   href: entities/Finance.Accounting.CostCenters.html
+- uid: Finance.Accounting.CurrentBalances
+  name: Finance.Accounting.CurrentBalances View
+  href: entities/Finance.Accounting.CurrentBalances.html
 - uid: Finance.Accounting.FinancialStatementNodeCorrespondances
   name: Finance.Accounting.FinancialStatementNodeCorrespondances Entity
   href: entities/Finance.Accounting.FinancialStatementNodeCorrespondances.html

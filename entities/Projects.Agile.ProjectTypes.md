@@ -31,6 +31,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Description](Projects.Agile.ProjectTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project type. `Filter(like)` `Introduced in version 25.1.3.29` 
 | [DisplayText](Projects.Agile.ProjectTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Icon](Projects.Agile.ProjectTypes.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
 | [Id](Projects.Agile.ProjectTypes.md#id) | guid |  
@@ -40,6 +41,16 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### Description
+
+Description of the project type. `Filter(like)` `Introduced in version 25.1.3.29`
+
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### DisplayText
 

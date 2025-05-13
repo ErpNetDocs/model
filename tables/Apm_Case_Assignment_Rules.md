@@ -12,6 +12,7 @@ Contains rules for automatically assigning cases to users based on the values of
 | Name | Type | Description |
 | - | - | --- |
 |[Assign_To_User_Id](#assign_to_user_id)|`uniqueidentifier` |The user who will be automatically assigned to the case when the rule conditions are matched.|
+|[Assignment_Kind](#assignment_kind)|`char(3)` Allowed: `ARS`, `PRS`, `COW`, `CUS`, `SUS`|Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.|
 |[Case_Assignment_Rule_Id](#case_assignment_rule_id)|`uniqueidentifier` `PK`||
 |[Case_Category_Id](#case_category_id)|`uniqueidentifier` |The case category to which the rule applies. NULL means the rule applies to all categories.|
 |[From_Date](#from_date)|`date` |Starting date of rule validity. NULL means no from date restriction.|
@@ -55,7 +56,7 @@ The user who will be automatically assigned to the case when the rule conditions
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -65,7 +66,45 @@ The user who will be automatically assigned to the case when the rule conditions
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Assignment_Kind
+
+
+Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`ARS`, `PRS`, `COW`, `CUS`, `SUS`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|SUS|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|16|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Assignment_Kind - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
 |Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Case_Assignment_Rule_Id
 
