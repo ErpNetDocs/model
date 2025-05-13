@@ -113,7 +113,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(Project)</td>
+<td>AttributeChanged(Project, ProjectArea)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -125,11 +125,13 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Set value: SocialGroup = Project.SocialGroup</td>
+<td>If a Project Area is selected and it has an assigned Social Group, this group is set in the Case.<br>
+Otherwise, the Social Group from the selected Project is assigned to the Case.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule ensures that the Case will inherit the Social Group of the selected Project.</td>
+<td>The rule ensures that the case inherits the social group from the selected project area.
+If the project area has no assigned social group or is not specified, the case inherits the social group from its project.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
