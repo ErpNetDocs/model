@@ -395,6 +395,8 @@
       href: Finance.Accounting.AccountRequiredProperties.md
     - name: Accounts
       href: Finance.Accounting.Accounts.md
+    - name: AccountStatement
+      href: Finance.Accounting.AccountStatement.md
     - name: CostCenters
       href: Finance.Accounting.CostCenters.md
     - name: CurrentBalances

@@ -598,6 +598,9 @@ references:
 - uid: Finance.Accounting.AccountRequiredProperties
   name: Finance.Accounting.AccountRequiredProperties Entity
   href: entities/Finance.Accounting.AccountRequiredProperties.html
+- uid: Finance.Accounting.AccountStatement
+  name: Finance.Accounting.AccountStatement View
+  href: entities/Finance.Accounting.AccountStatement.html
 - uid: Finance.Accounting.AccountingVoucherLines
   name: Finance.Accounting.AccountingVoucherLines Entity
   href: entities/Finance.Accounting.AccountingVoucherLines.html

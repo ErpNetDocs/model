@@ -11042,6 +11042,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R38732.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R38732.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R38742.md",
       "output": {
         ".html": {
@@ -13296,6 +13306,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Accounting.AccountRequiredProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Accounting.AccountStatement.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Accounting.AccountStatement.html"
         }
       },
       "version": ""
@@ -20315,6 +20335,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Acc_Account_Required_Properties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Acc_Account_Statement.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Acc_Account_Statement.html"
         }
       },
       "version": ""

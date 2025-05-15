@@ -147,6 +147,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( Convert( obj.Voucher.DocumentDate, Nullable`1) >= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Debit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.DebitBase.Value * ( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate ?? 0)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
