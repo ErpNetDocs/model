@@ -278,6 +278,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( Convert( obj.Voucher.DocumentDate, Nullable</code>1) &gt;= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Credit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.CreditBase.Value * Convert( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`</p>
 <h3 id="debit">Debit</h3>
 <p>The amount of the debit in the currency of the account. 0 means that the account is not debited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
@@ -302,7 +304,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( Convert( obj.Voucher.DocumentDate, Nullable</code>1) &gt;= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Debit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.DebitBase.Value * ( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate ?? 0)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`</p>
+<code>IIF( ( Convert( obj.Voucher.DocumentDate, Nullable</code>1) &gt;= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Debit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.DebitBase.Value * Convert( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`</p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -523,6 +525,7 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R38732.html">R38732 Accounting Voucher Line - Set Debit Reporting (Recalc)</a></li>
+<li><a href="../business-rules/R38733.html">R38733 Accounting Voucher Line - Set Credit Reporting (Recalc)</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:

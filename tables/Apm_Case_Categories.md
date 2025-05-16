@@ -14,6 +14,7 @@ Determines the type and workflow of the cases. Entity: Apm_Case_Categories (Intr
 |[Case_Category_Id](#case_category_id)|`uniqueidentifier` `PK`||
 |[Case_Category_Name](#case_category_name)|`nvarchar(256)` `ML`|Use short, singular phrase to describe a category of cases|
 |[Description_Template](#description_template)|`nvarchar(max)` |Interpolated string that sets a value for the Description field when creating new cases of this category.|
+|[Hide_Unused_System_States](#hide_unused_system_states)|`bit` |If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown.|
 |[Icon](#icon)|`nvarchar(128)` |Icon name from the Font Awesome icon set.|
 |[Inherit_From](#inherit_from)|`uniqueidentifier` |Specified when the current category inherits from another category. User states are inherited, along with other settings related to the category.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the category is active for new cases.|
@@ -128,6 +129,42 @@ Interpolated string that sets a value for the Description field when creating ne
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
+
+### Hide_Unused_System_States
+
+
+If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|10|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Hide_Unused_System_States - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Icon
 

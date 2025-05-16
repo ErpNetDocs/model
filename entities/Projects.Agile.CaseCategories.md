@@ -36,6 +36,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DescriptionTemplate](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Description field when creating new cases of this category. `Filter(like)` `Introduced in version 25.1.2.76` 
 | [DisplayText](Projects.Agile.CaseCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [HideUnusedSystemStates](Projects.Agile.CaseCategories.md#hideunusedsystemstates) | boolean | If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown. `Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.32` 
 | [Icon](Projects.Agile.CaseCategories.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
 | [Id](Projects.Agile.CaseCategories.md#id) | guid |  
 | [IsActive](Projects.Agile.CaseCategories.md#isactive) | boolean | Specifies whether the category is active for new cases. `Required` `Default(true)` `Filter(eq)` 
@@ -81,6 +82,17 @@ _Category_: **Calculated Attributes**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### HideUnusedSystemStates
+
+If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown. `Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.32`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### Icon
 

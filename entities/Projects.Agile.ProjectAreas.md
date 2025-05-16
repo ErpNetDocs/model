@@ -47,6 +47,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [PrimaryUser](Projects.Agile.ProjectAreas.md#primaryuser) | [Users](Systems.Security.Users.md) (nullable) | Specified, when there is a primary user for the area. `Filter(multi eq)` |
 | [Project](Projects.Agile.ProjectAreas.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | Specified for local project areas. null means that the area is global and assignable for all projects. `Filter(multi eq)` |
+| [SocialGroup](Projects.Agile.ProjectAreas.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | When specified, restricts the visibility of the cases within the project area to the members of the social group. `Filter(multi eq)` `Introduced in version 25.1.3.32` |
 
 
 ## Attribute Details
@@ -160,6 +161,15 @@ Specified for local project areas. null means that the area is global and assign
 
 _Type_: **[Projects](Projects.Agile.Projects.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### SocialGroup
+
+When specified, restricts the visibility of the cases within the project area to the members of the social group. `Filter(multi eq)` `Introduced in version 25.1.3.32`
+
+_Type_: **[Groups](Communities.Social.Groups.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
