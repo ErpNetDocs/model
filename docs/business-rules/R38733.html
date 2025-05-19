@@ -140,22 +140,14 @@ ReportingCurrency))</td>
 <tr>
 <td><strong>Description</strong></td>
 <td>Calculates the value of the CreditReporting field in an account voucher line when the
-Credit, CreditBase, or the document’s CurrencyDirectory is modified.
-The logic is as</td>
+Credit, CreditBase, or the document’s CurrencyDirectory is modified.The logic is as follows:
+1/ If the document date is on or after the ReportingCurrencyStartDate set in the
+Enterprise Company, the value is calculated using:CreditReporting =
+ConvertToReportingCurrency(Credit, CurrencyDirectory); 2/ If the document date is before
+the start date, the value is calculated using: CreditReporting = CreditBase *
+ReportingCurrencyRate. The result is expressed in the reporting currency defined in the
+Enterprise Company.</td>
 </tr>
-</tbody>
-</table>
-<p>The logic is as        |
-|                      | follows:</p>
-<ul>
-<li>If the document date is on or after the ReportingCurrencyStartDate set in the    |
-|                      | Enterprise Company, the value is calculated using:
-|</li>
-</ul>
-<table>
-<col style="width:18.97%">
-<col style="width:81.03%">
-<tbody>
 <tr>
 <td><strong>Message</strong></td>
 <td></td>
