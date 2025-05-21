@@ -20,6 +20,7 @@ Determines the type and workflow of the cases. Entity: Apm_Case_Categories (Intr
 |[Is_Active](#is_active)|`bit` |Specifies whether the category is active for new cases.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Ord](#ord)|`int` |Display order of the category relative to other categories within the project type.|
+|[Requires_Parent](#requires_parent)|`bit` |Specifies whether a parent case is required for cases of this category.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -327,6 +328,42 @@ Display order of the category relative to other categories within the project ty
 |Visible|yes|
 
 #### Ord - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Requires_Parent
+
+
+Specifies whether a parent case is required for cases of this category.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|11|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Requires_Parent - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

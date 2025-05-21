@@ -11,6 +11,7 @@ Agile project, used to logically group cases. Entity: Apm_Projects (Introduced i
 
 | Name | Type | Description |
 | - | - | --- |
+|[Access_Key_Id](#access_key_id)|`uniqueidentifier` ||
 |[Consider_Wip_Limit](#consider_wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Specified, when the project is for a customer.|
 |[Description](#description)|`nvarchar(254)` `ML`|Description of the project.|
@@ -27,6 +28,40 @@ Agile project, used to logically group cases. Entity: Apm_Projects (Introduced i
 |[Wip_Limit](#wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state|
 
 ## Columns
+
+### Access_Key_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|14|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Access_Key_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Consider_Wip_Limit
 

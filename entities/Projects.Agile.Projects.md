@@ -48,6 +48,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AccessKey](Projects.Agile.Projects.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this Project. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.3.39` |
 | [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
 | [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. `Required` `Filter(multi eq)` |
 | [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. `Required` `Filter(multi eq)` |
@@ -170,6 +171,24 @@ _Show in UI_: **CannotBeShown**
 
 ## Reference Details
 
+### AccessKey
+
+The access key, containing the permissions for this Project. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.3.39`
+
+_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **CannotBeShown**  
+
+
+_Remarks_  
+Supported permissions
+
+| Permission | Type |
+| --- | --- |
+| Update | - |
+| Delete | - |
+| Administer (manage security)| - |
 ### Customer
 
 Specified, when the project is for a customer. `Filter(multi eq)`

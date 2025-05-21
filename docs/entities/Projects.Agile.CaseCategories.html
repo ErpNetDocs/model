@@ -173,6 +173,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>int32</td>
 <td>Display order of the category relative to other categories within the project type. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
 </tr>
+<tr>
+<td><a href="Projects.Agile.CaseCategories.html#requiresparent">RequiresParent</a></td>
+<td>boolean</td>
+<td>Specifies whether a parent case is required for cases of this category. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.39</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -295,6 +300,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="requiresparent">RequiresParent</h3>
+<p>Specifies whether a parent case is required for cases of this category. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.39</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="inheritfrom">InheritFrom</h3>

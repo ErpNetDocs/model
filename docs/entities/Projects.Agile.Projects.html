@@ -186,6 +186,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
+<td><a href="Projects.Agile.Projects.html#accesskey">AccessKey</a></td>
+<td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
+<td>The access key, containing the permissions for this Project. An empty value means that all users have unlimited permissions. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.39</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Projects.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
 <td>Specified, when the project is for a customer. <code>Filter(multi eq)</code></td>
@@ -288,6 +293,36 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="accesskey">AccessKey</h3>
+<p>The access key, containing the permissions for this Project. An empty value means that all users have unlimited permissions. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.39</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p><em>Remarks</em><br>
+Supported permissions</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Administer (manage security)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 <h3 id="customer">Customer</h3>
 <p>Specified, when the project is for a customer. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>

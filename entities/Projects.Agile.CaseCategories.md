@@ -44,6 +44,7 @@ Aggregate Tree
 | [Notes](Projects.Agile.CaseCategories.md#notes) | string (max) __nullable__ | Notes for this CaseCategory. 
 | [ObjectVersion](Projects.Agile.CaseCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Ord](Projects.Agile.CaseCategories.md#ord) | int32 | Display order of the category relative to other categories within the project type. `Required` `Default(1)` `Filter(eq)` 
+| [RequiresParent](Projects.Agile.CaseCategories.md#requiresparent) | boolean | Specifies whether a parent case is required for cases of this category. `Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.39` 
 
 ## References
 
@@ -165,6 +166,17 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+_Show in UI_: **ShownByDefault**  
+
+### RequiresParent
+
+Specifies whether a parent case is required for cases of this category. `Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.39`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 _Show in UI_: **ShownByDefault**  
 
 

@@ -21,7 +21,6 @@ Cost corrections provide a way to correct the cost of stock transactions after t
 |[From_Date](#from_date)|`datetime` |The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is NULL.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
-|[IsValid](#isvalid)|`bit` |Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Source_Transaction_Id](#source_transaction_id)|`uniqueidentifier` Readonly|Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction.|
 |[Thru_Date](#thru_date)|`datetime` |The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is NULL.|
@@ -239,36 +238,6 @@ Specifies whether the document is a single execution of its order document.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
-
-### IsValid
-
-
-Obsolete. Not used. (Should be set to 1 if the document is completed and not void. Required for the indexed view Inv_Cost_Corrections_Summary, because Gen_Documents_Table cannot be included in the view)
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|False|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|bit|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Row_Version
 

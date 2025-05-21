@@ -30,7 +30,6 @@ Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The entity name of the document header.|
 |[From_Company_Division_Id](#from_company_division_id)|`uniqueidentifier` |The division of the company, issuing the document. NULL when the document is not issued by any specific division|
 |[From_Party_Id](#from_party_id)|`uniqueidentifier` |The party which issued the document|
-|[Grouping_Key](#grouping_key)|`uniqueidentifier` |A key distinguishes rows from different transactions in indexed views and helps prevent locking issues.|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Master_Document_Id](#master_document_id)|`uniqueidentifier` |In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -740,42 +739,6 @@ The party which issued the document
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
-
-### Grouping_Key
-
-
-A key distinguishes rows from different transactions in indexed views and helps prevent locking issues.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
-
-#### Grouping_Key - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Id
 
