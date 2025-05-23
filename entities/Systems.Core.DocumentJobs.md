@@ -134,6 +134,7 @@ _Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)_
 | DeleteAttribute<br />ChangesHistory | Delete attribute changes history. Stored as 'DAC'. <br /> _Database Value:_ 'DAC' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'DeleteAttribute<br />ChangesHistory' |
 | DeleteOldAuditLogs | Delete Old Audit Logs. Stored as 'DAL'. <br /> _Database Value:_ 'DAL' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'DeleteOldAuditLogs' |
 | CompleteUnfinished<br />TimeEntries | Complete Unfinished Time Entries. Stored as 'CTE'. <br /> _Database Value:_ 'CTE' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'CompleteUnfinished<br />TimeEntries' |
+| CalculateReporting<br />CurrencyAmounts | Calculate historical Reporting currency amounts. Stored as 'CRC'. <br /> _Database Value:_ 'CRC' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'CalculateReporting<br />CurrencyAmounts' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
