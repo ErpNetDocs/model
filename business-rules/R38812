@@ -1,0 +1,46 @@
+---
+erp.type: business-rule
+erp.entity: Crm.Sales.CustomerExternalAccess
+---
+
+# R38812 CustomerExternalAccess – Admin Cannot Modify Owner
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Code**                    | R38812                                                                                |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Entity**                  | @Crm.Sales.CustomerExternalAccess                                                      |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Name**                    | AdminCannotModifyOwner                                                           |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Attribute**               | \-                                                                                    |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Layer**                   | Back-End                                                                              |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Events**                  | Commit                                                                                |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Record State**            | Deleted                                                                               |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Priority**                | Normal                                                                                |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Modify**                  | NO                                                                                    |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Action**                  | If the current user has Role L80 – Admin,                                             | 
+|                             | then they are not allowed to delete or edit any CustomerExternalAccess record         | 
+|                             | associated with a user who has Role L90 – Owner.                                      | 
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Description**             | To ensure security and preserve role hierarchy, L80 – Admin users are restricted from | 
+|                             | modifying access settings of higher-privilege users. Specifically, they cannot edit   | 
+|                             | or delete any CustomerExternalAccess records associated with users holding the        |
+|                             | L90 – Owner role.                                                                     |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Message**                 | Action denied: Role L80 – Admin does not have sufficient permissions to edit or delete| 
+|                             | a user with Role L90 – Owner.                                                         |  
+|                             | <br><br>                                                                              |    
+|                             | Please contact a user with higher permissions.                                        | 
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Version**                 | Introduced: v.25                                                                      |
++-----------------------------+---------------------------------------------------------------------------------------+
+| **Revocable**               | NO                                                                                    |
++-----------------------------+---------------------------------------------------------------------------------------+
+
+*\* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic [System Business Rules](../templates/template-description-system-business-rules.md).*
