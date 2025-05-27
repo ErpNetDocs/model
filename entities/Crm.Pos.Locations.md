@@ -26,6 +26,8 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Crm.Pos.Locations](Crm.Pos.Locations.md)  
+  * [Crm.Pos.LocationAreas](Crm.Pos.LocationAreas.md)  
+  * [Crm.Pos.ExecutionResources](Crm.Pos.ExecutionResources.md)  
 
 ## Attributes
 
@@ -43,6 +45,13 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. `Required` `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. `Required` `Filter(multi eq)` |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Areas | [LocationAreas](Crm.Pos.LocationAreas.md) | List of `LocationArea`(Crm.Pos.LocationAreas.md) child objects, based on the `Crm.Pos.LocationArea.Location`(Crm.Pos.LocationAreas.md#location) back reference 
+| ExecutionResources | [ExecutionResources](Crm.Pos.ExecutionResources.md) | List of `ExecutionResource`(Crm.Pos.ExecutionResources.md) child objects, based on the `Crm.Pos.ExecutionResource.Location`(Crm.Pos.ExecutionResources.md#location) back reference 
 
 
 ## Attribute Details

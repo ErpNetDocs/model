@@ -264,8 +264,14 @@
     items:
     - name: Devices
       href: Crm.Pos.Devices.md
+    - name: ExecutionResources
+      href: Crm.Pos.ExecutionResources.md
+    - name: ExecutionStatuses
+      href: Crm.Pos.ExecutionStatuses.md
     - name: FiscalReceiptTemplates
       href: Crm.Pos.FiscalReceiptTemplates.md
+    - name: LocationAreas
+      href: Crm.Pos.LocationAreas.md
     - name: Locations
       href: Crm.Pos.Locations.md
     - name: Operators

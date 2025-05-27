@@ -406,9 +406,18 @@ references:
 - uid: Crm.Pos.Devices
   name: Crm.Pos.Devices Entity
   href: entities/Crm.Pos.Devices.html
+- uid: Crm.Pos.ExecutionResources
+  name: Crm.Pos.ExecutionResources Entity
+  href: entities/Crm.Pos.ExecutionResources.html
+- uid: Crm.Pos.ExecutionStatuses
+  name: Crm.Pos.ExecutionStatuses Entity
+  href: entities/Crm.Pos.ExecutionStatuses.html
 - uid: Crm.Pos.FiscalReceiptTemplates
   name: Crm.Pos.FiscalReceiptTemplates Entity
   href: entities/Crm.Pos.FiscalReceiptTemplates.html
+- uid: Crm.Pos.LocationAreas
+  name: Crm.Pos.LocationAreas Entity
+  href: entities/Crm.Pos.LocationAreas.html
 - uid: Crm.Pos.Locations
   name: Crm.Pos.Locations Entity
   href: entities/Crm.Pos.Locations.html

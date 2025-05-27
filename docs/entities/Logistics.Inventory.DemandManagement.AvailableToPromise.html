@@ -125,7 +125,7 @@ Show in UI:  <em>ShownByDefault</em></p>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromise.html#fromdate">FromDate</a></td>
 <td>datetime</td>
-<td>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromise.html#movementsbase">MovementsBase</a></td>
@@ -187,11 +187,11 @@ Show in UI:  <em>ShownByDefault</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="movementsbase">MovementsBase</h3>
 <p>The sum of the quantity of all planned stock movements on this date in а base measurement unit. . <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>

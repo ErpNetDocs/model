@@ -105,7 +105,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a></li>
+<li><a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a>
+<ul>
+<li><a href="Crm.Pos.LocationAreas.html">Crm.Pos.LocationAreas</a></li>
+<li><a href="Crm.Pos.ExecutionResources.html">Crm.Pos.ExecutionResources</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -163,6 +168,28 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Crm.Pos.Locations.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
 <td>The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Areas</td>
+<td><a href="Crm.Pos.LocationAreas.html">LocationAreas</a></td>
+<td>List of <code>LocationArea</code>(Crm.Pos.LocationAreas.md) child objects, based on the <code>Crm.Pos.LocationArea.Location</code>(Crm.Pos.LocationAreas.md#location) back reference</td>
+</tr>
+<tr>
+<td>ExecutionResources</td>
+<td><a href="Crm.Pos.ExecutionResources.html">ExecutionResources</a></td>
+<td>List of <code>ExecutionResource</code>(Crm.Pos.ExecutionResources.md) child objects, based on the <code>Crm.Pos.ExecutionResource.Location</code>(Crm.Pos.ExecutionResources.md#location) back reference</td>
 </tr>
 </tbody>
 </table>

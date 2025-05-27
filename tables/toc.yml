@@ -906,8 +906,14 @@
   items:
   - name: Pos_Devices
     href: Pos_Devices.md
+  - name: Pos_Execution_Resources
+    href: Pos_Execution_Resources.md
+  - name: Pos_Execution_Statuses
+    href: Pos_Execution_Statuses.md
   - name: Pos_Fiscal_Receipt_Templates
     href: Pos_Fiscal_Receipt_Templates.md
+  - name: Pos_Location_Areas
+    href: Pos_Location_Areas.md
   - name: Pos_Locations
     href: Pos_Locations.md
   - name: Pos_Operators

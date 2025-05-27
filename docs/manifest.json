@@ -12622,10 +12622,40 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.ExecutionResources.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.ExecutionResources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.ExecutionStatuses.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.ExecutionStatuses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Pos.FiscalReceiptTemplates.md",
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Pos.FiscalReceiptTemplates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.LocationAreas.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.LocationAreas.html"
         }
       },
       "version": ""
@@ -24731,10 +24761,40 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Execution_Resources.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Execution_Resources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Execution_Statuses.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Execution_Statuses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Pos_Fiscal_Receipt_Templates.md",
       "output": {
         ".html": {
           "relative_path": "tables/Pos_Fiscal_Receipt_Templates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Location_Areas.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Location_Areas.html"
         }
       },
       "version": ""

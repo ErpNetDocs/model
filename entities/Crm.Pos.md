@@ -5,7 +5,10 @@ uid: Crm.Pos
 
 ## Entities
 - [Devices](Crm.Pos.Devices.md)  
+- [ExecutionResources](Crm.Pos.ExecutionResources.md)  
+- [ExecutionStatuses](Crm.Pos.ExecutionStatuses.md)  
 - [FiscalReceiptTemplates](Crm.Pos.FiscalReceiptTemplates.md)  
+- [LocationAreas](Crm.Pos.LocationAreas.md)  
 - [Locations](Crm.Pos.Locations.md)  
 - [Operators](Crm.Pos.Operators.md)  
 - [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md)  
