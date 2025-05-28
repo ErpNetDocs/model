@@ -9,6 +9,9 @@
 * [Pos_Operators](Pos_Operators.md)
 * [Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md)
 * [Pos_Roles](Pos_Roles.md)
+* [Pos_Sale_Lines](Pos_Sale_Lines.md)
+* [Pos_Sale_Payments](Pos_Sale_Payments.md)
+* [Pos_Sales](Pos_Sales.md)
 * [Pos_Sequences](Pos_Sequences.md)
 * [Pos_Terminals](Pos_Terminals.md)
 

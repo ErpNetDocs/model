@@ -12702,6 +12702,36 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.SaleLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.SaleLines.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.SalePayments.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.SalePayments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.Sales.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.Sales.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Pos.Sequences.md",
       "output": {
         ".html": {
@@ -19162,6 +19192,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Monitoring.AppsPerformance.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Monitoring.AppsPerformance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Monitoring.AuditLogEntries.md",
       "output": {
         ".html": {
@@ -22291,6 +22331,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Dmv_Apps_Performance.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Dmv_Apps_Performance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Dmv_Audit_Log_Entries.md",
       "output": {
         ".html": {
@@ -24835,6 +24885,36 @@
       "output": {
         ".html": {
           "relative_path": "tables/Pos_Roles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Sale_Lines.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Sale_Lines.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Sale_Payments.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Sale_Payments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Sales.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Sales.html"
         }
       },
       "version": ""

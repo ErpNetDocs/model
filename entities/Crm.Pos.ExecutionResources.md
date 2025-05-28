@@ -36,7 +36,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Capacity](Crm.Pos.ExecutionResources.md#capacity) | int32 __nullable__ | Optional: number of simultaneous uses (e.g., seating for 4). `Filter(eq;ge;le)` 
-| [Code](Crm.Pos.ExecutionResources.md#code) | string (16) | Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` 
+| [Code](Crm.Pos.ExecutionResources.md#code) | string (16) | Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Crm.Pos.ExecutionResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Pos.ExecutionResources.md#id) | guid |  
 | [IsActive](Crm.Pos.ExecutionResources.md#isactive) | boolean | Indicates whether the POS execution resource  is currently active. `Required` `Default(true)` `Filter(eq)` 
@@ -66,12 +66,13 @@ _Show in UI_: **ShownByDefault**
 
 ### Code
 
-Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)`
+Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **16**  
 _Show in UI_: **ShownByDefault**  
 
@@ -154,7 +155,6 @@ _Show in UI_: **ShownByDefault**
 The POS location where the resource is situated. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Locations](Crm.Pos.Locations.md)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  

@@ -280,6 +280,12 @@
       href: Crm.Pos.ProductTypeTaxGroups.md
     - name: Roles
       href: Crm.Pos.Roles.md
+    - name: SaleLines
+      href: Crm.Pos.SaleLines.md
+    - name: SalePayments
+      href: Crm.Pos.SalePayments.md
+    - name: Sales
+      href: Crm.Pos.Sales.md
     - name: Sequences
       href: Crm.Pos.Sequences.md
     - name: Terminals
@@ -1270,6 +1276,8 @@
   - name: Monitoring
     href: Systems.Monitoring.md
     items:
+    - name: AppsPerformance
+      href: Systems.Monitoring.AppsPerformance.md
     - name: AuditLogEntries
       href: Systems.Monitoring.AuditLogEntries.md
     - name: AuditLogSummary

@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique (within the location) short code, e.g., DINING, ZONE-A. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Unique (within the location) short code, e.g., DINING, ZONE-A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#displaytext">DisplayText</a></td>
@@ -180,11 +180,12 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique (within the location) short code, e.g., DINING, ZONE-A. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Unique (within the location) short code, e.g., DINING, ZONE-A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
@@ -246,7 +247,6 @@ Aggregate Root:<br>
 <h3 id="location">Location</h3>
 <p>Parent shop, salon or facility. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>

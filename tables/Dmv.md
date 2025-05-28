@@ -1,5 +1,6 @@
 # Dmv
 
+* [Dmv_Apps_Performance](Dmv_Apps_Performance.md)
 * [Dmv_Audit_Log_Entries](Dmv_Audit_Log_Entries.md)
 * [Dmv_Current_Sessions](Dmv_Current_Sessions.md)
 * [Dmv_Exec_Stats](Dmv_Exec_Stats.md)

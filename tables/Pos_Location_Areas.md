@@ -47,7 +47,7 @@ Unique (within the location) short code, e.g., DINING, ZONE-A.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(16)|

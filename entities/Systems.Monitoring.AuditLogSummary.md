@@ -82,8 +82,8 @@ The event primary classification, which shows the source of the event. E=Entity 
 
 _Type_: **[EventClass](Systems.Monitoring.AuditLogSummary.md#eventclass)**  
 _Category_: **System**  
-Allowed values for the `EventClass`(Systems.Monitoring.AuditLogEntries.md#eventclass) data attribute  
-_Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Members)_  
+Allowed values for the `EventClass`(Systems.Monitoring.AuditLogSummary.md#eventclass) data attribute  
+_Allowed Values (Systems.Monitoring.AuditLogSummaryRepository.EventClass Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -92,8 +92,8 @@ _Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Me
 | Server | Server value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Server' |
 
 _Inherited From_: **Sys_Audit_Log_Entries_Table.Event_Class**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **True**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
 ### TotalSizeMB

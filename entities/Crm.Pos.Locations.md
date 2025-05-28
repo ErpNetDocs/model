@@ -26,8 +26,8 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Crm.Pos.Locations](Crm.Pos.Locations.md)  
-  * [Crm.Pos.LocationAreas](Crm.Pos.LocationAreas.md)  
   * [Crm.Pos.ExecutionResources](Crm.Pos.ExecutionResources.md)  
+  * [Crm.Pos.LocationAreas](Crm.Pos.LocationAreas.md)  
 
 ## Attributes
 

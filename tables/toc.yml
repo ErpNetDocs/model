@@ -397,6 +397,8 @@
 - name: Dmv
   href: Dmv.md
   items:
+  - name: Dmv_Apps_Performance
+    href: Dmv_Apps_Performance.md
   - name: Dmv_Audit_Log_Entries
     href: Dmv_Audit_Log_Entries.md
   - name: Dmv_Current_Sessions
@@ -922,6 +924,12 @@
     href: Pos_Product_Type_Tax_Groups.md
   - name: Pos_Roles
     href: Pos_Roles.md
+  - name: Pos_Sale_Lines
+    href: Pos_Sale_Lines.md
+  - name: Pos_Sale_Payments
+    href: Pos_Sale_Payments.md
+  - name: Pos_Sales
+    href: Pos_Sales.md
   - name: Pos_Sequences
     href: Pos_Sequences.md
   - name: Pos_Terminals

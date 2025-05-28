@@ -33,7 +33,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pos.ExecutionStatuses.md#code) | string (16) | Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` 
+| [Code](Crm.Pos.ExecutionStatuses.md#code) | string (16) | Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Crm.Pos.ExecutionStatuses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | The system-defined stage under which is the current status. `Required` `Default("PND")` 
 | [Id](Crm.Pos.ExecutionStatuses.md#id) | guid |  
@@ -54,12 +54,13 @@ Aggregate Tree
 
 ### Code
 
-Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)`
+Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **16**  
 _Show in UI_: **ShownByDefault**  
 

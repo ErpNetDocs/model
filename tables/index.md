@@ -214,6 +214,7 @@
 
 ## [Dmv](Dmv.md)
 
+* [Dmv_Apps_Performance](Dmv_Apps_Performance.md)
 * [Dmv_Audit_Log_Entries](Dmv_Audit_Log_Entries.md)
 * [Dmv_Current_Sessions](Dmv_Current_Sessions.md)
 * [Dmv_Exec_Stats](Dmv_Exec_Stats.md)
@@ -499,6 +500,9 @@
 * [Pos_Operators](Pos_Operators.md)
 * [Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md)
 * [Pos_Roles](Pos_Roles.md)
+* [Pos_Sale_Lines](Pos_Sale_Lines.md)
+* [Pos_Sale_Payments](Pos_Sale_Payments.md)
+* [Pos_Sales](Pos_Sales.md)
 * [Pos_Sequences](Pos_Sequences.md)
 * [Pos_Terminals](Pos_Terminals.md)
 

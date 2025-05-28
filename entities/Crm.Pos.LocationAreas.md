@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pos.LocationAreas.md#code) | string (16) | Unique (within the location) short code, e.g., DINING, ZONE-A. `Required` `Filter(eq;like)` 
+| [Code](Crm.Pos.LocationAreas.md#code) | string (16) | Unique (within the location) short code, e.g., DINING, ZONE-A. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Crm.Pos.LocationAreas.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Pos.LocationAreas.md#id) | guid |  
 | [IsActive](Crm.Pos.LocationAreas.md#isactive) | boolean | Indicates whether the POS location area  is currently active. `Required` `Default(true)` `Filter(eq)` 
@@ -55,12 +55,13 @@ Aggregate Root:
 
 ### Code
 
-Unique (within the location) short code, e.g., DINING, ZONE-A. `Required` `Filter(eq;like)`
+Unique (within the location) short code, e.g., DINING, ZONE-A. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **16**  
 _Show in UI_: **ShownByDefault**  
 
@@ -148,7 +149,6 @@ _Front-End Recalc Expressions:_
 Parent shop, salon or facility. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Locations](Crm.Pos.Locations.md)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  

@@ -430,6 +430,15 @@ references:
 - uid: Crm.Pos.Roles
   name: Crm.Pos.Roles Entity
   href: entities/Crm.Pos.Roles.html
+- uid: Crm.Pos.SaleLines
+  name: Crm.Pos.SaleLines Entity
+  href: entities/Crm.Pos.SaleLines.html
+- uid: Crm.Pos.SalePayments
+  name: Crm.Pos.SalePayments Entity
+  href: entities/Crm.Pos.SalePayments.html
+- uid: Crm.Pos.Sales
+  name: Crm.Pos.Sales Entity
+  href: entities/Crm.Pos.Sales.html
 - uid: Crm.Pos.Sequences
   name: Crm.Pos.Sequences Entity
   href: entities/Crm.Pos.Sequences.html
@@ -2095,6 +2104,9 @@ references:
 - uid: Systems.Monitoring
   name: Systems.Monitoring Namespace
   href: entities/Systems.Monitoring.html
+- uid: Systems.Monitoring.AppsPerformance
+  name: Systems.Monitoring.AppsPerformance View
+  href: entities/Systems.Monitoring.AppsPerformance.html
 - uid: Systems.Monitoring.AuditLogEntries
   name: Systems.Monitoring.AuditLogEntries Entity
   href: entities/Systems.Monitoring.AuditLogEntries.html

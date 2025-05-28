@@ -13,6 +13,9 @@ uid: Crm.Pos
 - [Operators](Crm.Pos.Operators.md)  
 - [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md)  
 - [Roles](Crm.Pos.Roles.md)  
+- [SaleLines](Crm.Pos.SaleLines.md)  
+- [SalePayments](Crm.Pos.SalePayments.md)  
+- [Sales](Crm.Pos.Sales.md)  
 - [Sequences](Crm.Pos.Sequences.md)  
 - [Terminals](Crm.Pos.Terminals.md)  
 

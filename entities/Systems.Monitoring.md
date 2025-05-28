@@ -4,6 +4,7 @@ uid: Systems.Monitoring
 # Systems.Monitoring Namespace
 
 ## Entities
+- [AppsPerformance](Systems.Monitoring.AppsPerformance.md)  
 - [AuditLogEntries](Systems.Monitoring.AuditLogEntries.md)  
 - [AuditLogSummary](Systems.Monitoring.AuditLogSummary.md)  
 - [CurrentSessions](Systems.Monitoring.CurrentSessions.md)  
