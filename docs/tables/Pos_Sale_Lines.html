@@ -89,7 +89,7 @@
 
 <h2 id="entity">Entity</h2>
 <p>Entity: <a href="../entities/Crm.Pos.SaleLines.html">Crm.Pos.SaleLines</a></p>
-<p>Stores line-level details for items or services sold in a POS transaction. Each line is linked to a POS Sales record and typically represents a single product, quantity, and unit price. It supports complex tracking in environments like retail chains, restaurants, and service centers, including execution status for kitchen/service integration, discounts, and tax breakdowns. Entity: Pos_Sale_Lines</p>
+<p>Stores line-level details for items or services sold in a POS transaction. Each line is linked to a POS Sales record and typically represents a single product, quantity, and unit price. It supports complex tracking in environments like retail chains, restaurants, and service centers, including execution status for kitchen/service integration, discounts, and tax breakdowns. Entity: Pos_Sale_Lines (Introduced in version 25.1.3.46)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Pos_Sales.html">Pos_Sales</a></li>
@@ -146,7 +146,7 @@
 </tr>
 <tr>
 <td><a href="#execution_stage">Execution_Stage</a></td>
-<td><code>nvarchar(3)</code></td>
+<td><code>char(3)</code> Allowed: <code>PND</code>, <code>PRP</code>, <code>DEL</code>, <code>FIN</code></td>
 <td>Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</td>
 </tr>
 <tr>
@@ -175,12 +175,7 @@
 <td>Notes for the line.</td>
 </tr>
 <tr>
-<td><a href="#pos_sale_id">Pos_Sale_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>The main POS sale.</td>
-</tr>
-<tr>
-<td><a href="#pos_sale_line">Pos_Sale_Line</a></td>
+<td><a href="#pos_sale_line_id">Pos_Sale_Line_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
 <td></td>
 </tr>
@@ -208,6 +203,11 @@
 <td><a href="#row_version">Row_Version</a></td>
 <td><code>timestamp</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#sale_id">Sale_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The main POS sale.</td>
 </tr>
 <tr>
 <td><a href="#tax_amount">Tax_Amount</a></td>
@@ -252,7 +252,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>CurrentDateTimeUtc</td>
+<td>CurrentDateTime</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -272,7 +272,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>12</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -344,6 +344,12 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
 <td>no</td>
@@ -391,7 +397,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>13</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -514,7 +520,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>8</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -574,6 +580,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="discount_amount---supported-filters">Discount_Amount - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="execution_area_id">Execution_Area_Id</h3>
 <p>Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</p>
 <table>
@@ -614,7 +639,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>22</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -737,7 +762,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>19</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -809,6 +834,12 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
 <td>no</td>
@@ -856,7 +887,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>20</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -979,7 +1010,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>21</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1039,6 +1070,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="execution_note---supported-filters">Execution_Note - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="execution_resource_id">Execution_Resource_Id</h3>
 <p>The resource (table, room, etc.) used to execute the current line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</p>
 <table>
@@ -1079,7 +1129,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>23</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1173,6 +1223,10 @@
 </thead>
 <tbody>
 <tr>
+<td>Allowed Values</td>
+<td><code>PND</code>, <code>PRP</code>, <code>DEL</code>, <code>FIN</code></td>
+</tr>
+<tr>
 <td>Auto Complete</td>
 <td>no</td>
 </tr>
@@ -1202,7 +1256,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>17</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1242,7 +1296,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3) (Allows NULL)</td>
+<td>char(3) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1259,6 +1313,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="execution_stage---supported-filters">Execution_Stage - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -1302,7 +1375,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>18</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1425,7 +1498,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>14</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1485,6 +1558,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="is_voided---supported-filters">Is_Voided - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="line_amount">Line_Amount</h3>
 <p>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds.</p>
 <table>
@@ -1525,7 +1617,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>10</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1585,6 +1677,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="line_amount---supported-filters">Line_Amount - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="line_no">Line_No</h3>
 <p>Line number within the POS sale.</p>
 <table>
@@ -1598,6 +1709,10 @@
 <tr>
 <td>Auto Complete</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Autoincrement</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Data Filter</td>
@@ -1625,7 +1740,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>2</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1685,6 +1800,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="line_no---supported-filters">Line_No - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <h3 id="notes">Notes</h3>
 <p>Notes for the line.</p>
 <table>
@@ -1725,7 +1859,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>11</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1785,111 +1919,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pos_sale_id">Pos_Sale_Id</h3>
-<p>The main POS sale.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Pos_Sales.html">Pos_Sales</a></td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="pos_sale_id---supported-filters">Pos_Sale_Id - Supported Filters</h4>
+<h4 id="notes---supported-filters">Notes - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1901,14 +1931,14 @@
 </thead>
 <tbody>
 <tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
+<td>Like</td>
+<td>None</td>
 <td>no</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<h3 id="pos_sale_line">Pos_Sale_Line</h3>
+<h3 id="pos_sale_line_id">Pos_Sale_Line_Id</h3>
 <table>
 <thead>
 <tr>
@@ -1947,7 +1977,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>0</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2003,11 +2033,11 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
-<h4 id="pos_sale_line---supported-filters">Pos_Sale_Line - Supported Filters</h4>
+<h4 id="pos_sale_line_id---supported-filters">Pos_Sale_Line_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -2066,7 +2096,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>3</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2189,7 +2219,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2246,6 +2276,31 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quantity---supported-filters">Quantity - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -2289,7 +2344,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>6</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2349,6 +2404,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="quantity_base---supported-filters">Quantity_Base - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="quantity_unit_id">Quantity_Unit_Id</h3>
 <p>Measurement unit of Quantity.</p>
 <table>
@@ -2389,7 +2463,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2511,7 +2585,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>24</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2571,6 +2645,129 @@
 </tr>
 </tbody>
 </table>
+<h3 id="sale_id">Sale_Id</h3>
+<p>The main POS sale.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Pos_Sales.html">Pos_Sales</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sale_id---supported-filters">Sale_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="tax_amount">Tax_Amount</h3>
 <p>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds.</p>
 <table>
@@ -2611,7 +2808,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>9</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2668,6 +2865,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tax_amount---supported-filters">Tax_Amount - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -2711,7 +2927,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>7</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2771,6 +2987,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="unit_price---supported-filters">Unit_Price - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="voided_at">Voided_At</h3>
 <p>Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</p>
 <table>
@@ -2811,7 +3046,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>15</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2883,6 +3118,12 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
 <td>no</td>
@@ -2930,7 +3171,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>16</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>

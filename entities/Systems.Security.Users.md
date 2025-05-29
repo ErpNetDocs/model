@@ -61,7 +61,7 @@ Aggregate Tree
 | [PhoneNumberConfirmed](Systems.Security.Users.md#phonenumberconfirmed) | boolean | Indicates whether the Phone Number has been verified. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` 
 | [RegistrationMessage](Systems.Security.Users.md#registrationmessage) | string (254) __nullable__ | Message from the user to the registration operator, regarding the desired permissions and assignment. `Introduced in version 22.1.6.61` 
 | [TwoFactorEnabled](Systems.Security.Users.md#twofactorenabled) | boolean | Indicates whether two-factor authentication has been enabled. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` 
-| [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). `Required` `Default("INT")` `Filter(multi eq)` `Introduced in version 18.2` 
+| [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). `Required` `Default("INT")` `Filter(multi eq;like)` `Introduced in version 18.2` 
 | [VoiceExtensionNumbers](Systems.Security.Users.md#voiceextensionnumbers) | string (254) __nullable__ | Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration. 
 | [WindowsUserName](Systems.Security.Users.md#windowsusername) | string (128) __nullable__ | The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user. 
 
@@ -335,7 +335,7 @@ _Show in UI_: **ShownByDefault**
 
 ### UserType
 
-Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). `Required` `Default("INT")` `Filter(multi eq)` `Introduced in version 18.2`
+Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). `Required` `Default("INT")` `Filter(multi eq;like)` `Introduced in version 18.2`
 
 _Type_: **[UserType](Systems.Security.Users.md#usertype)**  
 _Category_: **System**  
@@ -352,7 +352,7 @@ _Allowed Values (Systems.Security.UsersRepository.UserType Enum Members)_
 | InvitationInternalNoLogin | InvitationInternalNoLogin value. Stored as 'INI'. <br /> _Database Value:_ 'INI' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'InvitationInternalNoLogin' |
 | InvitationExternalNoLogin | InvitationExternalNoLogin value. Stored as 'INE'. <br /> _Database Value:_ 'INE' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'InvitationExternalNoLogin' |
 
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **InternalUser**  
 _Show in UI_: **ShownByDefault**  

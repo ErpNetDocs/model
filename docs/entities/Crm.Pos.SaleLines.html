@@ -88,15 +88,15 @@
 <h1 id="crmpossalelines-entity">Crm.Pos.SaleLines Entity</h1>
 
 <p><strong>Namespace:</strong> <a href="Crm.Pos.html">Crm.Pos</a></p>
-<p>Stores line-level details for items or services sold in a POS transaction. Each line is linked to a POS Sales record and typically represents a single product, quantity, and unit price. It supports complex tracking in environments like retail chains, restaurants, and service centers, including execution status for kitchen/service integration, discounts, and tax breakdowns. Entity: Pos_Sale_Lines</p>
+<p>Stores line-level details for items or services sold in a POS transaction. Each line is linked to a POS Sales record and typically represents a single product, quantity, and unit price. It supports complex tracking in environments like retail chains, restaurants, and service centers, including execution status for kitchen/service integration, discounts, and tax breakdowns. Entity: Pos_Sale_Lines (Introduced in version 25.1.3.46)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{PosSale.DocumentNumber}</em><br>
+<em>{Sale.DocumentNumber}</em><br>
 Default Search Members:<br>
-<em>PosSale.DocumentNumber</em><br>
+<em>Sale.DocumentNumber</em><br>
 Name Data Member:<br>
-<em>PosSale.DocumentNumber</em><br>
-Category:  <em>Definitions</em><br>
+<em>Sale.DocumentNumber</em><br>
+Category:  <em>Documents</em><br>
 Show in UI:  <em>ShownByDefault</em></p>
 <h2 id="track-changes">Track Changes</h2>
 <p>Min level:  <em>0 - Do not track changes</em><br>
@@ -120,12 +120,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#createdat">CreatedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></td>
+<td>The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#discountamount">DiscountAmount</a></td>
-<td>decimal (12, 2)</td>
-<td>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
+<td>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#displaytext">DisplayText</a></td>
@@ -135,17 +135,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#executionchangedat">ExecutionChangedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(ge;le)</code></td>
+<td>Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#executionnote">ExecutionNote</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</td>
+<td>Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#executionstage">ExecutionStage</a></td>
-<td>string (3) <strong>nullable</strong></td>
-<td>Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</td>
+<td><a href="Crm.Pos.SaleLines.html#executionstage">ExecutionStage</a> <strong>nullable</strong></td>
+<td>Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#id">Id</a></td>
@@ -155,22 +155,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#isvoided">IsVoided</a></td>
 <td>boolean</td>
-<td>Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Required</code> <code>Default(false)</code></td>
+<td>Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#lineamount">LineAmount</a></td>
-<td>decimal (12, 2)</td>
-<td>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Required</code></td>
+<td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
+<td>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number within the POS sale. <code>Required</code></td>
+<td>Line number within the POS sale. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#notes">Notes</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Notes for the line.</td>
+<td>Notes for the line. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#objectversion">ObjectVersion</a></td>
@@ -179,28 +179,28 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#quantity">Quantity</a></td>
-<td>decimal (12, 3)</td>
-<td>The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns. <code>Required</code></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
+<td>The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#quantitybase">QuantityBase</a></td>
-<td>decimal (12, 3)</td>
-<td>Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns. <code>Required</code></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
+<td>Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#taxamount">TaxAmount</a></td>
-<td>decimal (12, 2)</td>
-<td>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Required</code> <code>Default(0)</code></td>
+<td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
+<td>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#unitprice">UnitPrice</a></td>
-<td>decimal (12, 2)</td>
-<td>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Required</code></td>
+<td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
+<td>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#voidedat">VoidedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(ge;le)</code></td>
+<td>Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -240,11 +240,6 @@ Aggregate Root:<br>
 <td>User-configurable status of the process. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.SaleLines.html#possale">PosSale</a></td>
-<td><a href="Crm.Pos.Sales.html">Sales</a></td>
-<td>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Pos.SaleLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
 <td>The sold product. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -255,6 +250,11 @@ Aggregate Root:<br>
 <td>Measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.SaleLines.html#sale">Sale</a></td>
+<td><a href="Crm.Pos.Sales.html">Sales</a></td>
+<td>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.SaleLines.html#voidedby">VoidedBy</a></td>
 <td><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</td>
 <td>Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(multi eq)</code></td>
@@ -263,20 +263,20 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdat">CreatedAt</h3>
-<p>The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></p>
+<p>The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="discountamount">DiscountAmount</h3>
-<p>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal (12, 2)</strong><br>
+<p>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
+<em>Default Value</em>: <strong>Constant</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
@@ -286,27 +286,54 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="executionchangedat">ExecutionChangedAt</h3>
-<p>Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(ge;le)</code></p>
+<p>Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="executionnote">ExecutionNote</h3>
-<p>Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</p>
+<p>Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="executionstage">ExecutionStage</h3>
-<p>Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).</p>
-<p><em>Type</em>: <strong>string (3) <strong>nullable</strong></strong><br>
+<p>Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pos.SaleLines.html#executionstage">ExecutionStage</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#executionstage) data attribute<br>
+<em>Allowed Values (Crm.Pos.ExecutionStatusesRepository.ExecutionStage Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pending</td>
+<td>Pending. Stored as 'PND'. <br> <em>Database Value:</em> 'PND' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Pending'</td>
+</tr>
+<tr>
+<td>Prepare</td>
+<td>Prepare. Stored as 'PRP'. <br> <em>Database Value:</em> 'PRP' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Prepare'</td>
+</tr>
+<tr>
+<td>Deliver</td>
+<td>Deliver. Stored as 'DEL'. <br> <em>Database Value:</em> 'DEL' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Deliver'</td>
+</tr>
+<tr>
+<td>Finalize</td>
+<td>Finalize. Stored as 'FIN'. <br> <em>Database Value:</em> 'FIN' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Finalize'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>3</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
@@ -314,34 +341,38 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="isvoided">IsVoided</h3>
-<p>Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Required</code> <code>Default(false)</code></p>
+<p>Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (12, 2)</strong><br>
+<p>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number within the POS sale. <code>Required</code></p>
+<p>Line number within the POS sale. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>( obj.Sale.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>( obj.Sale.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the line.</p>
+<p>Notes for the line. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
@@ -353,39 +384,39 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
+<p>The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
+<p>Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="taxamount">TaxAmount</h3>
-<p>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal (12, 2)</strong><br>
+<p>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
+<em>Default Value</em>: <strong>Constant</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="unitprice">UnitPrice</h3>
-<p>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (12, 2)</strong><br>
+<p>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="voidedat">VoidedAt</h3>
-<p>Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(ge;le)</code></p>
+<p>Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -419,14 +450,6 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="possale">PosSale</h3>
-<p>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html">Sales</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The sold product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
@@ -438,6 +461,14 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="sale">Sale</h3>
+<p>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html">Sales</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="voidedby">VoidedBy</h3>
 <p>Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(multi eq)</code></p>

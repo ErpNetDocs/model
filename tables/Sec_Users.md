@@ -913,6 +913,7 @@ Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Voice_Extension_Numbers
 

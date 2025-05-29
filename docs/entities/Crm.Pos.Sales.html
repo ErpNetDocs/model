@@ -96,7 +96,7 @@ Default Search Members:<br>
 <em>DocumentNumber</em><br>
 Code Data Member:<br>
 <em>DocumentNumber</em><br>
-Category:  <em>Definitions</em><br>
+Category:  <em>Documents</em><br>
 Show in UI:  <em>ShownByDefault</em></p>
 <h2 id="track-changes">Track Changes</h2>
 <p>Min level:  <em>0 - Do not track changes</em><br>
@@ -155,37 +155,42 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pos.Sales.html#openedat">OpenedAt</a></td>
 <td>datetime</td>
-<td>Time of the opening of the POS sale. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Time of the opening of the POS sale. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#originalsalenumber">OriginalSaleNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq)</code></td>
+<td>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#saledate">SaleDate</a></td>
 <td>date</td>
-<td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></td>
-<td>string (3)</td>
+<td><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></td>
 <td>Kind of POS sale event. Typically it is &quot;Normal sale&quot;. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#salestage">SaleStage</a></td>
-<td>string (3)</td>
+<td><a href="Crm.Pos.Sales.html#salestage">SaleStage</a></td>
 <td>General stage of the sale. Finalized sales must have matching amounts between header and detail lines. <code>Required</code> <code>Default(&quot;NEW&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Sales.html#totalamount">TotalAmount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
+<td>Total net amount in the sale currency (positive for normal sale, negative for returns/refunds). <code>Currency: SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.47</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Sales.html#totalamountbase">TotalAmountBase</a></td>
-<td>decimal (14, 2)</td>
-<td>Total net amount in base currency (positive for normal sale, negative for returns/refunds). <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
+<td>Total net amount in base currency (positive for normal sale, negative for returns/refunds). <code>Currency: Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#totalamountreporting">TotalAmountReporting</a></td>
-<td>decimal (14, 2) <strong>nullable</strong></td>
-<td>Total net amount in reporting currency (if applicable). <code>Filter(eq;ge;le)</code></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
+<td>Total net amount in reporting currency (if applicable). <code>Currency: Location.EnterpriseCompany.ReportingCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#voidedat">VoidedAt</a></td>
@@ -240,6 +245,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Set when there is single payment type (method) for the whole sale. null when there are multiple payments. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Sales.html#salecurrency">SaleCurrency</a></td>
+<td><a href="General.Currencies.Currencies.html">Currencies</a></td>
+<td>Reference to the currency in which this POS sale is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.47</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Sales.html#terminal">Terminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a></td>
 <td>Link to specific POS workspace terminal used. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -264,12 +274,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td>Lines</td>
 <td><a href="Crm.Pos.SaleLines.html">SaleLines</a></td>
-<td>List of <code>SaleLine</code>(Crm.Pos.SaleLines.md) child objects, based on the <code>Crm.Pos.SaleLine.PosSale</code>(Crm.Pos.SaleLines.md#possale) back reference</td>
+<td>List of <code>SaleLine</code>(Crm.Pos.SaleLines.md) child objects, based on the <code>Crm.Pos.SaleLine.Sale</code>(Crm.Pos.SaleLines.md#sale) back reference</td>
 </tr>
 <tr>
 <td>Payments</td>
 <td><a href="Crm.Pos.SalePayments.html">SalePayments</a></td>
-<td>List of <code>SalePayment</code>(Crm.Pos.SalePayments.md) child objects, based on the <code>Crm.Pos.SalePayment.PosSale</code>(Crm.Pos.SalePayments.md#possale) back reference</td>
+<td>List of <code>SalePayment</code>(Crm.Pos.SalePayments.md) child objects, based on the <code>Crm.Pos.SalePayment.Sale</code>(Crm.Pos.SalePayments.md#sale) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -319,57 +329,106 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="openedat">OpenedAt</h3>
-<p>Time of the opening of the POS sale. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Time of the opening of the POS sale. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="originalsalenumber">OriginalSaleNumber</h3>
-<p>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq)</code></p>
+<p>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="saledate">SaleDate</h3>
-<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTime</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="salekind">SaleKind</h3>
 <p>Kind of POS sale event. Typically it is &quot;Normal sale&quot;. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (3)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
+Allowed values for the <code>SaleKind</code>(Crm.Pos.Sales.md#salekind) data attribute<br>
+<em>Allowed Values (Crm.Pos.SalesRepository.SaleKind Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NormalSale</td>
+<td>Normal sale. Stored as 'SAL'. <br> <em>Database Value:</em> 'SAL' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'NormalSale'</td>
+</tr>
+<tr>
+<td>ReturnOrrefund</td>
+<td>Return/refund. Stored as 'RET'. <br> <em>Database Value:</em> 'RET' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ReturnOrrefund'</td>
+</tr>
+<tr>
+<td>Mixed</td>
+<td>Mixed. Stored as 'MIX'. <br> <em>Database Value:</em> 'MIX' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Mixed'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>3</strong><br>
-<em>Default Value</em>: <strong>SAL</strong><br>
+<em>Default Value</em>: <strong>NormalSale</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="salestage">SaleStage</h3>
 <p>General stage of the sale. Finalized sales must have matching amounts between header and detail lines. <code>Required</code> <code>Default(&quot;NEW&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (3)</strong><br>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html#salestage">SaleStage</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>SaleStage</code>(Crm.Pos.Sales.md#salestage) data attribute<br>
+<em>Allowed Values (Crm.Pos.SalesRepository.SaleStage Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>New. Stored as 'NEW'. <br> <em>Database Value:</em> 'NEW' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+</tr>
+<tr>
+<td>Finalized</td>
+<td>Finalized. Stored as 'FIN'. <br> <em>Database Value:</em> 'FIN' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Finalized'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>New</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="totalamount">TotalAmount</h3>
+<p>Total net amount in the sale currency (positive for normal sale, negative for returns/refunds). <code>Currency: SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.47</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>3</strong><br>
-<em>Default Value</em>: <strong>NEW</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="totalamountbase">TotalAmountBase</h3>
-<p>Total net amount in base currency (positive for normal sale, negative for returns/refunds). <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal (14, 2)</strong><br>
+<p>Total net amount in base currency (positive for normal sale, negative for returns/refunds). <code>Currency: Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="totalamountreporting">TotalAmountReporting</h3>
-<p>Total net amount in reporting currency (if applicable). <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal (14, 2) <strong>nullable</strong></strong><br>
+<p>Total net amount in reporting currency (if applicable). <code>Currency: Location.EnterpriseCompany.ReportingCurrency</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -422,6 +481,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>Set when there is single payment type (method) for the whole sale. null when there are multiple payments. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="salecurrency">SaleCurrency</h3>
+<p>Reference to the currency in which this POS sale is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.47</code></p>
+<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

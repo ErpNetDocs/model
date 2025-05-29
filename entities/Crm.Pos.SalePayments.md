@@ -5,16 +5,16 @@ uid: Crm.Pos.SalePayments
 
 **Namespace:** [Crm.Pos](Crm.Pos.md)  
 
-Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments
+Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments (Introduced in version 25.1.3.46)
 
 ## Default Visualization
 Default Display Text Format:  
-_{PosSale.DocumentNumber}_  
+_{Sale.DocumentNumber}_  
 Default Search Members:  
-_PosSale.DocumentNumber_  
+_Sale.DocumentNumber_  
 Name Data Member:  
-_PosSale.DocumentNumber_  
-Category:  _Definitions_  
+_Sale.DocumentNumber_  
+Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
 
 ## Track Changes  
@@ -33,14 +33,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Crm.Pos.SalePayments.md#amount) | decimal (12, 2) | Amount paid (in Amount Currency). `Required` 
-| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | decimal (12, 2) | Amount in base currency. `Required` 
-| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event. `Required` `Default(NowUtc)` `Filter(ge;le)` 
+| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency). `Currency: AmountCurrency` `Required` `Filter(eq;ge;le)` 
+| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency. `Currency: Sale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
+| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [DisplayText](Crm.Pos.SalePayments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Pos.SalePayments.md#id) | guid |  
-| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment. 
+| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment. `Filter(like)` 
 | [ObjectVersion](Crm.Pos.SalePayments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID). 
+| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID). `Filter(eq;like)` 
 
 ## References
 
@@ -48,40 +48,40 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AmountCurrency](Crm.Pos.SalePayments.md#amountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Amount. `Required` `Filter(multi eq)` |
 | [PaymentType](Crm.Pos.SalePayments.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) | The payment type (method) for this payment. `Required` `Filter(multi eq)` |
-| [PosSale](Crm.Pos.SalePayments.md#possale) | [Sales](Crm.Pos.Sales.md) | The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner` |
+| [Sale](Crm.Pos.SalePayments.md#sale) | [Sales](Crm.Pos.Sales.md) | The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
 
 ### Amount
 
-Amount paid (in Amount Currency). `Required`
+Amount paid (in Amount Currency). `Currency: AmountCurrency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **decimal (12, 2)**  
+_Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
 ### AmountBase
 
-Amount in base currency. `Required`
+Amount in base currency. `Currency: Sale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)`
 
-_Type_: **decimal (12, 2)**  
+_Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
 ### CreatedAt
 
-Timestamp of the payment event. `Required` `Default(NowUtc)` `Filter(ge;le)`
+Timestamp of the payment event. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
 _Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
-_Default Value_: **CurrentDateTimeUtc**  
+_Default Value_: **CurrentDateTime**  
 _Show in UI_: **ShownByDefault**  
 
 ### DisplayText
@@ -100,15 +100,15 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+_Show in UI_: **CannotBeShown**  
 
 ### Notes
 
-Notes for the sale payment.
+Notes for the sale payment. `Filter(like)`
 
 _Type_: **string (128) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
 _Show in UI_: **ShownByDefault**  
@@ -125,11 +125,11 @@ _Show in UI_: **HiddenByDefault**
 
 ### Reference
 
-Optional external reference (e.g. card transaction ID).
+Optional external reference (e.g. card transaction ID). `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 _Show in UI_: **ShownByDefault**  
@@ -155,7 +155,7 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
-### PosSale
+### Sale
 
 The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner`
 

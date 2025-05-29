@@ -14,7 +14,7 @@ Default Search Members:
 _DocumentNumber_  
 Code Data Member:  
 _DocumentNumber_  
-Category:  _Definitions_  
+Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
 
 ## Track Changes  
@@ -39,13 +39,14 @@ Aggregate Tree
 | [Id](Crm.Pos.Sales.md#id) | guid |  
 | [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided. `Required` `Default(false)` `Filter(eq)` 
 | [ObjectVersion](Crm.Pos.Sales.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
-| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (16) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq)` 
-| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
-| [SaleKind](Crm.Pos.Sales.md#salekind) | string (3) | Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)` 
-| [SaleStage](Crm.Pos.Sales.md#salestage) | string (3) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)` 
-| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | decimal (14, 2) | Total net amount in base currency (positive for normal sale, negative for returns/refunds). `Required` `Filter(eq;ge;le)` 
-| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | decimal (14, 2) __nullable__ | Total net amount in reporting currency (if applicable). `Filter(eq;ge;le)` 
+| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. `Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (16) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)` 
+| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)` 
+| [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)` 
+| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total net amount in the sale currency (positive for normal sale, negative for returns/refunds). `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47` 
+| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total net amount in base currency (positive for normal sale, negative for returns/refunds). `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)` 
+| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total net amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)` 
 | [VoidedAt](Crm.Pos.Sales.md#voidedat) | datetime __nullable__ | Date and time when the document was voided. `Filter(eq;ge;le)` 
 
 ## References
@@ -59,6 +60,7 @@ Aggregate Tree
 | [Operator](Crm.Pos.Sales.md#operator) | [Operators](Crm.Pos.Operators.md) | Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator. `Required` `Filter(multi eq)` |
 | [OriginalSale](Crm.Pos.Sales.md#originalsale) | [Sales](Crm.Pos.Sales.md) (nullable) | Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). `Filter(multi eq)` |
 | [PaymentType](Crm.Pos.Sales.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Set when there is single payment type (method) for the whole sale. null when there are multiple payments. `Filter(multi eq)` |
+| [SaleCurrency](Crm.Pos.Sales.md#salecurrency) | [Currencies](General.Currencies.Currencies.md) | Reference to the currency in which this POS sale is recorded. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.47` |
 | [Terminal](Crm.Pos.Sales.md#terminal) | [Terminals](Crm.Pos.Terminals.md) | Link to specific POS workspace terminal used. `Required` `Filter(multi eq)` |
 | [VoidedBy](Crm.Pos.Sales.md#voidedby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who voided the document. `Filter(multi eq)` |
 
@@ -66,8 +68,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [SaleLines](Crm.Pos.SaleLines.md) | List of `SaleLine`(Crm.Pos.SaleLines.md) child objects, based on the `Crm.Pos.SaleLine.PosSale`(Crm.Pos.SaleLines.md#possale) back reference 
-| Payments | [SalePayments](Crm.Pos.SalePayments.md) | List of `SalePayment`(Crm.Pos.SalePayments.md) child objects, based on the `Crm.Pos.SalePayment.PosSale`(Crm.Pos.SalePayments.md#possale) back reference 
+| Lines | [SaleLines](Crm.Pos.SaleLines.md) | List of `SaleLine`(Crm.Pos.SaleLines.md) child objects, based on the `Crm.Pos.SaleLine.Sale`(Crm.Pos.SaleLines.md#sale) back reference 
+| Payments | [SalePayments](Crm.Pos.SalePayments.md) | List of `SalePayment`(Crm.Pos.SalePayments.md) child objects, based on the `Crm.Pos.SalePayment.Sale`(Crm.Pos.SalePayments.md#sale) back reference 
 
 
 ## Attribute Details
@@ -135,66 +137,91 @@ _Show in UI_: **HiddenByDefault**
 
 ### OpenedAt
 
-Time of the opening of the POS sale. `Required` `Default(NowUtc)` `Filter(eq;ge;le)`
+Time of the opening of the POS sale. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
-_Default Value_: **CurrentDateTimeUtc**  
+_Default Value_: **CurrentDateTime**  
 _Show in UI_: **ShownByDefault**  
 
 ### OriginalSaleNumber
 
-Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq)`
+Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)`
 
 _Type_: **string (16) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **Equals**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
 _Show in UI_: **ShownByDefault**  
 
 ### SaleDate
 
-Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(NowUtc)` `Filter(eq;ge;le)`
+Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 _Type_: **date**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
-_Default Value_: **CurrentDateTimeUtc**  
+_Default Value_: **CurrentDateTime**  
 _Show in UI_: **ShownByDefault**  
 
 ### SaleKind
 
 Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)`
 
-_Type_: **string (3)**  
+_Type_: **[SaleKind](Crm.Pos.Sales.md#salekind)**  
 _Category_: **System**  
+Allowed values for the `SaleKind`(Crm.Pos.Sales.md#salekind) data attribute  
+_Allowed Values (Crm.Pos.SalesRepository.SaleKind Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| NormalSale | Normal sale. Stored as 'SAL'. <br /> _Database Value:_ 'SAL' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'NormalSale' |
+| ReturnOrrefund | Return/refund. Stored as 'RET'. <br /> _Database Value:_ 'RET' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ReturnOrrefund' |
+| Mixed | Mixed. Stored as 'MIX'. <br /> _Database Value:_ 'MIX' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Mixed' |
+
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
-_Maximum Length_: **3**  
-_Default Value_: **SAL**  
+_Default Value_: **NormalSale**  
 _Show in UI_: **ShownByDefault**  
 
 ### SaleStage
 
 General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)`
 
-_Type_: **string (3)**  
+_Type_: **[SaleStage](Crm.Pos.Sales.md#salestage)**  
+_Category_: **System**  
+Allowed values for the `SaleStage`(Crm.Pos.Sales.md#salestage) data attribute  
+_Allowed Values (Crm.Pos.SalesRepository.SaleStage Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| New | New. Stored as 'NEW'. <br /> _Database Value:_ 'NEW' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'New' |
+| Finalized | Finalized. Stored as 'FIN'. <br /> _Database Value:_ 'FIN' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Finalized' |
+
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **New**  
+_Show in UI_: **ShownByDefault**  
+
+### TotalAmount
+
+Total net amount in the sale currency (positive for normal sale, negative for returns/refunds). `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47`
+
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
-_Maximum Length_: **3**  
-_Default Value_: **NEW**  
 _Show in UI_: **ShownByDefault**  
 
 ### TotalAmountBase
 
-Total net amount in base currency (positive for normal sale, negative for returns/refunds). `Required` `Filter(eq;ge;le)`
+Total net amount in base currency (positive for normal sale, negative for returns/refunds). `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **decimal (14, 2)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
@@ -202,9 +229,9 @@ _Show in UI_: **ShownByDefault**
 
 ### TotalAmountReporting
 
-Total net amount in reporting currency (if applicable). `Filter(eq;ge;le)`
+Total net amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)`
 
-_Type_: **decimal (14, 2) __nullable__**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
@@ -283,6 +310,15 @@ _Show in UI_: **ShownByDefault**
 Set when there is single payment type (method) for the whole sale. null when there are multiple payments. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### SaleCurrency
+
+Reference to the currency in which this POS sale is recorded. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.47`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

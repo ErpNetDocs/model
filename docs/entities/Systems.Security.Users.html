@@ -241,7 +241,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Security.Users.html#usertype">UserType</a></td>
 <td><a href="Systems.Security.Users.html#usertype">UserType</a></td>
-<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
+<td>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq;like)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#voiceextensionnumbers">VoiceExtensionNumbers</a></td>
@@ -519,7 +519,7 @@ Allowed values for the <code>PasswordFormat</code>(Systems.Security.Users.md#pas
 <em>Default Value</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="usertype">UserType</h3>
-<p>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
+<p>Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login). <code>Required</code> <code>Default(&quot;INT&quot;)</code> <code>Filter(multi eq;like)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html#usertype">UserType</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>UserType</code>(Systems.Security.Users.md#usertype) data attribute<br>
@@ -562,7 +562,7 @@ Allowed values for the <code>UserType</code>(Systems.Security.Users.md#usertype)
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>InternalUser</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

@@ -9,7 +9,7 @@ Contains rules for automatically assigning cases to users based on the values of
 
 ## Default Visualization
 Default Display Text Format:  
-_{RuleNo} - {AssignToUser}_  
+_{RuleNo}: {AssignmentKind} - {AssignToUser}_  
 Default Search Members:  
 __  
 Category:  _Settings_  

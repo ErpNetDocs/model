@@ -116,7 +116,7 @@
 <td>Set for known customers (e.g. loyalty program), otherwise null.</td>
 </tr>
 <tr>
-<td><a href="#document_numer">Document_Numer</a></td>
+<td><a href="#document_number">Document_Number</a></td>
 <td><code>nvarchar(16)</code></td>
 <td>Receipt document number.</td>
 </tr>
@@ -152,7 +152,7 @@
 </tr>
 <tr>
 <td><a href="#original_sale_number">Original_Sale_Number</a></td>
-<td><code>nvarchar(20)</code></td>
+<td><code>nvarchar(16)</code></td>
 <td>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.</td>
 </tr>
 <tr>
@@ -161,14 +161,14 @@
 <td>Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.</td>
 </tr>
 <tr>
-<td><a href="#pos_sale_id">Pos_Sale_Id</a></td>
-<td><code>uniqueidentifier</code> <code>PK</code></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="#row_version">Row_Version</a></td>
 <td><code>timestamp</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#sale_currency_id">Sale_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Reference to the currency in which this POS sale is recorded.</td>
 </tr>
 <tr>
 <td><a href="#sale_date">Sale_Date</a></td>
@@ -176,19 +176,29 @@
 <td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.</td>
 </tr>
 <tr>
+<td><a href="#sale_id">Sale_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="#sale_kind">Sale_Kind</a></td>
-<td><code>nvarchar(3)</code></td>
+<td><code>char(3)</code> Allowed: <code>SAL</code>, <code>RET</code>, <code>MIX</code></td>
 <td>Kind of POS sale event. Typically it is &quot;Normal sale&quot;.</td>
 </tr>
 <tr>
 <td><a href="#sale_stage">Sale_Stage</a></td>
-<td><code>nvarchar(3)</code></td>
+<td><code>char(3)</code> Allowed: <code>NEW</code>, <code>FIN</code></td>
 <td>General stage of the sale. Finalized sales must have matching amounts between header and detail lines.</td>
 </tr>
 <tr>
 <td><a href="#terminal_id">Terminal_Id</a></td>
 <td><code>uniqueidentifier</code></td>
 <td>Link to specific POS workspace terminal used.</td>
+</tr>
+<tr>
+<td><a href="#total_amount">Total_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).</td>
 </tr>
 <tr>
 <td><a href="#total_amount_base">Total_Amount_Base</a></td>
@@ -253,7 +263,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>13</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -325,6 +335,12 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
 <td>no</td>
@@ -372,7 +388,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>14</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -495,7 +511,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>8</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -578,7 +594,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="document_numer">Document_Numer</h3>
+<h3 id="document_number">Document_Number</h3>
 <p>Receipt document number.</p>
 <table>
 <thead>
@@ -618,7 +634,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>22</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -678,6 +694,31 @@
 </tr>
 </tbody>
 </table>
+<h4 id="document_number---supported-filters">Document_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="is_voided">Is_Voided</h3>
 <p>Marked true if sale is canceled/voided.</p>
 <table>
@@ -718,7 +759,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>15</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -778,6 +819,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="is_voided---supported-filters">Is_Voided - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="location_id">Location_Id</h3>
 <p>Link to location where the sale occurred.</p>
 <table>
@@ -818,7 +878,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -921,7 +981,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>CurrentDateTimeUtc</td>
+<td>CurrentDateTime</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -941,7 +1001,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>12</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1013,6 +1073,12 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
 <td>no</td>
@@ -1060,7 +1126,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>21</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1183,7 +1249,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>6</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1306,7 +1372,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>18</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1425,11 +1491,11 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>20</td>
+<td>16</td>
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>19</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1469,7 +1535,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(20) (Allows NULL)</td>
+<td>nvarchar(16) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1486,6 +1552,31 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="original_sale_number---supported-filters">Original_Sale_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -1529,7 +1620,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>11</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1612,124 +1703,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pos_sale_id">Pos_Sale_Id</h3>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NewGuid</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>yes (order: 1)</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="pos_sale_id---supported-filters">Pos_Sale_Id - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <h3 id="row_version">Row_Version</h3>
 <table>
 <thead>
@@ -1769,7 +1742,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>20</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1829,8 +1802,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="sale_date">Sale_Date</h3>
-<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.</p>
+<h3 id="sale_currency_id">Sale_Currency_Id</h3>
+<p>Reference to the currency in which this POS sale is recorded.</p>
 <table>
 <thead>
 <tr>
@@ -1849,7 +1822,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>CurrentDateTimeUtc</td>
+<td>None</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -1870,6 +1843,129 @@
 <tr>
 <td>Order</td>
 <td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sale_currency_id---supported-filters">Sale_Currency_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sale_date">Sale_Date</h3>
+<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>CurrentDateTime</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1941,8 +2037,132 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sale_id">Sale_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sale_id---supported-filters">Sale_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
 </tr>
@@ -1958,6 +2178,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>SAL</code>, <code>RET</code>, <code>MIX</code></td>
+</tr>
 <tr>
 <td>Auto Complete</td>
 <td>no</td>
@@ -1988,7 +2212,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>2</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2028,7 +2252,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2048,6 +2272,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="sale_kind---supported-filters">Sale_Kind - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="sale_stage">Sale_Stage</h3>
 <p>General stage of the sale. Finalized sales must have matching amounts between header and detail lines.</p>
 <table>
@@ -2058,6 +2301,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>NEW</code>, <code>FIN</code></td>
+</tr>
 <tr>
 <td>Auto Complete</td>
 <td>no</td>
@@ -2088,7 +2335,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>3</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2128,7 +2375,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(3)</td>
+<td>char(3)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2145,6 +2392,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sale_stage---supported-filters">Sale_Stage - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -2188,7 +2454,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2271,8 +2537,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="total_amount_base">Total_Amount_Base</h3>
-<p>Total net amount in base currency (positive for normal sale, negative for returns/refunds).</p>
+<h3 id="total_amount">Total_Amount</h3>
+<p>Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).</p>
 <table>
 <thead>
 <tr>
@@ -2371,6 +2637,150 @@
 </tr>
 </tbody>
 </table>
+<h4 id="total_amount---supported-filters">Total_Amount - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="total_amount_base">Total_Amount_Base</h3>
+<p>Total net amount in base currency (positive for normal sale, negative for returns/refunds).</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="total_amount_base---supported-filters">Total_Amount_Base - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="total_amount_reporting">Total_Amount_Reporting</h3>
 <p>Total net amount in reporting currency (if applicable).</p>
 <table>
@@ -2411,7 +2821,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>10</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2471,6 +2881,31 @@
 </tr>
 </tbody>
 </table>
+<h4 id="total_amount_reporting---supported-filters">Total_Amount_Reporting - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="voided_at">Voided_At</h3>
 <p>Date and time when the document was voided.</p>
 <table>
@@ -2511,7 +2946,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>16</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2583,6 +3018,12 @@
 </thead>
 <tbody>
 <tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
 <td>GreaterThanOrLessThan</td>
 <td>None</td>
 <td>no</td>
@@ -2630,7 +3071,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>17</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>

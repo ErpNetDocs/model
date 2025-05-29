@@ -14,21 +14,23 @@ Stores header-level information for individual retail transactions processed thr
 |[Closed_At](#closed_at)|`datetime` |When the sale was finalized (paid, voided, or completed).|
 |[Closed_By_Id](#closed_by_id)|`uniqueidentifier` |The operator who finalized or closed the sale (may differ from opener).|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Set for known customers (e.g. loyalty program), otherwise null.|
-|[Document_Numer](#document_numer)|`nvarchar(16)` |Receipt document number.|
+|[Document_Number](#document_number)|`nvarchar(16)` |Receipt document number.|
 |[Is_Voided](#is_voided)|`bit` |Marked true if sale is canceled/voided.|
 |[Location_Id](#location_id)|`uniqueidentifier` |Link to location where the sale occurred.|
 |[Opened_At](#opened_at)|`datetime` |Time of the opening of the POS sale.|
 |[Opened_By_Id](#opened_by_id)|`uniqueidentifier` |The operator who created the sale.|
 |[Operator_Id](#operator_id)|`uniqueidentifier` |Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.|
 |[Original_Sale_Id](#original_sale_id)|`uniqueidentifier` |Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).|
-|[Original_Sale_Number](#original_sale_number)|`nvarchar(20)` |Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.|
+|[Original_Sale_Number](#original_sale_number)|`nvarchar(16)` |Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.|
-|[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
+|[Sale_Currency_Id](#sale_currency_id)|`uniqueidentifier` |Reference to the currency in which this POS sale is recorded.|
 |[Sale_Date](#sale_date)|`date` |Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.|
-|[Sale_Kind](#sale_kind)|`nvarchar(3)` |Kind of POS sale event. Typically it is "Normal sale".|
-|[Sale_Stage](#sale_stage)|`nvarchar(3)` |General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
+|[Sale_Id](#sale_id)|`uniqueidentifier` `PK`||
+|[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `MIX`|Kind of POS sale event. Typically it is "Normal sale".|
+|[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
 |[Terminal_Id](#terminal_id)|`uniqueidentifier` |Link to specific POS workspace terminal used.|
+|[Total_Amount](#total_amount)|`decimal(14, 2)` |Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).|
 |[Total_Amount_Base](#total_amount_base)|`decimal(14, 2)` |Total net amount in base currency (positive for normal sale, negative for returns/refunds).|
 |[Total_Amount_Reporting](#total_amount_reporting)|`decimal(14, 2)` |Total net amount in reporting currency (if applicable).|
 |[Voided_At](#voided_at)|`datetime` |Date and time when the document was voided.|
@@ -50,7 +52,7 @@ When the sale was finalized (paid, voided, or completed).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|13|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -70,6 +72,7 @@ When the sale was finalized (paid, voided, or completed).
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Closed_By_Id
@@ -86,7 +89,7 @@ The operator who finalized or closed the sale (may differ from opener).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|14|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -123,7 +126,7 @@ Set for known customers (e.g. loyalty program), otherwise null.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -146,7 +149,7 @@ Set for known customers (e.g. loyalty program), otherwise null.
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Document_Numer
+### Document_Number
 
 
 Receipt document number.
@@ -160,7 +163,7 @@ Receipt document number.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|16|
-|Order|2147483647|
+|Order|22|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -176,6 +179,13 @@ Receipt document number.
 |User Login|no|
 |Visible|yes|
 
+#### Document_Number - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Is_Voided
 
 
@@ -190,7 +200,7 @@ Marked true if sale is canceled/voided.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|15|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -206,6 +216,12 @@ Marked true if sale is canceled/voided.
 |User Login|no|
 |Visible|yes|
 
+#### Is_Voided - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Location_Id
 
 
@@ -220,7 +236,7 @@ Link to location where the sale occurred.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -252,12 +268,12 @@ Time of the opening of the POS sale.
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|CurrentDateTimeUtc|
+|Default Value|CurrentDateTime|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|12|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -277,6 +293,7 @@ Time of the opening of the POS sale.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Opened_By_Id
@@ -293,7 +310,7 @@ The operator who created the sale.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|21|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -330,7 +347,7 @@ Primary operator, responsible for the POS sale (used for reports, commissions, e
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -367,7 +384,7 @@ Might be specified when this sale refunds/returns another POS sale (and the orig
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|18|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -403,8 +420,8 @@ Original sale document number. Might be specified when this sale refunds/returns
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|20|
-|Order|2147483647|
+|Max Length|16|
+|Order|19|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -414,11 +431,18 @@ Original sale document number. Might be specified when this sale refunds/returns
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(20) (Allows NULL)|
+|Type|nvarchar(16) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Original_Sale_Number - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Payment_Type_Id
 
@@ -434,7 +458,7 @@ Set when there is single payment type (method) for the whole sale. NULL when the
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|11|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -457,40 +481,37 @@ Set when there is single payment type (method) for the whole sale. NULL when the
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
-### Pos_Sale_Id
+### Row_Version
 
 | Property | Value |
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|NewGuid|
+|Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|20|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
-|Primary Key|yes (order: 1)|
+|Primary Key|no|
 |Readonly|no|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
-#### Pos_Sale_Id - Supported Filters
+### Sale_Currency_Id
 
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
-### Row_Version
+Reference to the currency in which this POS sale is recorded.
 
 | Property | Value |
 | - | - |
@@ -507,15 +528,22 @@ Set when there is single payment type (method) for the whole sale. NULL when the
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|timestamp|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|no|
+|Visible|yes|
+
+#### Sale_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Sale_Date
 
@@ -526,12 +554,12 @@ Represents the business date of the sale (used for aggregations, reporting, acco
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|CurrentDateTimeUtc|
+|Default Value|CurrentDateTime|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -551,7 +579,41 @@ Represents the business date of the sale (used for aggregations, reporting, acco
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
+
+### Sale_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|0|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Sale_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Sale_Kind
 
@@ -560,6 +622,7 @@ Kind of POS sale event. Typically it is "Normal sale".
 
 | Property | Value |
 | - | - |
+|Allowed Values|`SAL`, `RET`, `MIX`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|SAL|
@@ -567,7 +630,7 @@ Kind of POS sale event. Typically it is "Normal sale".
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -577,11 +640,17 @@ Kind of POS sale event. Typically it is "Normal sale".
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Sale_Kind - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Sale_Stage
 
@@ -590,6 +659,7 @@ General stage of the sale. Finalized sales must have matching amounts between he
 
 | Property | Value |
 | - | - |
+|Allowed Values|`NEW`, `FIN`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NEW|
@@ -597,7 +667,7 @@ General stage of the sale. Finalized sales must have matching amounts between he
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -607,11 +677,17 @@ General stage of the sale. Finalized sales must have matching amounts between he
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Sale_Stage - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Terminal_Id
 
@@ -627,7 +703,7 @@ Link to specific POS workspace terminal used.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -650,10 +726,10 @@ Link to specific POS workspace terminal used.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Total_Amount_Base
+### Total_Amount
 
 
-Total net amount in base currency (positive for normal sale, negative for returns/refunds).
+Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).
 
 | Property | Value |
 | - | - |
@@ -680,6 +756,49 @@ Total net amount in base currency (positive for normal sale, negative for return
 |User Login|no|
 |Visible|yes|
 
+#### Total_Amount - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Total_Amount_Base
+
+
+Total net amount in base currency (positive for normal sale, negative for returns/refunds).
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(14, 2)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Total_Amount_Base - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Total_Amount_Reporting
 
 
@@ -694,7 +813,7 @@ Total net amount in reporting currency (if applicable).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -710,6 +829,13 @@ Total net amount in reporting currency (if applicable).
 |User Login|no|
 |Visible|yes|
 
+#### Total_Amount_Reporting - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Voided_At
 
 
@@ -724,7 +850,7 @@ Date and time when the document was voided.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|16|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -744,6 +870,7 @@ Date and time when the document was voided.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Voided_By_Id
@@ -760,7 +887,7 @@ The operator who voided the document.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|17|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

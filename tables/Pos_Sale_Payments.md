@@ -5,7 +5,7 @@
 
 Entity: [Crm.Pos.SalePayments](~/entities/Crm.Pos.SalePayments.md)
 
-Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments
+Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments (Introduced in version 25.1.3.46)
 
 ## Owner Tables Hierarchy
 
@@ -21,10 +21,10 @@ Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments
 |[Created_At](#created_at)|`datetime` |Timestamp of the payment event.|
 |[Notes](#notes)|`nvarchar(128)` |Notes for the sale payment.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |The payment type (method) for this payment.|
-|[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` |The POS sale to which this specifies a payment.|
 |[Pos_Sale_Payment_Id](#pos_sale_payment_id)|`uniqueidentifier` `PK`||
 |[Reference](#reference)|`nvarchar(64)` |Optional external reference (e.g. card transaction ID).|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Sale_Id](#sale_id)|`uniqueidentifier` |The POS sale to which this specifies a payment.|
 
 ## Columns
 
@@ -42,7 +42,7 @@ Amount paid (in Amount Currency).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -57,6 +57,13 @@ Amount paid (in Amount Currency).
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Amount - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
 
 ### Amount_Base
 
@@ -72,7 +79,7 @@ Amount in base currency.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -88,6 +95,12 @@ Amount in base currency.
 |User Login|no|
 |Visible|yes|
 
+#### Amount_Base - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Amount_Currency_Id
 
 
@@ -102,7 +115,7 @@ The currency of Amount.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -134,12 +147,12 @@ Timestamp of the payment event.
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|CurrentDateTimeUtc|
+|Default Value|CurrentDateTime|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -159,6 +172,7 @@ Timestamp of the payment event.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Notes
@@ -175,7 +189,7 @@ Notes for the sale payment.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|128|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -191,6 +205,12 @@ Notes for the sale payment.
 |User Login|no|
 |Visible|yes|
 
+#### Notes - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Payment_Type_Id
 
 
@@ -205,7 +225,7 @@ The payment type (method) for this payment.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -228,43 +248,6 @@ The payment type (method) for this payment.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Pos_Sale_Id
-
-
-The POS sale to which this specifies a payment.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|yes|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Pos_Sales](Pos_Sales.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Pos_Sale_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
 ### Pos_Sale_Payment_Id
 
 | Property | Value |
@@ -276,7 +259,7 @@ The POS sale to which this specifies a payment.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -290,7 +273,7 @@ The POS sale to which this specifies a payment.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Pos_Sale_Payment_Id - Supported Filters
 
@@ -312,7 +295,7 @@ Optional external reference (e.g. card transaction ID).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|64|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -328,6 +311,13 @@ Optional external reference (e.g. card transaction ID).
 |User Login|no|
 |Visible|yes|
 
+#### Reference - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -339,7 +329,7 @@ Optional external reference (e.g. card transaction ID).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -354,5 +344,42 @@ Optional external reference (e.g. card transaction ID).
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Sale_Id
+
+
+The POS sale to which this specifies a payment.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|1|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Sales](Pos_Sales.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Sale_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 
