@@ -9,11 +9,11 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Sale.DocumentNumber}_  
+_{PosSale.DocumentNumber}_  
 Default Search Members:  
-_Sale.DocumentNumber_  
+_PosSale.DocumentNumber_  
 Name Data Member:  
-_Sale.DocumentNumber_  
+_PosSale.DocumentNumber_  
 Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
 
@@ -34,21 +34,21 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreatedAt](Crm.Pos.SaleLines.md#createdat) | datetime __nullable__ | The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Default(Now)` `Filter(eq;ge;le)` 
-| [DiscountAmount](Crm.Pos.SaleLines.md#discountamount) | [Amount (12, 2)](../data-types.md#amount) | The amount of discount applied to the line. Positive for normal sales, negative for refunds. `Currency: Sale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` 
+| [DiscountAmount](Crm.Pos.SaleLines.md#discountamount) | [Amount (12, 2)](../data-types.md#amount) | The amount of discount applied to the line. Positive for normal sales, negative for refunds. `Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` 
 | [DisplayText](Crm.Pos.SaleLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExecutionChangedAt](Crm.Pos.SaleLines.md#executionchangedat) | datetime __nullable__ | Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(eq;ge;le)` 
 | [ExecutionNote](Crm.Pos.SaleLines.md#executionnote) | string (64) __nullable__ | Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(like)` 
 | [ExecutionStage](Crm.Pos.SaleLines.md#executionstage) | [ExecutionStage](Crm.Pos.SaleLines.md#executionstage) __nullable__ | Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(eq)` 
 | [Id](Crm.Pos.SaleLines.md#id) | guid |  
 | [IsVoided](Crm.Pos.SaleLines.md#isvoided) | boolean | Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Required` `Default(false)` `Filter(eq)` 
-| [LineAmount](Crm.Pos.SaleLines.md#lineamount) | [Amount (12, 2)](../data-types.md#amount) | Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. `Currency: Sale.SaleCurrency` `Required` `Filter(eq)` 
+| [LineAmount](Crm.Pos.SaleLines.md#lineamount) | [Amount (12, 2)](../data-types.md#amount) | Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. `Currency: PosSale.SaleCurrency` `Required` `Filter(eq)` 
 | [LineNo](Crm.Pos.SaleLines.md#lineno) | int32 | Line number within the POS sale. `Required` `Filter(eq)` 
 | [Notes](Crm.Pos.SaleLines.md#notes) | string (64) __nullable__ | Notes for the line. `Filter(like)` 
 | [ObjectVersion](Crm.Pos.SaleLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Quantity](Crm.Pos.SaleLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
 | [QuantityBase](Crm.Pos.SaleLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq)` 
-| [TaxAmount](Crm.Pos.SaleLines.md#taxamount) | [Amount (12, 2)](../data-types.md#amount) | Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. `Currency: Sale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` 
-| [UnitPrice](Crm.Pos.SaleLines.md#unitprice) | [Amount (12, 2)](../data-types.md#amount) | Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. `Currency: Sale.SaleCurrency` `Required` `Filter(eq)` 
+| [TaxAmount](Crm.Pos.SaleLines.md#taxamount) | [Amount (12, 2)](../data-types.md#amount) | Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. `Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` 
+| [UnitPrice](Crm.Pos.SaleLines.md#unitprice) | [Amount (12, 2)](../data-types.md#amount) | Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. `Currency: PosSale.SaleCurrency` `Required` `Filter(eq)` 
 | [VoidedAt](Crm.Pos.SaleLines.md#voidedat) | datetime __nullable__ | Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(eq;ge;le)` 
 
 ## References
@@ -60,9 +60,9 @@ Aggregate Root:
 | [ExecutionChangedBy](Crm.Pos.SaleLines.md#executionchangedby) | [Operators](Crm.Pos.Operators.md) (nullable) | Which staff member last updated the execution status. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)` |
 | [ExecutionResource](Crm.Pos.SaleLines.md#executionresource) | [ExecutionResources](Crm.Pos.ExecutionResources.md) (nullable) | The resource (table, room, etc.) used to execute the current line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)` |
 | [ExecutionStatus](Crm.Pos.SaleLines.md#executionstatus) | [ExecutionStatuses](Crm.Pos.ExecutionStatuses.md) (nullable) | User-configurable status of the process. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)` |
+| [PosSale](Crm.Pos.SaleLines.md#possale) | [Sales](Crm.Pos.Sales.md) | The main POS sale. `Required` `Filter(multi eq)` `Owner` |
 | [Product](Crm.Pos.SaleLines.md#product) | [Products](General.Products.Products.md) | The sold product. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Crm.Pos.SaleLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit of Quantity. `Required` `Filter(multi eq)` |
-| [Sale](Crm.Pos.SaleLines.md#sale) | [Sales](Crm.Pos.Sales.md) | The main POS sale. `Required` `Filter(multi eq)` `Owner` |
 | [VoidedBy](Crm.Pos.SaleLines.md#voidedby) | [Operators](Crm.Pos.Operators.md) (nullable) | Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)` |
 
 
@@ -81,7 +81,7 @@ _Show in UI_: **ShownByDefault**
 
 ### DiscountAmount
 
-The amount of discount applied to the line. Positive for normal sales, negative for refunds. `Currency: Sale.SaleCurrency` `Required` `Default(0)` `Filter(eq)`
+The amount of discount applied to the line. Positive for normal sales, negative for refunds. `Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -163,7 +163,7 @@ _Show in UI_: **ShownByDefault**
 
 ### LineAmount
 
-Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. `Currency: Sale.SaleCurrency` `Required` `Filter(eq)`
+Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. `Currency: PosSale.SaleCurrency` `Required` `Filter(eq)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -182,10 +182,10 @@ _Supports Order By_: **False**
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`( obj.Sale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+`( obj.PosSale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.Sale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+`( obj.PosSale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Notes
 
 Notes for the line. `Filter(like)`
@@ -229,7 +229,7 @@ _Show in UI_: **ShownByDefault**
 
 ### TaxAmount
 
-Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. `Currency: Sale.SaleCurrency` `Required` `Default(0)` `Filter(eq)`
+Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. `Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -240,7 +240,7 @@ _Show in UI_: **ShownByDefault**
 
 ### UnitPrice
 
-Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. `Currency: Sale.SaleCurrency` `Required` `Filter(eq)`
+Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. `Currency: PosSale.SaleCurrency` `Required` `Filter(eq)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -306,6 +306,17 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
+### PosSale
+
+The main POS sale. `Required` `Filter(multi eq)` `Owner`
+
+_Type_: **[Sales](Crm.Pos.Sales.md)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
+_Show in UI_: **ShownByDefault**  
+
 ### Product
 
 The sold product. `Required` `Filter(multi eq)`
@@ -322,17 +333,6 @@ Measurement unit of Quantity. `Required` `Filter(multi eq)`
 _Type_: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
-
-### Sale
-
-The main POS sale. `Required` `Filter(multi eq)` `Owner`
-
-_Type_: **[Sales](Crm.Pos.Sales.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### VoidedBy

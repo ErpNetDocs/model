@@ -21,10 +21,10 @@ Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments 
 |[Created_At](#created_at)|`datetime` |Timestamp of the payment event.|
 |[Notes](#notes)|`nvarchar(128)` |Notes for the sale payment.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |The payment type (method) for this payment.|
+|[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` |The POS sale to which this specifies a payment.|
 |[Pos_Sale_Payment_Id](#pos_sale_payment_id)|`uniqueidentifier` `PK`||
 |[Reference](#reference)|`nvarchar(64)` |Optional external reference (e.g. card transaction ID).|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Sale_Id](#sale_id)|`uniqueidentifier` |The POS sale to which this specifies a payment.|
 
 ## Columns
 
@@ -248,6 +248,43 @@ The payment type (method) for this payment.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Pos_Sale_Id
+
+
+The POS sale to which this specifies a payment.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|1|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Sales](Pos_Sales.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Pos_Sale_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Pos_Sale_Payment_Id
 
 | Property | Value |
@@ -344,42 +381,5 @@ Optional external reference (e.g. card transaction ID).
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
-
-### Sale_Id
-
-
-The POS sale to which this specifies a payment.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|1|
-|Ownership Reference|yes|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Pos_Sales](Pos_Sales.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Sale_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 

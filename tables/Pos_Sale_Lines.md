@@ -29,13 +29,13 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 |[Line_Amount](#line_amount)|`decimal(12, 2)` |Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds.|
 |[Line_No](#line_no)|`int` |Line number within the POS sale.|
 |[Notes](#notes)|`nvarchar(64)` |Notes for the line.|
+|[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` |The main POS sale.|
 |[Pos_Sale_Line_Id](#pos_sale_line_id)|`uniqueidentifier` `PK`||
 |[Product_Id](#product_id)|`uniqueidentifier` |The sold product.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns.|
 |[Quantity_Base](#quantity_base)|`decimal(12, 3)` |Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns.|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |Measurement unit of Quantity.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Sale_Id](#sale_id)|`uniqueidentifier` |The main POS sale.|
 |[Tax_Amount](#tax_amount)|`decimal(12, 2)` |Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds.|
 |[Unit_Price](#unit_price)|`decimal(12, 2)` |Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number.|
 |[Voided_At](#voided_at)|`datetime` |Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
@@ -556,6 +556,43 @@ Notes for the line.
 | - | - | - | - |
 |Like|None|no|no|
 
+### Pos_Sale_Id
+
+
+The main POS sale.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|1|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Sales](Pos_Sales.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Pos_Sale_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Pos_Sale_Line_Id
 
 | Property | Value |
@@ -762,43 +799,6 @@ Measurement unit of Quantity.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
-
-### Sale_Id
-
-
-The main POS sale.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|1|
-|Ownership Reference|yes|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Pos_Sales](Pos_Sales.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Sale_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Tax_Amount
 

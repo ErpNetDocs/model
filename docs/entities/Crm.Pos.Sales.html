@@ -274,12 +274,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td>Lines</td>
 <td><a href="Crm.Pos.SaleLines.html">SaleLines</a></td>
-<td>List of <code>SaleLine</code>(Crm.Pos.SaleLines.md) child objects, based on the <code>Crm.Pos.SaleLine.Sale</code>(Crm.Pos.SaleLines.md#sale) back reference</td>
+<td>List of <code>SaleLine</code>(Crm.Pos.SaleLines.md) child objects, based on the <code>Crm.Pos.SaleLine.PosSale</code>(Crm.Pos.SaleLines.md#possale) back reference</td>
 </tr>
 <tr>
 <td>Payments</td>
 <td><a href="Crm.Pos.SalePayments.html">SalePayments</a></td>
-<td>List of <code>SalePayment</code>(Crm.Pos.SalePayments.md) child objects, based on the <code>Crm.Pos.SalePayment.Sale</code>(Crm.Pos.SalePayments.md#sale) back reference</td>
+<td>List of <code>SalePayment</code>(Crm.Pos.SalePayments.md) child objects, based on the <code>Crm.Pos.SalePayment.PosSale</code>(Crm.Pos.SalePayments.md#possale) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -490,6 +490,8 @@ Allowed values for the <code>SaleStage</code>(Crm.Pos.Sales.md#salestage) data a
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Location.EnterpriseCompany.BaseCurrency</code></p>
 <h3 id="terminal">Terminal</h3>
 <p>Link to specific POS workspace terminal used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Terminals.html">Terminals</a></strong><br>

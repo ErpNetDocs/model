@@ -24,10 +24,8 @@ Max level:  _4 - Track object attribute and blob changes_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[Projects.Agile.CaseCategories](Projects.Agile.CaseCategories.md)  
-Aggregate Root:  
-[Projects.Agile.CaseCategories](Projects.Agile.CaseCategories.md)  
+Aggregate Tree  
+* [Projects.Agile.UserStates](Projects.Agile.UserStates.md)  
 
 ## Attributes
 
@@ -45,7 +43,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CaseCategory](Projects.Agile.UserStates.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category for which the user state is defined. `Required` `Filter(multi eq)` `Owner` |
+| [CaseCategory](Projects.Agile.UserStates.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category for which the user state is defined. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -143,12 +141,11 @@ _Show in UI_: **ShownByDefault**
 
 ### CaseCategory
 
-The category for which the user state is defined. `Required` `Filter(multi eq)` `Owner`
+The category for which the user state is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 

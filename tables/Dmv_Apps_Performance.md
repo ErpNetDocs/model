@@ -5,7 +5,7 @@
 
 Entity: [Systems.Monitoring.AppsPerformance](~/entities/Systems.Monitoring.AppsPerformance.md)
 
-Applications performance statistics dynamic management view. Entity: Dmv_Apps_Performance (Introduced in version 25.1.3.46)
+Applications performance statistics dynamic management view. Entity: Dmv_Apps_Performance (Introduced in version 25.1.3.47)
 
 ## Summary
 
@@ -14,6 +14,7 @@ Applications performance statistics dynamic management view. Entity: Dmv_Apps_Pe
 |[Application](#application)|`nvarchar(64)` |The name of the application that executes the operation|
 |[Busy_Time_Hours_Per_Day](#busy_time_hours_per_day)|`float` |Busy time in percentage per day|
 |[Busy_Time_Percentage](#busy_time_percentage)|`float` |Busy time in percentage|
+|[Requests](#requests)|`int` |Number of requests from the application to the server|
 
 ## Columns
 
@@ -65,6 +66,7 @@ Busy time in percentage per day
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
+|Format|N2|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -101,6 +103,7 @@ Busy time in percentage
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
+|Format|N2|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -125,5 +128,43 @@ Busy time in percentage
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Requests
+
+
+Number of requests from the application to the server
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Format|N0|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Requests - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
+|Like|None|no|no|
 
 

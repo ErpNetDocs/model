@@ -68,8 +68,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| Lines | [SaleLines](Crm.Pos.SaleLines.md) | List of `SaleLine`(Crm.Pos.SaleLines.md) child objects, based on the `Crm.Pos.SaleLine.Sale`(Crm.Pos.SaleLines.md#sale) back reference 
-| Payments | [SalePayments](Crm.Pos.SalePayments.md) | List of `SalePayment`(Crm.Pos.SalePayments.md) child objects, based on the `Crm.Pos.SalePayment.Sale`(Crm.Pos.SalePayments.md#sale) back reference 
+| Lines | [SaleLines](Crm.Pos.SaleLines.md) | List of `SaleLine`(Crm.Pos.SaleLines.md) child objects, based on the `Crm.Pos.SaleLine.PosSale`(Crm.Pos.SaleLines.md#possale) back reference 
+| Payments | [SalePayments](Crm.Pos.SalePayments.md) | List of `SalePayment`(Crm.Pos.SalePayments.md) child objects, based on the `Crm.Pos.SalePayment.PosSale`(Crm.Pos.SalePayments.md#possale) back reference 
 
 
 ## Attribute Details
@@ -322,6 +322,9 @@ _Type_: **[Currencies](General.Currencies.Currencies.md)**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`obj.Location.EnterpriseCompany.BaseCurrency`
 
 ### Terminal
 

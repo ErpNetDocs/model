@@ -91,11 +91,11 @@
 <p>Stores line-level details for items or services sold in a POS transaction. Each line is linked to a POS Sales record and typically represents a single product, quantity, and unit price. It supports complex tracking in environments like retail chains, restaurants, and service centers, including execution status for kitchen/service integration, discounts, and tax breakdowns. Entity: Pos_Sale_Lines (Introduced in version 25.1.3.46)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Sale.DocumentNumber}</em><br>
+<em>{PosSale.DocumentNumber}</em><br>
 Default Search Members:<br>
-<em>Sale.DocumentNumber</em><br>
+<em>PosSale.DocumentNumber</em><br>
 Name Data Member:<br>
-<em>Sale.DocumentNumber</em><br>
+<em>PosSale.DocumentNumber</em><br>
 Category:  <em>Documents</em><br>
 Show in UI:  <em>ShownByDefault</em></p>
 <h2 id="track-changes">Track Changes</h2>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#discountamount">DiscountAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#displaytext">DisplayText</a></td>
@@ -160,7 +160,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#lineamount">LineAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
+<td>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#lineno">LineNo</a></td>
@@ -190,12 +190,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#taxamount">TaxAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
+<td>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#voidedat">VoidedAt</a></td>
@@ -240,6 +240,11 @@ Aggregate Root:<br>
 <td>User-configurable status of the process. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.SaleLines.html#possale">PosSale</a></td>
+<td><a href="Crm.Pos.Sales.html">Sales</a></td>
+<td>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.SaleLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
 <td>The sold product. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -248,11 +253,6 @@ Aggregate Root:<br>
 <td><a href="Crm.Pos.SaleLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>Measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Pos.SaleLines.html#sale">Sale</a></td>
-<td><a href="Crm.Pos.Sales.html">Sales</a></td>
-<td>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SaleLines.html#voidedby">VoidedBy</a></td>
@@ -271,7 +271,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="discountamount">DiscountAmount</h3>
-<p>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
+<p>The amount of discount applied to the line. Positive for normal sales, negative for refunds. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -351,7 +351,7 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Default Value</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
+<p>Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -365,9 +365,9 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.Sale.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
+<code>( obj.PosSale.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.Sale.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
+<code>( obj.PosSale.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for the line. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
@@ -398,7 +398,7 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="taxamount">TaxAmount</h3>
-<p>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
+<p>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -406,7 +406,7 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Default Value</em>: <strong>Constant</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="unitprice">UnitPrice</h3>
-<p>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Currency: Sale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
+<p>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number. <code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -450,6 +450,14 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="possale">PosSale</h3>
+<p>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html">Sales</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The sold product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
@@ -461,14 +469,6 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <p><em>Type</em>: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="sale">Sale</h3>
-<p>The main POS sale. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html">Sales</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="voidedby">VoidedBy</h3>
 <p>Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). <code>Filter(multi eq)</code></p>

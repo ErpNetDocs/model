@@ -91,11 +91,11 @@
 <p>Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments (Introduced in version 25.1.3.46)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Sale.DocumentNumber}</em><br>
+<em>{PosSale.DocumentNumber}</em><br>
 Default Search Members:<br>
-<em>Sale.DocumentNumber</em><br>
+<em>PosSale.DocumentNumber</em><br>
 Name Data Member:<br>
-<em>Sale.DocumentNumber</em><br>
+<em>PosSale.DocumentNumber</em><br>
 Category:  <em>Documents</em><br>
 Show in UI:  <em>ShownByDefault</em></p>
 <h2 id="track-changes">Track Changes</h2>
@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#amountbase">AmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>Amount in base currency. <code>Currency: Sale.Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
+<td>Amount in base currency. <code>Currency: PosSale.Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#createdat">CreatedAt</a></td>
@@ -180,7 +180,7 @@ Aggregate Root:<br>
 <td>The payment type (method) for this payment. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.SalePayments.html#sale">Sale</a></td>
+<td><a href="Crm.Pos.SalePayments.html#possale">PosSale</a></td>
 <td><a href="Crm.Pos.Sales.html">Sales</a></td>
 <td>The POS sale to which this specifies a payment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
@@ -195,7 +195,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="amountbase">AmountBase</h3>
-<p>Amount in base currency. <code>Currency: Sale.Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
+<p>Amount in base currency. <code>Currency: PosSale.Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -258,7 +258,7 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="sale">Sale</h3>
+<h3 id="possale">PosSale</h3>
 <p>The POS sale to which this specifies a payment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Sales.html">Sales</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

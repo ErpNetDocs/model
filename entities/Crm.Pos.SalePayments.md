@@ -9,11 +9,11 @@ Specified only when a POS sale has multiple payments. Entity: Pos_Sale_Payments 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Sale.DocumentNumber}_  
+_{PosSale.DocumentNumber}_  
 Default Search Members:  
-_Sale.DocumentNumber_  
+_PosSale.DocumentNumber_  
 Name Data Member:  
-_Sale.DocumentNumber_  
+_PosSale.DocumentNumber_  
 Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
 
@@ -34,7 +34,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency). `Currency: AmountCurrency` `Required` `Filter(eq;ge;le)` 
-| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency. `Currency: Sale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
+| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency. `Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
 | [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [DisplayText](Crm.Pos.SalePayments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Pos.SalePayments.md#id) | guid |  
@@ -48,7 +48,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AmountCurrency](Crm.Pos.SalePayments.md#amountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Amount. `Required` `Filter(multi eq)` |
 | [PaymentType](Crm.Pos.SalePayments.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) | The payment type (method) for this payment. `Required` `Filter(multi eq)` |
-| [Sale](Crm.Pos.SalePayments.md#sale) | [Sales](Crm.Pos.Sales.md) | The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner` |
+| [PosSale](Crm.Pos.SalePayments.md#possale) | [Sales](Crm.Pos.Sales.md) | The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -65,7 +65,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AmountBase
 
-Amount in base currency. `Currency: Sale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)`
+Amount in base currency. `Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -155,7 +155,7 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
-### Sale
+### PosSale
 
 The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner`
 

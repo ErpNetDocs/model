@@ -23,10 +23,10 @@ Stores header-level information for individual retail transactions processed thr
 |[Original_Sale_Id](#original_sale_id)|`uniqueidentifier` |Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).|
 |[Original_Sale_Number](#original_sale_number)|`nvarchar(16)` |Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.|
+|[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Sale_Currency_Id](#sale_currency_id)|`uniqueidentifier` |Reference to the currency in which this POS sale is recorded.|
 |[Sale_Date](#sale_date)|`date` |Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.|
-|[Sale_Id](#sale_id)|`uniqueidentifier` `PK`||
 |[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `MIX`|Kind of POS sale event. Typically it is "Normal sale".|
 |[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
 |[Terminal_Id](#terminal_id)|`uniqueidentifier` |Link to specific POS workspace terminal used.|
@@ -481,6 +481,39 @@ Set when there is single payment type (method) for the whole sale. NULL when the
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Pos_Sale_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|0|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Pos_Sale_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -581,39 +614,6 @@ Represents the business date of the sale (used for aggregations, reporting, acco
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
-
-### Sale_Id
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|0|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|yes (order: 1)|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
-
-#### Sale_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Sale_Kind
 

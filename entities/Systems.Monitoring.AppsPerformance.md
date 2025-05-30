@@ -5,11 +5,11 @@ uid: Systems.Monitoring.AppsPerformance
 
 **Namespace:** [Systems.Monitoring](Systems.Monitoring.md)  
 
-Applications performance statistics dynamic management view. Entity: Dmv_Apps_Performance (Introduced in version 25.1.3.46)
+Applications performance statistics dynamic management view. Entity: Dmv_Apps_Performance (Introduced in version 25.1.3.47)
 
 ## Default Visualization
 Default Display Text Format:  
-_{Application}: {BusyTimePercentage}_  
+_{Application}: {Requests}_  
 Default Search Members:  
 __  
 Category:  _DynamicViews_  
@@ -28,6 +28,7 @@ Aggregate Tree
 | [Application](Systems.Monitoring.AppsPerformance.md#application) | string (64) | The name of the application that executes the operation. `Required` `Filter(eq;like)` `ORD` 
 | [BusyTimeHoursPerDay](Systems.Monitoring.AppsPerformance.md#busytimehoursperday) | double | Busy time in percentage per day. `Required` `Filter(ge;le)` `ORD` 
 | [BusyTimePercentage](Systems.Monitoring.AppsPerformance.md#busytimepercentage) | double | Busy time in percentage. `Required` `Filter(ge;le)` `ORD` 
+| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | int32 | Number of requests from the application to the server. `Required` `Filter(eq;like)` `ORD` 
 
 
 ## Attribute Details
@@ -60,6 +61,16 @@ Busy time in percentage. `Required` `Filter(ge;le)` `ORD`
 _Type_: **double**  
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### Requests
+
+Number of requests from the application to the server. `Required` `Filter(eq;like)` `ORD`
+
+_Type_: **int32**  
+_Category_: **System**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 

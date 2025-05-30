@@ -88,10 +88,10 @@
 <h1 id="systemsmonitoringappsperformance-view">Systems.Monitoring.AppsPerformance View</h1>
 
 <p><strong>Namespace:</strong> <a href="Systems.Monitoring.html">Systems.Monitoring</a></p>
-<p>Applications performance statistics dynamic management view. Entity: Dmv_Apps_Performance (Introduced in version 25.1.3.46)</p>
+<p>Applications performance statistics dynamic management view. Entity: Dmv_Apps_Performance (Introduced in version 25.1.3.47)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Application}: {BusyTimePercentage}</em><br>
+<em>{Application}: {Requests}</em><br>
 Default Search Members:<br>
 __<br>
 Category:  <em>DynamicViews</em><br>
@@ -127,6 +127,11 @@ Show in UI:  <em>ShownByDefault</em></p>
 <td>double</td>
 <td>Busy time in percentage. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
+<tr>
+<td><a href="Systems.Monitoring.AppsPerformance.html#requests">Requests</a></td>
+<td>int32</td>
+<td>Number of requests from the application to the server. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -150,6 +155,13 @@ Show in UI:  <em>ShownByDefault</em></p>
 <p><em>Type</em>: <strong>double</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="requests">Requests</h3>
+<p>Number of requests from the application to the server. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
