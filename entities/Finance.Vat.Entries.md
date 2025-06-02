@@ -46,7 +46,7 @@ Aggregate Tree
 | [AdjustmentNumber](Finance.Vat.Entries.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Finance.Vat.Entries.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Finance.Vat.Entries.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [AmountBase](Finance.Vat.Entries.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Amount of the operation without the tax in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
+| [AmountBase](Finance.Vat.Entries.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Amount of the operation without the tax in base currency. `Currency: BaseCurrency` `Required` 
 | [ApplyDate](Finance.Vat.Entries.md#applydate) | date | Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period. `Required` `Filter(ge;le)` 
 | [CashReportingMode](Finance.Vat.Entries.md#cashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. `Required` `Default(false)` 
 | [CompleteTime](Finance.Vat.Entries.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -74,7 +74,7 @@ Aggregate Tree
 | [ReleaseTime](Finance.Vat.Entries.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Finance.Vat.Entries.md#state) | [DocumentState](Finance.Vat.Entries.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Finance.Vat.Entries.md#statetagsattribute) | string | Specifies the state of the document. 
-| [VATAmountBase](Finance.Vat.Entries.md#vatamountbase) | [Amount (14, 2)](../data-types.md#amount) | The amount of the tax for the operation in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
+| [VATAmountBase](Finance.Vat.Entries.md#vatamountbase) | [Amount (14, 2)](../data-types.md#amount) | The amount of the tax for the operation in base currency. `Currency: BaseCurrency` `Required` 
 | [Void](Finance.Vat.Entries.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Finance.Vat.Entries.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Finance.Vat.Entries.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -87,6 +87,7 @@ Aggregate Tree
 | [AccessKey](Finance.Vat.Entries.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Finance.Vat.Entries.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Finance.Vat.Entries.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [BaseCurrency](Finance.Vat.Entries.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for Enterprise Company at the moment of entry generation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.51` |
 | [CurrencyDirectory](Finance.Vat.Entries.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DealType](Finance.Vat.Entries.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) | Deal type that caused this entry. `Required` `Filter(multi eq)` |
 | [DocumentType](Finance.Vat.Entries.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -157,7 +158,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### AmountBase
 
-Amount of the operation without the tax in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required`
+Amount of the operation without the tax in base currency. `Currency: BaseCurrency` `Required`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -499,7 +500,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### VATAmountBase
 
-The amount of the tax for the operation in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required`
+The amount of the tax for the operation in base currency. `Currency: BaseCurrency` `Required`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -591,6 +592,18 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
+
+### BaseCurrency
+
+The base currency for summary reporting for Enterprise Company at the moment of entry generation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.51`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`obj.EnterpriseCompany.BaseCurrency`
 
 ### CurrencyDirectory
 

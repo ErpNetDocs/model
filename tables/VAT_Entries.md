@@ -17,6 +17,7 @@ Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 | - | - | --- |
 |[Amount_Base](#amount_base)|`decimal(14, 2)` |Amount of the operation without the tax in base currency.|
 |[Apply_Date](#apply_date)|`date` |Specifies the date on which the entry should be applied in the reporting. Usually equal to the document date with exception for documents that are late to be applied in the correct period|
+|[Base_Currency_Id](#base_currency_id)|`uniqueidentifier` |The base currency for summary reporting for Enterprise Company at the moment of entry generation.|
 |[Cash_Reporting_Mode](#cash_reporting_mode)|`bit` |When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.|
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` |Deal type that caused this entry.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -99,6 +100,43 @@ Specifies the date on which the entry should be applied in the reporting. Usuall
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Base_Currency_Id
+
+
+The base currency for summary reporting for Enterprise Company at the moment of entry generation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|yes|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Base_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Cash_Reporting_Mode
 
