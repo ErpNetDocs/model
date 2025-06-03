@@ -1666,6 +1666,9 @@ references:
 - uid: Projects.Agile.TimeEntries
   name: Projects.Agile.TimeEntries Entity
   href: entities/Projects.Agile.TimeEntries.html
+- uid: Projects.Agile.UserStateCaseCategories
+  name: Projects.Agile.UserStateCaseCategories Entity
+  href: entities/Projects.Agile.UserStateCaseCategories.html
 - uid: Projects.Agile.UserStates
   name: Projects.Agile.UserStates Entity
   href: entities/Projects.Agile.UserStates.html

@@ -25,21 +25,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Application](Systems.Monitoring.AppsPerformance.md#application) | string (64) | The name of the application that executes the operation. `Required` `Filter(eq;like)` `ORD` 
+| [Application](Systems.Monitoring.AppsPerformance.md#application) | string (64) | The name of the application that executes the operation. `Required` `Filter(eq;ge;le)` `ORD` 
 | [BusyTimeHoursPerDay](Systems.Monitoring.AppsPerformance.md#busytimehoursperday) | double | Busy time in percentage per day. `Required` `Filter(ge;le)` `ORD` 
 | [BusyTimePercentage](Systems.Monitoring.AppsPerformance.md#busytimepercentage) | double | Busy time in percentage. `Required` `Filter(ge;le)` `ORD` 
-| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | int32 | Number of requests from the application to the server. `Required` `Filter(eq;like)` `ORD` 
+| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | int32 | The total number of requests the application has made to the server. `Required` `Filter(eq;like)` `ORD` 
 
 
 ## Attribute Details
 
 ### Application
 
-The name of the application that executes the operation. `Required` `Filter(eq;like)` `ORD`
+The name of the application that executes the operation. `Required` `Filter(eq;ge;le)` `ORD`
 
 _Type_: **string (64)**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **ShownByDefault**  
@@ -66,7 +66,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Requests
 
-Number of requests from the application to the server. `Required` `Filter(eq;like)` `ORD`
+The total number of requests the application has made to the server. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **int32**  
 _Category_: **System**  

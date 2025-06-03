@@ -105,7 +105,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Projects.Agile.UserStates.html">Projects.Agile.UserStates</a></li>
+<li><a href="Projects.Agile.UserStates.html">Projects.Agile.UserStates</a>
+<ul>
+<li><a href="Projects.Agile.UserStateCaseCategories.html">Projects.Agile.UserStateCaseCategories</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -154,7 +158,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 </tbody>
 </table>
-<h2 id="references">References</h2>
+<h2 id="child-collections">Child Collections</h2>
 <table>
 <thead>
 <tr>
@@ -165,9 +169,9 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Projects.Agile.UserStates.html#casecategory">CaseCategory</a></td>
-<td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The category for which the user state is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>CaseCategories</td>
+<td><a href="Projects.Agile.UserStateCaseCategories.html">UserStateCaseCategories</a></td>
+<td>List of <code>UserStateCaseCategory</code>(Projects.Agile.UserStateCaseCategories.md) child objects, based on the <code>Projects.Agile.UserStateCaseCategory.UserState</code>(Projects.Agile.UserStateCaseCategories.md#userstate) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -265,13 +269,6 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="reference-details">Reference Details</h2>
-<h3 id="casecategory">CaseCategory</h3>
-<p>The category for which the user state is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

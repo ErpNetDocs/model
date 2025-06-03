@@ -213,6 +213,19 @@ _Show in UI_: **ShownByDefault**
 
 Methods that can be invoked in public APIs.
 
+### ChangeFolder
+
+Changes the folder of the object to the specified folder.             This method saves immediately the changes.  
+_Return Type_: **void**  
+_Declaring Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Domain API Request_: **POST**  
+
+**Parameters**  
+  * **folder**  
+      
+    _Type_: [Folders](General.Files.Folders.md)  
+
+
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  

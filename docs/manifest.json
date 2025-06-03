@@ -17462,6 +17462,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Projects.Agile.UserStateCaseCategories.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Projects.Agile.UserStateCaseCategories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Projects.Agile.UserStates.md",
       "output": {
         ".html": {
@@ -20735,6 +20745,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Apm_Time_Entries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Apm_User_State_Case_Categories.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Apm_User_State_Case_Categories.html"
         }
       },
       "version": ""

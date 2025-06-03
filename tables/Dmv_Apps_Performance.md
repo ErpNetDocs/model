@@ -14,7 +14,7 @@ Applications performance statistics dynamic management view. Entity: Dmv_Apps_Pe
 |[Application](#application)|`nvarchar(64)` |The name of the application that executes the operation|
 |[Busy_Time_Hours_Per_Day](#busy_time_hours_per_day)|`float` |Busy time in percentage per day|
 |[Busy_Time_Percentage](#busy_time_percentage)|`float` |Busy time in percentage|
-|[Requests](#requests)|`int` |Number of requests from the application to the server|
+|[Requests](#requests)|`int` |The total number of requests the application has made to the server|
 
 ## Columns
 
@@ -52,8 +52,8 @@ The name of the application that executes the operation
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|yes|
-|Like|None|no|no|
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
 
 ### Busy_Time_Hours_Per_Day
 
@@ -132,7 +132,7 @@ Busy time in percentage
 ### Requests
 
 
-Number of requests from the application to the server
+The total number of requests the application has made to the server
 
 | Property | Value |
 | - | - |

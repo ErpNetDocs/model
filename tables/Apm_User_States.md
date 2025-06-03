@@ -11,7 +11,6 @@ Workflow states for the case categories. Entity: Apm_User_States (Introduced in 
 
 | Name | Type | Description |
 | - | - | --- |
-|[Case_Category_Id](#case_category_id)|`uniqueidentifier` |The category for which the user state is defined.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the user state can be set to cases.|
 |[Ord](#ord)|`int` |Unique ordinal position of the state within the system state.|
 |[System_State](#system_state)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`|The system state, which this state extends.|
@@ -19,43 +18,6 @@ Workflow states for the case categories. Entity: Apm_User_States (Introduced in 
 |[User_State_Name](#user_state_name)|`nvarchar(256)` `ML`|Multi-language name of the user state.|
 
 ## Columns
-
-### Case_Category_Id
-
-
-The category for which the user state is defined.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|1|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Apm_Case_Categories](Apm_Case_Categories.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Case_Category_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Is_Active
 

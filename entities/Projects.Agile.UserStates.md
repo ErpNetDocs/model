@@ -26,6 +26,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Agile.UserStates](Projects.Agile.UserStates.md)  
+  * [Projects.Agile.UserStateCaseCategories](Projects.Agile.UserStateCaseCategories.md)  
 
 ## Attributes
 
@@ -39,11 +40,11 @@ Aggregate Tree
 | [Ord](Projects.Agile.UserStates.md#ord) | int32 | Unique ordinal position of the state within the system state. `Required` `Filter(eq;ge;le)` `ORD` 
 | [SystemState](Projects.Agile.UserStates.md#systemstate) | [SystemState](Projects.Agile.UserStates.md#systemstate) | The system state, which this state extends. `Required` `Filter(multi eq)` `ORD` 
 
-## References
+## Child Collections
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CaseCategory](Projects.Agile.UserStates.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category for which the user state is defined. `Required` `Filter(multi eq)` |
+| CaseCategories | [UserStateCaseCategories](Projects.Agile.UserStateCaseCategories.md) | List of `UserStateCaseCategory`(Projects.Agile.UserStateCaseCategories.md) child objects, based on the `Projects.Agile.UserStateCaseCategory.UserState`(Projects.Agile.UserStateCaseCategories.md#userstate) back reference 
 
 
 ## Attribute Details
@@ -134,18 +135,6 @@ _Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)_
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-
-## Reference Details
-
-### CaseCategory
-
-The category for which the user state is defined. `Required` `Filter(multi eq)`
-
-_Type_: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
 
