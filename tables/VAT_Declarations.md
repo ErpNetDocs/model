@@ -15,6 +15,7 @@ Contains the VAT declarations, issued by the enterprise company, according to th
 
 | Name | Type | Description |
 | - | - | --- |
+|[Base_Currency_Id](#base_currency_id)|`uniqueidentifier` |The base currency for summary reporting for Enterprise Company at the moment of VAT Declaration creation.|
 |[Declaration_Id](#declaration_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[From_Date](#from_date)|`date` |Start date of the period fot which the VAT declaration is made.|
@@ -23,6 +24,43 @@ Contains the VAT declarations, issued by the enterprise company, according to th
 |[To_Date](#to_date)|`date` |End date of the period fot which the VAT declaration is made.|
 
 ## Columns
+
+### Base_Currency_Id
+
+
+The base currency for summary reporting for Enterprise Company at the moment of VAT Declaration creation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Base_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Declaration_Id
 

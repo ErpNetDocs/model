@@ -12,6 +12,7 @@ Base data for calculation of Vat Box amounts. Entity: VAT_Declaration_Box_Deal_T
 | Name | Type | Description |
 | - | - | --- |
 |[Amount](#amount)|`decimal(15, 2)` |The amount of the operation according to the category.|
+|[Base_Currency_Id](#base_currency_id)|`uniqueidentifier` ||
 |[Box_Id](#box_id)|`uniqueidentifier` |The type of box in a VAT declaration.|
 |[Declaration_Id](#declaration_id)|`uniqueidentifier` |The VAT declaration|
 |[VAT_Entry_Id](#vat_entry_id)|`uniqueidentifier` |Unique identification number of this VAT entry.|
@@ -47,6 +48,40 @@ The amount of the operation according to the category.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Base_Currency_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Base_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Box_Id
 

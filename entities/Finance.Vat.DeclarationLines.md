@@ -31,7 +31,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Finance.Vat.DeclarationLines.md#amountbase) | decimal (14, 2) | Declared value in base currency. `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [AmountBase](Finance.Vat.DeclarationLines.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Declared value in base currency. `Currency: Declaration.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [DisplayText](Finance.Vat.DeclarationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Vat.DeclarationLines.md#id) | guid |  
 | [LineNo](Finance.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
@@ -51,13 +51,13 @@ Aggregate Root:
 
 ### AmountBase
 
-Declared value in base currency. `Required` `Default(0)` `Filter(eq;ge;le)`
+Declared value in base currency. `Currency: Declaration.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)`
 
-_Type_: **decimal (14, 2)**  
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
-_Default Value_: **0**  
+_Default Value_: **Constant**  
 _Show in UI_: **ShownByDefault**  
 
 ### DisplayText

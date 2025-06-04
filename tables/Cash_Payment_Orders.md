@@ -44,7 +44,7 @@ Each payment order contains a receivable or payable amount. Entity: Cash_Payment
 |[Ref_Invoice_Document_No](#ref_invoice_document_no)|`nvarchar(20)` |The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.|
 |[Ref_Invoice_Document_Type_Id](#ref_invoice_document_type_id)|`uniqueidentifier` |The document type of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Total_Amount](#total_amount)|`decimal(18, 2)` |Total amount that should be payed|
+|[Total_Amount](#total_amount)|`decimal(18, 2)` |Total amount that should be paid|
 |[Total_Amount_Currency_Id](#total_amount_currency_id)|`uniqueidentifier` |The currency of Total Amount.|
 
 ## Columns
@@ -1090,7 +1090,7 @@ The document type of the invoice which has created or is related to the payment 
 ### Total_Amount
 
 
-Total amount that should be payed
+Total amount that should be paid
 
 | Property | Value |
 | - | - |

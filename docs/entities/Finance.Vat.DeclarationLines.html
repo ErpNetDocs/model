@@ -117,8 +117,8 @@ Aggregate Root:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Vat.DeclarationLines.html#amountbase">AmountBase</a></td>
-<td>decimal (14, 2)</td>
-<td>Declared value in base currency. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
+<td>Declared value in base currency. <code>Currency: Declaration.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.DeclarationLines.html#displaytext">DisplayText</a></td>
@@ -176,12 +176,12 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountbase">AmountBase</h3>
-<p>Declared value in base currency. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal (14, 2)</strong><br>
+<p>Declared value in base currency. <code>Currency: Declaration.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
+<em>Default Value</em>: <strong>Constant</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>

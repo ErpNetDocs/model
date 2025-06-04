@@ -9,7 +9,7 @@ Base data for calculation of Vat Box amounts. Entity: VAT_Declaration_Box_Deal_T
 
 ## Default Visualization
 Default Display Text Format:  
-_{BoxId}: {DeclarationId}_  
+_{AmountValue}: {BoxId}_  
 Default Search Members:  
 __  
 Category:  _Views_  
@@ -25,12 +25,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Finance.Vat.DeclarationAmountDetails.md#amount) | decimal (15, 2) | The amount of the operation according to the category. `Required` 
+| [Amount](Finance.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) | The amount of the operation according to the category. `Currency: BaseCurrency` `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [BaseCurrency](Finance.Vat.DeclarationAmountDetails.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for Enterprise Company at the moment of entry generation. `Required` `Filter(multi eq)` `Inherited from VAT_Entries_Table.Base_Currency_Id` `Introduced in version 25.1.3.53` |
 | [Box](Finance.Vat.DeclarationAmountDetails.md#box) | [BoxTypes](Finance.Vat.BoxTypes.md) | The type of box in a VAT declaration. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Box_Types_Table.Box_Type_Id` |
 | [Declaration](Finance.Vat.DeclarationAmountDetails.md#declaration) | [Declarations](Finance.Vat.Declarations.md) | The VAT declaration. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Declarations_Table.Declaration_Id` |
 | [VATEntry](Finance.Vat.DeclarationAmountDetails.md#vatentry) | [Entries](Finance.Vat.Entries.md) | Unique identification number of this VAT entry. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Entries_Table.Entry_Id` |
@@ -40,9 +41,9 @@ Aggregate Tree
 
 ### Amount
 
-The amount of the operation according to the category. `Required`
+The amount of the operation according to the category. `Currency: BaseCurrency` `Required`
 
-_Type_: **decimal (15, 2)**  
+_Type_: **[Amount (15, 2)](../data-types.md#amount)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -50,6 +51,16 @@ _Show in UI_: **ShownByDefault**
 
 
 ## Reference Details
+
+### BaseCurrency
+
+The base currency for summary reporting for Enterprise Company at the moment of entry generation. `Required` `Filter(multi eq)` `Inherited from VAT_Entries_Table.Base_Currency_Id` `Introduced in version 25.1.3.53`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md)**  
+_Category_: **System**  
+_Inherited From_: **VAT_Entries_Table.Base_Currency_Id**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
 
 ### Box
 
