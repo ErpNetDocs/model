@@ -135,7 +135,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#invoicedvalueamountbase">InvoicedValueAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 0)</a></td>
-<td>Invoiced value of the goods in the base currency. <code>Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency</code> <code>Required</code></td>
+<td>Invoiced value of the goods in the base currency. <code>Currency: IntrastatDeclaration.BaseCurrency</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#lineaction">LineAction</a></td>
@@ -165,7 +165,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#statisticalvalueamountbase">StatisticalValueAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 0)</a> <strong>nullable</strong></td>
-<td>Statistical value of the goods in the base currency. <code>Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency</code></td>
+<td>Statistical value of the goods in the base currency. <code>Currency: IntrastatDeclaration.BaseCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></td>
@@ -309,7 +309,7 @@ Generic enum type for DeliveryTerms properties<br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="invoicedvalueamountbase">InvoicedValueAmountBase</h3>
-<p>Invoiced value of the goods in the base currency. <code>Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency</code> <code>Required</code></p>
+<p>Invoiced value of the goods in the base currency. <code>Currency: IntrastatDeclaration.BaseCurrency</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (10, 0)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -384,7 +384,7 @@ Allowed values for the <code>LineAction</code>(Finance.Intrastat.DeclarationLine
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="statisticalvalueamountbase">StatisticalValueAmountBase</h3>
-<p>Statistical value of the goods in the base currency. <code>Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency</code></p>
+<p>Statistical value of the goods in the base currency. <code>Currency: IntrastatDeclaration.BaseCurrency</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (10, 0)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>

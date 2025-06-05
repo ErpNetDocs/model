@@ -87,6 +87,7 @@ Aggregate Tree
 | [AdjustedDocument](Finance.Intrastat.Declarations.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Finance.Intrastat.Declarations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AuthorizedPerson](Finance.Intrastat.Declarations.md#authorizedperson) | [Persons](General.Contacts.Persons.md) (nullable) | The authorized person who submits the intrastat declaration. `Filter(multi eq)` `Introduced in version 18.2` |
+| [BaseCurrency](Finance.Intrastat.Declarations.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.55` |
 | [CurrencyDirectory](Finance.Intrastat.Declarations.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Finance.Intrastat.Declarations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Finance.Intrastat.Declarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -593,6 +594,20 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
+### BaseCurrency
+
+The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.55`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`obj.EnterpriseCompany.BaseCurrency`
+
+_Front-End Recalc Expressions:_  
+`obj.EnterpriseCompany.BaseCurrency`
 ### CurrencyDirectory
 
 The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))

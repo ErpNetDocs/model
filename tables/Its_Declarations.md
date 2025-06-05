@@ -16,6 +16,7 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 | Name | Type | Description |
 | - | - | --- |
 |[Authorized_Person_Id](#authorized_person_id)|`uniqueidentifier` |The authorized person who submits the intrastat declaration.|
+|[Base_Currency_Id](#base_currency_id)|`uniqueidentifier` |The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation.|
 |[Declaration_Function](#declaration_function)|`char(1)` Allowed: `R`, `C`|Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective|
 |[Declare_Statistical_Values](#declare_statistical_values)|`bit` |Does the declaration contain statistical values? 1=Yes; 0=No|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -67,6 +68,43 @@ The authorized person who submits the intrastat declaration.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Base_Currency_Id
+
+
+The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Base_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Declaration_Function
 
