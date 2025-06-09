@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R37141 Groups - Notify Group Members Changed | ERP.net Domain Model </title>
+      <title>R38866 Group - System Comment On Group Renamed | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R37141 Groups - Notify Group Members Changed | ERP.net Domain Model ">
+      <meta name="title" content="R38866 Group - System Comment On Group Renamed | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37141.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38866.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,89 +85,83 @@
         </div>
 
         <article data-uid="">
-<h1 id="r37141-groups---notify-group-members-changed">R37141 Groups - Notify Group Members Changed</h1>
+<h1 id="r38866-group---system-comment-on-group-renamed">R38866 Group - System Comment On Group Renamed</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td><strong>Code</strong></td>
-<td>R37141</td>
+<td>Code</td>
+<td>R38866</td>
 </tr>
 <tr>
-<td><strong>Entity</strong></td>
+<td>Entity</td>
 <td><a class="xref" href="../entities/Communities.Social.Groups.html">Communities.Social.Groups Entity</a></td>
 </tr>
 <tr>
-<td><strong>Name</strong></td>
-<td>NotifyGroupMembersChanged</td>
+<td>Name</td>
+<td>SystemCommentOnGroupRenamed</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
+<td>Attribute</td>
 <td>-</td>
 </tr>
 <tr>
-<td><strong>Layer</strong></td>
+<td>Layer</td>
 <td>Back-End</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
+<td>Events</td>
 <td>AggregateCommitted</td>
 </tr>
 <tr>
-<td><strong>Record State</strong></td>
-<td>Added, Deleted</td>
+<td>Record State</td>
+<td>Insert</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
+<td>Priority</td>
 <td>Normal</td>
 </tr>
 <tr>
-<td><strong>Modify</strong></td>
+<td>Modify</td>
 <td>NO</td>
 </tr>
 <tr>
-<td><strong>Action</strong>
-|</td>
-<td>
-<ol>
-<li>Create notifications</li>
-<li>Create comments in Chat on behalf of System User:
-On GroupMember Add:<br>
-NT_SOC_GROUP_MEMBERSHIP_ADDED
-<br><br>
-Оn GroupMember Delete:<br>
-NT_SOC_GROUP_MEMBERSHIP_REMOVED</li>
-</ol>
-</td>
+<td>Applicable Legislations</td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
-<td><strong>Description</strong></td>
-<td>The rule ensures that a proper notification is created for the user when they are
-added to or removed from a social group. It also creates system comments in the chats.</td>
+<td>Action</td>
+<td>On change of Group Name, create a record in Group.Social.Comments on behalf of the System User</td>
 </tr>
 <tr>
-<td><strong>Messages</strong></td>
-<td></td>
+<td>Description</td>
+<td>The rule creates a system comment in the group chat when its name is changed: &quot;The group was renamed to '{Group.newName}'</td>
 </tr>
 <tr>
-<td><strong>Version</strong></td>
-<td>Introduced: v.25</td>
+<td>Message</td>
+<td>{GroupMember.User.Name}' was added to the group.</td>
 </tr>
 <tr>
-<td><strong>Revocable</strong></td>
+<td>Introduced</td>
+<td>v.</td>
+</tr>
+<tr>
+<td>Revocable</td>
 <td>NO</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R37141.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38866.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -132,6 +132,11 @@ Show in UI:  <em>ShownByDefault</em></p>
 <td>int32</td>
 <td>The total number of requests the application has made to the server. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
+<tr>
+<td><a href="Systems.Monitoring.AppsPerformance.html#statisticssince">StatisticsSince</a></td>
+<td>datetime</td>
+<td>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 25.1.3.60</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -162,6 +167,13 @@ Show in UI:  <em>ShownByDefault</em></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="statisticssince">StatisticsSince</h3>
+<p>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 25.1.3.60</code></p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>

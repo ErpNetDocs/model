@@ -15,6 +15,7 @@ Represents the data, sent to the customs authorities for the Excise Declarations
 
 | Name | Type | Description |
 | - | - | --- |
+|[Base_Currency_Id](#base_currency_id)|`uniqueidentifier` |The base currency for Enterprise Company at the moment of Excise Declaration creation.|
 |[Document_Id](#document_id)|`uniqueidentifier` |Excise Declaration|
 |[Excise_Declaration_Id](#excise_declaration_id)|`uniqueidentifier` `PK`|Excise Declaration|
 |[From_Date](#from_date)|`date` |Start date of the period fot which the Excise declaration is made.|
@@ -24,6 +25,43 @@ Represents the data, sent to the customs authorities for the Excise Declarations
 |[To_Date](#to_date)|`date` |End date of the period fot which the Excise declaration is made.|
 
 ## Columns
+
+### Base_Currency_Id
+
+
+The base currency for Enterprise Company at the moment of Excise Declaration creation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Base_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Document_Id
 

@@ -29,6 +29,7 @@ Aggregate Tree
 | [BusyTimeHoursPerDay](Systems.Monitoring.AppsPerformance.md#busytimehoursperday) | double | Busy time in percentage per day. `Required` `Filter(ge;le)` `ORD` 
 | [BusyTimePercentage](Systems.Monitoring.AppsPerformance.md#busytimepercentage) | double | Busy time in percentage. `Required` `Filter(ge;le)` `ORD` 
 | [Requests](Systems.Monitoring.AppsPerformance.md#requests) | int32 | The total number of requests the application has made to the server. `Required` `Filter(eq;like)` `ORD` 
+| [StatisticsSince](Systems.Monitoring.AppsPerformance.md#statisticssince) | datetime | The date and time since when the statistics are collected. `Required` `Filter(ge;le)` `ORD` `Introduced in version 25.1.3.60` 
 
 
 ## Attribute Details
@@ -71,6 +72,16 @@ The total number of requests the application has made to the server. `Required` 
 _Type_: **int32**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
+_Supports Order By_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### StatisticsSince
+
+The date and time since when the statistics are collected. `Required` `Filter(ge;le)` `ORD` `Introduced in version 25.1.3.60`
+
+_Type_: **datetime**  
+_Category_: **System**  
+_Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 

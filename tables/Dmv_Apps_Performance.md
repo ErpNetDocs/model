@@ -15,6 +15,7 @@ Applications performance statistics dynamic management view. Entity: Dmv_Apps_Pe
 |[Busy_Time_Hours_Per_Day](#busy_time_hours_per_day)|`float` |Busy time in percentage per day|
 |[Busy_Time_Percentage](#busy_time_percentage)|`float` |Busy time in percentage|
 |[Requests](#requests)|`int` |The total number of requests the application has made to the server|
+|[Statistics_Since](#statistics_since)|`datetime` |The date and time since when the statistics are collected|
 
 ## Columns
 
@@ -166,5 +167,41 @@ The total number of requests the application has made to the server
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
 |Like|None|no|no|
+
+### Statistics_Since
+
+
+The date and time since when the statistics are collected
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Statistics_Since - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
 
 
