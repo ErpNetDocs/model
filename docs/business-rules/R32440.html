@@ -113,7 +113,8 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(ExciseAmountBase, ExciseDutyRateValue, Document, EnterpriseCompany)</td>
+<td>AttributeChanged(ExciseAmountBase, ExciseDutyRateValue, ExciseAdministrativeDocument,
+BaseCurrency)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -130,7 +131,7 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>new Amount((ExciseAmountBase * (ExciseDutyRateValue ?? 0)), Document.EnterpriseCompany.
+<td>new Amount((ExciseAmountBase * (ExciseDutyRateValue ?? 0)), ExciseAdministrativeDocument.
 BaseCurrency)</td>
 </tr>
 <tr>

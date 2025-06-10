@@ -11122,6 +11122,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R38865.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R38865.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R38866.md",
       "output": {
         ".html": {

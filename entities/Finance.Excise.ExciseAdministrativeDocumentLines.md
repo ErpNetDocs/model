@@ -34,8 +34,8 @@ Aggregate Root:
 | [CurrentBalanceBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
 | [DisplayText](Finance.Excise.ExciseAdministrativeDocumentLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExciseAlcoholicStrength](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | The alcoholic strength, which will be used for Excise reporting purposes. null  if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.97` 
-| [ExciseAmount](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) | The excise amount . `Currency: Document.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94` 
-| [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 4) | The excise amount in base currency. `Unit: ExciseAdministrative<br />Document.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94` 
+| [ExciseAmount](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) | The excise amount . `Currency: ExciseAdministrative<br />Document.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94` 
+| [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 4) | The excise amount in base currency. `Unit: ExciseAdministrative<br />Document.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94` 
 | [ExciseDutyRateValue](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97` 
 | [ExciseQuantity](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, converted, for reporting purposes, in the measurement unit of the excise product type. `Unit: ExciseQuantityUnit` `Required` `Introduced in version 22.1.6.58` 
 | [Id](Finance.Excise.ExciseAdministrativeDocumentLines.md#id) | guid |  
@@ -99,7 +99,7 @@ _Front-End Recalc Expressions:_
 `obj.GetNewAlcoholicStrength( obj.MeasuringTransaction, obj.Product)`
 ### ExciseAmount
 
-The excise amount . `Currency: Document.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94`
+The excise amount . `Currency: ExciseAdministrativeDocument.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -109,10 +109,10 @@ _Default Value_: **Constant**
 _Show in UI_: **HiddenByDefault**  
 
 _Front-End Recalc Expressions:_  
-`new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.Document.EnterpriseCompany.BaseCurrency)`
+`new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.ExciseAdministrativeDocument.BaseCurrency)`
 ### ExciseAmountBase
 
-The excise amount in base currency. `Unit: ExciseAdministrativeDocument.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94`
+The excise amount in base currency. `Unit: ExciseAdministrativeDocument.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94`
 
 _Type_: **decimal (14, 4)**  
 _Category_: **System**  

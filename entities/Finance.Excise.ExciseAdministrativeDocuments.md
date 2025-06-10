@@ -82,6 +82,7 @@ Aggregate Tree
 | [AccessKey](Finance.Excise.ExciseAdministrativeDocuments.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Finance.Excise.ExciseAdministrativeDocuments.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Finance.Excise.ExciseAdministrativeDocuments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [BaseCurrency](Finance.Excise.ExciseAdministrativeDocuments.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for Enterprise Company at the moment of Excise Administrative Document creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61` |
 | [CurrencyDirectory](Finance.Excise.ExciseAdministrativeDocuments.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DeliveryParty](Finance.Excise.ExciseAdministrativeDocuments.md#deliveryparty) | [Parties](General.Contacts.Parties.md) (nullable) | Indicates the party where the goods are send/received. null means it is the same as Other Party. `Filter(multi eq)` `Introduced in version 24.1.0.10` |
 | [DocumentType](Finance.Excise.ExciseAdministrativeDocuments.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -517,6 +518,20 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
+### BaseCurrency
+
+The base currency for Enterprise Company at the moment of Excise Administrative Document creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`obj.EnterpriseCompany.BaseCurrency`
+
+_Front-End Recalc Expressions:_  
+`obj.EnterpriseCompany.BaseCurrency`
 ### CurrencyDirectory
 
 The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))

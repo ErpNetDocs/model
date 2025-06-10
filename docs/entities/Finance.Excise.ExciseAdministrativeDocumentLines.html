@@ -133,12 +133,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#exciseamount">ExciseAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The excise amount . <code>Currency: Document.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></td>
+<td>The excise amount . <code>Currency: ExciseAdministrative&lt;br /&gt;Document.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#exciseamountbase">ExciseAmountBase</a></td>
 <td>decimal (14, 4)</td>
-<td>The excise amount in base currency. <code>Unit: ExciseAdministrative&lt;br /&gt;Document.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></td>
+<td>The excise amount in base currency. <code>Unit: ExciseAdministrative&lt;br /&gt;Document.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#excisedutyratevalue">ExciseDutyRateValue</a></td>
@@ -279,7 +279,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.GetNewAlcoholicStrength( obj.MeasuringTransaction, obj.Product)</code></p>
 <h3 id="exciseamount">ExciseAmount</h3>
-<p>The excise amount . <code>Currency: Document.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></p>
+<p>The excise amount . <code>Currency: ExciseAdministrativeDocument.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -287,9 +287,9 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.Document.EnterpriseCompany.BaseCurrency)</code></p>
+<code>new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.ExciseAdministrativeDocument.BaseCurrency)</code></p>
 <h3 id="exciseamountbase">ExciseAmountBase</h3>
-<p>The excise amount in base currency. <code>Unit: ExciseAdministrativeDocument.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></p>
+<p>The excise amount in base currency. <code>Unit: ExciseAdministrativeDocument.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 21.1.3.94</code></p>
 <p><em>Type</em>: <strong>decimal (14, 4)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>

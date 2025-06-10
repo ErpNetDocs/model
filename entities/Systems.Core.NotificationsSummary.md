@@ -26,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [LastNotificationClass](Systems.Core.NotificationsSummary.md#lastnotificationclass) | string (64) | Last Notification Class. `Required` `Introduced in version 25.1.1.34` 
+| [LastNotificationId](Systems.Core.NotificationsSummary.md#lastnotificationid) | guid | The id of the last notification, related to this data object. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61` 
 | [LastNotificationSubject](Systems.Core.NotificationsSummary.md#lastnotificationsubject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)` `Inherited from Cmm_Notifications_Table.Subject` 
 | [LastNotificationTime](Systems.Core.NotificationsSummary.md#lastnotificationtime) | datetime | The exact server time (in UTC), when the notification was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `Inherited from Cmm_Notifications_Table.Creation_Time_Utc` 
 | [NotificationsCount](Systems.Core.NotificationsSummary.md#notificationscount) | int32 | Notifications Count. `Required` 
@@ -50,6 +51,15 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+_Show in UI_: **ShownByDefault**  
+
+### LastNotificationId
+
+The id of the last notification, related to this data object. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61`
+
+_Type_: **guid**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
 ### LastNotificationSubject
