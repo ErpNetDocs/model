@@ -130,10 +130,17 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>
-<pre><code>                                                                                         |
-</code></pre>
-</td>
+<td>IF
+<br>
+TargetParty IS NULL
+AND ResponsibleParty IS NOT NULL
+AND (
+Subject IS NULL
+OR Subject = SystemSubject(SystemType, TargetParty.OldValue)
+OR Subject = SystemSubject(SystemType, ResponsibleParty.OldValue)
+)
+THEN
+Subject = SystemSubject(SystemType / ResponsibleParty)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -148,7 +155,7 @@ Target Party, while preserving any user-entered Subject text.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td></td>
+<td>v.25</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
