@@ -129,7 +129,7 @@
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The calculation logic for the FullState field requires the introduction of this business rule to ensure that the UserState.Ord value always falls within the range of 1 to 9999. This helps prevent errors when sorting Cases by Full State in the Cases navigator.</td>
+<td>The calculation logic for the FullState field in Cases (Case.SystemState * 10000 + Case.UserState.Ord) requires the introduction of this business rule to prevent incorrect sorting by this field in the Cases navigator.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
