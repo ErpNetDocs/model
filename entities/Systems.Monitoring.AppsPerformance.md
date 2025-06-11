@@ -28,7 +28,7 @@ Aggregate Tree
 | [Application](Systems.Monitoring.AppsPerformance.md#application) | string (64) | The name of the application that executes the operation. `Required` `Filter(eq;ge;le)` `ORD` 
 | [BusyTimeHoursPerDay](Systems.Monitoring.AppsPerformance.md#busytimehoursperday) | double | Busy time in percentage per day. `Required` `Filter(ge;le)` `ORD` 
 | [BusyTimePercentage](Systems.Monitoring.AppsPerformance.md#busytimepercentage) | double | Busy time in percentage. `Required` `Filter(ge;le)` `ORD` 
-| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | int32 | The total number of requests the application has made to the server. `Required` `Filter(eq;like)` `ORD` 
+| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | double | The number of requests per minute the application has made to the server. `Required` `Filter(eq;like)` `ORD` 
 | [StatisticsSince](Systems.Monitoring.AppsPerformance.md#statisticssince) | datetime | The date and time since when the statistics are collected. `Required` `Filter(ge;le)` `ORD` `Introduced in version 25.1.3.60` 
 
 
@@ -67,9 +67,9 @@ _Show in UI_: **ShownByDefault**
 
 ### Requests
 
-The total number of requests the application has made to the server. `Required` `Filter(eq;like)` `ORD`
+The number of requests per minute the application has made to the server. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **int32**  
+_Type_: **double**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  

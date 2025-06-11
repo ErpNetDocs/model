@@ -39,7 +39,7 @@ Aggregate Tree
 | [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date. `Filter(ge;le)` 
 | [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time. `Filter(ge;le)` 
 | [EstimatedTimeHours](Projects.Agile.Cases.md#estimatedtimehours) | decimal (8, 2) __nullable__ | Estimation of the required work effort in hours. 
-| [FullState](Projects.Agile.Cases.md#fullstate) | string | Full state of the case based on its system and user state. [ReadOnly] 
+| [FullState](Projects.Agile.Cases.md#fullstate) | int32 | Full state of the case based on its system and user state. [ReadOnly] 
 | [Id](Projects.Agile.Cases.md#id) | guid |  
 | [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [LoggedTime](Projects.Agile.Cases.md#loggedtime) | decimal (0, 0) | Total duration of the logged time for the case (in hours). [ReadOnly] 
@@ -163,7 +163,7 @@ _Show in UI_: **ShownByDefault**
 
 Full state of the case based on its system and user state. [ReadOnly]
 
-_Type_: **string**  
+_Type_: **int32**  
 _Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
