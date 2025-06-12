@@ -174,7 +174,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company to which this ExecutionStatus applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></td>
+<td>When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#location">Location</a></td>
@@ -274,7 +274,7 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this ExecutionStatus applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
+<p>When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>

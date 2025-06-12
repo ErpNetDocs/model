@@ -12,7 +12,7 @@ Defines user-configurable status values that describe sub-stages within a broade
 | Name | Type | Description |
 | - | - | --- |
 |[Code](#code)|`nvarchar(16)` |Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc.|
-|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
+|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When specified, means that the status applies only to the specified enterprise company. NULL means the status is applicable to all enterprise companies.|
 |[Execution_Stage](#execution_stage)|`char(3)` Allowed: `PND`, `PRP`, `DEL`, `FIN`|The system-defined stage under which is the current status.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the POS execution status is currently active.|
 |[Location_Id](#location_id)|`uniqueidentifier` |When specified, means that the status applies only to the specified location. NULL means the status is applicable to all locations.|
@@ -61,6 +61,9 @@ Unique short descriptive code of the user status. Used for display constrained d
 |Like|None|no|no|
 
 ### Enterprise_Company_Id
+
+
+When specified, means that the status applies only to the specified enterprise company. NULL means the status is applicable to all enterprise companies.
 
 | Property | Value |
 | - | - |

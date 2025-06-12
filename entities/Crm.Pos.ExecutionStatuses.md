@@ -46,7 +46,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.ExecutionStatuses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this ExecutionStatus applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Pos.ExecutionStatuses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. `Filter(multi eq)` |
 | [Location](Crm.Pos.ExecutionStatuses.md#location) | [Locations](Crm.Pos.Locations.md) (nullable) | When specified, means that the status applies only to the specified location. null means the status is applicable to all locations. `Filter(multi eq)` |
 
 
@@ -150,7 +150,7 @@ _Show in UI_: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The Enterprise Company to which this ExecutionStatus applies, or null if it is for all enterprise companies. `Filter(multi eq)`
+When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Indexed_: **True**  
