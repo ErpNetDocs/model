@@ -130,11 +130,11 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF ResponsibleParty != Owner
-THEN
+<td>IF ResponsibleParty != OwnerParty
+<br> THEN
 IF ActivityParticipants.Count == 1
 THEN Set the ParticipantPerson of the only ActivityParticipant to = ResponsibleParty
-ELSE
+<br> ELSE
 IF no ActivityParticipants exists with ParticipantPerson == ResponsibleParty
 THEN Add new ActivityParticipant with ParticipantPerson = ResponsibleParty</td>
 </tr>
