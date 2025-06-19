@@ -37,7 +37,7 @@ Aggregate Tree
 | [Name](Projects.AI.Providers.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the provider. `Required` `Filter(like)` 
 | [Notes](Projects.AI.Providers.md#notes) | string (max) __nullable__ | Notes for this Provider. 
 | [ObjectVersion](Projects.AI.Providers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ProviderApiKey](Projects.AI.Providers.md#providerapikey) | string (128) | The API key (provided by the model provider), which should be used to access the provider API. `Required` 
+| [ProviderApiKey](Projects.AI.Providers.md#providerapikey) | string (256) __nullable__ | The API key (provided by the model provider), which should be used to access the provider API. 
 | [ProviderField](Projects.AI.Providers.md#providerfield) | [ProviderField](Projects.AI.Providers.md#providerfield) | The provider of the base model. Currently, only OpenAI is supported. `Required` `Default("OpenAI")` `Filter(eq)` 
 
 
@@ -106,13 +106,13 @@ _Show in UI_: **HiddenByDefault**
 
 ### ProviderApiKey
 
-The API key (provided by the model provider), which should be used to access the provider API. `Required`
+The API key (provided by the model provider), which should be used to access the provider API.
 
-_Type_: **string (128)**  
+_Type_: **string (256) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **128**  
+_Maximum Length_: **256**  
 _Show in UI_: **ShownByDefault**  
 
 ### ProviderField

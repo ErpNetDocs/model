@@ -149,8 +149,8 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Projects.AI.Providers.html#providerapikey">ProviderApiKey</a></td>
-<td>string (128)</td>
-<td>The API key (provided by the model provider), which should be used to access the provider API. <code>Required</code></td>
+<td>string (256) <strong>nullable</strong></td>
+<td>The API key (provided by the model provider), which should be used to access the provider API.</td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Providers.html#providerfield">ProviderField</a></td>
@@ -205,12 +205,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="providerapikey">ProviderApiKey</h3>
-<p>The API key (provided by the model provider), which should be used to access the provider API. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
+<p>The API key (provided by the model provider), which should be used to access the provider API.</p>
+<p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
+<em>Maximum Length</em>: <strong>256</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="providerfield">ProviderField</h3>
 <p>The provider of the base model. Currently, only OpenAI is supported. <code>Required</code> <code>Default(&quot;OpenAI&quot;)</code> <code>Filter(eq)</code></p>

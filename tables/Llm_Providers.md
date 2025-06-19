@@ -15,7 +15,7 @@ Specifies provider and base model, on which the user models can be based. Entity
 |[Name](#name)|`nvarchar(256)` `ML`|Multi-language name of the provider|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Provider](#provider)|`nvarchar(64)` Allowed: `OpenAI`|The provider of the base model. Currently, only OpenAI is supported.|
-|[Provider_Api_Key](#provider_api_key)|`nvarchar(128)` |The API key (provided by the model provider), which should be used to access the provider API.|
+|[Provider_Api_Key](#provider_api_key)|`nvarchar(256)` |The API key (provided by the model provider), which should be used to access the provider API.|
 |[Provider_Id](#provider_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -170,7 +170,7 @@ The API key (provided by the model provider), which should be used to access the
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|128|
+|Max Length|256|
 |Order|4|
 |Ownership Reference|no|
 |Pasword|yes|
@@ -181,7 +181,7 @@ The API key (provided by the model provider), which should be used to access the
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(128)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
