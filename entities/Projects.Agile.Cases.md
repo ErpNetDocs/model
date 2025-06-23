@@ -14,6 +14,7 @@ Default Search Members:
 __  
 Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 Layout category attribute:  _CaseCategoryId_  
 
 ## Track Changes  

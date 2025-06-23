@@ -14,6 +14,7 @@ Default Search Members:
 __  
 Category:  _Definitions_  
 Show in UI:  _CannotBeShown_  
+API access:  _None_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  

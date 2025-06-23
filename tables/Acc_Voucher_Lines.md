@@ -31,7 +31,9 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 |[Line_No](#line_no)|`int` |Consecutive number of the line within the voucher|
 |[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` |The profit center to which this revenue is related|
 |[Rate_Divisor](#rate_divisor)|`decimal(18, 6)` |The divisor for conversion from Debit/Credit to base currency|
+|[Rate_Divisor_RC](#rate_divisor_rc)|`decimal(18, 6)` |The divisor for conversion from Debit/Credit to Reporting currency.|
 |[Rate_Multiplier](#rate_multiplier)|`decimal(18, 6)` |The multiplier for conversion from Debit/Credit to base currency|
+|[Rate_Multiplier_RC](#rate_multiplier_rc)|`decimal(18, 6)` |The multiplier for conversion from Debit/Credit to Reporting currency.|
 |[Referenced_Document_Id](#referenced_document_id)|`uniqueidentifier` |The document which is referenced by the line. By default, this is the document of the voucher|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Voucher_Id](#voucher_id)|`uniqueidentifier` |The voucher to which this line is attached|
@@ -248,7 +250,7 @@ The amount of credit in reporting currency.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|19|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -375,7 +377,7 @@ The amount of debit in reporting currency.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|18|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -526,6 +528,36 @@ The divisor for conversion from Debit/Credit to base currency
 |User Login|no|
 |Visible|no|
 
+### Rate_Divisor_RC
+
+
+The divisor for conversion from Debit/Credit to Reporting currency.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|21|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 6) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
 ### Rate_Multiplier
 
 
@@ -551,6 +583,36 @@ The multiplier for conversion from Debit/Credit to base currency
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|decimal(18, 6)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+### Rate_Multiplier_RC
+
+
+The multiplier for conversion from Debit/Credit to Reporting currency.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|20|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 6) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -604,7 +666,7 @@ The document which is referenced by the line. By default, this is the document o
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|17|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

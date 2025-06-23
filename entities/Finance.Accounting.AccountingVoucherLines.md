@@ -14,6 +14,7 @@ Default Search Members:
 _Voucher.DocumentNo_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  
@@ -45,7 +46,9 @@ Aggregate Root:
 | [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher. `Required` 
 | [ObjectVersion](Finance.Accounting.AccountingVoucherLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
+| [RateDivisorRC](Finance.Accounting.AccountingVoucherLines.md#ratedivisorrc) | decimal (18, 6) __nullable__ | The divisor for conversion from Debit/Credit to Reporting currency. `Introduced in version 26.1.3.74` 
 | [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
+| [RateMultiplierRC](Finance.Accounting.AccountingVoucherLines.md#ratemultiplierrc) | decimal (18, 6) __nullable__ | The multiplier for conversion from Debit/Credit to Reporting currency. `Introduced in version 26.1.3.74` 
 
 ## References
 
@@ -217,6 +220,16 @@ _Supports Order By_: **False**
 _Default Value_: **1**  
 _Show in UI_: **HiddenByDefault**  
 
+### RateDivisorRC
+
+The divisor for conversion from Debit/Credit to Reporting currency. `Introduced in version 26.1.3.74`
+
+_Type_: **decimal (18, 6) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Show in UI_: **HiddenByDefault**  
+
 ### RateMultiplier
 
 The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)`
@@ -226,6 +239,16 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+_Show in UI_: **HiddenByDefault**  
+
+### RateMultiplierRC
+
+The multiplier for conversion from Debit/Credit to Reporting currency. `Introduced in version 26.1.3.74`
+
+_Type_: **decimal (18, 6) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 _Show in UI_: **HiddenByDefault**  
 
 

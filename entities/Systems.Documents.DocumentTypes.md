@@ -27,6 +27,7 @@ Name Data Member:
 _TypeName_  
 Category:  _Settings_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 Layout category attribute:  _EntityName_  
 
 ## Track Changes  

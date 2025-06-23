@@ -16,6 +16,7 @@ Name Data Member:
 _FolderName_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _1 - Track last changes only_  

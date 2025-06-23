@@ -19,6 +19,7 @@ Name Data Member:
 _Name_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 Layout category attribute:  _PartyType_  
 
 ## Track Changes  

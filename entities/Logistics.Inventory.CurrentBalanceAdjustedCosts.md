@@ -14,6 +14,7 @@ Default Search Members:
 __  
 Category:  _Views_  
 Show in UI:  _HiddenByDefault_  
+API access:  _ReadWrite_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

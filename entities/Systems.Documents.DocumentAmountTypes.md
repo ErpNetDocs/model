@@ -27,6 +27,7 @@ Name Data Member:
 _AmountTypeName_  
 Category:  _Settings_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 Layout category attribute:  _DistributeBy_  
 
 ## Track Changes  

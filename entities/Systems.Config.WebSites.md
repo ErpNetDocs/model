@@ -23,6 +23,7 @@ Default Search Members:
 __  
 Category:  _Settings_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _3 - Track object and attribute changes_  

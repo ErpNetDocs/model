@@ -26,6 +26,7 @@ Code Data Member:
 _DocumentNo_  
 Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 Layout category attribute:  _DocumentTypeId_  
 
 ## Track Changes  

@@ -27,6 +27,7 @@ Name Data Member:
 _Party.PartyName_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 Layout category attribute:  _CustomerTypeId_  
 
 ## Track Changes  

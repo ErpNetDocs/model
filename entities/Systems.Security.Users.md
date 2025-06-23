@@ -18,6 +18,7 @@ Name Data Member:
 _Name_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _3 - Track object and attribute changes_  

@@ -29,6 +29,7 @@ Name Data Member:
 _Document.EntityName_  
 Category:  _Definitions_  
 Show in UI:  _HiddenByDefault_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  

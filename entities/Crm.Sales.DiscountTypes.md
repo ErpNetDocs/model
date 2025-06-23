@@ -27,6 +27,7 @@ Name Data Member:
 _Name_  
 Category:  _Settings_  
 Show in UI:  _CannotBeShown_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  

@@ -95,7 +95,8 @@
 Default Search Members:<br>
 <em>Voucher.DocumentNo</em><br>
 Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
+Show in UI:  <em>ShownByDefault</em><br>
+API access:  <em>ReadWrite</em></p>
 <h2 id="track-changes">Track Changes</h2>
 <p>Min level:  <em>0 - Do not track changes</em><br>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
@@ -186,9 +187,19 @@ Aggregate Root:<br>
 <td>The divisor for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#ratedivisorrc">RateDivisorRC</a></td>
+<td>decimal (18, 6) <strong>nullable</strong></td>
+<td>The divisor for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratemultiplier">RateMultiplier</a></td>
 <td>decimal (18, 6)</td>
 <td>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Accounting.AccountingVoucherLines.html#ratemultiplierrc">RateMultiplierRC</a></td>
+<td>decimal (18, 6) <strong>nullable</strong></td>
+<td>The multiplier for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></td>
 </tr>
 </tbody>
 </table>
@@ -353,6 +364,13 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="ratedivisorrc">RateDivisorRC</h3>
+<p>The divisor for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></p>
+<p><em>Type</em>: <strong>decimal (18, 6) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
 <p>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
@@ -360,6 +378,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong><br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="ratemultiplierrc">RateMultiplierRC</h3>
+<p>The multiplier for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></p>
+<p><em>Type</em>: <strong>decimal (18, 6) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>

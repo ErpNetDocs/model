@@ -16,6 +16,7 @@ Name Data Member:
 _OutputOrderLine.OutputOrder.EntityName_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
+API access:  _ReadWrite_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  
