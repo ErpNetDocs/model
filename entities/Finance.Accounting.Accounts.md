@@ -41,6 +41,7 @@ Aggregate Tree
 | [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | True means that the account won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
 | [DisplayText](Finance.Accounting.Accounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Accounting.Accounts.md#id) | guid |  
+| [LimitToBaseCurrency](Finance.Accounting.Accounts.md#limittobasecurrency) | boolean | When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked. `Required` `Default(false)` `Filter(eq)` `Introduced in version 26.1.3.78` 
 | [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The account name. `Required` `Filter(like)` 
 | [Number](Finance.Accounting.Accounts.md#number) | string (30) | The number of the account, unique within the account group. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Accounting.Accounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -135,6 +136,17 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
+
+### LimitToBaseCurrency
+
+When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked. `Required` `Default(false)` `Filter(eq)` `Introduced in version 26.1.3.78`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### Name
 

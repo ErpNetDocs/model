@@ -155,6 +155,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td></td>
 </tr>
 <tr>
+<td><a href="Finance.Accounting.Accounts.html#limittobasecurrency">LimitToBaseCurrency</a></td>
+<td>boolean</td>
+<td>When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 26.1.3.78</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Accounting.Accounts.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
 <td>The account name. <code>Required</code> <code>Filter(like)</code></td>
@@ -288,6 +293,14 @@ Allowed values for the <code>CurrencyValuationMethod</code>(Finance.Accounting.A
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<h3 id="limittobasecurrency">LimitToBaseCurrency</h3>
+<p>When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 26.1.3.78</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
 <p>The account name. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>

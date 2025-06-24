@@ -21,6 +21,7 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 |[Description](#description)|`nvarchar(254)` ||
 |[Discontinued](#discontinued)|`bit` |1 means that the account won't be used any more and should not appear in combo boxes|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
+|[Limit_To_Base_Currency](#limit_to_base_currency)|`bit` |When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -39,7 +40,7 @@ The full number of the account, unique among all accounts. It consists of the gr
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|30|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -75,7 +76,7 @@ The account group to which this account belongs
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -109,7 +110,7 @@ The account group to which this account belongs
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -145,7 +146,7 @@ The account name
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -181,7 +182,7 @@ The number of the account, unique within the account group
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|30|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -217,7 +218,7 @@ The primary currency of the account. All movements on the account are stored in 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -255,7 +256,7 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -283,7 +284,7 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -313,7 +314,7 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -346,7 +347,7 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -369,6 +370,42 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Limit_To_Base_Currency
+
+
+When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|11|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Limit_To_Base_Currency - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -380,7 +417,7 @@ Method for base currency valuation of non base currency amounts. ACB = Account_C
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
