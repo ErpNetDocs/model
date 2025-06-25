@@ -25,6 +25,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |[Exchange_Difference_Debit_Account_Id](#exchange_difference_debit_account_id)|`uniqueidentifier` |Account for balancing accounting vouchers with debit difference due to currency exchanges|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current Enterprise company  is active.|
 |[Print_Images_Retention_Months](#print_images_retention_months)|`int` |A period of months for which the printed images of the documents will be kept.|
+|[Reporting_Currency_End_Date](#reporting_currency_end_date)|`date` |Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.|
 |[Reporting_Currency_Id](#reporting_currency_id)|`uniqueidentifier` |Used for preparing accounting reports in a currency required for internal or external reporting purposes.|
 |[Reporting_Currency_Processed_Date](#reporting_currency_processed_date)|`date` Readonly|Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.|
 |[Reporting_Currency_Rate](#reporting_currency_rate)|`decimal(18, 6)` |Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).|
@@ -527,6 +528,43 @@ A period of months for which the printed images of the documents will be kept.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Reporting_Currency_End_Date
+
+
+Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|21|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Reporting_Currency_End_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Reporting_Currency_Id
