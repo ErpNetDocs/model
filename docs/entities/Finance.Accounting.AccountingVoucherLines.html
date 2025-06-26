@@ -290,7 +290,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( Convert( obj.Voucher.DocumentDate, Nullable</code>1) &gt;= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Credit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.CreditBase.Value * Convert( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`</p>
+<code>new Amount( ( ( obj.Credit.Value * Convert( obj.RateMultiplierRC, Decimal)) / Convert( obj.RateDivisorRC, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency)</code></p>
 <h3 id="debit">Debit</h3>
 <p>The amount of the debit in the currency of the account. 0 means that the account is not debited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
