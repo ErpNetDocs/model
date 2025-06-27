@@ -315,7 +315,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( Convert( obj.Voucher.DocumentDate, Nullable</code>1) &gt;= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Debit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.DebitBase.Value * Convert( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`</p>
+<code>new Amount( ( ( obj.Debit.Value * Convert( obj.RateMultiplierRC, Decimal)) / Convert( obj.RateDivisorRC, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency)</code></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>

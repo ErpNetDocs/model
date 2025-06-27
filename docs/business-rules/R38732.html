@@ -113,8 +113,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(Debit, DebitBase, Voucher, DocumentDate, EnterpriseCompany,
-CurrencyDirectory)</td>
+<td>AttributeChanged(Debit, RateMultiplierRC, RateDivisorRC, Voucher, EnterpriseCompany)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -131,20 +130,18 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IIF((Convert(Voucher.DocumentDate, Nullable`1) &gt;= Voucher.EnterpriseCompany.
-ReportingCurrencyStartDate), Debit.ConvertTo(Voucher.EnterpriseCompany.ReportingCurrency,
-Voucher.CurrencyDirectory), new Amount((DebitBase.Value * Convert(Voucher.EnterpriseCompany.
-ReportingCurrencyRate, Decimal)), Voucher.EnterpriseCompany.ReportingCurrency))</td>
+<td>new Amount(((Debit.Value * Convert(RateMultiplierRC, Decimal)) / Convert(RateDivisorRC,
+Decimal)), Voucher.EnterpriseCompany.ReportingCurrency)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>Calculates the value of the DebitReporting field in an account voucher line when the Debit,
-DebitBase, or the document’s CurrencyDirectory is modified.The logic is as follows: 1/ If
-the document date is on or after the ReportingCurrencyStartDate set in the Enterprise
-Company, the value is calculated using: DebitReporting = ConvertToReportingCurrency(Debit,
-CurrencyDirectory); 2/ If the document date is before the start date, the value is
-calculated using:DebitReporting = DebitBase * ReportingCurrencyRate. The result is
-expressed in the reporting currency defined in the Enterprise Company.</td>
+RateMultiplierRC, RateDivisorRC, or the document’s CurrencyDirectory is modified. The logic
+is as follows: 1/ If the document date is on or before the ReportingCurrencyEndDate defined
+in the Enterprise Company, the value is calculated as: DebitReporting = Debit *
+RateMultiplierRC / RateDivisorRC; 2/ If the document date is after the
+ReportingCurrencyEndDate, the field is not calculated and remains empty. The result, when
+calculated, is expressed in the reporting currency defined in the Enterprise Company.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

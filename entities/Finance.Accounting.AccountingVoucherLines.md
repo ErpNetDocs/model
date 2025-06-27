@@ -153,7 +153,7 @@ _Supports Order By_: **False**
 _Show in UI_: **ShownByDefault**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( Convert( obj.Voucher.DocumentDate, Nullable`1) >= obj.Voucher.EnterpriseCompany.ReportingCurrencyStartDate), obj.Debit.ConvertTo( obj.Voucher.EnterpriseCompany.ReportingCurrency, obj.Voucher.CurrencyDirectory), new Amount( ( obj.DebitBase.Value * Convert( obj.Voucher.EnterpriseCompany.ReportingCurrencyRate, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency))`
+`new Amount( ( ( obj.Debit.Value * Convert( obj.RateMultiplierRC, Decimal)) / Convert( obj.RateDivisorRC, Decimal)), obj.Voucher.EnterpriseCompany.ReportingCurrency)`
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.

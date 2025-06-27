@@ -180,6 +180,7 @@ _Allowed Values (Systems.Config.WebSitesRepository.WebSiteType Enum Members)_
 | OLAP | OLAP value. Stored as 'OLP'. <br /> _Database Value:_ 'OLP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'OLAP' |
 | MicrosoftSync | MicrosoftSync value. Stored as 'MSS'. <br /> _Database Value:_ 'MSS' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'MicrosoftSync' |
 | VideoConferencing | VideoConferencing value. Stored as 'VDC'. <br /> _Database Value:_ 'VDC' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'VideoConferencing' |
+| AIServer | AIServer value. Stored as 'AIS'. <br /> _Database Value:_ 'AIS' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'AIServer' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
