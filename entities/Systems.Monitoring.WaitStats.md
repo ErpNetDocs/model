@@ -154,6 +154,17 @@ _Maximum Length_: **128**
 _Show in UI_: **ShownByDefault**  
 
 
+## API Methods
+
+Methods that can be invoked in public APIs.
+
+### ResetStats
+
+Reset wait statistics  
+_Return Type_: **void**  
+_Declaring Type_: **[WaitStats](Systems.Monitoring.WaitStats.md)**  
+_Domain API Request_: **POST**  
+
 ## API
 
 Domain API Query:

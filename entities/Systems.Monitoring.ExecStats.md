@@ -154,6 +154,17 @@ _Supports Order By_: **True**
 _Show in UI_: **ShownByDefault**  
 
 
+## API Methods
+
+Methods that can be invoked in public APIs.
+
+### ResetStats
+
+Reset performace statistics  
+_Return Type_: **void**  
+_Declaring Type_: **[ExecStats](Systems.Monitoring.ExecStats.md)**  
+_Domain API Request_: **POST**  
+
 ## API
 
 Domain API Query:
