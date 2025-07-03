@@ -35,6 +35,7 @@ Aggregate Tree
 | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` 
 | [DisplayText](Logistics.Wms.WarehouseTransactions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
+| [IsAutoAccepted](Logistics.Wms.WarehouseTransactions.md#isautoaccepted) | boolean | Auto-flag indicating that the product was accepted as correct without being physically counted. `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Introduced in version 26.1.3.87` 
 | [ObjectVersion](Logistics.Wms.WarehouseTransactions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 | [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
@@ -119,6 +120,17 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
+
+### IsAutoAccepted
+
+Auto-flag indicating that the product was accepted as correct without being physically counted. `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Introduced in version 26.1.3.87`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### ObjectVersion
 

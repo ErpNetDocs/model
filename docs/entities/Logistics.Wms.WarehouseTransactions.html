@@ -142,6 +142,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseTransactions.html#isautoaccepted">IsAutoAccepted</a></td>
+<td>boolean</td>
+<td>Auto-flag indicating that the product was accepted as correct without being physically counted. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.1.3.87</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
@@ -298,6 +303,14 @@ Allowed values for the <code>Direction</code>(Logistics.Wms.WarehouseTransaction
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<h3 id="isautoaccepted">IsAutoAccepted</h3>
+<p>Auto-flag indicating that the product was accepted as correct without being physically counted. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.1.3.87</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>

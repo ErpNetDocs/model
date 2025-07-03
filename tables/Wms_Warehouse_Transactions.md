@@ -16,6 +16,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The creation time in UTC.|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The creation user.|
 |[Direction](#direction)|`char(1)` Allowed: `I`, `O`|Direction of the transaction - I=IN, O=OUT.|
+|[Is_Auto_Accepted](#is_auto_accepted)|`bit` Readonly|Auto-flag indicating that the product was accepted as correct without being physically counted.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot which was transacted. NULL when the transaction was not for a specific lot.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which was transacted.|
@@ -49,7 +50,7 @@ Catch (measured) quantity for the transaction. Positive values indicate transact
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|13|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -86,7 +87,7 @@ The measurement unit of the catch quantity. NULL when catch measurement is not c
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|14|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -123,7 +124,7 @@ The creation time in UTC.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|16|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -160,7 +161,7 @@ The creation user.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|15|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -198,7 +199,7 @@ Direction of the transaction - I=IN, O=OUT.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -220,6 +221,42 @@ Direction of the transaction - I=IN, O=OUT.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Is_Auto_Accepted
+
+
+Auto-flag indicating that the product was accepted as correct without being physically counted.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|21|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Auto_Accepted - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Logistic_Unit_Id
 
 
@@ -234,7 +271,7 @@ Logistic unit, which was transacted. NULL when the transaction was not for a log
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -271,7 +308,7 @@ The lot which was transacted. NULL when the transaction was not for a specific l
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -308,7 +345,7 @@ The product, which was transacted.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -345,7 +382,7 @@ The product variant, which was transacted. NULL when the transaction was not for
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -382,7 +419,7 @@ The transacted net change in quantity. Positive values indicate transactions. Ne
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|11|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -419,7 +456,7 @@ Quantity in the base measurement unit of the product.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|19|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -449,7 +486,7 @@ The measurement unit of quantity.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|12|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -483,7 +520,7 @@ The measurement unit of quantity.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|17|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -513,7 +550,7 @@ The serial number which was transacted. NULL when the transaction was not for a 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -550,7 +587,7 @@ The theoretical quantity according to the current measurement dimensions of the 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|18|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -581,7 +618,7 @@ The type of the task (operation), which was transacted.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|20|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -617,7 +654,7 @@ The warehouse in which the transaction occurred.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -654,7 +691,7 @@ The warehouse location, where the transaction occurred.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -691,7 +728,7 @@ The order which created this transaction. NULL when this transaction was not bas
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -728,7 +765,7 @@ The order line which created this transaction. NULL when this transaction was no
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -762,7 +799,7 @@ The order line which created this transaction. NULL when this transaction was no
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
