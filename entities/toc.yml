@@ -946,6 +946,10 @@
       href: Logistics.Wms.WarehouseOrders.md
     - name: WarehousePolicies
       href: Logistics.Wms.WarehousePolicies.md
+    - name: WarehouseReconciliationLines
+      href: Logistics.Wms.WarehouseReconciliationLines.md
+    - name: WarehouseReconciliations
+      href: Logistics.Wms.WarehouseReconciliations.md
     - name: WarehouseRequisitionLines
       href: Logistics.Wms.WarehouseRequisitionLines.md
     - name: WarehouseRequisitions

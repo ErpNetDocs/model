@@ -1468,6 +1468,12 @@ references:
 - uid: Logistics.Wms.WarehousePolicies
   name: Logistics.Wms.WarehousePolicies Entity
   href: entities/Logistics.Wms.WarehousePolicies.html
+- uid: Logistics.Wms.WarehouseReconciliationLines
+  name: Logistics.Wms.WarehouseReconciliationLines Entity
+  href: entities/Logistics.Wms.WarehouseReconciliationLines.html
+- uid: Logistics.Wms.WarehouseReconciliations
+  name: Logistics.Wms.WarehouseReconciliations Entity
+  href: entities/Logistics.Wms.WarehouseReconciliations.html
 - uid: Logistics.Wms.WarehouseRequisitionExecutions
   name: Logistics.Wms.WarehouseRequisitionExecutions Entity
   href: entities/Logistics.Wms.WarehouseRequisitionExecutions.html

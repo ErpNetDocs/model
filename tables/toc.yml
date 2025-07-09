@@ -1352,6 +1352,10 @@
     href: Wms_Warehouse_Orders.md
   - name: Wms_Warehouse_Policies
     href: Wms_Warehouse_Policies.md
+  - name: Wms_Warehouse_Reconciliation_Lines
+    href: Wms_Warehouse_Reconciliation_Lines.md
+  - name: Wms_Warehouse_Reconciliations
+    href: Wms_Warehouse_Reconciliations.md
   - name: Wms_Warehouse_Requisition_Lines
     href: Wms_Warehouse_Requisition_Lines.md
   - name: Wms_Warehouse_Requisitions
