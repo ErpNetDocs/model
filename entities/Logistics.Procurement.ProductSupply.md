@@ -21,7 +21,7 @@ Default Display Text Format:
 _{ProcurementType} {Product.PartNumber}: {Product.Name:T} ({Store.Name:T})_  
 Default Search Members:  
 _Product.PartNumber; Product.Name_  
-Category:  _Views_  
+Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  
 

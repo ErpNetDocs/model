@@ -251,6 +251,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Show in UI_: **HiddenByDefault**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)), obj.DetermineMultiplierAndDivisorRC( obj.Account, obj.Currency, obj.ItemKey, obj.ReferencedDocument).Item1, obj.RateMultiplierRC)`
 
 ## Reference Details
 

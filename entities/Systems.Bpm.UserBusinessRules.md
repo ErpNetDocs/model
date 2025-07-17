@@ -189,6 +189,7 @@ _Allowed Values (Systems.Bpm.UserBusinessRulesRepository.ScriptLanguage Enum Mem
 | ---- | --- |
 | Integrated | Integrated value. Stored as 'Integrated'. <br /> _Database Value:_ 'Integrated' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Integrated' |
 | CSharp | CSharp value. Stored as 'CSharp'. <br /> _Database Value:_ 'CSharp' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CSharp' |
+| JavaScript | JavaScript value. Stored as 'JavaScript'. <br /> _Database Value:_ 'JavaScript' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'JavaScript' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

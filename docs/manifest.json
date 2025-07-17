@@ -11212,6 +11212,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R38922.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R38922.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R38949.md",
       "output": {
         ".html": {

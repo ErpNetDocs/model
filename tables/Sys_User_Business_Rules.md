@@ -17,7 +17,7 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Repository_Name](#repository_name)|`nvarchar(128)` |The name of the repository, for which this business rule is defined.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Script_Language](#script_language)|`nvarchar(16)` Allowed: `Integrated`, `CSharp`|The programming language used to define the rule actions.|
+|[Script_Language](#script_language)|`nvarchar(16)` Allowed: `Integrated`, `CSharp`, `JavaScript`|The programming language used to define the rule actions.|
 |[Script_Text](#script_text)|`nvarchar(max)` |The program code used to define the rule actions.|
 |[User_Business_Rule_Code](#user_business_rule_code)|`nvarchar(16)` ||
 |[User_Business_Rule_Id](#user_business_rule_id)|`uniqueidentifier` `PK`||
@@ -227,7 +227,7 @@ The programming language used to define the rule actions.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`Integrated`, `CSharp`|
+|Allowed Values|`Integrated`, `CSharp`, `JavaScript`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|Integrated|
@@ -258,6 +258,7 @@ The program code used to define the rule actions.
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
