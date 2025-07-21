@@ -17,6 +17,7 @@ Sessions dynamic management view. Entity: Dmv_Current_Sessions (Introduced in ve
 |[Device](#device)|`nvarchar(64)` |The name of the user's device.|
 |[Download_MB](#download_mb)|`decimal(12, 3)` |The downloaded megabytes at the time of the request.|
 |[Last_Request_Time](#last_request_time)|`datetime` |The last request time.|
+|[Session_Id](#session_id)|`nvarchar(64)` |The id of the session.|
 |[Start_Time](#start_time)|`datetime` |The login time of the session.|
 |[Total_Requests_Count](#total_requests_count)|`bigint` |The total request count at the time of the request.|
 |[Upload_MB](#upload_mb)|`decimal(12, 3)` |The uploaded megabytes at the time of the request.|
@@ -241,6 +242,42 @@ The last request time.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Session_Id
+
+
+The id of the session.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Session_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Start_Time
 

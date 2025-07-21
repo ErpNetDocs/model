@@ -96,7 +96,7 @@ Version: <strong>24.1.5.35</strong><br>
 Case: <strong>35911</strong></p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{User}: {Device}</em><br>
+<em>{SessionId}: {User}</em><br>
 Default Search Members:<br>
 __<br>
 Category:  <em>DynamicViews</em><br>
@@ -147,6 +147,11 @@ API access:  <em>ReadWrite</em></p>
 <td><a href="Systems.Monitoring.CurrentSessions.html#lastrequesttime">LastRequestTime</a></td>
 <td>datetime</td>
 <td>The last request time. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.CurrentSessions.html#sessionid">SessionId</a></td>
+<td>string (64)</td>
+<td>The id of the session. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.1.4.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#starttime">StartTime</a></td>
@@ -214,6 +219,14 @@ API access:  <em>ReadWrite</em></p>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="sessionid">SessionId</h3>
+<p>The id of the session. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.1.4.3</code></p>
+<p><em>Type</em>: <strong>string (64)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
 <p>The login time of the session. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>

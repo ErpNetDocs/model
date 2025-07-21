@@ -18,7 +18,7 @@ Case: **35911**
 
 ## Default Visualization
 Default Display Text Format:  
-_{User}: {Device}_  
+_{SessionId}: {User}_  
 Default Search Members:  
 __  
 Category:  _DynamicViews_  
@@ -41,6 +41,7 @@ Aggregate Tree
 | [Device](Systems.Monitoring.CurrentSessions.md#device) | string (64) | The name of the user's device. `Required` `Filter(eq;like)` `ORD` 
 | [DownloadMB](Systems.Monitoring.CurrentSessions.md#downloadmb) | decimal (12, 3) | The downloaded megabytes at the time of the request. `Required` `Filter(ge;le)` `ORD` 
 | [LastRequestTime](Systems.Monitoring.CurrentSessions.md#lastrequesttime) | datetime | The last request time. `Required` `Filter(ge;le)` `ORD` 
+| [SessionId](Systems.Monitoring.CurrentSessions.md#sessionid) | string (64) | The id of the session. `Required` `Filter(eq)` `Introduced in version 26.1.4.3` 
 | [StartTime](Systems.Monitoring.CurrentSessions.md#starttime) | datetime | The login time of the session. `Required` `Filter(ge;le)` `ORD` 
 | [TotalRequestsCount](Systems.Monitoring.CurrentSessions.md#totalrequestscount) | int64 | The total request count at the time of the request. `Required` `Filter(ge;le)` `ORD` 
 | [UploadMB](Systems.Monitoring.CurrentSessions.md#uploadmb) | decimal (12, 3) | The uploaded megabytes at the time of the request. `Required` `Filter(ge;le)` `ORD` 
@@ -109,6 +110,17 @@ _Type_: **datetime**
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### SessionId
+
+The id of the session. `Required` `Filter(eq)` `Introduced in version 26.1.4.3`
+
+_Type_: **string (64)**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Maximum Length_: **64**  
 _Show in UI_: **ShownByDefault**  
 
 ### StartTime
