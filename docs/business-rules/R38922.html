@@ -130,9 +130,9 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Convert(IIF((((Account != null) AndAlso (Currency != null)) AndAlso (ItemKey != null)),
-DetermineMultiplierAndDivisorRC(Account, Currency, ItemKey, ReferencedDocument).Item1,
-RateMultiplierRC), Object)</td>
+<td>Convert(IIF(((((Account != null) AndAlso (Currency != null)) AndAlso (ItemKey != null))
+AndAlso ((ReferencedDocument == null) OrElse True)), DetermineMultiplierAndDivisorRC().
+Item1, RateMultiplierRC), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

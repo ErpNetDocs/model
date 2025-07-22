@@ -176,6 +176,7 @@ _Allowed Values (Finance.Payments.PaymentBalancesRepository.PaymentStatus Enum M
 | PartiallyPaid | A partial payment has been made, but the full amount is still outstanding.. Stored as 'PP'. <br /> _Database Value:_ 'PP' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'PartiallyPaid' |
 | Paid | The full payment has been completed.. Stored as 'PA'. <br /> _Database Value:_ 'PA' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Paid' |
 | Overpaid | More than the required amount has been paid.. Stored as 'OV'. <br /> _Database Value:_ 'OV' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Overpaid' |
+| Other | The payment is made in the opposite direction.. Stored as 'ER'. <br /> _Database Value:_ 'ER' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Other' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  

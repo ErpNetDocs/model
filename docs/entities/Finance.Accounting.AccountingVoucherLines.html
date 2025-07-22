@@ -371,6 +371,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)</code></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
 <p>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
@@ -387,7 +389,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)), obj.DetermineMultiplierAndDivisorRC( obj.Account, obj.Currency, obj.ItemKey, obj.ReferencedDocument).Item1, obj.RateMultiplierRC)</code></p>
+<code>IIF( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>
 <p>The account being debited or credited. <code>Required</code> <code>Filter(multi eq)</code></p>
@@ -556,6 +558,7 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <li><a href="../business-rules/R38732.html">R38732 Accounting Voucher Line - Set Debit Reporting (Recalc)</a></li>
 <li><a href="../business-rules/R38733.html">R38733 Accounting Voucher Line - Set Credit Reporting (Recalc)</a></li>
 <li><a href="../business-rules/R38922.html">R38922 Accounting Voucher Line - Set Rate Multiplier R C (Recalc)</a></li>
+<li><a href="../business-rules/R38926.html">R38926 Accounting Voucher Line - Set Rate Divisor R C (Recalc)</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:

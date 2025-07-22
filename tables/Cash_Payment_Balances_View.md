@@ -23,7 +23,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 |[Paid_Amount](#paid_amount)|`decimal(38, 2)` |The paid amount. Taken from released payment transactions.|
 |[Party_Id](#party_id)|`uniqueidentifier` |The party which is to pay or receive the amount|
 |[Payment_Order_Id](#payment_order_id)|`uniqueidentifier` |The payment order.|
-|[Payment_Status](#payment_status)|`char(2)` Allowed: `UN`, `PP`, `PA`, `OV`|Payment Status	|
+|[Payment_Status](#payment_status)|`char(2)` Allowed: `UN`, `PP`, `PA`, `OV`, `ER`|Payment Status	|
 |[Ref_Document_Date](#ref_document_date)|`datetime` |The date of the original document. NULL means that it is unknown|
 |[Ref_Document_Id](#ref_document_id)|`uniqueidentifier` |The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document.|
 |[Ref_Document_No](#ref_document_no)|`nvarchar(20)` |The number of the document which has created the payment order and is the basis for the payment|
@@ -487,7 +487,7 @@ Payment Status
 
 | Property | Value |
 | - | - |
-|Allowed Values|`UN`, `PP`, `PA`, `OV`|
+|Allowed Values|`UN`, `PP`, `PA`, `OV`, `ER`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

@@ -21,7 +21,7 @@ Sessions dynamic management view. Entity: Dmv_Current_Sessions (Introduced in ve
 |[Start_Time](#start_time)|`datetime` |The login time of the session.|
 |[Total_Requests_Count](#total_requests_count)|`bigint` |The total request count at the time of the request.|
 |[Upload_MB](#upload_mb)|`decimal(12, 3)` |The uploaded megabytes at the time of the request.|
-|[User](#user)|`nvarchar(64)` |The login name of the session's user.|
+|[User_Login](#user_login)|`nvarchar(64)` |The user login name.|
 
 ## Columns
 
@@ -387,10 +387,10 @@ The uploaded megabytes at the time of the request.
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
-### User
+### User_Login
 
 
-The login name of the session's user.
+The user login name.
 
 | Property | Value |
 | - | - |
@@ -408,7 +408,7 @@ The login name of the session's user.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|yes|
+|Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(64)|
@@ -416,12 +416,5 @@ The login name of the session's user.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
-
-#### User - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|yes|
-|Like|None|no|no|
 
 

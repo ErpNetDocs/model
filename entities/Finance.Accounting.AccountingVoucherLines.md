@@ -230,6 +230,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Show in UI_: **HiddenByDefault**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)`
 ### RateMultiplier
 
 The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)`
@@ -252,7 +254,7 @@ _Supports Order By_: **False**
 _Show in UI_: **HiddenByDefault**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)), obj.DetermineMultiplierAndDivisorRC( obj.Account, obj.Currency, obj.ItemKey, obj.ReferencedDocument).Item1, obj.RateMultiplierRC)`
+`IIF( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.ItemKey != null)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)`
 
 ## Reference Details
 

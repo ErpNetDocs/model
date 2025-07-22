@@ -18,7 +18,7 @@ Case: **35911**
 
 ## Default Visualization
 Default Display Text Format:  
-_{SessionId}: {User}_  
+_{SessionId}: {UserLogin}_  
 Default Search Members:  
 __  
 Category:  _DynamicViews_  
@@ -45,7 +45,7 @@ Aggregate Tree
 | [StartTime](Systems.Monitoring.CurrentSessions.md#starttime) | datetime | The login time of the session. `Required` `Filter(ge;le)` `ORD` 
 | [TotalRequestsCount](Systems.Monitoring.CurrentSessions.md#totalrequestscount) | int64 | The total request count at the time of the request. `Required` `Filter(ge;le)` `ORD` 
 | [UploadMB](Systems.Monitoring.CurrentSessions.md#uploadmb) | decimal (12, 3) | The uploaded megabytes at the time of the request. `Required` `Filter(ge;le)` `ORD` 
-| [User](Systems.Monitoring.CurrentSessions.md#user) | string (64) | The login name of the session's user. `Required` `Filter(eq;like)` `ORD` 
+| [UserLogin](Systems.Monitoring.CurrentSessions.md#userlogin) | string (64) | The user login name. `Required` `Introduced in version 26.1.4.3` 
 
 
 ## Attribute Details
@@ -153,14 +153,14 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
-### User
+### UserLogin
 
-The login name of the session's user. `Required` `Filter(eq;like)` `ORD`
+The user login name. `Required` `Introduced in version 26.1.4.3`
 
 _Type_: **string (64)**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 _Maximum Length_: **64**  
 _Show in UI_: **ShownByDefault**  
 

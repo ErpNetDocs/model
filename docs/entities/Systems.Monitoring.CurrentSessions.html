@@ -96,7 +96,7 @@ Version: <strong>24.1.5.35</strong><br>
 Case: <strong>35911</strong></p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{SessionId}: {User}</em><br>
+<em>{SessionId}: {UserLogin}</em><br>
 Default Search Members:<br>
 __<br>
 Category:  <em>DynamicViews</em><br>
@@ -169,9 +169,9 @@ API access:  <em>ReadWrite</em></p>
 <td>The uploaded megabytes at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.CurrentSessions.html#user">User</a></td>
+<td><a href="Systems.Monitoring.CurrentSessions.html#userlogin">UserLogin</a></td>
 <td>string (64)</td>
-<td>The login name of the session's user. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>The user login name. <code>Required</code> <code>Introduced in version 26.1.4.3</code></td>
 </tr>
 </tbody>
 </table>
@@ -249,12 +249,12 @@ API access:  <em>ReadWrite</em></p>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="user">User</h3>
-<p>The login name of the session's user. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<h3 id="userlogin">UserLogin</h3>
+<p>The user login name. <code>Required</code> <code>Introduced in version 26.1.4.3</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
