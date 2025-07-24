@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R38826 Activity - Set Responsible Party From Assigned To User | ERP.net Domain Model </title>
+      <title>R38951-2 Accounting Voucher Line - Set Reporting Amounts | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R38826 Activity - Set Responsible Party From Assigned To User | ERP.net Domain Model ">
+      <meta name="title" content="R38951-2 Accounting Voucher Line - Set Reporting Amounts | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38826.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38951-2.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r38826-activity---set-responsible-party-from-assigned-to-user">R38826 Activity - Set Responsible Party From Assigned To User</h1>
+<h1 id="r38951-2-accounting-voucher-line---set-reporting-amounts">R38951-2 Accounting Voucher Line - Set Reporting Amounts</h1>
 
 <table>
 <col style="width:25%">
@@ -93,19 +93,19 @@
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R38826</td>
+<td>R38951-2</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/General.Activities.Activities.html">General.Activities.Activities Entity</a></td>
+<td><a class="xref" href="../entities/Finance.Accounting.AccountingVoucherLines.html">Finance.Accounting.AccountingVoucherLines Entity</a></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>SetResponsiblePartyFromAssignedToUser</td>
+<td>SetReportingAmounts</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>ResponsibleParty</td>
+<td>DebitReporting, CreditReporting</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -113,7 +113,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(AssignedToUser)</td>
+<td>AttributeChanged(Debit, Credit, RateMultiplierRC, RateDivisorRC)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -125,16 +125,29 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF &quot;Activity.AssignedToUser != NULL&quot;
-AND &quot;Activity.ResponsibleParty != Activity.AssignedToUser.Person&quot;, set value:
+<td>IF (Enterprise Company.ReportingCurrency Is Not Null AND
+Enterprise Company.ReportingCurrencyStartDate Is Not Null AND
+( DocumentDate &lt;= EnterpriseCompany.ReportingCurrencyEndDate OR
+EnterpriseCompany.ReportingCurrencyEndDate Is Null )
 <br><br>
-ResponsibleParty = AssignedToUser.Person</td>
+set values:
+DebitReporting = Debit * RateMultiplierRC / RateDivisorRC
+CreditReporting = Credit * RateMultiplierRC / RateDivisorRC</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>To maintain consistency between assigned users and responsible parties, this rule
-ensures that, upon modification of the Assigned to User field, the Responsible Party
-field is synchronized with the Person associated with the new User.</td>
+<td>Calculates the value of the DebitReporting field in an account voucher line when
+the Debit, RateMultiplierRC, RateDivisorRC, or the document’s CurrencyDirectory
+is modified.
+The logic is as follows:
+&gt; If the document date is on or before the ReportingCurrencyEndDate defined
+in the Enterprise Company, the value is calculated as:
+DebitReporting = Debit * RateMultiplierRC / RateDivisorRC
+&gt; If the document date is after the ReportingCurrencyEndDate, field is
+not calculated and remains empty.
+<br><br>
+The result, when calculated, is expressed in the reporting currency defined
+in the Enterprise Company.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -146,7 +159,7 @@ field is synchronized with the Person associated with the new User.</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
-<td>YES</td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
@@ -156,7 +169,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38826.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R38951-2.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
