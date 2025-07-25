@@ -442,6 +442,7 @@ Aggregate Root:<br>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesOrder.ApplyTradeConditions</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( ( ( obj.ReturnForSalesOrderLine != null) OrElse ( obj.ReturnForInvoiceLine != null)) OrElse ( obj.HistoricalUnitCost != null)), False, True)</code>
 <code>obj.SalesOrder.ApplyTradeConditions</code></p>
 <h3 id="bonusprogramamount">BonusProgramAmount</h3>
 <p>The amount of the discount from the bonus program.</p>
@@ -1283,6 +1284,7 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <li><a href="../business-rules/R34511.html">R34511 Sales Order Line - Set Level1 Discount Percent (Recalc)</a></li>
 <li><a href="../business-rules/R34524.html">R34524 Sales Order Line - Set Level1 Discount (Recalc)</a></li>
 <li><a href="../business-rules/R35120.html">R35120 Sales Order Line - Select Product If Customer Empty Not Allowed</a></li>
+<li><a href="../business-rules/R38993.html">R38993 Sales Order Line - Set Apply Trade Conditions (Recalc)</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:

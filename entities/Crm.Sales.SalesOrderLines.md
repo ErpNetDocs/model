@@ -116,6 +116,7 @@ _Back-End Default Expression:_
 `obj.SalesOrder.ApplyTradeConditions`
 
 _Front-End Recalc Expressions:_  
+`IIF( ( ( ( obj.ReturnForSalesOrderLine != null) OrElse ( obj.ReturnForInvoiceLine != null)) OrElse ( obj.HistoricalUnitCost != null)), False, True)`
 `obj.SalesOrder.ApplyTradeConditions`
 ### BonusProgramAmount
 
