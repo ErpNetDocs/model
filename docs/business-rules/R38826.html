@@ -126,6 +126,7 @@
 <tr>
 <td><strong>Action</strong></td>
 <td>IF &quot;Activity.AssignedToUser != NULL&quot;
+AND &quot;Activity.AssignedToUser.Person != NULL&quot;
 AND &quot;Activity.ResponsibleParty != Activity.AssignedToUser.Person&quot;, set value:
 <br><br>
 ResponsibleParty = AssignedToUser.Person</td>
