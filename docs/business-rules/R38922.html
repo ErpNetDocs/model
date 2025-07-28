@@ -113,7 +113,8 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(ItemKey, RateMultiplierRC, Account, Currency, ReferencedDocument)</td>
+<td>AttributeChanged(ItemKey, Debit, Credit, RateMultiplierRC, Account, Currency,
+ReferencedDocument)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -130,13 +131,15 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Convert(IIF(((((Account != null) AndAlso (Currency != null)) AndAlso (ItemKey != null))
-AndAlso ((ReferencedDocument == null) OrElse True)), DetermineMultiplierAndDivisorRC().
-Item1, RateMultiplierRC), Object)</td>
+<td>Convert(IIF(((((((Account != null) AndAlso (Currency != null)) AndAlso (ItemKey != null))
+AndAlso ((ReferencedDocument == null) OrElse True)) AndAlso ((Debit.Value != 0) OrElse True)
+) AndAlso ((Credit.Value != 0) OrElse True)), DetermineMultiplierAndDivisorRC().Item1,
+RateMultiplierRC), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>Sets RateMultiplierRC when Account, Currency, ItemKey or ReferencedDocument is changed.</td>
+<td>Sets RateMultiplierRC when Account, Currency, ItemKey, ReferencedDocument, Debit or Credit
+is changed.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
