@@ -9,7 +9,7 @@ Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81
 
 ## Default Visualization
 Default Display Text Format:  
-_{ActionDescription} by {CreationUser} {CreationTimeUtc}_  
+_{CreationTimeUtc} {ActionDescription} by {CreationUser}_  
 Default Search Members:  
 _Case_  
 Name Data Member:  

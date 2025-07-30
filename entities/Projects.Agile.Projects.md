@@ -53,7 +53,7 @@ Aggregate Tree
 | [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
 | [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. `Required` `Filter(multi eq)` |
 | [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. `Required` `Filter(multi eq)` |
-| [SocialGroup](Projects.Agile.Projects.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | When specified, restricts the visibility of the cases within the project to the members of the social group. `Filter(multi eq)` `Introduced in version 25.1.2.63` |
+| [SocialGroup](Projects.Agile.Projects.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | The working group responsible for discussing and collaborating on this project. `Filter(multi eq)` `Introduced in version 25.1.2.63` |
 
 
 ## Attribute Details
@@ -222,7 +222,7 @@ _Show in UI_: **ShownByDefault**
 
 ### SocialGroup
 
-When specified, restricts the visibility of the cases within the project to the members of the social group. `Filter(multi eq)` `Introduced in version 25.1.2.63`
+The working group responsible for discussing and collaborating on this project. `Filter(multi eq)` `Introduced in version 25.1.2.63`
 
 _Type_: **[Groups](Communities.Social.Groups.md) (nullable)**  
 _Category_: **System**  

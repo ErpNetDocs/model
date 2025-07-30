@@ -21,7 +21,7 @@ Area of a project. Can be applicable to a single project or all projects. Entity
 |[Project_Id](#project_id)|`uniqueidentifier` |Specified for local project areas. NULL means that the area is global and assignable for all projects.|
 |[Ready_Wip_Limit](#ready_wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Social_Group_Id](#social_group_id)|`uniqueidentifier` |When specified, restricts the visibility of the cases within the project area to the members of the social group.|
+|[Social_Group_Id](#social_group_id)|`uniqueidentifier` |The working group responsible for discussing and collaborating on this project area.|
 
 ## Columns
 
@@ -381,7 +381,7 @@ When set, specifies the work-in-progress (WIP) limit. The limit is for number of
 ### Social_Group_Id
 
 
-When specified, restricts the visibility of the cases within the project area to the members of the social group.
+The working group responsible for discussing and collaborating on this project area.
 
 | Property | Value |
 | - | - |

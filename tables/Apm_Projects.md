@@ -24,7 +24,7 @@ Agile project, used to logically group cases. Entity: Apm_Projects (Introduced i
 |[Project_Type_Id](#project_type_id)|`uniqueidentifier` |Specifies what kind of project is this.|
 |[Ready_Wip_Limit](#ready_wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Social_Group_Id](#social_group_id)|`uniqueidentifier` |When specified, restricts the visibility of the cases within the project to the members of the social group.|
+|[Social_Group_Id](#social_group_id)|`uniqueidentifier` |The working group responsible for discussing and collaborating on this project.|
 |[Wip_Limit](#wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state|
 
 ## Columns
@@ -492,7 +492,7 @@ When set, specifies the work-in-progress (WIP) limit. The limit is for number of
 ### Social_Group_Id
 
 
-When specified, restricts the visibility of the cases within the project to the members of the social group.
+The working group responsible for discussing and collaborating on this project.
 
 | Property | Value |
 | - | - |
