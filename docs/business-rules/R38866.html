@@ -133,7 +133,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>On change of Group Name, create a record in Group.Social.Comments on behalf of the System User</td>
+<td>If (SocialGroup.Name != SocialGroup.Name.DatabaseValue)<br>then create a new record in Communities.Social.Comments as follows:<br> - Comments.CommentText = The group was renamed to '{SocialGroup.Name}'.<br>- Comments.CreationTimeUtc = NOW <br>- Comment.DataObject = ExtensibleDataObject <br> WHERE (EntityType =Cmm_Social_Groups AND EntityItemId = SocialGroup.Id)<br>- Comments.User = <system><br> On change of Group Name, create a record in Group.Social.Comments on behalf of the System User</system></td>
 </tr>
 <tr>
 <td>Description</td>
