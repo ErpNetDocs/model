@@ -131,10 +131,10 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Convert(IIF(((((((Account != null) AndAlso (Currency != null)) AndAlso (ItemKey != null))
-AndAlso ((ReferencedDocument == null) OrElse True)) AndAlso ((Debit.Value != 0) OrElse True)
-) AndAlso ((Credit.Value != 0) OrElse True)), DetermineMultiplierAndDivisorRC().Item2,
-RateDivisorRC), Object)</td>
+<td>Convert(IIF(((((((Account != null) AndAlso (Currency != null)) AndAlso ((ItemKey != null)
+OrElse True)) AndAlso ((ReferencedDocument == null) OrElse True)) AndAlso ((Debit.Value !=
+0) OrElse True)) AndAlso ((Credit.Value != 0) OrElse True)),
+DetermineMultiplierAndDivisorRC().Item2, RateDivisorRC), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
