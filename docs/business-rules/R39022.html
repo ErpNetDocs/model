@@ -120,6 +120,10 @@
 <td>Committed</td>
 </tr>
 <tr>
+<td>Record State</td>
+<td>Inserted</td>
+</tr>
+<tr>
 <td>Priority</td>
 <td>Normal</td>
 </tr>
@@ -129,7 +133,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>IF Social.Reaction.DataObject == Social.Comment.DataObject <br>where DataObject.ExtensibleDataObject.EntityType == Cmm_Social_Groups <br>AND Group.Id = DataObject.ExtensibleDataObject.EntityItemId <br>Then Group.LastInteractionTimeUtc = NOW(UTC)</td>
+<td>IF DataObject.EntityType == Cmm_Social_Groups <br>, then SET Group.LastInteractionTimeUtc = NOW(UTC) <br> WHERE Group.Id = DataObject.EntityItemId</td>
 </tr>
 <tr>
 <td>Description</td>
