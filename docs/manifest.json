@@ -522,6 +522,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R26726.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R26726.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R26727.md",
       "output": {
         ".html": {

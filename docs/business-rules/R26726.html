@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R33427 SocialReaction - Notify User Comment Reaction | ERP.net Domain Model </title>
+      <title>R26726 AccountingVouchers – Line Currency Is Valid | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R33427 SocialReaction - Notify User Comment Reaction | ERP.net Domain Model ">
+      <meta name="title" content="R26726 AccountingVouchers – Line Currency Is Valid | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R33427.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R26726.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r33427-socialreaction---notify-user-comment-reaction">R33427 SocialReaction - Notify User Comment Reaction</h1>
+<h1 id="r26726-accountingvouchers--line-currency-is-valid">R26726 AccountingVouchers – Line Currency Is Valid</h1>
 
 <table>
 <thead>
@@ -97,19 +97,19 @@
 <tbody>
 <tr>
 <td>Code</td>
-<td>R33427</td>
+<td>R26726</td>
 </tr>
 <tr>
 <td>Entity</td>
-<td><a class="xref" href="../entities/Communities.Social.Reactions.html">Communities.Social.Reactions Entity</a></td>
+<td><a class="xref" href="../entities/Finance.Accounting.AccountingVouchers.html">Finance.Accounting.AccountingVouchers Entity</a></td>
 </tr>
 <tr>
 <td>Name</td>
-<td>NotifyUserCommentReaction</td>
+<td>LineCurrencyIsValid</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>-</td>
+<td>AccountingVoucherLine.Currency</td>
 </tr>
 <tr>
 <td>Layer</td>
@@ -117,35 +117,27 @@
 </tr>
 <tr>
 <td>Events</td>
-<td>Committed</td>
-</tr>
-<tr>
-<td>Priority</td>
-<td>Normal</td>
+<td>New +</td>
 </tr>
 <tr>
 <td>Modify</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>Applicable Legislations</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
+<td>NO</td>
 </tr>
 <tr>
 <td>Action</td>
-<td>If Reaction.User != Reaction.SocialComment.User, <br> then create a new Notification as follows: <br><br> - Notification.UserId = Reaction.SocialComment.UserId <br> - CreationTimeUtc =  NOW <br> - Notification.DataObjectId = Social.Comments.DataObjectId <br> - NotificationClass = NT_SOC_REACTION <br> - Subject = {Reaction.User.FullName} reacted to your comment.</td>
+<td>For each VoucherLine in the current document, validates that: <br> •	If (Account.LimitToBaseCurrency == FALSE), AND (Account.Currency = NULL) then Currency = any value <br> •	If (Account.LimitToBaseCurrency == FALSE), AND (Account.Currency != NULL) then Currency = AccountCurrency <br>•	If (Account.LimitToBaseCurrency == TRUE), then Currency = EnterpriseCompany.BaseCurrency OR EnterpriseCompany.ReportingCurrency</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When a user reacted to your comment, the rule creates a notification for you. This notification will then be sent to the user by the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.</td>
+<td>For each line in the current Accounting Voucher, the system validates the currency according to the Account’s settings. <br> If the Account is not limited to base currency (Limit To Base Currency is not check-marked) and has no specified currency, any currency is allowed in the Accounting Voucher Line. <br> If the Account is not limited to base currency (Limit To Base Currency is not check-marked) and has a specified currency, it must match the Currency in the Accounting Voucher Line.  <br> If the Account is limited to base currency (Limit To Base Currency is check-marked), then the currency used in the Accounting Voucher Line must be either the Enterprise Company's Base Currency or Reporting Currency.</td>
 </tr>
 <tr>
 <td>Message</td>
-<td>-</td>
+<td>Line number '{AccountingVoucherLine.LineNo}' of document '{AccountingVoucher.DisplayText}', contains an invalid currency. <br> The selected account allows only specific currencies. If the account is limited to base currency, the voucher line must use the company's base or reporting currency. If the account allows other currencies but has a specified currency, it must match the one used in this line. <br> Please review the account's currency settings.</td>
 </tr>
 <tr>
 <td>Version</td>
-<td>Introduced: v.23</td>
+<td>Introduced in: 2026</td>
 </tr>
 <tr>
 <td>Revocable</td>
@@ -153,13 +145,11 @@
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R33427.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R26726.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
