@@ -105,13 +105,18 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="#history_visible_since_time_utc">History_Visible_Since_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.</td>
+</tr>
+<tr>
 <td><a href="#join_time_utc">Join_Time_Utc</a></td>
 <td><code>datetime</code></td>
 <td>The exact server time (in UTC), when the user joined the group.</td>
 </tr>
 <tr>
-<td><a href="#lastseentimeutc">LastSeenTimeUtc</a></td>
-<td><code>datetime</code> Readonly</td>
+<td><a href="#last_seen_time_utc">Last_Seen_Time_Utc</a></td>
+<td><code>datetime</code></td>
 <td>The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.</td>
 </tr>
 <tr>
@@ -142,6 +147,125 @@
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
+<h3 id="history_visible_since_time_utc">History_Visible_Since_Time_Utc</h3>
+<p>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="history_visible_since_time_utc---supported-filters">History_Visible_Since_Time_Utc - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="join_time_utc">Join_Time_Utc</h3>
 <p>The exact server time (in UTC), when the user joined the group.</p>
 <table>
@@ -261,7 +385,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="lastseentimeutc">LastSeenTimeUtc</h3>
+<h3 id="last_seen_time_utc">Last_Seen_Time_Utc</h3>
 <p>The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.</p>
 <table>
 <thead>
@@ -321,7 +445,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -357,11 +481,11 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
-<h4 id="lastseentimeutc---supported-filters">LastSeenTimeUtc - Supported Filters</h4>
+<h4 id="last_seen_time_utc---supported-filters">Last_Seen_Time_Utc - Supported Filters</h4>
 <table>
 <thead>
 <tr>

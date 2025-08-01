@@ -15,8 +15,9 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 
 | Name | Type | Description |
 | - | - | --- |
+|[History_Visible_Since_Time_Utc](#history_visible_since_time_utc)|`datetime` |Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.|
 |[Join_Time_Utc](#join_time_utc)|`datetime` |The exact server time (in UTC), when the user joined the group.|
-|[LastSeenTimeUtc](#lastseentimeutc)|`datetime` Readonly|The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.|
+|[Last_Seen_Time_Utc](#last_seen_time_utc)|`datetime` |The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.|
 |[Role](#role)|`char(1)` Allowed: `M`, `A`, `O`|Member role in a group. Defaults to member.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |The group in which the user participates.|
@@ -24,6 +25,42 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 |[User_Id](#user_id)|`uniqueidentifier` |The user, who is a member of the group.|
 
 ## Columns
+
+### History_Visible_Since_Time_Utc
+
+
+Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### History_Visible_Since_Time_Utc - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
 
 ### Join_Time_Utc
 
@@ -61,7 +98,7 @@ The exact server time (in UTC), when the user joined the group.
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
-### LastSeenTimeUtc
+### Last_Seen_Time_Utc
 
 
 The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.
@@ -80,7 +117,7 @@ The time (in UTC) until the group member caught up with the content in the corre
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|yes|
+|Readonly|no|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -89,9 +126,9 @@ The time (in UTC) until the group member caught up with the content in the corre
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|no|
+|Visible|yes|
 
-#### LastSeenTimeUtc - Supported Filters
+#### Last_Seen_Time_Utc - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

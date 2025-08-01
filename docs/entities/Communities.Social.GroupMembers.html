@@ -124,6 +124,11 @@ Aggregate Root:<br>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
+<td><a href="Communities.Social.GroupMembers.html#historyvisiblesincetimeutc">HistoryVisibleSinceTimeUtc</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. null removes the cutoff, exposing the full history. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></td>
+</tr>
+<tr>
 <td><a href="Communities.Social.GroupMembers.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -136,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#lastseentimeutc">LastSeenTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time (in UTC) until the group member caught up with the content in the corresponding group. null indicates that the group has no content or the member has never interacted with it. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.12</code></td>
+<td>The time (in UTC) until the group member caught up with the content in the corresponding group. null indicates that the group has no content or the member has never interacted with it. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#objectversion">ObjectVersion</a></td>
@@ -180,6 +185,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="historyvisiblesincetimeutc">HistoryVisibleSinceTimeUtc</h3>
+<p>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. null removes the cutoff, exposing the full history. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></p>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -196,12 +208,12 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="lastseentimeutc">LastSeenTimeUtc</h3>
-<p>The time (in UTC) until the group member caught up with the content in the corresponding group. null indicates that the group has no content or the member has never interacted with it. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.12</code></p>
+<p>The time (in UTC) until the group member caught up with the content in the corresponding group. null indicates that the group has no content or the member has never interacted with it. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
