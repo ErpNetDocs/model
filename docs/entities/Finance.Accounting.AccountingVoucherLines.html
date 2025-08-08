@@ -289,6 +289,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>new Amount( ( ( obj.Credit.Value * ( obj.RateMultiplierRC ?? 0)) / ( obj.RateDivisorRC ?? 1)), obj.Voucher.EnterpriseCompany.ReportingCurrency)</code></p>
 <h3 id="debit">Debit</h3>
 <p>The amount of the debit in the currency of the account. 0 means that the account is not debited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
@@ -312,6 +314,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>new Amount( ( ( obj.Debit.Value * ( obj.RateMultiplierRC ?? 0)) / ( obj.RateDivisorRC ?? 1)), obj.Voucher.EnterpriseCompany.ReportingCurrency)</code></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>

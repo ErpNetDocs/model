@@ -126,6 +126,7 @@ _Show in UI_: **ShownByDefault**
 When not null, specifies that the reaction is for the specified comment within the data object. `Filter(multi eq)`
 
 _Type_: **[Comments](Communities.Social.Comments.md) (nullable)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

@@ -118,6 +118,9 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Back-End Default Expression:_  
+`new Amount( ( ( obj.Credit.Value * ( obj.RateMultiplierRC ?? 0)) / ( obj.RateDivisorRC ?? 1)), obj.Voucher.EnterpriseCompany.ReportingCurrency)`
+
 ### Debit
 
 The amount of the debit in the currency of the account. 0 means that the account is not debited. `Currency: Currency` `Required` `Default(0)`
@@ -149,6 +152,9 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+_Back-End Default Expression:_  
+`new Amount( ( ( obj.Debit.Value * ( obj.RateMultiplierRC ?? 0)) / ( obj.RateDivisorRC ?? 1)), obj.Voucher.EnterpriseCompany.ReportingCurrency)`
 
 ### DisplayText
 
