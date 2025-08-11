@@ -113,9 +113,10 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(Quantity, RequiredDeliveryDate, BonusProgram, ReturnForSalesOrderLine,
-Product, QuantityUnit, SalesOrder, ProductPrice, Customer, ShipToCustomer,
-EnterpriseCompany, EnterpriseCompanyLocation, DistributionChannel, PriceList)</td>
+<td>AttributeChanged(ApplyTradeConditions, Quantity, RequiredDeliveryDate, ProductPrice,
+BonusProgram, ReturnForSalesOrderLine, Product, QuantityUnit, SalesOrder, Customer,
+ShipToCustomer, EnterpriseCompany, EnterpriseCompanyLocation, DistributionChannel,
+PriceList)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -132,11 +133,12 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IIF((((BonusProgram != null) AndAlso (Convert(BonusProgram.BonusAction, Int32) == 0))
-OrElse (ReturnForSalesOrderLine != null)), null, DetermineProductPrice(Product, Quantity,
-QuantityUnit, RequiredDeliveryDate, SalesOrder.Customer, SalesOrder.ShipToCustomer,
-SalesOrder.EnterpriseCompany, SalesOrder.EnterpriseCompanyLocation, SalesOrder.
-DistributionChannel, SalesOrder.PriceList, ProductPrice))</td>
+<td>IIF((ApplyTradeConditions == False), ProductPrice, IIF((((BonusProgram != null) AndAlso
+(Convert(BonusProgram.BonusAction, Int32) == 0)) OrElse (ReturnForSalesOrderLine != null)),
+null, DetermineProductPrice(Product, Quantity, QuantityUnit, RequiredDeliveryDate,
+SalesOrder.Customer, SalesOrder.ShipToCustomer, SalesOrder.EnterpriseCompany, SalesOrder.
+EnterpriseCompanyLocation, SalesOrder.DistributionChannel, SalesOrder.PriceList,
+ProductPrice)))</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

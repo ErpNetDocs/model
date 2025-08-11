@@ -50,7 +50,7 @@ Aggregate Tree
 | [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case. `Required` `Default("1")` `Filter(multi eq)` `ReadOnly` 
-| [Title](Projects.Agile.Cases.md#title) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Case short title. `Required` `Filter(like)` 
+| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title. `Required` `Filter(like)` 
 | [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 
 ## References
@@ -291,10 +291,11 @@ _Show in UI_: **HiddenByDefault**
 
 Case short title. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
+_Type_: **string (128)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+_Maximum Length_: **128**  
 _Show in UI_: **ShownByDefault**  
 
 ### WaitingTimeUTC

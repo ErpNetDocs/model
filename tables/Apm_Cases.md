@@ -36,7 +36,7 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |Specified, when the case is assigned to a group of users.|
 |[Stakeholder_Party_Id](#stakeholder_party_id)|`uniqueidentifier` |The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).|
 |[System_State](#system_state)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, Readonly|The base state of the case.|
-|[Title](#title)|`nvarchar(128)` `ML`|Case short title.|
+|[Title](#title)|`nvarchar(128)` |Case short title.|
 |[User_State_Id](#user_state_id)|`uniqueidentifier` Readonly|The user-defined sub-state of the case.|
 |[Waiting_Time_UTC](#waiting_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has changed to waiting state.|
 
@@ -958,7 +958,7 @@ Case short title.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(128) (MultiLanguage)|
+|Type|nvarchar(128)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

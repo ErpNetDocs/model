@@ -119,7 +119,7 @@ _Supports Order By_: **False**
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`new Amount( ( ( obj.Credit.Value * ( obj.RateMultiplierRC ?? 0)) / ( obj.RateDivisorRC ?? 1)), obj.Voucher.EnterpriseCompany.ReportingCurrency)`
+`obj.SetDefaultsToRCattributes( obj.CreditReporting, "CreditReporting")`
 
 ### Debit
 
@@ -154,7 +154,7 @@ _Supports Order By_: **False**
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`new Amount( ( ( obj.Debit.Value * ( obj.RateMultiplierRC ?? 0)) / ( obj.RateDivisorRC ?? 1)), obj.Voucher.EnterpriseCompany.ReportingCurrency)`
+`obj.SetDefaultsToRCattributes( obj.DebitReporting, "DebitReporting")`
 
 ### DisplayText
 
@@ -233,7 +233,7 @@ _Supports Order By_: **False**
 _Show in UI_: **HiddenByDefault**  
 
 _Back-End Default Expression:_  
-`obj.DetermineMultiplierAndDivisorRC( ).Item2`
+`obj.SetDefaultsToRCattributes( Convert( obj.RateDivisorRC, Object), "RateDivisorRC")`
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)`
@@ -259,7 +259,7 @@ _Supports Order By_: **False**
 _Show in UI_: **HiddenByDefault**  
 
 _Back-End Default Expression:_  
-`obj.DetermineMultiplierAndDivisorRC( ).Item1`
+`obj.SetDefaultsToRCattributes( Convert( obj.RateMultiplierRC, Object), "RateMultiplierRC")`
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)`
