@@ -113,8 +113,8 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(ItemKey, Debit, Credit, RateMultiplierRC, Account, Currency,
-ReferencedDocument)</td>
+<td>AttributeChanged(ItemKey, Debit, Credit, RateMultiplierRC, Account, Currency, Voucher,
+ReferencedDocument, EnterpriseCompany)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -131,10 +131,12 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Convert(IIF(((((((Account != null) AndAlso (Currency != null)) AndAlso ((ItemKey != null)
-OrElse True)) AndAlso ((ReferencedDocument == null) OrElse True)) AndAlso ((Debit.Value !=
-0) OrElse True)) AndAlso ((Credit.Value != 0) OrElse True)),
-DetermineMultiplierAndDivisorRC().Item1, RateMultiplierRC), Object)</td>
+<td>Convert(IIF(((((((((Account != null) AndAlso (Currency != null)) AndAlso (Voucher.
+EnterpriseCompany.ReportingCurrency != null)) AndAlso Not(Voucher.EnterpriseCompany.
+ReportingCurrency.IsGhost)) AndAlso ((ItemKey != null) OrElse True)) AndAlso
+((ReferencedDocument == null) OrElse True)) AndAlso ((Debit.Value != 0) OrElse True))
+AndAlso ((Credit.Value != 0) OrElse True)), DetermineMultiplierAndDivisorRC().Item1,
+RateMultiplierRC), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

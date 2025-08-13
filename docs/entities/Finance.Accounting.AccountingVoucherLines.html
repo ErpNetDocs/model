@@ -374,7 +374,7 @@ Aggregate Root:<br>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SetDefaultsToRCattributes( Convert( obj.RateDivisorRC, Object), &quot;RateDivisorRC&quot;)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)</code></p>
+<code>IIF( ( ( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.Voucher.EnterpriseCompany.ReportingCurrency != null)) AndAlso Not( obj.Voucher.EnterpriseCompany.ReportingCurrency.IsGhost)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)</code></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
 <p>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
@@ -393,7 +393,7 @@ Aggregate Root:<br>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SetDefaultsToRCattributes( Convert( obj.RateMultiplierRC, Object), &quot;RateMultiplierRC&quot;)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)</code></p>
+<code>IIF( ( ( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.Voucher.EnterpriseCompany.ReportingCurrency != null)) AndAlso Not( obj.Voucher.EnterpriseCompany.ReportingCurrency.IsGhost)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>
 <p>The account being debited or credited. <code>Required</code> <code>Filter(multi eq)</code></p>

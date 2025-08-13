@@ -236,7 +236,7 @@ _Back-End Default Expression:_
 `obj.SetDefaultsToRCattributes( Convert( obj.RateDivisorRC, Object), "RateDivisorRC")`
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)`
+`IIF( ( ( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.Voucher.EnterpriseCompany.ReportingCurrency != null)) AndAlso Not( obj.Voucher.EnterpriseCompany.ReportingCurrency.IsGhost)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)`
 ### RateMultiplier
 
 The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)`
@@ -262,7 +262,7 @@ _Back-End Default Expression:_
 `obj.SetDefaultsToRCattributes( Convert( obj.RateMultiplierRC, Object), "RateMultiplierRC")`
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)`
+`IIF( ( ( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.Voucher.EnterpriseCompany.ReportingCurrency != null)) AndAlso Not( obj.Voucher.EnterpriseCompany.ReportingCurrency.IsGhost)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.DetermineMultiplierAndDivisorRC( ).Item1, obj.RateMultiplierRC)`
 
 ## Reference Details
 
