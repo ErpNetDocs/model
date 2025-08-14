@@ -34,7 +34,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DisplayText](Logistics.Wms.WarehouseReconciliationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Wms.WarehouseReconciliationLines.md#id) | guid |  
-| [LineNo](Logistics.Wms.WarehouseReconciliationLines.md#lineno) | int32 | Consecutive number of the line in the document. `Required` `Filter(eq)` 
+| [LineNo](Logistics.Wms.WarehouseReconciliationLines.md#lineno) | int32 | Consecutive number of the line in the document. `Required` `Filter(eq)` `ORD` 
 | [ObjectVersion](Logistics.Wms.WarehouseReconciliationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -70,19 +70,19 @@ _Show in UI_: **CannotBeShown**
 
 ### LineNo
 
-Consecutive number of the line in the document. `Required` `Filter(eq)`
+Consecutive number of the line in the document. `Required` `Filter(eq)` `ORD`
 
 _Type_: **int32**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`( obj.WarehouseReconciliation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+`( obj.WarehouseReconciliation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`( obj.WarehouseReconciliation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+`( obj.WarehouseReconciliation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### ObjectVersion
 
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.

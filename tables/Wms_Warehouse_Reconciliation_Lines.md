@@ -33,7 +33,7 @@ Consecutive number of the line in the document.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Autoincrement|1|
+|Autoincrement|10|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -47,7 +47,7 @@ Consecutive number of the line in the document.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|int|
