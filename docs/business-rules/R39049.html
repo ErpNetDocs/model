@@ -129,19 +129,18 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>When saving a Store, checks the EnterpriseCompany field.If it is not entered on
-creation, or if it was previously entered and is now removed, then throw an error.</td>
+<td>Validates that the EnterpriseCompany field is filled in. This field is required when
+creating a new Store, and cannot be removed if it was previously set.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>The rule ensures that every Store has an Enterprise Company on creation and prevents
-clearing the Enterprise Company when it has previously been set.</td>
+deleting the Enterprise Company when it has previously been set.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The field 'Enterprise Company' in table 'Stores' must have a value on creation and
-cannot be cleared once it has been set. Please make sure that the 'Enterprise Company'
-field is filled in and try again.</td>
+<td>The field 'Enterprise Company' in table 'Stores' must have a value.
+Please make sure that the 'Enterprise Company' field is filled in and try again.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
