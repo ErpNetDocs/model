@@ -68,6 +68,8 @@
     href: Apm_Project_Types.md
   - name: Apm_Projects
     href: Apm_Projects.md
+  - name: Apm_Sprints
+    href: Apm_Sprints.md
   - name: Apm_Time_Entries
     href: Apm_Time_Entries.md
   - name: Apm_User_State_Case_Categories

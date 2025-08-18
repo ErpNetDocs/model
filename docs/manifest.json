@@ -11342,6 +11342,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R39056.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39056.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R39057.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39057.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -17692,6 +17712,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Projects.Agile.Sprints.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Projects.Agile.Sprints.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Projects.Agile.TimeEntries.md",
       "output": {
         ".html": {
@@ -20975,6 +21005,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Apm_Projects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Apm_Sprints.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Apm_Sprints.html"
         }
       },
       "version": ""

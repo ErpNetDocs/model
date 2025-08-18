@@ -1669,6 +1669,9 @@ references:
 - uid: Projects.Agile.Projects
   name: Projects.Agile.Projects Entity
   href: entities/Projects.Agile.Projects.html
+- uid: Projects.Agile.Sprints
+  name: Projects.Agile.Sprints Entity
+  href: entities/Projects.Agile.Sprints.html
 - uid: Projects.Agile.TimeEntries
   name: Projects.Agile.TimeEntries Entity
   href: entities/Projects.Agile.TimeEntries.html

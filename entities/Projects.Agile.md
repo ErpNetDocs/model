@@ -14,6 +14,7 @@ uid: Projects.Agile
 - [Projects](Projects.Agile.Projects.md)  
 - [ProjectTypeCaseCategories](Projects.Agile.ProjectTypeCaseCategories.md)  
 - [ProjectTypes](Projects.Agile.ProjectTypes.md)  
+- [Sprints](Projects.Agile.Sprints.md)  
 - [TimeEntries](Projects.Agile.TimeEntries.md)  
 - [UserStateCaseCategories](Projects.Agile.UserStateCaseCategories.md)  
 - [UserStates](Projects.Agile.UserStates.md)  
