@@ -9,7 +9,7 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Number}: {Name:T}_  
 Default Search Members:  
 _Number; Name_  
 Code Data Member:  

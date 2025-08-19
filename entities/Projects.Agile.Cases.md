@@ -66,6 +66,7 @@ Aggregate Tree
 | [ProjectArea](Projects.Agile.Cases.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The are to which the case is assigned. `Filter(multi eq)` |
 | [ProjectMilestone](Projects.Agile.Cases.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | Determines the milestone for which the case must be resolved. `Filter(multi eq)` |
 | [SocialGroup](Projects.Agile.Cases.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Specified, when the case is assigned to a group of users. `Filter(multi eq)` |
+| [Sprint](Projects.Agile.Cases.md#sprint) | [Sprints](Projects.Agile.Sprints.md) (nullable) | The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). `Filter(multi eq)` `Introduced in version 26.1.4.33` |
 | [StakeholderParty](Projects.Agile.Cases.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). `Filter(multi eq)` `Introduced in version 25.1.2.70` |
 | [UserState](Projects.Agile.Cases.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user-defined sub-state of the case. `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.0.97` |
 
@@ -397,6 +398,15 @@ Specified, when the case is assigned to a group of users. `Filter(multi eq)`
 
 _Type_: **[Groups](Communities.Social.Groups.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### Sprint
+
+The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). `Filter(multi eq)` `Introduced in version 26.1.4.33`
+
+_Type_: **[Sprints](Projects.Agile.Sprints.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
