@@ -22,6 +22,7 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 |[Payment_Account_Name](#payment_account_name)|`nvarchar(50)` `ML`||
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Use_Base_Currency](#use_base_currency)|`bit` |When enabled, this setting restricts the payment account to use only the base currency.|
 
 ## Columns
 
@@ -400,5 +401,35 @@ Specifies the payment type used to pay, when using this payment account. NULL wh
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Use_Base_Currency
+
+
+When enabled, this setting restricts the payment account to use only the base currency.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 

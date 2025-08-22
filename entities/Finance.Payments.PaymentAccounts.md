@@ -40,6 +40,7 @@ Aggregate Tree
 | [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString (50)](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Payments.PaymentAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [UseBaseCurrency](Finance.Payments.PaymentAccounts.md#usebasecurrency) | boolean | When enabled, this setting restricts the payment account to use only the base currency. `Required` `Default(false)` `Introduced in version 26.1.4.36` 
 
 ## References
 
@@ -119,6 +120,17 @@ _Category_: **Extensible Data Object**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### UseBaseCurrency
+
+When enabled, this setting restricts the payment account to use only the base currency. `Required` `Default(false)` `Introduced in version 26.1.4.36`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 
 ## Reference Details

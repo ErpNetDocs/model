@@ -150,6 +150,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
+<tr>
+<td><a href="Finance.Payments.PaymentAccounts.html#usebasecurrency">UseBaseCurrency</a></td>
+<td>boolean</td>
+<td>When enabled, this setting restricts the payment account to use only the base currency. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 26.1.4.36</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -242,6 +247,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="usebasecurrency">UseBaseCurrency</h3>
+<p>When enabled, this setting restricts the payment account to use only the base currency. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 26.1.4.36</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The access key, containing the permissions for this PaymentAccount. An empty value means that all users have unlimited permissions. <code>Filter(multi eq)</code></p>
