@@ -123,6 +123,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
+<td><a href="Projects.Agile.UserStates.html#description">Description</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a> <strong>nullable</strong></td>
+<td>Short explanation for this state, visible to users when selected. <code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.UserStates.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
@@ -141,6 +146,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Projects.Agile.UserStates.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
 <td>Multi-language name of the user state. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="Projects.Agile.UserStates.html#notes">Notes</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Notes. <code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#objectversion">ObjectVersion</a></td>
@@ -177,6 +187,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="description">Description</h3>
+<p>Short explanation for this state, visible to users when selected. <code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a> <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -204,6 +221,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Notes. <code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>

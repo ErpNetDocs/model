@@ -33,10 +33,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Description](Projects.Agile.UserStates.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Short explanation for this state, visible to users when selected. `Filter(like)` `Introduced in version 26.1.4.39` 
 | [DisplayText](Projects.Agile.UserStates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Projects.Agile.UserStates.md#id) | guid |  
 | [IsActive](Projects.Agile.UserStates.md#isactive) | boolean | Specifies whether the user state can be set to cases. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Projects.Agile.UserStates.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the user state. `Required` `Filter(eq;like)` 
+| [Notes](Projects.Agile.UserStates.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` `Introduced in version 26.1.4.39` 
 | [ObjectVersion](Projects.Agile.UserStates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Ord](Projects.Agile.UserStates.md#ord) | int32 | Unique ordinal position of the state within the system state. `Required` `Filter(eq;ge;le)` `ORD` 
 | [SystemState](Projects.Agile.UserStates.md#systemstate) | [SystemState](Projects.Agile.UserStates.md#systemstate) | The system state, which this state extends. `Required` `Filter(multi eq)` `ORD` 
@@ -49,6 +51,16 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### Description
+
+Short explanation for this state, visible to users when selected. `Filter(like)` `Introduced in version 26.1.4.39`
+
+_Type_: **[MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### DisplayText
 
@@ -87,6 +99,17 @@ _Type_: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
+### Notes
+
+Notes. `Filter(like)` `Introduced in version 26.1.4.39`
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 _Show in UI_: **ShownByDefault**  
 
 ### ObjectVersion
