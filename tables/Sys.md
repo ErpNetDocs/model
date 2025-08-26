@@ -20,6 +20,7 @@
 * [Sys_Filter](Sys_Filter.md)
 * [Sys_Form_Layouts](Sys_Form_Layouts.md)
 * [Sys_Information_Messages](Sys_Information_Messages.md)
+* [Sys_Instance_Change_Requests](Sys_Instance_Change_Requests.md)
 * [Sys_Instance_Statistics](Sys_Instance_Statistics.md)
 * [Sys_Jobs](Sys_Jobs.md)
 * [Sys_Numbers](Sys_Numbers.md)

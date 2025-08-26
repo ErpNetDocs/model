@@ -1210,6 +1210,8 @@
       href: Systems.Core.ExtensibleDataObjects.md
     - name: FormLayouts
       href: Systems.Core.FormLayouts.md
+    - name: InstanceChangeRequests
+      href: Systems.Core.InstanceChangeRequests.md
     - name: Notifications
       href: Systems.Core.Notifications.md
     - name: NotificationSettings

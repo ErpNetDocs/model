@@ -11372,6 +11372,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R39077.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39077.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -18726,6 +18736,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Core.InformationMessages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Core.InstanceChangeRequests.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Core.InstanceChangeRequests.html"
         }
       },
       "version": ""
@@ -26815,6 +26835,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sys_Information_Messages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sys_Instance_Change_Requests.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sys_Instance_Change_Requests.html"
         }
       },
       "version": ""

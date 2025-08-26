@@ -1957,6 +1957,9 @@ references:
 - uid: Systems.Core.FormLayouts
   name: Systems.Core.FormLayouts Entity
   href: entities/Systems.Core.FormLayouts.html
+- uid: Systems.Core.InstanceChangeRequests
+  name: Systems.Core.InstanceChangeRequests Entity
+  href: entities/Systems.Core.InstanceChangeRequests.html
 - uid: Systems.Core.NotificationSettings
   name: Systems.Core.NotificationSettings Entity
   href: entities/Systems.Core.NotificationSettings.html

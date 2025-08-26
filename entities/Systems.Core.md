@@ -12,6 +12,7 @@ uid: Systems.Core
 - [DocumentVersions](Systems.Core.DocumentVersions.md)  
 - [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
 - [FormLayouts](Systems.Core.FormLayouts.md)  
+- [InstanceChangeRequests](Systems.Core.InstanceChangeRequests.md)  
 - [Notifications](Systems.Core.Notifications.md)  
 - [NotificationSettings](Systems.Core.NotificationSettings.md)  
 - [NotificationsSummary](Systems.Core.NotificationsSummary.md)  
