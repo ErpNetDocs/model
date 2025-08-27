@@ -116,6 +116,7 @@ _Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)_
 | DeleteOldAuditLogs | Delete Old Audit Logs. Stored as 'DAL'. <br /> _Database Value:_ 'DAL' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'DeleteOldAuditLogs' |
 | CompleteUnfinished<br />TimeEntries | Complete Unfinished Time Entries. Stored as 'CTE'. <br /> _Database Value:_ 'CTE' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'CompleteUnfinished<br />TimeEntries' |
 | CalculateReporting<br />CurrencyAmounts | Calculate historical Reporting currency amounts. Stored as 'CRC'. <br /> _Database Value:_ 'CRC' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'CalculateReporting<br />CurrencyAmounts' |
+| InstanceChangesProcessor | InstanceChangesProcessor value. Stored as 'ICP'. <br /> _Database Value:_ 'ICP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'InstanceChangesProcessor' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
