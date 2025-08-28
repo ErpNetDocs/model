@@ -119,7 +119,7 @@ Notes
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(max) (Allows NULL)|
-|UI Memo Editor|no|
+|UI Memo Editor|yes|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
