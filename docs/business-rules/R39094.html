@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R39040 Accounting Voucher Lines - Line New Currency Is Valid | ERP.net Domain Model </title>
+      <title>R39094 Instance Change Request - Configuring Settings_Json | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R39040 Accounting Voucher Lines - Line New Currency Is Valid | ERP.net Domain Model ">
+      <meta name="title" content="R39094 Instance Change Request - Configuring Settings_Json | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39040.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39094.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r39040-accounting-voucher-lines---line-new-currency-is-valid">R39040 Accounting Voucher Lines - Line New Currency Is Valid</h1>
+<h1 id="r39094-instance-change-request---configuring-settings_json">R39094 Instance Change Request - Configuring Settings_Json</h1>
 
 <table>
 <thead>
@@ -97,19 +97,19 @@
 <tbody>
 <tr>
 <td>Code</td>
-<td>R39040</td>
+<td>R39094</td>
 </tr>
 <tr>
 <td>Entity</td>
-<td><a class="xref" href="../entities/Finance.Accounting.AccountingVoucherLines.html">Finance.Accounting.AccountingVoucherLines Entity</a></td>
+<td><a class="xref" href="../entities/Systems.Core.InstanceChangeRequests.html">Systems.Core.InstanceChangeRequests Entity</a></td>
 </tr>
 <tr>
 <td>Name</td>
-<td>LineNewCurrencyIsValid</td>
+<td>ConfiguringSettingsJson</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>Currency</td>
+<td>SettingsJson</td>
 </tr>
 <tr>
 <td>Layer</td>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td>Events</td>
-<td>AttributeChanged (Currency)</td>
+<td>AttributeChanged (ChangeKind)</td>
 </tr>
 <tr>
 <td>Priority</td>
@@ -125,7 +125,7 @@
 </tr>
 <tr>
 <td>Modify</td>
-<td>NO</td>
+<td>YES</td>
 </tr>
 <tr>
 <td>Applicable Legislations</td>
@@ -133,33 +133,31 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>Validates that: <br> If (Account != null) AND (Account.Currency !=  null) AND (Account.LimitToBaseCurrency = False) THEN (Currency == Account.Currency) <br> If (Account != null) AND (Account.LimitToBaseCurrency = TRUE) THEN (Currency = AccountingVoucher.EnterpriseCompany.BaseCurrency OR AccountingVoucher.EnterpriseCompany.ReportingCurrency)</td>
+<td>If the change type is REP, then the system creates a JSON with three empty fields with placeholders: ReportingCurrencyStartDate, ReportingCurrencyEndDate, and ReportingCurrencyRate. <br> If the change type is BAS, then the system creates a JSON with two empty fields with placeholders: CurrencyRate and CurrencyDirectory. <br>  If the change type is DEF, then the system also creates a JSON with two empty fields with placeholders: CurrencyRate and CurrencyDirectory.</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>If the Account specified in Voucher Lines does not have the 'Limit to base currency' enabled, then the Currency in the Accounting Voucher Line must match the specified Account Currency (if any). <br> However, if the 'Limit to base currency' is enabled, then the Currency used in the Accounting Voucher Line must be either the Enterprise Company's Base Currency or Reporting Currency.</td>
+<td>The rule automatically generates a predefined JSON structure in the Settings_Json field when a change type (REP, BAS, or DEF) is selected. It provides the required parameters and placeholders for the user to fill in.</td>
 </tr>
 <tr>
 <td>Message</td>
-<td>The selected Currency is invalid. <br> This account allows only '{Account.Currency}' or, if limited to base currency, the enterprise company's Base '{AccountingVoucher.EnterpriseCompany.BaseCurrency}' or Reporting '{AccountingVoucher.EnterpriseCompany.ReportingCurrency}' currency. <br> Please select a valid currency.</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Version</td>
-<td>Introduced: 2026</td>
+<td>Introduced:</td>
 </tr>
 <tr>
 <td>Revocable</td>
-<td>YES</td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39040.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39094.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
