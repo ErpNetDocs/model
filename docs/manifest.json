@@ -11352,16 +11352,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "business-rules/R39057.md",
-      "output": {
-        ".html": {
-          "relative_path": "business-rules/R39057.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "business-rules/R39062.md",
       "output": {
         ".html": {
@@ -17722,6 +17712,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Projects.Agile.ProjectGroups.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Projects.Agile.ProjectGroups.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Projects.Agile.ProjectMilestones.md",
       "output": {
         ".html": {
@@ -21025,6 +21025,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Apm_Project_Areas.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Apm_Project_Groups.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Apm_Project_Groups.html"
         }
       },
       "version": ""

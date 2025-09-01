@@ -10,6 +10,7 @@ uid: Projects.Agile
 - [CaseDevelopments](Projects.Agile.CaseDevelopments.md)  
 - [Cases](Projects.Agile.Cases.md)  
 - [ProjectAreas](Projects.Agile.ProjectAreas.md)  
+- [ProjectGroups](Projects.Agile.ProjectGroups.md)  
 - [ProjectMilestones](Projects.Agile.ProjectMilestones.md)  
 - [Projects](Projects.Agile.Projects.md)  
 - [ProjectTypeCaseCategories](Projects.Agile.ProjectTypeCaseCategories.md)  

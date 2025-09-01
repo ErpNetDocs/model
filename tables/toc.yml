@@ -60,6 +60,8 @@
     href: Apm_Cases.md
   - name: Apm_Project_Areas
     href: Apm_Project_Areas.md
+  - name: Apm_Project_Groups
+    href: Apm_Project_Groups.md
   - name: Apm_Project_Milestones
     href: Apm_Project_Milestones.md
   - name: Apm_Project_Type_Case_Categories

@@ -1052,6 +1052,8 @@
       href: Projects.Agile.Cases.md
     - name: ProjectAreas
       href: Projects.Agile.ProjectAreas.md
+    - name: ProjectGroups
+      href: Projects.Agile.ProjectGroups.md
     - name: ProjectMilestones
       href: Projects.Agile.ProjectMilestones.md
     - name: Projects

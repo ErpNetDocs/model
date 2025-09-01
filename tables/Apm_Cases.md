@@ -170,7 +170,7 @@ The category of the case. This also determines the workflow for the case.
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|int|
 |UI Memo Editor|no|
 |UI Width|Medium|
