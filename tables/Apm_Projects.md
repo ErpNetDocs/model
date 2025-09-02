@@ -19,6 +19,7 @@ Agile project, used to logically group cases. Entity: Apm_Projects (Introduced i
 |[Is_Active](#is_active)|`bit` |Is the project active for new cases?|
 |[Is_Template](#is_template)|`bit` |Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project.|
 |[Primary_User_Id](#primary_user_id)|`uniqueidentifier` |The primary responsible user for the project.|
+|[Project_Group_Id](#project_group_id)|`uniqueidentifier` |The project group to which the project belongs. NULL means the project is not assigned to any group.|
 |[Project_Id](#project_id)|`uniqueidentifier` `PK`||
 |[Project_Name](#project_name)|`nvarchar(256)` `ML`|Multi-language name of the project|
 |[Project_Type_Id](#project_type_id)|`uniqueidentifier` |Specifies what kind of project is this.|
@@ -318,6 +319,43 @@ The primary responsible user for the project.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Project_Group_Id
+
+
+The project group to which the project belongs. NULL means the project is not assigned to any group.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|15|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Apm_Project_Groups](Apm_Project_Groups.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Project_Group_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Project_Id
 

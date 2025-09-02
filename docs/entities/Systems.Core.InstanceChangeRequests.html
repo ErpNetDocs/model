@@ -169,7 +169,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#requestno">RequestNo</a></td>
 <td>int32</td>
-<td>Global consequtive request number. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Global consequtive request number. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#settingsjson">SettingsJson</a></td>
@@ -313,11 +313,11 @@ Allowed values for the <code>ChangeKind</code>(Systems.Core.InstanceChangeReques
 <em>Maximum Length</em>: <strong>32</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="requestno">RequestNo</h3>
-<p>Global consequtive request number. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Global consequtive request number. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
 <p>Additional settings for the change; expressed in Json. The format depends on the change kind. <code>Filter(like)</code></p>

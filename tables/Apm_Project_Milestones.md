@@ -13,6 +13,7 @@ Local and global project milestones. Entity: Apm_Project_Milestones (Introduced 
 | - | - | --- |
 |[Completion_Date](#completion_date)|`date` |Planned completion date for the milestone|
 |[Is_Active](#is_active)|`bit` |Specifies whether the milestone is active for new cases|
+|[Project_Group_Id](#project_group_id)|`uniqueidentifier` |Specified for milestones that are applicable to all projects within the project group. NULL means the milestone is global, unless it is linked to a specific project.|
 |[Project_Id](#project_id)|`uniqueidentifier` |Specified for local project milestones. NULL means the milestone is global and assignable for all projects.|
 |[Project_Milestone_Id](#project_milestone_id)|`uniqueidentifier` `PK`||
 |[Project_Milestone_Name](#project_milestone_name)|`nvarchar(254)` `ML`||
@@ -92,6 +93,43 @@ Specifies whether the milestone is active for new cases
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`True`|no|no|
+
+### Project_Group_Id
+
+
+Specified for milestones that are applicable to all projects within the project group. NULL means the milestone is global, unless it is linked to a specific project.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|6|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Apm_Project_Groups](Apm_Project_Groups.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Project_Group_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Project_Id
 

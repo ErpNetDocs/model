@@ -202,6 +202,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The primary responsible user for the project. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.Projects.html#projectgroup">ProjectGroup</a></td>
+<td><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</td>
+<td>The project group to which the project belongs. null means the project is not assigned to any group. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Projects.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.Agile.ProjectTypes.html">ProjectTypes</a></td>
 <td>Specifies what kind of project is this. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -335,6 +340,12 @@ Supported permissions</p>
 <p>The primary responsible user for the project. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="projectgroup">ProjectGroup</h3>
+<p>The project group to which the project belongs. null means the project is not assigned to any group. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></p>
+<p><em>Type</em>: <strong><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

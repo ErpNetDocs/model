@@ -44,6 +44,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Project](Projects.Agile.ProjectMilestones.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | Specified for local project milestones. null means the milestone is global and assignable for all projects. `Filter(multi eq)` |
+| [ProjectGroup](Projects.Agile.ProjectMilestones.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. `Filter(multi eq)` `Introduced in version 26.1.4.49` |
 
 
 ## Attribute Details
@@ -117,6 +118,15 @@ Specified for local project milestones. null means the milestone is global and a
 
 _Type_: **[Projects](Projects.Agile.Projects.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### ProjectGroup
+
+Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. `Filter(multi eq)` `Introduced in version 26.1.4.49`
+
+_Type_: **[ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

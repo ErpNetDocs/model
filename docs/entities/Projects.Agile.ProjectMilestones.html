@@ -165,6 +165,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Projects.Agile.Projects.html">Projects</a> (nullable)</td>
 <td>Specified for local project milestones. null means the milestone is global and assignable for all projects. <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Projects.Agile.ProjectMilestones.html#projectgroup">ProjectGroup</a></td>
+<td><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</td>
+<td>Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -216,6 +221,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>Specified for local project milestones. null means the milestone is global and assignable for all projects. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.Projects.html">Projects</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="projectgroup">ProjectGroup</h3>
+<p>Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></p>
+<p><em>Type</em>: <strong><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

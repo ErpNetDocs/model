@@ -48,6 +48,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [PrimaryUser](Projects.Agile.ProjectAreas.md#primaryuser) | [Users](Systems.Security.Users.md) (nullable) | Specified, when there is a primary user for the area. `Filter(multi eq)` |
 | [Project](Projects.Agile.ProjectAreas.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | Specified for local project areas. null means that the area is global and assignable for all projects. `Filter(multi eq)` |
+| [ProjectGroup](Projects.Agile.ProjectAreas.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | Specified for areas that are applicable to all projects within the project group. null means the area is global, unless it is linked to a specific project. `Filter(multi eq)` `Introduced in version 26.1.4.49` |
 | [SocialGroup](Projects.Agile.ProjectAreas.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | The working group responsible for discussing and collaborating on this project area. `Filter(multi eq)` `Introduced in version 25.1.3.32` |
 
 
@@ -162,6 +163,15 @@ Specified for local project areas. null means that the area is global and assign
 
 _Type_: **[Projects](Projects.Agile.Projects.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### ProjectGroup
+
+Specified for areas that are applicable to all projects within the project group. null means the area is global, unless it is linked to a specific project. `Filter(multi eq)` `Introduced in version 26.1.4.49`
+
+_Type_: **[ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

@@ -18,6 +18,7 @@ Area of a project. Can be applicable to a single project or all projects. Entity
 |[Primary_User_Id](#primary_user_id)|`uniqueidentifier` |Specified, when there is a primary user for the area|
 |[Project_Area_Id](#project_area_id)|`uniqueidentifier` `PK`||
 |[Project_Area_Name](#project_area_name)|`nvarchar(256)` `ML`|Multi-language name of the project area|
+|[Project_Group_Id](#project_group_id)|`uniqueidentifier` |Specified for areas that are applicable to all projects within the project group. NULL means the area is global, unless it is linked to a specific project.|
 |[Project_Id](#project_id)|`uniqueidentifier` |Specified for local project areas. NULL means that the area is global and assignable for all projects.|
 |[Ready_Wip_Limit](#ready_wip_limit)|`int` |When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -276,6 +277,43 @@ Multi-language name of the project area
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
+
+### Project_Group_Id
+
+
+Specified for areas that are applicable to all projects within the project group. NULL means the area is global, unless it is linked to a specific project.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|11|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Apm_Project_Groups](Apm_Project_Groups.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Project_Group_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Project_Id
 

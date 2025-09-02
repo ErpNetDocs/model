@@ -604,7 +604,7 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`obj.EnterpriseCompany.BaseCurrency`
+`obj.DetermineAndSetBaseCurrency( )`
 
 ### CurrencyDirectory
 

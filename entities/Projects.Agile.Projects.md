@@ -52,6 +52,7 @@ Aggregate Tree
 | [AccessKey](Projects.Agile.Projects.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this Project. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.3.39` |
 | [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
 | [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. `Required` `Filter(multi eq)` |
+| [ProjectGroup](Projects.Agile.Projects.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | The project group to which the project belongs. null means the project is not assigned to any group. `Filter(multi eq)` `Introduced in version 26.1.4.49` |
 | [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. `Required` `Filter(multi eq)` |
 | [SocialGroup](Projects.Agile.Projects.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | The working group responsible for discussing and collaborating on this project. `Filter(multi eq)` `Introduced in version 25.1.2.63` |
 
@@ -206,6 +207,15 @@ The primary responsible user for the project. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### ProjectGroup
+
+The project group to which the project belongs. null means the project is not assigned to any group. `Filter(multi eq)` `Introduced in version 26.1.4.49`
+
+_Type_: **[ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

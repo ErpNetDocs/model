@@ -40,7 +40,7 @@ Aggregate Tree
 | [ProgressDate](Systems.Core.InstanceChangeRequests.md#progressdate) | date __nullable__ | The date up to which the data is updated in the database. Updated by the batch job. `Filter(eq;ge;le)` 
 | [ProgressPercent](Systems.Core.InstanceChangeRequests.md#progresspercent) | decimal (5, 2) __nullable__ | Progress, updated by the batch job. `Filter(ge;le)` 
 | [ReferenceNo](Systems.Core.InstanceChangeRequests.md#referenceno) | string (32) __nullable__ | Text for internal reference of the change request. `Filter(eq)` 
-| [RequestNo](Systems.Core.InstanceChangeRequests.md#requestno) | int32 | Global consequtive request number. `Required` `Filter(eq)` 
+| [RequestNo](Systems.Core.InstanceChangeRequests.md#requestno) | int32 | Global consequtive request number. `Required` `Filter(eq)` `ORD` 
 | [SettingsJson](Systems.Core.InstanceChangeRequests.md#settingsjson) | string (max) __nullable__ | Additional settings for the change; expressed in Json. The format depends on the change kind. `Filter(like)` 
 | [State](Systems.Core.InstanceChangeRequests.md#state) | [State](Systems.Core.InstanceChangeRequests.md#state) | Current state of the request. `Required` `Default("DRF")` `Filter(eq)` 
 
@@ -168,12 +168,12 @@ _Show in UI_: **ShownByDefault**
 
 ### RequestNo
 
-Global consequtive request number. `Required` `Filter(eq)`
+Global consequtive request number. `Required` `Filter(eq)` `ORD`
 
 _Type_: **int32**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### SettingsJson
