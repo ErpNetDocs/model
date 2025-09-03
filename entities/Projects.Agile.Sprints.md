@@ -162,6 +162,7 @@ _Show in UI_: **HiddenByDefault**
 Project to which this sprint belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Projects](Projects.Agile.Projects.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

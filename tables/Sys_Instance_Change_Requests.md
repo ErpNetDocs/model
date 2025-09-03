@@ -13,6 +13,7 @@ Major changes to enterprise companies (like base or reporting currency change). 
 | - | - | --- |
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The user, to which it is assigned.|
 |[Change_Kind](#change_kind)|`char(3)` Allowed: `REP`, `BAS`, `DEF`|The type of change requested for the enterprise company.|
+|[Currency_Rate](#currency_rate)|`decimal(18, 6)` |Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.|
 |[Effective_Date](#effective_date)|`date` |The date from which the change is effective. Might differ from execution date.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company being changed. Null means that the change is for the whole instance.|
 |[Execution_Date](#execution_date)|`date` |The date on which the change should be initiated.|
@@ -103,6 +104,42 @@ The type of change requested for the enterprise company.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Currency_Rate
+
+
+Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|16|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 6) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Currency_Rate - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Effective_Date
 
@@ -557,7 +594,7 @@ Additional settings for the change; expressed in Json. The format depends on the
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(max) (Allows NULL)|
-|UI Memo Editor|no|
+|UI Memo Editor|yes|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|

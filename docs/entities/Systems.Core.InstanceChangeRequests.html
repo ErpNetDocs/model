@@ -91,7 +91,7 @@
 <p>Major changes to enterprise companies (like base or reporting currency change). Entity: Sys_Instance_Change_Requests (Introduced in version 26.1.4.40)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {EnterpriseCompanyId}</em><br>
+<em>{RequestNo}: {ChangeKind}</em><br>
 Default Search Members:<br>
 __<br>
 Category:  <em>Definitions</em><br>
@@ -120,6 +120,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Systems.Core.InstanceChangeRequests.html#changekind">ChangeKind</a></td>
 <td><a href="Systems.Core.InstanceChangeRequests.html#changekind">ChangeKind</a></td>
 <td>The type of change requested for the enterprise company. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.InstanceChangeRequests.html#currencyrate">CurrencyRate</a></td>
+<td>decimal (18, 6) <strong>nullable</strong></td>
+<td>Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution. <code>Filter(eq)</code> <code>Introduced in version 26.1.4.51</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#displaytext">DisplayText</a></td>
@@ -245,6 +250,13 @@ Allowed values for the <code>ChangeKind</code>(Systems.Core.InstanceChangeReques
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="currencyrate">CurrencyRate</h3>
+<p>Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution. <code>Filter(eq)</code> <code>Introduced in version 26.1.4.51</code></p>
+<p><em>Type</em>: <strong>decimal (18, 6) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
