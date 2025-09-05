@@ -207,6 +207,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Indicates the time (in UTC) when the case was resolved. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.Cases.html#storypoints">StoryPoints</a></td>
+<td>int32 <strong>nullable</strong></td>
+<td>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
 <td>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
@@ -475,6 +480,13 @@ Allowed values for the <code>Priority</code>(Projects.Agile.Cases.md#priority) d
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="storypoints">StoryPoints</h3>
+<p>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></p>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="systemstate">SystemState</h3>
 <p>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></strong><br>

@@ -31,7 +31,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | The type of change requested for the enterprise company. `Required` `Filter(multi eq)` 
-| [CurrencyRate](Systems.Core.InstanceChangeRequests.md#currencyrate) | decimal (18, 6) __nullable__ | Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution. `Filter(eq)` `Introduced in version 26.1.4.51` 
+| [CurrencyRate](Systems.Core.InstanceChangeRequests.md#currencyrate) | decimal (20, 10) __nullable__ | Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution. `Filter(eq)` `Introduced in version 26.1.4.51` 
 | [DisplayText](Systems.Core.InstanceChangeRequests.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EffectiveDate](Systems.Core.InstanceChangeRequests.md#effectivedate) | date | The date from which the change is effective. Might differ from execution date. `Required` `Filter(eq;ge;le)` 
 | [ExecutionDate](Systems.Core.InstanceChangeRequests.md#executiondate) | date | The date on which the change should be initiated. `Required` `Filter(eq;ge;le)` 
@@ -80,7 +80,7 @@ _Show in UI_: **ShownByDefault**
 
 Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution. `Filter(eq)` `Introduced in version 26.1.4.51`
 
-_Type_: **decimal (18, 6) __nullable__**  
+_Type_: **decimal (20, 10) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  

@@ -49,6 +49,7 @@ Aggregate Tree
 | [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest). `Required` `Default(7)` `Filter(eq)` 
 | [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
+| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. `Filter(eq;ge;le)` `Introduced in version 26.1.4.53` 
 | [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case. `Required` `Default("1")` `Filter(multi eq)` `ReadOnly` 
 | [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title. `Required` `Filter(like)` 
 | [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
@@ -263,6 +264,16 @@ _Category_: **System**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **HiddenByDefault**  
+
+### StoryPoints
+
+When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. `Filter(eq;ge;le)` `Introduced in version 26.1.4.53`
+
+_Type_: **int32 __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### SystemState
 

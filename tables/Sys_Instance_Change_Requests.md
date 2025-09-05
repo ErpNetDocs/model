@@ -13,7 +13,7 @@ Major changes to enterprise companies (like base or reporting currency change). 
 | - | - | --- |
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The user, to which it is assigned.|
 |[Change_Kind](#change_kind)|`char(3)` Allowed: `REP`, `BAS`, `DEF`|The type of change requested for the enterprise company.|
-|[Currency_Rate](#currency_rate)|`decimal(18, 6)` |Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.|
+|[Currency_Rate](#currency_rate)|`decimal(20, 10)` |Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.|
 |[Effective_Date](#effective_date)|`date` |The date from which the change is effective. Might differ from execution date.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company being changed. Null means that the change is for the whole instance.|
 |[Execution_Date](#execution_date)|`date` |The date on which the change should be initiated.|
@@ -129,7 +129,7 @@ Currency Rate, applied for the change when relevant (e.g. reporting or base curr
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 6) (Allows NULL)|
+|Type|decimal(20, 10) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
