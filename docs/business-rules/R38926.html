@@ -135,7 +135,7 @@ Legislations</strong></td>
 EnterpriseCompany.ReportingCurrency != null)) AndAlso Not(Voucher.EnterpriseCompany.
 ReportingCurrency.IsGhost)) AndAlso ((ItemKey != null) OrElse True)) AndAlso
 ((ReferencedDocument == null) OrElse True)) AndAlso ((Debit.Value != 0) OrElse True))
-AndAlso ((Credit.Value != 0) OrElse True)), DetermineMultiplierAndDivisorRC().Item2,
+AndAlso ((Credit.Value != 0) OrElse True)), SetMultiplierAndDivisorRC().Item2,
 RateDivisorRC), Object)</td>
 </tr>
 <tr>

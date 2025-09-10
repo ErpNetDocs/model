@@ -182,6 +182,7 @@ _Show in UI_: **ShownByDefault**
 Global consequtive request number. `Required` `Filter(eq)` `ORD`
 
 _Type_: **int32**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  

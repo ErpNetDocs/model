@@ -15,7 +15,7 @@ Logical grouping of projects for shared configuration, such as project areas, mi
 |[Description](#description)|`nvarchar(256)` `ML`|Description of the project group.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current project group is active.|
 |[Name](#name)|`nvarchar(256)` `ML`|Multi-language name of the project group.|
-|[Project_Group_Id](#project_group_id)|`uniqueidentifier` `PK`|Unique code of the project group.|
+|[Project_Group_Id](#project_group_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -166,9 +166,6 @@ Multi-language name of the project group.
 |Like|None|no|no|
 
 ### Project_Group_Id
-
-
-Unique code of the project group.
 
 | Property | Value |
 | - | - |
