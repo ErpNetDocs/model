@@ -47,7 +47,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Document](Logistics.Inventory.CostCorrectionLines.md#document) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Inventory.CostCorrectionLines.md#document) | [CostCorrections](Logistics.Inventory.CostCorrections.md) |  |
 | [TransactionLine](Logistics.Inventory.CostCorrectionLines.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The transaction line, which is corrected. `Required` `Filter(multi eq)` |
 
 
@@ -141,8 +141,6 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 _Show in UI_: **ShownByDefault**  
 
 ### Document
-
-The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
 _Indexed_: **True**  

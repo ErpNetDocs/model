@@ -32,8 +32,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CompletedDateTimeUtc](Projects.Todo.Tasks.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task was completed. `Filter(eq;ge;le)` `ReadOnly` 
+| [CreationTimeUtc](Projects.Todo.Tasks.md#creationtimeutc) | datetime | Indicates (in UTC) when the task was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` `Introduced in version 26.1.4.61` 
 | [DisplayText](Projects.Todo.Tasks.md#displaytext) | string |  
-| [DueDate](Projects.Todo.Tasks.md#duedate) | date __nullable__ | Indicates when the task should be finished. `Filter(eq;ge;le)` 
+| [DueDate](Projects.Todo.Tasks.md#duedate) | date __nullable__ | Indicates when the task should be finished. `Filter(eq;ge;le)` `ORD` 
 | [Id](Projects.Todo.Tasks.md#id) | guid |  
 | [Importance](Projects.Todo.Tasks.md#importance) | [Importance](Projects.Todo.Tasks.md#importance) | The importance of the task. `Required` `Default("N")` `Filter(eq)` 
 | [Notes](Projects.Todo.Tasks.md#notes) | string (max) __nullable__ | Notes for this Task. `Introduced in version 23.1.1.48` 
@@ -70,6 +71,18 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+### CreationTimeUtc
+
+Indicates (in UTC) when the task was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` `Introduced in version 26.1.4.61`
+
+_Type_: **datetime**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **True**  
+_Default Value_: **CurrentDateTimeUtc**  
+_Show in UI_: **ShownByDefault**  
+
 ### DisplayText
 
 _Type_: **string**  
@@ -80,12 +93,13 @@ _Show in UI_: **HiddenByDefault**
 
 ### DueDate
 
-Indicates when the task should be finished. `Filter(eq;ge;le)`
+Indicates when the task should be finished. `Filter(eq;ge;le)` `ORD`
 
 _Type_: **date __nullable__**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### Id

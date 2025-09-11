@@ -20,7 +20,7 @@ Case: **37169**
 Default Display Text Format:  
 _{DocumentAmountType} {DocumentLineId} {Amount}_  
 Default Search Members:  
-_Document.EntityName_  
+_Document.DocumentNo_  
 Name Data Member:  
 _Document.EntityName_  
 Category:  _Definitions_  

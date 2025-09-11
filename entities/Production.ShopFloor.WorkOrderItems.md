@@ -54,7 +54,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Production.ShopFloor.WorkOrderItems.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The Id of the work order, containing the item. `Required` `Filter(multi eq)` |
+| [Document](Production.ShopFloor.WorkOrderItems.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) |  |
 | [Lot](Production.ShopFloor.WorkOrderItems.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. `Filter(multi eq)` |
 | [OutputStore](Production.ShopFloor.WorkOrderItems.md#outputstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Output store for the production. `Filter(multi eq)` |
 | [ParentDocument](Production.ShopFloor.WorkOrderItems.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
@@ -291,8 +291,6 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
-
-The Id of the work order, containing the item. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Indexed_: **True**  

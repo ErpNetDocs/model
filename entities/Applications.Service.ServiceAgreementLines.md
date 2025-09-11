@@ -48,7 +48,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Applications.Service.ServiceAgreementLines.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Applications.Service.ServiceAgreementLines.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) |  |
 | [ParentDocument](Applications.Service.ServiceAgreementLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ServiceObject](Applications.Service.ServiceAgreementLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is covered by the current agreement. `Required` `Filter(multi eq)` |
@@ -167,8 +167,6 @@ _Show in UI_: **ShownByDefault**
 ## Reference Details
 
 ### Document
-
-The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  

@@ -48,7 +48,7 @@ Aggregate Root:
 | [Asset](Finance.Assets.AssetOrderLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is acquired or retired. `Required` `Filter(multi eq)` |
 | [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) | [AssetOrders](Finance.Assets.AssetOrders.md) | The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [AssetValueCurrency](Finance.Assets.AssetOrderLines.md#assetvaluecurrency) | [Currencies](General.Currencies.Currencies.md) | Currency of Asset Value. `Required` `Filter(multi eq)` |
-| [Document](Finance.Assets.AssetOrderLines.md#document) | [AssetOrders](Finance.Assets.AssetOrders.md) | The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Finance.Assets.AssetOrderLines.md#document) | [AssetOrders](Finance.Assets.AssetOrders.md) |  |
 | [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 18.2` |
 
 
@@ -148,8 +148,6 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **ShownByDefault**  
 
 ### Document
-
-The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
 _Indexed_: **True**  

@@ -216,7 +216,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></td>
-<td>The <see cref="PurchaseOrder"></see> to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#lot">Lot</a></td>
@@ -416,7 +416,6 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <see cref="PurchaseOrder"></see> to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
@@ -472,7 +471,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.DeterminePurchaseProductPrice( Convert( obj.Document.DocumentDate, Nullable</code>1), obj.PurchaseOrder.Supplier, obj.Product, obj.Quantity, obj.Document.EnterpriseCompany, obj.PurchaseOrder.PurchasePriceList)`</p>
+<code>obj.DeterminePurchaseProductPrice( Convert( obj.PurchaseOrder.DocumentDate, Nullable</code>1), obj.PurchaseOrder.Supplier, obj.Product, obj.Quantity, obj.PurchaseOrder.EnterpriseCompany, obj.PurchaseOrder.PurchasePriceList)`</p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>

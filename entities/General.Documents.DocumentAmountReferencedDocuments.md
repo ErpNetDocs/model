@@ -9,9 +9,9 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentAmount.Document.EntityName}_  
+_{Id}. {DocumentAmount.Document.DocumentNo} {DocumentAmount.Document.DocumentType.TypeName:T}_  
 Default Search Members:  
-_DocumentAmount.Document.EntityName_  
+_DocumentAmount.Document.DocumentNo_  
 Name Data Member:  
 _DocumentAmount.Document.EntityName_  
 Category:  _Definitions_  

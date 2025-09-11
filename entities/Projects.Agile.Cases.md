@@ -11,7 +11,11 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 Default Display Text Format:  
 _{Number}: {Title:T}_  
 Default Search Members:  
-__  
+_Number; Title_  
+Code Data Member:  
+_Number_  
+Name Data Member:  
+_Title_  
 Category:  _Documents_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  

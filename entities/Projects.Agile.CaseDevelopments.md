@@ -11,9 +11,9 @@ Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81
 Default Display Text Format:  
 _{CreationTimeUtc} {ActionDescription} by {CreationUser}_  
 Default Search Members:  
-_Case_  
+_Case.Title_  
 Name Data Member:  
-_Case_  
+_Case.Title_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  

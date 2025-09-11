@@ -58,7 +58,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Transportation.TransportationExecutionLines.md#document) | [TransportationExecutions](Logistics.Transportation.TransportationExecutions.md) | The <see cref="Transportation<br />Execution"/> to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Transportation.TransportationExecutionLines.md#document) | [TransportationExecutions](Logistics.Transportation.TransportationExecutions.md) |  |
 | [ExecutionOfTransportation<br />OrderLine](Logistics.Transportation.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Transportation.TransportationOrderLines.md) | The transportation order line, which is executed. `Required` `Filter(multi eq)` |
 | [GeoPoint](Logistics.Transportation.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. `Required` `Filter(multi eq)` |
 | [TransportationExecution](Logistics.Transportation.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Transportation.TransportationExecutions.md) | The <see cref="Transportation<br />Execution"/> to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` `Owner` |
@@ -215,8 +215,6 @@ _Show in UI_: **ShownByDefault**
 ## Reference Details
 
 ### Document
-
-The <see cref="TransportationExecution"/> to which this TransportationExecutionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationExecutions](Logistics.Transportation.TransportationExecutions.md)**  
 _Indexed_: **True**  

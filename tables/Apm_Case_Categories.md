@@ -236,6 +236,7 @@ Specifies whether the category is active for new cases.
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

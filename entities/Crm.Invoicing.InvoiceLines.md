@@ -58,7 +58,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Invoicing.InvoiceLines.md#document) | [Invoices](Crm.Invoicing.Invoices.md) | The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Crm.Invoicing.InvoiceLines.md#document) | [Invoices](Crm.Invoicing.Invoices.md) |  |
 | [IntrastatTransportCountry](Crm.Invoicing.InvoiceLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)` |
 | [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) | [Invoices](Crm.Invoicing.Invoices.md) | The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [InvoiceOrderLine](Crm.Invoicing.InvoiceLines.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | Invoice order line which is invoiced by this line. `Filter(multi eq)` |
@@ -397,8 +397,6 @@ _Show in UI_: **ShownByDefault**
 ## Reference Details
 
 ### Document
-
-The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
 _Indexed_: **True**  

@@ -57,7 +57,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Presales.OfferLines.md#document) | [Offers](Crm.Presales.Offers.md) | The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Crm.Presales.OfferLines.md#document) | [Offers](Crm.Presales.Offers.md) |  |
 | [LineDiscount](Crm.Presales.OfferLines.md#linediscount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | When not null, contains the discount policy selected for this line. `Filter(multi eq)` |
 | [LineEndCustomerParty](Crm.Presales.OfferLines.md#lineendcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. `Filter(multi eq)` `Introduced in version 21.1.2.96` |
 | [Offer](Crm.Presales.OfferLines.md#offer) | [Offers](Crm.Presales.Offers.md) | The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner` |
@@ -325,8 +325,6 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
-
-The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Offers](Crm.Presales.Offers.md)**  
 _Indexed_: **True**  

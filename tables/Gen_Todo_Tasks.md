@@ -13,6 +13,7 @@ Represents a task, such as a piece of work or personal item, that can be tracked
 | - | - | --- |
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The user, to whom the todo is assigned.|
 |[Completed_Date_Time_Utc](#completed_date_time_utc)|`datetime` Readonly|Indicates (in UTC) when the task was completed.|
+|[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|Indicates (in UTC) when the task was created.|
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The object for which this is a to-do item.|
 |[Due_Date](#due_date)|`date` |Indicates when the task should be finished.|
 |[Importance](#importance)|`char(1)` Allowed: `L`, `N`, `H`|The importance of the task.|
@@ -101,6 +102,43 @@ Indicates (in UTC) when the task was completed.
 |Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
 
+### Creation_Time_Utc
+
+
+Indicates (in UTC) when the task was created.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|CurrentDateTimeUtc|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Creation_Time_Utc - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Data_Object_Id
 
 
@@ -159,7 +197,7 @@ Indicates when the task should be finished.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|date (Allows NULL)|

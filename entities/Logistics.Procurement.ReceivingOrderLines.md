@@ -53,7 +53,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Procurement.ReceivingOrderLines.md#document) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Procurement.ReceivingOrderLines.md#document) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) |  |
 | [LineStore](Logistics.Procurement.ReceivingOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods are received. `Filter(multi eq)` |
 | [Lot](Logistics.Procurement.ReceivingOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the received goods. `Filter(multi eq)` |
 | [Product](Logistics.Procurement.ReceivingOrderLines.md#product) | [Products](General.Products.Products.md) | The received product. `Required` `Filter(multi eq)` |
@@ -268,8 +268,6 @@ _Front-End Recalc Expressions:_
 ## Reference Details
 
 ### Document
-
-The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Indexed_: **True**  

@@ -231,7 +231,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#document">Document</a></td>
 <td><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></td>
-<td>The voucher to which this line is attached. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#profitcenter">ProfitCenter</a></td>
@@ -415,7 +415,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="document">Document</h3>
-<p>The voucher to which this line is attached. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
@@ -435,7 +434,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>IIF( ( obj.Voucher.DefaultReferencedDocument != null), obj.Voucher.DefaultReferencedDocument, obj.Document)</code></p>
+<code>IIF( ( obj.Voucher.DefaultReferencedDocument != null), obj.Voucher.DefaultReferencedDocument, Convert( obj.Voucher, Document))</code></p>
 <h3 id="voucher">Voucher</h3>
 <p>The voucher to which this line is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>

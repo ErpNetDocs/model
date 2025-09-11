@@ -18,9 +18,9 @@ Case: **37169**
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.EntityName}_  
+_{Id}. {Document.DocumentNo} {Document.DocumentType.TypeName:T}_  
 Default Search Members:  
-_Document.EntityName_  
+_Document.DocumentNo_  
 Name Data Member:  
 _Document.EntityName_  
 Category:  _Definitions_  

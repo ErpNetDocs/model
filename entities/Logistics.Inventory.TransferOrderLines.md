@@ -49,7 +49,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Inventory.TransferOrderLines.md#document) | [TransferOrders](Logistics.Inventory.TransferOrders.md) | The parent transfer order. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Inventory.TransferOrderLines.md#document) | [TransferOrders](Logistics.Inventory.TransferOrders.md) |  |
 | [FromStoreBin](Logistics.Inventory.TransferOrderLines.md#fromstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)` |
 | [Lot](Logistics.Inventory.TransferOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` |
 | [Product](Logistics.Inventory.TransferOrderLines.md#product) | [Products](General.Products.Products.md) | The product which will be transferred. `Required` `Filter(multi eq)` |
@@ -215,8 +215,6 @@ _Front-End Recalc Expressions:_
 ## Reference Details
 
 ### Document
-
-The parent transfer order. `Required` `Filter(multi eq)`
 
 _Type_: **[TransferOrders](Logistics.Inventory.TransferOrders.md)**  
 _Indexed_: **True**  

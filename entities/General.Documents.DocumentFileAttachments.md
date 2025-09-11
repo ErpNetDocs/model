@@ -22,9 +22,9 @@ Case: **37169**
 
 ## Default Visualization
 Default Display Text Format:  
-_{FileName}_  
+_{Id}. {Document.DocumentNo} {Document.DocumentType.TypeName:T}_  
 Default Search Members:  
-_FileName_  
+_Document.DocumentNo_  
 Name Data Member:  
 _FileName_  
 Category:  _Definitions_  

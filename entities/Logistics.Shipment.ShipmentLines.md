@@ -58,7 +58,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Shipment.ShipmentLines.md#document) | [Shipments](Logistics.Shipment.Shipments.md) | The <see cref="Shipment"/> to which this ShipmentLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Shipment.ShipmentLines.md#document) | [Shipments](Logistics.Shipment.Shipments.md) |  |
 | [Lot](Logistics.Shipment.ShipmentLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The store lot from which to take the goods. `Filter(multi eq)` |
 | [ParentDocument](Logistics.Shipment.ShipmentLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [ParentSalesOrderLine](Logistics.Shipment.ShipmentLines.md#parentsalesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) | Sales order line which is shipped. `Required` `Filter(multi eq)` |
@@ -311,8 +311,6 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
-
-The <see cref="Shipment"/> to which this ShipmentLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Shipments](Logistics.Shipment.Shipments.md)**  
 _Indexed_: **True**  

@@ -48,7 +48,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Competitor](Crm.Marketing.MarketingActivityLines.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | Competitor where marketing activity was held. `Filter(multi eq)` |
-| [Document](Crm.Marketing.MarketingActivityLines.md#document) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` |
+| [Document](Crm.Marketing.MarketingActivityLines.md#document) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) |  |
 | [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` `Owner` |
 | [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) | Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)` |
 | [OrderQuantityUnit](Crm.Marketing.MarketingActivityLines.md#orderquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit of In_Store_Available_<br />Quantity and Order_Quantity. `Filter(multi eq)` |
@@ -176,8 +176,6 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **ShownByDefault**  
 
 ### Document
-
-Marketing activity. `Required` `Filter(multi eq)`
 
 _Type_: **[MarketingActivities](Crm.Marketing.MarketingActivities.md)**  
 _Category_: **System**  

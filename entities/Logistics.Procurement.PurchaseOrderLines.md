@@ -54,7 +54,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Procurement.PurchaseOrderLines.md#document) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) | The <see cref="PurchaseOrder"/> to which this PurchaseOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Procurement.PurchaseOrderLines.md#document) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) |  |
 | [Lot](Logistics.Procurement.PurchaseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | When not null, indicates that a specific lot is required to be delivered. `Filter(multi eq)` |
 | [ParentDocument](Logistics.Procurement.PurchaseOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 18.2` |
 | [Product](Logistics.Procurement.PurchaseOrderLines.md#product) | [Products](General.Products.Products.md) | The ordered product. `Required` `Filter(multi eq)` |
@@ -276,8 +276,6 @@ _Front-End Recalc Expressions:_
 
 ### Document
 
-The <see cref="PurchaseOrder"/> to which this PurchaseOrderLine belongs. `Required` `Filter(multi eq)`
-
 _Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
@@ -355,7 +353,7 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **HiddenByDefault**  
 
 _Front-End Recalc Expressions:_  
-`obj.DeterminePurchaseProductPrice( Convert( obj.Document.DocumentDate, Nullable`1), obj.PurchaseOrder.Supplier, obj.Product, obj.Quantity, obj.Document.EnterpriseCompany, obj.PurchaseOrder.PurchasePriceList)`
+`obj.DeterminePurchaseProductPrice( Convert( obj.PurchaseOrder.DocumentDate, Nullable`1), obj.PurchaseOrder.Supplier, obj.Product, obj.Quantity, obj.PurchaseOrder.EnterpriseCompany, obj.PurchaseOrder.PurchasePriceList)`
 ### QuantityUnit
 
 The measurement unit of Quantity. `Required` `Filter(multi eq)`

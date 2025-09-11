@@ -48,7 +48,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Inventory.ReconciliationLines.md#document) | [Reconciliations](Logistics.Inventory.Reconciliations.md) | Parent reconciliation Id. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Inventory.ReconciliationLines.md#document) | [Reconciliations](Logistics.Inventory.Reconciliations.md) |  |
 | [Lot](Logistics.Inventory.ReconciliationLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was reconciled. `Filter(multi eq)` |
 | [Product](Logistics.Inventory.ReconciliationLines.md#product) | [Products](General.Products.Products.md) | The id of the reconciled product. `Required` `Filter(multi eq)` |
 | [ProductCode](Logistics.Inventory.ReconciliationLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
@@ -192,8 +192,6 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
-
-Parent reconciliation Id. `Required` `Filter(multi eq)`
 
 _Type_: **[Reconciliations](Logistics.Inventory.Reconciliations.md)**  
 _Indexed_: **True**  

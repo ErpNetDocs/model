@@ -126,6 +126,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Indicates (in UTC) when the task was completed. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Todo.Tasks.html#creationtimeutc">CreationTimeUtc</a></td>
+<td>datetime</td>
+<td>Indicates (in UTC) when the task was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 26.1.4.61</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Todo.Tasks.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td></td>
@@ -133,7 +138,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#duedate">DueDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Indicates when the task should be finished. <code>Filter(eq;ge;le)</code></td>
+<td>Indicates when the task should be finished. <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#id">Id</a></td>
@@ -229,6 +234,15 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="creationtimeutc">CreationTimeUtc</h3>
+<p>Indicates (in UTC) when the task was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 26.1.4.61</code></p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Category</em>: <strong>Calculated Attributes</strong><br>
@@ -236,11 +250,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>Indicates when the task should be finished. <code>Filter(eq;ge;le)</code></p>
+<p>Indicates when the task should be finished. <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
