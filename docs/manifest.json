@@ -18242,26 +18242,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "entities/Projects.ToDoSubTasks.md",
-      "output": {
-        ".html": {
-          "relative_path": "entities/Projects.ToDoSubTasks.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "entities/Projects.ToDoTasks.md",
-      "output": {
-        ".html": {
-          "relative_path": "entities/Projects.ToDoTasks.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "entities/Projects.Todo.TaskItems.md",
       "output": {
         ".html": {

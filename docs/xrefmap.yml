@@ -1801,9 +1801,6 @@ references:
 - uid: Projects.Templates
   name: Projects.Templates Entity
   href: entities/Projects.Templates.html
-- uid: Projects.ToDoSubTasks
-  name: Projects.ToDoSubTasks Entity
-  href: entities/Projects.ToDoSubTasks.html
 - uid: Projects.Todo
   name: Projects.Todo Namespace
   href: entities/Projects.Todo.html
@@ -1816,9 +1813,6 @@ references:
 - uid: Projects.TodoTaskItems
   name: Projects.TodoTaskItems Entity
   href: entities/Projects.TodoTaskItems.html
-- uid: Projects.TodoTasks
-  name: Projects.TodoTasks Entity
-  href: entities/Projects.ToDoTasks.html
 - uid: Projects.TypeRoles
   name: Projects.TypeRoles Entity
   href: entities/Projects.TypeRoles.html
