@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Table Inv_Lots | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Table Inv_Lots | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Inv_Lots.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="table-inv_lots">Table Inv_Lots</h1>
+
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a></p>
+<p>Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots</p>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
+<ul>
+<li><a href="Gen_Products.html">Gen_Products</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#alcoholic_strength">Alcoholic_Strength</a></td>
+<td><code>decimal(5, 2)</code></td>
+<td>Percentage of pure alcohol used in excise duty reporting.</td>
+</tr>
+<tr>
+<td><a href="#blocked_for_document_id">Blocked_For_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>If non-null, contains the document for which the lot is blocked</td>
+</tr>
+<tr>
+<td><a href="#blocked_for_party_id">Blocked_For_Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Non-NULL when the warehouse lot is blocked specifically for some party</td>
+</tr>
+<tr>
+<td><a href="#certificate_document_id">Certificate_Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#description">Description</a></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</td>
+</tr>
+<tr>
+<td><a href="#expiry_date">Expiry_Date</a></td>
+<td><code>datetime</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#license_no">License_No</a></td>
+<td><code>nvarchar(50)</code></td>
+<td>The license number for this lot. Null when license number is N/A or unknown.</td>
+</tr>
+<tr>
+<td><a href="#lot_id">Lot_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#lot_number">Lot_Number</a></td>
+<td><code>nvarchar(30)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#product_id">Product_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The product to which the lot is bound</td>
+</tr>
+<tr>
+<td><a href="#production_batch_id">Production_Batch_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Non-NULL if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods</td>
+</tr>
+<tr>
+<td><a href="#purchase_lot_number">Purchase_Lot_Number</a></td>
+<td><code>nvarchar(30)</code></td>
+<td>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.</td>
+</tr>
+<tr>
+<td><a href="#receipt_date">Receipt_Date</a></td>
+<td><code>date</code> Readonly</td>
+<td>The date of the first receipt of products in this lot.</td>
+</tr>
+<tr>
+<td><a href="#receipt_store_transaction_id">Receipt_Store_Transaction_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The store receipt transaction, which created the lot. NULL if the lot is manually created</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#status">Status</a></td>
+<td><code>int</code> Allowed: <code>0</code>, <code>-1</code>, <code>-2</code>, <code>-3</code></td>
+<td>Status of the warehouse lot. Minus statuses describe blocked conditions.<br>-3 blocked for document (sales or service order)<br>-2 blocked for party<br>-1 blocked for inspection<br>0 free to use</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="alcoholic_strength">Alcoholic_Strength</h3>
+<p>Percentage of pure alcohol used in excise duty reporting.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(5, 2)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blocked_for_document_id">Blocked_For_Document_Id</h3>
+<p>If non-null, contains the document for which the lot is blocked</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="blocked_for_document_id---supported-filters">Blocked_For_Document_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blocked_for_party_id">Blocked_For_Party_Id</h3>
+<p>Non-NULL when the warehouse lot is blocked specifically for some party</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Parties.html">Gen_Parties</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="blocked_for_party_id---supported-filters">Blocked_For_Party_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_document_id">Certificate_Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="certificate_document_id---supported-filters">Certificate_Document_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>254</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(254) (MultiLanguage) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="excise_measuring_transaction_id">Excise_Measuring_Transaction_Id</h3>
+<p>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Exc_Measuring_Transactions.html">Exc_Measuring_Transactions</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="excise_measuring_transaction_id---supported-filters">Excise_Measuring_Transaction_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expiry_date">Expiry_Date</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="expiry_date---supported-filters">Expiry_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="license_no">License_No</h3>
+<p>The license number for this lot. Null when license number is N/A or unknown.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(50) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_id">Lot_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lot_id---supported-filters">Lot_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lot_number">Lot_Number</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(30)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lot_number---supported-filters">Lot_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product_id">Product_Id</h3>
+<p>The product to which the lot is bound</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Products.html">Gen_Products</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="product_id---supported-filters">Product_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="production_batch_id">Production_Batch_Id</h3>
+<p>Non-NULL if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="production_batch_id---supported-filters">Production_Batch_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_lot_number">Purchase_Lot_Number</h3>
+<p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(30) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="purchase_lot_number---supported-filters">Purchase_Lot_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receipt_date">Receipt_Date</h3>
+<p>The date of the first receipt of products in this lot.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>date (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="receipt_date---supported-filters">Receipt_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receipt_store_transaction_id">Receipt_Store_Transaction_Id</h3>
+<p>The store receipt transaction, which created the lot. NULL if the lot is manually created</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Inv_Transactions.html">Inv_Transactions</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="receipt_store_transaction_id---supported-filters">Receipt_Store_Transaction_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status">Status</h3>
+<p>Status of the warehouse lot. Minus statuses describe blocked conditions.
+-3 blocked for document (sales or service order)
+-2 blocked for party
+-1 blocked for inspection
+0 free to use</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>0</code>, <code>-1</code>, <code>-2</code>, <code>-3</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="status---supported-filters">Status - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Inv_Lots.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

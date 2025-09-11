@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Table Crm_Deals | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Table Crm_Deals | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Crm_Deals.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="table-crm_deals">Table Crm_Deals</h1>
+
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Crm.Presales.Deals.html">Crm.Presales.Deals</a></p>
+<p>Potential deals (Opportunities). Entity: Crm_Deals</p>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
+<ul>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#campaign_id">Campaign_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The marketing campaign to which this opportunity belongs.</td>
+</tr>
+<tr>
+<td><a href="#deal_id">Deal_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#deal_status">Deal_Status</a></td>
+<td><code>char(3)</code> Allowed: <code>INP</code>, <code>SUC</code>, <code>UNS</code></td>
+<td>Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress</td>
+</tr>
+<tr>
+<td><a href="#dealer_id">Dealer_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The external dealer, which provided the opportunity</td>
+</tr>
+<tr>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#expected_revenue">Expected_Revenue</a></td>
+<td><code>decimal(18, 2)</code></td>
+<td>Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.</td>
+</tr>
+<tr>
+<td><a href="#expected_revenue_currency_id">Expected_Revenue_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of Expected Revenue</td>
+</tr>
+<tr>
+<td><a href="#is_released">Is_Released</a></td>
+<td><code>bit</code> Readonly</td>
+<td>True if the document is not void and its state is released or greater. Deprecated</td>
+</tr>
+<tr>
+<td><a href="#is_single_execution">Is_Single_Execution</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Specifies whether the document is a single execution of its order document.</td>
+</tr>
+<tr>
+<td><a href="#leading_sales_person_id">Leading_Sales_Person_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The sales person, responsible for the opportunity</td>
+</tr>
+<tr>
+<td><a href="#lost_to_competitor_id">Lost_To_Competitor_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, specifies the competitor to which we lost the deal.</td>
+</tr>
+<tr>
+<td><a href="#lost_to_competitor_solution_id">Lost_To_Competitor_Solution_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not null, specifies the competitor solution to which we lost the deal.</td>
+</tr>
+<tr>
+<td><a href="#marketing_solution_id">Marketing_Solution_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The marketing solution, in which the potential client is interested.</td>
+</tr>
+<tr>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The prospect customers party. The party might not yet have a customer record.</td>
+</tr>
+<tr>
+<td><a href="#revenue_end_date">Revenue_End_Date</a></td>
+<td><code>datetime</code></td>
+<td>Expected date on which the last revenue from this deal will occur.</td>
+</tr>
+<tr>
+<td><a href="#revenue_start_date">Revenue_Start_Date</a></td>
+<td><code>datetime</code></td>
+<td>Expected date on which revenue from this deal will start.</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#success_probability">Success_Probability</a></td>
+<td><code>decimal(3, 2)</code></td>
+<td>Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="campaign_id">Campaign_Id</h3>
+<p>The marketing campaign to which this opportunity belongs.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Campaigns.html">Crm_Campaigns</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="campaign_id---supported-filters">Campaign_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deal_id">Deal_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deal_id---supported-filters">Deal_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deal_status">Deal_Status</h3>
+<p>Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>INP</code>, <code>SUC</code>, <code>UNS</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>INP</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deal_status---supported-filters">Deal_Status - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dealer_id">Dealer_Id</h3>
+<p>The external dealer, which provided the opportunity</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Dealers.html">Crm_Dealers</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dealer_id---supported-filters">Dealer_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="document_id---supported-filters">Document_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expected_revenue">Expected_Revenue</h3>
+<p>Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>N2</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>Sum</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(18, 2)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="expected_revenue---supported-filters">Expected_Revenue - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="expected_revenue_currency_id">Expected_Revenue_Currency_Id</h3>
+<p>The currency of Expected Revenue</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="expected_revenue_currency_id---supported-filters">Expected_Revenue_Currency_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_released">Is_Released</h3>
+<p>True if the document is not void and its state is released or greater. Deprecated</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is_released---supported-filters">Is_Released - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_single_execution">Is_Single_Execution</h3>
+<p>Specifies whether the document is a single execution of its order document.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is_single_execution---supported-filters">Is_Single_Execution - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="leading_sales_person_id">Leading_Sales_Person_Id</h3>
+<p>The sales person, responsible for the opportunity</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Sales_Persons.html">Crm_Sales_Persons</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="leading_sales_person_id---supported-filters">Leading_Sales_Person_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lost_to_competitor_id">Lost_To_Competitor_Id</h3>
+<p>When not null, specifies the competitor to which we lost the deal.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Competitors.html">Crm_Competitors</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lost_to_competitor_id---supported-filters">Lost_To_Competitor_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lost_to_competitor_solution_id">Lost_To_Competitor_Solution_Id</h3>
+<p>When not null, specifies the competitor solution to which we lost the deal.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Depends On</td>
+<td><a href="#lost_to_competitor_id">Lost_To_Competitor_Id</a></td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Competitor_Solutions.html">Crm_Competitor_Solutions</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lost_to_competitor_solution_id---supported-filters">Lost_To_Competitor_Solution_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="marketing_solution_id">Marketing_Solution_Id</h3>
+<p>The marketing solution, in which the potential client is interested.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Marketing_Solutions.html">Crm_Marketing_Solutions</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="marketing_solution_id---supported-filters">Marketing_Solution_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="party_id">Party_Id</h3>
+<p>The prospect customers party. The party might not yet have a customer record.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Parties.html">Gen_Parties</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="party_id---supported-filters">Party_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="revenue_end_date">Revenue_End_Date</h3>
+<p>Expected date on which the last revenue from this deal will occur.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>CurrentDate</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="revenue_end_date---supported-filters">Revenue_End_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="revenue_start_date">Revenue_Start_Date</h3>
+<p>Expected date on which revenue from this deal will start.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>CurrentDate</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="revenue_start_date---supported-filters">Revenue_Start_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="success_probability">Success_Probability</h3>
+<p>Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15).</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attributes</td>
+<td>IsPercent</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(3, 2)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Crm_Deals.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

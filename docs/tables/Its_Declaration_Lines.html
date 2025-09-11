@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Table Its_Declaration_Lines | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Table Its_Declaration_Lines | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Its_Declaration_Lines.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="table-its_declaration_lines">Table Its_Declaration_Lines</h1>
+
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Intrastat.DeclarationLines.html">Finance.Intrastat.DeclarationLines</a></p>
+<p>Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines</p>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
+<ul>
+<li><a href="Its_Declarations.html">Its_Declarations</a></li>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#administrative_region_id">Administrative_Region_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Administrative region of the enterprise company at the time of the declaration</td>
+</tr>
+<tr>
+<td><a href="#delivery_terms">Delivery_Terms</a></td>
+<td><code>char(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+<td>Delivery terms - classification according to Intrastat (which uses the common abbreviations)</td>
+</tr>
+<tr>
+<td><a href="#intrastat_commodity_code_id">Intrastat_Commodity_Code_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The commodity code of the goods, according to the Intrastat commodity classification</td>
+</tr>
+<tr>
+<td><a href="#intrastat_declaration_id">Intrastat_Declaration_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The intrastat declaration, to which this line belongs</td>
+</tr>
+<tr>
+<td><a href="#intrastat_declaration_line_id">Intrastat_Declaration_Line_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td>The unique id of the line</td>
+</tr>
+<tr>
+<td><a href="#invoiced_value_amount_base">Invoiced_Value_Amount_Base</a></td>
+<td><code>decimal(10, 0)</code></td>
+<td>Invoiced value of the goods in the base currency</td>
+</tr>
+<tr>
+<td><a href="#line_action">Line_Action</a></td>
+<td><code>char(3)</code> Allowed: <code>NEW</code>, <code>EDN</code>, <code>EDO</code>, <code>DEL</code></td>
+<td>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted</td>
+</tr>
+<tr>
+<td><a href="#line_no">Line_No</a></td>
+<td><code>int</code></td>
+<td>Consequtive line number within the intrastat declaration</td>
+</tr>
+<tr>
+<td><a href="#net_mass_kg">Net_Mass_Kg</a></td>
+<td><code>decimal(14, 3)</code></td>
+<td>Net mass of the goods in kg</td>
+</tr>
+<tr>
+<td><a href="#origin_country_id">Origin_Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The country of origin of the goods. NULL for outbound declarations</td>
+</tr>
+<tr>
+<td><a href="#party_country_id">Party_Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The country of the partner</td>
+</tr>
+<tr>
+<td><a href="#party_id">Party_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Partner to whom the goods are dispatched, or partner from whom the goods are received.</td>
+</tr>
+<tr>
+<td><a href="#quantity_supplementary_unit">Quantity_Supplementary_Unit</a></td>
+<td><code>decimal(10, 0)</code></td>
+<td>Quantity of the goods in the supplementary unit. NULL when no supplementary unit is specified</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#statistical_value_amount_base">Statistical_Value_Amount_Base</a></td>
+<td><code>decimal(10, 0)</code></td>
+<td>Statistical value of the goods in the base currency</td>
+</tr>
+<tr>
+<td><a href="#transaction_nature">Transaction_Nature</a></td>
+<td><code>char(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+<td>Transaction nature, according to the Intrastat classification</td>
+</tr>
+<tr>
+<td><a href="#transport_country_id">Transport_Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The country of the transportation company</td>
+</tr>
+<tr>
+<td><a href="#transport_mode">Transport_Mode</a></td>
+<td><code>char(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+<td>Transportation mode - type of transportation used</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="administrative_region_id">Administrative_Region_Id</h3>
+<p>Administrative region of the enterprise company at the time of the declaration</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Administrative_Regions.html">Gen_Administrative_Regions</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="administrative_region_id---supported-filters">Administrative_Region_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delivery_terms">Delivery_Terms</h3>
+<p>Delivery terms - classification according to Intrastat (which uses the common abbreviations)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_commodity_code_id">Intrastat_Commodity_Code_Id</h3>
+<p>The commodity code of the goods, according to the Intrastat commodity classification</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Its_Commodity_Codes.html">Its_Commodity_Codes</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="intrastat_commodity_code_id---supported-filters">Intrastat_Commodity_Code_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_declaration_id">Intrastat_Declaration_Id</h3>
+<p>The intrastat declaration, to which this line belongs</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Its_Declarations.html">Its_Declarations</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="intrastat_declaration_id---supported-filters">Intrastat_Declaration_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_declaration_line_id">Intrastat_Declaration_Line_Id</h3>
+<p>The unique id of the line</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="intrastat_declaration_line_id---supported-filters">Intrastat_Declaration_Line_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invoiced_value_amount_base">Invoiced_Value_Amount_Base</h3>
+<p>Invoiced value of the goods in the base currency</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(10, 0)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_action">Line_Action</h3>
+<p>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>NEW</code>, <code>EDN</code>, <code>EDO</code>, <code>DEL</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NEW</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line_no">Line_No</h3>
+<p>Consequtive line number within the intrastat declaration</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Autoincrement</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>int</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="line_no---supported-filters">Line_No - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="net_mass_kg">Net_Mass_Kg</h3>
+<p>Net mass of the goods in kg</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(14, 3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="net_mass_kg---supported-filters">Net_Mass_Kg - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="origin_country_id">Origin_Country_Id</h3>
+<p>The country of origin of the goods. NULL for outbound declarations</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Countries.html">Gen_Countries</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="origin_country_id---supported-filters">Origin_Country_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="party_country_id">Party_Country_Id</h3>
+<p>The country of the partner</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Countries.html">Gen_Countries</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="party_country_id---supported-filters">Party_Country_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="party_id">Party_Id</h3>
+<p>Partner to whom the goods are dispatched, or partner from whom the goods are received.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Parties.html">Gen_Parties</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="party_id---supported-filters">Party_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantity_supplementary_unit">Quantity_Supplementary_Unit</h3>
+<p>Quantity of the goods in the supplementary unit. NULL when no supplementary unit is specified</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(10, 0) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="statistical_value_amount_base">Statistical_Value_Amount_Base</h3>
+<p>Statistical value of the goods in the base currency</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(10, 0) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transaction_nature">Transaction_Nature</h3>
+<p>Transaction nature, according to the Intrastat classification</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(2)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_country_id">Transport_Country_Id</h3>
+<p>The country of the transportation company</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Countries.html">Gen_Countries</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="transport_country_id---supported-filters">Transport_Country_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transport_mode">Transport_Mode</h3>
+<p>Transportation mode - type of transportation used</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(1)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Its_Declaration_Lines.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

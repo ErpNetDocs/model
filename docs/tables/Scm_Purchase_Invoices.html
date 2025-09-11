@@ -1,0 +1,3315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Table Scm_Purchase_Invoices | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Table Scm_Purchase_Invoices | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Scm_Purchase_Invoices.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="table-scm_purchase_invoices">Table Scm_Purchase_Invoices</h1>
+
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Logistics.Procurement.PurchaseInvoices.html">Logistics.Procurement.PurchaseInvoices</a></p>
+<p>Contains purchase invoice headers. Entity: Scm_Purchase_Invoices</p>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
+<ul>
+<li><a href="Gen_Documents.html">Gen_Documents</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#apply_date">Apply_Date</a></td>
+<td><code>date</code></td>
+<td>Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.</td>
+</tr>
+<tr>
+<td><a href="#cost_center_id">Cost_Center_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Cost center for which the amount from this document will be accounted.</td>
+</tr>
+<tr>
+<td><a href="#credit_note_original_purchase_invoice_id">Credit_Note_Original_Purchase_Invoice_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The original invoice, which is debited/credited with this note</td>
+</tr>
+<tr>
+<td><a href="#credit_note_reason">Credit_Note_Reason</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Reason for the debit/credit note</td>
+</tr>
+<tr>
+<td><a href="#deal_type_id">Deal_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.</td>
+</tr>
+<tr>
+<td><a href="#delivery_terms_code">Delivery_Terms_Code</a></td>
+<td><code>char(3)</code> Allowed: <code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#document_currency_id">Document_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The currency of the unit prices and amounts in the document.</td>
+</tr>
+<tr>
+<td><a href="#document_id">Document_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#intrastat_destination_region_id">Intrastat_Destination_Region_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.</td>
+</tr>
+<tr>
+<td><a href="#intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</a></td>
+<td><code>char(2)</code> Allowed: <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+<td>Transaction nature; used for Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#intrastat_transport_country_id">Intrastat_Transport_Country_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Country of origin of the transport company; used for Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</a></td>
+<td><code>char(1)</code> Allowed: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+<td>Transport mode; used for Intrastat reporting</td>
+</tr>
+<tr>
+<td><a href="#is_released">Is_Released</a></td>
+<td><code>bit</code> Readonly</td>
+<td>True if the document is not void and its state is released or greater. Deprecated</td>
+</tr>
+<tr>
+<td><a href="#is_single_execution">Is_Single_Execution</a></td>
+<td><code>bit</code> Readonly</td>
+<td>Specifies whether the document is a single execution of its order document.</td>
+</tr>
+<tr>
+<td><a href="#payment_account_id">Payment_Account_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>When not NULL, specifies the default payment account for the payment order</td>
+</tr>
+<tr>
+<td><a href="#payment_due_date">Payment_Due_Date</a></td>
+<td><code>datetime</code></td>
+<td>Due date for paying the invoice. NULL means to use the default</td>
+</tr>
+<tr>
+<td><a href="#payment_type_id">Payment_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated</td>
+</tr>
+<tr>
+<td><a href="#purchase_invoice_id">Purchase_Invoice_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#purchase_order_id">Purchase_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed</td>
+</tr>
+<tr>
+<td><a href="#purchase_price_list_id">Purchase_Price_List_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</td>
+</tr>
+<tr>
+<td><a href="#receiving_order_id">Receiving_Order_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO</td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#sale_deal_type_id">Sale_Deal_Type_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.</td>
+</tr>
+<tr>
+<td><a href="#supplier_id">Supplier_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The supplier of the purchase, who is issuing the document.</td>
+</tr>
+<tr>
+<td><a href="#vat_cash_reporting_mode">VAT_Cash_Reporting_Mode</a></td>
+<td><code>bit</code></td>
+<td>When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries.</td>
+</tr>
+<tr>
+<td><a href="#vat_notes">VAT_Notes</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>Description of the operation that will be entered in the VAT ledgers.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="apply_date">Apply_Date</h3>
+<p>Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>date</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="apply_date---supported-filters">Apply_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cost_center_id">Cost_Center_Id</h3>
+<p>Cost center for which the amount from this document will be accounted.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Acc_Cost_Centers.html">Acc_Cost_Centers</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cost_center_id---supported-filters">Cost_Center_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="credit_note_original_purchase_invoice_id">Credit_Note_Original_Purchase_Invoice_Id</h3>
+<p>The original invoice, which is debited/credited with this note</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Scm_Purchase_Invoices.html">Scm_Purchase_Invoices</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="credit_note_original_purchase_invoice_id---supported-filters">Credit_Note_Original_Purchase_Invoice_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="credit_note_reason">Credit_Note_Reason</h3>
+<p>Reason for the debit/credit note</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>254</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(254) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deal_type_id">Deal_Type_Id</h3>
+<p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deal_type_id---supported-filters">Deal_Type_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delivery_terms_code">Delivery_Terms_Code</h3>
+<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>EXW</code>, <code>FCA</code>, <code>FAS</code>, <code>FOB</code>, <code>CFR</code>, <code>CIF</code>, <code>CPT</code>, <code>CIP</code>, <code>DAP</code>, <code>DAT</code>, <code>DDP</code>, <code>DPU</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_currency_id">Document_Currency_Id</h3>
+<p>The currency of the unit prices and amounts in the document.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="document_currency_id---supported-filters">Document_Currency_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document_id">Document_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Documents.html">Gen_Documents</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="document_id---supported-filters">Document_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_destination_region_id">Intrastat_Destination_Region_Id</h3>
+<p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Administrative_Regions.html">Gen_Administrative_Regions</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="intrastat_destination_region_id---supported-filters">Intrastat_Destination_Region_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_transaction_nature_code">Intrastat_Transaction_Nature_Code</h3>
+<p>Transaction nature; used for Intrastat reporting</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>19</code>, <code>21</code>, <code>22</code>, <code>23</code>, <code>29</code>, <code>60</code>, <code>70</code>, <code>80</code>, <code>91</code>, <code>99</code>, <code>30</code>, <code>41</code>, <code>42</code>, <code>51</code>, <code>52</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(2) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_transport_country_id">Intrastat_Transport_Country_Id</h3>
+<p>Country of origin of the transport company; used for Intrastat reporting</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Countries.html">Gen_Countries</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="intrastat_transport_country_id---supported-filters">Intrastat_Transport_Country_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrastat_transport_mode_code">Intrastat_Transport_Mode_Code</h3>
+<p>Transport mode; used for Intrastat reporting</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(1) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_released">Is_Released</h3>
+<p>True if the document is not void and its state is released or greater. Deprecated</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is_released---supported-filters">Is_Released - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="is_single_execution">Is_Single_Execution</h3>
+<p>Specifies whether the document is a single execution of its order document.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is_single_execution---supported-filters">Is_Single_Execution - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_account_id">Payment_Account_Id</h3>
+<p>When not NULL, specifies the default payment account for the payment order</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Cash_Payment_Accounts.html">Cash_Payment_Accounts</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="payment_account_id---supported-filters">Payment_Account_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_due_date">Payment_Due_Date</h3>
+<p>Due date for paying the invoice. NULL means to use the default</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="payment_due_date---supported-filters">Payment_Due_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_type_id">Payment_Type_Id</h3>
+<p>The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Cash_Payment_Types.html">Cash_Payment_Types</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="payment_type_id---supported-filters">Payment_Type_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_invoice_id">Purchase_Invoice_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="purchase_invoice_id---supported-filters">Purchase_Invoice_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_order_id">Purchase_Order_Id</h3>
+<p>The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Scm_Purchase_Orders.html">Scm_Purchase_Orders</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="purchase_order_id---supported-filters">Purchase_Order_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purchase_price_list_id">Purchase_Price_List_Id</h3>
+<p>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Scm_Purchase_Price_Lists.html">Scm_Purchase_Price_Lists</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="purchase_price_list_id---supported-filters">Purchase_Price_List_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiving_order_id">Receiving_Order_Id</h3>
+<p>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Scm_Receiving_Orders.html">Scm_Receiving_Orders</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="receiving_order_id---supported-filters">Receiving_Order_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sale_deal_type_id">Sale_Deal_Type_Id</h3>
+<p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="VAT_Deal_Types.html">VAT_Deal_Types</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sale_deal_type_id---supported-filters">Sale_Deal_Type_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supplier_id">Supplier_Id</h3>
+<p>The supplier of the purchase, who is issuing the document.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Scm_Suppliers.html">Scm_Suppliers</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supplier_id---supported-filters">Supplier_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat_cash_reporting_mode">VAT_Cash_Reporting_Mode</h3>
+<p>When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vat_cash_reporting_mode---supported-filters">VAT_Cash_Reporting_Mode - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat_notes">VAT_Notes</h3>
+<p>Description of the operation that will be entered in the VAT ledgers.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attributes</td>
+<td>IsLongString</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>254</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(254) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>100</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Scm_Purchase_Invoices.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

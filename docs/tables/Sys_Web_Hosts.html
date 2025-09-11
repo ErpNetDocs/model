@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Table Sys_Web_Hosts | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Table Sys_Web_Hosts | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Sys_Web_Hosts.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="table-sys_web_hosts">Table Sys_Web_Hosts</h1>
+
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Systems.Config.WebHosts.html">Systems.Config.WebHosts</a></p>
+<p>Contains the names and https certificates of the different host names used to host sites. Entity: Sys_Web_Hosts (Introduced in version 19.1)</p>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#certificate_contents">Certificate_Contents</a></td>
+<td><code>varbinary</code></td>
+<td>The contents of the web host certificate. NULL means to use the server system certificate.</td>
+</tr>
+<tr>
+<td><a href="#certificate_expiry_date">Certificate_Expiry_Date</a></td>
+<td><code>date</code></td>
+<td>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</td>
+</tr>
+<tr>
+<td><a href="#certificate_original_filename">Certificate_Original_Filename</a></td>
+<td><code>nvarchar(254)</code></td>
+<td>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</td>
+</tr>
+<tr>
+<td><a href="#certificate_password">Certificate_Password</a></td>
+<td><code>nvarchar(max)</code></td>
+<td>The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.</td>
+</tr>
+<tr>
+<td><a href="#certificate_type">Certificate_Type</a></td>
+<td><code>nvarchar(3)</code></td>
+<td>The type of certificate uploaded. Currently, only PFX is supported.</td>
+</tr>
+<tr>
+<td><a href="#notes">Notes</a></td>
+<td><code>nvarchar(max)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#row_version">Row_Version</a></td>
+<td><code>timestamp</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#web_host_id">Web_Host_Id</a></td>
+<td><code>uniqueidentifier</code> <code>PK</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#web_host_name">Web_Host_Name</a></td>
+<td><code>nvarchar(max)</code></td>
+<td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="columns">Columns</h2>
+<h3 id="certificate_contents">Certificate_Contents</h3>
+<p>The contents of the web host certificate. NULL means to use the server system certificate.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>varbinary (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_expiry_date">Certificate_Expiry_Date</h3>
+<p>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>date (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="certificate_expiry_date---supported-filters">Certificate_Expiry_Date - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_original_filename">Certificate_Original_Filename</h3>
+<p>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>254</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(254) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="certificate_original_filename---supported-filters">Certificate_Original_Filename - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_password">Certificate_Password</h3>
+<p>The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(max) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate_type">Certificate_Type</h3>
+<p>The type of certificate uploaded. Currently, only PFX is supported.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>PFX</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="certificate_type---supported-filters">Certificate_Type - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attributes</td>
+<td>IsLongString</td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(max) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="row_version">Row_Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_host_id">Web_Host_Id</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NewGuid</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>yes (order: 1)</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="web_host_id---supported-filters">Web_Host_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web_host_name">Web_Host_Name</h3>
+<p>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(max)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="web_host_name---supported-filters">Web_Host_Name - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Sys_Web_Hosts.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
