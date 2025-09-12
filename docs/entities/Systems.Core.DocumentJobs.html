@@ -179,6 +179,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>boolean</td>
 <td>Specifies whether to automatically run the job when the server is idle. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> (Inherited from <a href="Systems.Config.Jobs.html">Jobs</a>)</td>
 </tr>
+<tr>
+<td><a href="Systems.Core.DocumentJobs.html#schedule">Schedule</a></td>
+<td><a href="Systems.Core.DocumentJobs.html#schedule">Schedule</a></td>
+<td>Defines the execution schedule of the Job. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.62</code> (Inherited from <a href="Systems.Config.Jobs.html">Jobs</a>)</td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -382,6 +387,34 @@ Enumeration of document system states<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="schedule">Schedule</h3>
+<p>Defines the execution schedule of the Job. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.62</code> (Inherited from <a href="Systems.Config.Jobs.html">Jobs</a>)</p>
+<p><em>Type</em>: <strong><a href="Systems.Core.DocumentJobs.html#schedule">Schedule</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>Schedule</code>(Systems.Config.Jobs.md#schedule) data attribute<br>
+<em>Allowed Values (Systems.Config.JobsRepository.Schedule Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>No schedule - not executed automatically (only manually).. Stored as 'NON'. <br> <em>Database Value:</em> 'NON' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'None'</td>
+</tr>
+<tr>
+<td>Night</td>
+<td>Executed only during night time.. Stored as 'NGH'. <br> <em>Database Value:</em> 'NGH' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Night'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>None</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>

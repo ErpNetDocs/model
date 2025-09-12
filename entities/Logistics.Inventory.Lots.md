@@ -9,7 +9,7 @@ Warehouse lots. They contain one row for each specific product, status, producti
 
 ## Default Visualization
 Default Display Text Format:  
-_{Product.Name:T}_  
+_{Number}_  
 Default Search Members:  
 _Number; Product.Name_  
 Code Data Member:  

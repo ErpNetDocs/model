@@ -183,10 +183,10 @@ _Supports Order By_: **False**
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  
-`( obj.PosSale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+`( obj.PosSale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 
 _Front-End Recalc Expressions:_  
-`( obj.PosSale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+`( obj.PosSale.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 Notes for the line. `Filter(like)`

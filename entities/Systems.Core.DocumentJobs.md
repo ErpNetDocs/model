@@ -53,6 +53,7 @@ Aggregate Tree
 | [Notes](Systems.Core.DocumentJobs.md#notes) | string (max) __nullable__ | Notes for this Job. (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [ObjectVersion](Systems.Core.DocumentJobs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RunOnIdle](Systems.Core.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
+| [Schedule](Systems.Core.DocumentJobs.md#schedule) | [Schedule](Systems.Core.DocumentJobs.md#schedule) | Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 
 ## References
 
@@ -207,6 +208,25 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### Schedule
+
+Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62` (Inherited from [Jobs](Systems.Config.Jobs.md))
+
+_Type_: **[Schedule](Systems.Core.DocumentJobs.md#schedule)**  
+_Category_: **System**  
+Allowed values for the `Schedule`(Systems.Config.Jobs.md#schedule) data attribute  
+_Allowed Values (Systems.Config.JobsRepository.Schedule Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| None | No schedule - not executed automatically (only manually).. Stored as 'NON'. <br /> _Database Value:_ 'NON' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'None' |
+| Night | Executed only during night time.. Stored as 'NGH'. <br /> _Database Value:_ 'NGH' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Night' |
+
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **None**  
 _Show in UI_: **ShownByDefault**  
 
 

@@ -491,7 +491,7 @@ Line number within the POS sale.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Autoincrement|1|
+|Autoincrement|10|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|

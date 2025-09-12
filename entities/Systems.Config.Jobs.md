@@ -50,6 +50,7 @@ Aggregate Tree
 | [Notes](Systems.Config.Jobs.md#notes) | string (max) __nullable__ | Notes for this Job. 
 | [ObjectVersion](Systems.Config.Jobs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RunOnIdle](Systems.Config.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` 
+| [Schedule](Systems.Config.Jobs.md#schedule) | [Schedule](Systems.Config.Jobs.md#schedule) | Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62` 
 
 
 ## Attribute Details
@@ -164,6 +165,25 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### Schedule
+
+Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62`
+
+_Type_: **[Schedule](Systems.Config.Jobs.md#schedule)**  
+_Category_: **System**  
+Allowed values for the `Schedule`(Systems.Config.Jobs.md#schedule) data attribute  
+_Allowed Values (Systems.Config.JobsRepository.Schedule Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| None | No schedule - not executed automatically (only manually).. Stored as 'NON'. <br /> _Database Value:_ 'NON' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'None' |
+| Night | Executed only during night time.. Stored as 'NGH'. <br /> _Database Value:_ 'NGH' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Night' |
+
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **None**  
 _Show in UI_: **ShownByDefault**  
 
 

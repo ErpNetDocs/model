@@ -19,6 +19,7 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Run_On_Idle](#run_on_idle)|`bit` |Specifies whether to automatically run the job when the server is idle.|
+|[Schedule](#schedule)|`char(3)` Allowed: `NON`, `NGH`|Defines the execution schedule of the Job.|
 
 ## Columns
 
@@ -286,6 +287,43 @@ Specifies whether to automatically run the job when the server is idle.
 |Visible|yes|
 
 #### Run_On_Idle - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Schedule
+
+
+Defines the execution schedule of the Job.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`NON`, `NGH`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NON|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Schedule - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
