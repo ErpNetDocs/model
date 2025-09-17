@@ -91,9 +91,9 @@
 <p>Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{SalesOrder.EntityName}</em><br>
+<em>{Id}. {SalesOrder.DocumentNo} {SalesOrder.DocumentType.TypeName:T}</em><br>
 Default Search Members:<br>
-<em>SalesOrder.EntityName</em><br>
+<em>SalesOrder.DocumentNo</em><br>
 Name Data Member:<br>
 <em>SalesOrder.EntityName</em><br>
 Category:  <em>Definitions</em><br>
@@ -195,6 +195,11 @@ Aggregate Root:<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#document">Document</a></td>
+<td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></td>
+<td></td>
+</tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
@@ -357,6 +362,12 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.AmountPercent != null), False, obj.Remainder)</code></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="document">Document</h3>
+<p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <p>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>

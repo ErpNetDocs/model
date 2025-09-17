@@ -9,9 +9,9 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesOrder.EntityName}_  
+_{Id}. {SalesOrder.DocumentNo} {SalesOrder.DocumentType.TypeName:T}_  
 Default Search Members:  
-_SalesOrder.EntityName_  
+_SalesOrder.DocumentNo_  
 Name Data Member:  
 _SalesOrder.EntityName_  
 Category:  _Definitions_  
@@ -52,6 +52,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Crm.Sales.SalesOrderPaymentPlans.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) |  |
 | [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. `Filter(multi eq)` |
 | [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. `Filter(multi eq)` |
 | [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPaymentPlan belongs. `Required` `Filter(multi eq)` `Owner` |
@@ -224,6 +225,14 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.AmountPercent != null), False, obj.Remainder)`
 
 ## Reference Details
+
+### Document
+
+_Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
 
 ### PaymentAccount
 

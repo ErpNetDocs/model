@@ -9,9 +9,9 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesOrder.EntityName}_  
+_{Id}. {SalesOrder.DocumentNo} {SalesOrder.DocumentType.TypeName:T}_  
 Default Search Members:  
-_SalesOrder.EntityName_  
+_SalesOrder.DocumentNo_  
 Name Data Member:  
 _SalesOrder.EntityName_  
 Category:  _Definitions_  
@@ -44,6 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Crm.Sales.SalesOrderPromotionalPackages.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) |  |
 | [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) | The type of promotional package sold. `Required` `Filter(multi eq)` |
 | [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -107,6 +108,14 @@ _Show in UI_: **HiddenByDefault**
 
 
 ## Reference Details
+
+### Document
+
+_Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
 
 ### PromotionalPackage
 

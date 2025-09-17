@@ -194,7 +194,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#currency">Currency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. <code>Filter(multi eq)</code></td>
+<td>The currency of the account. If not specified, the account accepts movements in any currency. If specified, all movements are recorded in this currency. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.Accounts.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -331,7 +331,7 @@ Allowed values for the <code>CurrencyValuationMethod</code>(Finance.Accounting.A
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="currency">Currency</h3>
-<p>The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. <code>Filter(multi eq)</code></p>
+<p>The currency of the account. If not specified, the account accepts movements in any currency. If specified, all movements are recorded in this currency. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

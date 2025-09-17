@@ -51,7 +51,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccountGroup](Finance.Accounting.Accounts.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | The account group to which this account belongs. `Required` `Filter(multi eq)` |
-| [Currency](Finance.Accounting.Accounts.md#currency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. `Filter(multi eq)` |
+| [Currency](Finance.Accounting.Accounts.md#currency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency of the account. If not specified, the account accepts movements in any currency. If specified, all movements are recorded in this currency. `Filter(multi eq)` |
 | [EnterpriseCompany](Finance.Accounting.Accounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
 
 ## Child Collections
@@ -193,7 +193,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Currency
 
-The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. `Filter(multi eq)`
+The currency of the account. If not specified, the account accepts movements in any currency. If specified, all movements are recorded in this currency. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 _Category_: **System**  
