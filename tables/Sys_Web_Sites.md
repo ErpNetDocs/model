@@ -193,6 +193,12 @@ The relative Url of the site. This is the text after the first slash after the p
 |User Login|no|
 |Visible|yes|
 
+#### Relative_Url - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
+
 ### Row_Version
 
 | Property | Value |
