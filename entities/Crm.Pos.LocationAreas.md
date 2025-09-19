@@ -141,6 +141,7 @@ _Back-End Default Expression:_
 `( obj.Location.Areas.Select( c => c.Ord).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
+`obj.SetLocationAreaOrd( obj.Location)`
 `( obj.Location.Areas.Select( c => c.Ord).DefaultIfEmpty( 0).Max( ) + 1)`
 
 ## Reference Details

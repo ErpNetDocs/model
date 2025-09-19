@@ -45,7 +45,7 @@ Aggregate Tree
 | [IsPrivate](Systems.Config.WebSites.md#isprivate) | boolean | Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. `Required` `Default(false)` `Filter(eq)` `Introduced in version 23.1.0.8` 
 | [Notes](Systems.Config.WebSites.md#notes) | string (max) __nullable__ | Notes for this WebSite. 
 | [ObjectVersion](Systems.Config.WebSites.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [RelativeUrl](Systems.Config.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
+| [RelativeUrl](Systems.Config.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. `Filter(eq)` 
 | [SettingsJson](Systems.Config.WebSites.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37` 
 | [Uin](Systems.Config.WebSites.md#uin) | string (64) __nullable__ | For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . `Introduced in version 24.1.5.42` 
 | [WebSiteType](Systems.Config.WebSites.md#websitetype) | [WebSiteType](Systems.Config.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)` 
@@ -125,11 +125,11 @@ _Show in UI_: **HiddenByDefault**
 
 ### RelativeUrl
 
-The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.
+The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. `Filter(eq)`
 
 _Type_: **string (254) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  

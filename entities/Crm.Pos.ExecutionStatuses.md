@@ -146,6 +146,11 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Back-End Default Expression:_  
+`obj.SetExecutionStatusOrd( obj.ExecutionStage)`
+
+_Front-End Recalc Expressions:_  
+`obj.SetExecutionStatusOrd( obj.ExecutionStage)`
 
 ## Reference Details
 
