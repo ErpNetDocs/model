@@ -43,7 +43,7 @@ Aggregate Root:
 | [Name](Crm.Pos.LocationAreas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-friendly name (e.g., "Main Dining Hall"). `Required` `Filter(like)` 
 | [Notes](Crm.Pos.LocationAreas.md#notes) | string (max) __nullable__ | Notes for the location area. `Filter(like)` 
 | [ObjectVersion](Crm.Pos.LocationAreas.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [Ord](Crm.Pos.LocationAreas.md#ord) | int32 | Sort order within the location. Controls display order in UI components. `Required` `Filter(eq;ge;le)` 
+| [Ord](Crm.Pos.LocationAreas.md#ord) | int32 | Sort order within the location. Controls display order in UI components. `Required` `Filter(eq;ge;le)` `ORD` 
 
 ## References
 
@@ -129,12 +129,12 @@ _Show in UI_: **HiddenByDefault**
 
 ### Ord
 
-Sort order within the location. Controls display order in UI components. `Required` `Filter(eq;ge;le)`
+Sort order within the location. Controls display order in UI components. `Required` `Filter(eq;ge;le)` `ORD`
 
 _Type_: **int32**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  

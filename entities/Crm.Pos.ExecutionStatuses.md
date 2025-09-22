@@ -41,7 +41,7 @@ Aggregate Tree
 | [IsActive](Crm.Pos.ExecutionStatuses.md#isactive) | boolean | Indicates whether the POS execution status is currently active. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Crm.Pos.ExecutionStatuses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` 
 | [ObjectVersion](Crm.Pos.ExecutionStatuses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [Ord](Crm.Pos.ExecutionStatuses.md#ord) | int32 | The sort order of the status within the stage. `Required` `Filter(eq;ge;le)` 
+| [Ord](Crm.Pos.ExecutionStatuses.md#ord) | int32 | The sort order of the status within the stage. `Required` `Filter(eq;ge;le)` `ORD` 
 
 ## References
 
@@ -138,12 +138,12 @@ _Show in UI_: **HiddenByDefault**
 
 ### Ord
 
-The sort order of the status within the stage. `Required` `Filter(eq;ge;le)`
+The sort order of the status within the stage. `Required` `Filter(eq;ge;le)` `ORD`
 
 _Type_: **int32**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 _Back-End Default Expression:_  

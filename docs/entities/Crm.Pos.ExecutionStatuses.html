@@ -158,7 +158,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#ord">Ord</a></td>
 <td>int32</td>
-<td>The sort order of the status within the stage. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The sort order of the status within the stage. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -267,11 +267,11 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="ord">Ord</h3>
-<p>The sort order of the status within the stage. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The sort order of the status within the stage. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SetExecutionStatusOrd( obj.ExecutionStage)</code></p>

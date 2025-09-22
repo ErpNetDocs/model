@@ -158,7 +158,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#ord">Ord</a></td>
 <td>int32</td>
-<td>Sort order within the location. Controls display order in UI components. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Sort order within the location. Controls display order in UI components. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -234,11 +234,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="ord">Ord</h3>
-<p>Sort order within the location. Controls display order in UI components. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Sort order within the location. Controls display order in UI components. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>( obj.Location.Areas.Select( c =&gt; c.Ord).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
