@@ -36,10 +36,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Pos.ExecutionStatuses.md#code) | string (16) | Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Crm.Pos.ExecutionStatuses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | The system-defined stage under which is the current status. `Required` `Default("PND")` 
+| [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | The system-defined stage under which is the current status. `Required` `Default("PND")` `Filter(multi eq)` 
 | [Id](Crm.Pos.ExecutionStatuses.md#id) | guid |  
 | [IsActive](Crm.Pos.ExecutionStatuses.md#isactive) | boolean | Indicates whether the POS execution status is currently active. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Crm.Pos.ExecutionStatuses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` 
+| [Name](Crm.Pos.ExecutionStatuses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Crm.Pos.ExecutionStatuses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Ord](Crm.Pos.ExecutionStatuses.md#ord) | int32 | The sort order of the status within the stage. `Required` `Filter(eq;ge;le)` `ORD` 
 
@@ -77,7 +77,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### ExecutionStage
 
-The system-defined stage under which is the current status. `Required` `Default("PND")`
+The system-defined stage under which is the current status. `Required` `Default("PND")` `Filter(multi eq)`
 
 _Type_: **[ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage)**  
 _Category_: **System**  
@@ -91,7 +91,7 @@ _Allowed Values (Crm.Pos.ExecutionStatusesRepository.ExecutionStage Enum Members
 | Deliver | Deliver. Stored as 'DEL'. <br /> _Database Value:_ 'DEL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Deliver' |
 | Finalize | Finalize. Stored as 'FIN'. <br /> _Database Value:_ 'FIN' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Finalize' |
 
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **Pending**  
 _Show in UI_: **ShownByDefault**  
@@ -118,11 +118,11 @@ _Show in UI_: **ShownByDefault**
 
 ### Name
 
-Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required`
+Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
@@ -150,7 +150,7 @@ _Back-End Default Expression:_
 `obj.SetExecutionStatusOrd( obj.ExecutionStage)`
 
 _Front-End Recalc Expressions:_  
-`obj.SetExecutionStatusOrd( obj.ExecutionStage)`
+`IIF( ( Convert( obj.ExecutionStage, Nullable`1) != Convert( null, Nullable`1)), obj.SetExecutionStatusOrd( obj.ExecutionStage), obj.SetExecutionStatusOrd( obj.ExecutionStage))`
 
 ## Reference Details
 

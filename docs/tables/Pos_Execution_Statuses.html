@@ -476,7 +476,7 @@
 </tr>
 <tr>
 <td>Supports EQUALS_IN</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Type</td>
@@ -497,6 +497,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="execution_stage---supported-filters">Execution_Stage - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -842,6 +861,31 @@
 </tr>
 </tbody>
 </table>
+<h4 id="name---supported-filters">Name - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ord">Ord</h3>
 <p>The sort order of the status within the stage.</p>
 <table>
@@ -855,10 +899,6 @@
 <tr>
 <td>Auto Complete</td>
 <td>no</td>
-</tr>
-<tr>
-<td>Autoincrement</td>
-<td>1</td>
 </tr>
 <tr>
 <td>Data Filter</td>

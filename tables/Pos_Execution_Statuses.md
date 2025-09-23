@@ -121,12 +121,18 @@ The system-defined stage under which is the current status.
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Execution_Stage - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Is_Active
 
@@ -231,6 +237,13 @@ Name of the execution status. Should be action-oriented, e.g. reflect the NEXT a
 |User Login|no|
 |Visible|yes|
 
+#### Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Ord
 
 
@@ -239,7 +252,6 @@ The sort order of the status within the stage.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Autoincrement|1|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
