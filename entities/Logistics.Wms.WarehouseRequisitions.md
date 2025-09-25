@@ -59,6 +59,7 @@ Aggregate Tree
 | [EntityName](Logistics.Wms.WarehouseRequisitions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ExpectedDate](Logistics.Wms.WarehouseRequisitions.md#expecteddate) | date | Date, when the requisition is expected to be fulfilled. `Required` `Default(Today)` `Filter(multi eq;ge;le)` 
 | [ExpectedTime](Logistics.Wms.WarehouseRequisitions.md#expectedtime) | time __nullable__ | Time, when the requisition is expected to be executed. null when the time is unknown. `Filter(eq;ge;le)` 
+| [FullState](Logistics.Wms.WarehouseRequisitions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Logistics.Wms.WarehouseRequisitions.md#id) | guid |  
 | [ObjectVersion](Logistics.Wms.WarehouseRequisitions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Logistics.Wms.WarehouseRequisitions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Wms.WarehouseRequisitions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -269,6 +270,16 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

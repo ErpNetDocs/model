@@ -70,6 +70,7 @@ Aggregate Tree
 | [DocumentVersion](General.Activities.Activities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EndTime](General.Activities.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` 
 | [EntityName](General.Activities.Activities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [FullState](General.Activities.Activities.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](General.Activities.Activities.md#id) | guid |  
 | [<s>IsReleased</s>](General.Activities.Activities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](General.Activities.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -110,7 +111,7 @@ Aggregate Tree
 | [FromCompanyDivision](General.Activities.Activities.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](General.Activities.Activities.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](General.Activities.Activities.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OwnerParty](General.Activities.Activities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` |
+| [OwnerParty](General.Activities.Activities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` `ReadOnly` |
 | [Parent](General.Activities.Activities.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](General.Activities.Activities.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ProjectTask](General.Activities.Activities.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` |
@@ -295,6 +296,16 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 
@@ -714,7 +725,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### OwnerParty
 
-The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)`
+The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Category_: **System**  

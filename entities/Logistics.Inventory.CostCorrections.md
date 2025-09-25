@@ -58,6 +58,7 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Inventory.CostCorrections.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.CostCorrections.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` `Filter(ge;le)` 
+| [FullState](Logistics.Inventory.CostCorrections.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Logistics.Inventory.CostCorrections.md#id) | guid |  
 | [<s>IsReleased</s>](Logistics.Inventory.CostCorrections.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Logistics.Inventory.CostCorrections.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -260,6 +261,16 @@ _Category_: **System**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

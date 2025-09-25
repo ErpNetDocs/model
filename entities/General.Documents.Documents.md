@@ -65,6 +65,7 @@ Aggregate Tree
 | [DocumentNotes](General.Documents.Documents.md#documentnotes) | string (max) __nullable__ | Notes for this Document. 
 | [DocumentVersion](General.Documents.Documents.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` 
 | [EntityName](General.Documents.Documents.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` 
+| [FullState](General.Documents.Documents.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ObjectVersion](General.Documents.Documents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` 
 | [PlanningOnly](General.Documents.Documents.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` 
@@ -261,6 +262,16 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### ObjectVersion
 

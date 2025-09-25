@@ -60,6 +60,7 @@ Aggregate Tree
 | [DocumentVersion](Finance.Vat.Entries.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Vat.Entries.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntryType](Finance.Vat.Entries.md#entrytype) | [EntryType](Finance.Vat.Entries.md#entrytype) | Type of the VAT entry. S=Sales, P=Purchases. `Required` `Filter(eq)` `ORD` 
+| [FullState](Finance.Vat.Entries.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Finance.Vat.Entries.md#id) | guid |  
 | [<s>IsReleased</s>](Finance.Vat.Entries.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Finance.Vat.Entries.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -314,6 +315,16 @@ _Show in UI_: **ShownByDefault**
 
 _Front-End Recalc Expressions:_  
 `obj.DealType.EntryType`
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### Id
 
 _Type_: **guid**  

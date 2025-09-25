@@ -59,6 +59,7 @@ Aggregate Tree
 | [DocumentVersion](Crm.Presales.Deals.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Presales.Deals.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ExpectedRevenue](Crm.Presales.Deals.md#expectedrevenue) | [Amount (18, 2)](../data-types.md#amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)` 
+| [FullState](Crm.Presales.Deals.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Crm.Presales.Deals.md#id) | guid |  
 | [<s>IsReleased</s>](Crm.Presales.Deals.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Crm.Presales.Deals.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -290,6 +291,16 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 _Show in UI_: **ShownByDefault**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

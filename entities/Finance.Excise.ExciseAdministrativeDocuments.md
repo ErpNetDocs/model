@@ -60,6 +60,7 @@ Aggregate Tree
 | [DocumentNotes](Finance.Excise.ExciseAdministrativeDocuments.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Finance.Excise.ExciseAdministrativeDocuments.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Excise.ExciseAdministrativeDocuments.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [FullState](Finance.Excise.ExciseAdministrativeDocuments.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Finance.Excise.ExciseAdministrativeDocuments.md#id) | guid |  
 | [IsDeferredSubmission](Finance.Excise.ExciseAdministrativeDocuments.md#isdeferredsubmission) | boolean | Indicates whether the movement has begun under the cover of a paper administrative document. `Required` `Default(false)` 
 | [ObjectVersion](Finance.Excise.ExciseAdministrativeDocuments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -296,6 +297,16 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

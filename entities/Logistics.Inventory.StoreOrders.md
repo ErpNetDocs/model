@@ -59,6 +59,7 @@ Aggregate Tree
 | [DriverName](Logistics.Inventory.StoreOrders.md#drivername) | string (64) __nullable__ | The name of the driver, who will deliver the stocks. 
 | [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur. `Required` `Default(Today)` `Filter(ge;le)` `ORD` 
 | [EntityName](Logistics.Inventory.StoreOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [FullState](Logistics.Inventory.StoreOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Logistics.Inventory.StoreOrders.md#id) | guid |  
 | [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Logistics.Inventory.StoreOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
@@ -282,6 +283,16 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

@@ -62,6 +62,7 @@ Aggregate Tree
 | [DocumentVersion](Applications.AssetManagement.MaintenanceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EndTime](Applications.AssetManagement.MaintenanceOrders.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [EntityName](Applications.AssetManagement.MaintenanceOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [FullState](Applications.AssetManagement.MaintenanceOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Applications.AssetManagement.MaintenanceOrders.md#id) | guid |  
 | [<s>IsReleased</s>](Applications.AssetManagement.MaintenanceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [IsSingleExecution](Applications.AssetManagement.MaintenanceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Activities.Activities.md)) 
@@ -104,7 +105,7 @@ Aggregate Tree
 | [MaintenanceType](Applications.AssetManagement.MaintenanceOrders.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) (nullable) | The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. `Filter(multi eq)` |
 | [ManagedAsset](Applications.AssetManagement.MaintenanceOrders.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | The asset, which will be maintained. null means that more than one asset will be maintained. `Filter(multi eq)` |
 | [MasterDocument](Applications.AssetManagement.MaintenanceOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OwnerParty](Applications.AssetManagement.MaintenanceOrders.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
+| [OwnerParty](Applications.AssetManagement.MaintenanceOrders.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` `ReadOnly` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [Parent](Applications.AssetManagement.MaintenanceOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Applications.AssetManagement.MaintenanceOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ProjectTask](Applications.AssetManagement.MaintenanceOrders.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
@@ -291,6 +292,16 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 
@@ -729,7 +740,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### OwnerParty
 
-The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md))
+The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` `ReadOnly` (Inherited from [Activities](General.Activities.Activities.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Category_: **System**  

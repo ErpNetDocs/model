@@ -57,6 +57,7 @@ Aggregate Tree
 | [DocumentVersion](Finance.Excise.ExciseDeclarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Excise.ExciseDeclarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FromDate](Finance.Excise.ExciseDeclarations.md#fromdate) | date | Start date of the period fot which the Excise declaration is made. `Required` `Filter(multi eq;ge;le)` 
+| [FullState](Finance.Excise.ExciseDeclarations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Finance.Excise.ExciseDeclarations.md#id) | guid |  
 | [ObjectVersion](Finance.Excise.ExciseDeclarations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Finance.Excise.ExciseDeclarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Excise.ExciseDeclarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -257,6 +258,16 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### FullState
+
+Full state of the document based on its system and user state. [ReadOnly]
+
+_Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

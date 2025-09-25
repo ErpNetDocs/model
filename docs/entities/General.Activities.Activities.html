@@ -215,6 +215,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td><a href="General.Activities.Activities.html#fullstate">FullState</a></td>
+<td>string</td>
+<td>Full state of the document based on its system and user state. [ReadOnly]</td>
+</tr>
+<tr>
 <td><a href="General.Activities.Activities.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -404,7 +409,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="General.Activities.Activities.html#ownerparty">OwnerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party that owns the task. Initially this is the party that has created the task. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The party that owns the task. Initially this is the party that has created the task. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#parent">Parent</a></td>
@@ -651,6 +656,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<h3 id="fullstate">FullState</h3>
+<p>Full state of the document based on its system and user state. [ReadOnly]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -1054,7 +1066,7 @@ Supported permissions</p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="ownerparty">OwnerParty</h3>
-<p>The party that owns the task. Initially this is the party that has created the task. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The party that owns the task. Initially this is the party that has created the task. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
