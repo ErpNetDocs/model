@@ -57,7 +57,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CargoType](Logistics.Transportation.TransportationOrderLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. `Required` `Filter(multi eq)` |
-| [Document](Logistics.Transportation.TransportationOrderLines.md#document) | [TransportationOrders](Logistics.Transportation.TransportationOrders.md) |  |
+| [Document](Logistics.Transportation.TransportationOrderLines.md#document) | [TransportationOrders](Logistics.Transportation.TransportationOrders.md) | The owner document. The <see cref="Transportation<br />Order"/> to which this TransportationOrderLine belongs. `Required` `Filter(multi eq)` |
 | [ParentDocument](Logistics.Transportation.TransportationOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [TransportationOrder](Logistics.Transportation.TransportationOrderLines.md#transportationorder) | [TransportationOrders](Logistics.Transportation.TransportationOrders.md) | The <see cref="Transportation<br />Order"/> to which this TransportationOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -183,6 +183,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **ShownByDefault**  
 
 ### Document
+
+The owner document. The <see cref="TransportationOrder"/> to which this TransportationOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationOrders](Logistics.Transportation.TransportationOrders.md)**  
 _Indexed_: **True**  

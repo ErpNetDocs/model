@@ -51,7 +51,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Invoicing.InvoiceOrderLines.md#document) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) |  |
+| [Document](Crm.Invoicing.InvoiceOrderLines.md#document) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The owner document. The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` |
 | [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [LineDealType](Crm.Invoicing.InvoiceOrderLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. `Filter(multi eq)` |
 | [LineDiscount](Crm.Invoicing.InvoiceOrderLines.md#linediscount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_<br />Discount_Percent. `Filter(multi eq)` |
@@ -246,6 +246,8 @@ _Front-End Recalc Expressions:_
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
 _Indexed_: **True**  

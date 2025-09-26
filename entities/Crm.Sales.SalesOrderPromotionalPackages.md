@@ -44,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Sales.SalesOrderPromotionalPackages.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) |  |
+| [Document](Crm.Sales.SalesOrderPromotionalPackages.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The owner document. The <see cref="SalesOrder"/> to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` |
 | [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) | The type of promotional package sold. `Required` `Filter(multi eq)` |
 | [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -110,6 +110,8 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="SalesOrder"/> to which this SalesOrderPromotionalPackage belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Indexed_: **True**  

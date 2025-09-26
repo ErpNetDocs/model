@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Production.ShopFloor.OutputOrderConsumptionLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) |  |
+| [Document](Production.ShopFloor.OutputOrderConsumptionLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The owner document. The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | Work order for the line. Initially copied from the header (if there work order is not null). `Required` `Filter(multi eq)` |
 | [Material](Production.ShopFloor.OutputOrderConsumptionLines.md#material) | [Products](General.Products.Products.md) | The consumed material. `Required` `Filter(multi eq)` |
 | [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` `Owner` |
@@ -149,6 +149,8 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  

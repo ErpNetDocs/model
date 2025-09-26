@@ -191,7 +191,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Inventory.TransferOrders.html">TransferOrders</a></td>
-<td></td>
+<td>The owner document. The parent transfer order. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#fromstorebin">FromStoreBin</a></td>
@@ -351,6 +351,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( obj.Product != null) AndAlso ( obj.QuantityUnit != null)), obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.TransferOrder.ToStore.Currency, obj.TransferOrder.CurrencyDirectory), obj.StandardUnitPrice)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
+<p>The owner document. The parent transfer order. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.TransferOrders.html">TransferOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>

@@ -211,7 +211,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></td>
-<td></td>
+<td>The owner document. The <see cref="ReceivingOrder"></see> to which this ReceivingOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#linestore">LineStore</a></td>
@@ -416,6 +416,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
+<p>The owner document. The <see cref="ReceivingOrder"></see> to which this ReceivingOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>

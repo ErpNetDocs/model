@@ -45,7 +45,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [BoxType](Finance.Vat.DeclarationLines.md#boxtype) | [BoxTypes](Finance.Vat.BoxTypes.md) | Type of box in VAT declaration. . `Required` `Filter(multi eq)` |
 | [Declaration](Finance.Vat.DeclarationLines.md#declaration) | [Declarations](Finance.Vat.Declarations.md) | The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Document](Finance.Vat.DeclarationLines.md#document) | [Declarations](Finance.Vat.Declarations.md) |  |
+| [Document](Finance.Vat.DeclarationLines.md#document) | [Declarations](Finance.Vat.Declarations.md) | The owner document. The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -140,6 +140,8 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 _Show in UI_: **ShownByDefault**  
 
 ### Document
+
+The owner document. The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Declarations](Finance.Vat.Declarations.md)**  
 _Indexed_: **True**  

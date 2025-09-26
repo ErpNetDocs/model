@@ -44,7 +44,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Deal](Crm.Presales.DealLines.md#deal) | [Deals](Crm.Presales.Deals.md) | Deal. `Required` `Filter(multi eq)` `Owner` |
-| [Document](Crm.Presales.DealLines.md#document) | [Deals](Crm.Presales.Deals.md) |  |
+| [Document](Crm.Presales.DealLines.md#document) | [Deals](Crm.Presales.Deals.md) | The owner document. Deal. `Required` `Filter(multi eq)` |
 | [Product](Crm.Presales.DealLines.md#product) | [Products](General.Products.Products.md) | The product, to which the client has interest. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Crm.Presales.DealLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 
@@ -131,6 +131,8 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 _Show in UI_: **ShownByDefault**  
 
 ### Document
+
+The owner document. Deal. `Required` `Filter(multi eq)`
 
 _Type_: **[Deals](Crm.Presales.Deals.md)**  
 _Indexed_: **True**  

@@ -56,7 +56,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CargoType](Logistics.Transportation.TransportationRequisitionLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. `Required` `Filter(multi eq)` |
-| [Document](Logistics.Transportation.TransportationRequisitionLines.md#document) | [TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md) |  |
+| [Document](Logistics.Transportation.TransportationRequisitionLines.md#document) | [TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md) | The owner document. The <see cref="Transportation<br />Requisition"/> to which this Transportation<br />RequisitionLine belongs. `Required` `Filter(multi eq)` |
 | [ParentDocument](Logistics.Transportation.TransportationRequisitionLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [TransportationRequisition](Logistics.Transportation.TransportationRequisitionLines.md#transportationrequisition) | [TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md) | The <see cref="Transportation<br />Requisition"/> to which this Transportation<br />RequisitionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -171,6 +171,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **ShownByDefault**  
 
 ### Document
+
+The owner document. The <see cref="TransportationRequisition"/> to which this TransportationRequisitionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md)**  
 _Indexed_: **True**  

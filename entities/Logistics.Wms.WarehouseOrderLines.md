@@ -49,7 +49,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Wms.WarehouseOrderLines.md#document) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) |  |
+| [Document](Logistics.Wms.WarehouseOrderLines.md#document) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | The owner document. The <see cref="WarehouseOrder"/> to which this WarehouseOrderLine belongs. `Required` `Filter(multi eq)` |
 | [LogisticUnit](Logistics.Wms.WarehouseOrderLines.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | Logistic unit, which should be used in the operation. `Filter(multi eq)` `Introduced in version 21.1.1.18` |
 | [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. `Filter(multi eq)` |
 | [ParentDocument](Logistics.Wms.WarehouseOrderLines.md#parentdocument) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26` |
@@ -228,6 +228,8 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="WarehouseOrder"/> to which this WarehouseOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 _Indexed_: **True**  

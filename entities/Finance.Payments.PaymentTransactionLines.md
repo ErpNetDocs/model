@@ -46,7 +46,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Finance.Payments.PaymentTransactionLines.md#document) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) |  |
+| [Document](Finance.Payments.PaymentTransactionLines.md#document) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The owner document. The <see cref="PaymentTransaction"/<br />> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` |
 | [PaymentOrder](Finance.Payments.PaymentTransactionLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this transaction amount distribution (tr.line). `Required` `Filter(multi eq)` |
 | [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The <see cref="PaymentTransaction"/<br />> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -134,6 +134,8 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="PaymentTransaction"/> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
 _Indexed_: **True**  

@@ -181,7 +181,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#document">Document</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a></td>
-<td></td>
+<td>The owner document. The <see cref="Warehouse<br />Requisition"></see> to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#lot">Lot</a></td>
@@ -306,6 +306,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
+<p>The owner document. The <see cref="WarehouseRequisition"></see> to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>

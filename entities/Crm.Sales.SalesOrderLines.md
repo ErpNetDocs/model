@@ -75,7 +75,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BonusProgram](Crm.Sales.SalesOrderLines.md#bonusprogram) | [BonusPrograms](Crm.Pricing.BonusPrograms.md) (nullable) | The bonus program, based on which the line was automatically added. null when the line was not added for bonus program. `Filter(multi eq)` |
-| [Document](Crm.Sales.SalesOrderLines.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) |  |
+| [Document](Crm.Sales.SalesOrderLines.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The owner document. The <see cref="SalesOrder"/> to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` |
 | [IntrastatTransportCountry](Crm.Sales.SalesOrderLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)` |
 | [Level1Discount](Crm.Sales.SalesOrderLines.md#level1discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | Indicates the level 1 discount. `Filter(multi eq)` `Introduced in version 23.1.2.56` |
 | [Level2Discount](Crm.Sales.SalesOrderLines.md#level2discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | Indicates the level 2 discount. `Filter(multi eq)` `Introduced in version 23.1.2.8` |
@@ -640,6 +640,8 @@ _Show in UI_: **HiddenByDefault**
 _Front-End Recalc Expressions:_  
 `IIF( ( obj.ReturnForSalesOrderLine != null), null, obj.BonusProgram)`
 ### Document
+
+The owner document. The <see cref="SalesOrder"/> to which this SalesOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Indexed_: **True**  

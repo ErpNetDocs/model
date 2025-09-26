@@ -41,7 +41,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Wms.WarehouseReconciliationLines.md#document) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) |  |
+| [Document](Logistics.Wms.WarehouseReconciliationLines.md#document) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | The owner document. Reconciliation document this line belongs to. `Required` `Filter(multi eq)` |
 | [WarehouseLocation](Logistics.Wms.WarehouseReconciliationLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | Warehouse location to be counted. `Required` `Filter(multi eq)` |
 | [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationLines.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | Reconciliation document this line belongs to. `Required` `Filter(multi eq)` `Owner` |
 | [WarehouseWorker](Logistics.Wms.WarehouseReconciliationLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Worker (human or robot) assigned to perform the counting. `Filter(multi eq)` |
@@ -97,6 +97,8 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
+
+The owner document. Reconciliation document this line belongs to. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md)**  
 _Indexed_: **True**  

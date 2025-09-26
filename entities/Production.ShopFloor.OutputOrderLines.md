@@ -51,7 +51,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) |  |
+| [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The owner document. The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The work order for which work is being accounted. `Required` `Filter(multi eq)` |
 | [Lot](Production.ShopFloor.OutputOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. `Filter(multi eq)` |
 | [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
@@ -239,6 +239,8 @@ _Show in UI_: **HiddenByDefault**
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  

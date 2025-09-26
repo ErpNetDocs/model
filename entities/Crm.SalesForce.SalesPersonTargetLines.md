@@ -59,7 +59,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BonusProgram](Crm.SalesForce.SalesPersonTargetLines.md#bonusprogram) | [BonusPrograms](Crm.Pricing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. `Filter(multi eq)` |
-| [Document](Crm.SalesForce.SalesPersonTargetLines.md#document) | [SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md) |  |
+| [Document](Crm.SalesForce.SalesPersonTargetLines.md#document) | [SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md) | The owner document. The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` |
 | [ProductGroup](Crm.SalesForce.SalesPersonTargetLines.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. `Filter(multi eq)` |
 | [PromotionalPackage](Crm.SalesForce.SalesPersonTargetLines.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. `Filter(multi eq)` |
 | [SalesPerson](Crm.SalesForce.SalesPersonTargetLines.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | Sales person to whom the target is assigned. `Required` `Filter(multi eq)` |
@@ -194,6 +194,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Show in UI_: **ShownByDefault**  
 
 ### Document
+
+The owner document. The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md)**  
 _Category_: **System**  

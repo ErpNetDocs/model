@@ -186,7 +186,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#document">Document</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></td>
-<td></td>
+<td>The owner document. The <see cref="WorkOrder"></see> to which this WorkOrderItemIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#lot">Lot</a></td>
@@ -367,6 +367,7 @@ Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderI
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.DistributeBy == null) OrElse ( Convert( obj.DistributeBy.Value, Int32) != 1)), null, obj.DistributeByMeasurementCategory)</code></p>
 <h3 id="document">Document</h3>
+<p>The owner document. The <see cref="WorkOrder"></see> to which this WorkOrderItemIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>

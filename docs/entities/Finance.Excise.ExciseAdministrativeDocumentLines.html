@@ -201,7 +201,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#document">Document</a></td>
 <td><a href="Finance.Excise.ExciseAdministrativeDocuments.html">ExciseAdministrativeDocuments</a></td>
-<td></td>
+<td>The owner document. The <see cref="ExciseAdministrative<br />Document"></see> to which this ExciseAdministrative<br>DocumentLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#exciseadministrativedocument">ExciseAdministrative<br>Document</a></td>
@@ -376,6 +376,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
+<p>The owner document. The <see cref="ExciseAdministrativeDocument"></see> to which this ExciseAdministrativeDocumentLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseAdministrativeDocuments.html">ExciseAdministrativeDocuments</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

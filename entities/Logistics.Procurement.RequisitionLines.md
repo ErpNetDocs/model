@@ -48,7 +48,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Procurement.RequisitionLines.md#document) | [Requisitions](Logistics.Procurement.Requisitions.md) |  |
+| [Document](Logistics.Procurement.RequisitionLines.md#document) | [Requisitions](Logistics.Procurement.Requisitions.md) | The owner document. The <see cref="Requisition"/> to which this RequisitionLine belongs. `Required` `Filter(multi eq)` |
 | [Lot](Logistics.Procurement.RequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | When not null, indicates a specific lot should be purchased. `Filter(multi eq)` |
 | [Product](Logistics.Procurement.RequisitionLines.md#product) | [Products](General.Products.Products.md) (nullable) | The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. `Filter(multi eq)` |
 | [QuantityUnit](Logistics.Procurement.RequisitionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
@@ -191,6 +191,8 @@ _Front-End Recalc Expressions:_
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="Requisition"/> to which this RequisitionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Requisitions](Logistics.Procurement.Requisitions.md)**  
 _Indexed_: **True**  

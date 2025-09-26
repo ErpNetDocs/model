@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Applications.Service.ServiceActivityMaterials.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) |  |
+| [Document](Applications.Service.ServiceActivityMaterials.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The owner document. The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` |
 | [LineStore](Applications.Service.ServiceActivityMaterials.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which the product was taken. null = use the store from the header. `Filter(multi eq)` |
 | [Lot](Applications.Service.ServiceActivityMaterials.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product used as material. null means that the lot is unknown or will be specified at a later stage (in a store order. etc.). `Filter(multi eq)` `Introduced in version 25.1.1.39` |
 | [Product](Applications.Service.ServiceActivityMaterials.md#product) | [Products](General.Products.Products.md) | The product, which was used as material. `Required` `Filter(multi eq)` |
@@ -162,6 +162,8 @@ _Front-End Recalc Expressions:_
 ## Reference Details
 
 ### Document
+
+The owner document. The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Indexed_: **True**  
