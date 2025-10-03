@@ -133,15 +133,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>If Enterprise Company == NEW <br> THEN Base Currency == Any Currency <br> ELSE Base Currency cannot be changed</td>
+<td>Once specified, the base currency cannot be changed.</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>The rule prevents changing Base Currency in existing Enterprise Company, but allows the creation of a new Enterprise Company with any currency.</td>
-</tr>
-<tr>
-<td>Message</td>
-<td>Unable to change the value in the Base Currency field. <br> You are trying to modify the Base Currency field for Enterprise Company '{EnterpriseCompany}'. <br> The Base Currency is fixed and cannot be changed.</td>
+<td>Once a base currency has been assigned to an enterprise company, it becomes immutable. This ensures consistency across all financial records and prevents discrepancies that could arise from changing the fundamental currency of reference. The restriction safeguards data integrity, supports accurate reporting, and aligns with standard accounting principles that require a stable base currency throughout the company’s lifecycle.</td>
 </tr>
 <tr>
 <td>Version</td>
