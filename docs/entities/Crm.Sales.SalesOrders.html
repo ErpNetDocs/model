@@ -155,6 +155,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The user who adjusted the document. <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td><a href="Crm.Sales.SalesOrders.html#amounttopay">AmountToPay</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The total amount to pay after all lines, discounts, and taxes.</td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrders.html#applytradeconditions">ApplyTradeConditions</a></td>
 <td>boolean <strong>nullable</strong></td>
 <td>Specifies whether the system should apply standard pricing and discounts to this document. <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></td>
@@ -338,6 +343,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Crm.Sales.SalesOrders.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
 <td>When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrders.html#totallineamount">TotalLineAmount</a></td>
+<td><a href="../data-types.html#amount">Amount</a></td>
+<td>The sum of Line Amounts from all document lines.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#void">Void</a></td>
@@ -663,6 +673,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="amounttopay">AmountToPay</h3>
+<p>The total amount to pay after all lines, discounts, and taxes.</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="applytradeconditions">ApplyTradeConditions</h3>
 <p>Specifies whether the system should apply standard pricing and discounts to this document. <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></p>
@@ -1222,6 +1239,13 @@ Enumeration of document system states<br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.LineToDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
+<h3 id="totallineamount">TotalLineAmount</h3>
+<p>The sum of Line Amounts from all document lines.</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount</a></strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>

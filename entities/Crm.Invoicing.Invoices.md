@@ -48,6 +48,7 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Invoicing.Invoices.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Invoicing.Invoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Invoicing.Invoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [AmountToPay](Crm.Invoicing.Invoices.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. 
 | [ApplyDate](Crm.Invoicing.Invoices.md#applydate) | date | When not null specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date. `Required` `Filter(ge;le)` 
 | [AutomaticOrderLinking](Crm.Invoicing.Invoices.md#automaticorderlinking) | boolean | Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release. `Required` `Default(false)` 
 | [CompleteTime](Crm.Invoicing.Invoices.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -82,6 +83,7 @@ Aggregate Tree
 | [ReleaseTime](Crm.Invoicing.Invoices.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Crm.Invoicing.Invoices.md#state) | [DocumentState](Crm.Invoicing.Invoices.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Crm.Invoicing.Invoices.md#statetagsattribute) | string | Specifies the state of the document. 
+| [TotalLineAmount](Crm.Invoicing.Invoices.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. 
 | [VATCashReportingMode](Crm.Invoicing.Invoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. `Required` `Default(false)` `Filter(eq)` 
 | [VATNotes](Crm.Invoicing.Invoices.md#vatnotes) | string (254) __nullable__ | Description of the operation that will be entered in the VAT ledgers. 
 | [Void](Crm.Invoicing.Invoices.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -167,6 +169,16 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+_Show in UI_: **HiddenByDefault**  
+
+### AmountToPay
+
+The total amount to pay after all lines, discounts, and taxes.
+
+_Type_: **[Amount](../data-types.md#amount)**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
 
 ### ApplyDate
@@ -620,6 +632,16 @@ _Show in UI_: **HiddenByDefault**
 Specifies the state of the document.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### TotalLineAmount
+
+The sum of Line Amounts from all document lines.
+
+_Type_: **[Amount](../data-types.md#amount)**  
 _Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  

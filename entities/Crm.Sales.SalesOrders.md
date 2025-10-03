@@ -50,6 +50,7 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Sales.SalesOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Sales.SalesOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Sales.SalesOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [AmountToPay](Crm.Sales.SalesOrders.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. 
 | [ApplyTradeConditions](Crm.Sales.SalesOrders.md#applytradeconditions) | boolean __nullable__ | Specifies whether the system should apply standard pricing and discounts to this document. `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53` 
 | [CompleteTime](Crm.Sales.SalesOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Sales.SalesOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -87,6 +88,7 @@ Aggregate Tree
 | [State](Crm.Sales.SalesOrders.md#state) | [DocumentState](Crm.Sales.SalesOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Crm.Sales.SalesOrders.md#statetagsattribute) | string | Specifies the state of the document. 
 | [ToDate](Crm.Sales.SalesOrders.md#todate) | date __nullable__ | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. `Filter(ge;le)` `Introduced in version 20.1` 
+| [TotalLineAmount](Crm.Sales.SalesOrders.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. 
 | [Void](Crm.Sales.SalesOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Crm.Sales.SalesOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Crm.Sales.SalesOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -186,6 +188,16 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+_Show in UI_: **HiddenByDefault**  
+
+### AmountToPay
+
+The total amount to pay after all lines, discounts, and taxes.
+
+_Type_: **[Amount](../data-types.md#amount)**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
 
 ### ApplyTradeConditions
@@ -679,6 +691,16 @@ _Show in UI_: **ShownByDefault**
 
 _Front-End Recalc Expressions:_  
 `obj.Lines.Select( c => SalesOrderLinesRepository.LineToDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
+### TotalLineAmount
+
+The sum of Line Amounts from all document lines.
+
+_Type_: **[Amount](../data-types.md#amount)**  
+_Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### Void
 
 True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
