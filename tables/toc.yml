@@ -669,6 +669,10 @@
     href: Gen_Product_Groups.md
   - name: Gen_Product_Pictures
     href: Gen_Product_Pictures.md
+  - name: Gen_Product_Relation_Types
+    href: Gen_Product_Relation_Types.md
+  - name: Gen_Product_Relations
+    href: Gen_Product_Relations.md
   - name: Gen_Product_Supply
     href: Gen_Product_Supply.md
   - name: Gen_Product_Type_Purchase_Invoice_Line_Properties

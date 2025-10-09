@@ -24081,6 +24081,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Gen_Product_Relation_Types.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Gen_Product_Relation_Types.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Gen_Product_Relations.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Gen_Product_Relations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Gen_Product_Supply.md",
       "output": {
         ".html": {
