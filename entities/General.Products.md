@@ -16,6 +16,8 @@ uid: General.Products
 - [ProductGroupRequiredProperties](General.Products.ProductGroupRequiredProperties.md)  
 - [ProductGroups](General.Products.ProductGroups.md)  
 - [ProductPictures](General.Products.ProductPictures.md)  
+- [ProductRelations](General.Products.ProductRelations.md)  
+- [ProductRelationTypes](General.Products.ProductRelationTypes.md)  
 - [Products](General.Products.Products.md)  
 - [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md)  
 - [ProductTypes](General.Products.ProductTypes.md)  

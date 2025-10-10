@@ -15922,6 +15922,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/General.Products.ProductRelationTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/General.Products.ProductRelationTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/General.Products.ProductRelations.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/General.Products.ProductRelations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/General.Products.ProductSupply.md",
       "output": {
         ".html": {

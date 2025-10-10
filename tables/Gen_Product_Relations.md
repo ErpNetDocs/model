@@ -1,6 +1,12 @@
 # Table Gen_Product_Relations
 
 
+## Entity
+
+Entity: [General.Products.ProductRelations](~/entities/General.Products.ProductRelations.md)
+
+Contains relations between the products (Replacement, Merchandising etc.). Entity: Gen_Product_Relations (Introduced in version 26.2.0.8)
+
 ## Summary
 
 | Name | Type | Description |

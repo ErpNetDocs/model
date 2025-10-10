@@ -1135,6 +1135,12 @@ references:
 - uid: General.Products.ProductPictures
   name: General.Products.ProductPictures Entity
   href: entities/General.Products.ProductPictures.html
+- uid: General.Products.ProductRelationTypes
+  name: General.Products.ProductRelationTypes Entity
+  href: entities/General.Products.ProductRelationTypes.html
+- uid: General.Products.ProductRelations
+  name: General.Products.ProductRelations Entity
+  href: entities/General.Products.ProductRelations.html
 - uid: General.Products.ProductTypePurchaseInvoiceLineProperties
   name: General.Products.ProductTypePurchaseInvoiceLineProperties Entity
   href: entities/General.Products.ProductTypePurchaseInvoiceLineProperties.html

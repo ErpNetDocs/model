@@ -1,6 +1,12 @@
 # Table Gen_Product_Relation_Types
 
 
+## Entity
+
+Entity: [General.Products.ProductRelationTypes](~/entities/General.Products.ProductRelationTypes.md)
+
+List of user-defined product relations types. Each relation type has associated system type. Entity: Gen_Product_Relation_Types (Introduced in version 26.2.0.8)
+
 ## Summary
 
 | Name | Type | Description |

@@ -743,6 +743,10 @@
       href: General.Products.ProductGroups.md
     - name: ProductPictures
       href: General.Products.ProductPictures.md
+    - name: ProductRelations
+      href: General.Products.ProductRelations.md
+    - name: ProductRelationTypes
+      href: General.Products.ProductRelationTypes.md
     - name: Products
       href: General.Products.Products.md
     - name: ProductTypePurchaseInvoiceLineProperties
