@@ -34,6 +34,8 @@ Aggregate Tree
 | [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime | The creation time in UTC. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
 | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` 
 | [DisplayText](Logistics.Wms.WarehouseTransactions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Logistics.Wms.WarehouseTransactions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Wms.WarehouseTransactions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
 | [IsAutoAccepted](Logistics.Wms.WarehouseTransactions.md#isautoaccepted) | boolean | Auto-flag indicating that the product was accepted as correct without being physically counted. `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Introduced in version 26.1.3.87` 
 | [ObjectVersion](Logistics.Wms.WarehouseTransactions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -108,6 +110,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

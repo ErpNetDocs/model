@@ -59,6 +59,8 @@ Aggregate Tree
 | [DriverName](Logistics.Inventory.StoreOrders.md#drivername) | string (64) __nullable__ | The name of the driver, who will deliver the stocks. 
 | [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur. `Required` `Default(Today)` `Filter(ge;le)` `ORD` 
 | [EntityName](Logistics.Inventory.StoreOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ExternalId](Logistics.Inventory.StoreOrders.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Inventory.StoreOrders.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Logistics.Inventory.StoreOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Logistics.Inventory.StoreOrders.md#id) | guid |  
 | [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
@@ -283,6 +285,26 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### FullState
 

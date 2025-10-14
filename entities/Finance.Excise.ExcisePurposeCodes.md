@@ -36,6 +36,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Finance.Excise.ExcisePurposeCodes.md#code) | string (32) | The unique code of the ExcisePurposeCode. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Finance.Excise.ExcisePurposeCodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Finance.Excise.ExcisePurposeCodes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Finance.Excise.ExcisePurposeCodes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Finance.Excise.ExcisePurposeCodes.md#id) | guid |  
 | [IsDefault](Finance.Excise.ExcisePurposeCodes.md#isdefault) | boolean | Excise Purpose Codes which is the default for documents. `Required` `Default(false)` `Filter(eq)` `Introduced in version 21.1.4.0` 
 | [Name](Finance.Excise.ExcisePurposeCodes.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | The name of this ExcisePurposeCode. `Required` `Filter(like)` 
@@ -63,6 +65,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

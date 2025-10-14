@@ -32,6 +32,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DisplayText](Crm.Subscriptions.Subscriptions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Crm.Subscriptions.Subscriptions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Subscriptions.Subscriptions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
 | [Id](Crm.Subscriptions.Subscriptions.md#id) | guid |  
 | [Notes](Crm.Subscriptions.Subscriptions.md#notes) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Notes for this Subscription. `Filter(like)` 
@@ -61,6 +63,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

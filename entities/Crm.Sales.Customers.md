@@ -56,6 +56,8 @@ Aggregate Tree
 | [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. `Required` `Default(0)` 
 | [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer. `Required` `Default(0)` 
 | [DisplayText](Crm.Sales.Customers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Crm.Sales.Customers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Sales.Customers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship. `Default(Today)` `Filter(ge;le)` 
 | [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer. `Required` `Default(0)` 
 | [Id](Crm.Sales.Customers.md#id) | guid |  
@@ -200,6 +202,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

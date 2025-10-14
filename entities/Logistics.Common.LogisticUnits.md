@@ -46,6 +46,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DisplayText](Logistics.Common.LogisticUnits.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExpectedWeight](Logistics.Common.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)` 
+| [ExternalId](Logistics.Common.LogisticUnits.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Common.LogisticUnits.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Logistics.Common.LogisticUnits.md#id) | guid |  
 | [IsActive](Logistics.Common.LogisticUnits.md#isactive) | boolean | Indicates whether the logistic unit is currently active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.2.11` 
 | [MeasuredWeight](Logistics.Common.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
@@ -90,6 +92,26 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

@@ -32,6 +32,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTimeUtc](Projects.AI.AssistantConversations.md#creationtimeutc) | datetime | The time when the assistant conversation was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` 
 | [DisplayText](Projects.AI.AssistantConversations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Projects.AI.AssistantConversations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.AI.AssistantConversations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Projects.AI.AssistantConversations.md#id) | guid |  
 | [IsActive](Projects.AI.AssistantConversations.md#isactive) | boolean | Indicates whether the conversation is active. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](Projects.AI.AssistantConversations.md#notes) | string (max) __nullable__ | Notes for this AssistantConversation. 
@@ -65,6 +67,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

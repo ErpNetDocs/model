@@ -45,6 +45,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Pricing.PriceTypes.md#code) | string (16) | Short identification code of the price type. `Required` `Filter(eq)` `ORD` 
 | [DisplayText](Crm.Pricing.PriceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Crm.Pricing.PriceTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Pricing.PriceTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Crm.Pricing.PriceTypes.md#id) | guid |  
 | [IsActive](Crm.Pricing.PriceTypes.md#isactive) | boolean | Indicates whether the current Price type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
 | [Name](Crm.Pricing.PriceTypes.md#name) | string (254) | Full name of the price type. `Required` `Filter(eq;like)` 
@@ -73,6 +75,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

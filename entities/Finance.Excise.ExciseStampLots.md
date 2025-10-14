@@ -35,6 +35,8 @@ Aggregate Tree
 | [BatchNumber](Finance.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps. `Required` `Filter(multi eq;like)` `ORD` 
 | [DisplayText](Finance.Excise.ExciseStampLots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndNumber](Finance.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot. `Required` 
+| [ExternalId](Finance.Excise.ExciseStampLots.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Finance.Excise.ExciseStampLots.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Finance.Excise.ExciseStampLots.md#id) | guid |  
 | [IsActive](Finance.Excise.ExciseStampLots.md#isactive) | boolean | Is Active. `Required` `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Finance.Excise.ExciseStampLots.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -89,6 +91,26 @@ _Show in UI_: **ShownByDefault**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( obj.Quantity > 0), obj.StartNumber, null).AddToNumberInString( Convert( ( obj.Quantity - 1), BigInteger), null)`
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### Id
 
 _Type_: **guid**  

@@ -217,6 +217,16 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Type of the VAT entry. S=Sales, P=Purchases. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Vat.Entries.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
 <td><a href="Finance.Vat.Entries.html#fullstate">FullState</a></td>
 <td>string</td>
 <td>Full state of the document based on its system and user state. [ReadOnly]</td>
@@ -655,6 +665,20 @@ Allowed values for the <code>EntryType</code>(Finance.Vat.Entries.md#entrytype) 
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.DealType.EntryType</code></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="fullstate">FullState</h3>
 <p>Full state of the document based on its system and user state. [ReadOnly]</p>
 <p><em>Type</em>: <strong>string</strong><br>

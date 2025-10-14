@@ -44,6 +44,8 @@ Aggregate Tree
 | [ApplicationName](Systems.Core.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout. `Required` `Filter(eq)` `ORD` 
 | [Category](Systems.Core.FormLayouts.md#category) | string (36) __nullable__ | The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type. `Filter(eq)` `Introduced in version 23.1.1.25` 
 | [DisplayText](Systems.Core.FormLayouts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Systems.Core.FormLayouts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Core.FormLayouts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FormName](Systems.Core.FormLayouts.md#formname) | string (128) | The form, for which the layout is applied. `Required` `Filter(eq;like)` 
 | [Id](Systems.Core.FormLayouts.md#id) | guid |  
 | [Layout](Systems.Core.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. 
@@ -95,6 +97,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

@@ -2197,6 +2197,9 @@ references:
 - uid: Systems.Security.AccessKeys
   name: Systems.Security.AccessKeys Entity
   href: entities/Systems.Security.AccessKeys.html
+- uid: Systems.Security.AccessTokens
+  name: Systems.Security.AccessTokens Entity
+  href: entities/Systems.Security.AccessTokens.html
 - uid: Systems.Security.ColumnPermissions
   name: Systems.Security.ColumnPermissions Entity
   href: entities/Systems.Security.ColumnPermissions.html

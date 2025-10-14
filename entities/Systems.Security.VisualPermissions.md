@@ -35,6 +35,8 @@ Aggregate Tree
 | [ApplicationName](Systems.Security.VisualPermissions.md#applicationname) | string (64) | The application for which the permission is specified. `Required` `Filter(eq)` 
 | [DisplayText](Systems.Security.VisualPermissions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ElementName](Systems.Security.VisualPermissions.md#elementname) | string (4000) __nullable__ | Optionally, the element from the panel which will be secured. `Filter(eq)` 
+| [ExternalId](Systems.Security.VisualPermissions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Security.VisualPermissions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FormName](Systems.Security.VisualPermissions.md#formname) | string (128) __nullable__ | Optionally, the form which will be secured. `Filter(eq)` 
 | [Id](Systems.Security.VisualPermissions.md#id) | guid |  
 | [ObjectVersion](Systems.Security.VisualPermissions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -81,6 +83,26 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Maximum Length_: **4000**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### FormName
 

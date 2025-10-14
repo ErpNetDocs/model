@@ -140,6 +140,16 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Vat.DealTypes.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.DealTypes.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
 <td><a href="Finance.Vat.DealTypes.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -244,6 +254,20 @@ Allowed values for the <code>EntryType</code>(Finance.Vat.DealTypes.md#entrytype
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

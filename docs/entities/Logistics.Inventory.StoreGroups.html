@@ -131,6 +131,16 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.StoreGroups.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.StoreGroups.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#fullpath"><s>FullPath</s></a></td>
 <td>string (25) <strong>nullable</strong></td>
 <td><strong>OBSOLETE! Do not use!</strong> The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. <code>Obsolete</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> <code>Obsoleted in version 23.1.2.3</code></td>
@@ -199,6 +209,20 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>

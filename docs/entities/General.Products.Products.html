@@ -185,6 +185,16 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Total default expiry period for the product (in days) from the date of production to the date of expiry.</td>
 </tr>
 <tr>
+<td><a href="General.Products.Products.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="General.Products.Products.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
 <td><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></td>
 <td><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></td>
 <td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). <code>Required</code> <code>Default(&quot;M&quot;)</code></td>
@@ -589,6 +599,20 @@ Allowed values for the <code>CostingMethod</code>(General.Products.Products.md#c
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="flushingmethod">FlushingMethod</h3>
 <p>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). <code>Required</code> <code>Default(&quot;M&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></strong><br>

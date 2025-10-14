@@ -37,6 +37,8 @@ Aggregate Tree
 | [Code](Crm.Presales.LeadUserStages.md#code) | string (32) | The unique code of the LeadUserStage. `Required` `Filter(eq;like)` `ORD` 
 | [Description](Crm.Presales.LeadUserStages.md#description) | string (max) __nullable__ | Description of the user stage. Displayed to the end-user upon stage selection. 
 | [DisplayText](Crm.Presales.LeadUserStages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Crm.Presales.LeadUserStages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Presales.LeadUserStages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Crm.Presales.LeadUserStages.md#id) | guid |  
 | [IsActive](Crm.Presales.LeadUserStages.md#isactive) | boolean | Indicates whether the current Lead's User Stage is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.4.62` 
 | [Name](Crm.Presales.LeadUserStages.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the user stage. `Required` `Filter(like)` 
@@ -76,6 +78,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

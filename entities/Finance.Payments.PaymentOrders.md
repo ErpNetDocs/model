@@ -61,6 +61,8 @@ Aggregate Tree
 | [DueDate](Finance.Payments.PaymentOrders.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` 
 | [DueStartDate](Finance.Payments.PaymentOrders.md#duestartdate) | date __nullable__ | The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `ORD` 
 | [EntityName](Finance.Payments.PaymentOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ExternalId](Finance.Payments.PaymentOrders.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Finance.Payments.PaymentOrders.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Finance.Payments.PaymentOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Finance.Payments.PaymentOrders.md#id) | guid |  
 | [InstallmentNumber](Finance.Payments.PaymentOrders.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. `Filter(eq)` 
@@ -340,6 +342,26 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### FullState
 

@@ -42,6 +42,8 @@ Aggregate Tree
 | [EngineIdentificationNumber](Applications.Fleet.Vehicles.md#engineidentificationnumber) | string (20) __nullable__ | Engine identification number. `Filter(eq;like)` 
 | [EnginePowerhp](Applications.Fleet.Vehicles.md#enginepowerhp) | int32 __nullable__ | Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. `Filter(eq;ge;le)` 
 | [EngineSizecc](Applications.Fleet.Vehicles.md#enginesizecc) | int32 __nullable__ | Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). `Filter(eq;ge;le)` 
+| [ExternalId](Applications.Fleet.Vehicles.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Applications.Fleet.Vehicles.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FuelCapacity](Applications.Fleet.Vehicles.md#fuelcapacity) | int32 __nullable__ | Maximum fuel capacity of the engine or the battery in the fuel measurement unit. 
 | [FuelCompsumption](Applications.Fleet.Vehicles.md#fuelcompsumption) | decimal (7, 1) __nullable__ | Average fuel consumption in the fuel measurement unit for 1 operational unit. 
 | [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string (64) __nullable__ | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. `Filter(eq;like)` 
@@ -166,6 +168,26 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### FuelCapacity
 

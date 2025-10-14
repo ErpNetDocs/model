@@ -34,6 +34,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Description](Projects.Agile.ProjectTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project type. `Filter(like)` `Introduced in version 25.1.3.29` 
 | [DisplayText](Projects.Agile.ProjectTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Projects.Agile.ProjectTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.ProjectTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Icon](Projects.Agile.ProjectTypes.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
 | [Id](Projects.Agile.ProjectTypes.md#id) | guid |  
 | [IsActive](Projects.Agile.ProjectTypes.md#isactive) | boolean | Specifies whether the project type is active for new projects. `Required` `Default(true)` `Filter(eq)` 
@@ -59,6 +61,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

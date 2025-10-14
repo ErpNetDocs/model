@@ -36,6 +36,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DescriptionTemplate](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Description field when creating new cases of this category. `Filter(like)` `Introduced in version 25.1.2.76` 
 | [DisplayText](Projects.Agile.CaseCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Projects.Agile.CaseCategories.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.CaseCategories.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [HideUnusedSystemStates](Projects.Agile.CaseCategories.md#hideunusedsystemstates) | boolean | If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown. `Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.32` 
 | [Icon](Projects.Agile.CaseCategories.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
 | [Id](Projects.Agile.CaseCategories.md#id) | guid |  
@@ -73,6 +75,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

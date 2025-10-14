@@ -37,6 +37,8 @@ Aggregate Tree
 | [Count](Systems.Monitoring.InstanceStatistics.md#count) | int32 | Number of occurrences. `Required` `Filter(ge;le)` 
 | [DisplayText](Systems.Monitoring.InstanceStatistics.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExcludeFromSummary](Systems.Monitoring.InstanceStatistics.md#excludefromsummary) | boolean | Denotes that the stat should be excluded from summarization queries (for example long polling requests). `Required` 
+| [ExternalId](Systems.Monitoring.InstanceStatistics.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Monitoring.InstanceStatistics.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Monitoring.InstanceStatistics.md#id) | guid |  
 | [InstanceName](Systems.Monitoring.InstanceStatistics.md#instancename) | string (128) | The name of the instance to which this statistic applies. `Required` `Filter(eq;like)` 
 | [Max](Systems.Monitoring.InstanceStatistics.md#max) | int32 __nullable__ | The max value of the stat within the time period. `Filter(ge;le)` 
@@ -103,6 +105,26 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

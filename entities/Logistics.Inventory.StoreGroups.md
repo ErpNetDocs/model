@@ -36,6 +36,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Logistics.Inventory.StoreGroups.md#code) | string (16) | The unique code of the StoreGroup. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Logistics.Inventory.StoreGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Logistics.Inventory.StoreGroups.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Inventory.StoreGroups.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [<s>FullPath</s>](Logistics.Inventory.StoreGroups.md#fullpath) | string (25) __nullable__ | **OBSOLETE! Do not use!** The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. `Obsolete` `Filter(eq;like)` `ORD` `ReadOnly` `Obsoleted in version 23.1.2.3` 
 | [Id](Logistics.Inventory.StoreGroups.md#id) | guid |  
 | [Name](Logistics.Inventory.StoreGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this StoreGroup. `Required` `Filter(like)` 
@@ -73,6 +75,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

@@ -36,6 +36,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.CompanySizeClasses.md#code) | string (32) | The unique code of the CompanySizeClass. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Crm.Marketing.CompanySizeClasses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Crm.Marketing.CompanySizeClasses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Marketing.CompanySizeClasses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)` 
 | [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)` 
 | [Id](Crm.Marketing.CompanySizeClasses.md#id) | guid |  
@@ -73,6 +75,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

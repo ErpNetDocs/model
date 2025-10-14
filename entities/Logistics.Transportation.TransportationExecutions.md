@@ -68,6 +68,8 @@ Aggregate Tree
 | [EntityName](Logistics.Transportation.TransportationExecutions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ExecutionDate](Logistics.Transportation.TransportationExecutions.md#executiondate) | date __nullable__ | Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. `Filter(ge;le)` 
 | [ExecutionTime](Logistics.Transportation.TransportationExecutions.md#executiontime) | time __nullable__ | Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. `Filter(ge;le)` 
+| [ExternalId](Logistics.Transportation.TransportationExecutions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Transportation.TransportationExecutions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Logistics.Transportation.TransportationExecutions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Logistics.Transportation.TransportationExecutions.md#id) | guid |  
 | [ObjectVersion](Logistics.Transportation.TransportationExecutions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -282,6 +284,26 @@ _Show in UI_: **ShownByDefault**
 
 _Front-End Recalc Expressions:_  
 `obj.Lines.Select( c => TransportationExecutionLinesRepository.ExecutionTimeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### FullState
 
 Full state of the document based on its system and user state. [ReadOnly]

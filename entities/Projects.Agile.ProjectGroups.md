@@ -37,6 +37,8 @@ Aggregate Tree
 | [Code](Projects.Agile.ProjectGroups.md#code) | string (16) | Unique code of the project group. `Required` `Filter(multi eq)` 
 | [Description](Projects.Agile.ProjectGroups.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Description of the project group. `Filter(like)` 
 | [DisplayText](Projects.Agile.ProjectGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Projects.Agile.ProjectGroups.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.ProjectGroups.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Projects.Agile.ProjectGroups.md#id) | guid |  
 | [IsActive](Projects.Agile.ProjectGroups.md#isactive) | boolean | Indicates whether the current project group is active. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Projects.Agile.ProjectGroups.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project group. `Required` `Filter(eq;like)` 
@@ -72,6 +74,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

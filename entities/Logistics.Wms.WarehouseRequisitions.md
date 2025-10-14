@@ -59,6 +59,8 @@ Aggregate Tree
 | [EntityName](Logistics.Wms.WarehouseRequisitions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ExpectedDate](Logistics.Wms.WarehouseRequisitions.md#expecteddate) | date | Date, when the requisition is expected to be fulfilled. `Required` `Default(Today)` `Filter(multi eq;ge;le)` 
 | [ExpectedTime](Logistics.Wms.WarehouseRequisitions.md#expectedtime) | time __nullable__ | Time, when the requisition is expected to be executed. null when the time is unknown. `Filter(eq;ge;le)` 
+| [ExternalId](Logistics.Wms.WarehouseRequisitions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Wms.WarehouseRequisitions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Logistics.Wms.WarehouseRequisitions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Logistics.Wms.WarehouseRequisitions.md#id) | guid |  
 | [ObjectVersion](Logistics.Wms.WarehouseRequisitions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -270,6 +272,26 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### FullState
 

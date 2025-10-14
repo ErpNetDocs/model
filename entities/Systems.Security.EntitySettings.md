@@ -43,6 +43,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DisplayText](Systems.Security.EntitySettings.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DisplayTextFormat](Systems.Security.EntitySettings.md#displaytextformat) | string (128) __nullable__ | Interpolated string, containing the default format for displaying values of the entity. null means to use the system-wide default. `Introduced in version 22.1.4.18` 
+| [ExternalId](Systems.Security.EntitySettings.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Security.EntitySettings.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Security.EntitySettings.md#id) | guid |  
 | [LogCreate](Systems.Security.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
 | [LogDelete](Systems.Security.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
@@ -82,6 +84,26 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

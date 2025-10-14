@@ -38,6 +38,8 @@ Aggregate Tree
 | [CompletionTimeUtc](Projects.AI.Compilations.md#completiontimeutc) | datetime __nullable__ | The time, when the compilation has completed. `Filter(eq;ge;le)` `ORD` `ReadOnly` 
 | [DisplayText](Projects.AI.Compilations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ErrorMessage](Projects.AI.Compilations.md#errormessage) | string (max) __nullable__ | Human-readable error message indicating the problem, when a build is not successful. `ReadOnly` 
+| [ExternalId](Projects.AI.Compilations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.AI.Compilations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Projects.AI.Compilations.md#id) | guid |  
 | [IsSuccessful](Projects.AI.Compilations.md#issuccessful) | boolean | Indicated whether the build process was successful and the compilation can be used for conversations. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ObjectVersion](Projects.AI.Compilations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -112,6 +114,26 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

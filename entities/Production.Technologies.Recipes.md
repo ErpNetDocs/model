@@ -38,6 +38,8 @@ Aggregate Tree
 | [CreationUser](Production.Technologies.Recipes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Recipe. `Filter(like)` `ReadOnly` 
 | [DisplayText](Production.Technologies.Recipes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExpiryDate](Production.Technologies.Recipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. null means that the recipe might still be in use. `Filter(ge;le)` 
+| [ExternalId](Production.Technologies.Recipes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Production.Technologies.Recipes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Production.Technologies.Recipes.md#id) | guid |  
 | [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Production.Technologies.Recipes.md#name) | string (64) | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. `Required` `Filter(like)` 
@@ -110,6 +112,26 @@ _Category_: **System**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

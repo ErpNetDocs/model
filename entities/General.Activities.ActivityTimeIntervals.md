@@ -43,6 +43,8 @@ Aggregate Tree
 | [DisplayText](General.Activities.ActivityTimeIntervals.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
 | [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
+| [ExternalId](General.Activities.ActivityTimeIntervals.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](General.Activities.ActivityTimeIntervals.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](General.Activities.ActivityTimeIntervals.md#id) | guid |  
 | [Notes](General.Activities.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval. 
 | [ObjectVersion](General.Activities.ActivityTimeIntervals.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -103,6 +105,26 @@ _Show in UI_: **ShownByDefault**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( obj.Activity.PlannedDurationMinutes ?? 0) == 0), 0, Min( 0.9, Round( Max( 0, ( obj.Transaction.Clone( ).Query( ).Where( ti => ( ti.Activity == obj.Activity)).ToList( ).Where( ti => ( ( ti != obj) AndAlso ( ti.Date.Add( ti.EndTime) <= obj.Date.Add( obj.EndTime)))).OrderBy( ti => ti.Date.Add( ti.EndTime)).Select( ti => ti.ExecutionCompletePercent).LastOrDefault( ) + Convert( ( Convert( ( obj.EndTime - obj.StartTime).TotalMinutes, Nullable`1) / Convert( obj.Activity.PlannedDurationMinutes, Nullable`1)), Decimal))), 2)))`
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### Id
 
 _Type_: **guid**  

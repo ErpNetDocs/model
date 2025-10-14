@@ -48,6 +48,8 @@ Aggregate Tree
 | [CreationTime](General.Contacts.Persons.md#creationtime) | datetime __nullable__ | Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Contacts.Persons.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
 | [DisplayText](General.Contacts.Persons.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](General.Contacts.Persons.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](General.Contacts.Persons.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | First name of the person. `Filter(eq;like)` 
 | [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;null=not known/not provided. `Filter(eq)` 
 | [GLN](General.Contacts.Persons.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -145,6 +147,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

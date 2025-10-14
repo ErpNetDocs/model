@@ -40,6 +40,8 @@ Aggregate Tree
 | [Code](Finance.Excise.ExciseProductTypes.md#code) | string (32) | The unique code of the ExciseProductType. `Required` `Filter(multi eq;like)` `ORD` 
 | [DisplayText](Finance.Excise.ExciseProductTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExciseAmountPerStamp](Finance.Excise.ExciseProductTypes.md#exciseamountperstamp) | decimal (10, 6) | The excise duty, which is charged with one excise label. `Required` `Default(0)` 
+| [ExternalId](Finance.Excise.ExciseProductTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Finance.Excise.ExciseProductTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Finance.Excise.ExciseProductTypes.md#id) | guid |  
 | [IsActive](Finance.Excise.ExciseProductTypes.md#isactive) | boolean | Indicates whether this excise poduct type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Excise.ExciseProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ExciseProductType. `Required` `Filter(like)` 
@@ -133,6 +135,26 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

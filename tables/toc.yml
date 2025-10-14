@@ -1152,6 +1152,8 @@
   items:
   - name: Sec_Access_Keys
     href: Sec_Access_Keys.md
+  - name: Sec_Access_Tokens
+    href: Sec_Access_Tokens.md
   - name: Sec_Column_Permissions
     href: Sec_Column_Permissions.md
   - name: Sec_Domain_Providers

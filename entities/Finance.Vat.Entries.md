@@ -60,6 +60,8 @@ Aggregate Tree
 | [DocumentVersion](Finance.Vat.Entries.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Vat.Entries.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntryType](Finance.Vat.Entries.md#entrytype) | [EntryType](Finance.Vat.Entries.md#entrytype) | Type of the VAT entry. S=Sales, P=Purchases. `Required` `Filter(eq)` `ORD` 
+| [ExternalId](Finance.Vat.Entries.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Finance.Vat.Entries.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Finance.Vat.Entries.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Finance.Vat.Entries.md#id) | guid |  
 | [<s>IsReleased</s>](Finance.Vat.Entries.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
@@ -315,6 +317,26 @@ _Show in UI_: **ShownByDefault**
 
 _Front-End Recalc Expressions:_  
 `obj.DealType.EntryType`
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
 ### FullState
 
 Full state of the document based on its system and user state. [ReadOnly]

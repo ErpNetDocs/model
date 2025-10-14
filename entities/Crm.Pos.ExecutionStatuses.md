@@ -37,6 +37,8 @@ Aggregate Tree
 | [Code](Crm.Pos.ExecutionStatuses.md#code) | string (16) | Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Crm.Pos.ExecutionStatuses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | The system-defined stage under which is the current status. `Required` `Default("PND")` `Filter(multi eq)` 
+| [ExternalId](Crm.Pos.ExecutionStatuses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Pos.ExecutionStatuses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Crm.Pos.ExecutionStatuses.md#id) | guid |  
 | [IsActive](Crm.Pos.ExecutionStatuses.md#isactive) | boolean | Indicates whether the POS execution status is currently active. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Crm.Pos.ExecutionStatuses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` `Filter(eq;like)` 
@@ -95,6 +97,26 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Default Value_: **Pending**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

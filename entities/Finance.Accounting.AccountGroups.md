@@ -37,6 +37,8 @@ Aggregate Tree
 | [Description](Finance.Accounting.AccountGroups.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this AccountGroup. 
 | [Discontinued](Finance.Accounting.AccountGroups.md#discontinued) | boolean | True means that the account group won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
 | [DisplayText](Finance.Accounting.AccountGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Finance.Accounting.AccountGroups.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Finance.Accounting.AccountGroups.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string (256) __nullable__ | Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)` 
 | [Id](Finance.Accounting.AccountGroups.md#id) | guid |  
 | [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString (160)](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group. `Required` `Filter(like)` 
@@ -79,6 +81,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

@@ -39,6 +39,8 @@ Aggregate Tree
 | [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time (in UTC) of the exchange. `Filter(ge;le)` 
 | [ExchangeLog](Systems.Exchange.DataExchanges.md#exchangelog) | string (max) __nullable__ | General log of the last transfer attempt. Messages for the individual objects are kept with the objects. `Filter(like)` 
 | [ExternalAddress](Systems.Exchange.DataExchanges.md#externaladdress) | string (254) __nullable__ | Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver. `Filter(like)` 
+| [ExternalId](Systems.Exchange.DataExchanges.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Exchange.DataExchanges.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Exchange.DataExchanges.md#id) | guid |  
 | [KeepUntil](Systems.Exchange.DataExchanges.md#keepuntil) | date | Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted). `Required` `Filter(ge;le)` 
 | [Mode](Systems.Exchange.DataExchanges.md#mode) | [Mode](Systems.Exchange.DataExchanges.md#mode) | Operation mode of the exchange. `Required` `Default("E")` `Filter(eq)` 
@@ -129,6 +131,26 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

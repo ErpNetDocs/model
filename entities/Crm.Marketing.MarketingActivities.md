@@ -63,6 +63,8 @@ Aggregate Tree
 | [DocumentVersion](Crm.Marketing.MarketingActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EndTime](Crm.Marketing.MarketingActivities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [EntityName](Crm.Marketing.MarketingActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [ExternalId](Crm.Marketing.MarketingActivities.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Marketing.MarketingActivities.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [FullState](Crm.Marketing.MarketingActivities.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [Id](Crm.Marketing.MarketingActivities.md#id) | guid |  
@@ -304,6 +306,26 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 _Show in UI_: **CannotBeShown**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### ForecastedCost
 

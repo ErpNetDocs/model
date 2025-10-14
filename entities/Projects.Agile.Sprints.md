@@ -35,6 +35,8 @@ Aggregate Tree
 | [ActivatedAt](Projects.Agile.Sprints.md#activatedat) | datetime __nullable__ | Timestamp when the sprint was activated. `Filter(eq;ge;le)` 
 | [DisplayText](Projects.Agile.Sprints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndDate](Projects.Agile.Sprints.md#enddate) | date | End date of the sprint’s timebox. `Required` `Filter(eq;ge;le)` 
+| [ExternalId](Projects.Agile.Sprints.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.Sprints.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Goal](Projects.Agile.Sprints.md#goal) | string (500) __nullable__ | Short description of the main objectives or focus for the sprint. `Filter(eq;like)` 
 | [Id](Projects.Agile.Sprints.md#id) | guid |  
 | [Name](Projects.Agile.Sprints.md#name) | string (100) | Human-readable sprint name, e.g. “Sprint 14”. `Required` `Filter(eq;like)` 
@@ -81,6 +83,26 @@ _Category_: **System**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Goal
 

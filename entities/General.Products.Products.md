@@ -55,6 +55,8 @@ Aggregate Tree
 | [Description](General.Products.Products.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of the product. 
 | [DisplayText](General.Products.Products.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 __nullable__ | Total default expiry period for the product (in days) from the date of production to the date of expiry. 
+| [ExternalId](General.Products.Products.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](General.Products.Products.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")` 
 | [GuaranteePeriodDays](General.Products.Products.md#guaranteeperioddays) | int32 __nullable__ | Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others. 
 | [Id](General.Products.Products.md#id) | guid |  
@@ -242,6 +244,26 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### FlushingMethod
 

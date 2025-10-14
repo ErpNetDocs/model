@@ -19912,6 +19912,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Security.AccessTokens.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Security.AccessTokens.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Security.ColumnPermissions.md",
       "output": {
         ".html": {
@@ -26435,6 +26445,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sec_Access_Keys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sec_Access_Tokens.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sec_Access_Tokens.html"
         }
       },
       "version": ""

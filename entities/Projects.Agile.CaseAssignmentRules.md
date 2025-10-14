@@ -32,6 +32,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29` 
 | [DisplayText](Projects.Agile.CaseAssignmentRules.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Projects.Agile.CaseAssignmentRules.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.CaseAssignmentRules.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)` 
 | [Id](Projects.Agile.CaseAssignmentRules.md#id) | guid |  
 | [IsActive](Projects.Agile.CaseAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)` 
@@ -85,6 +87,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

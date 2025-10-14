@@ -42,6 +42,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DisplayText](Systems.Monitoring.InformationMessages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Systems.Monitoring.InformationMessages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Monitoring.InformationMessages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Monitoring.InformationMessages.md#id) | guid |  
 | [InformationMessageTime](Systems.Monitoring.InformationMessages.md#informationmessagetime) | datetime | Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
 | [InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly` 
@@ -61,6 +63,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

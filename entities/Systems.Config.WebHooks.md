@@ -46,6 +46,8 @@ Aggregate Tree
 | [Body](Systems.Config.WebHooks.md#body) | string (max) __nullable__ | The body of the POST request (interpolated string). 
 | [Code](Systems.Config.WebHooks.md#code) | string (32) | The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Systems.Config.WebHooks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Systems.Config.WebHooks.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Config.WebHooks.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Headers](Systems.Config.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. 
 | [Id](Systems.Config.WebHooks.md#id) | guid |  
 | [Name](Systems.Config.WebHooks.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Webhook name (multi-language). `Required` `Filter(like)` 
@@ -87,6 +89,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  

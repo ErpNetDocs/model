@@ -57,6 +57,8 @@ Aggregate Tree
 | [Description](Systems.Documents.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
 | [DisplayText](Systems.Documents.DocumentAmountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | Determines how the amount will be distributed among the document lines. `Required` `Default("AMOUNT")` `Filter(eq)` 
+| [ExternalId](Systems.Documents.DocumentAmountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Documents.DocumentAmountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Documents.DocumentAmountTypes.md#id) | guid |  
 | [IsActive](Systems.Documents.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Systems.Documents.DocumentAmountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -227,6 +229,26 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **Amount**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 

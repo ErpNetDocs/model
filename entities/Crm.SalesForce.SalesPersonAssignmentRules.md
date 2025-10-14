@@ -41,6 +41,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. `Required` `Default("C")` `Filter(eq)` 
 | [DisplayText](Crm.SalesForce.SalesPersonAssignmentRules.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [ExternalId](Crm.SalesForce.SalesPersonAssignmentRules.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.SalesForce.SalesPersonAssignmentRules.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromDate](Crm.SalesForce.SalesPersonAssignmentRules.md#fromdate) | datetime __nullable__ | Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)` 
 | [Id](Crm.SalesForce.SalesPersonAssignmentRules.md#id) | guid |  
 | [IsActive](Crm.SalesForce.SalesPersonAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)` 
@@ -88,6 +90,26 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
