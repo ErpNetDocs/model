@@ -66,7 +66,7 @@ Aggregate Tree
 | [AccessKey](General.EnterpriseCompanies.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this EnterpriseCompany. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [AdvanceProduct](General.EnterpriseCompanies.md#advanceproduct) | [Products](General.Products.Products.md) (nullable) | Product that is used for handling advances in trade documents. `Filter(multi eq)` |
 | [BaseCurrency](General.EnterpriseCompanies.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for this company. `Required` `Filter(multi eq)` |
-| [Company](General.EnterpriseCompanies.md#company) | [Companies](General.Contacts.Companies.md) | Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` |
+| [Company](General.EnterpriseCompanies.md#company) | [Companies](General.Contacts.Companies.md) | Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` `FilterableReference` |
 | [ExchangeDifference<br />CreditAccount](General.EnterpriseCompanies.md#exchangedifferencecreditaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with credit difference due to currency exchanges. `Filter(multi eq)` |
 | [ExchangeDifference<br />DebitAccount](General.EnterpriseCompanies.md#exchangedifferencedebitaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)` |
 | [ReportingCurrency](General.EnterpriseCompanies.md#reportingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93` |
@@ -316,12 +316,13 @@ _Show in UI_: **ShownByDefault**
 
 ### Company
 
-Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)`
+Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` `FilterableReference`
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### ExchangeDifferenceCreditAccount

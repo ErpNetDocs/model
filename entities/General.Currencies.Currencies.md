@@ -20,7 +20,9 @@ Case: **37169**
 Default Display Text Format:  
 _{CurrencySign}_  
 Default Search Members:  
-_Name_  
+_CurrencySign; Name_  
+Code Data Member:  
+_CurrencySign_  
 Name Data Member:  
 _Name_  
 Category:  _Settings_  

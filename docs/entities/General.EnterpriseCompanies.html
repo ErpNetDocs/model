@@ -251,7 +251,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a></td>
-<td>Contains the base company data on which this enterprise company is based. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Contains the base company data on which this enterprise company is based. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#exchangedifferencecreditaccount">ExchangeDifference<br>CreditAccount</a></td>
@@ -524,11 +524,12 @@ Supported permissions</p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="company">Company</h3>
-<p>Contains the base company data on which this enterprise company is based. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Contains the base company data on which this enterprise company is based. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="exchangedifferencecreditaccount">ExchangeDifferenceCreditAccount</h3>
 <p>Account for balancing accounting vouchers with credit difference due to currency exchanges. <code>Filter(multi eq)</code></p>
