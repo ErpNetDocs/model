@@ -123,6 +123,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
+<td><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></td>
+<td><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></td>
+<td>Defines who is allowed to issue reference access tokens for this trusted application. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.16</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationsecrethash">ApplicationSecretHash</a></td>
 <td>string (250) <strong>nullable</strong></td>
 <td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></td>
@@ -259,6 +264,38 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="accesstokens">AccessTokens</h3>
+<p>Defines who is allowed to issue reference access tokens for this trusted application. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.16</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>AccessTokens</code>(Systems.Security.TrustedApplications.md#accesstokens) data attribute<br>
+<em>Allowed Values (Systems.Security.TrustedApplicationsRepository.AccessTokens Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Reference tokens cannot be issued. (Default). Stored as 'NON'. <br> <em>Database Value:</em> 'NON' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'None'</td>
+</tr>
+<tr>
+<td>AuthenticatedUsers</td>
+<td>Any authenticated (logged-in) user may issue.. Stored as 'USR'. <br> <em>Database Value:</em> 'USR' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'AuthenticatedUsers'</td>
+</tr>
+<tr>
+<td>AdministratorsOnly</td>
+<td>Only administrators may issue.. Stored as 'ADM'. <br> <em>Database Value:</em> 'ADM' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AdministratorsOnly'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>None</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="applicationsecrethash">ApplicationSecretHash</h3>
 <p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></p>
 <p><em>Type</em>: <strong>string (250) <strong>nullable</strong></strong><br>

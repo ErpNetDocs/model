@@ -33,6 +33,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | Defines who is allowed to issue reference access tokens for this trusted application. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.2.0.16` 
 | [ApplicationSecretHash](Systems.Security.TrustedApplications.md#applicationsecrethash) | string (250) __nullable__ | Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. `Introduced in version 20.1` 
 | [ApplicationUri](Systems.Security.TrustedApplications.md#applicationuri) | string (254) | Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". `Required` `Filter(eq)` 
 | [BasicAuthenticationAllowed](Systems.Security.TrustedApplications.md#basicauthenticationallowed) | boolean | If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. `Required` `Default(false)` `Filter(eq)` 
@@ -68,6 +69,26 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AccessTokens
+
+Defines who is allowed to issue reference access tokens for this trusted application. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.2.0.16`
+
+_Type_: **[AccessTokens](Systems.Security.TrustedApplications.md#accesstokens)**  
+_Category_: **System**  
+Allowed values for the `AccessTokens`(Systems.Security.TrustedApplications.md#accesstokens) data attribute  
+_Allowed Values (Systems.Security.TrustedApplicationsRepository.AccessTokens Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| None | Reference tokens cannot be issued. (Default). Stored as 'NON'. <br /> _Database Value:_ 'NON' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'None' |
+| AuthenticatedUsers | Any authenticated (logged-in) user may issue.. Stored as 'USR'. <br /> _Database Value:_ 'USR' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'AuthenticatedUsers' |
+| AdministratorsOnly | Only administrators may issue.. Stored as 'ADM'. <br /> _Database Value:_ 'ADM' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'AdministratorsOnly' |
+
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **None**  
+_Show in UI_: **ShownByDefault**  
 
 ### ApplicationSecretHash
 

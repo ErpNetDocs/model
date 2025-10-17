@@ -11,6 +11,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 | Name | Type | Description |
 | - | - | --- |
+|[Access_Tokens](#access_tokens)|`char(3)` Allowed: `NON`, `USR`, `ADM`||
 |[Application_Secret_Hash](#application_secret_hash)|`nvarchar(250)` |Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.|
 |[Application_Uri](#application_uri)|`nvarchar(254)` |Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".|
 |[Basic_Authentication_Allowed](#basic_authentication_allowed)|`bit` |If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.|
@@ -31,6 +32,40 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 |[Trusted_Application_Name](#trusted_application_name)|`nvarchar(254)` |The multi-language name of the application.|
 
 ## Columns
+
+### Access_Tokens
+
+| Property | Value |
+| - | - |
+|Allowed Values|`NON`, `USR`, `ADM`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NON|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Access_Tokens - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Application_Secret_Hash
 
