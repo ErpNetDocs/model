@@ -280,6 +280,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Core_NotificationSettings
+
+Domain API Entity Type:
+Systems_Core_NotificationSetting
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Core_NotificationSettings?$top=10>
 

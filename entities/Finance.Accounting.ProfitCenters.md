@@ -261,6 +261,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Accounting_ProfitCenters
+
+Domain API Entity Type:
+Finance_Accounting_ProfitCenter
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_ProfitCenters?$top=10>
 

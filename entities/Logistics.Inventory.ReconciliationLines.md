@@ -410,6 +410,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_ReconciliationLines
+
+Domain API Entity Type:
+Logistics_Inventory_ReconciliationLine
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_ReconciliationLines?$top=10>
 

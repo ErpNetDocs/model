@@ -1096,6 +1096,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Invoicing_InvoiceOrders
+
+Domain API Entity Type:
+Crm_Invoicing_InvoiceOrder
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Invoicing_InvoiceOrders?$top=10>
 

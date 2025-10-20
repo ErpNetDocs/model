@@ -268,6 +268,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Security_AccessKeys
+
+Domain API Entity Type:
+Systems_Security_AccessKey
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_AccessKeys?$top=10>
 

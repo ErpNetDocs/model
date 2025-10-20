@@ -11,7 +11,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 | Name | Type | Description |
 | - | - | --- |
-|[Access_Tokens](#access_tokens)|`char(3)` Allowed: `NON`, `USR`, `ADM`||
+|[Access_Tokens](#access_tokens)|`char(3)` Allowed: `NON`, `USR`, `ADM`|Defines who is allowed to issue reference access tokens for this trusted application.|
 |[Application_Secret_Hash](#application_secret_hash)|`nvarchar(250)` |Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.|
 |[Application_Uri](#application_uri)|`nvarchar(254)` |Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".|
 |[Basic_Authentication_Allowed](#basic_authentication_allowed)|`bit` |If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.|
@@ -34,6 +34,9 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 ## Columns
 
 ### Access_Tokens
+
+
+Defines who is allowed to issue reference access tokens for this trusted application.
 
 | Property | Value |
 | - | - |

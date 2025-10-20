@@ -441,6 +441,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Production_ShopFloor_WorkOrderItemIngredients
+
+Domain API Entity Type:
+Production_ShopFloor_WorkOrderItemIngredient
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Production_ShopFloor_WorkOrderItemIngredients?$top=10>
 

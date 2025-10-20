@@ -380,6 +380,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Core_FormLayouts
+
+Domain API Entity Type:
+Systems_Core_FormLayout
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Core_FormLayouts?$top=10>
 

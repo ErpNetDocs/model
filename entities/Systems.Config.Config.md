@@ -274,6 +274,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Config_Config
+
+Domain API Entity Type:
+Systems_Config
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Config_Config?$top=10>
 

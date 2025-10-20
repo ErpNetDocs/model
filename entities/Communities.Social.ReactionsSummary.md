@@ -99,6 +99,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Communities_Social_ReactionsSummary
+
+Domain API Entity Type:
+Communities_Social_ReactionsSummary
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Communities_Social_ReactionsSummary?$top=10>
 

@@ -240,6 +240,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_AssetManagement_ManagedAssetLocations
+
+Domain API Entity Type:
+Applications_AssetManagement_ManagedAssetLocation
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetLocations?$top=10>
 

@@ -144,6 +144,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Crm_Invoicing_InvoiceOrderLinesUnfulfilledView
+
+Domain API Entity Type:
+Crm_Invoicing_InvoiceOrderLinesUnfulfilledViewEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Invoicing_InvoiceOrderLinesUnfulfilledView?$top=10>
 

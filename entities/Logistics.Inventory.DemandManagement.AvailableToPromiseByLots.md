@@ -151,6 +151,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_DemandManagement_AvailableToPromiseByLots
+
+Domain API Entity Type:
+Logistics_Inventory_DemandManagement_AvailableToPromiseByLotsEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_DemandManagement_AvailableToPromiseByLots?$top=10>
 

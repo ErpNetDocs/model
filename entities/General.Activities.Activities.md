@@ -1131,6 +1131,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Activities_Activities
+
+Domain API Entity Type:
+General_Activities_Activity
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Activities_Activities?$top=10>
 

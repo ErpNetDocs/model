@@ -252,6 +252,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Resources_ResourceInstances
+
+Domain API Entity Type:
+General_Resources_ResourceInstance
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Resources_ResourceInstances?$top=10>
 

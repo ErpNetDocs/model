@@ -476,6 +476,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_PersonalData_PersonalDataProcesses
+
+Domain API Entity Type:
+Applications_PersonalData_PersonalDataProcess
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_PersonalDataProcesses?$top=10>
 

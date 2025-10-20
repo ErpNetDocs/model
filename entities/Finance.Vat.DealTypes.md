@@ -300,6 +300,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Vat_DealTypes
+
+Domain API Entity Type:
+Finance_Vat_DealType
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Vat_DealTypes?$top=10>
 

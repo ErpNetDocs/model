@@ -204,6 +204,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Assets_DepreciationAssets
+
+Domain API Entity Type:
+Finance_Assets_DepreciationAsset
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Assets_DepreciationAssets?$top=10>
 

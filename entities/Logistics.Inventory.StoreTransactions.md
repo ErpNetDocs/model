@@ -1051,6 +1051,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_StoreTransactions
+
+Domain API Entity Type:
+Logistics_Inventory_StoreTransaction
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_StoreTransactions?$top=10>
 

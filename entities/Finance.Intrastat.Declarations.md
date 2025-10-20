@@ -1059,6 +1059,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Intrastat_Declarations
+
+Domain API Entity Type:
+Finance_Intrastat_Declaration
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Intrastat_Declarations?$top=10>
 

@@ -285,6 +285,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Cms_ProductCatalogWebModules
+
+Domain API Entity Type:
+Applications_Cms_ProductCatalogWebModule
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Cms_ProductCatalogWebModules?$top=10>
 

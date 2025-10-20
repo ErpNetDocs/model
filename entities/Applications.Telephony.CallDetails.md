@@ -322,6 +322,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Telephony_CallDetails
+
+Domain API Entity Type:
+Applications_Telephony_CallDetail
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Telephony_CallDetails?$top=10>
 

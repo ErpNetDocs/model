@@ -260,6 +260,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Products_ProductGroupRangeProperties
+
+Domain API Entity Type:
+General_Products_ProductGroupRangeProperty
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroupRangeProperties?$top=10>
 

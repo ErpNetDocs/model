@@ -226,6 +226,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Fleet_VehicleSetVehicles
+
+Domain API Entity Type:
+Applications_Fleet_VehicleSetVehicle
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_VehicleSetVehicles?$top=10>
 

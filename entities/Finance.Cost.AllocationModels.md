@@ -224,6 +224,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Cost_AllocationModels
+
+Domain API Entity Type:
+Finance_Cost_AllocationModel
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Cost_AllocationModels?$top=10>
 

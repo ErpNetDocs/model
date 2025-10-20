@@ -274,6 +274,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Subscriptions_Subscriptions
+
+Domain API Entity Type:
+Crm_Subscriptions_Subscription
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Subscriptions_Subscriptions?$top=10>
 

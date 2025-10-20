@@ -241,6 +241,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Mail_MessageAttachments
+
+Domain API Entity Type:
+Applications_Mail_MessageAttachment
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Mail_MessageAttachments?$top=10>
 

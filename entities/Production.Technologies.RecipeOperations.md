@@ -402,6 +402,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Production_Technologies_RecipeOperations
+
+Domain API Entity Type:
+Production_Technologies_RecipeOperation
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Production_Technologies_RecipeOperations?$top=10>
 

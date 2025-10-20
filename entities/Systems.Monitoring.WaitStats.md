@@ -167,6 +167,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Monitoring_WaitStats
+
+Domain API Entity Type:
+Systems_Monitoring_WaitStatsEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Monitoring_WaitStats?$top=10>
 

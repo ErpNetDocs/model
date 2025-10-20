@@ -919,6 +919,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Payments_BulkPaymentOrders
+
+Domain API Entity Type:
+Finance_Payments_BulkPaymentOrder
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Payments_BulkPaymentOrders?$top=10>
 

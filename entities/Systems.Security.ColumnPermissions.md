@@ -246,6 +246,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Security_ColumnPermissions
+
+Domain API Entity Type:
+Systems_Security_ColumnPermission
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_ColumnPermissions?$top=10>
 

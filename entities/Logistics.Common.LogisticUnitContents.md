@@ -356,6 +356,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Common_LogisticUnitContents
+
+Domain API Entity Type:
+Logistics_Common_LogisticUnitContent
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Common_LogisticUnitContents?$top=10>
 

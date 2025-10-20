@@ -283,6 +283,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Documents_DocumentTypeNotifications
+
+Domain API Entity Type:
+Systems_Documents_DocumentTypeNotification
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Documents_DocumentTypeNotifications?$top=10>
 

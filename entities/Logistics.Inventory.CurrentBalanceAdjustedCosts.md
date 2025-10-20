@@ -163,6 +163,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_CurrentBalanceAdjustedCosts
+
+Domain API Entity Type:
+Logistics_Inventory_CurrentBalanceAdjustedCost
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_CurrentBalanceAdjustedCosts?$top=10>
 

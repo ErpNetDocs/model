@@ -256,6 +256,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Files_Folders
+
+Domain API Entity Type:
+General_Files_Folder
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Files_Folders?$top=10>
 

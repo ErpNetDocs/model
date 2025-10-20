@@ -361,6 +361,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Finance_Accounting_AccountStatement
+
+Domain API Entity Type:
+Finance_Accounting_AccountStatementEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_AccountStatement?$top=10>
 

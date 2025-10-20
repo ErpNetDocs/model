@@ -239,6 +239,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Production_Resources_FunctionGroups
+
+Domain API Entity Type:
+Production_Resources_FunctionGroup
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Production_Resources_FunctionGroups?$top=10>
 

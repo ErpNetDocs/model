@@ -237,6 +237,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Excise_ExciseOperationTypes
+
+Domain API Entity Type:
+Finance_Excise_ExciseOperationType
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Excise_ExciseOperationTypes?$top=10>
 

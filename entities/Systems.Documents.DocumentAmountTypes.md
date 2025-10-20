@@ -449,6 +449,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Documents_DocumentAmountTypes
+
+Domain API Entity Type:
+Systems_Documents_DocumentAmountType
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Documents_DocumentAmountTypes?$top=10>
 

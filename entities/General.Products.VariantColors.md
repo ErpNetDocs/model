@@ -221,6 +221,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Products_VariantColors
+
+Domain API Entity Type:
+General_Products_VariantColor
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Products_VariantColors?$top=10>
 

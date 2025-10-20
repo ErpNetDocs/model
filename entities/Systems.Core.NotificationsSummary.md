@@ -133,6 +133,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Core_NotificationsSummary
+
+Domain API Entity Type:
+Systems_Core_NotificationsSummary
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Core_NotificationsSummary?$top=10>
 

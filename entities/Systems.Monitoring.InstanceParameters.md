@@ -66,6 +66,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Monitoring_InstanceParameters
+
+Domain API Entity Type:
+Systems_Monitoring_InstanceParametersEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Monitoring_InstanceParameters?$top=10>
 

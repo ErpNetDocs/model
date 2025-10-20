@@ -274,6 +274,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_AssetManagement_MaintenanceOrderLines
+
+Domain API Entity Type:
+Applications_AssetManagement_MaintenanceOrderLine
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_MaintenanceOrderLines?$top=10>
 

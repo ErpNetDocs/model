@@ -454,6 +454,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Pricing_ProductPrices
+
+Domain API Entity Type:
+Crm_Pricing_ProductPrice
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Pricing_ProductPrices?$top=10>
 

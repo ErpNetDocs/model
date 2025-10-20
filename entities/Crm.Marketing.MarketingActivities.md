@@ -1168,6 +1168,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Marketing_MarketingActivities
+
+Domain API Entity Type:
+Crm_Marketing_MarketingActivity
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Marketing_MarketingActivities?$top=10>
 

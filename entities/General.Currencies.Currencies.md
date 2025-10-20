@@ -242,6 +242,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Currencies_Currencies
+
+Domain API Entity Type:
+General_Currencies_Currency
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Currencies_Currencies?$top=10>
 

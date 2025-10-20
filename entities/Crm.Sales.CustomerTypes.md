@@ -253,6 +253,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Sales_CustomerTypes
+
+Domain API Entity Type:
+Crm_Sales_CustomerType
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Sales_CustomerTypes?$top=10>
 

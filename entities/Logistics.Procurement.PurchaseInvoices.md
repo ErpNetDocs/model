@@ -1231,6 +1231,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Procurement_PurchaseInvoices
+
+Domain API Entity Type:
+Logistics_Procurement_PurchaseInvoice
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseInvoices?$top=10>
 

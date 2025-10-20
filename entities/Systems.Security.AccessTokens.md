@@ -34,7 +34,7 @@ Aggregate Tree
 | [Actor](Systems.Security.AccessTokens.md#actor) | string (128) __nullable__ | For whom the token was issued (might be user email). `Filter(multi eq)` 
 | [Client](Systems.Security.AccessTokens.md#client) | string (128) __nullable__ | The client application. `Filter(multi eq)` 
 | [ConsumedTimestamp](Systems.Security.AccessTokens.md#consumedtimestamp) | datetime __nullable__ | When it was used up (for one-time grants). `Filter(ge;le)` 
-| [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)` 
+| [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` 
 | [Data](Systems.Security.AccessTokens.md#data) | string (max) __nullable__ | Token contents. 
 | [Description](Systems.Security.AccessTokens.md#description) | string (128) __nullable__ | The description of this AccessToken. 
 | [DisplayText](Systems.Security.AccessTokens.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
@@ -42,7 +42,9 @@ Aggregate Tree
 | [ExternalId](Systems.Security.AccessTokens.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Systems.Security.AccessTokens.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Security.AccessTokens.md#id) | guid |  
+| [LastUsedTimestamp](Systems.Security.AccessTokens.md#lastusedtimestamp) | datetime __nullable__ | Indicates when the token was last used. `Filter(ge;le)` `Introduced in version 26.2.0.18` 
 | [ObjectVersion](Systems.Security.AccessTokens.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [Scopes](Systems.Security.AccessTokens.md#scopes) | string (256) __nullable__ | Space-separated list of permissions granted to this token. `Introduced in version 26.2.0.18` 
 | [Session](Systems.Security.AccessTokens.md#session) | string (128) __nullable__ | Session parameter. `Filter(multi eq)` 
 | [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc. `Required` 
 
@@ -102,12 +104,12 @@ _Show in UI_: **ShownByDefault**
 
 ### CreationTimestamp
 
-When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)`
+When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD`
 
 _Type_: **datetime**  
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Default Value_: **CurrentDateTimeUtc**  
 _Show in UI_: **ShownByDefault**  
 
@@ -182,6 +184,16 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 _Show in UI_: **ShownByDefault**  
 
+### LastUsedTimestamp
+
+Indicates when the token was last used. `Filter(ge;le)` `Introduced in version 26.2.0.18`
+
+_Type_: **datetime __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
 ### ObjectVersion
 
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
@@ -191,6 +203,17 @@ _Category_: **Extensible Data Object**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### Scopes
+
+Space-separated list of permissions granted to this token. `Introduced in version 26.2.0.18`
+
+_Type_: **string (256) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **256**  
+_Show in UI_: **ShownByDefault**  
 
 ### Session
 
@@ -340,6 +363,12 @@ _Domain API Request_: **POST**
 [!list limit=1000 erp.entity=Systems.Security.AccessTokens erp.type=front-end-business-rule default-text="None"]
 
 ## API
+
+Domain API Entity Set:
+Systems_Security_AccessTokens
+
+Domain API Entity Type:
+Systems_Security_AccessToken
 
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_AccessTokens?$top=10>

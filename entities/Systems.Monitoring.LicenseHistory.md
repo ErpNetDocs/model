@@ -134,6 +134,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Monitoring_LicenseHistory
+
+Domain API Entity Type:
+Systems_Monitoring_LicenseHistoryEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Monitoring_LicenseHistory?$top=10>
 

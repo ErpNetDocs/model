@@ -959,6 +959,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Service_ServiceAgreements
+
+Domain API Entity Type:
+Applications_Service_ServiceAgreement
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Service_ServiceAgreements?$top=10>
 

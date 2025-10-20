@@ -320,6 +320,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_PersonalData_DataSubjectRightRequests
+
+Domain API Entity Type:
+Applications_PersonalData_DataSubjectRightRequest
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_DataSubjectRightRequests?$top=10>
 

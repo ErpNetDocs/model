@@ -306,6 +306,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Marketing_CompanySizeClasses
+
+Domain API Entity Type:
+Crm_Marketing_CompanySizeClass
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Marketing_CompanySizeClasses?$top=10>
 

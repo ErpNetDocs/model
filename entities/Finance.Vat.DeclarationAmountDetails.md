@@ -99,6 +99,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Finance_Vat_DeclarationAmountDetails
+
+Domain API Entity Type:
+Finance_Vat_DeclarationAmountDetail
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Vat_DeclarationAmountDetails?$top=10>
 

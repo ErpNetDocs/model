@@ -253,6 +253,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Vat_DeclarationLines
+
+Domain API Entity Type:
+Finance_Vat_DeclarationLine
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Vat_DeclarationLines?$top=10>
 

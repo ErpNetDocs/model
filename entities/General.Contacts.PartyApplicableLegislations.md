@@ -257,6 +257,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Contacts_PartyApplicableLegislations
+
+Domain API Entity Type:
+General_Contacts_PartyApplicableLegislation
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Contacts_PartyApplicableLegislations?$top=10>
 

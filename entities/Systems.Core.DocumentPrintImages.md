@@ -243,6 +243,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Core_DocumentPrintImages
+
+Domain API Entity Type:
+Systems_Core_DocumentPrintImage
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Core_DocumentPrintImages?$top=10>
 

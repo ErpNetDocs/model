@@ -921,6 +921,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Payments_InvoiceReconciliations
+
+Domain API Entity Type:
+Finance_Payments_InvoiceReconciliation
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Payments_InvoiceReconciliations?$top=10>
 

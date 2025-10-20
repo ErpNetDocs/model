@@ -251,6 +251,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Documents_DocumentComments
+
+Domain API Entity Type:
+General_Documents_DocumentComment
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Documents_DocumentComments?$top=10>
 

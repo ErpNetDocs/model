@@ -402,6 +402,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Documents_Printouts
+
+Domain API Entity Type:
+Systems_Documents_Printout
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Documents_Printouts?$top=10>
 

@@ -973,6 +973,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Shipment_Shipments
+
+Domain API Entity Type:
+Logistics_Shipment
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Shipment_Shipments?$top=10>
 

@@ -224,6 +224,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Bpm_PropertyEnterpriseCompanyFilters
+
+Domain API Entity Type:
+Systems_Bpm_PropertyEnterpriseCompanyFilter
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_PropertyEnterpriseCompanyFilters?$top=10>
 

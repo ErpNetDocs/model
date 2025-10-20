@@ -378,6 +378,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Exchange_DataExchanges
+
+Domain API Entity Type:
+Systems_Exchange_DataExchange
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Exchange_DataExchanges?$top=10>
 

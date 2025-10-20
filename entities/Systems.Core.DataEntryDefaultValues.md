@@ -317,6 +317,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Core_DataEntryDefaultValues
+
+Domain API Entity Type:
+Systems_Core_DataEntryDefaultValue
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Core_DataEntryDefaultValues?$top=10>
 

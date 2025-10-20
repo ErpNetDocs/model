@@ -20,7 +20,9 @@ It keeps track of "grants" issued by Identity Server - Personal Access Tokens (P
 |[Data](#data)|`nvarchar(max)` |Token contents|
 |[Description](#description)|`nvarchar(128)` ||
 |[Expire_Timestamp](#expire_timestamp)|`datetime` |When the token expires|
+|[Last_Used_Timestamp](#last_used_timestamp)|`datetime` |Indicates when the token was last used.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Scopes](#scopes)|`nvarchar(256)` |Space-separated list of permissions granted to this token.|
 |[Session](#session)|`nvarchar(128)` |Session parameter|
 |[Trusted_Application_Id](#trusted_application_id)|`uniqueidentifier` |Sec_Trusted_Applications // Matched trusted application (from Client)|
 |[Type](#type)|`nvarchar(64)` |Type of the token - reference_token, refresh_token, etc.|
@@ -226,7 +228,7 @@ When the token was created
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|datetime|
@@ -334,6 +336,42 @@ When the token expires
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
+### Last_Used_Timestamp
+
+
+Indicates when the token was last used.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Last_Used_Timestamp - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -360,6 +398,36 @@ When the token expires
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Scopes
+
+
+Space-separated list of permissions granted to this token.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|256|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(256) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Session
 

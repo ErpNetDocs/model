@@ -252,6 +252,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Sales_CustomerExternalAccess
+
+Domain API Entity Type:
+Crm_Sales_CustomerExternalAcces
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Sales_CustomerExternalAccess?$top=10>
 

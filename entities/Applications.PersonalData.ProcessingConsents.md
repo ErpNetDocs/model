@@ -432,6 +432,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_PersonalData_ProcessingConsents
+
+Domain API Entity Type:
+Applications_PersonalData_ProcessingConsent
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_PersonalData_ProcessingConsents?$top=10>
 

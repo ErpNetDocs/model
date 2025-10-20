@@ -148,6 +148,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Monitoring_ProcedureStatusInfo
+
+Domain API Entity Type:
+Systems_Monitoring_ProcedureStatusInfoEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Monitoring_ProcedureStatusInfo?$top=10>
 

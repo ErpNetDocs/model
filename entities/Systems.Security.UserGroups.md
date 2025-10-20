@@ -204,6 +204,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Security_UserGroups
+
+Domain API Entity Type:
+Systems_Security_UserGroup
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_UserGroups?$top=10>
 

@@ -81,6 +81,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Core_AttributeChanges
+
+Domain API Entity Type:
+Systems_Core_AttributeChange
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Core_AttributeChanges?$top=10>
 

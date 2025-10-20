@@ -418,6 +418,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_TransferOrderLines
+
+Domain API Entity Type:
+Logistics_Inventory_TransferOrderLine
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_TransferOrderLines?$top=10>
 

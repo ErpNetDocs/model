@@ -279,6 +279,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Security_VisualPermissions
+
+Domain API Entity Type:
+Systems_Security_VisualPermission
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_VisualPermissions?$top=10>
 

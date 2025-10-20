@@ -373,6 +373,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Mail_Boxes
+
+Domain API Entity Type:
+Applications_Mail_Box
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Mail_Boxes?$top=10>
 

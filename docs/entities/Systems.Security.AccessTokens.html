@@ -139,7 +139,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#creationtimestamp">CreationTimestamp</a></td>
 <td>datetime</td>
-<td>When the token was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></td>
+<td>When the token was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#data">Data</a></td>
@@ -177,9 +177,19 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.AccessTokens.html#lastusedtimestamp">LastUsedTimestamp</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Indicates when the token was last used. <code>Filter(ge;le)</code> <code>Introduced in version 26.2.0.18</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.AccessTokens.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.AccessTokens.html#scopes">Scopes</a></td>
+<td>string (256) <strong>nullable</strong></td>
+<td>Space-separated list of permissions granted to this token. <code>Introduced in version 26.2.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#session">Session</a></td>
@@ -249,11 +259,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimestamp">CreationTimestamp</h3>
-<p>When the token was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></p>
+<p>When the token was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="data">Data</h3>
@@ -307,6 +317,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="lastusedtimestamp">LastUsedTimestamp</h3>
+<p>Indicates when the token was last used. <code>Filter(ge;le)</code> <code>Introduced in version 26.2.0.18</code></p>
+<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -314,6 +331,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="scopes">Scopes</h3>
+<p>Space-separated list of permissions granted to this token. <code>Introduced in version 26.2.0.18</code></p>
+<p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>256</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="session">Session</h3>
 <p>Session parameter. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
@@ -457,6 +482,10 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <p>None</p>
 <h2 id="api">API</h2>
+<p>Domain API Entity Set:
+Systems_Security_AccessTokens</p>
+<p>Domain API Entity Type:
+Systems_Security_AccessToken</p>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Security_AccessTokens?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Security_AccessTokens?$top=10</a></p>
 <p>Domain API Query Builder:

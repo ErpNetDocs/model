@@ -300,6 +300,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Projects_Agile_CaseDevelopments
+
+Domain API Entity Type:
+Projects_Agile_CaseDevelopment
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Projects_Agile_CaseDevelopments?$top=10>
 

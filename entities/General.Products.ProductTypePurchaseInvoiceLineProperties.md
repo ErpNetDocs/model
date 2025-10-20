@@ -232,6 +232,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Products_ProductTypePurchaseInvoiceLineProperties
+
+Domain API Entity Type:
+General_Products_ProductTypePurchaseInvoiceLineProperty
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Products_ProductTypePurchaseInvoiceLineProperties?$top=10>
 

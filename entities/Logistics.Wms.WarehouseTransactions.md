@@ -448,6 +448,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Wms_WarehouseTransactions
+
+Domain API Entity Type:
+Logistics_Wms_WarehouseTransaction
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseTransactions?$top=10>
 

@@ -474,6 +474,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_External_PublicUsers
+
+Domain API Entity Type:
+Systems_External_PublicUser
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_External_PublicUsers?$top=10>
 

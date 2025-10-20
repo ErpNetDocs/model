@@ -342,6 +342,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Bpm_Processes
+
+Domain API Entity Type:
+Systems_Bpm_Process
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_Processes?$top=10>
 

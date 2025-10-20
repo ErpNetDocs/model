@@ -376,6 +376,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Procurement_PurchaseProductPrices
+
+Domain API Entity Type:
+Logistics_Procurement_PurchaseProductPrice
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_PurchaseProductPrices?$top=10>
 

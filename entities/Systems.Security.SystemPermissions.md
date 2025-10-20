@@ -76,6 +76,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Security_SystemPermissions
+
+Domain API Entity Type:
+Systems_Security_SystemPermissionsEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_SystemPermissions?$top=10>
 

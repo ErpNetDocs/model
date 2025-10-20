@@ -289,6 +289,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Activities_ActivityTemplates
+
+Domain API Entity Type:
+General_Activities_ActivityTemplate
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Activities_ActivityTemplates?$top=10>
 

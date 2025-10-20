@@ -250,6 +250,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Intrastat_CommodityCodes
+
+Domain API Entity Type:
+Finance_Intrastat_CommodityCode
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Intrastat_CommodityCodes?$top=10>
 

@@ -215,6 +215,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Projects_Agile_CaseCategoryRelationships
+
+Domain API Entity Type:
+Projects_Agile_CaseCategoryRelationship
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Projects_Agile_CaseCategoryRelationships?$top=10>
 

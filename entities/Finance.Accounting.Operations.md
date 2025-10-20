@@ -917,6 +917,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Finance_Accounting_Operations
+
+Domain API Entity Type:
+Finance_Accounting_Operation
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_Operations?$top=10>
 

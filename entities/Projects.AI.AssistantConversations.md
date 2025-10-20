@@ -270,6 +270,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Projects_AI_AssistantConversations
+
+Domain API Entity Type:
+Projects_AI_AssistantConversation
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Projects_AI_AssistantConversations?$top=10>
 

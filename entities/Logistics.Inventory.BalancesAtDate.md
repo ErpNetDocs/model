@@ -173,6 +173,12 @@ _Show in UI_: **HiddenByDefault**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_BalancesAtDate
+
+Domain API Entity Type:
+Logistics_Inventory_BalancesAtDateEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_BalancesAtDate?$top=10>
 

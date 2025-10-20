@@ -297,6 +297,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Security_UserDevices
+
+Domain API Entity Type:
+Systems_Security_UserDevice
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Security_UserDevices?$top=10>
 

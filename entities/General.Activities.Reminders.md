@@ -249,6 +249,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Activities_Reminders
+
+Domain API Entity Type:
+General_Activities_Reminder
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Activities_Reminders?$top=10>
 

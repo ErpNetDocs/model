@@ -258,6 +258,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Contacts_ContactMechanismPurposes
+
+Domain API Entity Type:
+General_Contacts_ContactMechanismPurpose
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Contacts_ContactMechanismPurposes?$top=10>
 

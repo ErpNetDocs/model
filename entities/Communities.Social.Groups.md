@@ -237,6 +237,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Communities_Social_Groups
+
+Domain API Entity Type:
+Communities_Social_Group
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Communities_Social_Groups?$top=10>
 

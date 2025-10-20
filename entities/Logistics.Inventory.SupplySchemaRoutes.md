@@ -254,6 +254,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Logistics_Inventory_SupplySchemaRoutes
+
+Domain API Entity Type:
+Logistics_Inventory_SupplySchemaRoute
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_SupplySchemaRoutes?$top=10>
 

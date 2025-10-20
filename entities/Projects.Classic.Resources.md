@@ -217,6 +217,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Projects_Classic_Resources
+
+Domain API Entity Type:
+Projects_Classic_Resource
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Projects_Classic_Resources?$top=10>
 

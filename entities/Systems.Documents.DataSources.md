@@ -267,6 +267,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Documents_DataSources
+
+Domain API Entity Type:
+Systems_Documents_DataSource
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Documents_DataSources?$top=10>
 

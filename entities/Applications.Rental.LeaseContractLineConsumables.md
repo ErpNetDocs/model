@@ -252,6 +252,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Applications_Rental_LeaseContractLineConsumables
+
+Domain API Entity Type:
+Applications_Rental_LeaseContractLineConsumable
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Applications_Rental_LeaseContractLineConsumables?$top=10>
 

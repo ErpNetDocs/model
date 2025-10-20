@@ -344,6 +344,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Bpm_UserBusinessRules
+
+Domain API Entity Type:
+Systems_Bpm_UserBusinessRule
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRules?$top=10>
 

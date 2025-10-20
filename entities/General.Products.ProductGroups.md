@@ -477,6 +477,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+General_Products_ProductGroups
+
+Domain API Entity Type:
+General_Products_ProductGroup
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroups?$top=10>
 

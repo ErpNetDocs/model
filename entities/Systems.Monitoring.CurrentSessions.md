@@ -167,6 +167,12 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
+Domain API Entity Set:
+Systems_Monitoring_CurrentSessions
+
+Domain API Entity Type:
+Systems_Monitoring_CurrentSessionsEntry
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Monitoring_CurrentSessions?$top=10>
 

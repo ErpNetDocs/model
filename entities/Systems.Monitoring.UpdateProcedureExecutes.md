@@ -249,6 +249,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Systems_Monitoring_UpdateProcedureExecutes
+
+Domain API Entity Type:
+Systems_Monitoring_UpdateProcedureExecute
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Systems_Monitoring_UpdateProcedureExecutes?$top=10>
 

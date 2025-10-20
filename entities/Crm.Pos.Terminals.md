@@ -267,6 +267,12 @@ _Domain API Request_: **POST**
 
 ## API
 
+Domain API Entity Set:
+Crm_Pos_Terminals
+
+Domain API Entity Type:
+Crm_Pos_Terminal
+
 Domain API Query:
 <https://demodb.my.erp.net/api/domain/odata/Crm_Pos_Terminals?$top=10>
 
