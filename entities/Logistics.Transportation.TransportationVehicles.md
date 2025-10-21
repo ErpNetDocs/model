@@ -291,15 +291,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Logistics_Transportation_TransportationVehicles
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Logistics_Transportation_TransportationVehicle
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Logistics_Transportation_TransportationVehicles?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Logistics_Transportation_TransportationVehicles?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Transportation_TransportationVehicles?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Logistics_Transportation_TransportationVehicles?$top=10>
 

@@ -962,15 +962,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Logistics_Inventory_CostCorrections
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Logistics_Inventory_CostCorrection
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Logistics_Inventory_CostCorrections?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Logistics_Inventory_CostCorrections?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrections?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Logistics_Inventory_CostCorrections?$top=10>
 

@@ -160,15 +160,15 @@ _Show in UI_: **ShownByDefault**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Finance_Accounting_HistoricalBalances
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Finance_Accounting_HistoricalBalancesEntry
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_HistoricalBalances?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Finance_Accounting_HistoricalBalances?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_HistoricalBalances?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Finance_Accounting_HistoricalBalances?$top=10>
 

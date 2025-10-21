@@ -269,15 +269,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Systems_Bpm_UserBusinessRuleConditions
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Systems_Bpm_UserBusinessRuleCondition
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleConditions?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Systems_Bpm_UserBusinessRuleConditions?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleConditions?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Systems_Bpm_UserBusinessRuleConditions?$top=10>
 

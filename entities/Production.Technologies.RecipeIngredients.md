@@ -357,15 +357,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Production_Technologies_RecipeIngredients
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Production_Technologies_RecipeIngredient
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Production_Technologies_RecipeIngredients?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Production_Technologies_RecipeIngredients?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Production_Technologies_RecipeIngredients?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Production_Technologies_RecipeIngredients?$top=10>
 

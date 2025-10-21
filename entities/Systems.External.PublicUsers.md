@@ -474,15 +474,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Systems_External_PublicUsers
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Systems_External_PublicUser
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Systems_External_PublicUsers?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Systems_External_PublicUsers?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Systems_External_PublicUsers?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Systems_External_PublicUsers?$top=10>
 

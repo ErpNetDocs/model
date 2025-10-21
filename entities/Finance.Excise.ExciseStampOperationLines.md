@@ -327,15 +327,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Finance_Excise_ExciseStampOperationLines
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Finance_Excise_ExciseStampOperationLine
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Finance_Excise_ExciseStampOperationLines?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Finance_Excise_ExciseStampOperationLines?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Finance_Excise_ExciseStampOperationLines?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Finance_Excise_ExciseStampOperationLines?$top=10>
 

@@ -226,15 +226,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Projects_Classic_ProjectTaskDependancies
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Projects_Classic_ProjectTaskDependancy
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Projects_Classic_ProjectTaskDependancies?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Projects_Classic_ProjectTaskDependancies?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Projects_Classic_ProjectTaskDependancies?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Projects_Classic_ProjectTaskDependancies?$top=10>
 

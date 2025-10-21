@@ -952,15 +952,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Finance_Excise_ExciseDeclarations
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Finance_Excise_ExciseDeclaration
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Finance_Excise_ExciseDeclarations?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Finance_Excise_ExciseDeclarations?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Finance_Excise_ExciseDeclarations?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Finance_Excise_ExciseDeclarations?$top=10>
 

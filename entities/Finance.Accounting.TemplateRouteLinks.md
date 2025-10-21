@@ -204,15 +204,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Finance_Accounting_TemplateRouteLinks
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Finance_Accounting_TemplateRouteLink
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_TemplateRouteLinks?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Finance_Accounting_TemplateRouteLinks?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TemplateRouteLinks?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Finance_Accounting_TemplateRouteLinks?$top=10>
 

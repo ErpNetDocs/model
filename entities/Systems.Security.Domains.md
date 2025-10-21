@@ -249,15 +249,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Systems_Security_Domains
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Systems_Security_Domain
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Systems_Security_Domains?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Systems_Security_Domains?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Systems_Security_Domains?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Systems_Security_Domains?$top=10>
 

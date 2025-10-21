@@ -973,15 +973,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Logistics_Shipment_Shipments
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Logistics_Shipment
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Logistics_Shipment_Shipments?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Logistics_Shipment_Shipments?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_Shipments?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Logistics_Shipment_Shipments?$top=10>
 

@@ -233,15 +233,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Finance_Payments_PaymentSlipLines
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Finance_Payments_PaymentSlipLine
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Finance_Payments_PaymentSlipLines?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Finance_Payments_PaymentSlipLines?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipLines?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Finance_Payments_PaymentSlipLines?$top=10>
 

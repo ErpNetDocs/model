@@ -565,15 +565,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Applications_Fleet_Vehicles
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Applications_Fleet_Vehicle
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Applications_Fleet_Vehicles?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Applications_Fleet_Vehicles?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Applications_Fleet_Vehicles?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Applications_Fleet_Vehicles?$top=10>
 

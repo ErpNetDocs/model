@@ -302,15 +302,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Projects_Agile_Sprints
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Projects_Agile_Sprint
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Projects_Agile_Sprints?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Projects_Agile_Sprints?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Projects_Agile_Sprints?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Projects_Agile_Sprints?$top=10>
 

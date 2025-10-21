@@ -254,15 +254,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Communities_Social_Comments
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Communities_Social_Comment
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Communities_Social_Comments?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Communities_Social_Comments?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Communities_Social_Comments?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Communities_Social_Comments?$top=10>
 

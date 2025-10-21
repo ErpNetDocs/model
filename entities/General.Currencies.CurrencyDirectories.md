@@ -974,15 +974,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 General_Currencies_CurrencyDirectories
 
-Domain API Entity Type:
+Domain API Entity Type: 
 General_Currencies_CurrencyDirectory
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/General_Currencies_CurrencyDirectories?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/General_Currencies_CurrencyDirectories?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#General_Currencies_CurrencyDirectories?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#General_Currencies_CurrencyDirectories?$top=10>
 

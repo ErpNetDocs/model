@@ -321,15 +321,15 @@ _Domain API Request_: **POST**
 
 ## API
 
-Domain API Entity Set:
+Domain API Entity Set: 
 Applications_AssetManagement_ManagedAssets
 
-Domain API Entity Type:
+Domain API Entity Type: 
 Applications_AssetManagement_ManagedAsset
 
 Domain API Query:
-<https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssets?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssets?$top=10>
 
 Domain API Query Builder:
-<https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssets?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssets?$top=10>
 
