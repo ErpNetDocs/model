@@ -125,7 +125,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>For each VoucherLine in the current document, validates that: <br> •	If (Account.LimitToBaseCurrency == FALSE), AND (Account.Currency = NULL) then Currency = any value <br> •	If (Account.LimitToBaseCurrency == FALSE), AND (Account.Currency != NULL) then Currency = AccountCurrency <br>•	If (Account.LimitToBaseCurrency == TRUE), then Currency = EnterpriseCompany.BaseCurrency OR EnterpriseCompany.ReportingCurrency <br> OR IF (InstanceChangeRequest.ChangeKind = 'BaseCurrencyChange') <br> AND (InstanceChangeRequest.BaseCurrencyChange = 'Scheduled') <br> then Currency = InstanceChangeRequest.NewValueCurrency</td>
+<td>For each VoucherLine in the current document, validates that: <br> •	If (Account.LimitToBaseCurrency == FALSE), AND (Account.Currency = NULL) then Currency = any value <br> •	If (Account.LimitToBaseCurrency == FALSE), AND (Account.Currency != NULL) then Currency = Account.Currency <br>•	If (Account.LimitToBaseCurrency == TRUE), then Currency = EnterpriseCompany.BaseCurrency <br> OR EnterpriseCompany.ReportingCurrency <br> OR If (InstanceChangeRequest.ChangeKind = 'BaseCurrencyChange') <br> AND (InstanceChangeRequest.BaseCurrencyChange = 'Scheduled') <br> then Currency = InstanceChangeRequest.NewValueCurrency</td>
 </tr>
 <tr>
 <td>Description</td>
