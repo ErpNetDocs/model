@@ -263,6 +263,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Specifies the state of the document.</td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#tasktype">TaskType</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html#tasktype">TaskType</a> <strong>nullable</strong></td>
+<td>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.28</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#void">Void</a></td>
 <td>boolean</td>
 <td>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
@@ -715,6 +720,85 @@ Enumeration of document system states<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="tasktype">TaskType</h3>
+<p>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.28</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html#tasktype">TaskType</a> <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrders.md#tasktype) data attribute<br>
+<em>Allowed Values (Logistics.Wms.WarehouseOrdersRepository.TaskType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Receive</td>
+<td>Receive value. Stored as 'REC'. <br> <em>Database Value:</em> 'REC' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Receive'</td>
+</tr>
+<tr>
+<td>Dispatch</td>
+<td>Dispatch value. Stored as 'DIS'. <br> <em>Database Value:</em> 'DIS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Dispatch'</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Move value. Stored as 'MOV'. <br> <em>Database Value:</em> 'MOV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Move'</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Label value. Stored as 'LBL'. <br> <em>Database Value:</em> 'LBL' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Label'</td>
+</tr>
+<tr>
+<td>Inspect</td>
+<td>Inspect value. Stored as 'INS'. <br> <em>Database Value:</em> 'INS' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Inspect'</td>
+</tr>
+<tr>
+<td>Pack</td>
+<td>Pack value. Stored as 'PCK'. <br> <em>Database Value:</em> 'PCK' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Pack'</td>
+</tr>
+<tr>
+<td>Unpack</td>
+<td>Unpack value. Stored as 'UPK'. <br> <em>Database Value:</em> 'UPK' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Unpack'</td>
+</tr>
+<tr>
+<td>Kit</td>
+<td>Kit value. Stored as 'KIT'. <br> <em>Database Value:</em> 'KIT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'Kit'</td>
+</tr>
+<tr>
+<td>Dekit</td>
+<td>Dekit value. Stored as 'DKT'. <br> <em>Database Value:</em> 'DKT' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'Dekit'</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>Count value. Stored as 'CNT'. <br> <em>Database Value:</em> 'CNT' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'Count'</td>
+</tr>
+<tr>
+<td>UserTask</td>
+<td>UserTask value. Stored as 'TSK'. <br> <em>Database Value:</em> 'TSK' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'UserTask'</td>
+</tr>
+<tr>
+<td>ComponentDispatch</td>
+<td>ComponentDispatch value. Stored as 'CDP'. <br> <em>Database Value:</em> 'CDP' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'ComponentDispatch'</td>
+</tr>
+<tr>
+<td>ComponentReceive</td>
+<td>ComponentReceive value. Stored as 'CRC'. <br> <em>Database Value:</em> 'CRC' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'ComponentReceive'</td>
+</tr>
+<tr>
+<td>Assemble</td>
+<td>Assemble value. Stored as 'ASM'. <br> <em>Database Value:</em> 'ASM' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'Assemble'</td>
+</tr>
+<tr>
+<td>Disassemble</td>
+<td>Disassemble value. Stored as 'DSM'. <br> <em>Database Value:</em> 'DSM' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'Disassemble'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
