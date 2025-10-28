@@ -158,7 +158,7 @@ Member role in a group. Defaults to member.
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|char(1)|
 |UI Memo Editor|no|
 |UI Width|Medium|
