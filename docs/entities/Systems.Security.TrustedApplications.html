@@ -135,7 +135,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationuri">ApplicationUri</a></td>
 <td>string (254)</td>
-<td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#basicauthenticationallowed">BasicAuthenticationAllowed</a></td>
@@ -305,11 +305,12 @@ Allowed values for the <code>AccessTokens</code>(Systems.Security.TrustedApplica
 <em>Maximum Length</em>: <strong>250</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="applicationuri">ApplicationUri</h3>
-<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>254</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="basicauthenticationallowed">BasicAuthenticationAllowed</h3>
