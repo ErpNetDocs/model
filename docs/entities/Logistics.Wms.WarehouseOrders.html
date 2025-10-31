@@ -799,6 +799,8 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrders.md#ta
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; WarehouseOrderLinesRepository.TaskTypeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>

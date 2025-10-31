@@ -438,6 +438,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => WarehouseOrderLinesRepository.TaskTypeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### Void
 
 True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))

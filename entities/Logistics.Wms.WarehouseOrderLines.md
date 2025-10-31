@@ -224,6 +224,11 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Show in UI_: **HiddenByDefault**  
 
+_Back-End Default Expression:_  
+`obj.WarehouseOrder.TaskType`
+
+_Front-End Recalc Expressions:_  
+`obj.WarehouseOrder.TaskType`
 
 ## Reference Details
 
