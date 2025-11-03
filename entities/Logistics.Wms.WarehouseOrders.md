@@ -413,8 +413,8 @@ The type of the task (operation), which should be performed. REC=Receive; DIS=Di
 
 _Type_: **[TaskType](Logistics.Wms.WarehouseOrders.md#tasktype) __nullable__**  
 _Category_: **System**  
-Allowed values for the `TaskType`(Logistics.Wms.WarehouseOrders.md#tasktype) data attribute  
-_Allowed Values (Logistics.Wms.WarehouseOrdersRepository.TaskType Enum Members)_  
+Allowed values for the `TaskType`(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute  
+_Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
