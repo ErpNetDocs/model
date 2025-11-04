@@ -125,17 +125,26 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>if (AccountingVoucherLine.Currency == EnterpriseCompany.BaseCurrency)
+<td>if (AccountingVoucherLine.Currency == EnterpriseCompany.BaseCurrency
+&amp;&amp; Config.AllowBaseCurrencyLineAmountMismatch = False)
 <br><br>
 Debit = DebitBase
 <br><br>
-Credit = CreditBase</td>
+Credit = CreditBase
+<br><br>
+if (AccountingVoucherLine.Currency == EnterpriseCompany.BaseCurrency
+&amp;&amp; Config.AllowBaseCurrencyLineAmountMismatch = True)
+<br><br>
+Debit != DebitBase
+<br><br>
+Credit != CreditBase</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>If the currency in the particular voucher line is the base currency, then the amount in Debit
 must be the same as the amount in Debit Base and also then the amount in Credit must be the
-same as the amount in Credit Base</td>
+same as the amount in Credit Base
+(only when config option AllowBaseCurrencyLineAmountMismatch is false )</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -152,7 +161,10 @@ then Debit must equal Debit Base and Credit must equal Credit Base.
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2019.1</td>
+<td>2019.1
+Updated 26.1 - If the config option AllowBaseCurrencyLineAmountMismatch is false —
+i.e. do not allow differences
+between the amounts in Debit/DebitBase and Credit/CreditBase when Currency == BaseCurrency.</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

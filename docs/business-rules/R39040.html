@@ -133,15 +133,15 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>Validates that: <br> If (Account != null) AND (Account.Currency !=  null) AND (Account.LimitToBaseCurrency = False) THEN (Currency == Account.Currency) <br> If (Account != null) AND (Account.LimitToBaseCurrency = TRUE) THEN (Currency = AccountingVoucher.EnterpriseCompany.BaseCurrency OR AccountingVoucher.EnterpriseCompany.ReportingCurrency)</td>
+<td>Validates that: <br> If (Account != null) AND (Account.Currency !=  null) AND (Account.LimitToBaseCurrency = False) THEN (Currency == Account.Currency) <br> If (Account != null) AND (Account.LimitToBaseCurrency = TRUE) THEN (Currency = AccountingVoucher.EnterpriseCompany.BaseCurrency OR AccountingVoucher.EnterpriseCompany.ReportingCurrency) <br> OR If (InstanceChangeRequest.ChangeKind = 'BaseCurrencyChange') AND (InstanceChangeRequest.BaseCurrencyChange = 'Scheduled') THEN (AccountingVoucherLines.Currency = InstanceChangeRequest.NewValueCurrency)</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>If the Account specified in Voucher Lines does not have the 'Limit to base currency' enabled, then the Currency in the Accounting Voucher Line must match the specified Account Currency (if any). <br> However, if the 'Limit to base currency' is enabled, then the Currency used in the Accounting Voucher Line must be either the Enterprise Company's Base Currency or Reporting Currency.</td>
+<td>If the Account specified in Voucher Lines does not have the 'Limit to base currency' enabled, then the Currency in the Accounting Voucher Line must match the specified Account Currency (if any). <br> However, if the 'Limit to base currency' is enabled, then the Currency used in the Accounting Voucher Line must be either the Enterprise Company's Base Currency, Reporting Currency or if there is a record of Instance Change Request where the ChangeKind is ‘BaseCurrencyChange’ and its state is ‘Scheduled’ then Currency can be equal to the New Value Currency.</td>
 </tr>
 <tr>
 <td>Message</td>
-<td>The selected Currency is invalid. <br> This account allows only '{Account.Currency}' or, if limited to base currency, the enterprise company's Base '{AccountingVoucher.EnterpriseCompany.BaseCurrency}' or Reporting '{AccountingVoucher.EnterpriseCompany.ReportingCurrency}' currency. <br> Please select a valid currency.</td>
+<td>The selected Currency is invalid. <br> This account allows only '{Account.Currency}' or, if limited to base currency, the enterprise company's Base '{AccountingVoucher.EnterpriseCompany.BaseCurrency}', Reporting '{AccountingVoucher.EnterpriseCompany.ReportingCurrency}' currency or New Value Currency ‘{InstanceChangeRequest.NewValueCurrency}’. <br> Please select a valid currency.</td>
 </tr>
 <tr>
 <td>Version</td>
