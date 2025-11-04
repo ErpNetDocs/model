@@ -197,6 +197,11 @@ Aggregate Root:<br>
 <td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Shipment.ShipmentOrderLines.html#product">Product</a></td>
+<td><a href="../data-types.html#general.products.product">Product</a></td>
+<td>Gets or sets the product.</td>
+</tr>
+<tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The quantity to be shipped. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
@@ -396,6 +401,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="product">Product</h3>
+<p>Gets or sets the product.</p>
+<p><em>Type</em>: <strong><a href="../data-types.html#general.products.product">Product</a></strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity to be shipped. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
