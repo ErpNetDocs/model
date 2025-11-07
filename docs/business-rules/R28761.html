@@ -125,8 +125,7 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>if (AccountingVoucherLine.Currency == EnterpriseCompany.BaseCurrency
-&amp;&amp; Config./Accounting/AccountingVoucherLines/AllowBaseCurrencyLineAmountMismatch != 1   )
+<td>if (AccountingVoucherLine.Currency == EnterpriseCompany.BaseCurrency)
 <br><br>
 Debit = DebitBase
 <br><br>
@@ -136,8 +135,7 @@ Credit = CreditBase</td>
 <td><strong>Description</strong></td>
 <td>If the currency in the particular voucher line is the base currency, then the amount in Debit
 must be the same as the amount in Debit Base, and also then the amount in Credit must be the
-same as the amount in Credit Base
-(only when config option AllowBaseCurrencyLineAmountMismatch is false )</td>
+same as the amount in Credit Base</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -153,10 +151,7 @@ then Debit must equal Debit Base and Credit must equal Credit Base.
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2019.1
-Updated: 26.1 - Added condition by the config option
-/Accounting/AccountingVoucherLines/AllowBaseCurrencyLineAmountMismatch. If its value
-is equal to 1, then the validation is not performed.</td>
+<td>Introduced: 2019.1</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>

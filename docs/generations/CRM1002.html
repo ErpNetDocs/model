@@ -148,21 +148,19 @@
 </table>
 <h2 id="business-logic">Business Logic</h2>
 <p>The current generation procedure is meant to create template offers from a Deal.</p>
-<p>To create an offer, the customer has to be specified. The customer is extracted from the party, selected in the Deal - Deal.Party - and the up to date customer definition of this party in the enterprise company of the offer - Offer.EnterpriseCompany(so Customer.Party = Deal.Party &amp;&amp; Customer.EnterpriseCompany == Offer.EnterpriseCompany).
-If no such customer is found, the generation procedure is stopped and an error is thrown. The error text is:</p>
-<pre><code> Party '{Deal.Party.PartyName}' is not defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'. 
- In order to create an offer the party has to be defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'.
-</code></pre>
 <p><strong>The fields in the Offer’s header are filled as follows:</strong></p>
 <pre><code>Offer.DocumentDate = Deal.DocumentDate
-Offer.Customer = the determined Customer for the Deal.Party
+Offer.Customer = 
+if (Count(Customers, where Party == Deal.Party &amp;&amp; (EnterpriseCompany == Offer.EnterpriseCompany || EnterpriseCompany == null) &amp;&amp; Active == True) &gt; 0)
+, then Customer = the determined Customer for the Deal.Party
+, else Customer = null
 Offer.DocumentCurrency = Offer.EnterpriseCompany.BaseCurrency 
 Offer.Deal = Deal 
 Offer.SalesPerson = Deal.LeadingSalesPerson
-Offer.RequiredDeliveryDate = DocumentDate + Customer.DefaultDeliveryTermDays
-Offer.PaymentDueDate = DocumentDate + Customer.DefaultPaymentTermDays
-Offer.PriceList = Customer.DefaultPriceList
-Offer.PaymentType = Customer.DefaultPaymentType
+Offer.RequiredDeliveryDate = DocumentDate
+Offer.PaymentDueDate = DocumentDate
+Offer.PriceList = null
+Offer.PaymentType = null
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
