@@ -9,5 +9,6 @@ uid: Finance
 - [Excise](Finance.Excise.md)  
 - [Intrastat](Finance.Intrastat.md)  
 - [Payments](Finance.Payments.md)  
+- [Saft](Finance.Saft.md)  
 - [Vat](Finance.Vat.md)  
 

@@ -14692,6 +14692,66 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileAccounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileAccounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileCompanies.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileCompanies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileParties.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileParties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileProductAccounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileProductAccounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.Profiles.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.Profiles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Vat.BGVATDeclarations.md",
       "output": {
         ".html": {
@@ -26265,6 +26325,66 @@
       "output": {
         ".html": {
           "relative_path": "tables/Rent_Transactions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Accounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Accounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Companies.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Companies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Parties.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Parties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Product_Accounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Product_Accounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profiles.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profiles.html"
         }
       },
       "version": ""

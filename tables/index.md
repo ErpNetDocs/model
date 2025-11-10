@@ -601,6 +601,14 @@
 * [Rent_Transaction_Templates](Rent_Transaction_Templates.md)
 * [Rent_Transactions](Rent_Transactions.md)
 
+## [Saft](Saft.md)
+
+* [Saft_Profile_Accounts](Saft_Profile_Accounts.md)
+* [Saft_Profile_Companies](Saft_Profile_Companies.md)
+* [Saft_Profile_Parties](Saft_Profile_Parties.md)
+* [Saft_Profile_Product_Accounts](Saft_Profile_Product_Accounts.md)
+* [Saft_Profiles](Saft_Profiles.md)
+
 ## [Scm](Scm.md)
 
 * [Scm_Purchase_Control_Document_Lines](Scm_Purchase_Control_Document_Lines.md)

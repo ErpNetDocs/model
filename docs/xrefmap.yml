@@ -883,6 +883,24 @@ references:
 - uid: Finance.Payments.Transfers
   name: Finance.Payments.Transfers Entity
   href: entities/Finance.Payments.Transfers.html
+- uid: Finance.Saft
+  name: Finance.Saft Namespace
+  href: entities/Finance.Saft.html
+- uid: Finance.Saft.ProfileAccounts
+  name: Finance.Saft.ProfileAccounts Entity
+  href: entities/Finance.Saft.ProfileAccounts.html
+- uid: Finance.Saft.ProfileCompanies
+  name: Finance.Saft.ProfileCompanies Entity
+  href: entities/Finance.Saft.ProfileCompanies.html
+- uid: Finance.Saft.ProfileParties
+  name: Finance.Saft.ProfileParties Entity
+  href: entities/Finance.Saft.ProfileParties.html
+- uid: Finance.Saft.ProfileProductAccounts
+  name: Finance.Saft.ProfileProductAccounts Entity
+  href: entities/Finance.Saft.ProfileProductAccounts.html
+- uid: Finance.Saft.Profiles
+  name: Finance.Saft.Profiles Entity
+  href: entities/Finance.Saft.Profiles.html
 - uid: Finance.Vat
   name: Finance.Vat Namespace
   href: entities/Finance.Vat.html

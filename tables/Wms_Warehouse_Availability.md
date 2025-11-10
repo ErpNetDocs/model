@@ -11,7 +11,6 @@ The availability of goods in the warehouse locations of the warehouse. Entity: W
 
 | Name | Type | Description |
 | - | - | --- |
-|[Cnt](#cnt)|`bigint` ||
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot which was transacted. NULL when the transaction was not for a specific lot.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which was transacted.|
@@ -23,33 +22,6 @@ The availability of goods in the warehouse locations of the warehouse. Entity: W
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |The warehouse location, where the transaction occurred.|
 
 ## Columns
-
-### Cnt
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|bigint|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Logistic_Unit_Id
 

@@ -51,7 +51,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
 | [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
-| [<s>SupplySchema</s>](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | **OBSOLETE! Do not use!** The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.0.32` `Obsolete` `Owner` |
+| [<s>SupplySchema</s>](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | **OBSOLETE! Do not use!** The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.0.45` `Obsolete` `Owner` |
 
 
 ## Attribute Details
@@ -141,7 +141,7 @@ _Show in UI_: **ShownByDefault**
 
 ### SupplySchema
 
-**OBSOLETE! Do not use!** The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.0.32` `Obsolete` `Owner`
+**OBSOLETE! Do not use!** The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.0.45` `Obsolete` `Owner`
 
 _Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Indexed_: **True**  

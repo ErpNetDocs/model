@@ -7,10 +7,6 @@ Entity: [Systems.Core.ObjectFiles](~/entities/Systems.Core.ObjectFiles.md)
 
 Contains files attached to objects. Entity: Sys_Object_Files
 
-## Owner Tables Hierarchy
-
-* [Sys_Objects](Sys_Objects.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -594,7 +590,7 @@ The object to which the file is attached
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

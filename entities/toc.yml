@@ -580,6 +580,19 @@
       href: Finance.Payments.PaymentTypes.md
     - name: Transfers
       href: Finance.Payments.Transfers.md
+  - name: Saft
+    href: Finance.Saft.md
+    items:
+    - name: ProfileAccounts
+      href: Finance.Saft.ProfileAccounts.md
+    - name: ProfileCompanies
+      href: Finance.Saft.ProfileCompanies.md
+    - name: ProfileParties
+      href: Finance.Saft.ProfileParties.md
+    - name: ProfileProductAccounts
+      href: Finance.Saft.ProfileProductAccounts.md
+    - name: Profiles
+      href: Finance.Saft.Profiles.md
   - name: Vat
     href: Finance.Vat.md
     items:

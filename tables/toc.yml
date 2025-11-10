@@ -1112,6 +1112,19 @@
     href: Rent_Transaction_Templates.md
   - name: Rent_Transactions
     href: Rent_Transactions.md
+- name: Saft
+  href: Saft.md
+  items:
+  - name: Saft_Profile_Accounts
+    href: Saft_Profile_Accounts.md
+  - name: Saft_Profile_Companies
+    href: Saft_Profile_Companies.md
+  - name: Saft_Profile_Parties
+    href: Saft_Profile_Parties.md
+  - name: Saft_Profile_Product_Accounts
+    href: Saft_Profile_Product_Accounts.md
+  - name: Saft_Profiles
+    href: Saft_Profiles.md
 - name: Scm
   href: Scm.md
   items:
