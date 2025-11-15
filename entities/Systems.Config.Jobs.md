@@ -140,6 +140,7 @@ _Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)_
 | CompleteUnfinished<br />TimeEntries | Complete Unfinished Time Entries. Stored as 'CTE'. <br /> _Database Value:_ 'CTE' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'CompleteUnfinished<br />TimeEntries' |
 | CalculateReporting<br />CurrencyAmounts | Calculate historical Reporting currency amounts. Stored as 'CRC'. <br /> _Database Value:_ 'CRC' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'CalculateReporting<br />CurrencyAmounts' |
 | InstanceChangesProcessor | InstanceChangesProcessor value. Stored as 'ICP'. <br /> _Database Value:_ 'ICP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'InstanceChangesProcessor' |
+| DeleteExpiredAccessTokens | DeleteExpiredAccessTokens value. Stored as 'DRT'. <br /> _Database Value:_ 'DRT' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'DeleteExpiredAccessTokens' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
