@@ -37,7 +37,6 @@ Aggregate Tree
   * [General.Products.ProductPictures](General.Products.ProductPictures.md)  
   * [General.Products.ProductVariants](General.Products.ProductVariants.md)  
   * [General.Products.CompositeProductComponents](General.Products.CompositeProductComponents.md)  
-  * [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md)  
   * [Logistics.Inventory.ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
   * [Logistics.Inventory.SerialNumbers](Logistics.Inventory.SerialNumbers.md)  
 
@@ -112,7 +111,6 @@ Aggregate Tree
 | DistributionChannels | [ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md) | List of `ProductDistribution<br />Channel`(Crm.Marketing.ProductDistribution<br />Channels.md) child objects, based on the `Crm.Marketing.ProductDistributionChannel.Product`(Crm.Marketing.ProductDistribution<br />Channels.md#product) back reference 
 | DocumentAmounts | [ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md) | List of `ProductDocumentAmount`(General.Products.ProductDocumentAmounts.md) child objects, based on the `General.Products.ProductDocumentAmount.Product`(General.Products.ProductDocumentAmounts.md#product) back reference 
 | LineDiscounts | [LineDiscounts](Crm.Pricing.LineDiscounts.md) | List of `LineDiscount`(Crm.Pricing.LineDiscounts.md) child objects, based on the `Crm.LineDiscount.Product`(Crm.Pricing.LineDiscounts.md#product) back reference 
-| Lots | [Lots](Logistics.Inventory.Lots.md) | List of `Lot`(Logistics.Inventory.Lots.md) child objects, based on the `Logistics.Inventory.Lot.Product`(Logistics.Inventory.Lots.md#product) back reference 
 | Pictures | [ProductPictures](General.Products.ProductPictures.md) | List of `ProductPicture`(General.Products.ProductPictures.md) child objects, based on the `General.Products.ProductPicture.Product`(General.Products.ProductPictures.md#product) back reference 
 | Prices | [ProductPrices](Crm.Pricing.ProductPrices.md) | List of `ProductPrice`(Crm.Pricing.ProductPrices.md) child objects, based on the `Crm.ProductPrice.Product`(Crm.Pricing.ProductPrices.md#product) back reference 
 | PurchaseProductPrices | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) | List of `PurchaseProductPrice`(Logistics.Procurement.PurchaseProductPrices.md) child objects, based on the `Logistics.Procurement.PurchaseProductPrice.Product`(Logistics.Procurement.PurchaseProductPrices.md#product) back reference 

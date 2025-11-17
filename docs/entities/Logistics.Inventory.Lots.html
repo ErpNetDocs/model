@@ -93,11 +93,9 @@
 <p>Default Display Text Format:<br>
 <em>{Number}</em><br>
 Default Search Members:<br>
-<em>Number; Product.Name</em><br>
+<em>Number</em><br>
 Code Data Member:<br>
 <em>Number</em><br>
-Name Data Member:<br>
-<em>Product.Name</em><br>
 Category:  <em>Views</em><br>
 Show in UI:  <em>ShownByDefault</em><br>
 API access:  <em>ReadWrite</em></p>
@@ -106,10 +104,10 @@ API access:  <em>ReadWrite</em></p>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="General.Products.Products.html">General.Products.Products</a><br>
-Aggregate Root:<br>
-<a href="General.Products.Products.html">General.Products.Products</a></p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a></li>
+</ul>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -139,6 +137,16 @@ Aggregate Root:<br>
 <td><a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Expiry date for this lot. <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#id">Id</a></td>
@@ -215,7 +223,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product to which the lot is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The product to which the lot is bound. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#receiptstoretransaction">ReceiptStoreTransaction</a></td>
@@ -254,6 +262,20 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -370,12 +392,11 @@ Allowed values for the <code>Status</code>(Logistics.Inventory.Lots.md#status) d
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product to which the lot is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The product to which the lot is bound. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="receiptstoretransaction">ReceiptStoreTransaction</h3>
 <p>The store receipt transaction, which created the lot. null if the lot is manually created. <code>Filter(multi eq)</code></p>

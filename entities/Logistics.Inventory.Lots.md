@@ -11,11 +11,9 @@ Warehouse lots. They contain one row for each specific product, status, producti
 Default Display Text Format:  
 _{Number}_  
 Default Search Members:  
-_Number; Product.Name_  
+_Number_  
 Code Data Member:  
 _Number_  
-Name Data Member:  
-_Product.Name_  
 Category:  _Views_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  
@@ -27,10 +25,8 @@ Max level:  _4 - Track object attribute and blob changes_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[General.Products.Products](General.Products.Products.md)  
-Aggregate Root:  
-[General.Products.Products](General.Products.Products.md)  
+Aggregate Tree  
+* [Logistics.Inventory.Lots](Logistics.Inventory.Lots.md)  
 
 ## Attributes
 
@@ -40,6 +36,8 @@ Aggregate Root:
 | [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this Lot. 
 | [DisplayText](Logistics.Inventory.Lots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot. `Filter(ge;le)` 
+| [ExternalId](Logistics.Inventory.Lots.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Inventory.Lots.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Logistics.Inventory.Lots.md#id) | guid |  
 | [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string (50) __nullable__ | The license number for this lot. Null when license number is N/A or unknown. 
 | [Number](Logistics.Inventory.Lots.md#number) | string (30) | The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)` `ORD` 
@@ -57,7 +55,7 @@ Aggregate Root:
 | [BlockedForParty](Logistics.Inventory.Lots.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | Non-null when the warehouse lot is blocked specifically for some party. `Filter(multi eq)` |
 | [CertificateDocument](Logistics.Inventory.Lots.md#certificatedocument) | [Documents](General.Documents.Documents.md) (nullable) | Document, containing the certificate for this lot. `Filter(multi eq)` |
 | [ExciseMeasuringTransaction](Logistics.Inventory.Lots.md#excisemeasuringtransaction) | [MeasuringTransactions](Finance.Excise.MeasuringTransactions.md) (nullable) | When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. `Filter(multi eq)` `Introduced in version 21.1.1.59` |
-| [Product](Logistics.Inventory.Lots.md#product) | [Products](General.Products.Products.md) | The product to which the lot is bound. `Required` `Filter(multi eq)` `Owner` |
+| [Product](Logistics.Inventory.Lots.md#product) | [Products](General.Products.Products.md) | The product to which the lot is bound. `Required` `Filter(multi eq)` |
 | [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#receiptstoretransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. null if the lot is manually created. `Filter(multi eq)` |
 
 
@@ -103,6 +101,26 @@ _Category_: **System**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+_Type_: **string**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Id
 
@@ -241,13 +259,12 @@ _Show in UI_: **ShownByDefault**
 
 ### Product
 
-The product to which the lot is bound. `Required` `Filter(multi eq)` `Owner`
+The product to which the lot is bound. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### ReceiptStoreTransaction

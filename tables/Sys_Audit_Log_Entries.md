@@ -16,7 +16,7 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 |[Details](#details)|`nvarchar(max)` |Detailed contents of the event. Contents depend on the Event Type and Event Name.|
 |[Entity_Item_Id](#entity_item_id)|`uniqueidentifier` |The Id of the record, which is referenced by the event. Null when unknown or N/A.|
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The entity, which is being referenced by the event. Null when unknown or N/A.|
-|[Event_Class](#event_class)|`char(1)` Allowed: `E`, `A`, `S`|The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.|
+|[Event_Class](#event_class)|`char(1)` Allowed: `E`, `A`, `S`, `P`|The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events.|
 |[Event_Name](#event_name)|`nvarchar(128)` |Specific event or method name. Contents depend on the Event Type. Null when N/A.|
 |[Event_Time_Utc](#event_time_utc)|`datetime` |The exact date and time (in Utc) when the event occurred.|
 |[Event_Type](#event_type)|`char(3)` Allowed: `EID`, `ELD`, `ECR`, `EUP`, `EDE`, `EMT`, `ETH`, `AIN`, `AOU`, `AUP`, `AFL`, `APW`, `ATH`, `STH`, `APC`|Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event.|
@@ -207,7 +207,7 @@ The event primary classification, which shows the source of the event. E=Entity 
 
 | Property | Value |
 | - | - |
-|Allowed Values|`E`, `A`, `S`|
+|Allowed Values|`E`, `A`, `S`, `P`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

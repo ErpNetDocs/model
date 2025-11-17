@@ -7,10 +7,6 @@ Entity: [Logistics.Inventory.Lots](~/entities/Logistics.Inventory.Lots.md)
 
 Warehouse lots. They contain one row for each specific product, status, production batch and other specific warehousing conditions. Lot status can block certain operations. Entity: Inv_Lots
 
-## Owner Tables Hierarchy
-
-* [Gen_Products](Gen_Products.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -382,7 +378,7 @@ The product to which the lot is bound
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

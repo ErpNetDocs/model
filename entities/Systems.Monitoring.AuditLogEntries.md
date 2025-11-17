@@ -25,7 +25,7 @@ Name Data Member:
 _ApplicationName_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
-API access:  _None_  
+API access:  _ReadOnly_  
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  
@@ -131,6 +131,7 @@ _Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Me
 | Entity | Entity value. Stored as 'E'. <br /> _Database Value:_ 'E' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Entity' |
 | Authentication | Authentication value. Stored as 'A'. <br /> _Database Value:_ 'A' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Authentication' |
 | Server | Server value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Server' |
+| Presence | Presence value. Stored as 'P'. <br /> _Database Value:_ 'P' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Presence' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
