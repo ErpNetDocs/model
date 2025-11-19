@@ -169,6 +169,11 @@ Aggregate Root:<br>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentamount">PaymentAmount</a></td>
+<td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
+<td>The amount the customer is expected to pay in that specific payment currency. <code>Currency: PaymentCurrency</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.0.53</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentstartdays">PaymentStartDays</a></td>
 <td>int32</td>
 <td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></td>
@@ -204,6 +209,11 @@ Aggregate Root:<br>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
 <td>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentcurrency">PaymentCurrency</a></td>
+<td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
+<td>Defines the currency of the PaymentAmount. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.53</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymenttype">PaymentType</a></td>
@@ -329,6 +339,13 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="paymentamount">PaymentAmount</h3>
+<p>The amount the customer is expected to pay in that specific payment currency. <code>Currency: PaymentCurrency</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.0.53</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="paymentstartdays">PaymentStartDays</h3>
 <p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -380,6 +397,12 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.SalesOrder.PaymentAccount.IfNullThen( obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount))</code>
 <code>obj.SalesOrder.PaymentAccount</code></p>
+<h3 id="paymentcurrency">PaymentCurrency</h3>
+<p>Defines the currency of the PaymentAmount. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.53</code></p>
+<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>

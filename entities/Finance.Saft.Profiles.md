@@ -40,6 +40,7 @@ Aggregate Tree
 | [ExternalId](Finance.Saft.Profiles.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Finance.Saft.Profiles.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Finance.Saft.Profiles.md#id) | guid |  
+| [IsActive](Finance.Saft.Profiles.md#isactive) | boolean | Indicates whether the current profile is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 26.2.0.53` 
 | [Name](Finance.Saft.Profiles.md#name) | string (254) | Descriptive name of the SAF-T profile. `Required` `Filter(eq;like)` 
 | [Notes](Finance.Saft.Profiles.md#notes) | string (max) __nullable__ | Additional information about the profile. `Filter(like)` 
 | [ObjectVersion](Finance.Saft.Profiles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -94,6 +95,17 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
+
+### IsActive
+
+Indicates whether the current profile is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 26.2.0.53`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
+_Show in UI_: **ShownByDefault**  
 
 ### Name
 

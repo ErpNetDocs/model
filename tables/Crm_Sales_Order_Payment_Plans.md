@@ -24,6 +24,8 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 |[Installment_Number](#installment_number)|`int` |Consequtive installment number. Used for identifying different payments generated according this payment plan.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.|
+|[Payment_Amount](#payment_amount)|`decimal(14, 2)` |The amount the customer is expected to pay in that specific payment currency.|
+|[Payment_Currency_Id](#payment_currency_id)|`uniqueidentifier` |Defines the currency of the PaymentAmount.|
 |[Payment_Start_Days](#payment_start_days)|`int` |Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.|
 |[Payment_Term_Days](#payment_term_days)|`int` |Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.|
@@ -49,7 +51,7 @@ Amount to be payed.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -80,7 +82,7 @@ Percent of the sales order amount to be payed.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -111,7 +113,7 @@ Method to determine the payment due date. SLS = Use sales order date, INV = Use 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -141,7 +143,7 @@ Explicitly specified payment due date. Must be filled if and only if Due_Date_Fo
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -177,7 +179,7 @@ Explicitly specified date on which the payment becomes executable. Can be specif
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -214,7 +216,7 @@ Consequtive installment number. Used for identifying different payments generate
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -242,7 +244,7 @@ Consequtive installment number. Used for identifying different payments generate
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -272,7 +274,7 @@ Specifies the payment account towards which the payment is expected. NULL means 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|13|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -295,6 +297,80 @@ Specifies the payment account towards which the payment is expected. NULL means 
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Payment_Amount
+
+
+The amount the customer is expected to pay in that specific payment currency.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|15|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(14, 2) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Payment_Amount - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Payment_Currency_Id
+
+
+Defines the currency of the PaymentAmount.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|16|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Payment_Currency_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Payment_Start_Days
 
 
@@ -309,7 +385,7 @@ Number of days until the payment becomes executable. The days are counted, start
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|11|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -339,7 +415,7 @@ Payment term in days, which are to be added to form the payment due date. 0 mean
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -369,7 +445,7 @@ Specifies the expected payment type. NULL means that there is no expected paymen
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|12|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -406,7 +482,7 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -433,7 +509,7 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|14|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -460,7 +536,7 @@ Indicates wheather this amount is the remainder of the document. Amount = Total 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
@@ -497,7 +573,7 @@ Unique identification of the payment plan
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

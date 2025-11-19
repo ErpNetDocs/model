@@ -146,6 +146,16 @@
 <td>Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.</td>
 </tr>
 <tr>
+<td><a href="#payment_amount">Payment_Amount</a></td>
+<td><code>decimal(14, 2)</code></td>
+<td>The amount the customer is expected to pay in that specific payment currency.</td>
+</tr>
+<tr>
+<td><a href="#payment_currency_id">Payment_Currency_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>Defines the currency of the PaymentAmount.</td>
+</tr>
+<tr>
 <td><a href="#payment_start_days">Payment_Start_Days</a></td>
 <td><code>int</code></td>
 <td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.</td>
@@ -227,7 +237,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>8</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -331,7 +341,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>6</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -435,7 +445,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>3</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -535,7 +545,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -654,7 +664,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>10</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -777,7 +787,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>2</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -880,7 +890,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>9</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -980,7 +990,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>13</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1063,6 +1073,254 @@
 </tr>
 </tbody>
 </table>
+<h3 id="payment_amount">Payment_Amount</h3>
+<p>The amount the customer is expected to pay in that specific payment currency.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(14, 2) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="payment_amount---supported-filters">Payment_Amount - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment_currency_id">Payment_Currency_Id</h3>
+<p>Defines the currency of the PaymentAmount.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Currencies.html">Gen_Currencies</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="payment_currency_id---supported-filters">Payment_Currency_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="payment_start_days">Payment_Start_Days</h3>
 <p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.</p>
 <table>
@@ -1103,7 +1361,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>11</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1203,7 +1461,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1303,7 +1561,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>12</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1426,7 +1684,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>7</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1525,7 +1783,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>14</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1624,7 +1882,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1747,7 +2005,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>0</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>

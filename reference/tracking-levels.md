@@ -40,6 +40,7 @@ The following table contains default system-specified tracking levels:
 | Systems.Core.ObjectChangesets | 0 - Do not track changes | 0 - Do not track changes |
 | Systems.Documents.DocumentTypes | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
 | Systems.Documents.PrintoutLayouts | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
+| Systems.Monitoring.AuditLogEntries | 0 - Do not track changes | 0 - Do not track changes |
 | Systems.Security.EntitySettings | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Security.GroupAccessKeys | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Security.Groups | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

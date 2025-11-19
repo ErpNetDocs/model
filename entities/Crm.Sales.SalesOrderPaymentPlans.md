@@ -44,6 +44,7 @@ Aggregate Root:
 | [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. `Required` 
 | [Notes](Crm.Sales.SalesOrderPaymentPlans.md#notes) | string (254) __nullable__ | Notes for this SalesOrderPaymentPlan. 
 | [ObjectVersion](Crm.Sales.SalesOrderPaymentPlans.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [PaymentAmount](Crm.Sales.SalesOrderPaymentPlans.md#paymentamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The amount the customer is expected to pay in that specific payment currency. `Currency: PaymentCurrency` `Filter(eq;ge;le)` `Introduced in version 26.2.0.53` 
 | [PaymentStartDays](Crm.Sales.SalesOrderPaymentPlans.md#paymentstartdays) | int32 | Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. `Required` `Default(0)` 
 | [PaymentTermDays](Crm.Sales.SalesOrderPaymentPlans.md#paymenttermdays) | int32 | Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. `Required` `Default(0)` 
 | [Remainder](Crm.Sales.SalesOrderPaymentPlans.md#remainder) | boolean | Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). `Required` `Default(false)` 
@@ -54,6 +55,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Document](Crm.Sales.SalesOrderPaymentPlans.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The owner document. The <see cref="SalesOrder"/> to which this SalesOrderPaymentPlan belongs. `Required` `Filter(multi eq)` |
 | [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. `Filter(multi eq)` |
+| [PaymentCurrency](Crm.Sales.SalesOrderPaymentPlans.md#paymentcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Defines the currency of the PaymentAmount. `Filter(multi eq)` `Introduced in version 26.2.0.53` |
 | [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. `Filter(multi eq)` |
 | [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPaymentPlan belongs. `Required` `Filter(multi eq)` `Owner` |
 
@@ -180,6 +182,16 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
 
+### PaymentAmount
+
+The amount the customer is expected to pay in that specific payment currency. `Currency: PaymentCurrency` `Filter(eq;ge;le)` `Introduced in version 26.2.0.53`
+
+_Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
 ### PaymentStartDays
 
 Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. `Required` `Default(0)`
@@ -251,6 +263,15 @@ _Back-End Default Expression:_
 _Front-End Recalc Expressions:_  
 `obj.SalesOrder.PaymentAccount.IfNullThen( obj.PaymentType.DefaultPaymentAccount.IfNullThen( obj.PaymentAccount))`
 `obj.SalesOrder.PaymentAccount`
+### PaymentCurrency
+
+Defines the currency of the PaymentAmount. `Filter(multi eq)` `Introduced in version 26.2.0.53`
+
+_Type_: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
 ### PaymentType
 
 Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. `Filter(multi eq)`

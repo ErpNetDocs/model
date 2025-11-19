@@ -11,12 +11,49 @@ SAF-T export profiles. Entity: Saft_Profiles (Introduced in version 26.2.0.42)
 
 | Name | Type | Description |
 | - | - | --- |
+|[Is_Active](#is_active)|`bit` |Indicates whether the current profile is active.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information about the profile.|
 |[Profile_Name](#profile_name)|`nvarchar(254)` |Descriptive name of the SAF-T profile.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Profile_Id](#saft_profile_id)|`uniqueidentifier` `PK`|Unique identifier of the profile.|
 
 ## Columns
+
+### Is_Active
+
+
+Indicates whether the current profile is active.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|4|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Notes
 

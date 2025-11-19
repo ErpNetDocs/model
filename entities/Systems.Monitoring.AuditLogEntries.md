@@ -29,7 +29,7 @@ API access:  _ReadOnly_
 
 ## Track Changes  
 Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Max level:  _0 - Do not track changes_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
