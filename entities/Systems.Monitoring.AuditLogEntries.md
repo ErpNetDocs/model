@@ -46,7 +46,7 @@ Aggregate Tree
 | [DisplayText](Systems.Monitoring.AuditLogEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EntityItemId](Systems.Monitoring.AuditLogEntries.md#entityitemid) | guid __nullable__ | The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)` 
 | [EntityName](Systems.Monitoring.AuditLogEntries.md#entityname) | string (64) __nullable__ | The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)` 
-| [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. `Required` `Filter(multi eq)` 
+| [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)` 
 | [EventName](Systems.Monitoring.AuditLogEntries.md#eventname) | string (128) __nullable__ | Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)` 
 | [EventTimeUtc](Systems.Monitoring.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` 
 | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. `Required` `Filter(multi eq)` 
@@ -119,7 +119,7 @@ _Show in UI_: **ShownByDefault**
 
 ### EventClass
 
-The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. `Required` `Filter(multi eq)`
+The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)`
 
 _Type_: **[EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass)**  
 _Category_: **System**  

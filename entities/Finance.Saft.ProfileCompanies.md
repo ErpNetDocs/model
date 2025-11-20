@@ -131,11 +131,11 @@ _Allowed Values (Finance.Saft.ProfileCompaniesRepository.IsPartOfGroup Enum Memb
 
 | Value | Description |
 | ---- | --- |
-| HeadOfLocalGroup | HeadOfLocalGroup value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'HeadOfLocalGroup' |
-| HeadOfMultinationalGroup | HeadOfMultinationalGroup value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'HeadOfMultinationalGroup' |
-| PartOfLocalGroup | PartOfLocalGroup value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PartOfLocalGroup' |
-| PartOfMultinationalGroup | PartOfMultinationalGroup value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'PartOfMultinationalGroup' |
-| NotPartOfAGroup | NotPartOfAGroup value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'NotPartOfAGroup' |
+| HeadOfLocalGroup | Head of local group. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'HeadOfLocalGroup' |
+| HeadOfMultinationalGroup | Head of multinational group. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'HeadOfMultinationalGroup' |
+| PartOfLocalGroup | Part of local group. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PartOfLocalGroup' |
+| PartOfMultinationalGroup | Part of multinational group. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'PartOfMultinationalGroup' |
+| NotPartOfAGroup | Not part of a group. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'NotPartOfAGroup' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
