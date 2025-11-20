@@ -14,8 +14,9 @@
 - [Public](Public.md)  
 - [Systems](Systems.md)  
 
-## Entity Renames
+## Entity Type Renames
 
-Renaming entity sets is essential to ensure clarity, consistency, and alignment with evolving business requirements and terminology, thereby enhancing overall database management and usability.  
+Renaming entity types is essential to ensure clarity, consistency, and alignment with evolving business requirements and terminology, thereby enhancing overall database management and usability.  
 
-In various versions of ERP.net, different entities have been renamed. You can find a list of all the renamings and the respective versions in which they occurred [at this address](../reference/renames.md).  
+In various versions of ERP.net, different entity types have been renamed. You can find a list of all the renames and the respective versions in which they occurred [at this address](../reference/renames.md).  
+
