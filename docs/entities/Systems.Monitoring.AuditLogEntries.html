@@ -166,7 +166,7 @@ Max level:  <em>0 - Do not track changes</em></p>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventtype">EventType</a></td>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventtype">EventType</a></td>
-<td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#externalid">ExternalId</a></td>
@@ -303,7 +303,7 @@ Allowed values for the <code>EventClass</code>(Systems.Monitoring.AuditLogEntrie
 <em>Default Value</em>: <strong>CurrentDateTime</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="eventtype">EventType</h3>
-<p>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Monitoring.AuditLogEntries.html#eventtype">EventType</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>EventType</code>(Systems.Monitoring.AuditLogEntries.md#eventtype) data attribute<br>
@@ -375,6 +375,26 @@ Allowed values for the <code>EventType</code>(Systems.Monitoring.AuditLogEntries
 <tr>
 <td>AuthPresenceChange</td>
 <td>AuthPresenceChange value. Stored as 'APC'. <br> <em>Database Value:</em> 'APC' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'AuthPresenceChange'</td>
+</tr>
+<tr>
+<td>ChangePresenceToAvailable</td>
+<td>ChangePresenceToAvailable value. Stored as 'PSA'. <br> <em>Database Value:</em> 'PSA' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'ChangePresenceToAvailable'</td>
+</tr>
+<tr>
+<td>ChangePresenceToDND</td>
+<td>ChangePresenceToDND value. Stored as 'PSD'. <br> <em>Database Value:</em> 'PSD' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'ChangePresenceToDND'</td>
+</tr>
+<tr>
+<td>ChangePresenceToBusy</td>
+<td>ChangePresenceToBusy value. Stored as 'PSB'. <br> <em>Database Value:</em> 'PSB' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'ChangePresenceToBusy'</td>
+</tr>
+<tr>
+<td>ChangePresenceToAway</td>
+<td>ChangePresenceToAway value. Stored as 'PSW'. <br> <em>Database Value:</em> 'PSW' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'ChangePresenceToAway'</td>
+</tr>
+<tr>
+<td>ChangePresenceToOffline</td>
+<td>ChangePresenceToOffline value. Stored as 'PSO'. <br> <em>Database Value:</em> 'PSO' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'ChangePresenceToOffline'</td>
 </tr>
 </tbody>
 </table>

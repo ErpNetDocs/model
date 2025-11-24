@@ -47,6 +47,7 @@ Aggregate Tree
 | [Name](Systems.Exchange.DataExchanges.md#name) | string (64) __nullable__ | The name of the package. Can be empty if naming is not important. `Filter(eq;like)` 
 | [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes for the exchange. `Filter(like)` 
 | [ObjectVersion](Systems.Exchange.DataExchanges.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [Payload](Systems.Exchange.DataExchanges.md#payload) | string (max) __nullable__ | Contains JSON data in Open Exchange format ready to be imported via Domain API Import action. `Introduced in version 26.2.0.55` 
 | [State](Systems.Exchange.DataExchanges.md#state) | [State](Systems.Exchange.DataExchanges.md#state) | State of the exchange. `Required` `Default("PRE")` `Filter(eq)` 
 
 ## References
@@ -224,6 +225,17 @@ _Category_: **Extensible Data Object**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### Payload
+
+Contains JSON data in Open Exchange format ready to be imported via Domain API Import action. `Introduced in version 26.2.0.55`
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
+_Show in UI_: **ShownByDefault**  
 
 ### State
 

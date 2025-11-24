@@ -49,7 +49,7 @@ Aggregate Tree
 | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)` 
 | [EventName](Systems.Monitoring.AuditLogEntries.md#eventname) | string (128) __nullable__ | Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)` 
 | [EventTimeUtc](Systems.Monitoring.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` 
-| [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. `Required` `Filter(multi eq)` 
+| [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. `Required` `Filter(multi eq)` 
 | [ExternalId](Systems.Monitoring.AuditLogEntries.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Systems.Monitoring.AuditLogEntries.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Systems.Monitoring.AuditLogEntries.md#id) | guid |  
@@ -162,7 +162,7 @@ _Show in UI_: **ShownByDefault**
 
 ### EventType
 
-Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. `Required` `Filter(multi eq)`
+Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. `Required` `Filter(multi eq)`
 
 _Type_: **[EventType](Systems.Monitoring.AuditLogEntries.md#eventtype)**  
 _Category_: **System**  
@@ -186,6 +186,11 @@ _Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventType Enum Mem
 | OtherAuthEvent | OtherAuthEvent value. Stored as 'ATH'. <br /> _Database Value:_ 'ATH' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'OtherAuthEvent' |
 | OtherServerEvent | OtherServerEvent value. Stored as 'STH'. <br /> _Database Value:_ 'STH' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'OtherServerEvent' |
 | AuthPresenceChange | AuthPresenceChange value. Stored as 'APC'. <br /> _Database Value:_ 'APC' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'AuthPresenceChange' |
+| ChangePresenceToAvailable | ChangePresenceToAvailable value. Stored as 'PSA'. <br /> _Database Value:_ 'PSA' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'ChangePresenceToAvailable' |
+| ChangePresenceToDND | ChangePresenceToDND value. Stored as 'PSD'. <br /> _Database Value:_ 'PSD' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'ChangePresenceToDND' |
+| ChangePresenceToBusy | ChangePresenceToBusy value. Stored as 'PSB'. <br /> _Database Value:_ 'PSB' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'ChangePresenceToBusy' |
+| ChangePresenceToAway | ChangePresenceToAway value. Stored as 'PSW'. <br /> _Database Value:_ 'PSW' <br /> _Model Value:_ 18 <br /> _Domain API Value:_ 'ChangePresenceToAway' |
+| ChangePresenceToOffline | ChangePresenceToOffline value. Stored as 'PSO'. <br /> _Database Value:_ 'PSO' <br /> _Model Value:_ 19 <br /> _Domain API Value:_ 'ChangePresenceToOffline' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
