@@ -151,9 +151,9 @@
 <p><strong>The fields in the Offer’s header are filled as follows:</strong></p>
 <pre><code>Offer.DocumentDate = Deal.DocumentDate
 Offer.Customer = 
-if (Count(Customers, where Party == Deal.Party &amp;&amp; (EnterpriseCompany == Offer.EnterpriseCompany || EnterpriseCompany == null) &amp;&amp; Active == True) &gt; 0)
-, then Customer = the determined Customer for the Deal.Party
-, else Customer = null
+              if (Count(Customers, where Party == Deal.Party &amp;&amp; (EnterpriseCompany == Offer.EnterpriseCompany || EnterpriseCompany == null) &amp;&amp; Active == True) &gt; 0)
+              , then Customer = the determined Customer for the Deal.Party
+              , else Customer = null
 Offer.DocumentCurrency = Offer.EnterpriseCompany.BaseCurrency 
 Offer.Deal = Deal 
 Offer.SalesPerson = Deal.LeadingSalesPerson
