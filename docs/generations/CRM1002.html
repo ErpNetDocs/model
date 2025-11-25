@@ -157,10 +157,22 @@ if (Count(Customers, where Party == Deal.Party &amp;&amp; (EnterpriseCompany == 
 Offer.DocumentCurrency = Offer.EnterpriseCompany.BaseCurrency 
 Offer.Deal = Deal 
 Offer.SalesPerson = Deal.LeadingSalesPerson
-Offer.RequiredDeliveryDate = DocumentDate
-Offer.PaymentDueDate = DocumentDate
-Offer.PriceList = null
-Offer.PaymentType = null
+Offer.RequiredDeliveryDate =
+                            if(Offer.Customer != NULL)
+                            , then DocumentDate + Customer.DefaultDeliveryTermDays
+                            else DocumentDate
+Offer.PaymentDueDate =
+                            if(Offer.Customer != NULL)
+                            , DocumentDate + Customer.DefaultPaymentTermDays
+                            else DocumentDate
+Offer.PriceList =
+                           if(Offer.Customer != NULL)
+                            , Customer.DefaultPriceList
+                            else NULL
+Offer.PaymentType =
+                            if(Offer.Customer != NULL)
+                            , Customer.DefaultPaymentType
+                            else NULL
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
