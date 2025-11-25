@@ -152,8 +152,6 @@
 </table>
 <h2 id="business-logic">Business Logic</h2>
 <p>This Generation is used to create Store Orders from the Transfer Order and break down rows by Available To Promise Lots.</p>
-<p>If for the current row of the Transfer Order there is no enough quantity from first Lot then is created another row in the Store Orders with remaining Quantity and another Available Lot.</p>
-<p>If there is no Available Lot then Lot is Null.</p>
 <pre><code>StoreOrder.DocumentDate = TransferOrder.DocumentDate
 
 StoreOrder.Store = TransferOrder.FromStore
@@ -242,6 +240,12 @@ StoreOrder.ToParty = TransferOrder.ToStore
 </tr>
 </tbody>
 </table>
+<p><br><br>
+Store Order Lines are created from Transfer Order Lines by allocating the ordered quantities across available lots, using the <a href="https://docs.erp.net/tech/modules/logistics/concepts/lots-issue.html">Lots Issue</a> algorithm. This algorithm selects lots based on the Available to Promise (ATP) logic and the defined lot issuing strategy (e.g., FIFO, FEFO, LIFO).</p>
+<p>If the full quantity cannot be fulfilled from a single lot, the line is split into multiple Store Order Lines, each referencing a different lot with available quantity.
+If there is insufficient total lot quantity to cover the required amount, the remaining quantity is added in a separate line with Lot = null, indicating that the allocation could not be completed with existing lots.
+<br></p>
+<p><strong>The new Store Order Line is created as follows:</strong></p>
 <pre><code>StoreOrderLine.LineNo = TransferOrderLine.LineOrd
 
 StoreOrderLine.ParentLineId = TranferOrderLine.Id
@@ -254,13 +258,22 @@ StoreOrderLine.StoreBin = TransferOrderLine.FromStoreBin
 
 StoreOrderLine.SerialNumber = TransferOrderLine.SerialNumber
 
-StoreOrderLine.Quantity = TransferOrderLine.REMAINING(MQuantity)
+StoreOrderLine.QuantityBase =
+                          if CurrentLot.ATP &gt;= (TransferOrderLine.REMAINING(MQuantityBase) - the sum of QuantityBase of the previous Lot lines in this document)
+
+                          , then StoreOrderLine.QuantityBase = TransferOrderLine.REMAINING(MQuantityBase) - the sum of QuantityBase of the previous Lot lines in this document
+
+                          else StoreOrderLine.QuantityBase = CurrentLot.ATP
+
+StoreOrderLine.StandardQuantityBase = StoreOrderLine.QuantityBase
 
 StoreOrderLine.QuantityUnit = TransferOrderLine.QuantityUnit
 
-StoreOrderLine.QuantityBase = TransferOrderLine.REMAINING(MQuantityBase)
+StoreOrderLine.Quantity = If this is not the last line in the breakdown
 
-StoreOrderLine.StandardQuantityBase = TransferOrderLine.REMAINING(MStandardQuantityBase)
+                          , then StoreOrderLine.Quantity = StoreOrderLine.QuantityBase.ConvertTo(StoreOrderLine.QuantityUnit, StoreOrderLine.Product)
+
+                          еlse StoreOrderLine.Quantity = TransferOrderLine.REMAINING(MQuantity) − sum of StoreOrderLine.Quantity of the previous lines in this breakdown
 
 StoreOrderLine.UnitCost = null
 
@@ -268,9 +281,9 @@ StoreOrderLine.LineCost = null
 
 StoreOrderLine.Lot =
 
-​                 if (TransferOrderLine.Lot != Null), then TransferOrderLine.Lot
+​                 if (TransferOrderLine.Lot != Null), then StoreOrderLine.Lot = TransferOrderLine.Lot
 
-                 else if (Lots Issue* == Null), then Null
+                 else if (Lots Issue* == Null), then StoreOrderLine.Lot = Null
 
                  else Lots Issue*
 
@@ -292,8 +305,6 @@ StoreOrderLine.ForOrdering = false
 
 </code></pre>
 <p><a href="https://docs.erp.net/tech/modules/logistics/concepts/lots-issue.html">Lots Issue</a> is algorithm than determine Lots from Available To Promise Lots.</p>
-<p>If there is no enough quantity from first Lot then current row is break down to multiple rows as in next row is filled another Lots that is available.</p>
-<p>If there is no available Lot for the current row then Lot = Null.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>WARNING: Any of the Store Orders created according to the description above is saved then and only when there is at least one line in it.</p>
