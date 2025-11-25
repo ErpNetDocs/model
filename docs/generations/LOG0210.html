@@ -242,7 +242,7 @@ StoreOrder.ToParty = TransferOrder.ToStore
 </table>
 <p><br><br>
 Store Order Lines are created from Transfer Order Lines by allocating the ordered quantities across available lots, using the <a href="https://docs.erp.net/tech/modules/logistics/concepts/lots-issue.html">Lots Issue</a> algorithm. This algorithm selects lots based on the Available to Promise (ATP) logic and the defined lot issuing strategy (e.g., FIFO, FEFO, LIFO).</p>
-<p>If the full quantity cannot be fulfilled from a single lot, the line is split into multiple Store Order Lines, each referencing a different lot with available quantity.
+<p>If the full quantity cannot be fulfilled from a single lot, the line is split into multiple Store Order Lines, each referencing a different lot with available quantity.<br>
 If there is insufficient total lot quantity to cover the required amount, the remaining quantity is added in a separate line with Lot = null, indicating that the allocation could not be completed with existing lots.
 <br></p>
 <p><strong>The new Store Order Line is created as follows:</strong></p>
