@@ -403,6 +403,8 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.PaymentAccount != null), obj.PaymentAccount.Currency, null)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
@@ -531,7 +533,9 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
+<ul>
+<li><a href="../business-rules/R39322.html">R39322 Sales Order Payment Plan - Set Payment Currency (Recalc)</a></li>
+</ul>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Crm_Sales_SalesOrderPaymentPlans</p>
