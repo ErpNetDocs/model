@@ -568,6 +568,9 @@ references:
 - uid: Crm.Sales.SalesOrdersOptions
   name: Crm.Sales.SalesOrdersOptions Entity
   href: entities/Crm.Sales.SalesOrdersOptions.html
+- uid: Crm.SalesAnalytics
+  name: Crm.SalesAnalytics View
+  href: entities/Crm.SalesAnalytics.html
 - uid: Crm.SalesForce
   name: Crm.SalesForce Namespace
   href: entities/Crm.SalesForce.html
@@ -1861,6 +1864,21 @@ references:
 - uid: Public.Users
   name: Public.Users View
   href: entities/Public.Users.html
+- uid: Regulatory
+  name: Regulatory Namespace
+  href: entities/Regulatory.html
+- uid: Regulatory.Common
+  name: Regulatory.Common Namespace
+  href: entities/Regulatory.Common.html
+- uid: Regulatory.Common.CodeEntries
+  name: Regulatory.Common.CodeEntries Entity
+  href: entities/Regulatory.Common.CodeEntries.html
+- uid: Regulatory.Common.CodeLists
+  name: Regulatory.Common.CodeLists Entity
+  href: entities/Regulatory.Common.CodeLists.html
+- uid: Regulatory.Common.Jurisdictions
+  name: Regulatory.Common.Jurisdictions Entity
+  href: entities/Regulatory.Common.Jurisdictions.html
 - uid: Systems
   name: Systems Namespace
   href: entities/Systems.html

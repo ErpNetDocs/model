@@ -23,7 +23,6 @@ Denotes a data exchange (import, export, etc.) operation with detailed info abou
 |[Mode](#mode)|`char(1)` Allowed: `E`, `I`|Operation mode of the exchange.|
 |[Name](#name)|`nvarchar(64)` |The name of the package. Can be empty if naming is not important.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the exchange.|
-|[Payload](#payload)|`nvarchar(max)` |Contains JSON data in Open Exchange format ready to be imported via Domain API Import action.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[State](#state)|`char(3)` Allowed: `PRE`, `RED`, `FSC`, `FFL`, `CSC`, `CFL`|State of the exchange.|
 
@@ -461,36 +460,6 @@ Notes for the exchange.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
-
-### Payload
-
-
-Contains JSON data in Open Exchange format ready to be imported via Domain API Import action.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|2147483647|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(max) (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
 
 ### Row_Version
 

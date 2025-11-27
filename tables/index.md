@@ -201,6 +201,7 @@
 * [Crm_Product_Prices](Crm_Product_Prices.md)
 * [Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md)
 * [Crm_Promotional_Packages](Crm_Promotional_Packages.md)
+* [Crm_Sales_Analytics](Crm_Sales_Analytics.md)
 * [Crm_Sales_Order_Lines](Crm_Sales_Order_Lines.md)
 * [Crm_Sales_Order_Payment_Orders_Templates](Crm_Sales_Order_Payment_Orders_Templates.md)
 * [Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md)
@@ -585,6 +586,12 @@
 ## [Public](Public.md)
 
 * [Public_Users](Public_Users.md)
+
+## [Reg](Reg.md)
+
+* [Reg_Code_Entries](Reg_Code_Entries.md)
+* [Reg_Code_Lists](Reg_Code_Lists.md)
+* [Reg_Jurisdictions](Reg_Jurisdictions.md)
 
 ## [Rent](Rent.md)
 

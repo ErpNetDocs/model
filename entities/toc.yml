@@ -369,6 +369,8 @@
       href: Crm.Sales.SalesOrders.md
     - name: SalesOrdersOptions
       href: Crm.Sales.SalesOrdersOptions.md
+  - name: SalesAnalytics
+    href: Crm.SalesAnalytics.md
   - name: SalesForce
     href: Crm.SalesForce.md
     items:
@@ -1165,6 +1167,18 @@
   items:
   - name: Users
     href: Public.Users.md
+- name: Regulatory
+  href: Regulatory.md
+  items:
+  - name: Common
+    href: Regulatory.Common.md
+    items:
+    - name: CodeEntries
+      href: Regulatory.Common.CodeEntries.md
+    - name: CodeLists
+      href: Regulatory.Common.CodeLists.md
+    - name: Jurisdictions
+      href: Regulatory.Common.Jurisdictions.md
 - name: Systems
   href: Systems.md
   items:

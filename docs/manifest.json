@@ -13642,6 +13642,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.SalesAnalytics.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.SalesAnalytics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.SalesForce.SalesPersonAssignmentRules.md",
       "output": {
         ".html": {
@@ -18552,6 +18562,56 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Common.CodeEntries.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Common.CodeEntries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Common.CodeLists.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Common.CodeLists.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Common.Jurisdictions.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Common.Jurisdictions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Common.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Common.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Bpm.CalculatedAttributeExpressions.md",
       "output": {
         ".html": {
@@ -22771,6 +22831,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Sales_Analytics.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Sales_Analytics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Crm_Sales_Order_Lines.md",
       "output": {
         ".html": {
@@ -26225,6 +26295,46 @@
       "output": {
         ".html": {
           "relative_path": "tables/Public_Users.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Reg.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Reg.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Reg_Code_Entries.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Reg_Code_Entries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Reg_Code_Lists.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Reg_Code_Lists.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Reg_Jurisdictions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Reg_Jurisdictions.html"
         }
       },
       "version": ""

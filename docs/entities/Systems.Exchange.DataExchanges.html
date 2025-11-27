@@ -193,11 +193,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
-<td><a href="Systems.Exchange.DataExchanges.html#payload">Payload</a></td>
-<td>string (max) <strong>nullable</strong></td>
-<td>Contains JSON data in Open Exchange format ready to be imported via Domain API Import action. <code>Introduced in version 26.2.0.55</code></td>
-</tr>
-<tr>
 <td><a href="Systems.Exchange.DataExchanges.html#state">State</a></td>
 <td><a href="Systems.Exchange.DataExchanges.html#state">State</a></td>
 <td>State of the exchange. <code>Required</code> <code>Default(&quot;PRE&quot;)</code> <code>Filter(eq)</code></td>
@@ -373,14 +368,6 @@ Allowed values for the <code>Mode</code>(Systems.Exchange.DataExchanges.md#mode)
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="payload">Payload</h3>
-<p>Contains JSON data in Open Exchange format ready to be imported via Domain API Import action. <code>Introduced in version 26.2.0.55</code></p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
 <p>State of the exchange. <code>Required</code> <code>Default(&quot;PRE&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Exchange.DataExchanges.html#state">State</a></strong><br>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Crm.SalesAnalytics View | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Crm.SalesAnalytics View | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/entities/Crm.SalesAnalytics.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Crm.SalesAnalytics">
+<h1 id="crmsalesanalytics-view">Crm.SalesAnalytics View</h1>
+
+<p><strong>Namespace:</strong> <a href="Crm.html">Crm</a></p>
+<p>Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62)</p>
+<h2 id="default-visualization">Default Visualization</h2>
+<p>Default Display Text Format:<br>
+<em>{SalesAnalyticId}: {DocumentDate}</em><br>
+Default Search Members:<br>
+__<br>
+Category:  <em>Views</em><br>
+Show in UI:  <em>ShownByDefault</em><br>
+API access:  <em>ReadOnly</em></p>
+<h2 id="aggregate">Aggregate</h2>
+<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Crm.SalesAnalytics.html">Crm.SalesAnalytics</a></li>
+</ul>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#documentdate">DocumentDate</a></td>
+<td>date</td>
+<td>Date to group for. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#lineamount">LineAmount</a></td>
+<td>decimal (38, 2)</td>
+<td>Line Amount for date. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#linediscountamount">LineDiscountAmount</a></td>
+<td>decimal (38, 2)</td>
+<td>Discount over Line Amount for Date. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#quantitybase">QuantityBase</a></td>
+<td>decimal (38, 3)</td>
+<td>Base Quantity for Date. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#salesanalyticid">SalesAnalyticId</a></td>
+<td>guid</td>
+<td>Row Id. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#standardquantitybase">StandardQuantityBase</a></td>
+<td>decimal (38, 3)</td>
+<td>Standard Base Quantity for Date. <code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#bonusprogram">BonusProgram</a></td>
+<td><a href="Crm.Pricing.BonusPrograms.html">BonusPrograms</a></td>
+<td>Bonus Program. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Bonus_Programs_Table.Bonus_Program_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#customer">Customer</a></td>
+<td><a href="Crm.Sales.Customers.html">Customers</a></td>
+<td>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#dealer">Dealer</a></td>
+<td><a href="Crm.Sales.Dealers.html">Dealers</a></td>
+<td>Dealer. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Dealers_Table.Dealer_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#distributionchannel">DistributionChannel</a></td>
+<td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></td>
+<td>Distribution Channel. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Distribution_&lt;br /&gt;Channels_Table.Distribution_Channel_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#documentcurrency">DocumentCurrency</a></td>
+<td><a href="General.Currencies.Currencies.html">Currencies</a></td>
+<td>Currency. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#endcustomerparty">EndCustomerParty</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a></td>
+<td>Unique party id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Parties_Table.Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#enterprisecompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
+<td>The Enterprise Company to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_&lt;br /&gt;Companies_Table.Enterprise_Company_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
+<td>The Enterprise Company Location to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#level1discount">Level1Discount</a></td>
+<td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></td>
+<td>Level 1 Discount. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#level2discount">Level2Discount</a></td>
+<td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></td>
+<td>Level 2 Discount. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#level3discount">Level3Discount</a></td>
+<td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></td>
+<td>Level 3 Discount. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#product">Product</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
+<td>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#productprice">ProductPrice</a></td>
+<td><a href="Crm.Pricing.ProductPrices.html">ProductPrices</a></td>
+<td>Product Price. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Product_Prices_Table.Product_Price_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#productvariant">ProductVariant</a></td>
+<td><a href="General.Products.ProductVariants.html">ProductVariants</a></td>
+<td>Product Variant. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#promotionalpackage">PromotionalPackage</a></td>
+<td><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a></td>
+<td>Promotional Package. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Promotional_&lt;br /&gt;Packages_Table.Promotional_Package_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#salesperson">SalesPerson</a></td>
+<td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></td>
+<td>Unique sales person Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Sales_Persons_Table.Sales_Person_Id</code></td>
+</tr>
+<tr>
+<td><a href="Crm.SalesAnalytics.html#store">Store</a></td>
+<td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
+<td>Unique store Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Stores_Table.Id</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="documentdate">DocumentDate</h3>
+<p>Date to group for. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
+<p><em>Type</em>: <strong>date</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="lineamount">LineAmount</h3>
+<p>Line Amount for date. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="linediscountamount">LineDiscountAmount</h3>
+<p>Discount over Line Amount for Date. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="quantitybase">QuantityBase</h3>
+<p>Base Quantity for Date. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="salesanalyticid">SalesAnalyticId</h3>
+<p>Row Id. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="standardquantitybase">StandardQuantityBase</h3>
+<p>Standard Base Quantity for Date. <code>Required</code></p>
+<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="bonusprogram">BonusProgram</h3>
+<p>Bonus Program. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Bonus_Programs_Table.Bonus_Program_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.BonusPrograms.html">BonusPrograms</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Bonus_Programs_Table.Bonus_Program_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="customer">Customer</h3>
+<p>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Customers_Table.Customer_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="dealer">Dealer</h3>
+<p>Dealer. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Dealers_Table.Dealer_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Sales.Dealers.html">Dealers</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Dealers_Table.Dealer_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="distributionchannel">DistributionChannel</h3>
+<p>Distribution Channel. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Distribution_Channels_Table.Distribution_Channel_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Distribution_Channels_Table.Distribution_Channel_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="documentcurrency">DocumentCurrency</h3>
+<p>Currency. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="endcustomerparty">EndCustomerParty</h3>
+<p>Unique party id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Parties_Table.Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Parties_Table.Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<p>The Enterprise Company to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<p>The Enterprise Company Location to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level1discount">Level1Discount</h3>
+<p>Level 1 Discount. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Line_Discounts_Table.Line_Discount_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level2discount">Level2Discount</h3>
+<p>Level 2 Discount. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Line_Discounts_Table.Line_Discount_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="level3discount">Level3Discount</h3>
+<p>Level 3 Discount. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Line_Discounts_Table.Line_Discount_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="product">Product</h3>
+<p>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Products_Table.Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="productprice">ProductPrice</h3>
+<p>Product Price. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Product_Prices_Table.Product_Price_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.ProductPrices.html">ProductPrices</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Product_Prices_Table.Product_Price_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="productvariant">ProductVariant</h3>
+<p>Product Variant. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Gen_Product_Variants_Table.Product_Variant_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="promotionalpackage">PromotionalPackage</h3>
+<p>Promotional Package. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Promotional_Packages_Table.Promotional_Package_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Promotional_Packages_Table.Promotional_Package_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="salesperson">SalesPerson</h3>
+<p>Unique sales person Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Sales_Persons_Table.Sales_Person_Id</code></p>
+<p><em>Type</em>: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Crm_Sales_Persons_Table.Sales_Person_Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="store">Store</h3>
+<p>Unique store Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Stores_Table.Id</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Inherited From</em>: <strong>Inv_Stores_Table.Id</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h2 id="api">API</h2>
+<p>Domain API Entity Set:
+Crm_SalesAnalytics</p>
+<p>Domain API Entity Type:
+Crm_SalesAnalyticsEntry</p>
+<p>Domain API Query:
+<a href="https://testdb.my.erp.net/api/domain/odata/Crm_SalesAnalytics?$top=10">https://testdb.my.erp.net/api/domain/odata/Crm_SalesAnalytics?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://testdb.my.erp.net/api/domain/querybuilder#Crm_SalesAnalytics?$top=10">https://testdb.my.erp.net/api/domain/querybuilder#Crm_SalesAnalytics?$top=10</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Crm.SalesAnalytics.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

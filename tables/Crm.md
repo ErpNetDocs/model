@@ -46,6 +46,7 @@
 * [Crm_Product_Prices](Crm_Product_Prices.md)
 * [Crm_Promotional_Package_Lines](Crm_Promotional_Package_Lines.md)
 * [Crm_Promotional_Packages](Crm_Promotional_Packages.md)
+* [Crm_Sales_Analytics](Crm_Sales_Analytics.md)
 * [Crm_Sales_Order_Lines](Crm_Sales_Order_Lines.md)
 * [Crm_Sales_Order_Payment_Orders_Templates](Crm_Sales_Order_Payment_Orders_Templates.md)
 * [Crm_Sales_Order_Payment_Plans](Crm_Sales_Order_Payment_Plans.md)

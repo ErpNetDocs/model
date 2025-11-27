@@ -374,6 +374,8 @@
     href: Crm_Promotional_Package_Lines.md
   - name: Crm_Promotional_Packages
     href: Crm_Promotional_Packages.md
+  - name: Crm_Sales_Analytics
+    href: Crm_Sales_Analytics.md
   - name: Crm_Sales_Order_Lines
     href: Crm_Sales_Order_Lines.md
   - name: Crm_Sales_Order_Payment_Orders_Templates
@@ -1085,6 +1087,15 @@
   items:
   - name: Public_Users
     href: Public_Users.md
+- name: Reg
+  href: Reg.md
+  items:
+  - name: Reg_Code_Entries
+    href: Reg_Code_Entries.md
+  - name: Reg_Code_Lists
+    href: Reg_Code_Lists.md
+  - name: Reg_Jurisdictions
+    href: Reg_Jurisdictions.md
 - name: Rent
   href: Rent.md
   items:
