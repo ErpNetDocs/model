@@ -7,6 +7,10 @@ Entity: [Regulatory.Common.CodeEntries](~/entities/Regulatory.Common.CodeEntries
 
 Code Entries. Entity: Reg_Code_Entries (Introduced in version 26.2.0.62)
 
+## Owner Tables Hierarchy
+
+* [Reg_Code_Lists](Reg_Code_Lists.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -20,7 +24,7 @@ Code Entries. Entity: Reg_Code_Entries (Introduced in version 26.2.0.62)
 |[Data_2](#data_2)|`nvarchar(64)` |Data 2|
 |[Data_3](#data_3)|`nvarchar(64)` |Data 3|
 |[Is_Active](#is_active)|`bit` |Specifies whether the code entry is active.|
-|[Name](#name)|`nvarchar(254)` `ML`|Official (regulatory) name|
+|[Name](#name)|`nvarchar(254)` `ML`|Official (regulatory) name.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the entry.|
 |[Parent_Entry_Id](#parent_entry_id)|`uniqueidentifier` |Parent entry for hierarchical lists (regions / subregions / groups).|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -192,7 +196,7 @@ Code List
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
@@ -364,7 +368,7 @@ Specifies whether the code entry is active.
 ### Name
 
 
-Official (regulatory) name
+Official (regulatory) name.
 
 | Property | Value |
 | - | - |
@@ -395,7 +399,6 @@ Official (regulatory) name
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Notes
@@ -533,7 +536,6 @@ Abbreviation, if such exists.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Valid_From

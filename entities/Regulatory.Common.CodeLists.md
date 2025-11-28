@@ -29,6 +29,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Regulatory.Common.CodeLists](Regulatory.Common.CodeLists.md)  
+  * [Regulatory.Common.CodeEntries](Regulatory.Common.CodeEntries.md)  
 
 ## Attributes
 
@@ -42,14 +43,25 @@ Aggregate Tree
 | [ExternalSystem](Regulatory.Common.CodeLists.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Regulatory.Common.CodeLists.md#id) | guid |  
 | [IsActive](Regulatory.Common.CodeLists.md#isactive) | boolean | Specifies whether the list is active. `Required` `Default(true)` `Filter(eq)` 
-| [JurisdictionId](Regulatory.Common.CodeLists.md#jurisdictionid) | guid | The jurisdiction to which the list belongs. `Required` `Filter(multi eq)` 
-| [LegalReference](Regulatory.Common.CodeLists.md#legalreference) | string (254) __nullable__ | .Reference to law/article/ordinance number, URL, file name, etc. `Filter(eq;like)` 
+| [LegalReference](Regulatory.Common.CodeLists.md#legalreference) | string (254) __nullable__ | Reference to law/article/ordinance number, URL, file name, etc. `Filter(eq;like)` 
 | [ListCode](Regulatory.Common.CodeLists.md#listcode) | string (16) | Regulatory code of the list, unique within the jurisdiction. `Required` `Filter(eq;like)` 
-| [ListName](Regulatory.Common.CodeLists.md#listname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Regulatory name of the list. `Required` `Filter(eq;like)` 
+| [ListName](Regulatory.Common.CodeLists.md#listname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Regulatory name of the list. `Required` `Filter(like)` 
 | [Notes](Regulatory.Common.CodeLists.md#notes) | string (max) __nullable__ | Notes for the list. 
 | [ObjectVersion](Regulatory.Common.CodeLists.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ValidFrom](Regulatory.Common.CodeLists.md#validfrom) | date __nullable__ | When not null specifies the first date when the list is valid. `Filter(eq;ge;le)` 
 | [ValidTo](Regulatory.Common.CodeLists.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the list is valid. `Filter(eq;ge;le)` 
+
+## References
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Jurisdiction](Regulatory.Common.CodeLists.md#jurisdiction) | [Jurisdictions](Regulatory.Common.Jurisdictions.md) | The jurisdiction to which the list belongs. `Required` `Filter(multi eq)` |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| CodeEntries | [CodeEntries](Regulatory.Common.CodeEntries.md) | List of `CodeEntry`(Regulatory.Common.CodeEntries.md) child objects, based on the `Regulatory.Common.CodeEntry.CodeList`(Regulatory.Common.CodeEntries.md#codelist) back reference 
 
 
 ## Attribute Details
@@ -137,19 +149,9 @@ _Supports Order By_: **False**
 _Default Value_: **True**  
 _Show in UI_: **ShownByDefault**  
 
-### JurisdictionId
-
-The jurisdiction to which the list belongs. `Required` `Filter(multi eq)`
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
-
 ### LegalReference
 
-.Reference to law/article/ordinance number, URL, file name, etc. `Filter(eq;like)`
+Reference to law/article/ordinance number, URL, file name, etc. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
 _Category_: **System**  
@@ -171,11 +173,11 @@ _Show in UI_: **ShownByDefault**
 
 ### ListName
 
-Regulatory name of the list. `Required` `Filter(eq;like)`
+Regulatory name of the list. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
@@ -218,6 +220,19 @@ _Type_: **date __nullable__**
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
+
+## Reference Details
+
+### Jurisdiction
+
+The jurisdiction to which the list belongs. `Required` `Filter(multi eq)`
+
+_Type_: **[Jurisdictions](Regulatory.Common.Jurisdictions.md)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
 

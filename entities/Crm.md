@@ -12,6 +12,3 @@ uid: Crm
 - [SalesForce](Crm.SalesForce.md)  
 - [Subscriptions](Crm.Subscriptions.md)  
 
-## Entities
-- [SalesAnalytics](Crm.SalesAnalytics.md)  
-

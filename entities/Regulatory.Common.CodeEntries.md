@@ -27,8 +27,10 @@ Max level:  _4 - Track object attribute and blob changes_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Regulatory.Common.CodeEntries](Regulatory.Common.CodeEntries.md)  
+Aggregate Parent:  
+[Regulatory.Common.CodeLists](Regulatory.Common.CodeLists.md)  
+Aggregate Root:  
+[Regulatory.Common.CodeLists](Regulatory.Common.CodeLists.md)  
 
 ## Attributes
 
@@ -41,14 +43,12 @@ Aggregate Tree
 | [Data2](Regulatory.Common.CodeEntries.md#data2) | string (64) __nullable__ | Data 2. `Filter(eq;like)` 
 | [Data3](Regulatory.Common.CodeEntries.md#data3) | string (64) __nullable__ | Data 3. `Filter(eq;like)` 
 | [DisplayText](Regulatory.Common.CodeEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](Regulatory.Common.CodeEntries.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Common.CodeEntries.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Regulatory.Common.CodeEntries.md#id) | guid |  
 | [IsActive](Regulatory.Common.CodeEntries.md#isactive) | boolean | Specifies whether the code entry is active. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Regulatory.Common.CodeEntries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Official (regulatory) name. `Filter(eq;like)` 
+| [Name](Regulatory.Common.CodeEntries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Official (regulatory) name. `Filter(like)` 
 | [Notes](Regulatory.Common.CodeEntries.md#notes) | string (max) __nullable__ | Notes for the entry. `Filter(eq;like)` 
 | [ObjectVersion](Regulatory.Common.CodeEntries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ShortName](Regulatory.Common.CodeEntries.md#shortname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Abbreviation, if such exists. `Filter(eq;like)` 
+| [ShortName](Regulatory.Common.CodeEntries.md#shortname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Abbreviation, if such exists. `Filter(like)` 
 | [ValidFrom](Regulatory.Common.CodeEntries.md#validfrom) | date __nullable__ | From when this entry is valid. `Filter(eq;ge;le)` 
 | [ValidTo](Regulatory.Common.CodeEntries.md#validto) | date __nullable__ | Until when it is valid. `Filter(eq;ge;le)` 
 
@@ -56,7 +56,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CodeList](Regulatory.Common.CodeEntries.md#codelist) | [CodeLists](Regulatory.Common.CodeLists.md) | Code List. `Required` `Filter(multi eq)` |
+| [CodeList](Regulatory.Common.CodeEntries.md#codelist) | [CodeLists](Regulatory.Common.CodeLists.md) | Code List. `Required` `Filter(multi eq)` `Owner` `FilterableReference` |
 | [ParentEntry](Regulatory.Common.CodeEntries.md#parententry) | [CodeEntries](Regulatory.Common.CodeEntries.md) (nullable) | Parent entry for hierarchical lists (regions / subregions / groups). `Filter(multi eq)` |
 
 
@@ -138,26 +138,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
 
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
 ### Id
 
 _Type_: **guid**  
@@ -180,11 +160,11 @@ _Show in UI_: **ShownByDefault**
 
 ### Name
 
-Official (regulatory) name. `Filter(eq;like)`
+Official (regulatory) name. `Filter(like)`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
@@ -211,11 +191,11 @@ _Show in UI_: **HiddenByDefault**
 
 ### ShortName
 
-Abbreviation, if such exists. `Filter(eq;like)`
+Abbreviation, if such exists. `Filter(like)`
 
 _Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
@@ -244,12 +224,13 @@ _Show in UI_: **ShownByDefault**
 
 ### CodeList
 
-Code List. `Required` `Filter(multi eq)`
+Code List. `Required` `Filter(multi eq)` `Owner` `FilterableReference`
 
 _Type_: **[CodeLists](Regulatory.Common.CodeLists.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### ParentEntry

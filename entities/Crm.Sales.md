@@ -15,6 +15,7 @@ uid: Crm.Sales
 - [Distributors](Crm.Sales.Distributors.md)  
 - [DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md)  
 - [ForecastItems](Crm.Sales.ForecastItems.md)  
+- [SalesAnalytics](Crm.Sales.SalesAnalytics.md)  
 - [SalesOrderLines](Crm.Sales.SalesOrderLines.md)  
 - [SalesOrderPaymentOrdersTemplates](Crm.Sales.SalesOrderPaymentOrdersTemplates.md)  
 - [SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md)  

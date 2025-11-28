@@ -42,7 +42,7 @@ Aggregate Tree
 | [ExternalSystem](Regulatory.Common.Jurisdictions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Regulatory.Common.Jurisdictions.md#id) | guid |  
 | [IsActive](Regulatory.Common.Jurisdictions.md#isactive) | boolean | Specifies whether the jurisdiction is active. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Regulatory.Common.Jurisdictions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the jurisdiction. `Required` `Filter(eq;like)` 
+| [Name](Regulatory.Common.Jurisdictions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the jurisdiction. `Required` `Filter(like)` 
 | [Notes](Regulatory.Common.Jurisdictions.md#notes) | string (max) __nullable__ | Notes for the jurisdiction. `Filter(like)` 
 | [ObjectVersion](Regulatory.Common.Jurisdictions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ValidFrom](Regulatory.Common.Jurisdictions.md#validfrom) | date __nullable__ | When not null specifies the first date when the jurisdiction is valid. `Filter(eq;ge;le)` 
@@ -137,11 +137,11 @@ _Show in UI_: **ShownByDefault**
 
 ### Name
 
-Name of the jurisdiction. `Required` `Filter(eq;like)`
+Name of the jurisdiction. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 

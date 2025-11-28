@@ -550,6 +550,9 @@ references:
 - uid: Crm.Sales.ForecastItems
   name: Crm.Sales.ForecastItems Entity
   href: entities/Crm.Sales.ForecastItems.html
+- uid: Crm.Sales.SalesAnalytics
+  name: Crm.Sales.SalesAnalytics View
+  href: entities/Crm.Sales.SalesAnalytics.html
 - uid: Crm.Sales.SalesOrderLines
   name: Crm.Sales.SalesOrderLines Entity
   href: entities/Crm.Sales.SalesOrderLines.html

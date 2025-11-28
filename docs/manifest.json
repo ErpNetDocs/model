@@ -11542,6 +11542,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R39354.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39354.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -13566,6 +13576,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.ForecastItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Sales.SalesAnalytics.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Sales.SalesAnalytics.html"
         }
       },
       "version": ""

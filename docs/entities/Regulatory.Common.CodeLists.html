@@ -108,7 +108,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Regulatory.Common.CodeLists.html">Regulatory.Common.CodeLists</a></li>
+<li><a href="Regulatory.Common.CodeLists.html">Regulatory.Common.CodeLists</a>
+<ul>
+<li><a href="Regulatory.Common.CodeEntries.html">Regulatory.Common.CodeEntries</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -161,14 +165,9 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Specifies whether the list is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
-<td><a href="Regulatory.Common.CodeLists.html#jurisdictionid">JurisdictionId</a></td>
-<td>guid</td>
-<td>The jurisdiction to which the list belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
 <td><a href="Regulatory.Common.CodeLists.html#legalreference">LegalReference</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>.Reference to law/article/ordinance number, URL, file name, etc. <code>Filter(eq;like)</code></td>
+<td>Reference to law/article/ordinance number, URL, file name, etc. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#listcode">ListCode</a></td>
@@ -178,7 +177,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#listname">ListName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Regulatory name of the list. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Regulatory name of the list. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#notes">Notes</a></td>
@@ -199,6 +198,40 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Regulatory.Common.CodeLists.html#validto">ValidTo</a></td>
 <td>date <strong>nullable</strong></td>
 <td>When not null specifies the last date (inclusive) when the list is valid. <code>Filter(eq;ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Regulatory.Common.CodeLists.html#jurisdiction">Jurisdiction</a></td>
+<td><a href="Regulatory.Common.Jurisdictions.html">Jurisdictions</a></td>
+<td>The jurisdiction to which the list belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CodeEntries</td>
+<td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
+<td>List of <code>CodeEntry</code>(Regulatory.Common.CodeEntries.md) child objects, based on the <code>Regulatory.Common.CodeEntry.CodeList</code>(Regulatory.Common.CodeEntries.md#codelist) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -263,15 +296,8 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="jurisdictionid">JurisdictionId</h3>
-<p>The jurisdiction to which the list belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="legalreference">LegalReference</h3>
-<p>.Reference to law/article/ordinance number, URL, file name, etc. <code>Filter(eq;like)</code></p>
+<p>Reference to law/article/ordinance number, URL, file name, etc. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -287,10 +313,10 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Maximum Length</em>: <strong>16</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="listname">ListName</h3>
-<p>Regulatory name of the list. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Regulatory name of the list. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
@@ -321,6 +347,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="jurisdiction">Jurisdiction</h3>
+<p>The jurisdiction to which the list belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Regulatory.Common.Jurisdictions.html">Jurisdictions</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

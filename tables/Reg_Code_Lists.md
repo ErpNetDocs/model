@@ -17,7 +17,7 @@ Code Lists. Entity: Reg_Code_Lists (Introduced in version 26.2.0.62)
 |[Entity_Type_Name](#entity_type_name)|`nvarchar(128)` |Internal entity type, whose entities map to entries in the list.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the list is active.|
 |[Jurisdiction_Id](#jurisdiction_id)|`uniqueidentifier` |The jurisdiction to which the list belongs.|
-|[Legal_Reference](#legal_reference)|`nvarchar(254)` |.Reference to law/article/ordinance number, URL, file name, etc.|
+|[Legal_Reference](#legal_reference)|`nvarchar(254)` |Reference to law/article/ordinance number, URL, file name, etc.|
 |[List_Code](#list_code)|`nvarchar(16)` |Regulatory code of the list, unique within the jurisdiction|
 |[List_Name](#list_name)|`nvarchar(254)` `ML`|Regulatory name of the list.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the list.|
@@ -230,6 +230,7 @@ The jurisdiction to which the list belongs.
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Reg_Jurisdictions](Reg_Jurisdictions.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -249,7 +250,7 @@ The jurisdiction to which the list belongs.
 ### Legal_Reference
 
 
-.Reference to law/article/ordinance number, URL, file name, etc.
+Reference to law/article/ordinance number, URL, file name, etc.
 
 | Property | Value |
 | - | - |
@@ -354,7 +355,6 @@ Regulatory name of the list.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes

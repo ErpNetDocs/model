@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.SalesAnalytics](~/entities/Crm.SalesAnalytics.md)
+Entity: [Crm.Sales.SalesAnalytics](~/entities/Crm.Sales.SalesAnalytics.md)
 
 Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62)
 
@@ -11,27 +11,27 @@ Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62
 
 | Name | Type | Description |
 | - | - | --- |
-|[Bonus_Program_Id](#bonus_program_id)|`uniqueidentifier` |Bonus Program|
+|[Bonus_Program_Id](#bonus_program_id)|`uniqueidentifier` |Bonus Program used in sales|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Unique customer Id.|
-|[Dealer_Id](#dealer_id)|`uniqueidentifier` |Dealer|
-|[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |Distribution Channel|
-|[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |Currency|
+|[Dealer_Id](#dealer_id)|`uniqueidentifier` |External Dealer for this sales|
+|[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |Distribution Channel for this sales|
+|[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |Currency for this sales|
 |[Document_Date](#document_date)|`date` |Date to group for|
 |[End_Customer_Party_Id](#end_customer_party_id)|`uniqueidentifier` |Unique party id.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The Enterprise Company to which this SalesAnalyticsEntry applies.|
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |The Enterprise Company Location to which this SalesAnalyticsEntry applies.|
-|[Level1_Discount_Id](#level1_discount_id)|`uniqueidentifier` |Level 1 Discount|
-|[Level2_Discount_Id](#level2_discount_id)|`uniqueidentifier` |Level 2 Discount|
-|[Level3_Discount_Id](#level3_discount_id)|`uniqueidentifier` |Level 3 Discount|
+|[Level1_Discount_Id](#level1_discount_id)|`uniqueidentifier` |Level 1 Discount for this sales|
+|[Level2_Discount_Id](#level2_discount_id)|`uniqueidentifier` |Level 2 Discount for this sales|
+|[Level3_Discount_Id](#level3_discount_id)|`uniqueidentifier` |Level 3 Discount for this sales|
 |[Line_Amount](#line_amount)|`decimal(38, 2)` |Line Amount for date|
 |[Line_Discount_Amount](#line_discount_amount)|`decimal(38, 2)` |Discount over Line Amount for Date|
 |[Product_Id](#product_id)|`uniqueidentifier` |Unique id of the item.|
-|[Product_Price_Id](#product_price_id)|`uniqueidentifier` |Product Price|
-|[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |Product Variant|
-|[Promotional_Package_Id](#promotional_package_id)|`uniqueidentifier` |Promotional Package|
+|[Product_Price_Id](#product_price_id)|`uniqueidentifier` |Product Price for this sales|
+|[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |Product Variant for this sales|
+|[Promotional_Package_Id](#promotional_package_id)|`uniqueidentifier` |Promotional Package for this sales|
 |[Quantity_Base](#quantity_base)|`decimal(38, 3)` |Base Quantity for Date|
 |[Sales_Analytic_Id](#sales_analytic_id)|`uniqueidentifier` |Row Id|
-|[Sales_Person_Id](#sales_person_id)|`uniqueidentifier` |Unique sales person Id.|
+|[Sales_Person_Id](#sales_person_id)|`uniqueidentifier` |Unique sales person for this sales|
 |[Standard_Quantity_Base](#standard_quantity_base)|`decimal(38, 3)` |Standard Base Quantity for Date|
 |[Store_Id](#store_id)|`uniqueidentifier` |Unique store Id.|
 
@@ -40,7 +40,7 @@ Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62
 ### Bonus_Program_Id
 
 
-Bonus Program
+Bonus Program used in sales
 
 | Property | Value |
 | - | - |
@@ -112,7 +112,7 @@ Unique customer Id.
 ### Dealer_Id
 
 
-Dealer
+External Dealer for this sales
 
 | Property | Value |
 | - | - |
@@ -148,7 +148,7 @@ Dealer
 ### Distribution_Channel_Id
 
 
-Distribution Channel
+Distribution Channel for this sales
 
 | Property | Value |
 | - | - |
@@ -184,7 +184,7 @@ Distribution Channel
 ### Document_Currency_Id
 
 
-Currency
+Currency for this sales
 
 | Property | Value |
 | - | - |
@@ -367,7 +367,7 @@ The Enterprise Company Location to which this SalesAnalyticsEntry applies.
 ### Level1_Discount_Id
 
 
-Level 1 Discount
+Level 1 Discount for this sales
 
 | Property | Value |
 | - | - |
@@ -404,7 +404,7 @@ Level 1 Discount
 ### Level2_Discount_Id
 
 
-Level 2 Discount
+Level 2 Discount for this sales
 
 | Property | Value |
 | - | - |
@@ -441,7 +441,7 @@ Level 2 Discount
 ### Level3_Discount_Id
 
 
-Level 3 Discount
+Level 3 Discount for this sales
 
 | Property | Value |
 | - | - |
@@ -575,7 +575,7 @@ Unique id of the item.
 ### Product_Price_Id
 
 
-Product Price
+Product Price for this sales
 
 | Property | Value |
 | - | - |
@@ -611,7 +611,7 @@ Product Price
 ### Product_Variant_Id
 
 
-Product Variant
+Product Variant for this sales
 
 | Property | Value |
 | - | - |
@@ -647,7 +647,7 @@ Product Variant
 ### Promotional_Package_Id
 
 
-Promotional Package
+Promotional Package for this sales
 
 | Property | Value |
 | - | - |
@@ -749,7 +749,7 @@ Row Id
 ### Sales_Person_Id
 
 
-Unique sales person Id.
+Unique sales person for this sales
 
 | Property | Value |
 | - | - |

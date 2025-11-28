@@ -357,6 +357,8 @@
       href: Crm.Sales.DocumentTypePaymentOptions.md
     - name: ForecastItems
       href: Crm.Sales.ForecastItems.md
+    - name: SalesAnalytics
+      href: Crm.Sales.SalesAnalytics.md
     - name: SalesOrderLines
       href: Crm.Sales.SalesOrderLines.md
     - name: SalesOrderPaymentOrdersTemplates
@@ -369,8 +371,6 @@
       href: Crm.Sales.SalesOrders.md
     - name: SalesOrdersOptions
       href: Crm.Sales.SalesOrdersOptions.md
-  - name: SalesAnalytics
-    href: Crm.SalesAnalytics.md
   - name: SalesForce
     href: Crm.SalesForce.md
     items:

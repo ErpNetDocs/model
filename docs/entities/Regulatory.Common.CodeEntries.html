@@ -106,10 +106,10 @@ API access:  <em>ReadWrite</em></p>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Regulatory.Common.CodeEntries.html">Regulatory.Common.CodeEntries</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="Regulatory.Common.CodeLists.html">Regulatory.Common.CodeLists</a><br>
+Aggregate Root:<br>
+<a href="Regulatory.Common.CodeLists.html">Regulatory.Common.CodeLists</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -156,16 +156,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
-<td><a href="Regulatory.Common.CodeEntries.html#externalid">ExternalId</a></td>
-<td>string</td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="Regulatory.Common.CodeEntries.html#externalsystem">ExternalSystem</a></td>
-<td>string</td>
-<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
 <td><a href="Regulatory.Common.CodeEntries.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -178,7 +168,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>Official (regulatory) name. <code>Filter(eq;like)</code></td>
+<td>Official (regulatory) name. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#notes">Notes</a></td>
@@ -193,7 +183,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#shortname">ShortName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>Abbreviation, if such exists. <code>Filter(eq;like)</code></td>
+<td>Abbreviation, if such exists. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#validfrom">ValidFrom</a></td>
@@ -220,7 +210,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#codelist">CodeList</a></td>
 <td><a href="Regulatory.Common.CodeLists.html">CodeLists</a></td>
-<td>Code List. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Code List. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#parententry">ParentEntry</a></td>
@@ -285,20 +275,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -315,10 +291,10 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Default Value</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Official (regulatory) name. <code>Filter(eq;like)</code></p>
+<p>Official (regulatory) name. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
@@ -337,10 +313,10 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="shortname">ShortName</h3>
-<p>Abbreviation, if such exists. <code>Filter(eq;like)</code></p>
+<p>Abbreviation, if such exists. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
@@ -359,11 +335,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="codelist">CodeList</h3>
-<p>Code List. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Code List. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="Regulatory.Common.CodeLists.html">CodeLists</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="parententry">ParentEntry</h3>
 <p>Parent entry for hierarchical lists (regions / subregions / groups). <code>Filter(multi eq)</code></p>
