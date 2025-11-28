@@ -125,7 +125,7 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If (Customer == NULL) &amp;&amp; (ToParty != NULL):<br>
+<td>If (Customer == NULL) &amp;&amp; (ToParty != NULL):<br><br>
 Search for an existing Customer record where:<br>
 • Customer.Party == Offer.ToParty<br>
 • Customer.IsActive == TRUE<br>
@@ -133,7 +133,7 @@ Search for an existing Customer record where:<br>
 • Customer.FromDate == NULL OR Customer.FromDate &lt;= Offer.DocumentDate<br>
 • Customer.ThruDate == NULL OR Customer.ThruDate &gt;= Offer.DocumentDate<br><br>
 If a matching Customer is found:<br>
-• Set the first found Customer to the Offer's Customer field.<br><br>
+• Set the first found Customer to the Offer's Customer field.<br>
 Else:<br>
 • Create a new Customer record where:<br>
 • Customer.Party == Offer.ToParty<br>
