@@ -125,24 +125,35 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (Customer == NULL) &amp;&amp; (ToParty != NULL):<br></p>
-<ul>
-<li>Create a new Customer record where:<br>
-• Party = Offer.ToParty<br>
+<td>If (Customer == NULL) &amp;&amp; (ToParty != NULL):<br>
+Search for an existing Customer record where:<br>
+• Customer.Party == Offer.ToParty<br>
+• Customer.IsActive == TRUE<br>
+• Customer.EnterpriseCompany == Offer.EnterpriseCompany OR Customer.EnterpriseCompany == NULL
+• Customer.FromDate == NULL OR Customer.FromDate &lt;= Offer.DocumentDate<br>
+• Customer.ThruDate == NULL OR Customer.ThruDate &gt;= Offer.DocumentDate<br><br>
+If a matching Customer is found:<br>
+• Set the first found Customer to the Offer's Customer field.<br><br>
+Else:<br>
+• Create a new Customer record where:<br>
+• Customer.Party == Offer.ToParty<br>
 • Customer.FromDate = TODAY<br>
 • Customer.EnterpriseCompany = Offer.EnterpriseCompany<br>
 • Customer.DefaultCurrency = Offer.EnterpriseCompany.BaseCurrency<br>
 • Customer.CreditLimit = Offer.EnterpriseCompany.DefaultCustomerCreditLimitBase<br>
-• Other customer fields are set to NULL or to their default values<br></li>
-<li>Then set the new Customer to the Offer's Customer field.</li>
-</ul>
-</td>
+• Customer.IsActive = TRUE<br>
+• Customer.AllowUseAsPrimaryCustomer = TRUE<br>
+• Customer.AllowUseAsShipToCustomer = FALSE<br>
+• Other customer fields are set to NULL or to their default values<br><br>
+• Then set the new Customer to the Offer's Customer field</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule automates the creation and assignment of a Customer when an Offer is approved
-(system state set to Released or higher). It eliminates the need for manual customer creation
-by the user.</td>
+<td>The rule checks for an existing valid Customer record based on the Offer’s ToParty and
+EnterpriseCompany when an Offer is approved (system state set to Released or higher).<br>
+If there is an existing valid Customer record, it is assigned to the Offer.<br>
+If no such record is found, a new Customer is created and then assigned to the Offer.<br>
+This eliminates the need for manual customer assignment or creation by the user.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -150,7 +161,7 @@ by the user.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced:</td>
+<td>Introduced: v.26.2</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
