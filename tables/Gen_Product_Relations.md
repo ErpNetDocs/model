@@ -7,6 +7,10 @@ Entity: [General.Products.ProductRelations](~/entities/General.Products.ProductR
 
 Contains relations between the products (Replacement, Merchandising etc.). Entity: Gen_Product_Relations (Introduced in version 26.2.0.8)
 
+## Owner Tables Hierarchy
+
+* [Gen_Products](Gen_Products.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -75,7 +79,7 @@ From product
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

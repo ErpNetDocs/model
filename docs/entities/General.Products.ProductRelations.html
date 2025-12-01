@@ -91,9 +91,11 @@
 <p>Contains relations between the products (Replacement, Merchandising etc.). Entity: Gen_Product_Relations (Introduced in version 26.2.0.8)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {FromProductId}</em><br>
+<em>{SystemType}: {FromProduct} - {ToProduct}</em><br>
 Default Search Members:<br>
-__<br>
+<em>FromProduct.Name</em><br>
+Name Data Member:<br>
+<em>FromProduct.Name</em><br>
 Category:  <em>Definitions</em><br>
 Show in UI:  <em>ShownByDefault</em><br>
 API access:  <em>ReadWrite</em></p>
@@ -102,10 +104,10 @@ API access:  <em>ReadWrite</em></p>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="General.Products.ProductRelations.html">General.Products.ProductRelations</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="General.Products.Products.html">General.Products.Products</a><br>
+Aggregate Root:<br>
+<a href="General.Products.Products.html">General.Products.Products</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -120,16 +122,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="General.Products.ProductRelations.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductRelations.html#externalid">ExternalId</a></td>
-<td>string</td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductRelations.html#externalsystem">ExternalSystem</a></td>
-<td>string</td>
-<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductRelations.html#fromdate">FromDate</a></td>
@@ -176,7 +168,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="General.Products.ProductRelations.html#fromproduct">FromProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>From product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>From product. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductRelations.html#relationtype">RelationType</a></td>
@@ -195,20 +187,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
@@ -257,10 +235,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="fromproduct">FromProduct</h3>
-<p>From product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>From product. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="relationtype">RelationType</h3>
 <p>Products relation type. <code>Required</code> <code>Filter(multi eq)</code></p>

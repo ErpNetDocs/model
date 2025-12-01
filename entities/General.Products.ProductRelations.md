@@ -9,9 +9,11 @@ Contains relations between the products (Replacement, Merchandising etc.). Entit
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {FromProductId}_  
+_{SystemType}: {FromProduct} - {ToProduct}_  
 Default Search Members:  
-__  
+_FromProduct.Name_  
+Name Data Member:  
+_FromProduct.Name_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  
@@ -23,16 +25,16 @@ Max level:  _4 - Track object attribute and blob changes_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [General.Products.ProductRelations](General.Products.ProductRelations.md)  
+Aggregate Parent:  
+[General.Products.Products](General.Products.Products.md)  
+Aggregate Root:  
+[General.Products.Products](General.Products.Products.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DisplayText](General.Products.ProductRelations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](General.Products.ProductRelations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Products.ProductRelations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromDate](General.Products.ProductRelations.md#fromdate) | date __nullable__ | Start date from which the product relation is valid. `Filter(eq;ge;le)` 
 | [Id](General.Products.ProductRelations.md#id) | guid |  
 | [Notes](General.Products.ProductRelations.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
@@ -44,7 +46,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromProduct](General.Products.ProductRelations.md#fromproduct) | [Products](General.Products.Products.md) | From product. `Required` `Filter(multi eq)` |
+| [FromProduct](General.Products.ProductRelations.md#fromproduct) | [Products](General.Products.Products.md) | From product. `Required` `Filter(multi eq)` `Owner` |
 | [RelationType](General.Products.ProductRelations.md#relationtype) | [ProductRelationTypes](General.Products.ProductRelationTypes.md) | Products relation type. `Required` `Filter(multi eq)` |
 | [ToProduct](General.Products.ProductRelations.md#toproduct) | [Products](General.Products.Products.md) | To product. `Required` `Filter(multi eq)` |
 
@@ -57,26 +59,6 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
@@ -146,11 +128,12 @@ _Show in UI_: **ShownByDefault**
 
 ### FromProduct
 
-From product. `Required` `Filter(multi eq)`
+From product. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 ### RelationType

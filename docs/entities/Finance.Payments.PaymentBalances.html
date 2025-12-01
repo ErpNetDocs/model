@@ -161,7 +161,7 @@ API access:  <em>ReadWrite</em></p>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#refdocumentdate">RefDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the original document. null means that it is unknown. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></td>
+<td>The date of the original document. null means that it is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#refdocumentno">RefDocumentNo</a></td>
@@ -390,11 +390,11 @@ Allowed values for the <code>PaymentStatus</code>(Finance.Payments.PaymentBalanc
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
-<p>The date of the original document. null means that it is unknown. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></p>
+<p>The date of the original document. null means that it is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_Date</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Back-End Default Expression:</em><br>

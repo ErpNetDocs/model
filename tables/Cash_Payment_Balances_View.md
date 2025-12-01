@@ -552,6 +552,7 @@ The date of the original document. NULL means that it is unknown
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
+|GreaterThanOrLessThan|None|yes|yes|
 
 ### Ref_Document_Id
 

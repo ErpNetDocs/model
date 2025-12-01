@@ -35,6 +35,7 @@ Aggregate Tree
   * [General.Products.ProductDimensions](General.Products.ProductDimensions.md)  
   * [General.Products.ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md)  
   * [General.Products.ProductPictures](General.Products.ProductPictures.md)  
+  * [General.Products.ProductRelations](General.Products.ProductRelations.md)  
   * [General.Products.ProductVariants](General.Products.ProductVariants.md)  
   * [General.Products.CompositeProductComponents](General.Products.CompositeProductComponents.md)  
   * [Logistics.Inventory.ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
@@ -114,6 +115,7 @@ Aggregate Tree
 | Pictures | [ProductPictures](General.Products.ProductPictures.md) | List of `ProductPicture`(General.Products.ProductPictures.md) child objects, based on the `General.Products.ProductPicture.Product`(General.Products.ProductPictures.md#product) back reference 
 | Prices | [ProductPrices](Crm.Pricing.ProductPrices.md) | List of `ProductPrice`(Crm.Pricing.ProductPrices.md) child objects, based on the `Crm.ProductPrice.Product`(Crm.Pricing.ProductPrices.md#product) back reference 
 | PurchaseProductPrices | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) | List of `PurchaseProductPrice`(Logistics.Procurement.PurchaseProductPrices.md) child objects, based on the `Logistics.Procurement.PurchaseProductPrice.Product`(Logistics.Procurement.PurchaseProductPrices.md#product) back reference 
+| Relations | [ProductRelations](General.Products.ProductRelations.md) | List of `ProductRelation`(General.Products.ProductRelations.md) child objects, based on the `General.Products.ProductRelation.FromProduct`(General.Products.ProductRelations.md#fromproduct) back reference 
 | SerialNumbers | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) | List of `SerialNumber`(Logistics.Inventory.SerialNumbers.md) child objects, based on the `Logistics.Inventory.SerialNumber.Product`(Logistics.Inventory.SerialNumbers.md#product) back reference 
 | Variants | [ProductVariants](General.Products.ProductVariants.md) | List of `ProductVariant`(General.Products.ProductVariants.md) child objects, based on the `General.Products.ProductVariant.Product`(General.Products.ProductVariants.md#product) back reference 
 
