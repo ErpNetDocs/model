@@ -9,7 +9,7 @@ Contains relations between the products (Replacement, Merchandising etc.). Entit
 
 ## Default Visualization
 Default Display Text Format:  
-_{SystemType}: {FromProduct} - {ToProduct}_  
+_{RelationType.SystemType}: {FromProduct)} - {ToProduct)}_  
 Default Search Members:  
 _FromProduct.Name_  
 Name Data Member:  

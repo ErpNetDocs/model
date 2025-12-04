@@ -235,6 +235,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( ( obj.PaymentCurrency == null) OrElse ( obj.PaymentAmount == null)), obj.Amount, obj.SetAmount( ))</code></p>
 <h3 id="amountpercent">AmountPercent</h3>
 <p>Percent of the sales order amount to be payed.</p>
 <p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
@@ -346,6 +348,8 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( obj.PaymentCurrency == null), null, IIF( ( ( obj.Amount != null) OrElse True), obj.SetPaymentAmount( ), obj.PaymentAmount))</code></p>
 <h3 id="paymentstartdays">PaymentStartDays</h3>
 <p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -535,6 +539,8 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R39322.html">R39322 Sales Order Payment Plan - Set Payment Currency (Recalc)</a></li>
+<li><a href="../business-rules/R39324.html">R39324 Sales Order Payment Plan - Set Payment Amount (Recalc)</a></li>
+<li><a href="../business-rules/R39328.html">R39328 Sales Order Payment Plan - Set Amount (Recalc)</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:

@@ -72,6 +72,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( obj.PaymentCurrency == null) OrElse ( obj.PaymentAmount == null)), obj.Amount, obj.SetAmount( ))`
 ### AmountPercent
 
 Percent of the sales order amount to be payed.
@@ -192,6 +194,8 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.PaymentCurrency == null), null, IIF( ( ( obj.Amount != null) OrElse True), obj.SetPaymentAmount( ), obj.PaymentAmount))`
 ### PaymentStartDays
 
 Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. `Required` `Default(0)`

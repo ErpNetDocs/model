@@ -39,7 +39,6 @@ Aggregate Root:
 | [Id](Finance.Saft.ProfileAccounts.md#id) | guid |  
 | [Notes](Finance.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping. `Filter(like)` 
 | [ObjectVersion](Finance.Saft.ProfileAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [SaftAccountNo](Finance.Saft.ProfileAccounts.md#saftaccountno) | int32 | SAF-T account number. `Required` `Filter(eq;ge;le)` 
 | [SignificantPropertyOrder](Finance.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. `Filter(eq;ge;le)` 
 
 ## References
@@ -47,6 +46,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Account](Finance.Saft.ProfileAccounts.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Internal general ledger account. `Required` `Filter(multi eq)` |
+| [AccountCodeEntry](Finance.Saft.ProfileAccounts.md#accountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. `Required` `Filter(multi eq)` `Introduced in version 26.2.0.69` |
 | [Profile](Finance.Saft.ProfileAccounts.md#profile) | [Profiles](Finance.Saft.Profiles.md) | SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -111,16 +111,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
 
-### SaftAccountNo
-
-SAF-T account number. `Required` `Filter(eq;ge;le)`
-
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
 ### SignificantPropertyOrder
 
 Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. `Filter(eq;ge;le)`
@@ -140,6 +130,15 @@ Internal general ledger account. `Required` `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### AccountCodeEntry
+
+The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. `Required` `Filter(multi eq)` `Introduced in version 26.2.0.69`
+
+_Type_: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

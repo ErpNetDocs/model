@@ -15,16 +15,53 @@ GL Accounts to SAF-T mapping. Entity: Saft_Profile_Accounts (Introduced in versi
 
 | Name | Type | Description |
 | - | - | --- |
+|[Account_Code_Entry_Id](#account_code_entry_id)|`uniqueidentifier` |The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation.|
 |[Account_Id](#account_id)|`uniqueidentifier` |Internal general ledger account.|
 |[Account_Type](#account_type)|`char(3)` Allowed: `ACT`, `PAS`, `BIF`|Account classification in SAF-T.|
 |[Notes](#notes)|`nvarchar(max)` |Additional details about the mapping.|
 |[Profile_Id](#profile_id)|`uniqueidentifier` |SAF-T profile this mapping belongs to.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Saft_Account_No](#saft_account_no)|`int` |SAF-T account number.|
 |[Saft_Profile_Account_Id](#saft_profile_account_id)|`uniqueidentifier` `PK`|Unique record identifier|
 |[Significant_Property_Order](#significant_property_order)|`int` |Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.|
 
 ## Columns
+
+### Account_Code_Entry_Id
+
+
+The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|7|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Reg_Code_Entries](Reg_Code_Entries.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Account_Code_Entry_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Account_Id
 
@@ -78,7 +115,7 @@ Account classification in SAF-T.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|5|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -114,7 +151,7 @@ Additional details about the mapping.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|4|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -184,7 +221,7 @@ SAF-T profile this mapping belongs to.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|7|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -199,43 +236,6 @@ SAF-T profile this mapping belongs to.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
-
-### Saft_Account_No
-
-
-SAF-T account number.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|3|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Saft_Account_No - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-|GreaterThanOrLessThan|None|no|no|
 
 ### Saft_Profile_Account_Id
 
@@ -287,7 +287,7 @@ Sequence number of the analytical property considered important for this account
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|6|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

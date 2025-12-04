@@ -144,11 +144,6 @@ Aggregate Root:<br>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
-<td><a href="Finance.Saft.ProfileAccounts.html#saftaccountno">SaftAccountNo</a></td>
-<td>int32</td>
-<td>SAF-T account number. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
-</tr>
-<tr>
 <td><a href="Finance.Saft.ProfileAccounts.html#significantpropertyorder">SignificantPropertyOrder</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. <code>Filter(eq;ge;le)</code></td>
@@ -169,6 +164,11 @@ Aggregate Root:<br>
 <td><a href="Finance.Saft.ProfileAccounts.html#account">Account</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Accounts</a></td>
 <td>Internal general ledger account. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Saft.ProfileAccounts.html#accountcodeentry">AccountCodeEntry</a></td>
+<td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
+<td>The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.69</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Saft.ProfileAccounts.html#profile">Profile</a></td>
@@ -238,13 +238,6 @@ Allowed values for the <code>AccountType</code>(Finance.Saft.ProfileAccounts.md#
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="saftaccountno">SaftAccountNo</h3>
-<p>SAF-T account number. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="significantpropertyorder">SignificantPropertyOrder</h3>
 <p>Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
@@ -257,6 +250,12 @@ Allowed values for the <code>AccountType</code>(Finance.Saft.ProfileAccounts.md#
 <p>Internal general ledger account. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="accountcodeentry">AccountCodeEntry</h3>
+<p>The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.69</code></p>
+<p><em>Type</em>: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

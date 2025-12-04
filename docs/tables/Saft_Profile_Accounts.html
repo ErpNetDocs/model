@@ -105,6 +105,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="#account_code_entry_id">Account_Code_Entry_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation.</td>
+</tr>
+<tr>
 <td><a href="#account_id">Account_Id</a></td>
 <td><code>uniqueidentifier</code></td>
 <td>Internal general ledger account.</td>
@@ -130,11 +135,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="#saft_account_no">Saft_Account_No</a></td>
-<td><code>int</code></td>
-<td>SAF-T account number.</td>
-</tr>
-<tr>
 <td><a href="#saft_profile_account_id">Saft_Profile_Account_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
 <td>Unique record identifier</td>
@@ -147,6 +147,129 @@
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
+<h3 id="account_code_entry_id">Account_Code_Entry_Id</h3>
+<p>The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Reg_Code_Entries.html">Reg_Code_Entries</a></td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>uniqueidentifier</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="account_code_entry_id---supported-filters">Account_Code_Entry_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="account_id">Account_Id</h3>
 <p>Internal general ledger account.</p>
 <table>
@@ -314,7 +437,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>5</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -433,7 +556,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>4</td>
+<td>3</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -674,7 +797,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>7</td>
+<td>6</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -730,131 +853,6 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="saft_account_no">Saft_Account_No</h3>
-<p>SAF-T account number.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>3</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>int</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="saft_account_no---supported-filters">Saft_Account_No - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -1018,7 +1016,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>6</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
