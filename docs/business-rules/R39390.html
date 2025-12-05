@@ -131,7 +131,9 @@ Then (ToState cannot be Released or lower than Released)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>Ensures the integrity of accounting data submitted to SAF-T by preventing further state changes after completion.</td>
+<td>Ensures the integrity of accounting data submitted to SAF-T by preventing transitions
+to the &quot;Released&quot; state or any lower state, in order to restrict further editing
+once the &quot;Completed&quot; state is reached.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
