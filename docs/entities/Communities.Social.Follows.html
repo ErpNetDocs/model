@@ -137,6 +137,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
 </tr>
 <tr>
+<td><a href="Communities.Social.Follows.html#followlevel">FollowLevel</a></td>
+<td><a href="Communities.Social.Follows.html#followlevel">FollowLevel</a></td>
+<td>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Introduced in version 26.2.0.70</code></td>
+</tr>
+<tr>
 <td><a href="Communities.Social.Follows.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -200,6 +205,38 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="followlevel">FollowLevel</h3>
+<p>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Introduced in version 26.2.0.70</code></p>
+<p><em>Type</em>: <strong><a href="Communities.Social.Follows.html#followlevel">FollowLevel</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>FollowLevel</code>(Communities.Social.Follows.md#followlevel) data attribute<br>
+<em>Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tagged</td>
+<td>Automatically followed due to mention or assignment.. Stored as 'TAG'. <br> <em>Database Value:</em> 'TAG' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Tagged'</td>
+</tr>
+<tr>
+<td>Follow</td>
+<td>User willingly chose to follow this object.. Stored as 'FLW'. <br> <em>Database Value:</em> 'FLW' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Follow'</td>
+</tr>
+<tr>
+<td>Favorite</td>
+<td>User marked this object as a favorite.. Stored as 'FAV'. <br> <em>Database Value:</em> 'FAV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Favorite'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Tagged</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

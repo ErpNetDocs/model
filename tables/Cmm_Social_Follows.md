@@ -13,6 +13,7 @@ Denotes a user following an object in the system. The user will be notified for 
 | - | - | --- |
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact server time (in UTC), when the follow was created.|
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The object being followed by the user.|
+|[Follow_Level](#follow_level)|`char(3)` Allowed: `TAG`, `FLW`, `FAV`|Indicates the level of user’s interest for this object.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Follow_Id](#social_follow_id)|`uniqueidentifier` `PK`||
 |[User_Id](#user_id)|`uniqueidentifier` |The user which follows the object.|
@@ -91,6 +92,37 @@ The object being followed by the user.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Follow_Level
+
+
+Indicates the level of user’s interest for this object.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`TAG`, `FLW`, `FAV`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|TAG|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Row_Version
 

@@ -101,30 +101,40 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="#creation_time_utc">Creation_Time_Utc</a></td>
+<td><code>datetime</code></td>
+<td>The exact server time (in UTC), when the follow was created.</td>
+</tr>
+<tr>
 <td><a href="#data_object_id">Data_Object_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>The data object subject to the social follow</td>
+<td>The object being followed by the user.</td>
 </tr>
 <tr>
 <td><a href="#entity_item_id">Entity_Item_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>The followed entity item.</td>
+<td>The Id of the primary row to which the object is bound</td>
 </tr>
 <tr>
 <td><a href="#entity_type">Entity_Type</a></td>
 <td><code>nvarchar(64)</code></td>
-<td>The followed entity type.</td>
+<td>The entity type of the row to which the object is bound</td>
+</tr>
+<tr>
+<td><a href="#follow_level">Follow_Level</a></td>
+<td><code>char(3)</code> Allowed: <code>TAG</code>, <code>FLW</code>, <code>FAV</code></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="#user_id">User_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>The user which follows the entity.</td>
+<td>The user which follows the object.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="data_object_id">Data_Object_Id</h3>
-<p>The data object subject to the social follow</p>
+<h3 id="creation_time_utc">Creation_Time_Utc</h3>
+<p>The exact server time (in UTC), when the follow was created.</p>
 <table>
 <thead>
 <tr>
@@ -138,16 +148,12 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Base Table.Column</td>
-<td><a href="Sys_Objects.html">Sys_Objects</a>.<a href="Sys_Objects.html#object_id">Object_Id</a></td>
-</tr>
-<tr>
 <td>Data Filter</td>
 <td>no</td>
 </tr>
 <tr>
 <td>Default Value</td>
-<td>NewGuid</td>
+<td>CurrentDateTimeUtc</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -188,6 +194,129 @@
 <tr>
 <td>Readonly</td>
 <td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="creation_time_utc---supported-filters">Creation_Time_Utc - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data_object_id">Data_Object_Id</h3>
+<p>The object being followed by the user.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Sys_Objects.html">Sys_Objects</a></td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -247,7 +376,7 @@
 </tbody>
 </table>
 <h3 id="entity_item_id">Entity_Item_Id</h3>
-<p>The followed entity item.</p>
+<p>The Id of the primary row to which the object is bound</p>
 <table>
 <thead>
 <tr>
@@ -366,7 +495,7 @@
 </tbody>
 </table>
 <h3 id="entity_type">Entity_Type</h3>
-<p>The followed entity type.</p>
+<p>The entity type of the row to which the object is bound</p>
 <table>
 <thead>
 <tr>
@@ -385,7 +514,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -397,7 +526,7 @@
 </tr>
 <tr>
 <td>Is Entity Name</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Max Length</td>
@@ -484,8 +613,136 @@
 </tr>
 </tbody>
 </table>
+<h3 id="follow_level">Follow_Level</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>TAG</code>, <code>FLW</code>, <code>FAV</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>TAG</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="follow_level---supported-filters">Follow_Level - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="user_id">User_Id</h3>
-<p>The user which follows the entity.</p>
+<p>The user which follows the object.</p>
 <table>
 <thead>
 <tr>
@@ -504,7 +761,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>NewGuid</td>
+<td>None</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -545,6 +802,10 @@
 <tr>
 <td>Readonly</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Sec_Users.html">Sec_Users</a></td>
 </tr>
 <tr>
 <td>RTF</td>
