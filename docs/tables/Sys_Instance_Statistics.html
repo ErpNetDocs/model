@@ -162,7 +162,7 @@
 </tr>
 <tr>
 <td><a href="#statistic_type">Statistic_Type</a></td>
-<td><code>char(3)</code> Allowed: <code>EXE</code>, <code>WAI</code>, <code>TAB</code>, <code>PER</code>, <code>SIT</code></td>
+<td><code>char(3)</code> Allowed: <code>EXE</code>, <code>WAI</code>, <code>TAB</code>, <code>PER</code>, <code>SIT</code>, <code>PAR</code></td>
 <td>The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site</td>
 </tr>
 <tr>
@@ -179,6 +179,11 @@
 <td><a href="#unit_of_measure">Unit_Of_Measure</a></td>
 <td><code>nvarchar(10)</code></td>
 <td>Unit of measure for Total and Max.</td>
+</tr>
+<tr>
+<td><a href="#value">Value</a></td>
+<td><code>nvarchar(64)</code></td>
+<td>Holds the metric in text when numeric fields can't represent it.</td>
 </tr>
 </tbody>
 </table>
@@ -1582,7 +1587,7 @@
 <tbody>
 <tr>
 <td>Allowed Values</td>
-<td><code>EXE</code>, <code>WAI</code>, <code>TAB</code>, <code>PER</code>, <code>SIT</code></td>
+<td><code>EXE</code>, <code>WAI</code>, <code>TAB</code>, <code>PER</code>, <code>SIT</code>, <code>PAR</code></td>
 </tr>
 <tr>
 <td>Auto Complete</td>
@@ -2047,6 +2052,106 @@
 <td><code>NULL</code></td>
 <td>no</td>
 <td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="value">Value</h3>
+<p>Holds the metric in text when numeric fields can't represent it.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>64</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(64) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>

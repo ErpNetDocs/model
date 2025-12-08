@@ -585,6 +585,8 @@
   - name: Saft
     href: Finance.Saft.md
     items:
+    - name: ProfileAccountByProducts
+      href: Finance.Saft.ProfileAccountByProducts.md
     - name: ProfileAccounts
       href: Finance.Saft.ProfileAccounts.md
     - name: ProfileCompanies

@@ -19,8 +19,8 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |Date and time (in UTC) when the application was registered.|
 |[Impersonate_As_Community_User_Allowed](#impersonate_as_community_user_allowed)|`bit` |Allows the application to request login from external users and operate on their behalf.|
 |[Impersonate_As_Internal_User_Allowed](#impersonate_as_internal_user_allowed)|`bit` |Allows the application to request login from internal users and operate on their behalf.|
-|[Impersonate_Login_Url](#impersonate_login_url)|`nvarchar(254)` |The login Url used when an application is impersonated as (usually community) user.|
-|[Impersonate_Logout_Url](#impersonate_logout_url)|`nvarchar(254)` |The logout Url used when an application is impersonated as (usually community) user.|
+|[Impersonate_Login_Url](#impersonate_login_url)|`nvarchar(254)` |The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.|
+|[Impersonate_Logout_Url](#impersonate_logout_url)|`nvarchar(254)` |The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.|
 |[Is_Enabled](#is_enabled)|`bit` |Specifies whether the application is enabled for login.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -315,7 +315,7 @@ Allows the application to request login from internal users and operate on their
 ### Impersonate_Login_Url
 
 
-The login Url used when an application is impersonated as (usually community) user.
+The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.
 
 | Property | Value |
 | - | - |
@@ -345,7 +345,7 @@ The login Url used when an application is impersonated as (usually community) us
 ### Impersonate_Logout_Url
 
 
-The logout Url used when an application is impersonated as (usually community) user.
+The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.
 
 | Property | Value |
 | - | - |

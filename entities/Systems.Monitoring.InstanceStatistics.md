@@ -51,6 +51,7 @@ Aggregate Tree
 | [SubType](Systems.Monitoring.InstanceStatistics.md#subtype) | string (64) | Kind of stat (depending on the type). `Required` `Filter(eq)` 
 | [Total](Systems.Monitoring.InstanceStatistics.md#total) | int32 | The total of the stat for the time period. `Required` `Filter(ge;le)` 
 | [UnitOfMeasure](Systems.Monitoring.InstanceStatistics.md#unitofmeasure) | string (10) | Unit of measure for Total and Max. `Required` `Filter(eq)` 
+| [Value](Systems.Monitoring.InstanceStatistics.md#value) | string (64) __nullable__ | Holds the metric in text when numeric fields can't represent it. `Introduced in version 26.2.0.73` 
 
 
 ## Attribute Details
@@ -224,6 +225,7 @@ _Allowed Values (Systems.Monitoring.InstanceStatisticsRepository.StatisticType E
 | Table | Table value. Stored as 'TAB'. <br /> _Database Value:_ 'TAB' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Table' |
 | Perf | Perf value. Stored as 'PER'. <br /> _Database Value:_ 'PER' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Perf' |
 | Site | Site value. Stored as 'SIT'. <br /> _Database Value:_ 'SIT' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Site' |
+| Parameter | Parameter value. Stored as 'PAR'. <br /> _Database Value:_ 'PAR' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Parameter' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
@@ -259,6 +261,17 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **10**  
+_Show in UI_: **ShownByDefault**  
+
+### Value
+
+Holds the metric in text when numeric fields can't represent it. `Introduced in version 26.2.0.73`
+
+_Type_: **string (64) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **64**  
 _Show in UI_: **ShownByDefault**  
 
 

@@ -45,8 +45,8 @@ Aggregate Tree
 | [Id](Systems.Security.TrustedApplications.md#id) | guid |  
 | [ImpersonateAsCommunity<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateascommunityuserallowed) | boolean | Allows the application to request login from external users and operate on their behalf. `Required` `Default(false)` `Filter(eq)` 
 | [ImpersonateAsInternal<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateasinternaluserallowed) | boolean | Allows the application to request login from internal users and operate on their behalf. `Required` `Default(false)` `Filter(eq)` 
-| [ImpersonateLoginUrl](Systems.Security.TrustedApplications.md#impersonateloginurl) | string (254) __nullable__ | The login Url used when an application is impersonated as (usually community) user. 
-| [ImpersonateLogoutUrl](Systems.Security.TrustedApplications.md#impersonatelogouturl) | string (254) __nullable__ | The logout Url used when an application is impersonated as (usually community) user. 
+| [ImpersonateLoginUrl](Systems.Security.TrustedApplications.md#impersonateloginurl) | string (254) __nullable__ | The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
+| [ImpersonateLogoutUrl](Systems.Security.TrustedApplications.md#impersonatelogouturl) | string (254) __nullable__ | The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
 | [IsEnabled](Systems.Security.TrustedApplications.md#isenabled) | boolean | Specifies whether the application is enabled for login. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Systems.Security.TrustedApplications.md#name) | string (254) | The multi-language name of the application. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Security.TrustedApplications.md#notes) | string (max) __nullable__ | Notes for this TrustedApplication. 
@@ -217,7 +217,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ImpersonateLoginUrl
 
-The login Url used when an application is impersonated as (usually community) user.
+The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.
 
 _Type_: **string (254) __nullable__**  
 _Category_: **System**  
@@ -228,7 +228,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ImpersonateLogoutUrl
 
-The logout Url used when an application is impersonated as (usually community) user.
+The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.
 
 _Type_: **string (254) __nullable__**  
 _Category_: **System**  

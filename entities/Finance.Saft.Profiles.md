@@ -27,6 +27,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Finance.Saft.Profiles](Finance.Saft.Profiles.md)  
+  * [Finance.Saft.ProfileAccountByProducts](Finance.Saft.ProfileAccountByProducts.md)  
   * [Finance.Saft.ProfileAccounts](Finance.Saft.ProfileAccounts.md)  
   * [Finance.Saft.ProfileCompanies](Finance.Saft.ProfileCompanies.md)  
   * [Finance.Saft.ProfileParties](Finance.Saft.ProfileParties.md)  
@@ -49,6 +50,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| AccountByProducts | [ProfileAccountByProducts](Finance.Saft.ProfileAccountByProducts.md) | List of `ProfileAccountByProduct`(Finance.Saft.ProfileAccountByProducts.md) child objects, based on the `Finance.Saft.ProfileAccountByProduct.Profile`(Finance.Saft.ProfileAccountByProducts.md#profile) back reference 
 | Accounts | [ProfileAccounts](Finance.Saft.ProfileAccounts.md) | List of `ProfileAccount`(Finance.Saft.ProfileAccounts.md) child objects, based on the `Finance.Saft.ProfileAccount.Profile`(Finance.Saft.ProfileAccounts.md#profile) back reference 
 | Companies | [ProfileCompanies](Finance.Saft.ProfileCompanies.md) | List of `ProfileCompany`(Finance.Saft.ProfileCompanies.md) child objects, based on the `Finance.Saft.ProfileCompany.Profile`(Finance.Saft.ProfileCompanies.md#profile) back reference 
 | Parties | [ProfileParties](Finance.Saft.ProfileParties.md) | List of `ProfileParty`(Finance.Saft.ProfileParties.md) child objects, based on the `Finance.Saft.ProfileParty.Profile`(Finance.Saft.ProfileParties.md#profile) back reference 

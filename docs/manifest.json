@@ -14812,6 +14812,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileAccountByProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileAccountByProducts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Saft.ProfileAccounts.md",
       "output": {
         ".html": {
@@ -26555,6 +26565,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Account_By_Products.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Account_By_Products.html"
         }
       },
       "version": ""

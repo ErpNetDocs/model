@@ -28,8 +28,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTimeUtc](Communities.Social.FollowedEntities.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc` `Introduced in version 22.1.6.73` 
 | [EntityItemId](Communities.Social.FollowedEntities.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Item_Id` 
-| [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)` `Inherited from Sys_Objects_Table.Entity_Type` 
-| [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70` 
+| [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Type` 
+| [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq;ge;le)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70` 
 
 ## References
 
@@ -65,12 +65,12 @@ _Show in UI_: **ShownByDefault**
 
 ### EntityType
 
-The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)` `Inherited from Sys_Objects_Table.Entity_Type`
+The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Type`
 
 _Type_: **string (64)**  
 _Category_: **System**  
 _Inherited From_: **Sys_Objects_Table.Entity_Type**  
-_Supported Filters_: **Equals**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 _Default Value_: ** **  
@@ -78,18 +78,18 @@ _Show in UI_: **ShownByDefault**
 
 ### FollowLevel
 
-Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70`
+Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq;ge;le)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70`
 
 _Type_: **[FollowLevel](Communities.Social.FollowedEntities.md#followlevel)**  
 _Category_: **System**  
-Allowed values for the `FollowLevel`(Communities.Social.FollowedEntities.md#followlevel) data attribute  
-_Allowed Values (Communities.Social.FollowedEntitiesRepository.FollowLevel Enum Members)_  
+Allowed values for the `FollowLevel`(Communities.Social.Follows.md#followlevel) data attribute  
+_Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
-| Tagged | Tagged value. Stored as 'TAG'. <br /> _Database Value:_ 'TAG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Tagged' |
-| Follow | Follow value. Stored as 'FLW'. <br /> _Database Value:_ 'FLW' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Follow' |
-| Favorite | Favorite value. Stored as 'FAV'. <br /> _Database Value:_ 'FAV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Favorite' |
+| Tagged | Automatically followed due to mention or assignment.. Stored as 'TAG'. <br /> _Database Value:_ 'TAG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Tagged' |
+| Follow | User willingly chose to follow this object.. Stored as 'FLW'. <br /> _Database Value:_ 'FLW' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Follow' |
+| Favorite | User marked this object as a favorite.. Stored as 'FAV'. <br /> _Database Value:_ 'FAV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Favorite' |
 
 _Inherited From_: **Cmm_Social_Follows_Table.Follow_Level**  
 _Supported Filters_: **NotFilterable**  

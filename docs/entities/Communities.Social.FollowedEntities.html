@@ -126,12 +126,12 @@ API access:  <em>ReadWrite</em></p>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#entitytype">EntityType</a></td>
 <td>string (64)</td>
-<td>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></td>
+<td>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#followlevel">FollowLevel</a></td>
 <td><a href="Communities.Social.FollowedEntities.html#followlevel">FollowLevel</a></td>
-<td>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Inherited from Cmm_Social_Follows_Table.Follow_Level</code> <code>Introduced in version 26.2.0.70</code></td>
+<td>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Filter(multi eq;ge;le)</code> <code>Inherited from Cmm_Social_Follows_Table.Follow_Level</code> <code>Introduced in version 26.2.0.70</code></td>
 </tr>
 </tbody>
 </table>
@@ -175,21 +175,21 @@ API access:  <em>ReadWrite</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="entitytype">EntityType</h3>
-<p>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></p>
+<p>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Sys_Objects_Table.Entity_Type</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Default Value</em>: ** **<br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="followlevel">FollowLevel</h3>
-<p>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Inherited from Cmm_Social_Follows_Table.Follow_Level</code> <code>Introduced in version 26.2.0.70</code></p>
+<p>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Filter(multi eq;ge;le)</code> <code>Inherited from Cmm_Social_Follows_Table.Follow_Level</code> <code>Introduced in version 26.2.0.70</code></p>
 <p><em>Type</em>: <strong><a href="Communities.Social.FollowedEntities.html#followlevel">FollowLevel</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-Allowed values for the <code>FollowLevel</code>(Communities.Social.FollowedEntities.md#followlevel) data attribute<br>
-<em>Allowed Values (Communities.Social.FollowedEntitiesRepository.FollowLevel Enum Members)</em></p>
+Allowed values for the <code>FollowLevel</code>(Communities.Social.Follows.md#followlevel) data attribute<br>
+<em>Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)</em></p>
 <table>
 <thead>
 <tr>
@@ -200,15 +200,15 @@ Allowed values for the <code>FollowLevel</code>(Communities.Social.FollowedEntit
 <tbody>
 <tr>
 <td>Tagged</td>
-<td>Tagged value. Stored as 'TAG'. <br> <em>Database Value:</em> 'TAG' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Tagged'</td>
+<td>Automatically followed due to mention or assignment.. Stored as 'TAG'. <br> <em>Database Value:</em> 'TAG' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Tagged'</td>
 </tr>
 <tr>
 <td>Follow</td>
-<td>Follow value. Stored as 'FLW'. <br> <em>Database Value:</em> 'FLW' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Follow'</td>
+<td>User willingly chose to follow this object.. Stored as 'FLW'. <br> <em>Database Value:</em> 'FLW' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Follow'</td>
 </tr>
 <tr>
 <td>Favorite</td>
-<td>Favorite value. Stored as 'FAV'. <br> <em>Database Value:</em> 'FAV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Favorite'</td>
+<td>User marked this object as a favorite.. Stored as 'FAV'. <br> <em>Database Value:</em> 'FAV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Favorite'</td>
 </tr>
 </tbody>
 </table>

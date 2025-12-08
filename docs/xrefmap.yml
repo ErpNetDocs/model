@@ -892,6 +892,9 @@ references:
 - uid: Finance.Saft
   name: Finance.Saft Namespace
   href: entities/Finance.Saft.html
+- uid: Finance.Saft.ProfileAccountByProducts
+  name: Finance.Saft.ProfileAccountByProducts Entity
+  href: entities/Finance.Saft.ProfileAccountByProducts.html
 - uid: Finance.Saft.ProfileAccounts
   name: Finance.Saft.ProfileAccounts Entity
   href: entities/Finance.Saft.ProfileAccounts.html

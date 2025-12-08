@@ -23,10 +23,11 @@ Logs time-windowed performance metrics for the monitored system instance across 
 |[Statistic_Date](#statistic_date)|`date` |The date (in UTC time) for which we are storing the statistics.|
 |[Statistic_From_Time_Utc](#statistic_from_time_utc)|`time` |The starting of the time period within the date.|
 |[Statistic_To_Time_Utc](#statistic_to_time_utc)|`time` |The ending of the time period within the date.|
-|[Statistic_Type](#statistic_type)|`char(3)` Allowed: `EXE`, `WAI`, `TAB`, `PER`, `SIT`|The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site|
+|[Statistic_Type](#statistic_type)|`char(3)` Allowed: `EXE`, `WAI`, `TAB`, `PER`, `SIT`, `PAR`|The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site|
 |[Sub_Type](#sub_type)|`nvarchar(64)` |Kind of stat (depending on the type).|
 |[Total](#total)|`int` |The total of the stat for the time period.|
 |[Unit_Of_Measure](#unit_of_measure)|`nvarchar(10)` |Unit of measure for Total and Max.|
+|[Value](#value)|`nvarchar(64)` |Holds the metric in text when numeric fields can't represent it.|
 
 ## Columns
 
@@ -448,7 +449,7 @@ The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Pe
 
 | Property | Value |
 | - | - |
-|Allowed Values|`EXE`, `WAI`, `TAB`, `PER`, `SIT`|
+|Allowed Values|`EXE`, `WAI`, `TAB`, `PER`, `SIT`, `PAR`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -585,5 +586,35 @@ Unit of measure for Total and Max.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Value
+
+
+Holds the metric in text when numeric fields can't represent it.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 

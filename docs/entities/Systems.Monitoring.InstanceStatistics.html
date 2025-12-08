@@ -213,6 +213,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>string (10)</td>
 <td>Unit of measure for Total and Max. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
+<tr>
+<td><a href="Systems.Monitoring.InstanceStatistics.html#value">Value</a></td>
+<td>string (64) <strong>nullable</strong></td>
+<td>Holds the metric in text when numeric fields can't represent it. <code>Introduced in version 26.2.0.73</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -359,6 +364,10 @@ Allowed values for the <code>StatisticType</code>(Systems.Monitoring.InstanceSta
 <td>Site</td>
 <td>Site value. Stored as 'SIT'. <br> <em>Database Value:</em> 'SIT' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Site'</td>
 </tr>
+<tr>
+<td>Parameter</td>
+<td>Parameter value. Stored as 'PAR'. <br> <em>Database Value:</em> 'PAR' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Parameter'</td>
+</tr>
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -386,6 +395,14 @@ Allowed values for the <code>StatisticType</code>(Systems.Monitoring.InstanceSta
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>10</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="value">Value</h3>
+<p>Holds the metric in text when numeric fields can't represent it. <code>Introduced in version 26.2.0.73</code></p>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
