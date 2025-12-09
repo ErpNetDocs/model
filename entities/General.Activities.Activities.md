@@ -113,7 +113,7 @@ Aggregate Tree
 | [FromCompanyDivision](General.Activities.Activities.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](General.Activities.Activities.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](General.Activities.Activities.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OwnerParty](General.Activities.Activities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` `ReadOnly` |
+| [OwnerParty](General.Activities.Activities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` |
 | [Parent](General.Activities.Activities.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](General.Activities.Activities.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ProjectTask](General.Activities.Activities.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` |
@@ -747,7 +747,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### OwnerParty
 
-The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` `ReadOnly`
+The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Category_: **System**  

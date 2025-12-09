@@ -5,6 +5,7 @@
 * [Pos_Execution_Statuses](Pos_Execution_Statuses.md)
 * [Pos_Fiscal_Receipt_Templates](Pos_Fiscal_Receipt_Templates.md)
 * [Pos_Location_Areas](Pos_Location_Areas.md)
+* [Pos_Location_Products](Pos_Location_Products.md)
 * [Pos_Locations](Pos_Locations.md)
 * [Pos_Operators](Pos_Operators.md)
 * [Pos_Product_Type_Tax_Groups](Pos_Product_Type_Tax_Groups.md)

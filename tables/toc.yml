@@ -928,6 +928,8 @@
     href: Pos_Fiscal_Receipt_Templates.md
   - name: Pos_Location_Areas
     href: Pos_Location_Areas.md
+  - name: Pos_Location_Products
+    href: Pos_Location_Products.md
   - name: Pos_Locations
     href: Pos_Locations.md
   - name: Pos_Operators
@@ -1132,10 +1134,10 @@
     href: Saft_Profile_Accounts.md
   - name: Saft_Profile_Companies
     href: Saft_Profile_Companies.md
+  - name: Saft_Profile_Measurement_Units
+    href: Saft_Profile_Measurement_Units.md
   - name: Saft_Profile_Parties
     href: Saft_Profile_Parties.md
-  - name: Saft_Profile_Product_Accounts
-    href: Saft_Profile_Product_Accounts.md
   - name: Saft_Profiles
     href: Saft_Profiles.md
 - name: Scm

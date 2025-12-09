@@ -29,6 +29,7 @@ Aggregate Tree
 * [Crm.Pos.Locations](Crm.Pos.Locations.md)  
   * [Crm.Pos.ExecutionResources](Crm.Pos.ExecutionResources.md)  
   * [Crm.Pos.LocationAreas](Crm.Pos.LocationAreas.md)  
+  * [Crm.Pos.LocationProducts](Crm.Pos.LocationProducts.md)  
 
 ## Attributes
 
@@ -55,6 +56,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | Areas | [LocationAreas](Crm.Pos.LocationAreas.md) | List of `LocationArea`(Crm.Pos.LocationAreas.md) child objects, based on the `Crm.Pos.LocationArea.Location`(Crm.Pos.LocationAreas.md#location) back reference 
 | ExecutionResources | [ExecutionResources](Crm.Pos.ExecutionResources.md) | List of `ExecutionResource`(Crm.Pos.ExecutionResources.md) child objects, based on the `Crm.Pos.ExecutionResource.Location`(Crm.Pos.ExecutionResources.md#location) back reference 
+| Products | [LocationProducts](Crm.Pos.LocationProducts.md) | List of `LocationProduct`(Crm.Pos.LocationProducts.md) child objects, based on the `Crm.Pos.LocationProduct.Location`(Crm.Pos.LocationProducts.md#location) back reference 
 
 
 ## Attribute Details

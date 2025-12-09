@@ -139,7 +139,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Communities.Social.Follows.html#followlevel">FollowLevel</a></td>
 <td><a href="Communities.Social.Follows.html#followlevel">FollowLevel</a></td>
-<td>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Introduced in version 26.2.0.70</code></td>
+<td>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.70</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.Follows.html#id">Id</a></td>
@@ -206,7 +206,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="followlevel">FollowLevel</h3>
-<p>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Introduced in version 26.2.0.70</code></p>
+<p>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.70</code></p>
 <p><em>Type</em>: <strong><a href="Communities.Social.Follows.html#followlevel">FollowLevel</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>FollowLevel</code>(Communities.Social.Follows.md#followlevel) data attribute<br>
@@ -233,7 +233,7 @@ Allowed values for the <code>FollowLevel</code>(Communities.Social.Follows.md#fo
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Tagged</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

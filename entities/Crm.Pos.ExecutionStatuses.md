@@ -172,7 +172,7 @@ _Back-End Default Expression:_
 `obj.SetExecutionStatusOrd( obj.ExecutionStage)`
 
 _Front-End Recalc Expressions:_  
-`IIF( ( Convert( obj.ExecutionStage, Nullable`1) != Convert( null, Nullable`1)), obj.SetExecutionStatusOrd( obj.ExecutionStage), obj.SetExecutionStatusOrd( obj.ExecutionStage))`
+`obj.SetExecutionStatusOrd( obj.ExecutionStage)`
 
 ## Reference Details
 

@@ -34,7 +34,7 @@ Aggregate Tree
 | [DisplayText](Communities.Social.Follows.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExternalId](Communities.Social.Follows.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Communities.Social.Follows.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [FollowLevel](Communities.Social.Follows.md#followlevel) | [FollowLevel](Communities.Social.Follows.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Introduced in version 26.2.0.70` 
+| [FollowLevel](Communities.Social.Follows.md#followlevel) | [FollowLevel](Communities.Social.Follows.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Introduced in version 26.2.0.70` 
 | [Id](Communities.Social.Follows.md#id) | guid |  
 | [ObjectVersion](Communities.Social.Follows.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -91,7 +91,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### FollowLevel
 
-Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Introduced in version 26.2.0.70`
+Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Introduced in version 26.2.0.70`
 
 _Type_: **[FollowLevel](Communities.Social.Follows.md#followlevel)**  
 _Category_: **System**  
@@ -104,7 +104,7 @@ _Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)_
 | Follow | User willingly chose to follow this object.. Stored as 'FLW'. <br /> _Database Value:_ 'FLW' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Follow' |
 | Favorite | User marked this object as a favorite.. Stored as 'FAV'. <br /> _Database Value:_ 'FAV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Favorite' |
 
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **Tagged**  
 _Show in UI_: **ShownByDefault**  

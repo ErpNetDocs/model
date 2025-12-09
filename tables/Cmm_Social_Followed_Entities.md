@@ -198,7 +198,6 @@ The entity type of the row to which the object is bound
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-|GreaterThanOrLessThan|None|no|no|
 
 ### User_Id
 

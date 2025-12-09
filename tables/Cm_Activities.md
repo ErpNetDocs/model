@@ -23,7 +23,7 @@ Generic activity. Provides task management functionality. Activity can be one of
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[Notes](#notes)|`nvarchar(max)` ||
-|[Owner_Party_Id](#owner_party_id)|`uniqueidentifier` Readonly|The party that owns the task. Initially this is the party that has created the task|
+|[Owner_Party_Id](#owner_party_id)|`uniqueidentifier` |The party that owns the task. Initially this is the party that has created the task|
 |[Planned_Duration_Minutes](#planned_duration_minutes)|`int` |Total planned duration of the activity, regardless of the current execution status|
 |[Priority](#priority)|`tinyint` Allowed: `1`, `2`, `3`, `4`, `5`|Priority on the scale from 1 (least important) to 5 (very important)|
 |[Private](#private)|`bit` |1 if the task is visible only to its owner; 0 if this is publicly visible task|
@@ -339,7 +339,7 @@ The party that owns the task. Initially this is the party that has created the t
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|yes|
+|Readonly|no|
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |RTF|no|
 |Sortable|no|

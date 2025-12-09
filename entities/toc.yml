@@ -272,6 +272,8 @@
       href: Crm.Pos.FiscalReceiptTemplates.md
     - name: LocationAreas
       href: Crm.Pos.LocationAreas.md
+    - name: LocationProducts
+      href: Crm.Pos.LocationProducts.md
     - name: Locations
       href: Crm.Pos.Locations.md
     - name: Operators
@@ -591,10 +593,10 @@
       href: Finance.Saft.ProfileAccounts.md
     - name: ProfileCompanies
       href: Finance.Saft.ProfileCompanies.md
+    - name: ProfileMeasurementUnits
+      href: Finance.Saft.ProfileMeasurementUnits.md
     - name: ProfileParties
       href: Finance.Saft.ProfileParties.md
-    - name: ProfileProductAccounts
-      href: Finance.Saft.ProfileProductAccounts.md
     - name: Profiles
       href: Finance.Saft.Profiles.md
   - name: Vat

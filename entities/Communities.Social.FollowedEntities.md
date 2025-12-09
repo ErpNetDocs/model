@@ -29,7 +29,7 @@ Aggregate Tree
 | [CreationTimeUtc](Communities.Social.FollowedEntities.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc` `Introduced in version 22.1.6.73` 
 | [EntityItemId](Communities.Social.FollowedEntities.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Item_Id` 
 | [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Type` 
-| [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq;ge;le)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70` 
+| [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70` 
 
 ## References
 
@@ -78,7 +78,7 @@ _Show in UI_: **ShownByDefault**
 
 ### FollowLevel
 
-Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq;ge;le)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70`
+Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70`
 
 _Type_: **[FollowLevel](Communities.Social.FollowedEntities.md#followlevel)**  
 _Category_: **System**  
@@ -92,7 +92,7 @@ _Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)_
 | Favorite | User marked this object as a favorite.. Stored as 'FAV'. <br /> _Database Value:_ 'FAV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Favorite' |
 
 _Inherited From_: **Cmm_Social_Follows_Table.Follow_Level**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **Tagged**  
 _Show in UI_: **ShownByDefault**  

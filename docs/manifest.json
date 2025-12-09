@@ -13152,6 +13152,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.LocationProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.LocationProducts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Pos.Locations.md",
       "output": {
         ".html": {
@@ -14836,6 +14846,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Saft.ProfileCompanies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileMeasurementUnits.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileMeasurementUnits.html"
         }
       },
       "version": ""
@@ -25611,6 +25631,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Location_Products.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Location_Products.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Pos_Locations.md",
       "output": {
         ".html": {
@@ -26601,20 +26631,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Saft_Profile_Parties.md",
+      "source_relative_path": "tables/Saft_Profile_Measurement_Units.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Saft_Profile_Parties.html"
+          "relative_path": "tables/Saft_Profile_Measurement_Units.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Saft_Profile_Product_Accounts.md",
+      "source_relative_path": "tables/Saft_Profile_Parties.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Saft_Profile_Product_Accounts.html"
+          "relative_path": "tables/Saft_Profile_Parties.html"
         }
       },
       "version": ""

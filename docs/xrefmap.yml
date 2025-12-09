@@ -418,6 +418,9 @@ references:
 - uid: Crm.Pos.LocationAreas
   name: Crm.Pos.LocationAreas Entity
   href: entities/Crm.Pos.LocationAreas.html
+- uid: Crm.Pos.LocationProducts
+  name: Crm.Pos.LocationProducts Entity
+  href: entities/Crm.Pos.LocationProducts.html
 - uid: Crm.Pos.Locations
   name: Crm.Pos.Locations Entity
   href: entities/Crm.Pos.Locations.html
@@ -901,6 +904,9 @@ references:
 - uid: Finance.Saft.ProfileCompanies
   name: Finance.Saft.ProfileCompanies Entity
   href: entities/Finance.Saft.ProfileCompanies.html
+- uid: Finance.Saft.ProfileMeasurementUnits
+  name: Finance.Saft.ProfileMeasurementUnits Entity
+  href: entities/Finance.Saft.ProfileMeasurementUnits.html
 - uid: Finance.Saft.ProfileParties
   name: Finance.Saft.ProfileParties Entity
   href: entities/Finance.Saft.ProfileParties.html

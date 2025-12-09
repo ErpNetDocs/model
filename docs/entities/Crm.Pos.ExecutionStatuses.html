@@ -300,7 +300,7 @@ Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SetExecutionStatusOrd( obj.ExecutionStage)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( Convert( obj.ExecutionStage, Nullable</code>1) != Convert( null, Nullable<code>1)), obj.SetExecutionStatusOrd( obj.ExecutionStage), obj.SetExecutionStatusOrd( obj.ExecutionStage))</code></p>
+<code>obj.SetExecutionStatusOrd( obj.ExecutionStage)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. <code>Filter(multi eq)</code></p>

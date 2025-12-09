@@ -9,6 +9,7 @@ uid: Crm.Pos
 - [ExecutionStatuses](Crm.Pos.ExecutionStatuses.md)  
 - [FiscalReceiptTemplates](Crm.Pos.FiscalReceiptTemplates.md)  
 - [LocationAreas](Crm.Pos.LocationAreas.md)  
+- [LocationProducts](Crm.Pos.LocationProducts.md)  
 - [Locations](Crm.Pos.Locations.md)  
 - [Operators](Crm.Pos.Operators.md)  
 - [ProductTypeTaxGroups](Crm.Pos.ProductTypeTaxGroups.md)  
