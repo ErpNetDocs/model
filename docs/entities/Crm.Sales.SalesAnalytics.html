@@ -156,11 +156,6 @@ API access:  <em>ReadOnly</em></p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Crm.Sales.SalesAnalytics.html#bonusprogram">BonusProgram</a></td>
-<td><a href="Crm.Pricing.BonusPrograms.html">BonusPrograms</a></td>
-<td>Bonus Program used in sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Bonus_Programs_Table.Bonus_Program_Id</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
 <td>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></td>
@@ -196,39 +191,14 @@ API access:  <em>ReadOnly</em></p>
 <td>The Enterprise Company Location to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesAnalytics.html#level1discount">Level1Discount</a></td>
-<td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></td>
-<td>Level 1 Discount for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Sales.SalesAnalytics.html#level2discount">Level2Discount</a></td>
-<td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></td>
-<td>Level 2 Discount for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Sales.SalesAnalytics.html#level3discount">Level3Discount</a></td>
-<td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></td>
-<td>Level 3 Discount for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
 <td>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Sales.SalesAnalytics.html#productprice">ProductPrice</a></td>
-<td><a href="Crm.Pricing.ProductPrices.html">ProductPrices</a></td>
-<td>Product Price for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Product_Prices_Table.Product_Price_Id</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a></td>
 <td>Product Variant for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Sales.SalesAnalytics.html#promotionalpackage">PromotionalPackage</a></td>
-<td><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a></td>
-<td>Promotional Package for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Promotional_&lt;br /&gt;Packages_Table.Promotional_Package_Id</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#salesperson">SalesPerson</a></td>
@@ -285,14 +255,6 @@ API access:  <em>ReadOnly</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
-<h3 id="bonusprogram">BonusProgram</h3>
-<p>Bonus Program used in sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Bonus_Programs_Table.Bonus_Program_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.BonusPrograms.html">BonusPrograms</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Bonus_Programs_Table.Bonus_Program_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="customer">Customer</h3>
 <p>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
@@ -349,30 +311,6 @@ API access:  <em>ReadOnly</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="level1discount">Level1Discount</h3>
-<p>Level 1 Discount for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Line_Discounts_Table.Line_Discount_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="level2discount">Level2Discount</h3>
-<p>Level 2 Discount for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Line_Discounts_Table.Line_Discount_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="level3discount">Level3Discount</h3>
-<p>Level 3 Discount for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Line_Discounts_Table.Line_Discount_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Line_Discounts_Table.Line_Discount_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
@@ -381,27 +319,11 @@ API access:  <em>ReadOnly</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="productprice">ProductPrice</h3>
-<p>Product Price for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Product_Prices_Table.Product_Price_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.ProductPrices.html">ProductPrices</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Product_Prices_Table.Product_Price_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <p>Product Variant for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Gen_Product_Variants_Table.Product_Variant_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="promotionalpackage">PromotionalPackage</h3>
-<p>Promotional Package for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Promotional_Packages_Table.Promotional_Package_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Promotional_Packages_Table.Promotional_Package_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

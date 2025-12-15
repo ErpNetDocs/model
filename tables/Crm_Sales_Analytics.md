@@ -11,7 +11,6 @@ Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62
 
 | Name | Type | Description |
 | - | - | --- |
-|[Bonus_Program_Id](#bonus_program_id)|`uniqueidentifier` |Bonus Program used in sales|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Unique customer Id.|
 |[Dealer_Id](#dealer_id)|`uniqueidentifier` |External Dealer for this sales|
 |[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |Distribution Channel for this sales|
@@ -20,15 +19,10 @@ Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62
 |[End_Customer_Party_Id](#end_customer_party_id)|`uniqueidentifier` |Unique party id.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The Enterprise Company to which this SalesAnalyticsEntry applies.|
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |The Enterprise Company Location to which this SalesAnalyticsEntry applies.|
-|[Level1_Discount_Id](#level1_discount_id)|`uniqueidentifier` |Level 1 Discount for this sales|
-|[Level2_Discount_Id](#level2_discount_id)|`uniqueidentifier` |Level 2 Discount for this sales|
-|[Level3_Discount_Id](#level3_discount_id)|`uniqueidentifier` |Level 3 Discount for this sales|
 |[Line_Amount](#line_amount)|`decimal(38, 2)` |Line Amount for date|
 |[Line_Discount_Amount](#line_discount_amount)|`decimal(38, 2)` |Discount over Line Amount for Date|
 |[Product_Id](#product_id)|`uniqueidentifier` |Unique id of the item.|
-|[Product_Price_Id](#product_price_id)|`uniqueidentifier` |Product Price for this sales|
 |[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |Product Variant for this sales|
-|[Promotional_Package_Id](#promotional_package_id)|`uniqueidentifier` |Promotional Package for this sales|
 |[Quantity_Base](#quantity_base)|`decimal(38, 3)` |Base Quantity for Date|
 |[Sales_Analytic_Id](#sales_analytic_id)|`uniqueidentifier` |Row Id|
 |[Sales_Person_Id](#sales_person_id)|`uniqueidentifier` |Unique sales person for this sales|
@@ -36,42 +30,6 @@ Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62
 |[Store_Id](#store_id)|`uniqueidentifier` |Unique store Id.|
 
 ## Columns
-
-### Bonus_Program_Id
-
-
-Bonus Program used in sales
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Bonus_Program_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 ### Customer_Id
 
@@ -364,117 +322,6 @@ The Enterprise Company Location to which this SalesAnalyticsEntry applies.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Level1_Discount_Id
-
-
-Level 1 Discount for this sales
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Crm_Line_Discounts](Crm_Line_Discounts.md).[Line_Discount_Id](Crm_Line_Discounts.md#line_discount_id)|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Level1_Discount_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Level2_Discount_Id
-
-
-Level 2 Discount for this sales
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Crm_Line_Discounts](Crm_Line_Discounts.md).[Line_Discount_Id](Crm_Line_Discounts.md#line_discount_id)|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Level2_Discount_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Level3_Discount_Id
-
-
-Level 3 Discount for this sales
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Crm_Line_Discounts](Crm_Line_Discounts.md).[Line_Discount_Id](Crm_Line_Discounts.md#line_discount_id)|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Level3_Discount_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
 ### Line_Amount
 
 
@@ -572,42 +419,6 @@ Unique id of the item.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Product_Price_Id
-
-
-Product Price for this sales
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Product_Price_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
 ### Product_Variant_Id
 
 
@@ -639,42 +450,6 @@ Product Variant for this sales
 |Visible|yes|
 
 #### Product_Variant_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Promotional_Package_Id
-
-
-Promotional Package for this sales
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Promotional_Package_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

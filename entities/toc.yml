@@ -597,6 +597,8 @@
       href: Finance.Saft.ProfileMeasurementUnits.md
     - name: ProfileParties
       href: Finance.Saft.ProfileParties.md
+    - name: ProfilePayments
+      href: Finance.Saft.ProfilePayments.md
     - name: Profiles
       href: Finance.Saft.Profiles.md
   - name: Vat

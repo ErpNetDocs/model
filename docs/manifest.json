@@ -14892,6 +14892,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfilePayments.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfilePayments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Saft.ProfileProductAccounts.md",
       "output": {
         ".html": {
@@ -26665,6 +26675,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft_Profile_Parties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Payments.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Payments.html"
         }
       },
       "version": ""

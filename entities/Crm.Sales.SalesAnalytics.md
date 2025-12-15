@@ -37,7 +37,6 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BonusProgram](Crm.Sales.SalesAnalytics.md#bonusprogram) | [BonusPrograms](Crm.Pricing.BonusPrograms.md) | Bonus Program used in sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Bonus_Programs_Table.Bonus_Program_Id` |
 | [Customer](Crm.Sales.SalesAnalytics.md#customer) | [Customers](Crm.Sales.Customers.md) | Unique customer Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Customers_Table.Customer_Id` |
 | [Dealer](Crm.Sales.SalesAnalytics.md#dealer) | [Dealers](Crm.Sales.Dealers.md) | External Dealer for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Dealers_Table.Dealer_Id` |
 | [DistributionChannel](Crm.Sales.SalesAnalytics.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) | Distribution Channel for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Distribution_<br />Channels_Table.Distribution_Channel_Id` |
@@ -45,13 +44,8 @@ Aggregate Tree
 | [EndCustomerParty](Crm.Sales.SalesAnalytics.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) | Unique party id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Parties_Table.Id` |
 | [EnterpriseCompany](Crm.Sales.SalesAnalytics.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this SalesAnalyticsEntry applies. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_<br />Companies_Table.Enterprise_Company_Id` |
 | [EnterpriseCompanyLocation](Crm.Sales.SalesAnalytics.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The Enterprise Company Location to which this SalesAnalyticsEntry applies. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id` |
-| [Level1Discount](Crm.Sales.SalesAnalytics.md#level1discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) | Level 1 Discount for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Line_Discounts_Table.Line_Discount_Id` |
-| [Level2Discount](Crm.Sales.SalesAnalytics.md#level2discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) | Level 2 Discount for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Line_Discounts_Table.Line_Discount_Id` |
-| [Level3Discount](Crm.Sales.SalesAnalytics.md#level3discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) | Level 3 Discount for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Line_Discounts_Table.Line_Discount_Id` |
 | [Product](Crm.Sales.SalesAnalytics.md#product) | [Products](General.Products.Products.md) | Unique id of the item. `Required` `Default(New Guid)` `Filter(multi eq)` `ORD` `Inherited from Gen_Products_Table.Id` |
-| [ProductPrice](Crm.Sales.SalesAnalytics.md#productprice) | [ProductPrices](Crm.Pricing.ProductPrices.md) | Product Price for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Product_Prices_Table.Product_Price_Id` |
 | [ProductVariant](Crm.Sales.SalesAnalytics.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) | Product Variant for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id` |
-| [PromotionalPackage](Crm.Sales.SalesAnalytics.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) | Promotional Package for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Promotional_<br />Packages_Table.Promotional_Package_Id` |
 | [SalesPerson](Crm.Sales.SalesAnalytics.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | Unique sales person for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Sales_Persons_Table.Sales_Person_Id` |
 | [Store](Crm.Sales.SalesAnalytics.md#store) | [Stores](Logistics.Inventory.Stores.md) | Unique store Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Stores_Table.Id` |
 
@@ -119,17 +113,6 @@ _Show in UI_: **ShownByDefault**
 
 
 ## Reference Details
-
-### BonusProgram
-
-Bonus Program used in sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Bonus_Programs_Table.Bonus_Program_Id`
-
-_Type_: **[BonusPrograms](Crm.Pricing.BonusPrograms.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Bonus_Programs_Table.Bonus_Program_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
 
 ### Customer
 
@@ -208,39 +191,6 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 _Show in UI_: **ShownByDefault**  
 
-### Level1Discount
-
-Level 1 Discount for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Line_Discounts_Table.Line_Discount_Id`
-
-_Type_: **[LineDiscounts](Crm.Pricing.LineDiscounts.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Line_Discounts_Table.Line_Discount_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
-
-### Level2Discount
-
-Level 2 Discount for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Line_Discounts_Table.Line_Discount_Id`
-
-_Type_: **[LineDiscounts](Crm.Pricing.LineDiscounts.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Line_Discounts_Table.Line_Discount_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
-
-### Level3Discount
-
-Level 3 Discount for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Line_Discounts_Table.Line_Discount_Id`
-
-_Type_: **[LineDiscounts](Crm.Pricing.LineDiscounts.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Line_Discounts_Table.Line_Discount_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
-
 ### Product
 
 Unique id of the item. `Required` `Default(New Guid)` `Filter(multi eq)` `ORD` `Inherited from Gen_Products_Table.Id`
@@ -252,17 +202,6 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 _Show in UI_: **ShownByDefault**  
 
-### ProductPrice
-
-Product Price for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Product_Prices_Table.Product_Price_Id`
-
-_Type_: **[ProductPrices](Crm.Pricing.ProductPrices.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Product_Prices_Table.Product_Price_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
-
 ### ProductVariant
 
 Product Variant for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id`
@@ -270,17 +209,6 @@ Product Variant for this sales. `Required` `Default(New Guid)` `Filter(multi eq)
 _Type_: **[ProductVariants](General.Products.ProductVariants.md)**  
 _Category_: **System**  
 _Inherited From_: **Gen_Product_Variants_Table.Product_Variant_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
-
-### PromotionalPackage
-
-Promotional Package for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Promotional_Packages_Table.Promotional_Package_Id`
-
-_Type_: **[PromotionalPackages](Crm.Pricing.PromotionalPackages.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Promotional_Packages_Table.Promotional_Package_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **ShownByDefault**  

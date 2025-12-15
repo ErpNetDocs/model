@@ -616,6 +616,7 @@
 * [Saft_Profile_Companies](Saft_Profile_Companies.md)
 * [Saft_Profile_Measurement_Units](Saft_Profile_Measurement_Units.md)
 * [Saft_Profile_Parties](Saft_Profile_Parties.md)
+* [Saft_Profile_Payments](Saft_Profile_Payments.md)
 * [Saft_Profiles](Saft_Profiles.md)
 
 ## [Scm](Scm.md)

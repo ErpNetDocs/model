@@ -32,6 +32,7 @@ Aggregate Tree
   * [Finance.Saft.ProfileCompanies](Finance.Saft.ProfileCompanies.md)  
   * [Finance.Saft.ProfileMeasurementUnits](Finance.Saft.ProfileMeasurementUnits.md)  
   * [Finance.Saft.ProfileParties](Finance.Saft.ProfileParties.md)  
+  * [Finance.Saft.ProfilePayments](Finance.Saft.ProfilePayments.md)  
 
 ## Attributes
 
@@ -55,6 +56,7 @@ Aggregate Tree
 | Companies | [ProfileCompanies](Finance.Saft.ProfileCompanies.md) | List of `ProfileCompany`(Finance.Saft.ProfileCompanies.md) child objects, based on the `Finance.Saft.ProfileCompany.Profile`(Finance.Saft.ProfileCompanies.md#profile) back reference 
 | MeasurementUnits | [ProfileMeasurementUnits](Finance.Saft.ProfileMeasurementUnits.md) | List of `ProfileMeasurementUnit`(Finance.Saft.ProfileMeasurementUnits.md) child objects, based on the `Finance.Saft.ProfileMeasurementUnit.Profile`(Finance.Saft.ProfileMeasurementUnits.md#profile) back reference 
 | Parties | [ProfileParties](Finance.Saft.ProfileParties.md) | List of `ProfileParty`(Finance.Saft.ProfileParties.md) child objects, based on the `Finance.Saft.ProfileParty.Profile`(Finance.Saft.ProfileParties.md#profile) back reference 
+| Payments | [ProfilePayments](Finance.Saft.ProfilePayments.md) | List of `ProfilePayment`(Finance.Saft.ProfilePayments.md) child objects, based on the `Finance.Saft.ProfilePayment.Profile`(Finance.Saft.ProfilePayments.md#profile) back reference 
 
 
 ## Attribute Details
