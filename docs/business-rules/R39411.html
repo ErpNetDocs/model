@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R39411 Case - Closed Only If Task Completed | ERP.net Domain Model </title>
+      <title>R39411 Case - Closed Only If Tasks Completed | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R39411 Case - Closed Only If Task Completed | ERP.net Domain Model ">
+      <meta name="title" content="R39411 Case - Closed Only If Tasks Completed | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r39411-case---closed-only-if-task-completed">R39411 Case - Closed Only If Task Completed</h1>
+<h1 id="r39411-case---closed-only-if-tasks-completed">R39411 Case - Closed Only If Tasks Completed</h1>
 
 <table>
 <col style="width:25%">
@@ -101,7 +101,7 @@
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>ClosedOnlyIfTaskCompleted</td>
+<td>ClosedOnlyIfTasksCompleted</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
@@ -128,11 +128,11 @@
 <td>If System State is changed to 'CLOSED'
 <br><br>
 Validate that:<br>
-Extensible Data object of entity type Task is Completed.</td>
+All Tasks connected to that Case are Completed.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule ensures that only cases whose Tasks are completed, can be closed.</td>
+<td>The rule ensures that only cases whose Tasks are completed can be closed.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -147,7 +147,7 @@ Please complete all related Tasks before closing the Case.</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
-<td>NO</td>
+<td>YES</td>
 </tr>
 </tbody>
 </table>
