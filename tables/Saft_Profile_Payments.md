@@ -19,7 +19,7 @@ Profile/settings used to generate the SAF-T Payments section. Defines how paymen
 |[Direction](#direction)|`char(1)` Allowed: `O`, `I`|Payment direction.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |ERP.net document type that is the source of the payment.|
 |[Party_Type](#party_type)|`char(1)` Allowed: `S`, `C`, `N`|Counterparty type to be populated in SAF-T: Supplier, Customer, None.|
-|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |description: Payment account)– cash desk/bank account used for the payment.|
+|[Payment_Account_Id](#payment_account_id)|`uniqueidentifier` |description: Payment account – cash desk/bank account used for the payment.|
 |[Payment_Reason_Id](#payment_reason_id)|`uniqueidentifier` |Payment reason/classification.|
 |[Profile_Id](#profile_id)|`uniqueidentifier` |Identifier of the SAFT profile associated with this settings.|
 |[Profile_Payment_Id](#profile_payment_id)|`uniqueidentifier` `PK`|Unique identifier|
@@ -179,7 +179,7 @@ Counterparty type to be populated in SAF-T: Supplier, Customer, None.
 ### Payment_Account_Id
 
 
-description: Payment account)– cash desk/bank account used for the payment.
+description: Payment account – cash desk/bank account used for the payment.
 
 | Property | Value |
 | - | - |

@@ -46,7 +46,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DocumentType](Finance.Saft.ProfilePayments.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | ERP.net document type that is the source of the payment. `Filter(multi eq)` |
-| [PaymentAccount](Finance.Saft.ProfilePayments.md#paymentaccount) | [Accounts](Finance.Accounting.Accounts.md) | Description: Payment account)– cash desk/bank account used for the payment. `Required` `Filter(multi eq)` |
+| [PaymentAccount](Finance.Saft.ProfilePayments.md#paymentaccount) | [Accounts](Finance.Accounting.Accounts.md) | Description: Payment account – cash desk/bank account used for the payment. `Required` `Filter(multi eq)` |
 | [PaymentReason](Finance.Saft.ProfilePayments.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | Payment reason/classification. `Filter(multi eq)` |
 | [Profile](Finance.Saft.ProfilePayments.md#profile) | [Profiles](Finance.Saft.Profiles.md) | Identifier of the SAFT profile associated with this settings. `Required` `Filter(multi eq)` `Owner` |
 | [SaftAccountCodeEntry](Finance.Saft.ProfilePayments.md#saftaccountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine). `Required` `Filter(multi eq)` |
@@ -151,7 +151,7 @@ _Show in UI_: **ShownByDefault**
 
 ### PaymentAccount
 
-Description: Payment account)– cash desk/bank account used for the payment. `Required` `Filter(multi eq)`
+Description: Payment account – cash desk/bank account used for the payment. `Required` `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Indexed_: **True**  
