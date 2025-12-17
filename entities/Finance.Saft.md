@@ -10,5 +10,6 @@ uid: Finance.Saft
 - [ProfileMeasurementUnits](Finance.Saft.ProfileMeasurementUnits.md)  
 - [ProfileParties](Finance.Saft.ProfileParties.md)  
 - [ProfilePayments](Finance.Saft.ProfilePayments.md)  
+- [ProfilePaymentTypes](Finance.Saft.ProfilePaymentTypes.md)  
 - [Profiles](Finance.Saft.Profiles.md)  
 

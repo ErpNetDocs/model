@@ -14892,6 +14892,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfilePaymentTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfilePaymentTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Saft.ProfilePayments.md",
       "output": {
         ".html": {
@@ -26675,6 +26685,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft_Profile_Parties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Payment_Types.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Payment_Types.html"
         }
       },
       "version": ""

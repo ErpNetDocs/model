@@ -1138,6 +1138,8 @@
     href: Saft_Profile_Measurement_Units.md
   - name: Saft_Profile_Parties
     href: Saft_Profile_Parties.md
+  - name: Saft_Profile_Payment_Types
+    href: Saft_Profile_Payment_Types.md
   - name: Saft_Profile_Payments
     href: Saft_Profile_Payments.md
   - name: Saft_Profiles

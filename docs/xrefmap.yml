@@ -910,6 +910,9 @@ references:
 - uid: Finance.Saft.ProfileParties
   name: Finance.Saft.ProfileParties Entity
   href: entities/Finance.Saft.ProfileParties.html
+- uid: Finance.Saft.ProfilePaymentTypes
+  name: Finance.Saft.ProfilePaymentTypes Entity
+  href: entities/Finance.Saft.ProfilePaymentTypes.html
 - uid: Finance.Saft.ProfilePayments
   name: Finance.Saft.ProfilePayments Entity
   href: entities/Finance.Saft.ProfilePayments.html
