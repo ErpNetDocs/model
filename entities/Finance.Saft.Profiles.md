@@ -34,6 +34,7 @@ Aggregate Tree
   * [Finance.Saft.ProfileParties](Finance.Saft.ProfileParties.md)  
   * [Finance.Saft.ProfilePaymentTypes](Finance.Saft.ProfilePaymentTypes.md)  
   * [Finance.Saft.ProfilePayments](Finance.Saft.ProfilePayments.md)  
+  * [Finance.Saft.ProfileTaxCodeByDealTypes](Finance.Saft.ProfileTaxCodeByDealTypes.md)  
 
 ## Attributes
 
@@ -59,6 +60,7 @@ Aggregate Tree
 | Parties | [ProfileParties](Finance.Saft.ProfileParties.md) | List of `ProfileParty`(Finance.Saft.ProfileParties.md) child objects, based on the `Finance.Saft.ProfileParty.Profile`(Finance.Saft.ProfileParties.md#profile) back reference 
 | Payments | [ProfilePayments](Finance.Saft.ProfilePayments.md) | List of `ProfilePayment`(Finance.Saft.ProfilePayments.md) child objects, based on the `Finance.Saft.ProfilePayment.Profile`(Finance.Saft.ProfilePayments.md#profile) back reference 
 | PaymentTypes | [ProfilePaymentTypes](Finance.Saft.ProfilePaymentTypes.md) | List of `ProfilePaymentType`(Finance.Saft.ProfilePaymentTypes.md) child objects, based on the `Finance.Saft.ProfilePaymentType.Profile`(Finance.Saft.ProfilePaymentTypes.md#profile) back reference 
+| TaxCodeByDealTypes | [ProfileTaxCodeByDealTypes](Finance.Saft.ProfileTaxCodeByDealTypes.md) | List of `ProfileTaxCodeByDealType`(Finance.Saft.ProfileTaxCodeByDealTypes.md) child objects, based on the `Finance.Saft.ProfileTaxCodeByDealType.Profile`(Finance.Saft.ProfileTaxCodeByDealTypes.md#profile) back reference 
 
 
 ## Attribute Details

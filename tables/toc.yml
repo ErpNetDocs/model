@@ -1142,6 +1142,8 @@
     href: Saft_Profile_Payment_Types.md
   - name: Saft_Profile_Payments
     href: Saft_Profile_Payments.md
+  - name: Saft_Profile_Tax_Code_By_Deal_Types
+    href: Saft_Profile_Tax_Code_By_Deal_Types.md
   - name: Saft_Profiles
     href: Saft_Profiles.md
 - name: Scm

@@ -919,6 +919,9 @@ references:
 - uid: Finance.Saft.ProfileProductAccounts
   name: Finance.Saft.ProfileProductAccounts Entity
   href: entities/Finance.Saft.ProfileProductAccounts.html
+- uid: Finance.Saft.ProfileTaxCodeByDealTypes
+  name: Finance.Saft.ProfileTaxCodeByDealTypes Entity
+  href: entities/Finance.Saft.ProfileTaxCodeByDealTypes.html
 - uid: Finance.Saft.Profiles
   name: Finance.Saft.Profiles Entity
   href: entities/Finance.Saft.Profiles.html
