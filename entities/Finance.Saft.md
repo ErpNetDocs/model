@@ -12,5 +12,6 @@ uid: Finance.Saft
 - [ProfilePayments](Finance.Saft.ProfilePayments.md)  
 - [ProfilePaymentTypes](Finance.Saft.ProfilePaymentTypes.md)  
 - [Profiles](Finance.Saft.Profiles.md)  
+- [ProfileTaxCodeByAccounts](Finance.Saft.ProfileTaxCodeByAccounts.md)  
 - [ProfileTaxCodeByDealTypes](Finance.Saft.ProfileTaxCodeByDealTypes.md)  
 

@@ -14922,6 +14922,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileTaxCodeByAccounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileTaxCodeByAccounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Saft.ProfileTaxCodeByDealTypes.md",
       "output": {
         ".html": {
@@ -26715,6 +26725,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft_Profile_Payments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Tax_Code_By_Accounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Tax_Code_By_Accounts.html"
         }
       },
       "version": ""

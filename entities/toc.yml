@@ -603,6 +603,8 @@
       href: Finance.Saft.ProfilePaymentTypes.md
     - name: Profiles
       href: Finance.Saft.Profiles.md
+    - name: ProfileTaxCodeByAccounts
+      href: Finance.Saft.ProfileTaxCodeByAccounts.md
     - name: ProfileTaxCodeByDealTypes
       href: Finance.Saft.ProfileTaxCodeByDealTypes.md
   - name: Vat
