@@ -807,6 +807,16 @@
       href: General.Resources.WorkSchedules.md
     - name: WorkScheduleWorkingTime
       href: General.Resources.WorkScheduleWorkingTime.md
+- name: HumanResources
+  href: HumanResources.md
+  items:
+  - name: Governance
+    href: HumanResources.Governance.md
+    items:
+    - name: GovernancePolicies
+      href: HumanResources.Governance.GovernancePolicies.md
+    - name: GovernancePolicyRevisions
+      href: HumanResources.Governance.GovernancePolicyRevisions.md
 - name: Logistics
   href: Logistics.md
   items:

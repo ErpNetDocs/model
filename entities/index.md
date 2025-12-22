@@ -8,6 +8,7 @@
 - [Crm](Crm.md)  
 - [Finance](Finance.md)  
 - [General](General.md)  
+- [HumanResources](HumanResources.md)  
 - [Logistics](Logistics.md)  
 - [Production](Production.md)  
 - [Projects](Projects.md)  

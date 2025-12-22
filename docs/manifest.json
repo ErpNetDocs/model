@@ -16482,6 +16482,46 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/HumanResources.Governance.GovernancePolicies.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/HumanResources.Governance.GovernancePolicies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/HumanResources.Governance.GovernancePolicyRevisions.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/HumanResources.Governance.GovernancePolicyRevisions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/HumanResources.Governance.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/HumanResources.Governance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/HumanResources.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/HumanResources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Common.LogisticUnitContents.md",
       "output": {
         ".html": {
@@ -24775,6 +24815,36 @@
       "output": {
         ".html": {
           "relative_path": "tables/Geo_Map_Points.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Hrm.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Hrm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Hrm_Governance_Policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Hrm_Governance_Policies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Hrm_Governance_Policy_Revisions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Hrm_Governance_Policy_Revisions.html"
         }
       },
       "version": ""

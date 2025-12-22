@@ -1240,6 +1240,18 @@ references:
 - uid: General.Sequences
   name: General.Sequences Entity
   href: entities/General.Sequences.html
+- uid: HumanResources
+  name: HumanResources Namespace
+  href: entities/HumanResources.html
+- uid: HumanResources.Governance
+  name: HumanResources.Governance Namespace
+  href: entities/HumanResources.Governance.html
+- uid: HumanResources.Governance.GovernancePolicies
+  name: HumanResources.Governance.GovernancePolicies Entity
+  href: entities/HumanResources.Governance.GovernancePolicies.html
+- uid: HumanResources.Governance.GovernancePolicyRevisions
+  name: HumanResources.Governance.GovernancePolicyRevisions Entity
+  href: entities/HumanResources.Governance.GovernancePolicyRevisions.html
 - uid: LOG0205
   name: LOG0205 Create Warehouse Requisitions
   href: generations/LOG0205.html

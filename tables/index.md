@@ -396,6 +396,11 @@
 * [Geo_Areas](Geo_Areas.md)
 * [Geo_Map_Points](Geo_Map_Points.md)
 
+## [Hrm](Hrm.md)
+
+* [Hrm_Governance_Policies](Hrm_Governance_Policies.md)
+* [Hrm_Governance_Policy_Revisions](Hrm_Governance_Policy_Revisions.md)
+
 ## [Inv](Inv.md)
 
 * [Inv_Balances_At_Date](Inv_Balances_At_Date.md)

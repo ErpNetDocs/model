@@ -738,6 +738,13 @@
     href: Geo_Areas.md
   - name: Geo_Map_Points
     href: Geo_Map_Points.md
+- name: Hrm
+  href: Hrm.md
+  items:
+  - name: Hrm_Governance_Policies
+    href: Hrm_Governance_Policies.md
+  - name: Hrm_Governance_Policy_Revisions
+    href: Hrm_Governance_Policy_Revisions.md
 - name: Inv
   href: Inv.md
   items:
