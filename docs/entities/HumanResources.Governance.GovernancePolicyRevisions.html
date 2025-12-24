@@ -91,9 +91,11 @@
 <p>Policy revisions store the actual text of a policy as it applies for a specific period of time. Each revision represents a concrete version of the policy content, including its lifecycle state and the dates when it is valid. Policy revisions are used to determine which policy text is in force at a given moment and to preserve a stable history for reference and auditing. Entity: Hrm_Governance_Policy_Revisions (Introduced in version 26.2.0.88)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {PolicyId}</em><br>
+<em>{Policy.Name:T}</em><br>
 Default Search Members:<br>
-__<br>
+<em>Policy.Name</em><br>
+Name Data Member:<br>
+<em>Policy.Name</em><br>
 Category:  <em>Definitions</em><br>
 Show in UI:  <em>ShownByDefault</em><br>
 API access:  <em>ReadWrite</em></p>
@@ -102,10 +104,10 @@ API access:  <em>ReadWrite</em></p>
 Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="HumanResources.Governance.GovernancePolicyRevisions.html">HumanResources.Governance.GovernancePolicyRevisions</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="HumanResources.Governance.GovernancePolicies.html">HumanResources.Governance.GovernancePolicies</a><br>
+Aggregate Root:<br>
+<a href="HumanResources.Governance.GovernancePolicies.html">HumanResources.Governance.GovernancePolicies</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -120,16 +122,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#externalid">ExternalId</a></td>
-<td>string</td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#externalsystem">ExternalSystem</a></td>
-<td>string</td>
-<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
 </tr>
 <tr>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#id">Id</a></td>
@@ -176,7 +168,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#policy">Policy</a></td>
 <td><a href="HumanResources.Governance.GovernancePolicies.html">GovernancePolicies</a></td>
-<td>Reference to the policy this revision belongs to. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Reference to the policy this revision belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -185,20 +177,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
@@ -284,11 +262,12 @@ Allowed values for the <code>State</code>(HumanResources.Governance.GovernancePo
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="policy">Policy</h3>
-<p>Reference to the policy this revision belongs to. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Reference to the policy this revision belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="HumanResources.Governance.GovernancePolicies.html">GovernancePolicies</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

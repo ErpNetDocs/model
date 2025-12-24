@@ -9,9 +9,11 @@ Policy revisions store the actual text of a policy as it applies for a specific 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {PolicyId}_  
+_{Policy.Name:T}_  
 Default Search Members:  
-__  
+_Policy.Name_  
+Name Data Member:  
+_Policy.Name_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  
@@ -23,16 +25,16 @@ Max level:  _4 - Track object attribute and blob changes_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [HumanResources.Governance.GovernancePolicyRevisions](HumanResources.Governance.GovernancePolicyRevisions.md)  
+Aggregate Parent:  
+[HumanResources.Governance.GovernancePolicies](HumanResources.Governance.GovernancePolicies.md)  
+Aggregate Root:  
+[HumanResources.Governance.GovernancePolicies](HumanResources.Governance.GovernancePolicies.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DisplayText](HumanResources.Governance.GovernancePolicyRevisions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](HumanResources.Governance.GovernancePolicyRevisions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](HumanResources.Governance.GovernancePolicyRevisions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](HumanResources.Governance.GovernancePolicyRevisions.md#id) | guid |  
 | [ObjectVersion](HumanResources.Governance.GovernancePolicyRevisions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PolicyContent](HumanResources.Governance.GovernancePolicyRevisions.md#policycontent) | string (max) | Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI. `Required` `Filter(like)` 
@@ -44,7 +46,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Policy](HumanResources.Governance.GovernancePolicyRevisions.md#policy) | [GovernancePolicies](HumanResources.Governance.GovernancePolicies.md) | Reference to the policy this revision belongs to. `Required` `Filter(multi eq)` |
+| [Policy](HumanResources.Governance.GovernancePolicyRevisions.md#policy) | [GovernancePolicies](HumanResources.Governance.GovernancePolicies.md) | Reference to the policy this revision belongs to. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -55,26 +57,6 @@ Uses the repository DisplayTextFormat to build the display text from the attribu
 
 _Type_: **string**  
 _Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
@@ -157,12 +139,13 @@ _Show in UI_: **ShownByDefault**
 
 ### Policy
 
-Reference to the policy this revision belongs to. `Required` `Filter(multi eq)`
+Reference to the policy this revision belongs to. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[GovernancePolicies](HumanResources.Governance.GovernancePolicies.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Show in UI_: **ShownByDefault**  
 
 

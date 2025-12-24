@@ -108,7 +108,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="HumanResources.Governance.GovernancePolicies.html">HumanResources.Governance.GovernancePolicies</a></li>
+<li><a href="HumanResources.Governance.GovernancePolicies.html">HumanResources.Governance.GovernancePolicies</a>
+<ul>
+<li><a href="HumanResources.Governance.GovernancePolicyRevisions.html">HumanResources.Governance.GovernancePolicyRevisions</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -164,6 +168,23 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="HumanResources.Governance.GovernancePolicies.html#policykind">PolicyKind</a></td>
 <td><a href="HumanResources.Governance.GovernancePolicies.html#policykind">PolicyKind</a></td>
 <td>Classification of the policy. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revisions</td>
+<td><a href="HumanResources.Governance.GovernancePolicyRevisions.html">GovernancePolicyRevisions</a></td>
+<td>List of <code>GovernancePolicyRevision</code>(HumanResources.Governance.GovernancePolicyRevisions.md) child objects, based on the <code>HumanResources.Governance.GovernancePolicyRevision.Policy</code>(HumanResources.Governance.GovernancePolicyRevisions.md#policy) back reference</td>
 </tr>
 </tbody>
 </table>

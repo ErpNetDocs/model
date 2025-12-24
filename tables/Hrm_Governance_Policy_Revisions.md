@@ -7,6 +7,10 @@ Entity: [HumanResources.Governance.GovernancePolicyRevisions](~/entities/HumanRe
 
 Policy revisions store the actual text of a policy as it applies for a specific period of time. Each revision represents a concrete version of the policy content, including its lifecycle state and the dates when it is valid. Policy revisions are used to determine which policy text is in force at a given moment and to preserve a stable history for reference and auditing. Entity: Hrm_Governance_Policy_Revisions (Introduced in version 26.2.0.88)
 
+## Owner Tables Hierarchy
+
+* [Hrm_Governance_Policies](Hrm_Governance_Policies.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -108,7 +112,7 @@ Reference to the policy this revision belongs to.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

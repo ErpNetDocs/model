@@ -29,6 +29,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [HumanResources.Governance.GovernancePolicies](HumanResources.Governance.GovernancePolicies.md)  
+  * [HumanResources.Governance.GovernancePolicyRevisions](HumanResources.Governance.GovernancePolicyRevisions.md)  
 
 ## Attributes
 
@@ -43,6 +44,12 @@ Aggregate Tree
 | [Name](HumanResources.Governance.GovernancePolicies.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Policy name as spoken by users (e.g. "Remote Work Policy"). `Required` `Filter(like)` 
 | [ObjectVersion](HumanResources.Governance.GovernancePolicies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind) | [PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind) | Classification of the policy. `Required` `Filter(eq)` 
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Revisions | [GovernancePolicyRevisions](HumanResources.Governance.GovernancePolicyRevisions.md) | List of `GovernancePolicyRevision`(HumanResources.Governance.GovernancePolicyRevisions.md) child objects, based on the `HumanResources.Governance.GovernancePolicyRevision.Policy`(HumanResources.Governance.GovernancePolicyRevisions.md#policy) back reference 
 
 
 ## Attribute Details
