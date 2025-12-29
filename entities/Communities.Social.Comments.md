@@ -128,6 +128,7 @@ _Show in UI_: **HiddenByDefault**
 The root data object (post, marketplace product, document, etc), for which the comment is made. `Required` `Filter(multi eq)`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -137,6 +138,7 @@ _Show in UI_: **ShownByDefault**
 When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. `Filter(multi eq)`
 
 _Type_: **[Comments](Communities.Social.Comments.md) (nullable)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
@@ -146,6 +148,7 @@ _Show in UI_: **ShownByDefault**
 The user, who made the comment. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

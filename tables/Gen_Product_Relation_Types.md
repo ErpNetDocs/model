@@ -14,7 +14,7 @@ List of user-defined product relations types. Each relation type has associated 
 |[Code](#code)|`nvarchar(16)` |Code of the relation type.|
 |[Name](#name)|`nvarchar(254)` `ML`|Name of the relation type.|
 |[Notes](#notes)|`nvarchar(max)` |Notes|
-|[Product_Relation_Type_Id](#product_relation_type_id)|`uniqueidentifier` `PK`||
+|[Product_Relation_Type_Id](#product_relation_type_id)|`uniqueidentifier` `PK`|List of user-defined product relations types. Each relation type has associated system type.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[System_Type](#system_type)|`char(3)` Allowed: `GEN`, `RPL`, `MRC`, `FIT`|System type of the relation type.|
 
@@ -130,6 +130,9 @@ Notes
 |Like|None|no|no|
 
 ### Product_Relation_Type_Id
+
+
+List of user-defined product relations types. Each relation type has associated system type.
 
 | Property | Value |
 | - | - |

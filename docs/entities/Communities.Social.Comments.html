@@ -236,18 +236,21 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h3 id="dataobject">DataObject</h3>
 <p>The root data object (post, marketplace product, document, etc), for which the comment is made. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="replytocomment">ReplyToComment</h3>
 <p>When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Communities.Social.Comments.html">Comments</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
 <p>The user, who made the comment. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
