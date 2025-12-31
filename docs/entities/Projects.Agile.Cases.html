@@ -198,7 +198,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#number">Number</a></td>
 <td>int32</td>
-<td>The unique number of the Case. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 24.1.3.86</code></td>
+<td>The unique number of the Case. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 24.1.3.86</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#objectversion">ObjectVersion</a></td>
@@ -433,11 +433,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="number">Number</h3>
-<p>The unique number of the Case. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 24.1.3.86</code></p>
+<p>The unique number of the Case. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 24.1.3.86</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>

@@ -169,7 +169,7 @@ The category of the case. This also determines the workflow for the case.
 |Primary Key|no|
 |Readonly|yes|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
 |Type|int|
