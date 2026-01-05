@@ -107,7 +107,7 @@ Aggregate Tree
 | [Customer](Crm.Sales.SalesOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer, which placed the sales order. `Required` `Filter(multi eq)` |
 | [Deal](Crm.Sales.SalesOrders.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this order is based. `Filter(multi eq)` |
 | [Dealer](Crm.Sales.SalesOrders.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, associated with the sales order. `Filter(multi eq)` |
-| [DealType](Crm.Sales.SalesOrders.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
+| [DealType](Crm.Sales.SalesOrders.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
 | [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The distribution channel, that is used to deliver the products. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Sales.SalesOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -849,7 +849,7 @@ _Show in UI_: **HiddenByDefault**
 
 Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)`
 
-_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  

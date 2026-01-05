@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.Declarations](~/entities/Finance.Vat.Declarations.md)
+Entity: [Regulatory.Vat.Declarations](~/entities/Regulatory.Vat.Declarations.md)
 
 Contains the VAT declarations, issued by the enterprise company, according to the eligible legislation. Entity: VAT_Declarations (Introduced in version 22.1.4.21)
 

@@ -616,22 +616,6 @@
       href: Finance.Vat.BGVATDeclaringPersons.md
     - name: BGVATDocumentTypeVATCodes
       href: Finance.Vat.BGVATDocumentTypeVATCodes.md
-    - name: BoxTypeDealTypes
-      href: Finance.Vat.BoxTypeDealTypes.md
-    - name: BoxTypes
-      href: Finance.Vat.BoxTypes.md
-    - name: DealTypeDocumentAmounts
-      href: Finance.Vat.DealTypeDocumentAmounts.md
-    - name: DealTypes
-      href: Finance.Vat.DealTypes.md
-    - name: DeclarationAmountDetails
-      href: Finance.Vat.DeclarationAmountDetails.md
-    - name: DeclarationLines
-      href: Finance.Vat.DeclarationLines.md
-    - name: Declarations
-      href: Finance.Vat.Declarations.md
-    - name: Entries
-      href: Finance.Vat.Entries.md
 - name: General
   href: General.md
   items:
@@ -1201,6 +1185,25 @@
       href: Regulatory.Common.CodeLists.md
     - name: Jurisdictions
       href: Regulatory.Common.Jurisdictions.md
+  - name: Vat
+    href: Regulatory.Vat.md
+    items:
+    - name: BoxTypeDealTypes
+      href: Regulatory.Vat.BoxTypeDealTypes.md
+    - name: BoxTypes
+      href: Regulatory.Vat.BoxTypes.md
+    - name: DealTypeDocumentAmounts
+      href: Regulatory.Vat.DealTypeDocumentAmounts.md
+    - name: DealTypes
+      href: Regulatory.Vat.DealTypes.md
+    - name: DeclarationAmountDetails
+      href: Regulatory.Vat.DeclarationAmountDetails.md
+    - name: DeclarationLines
+      href: Regulatory.Vat.DeclarationLines.md
+    - name: Declarations
+      href: Regulatory.Vat.Declarations.md
+    - name: Entries
+      href: Regulatory.Vat.Entries.md
 - name: Systems
   href: Systems.md
   items:

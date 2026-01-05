@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.DealTypes](~/entities/Finance.Vat.DealTypes.md)
+Entity: [Regulatory.Vat.DealTypes](~/entities/Regulatory.Vat.DealTypes.md)
 
 Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types
 

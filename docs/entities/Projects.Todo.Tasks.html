@@ -205,7 +205,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</td>
-<td>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code></td>
+<td>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#owneruser">OwnerUser</a></td>
@@ -394,11 +394,12 @@ Allowed values for the <code>State</code>(Projects.Todo.Tasks.md#state) data att
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="dataobject">DataObject</h3>
-<p>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code></p>
+<p>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="owneruser">OwnerUser</h3>
 <p>The user, who created the todo and owns it. <code>Required</code> <code>Filter(multi eq)</code></p>

@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.DeclarationLines](~/entities/Finance.Vat.DeclarationLines.md)
+Entity: [Regulatory.Vat.DeclarationLines](~/entities/Regulatory.Vat.DeclarationLines.md)
 
 Contains the VAT declaration lines for declaration, issued by the enterprise company, according to the eligible legislation. Entity: VAT_Declaration_Lines (Introduced in version 22.1.4.22)
 

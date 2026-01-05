@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.DealTypeDocumentAmounts](~/entities/Finance.Vat.DealTypeDocumentAmounts.md)
+Entity: [Regulatory.Vat.DealTypeDocumentAmounts](~/entities/Regulatory.Vat.DealTypeDocumentAmounts.md)
 
 Contains custom percent ratios for additional amount distribution over products for VAT purposes. Entity: VAT_Deal_Type_Document_Amounts (Introduced in version 22.1.4.19)
 

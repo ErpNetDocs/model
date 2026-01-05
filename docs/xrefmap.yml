@@ -1915,6 +1915,33 @@ references:
 - uid: Regulatory.Common.Jurisdictions
   name: Regulatory.Common.Jurisdictions Entity
   href: entities/Regulatory.Common.Jurisdictions.html
+- uid: Regulatory.Vat
+  name: Regulatory.Vat Namespace
+  href: entities/Regulatory.Vat.html
+- uid: Regulatory.Vat.BoxTypeDealTypes
+  name: Regulatory.Vat.BoxTypeDealTypes Entity
+  href: entities/Regulatory.Vat.BoxTypeDealTypes.html
+- uid: Regulatory.Vat.BoxTypes
+  name: Regulatory.Vat.BoxTypes Entity
+  href: entities/Regulatory.Vat.BoxTypes.html
+- uid: Regulatory.Vat.DealTypeDocumentAmounts
+  name: Regulatory.Vat.DealTypeDocumentAmounts Entity
+  href: entities/Regulatory.Vat.DealTypeDocumentAmounts.html
+- uid: Regulatory.Vat.DealTypes
+  name: Regulatory.Vat.DealTypes Entity
+  href: entities/Regulatory.Vat.DealTypes.html
+- uid: Regulatory.Vat.DeclarationAmountDetails
+  name: Regulatory.Vat.DeclarationAmountDetails View
+  href: entities/Regulatory.Vat.DeclarationAmountDetails.html
+- uid: Regulatory.Vat.DeclarationLines
+  name: Regulatory.Vat.DeclarationLines Entity
+  href: entities/Regulatory.Vat.DeclarationLines.html
+- uid: Regulatory.Vat.Declarations
+  name: Regulatory.Vat.Declarations Entity
+  href: entities/Regulatory.Vat.Declarations.html
+- uid: Regulatory.Vat.Entries
+  name: Regulatory.Vat.Entries Entity
+  href: entities/Regulatory.Vat.Entries.html
 - uid: Systems
   name: Systems Namespace
   href: entities/Systems.html

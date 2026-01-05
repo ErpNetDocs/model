@@ -18812,6 +18812,96 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.BoxTypeDealTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.BoxTypeDealTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.BoxTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.BoxTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.DealTypeDocumentAmounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.DealTypeDocumentAmounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.DealTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.DealTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.DeclarationAmountDetails.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.DeclarationAmountDetails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.DeclarationLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.DeclarationLines.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.Declarations.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.Declarations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.Entries.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.Entries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Vat.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Vat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Regulatory.md",
       "output": {
         ".html": {

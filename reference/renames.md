@@ -5,6 +5,11 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Finance.Vat**  
+New name: **Regulatory.Vat**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
 Old name: **Finance.Payments.OrderBalances**  
 New name: **Finance.Payments.PaymentBalances**  
 Version: **25.1.2.86**  

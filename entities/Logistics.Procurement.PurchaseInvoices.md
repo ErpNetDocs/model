@@ -95,7 +95,7 @@ Aggregate Tree
 | [CostCenter](Logistics.Procurement.PurchaseInvoices.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost center for which the amount from this document will be accounted. `Filter(multi eq)` |
 | [CreditNoteOriginal<br />PurchaseInvoice](Logistics.Procurement.PurchaseInvoices.md#creditnoteoriginalpurchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The original invoice, which is debited/credited with this note. `Filter(multi eq)` |
 | [CurrencyDirectory](Logistics.Procurement.PurchaseInvoices.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DealType](Logistics.Procurement.PurchaseInvoices.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. `Filter(multi eq)` |
+| [DealType](Logistics.Procurement.PurchaseInvoices.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. `Filter(multi eq)` |
 | [DocumentCurrency](Logistics.Procurement.PurchaseInvoices.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. `Required` `Filter(multi eq)` |
 | [DocumentType](Logistics.Procurement.PurchaseInvoices.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Procurement.PurchaseInvoices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -114,7 +114,7 @@ Aggregate Tree
 | [ReceivingOrder](Logistics.Procurement.PurchaseInvoices.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable) | The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. `Filter(multi eq)` |
 | [ResponsiblePerson](Logistics.Procurement.PurchaseInvoices.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Logistics.Procurement.PurchaseInvoices.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SaleDealType](Logistics.Procurement.PurchaseInvoices.md#saledealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. `Filter(multi eq)` |
+| [SaleDealType](Logistics.Procurement.PurchaseInvoices.md#saledealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. `Filter(multi eq)` |
 | [Sequence](Logistics.Procurement.PurchaseInvoices.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Supplier](Logistics.Procurement.PurchaseInvoices.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the purchase, who is issuing the document. `Required` `Filter(multi eq)` |
 | [ToCompanyDivision](Logistics.Procurement.PurchaseInvoices.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -721,7 +721,7 @@ _Show in UI_: **HiddenByDefault**
 
 Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. `Filter(multi eq)`
 
-_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  
@@ -912,7 +912,7 @@ _Show in UI_: **HiddenByDefault**
 
 Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. `Filter(multi eq)`
 
-_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  

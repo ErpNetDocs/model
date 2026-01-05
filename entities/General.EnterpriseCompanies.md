@@ -76,7 +76,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| BGVATDeclaringPersons | [BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md) | List of `BGVATDeclaringPerson`(Finance.Vat.BGVATDeclaringPersons.md) child objects, based on the `Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany`(Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) back reference 
+| BGVATDeclaringPersons | [BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md) | List of BGVATDeclaringPerson child objects, based on the `Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany`(Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) back reference 
 | Crews | [Crews](Applications.Fleet.Crews.md) | List of `Crew`(Applications.Fleet.Crews.md) child objects, based on the `Applications.Fleet.Crew.EnterpriseCompany`(Applications.Fleet.Crews.md#enterprisecompany) back reference 
 | MapPoints | [MapPoints](General.Geography.MapPoints.md) | List of `MapPoint`(General.Geography.MapPoints.md) child objects, based on the `General.Geography.MapPoint.EnterpriseCompany`(General.Geography.MapPoints.md#enterprisecompany) back reference 
 | Resources | [Resources](Projects.Classic.Resources.md) | List of `Resource`(Projects.Classic.Resources.md) child objects, based on the `Projects.Classic.Resource.EnterpriseCompany`(Projects.Classic.Resources.md#enterprisecompany) back reference 

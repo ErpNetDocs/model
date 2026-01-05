@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.Entries](~/entities/Finance.Vat.Entries.md)
+Entity: [Regulatory.Vat.Entries](~/entities/Regulatory.Vat.Entries.md)
 
 Contains the entries in the VAT sales and purchase ledgers. Entity: VAT_Entries
 

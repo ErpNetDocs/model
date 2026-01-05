@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.BoxTypeDealTypes](~/entities/Finance.Vat.BoxTypeDealTypes.md)
+Entity: [Regulatory.Vat.BoxTypeDealTypes](~/entities/Regulatory.Vat.BoxTypeDealTypes.md)
 
 Determines the Amount Category which will be accumulated in the Box Type according to the specified the Deal Type. Entity: VAT_Box_Type_Deal_Types (Introduced in version 22.1.5.98)
 

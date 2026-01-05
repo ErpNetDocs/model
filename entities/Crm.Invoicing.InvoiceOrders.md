@@ -96,7 +96,7 @@ Aggregate Tree
 | [CreditNoteOriginal<br />InvoiceOrder](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) (nullable) | When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. `Filter(multi eq)` |
 | [CurrencyDirectory](Crm.Invoicing.InvoiceOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Customer](Crm.Invoicing.InvoiceOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer to whom to invoice. `Required` `Filter(multi eq)` |
-| [DealType](Crm.Invoicing.InvoiceOrders.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. `Filter(multi eq)` |
+| [DealType](Crm.Invoicing.InvoiceOrders.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Invoicing.InvoiceOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Invoicing.InvoiceOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Crm.Invoicing.InvoiceOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -649,7 +649,7 @@ _Show in UI_: **ShownByDefault**
 
 VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. `Filter(multi eq)`
 
-_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  

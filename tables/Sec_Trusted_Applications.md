@@ -16,7 +16,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 |[Application_Uri](#application_uri)|`nvarchar(254)` |Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".|
 |[Basic_Authentication_Allowed](#basic_authentication_allowed)|`bit` |If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.|
 |[Client_Type](#client_type)|`char(1)` Allowed: `C`, `P`|Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).|
-|[Creation_Time_Utc](#creation_time_utc)|`datetime` |Date and time (in UTC) when the application was registered.|
+|[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|Date and time (in UTC) when the application was registered.|
 |[Impersonate_As_Community_User_Allowed](#impersonate_as_community_user_allowed)|`bit` |Allows the application to request login from external users and operate on their behalf.|
 |[Impersonate_As_Internal_User_Allowed](#impersonate_as_internal_user_allowed)|`bit` |Allows the application to request login from internal users and operate on their behalf.|
 |[Impersonate_Login_Url](#impersonate_login_url)|`nvarchar(254)` |The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.|
@@ -222,7 +222,7 @@ Date and time (in UTC) when the application was registered.
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

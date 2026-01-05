@@ -80,7 +80,7 @@ Aggregate Root:
 | [Level1Discount](Crm.Sales.SalesOrderLines.md#level1discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | Indicates the level 1 discount. `Filter(multi eq)` `Introduced in version 23.1.2.56` |
 | [Level2Discount](Crm.Sales.SalesOrderLines.md#level2discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | Indicates the level 2 discount. `Filter(multi eq)` `Introduced in version 23.1.2.8` |
 | [Level3Discount](Crm.Sales.SalesOrderLines.md#level3discount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | Indicates the level 3 discount. `Filter(multi eq)` `Introduced in version 23.1.2.8` |
-| [LineDealType](Crm.Sales.SalesOrderLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
+| [LineDealType](Crm.Sales.SalesOrderLines.md#linedealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
 | [<s>LineDiscount</s>](Crm.Sales.SalesOrderLines.md#linediscount) | [LineDiscounts](Crm.Pricing.LineDiscounts.md) (nullable) | **OBSOLETE! Do not use!** The line discount type used to form the Line_Standard_<br />Discount_Percent. `Obsolete` `Filter(multi eq)` `ReadOnly` `Obsoleted in version 25.1.1.38` `Obsolete` |
 | [LineEndCustomerParty](Crm.Sales.SalesOrderLines.md#lineendcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. `Filter(multi eq)` `Introduced in version 20.1` |
 | [LineStore](Crm.Sales.SalesOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store which should be used to issue the goods for the line. null means to use the store from the header. `Filter(multi eq;like)` |
@@ -700,7 +700,7 @@ _Front-End Recalc Expressions:_
 
 Deal type to be passed to the invoice line. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)`
 
-_Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **HiddenByDefault**  

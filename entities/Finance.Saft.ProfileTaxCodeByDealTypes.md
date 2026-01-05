@@ -43,7 +43,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Finance.Saft.ProfileTaxCodeByDealTypes.md#dealtype) | [DealTypes](Finance.Vat.DealTypes.md) | The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. `Required` `Filter(multi eq)` |
+| [DealType](Finance.Saft.ProfileTaxCodeByDealTypes.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. `Required` `Filter(multi eq)` |
 | [DocumentType](Finance.Saft.ProfileTaxCodeByDealTypes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)` |
 | [Profile](Finance.Saft.ProfileTaxCodeByDealTypes.md#profile) | [Profiles](Finance.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner` |
 | [TaxCodeEntry](Finance.Saft.ProfileTaxCodeByDealTypes.md#taxcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met. `Required` `Filter(multi eq)` |
@@ -98,7 +98,7 @@ _Show in UI_: **HiddenByDefault**
 
 The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. `Required` `Filter(multi eq)`
 
-_Type_: **[DealTypes](Finance.Vat.DealTypes.md)**  
+_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  

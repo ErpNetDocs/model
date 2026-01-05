@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.BoxTypes](~/entities/Finance.Vat.BoxTypes.md)
+Entity: [Regulatory.Vat.BoxTypes](~/entities/Regulatory.Vat.BoxTypes.md)
 
 The types of boxes in a VAT declaration. . Entity: VAT_Box_Types (Introduced in version 22.1.4.18)
 

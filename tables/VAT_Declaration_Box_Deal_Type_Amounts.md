@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Vat.DeclarationAmountDetails](~/entities/Finance.Vat.DeclarationAmountDetails.md)
+Entity: [Regulatory.Vat.DeclarationAmountDetails](~/entities/Regulatory.Vat.DeclarationAmountDetails.md)
 
 Base data for calculation of Vat Box amounts. Entity: VAT_Declaration_Box_Deal_Type_Amounts (Introduced in version 23.1.2.31)
 
