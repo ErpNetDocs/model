@@ -128,6 +128,7 @@ Types of Managed assets. Used to categorize the tracked parameters of the assets
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Managed_Asset_Type_Name
 

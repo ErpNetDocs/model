@@ -147,6 +147,7 @@ The language code of the content.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Web_Module_Id
 

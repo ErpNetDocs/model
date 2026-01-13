@@ -54,6 +54,12 @@ Unique link type code
 |User Login|no|
 |Visible|yes|
 
+#### Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|yes|
+
 ### From_Doc_Type_Id
 
 

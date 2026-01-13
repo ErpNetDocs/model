@@ -50,6 +50,7 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cost_Allocation_Model_Name
 

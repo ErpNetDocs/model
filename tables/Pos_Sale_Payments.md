@@ -317,6 +317,7 @@ The POS sale to which this specifies a payment.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Reference
 

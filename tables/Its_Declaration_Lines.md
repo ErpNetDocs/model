@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Intrastat.DeclarationLines](~/entities/Finance.Intrastat.DeclarationLines.md)
+Entity: [Regulatory.Intrastat.DeclarationLines](~/entities/Regulatory.Intrastat.DeclarationLines.md)
 
 Contains the details of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declaration_Lines
 
@@ -214,6 +214,7 @@ The unique id of the line
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Invoiced_Value_Amount_Base
 

@@ -89,6 +89,7 @@ The access key, required to unlock the folder contents. NULL means the folder is
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Folder_Name
 

@@ -134,6 +134,7 @@ The product which is a component of the composite product.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Composite_Product_Id
 

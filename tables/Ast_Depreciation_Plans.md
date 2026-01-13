@@ -55,6 +55,7 @@ Each depreciation plan document can create depreciation plans for numerous asset
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Id
 

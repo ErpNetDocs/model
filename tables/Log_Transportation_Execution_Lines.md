@@ -393,6 +393,7 @@ Number of pallets affected by this operation. NULL when unknown or N/A.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Volume_Cbm
 

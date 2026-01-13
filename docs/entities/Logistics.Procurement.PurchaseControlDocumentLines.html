@@ -206,12 +206,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#document"><s>Document</s></a></td>
 <td><a href="Logistics.Procurement.PurchaseControlDocuments.html">PurchaseControlDocuments</a></td>
-<td><strong>OBSOLETE! Do not use!</strong> The owner document. The <see cref="Purchase<br />ControlDocument"></see> to which this PurchaseControl<br>DocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.0.46</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> The owner document. The <see cref="Purchase<br />ControlDocument"></see> to which this PurchaseControl<br>DocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchasecontroldocument"><s>PurchaseControlDocument</s></a></td>
 <td><a href="Logistics.Procurement.PurchaseControlDocuments.html">PurchaseControlDocuments</a></td>
-<td><strong>OBSOLETE! Do not use!</strong> The <see cref="Purchase<br />ControlDocument"></see> to which this PurchaseControl<br>DocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.0.46</code> <code>Obsolete</code> <code>Owner</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> The <see cref="Purchase<br />ControlDocument"></see> to which this PurchaseControl<br>DocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseinvoice">PurchaseInvoice</a></td>
@@ -226,7 +226,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseoperationtype"><s>PurchaseOperationType</s></a></td>
 <td><a href="Logistics.Procurement.PurchaseOperationTypes.html">PurchaseOperationTypes</a> (nullable)</td>
-<td><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.0.46</code> <code>Obsolete</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseorder">PurchaseOrder</a></td>
@@ -286,7 +286,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="invoicedamountbase">InvoicedAmountBase</h3>
@@ -369,14 +369,14 @@ Aggregate Root:<br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The owner document. The <see cref="PurchaseControlDocument"></see> to which this PurchaseControlDocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.0.46</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> The owner document. The <see cref="PurchaseControlDocument"></see> to which this PurchaseControlDocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseControlDocuments.html">PurchaseControlDocuments</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="purchasecontroldocument">PurchaseControlDocument</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The <see cref="PurchaseControlDocument"></see> to which this PurchaseControlDocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.0.46</code> <code>Obsolete</code> <code>Owner</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> The <see cref="PurchaseControlDocument"></see> to which this PurchaseControlDocumentLine belongs. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseControlDocuments.html">PurchaseControlDocuments</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
@@ -396,7 +396,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="purchaseoperationtype">PurchaseOperationType</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.0.46</code> <code>Obsolete</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOperationTypes.html">PurchaseOperationTypes</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

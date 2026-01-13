@@ -153,6 +153,7 @@ Content flags, like "Content-Type: text/plain; charset=utf-8"
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Mail_Message_Id
 

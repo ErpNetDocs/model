@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Intrastat.CommodityCodes](~/entities/Finance.Intrastat.CommodityCodes.md)
+Entity: [Regulatory.Intrastat.CommodityCodes](~/entities/Regulatory.Intrastat.CommodityCodes.md)
 
 Contains the approved commodity codes for each period from The Combined Nomenclature used within the European Union countries. They are used for reporting Intrastat and Excise. Entity: Its_Commodity_Codes
 
@@ -126,6 +126,7 @@ Description of the product code from the Intrastat Combined nomenclature
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

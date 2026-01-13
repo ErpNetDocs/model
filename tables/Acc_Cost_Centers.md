@@ -54,6 +54,7 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cost_Center_Name
 

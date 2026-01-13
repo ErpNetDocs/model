@@ -88,6 +88,7 @@ Unique code of the logistic unit type. Used for display and selection purposes. 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Name
 

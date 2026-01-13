@@ -133,6 +133,7 @@ Fixed scrap quantity of the material, needed for setup.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Line_Ord
 

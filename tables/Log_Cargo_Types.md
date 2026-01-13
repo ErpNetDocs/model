@@ -85,6 +85,7 @@ Represents a cargo type. Different cargo types might require different types of 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cargo_Type_Name
 

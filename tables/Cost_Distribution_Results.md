@@ -91,6 +91,7 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cost_Type_Id
 

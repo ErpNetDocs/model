@@ -55,6 +55,7 @@ Contains relationship between process and joint controllers. For processes with 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Joint_Controller_Party_Id
 

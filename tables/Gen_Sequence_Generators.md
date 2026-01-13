@@ -251,6 +251,7 @@ If specified then the generator is designated for use only in documents with tha
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Sequence_Id
 

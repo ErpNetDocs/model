@@ -123,6 +123,7 @@ The document Id of the base order for this MPS entry
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Need_Date
 

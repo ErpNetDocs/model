@@ -305,5 +305,6 @@ The measurement unit of Quantity. It is strongly suggested that the same unit is
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

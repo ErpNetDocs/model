@@ -198,6 +198,7 @@ Notes that describe this specific reminder for the task
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Reminder_Time
 

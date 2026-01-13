@@ -279,6 +279,7 @@ The code of the measuring device, used to measure the transaction.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Notes
 

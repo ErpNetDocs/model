@@ -84,6 +84,7 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Rental_Asset_Type_Name
 

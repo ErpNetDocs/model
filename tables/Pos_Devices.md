@@ -206,6 +206,7 @@ Indicates whether the device is currently active and can be choosen from drop-do
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Pos_Terminal_Id
 

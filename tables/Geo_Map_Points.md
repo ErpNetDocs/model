@@ -184,6 +184,7 @@ Longitude is angle from the prime meridian (in England) in east-west direction. 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Map_Point_Name
 

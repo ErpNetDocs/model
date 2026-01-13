@@ -87,6 +87,7 @@ Unique cost type code. Used for charting
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cost_Type_Name
 

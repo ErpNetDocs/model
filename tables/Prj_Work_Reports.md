@@ -264,5 +264,6 @@ The project task for which the work report is recorded. NULL means that the repo
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

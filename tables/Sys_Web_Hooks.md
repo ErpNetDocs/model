@@ -341,5 +341,6 @@ The destination URL, which should be called by the webhook (interpolated string)
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

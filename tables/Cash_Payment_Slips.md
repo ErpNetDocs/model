@@ -239,6 +239,7 @@ The account towards which the payments was effected
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Payment_Slip_No
 

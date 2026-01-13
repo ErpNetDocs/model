@@ -1330,6 +1330,7 @@ When specified indicates that some of the goods sold in Return_For_Sales_Order_I
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Sales_Person_Id
 

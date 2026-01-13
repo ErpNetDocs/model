@@ -91,6 +91,7 @@ Contains the resources, allocated to the activities. Entity: Cm_Activity_Resourc
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Notes
 

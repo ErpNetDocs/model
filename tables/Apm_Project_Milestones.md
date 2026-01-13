@@ -200,6 +200,7 @@ Specified for local project milestones. NULL means the milestone is global and a
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Milestone_Name
 

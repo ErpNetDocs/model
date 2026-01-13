@@ -55,6 +55,7 @@ Defines the parent/child relationship between the case categories. Entity: Apm_C
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Child_Case_Category_Id
 

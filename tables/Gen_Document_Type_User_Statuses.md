@@ -299,6 +299,7 @@ The system state to which this user status is bound
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### User_Status_Name
 

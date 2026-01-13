@@ -94,6 +94,7 @@ Represents a query within a data source. Entity: Sys_Data_Source_Queries
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Depends_On_Child_Rows
 

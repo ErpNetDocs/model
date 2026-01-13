@@ -330,6 +330,7 @@ Serial number for the product, that corresponds to this service object. If there
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Service_Object_Name
 

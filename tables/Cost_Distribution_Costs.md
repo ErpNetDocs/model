@@ -92,6 +92,7 @@ The cost (in base currency) which should be distributed.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cost_Distribution_Id
 

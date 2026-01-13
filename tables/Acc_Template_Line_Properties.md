@@ -359,5 +359,6 @@ Type of source for the property value. For example: System properties, User prop
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 

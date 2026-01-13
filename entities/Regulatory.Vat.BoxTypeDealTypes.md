@@ -59,9 +59,9 @@ _Allowed Values (Regulatory.Vat.BoxTypeDealTypesRepository.AmountCategory Enum M
 
 | Value | Description |
 | ---- | --- |
-| VAT | VAT value. Stored as 'V'. <br /> _Database Value:_ 'V' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'VAT' |
-| BASE | BASE value. Stored as 'B'. <br /> _Database Value:_ 'B' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'BASE' |
-| TOTAL | TOTAL value. Stored as 'T'. <br /> _Database Value:_ 'T' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'TOTAL' |
+| VAT | The amount of the tax for the operation in base currency.. Stored as 'V'. <br /> _Database Value:_ 'V' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'VAT' |
+| BASE | Amount of the operation without the tax in base currency.. Stored as 'B'. <br /> _Database Value:_ 'B' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'BASE' |
+| TOTAL | Amount of the operation with the tax in base currency.. Stored as 'T'. <br /> _Database Value:_ 'T' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'TOTAL' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
@@ -102,7 +102,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

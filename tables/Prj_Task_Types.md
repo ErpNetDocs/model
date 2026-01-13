@@ -207,6 +207,7 @@ When not NULL, specifies that this task type can be used only for projects of th
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Task_Type_Name
 

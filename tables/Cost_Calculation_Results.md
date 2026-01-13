@@ -97,6 +97,7 @@ Contains the results of cost calculations. Entity: Cost_Calculation_Results
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Full_Cost
 

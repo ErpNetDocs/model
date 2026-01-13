@@ -204,6 +204,7 @@ The dealer for which the forecast is made. When NULL, the forecast is not for an
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Active
 

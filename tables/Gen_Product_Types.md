@@ -337,6 +337,7 @@ If checked specifies that lots are automatically created by the receiving orders
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Product_Type_Name
 

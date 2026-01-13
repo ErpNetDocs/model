@@ -88,6 +88,7 @@ Quantity from the service agreement material line that is accounted for this ser
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

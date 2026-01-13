@@ -158,6 +158,7 @@ Id of the vehicle set (composition of vehicles, used together)
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Vehicle_Set_Name
 

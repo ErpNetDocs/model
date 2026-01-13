@@ -84,6 +84,7 @@ Categorization of the assets, which specifies their depreciation plans. Entity: 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Asset_Category_Name
 

@@ -86,6 +86,7 @@ The industries, for which we are offering solutions. Entity: Crm_Industries (Int
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Active
 

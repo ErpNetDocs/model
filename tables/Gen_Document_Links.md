@@ -54,6 +54,7 @@ Obsolete. Not used. Entity: Gen_Document_Links (Obsoleted in version 22.1.6.60)
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Link_Type_Id
 
@@ -87,6 +88,7 @@ Obsolete. Not used. Entity: Gen_Document_Links (Obsoleted in version 22.1.6.60)
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 
@@ -147,5 +149,6 @@ Obsolete. Not used. Entity: Gen_Document_Links (Obsoleted in version 22.1.6.60)
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

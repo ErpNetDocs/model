@@ -119,6 +119,7 @@ The process, whose data is disclosed to the recipient.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Recipient_Party_Id
 

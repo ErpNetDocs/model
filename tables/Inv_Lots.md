@@ -328,6 +328,7 @@ The license number for this lot. Null when license number is N/A or unknown.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Lot_Number
 

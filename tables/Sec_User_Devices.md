@@ -359,6 +359,7 @@ A token used for sending notifications to the device, such as a push notificatio
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### User_Id
 

@@ -119,6 +119,7 @@ For EU, the product category code is a single character - B,E,I,S,T or W.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Name
 

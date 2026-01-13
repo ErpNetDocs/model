@@ -579,6 +579,7 @@ The name of the invoiced product, initially copied from the name in the product 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Quantity
 

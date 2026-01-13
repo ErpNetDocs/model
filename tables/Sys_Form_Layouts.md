@@ -170,6 +170,7 @@ The object category for which the layout is applied. Object category is usually 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Form_Name
 

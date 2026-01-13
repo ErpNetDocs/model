@@ -93,6 +93,7 @@ Contains the additional participants in the activities. These are the participat
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Email
 

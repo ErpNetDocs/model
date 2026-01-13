@@ -89,6 +89,7 @@ Unique (within all groups) code of the asset group.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Managed_Asset_Group_Name
 

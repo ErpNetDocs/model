@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Intrastat.DocumentAmountTypeSettings](~/entities/Finance.Intrastat.DocumentAmountTypeSettings.md)
+Entity: [Regulatory.Intrastat.DocumentAmountTypeSettings](~/entities/Regulatory.Intrastat.DocumentAmountTypeSettings.md)
 
 Specifies the additional amounts, which are added to the invoiced and statistical values. Entity: Its_Document_Amount_Type_Settings
 
@@ -153,6 +153,7 @@ The amount type which will be added to the invoiced or the statistical value
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Enterprise_Company_Id
 

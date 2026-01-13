@@ -241,6 +241,7 @@ The organizational group of the asset. Used for organizational purposes only.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Managed_Asset_Name
 

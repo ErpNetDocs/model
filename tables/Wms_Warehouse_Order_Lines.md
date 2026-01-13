@@ -746,6 +746,7 @@ Location, where the opeartion should be performed. NULL for operations, which do
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Warehouse_Worker_Id
 

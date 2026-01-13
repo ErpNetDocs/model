@@ -162,6 +162,7 @@ Specifies whether the calculation method of the discount is based on a standard 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Discount_Type_Name
 

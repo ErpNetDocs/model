@@ -385,6 +385,7 @@ The measurement unit of the quantity rewarded of the bonus product. Should be no
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Bonus_Program_Name
 

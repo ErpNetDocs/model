@@ -138,6 +138,7 @@ Business reason for invoicing of this product or service. S=Shipment, P=Payment
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Line_Amount
 

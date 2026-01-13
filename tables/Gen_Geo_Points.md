@@ -127,6 +127,7 @@ The enterprise company for which the name of the geo point has meaning. Null for
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Geo_Point_Name
 

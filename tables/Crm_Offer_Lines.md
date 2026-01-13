@@ -459,6 +459,7 @@ The discount percentage, applied through the standard discount policy.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Product_Code_Id
 

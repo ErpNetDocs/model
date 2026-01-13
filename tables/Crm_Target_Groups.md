@@ -180,6 +180,7 @@ Short code for identification of target groups.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Target_Group_Name
 

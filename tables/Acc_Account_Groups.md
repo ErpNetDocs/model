@@ -54,6 +54,7 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Account_Group_Name
 

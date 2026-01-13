@@ -58,6 +58,7 @@ When specified, contains user-defined asset depreciation values for each depreci
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Depreciation_Plan_Line_Id
 

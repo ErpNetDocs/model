@@ -76,6 +76,7 @@ Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Execut
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Process_Element_Id
 

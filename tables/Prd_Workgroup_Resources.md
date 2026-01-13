@@ -123,6 +123,7 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Notes
 

@@ -294,5 +294,6 @@ The object, whose data was used to initially create the conversation. NULL means
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

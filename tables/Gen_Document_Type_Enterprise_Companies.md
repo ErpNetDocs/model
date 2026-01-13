@@ -54,6 +54,7 @@ Specifies the visibility (availability) of the document type for the different e
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Type_Id
 

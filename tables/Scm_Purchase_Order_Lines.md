@@ -609,6 +609,7 @@ If specified determines which product variant of the current product in this lin
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Purchase_Product_Price_Id
 

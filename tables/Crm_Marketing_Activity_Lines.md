@@ -311,6 +311,7 @@ Marketing activity
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Marketing_Activity_Line_Type_Id
 

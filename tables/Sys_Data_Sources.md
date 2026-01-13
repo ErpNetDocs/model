@@ -89,6 +89,7 @@ The name of the query or table that is used for root reference point of the load
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Data_Source_Name
 

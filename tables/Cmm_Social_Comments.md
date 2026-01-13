@@ -220,6 +220,7 @@ When not null, means that the comment is a reply to the specified comment. The c
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### User_Id
 

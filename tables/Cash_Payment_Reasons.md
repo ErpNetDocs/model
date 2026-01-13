@@ -123,6 +123,7 @@ Specifies whether the payment reason is defined by the system. The system define
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Payment_Reason_Name
 

@@ -77,6 +77,7 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Sequence_Name
 

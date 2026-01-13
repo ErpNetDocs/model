@@ -80,6 +80,7 @@ The Id of the affected object
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Old_Values_XML
 
@@ -146,6 +147,7 @@ Not used.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Operation_Time
 
@@ -181,7 +183,7 @@ Not used.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|GreaterThanOrLessThan|None|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Operation_Type
 
@@ -212,6 +214,12 @@ The type of operation - I=INSERT, D=DELETE, U=UPDATE
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Operation_Type - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

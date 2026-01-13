@@ -455,6 +455,7 @@ The latest saved version of the object. Starts from 1 and increments with 1 for 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

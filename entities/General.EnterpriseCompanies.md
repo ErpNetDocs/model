@@ -47,6 +47,7 @@ Aggregate Tree
 | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")` 
 | [DisplayText](General.EnterpriseCompanies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited. `Filter(ge;le)` 
+| [EndDateOfClosed<br />AccountingPeriod](General.EnterpriseCompanies.md#enddateofclosedaccountingperiod) | date __nullable__ | Indicates the date before which all accounting vouchers are permanently closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.1.0` 
 | [ExternalId](General.EnterpriseCompanies.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](General.EnterpriseCompanies.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](General.EnterpriseCompanies.md#id) | guid |  
@@ -76,7 +77,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| BGVATDeclaringPersons | [BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md) | List of BGVATDeclaringPerson child objects, based on the `Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany`(Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) back reference 
+| BGVATDeclaringPersons | [BGVATDeclaringPersons](Finance.Vat.BGVATDeclaringPersons.md) | List of `BGVATDeclaringPerson`(Finance.Vat.BGVATDeclaringPersons.md) child objects, based on the `Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany`(Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) back reference 
 | Crews | [Crews](Applications.Fleet.Crews.md) | List of `Crew`(Applications.Fleet.Crews.md) child objects, based on the `Applications.Fleet.Crew.EnterpriseCompany`(Applications.Fleet.Crews.md#enterprisecompany) back reference 
 | MapPoints | [MapPoints](General.Geography.MapPoints.md) | List of `MapPoint`(General.Geography.MapPoints.md) child objects, based on the `General.Geography.MapPoint.EnterpriseCompany`(General.Geography.MapPoints.md#enterprisecompany) back reference 
 | Resources | [Resources](Projects.Classic.Resources.md) | List of `Resource`(Projects.Classic.Resources.md) child objects, based on the `Projects.Classic.Resource.EnterpriseCompany`(Projects.Classic.Resources.md#enterprisecompany) back reference 
@@ -164,6 +165,16 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Show in UI_: **ShownByDefault**  
 
+### EndDateOfClosedAccountingPeriod
+
+Indicates the date before which all accounting vouchers are permanently closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.1.0`
+
+_Type_: **date __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
+
 ### ExternalId
 
 The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
@@ -189,7 +200,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

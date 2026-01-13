@@ -90,6 +90,7 @@ The class of the notification, for which the user is specifying settings. When N
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Receive_DeviceNotification
 

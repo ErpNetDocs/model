@@ -156,6 +156,7 @@ The id of the actual changed object, described by this change. This is different
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Object_Changeset_Id
 

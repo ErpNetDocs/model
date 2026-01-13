@@ -345,6 +345,7 @@ The standard quantity of the ordered items (usually with Purchase Order) in base
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Purchase_Invoice_Id
 

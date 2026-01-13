@@ -149,6 +149,7 @@ The unique code of the product valuation group.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Valuation_Group_Name
 

@@ -538,17 +538,6 @@
       href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses
       href: Finance.Excise.TaxWarehouses.md
-  - name: Intrastat
-    href: Finance.Intrastat.md
-    items:
-    - name: CommodityCodes
-      href: Finance.Intrastat.CommodityCodes.md
-    - name: DeclarationLines
-      href: Finance.Intrastat.DeclarationLines.md
-    - name: Declarations
-      href: Finance.Intrastat.Declarations.md
-    - name: DocumentAmountTypeSettings
-      href: Finance.Intrastat.DocumentAmountTypeSettings.md
   - name: Payments
     href: Finance.Payments.md
     items:
@@ -963,6 +952,8 @@
     items:
     - name: WarehouseAvailability
       href: Logistics.Wms.WarehouseAvailability.md
+    - name: WarehouseCounts
+      href: Logistics.Wms.WarehouseCounts.md
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
     - name: WarehouseOrderLines
@@ -971,6 +962,8 @@
       href: Logistics.Wms.WarehouseOrders.md
     - name: WarehousePolicies
       href: Logistics.Wms.WarehousePolicies.md
+    - name: WarehouseReconciliationDetails
+      href: Logistics.Wms.WarehouseReconciliationDetails.md
     - name: WarehouseReconciliationLines
       href: Logistics.Wms.WarehouseReconciliationLines.md
     - name: WarehouseReconciliations
@@ -1161,6 +1154,19 @@
       href: Projects.Classic.WorkReportResources.md
     - name: WorkReports
       href: Projects.Classic.WorkReports.md
+  - name: Procedures
+    href: Projects.Procedures.md
+    items:
+    - name: ChecklistExecutionItems
+      href: Projects.Procedures.ChecklistExecutionItems.md
+    - name: ChecklistTemplateItems
+      href: Projects.Procedures.ChecklistTemplateItems.md
+    - name: ChecklistTemplates
+      href: Projects.Procedures.ChecklistTemplates.md
+    - name: OperationalProcedureExecutions
+      href: Projects.Procedures.OperationalProcedureExecutions.md
+    - name: OperationalProcedures
+      href: Projects.Procedures.OperationalProcedures.md
   - name: Todo
     href: Projects.Todo.md
     items:
@@ -1185,6 +1191,17 @@
       href: Regulatory.Common.CodeLists.md
     - name: Jurisdictions
       href: Regulatory.Common.Jurisdictions.md
+  - name: Intrastat
+    href: Regulatory.Intrastat.md
+    items:
+    - name: CommodityCodes
+      href: Regulatory.Intrastat.CommodityCodes.md
+    - name: DeclarationLines
+      href: Regulatory.Intrastat.DeclarationLines.md
+    - name: Declarations
+      href: Regulatory.Intrastat.Declarations.md
+    - name: DocumentAmountTypeSettings
+      href: Regulatory.Intrastat.DocumentAmountTypeSettings.md
   - name: Vat
     href: Regulatory.Vat.md
     items:

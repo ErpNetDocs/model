@@ -91,6 +91,7 @@ Orders for maintenance. It is performed by a single service center, but can cont
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Maintenance_Type_Id
 

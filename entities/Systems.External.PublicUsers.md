@@ -70,7 +70,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Company](Systems.External.PublicUsers.md#company) | [Companies](General.Contacts.Companies.md) (nullable) | Link to an internal company record, specified by internal employee. `Filter(multi eq)` |
 | [Person](Systems.External.PublicUsers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | Link to an internal person record. Usually specified by internal employee, but can also be an automated process. `Filter(multi eq)` |
-| [<s>PublicUserList</s>](Systems.External.PublicUsers.md#publicuserlist) | [PublicUserLists](Systems.External.PublicUserLists.md) | **OBSOLETE! Do not use!** The list in which the user account is saved. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.0.46` `Obsolete` |
+| [<s>PublicUserList</s>](Systems.External.PublicUsers.md#publicuserlist) | [PublicUserLists](Systems.External.PublicUserLists.md) | **OBSOLETE! Do not use!** The list in which the user account is saved. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` |
 
 
 ## Attribute Details
@@ -209,7 +209,7 @@ _Show in UI_: **ShownByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 
@@ -363,7 +363,7 @@ _Show in UI_: **ShownByDefault**
 
 ### PublicUserList
 
-**OBSOLETE! Do not use!** The list in which the user account is saved. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.0.46` `Obsolete`
+**OBSOLETE! Do not use!** The list in which the user account is saved. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete`
 
 _Type_: **[PublicUserLists](Systems.External.PublicUserLists.md)**  
 _Category_: **System**  

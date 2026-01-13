@@ -141,6 +141,7 @@ The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Social_Group_Name
 

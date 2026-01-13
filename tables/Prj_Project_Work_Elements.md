@@ -125,6 +125,7 @@ The work element from the project type on which the current work element is base
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

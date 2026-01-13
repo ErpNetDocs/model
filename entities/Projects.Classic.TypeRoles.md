@@ -75,7 +75,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, Like, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

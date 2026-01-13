@@ -90,6 +90,7 @@ When specified for a product type, contains the suggested user-defined propertie
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Property_Id
 

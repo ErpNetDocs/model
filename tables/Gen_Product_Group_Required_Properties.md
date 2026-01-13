@@ -287,6 +287,7 @@ Specifies whether the property is required (or only suggested) to be set for new
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

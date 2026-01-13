@@ -62,6 +62,7 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Id
 

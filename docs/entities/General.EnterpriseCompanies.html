@@ -167,6 +167,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Start date of the priod when the documents can be edited. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="General.EnterpriseCompanies.html#enddateofclosedaccountingperiod">EndDateOfClosed<br>AccountingPeriod</a></td>
+<td>date <strong>nullable</strong></td>
+<td>Indicates the date before which all accounting vouchers are permanently closed. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.0</code></td>
+</tr>
+<tr>
 <td><a href="General.EnterpriseCompanies.html#externalid">ExternalId</a></td>
 <td>string</td>
 <td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
@@ -288,7 +293,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td>BGVATDeclaringPersons</td>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html">BGVATDeclaringPersons</a></td>
-<td>List of BGVATDeclaringPerson child objects, based on the <code>Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany</code>(Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) back reference</td>
+<td>List of <code>BGVATDeclaringPerson</code>(Finance.Vat.BGVATDeclaringPersons.md) child objects, based on the <code>Finance.Vat.BGVATDeclaringPerson.EnterpriseCompany</code>(Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) back reference</td>
 </tr>
 <tr>
 <td>Crews</td>
@@ -401,6 +406,13 @@ Allowed values for the <code>DefaultLanguage</code>(General.EnterpriseCompanies.
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="enddateofclosedaccountingperiod">EndDateOfClosedAccountingPeriod</h3>
+<p>Indicates the date before which all accounting vouchers are permanently closed. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.0</code></p>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="externalid">ExternalId</h3>
 <p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -419,7 +431,7 @@ Allowed values for the <code>DefaultLanguage</code>(General.EnterpriseCompanies.
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="isactive">IsActive</h3>

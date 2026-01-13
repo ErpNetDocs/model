@@ -227,6 +227,7 @@ When not null, specifies that the reaction is for the specified comment within t
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### User_Id
 

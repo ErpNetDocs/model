@@ -95,6 +95,7 @@ Defines the parameters, which are tracked for the assets of the different types.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Notes
 

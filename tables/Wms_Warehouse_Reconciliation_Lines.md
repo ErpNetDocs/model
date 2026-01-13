@@ -198,6 +198,7 @@ Unique identifier of the line in the reconciliation document.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Warehouse_Worker_Id
 

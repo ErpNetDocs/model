@@ -88,6 +88,7 @@ Provides a way to specify additional (to the one specified in Bonus Program.Cond
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Product_Id
 

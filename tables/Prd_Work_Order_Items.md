@@ -112,6 +112,7 @@ The date, when the item should be completed. NULL means that there is no constra
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Line_Ord
 

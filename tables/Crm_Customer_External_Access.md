@@ -57,6 +57,7 @@ Defines the users permissions to specific customer data. Entity: Crm_Customer_Ex
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Customer_Id
 

@@ -195,6 +195,7 @@ The document type, whose documents will be secured by the current rule.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Priority
 

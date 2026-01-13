@@ -107,6 +107,7 @@ The details of the movement of each excise product for each excise document. Ent
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Excise_Alcoholic_Strength
 

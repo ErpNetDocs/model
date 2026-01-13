@@ -540,6 +540,7 @@ The party who is the supplier for the enterprise company.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Supplier_Number
 

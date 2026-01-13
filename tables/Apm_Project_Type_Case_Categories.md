@@ -91,6 +91,7 @@ The case category that а project with this type can have.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Type_Id
 

@@ -154,6 +154,7 @@ The currency in which resource costs are specified. Required only if resource co
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Resource_Name
 

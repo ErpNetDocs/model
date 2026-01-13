@@ -116,6 +116,7 @@ When not NULL means that the project type is specific to the enterprise company
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Type_Name
 

@@ -91,6 +91,7 @@ Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Released
 

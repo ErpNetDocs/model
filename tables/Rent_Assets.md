@@ -341,6 +341,7 @@ The logical group of the rental asset.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Rental_Asset_Name
 

@@ -131,6 +131,7 @@ Indicates whether the current operation is active.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Minimum_Concurrent_Start_Time_Minutes
 

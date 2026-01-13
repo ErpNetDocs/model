@@ -56,6 +56,7 @@ Asset purchase or sales order. Entity: Ast_Asset_Orders
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Id
 

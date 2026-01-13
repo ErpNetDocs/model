@@ -85,6 +85,7 @@ User defined customer type. Primarily used for customer definition security, bec
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Customer_Type_Name
 

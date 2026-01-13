@@ -189,6 +189,7 @@ Contains the enumeration of all values in the alternating value set. Used only w
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Range_Type
 

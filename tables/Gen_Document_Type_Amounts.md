@@ -126,6 +126,7 @@ The amount type that should be automatically added to the documents of the speci
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Type_Id
 

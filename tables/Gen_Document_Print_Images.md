@@ -51,6 +51,7 @@ Contains the data of a printout of a document as it was obtained from the data s
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Print_Image
 

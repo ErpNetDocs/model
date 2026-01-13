@@ -152,6 +152,7 @@ The exact time of day, when the workgroup shift is available for utilisation
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

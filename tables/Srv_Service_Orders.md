@@ -266,6 +266,7 @@ When not NULL denotes that the order will be bound to the terms in the specified
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Ship_To_Customer_Id
 

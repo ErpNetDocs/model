@@ -92,4 +92,10 @@
 |User Login|no|
 |Visible|yes|
 
+#### Subsystem_Prefix - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|yes|
+
 

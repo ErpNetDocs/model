@@ -207,6 +207,7 @@ Specifies the layer on which to register the event. Allowed values = FTE-FrontEn
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### User_Business_Rule_Id
 

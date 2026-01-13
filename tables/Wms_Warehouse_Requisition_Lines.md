@@ -541,5 +541,6 @@ The theoretical quantity in base measurement unit according to the current measu
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

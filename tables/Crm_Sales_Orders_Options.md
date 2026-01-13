@@ -301,6 +301,7 @@ The currency of Minimal Amount
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Shipment_Allowance
 

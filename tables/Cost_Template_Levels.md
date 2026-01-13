@@ -89,6 +89,7 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Hierarchy_Level
 

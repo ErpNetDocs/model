@@ -104,6 +104,7 @@ Physical warehouse. Entity: Wms_Warehouses (Introduced in version 20.1)
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Warehouse_Name
 

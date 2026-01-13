@@ -59,6 +59,7 @@ Deal Type - Document Amount
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Deal_Type_Id
 

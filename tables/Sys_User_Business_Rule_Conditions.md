@@ -204,6 +204,7 @@ Unique consecutive number of the condition within the business rule.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### User_Business_Rule_Id
 

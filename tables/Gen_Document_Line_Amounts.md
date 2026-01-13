@@ -129,6 +129,7 @@ The type of amount for which the distribution pattern is specified.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Line_Id
 

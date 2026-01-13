@@ -145,6 +145,7 @@ Unique transportation mode code.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Transportation_Mode_Name
 

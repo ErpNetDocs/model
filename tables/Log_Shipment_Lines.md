@@ -761,6 +761,7 @@ The serial number of the shipped product. NULL means that serial number is unkno
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Shipment_Order_Line_Id
 

@@ -461,6 +461,7 @@ Specifies the measurement category to be used for distribution, when the Distrib
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Active
 

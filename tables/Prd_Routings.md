@@ -83,6 +83,7 @@ The last date, when the route should be used. NULL means that the route might st
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Shared
 

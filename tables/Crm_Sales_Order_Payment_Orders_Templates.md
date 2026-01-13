@@ -118,6 +118,7 @@ Contains options for generation of payment orders. Each option set is assigned t
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Amount_With_VAT
 

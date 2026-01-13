@@ -39,7 +39,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Systems.Documents.DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)  
-  * [Finance.Intrastat.DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md)  
+  * [Regulatory.Intrastat.DocumentAmountTypeSettings](Regulatory.Intrastat.DocumentAmountTypeSettings.md)  
   * [Systems.Documents.DocumentAmountTypeDependencies](Systems.Documents.DocumentAmountTypeDependencies.md)  
 
 ## Attributes
@@ -78,7 +78,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | Dependencies | [DocumentAmountTypeDependencies](Systems.Documents.DocumentAmountTypeDependencies.md) | List of `DocumentAmount<br />TypeDependency`(Systems.Documents.DocumentAmount<br />TypeDependencies.md) child objects, based on the `Systems.Documents.DocumentAmount<br />TypeDependency.DocumentAmountType`(Systems.Documents.DocumentAmount<br />TypeDependencies.md#documentamounttype) back reference 
-| Settings | [DocumentAmountTypeSettings](Finance.Intrastat.DocumentAmountTypeSettings.md) | List of `DocumentAmount<br />TypeSetting`(Finance.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the `Finance.Intrastat.DocumentAmountTypeSetting.DocumentAmountType`(Finance.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back reference 
+| Settings | [DocumentAmountTypeSettings](Regulatory.Intrastat.DocumentAmountTypeSettings.md) | List of `DocumentAmount<br />TypeSetting`(Regulatory.Intrastat.DocumentAmountTypeSettings.md) child objects, based on the `Regulatory.Intrastat.DocumentAmountTypeSetting.DocumentAmountType`(Regulatory.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) back reference 
 
 
 ## Attribute Details
@@ -255,7 +255,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

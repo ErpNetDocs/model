@@ -283,6 +283,7 @@ Unique code of the promotional package
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Promotional_Package_Name
 

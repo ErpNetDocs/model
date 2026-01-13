@@ -244,6 +244,7 @@ The managed asset under which the assets are managed.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Rental_Asset_Id
 

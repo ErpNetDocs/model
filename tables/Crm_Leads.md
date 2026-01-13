@@ -407,6 +407,7 @@ Filled when the person is identified and recorded in our master records.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Lead_User_Stage_Id
 

@@ -185,6 +185,7 @@ The language code of the article text.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### News_Web_Module_Id
 

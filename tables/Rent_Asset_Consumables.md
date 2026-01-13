@@ -58,6 +58,7 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Consumable_Quantity
 

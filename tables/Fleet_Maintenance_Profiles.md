@@ -114,6 +114,7 @@ Profiles contain multiple maintenance plans and can be assigned directly to a ve
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Maintenance_Profile_Name
 

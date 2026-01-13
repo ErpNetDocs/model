@@ -266,6 +266,7 @@ The parent web Module. It can only be a module with Module Type = Category. Null
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Web_Module_Name
 

@@ -171,6 +171,7 @@ The code of the variant. The code is unique within the Product. It is the concat
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Product_Variant_Name
 

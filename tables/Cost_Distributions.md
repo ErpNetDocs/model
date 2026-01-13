@@ -55,6 +55,7 @@ Used for cost distribution. Contains the period and the store of the cost distri
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Id
 

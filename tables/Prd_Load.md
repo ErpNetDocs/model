@@ -100,6 +100,7 @@ Date of the scheduled load. This is date only. Start_Time and End_Time specify t
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Priority
 

@@ -133,6 +133,7 @@ The time (in UTC) when the exchange is created.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Driver_Name
 

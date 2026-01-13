@@ -124,6 +124,7 @@ Interpolated string, containing the default format for displaying values of the 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Entity_Name
 

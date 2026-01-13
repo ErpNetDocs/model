@@ -178,6 +178,7 @@ True if the plan is active and can be selected from drop-downs.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Maintenance_Plan_Name
 

@@ -98,6 +98,7 @@ The department in which this employee is working. NULL means this information is
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Company_Id
 

@@ -55,6 +55,7 @@ Contains the cost types and their hierachy positions within a cost calculation. 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Cost_Template_Id
 

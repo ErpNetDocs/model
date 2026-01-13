@@ -200,6 +200,7 @@ Unique (within the location) code of the POS terminal.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Pos_Terminal_Name
 

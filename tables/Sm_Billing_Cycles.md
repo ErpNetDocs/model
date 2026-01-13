@@ -54,6 +54,7 @@ Billing cycles contain information when to issue new bills. Entity: Sm_Billing_C
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Billing_Cycle_Name
 

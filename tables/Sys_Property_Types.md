@@ -81,6 +81,12 @@ The system entity containing the objects
 |User Login|no|
 |Visible|yes|
 
+#### Entity_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|yes|
+
 ### Multi_Valued
 
 
@@ -173,6 +179,12 @@ Unique Id of the property
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Property_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

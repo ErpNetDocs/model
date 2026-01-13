@@ -82,6 +82,7 @@ The approximate duration of the operation (for quantity of 1) in seconds. This i
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Line_Ord
 

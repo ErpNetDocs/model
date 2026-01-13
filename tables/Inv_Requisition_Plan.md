@@ -627,6 +627,7 @@ The suggested by the program value equals Calendar_Date; the release date of the
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

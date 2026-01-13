@@ -265,6 +265,7 @@ Sales person to whom the target is assigned. Serves as default for the lines.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Target_Currency_Id
 

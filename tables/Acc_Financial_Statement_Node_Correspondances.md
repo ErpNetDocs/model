@@ -131,6 +131,7 @@ Correspondant account group determining the correspondances for which the balanc
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Financial_Statement_Node_Id
 

@@ -5,6 +5,11 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Finance.Intrastat**  
+New name: **Regulatory.Intrastat**  
+Version: **26.2.1.4**  
+Case: **39297**  
+
 Old name: **Finance.Vat**  
 New name: **Regulatory.Vat**  
 Version: **26.2.0.99**  

@@ -65,8 +65,8 @@ _Allowed Values (Regulatory.Vat.BoxTypesRepository.CalculationType Enum Members)
 
 | Value | Description |
 | ---- | --- |
-| DealTypes | DealTypes value. Stored as 'DT'. <br /> _Database Value:_ 'DT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'DealTypes' |
-| CalculatedAttribute | CalculatedAttribute value. Stored as 'CA'. <br /> _Database Value:_ 'CA' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CalculatedAttribute' |
+| DealTypes | Source of amounts are Vat Entries. Stored as 'DT'. <br /> _Database Value:_ 'DT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'DealTypes' |
+| CalculatedAttribute | Source of amounts is Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. Stored as 'CA'. <br /> _Database Value:_ 'CA' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CalculatedAttribute' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
@@ -119,7 +119,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

@@ -669,6 +669,7 @@ The process, which will be used to process the data. Null when the process is un
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Retracted_On_Utc
 

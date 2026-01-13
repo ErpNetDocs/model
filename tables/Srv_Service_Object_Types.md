@@ -76,6 +76,7 @@ Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Service_Object_Type_Name
 

@@ -140,6 +140,7 @@ If filled indicates which party is billed for the total amount. Possible values:
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Direction
 

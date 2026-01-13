@@ -87,6 +87,7 @@ Unique identifying code of the financial statement
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Financial_Statement_Name
 

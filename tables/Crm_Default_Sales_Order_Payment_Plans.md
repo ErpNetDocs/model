@@ -93,6 +93,7 @@ Percent of the sales order amount to be payed.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Type_Id
 

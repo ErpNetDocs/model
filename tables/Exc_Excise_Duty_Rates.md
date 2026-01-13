@@ -92,6 +92,7 @@ The rate which should be applied for the specified product and purpose.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Excise_Measurement_Unit_Id
 

@@ -689,6 +689,7 @@ When not NULL, specifies the payment account that is expected or will be used by
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Payment_Type_Id
 

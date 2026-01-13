@@ -154,6 +154,7 @@ Specifies whether the project type is active for new projects.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Type_Name
 

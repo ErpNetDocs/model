@@ -185,7 +185,7 @@ _Show in UI_: **ShownByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Show in UI_: **CannotBeShown**  
 
 ### NetRequirements

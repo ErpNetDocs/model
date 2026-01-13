@@ -92,6 +92,7 @@ The document amount for which the referenced document is specified.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Referenced_Document_Id
 

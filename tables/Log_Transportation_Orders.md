@@ -453,6 +453,7 @@ The mode of transportation which should be used for this order. NULL when it is 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Transportation_Vehicle_Id
 

@@ -29,6 +29,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Logistics.Wms.WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md)  
+  * [Logistics.Wms.WarehouseReconciliationDetails](Logistics.Wms.WarehouseReconciliationDetails.md)  
   * [Logistics.Wms.WarehouseReconciliationLines](Logistics.Wms.WarehouseReconciliationLines.md)  
   * [General.Documents.DocumentAmounts](General.Documents.DocumentAmounts.md)  
     * [General.Documents.DocumentAmountReferencedDocuments](General.Documents.DocumentAmountReferencedDocuments.md)  
@@ -105,6 +106,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | Comments | [DocumentComments](General.Documents.DocumentComments.md) | List of `DocumentComment`(General.Documents.DocumentComments.md) child objects, based on the `General.Documents.DocumentComment.Document`(General.Documents.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.Documents.md)) 
+| Details | [WarehouseReconciliationDetails](Logistics.Wms.WarehouseReconciliationDetails.md) | List of `WarehouseReconciliation<br />Detail`(Logistics.Wms.WarehouseReconciliation<br />Details.md) child objects, based on the `Logistics.Wms.WarehouseReconciliation<br />Detail.WarehouseReconciliation`(Logistics.Wms.WarehouseReconciliation<br />Details.md#warehousereconciliation) back reference 
 | DistributedAmounts | [DocumentDistributedAmounts](General.Documents.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.Documents.DocumentDistributedAmounts.md) child objects, based on the `General.Documents.DocumentDistributedAmount.Document`(General.Documents.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.Documents.md)) 
 | DocumentAmounts | [DocumentAmounts](General.Documents.DocumentAmounts.md) | List of `DocumentAmount`(General.Documents.DocumentAmounts.md) child objects, based on the `General.Documents.DocumentAmount.Document`(General.Documents.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.Documents.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.Documents.DocumentFileAttachments.md) child objects, based on the `General.Documents.DocumentFileAttachment.Document`(General.Documents.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -285,7 +287,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

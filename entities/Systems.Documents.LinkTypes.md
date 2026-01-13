@@ -101,7 +101,7 @@ _Show in UI_: **ShownByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **GreaterThanOrLessThan**  
 _Show in UI_: **ShownByDefault**  
 
 ### Name

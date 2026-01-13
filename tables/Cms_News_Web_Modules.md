@@ -58,6 +58,7 @@ Represents a web module, containing news. Entity: Cms_News_Web_Modules (Obsolete
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

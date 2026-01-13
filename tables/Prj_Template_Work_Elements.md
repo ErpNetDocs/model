@@ -88,6 +88,7 @@ Contains project work elements, which shall be copied to projects, based on the 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Type_Work_Element_Id
 

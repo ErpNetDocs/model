@@ -163,6 +163,7 @@ Connection code, unique within the process. Used as ID for XML serialization pur
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Process_Connection_Name
 

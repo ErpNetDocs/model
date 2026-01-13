@@ -89,6 +89,7 @@ Obsolete. Not used. (Types of excise operations. Used by general documents to sp
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Name
 

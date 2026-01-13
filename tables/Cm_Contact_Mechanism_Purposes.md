@@ -86,6 +86,7 @@ Contains user-defined purposes for processing contact mechanisms. Used for perso
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Contact_Mechanism_Type
 

@@ -192,6 +192,7 @@ The service object, which is experiencing the symptoms and needs repair.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Symptom_Description
 

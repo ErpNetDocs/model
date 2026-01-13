@@ -820,5 +820,6 @@ The order line which created this transaction. NULL when this transaction was no
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

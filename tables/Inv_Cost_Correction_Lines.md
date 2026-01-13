@@ -155,6 +155,7 @@ The amount of correction (plus or minus) for the Amount field of the transaction
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Product_Cost_Adjustment
 

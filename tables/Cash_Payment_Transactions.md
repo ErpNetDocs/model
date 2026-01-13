@@ -541,6 +541,7 @@ The number of the payment slip. Can be used to directly indicate the number with
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Payment_Type_Id
 

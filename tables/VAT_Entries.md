@@ -274,6 +274,7 @@ Unique identification number of this VAT entry.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Entry_Type
 

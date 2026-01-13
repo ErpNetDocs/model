@@ -184,6 +184,7 @@ Asset group code, unique within the parent node.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Rental_Asset_Group_Name
 

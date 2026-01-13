@@ -131,6 +131,7 @@ The logistic unit, which is detailed by this specification.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Name
 

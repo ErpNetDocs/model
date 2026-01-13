@@ -275,6 +275,7 @@ Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehous
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Deferred_Submission
 

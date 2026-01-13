@@ -9,7 +9,7 @@ Code Lists. Entity: Reg_Code_Lists (Introduced in version 26.2.0.62)
 
 ## Default Visualization
 Default Display Text Format:  
-_{EntityTypeName}_  
+_{ListCode}: {ListName}_  
 Default Search Members:  
 _ListCode; EntityTypeName_  
 Code Data Member:  
@@ -134,7 +134,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 

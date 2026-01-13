@@ -77,6 +77,7 @@ Contains templates for creating new projects. Entity: Prj_Templates
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Template_Name
 

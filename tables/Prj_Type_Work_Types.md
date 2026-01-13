@@ -190,6 +190,7 @@ True when the work type is currently active and selectable in new documents.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Work_Type_Name
 

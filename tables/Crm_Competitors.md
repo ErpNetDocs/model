@@ -58,6 +58,7 @@ Competitor to our marketing solutions.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Enterprise_Company_Id
 

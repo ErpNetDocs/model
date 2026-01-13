@@ -236,7 +236,7 @@ Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 _Type_: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) __nullable__**  
 _Category_: **System**  
 Generic enum type for DeliveryTerms properties  
-_Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_  
+_Allowed Values (Regulatory.Intrastat.DeliveryTerms Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -362,7 +362,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 
@@ -373,7 +373,7 @@ Transaction nature; used for Intrastat reporting.
 _Type_: **[TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__**  
 _Category_: **System**  
 Generic enum type for TransactionNature properties  
-_Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_  
+_Allowed Values (Regulatory.Intrastat.TransactionNature Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -410,7 +410,7 @@ Transport mode; used for Intrastat reporting.
 _Type_: **[TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__**  
 _Category_: **System**  
 Generic enum type for TransportMode properties  
-_Allowed Values (Finance.Intrastat.TransportMode Enum Members)_  
+_Allowed Values (Regulatory.Intrastat.TransportMode Enum Members)_  
 
 | Value | Description |
 | ---- | --- |

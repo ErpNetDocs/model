@@ -236,6 +236,7 @@ Number of periods calculated based on the Transaction Timestamps of the deliver 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Rental_Asset_Id
 

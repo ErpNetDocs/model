@@ -49,6 +49,7 @@ Categories of properties. Entity: Gen_Properties_Categories
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Properties_Category_Name
 

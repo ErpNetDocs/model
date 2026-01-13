@@ -78,6 +78,7 @@ Defines the types of relationships possible between the parties. Entity: Cm_Part
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Relationship_Type_Name
 

@@ -85,6 +85,7 @@ A mask that uses fields from the header table of the source document in the spec
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Additional_Days
 

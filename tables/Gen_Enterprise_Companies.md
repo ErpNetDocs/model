@@ -20,6 +20,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |[Default_Customer_Credit_Limit_Base](#default_customer_credit_limit_base)|`decimal(18, 2)` ||
 |[Default_Language](#default_language)|`nvarchar(10)` Allowed: `bg`, `en`|The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).|
 |[Edit_Period_Start_Date](#edit_period_start_date)|`datetime` |Start date of the priod when the documents can be edited|
+|[End_Date_Of_Closed_Accounting_Period](#end_date_of_closed_accounting_period)|`date` Readonly|Indicates the date before which all accounting vouchers are permanently closed.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` `PK`||
 |[Exchange_Difference_Credit_Account_Id](#exchange_difference_credit_account_id)|`uniqueidentifier` |Account for balancing accounting vouchers with credit difference due to currency exchanges|
 |[Exchange_Difference_Debit_Account_Id](#exchange_difference_debit_account_id)|`uniqueidentifier` |Account for balancing accounting vouchers with debit difference due to currency exchanges|
@@ -350,6 +351,42 @@ Start date of the priod when the documents can be edited
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
+### End_Date_Of_Closed_Accounting_Period
+
+
+Indicates the date before which all accounting vouchers are permanently closed.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### End_Date_Of_Closed_Accounting_Period - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
+
 ### Enterprise_Company_Id
 
 | Property | Value |
@@ -382,6 +419,7 @@ Start date of the priod when the documents can be edited
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Exchange_Difference_Credit_Account_Id
 

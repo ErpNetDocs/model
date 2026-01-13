@@ -131,6 +131,7 @@ Unique Id for the deal type. Deal_Type_Id should be used for identifyind and upd
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Deal_Type_Name
 

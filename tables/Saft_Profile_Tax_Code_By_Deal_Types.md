@@ -234,6 +234,7 @@ Unique identifier of the mapping record.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Tax_Code_Entry_Id
 

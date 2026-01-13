@@ -196,7 +196,7 @@ description: Payment account – cash desk/bank account used for the payment.
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
-|Referenced Table|[Acc_Accounts](Acc_Accounts.md)|
+|Referenced Table|[Cash_Payment_Accounts](Cash_Payment_Accounts.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -322,6 +322,7 @@ Unique identifier
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Row_Version
 

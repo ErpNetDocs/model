@@ -186,6 +186,7 @@ Unique code of the asset parameter.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Tracked_Parameter_Name
 

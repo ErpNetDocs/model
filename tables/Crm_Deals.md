@@ -105,6 +105,7 @@ The marketing campaign to which this opportunity belongs.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Deal_Status
 

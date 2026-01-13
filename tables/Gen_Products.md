@@ -638,6 +638,7 @@ Unique id of the item
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Intrastat_Commodity_Code_Id
 

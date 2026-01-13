@@ -41,6 +41,12 @@ Name of the domain
 |User Login|no|
 |Visible|yes|
 
+#### Domain_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|yes|
+
 ### Id
 
 

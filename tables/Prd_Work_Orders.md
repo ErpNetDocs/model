@@ -277,6 +277,7 @@ The duration of all operations in the protocol either planned (for planned order
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Released
 

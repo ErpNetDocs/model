@@ -433,6 +433,7 @@ The serial number of the product used as material. NULL means that the number is
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Service_Object_Id
 

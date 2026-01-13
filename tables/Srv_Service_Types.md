@@ -254,6 +254,7 @@ The service object type to which this service type is applicable
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Service_Type_Name
 

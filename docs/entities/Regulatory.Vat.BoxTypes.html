@@ -206,11 +206,11 @@ Allowed values for the <code>CalculationType</code>(Regulatory.Vat.BoxTypes.md#c
 <tbody>
 <tr>
 <td>DealTypes</td>
-<td>DealTypes value. Stored as 'DT'. <br> <em>Database Value:</em> 'DT' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'DealTypes'</td>
+<td>Source of amounts are Vat Entries. Stored as 'DT'. <br> <em>Database Value:</em> 'DT' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'DealTypes'</td>
 </tr>
 <tr>
 <td>CalculatedAttribute</td>
-<td>CalculatedAttribute value. Stored as 'CA'. <br> <em>Database Value:</em> 'CA' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CalculatedAttribute'</td>
+<td>Source of amounts is Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. Stored as 'CA'. <br> <em>Database Value:</em> 'CA' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CalculatedAttribute'</td>
 </tr>
 </tbody>
 </table>
@@ -251,7 +251,7 @@ Allowed values for the <code>CalculationType</code>(Regulatory.Vat.BoxTypes.md#c
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="name">Name</h3>

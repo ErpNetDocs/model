@@ -192,15 +192,15 @@ Allowed values for the <code>AmountCategory</code>(Regulatory.Vat.BoxTypeDealTyp
 <tbody>
 <tr>
 <td>VAT</td>
-<td>VAT value. Stored as 'V'. <br> <em>Database Value:</em> 'V' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'VAT'</td>
+<td>The amount of the tax for the operation in base currency.. Stored as 'V'. <br> <em>Database Value:</em> 'V' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'VAT'</td>
 </tr>
 <tr>
 <td>BASE</td>
-<td>BASE value. Stored as 'B'. <br> <em>Database Value:</em> 'B' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'BASE'</td>
+<td>Amount of the operation without the tax in base currency.. Stored as 'B'. <br> <em>Database Value:</em> 'B' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'BASE'</td>
 </tr>
 <tr>
 <td>TOTAL</td>
-<td>TOTAL value. Stored as 'T'. <br> <em>Database Value:</em> 'T' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'TOTAL'</td>
+<td>Amount of the operation with the tax in base currency.. Stored as 'T'. <br> <em>Database Value:</em> 'T' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'TOTAL'</td>
 </tr>
 </tbody>
 </table>
@@ -232,7 +232,7 @@ Allowed values for the <code>AmountCategory</code>(Regulatory.Vat.BoxTypeDealTyp
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="notes">Notes</h3>

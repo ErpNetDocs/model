@@ -92,6 +92,7 @@ The access key, containing the user permissions for this Campaign. Null means th
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Campaign_Name
 

@@ -110,6 +110,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <ul>
 <li><a href="Logistics.Wms.WarehouseReconciliations.html">Logistics.Wms.WarehouseReconciliations</a>
 <ul>
+<li><a href="Logistics.Wms.WarehouseReconciliationDetails.html">Logistics.Wms.WarehouseReconciliationDetails</a></li>
 <li><a href="Logistics.Wms.WarehouseReconciliationLines.html">Logistics.Wms.WarehouseReconciliationLines</a></li>
 <li><a href="General.Documents.DocumentAmounts.html">General.Documents.DocumentAmounts</a>
 <ul>
@@ -412,6 +413,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>List of <code>DocumentComment</code>(General.Documents.DocumentComments.md) child objects, based on the <code>General.Documents.DocumentComment.Document</code>(General.Documents.DocumentComments.md#document) back reference (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td>Details</td>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html">WarehouseReconciliationDetails</a></td>
+<td>List of <code>WarehouseReconciliation&lt;br /&gt;Detail</code>(Logistics.Wms.WarehouseReconciliation<br>Details.md) child objects, based on the <code>Logistics.Wms.WarehouseReconciliation&lt;br /&gt;Detail.WarehouseReconciliation</code>(Logistics.Wms.WarehouseReconciliation<br>Details.md#warehousereconciliation) back reference</td>
+</tr>
+<tr>
 <td>DistributedAmounts</td>
 <td><a href="General.Documents.DocumentDistributedAmounts.html">DocumentDistributedAmounts</a></td>
 <td>List of <code>DocumentDistributed&lt;br /&gt;Amount</code>(General.Documents.DocumentDistributedAmounts.md) child objects, based on the <code>General.Documents.DocumentDistributedAmount.Document</code>(General.Documents.DocumentDistributedAmounts.md#document) back reference (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
@@ -580,7 +586,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>

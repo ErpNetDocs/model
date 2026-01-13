@@ -331,6 +331,7 @@ The reason for the payment, as defined in Payment Reasons.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Payment_Slip_Id
 

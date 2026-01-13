@@ -93,6 +93,7 @@ The allocated amount of costs in the currency of the calculation.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Calculation_Id
 

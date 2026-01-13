@@ -58,6 +58,7 @@ Contains call detail records. Calls are phone calls, video calls and SMS message
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Call_Type
 

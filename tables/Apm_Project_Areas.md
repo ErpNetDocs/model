@@ -241,6 +241,7 @@ Specified, when there is a primary user for the area
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Area_Name
 

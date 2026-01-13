@@ -62,6 +62,7 @@ Represent an expression within the calculation of a calculated attribute. Entity
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Calculated_Attribute_Id
 

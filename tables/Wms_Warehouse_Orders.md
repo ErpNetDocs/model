@@ -191,6 +191,7 @@ The warehouse, where the order will be executed.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Warehouse_Worker_Id
 

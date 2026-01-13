@@ -52,7 +52,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommodityCode](Finance.Excise.ExciseProductTypes.md#commoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) | Code from The Combined Nomenclature used within the European Union countries. `Required` `Filter(multi eq)` |
+| [CommodityCode](Finance.Excise.ExciseProductTypes.md#commoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) | Code from The Combined Nomenclature used within the European Union countries. `Required` `Filter(multi eq)` |
 | [ExciseProduct](Finance.Excise.ExciseProductTypes.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) | Excise product according to the EU nomenclature for products subject to excise duty. `Required` `Filter(multi eq)` |
 | [MeasurementUnit](Finance.Excise.ExciseProductTypes.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The unit of measure in which the product is reported. `Filter(multi eq)` |
 
@@ -161,7 +161,7 @@ _Show in UI_: **HiddenByDefault**
 _Type_: **guid**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Default Value_: **NewGuid**  
 _Show in UI_: **CannotBeShown**  
 
@@ -214,7 +214,7 @@ _Show in UI_: **HiddenByDefault**
 
 Code from The Combined Nomenclature used within the European Union countries. `Required` `Filter(multi eq)`
 
-_Type_: **[CommodityCodes](Finance.Intrastat.CommodityCodes.md)**  
+_Type_: **[CommodityCodes](Regulatory.Intrastat.CommodityCodes.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

@@ -151,6 +151,7 @@ Is_System is True for those valuation models that are managed by the system via 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Valuation_Model_Name
 

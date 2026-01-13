@@ -156,6 +156,7 @@ Consumption order line which requested the Consumed_Quantity
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Output_Order_Line_Id
 

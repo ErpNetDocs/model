@@ -94,6 +94,7 @@ The base currency for summary reporting for Enterprise Company at the moment of 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Id
 

@@ -123,6 +123,7 @@ When not null, specifies a filter for the allowed values of the property for the
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Property_Id
 

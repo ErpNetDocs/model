@@ -441,5 +441,6 @@ When not null, specifies a date, up to which the property is required for the cu
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 

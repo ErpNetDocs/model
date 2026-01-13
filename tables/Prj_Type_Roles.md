@@ -117,6 +117,7 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 |Like|None|no|no|
 
 ### Role_Name

@@ -205,6 +205,7 @@ The email address associated with this mail box
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Owner_User_Id
 

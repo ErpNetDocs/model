@@ -120,6 +120,7 @@ When Group_Type=U, contains the user for which the group is defined, NULL otherw
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Group_Name
 

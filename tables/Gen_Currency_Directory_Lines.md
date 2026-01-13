@@ -91,6 +91,7 @@ Contains exchange rate for a currency against the main currency of currency dire
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### From_Currency_Id
 

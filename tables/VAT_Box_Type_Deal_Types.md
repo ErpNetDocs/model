@@ -89,6 +89,7 @@ Specifies the amount type from the Vat Entry which will be accumulated
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Box_Type_Id
 

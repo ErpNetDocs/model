@@ -521,6 +521,7 @@ Transport mode; used for Intrastat reporting
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Released
 

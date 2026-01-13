@@ -203,6 +203,7 @@ Element code, unique within the process. Used as ID for XML serialization purpos
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Process_Element_Name
 

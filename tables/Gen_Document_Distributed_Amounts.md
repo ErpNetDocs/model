@@ -124,6 +124,7 @@ The calculated base amount for the line in document currency. The base amount is
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Amount_Type_Id
 

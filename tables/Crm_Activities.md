@@ -162,6 +162,7 @@ The marketing campaing, to which this activity belongs
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Forecasted_Cost
 

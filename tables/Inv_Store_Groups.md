@@ -295,6 +295,7 @@ Parent store group. NULL if this is root group
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Store_Group_Name
 

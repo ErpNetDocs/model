@@ -128,6 +128,7 @@ Identifying code of the financial statement node. Unique within the parent finan
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Financial_Statement_Node_Name
 

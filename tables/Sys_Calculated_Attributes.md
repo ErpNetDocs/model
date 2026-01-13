@@ -55,6 +55,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Caption
 

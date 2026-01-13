@@ -454,6 +454,7 @@ The sales area, where the customer is located.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Sales_Person_Id
 

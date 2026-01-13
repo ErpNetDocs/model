@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Intrastat.Declarations](~/entities/Finance.Intrastat.Declarations.md)
+Entity: [Regulatory.Intrastat.Declarations](~/entities/Regulatory.Intrastat.Declarations.md)
 
 Contains the headers of the Intrastat declarations, issued by the enterprise companies. Entity: Its_Declarations
 
@@ -285,6 +285,7 @@ Intrastat declaration id
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Released
 

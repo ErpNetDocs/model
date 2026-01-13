@@ -452,6 +452,7 @@ The date, when the document is planned to be realeased and send to the supplier.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Purchase_Price_List_Id
 

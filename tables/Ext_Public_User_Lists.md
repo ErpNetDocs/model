@@ -119,6 +119,7 @@ The enterprise company to which this list belongs. Null means that the list is a
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Public_User_List_Name
 

@@ -269,6 +269,7 @@ Short code for identification of projects.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Project_Manager_Person_Id
 

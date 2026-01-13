@@ -1703,6 +1703,7 @@ When specified indicates that the goods sold in Return_For_Sales_Order_Line_Id a
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Serial_Number_Id
 

@@ -127,6 +127,7 @@ The measurement unit of Consumable Quantity.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Lease_Line_Id
 

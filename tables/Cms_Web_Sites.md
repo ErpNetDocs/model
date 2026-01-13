@@ -230,6 +230,7 @@ The list of users used to authorize the users on the site.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Web_Site_Name
 

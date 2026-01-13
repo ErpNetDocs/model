@@ -48,7 +48,7 @@
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|GreaterThanOrLessThan|None|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Working_Day
 
@@ -140,6 +140,7 @@
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Working_Minutes
 

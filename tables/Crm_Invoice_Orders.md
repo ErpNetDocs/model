@@ -392,6 +392,7 @@ The currency in which the document is issued. All amounts are in this currency
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Released
 

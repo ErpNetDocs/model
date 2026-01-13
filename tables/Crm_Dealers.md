@@ -54,6 +54,7 @@ External dealers. Entity: Crm_Dealers
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Enterprise_Company_Id
 

@@ -177,6 +177,7 @@ The name of the entity which fulfills the line. Used to differentiate between di
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Document_Id
 

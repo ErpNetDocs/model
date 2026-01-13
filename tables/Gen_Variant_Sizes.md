@@ -114,6 +114,7 @@ Unique code of the size. Used to generate parts of bar-codes and in other coding
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Variant_Size_Name
 

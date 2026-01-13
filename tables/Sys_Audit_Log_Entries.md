@@ -95,6 +95,7 @@ The client application that triggered the event. Null when unknown or N/A.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Details
 

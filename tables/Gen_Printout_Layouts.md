@@ -252,6 +252,7 @@ Format specifier of the layout. Recognized by the application
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Printout_Layout_Name
 

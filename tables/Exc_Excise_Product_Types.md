@@ -288,6 +288,7 @@ Excise product according to the EU nomenclature for products subject to excise d
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|yes|
 
 ### Is_Active
 
