@@ -133,6 +133,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></td>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></td>
 <td>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(multi eq)</code></td>
@@ -352,6 +357,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="bonusaction">BonusAction</h3>
 <p>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></strong><br>

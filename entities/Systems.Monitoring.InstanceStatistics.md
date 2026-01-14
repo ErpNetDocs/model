@@ -32,6 +32,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AggregateLastUpdateTimeUtc](Systems.Monitoring.InstanceStatistics.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [ApplicationName](Systems.Monitoring.InstanceStatistics.md#applicationname) | string (128) __nullable__ | The application (if applicable) for which we are recording stats. `Filter(eq;like)` 
 | [Avg](Systems.Monitoring.InstanceStatistics.md#avg) | int32 __nullable__ | The avg value of the stat for the time period. `Filter(ge;le)` 
 | [Count](Systems.Monitoring.InstanceStatistics.md#count) | int32 | Number of occurrences. `Required` `Filter(ge;le)` 
@@ -55,6 +56,16 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+_Type_: **datetime**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### ApplicationName
 

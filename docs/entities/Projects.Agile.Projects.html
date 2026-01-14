@@ -120,6 +120,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
+<td><a href="Projects.Agile.Projects.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Projects.html#considerwiplimit">ConsiderWipLimit</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></td>
@@ -229,6 +234,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="considerwiplimit">ConsiderWipLimit</h3>
 <p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>

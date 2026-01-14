@@ -133,6 +133,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Indicates whether the current workgroup is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></td>
 </tr>
 <tr>
+<td><a href="Production.Resources.Workgroups.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
 <td><a href="Production.Resources.Workgroups.html#costcurrency"><s>CostCurrency</s></a></td>
 <td>string (3) <strong>nullable</strong></td>
 <td><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></td>
@@ -215,6 +220,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="costcurrency">CostCurrency</h3>
 <p><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p><em>Type</em>: <strong>string (3) <strong>nullable</strong></strong><br>

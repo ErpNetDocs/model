@@ -32,6 +32,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AggregateLastUpdateTimeUtc](Crm.Pos.FiscalReceiptTemplates.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [CustomFooter](Crm.Pos.FiscalReceiptTemplates.md#customfooter) | string (256) __nullable__ | User-defined footer printed at the end of the document (interpolated string). 
 | [CustomHeader](Crm.Pos.FiscalReceiptTemplates.md#customheader) | string (256) __nullable__ | User-defined header printed at the beginning of the document (interpolated string). 
 | [CustomRowFooter](Crm.Pos.FiscalReceiptTemplates.md#customrowfooter) | string (256) __nullable__ | User-defined footer printed after each row (interpolated string). 
@@ -48,6 +49,16 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+_Type_: **datetime**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### CustomFooter
 

@@ -127,6 +127,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>For whom the token was issued (might be user email). <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.AccessTokens.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
 <td><a href="Systems.Security.AccessTokens.html#client">Client</a></td>
 <td>string (128) <strong>nullable</strong></td>
 <td>The client application. <code>Filter(multi eq)</code></td>
@@ -243,6 +248,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>128</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="client">Client</h3>
 <p>The client application. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>

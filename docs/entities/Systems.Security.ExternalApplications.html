@@ -129,6 +129,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The address (path) to the application. The address is platform-dependant. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.ExternalApplications.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
 <td><a href="Systems.Security.ExternalApplications.html#availableinmode">AvailableInMode</a></td>
 <td><a href="Systems.Security.ExternalApplications.html#availableinmode">AvailableInMode</a></td>
 <td>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. <code>Required</code> <code>Default(&quot;SINGLE&quot;)</code> <code>Filter(eq)</code></td>
@@ -226,6 +231,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="availableinmode">AvailableInMode</h3>
 <p>Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. <code>Required</code> <code>Default(&quot;SINGLE&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.ExternalApplications.html#availableinmode">AvailableInMode</a></strong><br>

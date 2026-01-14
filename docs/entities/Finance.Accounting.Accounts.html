@@ -130,6 +130,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Accounting.Accounts.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
 <td><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></td>
 <td><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></td>
 <td>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_<br>Directory, BRD=Balance_Reference_<br>Document. <code>Required</code> <code>Default(&quot;ACB&quot;)</code></td>
@@ -241,6 +246,13 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.AccountGroup.Number + obj.Number)</code></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="currencyvaluationmethod">CurrencyValuationMethod</h3>
 <p>Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. <code>Required</code> <code>Default(&quot;ACB&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html#currencyvaluationmethod">CurrencyValuationMethod</a></strong><br>

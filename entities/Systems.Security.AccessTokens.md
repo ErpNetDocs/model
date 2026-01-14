@@ -32,6 +32,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AccessTokenKey](Systems.Security.AccessTokens.md#accesstokenkey) | string (256) | The unique key of the token. `Required` `Filter(multi eq)` `ORD` 
 | [Actor](Systems.Security.AccessTokens.md#actor) | string (128) __nullable__ | For whom the token was issued (might be user email). `Filter(multi eq)` 
+| [AggregateLastUpdateTimeUtc](Systems.Security.AccessTokens.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [Client](Systems.Security.AccessTokens.md#client) | string (128) __nullable__ | The client application. `Filter(multi eq)` 
 | [ConsumedTimestamp](Systems.Security.AccessTokens.md#consumedtimestamp) | datetime __nullable__ | When it was used up (for one-time grants). `Filter(ge;le)` 
 | [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` 
@@ -80,6 +81,16 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
 _Show in UI_: **ShownByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+_Type_: **datetime**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Client
 

@@ -34,6 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AggregateLastUpdateTimeUtc](Regulatory.Common.Jurisdictions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [Code](Regulatory.Common.Jurisdictions.md#code) | string (50) | Short code of the jurisdiction (ISO-style preferrable). `Required` `Filter(eq;like)` `ORD` 
 | [CountryCode](Regulatory.Common.Jurisdictions.md#countrycode) | string (10) | ISO country code (if applicable). `Required` `Filter(eq;like)` 
 | [CurrencySign](Regulatory.Common.Jurisdictions.md#currencysign) | string (10) | Primary currency sign (if applicable). `Required` `Filter(eq;like)` 
@@ -50,6 +51,16 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+_Type_: **datetime**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### Code
 

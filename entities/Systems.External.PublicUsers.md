@@ -40,6 +40,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AboutMeText](Systems.External.PublicUsers.md#aboutmetext) | string (1024) __nullable__ | About me text, written by the user. 
 | [Address](Systems.External.PublicUsers.md#address) | string (128) __nullable__ | The primary address of the user. Can be specified with latin or local characters. `Filter(like)` 
+| [AggregateLastUpdateTimeUtc](Systems.External.PublicUsers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [AlternateEmail](Systems.External.PublicUsers.md#alternateemail) | string (64) __nullable__ | Alternate email of the user. Can be used for backup email for password restore. `Filter(like)` 
 | [City](Systems.External.PublicUsers.md#city) | string (64) __nullable__ | The state of residence of the user. Can be specified with latin or local letters. `Filter(like)` 
 | [CompanyName](Systems.External.PublicUsers.md#companyname) | string (64) __nullable__ | The name of the company, for which the user works, as specified by the user. `Filter(like)` 
@@ -96,6 +97,16 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
 _Show in UI_: **ShownByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+_Type_: **datetime**  
+_Category_: **Extensible Data Object**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+_Show in UI_: **HiddenByDefault**  
 
 ### AlternateEmail
 
