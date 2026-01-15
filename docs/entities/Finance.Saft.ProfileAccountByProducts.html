@@ -119,9 +119,19 @@ Aggregate Root:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Finance.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></td>
+<td><a href="Finance.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></td>
+<td>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+<tr>
+<td><a href="Finance.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></td>
+<td><a href="Finance.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></td>
+<td>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#id">Id</a></td>
@@ -173,6 +183,33 @@ Aggregate Root:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="debitcreditindicator">DebitCreditIndicator</h3>
+<p>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>DebitCreditIndicator</code>(Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator) data attribute<br>
+<em>Allowed Values (Finance.Saft.ProfileAccountByProductsRepository.DebitCreditIndicator Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debit</td>
+<td>Debit value. Stored as 'D'. <br> <em>Database Value:</em> 'D' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Debit'</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>Credit value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Credit'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -180,6 +217,33 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="entitykind">EntityKind</h3>
+<p>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>EntityKind</code>(Finance.Saft.ProfileAccountByProducts.md#entitykind) data attribute<br>
+<em>Allowed Values (Finance.Saft.ProfileAccountByProductsRepository.EntityKind Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sales</td>
+<td>Sales value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Sales'</td>
+</tr>
+<tr>
+<td>Purchases</td>
+<td>Purchases value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Purchases'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
