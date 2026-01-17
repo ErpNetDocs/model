@@ -34,9 +34,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines. `Required` `Filter(eq)` `Introduced in version 26.2.1.9` 
+| [DebitCreditIndicator](Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines. `Required` `Default("D")` `Filter(eq)` `Introduced in version 26.2.1.9` 
 | [DisplayText](Finance.Saft.ProfileAccountByProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [EntityKind](Finance.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Finance.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. `Required` `Filter(eq)` `Introduced in version 26.2.1.9` 
+| [EntityKind](Finance.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Finance.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. `Required` `Default("S")` `Filter(eq)` `Introduced in version 26.2.1.9` 
 | [Id](Finance.Saft.ProfileAccountByProducts.md#id) | guid |  
 | [Notes](Finance.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping. `Filter(like)` 
 | [ObjectVersion](Finance.Saft.ProfileAccountByProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -55,7 +55,7 @@ Aggregate Root:
 
 ### DebitCreditIndicator
 
-Debit/credit indicator for SAF-T invoice lines. `Required` `Filter(eq)` `Introduced in version 26.2.1.9`
+Debit/credit indicator for SAF-T invoice lines. `Required` `Default("D")` `Filter(eq)` `Introduced in version 26.2.1.9`
 
 _Type_: **[DebitCreditIndicator](Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator)**  
 _Category_: **System**  
@@ -69,6 +69,7 @@ _Allowed Values (Finance.Saft.ProfileAccountByProductsRepository.DebitCreditIndi
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Default Value_: **Debit**  
 _Show in UI_: **ShownByDefault**  
 
 ### DisplayText
@@ -83,7 +84,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### EntityKind
 
-Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. `Required` `Filter(eq)` `Introduced in version 26.2.1.9`
+Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. `Required` `Default("S")` `Filter(eq)` `Introduced in version 26.2.1.9`
 
 _Type_: **[EntityKind](Finance.Saft.ProfileAccountByProducts.md#entitykind)**  
 _Category_: **System**  
@@ -97,6 +98,7 @@ _Allowed Values (Finance.Saft.ProfileAccountByProductsRepository.EntityKind Enum
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+_Default Value_: **Sales**  
 _Show in UI_: **ShownByDefault**  
 
 ### Id

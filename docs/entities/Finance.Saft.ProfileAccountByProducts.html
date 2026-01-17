@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></td>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></td>
-<td>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
+<td>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#displaytext">DisplayText</a></td>
@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></td>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></td>
-<td>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
+<td>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Saft.ProfileAccountByProducts.html#id">Id</a></td>
@@ -184,7 +184,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="debitcreditindicator">DebitCreditIndicator</h3>
-<p>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
+<p>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>DebitCreditIndicator</code>(Finance.Saft.ProfileAccountByProducts.md#debitcreditindicator) data attribute<br>
@@ -209,6 +209,7 @@ Allowed values for the <code>DebitCreditIndicator</code>(Finance.Saft.ProfileAcc
 </table>
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Debit</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
@@ -218,7 +219,7 @@ Allowed values for the <code>DebitCreditIndicator</code>(Finance.Saft.ProfileAcc
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="entitykind">EntityKind</h3>
-<p>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
+<p>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>EntityKind</code>(Finance.Saft.ProfileAccountByProducts.md#entitykind) data attribute<br>
@@ -243,6 +244,7 @@ Allowed values for the <code>EntityKind</code>(Finance.Saft.ProfileAccountByProd
 </table>
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Sales</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>

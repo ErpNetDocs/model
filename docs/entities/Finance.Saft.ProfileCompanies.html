@@ -166,7 +166,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Saft.ProfileCompanies.html#taxaccountingbasis">TaxAccountingBasis</a></td>
 <td><a href="Finance.Saft.ProfileCompanies.html#taxaccountingbasis">TaxAccountingBasis</a></td>
-<td>Accounting basis: accrual, cash, or mixed. <code>Required</code> <code>Default(&quot;ACC&quot;)</code> <code>Filter(eq)</code></td>
+<td>Accounting basis: accrual, cash, or mixed. <code>Required</code> <code>Default(&quot;COM&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -305,7 +305,7 @@ Allowed values for the <code>IsPartOfGroup</code>(Finance.Saft.ProfileCompanies.
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="taxaccountingbasis">TaxAccountingBasis</h3>
-<p>Accounting basis: accrual, cash, or mixed. <code>Required</code> <code>Default(&quot;ACC&quot;)</code> <code>Filter(eq)</code></p>
+<p>Accounting basis: accrual, cash, or mixed. <code>Required</code> <code>Default(&quot;COM&quot;)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Saft.ProfileCompanies.html#taxaccountingbasis">TaxAccountingBasis</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>TaxAccountingBasis</code>(Finance.Saft.ProfileCompanies.md#taxaccountingbasis) data attribute<br>
@@ -319,22 +319,26 @@ Allowed values for the <code>TaxAccountingBasis</code>(Finance.Saft.ProfileCompa
 </thead>
 <tbody>
 <tr>
-<td>ACCRUAL</td>
-<td>ACCRUAL. Stored as 'ACC'. <br> <em>Database Value:</em> 'ACC' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ACCRUAL'</td>
+<td>CommercialEntity</td>
+<td>Commercial entity. Stored as 'COM'. <br> <em>Database Value:</em> 'COM' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'CommercialEntity'</td>
 </tr>
 <tr>
-<td>Cash</td>
-<td>Cash. Stored as 'CSH'. <br> <em>Database Value:</em> 'CSH' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Cash'</td>
+<td>CreditInstitution<br>OrNonBankFinancial<br>Institution</td>
+<td>Credit institution or non-bank financial institution. Stored as 'BNK'. <br> <em>Database Value:</em> 'BNK' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CreditInstitution<br>OrNonBankFinancial<br>Institution'</td>
 </tr>
 <tr>
-<td>Mixed</td>
-<td>Mixed. Stored as 'MIX'. <br> <em>Database Value:</em> 'MIX' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Mixed'</td>
+<td>InsuranceCompany</td>
+<td>Insurance company. Stored as 'INS'. <br> <em>Database Value:</em> 'INS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'InsuranceCompany'</td>
+</tr>
+<tr>
+<td>PublicSectorEntity</td>
+<td>Public sector entity. Stored as 'PUB'. <br> <em>Database Value:</em> 'PUB' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'PublicSectorEntity'</td>
 </tr>
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>ACCRUAL</strong><br>
+<em>Default Value</em>: <strong>CommercialEntity</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="beneficialownercompany">BeneficialOwnerCompany</h3>

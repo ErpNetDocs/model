@@ -27,7 +27,7 @@ Companies, for which the SAF-T profile is applied. Entity: Saft_Profile_Companie
 |[Profile_Id](#profile_id)|`uniqueidentifier` |The SAF-T profile this company belongs to.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Profile_Company_Id](#saft_profile_company_id)|`uniqueidentifier` `PK`|Unique record identifier|
-|[Tax_Accounting_Basis](#tax_accounting_basis)|`char(3)` Allowed: `ACC`, `CSH`, `MIX`|Accounting basis: accrual, cash, or mixed.|
+|[Tax_Accounting_Basis](#tax_accounting_basis)|`char(3)` Allowed: `COM`, `BNK`, `INS`, `PUB`|Accounting basis: accrual, cash, or mixed.|
 
 ## Columns
 
@@ -471,10 +471,10 @@ Accounting basis: accrual, cash, or mixed.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`ACC`, `CSH`, `MIX`|
+|Allowed Values|`COM`, `BNK`, `INS`, `PUB`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|ACC|
+|Default Value|COM|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|

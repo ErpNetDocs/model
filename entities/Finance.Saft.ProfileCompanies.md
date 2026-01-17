@@ -43,7 +43,7 @@ Aggregate Root:
 | [IsPartOfGroup](Finance.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Finance.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group. `Required` `Default(5)` `Filter(eq)` 
 | [Notes](Finance.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file. `Filter(like)` 
 | [ObjectVersion](Finance.Saft.ProfileCompanies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [TaxAccountingBasis](Finance.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Finance.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed. `Required` `Default("ACC")` `Filter(eq)` 
+| [TaxAccountingBasis](Finance.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Finance.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed. `Required` `Default("COM")` `Filter(eq)` 
 
 ## References
 
@@ -165,7 +165,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### TaxAccountingBasis
 
-Accounting basis: accrual, cash, or mixed. `Required` `Default("ACC")` `Filter(eq)`
+Accounting basis: accrual, cash, or mixed. `Required` `Default("COM")` `Filter(eq)`
 
 _Type_: **[TaxAccountingBasis](Finance.Saft.ProfileCompanies.md#taxaccountingbasis)**  
 _Category_: **System**  
@@ -174,13 +174,14 @@ _Allowed Values (Finance.Saft.ProfileCompaniesRepository.TaxAccountingBasis Enum
 
 | Value | Description |
 | ---- | --- |
-| ACCRUAL | ACCRUAL. Stored as 'ACC'. <br /> _Database Value:_ 'ACC' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'ACCRUAL' |
-| Cash | Cash. Stored as 'CSH'. <br /> _Database Value:_ 'CSH' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Cash' |
-| Mixed | Mixed. Stored as 'MIX'. <br /> _Database Value:_ 'MIX' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Mixed' |
+| CommercialEntity | Commercial entity. Stored as 'COM'. <br /> _Database Value:_ 'COM' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'CommercialEntity' |
+| CreditInstitution<br />OrNonBankFinancial<br />Institution | Credit institution or non-bank financial institution. Stored as 'BNK'. <br /> _Database Value:_ 'BNK' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CreditInstitution<br />OrNonBankFinancial<br />Institution' |
+| InsuranceCompany | Insurance company. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'InsuranceCompany' |
+| PublicSectorEntity | Public sector entity. Stored as 'PUB'. <br /> _Database Value:_ 'PUB' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PublicSectorEntity' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
-_Default Value_: **ACCRUAL**  
+_Default Value_: **CommercialEntity**  
 _Show in UI_: **ShownByDefault**  
 
 
