@@ -183,6 +183,16 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>The repository, for which the attribute is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Bpm.CalculatedAttributes.html#scriptlanguage">ScriptLanguage</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributes.html#scriptlanguage">ScriptLanguage</a></td>
+<td>The programming language used to evaluate the attribute. <code>Required</code> <code>Default(&quot;Integrated&quot;)</code> <code>Introduced in version 26.2.1.16</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributes.html#scripttext">ScriptText</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>The program code that defines how the attribute is evaluated. <code>Introduced in version 26.2.1.16</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Bpm.CalculatedAttributes.html#startingexpressionno">StartingExpressionNo</a></td>
 <td>int32</td>
 <td>The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. <code>Required</code> <code>Default(10)</code></td>
@@ -295,6 +305,42 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>128</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="scriptlanguage">ScriptLanguage</h3>
+<p>The programming language used to evaluate the attribute. <code>Required</code> <code>Default(&quot;Integrated&quot;)</code> <code>Introduced in version 26.2.1.16</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributes.html#scriptlanguage">ScriptLanguage</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>ScriptLanguage</code>(Systems.Bpm.CalculatedAttributes.md#scriptlanguage) data attribute<br>
+<em>Allowed Values (Systems.Bpm.CalculatedAttributesRepository.ScriptLanguage Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integrated</td>
+<td>Integrated value. Stored as 'Integrated'. <br> <em>Database Value:</em> 'Integrated' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Integrated'</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>JavaScript value. Stored as 'JavaScript'. <br> <em>Database Value:</em> 'JavaScript' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'JavaScript'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Integrated</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="scripttext">ScriptText</h3>
+<p>The program code that defines how the attribute is evaluated. <code>Introduced in version 26.2.1.16</code></p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="startingexpressionno">StartingExpressionNo</h3>
 <p>The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. <code>Required</code> <code>Default(10)</code></p>

@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileAccounts](~/entities/Finance.Saft.ProfileAccounts.md)
+Entity: [Regulatory.Saft.ProfileAccounts](~/entities/Regulatory.Saft.ProfileAccounts.md)
 
 GL Accounts to SAF-T mapping. Entity: Saft_Profile_Accounts (Introduced in version 26.2.0.42)
 

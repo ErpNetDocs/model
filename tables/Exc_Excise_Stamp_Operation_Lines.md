@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseStampOperationLines](~/entities/Finance.Excise.ExciseStampOperationLines.md)
+Entity: [Regulatory.Excise.ExciseStampOperationLines](~/entities/Regulatory.Excise.ExciseStampOperationLines.md)
 
 Excise Stamp Operation Lines. Entity: Exc_Excise_Stamp_Operation_Lines (Introduced in version 22.1.6.17)
 

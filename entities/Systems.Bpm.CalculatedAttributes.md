@@ -45,6 +45,8 @@ Aggregate Tree
 | [Notes](Systems.Bpm.CalculatedAttributes.md#notes) | string (max) __nullable__ | Notes for this CalculatedAttribute. 
 | [ObjectVersion](Systems.Bpm.CalculatedAttributes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RepositoryName](Systems.Bpm.CalculatedAttributes.md#repositoryname) | string (128) | The repository, for which the attribute is defined. `Required` `Filter(multi eq)` `ORD` 
+| [ScriptLanguage](Systems.Bpm.CalculatedAttributes.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.CalculatedAttributes.md#scriptlanguage) | The programming language used to evaluate the attribute. `Required` `Default("Integrated")` `Introduced in version 26.2.1.16` 
+| [ScriptText](Systems.Bpm.CalculatedAttributes.md#scripttext) | string (max) __nullable__ | The program code that defines how the attribute is evaluated. `Introduced in version 26.2.1.16` 
 | [StartingExpressionNo](Systems.Bpm.CalculatedAttributes.md#startingexpressionno) | int32 | The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. `Required` `Default(10)` 
 
 ## Child Collections
@@ -178,6 +180,36 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **128**  
+_Show in UI_: **ShownByDefault**  
+
+### ScriptLanguage
+
+The programming language used to evaluate the attribute. `Required` `Default("Integrated")` `Introduced in version 26.2.1.16`
+
+_Type_: **[ScriptLanguage](Systems.Bpm.CalculatedAttributes.md#scriptlanguage)**  
+_Category_: **System**  
+Allowed values for the `ScriptLanguage`(Systems.Bpm.CalculatedAttributes.md#scriptlanguage) data attribute  
+_Allowed Values (Systems.Bpm.CalculatedAttributesRepository.ScriptLanguage Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Integrated | Integrated value. Stored as 'Integrated'. <br /> _Database Value:_ 'Integrated' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Integrated' |
+| JavaScript | JavaScript value. Stored as 'JavaScript'. <br /> _Database Value:_ 'JavaScript' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'JavaScript' |
+
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **Integrated**  
+_Show in UI_: **ShownByDefault**  
+
+### ScriptText
+
+The program code that defines how the attribute is evaluated. `Introduced in version 26.2.1.16`
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 _Show in UI_: **ShownByDefault**  
 
 ### StartingExpressionNo

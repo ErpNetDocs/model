@@ -56,6 +56,7 @@ Aggregate Tree
 | [Variant](Logistics.Wms.WarehouseCounts.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. `Filter(multi eq)` `ReadOnly` |
 | [WarehouseLocation](Logistics.Wms.WarehouseCounts.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location where the counting occurred. `Required` `Filter(multi eq)` `ReadOnly` |
 | [WarehouseOrder](Logistics.Wms.WarehouseCounts.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | Warehouse order which initiated the counting. `Required` `Filter(multi eq)` `ReadOnly` |
+| [WarehouseOrderLine](Logistics.Wms.WarehouseCounts.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable) | Indicates for which Warehouse Order line this count entry was recorded. `Filter(multi eq)` `ReadOnly` `Introduced in version 26.2.1.16` |
 
 
 ## Attribute Details
@@ -260,6 +261,15 @@ Warehouse order which initiated the counting. `Required` `Filter(multi eq)` `Rea
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### WarehouseOrderLine
+
+Indicates for which Warehouse Order line this count entry was recorded. `Filter(multi eq)` `ReadOnly` `Introduced in version 26.2.1.16`
+
+_Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

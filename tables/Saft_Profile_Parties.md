@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileParties](~/entities/Finance.Saft.ProfileParties.md)
+Entity: [Regulatory.Saft.ProfileParties](~/entities/Regulatory.Saft.ProfileParties.md)
 
 Relations to other parties. Entity: Saft_Profile_Parties (Introduced in version 26.2.0.42)
 

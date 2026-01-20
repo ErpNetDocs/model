@@ -45,6 +45,7 @@ Aggregate Root:
 | [WarehouseLocation](Logistics.Wms.WarehouseReconciliationLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | Warehouse location to be counted. `Required` `Filter(multi eq)` |
 | [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationLines.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | Reconciliation document this line belongs to. `Required` `Filter(multi eq)` `Owner` |
 | [WarehouseWorker](Logistics.Wms.WarehouseReconciliationLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Worker (human or robot) assigned to perform the counting. `Filter(multi eq)` |
+| [WarehouseZone](Logistics.Wms.WarehouseReconciliationLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. `Filter(multi eq)` `Introduced in version 26.2.1.16` |
 
 
 ## Attribute Details
@@ -133,6 +134,15 @@ Worker (human or robot) assigned to perform the counting. `Filter(multi eq)`
 
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Show in UI_: **ShownByDefault**  
+
+### WarehouseZone
+
+Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. `Filter(multi eq)` `Introduced in version 26.2.1.16`
+
+_Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

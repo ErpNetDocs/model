@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.Profiles](~/entities/Finance.Saft.Profiles.md)
+Entity: [Regulatory.Saft.Profiles](~/entities/Regulatory.Saft.Profiles.md)
 
 SAF-T export profiles. Entity: Saft_Profiles (Introduced in version 26.2.0.42)
 

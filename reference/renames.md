@@ -5,6 +5,16 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Finance.Saft**  
+New name: **Regulatory.Saft**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise**  
+New name: **Regulatory.Excise**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
 Old name: **Finance.Intrastat**  
 New name: **Regulatory.Intrastat**  
 Version: **26.2.1.4**  

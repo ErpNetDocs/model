@@ -28,6 +28,7 @@ Captures raw physical count entries recorded in the warehouse operations before 
 |[Warehouse_Count_Id](#warehouse_count_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` Readonly|The warehouse location where the counting occurred.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` Readonly|Warehouse order which initiated the counting.|
+|[Warehouse_Order_Line_Id](#warehouse_order_line_id)|`uniqueidentifier` Readonly|Indicates for which Warehouse Order line this count entry was recorded.|
 
 ## Columns
 
@@ -646,5 +647,42 @@ Warehouse order which initiated the counting.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Warehouse_Order_Line_Id
+
+
+Indicates for which Warehouse Order line this count entry was recorded.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|17|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Wms_Warehouse_Order_Lines](Wms_Warehouse_Order_Lines.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Warehouse_Order_Line_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 

@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.MeasuringTransactions](~/entities/Finance.Excise.MeasuringTransactions.md)
+Entity: [Regulatory.Excise.MeasuringTransactions](~/entities/Regulatory.Excise.MeasuringTransactions.md)
 
 Transaction of product input or output, measured with specialized measuring device for excise purposes. Entity: Exc_Measuring_Transactions (Introduced in version 21.1.1.9)
 

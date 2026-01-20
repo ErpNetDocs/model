@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileTaxCodeByDealTypes](~/entities/Finance.Saft.ProfileTaxCodeByDealTypes.md)
+Entity: [Regulatory.Saft.ProfileTaxCodeByDealTypes](~/entities/Regulatory.Saft.ProfileTaxCodeByDealTypes.md)
 
 Maps SAF-T TaxCode for document lines by Deal type. Entity: Saft_Profile_Tax_Code_By_Deal_Types (Introduced in version 26.2.0.84)
 

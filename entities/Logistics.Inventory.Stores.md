@@ -89,7 +89,7 @@ Aggregate Tree
 | [ParentParty](Logistics.Inventory.Stores.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [ResponsibleParty](Logistics.Inventory.Stores.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | Primary responsible party (usually employee) for the stock in the store. `Filter(multi eq)` |
 | [StoreGroup](Logistics.Inventory.Stores.md#storegroup) | [StoreGroups](Logistics.Inventory.StoreGroups.md) | The store group, to which this store belongs. `Required` `Filter(multi eq)` |
-| [TaxWarehouse](Logistics.Inventory.Stores.md#taxwarehouse) | [TaxWarehouses](Finance.Excise.TaxWarehouses.md) (nullable) | Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93` |
+| [TaxWarehouse](Logistics.Inventory.Stores.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable) | Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93` |
 | [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. `Filter(multi eq)` `Introduced in version 20.1` |
 
 ## Child Collections
@@ -550,7 +550,7 @@ _Show in UI_: **ShownByDefault**
 
 Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93`
 
-_Type_: **[TaxWarehouses](Finance.Excise.TaxWarehouses.md) (nullable)**  
+_Type_: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  

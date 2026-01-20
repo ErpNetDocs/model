@@ -168,6 +168,11 @@ Aggregate Root:<br>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</td>
 <td>Worker (human or robot) assigned to perform the counting. <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationLines.html#warehousezone">WarehouseZone</a></td>
+<td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</td>
+<td>Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.16</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -230,6 +235,12 @@ Aggregate Root:<br>
 <p>Worker (human or robot) assigned to perform the counting. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="warehousezone">WarehouseZone</h3>
+<p>Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.16</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

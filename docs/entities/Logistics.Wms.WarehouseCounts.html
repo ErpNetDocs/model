@@ -233,6 +233,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></td>
 <td>Warehouse order which initiated the counting. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseCounts.html#warehouseorderline">WarehouseOrderLine</a></td>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</td>
+<td>Indicates for which Warehouse Order line this count entry was recorded. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.16</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -373,6 +378,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <p>Warehouse order which initiated the counting. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="warehouseorderline">WarehouseOrderLine</h3>
+<p>Indicates for which Warehouse Order line this count entry was recorded. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.16</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>

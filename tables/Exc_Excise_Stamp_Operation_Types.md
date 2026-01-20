@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseStampOperationTypes](~/entities/Finance.Excise.ExciseStampOperationTypes.md)
+Entity: [Regulatory.Excise.ExciseStampOperationTypes](~/entities/Regulatory.Excise.ExciseStampOperationTypes.md)
 
 Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Operation_Types (Introduced in version 22.1.5.85)
 

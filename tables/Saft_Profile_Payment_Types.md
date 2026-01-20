@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfilePaymentTypes](~/entities/Finance.Saft.ProfilePaymentTypes.md)
+Entity: [Regulatory.Saft.ProfilePaymentTypes](~/entities/Regulatory.Saft.ProfilePaymentTypes.md)
 
 A mapping table defining the relationship between a SAFT profile and the payment types associated with it. Stores the selected payment type and its required SAFT code used when generating the SAFT file. Entity: Saft_Profile_Payment_Types (Introduced in version 26.2.0.82)
 

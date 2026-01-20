@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfilePayments](~/entities/Finance.Saft.ProfilePayments.md)
+Entity: [Regulatory.Saft.ProfilePayments](~/entities/Regulatory.Saft.ProfilePayments.md)
 
 Profile/settings used to generate the SAF-T Payments section. Defines how payments are classified and mapped to NRA accounts, direction, counterparty type, and debit/credit indicator. Entity: Saft_Profile_Payments (Introduced in version 26.2.0.80)
 

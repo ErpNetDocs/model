@@ -22,6 +22,7 @@ Warehouse reconciliation detail records. Each record specifies a warehouse locat
 |[Warehouse_Reconciliation_Id](#warehouse_reconciliation_id)|`uniqueidentifier` |Reconciliation document this line belongs to.|
 |[Warehouse_Reconciliation_Line_Id](#warehouse_reconciliation_line_id)|`uniqueidentifier` `PK`|Unique identifier of the line in the reconciliation document.|
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` |Worker (human or robot) assigned to perform the counting.|
+|[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` |Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders.|
 
 ## Columns
 
@@ -232,6 +233,43 @@ Worker (human or robot) assigned to perform the counting.
 |Visible|yes|
 
 #### Warehouse_Worker_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Warehouse_Zone_Id
+
+
+Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|6|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Warehouse_Zone_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

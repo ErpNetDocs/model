@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseProducts](~/entities/Finance.Excise.ExciseProducts.md)
+Entity: [Regulatory.Excise.ExciseProducts](~/entities/Regulatory.Excise.ExciseProducts.md)
 
 Excise product codes are defined by the taxation and customs authorities. For EU, these are 4-letter codes, similar to T200, S200, B000, etc. . Entity: Exc_Excise_Products (Introduced in version 21.1.3.87)
 

@@ -39,7 +39,7 @@ Aggregate Root:
 | [Id](Logistics.Wms.WarehouseReconciliationDetails.md#id) | guid |  
 | [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line. `Filter(eq;ge;le)` `ReadOnly` 
 | [ObjectVersion](Logistics.Wms.WarehouseReconciliationDetails.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. `Required` `Default("PND")` `Filter(multi eq)` 
+| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. `Required` `Default("CRT")` `Filter(multi eq)` 
 | [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded. `Required` `Filter(eq)` `ReadOnly` 
 | [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created. `Required` `Filter(eq;ge;le)` `ReadOnly` 
 | [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. `Required` `Filter(eq;ge;le)` `ReadOnly` 
@@ -112,7 +112,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### ReviewStatus
 
-Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. `Required` `Default("PND")` `Filter(multi eq)`
+Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. `Required` `Default("CRT")` `Filter(multi eq)`
 
 _Type_: **[ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus)**  
 _Category_: **System**  
@@ -121,16 +121,16 @@ _Allowed Values (Logistics.Wms.WarehouseReconciliationDetailsRepository.ReviewSt
 
 | Value | Description |
 | ---- | --- |
-| Pending | The reconciliation line has not been reviewed yet. Used for all newly created snapshot lines.. Stored as 'PND'. <br /> _Database Value:_ 'PND' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Pending' |
-| CountingStarted | Counting has started for this line. Warehouse orders are generated and execution is in progress.. Stored as 'CST'. <br /> _Database Value:_ 'CST' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CountingStarted' |
-| CountingFinished | Counting has finished for this line.All related warehouse orders are completed and results are available for review.. Stored as 'CFN'. <br /> _Database Value:_ 'CFN' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'CountingFinished' |
-| Approved | The reconciliation result for this line has been reviewed and approved. No further recount is required. Lines in this status are considered final and will be used when generating warehouse transactions.. Stored as 'APR'. <br /> _Database Value:_ 'APR' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Approved' |
-| RecountRequired | A recount is required for this line due to discrepancies identified during review. Lines in this status should be included when generating recount warehouse orders.. Stored as 'RRQ'. <br /> _Database Value:_ 'RRQ' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'RecountRequired' |
-| Cancelled | The reconciliation line is excluded from the inventory process and will not be counted or processed further.. Stored as 'CNL'. <br /> _Database Value:_ 'CNL' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Cancelled' |
+| Created | The line is created from the snapshot and has no warehouse orders yet. This status is set automatically by the system on creation and can exist only once. It cannot be assigned manually by a user.. Stored as 'CRT'. <br /> _Database Value:_ 'CRT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Created' |
+| Started | Warehouse orders have been generated for this line. This status is set automatically by the system and cannot be assigned by a user.. Stored as 'STR'. <br /> _Database Value:_ 'STR' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Started' |
+| Finished | Counting for this line is completed and results are available for review. This status is set automatically by the system.. Stored as 'FIN'. <br /> _Database Value:_ 'FIN' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Finished' |
+| Approved | The result for this line has been reviewed and approved. The line is considered final and will be used when generating warehouse transactions.. Stored as 'APR'. <br /> _Database Value:_ 'APR' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Approved' |
+| Recount | The line requires additional counting and should be included when generating new warehouse orders.. Stored as 'RCN'. <br /> _Database Value:_ 'RCN' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Recount' |
+| Cancelled | The line is excluded from the reconciliation process and will not be counted or processed further.. Stored as 'CNL'. <br /> _Database Value:_ 'CNL' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Cancelled' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
-_Default Value_: **Pending**  
+_Default Value_: **Created**  
 _Show in UI_: **ShownByDefault**  
 
 ### Session

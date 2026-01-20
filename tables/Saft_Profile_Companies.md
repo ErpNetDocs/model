@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileCompanies](~/entities/Finance.Saft.ProfileCompanies.md)
+Entity: [Regulatory.Saft.ProfileCompanies](~/entities/Regulatory.Saft.ProfileCompanies.md)
 
 Companies, for which the SAF-T profile is applied. Entity: Saft_Profile_Companies (Introduced in version 26.2.0.42)
 

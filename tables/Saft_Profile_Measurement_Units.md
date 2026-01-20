@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileMeasurementUnits](~/entities/Finance.Saft.ProfileMeasurementUnits.md)
+Entity: [Regulatory.Saft.ProfileMeasurementUnits](~/entities/Regulatory.Saft.ProfileMeasurementUnits.md)
 
 A mapping table defining the relationship between a SAFT profile and the measurement units associated with it. Stores the selected measurement unit and its required SAFT code used when generating the SAFT file. Entity: Saft_Profile_Measurement_Units (Introduced in version 26.2.0.74)
 

@@ -505,39 +505,6 @@
       href: Finance.Cost.TemplateLevels.md
     - name: Templates
       href: Finance.Cost.Templates.md
-  - name: Excise
-    href: Finance.Excise.md
-    items:
-    - name: ExciseAdministrativeDocumentLines
-      href: Finance.Excise.ExciseAdministrativeDocumentLines.md
-    - name: ExciseAdministrativeDocuments
-      href: Finance.Excise.ExciseAdministrativeDocuments.md
-    - name: ExciseDeclarations
-      href: Finance.Excise.ExciseDeclarations.md
-    - name: ExciseDutyRates
-      href: Finance.Excise.ExciseDutyRates.md
-    - name: ExciseOperationTypes
-      href: Finance.Excise.ExciseOperationTypes.md
-    - name: ExciseProductCategories
-      href: Finance.Excise.ExciseProductCategories.md
-    - name: ExciseProducts
-      href: Finance.Excise.ExciseProducts.md
-    - name: ExciseProductTypes
-      href: Finance.Excise.ExciseProductTypes.md
-    - name: ExcisePurposeCodes
-      href: Finance.Excise.ExcisePurposeCodes.md
-    - name: ExciseStampLots
-      href: Finance.Excise.ExciseStampLots.md
-    - name: ExciseStampOperationLines
-      href: Finance.Excise.ExciseStampOperationLines.md
-    - name: ExciseStampOperations
-      href: Finance.Excise.ExciseStampOperations.md
-    - name: ExciseStampOperationTypes
-      href: Finance.Excise.ExciseStampOperationTypes.md
-    - name: MeasuringTransactions
-      href: Finance.Excise.MeasuringTransactions.md
-    - name: TaxWarehouses
-      href: Finance.Excise.TaxWarehouses.md
   - name: Payments
     href: Finance.Payments.md
     items:
@@ -573,29 +540,6 @@
       href: Finance.Payments.PaymentTypes.md
     - name: Transfers
       href: Finance.Payments.Transfers.md
-  - name: Saft
-    href: Finance.Saft.md
-    items:
-    - name: ProfileAccountByProducts
-      href: Finance.Saft.ProfileAccountByProducts.md
-    - name: ProfileAccounts
-      href: Finance.Saft.ProfileAccounts.md
-    - name: ProfileCompanies
-      href: Finance.Saft.ProfileCompanies.md
-    - name: ProfileMeasurementUnits
-      href: Finance.Saft.ProfileMeasurementUnits.md
-    - name: ProfileParties
-      href: Finance.Saft.ProfileParties.md
-    - name: ProfilePayments
-      href: Finance.Saft.ProfilePayments.md
-    - name: ProfilePaymentTypes
-      href: Finance.Saft.ProfilePaymentTypes.md
-    - name: Profiles
-      href: Finance.Saft.Profiles.md
-    - name: ProfileTaxCodeByAccounts
-      href: Finance.Saft.ProfileTaxCodeByAccounts.md
-    - name: ProfileTaxCodeByDealTypes
-      href: Finance.Saft.ProfileTaxCodeByDealTypes.md
   - name: Vat
     href: Finance.Vat.md
     items:
@@ -1191,6 +1135,39 @@
       href: Regulatory.Common.CodeLists.md
     - name: Jurisdictions
       href: Regulatory.Common.Jurisdictions.md
+  - name: Excise
+    href: Regulatory.Excise.md
+    items:
+    - name: ExciseAdministrativeDocumentLines
+      href: Regulatory.Excise.ExciseAdministrativeDocumentLines.md
+    - name: ExciseAdministrativeDocuments
+      href: Regulatory.Excise.ExciseAdministrativeDocuments.md
+    - name: ExciseDeclarations
+      href: Regulatory.Excise.ExciseDeclarations.md
+    - name: ExciseDutyRates
+      href: Regulatory.Excise.ExciseDutyRates.md
+    - name: ExciseOperationTypes
+      href: Regulatory.Excise.ExciseOperationTypes.md
+    - name: ExciseProductCategories
+      href: Regulatory.Excise.ExciseProductCategories.md
+    - name: ExciseProducts
+      href: Regulatory.Excise.ExciseProducts.md
+    - name: ExciseProductTypes
+      href: Regulatory.Excise.ExciseProductTypes.md
+    - name: ExcisePurposeCodes
+      href: Regulatory.Excise.ExcisePurposeCodes.md
+    - name: ExciseStampLots
+      href: Regulatory.Excise.ExciseStampLots.md
+    - name: ExciseStampOperationLines
+      href: Regulatory.Excise.ExciseStampOperationLines.md
+    - name: ExciseStampOperations
+      href: Regulatory.Excise.ExciseStampOperations.md
+    - name: ExciseStampOperationTypes
+      href: Regulatory.Excise.ExciseStampOperationTypes.md
+    - name: MeasuringTransactions
+      href: Regulatory.Excise.MeasuringTransactions.md
+    - name: TaxWarehouses
+      href: Regulatory.Excise.TaxWarehouses.md
   - name: Intrastat
     href: Regulatory.Intrastat.md
     items:
@@ -1202,6 +1179,29 @@
       href: Regulatory.Intrastat.Declarations.md
     - name: DocumentAmountTypeSettings
       href: Regulatory.Intrastat.DocumentAmountTypeSettings.md
+  - name: Saft
+    href: Regulatory.Saft.md
+    items:
+    - name: ProfileAccountByProducts
+      href: Regulatory.Saft.ProfileAccountByProducts.md
+    - name: ProfileAccounts
+      href: Regulatory.Saft.ProfileAccounts.md
+    - name: ProfileCompanies
+      href: Regulatory.Saft.ProfileCompanies.md
+    - name: ProfileMeasurementUnits
+      href: Regulatory.Saft.ProfileMeasurementUnits.md
+    - name: ProfileParties
+      href: Regulatory.Saft.ProfileParties.md
+    - name: ProfilePayments
+      href: Regulatory.Saft.ProfilePayments.md
+    - name: ProfilePaymentTypes
+      href: Regulatory.Saft.ProfilePaymentTypes.md
+    - name: Profiles
+      href: Regulatory.Saft.Profiles.md
+    - name: ProfileTaxCodeByAccounts
+      href: Regulatory.Saft.ProfileTaxCodeByAccounts.md
+    - name: ProfileTaxCodeByDealTypes
+      href: Regulatory.Saft.ProfileTaxCodeByDealTypes.md
   - name: Vat
     href: Regulatory.Vat.md
     items:

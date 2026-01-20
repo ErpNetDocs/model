@@ -19,6 +19,8 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Repository_Name](#repository_name)|`nvarchar(128)` |The repository, for which the attribute is defined.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Script_Language](#script_language)|`nvarchar(16)` Allowed: `Integrated`, `JavaScript`|The programming language used to evaluate the attribute.|
+|[Script_Text](#script_text)|`nvarchar(max)` |The program code that defines how the attribute is evaluated.|
 |[Starting_Expression_No](#starting_expression_no)|`int` |The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.|
 
 ## Columns
@@ -286,6 +288,68 @@ The repository, for which the attribute is defined.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Script_Language
+
+
+The programming language used to evaluate the attribute.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`Integrated`, `JavaScript`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|Integrated|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|16|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(16)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Script_Text
+
+
+The program code that defines how the attribute is evaluated.
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Starting_Expression_No
 

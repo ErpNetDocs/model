@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseDutyRates](~/entities/Finance.Excise.ExciseDutyRates.md)
+Entity: [Regulatory.Excise.ExciseDutyRates](~/entities/Regulatory.Excise.ExciseDutyRates.md)
 
 Duty rates are specified by the taxation and customs authorities. They are the basis for the calculation of the excise amount (based on the calculation algorithm, specified in the Product Category). Entity: Exc_Excise_Duty_Rates (Introduced in version 21.1.3.87)
 

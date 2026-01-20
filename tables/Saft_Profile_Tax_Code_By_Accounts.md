@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileTaxCodeByAccounts](~/entities/Finance.Saft.ProfileTaxCodeByAccounts.md)
+Entity: [Regulatory.Saft.ProfileTaxCodeByAccounts](~/entities/Regulatory.Saft.ProfileTaxCodeByAccounts.md)
 
 Maps SAF-T TaxCode for GL entry lines by account, analytic and document type. Entity: Saft_Profile_Tax_Code_By_Accounts (Introduced in version 26.2.0.85)
 

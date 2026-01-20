@@ -22,7 +22,7 @@ Contains detailed warehouse reconciliation data per location and product, includ
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` Readonly|The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` Readonly|Batch/lot of the product, when applicable.|
 |[Product_Id](#product_id)|`uniqueidentifier` Readonly|The product stored at the specified warehouse location.|
-|[Review_Status](#review_status)|`char(3)` Allowed: `PND`, `CST`, `CFN`, `APR`, `RRQ`, `CNL`|Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.|
+|[Review_Status](#review_status)|`char(3)` Allowed: `CRT`, `STR`, `FIN`, `APR`, `RCN`, `CNL`|Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` Readonly|Serial number of the product, when serialized tracking is enabled.|
 |[Session](#session)|`int` Readonly|The counting session in which this result was recorded.|
@@ -265,10 +265,10 @@ Indicates the current review state of the reconciliation detail line and how it 
 
 | Property | Value |
 | - | - |
-|Allowed Values|`PND`, `CST`, `CFN`, `APR`, `RRQ`, `CNL`|
+|Allowed Values|`CRT`, `STR`, `FIN`, `APR`, `RCN`, `CNL`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|PND|
+|Default Value|CRT|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|

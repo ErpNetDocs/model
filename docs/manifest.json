@@ -18892,6 +18892,166 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseAdministrativeDocumentLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseAdministrativeDocumentLines.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseAdministrativeDocuments.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseAdministrativeDocuments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseDeclarations.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseDeclarations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseDutyRates.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseDutyRates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseOperationTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseOperationTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseProductCategories.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseProductCategories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseProductTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseProductTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseProducts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExcisePurposeCodes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExcisePurposeCodes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseStampLots.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseStampLots.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseStampOperationLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseStampOperationLines.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseStampOperationTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseStampOperationTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.ExciseStampOperations.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.ExciseStampOperations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.MeasuringTransactions.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.MeasuringTransactions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.TaxWarehouses.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.TaxWarehouses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Excise.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Excise.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Regulatory.Intrastat.CommodityCodes.md",
       "output": {
         ".html": {
@@ -18936,6 +19096,116 @@
       "output": {
         ".html": {
           "relative_path": "entities/Regulatory.Intrastat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileAccountByProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileAccountByProducts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileAccounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileAccounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileCompanies.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileCompanies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileMeasurementUnits.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileMeasurementUnits.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileParties.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileParties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfilePaymentTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfilePaymentTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfilePayments.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfilePayments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileTaxCodeByAccounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileTaxCodeByAccounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileTaxCodeByDealTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileTaxCodeByDealTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.Profiles.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.Profiles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.html"
         }
       },
       "version": ""

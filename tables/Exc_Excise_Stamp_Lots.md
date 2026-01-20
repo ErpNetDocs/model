@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseStampLots](~/entities/Finance.Excise.ExciseStampLots.md)
+Entity: [Regulatory.Excise.ExciseStampLots](~/entities/Regulatory.Excise.ExciseStampLots.md)
 
 Sequence of excise stamps with same production batch and type, received with one delivery. Entity: Exc_Excise_Stamp_Lots (Introduced in version 22.1.6.13)
 

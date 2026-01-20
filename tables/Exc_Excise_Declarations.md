@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseDeclarations](~/entities/Finance.Excise.ExciseDeclarations.md)
+Entity: [Regulatory.Excise.ExciseDeclarations](~/entities/Regulatory.Excise.ExciseDeclarations.md)
 
 Represents the data, sent to the customs authorities for the Excise Declarations. Entity: Exc_Excise_Declarations (Introduced in version 22.1.4.93)
 

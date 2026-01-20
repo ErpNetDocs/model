@@ -1939,6 +1939,54 @@ references:
 - uid: Regulatory.Common.Jurisdictions
   name: Regulatory.Common.Jurisdictions Entity
   href: entities/Regulatory.Common.Jurisdictions.html
+- uid: Regulatory.Excise
+  name: Regulatory.Excise Namespace
+  href: entities/Regulatory.Excise.html
+- uid: Regulatory.Excise.ExciseAdministrativeDocumentLines
+  name: Regulatory.Excise.ExciseAdministrativeDocumentLines Entity
+  href: entities/Regulatory.Excise.ExciseAdministrativeDocumentLines.html
+- uid: Regulatory.Excise.ExciseAdministrativeDocuments
+  name: Regulatory.Excise.ExciseAdministrativeDocuments Entity
+  href: entities/Regulatory.Excise.ExciseAdministrativeDocuments.html
+- uid: Regulatory.Excise.ExciseDeclarations
+  name: Regulatory.Excise.ExciseDeclarations Entity
+  href: entities/Regulatory.Excise.ExciseDeclarations.html
+- uid: Regulatory.Excise.ExciseDutyRates
+  name: Regulatory.Excise.ExciseDutyRates Entity
+  href: entities/Regulatory.Excise.ExciseDutyRates.html
+- uid: Regulatory.Excise.ExciseOperationTypes
+  name: Regulatory.Excise.ExciseOperationTypes Entity
+  href: entities/Regulatory.Excise.ExciseOperationTypes.html
+- uid: Regulatory.Excise.ExciseProductCategories
+  name: Regulatory.Excise.ExciseProductCategories Entity
+  href: entities/Regulatory.Excise.ExciseProductCategories.html
+- uid: Regulatory.Excise.ExciseProductTypes
+  name: Regulatory.Excise.ExciseProductTypes Entity
+  href: entities/Regulatory.Excise.ExciseProductTypes.html
+- uid: Regulatory.Excise.ExciseProducts
+  name: Regulatory.Excise.ExciseProducts Entity
+  href: entities/Regulatory.Excise.ExciseProducts.html
+- uid: Regulatory.Excise.ExcisePurposeCodes
+  name: Regulatory.Excise.ExcisePurposeCodes Entity
+  href: entities/Regulatory.Excise.ExcisePurposeCodes.html
+- uid: Regulatory.Excise.ExciseStampLots
+  name: Regulatory.Excise.ExciseStampLots Entity
+  href: entities/Regulatory.Excise.ExciseStampLots.html
+- uid: Regulatory.Excise.ExciseStampOperationLines
+  name: Regulatory.Excise.ExciseStampOperationLines Entity
+  href: entities/Regulatory.Excise.ExciseStampOperationLines.html
+- uid: Regulatory.Excise.ExciseStampOperationTypes
+  name: Regulatory.Excise.ExciseStampOperationTypes Entity
+  href: entities/Regulatory.Excise.ExciseStampOperationTypes.html
+- uid: Regulatory.Excise.ExciseStampOperations
+  name: Regulatory.Excise.ExciseStampOperations Entity
+  href: entities/Regulatory.Excise.ExciseStampOperations.html
+- uid: Regulatory.Excise.MeasuringTransactions
+  name: Regulatory.Excise.MeasuringTransactions Entity
+  href: entities/Regulatory.Excise.MeasuringTransactions.html
+- uid: Regulatory.Excise.TaxWarehouses
+  name: Regulatory.Excise.TaxWarehouses Entity
+  href: entities/Regulatory.Excise.TaxWarehouses.html
 - uid: Regulatory.Intrastat
   name: Regulatory.Intrastat Namespace
   href: entities/Regulatory.Intrastat.html
@@ -1954,6 +2002,39 @@ references:
 - uid: Regulatory.Intrastat.DocumentAmountTypeSettings
   name: Regulatory.Intrastat.DocumentAmountTypeSettings Entity
   href: entities/Regulatory.Intrastat.DocumentAmountTypeSettings.html
+- uid: Regulatory.Saft
+  name: Regulatory.Saft Namespace
+  href: entities/Regulatory.Saft.html
+- uid: Regulatory.Saft.ProfileAccountByProducts
+  name: Regulatory.Saft.ProfileAccountByProducts Entity
+  href: entities/Regulatory.Saft.ProfileAccountByProducts.html
+- uid: Regulatory.Saft.ProfileAccounts
+  name: Regulatory.Saft.ProfileAccounts Entity
+  href: entities/Regulatory.Saft.ProfileAccounts.html
+- uid: Regulatory.Saft.ProfileCompanies
+  name: Regulatory.Saft.ProfileCompanies Entity
+  href: entities/Regulatory.Saft.ProfileCompanies.html
+- uid: Regulatory.Saft.ProfileMeasurementUnits
+  name: Regulatory.Saft.ProfileMeasurementUnits Entity
+  href: entities/Regulatory.Saft.ProfileMeasurementUnits.html
+- uid: Regulatory.Saft.ProfileParties
+  name: Regulatory.Saft.ProfileParties Entity
+  href: entities/Regulatory.Saft.ProfileParties.html
+- uid: Regulatory.Saft.ProfilePaymentTypes
+  name: Regulatory.Saft.ProfilePaymentTypes Entity
+  href: entities/Regulatory.Saft.ProfilePaymentTypes.html
+- uid: Regulatory.Saft.ProfilePayments
+  name: Regulatory.Saft.ProfilePayments Entity
+  href: entities/Regulatory.Saft.ProfilePayments.html
+- uid: Regulatory.Saft.ProfileTaxCodeByAccounts
+  name: Regulatory.Saft.ProfileTaxCodeByAccounts Entity
+  href: entities/Regulatory.Saft.ProfileTaxCodeByAccounts.html
+- uid: Regulatory.Saft.ProfileTaxCodeByDealTypes
+  name: Regulatory.Saft.ProfileTaxCodeByDealTypes Entity
+  href: entities/Regulatory.Saft.ProfileTaxCodeByDealTypes.html
+- uid: Regulatory.Saft.Profiles
+  name: Regulatory.Saft.Profiles Entity
+  href: entities/Regulatory.Saft.Profiles.html
 - uid: Regulatory.Vat
   name: Regulatory.Vat Namespace
   href: entities/Regulatory.Vat.html

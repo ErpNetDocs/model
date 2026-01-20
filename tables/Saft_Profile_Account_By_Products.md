@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Saft.ProfileAccountByProducts](~/entities/Finance.Saft.ProfileAccountByProducts.md)
+Entity: [Regulatory.Saft.ProfileAccountByProducts](~/entities/Regulatory.Saft.ProfileAccountByProducts.md)
 
 Maps the SAF-T account by product type for a selected SAF-T profile. Entity: Saft_Profile_Account_By_Products (Introduced in version 26.2.0.73)
 

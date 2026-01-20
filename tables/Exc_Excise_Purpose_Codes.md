@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExcisePurposeCodes](~/entities/Finance.Excise.ExcisePurposeCodes.md)
+Entity: [Regulatory.Excise.ExcisePurposeCodes](~/entities/Regulatory.Excise.ExcisePurposeCodes.md)
 
 Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. Entity: Exc_Excise_Purpose_Codes (Introduced in version 21.1.3.87)
 

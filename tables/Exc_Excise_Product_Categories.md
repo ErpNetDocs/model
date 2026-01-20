@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Finance.Excise.ExciseProductCategories](~/entities/Finance.Excise.ExciseProductCategories.md)
+Entity: [Regulatory.Excise.ExciseProductCategories](~/entities/Regulatory.Excise.ExciseProductCategories.md)
 
 Product Category is defined by the taxation and customs authorities. Also specifies the calculation algorithm for the excise. For EU, the product category code is a single character - B,E,I,S,T or W. Entity: Exc_Excise_Product_Categories (Introduced in version 21.1.3.87)
 
