@@ -132,12 +132,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#authority">Authority</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>The source authority (agency), which controls the list. <code>Filter(eq;like)</code></td>
+<td>Issuing or controlling authority (agency, institution). <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#description">Description</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Description of the list. <code>Filter(eq;like)</code></td>
+<td>Short description of the list’s purpose or scope. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#displaytext">DisplayText</a></td>
@@ -147,7 +147,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#entitytypename">EntityTypeName</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>Internal entity type, whose entities map to entries in the list. <code>Filter(eq;like)</code></td>
+<td>Internal system entity type mapped to entries in this list. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#externalid">ExternalId</a></td>
@@ -167,12 +167,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the list is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Specifies whether the list version is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#legalreference">LegalReference</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Reference to law/article/ordinance number, URL, file name, etc. <code>Filter(eq;like)</code></td>
+<td>Reference to the legal basis (law, article, ordinance, URL, file). <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#listcode">ListCode</a></td>
@@ -182,12 +182,12 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#listname">ListName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Regulatory name of the list. <code>Required</code> <code>Filter(like)</code></td>
+<td>Official regulatory name of the list (multi-language). <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the list.</td>
+<td>Additional notes or comments.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeLists.html#objectversion">ObjectVersion</a></td>
@@ -249,7 +249,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="authority">Authority</h3>
-<p>The source authority (agency), which controls the list. <code>Filter(eq;like)</code></p>
+<p>Issuing or controlling authority (agency, institution). <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -257,7 +257,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Maximum Length</em>: <strong>128</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="description">Description</h3>
-<p>Description of the list. <code>Filter(eq;like)</code></p>
+<p>Short description of the list’s purpose or scope. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -272,7 +272,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="entitytypename">EntityTypeName</h3>
-<p>Internal entity type, whose entities map to entries in the list. <code>Filter(eq;like)</code></p>
+<p>Internal system entity type mapped to entries in this list. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -301,7 +301,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Default Value</em>: <strong>NewGuid</strong><br>
 <em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the list is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Specifies whether the list version is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -309,7 +309,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Default Value</em>: <strong>True</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="legalreference">LegalReference</h3>
-<p>Reference to law/article/ordinance number, URL, file name, etc. <code>Filter(eq;like)</code></p>
+<p>Reference to the legal basis (law, article, ordinance, URL, file). <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -325,14 +325,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Maximum Length</em>: <strong>16</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="listname">ListName</h3>
-<p>Regulatory name of the list. <code>Required</code> <code>Filter(like)</code></p>
+<p>Official regulatory name of the list (multi-language). <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the list.</p>
+<p>Additional notes or comments.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>

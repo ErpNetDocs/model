@@ -2005,6 +2005,9 @@ references:
 - uid: Regulatory.Saft
   name: Regulatory.Saft Namespace
   href: entities/Regulatory.Saft.html
+- uid: Regulatory.Saft.ProfileAccountByAdditionalAmounts
+  name: Regulatory.Saft.ProfileAccountByAdditionalAmounts Entity
+  href: entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.html
 - uid: Regulatory.Saft.ProfileAccountByProducts
   name: Regulatory.Saft.ProfileAccountByProducts Entity
   href: entities/Regulatory.Saft.ProfileAccountByProducts.html

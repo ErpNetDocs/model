@@ -1182,6 +1182,8 @@
   - name: Saft
     href: Regulatory.Saft.md
     items:
+    - name: ProfileAccountByAdditionalAmounts
+      href: Regulatory.Saft.ProfileAccountByAdditionalAmounts.md
     - name: ProfileAccountByProducts
       href: Regulatory.Saft.ProfileAccountByProducts.md
     - name: ProfileAccounts

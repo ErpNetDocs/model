@@ -12,7 +12,7 @@ Default Display Text Format:
 _{Id}: {QuantityValue}_  
 Default Search Members:  
 __  
-Category:  _Definitions_  
+Category:  _Views_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  
 

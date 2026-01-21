@@ -36,35 +36,35 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdditionalDataJson](Regulatory.Common.CodeEntries.md#additionaldatajson) | string (max) __nullable__ | Additional Data Json. `Filter(eq;like)` 
-| [AltCode](Regulatory.Common.CodeEntries.md#altcode) | string (64) __nullable__ | Optional alternative/legacy code if needed. `Filter(eq;like)` 
-| [Code](Regulatory.Common.CodeEntries.md#code) | string (64) | The statutory code of the entry. The same code can appear multiple times for different validity periods. `Required` `Filter(eq;like)` 
-| [Data1](Regulatory.Common.CodeEntries.md#data1) | string (64) __nullable__ | Data 1. `Filter(eq;like)` 
-| [Data2](Regulatory.Common.CodeEntries.md#data2) | string (64) __nullable__ | Data 2. `Filter(eq;like)` 
-| [Data3](Regulatory.Common.CodeEntries.md#data3) | string (64) __nullable__ | Data 3. `Filter(eq;like)` 
+| [AdditionalDataJson](Regulatory.Common.CodeEntries.md#additionaldatajson) | string (max) __nullable__ | Flexible JSON field for extended regulatory attributes. `Filter(eq;like)` 
+| [AltCode](Regulatory.Common.CodeEntries.md#altcode) | string (64) __nullable__ | Optional alternative/legacy code used for backward compatibility. `Filter(eq;like)` 
+| [Code](Regulatory.Common.CodeEntries.md#code) | string (64) | Official statutory code of the entry; may repeat across different validity periods. `Required` `Filter(eq;like)` 
+| [Data1](Regulatory.Common.CodeEntries.md#data1) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data. `Filter(eq;like)` 
+| [Data2](Regulatory.Common.CodeEntries.md#data2) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data. `Filter(eq;like)` 
+| [Data3](Regulatory.Common.CodeEntries.md#data3) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data. `Filter(eq;like)` 
 | [DisplayText](Regulatory.Common.CodeEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Regulatory.Common.CodeEntries.md#id) | guid |  
-| [IsActive](Regulatory.Common.CodeEntries.md#isactive) | boolean | Specifies whether the code entry is active. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Regulatory.Common.CodeEntries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Official (regulatory) name. `Filter(like)` 
-| [Notes](Regulatory.Common.CodeEntries.md#notes) | string (max) __nullable__ | Notes for the entry. `Filter(eq;like)` 
+| [IsActive](Regulatory.Common.CodeEntries.md#isactive) | boolean | Specifies whether the code entry is currently active. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Regulatory.Common.CodeEntries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Official regulatory name of the entry (multi-language). `Filter(like)` 
+| [Notes](Regulatory.Common.CodeEntries.md#notes) | string (max) __nullable__ | Free text notes or comments. `Filter(eq;like)` 
 | [ObjectVersion](Regulatory.Common.CodeEntries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ShortName](Regulatory.Common.CodeEntries.md#shortname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Abbreviation, if such exists. `Filter(like)` 
-| [ValidFrom](Regulatory.Common.CodeEntries.md#validfrom) | date __nullable__ | From when this entry is valid. `Filter(eq;ge;le)` 
-| [ValidTo](Regulatory.Common.CodeEntries.md#validto) | date __nullable__ | Until when it is valid. `Filter(eq;ge;le)` 
+| [ShortName](Regulatory.Common.CodeEntries.md#shortname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Abbreviated or short name of the entry, if such exists. `Filter(like)` 
+| [ValidFrom](Regulatory.Common.CodeEntries.md#validfrom) | date __nullable__ | Date from which this entry is valid. `Filter(eq;ge;le)` 
+| [ValidTo](Regulatory.Common.CodeEntries.md#validto) | date __nullable__ | Date until which this entry is valid. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CodeList](Regulatory.Common.CodeEntries.md#codelist) | [CodeLists](Regulatory.Common.CodeLists.md) | Code List. `Required` `Filter(multi eq)` `Owner` `FilterableReference` |
-| [ParentEntry](Regulatory.Common.CodeEntries.md#parententry) | [CodeEntries](Regulatory.Common.CodeEntries.md) (nullable) | Parent entry for hierarchical lists (regions / subregions / groups). `Filter(multi eq)` |
+| [CodeList](Regulatory.Common.CodeEntries.md#codelist) | [CodeLists](Regulatory.Common.CodeLists.md) | Reference to the regulatory code list containing this entry. `Required` `Filter(multi eq)` `Owner` `FilterableReference` |
+| [ParentEntry](Regulatory.Common.CodeEntries.md#parententry) | [CodeEntries](Regulatory.Common.CodeEntries.md) (nullable) | Reference to a parent entry for hierarchical lists (regions / subregions / groups). `Filter(multi eq)` |
 
 
 ## Attribute Details
 
 ### AdditionalDataJson
 
-Additional Data Json. `Filter(eq;like)`
+Flexible JSON field for extended regulatory attributes. `Filter(eq;like)`
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  
@@ -75,7 +75,7 @@ _Show in UI_: **ShownByDefault**
 
 ### AltCode
 
-Optional alternative/legacy code if needed. `Filter(eq;like)`
+Optional alternative/legacy code used for backward compatibility. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
 _Category_: **System**  
@@ -86,7 +86,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Code
 
-The statutory code of the entry. The same code can appear multiple times for different validity periods. `Required` `Filter(eq;like)`
+Official statutory code of the entry; may repeat across different validity periods. `Required` `Filter(eq;like)`
 
 _Type_: **string (64)**  
 _Category_: **System**  
@@ -97,7 +97,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Data1
 
-Data 1. `Filter(eq;like)`
+Additional structured attribute for regulatory-specific data. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
 _Category_: **System**  
@@ -108,7 +108,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Data2
 
-Data 2. `Filter(eq;like)`
+Additional structured attribute for regulatory-specific data. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
 _Category_: **System**  
@@ -119,7 +119,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Data3
 
-Data 3. `Filter(eq;like)`
+Additional structured attribute for regulatory-specific data. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
 _Category_: **System**  
@@ -149,7 +149,7 @@ _Show in UI_: **CannotBeShown**
 
 ### IsActive
 
-Specifies whether the code entry is active. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the code entry is currently active. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Category_: **System**  
@@ -160,7 +160,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Name
 
-Official (regulatory) name. `Filter(like)`
+Official regulatory name of the entry (multi-language). `Filter(like)`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
@@ -170,7 +170,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Notes
 
-Notes for the entry. `Filter(eq;like)`
+Free text notes or comments. `Filter(eq;like)`
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  
@@ -191,7 +191,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### ShortName
 
-Abbreviation, if such exists. `Filter(like)`
+Abbreviated or short name of the entry, if such exists. `Filter(like)`
 
 _Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
@@ -201,7 +201,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ValidFrom
 
-From when this entry is valid. `Filter(eq;ge;le)`
+Date from which this entry is valid. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
 _Category_: **System**  
@@ -211,7 +211,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ValidTo
 
-Until when it is valid. `Filter(eq;ge;le)`
+Date until which this entry is valid. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
 _Category_: **System**  
@@ -224,7 +224,7 @@ _Show in UI_: **ShownByDefault**
 
 ### CodeList
 
-Code List. `Required` `Filter(multi eq)` `Owner` `FilterableReference`
+Reference to the regulatory code list containing this entry. `Required` `Filter(multi eq)` `Owner` `FilterableReference`
 
 _Type_: **[CodeLists](Regulatory.Common.CodeLists.md)**  
 _Indexed_: **True**  
@@ -235,7 +235,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ParentEntry
 
-Parent entry for hierarchical lists (regions / subregions / groups). `Filter(multi eq)`
+Reference to a parent entry for hierarchical lists (regions / subregions / groups). `Filter(multi eq)`
 
 _Type_: **[CodeEntries](Regulatory.Common.CodeEntries.md) (nullable)**  
 _Indexed_: **True**  

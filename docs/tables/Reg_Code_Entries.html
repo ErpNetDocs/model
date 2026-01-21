@@ -107,62 +107,62 @@
 <tr>
 <td><a href="#additional_data_json">Additional_Data_Json</a></td>
 <td><code>nvarchar(max)</code></td>
-<td>Additional Data Json</td>
+<td>Flexible JSON field for extended regulatory attributes.</td>
 </tr>
 <tr>
 <td><a href="#alt_code">Alt_Code</a></td>
 <td><code>nvarchar(64)</code></td>
-<td>Optional alternative/legacy code if needed.</td>
+<td>Optional alternative/legacy code used for backward compatibility.</td>
 </tr>
 <tr>
 <td><a href="#code">Code</a></td>
 <td><code>nvarchar(64)</code></td>
-<td>The statutory code of the entry. The same code can appear multiple times for different validity periods.</td>
+<td>Official statutory code of the entry; may repeat across different validity periods.</td>
 </tr>
 <tr>
 <td><a href="#code_entry_id">Code_Entry_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
-<td>Code Entry</td>
+<td>Unique identifier of the code entry.</td>
 </tr>
 <tr>
 <td><a href="#code_list_id">Code_List_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Code List</td>
+<td>Reference to the regulatory code list containing this entry.</td>
 </tr>
 <tr>
 <td><a href="#data_1">Data_1</a></td>
 <td><code>nvarchar(64)</code></td>
-<td>Data 1</td>
+<td>Additional structured attribute for regulatory-specific data.</td>
 </tr>
 <tr>
 <td><a href="#data_2">Data_2</a></td>
 <td><code>nvarchar(64)</code></td>
-<td>Data 2</td>
+<td>Additional structured attribute for regulatory-specific data.</td>
 </tr>
 <tr>
 <td><a href="#data_3">Data_3</a></td>
 <td><code>nvarchar(64)</code></td>
-<td>Data 3</td>
+<td>Additional structured attribute for regulatory-specific data.</td>
 </tr>
 <tr>
 <td><a href="#is_active">Is_Active</a></td>
 <td><code>bit</code></td>
-<td>Specifies whether the code entry is active.</td>
+<td>Specifies whether the code entry is currently active.</td>
 </tr>
 <tr>
 <td><a href="#name">Name</a></td>
 <td><code>nvarchar(254)</code> <code>ML</code></td>
-<td>Official (regulatory) name.</td>
+<td>Official regulatory name of the entry (multi-language).</td>
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
 <td><code>nvarchar(max)</code></td>
-<td>Notes for the entry.</td>
+<td>Free text notes or comments</td>
 </tr>
 <tr>
 <td><a href="#parent_entry_id">Parent_Entry_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Parent entry for hierarchical lists (regions / subregions / groups).</td>
+<td>Reference to a parent entry for hierarchical lists (regions / subregions / groups).</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -172,23 +172,23 @@
 <tr>
 <td><a href="#short_name">Short_Name</a></td>
 <td><code>nvarchar(64)</code> <code>ML</code></td>
-<td>Abbreviation, if such exists.</td>
+<td>Abbreviated or short name of the entry, if such exists.</td>
 </tr>
 <tr>
 <td><a href="#valid_from">Valid_From</a></td>
 <td><code>date</code></td>
-<td>From when this entry is valid.</td>
+<td>Date from which this entry is valid.</td>
 </tr>
 <tr>
 <td><a href="#valid_to">Valid_To</a></td>
 <td><code>date</code></td>
-<td>Until when it is valid.</td>
+<td>Date until which this entry is valid.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="additional_data_json">Additional_Data_Json</h3>
-<p>Additional Data Json</p>
+<p>Flexible JSON field for extended regulatory attributes.</p>
 <table>
 <thead>
 <tr>
@@ -313,7 +313,7 @@
 </tbody>
 </table>
 <h3 id="alt_code">Alt_Code</h3>
-<p>Optional alternative/legacy code if needed.</p>
+<p>Optional alternative/legacy code used for backward compatibility.</p>
 <table>
 <thead>
 <tr>
@@ -438,7 +438,7 @@
 </tbody>
 </table>
 <h3 id="code">Code</h3>
-<p>The statutory code of the entry. The same code can appear multiple times for different validity periods.</p>
+<p>Official statutory code of the entry; may repeat across different validity periods.</p>
 <table>
 <thead>
 <tr>
@@ -563,7 +563,7 @@
 </tbody>
 </table>
 <h3 id="code_entry_id">Code_Entry_Id</h3>
-<p>Code Entry</p>
+<p>Unique identifier of the code entry.</p>
 <table>
 <thead>
 <tr>
@@ -688,7 +688,7 @@
 </tbody>
 </table>
 <h3 id="code_list_id">Code_List_Id</h3>
-<p>Code List</p>
+<p>Reference to the regulatory code list containing this entry.</p>
 <table>
 <thead>
 <tr>
@@ -811,7 +811,7 @@
 </tbody>
 </table>
 <h3 id="data_1">Data_1</h3>
-<p>Data 1</p>
+<p>Additional structured attribute for regulatory-specific data.</p>
 <table>
 <thead>
 <tr>
@@ -936,7 +936,7 @@
 </tbody>
 </table>
 <h3 id="data_2">Data_2</h3>
-<p>Data 2</p>
+<p>Additional structured attribute for regulatory-specific data.</p>
 <table>
 <thead>
 <tr>
@@ -1061,7 +1061,7 @@
 </tbody>
 </table>
 <h3 id="data_3">Data_3</h3>
-<p>Data 3</p>
+<p>Additional structured attribute for regulatory-specific data.</p>
 <table>
 <thead>
 <tr>
@@ -1186,7 +1186,7 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Specifies whether the code entry is active.</p>
+<p>Specifies whether the code entry is currently active.</p>
 <table>
 <thead>
 <tr>
@@ -1305,7 +1305,7 @@
 </tbody>
 </table>
 <h3 id="name">Name</h3>
-<p>Official (regulatory) name.</p>
+<p>Official regulatory name of the entry (multi-language).</p>
 <table>
 <thead>
 <tr>
@@ -1424,7 +1424,7 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes for the entry.</p>
+<p>Free text notes or comments</p>
 <table>
 <thead>
 <tr>
@@ -1549,7 +1549,7 @@
 </tbody>
 </table>
 <h3 id="parent_entry_id">Parent_Entry_Id</h3>
-<p>Parent entry for hierarchical lists (regions / subregions / groups).</p>
+<p>Reference to a parent entry for hierarchical lists (regions / subregions / groups).</p>
 <table>
 <thead>
 <tr>
@@ -1771,7 +1771,7 @@
 </tbody>
 </table>
 <h3 id="short_name">Short_Name</h3>
-<p>Abbreviation, if such exists.</p>
+<p>Abbreviated or short name of the entry, if such exists.</p>
 <table>
 <thead>
 <tr>
@@ -1890,7 +1890,7 @@
 </tbody>
 </table>
 <h3 id="valid_from">Valid_From</h3>
-<p>From when this entry is valid.</p>
+<p>Date from which this entry is valid.</p>
 <table>
 <thead>
 <tr>
@@ -2015,7 +2015,7 @@
 </tbody>
 </table>
 <h3 id="valid_to">Valid_To</h3>
-<p>Until when it is valid.</p>
+<p>Date until which this entry is valid.</p>
 <table>
 <thead>
 <tr>

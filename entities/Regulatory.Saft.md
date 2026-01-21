@@ -4,6 +4,7 @@ uid: Regulatory.Saft
 # Regulatory.Saft Namespace
 
 ## Entities
+- [ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md)  
 - [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
 - [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
 - [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  

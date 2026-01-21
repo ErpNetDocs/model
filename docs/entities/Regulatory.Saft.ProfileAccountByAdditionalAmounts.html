@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Regulatory.Saft.ProfileAccountByAdditionalAmounts Entity | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Regulatory.Saft.ProfileAccountByAdditionalAmounts Entity | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Regulatory.Saft.ProfileAccountByAdditionalAmounts">
+<h1 id="regulatorysaftprofileaccountbyadditionalamounts-entity">Regulatory.Saft.ProfileAccountByAdditionalAmounts Entity</h1>
+
+<p><strong>Namespace:</strong> <a href="Regulatory.Saft.html">Regulatory.Saft</a></p>
+<p>Maps the SAF-T account by Amount type for a selected SAF-T profile. Entity: Saft_Profile_Account_By_Additional_Amounts (Introduced in version 26.2.1.18)</p>
+<h2 id="default-visualization">Default Visualization</h2>
+<p>Default Display Text Format:<br>
+<em>{Profile.Name}</em><br>
+Default Search Members:<br>
+<em>Profile.Name</em><br>
+Name Data Member:<br>
+<em>Profile.Name</em><br>
+Category:  <em>Definitions</em><br>
+Show in UI:  <em>ShownByDefault</em><br>
+API access:  <em>ReadWrite</em></p>
+<h2 id="track-changes">Track Changes</h2>
+<p>Min level:  <em>0 - Do not track changes</em><br>
+Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<h2 id="aggregate">Aggregate</h2>
+<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
+<p>Aggregate Parent:<br>
+<a href="Regulatory.Saft.Profiles.html">Regulatory.Saft.Profiles</a><br>
+Aggregate Root:<br>
+<a href="Regulatory.Saft.Profiles.html">Regulatory.Saft.Profiles</a></p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#debitcreditindicator">DebitCreditIndicator</a></td>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#debitcreditindicator">DebitCreditIndicator</a></td>
+<td>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#entitykind">EntityKind</a></td>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#entitykind">EntityKind</a></td>
+<td>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#notes">Notes</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Additional information or comments about the mapping. <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#accountcodeentry">AccountCodeEntry</a></td>
+<td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
+<td>The SAF-T account used during SAF-T generation for the selected product type. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#amounttype">AmountType</a></td>
+<td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
+<td>The ERP.net Amount type for which the SAF-T account is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#documenttype">DocumentType</a></td>
+<td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
+<td>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#profile">Profile</a></td>
+<td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
+<td>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="debitcreditindicator">DebitCreditIndicator</h3>
+<p>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#debitcreditindicator">DebitCreditIndicator</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>DebitCreditIndicator</code>(Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) data attribute<br>
+<em>Allowed Values (Regulatory.Saft.ProfileAccountByProductsRepository.DebitCreditIndicator Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debit</td>
+<td>Debit value. Stored as 'D'. <br> <em>Database Value:</em> 'D' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Debit'</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>Credit value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Credit'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="entitykind">EntityKind</h3>
+<p>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Filter(eq)</code></p>
+<p><em>Type</em>: <strong><a href="Regulatory.Saft.ProfileAccountByAdditionalAmounts.html#entitykind">EntityKind</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>EntityKind</code>(Regulatory.Saft.ProfileAccountByProducts.md#entitykind) data attribute<br>
+<em>Allowed Values (Regulatory.Saft.ProfileAccountByProductsRepository.EntityKind Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sales</td>
+<td>Sales value. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Sales'</td>
+</tr>
+<tr>
+<td>Purchases</td>
+<td>Purchases value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Purchases'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong><br>
+<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Additional information or comments about the mapping. <code>Filter(like)</code></p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****<br>
+<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="accountcodeentry">AccountCodeEntry</h3>
+<p>The SAF-T account used during SAF-T generation for the selected product type. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="amounttype">AmountType</h3>
+<p>The ERP.net Amount type for which the SAF-T account is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="documenttype">DocumentType</h3>
+<p>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="profile">Profile</h3>
+<p>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p><em>Type</em>: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h2 id="api-methods">API Methods</h2>
+<p>Methods that can be invoked in public APIs.</p>
+<h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
+<p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
+<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+<em>Declaring Type</em>: <strong>EntityObject</strong><br>
+<em>Domain API Request</em>: <strong>GET</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>customPropertyCode</strong><br>
+The code of the custom property<br>
+<em>Type</em>: string</p>
+</li>
+<li><p><strong>search</strong><br>
+The search text - searches by value or description. Can contain wildcard character %.<br>
+<em>Type</em>: string<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: null</p>
+</li>
+<li><p><strong>exactMatch</strong><br>
+If true the search text should be equal to the property value<br>
+<em>Type</em>: boolean<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: False</p>
+</li>
+<li><p><strong>orderByDescription</strong><br>
+If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
+<em>Type</em>: boolean<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: False</p>
+</li>
+<li><p><strong>top</strong><br>
+The top clause - default is 10<br>
+<em>Type</em>: int32<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: 10</p>
+</li>
+<li><p><strong>skip</strong><br>
+The skip clause - default is 0<br>
+<em>Type</em>: int32<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: 0</p>
+</li>
+</ul>
+<h3 id="createnotification">CreateNotification</h3>
+<p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong>EntityObject</strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>user</strong><br>
+The user.<br>
+<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+</li>
+<li><p><strong>notificationClass</strong><br>
+The notification class.<br>
+<em>Type</em>: string</p>
+</li>
+<li><p><strong>subject</strong><br>
+The notification subject.<br>
+<em>Type</em>: string</p>
+</li>
+<li><p><strong>priority</strong><br>
+The notification priority.<br>
+<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
+<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background</td>
+<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+</tr>
+<tr>
+<td>High</td>
+<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+</tr>
+<tr>
+<td>Urgent</td>
+<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Optional</em>: True<br>
+<em>Default Value</em>: Normal</p>
+</li>
+</ul>
+<h3 id="createcopy">CreateCopy</h3>
+<p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
+<em>Return Type</em>: <strong>EntityObject</strong><br>
+<em>Declaring Type</em>: <strong>EntityObject</strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>None</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>None</p>
+<h2 id="api">API</h2>
+<p>Domain API Entity Set:
+Regulatory_Saft_ProfileAccountByAdditionalAmounts</p>
+<p>Domain API Entity Type:
+Regulatory_Saft_ProfileAccountByAdditionalAmount</p>
+<p>Domain API Query:
+<a href="https://testdb.my.erp.net/api/domain/odata/Regulatory_Saft_ProfileAccountByAdditionalAmounts?$top=10">https://testdb.my.erp.net/api/domain/odata/Regulatory_Saft_ProfileAccountByAdditionalAmounts?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://testdb.my.erp.net/api/domain/querybuilder#Regulatory_Saft_ProfileAccountByAdditionalAmounts?$top=10">https://testdb.my.erp.net/api/domain/querybuilder#Regulatory_Saft_ProfileAccountByAdditionalAmounts?$top=10</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

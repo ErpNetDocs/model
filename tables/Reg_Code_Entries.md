@@ -15,29 +15,29 @@ Code Entries. Entity: Reg_Code_Entries (Introduced in version 26.2.0.62)
 
 | Name | Type | Description |
 | - | - | --- |
-|[Additional_Data_Json](#additional_data_json)|`nvarchar(max)` |Additional Data Json|
-|[Alt_Code](#alt_code)|`nvarchar(64)` |Optional alternative/legacy code if needed.|
-|[Code](#code)|`nvarchar(64)` |The statutory code of the entry. The same code can appear multiple times for different validity periods.|
-|[Code_Entry_Id](#code_entry_id)|`uniqueidentifier` `PK`|Code Entry|
-|[Code_List_Id](#code_list_id)|`uniqueidentifier` |Code List|
-|[Data_1](#data_1)|`nvarchar(64)` |Data 1|
-|[Data_2](#data_2)|`nvarchar(64)` |Data 2|
-|[Data_3](#data_3)|`nvarchar(64)` |Data 3|
-|[Is_Active](#is_active)|`bit` |Specifies whether the code entry is active.|
-|[Name](#name)|`nvarchar(254)` `ML`|Official (regulatory) name.|
-|[Notes](#notes)|`nvarchar(max)` |Notes for the entry.|
-|[Parent_Entry_Id](#parent_entry_id)|`uniqueidentifier` |Parent entry for hierarchical lists (regions / subregions / groups).|
+|[Additional_Data_Json](#additional_data_json)|`nvarchar(max)` |Flexible JSON field for extended regulatory attributes.|
+|[Alt_Code](#alt_code)|`nvarchar(64)` |Optional alternative/legacy code used for backward compatibility.|
+|[Code](#code)|`nvarchar(64)` |Official statutory code of the entry; may repeat across different validity periods.|
+|[Code_Entry_Id](#code_entry_id)|`uniqueidentifier` `PK`|Unique identifier of the code entry.|
+|[Code_List_Id](#code_list_id)|`uniqueidentifier` |Reference to the regulatory code list containing this entry.|
+|[Data_1](#data_1)|`nvarchar(64)` |Additional structured attribute for regulatory-specific data.|
+|[Data_2](#data_2)|`nvarchar(64)` |Additional structured attribute for regulatory-specific data.|
+|[Data_3](#data_3)|`nvarchar(64)` |Additional structured attribute for regulatory-specific data.|
+|[Is_Active](#is_active)|`bit` |Specifies whether the code entry is currently active.|
+|[Name](#name)|`nvarchar(254)` `ML`|Official regulatory name of the entry (multi-language).|
+|[Notes](#notes)|`nvarchar(max)` |Free text notes or comments|
+|[Parent_Entry_Id](#parent_entry_id)|`uniqueidentifier` |Reference to a parent entry for hierarchical lists (regions / subregions / groups).|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Short_Name](#short_name)|`nvarchar(64)` `ML`|Abbreviation, if such exists.|
-|[Valid_From](#valid_from)|`date` |From when this entry is valid.|
-|[Valid_To](#valid_to)|`date` |Until when it is valid.|
+|[Short_Name](#short_name)|`nvarchar(64)` `ML`|Abbreviated or short name of the entry, if such exists.|
+|[Valid_From](#valid_from)|`date` |Date from which this entry is valid.|
+|[Valid_To](#valid_to)|`date` |Date until which this entry is valid.|
 
 ## Columns
 
 ### Additional_Data_Json
 
 
-Additional Data Json
+Flexible JSON field for extended regulatory attributes.
 
 | Property | Value |
 | - | - |
@@ -74,7 +74,7 @@ Additional Data Json
 ### Alt_Code
 
 
-Optional alternative/legacy code if needed.
+Optional alternative/legacy code used for backward compatibility.
 
 | Property | Value |
 | - | - |
@@ -111,7 +111,7 @@ Optional alternative/legacy code if needed.
 ### Code
 
 
-The statutory code of the entry. The same code can appear multiple times for different validity periods.
+Official statutory code of the entry; may repeat across different validity periods.
 
 | Property | Value |
 | - | - |
@@ -148,7 +148,7 @@ The statutory code of the entry. The same code can appear multiple times for dif
 ### Code_Entry_Id
 
 
-Code Entry
+Unique identifier of the code entry.
 
 | Property | Value |
 | - | - |
@@ -185,7 +185,7 @@ Code Entry
 ### Code_List_Id
 
 
-Code List
+Reference to the regulatory code list containing this entry.
 
 | Property | Value |
 | - | - |
@@ -222,7 +222,7 @@ Code List
 ### Data_1
 
 
-Data 1
+Additional structured attribute for regulatory-specific data.
 
 | Property | Value |
 | - | - |
@@ -259,7 +259,7 @@ Data 1
 ### Data_2
 
 
-Data 2
+Additional structured attribute for regulatory-specific data.
 
 | Property | Value |
 | - | - |
@@ -296,7 +296,7 @@ Data 2
 ### Data_3
 
 
-Data 3
+Additional structured attribute for regulatory-specific data.
 
 | Property | Value |
 | - | - |
@@ -333,7 +333,7 @@ Data 3
 ### Is_Active
 
 
-Specifies whether the code entry is active.
+Specifies whether the code entry is currently active.
 
 | Property | Value |
 | - | - |
@@ -369,7 +369,7 @@ Specifies whether the code entry is active.
 ### Name
 
 
-Official (regulatory) name.
+Official regulatory name of the entry (multi-language).
 
 | Property | Value |
 | - | - |
@@ -405,7 +405,7 @@ Official (regulatory) name.
 ### Notes
 
 
-Notes for the entry.
+Free text notes or comments
 
 | Property | Value |
 | - | - |
@@ -442,7 +442,7 @@ Notes for the entry.
 ### Parent_Entry_Id
 
 
-Parent entry for hierarchical lists (regions / subregions / groups).
+Reference to a parent entry for hierarchical lists (regions / subregions / groups).
 
 | Property | Value |
 | - | - |
@@ -506,7 +506,7 @@ Parent entry for hierarchical lists (regions / subregions / groups).
 ### Short_Name
 
 
-Abbreviation, if such exists.
+Abbreviated or short name of the entry, if such exists.
 
 | Property | Value |
 | - | - |
@@ -542,7 +542,7 @@ Abbreviation, if such exists.
 ### Valid_From
 
 
-From when this entry is valid.
+Date from which this entry is valid.
 
 | Property | Value |
 | - | - |
@@ -579,7 +579,7 @@ From when this entry is valid.
 ### Valid_To
 
 
-Until when it is valid.
+Date until which this entry is valid.
 
 | Property | Value |
 | - | - |

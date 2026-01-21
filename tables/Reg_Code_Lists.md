@@ -11,16 +11,16 @@ Code Lists. Entity: Reg_Code_Lists (Introduced in version 26.2.0.62)
 
 | Name | Type | Description |
 | - | - | --- |
-|[Authority](#authority)|`nvarchar(128)` |The source authority (agency), which controls the list.|
-|[Code_List_Id](#code_list_id)|`uniqueidentifier` `PK`|Code List|
-|[Description](#description)|`nvarchar(254)` |Description of the list.|
-|[Entity_Type_Name](#entity_type_name)|`nvarchar(128)` |Internal entity type, whose entities map to entries in the list.|
-|[Is_Active](#is_active)|`bit` |Specifies whether the list is active.|
+|[Authority](#authority)|`nvarchar(128)` |Issuing or controlling authority (agency, institution).|
+|[Code_List_Id](#code_list_id)|`uniqueidentifier` `PK`|Unique identifier of the regulatory code list.|
+|[Description](#description)|`nvarchar(254)` |Short description of the list’s purpose or scope.|
+|[Entity_Type_Name](#entity_type_name)|`nvarchar(128)` |Internal system entity type mapped to entries in this list.|
+|[Is_Active](#is_active)|`bit` |Specifies whether the list version is currently active.|
 |[Jurisdiction_Id](#jurisdiction_id)|`uniqueidentifier` |The jurisdiction to which the list belongs.|
-|[Legal_Reference](#legal_reference)|`nvarchar(254)` |Reference to law/article/ordinance number, URL, file name, etc.|
+|[Legal_Reference](#legal_reference)|`nvarchar(254)` |Reference to the legal basis (law, article, ordinance, URL, file).|
 |[List_Code](#list_code)|`nvarchar(16)` |Regulatory code of the list, unique within the jurisdiction|
-|[List_Name](#list_name)|`nvarchar(254)` `ML`|Regulatory name of the list.|
-|[Notes](#notes)|`nvarchar(max)` |Notes for the list.|
+|[List_Name](#list_name)|`nvarchar(254)` `ML`|Official regulatory name of the list (multi-language).|
+|[Notes](#notes)|`nvarchar(max)` |Additional notes or comments|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Valid_From](#valid_from)|`date` |When not null specifies the first date when the list is valid.|
 |[Valid_To](#valid_to)|`date` |When not null specifies the last date (inclusive) when the list is valid.|
@@ -30,7 +30,7 @@ Code Lists. Entity: Reg_Code_Lists (Introduced in version 26.2.0.62)
 ### Authority
 
 
-The source authority (agency), which controls the list.
+Issuing or controlling authority (agency, institution).
 
 | Property | Value |
 | - | - |
@@ -67,7 +67,7 @@ The source authority (agency), which controls the list.
 ### Code_List_Id
 
 
-Code List
+Unique identifier of the regulatory code list.
 
 | Property | Value |
 | - | - |
@@ -104,7 +104,7 @@ Code List
 ### Description
 
 
-Description of the list.
+Short description of the list’s purpose or scope.
 
 | Property | Value |
 | - | - |
@@ -141,7 +141,7 @@ Description of the list.
 ### Entity_Type_Name
 
 
-Internal entity type, whose entities map to entries in the list.
+Internal system entity type mapped to entries in this list.
 
 | Property | Value |
 | - | - |
@@ -178,7 +178,7 @@ Internal entity type, whose entities map to entries in the list.
 ### Is_Active
 
 
-Specifies whether the list is active.
+Specifies whether the list version is currently active.
 
 | Property | Value |
 | - | - |
@@ -251,7 +251,7 @@ The jurisdiction to which the list belongs.
 ### Legal_Reference
 
 
-Reference to law/article/ordinance number, URL, file name, etc.
+Reference to the legal basis (law, article, ordinance, URL, file).
 
 | Property | Value |
 | - | - |
@@ -325,7 +325,7 @@ Regulatory code of the list, unique within the jurisdiction
 ### List_Name
 
 
-Regulatory name of the list.
+Official regulatory name of the list (multi-language).
 
 | Property | Value |
 | - | - |
@@ -361,7 +361,7 @@ Regulatory name of the list.
 ### Notes
 
 
-Notes for the list.
+Additional notes or comments
 
 | Property | Value |
 | - | - |

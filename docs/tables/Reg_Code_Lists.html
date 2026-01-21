@@ -103,27 +103,27 @@
 <tr>
 <td><a href="#authority">Authority</a></td>
 <td><code>nvarchar(128)</code></td>
-<td>The source authority (agency), which controls the list.</td>
+<td>Issuing or controlling authority (agency, institution).</td>
 </tr>
 <tr>
 <td><a href="#code_list_id">Code_List_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
-<td>Code List</td>
+<td>Unique identifier of the regulatory code list.</td>
 </tr>
 <tr>
 <td><a href="#description">Description</a></td>
 <td><code>nvarchar(254)</code></td>
-<td>Description of the list.</td>
+<td>Short description of the list’s purpose or scope.</td>
 </tr>
 <tr>
 <td><a href="#entity_type_name">Entity_Type_Name</a></td>
 <td><code>nvarchar(128)</code></td>
-<td>Internal entity type, whose entities map to entries in the list.</td>
+<td>Internal system entity type mapped to entries in this list.</td>
 </tr>
 <tr>
 <td><a href="#is_active">Is_Active</a></td>
 <td><code>bit</code></td>
-<td>Specifies whether the list is active.</td>
+<td>Specifies whether the list version is currently active.</td>
 </tr>
 <tr>
 <td><a href="#jurisdiction_id">Jurisdiction_Id</a></td>
@@ -133,7 +133,7 @@
 <tr>
 <td><a href="#legal_reference">Legal_Reference</a></td>
 <td><code>nvarchar(254)</code></td>
-<td>Reference to law/article/ordinance number, URL, file name, etc.</td>
+<td>Reference to the legal basis (law, article, ordinance, URL, file).</td>
 </tr>
 <tr>
 <td><a href="#list_code">List_Code</a></td>
@@ -143,12 +143,12 @@
 <tr>
 <td><a href="#list_name">List_Name</a></td>
 <td><code>nvarchar(254)</code> <code>ML</code></td>
-<td>Regulatory name of the list.</td>
+<td>Official regulatory name of the list (multi-language).</td>
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
 <td><code>nvarchar(max)</code></td>
-<td>Notes for the list.</td>
+<td>Additional notes or comments</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -169,7 +169,7 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="authority">Authority</h3>
-<p>The source authority (agency), which controls the list.</p>
+<p>Issuing or controlling authority (agency, institution).</p>
 <table>
 <thead>
 <tr>
@@ -294,7 +294,7 @@
 </tbody>
 </table>
 <h3 id="code_list_id">Code_List_Id</h3>
-<p>Code List</p>
+<p>Unique identifier of the regulatory code list.</p>
 <table>
 <thead>
 <tr>
@@ -419,7 +419,7 @@
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Description of the list.</p>
+<p>Short description of the list’s purpose or scope.</p>
 <table>
 <thead>
 <tr>
@@ -544,7 +544,7 @@
 </tbody>
 </table>
 <h3 id="entity_type_name">Entity_Type_Name</h3>
-<p>Internal entity type, whose entities map to entries in the list.</p>
+<p>Internal system entity type mapped to entries in this list.</p>
 <table>
 <thead>
 <tr>
@@ -669,7 +669,7 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
-<p>Specifies whether the list is active.</p>
+<p>Specifies whether the list version is currently active.</p>
 <table>
 <thead>
 <tr>
@@ -911,7 +911,7 @@
 </tbody>
 </table>
 <h3 id="legal_reference">Legal_Reference</h3>
-<p>Reference to law/article/ordinance number, URL, file name, etc.</p>
+<p>Reference to the legal basis (law, article, ordinance, URL, file).</p>
 <table>
 <thead>
 <tr>
@@ -1161,7 +1161,7 @@
 </tbody>
 </table>
 <h3 id="list_name">List_Name</h3>
-<p>Regulatory name of the list.</p>
+<p>Official regulatory name of the list (multi-language).</p>
 <table>
 <thead>
 <tr>
@@ -1280,7 +1280,7 @@
 </tbody>
 </table>
 <h3 id="notes">Notes</h3>
-<p>Notes for the list.</p>
+<p>Additional notes or comments</p>
 <table>
 <thead>
 <tr>

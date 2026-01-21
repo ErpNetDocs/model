@@ -19102,6 +19102,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Regulatory.Saft.ProfileAccountByProducts.md",
       "output": {
         ".html": {
@@ -27275,6 +27285,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Profile_Account_By_Additional_Amounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Profile_Account_By_Additional_Amounts.html"
         }
       },
       "version": ""

@@ -1148,6 +1148,8 @@
 - name: Saft
   href: Saft.md
   items:
+  - name: Saft_Profile_Account_By_Additional_Amounts
+    href: Saft_Profile_Account_By_Additional_Amounts.md
   - name: Saft_Profile_Account_By_Products
     href: Saft_Profile_Account_By_Products.md
   - name: Saft_Profile_Accounts

@@ -27,6 +27,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Regulatory.Saft.Profiles](Regulatory.Saft.Profiles.md)  
+  * [Regulatory.Saft.ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md)  
   * [Regulatory.Saft.ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
   * [Regulatory.Saft.ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
   * [Regulatory.Saft.ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
@@ -55,6 +56,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| AccountByAdditionalAmounts | [ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md) | List of `ProfileAccount<br />ByAdditionalAmount`(Regulatory.Saft.ProfileAccount<br />ByAdditionalAmounts.md) child objects, based on the `Regulatory.Saft.ProfileAccount<br />ByAdditionalAmount.Profile`(Regulatory.Saft.ProfileAccount<br />ByAdditionalAmounts.md#profile) back reference 
 | AccountByProducts | [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md) | List of `ProfileAccountByProduct`(Regulatory.Saft.ProfileAccountByProducts.md) child objects, based on the `Regulatory.Saft.ProfileAccountByProduct.Profile`(Regulatory.Saft.ProfileAccountByProducts.md#profile) back reference 
 | Accounts | [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md) | List of `ProfileAccount`(Regulatory.Saft.ProfileAccounts.md) child objects, based on the `Regulatory.Saft.ProfileAccount.Profile`(Regulatory.Saft.ProfileAccounts.md#profile) back reference 
 | Companies | [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md) | List of `ProfileCompany`(Regulatory.Saft.ProfileCompanies.md) child objects, based on the `Regulatory.Saft.ProfileCompany.Profile`(Regulatory.Saft.ProfileCompanies.md#profile) back reference 

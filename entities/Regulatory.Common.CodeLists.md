@@ -36,18 +36,18 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AggregateLastUpdateTimeUtc](Regulatory.Common.CodeLists.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [Authority](Regulatory.Common.CodeLists.md#authority) | string (128) __nullable__ | The source authority (agency), which controls the list. `Filter(eq;like)` 
-| [Description](Regulatory.Common.CodeLists.md#description) | string (254) __nullable__ | Description of the list. `Filter(eq;like)` 
+| [Authority](Regulatory.Common.CodeLists.md#authority) | string (128) __nullable__ | Issuing or controlling authority (agency, institution). `Filter(eq;like)` 
+| [Description](Regulatory.Common.CodeLists.md#description) | string (254) __nullable__ | Short description of the list’s purpose or scope. `Filter(eq;like)` 
 | [DisplayText](Regulatory.Common.CodeLists.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [EntityTypeName](Regulatory.Common.CodeLists.md#entitytypename) | string (128) __nullable__ | Internal entity type, whose entities map to entries in the list. `Filter(eq;like)` 
+| [EntityTypeName](Regulatory.Common.CodeLists.md#entitytypename) | string (128) __nullable__ | Internal system entity type mapped to entries in this list. `Filter(eq;like)` 
 | [ExternalId](Regulatory.Common.CodeLists.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Regulatory.Common.CodeLists.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Regulatory.Common.CodeLists.md#id) | guid |  
-| [IsActive](Regulatory.Common.CodeLists.md#isactive) | boolean | Specifies whether the list is active. `Required` `Default(true)` `Filter(eq)` 
-| [LegalReference](Regulatory.Common.CodeLists.md#legalreference) | string (254) __nullable__ | Reference to law/article/ordinance number, URL, file name, etc. `Filter(eq;like)` 
+| [IsActive](Regulatory.Common.CodeLists.md#isactive) | boolean | Specifies whether the list version is currently active. `Required` `Default(true)` `Filter(eq)` 
+| [LegalReference](Regulatory.Common.CodeLists.md#legalreference) | string (254) __nullable__ | Reference to the legal basis (law, article, ordinance, URL, file). `Filter(eq;like)` 
 | [ListCode](Regulatory.Common.CodeLists.md#listcode) | string (16) | Regulatory code of the list, unique within the jurisdiction. `Required` `Filter(eq;like)` 
-| [ListName](Regulatory.Common.CodeLists.md#listname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Regulatory name of the list. `Required` `Filter(like)` 
-| [Notes](Regulatory.Common.CodeLists.md#notes) | string (max) __nullable__ | Notes for the list. 
+| [ListName](Regulatory.Common.CodeLists.md#listname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Official regulatory name of the list (multi-language). `Required` `Filter(like)` 
+| [Notes](Regulatory.Common.CodeLists.md#notes) | string (max) __nullable__ | Additional notes or comments. 
 | [ObjectVersion](Regulatory.Common.CodeLists.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ValidFrom](Regulatory.Common.CodeLists.md#validfrom) | date __nullable__ | When not null specifies the first date when the list is valid. `Filter(eq;ge;le)` 
 | [ValidTo](Regulatory.Common.CodeLists.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the list is valid. `Filter(eq;ge;le)` 
@@ -79,7 +79,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### Authority
 
-The source authority (agency), which controls the list. `Filter(eq;like)`
+Issuing or controlling authority (agency, institution). `Filter(eq;like)`
 
 _Type_: **string (128) __nullable__**  
 _Category_: **System**  
@@ -90,7 +90,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Description
 
-Description of the list. `Filter(eq;like)`
+Short description of the list’s purpose or scope. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
 _Category_: **System**  
@@ -111,7 +111,7 @@ _Show in UI_: **HiddenByDefault**
 
 ### EntityTypeName
 
-Internal entity type, whose entities map to entries in the list. `Filter(eq;like)`
+Internal system entity type mapped to entries in this list. `Filter(eq;like)`
 
 _Type_: **string (128) __nullable__**  
 _Category_: **System**  
@@ -151,7 +151,7 @@ _Show in UI_: **CannotBeShown**
 
 ### IsActive
 
-Specifies whether the list is active. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the list version is currently active. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Category_: **System**  
@@ -162,7 +162,7 @@ _Show in UI_: **ShownByDefault**
 
 ### LegalReference
 
-Reference to law/article/ordinance number, URL, file name, etc. `Filter(eq;like)`
+Reference to the legal basis (law, article, ordinance, URL, file). `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
 _Category_: **System**  
@@ -184,7 +184,7 @@ _Show in UI_: **ShownByDefault**
 
 ### ListName
 
-Regulatory name of the list. `Required` `Filter(like)`
+Official regulatory name of the list (multi-language). `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
@@ -194,7 +194,7 @@ _Show in UI_: **ShownByDefault**
 
 ### Notes
 
-Notes for the list.
+Additional notes or comments.
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  

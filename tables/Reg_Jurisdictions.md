@@ -15,7 +15,7 @@ Represents a single coherent legal authority that governs a geographic or politi
 |[Country_Code](#country_code)|`nvarchar(10)` |ISO country code (if applicable).|
 |[Currency_Sign](#currency_sign)|`nvarchar(10)` |Primary currency sign (if applicable).|
 |[Is_Active](#is_active)|`bit` |Specifies whether the jurisdiction is active.|
-|[Jurisdiction_Id](#jurisdiction_id)|`uniqueidentifier` `PK`||
+|[Jurisdiction_Id](#jurisdiction_id)|`uniqueidentifier` `PK`|Unique identifier of the jurisdiction record.|
 |[Name](#name)|`nvarchar(254)` `ML`|Name of the jurisdiction.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the jurisdiction.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -172,6 +172,9 @@ Specifies whether the jurisdiction is active.
 |Equals|`NULL`|no|no|
 
 ### Jurisdiction_Id
+
+
+Unique identifier of the jurisdiction record.
 
 | Property | Value |
 | - | - |
