@@ -111,7 +111,7 @@ Debit/credit indicator for SAF-T invoice lines.
 |Allowed Values|`D`, `C`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|D|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -185,7 +185,7 @@ Specifies whether the product type to SAF-T account mapping applies to sales inv
 |Allowed Values|`S`, `P`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|S|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
