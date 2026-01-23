@@ -28,6 +28,7 @@ Companies, for which the SAF-T profile is applied. Entity: Saft_Profile_Companie
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Profile_Company_Id](#saft_profile_company_id)|`uniqueidentifier` `PK`|Unique record identifier|
 |[Tax_Accounting_Basis](#tax_accounting_basis)|`char(3)` Allowed: `COM`, `BNK`, `INS`, `PUB`|Accounting basis: accrual, cash, or mixed.|
+|[Ultimate_Owner_Company_Id](#ultimate_owner_company_id)|`uniqueidentifier` |Legal entity that is the ultimate owner (if applicable).|
 
 ## Columns
 
@@ -500,5 +501,42 @@ Accounting basis: accrual, cash, or mixed.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Ultimate_Owner_Company_Id
+
+
+Legal entity that is the ultimate owner (if applicable).
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|13|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cm_Companies](Cm_Companies.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Ultimate_Owner_Company_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 

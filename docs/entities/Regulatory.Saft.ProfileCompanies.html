@@ -200,6 +200,11 @@ Aggregate Root:<br>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
 <td>The SAF-T profile this company belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
+<tr>
+<td><a href="Regulatory.Saft.ProfileCompanies.html#ultimateownercompany">UltimateOwnerCompany</a></td>
+<td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
+<td>Legal entity that is the ultimate owner (if applicable). <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.19</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -265,23 +270,23 @@ Allowed values for the <code>IsPartOfGroup</code>(Regulatory.Saft.ProfileCompani
 <tbody>
 <tr>
 <td>HeadOfLocalGroup</td>
-<td>HeadOfLocalGroup value. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'HeadOfLocalGroup'</td>
+<td>Head of local group. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'HeadOfLocalGroup'</td>
 </tr>
 <tr>
 <td>HeadOfMultinationalGroup</td>
-<td>HeadOfMultinationalGroup value. Stored as 2. <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'HeadOfMultinationalGroup'</td>
+<td>Head of multinational group. Stored as 2. <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'HeadOfMultinationalGroup'</td>
 </tr>
 <tr>
 <td>PartOfLocalGroup</td>
-<td>PartOfLocalGroup value. Stored as 3. <br> <em>Database Value:</em> 3 <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'PartOfLocalGroup'</td>
+<td>Part of local group. Stored as 3. <br> <em>Database Value:</em> 3 <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'PartOfLocalGroup'</td>
 </tr>
 <tr>
 <td>PartOfMultinationalGroup</td>
-<td>PartOfMultinationalGroup value. Stored as 4. <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'PartOfMultinationalGroup'</td>
+<td>Part of multinational group. Stored as 4. <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'PartOfMultinationalGroup'</td>
 </tr>
 <tr>
 <td>NotPartOfAGroup</td>
-<td>NotPartOfAGroup value. Stored as 5. <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'NotPartOfAGroup'</td>
+<td>Not part of a group. Stored as 5. <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'NotPartOfAGroup'</td>
 </tr>
 </tbody>
 </table>
@@ -320,19 +325,19 @@ Allowed values for the <code>TaxAccountingBasis</code>(Regulatory.Saft.ProfileCo
 <tbody>
 <tr>
 <td>CommercialEntity</td>
-<td>CommercialEntity value. Stored as 'COM'. <br> <em>Database Value:</em> 'COM' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'CommercialEntity'</td>
+<td>Commercial entity. Stored as 'COM'. <br> <em>Database Value:</em> 'COM' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'CommercialEntity'</td>
 </tr>
 <tr>
 <td>CreditInstitution<br>OrNonBankFinancial<br>Institution</td>
-<td>CreditInstitution<br>OrNonBankFinancial<br>Institution value. Stored as 'BNK'. <br> <em>Database Value:</em> 'BNK' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CreditInstitution<br>OrNonBankFinancial<br>Institution'</td>
+<td>Credit institution or non-bank financial institution. Stored as 'BNK'. <br> <em>Database Value:</em> 'BNK' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CreditInstitution<br>OrNonBankFinancial<br>Institution'</td>
 </tr>
 <tr>
 <td>InsuranceCompany</td>
-<td>InsuranceCompany value. Stored as 'INS'. <br> <em>Database Value:</em> 'INS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'InsuranceCompany'</td>
+<td>Insurance company. Stored as 'INS'. <br> <em>Database Value:</em> 'INS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'InsuranceCompany'</td>
 </tr>
 <tr>
 <td>PublicSectorEntity</td>
-<td>PublicSectorEntity value. Stored as 'PUB'. <br> <em>Database Value:</em> 'PUB' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'PublicSectorEntity'</td>
+<td>Public sector entity. Stored as 'PUB'. <br> <em>Database Value:</em> 'PUB' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'PublicSectorEntity'</td>
 </tr>
 </tbody>
 </table>
@@ -367,6 +372,12 @@ Allowed values for the <code>TaxAccountingBasis</code>(Regulatory.Saft.ProfileCo
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<h3 id="ultimateownercompany">UltimateOwnerCompany</h3>
+<p>Legal entity that is the ultimate owner (if applicable). <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.19</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Companies.html">Companies</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

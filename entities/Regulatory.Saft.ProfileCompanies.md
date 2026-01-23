@@ -53,6 +53,7 @@ Aggregate Root:
 | [BeneficialOwnerPerson](Regulatory.Saft.ProfileCompanies.md#beneficialownerperson) | [Persons](General.Contacts.Persons.md) (nullable) | Natural person who is the beneficial owner (if applicable). `Filter(multi eq)` |
 | [EnterpriseCompany](Regulatory.Saft.ProfileCompanies.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Legal entity whose data will be exported to SAF-T. `Required` `Filter(multi eq)` |
 | [Profile](Regulatory.Saft.ProfileCompanies.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this company belongs to. `Required` `Filter(multi eq)` `Owner` |
+| [UltimateOwnerCompany](Regulatory.Saft.ProfileCompanies.md#ultimateownercompany) | [Companies](General.Contacts.Companies.md) (nullable) | Legal entity that is the ultimate owner (if applicable). `Filter(multi eq)` `Introduced in version 26.2.1.19` |
 
 
 ## Attribute Details
@@ -131,11 +132,11 @@ _Allowed Values (Regulatory.Saft.ProfileCompaniesRepository.IsPartOfGroup Enum M
 
 | Value | Description |
 | ---- | --- |
-| HeadOfLocalGroup | HeadOfLocalGroup value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'HeadOfLocalGroup' |
-| HeadOfMultinationalGroup | HeadOfMultinationalGroup value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'HeadOfMultinationalGroup' |
-| PartOfLocalGroup | PartOfLocalGroup value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PartOfLocalGroup' |
-| PartOfMultinationalGroup | PartOfMultinationalGroup value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'PartOfMultinationalGroup' |
-| NotPartOfAGroup | NotPartOfAGroup value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'NotPartOfAGroup' |
+| HeadOfLocalGroup | Head of local group. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'HeadOfLocalGroup' |
+| HeadOfMultinationalGroup | Head of multinational group. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'HeadOfMultinationalGroup' |
+| PartOfLocalGroup | Part of local group. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PartOfLocalGroup' |
+| PartOfMultinationalGroup | Part of multinational group. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'PartOfMultinationalGroup' |
+| NotPartOfAGroup | Not part of a group. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'NotPartOfAGroup' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
@@ -174,10 +175,10 @@ _Allowed Values (Regulatory.Saft.ProfileCompaniesRepository.TaxAccountingBasis E
 
 | Value | Description |
 | ---- | --- |
-| CommercialEntity | CommercialEntity value. Stored as 'COM'. <br /> _Database Value:_ 'COM' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'CommercialEntity' |
-| CreditInstitution<br />OrNonBankFinancial<br />Institution | CreditInstitution<br />OrNonBankFinancial<br />Institution value. Stored as 'BNK'. <br /> _Database Value:_ 'BNK' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CreditInstitution<br />OrNonBankFinancial<br />Institution' |
-| InsuranceCompany | InsuranceCompany value. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'InsuranceCompany' |
-| PublicSectorEntity | PublicSectorEntity value. Stored as 'PUB'. <br /> _Database Value:_ 'PUB' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PublicSectorEntity' |
+| CommercialEntity | Commercial entity. Stored as 'COM'. <br /> _Database Value:_ 'COM' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'CommercialEntity' |
+| CreditInstitution<br />OrNonBankFinancial<br />Institution | Credit institution or non-bank financial institution. Stored as 'BNK'. <br /> _Database Value:_ 'BNK' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CreditInstitution<br />OrNonBankFinancial<br />Institution' |
+| InsuranceCompany | Insurance company. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'InsuranceCompany' |
+| PublicSectorEntity | Public sector entity. Stored as 'PUB'. <br /> _Database Value:_ 'PUB' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PublicSectorEntity' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
@@ -224,6 +225,15 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
+_Show in UI_: **ShownByDefault**  
+
+### UltimateOwnerCompany
+
+Legal entity that is the ultimate owner (if applicable). `Filter(multi eq)` `Introduced in version 26.2.1.19`
+
+_Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Show in UI_: **ShownByDefault**  
 
 
