@@ -2065,6 +2065,12 @@ references:
 - uid: Regulatory.Vat.Entries
   name: Regulatory.Vat.Entries Entity
   href: entities/Regulatory.Vat.Entries.html
+- uid: Saft
+  name: Saft Namespace
+  href: entities/Saft.html
+- uid: Saft.AccountBalances
+  name: Saft.AccountBalances View
+  href: entities/Saft.AccountBalances.html
 - uid: Systems
   name: Systems Namespace
   href: entities/Systems.html

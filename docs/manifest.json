@@ -19322,6 +19322,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Saft.AccountBalances.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Saft.AccountBalances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Saft.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Saft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Bpm.CalculatedAttributeExpressions.md",
       "output": {
         ".html": {
@@ -27285,6 +27305,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Account_Balances.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Account_Balances.html"
         }
       },
       "version": ""

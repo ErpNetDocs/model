@@ -1223,6 +1223,11 @@
       href: Regulatory.Vat.Declarations.md
     - name: Entries
       href: Regulatory.Vat.Entries.md
+- name: Saft
+  href: Saft.md
+  items:
+  - name: AccountBalances
+    href: Saft.AccountBalances.md
 - name: Systems
   href: Systems.md
   items:
