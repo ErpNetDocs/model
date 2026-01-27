@@ -9,11 +9,11 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 
 ## Default Visualization
 Default Display Text Format:  
-_{PosOperatorCode}_  
+_{PinCode}_  
 Default Search Members:  
-_PosOperatorCode_  
+_PinCode_  
 Code Data Member:  
-_PosOperatorCode_  
+_PinCode_  
 Category:  _Definitions_  
 Show in UI:  _ShownByDefault_  
 API access:  _ReadWrite_  
@@ -39,6 +39,7 @@ Aggregate Tree
 | [Id](Crm.Pos.Operators.md#id) | guid |  
 | [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. `Required` `Default(true)` `Filter(multi eq)` 
 | [ObjectVersion](Crm.Pos.Operators.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [PinCode](Crm.Pos.Operators.md#pincode) | string (4) | 4-character PIN used to authenticate the POS operator. `Required` `Default("0000")` `Introduced in version 26.2.1.26` 
 | [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string (16) | Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD` 
 | [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location. `Required` `Filter(multi eq;ge;le)` 
 | [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date __nullable__ | The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. `Filter(multi eq;ge;le)` 
@@ -124,6 +125,18 @@ _Category_: **Extensible Data Object**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### PinCode
+
+4-character PIN used to authenticate the POS operator. `Required` `Default("0000")` `Introduced in version 26.2.1.26`
+
+_Type_: **string (4)**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **4**  
+_Default Value_: **0000**  
+_Show in UI_: **ShownByDefault**  
 
 ### PosOperatorCode
 

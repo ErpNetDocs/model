@@ -37,14 +37,14 @@ Aggregate Tree
 | [AggregateLastUpdateTimeUtc](Crm.Pos.Sales.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed). `Filter(eq;ge;le)` 
 | [DisplayText](Crm.Pos.Sales.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (16) | Receipt document number. `Required` `Filter(eq;like)` 
+| [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number. `Required` `Filter(eq;like)` 
 | [ExternalId](Crm.Pos.Sales.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Crm.Pos.Sales.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [Id](Crm.Pos.Sales.md#id) | guid |  
 | [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided. `Required` `Default(false)` `Filter(eq)` 
 | [ObjectVersion](Crm.Pos.Sales.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. `Required` `Default(Now)` `Filter(eq;ge;le)` 
-| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (16) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)` 
+| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)` 
 | [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)` 
 | [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)` 
@@ -112,11 +112,11 @@ _Show in UI_: **HiddenByDefault**
 
 Receipt document number. `Required` `Filter(eq;like)`
 
-_Type_: **string (16)**  
+_Type_: **string (25)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
-_Maximum Length_: **16**  
+_Maximum Length_: **25**  
 _Show in UI_: **ShownByDefault**  
 
 ### ExternalId
@@ -184,11 +184,11 @@ _Show in UI_: **ShownByDefault**
 
 Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)`
 
-_Type_: **string (16) __nullable__**  
+_Type_: **string (25) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
-_Maximum Length_: **16**  
+_Maximum Length_: **25**  
 _Show in UI_: **ShownByDefault**  
 
 ### SaleDate

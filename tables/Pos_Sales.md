@@ -14,14 +14,14 @@ Stores header-level information for individual retail transactions processed thr
 |[Closed_At](#closed_at)|`datetime` |When the sale was finalized (paid, voided, or completed).|
 |[Closed_By_Id](#closed_by_id)|`uniqueidentifier` |The operator who finalized or closed the sale (may differ from opener).|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Set for known customers (e.g. loyalty program), otherwise null.|
-|[Document_Number](#document_number)|`nvarchar(16)` |Receipt document number.|
+|[Document_Number](#document_number)|`nvarchar(25)` |Receipt document number.|
 |[Is_Voided](#is_voided)|`bit` |Marked true if sale is canceled/voided.|
 |[Location_Id](#location_id)|`uniqueidentifier` |Link to location where the sale occurred.|
 |[Opened_At](#opened_at)|`datetime` |Time of the opening of the POS sale.|
 |[Opened_By_Id](#opened_by_id)|`uniqueidentifier` |The operator who created the sale.|
 |[Operator_Id](#operator_id)|`uniqueidentifier` |Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.|
 |[Original_Sale_Id](#original_sale_id)|`uniqueidentifier` |Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).|
-|[Original_Sale_Number](#original_sale_number)|`nvarchar(16)` |Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.|
+|[Original_Sale_Number](#original_sale_number)|`nvarchar(25)` |Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.|
 |[Payment_Type_Id](#payment_type_id)|`uniqueidentifier` |Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.|
 |[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -162,7 +162,7 @@ Receipt document number.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|16|
+|Max Length|25|
 |Order|22|
 |Ownership Reference|no|
 |Pasword|no|
@@ -173,7 +173,7 @@ Receipt document number.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(16)|
+|Type|nvarchar(25)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -420,7 +420,7 @@ Original sale document number. Might be specified when this sale refunds/returns
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|16|
+|Max Length|25|
 |Order|19|
 |Ownership Reference|no|
 |Pasword|no|
@@ -431,7 +431,7 @@ Original sale document number. Might be specified when this sale refunds/returns
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(16) (Allows NULL)|
+|Type|nvarchar(25) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

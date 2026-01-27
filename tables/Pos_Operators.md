@@ -13,6 +13,7 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 | - | - | --- |
 |[Default_Pos_Terminal_Id](#default_pos_terminal_id)|`uniqueidentifier` |The default POS terminal for this opertor. NULL when there is no default.|
 |[Is_Active](#is_active)|`bit` |Indicates whether this operator is active and can be chosen for new records.|
+|[Pin_Code](#pin_code)|`nvarchar(4)` |4-character PIN used to authenticate the POS operator.|
 |[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |The POS location where this operator works.|
 |[Pos_Operator_Code](#pos_operator_code)|`nvarchar(16)` |Operator code. Unique within the Pos Location.|
 |[Pos_Operator_Id](#pos_operator_id)|`uniqueidentifier` `PK`||
@@ -96,6 +97,36 @@ Indicates whether this operator is active and can be chosen for new records.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Pin_Code
+
+
+4-character PIN used to authenticate the POS operator.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|0000|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|4|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(4)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Pos_Location_Id
 

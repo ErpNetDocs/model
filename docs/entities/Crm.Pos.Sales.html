@@ -140,7 +140,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#documentnumber">DocumentNumber</a></td>
-<td>string (16)</td>
+<td>string (25)</td>
 <td>Receipt document number. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -175,7 +175,7 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#originalsalenumber">OriginalSaleNumber</a></td>
-<td>string (16) <strong>nullable</strong></td>
+<td>string (25) <strong>nullable</strong></td>
 <td>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -323,11 +323,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="documentnumber">DocumentNumber</h3>
 <p>Receipt document number. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (16)</strong><br>
+<p><em>Type</em>: <strong>string (25)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>16</strong><br>
+<em>Maximum Length</em>: <strong>25</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="externalid">ExternalId</h3>
 <p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
@@ -375,11 +375,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="originalsalenumber">OriginalSaleNumber</h3>
 <p>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong>string (25) <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>16</strong><br>
+<em>Maximum Length</em>: <strong>25</strong><br>
 <em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="saledate">SaleDate</h3>
 <p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>

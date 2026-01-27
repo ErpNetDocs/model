@@ -44,7 +44,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) | The POS device, for which the sequence is defined. `Required` `Filter(multi eq)` |
+| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | The POS device, for which the sequence is defined. `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -146,9 +146,9 @@ _Show in UI_: **HiddenByDefault**
 
 ### PosDevice
 
-The POS device, for which the sequence is defined. `Required` `Filter(multi eq)`
+The POS device, for which the sequence is defined. `Filter(multi eq)`
 
-_Type_: **[Devices](Crm.Pos.Devices.md)**  
+_Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  

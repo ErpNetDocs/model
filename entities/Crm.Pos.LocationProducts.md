@@ -35,6 +35,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DisplayText](Crm.Pos.LocationProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [GrossPrice](Crm.Pos.LocationProducts.md#grossprice) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency. `Currency: Product.ProductCurrency` `Introduced in version 26.2.1.26` 
 | [Id](Crm.Pos.LocationProducts.md#id) | guid |  
 | [MaxQuantity](Crm.Pos.LocationProducts.md#maxquantity) | decimal (10, 3) __nullable__ | Maximum target on-hand quantity for this product in this POS location. Used to calculate replenishment need (MaxQuantity - CurrentOnHand). 
 | [MinQuantity](Crm.Pos.LocationProducts.md#minquantity) | decimal (10, 3) __nullable__ | Minimum desired on-hand quantity for this product in this POS location. Used for basic replenishment and stock alerts. 
@@ -63,6 +64,16 @@ _Category_: **Calculated Attributes**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 _Show in UI_: **HiddenByDefault**  
+
+### GrossPrice
+
+Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency. `Currency: Product.ProductCurrency` `Introduced in version 26.2.1.26`
+
+_Type_: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Show in UI_: **ShownByDefault**  
 
 ### Id
 

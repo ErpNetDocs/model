@@ -91,11 +91,11 @@
 <p>Represents one operator (person) in one POS location. Entity: Pos_Operators (Introduced in version 19.1)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{PosOperatorCode}</em><br>
+<em>{PinCode}</em><br>
 Default Search Members:<br>
-<em>PosOperatorCode</em><br>
+<em>PinCode</em><br>
 Code Data Member:<br>
-<em>PosOperatorCode</em><br>
+<em>PinCode</em><br>
 Category:  <em>Definitions</em><br>
 Show in UI:  <em>ShownByDefault</em><br>
 API access:  <em>ReadWrite</em></p>
@@ -152,6 +152,11 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Crm.Pos.Operators.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.Operators.html#pincode">PinCode</a></td>
+<td>string (4)</td>
+<td>4-character PIN used to authenticate the POS operator. <code>Required</code> <code>Default(&quot;0000&quot;)</code> <code>Introduced in version 26.2.1.26</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posoperatorcode">PosOperatorCode</a></td>
@@ -253,6 +258,15 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****<br>
 <em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<h3 id="pincode">PinCode</h3>
+<p>4-character PIN used to authenticate the POS operator. <code>Required</code> <code>Default(&quot;0000&quot;)</code> <code>Introduced in version 26.2.1.26</code></p>
+<p><em>Type</em>: <strong>string (4)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>4</strong><br>
+<em>Default Value</em>: <strong>0000</strong><br>
+<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
 <h3 id="posoperatorcode">PosOperatorCode</h3>
 <p>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
