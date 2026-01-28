@@ -1,29 +1,31 @@
 ---
 uid: Systems.Monitoring.WebSites
 ---
-# Systems.Monitoring.WebSites View
+# Systems.Monitoring.WebSites (View)
 
-**Namespace:** [Systems.Monitoring](Systems.Monitoring.md)  
 
-Web sites dynamic management view. Entity: Dmv_Web_Sites (Introduced in version 23.1.1.43)
+Web sites dynamic management view.
+
+## General
+Namespace: [Systems.Monitoring](Systems.Monitoring.md)  
+Repository: Systems.Monitoring.WebSites  
+Introduced In Version: 23.1.1.43  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Systems.Dmv.WebSites**  
-New name: **Systems.Monitoring.WebSites**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: Systems.Dmv.WebSites  
+New name: Systems.Monitoring.WebSites  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{RootUrl}: {Type}_  
-Default Search Members:  
-__  
-Category:  _DynamicViews_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {RootUrl}: {Type}  
+Search Members:   
+Category:  DynamicViews  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -47,44 +49,44 @@ Aggregate Tree
 
 Indicates whether this website is a system website. `Required` `Introduced in version 24.1.0.3`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### RootUrl
 
 The root URL of the web site. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (256)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **256**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (256)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **256**  
+Show in UI: **ShownByDefault**  
 
 ### Status
 
 The current status of the web site. `Required` `Filter(like)` `ORD`
 
-_Type_: **string (10)**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **10**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (10)**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **True**  
+Maximum Length: **10**  
+Show in UI: **ShownByDefault**  
 
 ### Type
 
 The site type. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -94,23 +96,23 @@ Methods that can be invoked in public APIs.
 ### Start
 
 Start web site  
-_Return Type_: **void**  
-_Declaring Type_: **[WebSites](Systems.Monitoring.WebSites.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[WebSites](Systems.Monitoring.WebSites.md)**  
+Domain API Request: **POST**  
 
 ### Stop
 
 Stop web site  
-_Return Type_: **void**  
-_Declaring Type_: **[WebSites](Systems.Monitoring.WebSites.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[WebSites](Systems.Monitoring.WebSites.md)**  
+Domain API Request: **POST**  
 
 ### Restart
 
 Restart web site  
-_Return Type_: **void**  
-_Declaring Type_: **[WebSites](Systems.Monitoring.WebSites.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[WebSites](Systems.Monitoring.WebSites.md)**  
+Domain API Request: **POST**  
 
 ## API
 

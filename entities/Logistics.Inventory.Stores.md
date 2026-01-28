@@ -1,30 +1,30 @@
 ---
 uid: Logistics.Inventory.Stores
 ---
-# Logistics.Inventory.Stores Entity
+# Logistics.Inventory.Stores
 
-**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
-**Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
 
-Represents the physical warehouses. Entity: Inv_Stores
+Represents the physical warehouses.
 
-## Default Visualization
-Default Display Text Format:  
-_{PartyName:T}_  
-Default Search Members:  
-_Code; PartyName_  
-Code Data Member:  
-_Code_  
-Name Data Member:  
-_PartyName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
-Layout category attribute:  _PartyType_  
+## General
+Namespace: [Logistics.Inventory](Logistics.Inventory.md)  
+Repository: Logistics.Inventory.Stores  
+Inherited From: [General.Contacts.Parties](General.Contacts.Parties.md)  
+Base Table: Inv_Stores  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {PartyName:T}  
+Search Members: Code; PartyName  
+Code Member: Code  
+Name Member: PartyName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
+Layout category By:  PartyType  
 
 ## Track Changes  
-Min level:  _4 - Track object attribute and blob changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  4 - Track object attribute and blob changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -45,20 +45,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` `Obsoleted in version 22.1.6.61` 
-| [AggregateLastUpdateTimeUtc](Logistics.Inventory.Stores.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [Code](Logistics.Inventory.Stores.md#code) | string (16) | The unique code of the Store. `Required` `Filter(eq;like)` `ORD` 
 | [CreationTime](Logistics.Inventory.Stores.md#creationtime) | datetime __nullable__ | Date and time when the Store was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Store. `Filter(like)` `ReadOnly` 
 | [DefaultSupplyStoreId](Logistics.Inventory.Stores.md#defaultsupplystoreid) | guid __nullable__ | The store from which goods are usually supplied to this store. `Filter(multi eq)` 
-| [DisplayText](Logistics.Inventory.Stores.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](Logistics.Inventory.Stores.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Logistics.Inventory.Stores.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [GLN](Logistics.Inventory.Stores.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [Id](Logistics.Inventory.Stores.md#id) | guid |  
 | [IsActive](Logistics.Inventory.Stores.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Name](Logistics.Inventory.Stores.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the store. `Required` `Filter(like)` 
 | [NumberOfDimensions](Logistics.Inventory.Stores.md#numberofdimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. `Required` `Default(0)` `Filter(eq)` 
-| [ObjectVersion](Logistics.Inventory.Stores.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PartyCode](Logistics.Inventory.Stores.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](Logistics.Inventory.Stores.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](Logistics.Inventory.Stores.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -92,6 +86,18 @@ Aggregate Tree
 | [TaxWarehouse](Logistics.Inventory.Stores.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable) | Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93` |
 | [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. `Filter(multi eq)` `Introduced in version 20.1` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Logistics.Inventory.Stores.md#id) | guid |  
+| [ObjectVersion](Logistics.Inventory.Stores.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Logistics.Inventory.Stores.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Logistics.Inventory.Stores.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Logistics.Inventory.Stores.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Logistics.Inventory.Stores.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -112,314 +118,314 @@ Aggregate Tree
 
 **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` `Obsoleted in version 22.1.6.61`
 
-_Type_: **boolean __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **CannotBeShown**  
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **CannotBeShown**  
 
 ### Code
 
 The unique code of the Store. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (16)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.IncMax( o => o.Code, null, "00000")`
 
 ### CreationTime
 
 Date and time when the Store was created. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationUser
 
 Login name of the user, who created the Store. `Filter(like)` `ReadOnly`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### DefaultSupplyStoreId
 
 The store from which goods are usually supplied to this store. `Filter(multi eq)`
 
-_Type_: **guid __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **guid __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 ### GLN
 
 Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (13) __nullable__**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **True**  
-_Maximum Length_: **13**  
-_Show in UI_: **ShownByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **string (13) __nullable__**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **True**  
+Maximum Length: **13**  
+Show in UI: **ShownByDefault**  
 
 ### IsActive
 
 Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Name
 
 Name of the store. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### NumberOfDimensions
 
 Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **ShownByDefault**  
 
 ### PartyCode
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (16)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.IncMax( o => o.PartyCode, null, "00000")`
 
 ### PartyCreationTime
 
 Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### PartyCreationUser
 
 Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### PartyName
 
 The name of the party. `Required` `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### PartyNotes
 
 Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### PartyType
 
 Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[PartyType](Logistics.Inventory.Stores.md#partytype)**  
-_Category_: **System**  
+Type: **[PartyType](Logistics.Inventory.Stores.md#partytype)**  
+Category: **System**  
 Allowed values for the PartyType data attribute  
-_Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)_  
+Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Company | Company value. Stored as 'C'. <br /> _Database Value:_ 'C' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Company' |
-| CompanyLocation | CompanyLocation value. Stored as 'L'. <br /> _Database Value:_ 'L' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CompanyLocation' |
-| Person | Person value. Stored as 'P'. <br /> _Database Value:_ 'P' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Person' |
-| Store | Store value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Store' |
-| CompanyDivision | CompanyDivision value. Stored as 'V'. <br /> _Database Value:_ 'V' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CompanyDivision' |
+| Company | Company value. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 0 <br /> Domain API Value: 'Company' |
+| CompanyLocation | CompanyLocation value. Stored as 'L'. <br /> Database Value: 'L' <br /> Model Value: 1 <br /> Domain API Value: 'CompanyLocation' |
+| Person | Person value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 2 <br /> Domain API Value: 'Person' |
+| Store | Store value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 3 <br /> Domain API Value: 'Store' |
+| CompanyDivision | CompanyDivision value. Stored as 'V'. <br /> Database Value: 'V' <br /> Model Value: 4 <br /> Domain API Value: 'CompanyDivision' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **Person**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **Person**  
+Show in UI: **ShownByDefault**  
 
 ### PartyUniqueNumber
 
 Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (16) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
 ### PartyUpdateTime
 
 Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### PartyUpdateUser
 
 Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### SchemaXML
 
 Obsolete. Not used.
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **CannotBeShown**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **CannotBeShown**  
 
 ### Unmanaged
 
 If false the system will expect the user to process the store transactions. If true the system will auto-generate them. `Required` `Default(true)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### UpdateTime
 
 Date and time when the Store was last updated. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### UpdateUser
 
 Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -428,13 +434,13 @@ _Show in UI_: **HiddenByDefault**
 
 The access key, containing the permissions for this Store. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
-_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 
-_Remarks_  
+Remarks  
 Supported permissions
 
 | Permission | Type |
@@ -448,121 +454,121 @@ Supported permissions
 
 The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Area
 
 The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Areas](General.Geography.Areas.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Currency
 
 The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. `Filter(multi eq)`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `IIF( ( obj.EnterpriseCompany != null), obj.EnterpriseCompany.BaseCurrency, obj.Transaction.CurrentEnterpriseCompany.BaseCurrency)`
 ### DefaultProductCodingSystem
 
 When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultStoreBin
 
 To be used when store bin is unknown. `Filter(multi eq)`
 
-_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### EnterpriseCompany
 
 The Enterprise Company to which this Store applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### EnterpriseCompanyLocation
 
 The Enterprise Company Location to which this Store applies, or null if it is for all enterprise company locations. `Filter(multi eq)`
 
-_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Parent
 
 Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity). `Filter(multi eq)`
 
-_Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 ### ParentParty
 
 Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ResponsibleParty
 
 Primary responsible party (usually employee) for the stock in the store. `Filter(multi eq)`
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### StoreGroup
 
 The store group, to which this store belongs. `Required` `Filter(multi eq)`
 
-_Type_: **[StoreGroups](Logistics.Inventory.StoreGroups.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[StoreGroups](Logistics.Inventory.StoreGroups.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### TaxWarehouse
 
 Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93`
 
-_Type_: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Warehouse
 
 Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. `Filter(multi eq)` `Introduced in version 20.1`
 
-_Type_: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -572,90 +578,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

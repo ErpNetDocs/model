@@ -1,7 +1,7 @@
-# Systems.Core.ExternalApplications Entity
+# Systems.Core.ExternalApplications
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Security.ExternalApplications](Systems.Security.ExternalApplications.md)
+New name: [Systems.Security.ExternalApplications](Systems.Security.ExternalApplications.md)

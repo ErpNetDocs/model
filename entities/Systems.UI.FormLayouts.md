@@ -1,7 +1,7 @@
-# Systems.UI.FormLayouts Entity
+# Systems.UI.FormLayouts
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Core.FormLayouts](Systems.Core.FormLayouts.md)
+New name: [Systems.Core.FormLayouts](Systems.Core.FormLayouts.md)

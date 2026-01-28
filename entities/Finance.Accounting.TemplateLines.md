@@ -1,26 +1,27 @@
 ---
 uid: Finance.Accounting.TemplateLines
 ---
-# Finance.Accounting.TemplateLines Entity
+# Finance.Accounting.TemplateLines
 
-**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
 
-Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount. Entity: Acc_Template_Lines
+Each template line contains the posting to a single set of debit and credit account. It also specifies the way to calculate the amount.
 
-## Default Visualization
-Default Display Text Format:  
-_{AmountColumnName}_  
-Default Search Members:  
-_AmountColumnName_  
-Name Data Member:  
-_AmountColumnName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Finance.Accounting](Finance.Accounting.md)  
+Repository: Finance.Accounting.TemplateLines  
+Base Table: Acc_Template_Lines  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {AmountColumnName}  
+Search Members: AmountColumnName  
+Name Member: AmountColumnName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -40,13 +41,10 @@ Aggregate Root:
 | [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string (254) __nullable__ | The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name. 
 | [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter __nullable__ | Filter that further specifies which rows from the amount rowset determine the amount. `Unit: obj.GetAmountSource<br />FilterEntityName()` 
 | [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string (64) | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required` 
-| [DisplayText](Finance.Accounting.TemplateLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter __nullable__ | The line is accounted only when the filter is satisfied compared with the source document header. `Unit: obj.Template.Route.DocumentType.EntityName` 
-| [Id](Finance.Accounting.TemplateLines.md#id) | guid |  
 | [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required` 
 | [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal (18, 6) | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
 | [Notes](Finance.Accounting.TemplateLines.md#notes) | string (254) __nullable__ | Notes for this TemplateLine. 
-| [ObjectVersion](Finance.Accounting.TemplateLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime __nullable__ | Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 | [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime __nullable__ | End date to which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 
@@ -57,6 +55,15 @@ Aggregate Root:
 | [CreditAccount](Finance.Accounting.TemplateLines.md#creditaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be credited. `Required` `Filter(multi eq)` |
 | [DebitAccount](Finance.Accounting.TemplateLines.md#debitaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be debited. `Required` `Filter(multi eq)` |
 | [Template](Finance.Accounting.TemplateLines.md#template) | [Templates](Finance.Accounting.Templates.md) | The <see cref="Template"/> to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner` |
+
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Finance.Accounting.TemplateLines.md#id) | guid |  
+| [ObjectVersion](Finance.Accounting.TemplateLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [DisplayText](Finance.Accounting.TemplateLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
 ## Child Collections
 
@@ -71,167 +78,167 @@ Aggregate Root:
 
 The name of the column within the amount rowset where the amount is located. `Required`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### AmountCondition
 
 Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
 
-_Type_: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) __nullable__**  
-_Category_: **System**  
+Type: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) __nullable__**  
+Category: **System**  
 Allowed values for the `AmountCondition`(Finance.Accounting.TemplateLines.md#amountcondition) data attribute  
-_Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)_  
+Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Positive | Positive value. Stored as '+'. <br /> _Database Value:_ '+' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Positive' |
-| Negative | Negative value. Stored as '-'. <br /> _Database Value:_ '-' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Negative' |
+| Positive | Positive value. Stored as '+'. <br /> Database Value: '+' <br /> Model Value: 0 <br /> Domain API Value: 'Positive' |
+| Negative | Negative value. Stored as '-'. <br /> Database Value: '-' <br /> Model Value: 1 <br /> Domain API Value: 'Negative' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### AmountRowId
 
 The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)`
 
-_Type_: **guid __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **guid __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### AmountRowName
 
 The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### AmountSourceFilter
 
 Filter that further specifies which rows from the amount rowset determine the amount. `Unit: obj.GetAmountSourceFilterEntityName()`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### AmountSourceName
 
 The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### FilterXML
 
 The line is accounted only when the filter is satisfied compared with the source document header. `Unit: obj.Template.Route.DocumentType.EntityName`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### LineNo
 
 Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Multiplier
 
 Factor by which the amount from the source will be multiplied. `Required` `Default(1)`
 
-_Type_: **decimal (18, 6)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **1**  
-_Show in UI_: **HiddenByDefault**  
+Type: **decimal (18, 6)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **1**  
+Show in UI: **HiddenByDefault**  
 
 ### Notes
 
 Notes for this TemplateLine.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### ValidFromDate
 
 Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ValidToDate
 
 End date to which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -240,30 +247,30 @@ _Show in UI_: **ShownByDefault**
 
 The account which should be credited. `Required` `Filter(multi eq)`
 
-_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Accounts](Finance.Accounting.Accounts.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DebitAccount
 
 The account which should be debited. `Required` `Filter(multi eq)`
 
-_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Accounts](Finance.Accounting.Accounts.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Template
 
 The <see cref="Template"/> to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner`
 
-_Type_: **[Templates](Finance.Accounting.Templates.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Templates](Finance.Accounting.Templates.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -273,90 +280,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

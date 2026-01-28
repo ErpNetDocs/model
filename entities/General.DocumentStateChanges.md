@@ -1,7 +1,7 @@
-# General.DocumentStateChanges Entity
+# General.DocumentStateChanges
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Documents.DocumentStateChanges](General.Documents.DocumentStateChanges.md)
+New name: [General.Documents.DocumentStateChanges](General.Documents.DocumentStateChanges.md)

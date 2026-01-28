@@ -1,7 +1,7 @@
-# General.Contacts.Reminders Entity
+# General.Contacts.Reminders
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Activities.Reminders](General.Activities.Reminders.md)
+New name: [General.Activities.Reminders](General.Activities.Reminders.md)

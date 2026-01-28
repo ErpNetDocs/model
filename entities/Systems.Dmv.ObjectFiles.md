@@ -1,7 +1,7 @@
-# Systems.Dmv.ObjectFiles Entity
+# Systems.Dmv.ObjectFiles
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.ObjectFiles](Systems.Monitoring.ObjectFiles.md)
+New name: [Systems.Monitoring.ObjectFiles](Systems.Monitoring.ObjectFiles.md)

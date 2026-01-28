@@ -1,7 +1,7 @@
-# General.Contacts.ActivityParticipants Entity
+# General.Contacts.ActivityParticipants
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Activities.ActivityParticipants](General.Activities.ActivityParticipants.md)
+New name: [General.Activities.ActivityParticipants](General.Activities.ActivityParticipants.md)

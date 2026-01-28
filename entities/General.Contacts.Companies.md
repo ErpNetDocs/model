@@ -1,30 +1,30 @@
 ---
 uid: General.Contacts.Companies
 ---
-# General.Contacts.Companies Entity
+# General.Contacts.Companies
 
-**Namespace:** [General.Contacts](General.Contacts.md)  
-**Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
 
-Contains company definitions. Entity: Cm_Companies
+Contains company definitions.
 
-## Default Visualization
-Default Display Text Format:  
-_{PartyName:T}_  
-Default Search Members:  
-_PartyCode; Name_  
-Code Data Member:  
-_PartyCode_  
-Name Data Member:  
-_Name_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
-Layout category attribute:  _PartyType_  
+## General
+Namespace: [General.Contacts](General.Contacts.md)  
+Repository: General.Contacts.Companies  
+Inherited From: [General.Contacts.Parties](General.Contacts.Parties.md)  
+Base Table: Cm_Companies  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {PartyName:T}  
+Search Members: PartyCode; Name  
+Code Member: PartyCode  
+Name Member: Name  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
+Layout category By:  PartyType  
 
 ## Track Changes  
-Min level:  _3 - Track object and attribute changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  3 - Track object and attribute changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -43,21 +43,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AggregateLastUpdateTimeUtc](General.Contacts.Companies.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [BranchNumber](General.Contacts.Companies.md#branchnumber) | int32 | Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different. `Required` `Default(0)` `Filter(eq)` 
 | [City](General.Contacts.Companies.md#city) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The city in which the company is registered. `Filter(like)` 
 | [CreationTime](General.Contacts.Companies.md#creationtime) | datetime __nullable__ | Date and time when the Company was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Contacts.Companies.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Company. `Filter(like)` `ReadOnly` 
-| [DisplayText](General.Contacts.Companies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](General.Contacts.Companies.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Contacts.Companies.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [GLN](General.Contacts.Companies.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [Id](General.Contacts.Companies.md#id) | guid |  
 | [IsActive](General.Contacts.Companies.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsVATCashReporting<br />Registered](General.Contacts.Companies.md#isvatcashreportingregistered) | boolean | When true, specifies that the company uses the special VAT Cash Reporting Mode. `Required` `Default(false)` 
 | [IsVATRegistered](General.Contacts.Companies.md#isvatregistered) | boolean | Determines wheather the company is included in VAT registers. `Required` `Default(false)` 
 | [Name](General.Contacts.Companies.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The name of this Company. `Filter(eq;like)` 
-| [ObjectVersion](General.Contacts.Companies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PartyCode](General.Contacts.Companies.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.Companies.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.Companies.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -86,6 +80,18 @@ Aggregate Tree
 | [ParentParty](General.Contacts.Companies.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [RegistrationResponsible<br />Person](General.Contacts.Companies.md#registrationresponsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The personal record of the primary responsible person as per registration. null means unknown. `Filter(multi eq)` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](General.Contacts.Companies.md#id) | guid |  
+| [ObjectVersion](General.Contacts.Companies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](General.Contacts.Companies.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](General.Contacts.Companies.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](General.Contacts.Companies.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](General.Contacts.Companies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -101,349 +107,349 @@ Aggregate Tree
 
 ## Attribute Details
 
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
 ### BranchNumber
 
 Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different. `Required` `Default(0)` `Filter(eq)`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **ShownByDefault**  
 
 ### City
 
 The city in which the company is registered. `Filter(like)`
 
-_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CreationTime
 
 Date and time when the Company was created. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationUser
 
 Login name of the user, who created the Company. `Filter(like)` `ReadOnly`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### GLN
 
 Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (13) __nullable__**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **True**  
-_Maximum Length_: **13**  
-_Show in UI_: **ShownByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **string (13) __nullable__**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **True**  
+Maximum Length: **13**  
+Show in UI: **ShownByDefault**  
 
 ### IsActive
 
 Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### IsVATCashReportingRegistered
 
 When true, specifies that the company uses the special VAT Cash Reporting Mode. `Required` `Default(false)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### IsVATRegistered
 
 Determines wheather the company is included in VAT registers. `Required` `Default(false)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Name
 
 The name of this Company. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### PartyCode
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (16)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.IncMax( o => o.PartyCode, null, "00000")`
 
 ### PartyCreationTime
 
 Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### PartyCreationUser
 
 Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### PartyName
 
 The name of the party. `Required` `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### PartyNotes
 
 Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### PartyType
 
 Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[PartyType](General.Contacts.Companies.md#partytype)**  
-_Category_: **System**  
+Type: **[PartyType](General.Contacts.Companies.md#partytype)**  
+Category: **System**  
 Allowed values for the PartyType data attribute  
-_Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)_  
+Allowed Values (General.Contacts.PartiesRepository.PartyType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Company | Company value. Stored as 'C'. <br /> _Database Value:_ 'C' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Company' |
-| CompanyLocation | CompanyLocation value. Stored as 'L'. <br /> _Database Value:_ 'L' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CompanyLocation' |
-| Person | Person value. Stored as 'P'. <br /> _Database Value:_ 'P' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Person' |
-| Store | Store value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Store' |
-| CompanyDivision | CompanyDivision value. Stored as 'V'. <br /> _Database Value:_ 'V' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CompanyDivision' |
+| Company | Company value. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 0 <br /> Domain API Value: 'Company' |
+| CompanyLocation | CompanyLocation value. Stored as 'L'. <br /> Database Value: 'L' <br /> Model Value: 1 <br /> Domain API Value: 'CompanyLocation' |
+| Person | Person value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 2 <br /> Domain API Value: 'Person' |
+| Store | Store value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 3 <br /> Domain API Value: 'Store' |
+| CompanyDivision | CompanyDivision value. Stored as 'V'. <br /> Database Value: 'V' <br /> Model Value: 4 <br /> Domain API Value: 'CompanyDivision' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **Person**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **Person**  
+Show in UI: **ShownByDefault**  
 
 ### PartyUniqueNumber
 
 Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (16) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
 ### PartyUpdateTime
 
 Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### PartyUpdateUser
 
 Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### RegistrationNumber
 
 Unique, government-assigned registration number. null means unknown. `Filter(eq;like)` `ORD`
 
-_Type_: **string (16) __nullable__**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16) __nullable__**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
 ### RegistrationPrimaryAddress
 
 The primary registration address of the company. `Filter(like)`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### RegistrationType
 
 Legal registration type - like LTD., PLC, etc. null means unknown. `Filter(eq)`
 
-_Type_: **[MultilanguageString (16)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (16)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### RegistrationVATNumber
 
 VAT registration number where applicable. null means that VAT number is not applicable or unknown. `Filter(eq)` `ORD`
 
-_Type_: **string (16) __nullable__**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16) __nullable__**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **True**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
 ### ResponsiblePersonName
 
 Primary responsible person of the company. null means unknown. `Filter(like)`
 
-_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### UpdateTime
 
 Date and time when the Company was last updated. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### UpdateUser
 
 Login name of the user, who last updated the Company. `Filter(like)` `ReadOnly`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -452,56 +458,56 @@ _Show in UI_: **HiddenByDefault**
 
 The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Area
 
 The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Areas](General.Geography.Areas.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Country
 
 The country, where the company is registered. `Filter(multi eq)`
 
-_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Countries](General.Geography.Countries.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultProductCodingSystem
 
 When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CodingSystems](General.Products.CodingSystems.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ParentParty
 
 Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### RegistrationResponsiblePerson
 
 The personal record of the primary responsible person as per registration. null means unknown. `Filter(multi eq)`
 
-_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 
 ## API Methods
@@ -511,90 +517,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

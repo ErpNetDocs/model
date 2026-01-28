@@ -1,26 +1,27 @@
 ---
 uid: Production.Resources.Load
 ---
-# Production.Resources.Load Entity
+# Production.Resources.Load
 
-**Namespace:** [Production.Resources](Production.Resources.md)  
 
-Contains scheduled operations usage of the resources. Entity: Prd_Load
+Contains scheduled operations usage of the resources.
 
-## Default Visualization
-Default Display Text Format:  
-_{WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName}_  
-Default Search Members:  
-_WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName_  
-Name Data Member:  
-_WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Production.Resources](Production.Resources.md)  
+Repository: Production.Resources.Load  
+Base Table: Prd_Load  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName}  
+Search Members: WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName  
+Name Member: WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -35,9 +36,6 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CalendarDate](Production.Resources.Load.md#calendardate) | datetime | Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. `Required` `Filter(ge;le)` 
-| [DisplayText](Production.Resources.Load.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [Id](Production.Resources.Load.md#id) | guid |  
-| [ObjectVersion](Production.Resources.Load.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Priority](Production.Resources.Load.md#priority) | [Priority](Production.Resources.Load.md#priority) | Priority of the allocation. 1=Lowest ... 5=Highest. `Required` `Default(3)` 
 | [TimeType](Production.Resources.Load.md#timetype) | [TimeType](Production.Resources.Load.md#timetype) | S=Setup; R=Run; W=Wait; M=Move. `Required` `Default("R")` 
 | [UsageEndTime](Production.Resources.Load.md#usageendtime) | datetime | The ending time of the planned usage. `Required` `Filter(ge;le)` 
@@ -53,131 +51,140 @@ Aggregate Root:
 | [WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | The <see cref="Production.ShopFloor.WorkOrderItemOperation"/> to which this Load belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Production.Resources.Load.md#id) | guid |  
+| [ObjectVersion](Production.Resources.Load.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [DisplayText](Production.Resources.Load.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+
 ## Attribute Details
 
 ### CalendarDate
 
 Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. `Required` `Filter(ge;le)`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Priority
 
 Priority of the allocation. 1=Lowest ... 5=Highest. `Required` `Default(3)`
 
-_Type_: **[Priority](Production.Resources.Load.md#priority)**  
-_Category_: **System**  
+Type: **[Priority](Production.Resources.Load.md#priority)**  
+Category: **System**  
 Allowed values for the `Priority`(Production.Resources.Load.md#priority) data attribute  
-_Allowed Values (Production.Resources.LoadRepository.Priority Enum Members)_  
+Allowed Values (Production.Resources.LoadRepository.Priority Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Lowest | Lowest value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Lowest' |
-| Two | Two value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Two' |
-| Three | Three value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Three' |
-| Four | Four value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Four' |
-| Highest | Highest value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Highest' |
+| Lowest | Lowest value. Stored as 1. <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'Lowest' |
+| Two | Two value. Stored as 2. <br /> Database Value: 2 <br /> Model Value: 2 <br /> Domain API Value: 'Two' |
+| Three | Three value. Stored as 3. <br /> Database Value: 3 <br /> Model Value: 3 <br /> Domain API Value: 'Three' |
+| Four | Four value. Stored as 4. <br /> Database Value: 4 <br /> Model Value: 4 <br /> Domain API Value: 'Four' |
+| Highest | Highest value. Stored as 5. <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'Highest' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **3**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **3**  
+Show in UI: **ShownByDefault**  
 
 ### TimeType
 
 S=Setup; R=Run; W=Wait; M=Move. `Required` `Default("R")`
 
-_Type_: **[TimeType](Production.Resources.Load.md#timetype)**  
-_Category_: **System**  
+Type: **[TimeType](Production.Resources.Load.md#timetype)**  
+Category: **System**  
 Allowed values for the `TimeType`(Production.Resources.Load.md#timetype) data attribute  
-_Allowed Values (Production.Resources.LoadRepository.TimeType Enum Members)_  
+Allowed Values (Production.Resources.LoadRepository.TimeType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Move | Move value. Stored as 'M'. <br /> _Database Value:_ 'M' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Move' |
-| Run | Run value. Stored as 'R'. <br /> _Database Value:_ 'R' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Run' |
-| Setup | Setup value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Setup' |
-| Wait | Wait value. Stored as 'W'. <br /> _Database Value:_ 'W' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Wait' |
+| Move | Move value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 0 <br /> Domain API Value: 'Move' |
+| Run | Run value. Stored as 'R'. <br /> Database Value: 'R' <br /> Model Value: 1 <br /> Domain API Value: 'Run' |
+| Setup | Setup value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 2 <br /> Domain API Value: 'Setup' |
+| Wait | Wait value. Stored as 'W'. <br /> Database Value: 'W' <br /> Model Value: 3 <br /> Domain API Value: 'Wait' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Run**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Run**  
+Show in UI: **ShownByDefault**  
 
 ### UsageEndTime
 
 The ending time of the planned usage. `Required` `Filter(ge;le)`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### UsageQuantity
 
 Quantity of the resource, which will be used for production. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` `Filter(ge;le)`
 
-_Type_: **[Quantity (9, 0)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **Constant**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (9, 0)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
 
 ### UsageStartTime
 
 The starting time of the planned usage. `Required` `Filter(ge;le)`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### UsageTimeMinutes
 
 Time allocated for the operation in minutes. `Required` `Default(0)` `Filter(ge;le)`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -186,20 +193,20 @@ _Show in UI_: **ShownByDefault**
 
 The exact resource being utilised. `Required` `Filter(multi eq)`
 
-_Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### WorkOrderItemOperation
 
 The <see cref="Production.ShopFloor.WorkOrderItemOperation"/> to which this Load belongs. `Required` `Filter(multi eq)` `Owner`
 
-_Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -209,90 +216,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

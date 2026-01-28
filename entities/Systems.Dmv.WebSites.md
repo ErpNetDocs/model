@@ -1,7 +1,7 @@
-# Systems.Dmv.WebSites Entity
+# Systems.Dmv.WebSites
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.WebSites](Systems.Monitoring.WebSites.md)
+New name: [Systems.Monitoring.WebSites](Systems.Monitoring.WebSites.md)

@@ -1,29 +1,30 @@
 ---
 uid: Projects.Agile.Cases
 ---
-# Projects.Agile.Cases Entity
+# Projects.Agile.Cases
 
-**Namespace:** [Projects.Agile](Projects.Agile.md)  
 
-Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in version 24.1.1.86)
+Case in a project. Used to track work progress.
 
-## Default Visualization
-Default Display Text Format:  
-_{Number}: {Title:T}_  
-Default Search Members:  
-_Number; Title_  
-Code Data Member:  
-_Number_  
-Name Data Member:  
-_Title_  
-Category:  _Documents_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
-Layout category attribute:  _CaseCategoryId_  
+## General
+Namespace: [Projects.Agile](Projects.Agile.md)  
+Repository: Projects.Agile.Cases  
+Base Table: Apm_Cases  
+Introduced In Version: 24.1.1.86  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {Number}: {Title:T}  
+Search Members: Number; Title  
+Code Member: Number  
+Name Member: Title  
+Category:  Documents  
+Show in UI:  ShownByDefault  
+Layout category By:  CaseCategoryId  
 
 ## Track Changes  
-Min level:  _4 - Track object attribute and blob changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  4 - Track object attribute and blob changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -36,23 +37,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AggregateLastUpdateTimeUtc](Projects.Agile.Cases.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.39` 
 | [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work. `Filter(like)` 
-| [DisplayText](Projects.Agile.Cases.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date. `Filter(ge;le)` 
 | [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time. `Filter(ge;le)` 
 | [EstimatedTimeHours](Projects.Agile.Cases.md#estimatedtimehours) | decimal (8, 2) __nullable__ | Estimation of the required work effort in hours. 
-| [ExternalId](Projects.Agile.Cases.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.Agile.Cases.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Projects.Agile.Cases.md#fullstate) | int32 | Full state of the case based on its system and user state. [ReadOnly] 
-| [Id](Projects.Agile.Cases.md#id) | guid |  
 | [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [LoggedTime](Projects.Agile.Cases.md#loggedtime) | decimal (0, 0) | Total duration of the logged time for the case (in hours). [ReadOnly] 
 | [Number](Projects.Agile.Cases.md#number) | int32 | The unique number of the Case. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` `Introduced in version 24.1.3.86` 
-| [ObjectVersion](Projects.Agile.Cases.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest). `Required` `Default(7)` `Filter(eq)` 
 | [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
@@ -78,6 +73,18 @@ Aggregate Tree
 | [StakeholderParty](Projects.Agile.Cases.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). `Filter(multi eq)` `Introduced in version 25.1.2.70` |
 | [UserState](Projects.Agile.Cases.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user-defined sub-state of the case. `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.0.97` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Projects.Agile.Cases.md#id) | guid |  
+| [ObjectVersion](Projects.Agile.Cases.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Projects.Agile.Cases.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.Cases.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Projects.Agile.Cases.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Projects.Agile.Cases.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -87,276 +94,276 @@ Aggregate Tree
 
 ## Attribute Details
 
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
 ### ClosedTimeUTC
 
 Indicates the time (in UTC) when the case was closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### ConsiderTimeUTC
 
 Indicates the time (in UTC) when the case has changed to consider state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.39`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationTimeUtc
 
 The exact date and time (in UTC) when the case was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **CurrentDateTimeUtc**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **CurrentDateTimeUtc**  
+Show in UI: **HiddenByDefault**  
 
 ### Description
 
 Description of the required work. `Filter(like)`
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### DueDate
 
 Specified when the case has specific due date. `Filter(ge;le)`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DueTime
 
 Specified when the case has specific due time. `Filter(ge;le)`
 
-_Type_: **time __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **time __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### EstimatedTimeHours
 
 Estimation of the required work effort in hours.
 
-_Type_: **decimal (8, 2) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **decimal (8, 2) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### FullState
 
 Full state of the case based on its system and user state. [ReadOnly]
 
-_Type_: **int32**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **int32**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 ### InProgressTimeUTC
 
 Indicates the time (in UTC) when the case has changed to in-progress state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### LoggedTime
 
 Total duration of the logged time for the case (in hours). [ReadOnly]
 
-_Type_: **decimal (0, 0)**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (0, 0)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **ShownByDefault**  
 
 ### Number
 
 The unique number of the Case. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` `Introduced in version 24.1.3.86`
 
-_Type_: **int32**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like, EqualsIn**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Priority
 
 Priority of the case, on a scale from 1 (highest) to 7 (lowest). `Required` `Default(7)` `Filter(eq)`
 
-_Type_: **[Priority](Projects.Agile.Cases.md#priority)**  
-_Category_: **System**  
+Type: **[Priority](Projects.Agile.Cases.md#priority)**  
+Category: **System**  
 Allowed values for the `Priority`(Projects.Agile.Cases.md#priority) data attribute  
-_Allowed Values (Projects.Agile.CasesRepository.Priority Enum Members)_  
+Allowed Values (Projects.Agile.CasesRepository.Priority Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Highest | Highest value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Highest' |
-| Two | Two value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Two' |
-| Three | Three value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Three' |
-| Four | Four value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Four' |
-| Five | Five value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Five' |
-| Six | Six value. Stored as 6. <br /> _Database Value:_ 6 <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'Six' |
-| Lowest | Lowest value. Stored as 7. <br /> _Database Value:_ 7 <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'Lowest' |
+| Highest | Highest value. Stored as 1. <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'Highest' |
+| Two | Two value. Stored as 2. <br /> Database Value: 2 <br /> Model Value: 2 <br /> Domain API Value: 'Two' |
+| Three | Three value. Stored as 3. <br /> Database Value: 3 <br /> Model Value: 3 <br /> Domain API Value: 'Three' |
+| Four | Four value. Stored as 4. <br /> Database Value: 4 <br /> Model Value: 4 <br /> Domain API Value: 'Four' |
+| Five | Five value. Stored as 5. <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'Five' |
+| Six | Six value. Stored as 6. <br /> Database Value: 6 <br /> Model Value: 6 <br /> Domain API Value: 'Six' |
+| Lowest | Lowest value. Stored as 7. <br /> Database Value: 7 <br /> Model Value: 7 <br /> Domain API Value: 'Lowest' |
 
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **7**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **7**  
+Show in UI: **ShownByDefault**  
 
 ### ReadyTimeUTC
 
 Indicates the time (in UTC) when the case has become ready for execution. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### ResolvedTimeUTC
 
 Indicates the time (in UTC) when the case was resolved. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### StoryPoints
 
 When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. `Filter(eq;ge;le)` `Introduced in version 26.1.4.53`
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### SystemState
 
 The base state of the case. `Required` `Default("1")` `Filter(multi eq)` `ReadOnly`
 
-_Type_: **[SystemState](Projects.Agile.Cases.md#systemstate)**  
-_Category_: **System**  
+Type: **[SystemState](Projects.Agile.Cases.md#systemstate)**  
+Category: **System**  
 Allowed values for the `SystemState`(Projects.Agile.Cases.md#systemstate) data attribute  
-_Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)_  
+Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| BACKLOG | The case is registered but not yet considered for work.. Stored as '1'. <br /> _Database Value:_ '1' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'BACKLOG' |
-| CONSIDER | The case is under evaluation for possible execution.. Stored as '2'. <br /> _Database Value:_ '2' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CONSIDER' |
-| READY | The case is approved and ready to be started.. Stored as '3'. <br /> _Database Value:_ '3' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'READY' |
-| INPROGRESS | Work on the case is currently ongoing.. Stored as '4'. <br /> _Database Value:_ '4' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'INPROGRESS' |
-| WAITING | The case is paused, waiting for input or conditions.. Stored as '5'. <br /> _Database Value:_ '5' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'WAITING' |
-| RESOLVED | Work is completed; final review or confirmation may be pending.. Stored as '6'. <br /> _Database Value:_ '6' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'RESOLVED' |
-| CLOSED | The case is finalized and officially closed.. Stored as '7'. <br /> _Database Value:_ '7' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'CLOSED' |
+| BACKLOG | The case is registered but not yet considered for work.. Stored as '1'. <br /> Database Value: '1' <br /> Model Value: 0 <br /> Domain API Value: 'BACKLOG' |
+| CONSIDER | The case is under evaluation for possible execution.. Stored as '2'. <br /> Database Value: '2' <br /> Model Value: 1 <br /> Domain API Value: 'CONSIDER' |
+| READY | The case is approved and ready to be started.. Stored as '3'. <br /> Database Value: '3' <br /> Model Value: 2 <br /> Domain API Value: 'READY' |
+| INPROGRESS | Work on the case is currently ongoing.. Stored as '4'. <br /> Database Value: '4' <br /> Model Value: 3 <br /> Domain API Value: 'INPROGRESS' |
+| WAITING | The case is paused, waiting for input or conditions.. Stored as '5'. <br /> Database Value: '5' <br /> Model Value: 4 <br /> Domain API Value: 'WAITING' |
+| RESOLVED | Work is completed; final review or confirmation may be pending.. Stored as '6'. <br /> Database Value: '6' <br /> Model Value: 5 <br /> Domain API Value: 'RESOLVED' |
+| CLOSED | The case is finalized and officially closed.. Stored as '7'. <br /> Database Value: '7' <br /> Model Value: 6 <br /> Domain API Value: 'CLOSED' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **BACKLOG**  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **BACKLOG**  
+Show in UI: **HiddenByDefault**  
 
 ### Title
 
 Case short title. `Required` `Filter(like)`
 
-_Type_: **string (128)**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128)**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### WaitingTimeUTC
 
 Indicates the time (in UTC) when the case has changed to waiting state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -365,118 +372,118 @@ _Show in UI_: **HiddenByDefault**
 
 The internal user to which the case is assigned. `Filter(multi eq)`
 
-_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.DetermineAssignToUser( obj.SystemState, obj.Project, obj.CaseCategory, obj.ProjectArea, obj.ProjectMilestone, obj.StakeholderParty, obj.UserState).IfNullThen( obj.AssignedToUser)`
 ### CaseCategory
 
 The category of the case. This also determines the workflow for the case. `Required` `Filter(multi eq)`
 
-_Type_: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DuplicateOfCase
 
 References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. `Filter(multi eq)` `Introduced in version 25.1.3.24`
 
-_Type_: **[Cases](Projects.Agile.Cases.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Cases](Projects.Agile.Cases.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### OwnerUser
 
 The user responsible for managing and overseeing the case. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76`
 
-_Type_: **[Users](Systems.Security.Users.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Parent
 
 Specified when this is a sub-case to another case. `Filter(multi eq)`
 
-_Type_: **[Cases](Projects.Agile.Cases.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Cases](Projects.Agile.Cases.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Project
 
 The project to which the case is assigned. `Required` `Filter(multi eq)`
 
-_Type_: **[Projects](Projects.Agile.Projects.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Projects](Projects.Agile.Projects.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProjectArea
 
 The are to which the case is assigned. `Filter(multi eq)`
 
-_Type_: **[ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProjectMilestone
 
 Determines the milestone for which the case must be resolved. `Filter(multi eq)`
 
-_Type_: **[ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### SocialGroup
 
 Specified, when the case is assigned to a group of users. `Filter(multi eq)`
 
-_Type_: **[Groups](Communities.Social.Groups.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Groups](Communities.Social.Groups.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Sprint
 
 The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). `Filter(multi eq)` `Introduced in version 26.1.4.33`
 
-_Type_: **[Sprints](Projects.Agile.Sprints.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Sprints](Projects.Agile.Sprints.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### StakeholderParty
 
 The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). `Filter(multi eq)` `Introduced in version 25.1.2.70`
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### UserState
 
 The user-defined sub-state of the case. `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.0.97`
 
-_Type_: **[UserStates](Projects.Agile.UserStates.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[UserStates](Projects.Agile.UserStates.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 
 ## API Methods
@@ -486,90 +493,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

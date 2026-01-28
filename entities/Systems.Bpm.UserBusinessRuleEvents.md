@@ -1,26 +1,27 @@
 ---
 uid: Systems.Bpm.UserBusinessRuleEvents
 ---
-# Systems.Bpm.UserBusinessRuleEvents Entity
+# Systems.Bpm.UserBusinessRuleEvents
 
-**Namespace:** [Systems.Bpm](Systems.Bpm.md)  
 
-Represents event registration of a business rule. Entity: Sys_User_Business_Rule_Events
+Represents event registration of a business rule.
 
-## Default Visualization
-Default Display Text Format:  
-_{UserBusinessRule.Name:T}_  
-Default Search Members:  
-_UserBusinessRule.Name_  
-Name Data Member:  
-_UserBusinessRule.Name_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Systems.Bpm](Systems.Bpm.md)  
+Repository: Systems.Bpm.UserBusinessRuleEvents  
+Base Table: Sys_User_Business_Rule_Events  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {UserBusinessRule.Name:T}  
+Search Members: UserBusinessRule.Name  
+Name Member: UserBusinessRule.Name  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -34,13 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Systems.Bpm.UserBusinessRuleEvents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EventParameter](Systems.Bpm.UserBusinessRuleEvents.md#eventparameter) | string (128) __nullable__ | Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc. 
 | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | The event for which to register the business rule. `Required` 
 | [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | [RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. `Required` `Default(50)` 
-| [Id](Systems.Bpm.UserBusinessRuleEvents.md#id) | guid |  
 | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. `Required` `Default("BKE")` 
-| [ObjectVersion](Systems.Bpm.UserBusinessRuleEvents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -49,116 +47,125 @@ Aggregate Root:
 | [UserBusinessRule](Systems.Bpm.UserBusinessRuleEvents.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The rule, which will be registered for the event. `Required` `Filter(multi eq)` `Owner` |
 
 
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Bpm.UserBusinessRuleEvents.md#id) | guid |  
+| [ObjectVersion](Systems.Bpm.UserBusinessRuleEvents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [DisplayText](Systems.Bpm.UserBusinessRuleEvents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+
 ## Attribute Details
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
 
 ### EventParameter
 
 Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
 
-_Type_: **string (128) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### EventType
 
 The event for which to register the business rule. `Required`
 
-_Type_: **[EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype)**  
-_Category_: **System**  
+Type: **[EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype)**  
+Category: **System**  
 Allowed values for the `EventType`(Systems.Bpm.UserBusinessRuleEvents.md#eventtype) data attribute  
-_Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Members)_  
+Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| AGGREGATECLIENTCOMMIT | Occurs for the aggregate root when saving a change of an aggregate object, but only when the change is made by a client application. If the change is made by the server, the event will not be triggered.. Stored as 'AGGREGATECLIENTCOMMIT'. <br /> _Database Value:_ 'AGGREGATECLIENTCOMMIT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AGGREGATECLIENTCOMMIT' |
-| ATTRIBUTECHANGED | Occurs after the attribute's value is changed. The attribute's name is specified in the 'Event Parameter' field.. Stored as 'ATTRIBUTECHANGED'. <br /> _Database Value:_ 'ATTRIBUTECHANGED' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ATTRIBUTECHANGED' |
-| ATTRIBUTECHANGING | Occurs before the attribute's value is changed. The attribute's name is specified in the 'Event Parameter' field.. Stored as 'ATTRIBUTECHANGING'. <br /> _Database Value:_ 'ATTRIBUTECHANGING' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ATTRIBUTECHANGING' |
-| CLIENTCOMMIT | Occurs when saving a change of the object, when the change is made by a client application. If the change is made by the server, the event will not be triggered.. Stored as 'CLIENTCOMMIT'. <br /> _Database Value:_ 'CLIENTCOMMIT' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CLIENTCOMMIT' |
-| COMMIT | Occurs when saving a change of the object.. Stored as 'COMMIT'. <br /> _Database Value:_ 'COMMIT' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'COMMIT' |
-| STATECHANGED | Occurs when the document state is changed. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNED', 'FIRMPLANNED', 'RELEASED', 'COMPLETED' and 'CLOSED'.. Stored as 'STATECHANGED'. <br /> _Database Value:_ 'STATECHANGED' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'STATECHANGED' |
-| STATECHANGING | Occurs during the document state change. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNING', 'FIRMPLANNING', 'RELEASING', 'COMPLETING' and 'CLOSING'.. Stored as 'STATECHANGING'. <br /> _Database Value:_ 'STATECHANGING' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'STATECHANGING' |
-| VOIDING | Occurs during the voiding of a document.. Stored as 'VOIDING'. <br /> _Database Value:_ 'VOIDING' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'VOIDING' |
-| CREATENEW | Occurs when a new object is created. Used to fill custom defaults.. Stored as 'CREATENEW'. <br /> _Database Value:_ 'CREATENEW' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'CREATENEW' |
-| COMMITTED | COMMITTED value. Stored as 'COMMITTED'. <br /> _Database Value:_ 'COMMITTED' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'COMMITTED' |
-| CLIENTCOMMITTED | CLIENTCOMMITTED value. Stored as 'CLIENTCOMMITTED'. <br /> _Database Value:_ 'CLIENTCOMMITTED' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'CLIENTCOMMITTED' |
-| AGGREGATECLIENTCOMMITTED | AGGREGATECLIENTCOMMITTED value. Stored as 'AGGREGATECLIENTCOMMITTED'. <br /> _Database Value:_ 'AGGREGATECLIENTCOMMITTED' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'AGGREGATECLIENTCOMMITTED' |
-| BEFORERECALCULATE | The event occurs before every recalculation of the amounts in the document for each object in the document aggregate. . Stored as 'BEFORERECALCULATE '. <br /> _Database Value:_ 'BEFORERECALCULATE ' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'BEFORERECALCULATE' |
+| AGGREGATECLIENTCOMMIT | Occurs for the aggregate root when saving a change of an aggregate object, but only when the change is made by a client application. If the change is made by the server, the event will not be triggered.. Stored as 'AGGREGATECLIENTCOMMIT'. <br /> Database Value: 'AGGREGATECLIENTCOMMIT' <br /> Model Value: 0 <br /> Domain API Value: 'AGGREGATECLIENTCOMMIT' |
+| ATTRIBUTECHANGED | Occurs after the attribute's value is changed. The attribute's name is specified in the 'Event Parameter' field.. Stored as 'ATTRIBUTECHANGED'. <br /> Database Value: 'ATTRIBUTECHANGED' <br /> Model Value: 1 <br /> Domain API Value: 'ATTRIBUTECHANGED' |
+| ATTRIBUTECHANGING | Occurs before the attribute's value is changed. The attribute's name is specified in the 'Event Parameter' field.. Stored as 'ATTRIBUTECHANGING'. <br /> Database Value: 'ATTRIBUTECHANGING' <br /> Model Value: 2 <br /> Domain API Value: 'ATTRIBUTECHANGING' |
+| CLIENTCOMMIT | Occurs when saving a change of the object, when the change is made by a client application. If the change is made by the server, the event will not be triggered.. Stored as 'CLIENTCOMMIT'. <br /> Database Value: 'CLIENTCOMMIT' <br /> Model Value: 3 <br /> Domain API Value: 'CLIENTCOMMIT' |
+| COMMIT | Occurs when saving a change of the object.. Stored as 'COMMIT'. <br /> Database Value: 'COMMIT' <br /> Model Value: 4 <br /> Domain API Value: 'COMMIT' |
+| STATECHANGED | Occurs when the document state is changed. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNED', 'FIRMPLANNED', 'RELEASED', 'COMPLETED' and 'CLOSED'.. Stored as 'STATECHANGED'. <br /> Database Value: 'STATECHANGED' <br /> Model Value: 5 <br /> Domain API Value: 'STATECHANGED' |
+| STATECHANGING | Occurs during the document state change. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNING', 'FIRMPLANNING', 'RELEASING', 'COMPLETING' and 'CLOSING'.. Stored as 'STATECHANGING'. <br /> Database Value: 'STATECHANGING' <br /> Model Value: 6 <br /> Domain API Value: 'STATECHANGING' |
+| VOIDING | Occurs during the voiding of a document.. Stored as 'VOIDING'. <br /> Database Value: 'VOIDING' <br /> Model Value: 7 <br /> Domain API Value: 'VOIDING' |
+| CREATENEW | Occurs when a new object is created. Used to fill custom defaults.. Stored as 'CREATENEW'. <br /> Database Value: 'CREATENEW' <br /> Model Value: 8 <br /> Domain API Value: 'CREATENEW' |
+| COMMITTED | COMMITTED value. Stored as 'COMMITTED'. <br /> Database Value: 'COMMITTED' <br /> Model Value: 9 <br /> Domain API Value: 'COMMITTED' |
+| CLIENTCOMMITTED | CLIENTCOMMITTED value. Stored as 'CLIENTCOMMITTED'. <br /> Database Value: 'CLIENTCOMMITTED' <br /> Model Value: 10 <br /> Domain API Value: 'CLIENTCOMMITTED' |
+| AGGREGATECLIENTCOMMITTED | AGGREGATECLIENTCOMMITTED value. Stored as 'AGGREGATECLIENTCOMMITTED'. <br /> Database Value: 'AGGREGATECLIENTCOMMITTED' <br /> Model Value: 11 <br /> Domain API Value: 'AGGREGATECLIENTCOMMITTED' |
+| BEFORERECALCULATE | The event occurs before every recalculation of the amounts in the document for each object in the document aggregate. . Stored as 'BEFORERECALCULATE '. <br /> Database Value: 'BEFORERECALCULATE ' <br /> Model Value: 12 <br /> Domain API Value: 'BEFORERECALCULATE' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ExecutionPriority
 
 Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. `Required` `Default(50)`
 
-_Type_: **[RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority)**  
-_Category_: **System**  
-_Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)_  
+Type: **[RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority)**  
+Category: **System**  
+Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Early | _Database Value:_ 30 <br /> _Model Value:_ 30 <br /> _Domain API Value:_ 'Early' |
-| Normal | _Database Value:_ 50 <br /> _Model Value:_ 50 <br /> _Domain API Value:_ 'Normal' |
-| Late | _Database Value:_ 70 <br /> _Model Value:_ 70 <br /> _Domain API Value:_ 'Late' |
-| SystemLateUpdate | _Database Value:_ 150 <br /> _Model Value:_ 150 <br /> _Domain API Value:_ 'SystemLateUpdate' |
-| SystemLateValidate | _Database Value:_ 200 <br /> _Model Value:_ 200 <br /> _Domain API Value:_ 'SystemLateValidate' |
+| Early | Database Value: 30 <br /> Model Value: 30 <br /> Domain API Value: 'Early' |
+| Normal | Database Value: 50 <br /> Model Value: 50 <br /> Domain API Value: 'Normal' |
+| Late | Database Value: 70 <br /> Model Value: 70 <br /> Domain API Value: 'Late' |
+| SystemLateUpdate | Database Value: 150 <br /> Model Value: 150 <br /> Domain API Value: 'SystemLateUpdate' |
+| SystemLateValidate | Database Value: 200 <br /> Model Value: 200 <br /> Domain API Value: 'SystemLateValidate' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **50**  
-_Show in UI_: **ShownByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **50**  
+Show in UI: **ShownByDefault**  
 
 ### Layer
 
 Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. `Required` `Default("BKE")`
 
-_Type_: **[Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer)**  
-_Category_: **System**  
+Type: **[Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer)**  
+Category: **System**  
 Allowed values for the `Layer`(Systems.Bpm.UserBusinessRuleEvents.md#layer) data attribute  
-_Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.Layer Enum Members)_  
+Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.Layer Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| FrontEnd | FrontEnd value. Stored as 'FTE'. <br /> _Database Value:_ 'FTE' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'FrontEnd' |
-| BackEnd | BackEnd value. Stored as 'BKE'. <br /> _Database Value:_ 'BKE' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'BackEnd' |
+| FrontEnd | FrontEnd value. Stored as 'FTE'. <br /> Database Value: 'FTE' <br /> Model Value: 0 <br /> Domain API Value: 'FrontEnd' |
+| BackEnd | BackEnd value. Stored as 'BKE'. <br /> Database Value: 'BKE' <br /> Model Value: 1 <br /> Domain API Value: 'BackEnd' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **BackEnd**  
-_Show in UI_: **CannotBeShown**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **BackEnd**  
+Show in UI: **CannotBeShown**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
 
 ### ObjectVersion
 
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -167,11 +174,11 @@ _Show in UI_: **HiddenByDefault**
 
 The rule, which will be registered for the event. `Required` `Filter(multi eq)` `Owner`
 
-_Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -181,90 +188,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

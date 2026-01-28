@@ -1,35 +1,36 @@
 ---
 uid: Systems.Documents.DocumentTypeSecurityConditions
 ---
-# Systems.Documents.DocumentTypeSecurityConditions Entity
+# Systems.Documents.DocumentTypeSecurityConditions
 
-**Namespace:** [Systems.Documents](Systems.Documents.md)  
 
-Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions
+Provides rules to conditionally secure new documents.
+
+## General
+Namespace: [Systems.Documents](Systems.Documents.md)  
+Repository: Systems.Documents.DocumentTypeSecurityConditions  
+Base Table: Gen_Document_Type_Security_Conditions  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **General.DocumentTypeSecurityConditions**  
-New name: **Systems.Documents.DocumentTypeSecurityConditions**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: General.DocumentTypeSecurityConditions  
+New name: Systems.Documents.DocumentTypeSecurityConditions  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{DocumentType.EntityName}_  
-Default Search Members:  
-_DocumentType.EntityName_  
-Name Data Member:  
-_DocumentType.EntityName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {DocumentType.EntityName}  
+Search Members: DocumentType.EntityName  
+Name Member: DocumentType.EntityName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -45,9 +46,6 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ConditionFilterXml](Systems.Documents.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. `Unit: obj.DocumentType.EntityName` `Required` 
 | [Description](Systems.Documents.DocumentTypeSecurityConditions.md#description) | string (254) | The description of this DocumentTypeSecurity<br />Condition. `Required` `Filter(eq;like)` 
-| [DisplayText](Systems.Documents.DocumentTypeSecurityConditions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [Id](Systems.Documents.DocumentTypeSecurityConditions.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.DocumentTypeSecurityConditions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)` 
 
 ## References
@@ -58,79 +56,88 @@ Aggregate Root:
 | [DocumentType](Systems.Documents.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` `Owner` |
 
 
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Documents.DocumentTypeSecurityConditions.md#id) | guid |  
+| [ObjectVersion](Systems.Documents.DocumentTypeSecurityConditions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [DisplayText](Systems.Documents.DocumentTypeSecurityConditions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+
 ## Attribute Details
 
 ### ConditionFilterXml
 
 Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. `Unit: obj.DocumentType.EntityName` `Required`
 
-_Type_: **dataaccessfilter**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **dataaccessfilter**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Description
 
 The description of this DocumentTypeSecurityCondition. `Required` `Filter(eq;like)`
 
-_Type_: **string (254)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### Priority
 
 Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)`
 
-_Type_: **[Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority)**  
-_Category_: **System**  
+Type: **[Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority)**  
+Category: **System**  
 Generic enum type for Priority properties  
-_Allowed Values (General.Priority Enum Members)_  
+Allowed Values (General.Priority Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Lowest | Lowest value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Lowest' |
-| Low | Low value. Stored as 2. <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-| Medium | Medium value. Stored as 3. <br /> _Database Value:_ 3 <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Medium' |
-| High | High value. Stored as 4. <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-| Highest | Highest value. Stored as 5. <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Highest' |
+| Lowest | Lowest value. Stored as 1. <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'Lowest' |
+| Low | Low value. Stored as 2. <br /> Database Value: 2 <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+| Medium | Medium value. Stored as 3. <br /> Database Value: 3 <br /> Model Value: 3 <br /> Domain API Value: 'Medium' |
+| High | High value. Stored as 4. <br /> Database Value: 4 <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+| Highest | Highest value. Stored as 5. <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'Highest' |
 
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **3**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **3**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -139,13 +146,13 @@ _Show in UI_: **ShownByDefault**
 
 The access key, which will be used to secure new documents, when this rule is selected. `Required` `Filter(multi eq)`
 
-_Type_: **[AccessKeys](Systems.Security.AccessKeys.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccessKeys](Systems.Security.AccessKeys.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
-_Remarks_  
+Remarks  
 Supported permissions
 
 | Permission | Type |
@@ -157,11 +164,11 @@ Supported permissions
 
 The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` `Owner`
 
-_Type_: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -171,90 +178,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

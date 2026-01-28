@@ -1,7 +1,7 @@
-# General.DocumentAmounts Entity
+# General.DocumentAmounts
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Documents.DocumentAmounts](General.Documents.DocumentAmounts.md)
+New name: [General.Documents.DocumentAmounts](General.Documents.DocumentAmounts.md)

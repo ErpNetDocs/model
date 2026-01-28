@@ -1,7 +1,7 @@
-# Communities.Notifications Entity
+# Communities.Notifications
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Systems.Core.Notifications](Systems.Core.Notifications.md)
+New name: [Systems.Core.Notifications](Systems.Core.Notifications.md)

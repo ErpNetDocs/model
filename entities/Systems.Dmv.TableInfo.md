@@ -1,7 +1,7 @@
-# Systems.Dmv.TableInfo Entity
+# Systems.Dmv.TableInfo
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.TableInfo](Systems.Monitoring.TableInfo.md)
+New name: [Systems.Monitoring.TableInfo](Systems.Monitoring.TableInfo.md)

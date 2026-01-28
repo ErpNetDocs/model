@@ -1,37 +1,37 @@
 ---
 uid: Crm.Pricing.PromotionalPackages
 ---
-# Crm.Pricing.PromotionalPackages Entity
+# Crm.Pricing.PromotionalPackages
 
-**Namespace:** [Crm.Pricing](Crm.Pricing.md)  
 
-Promotional packages are packages of products, which are sold together at a special pricing and discount conditions. Entity: Crm_Promotional_Packages
+Promotional packages are packages of products, which are sold together at a special pricing and discount conditions.
+
+## General
+Namespace: [Crm.Pricing](Crm.Pricing.md)  
+Repository: Crm.Pricing.PromotionalPackages  
+Base Table: Crm_Promotional_Packages  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Crm.PromotionalPackages**  
-New name: **Crm.Pricing.PromotionalPackages**  
-Version: **25.1.1.36**  
-Case: **37717**  
+Old name: Crm.PromotionalPackages  
+New name: Crm.Pricing.PromotionalPackages  
+Version: 25.1.1.36  
+Case: 37717  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{Name}_  
-Default Search Members:  
-_Code; Name_  
-Code Data Member:  
-_Code_  
-Name Data Member:  
-_Name_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {Name}  
+Search Members: Code; Name  
+Code Member: Code  
+Name Member: Name  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -45,14 +45,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)` 
-| [AggregateLastUpdateTimeUtc](Crm.Pricing.PromotionalPackages.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
-| [DisplayText](Crm.Pricing.PromotionalPackages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](Crm.Pricing.PromotionalPackages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pricing.PromotionalPackages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [Id](Crm.Pricing.PromotionalPackages.md#id) | guid |  
 | [Name](Crm.Pricing.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
-| [ObjectVersion](Crm.Pricing.PromotionalPackages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only for the customers, that match the filter. `Unit: Crm.Sales.CustomersRepository.TableName` 
 | [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. `Unit: Marketing.DistributionChannels<br />Repository.TableName` 
 | [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies validity condition for the Ship To Customer of the sales document. `Unit: Crm.Sales.CustomersRepository.TableName` 
@@ -73,6 +67,18 @@ Aggregate Tree
 | [ValidForShipToCustomer](Crm.Pricing.PromotionalPackages.md#validforshiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. `Filter(multi eq)` |
 | [ValidForTargetGroup](Crm.Pricing.PromotionalPackages.md#validfortargetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, the package is valid only for the specified customer target group. `Filter(multi eq)` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Crm.Pricing.PromotionalPackages.md#id) | guid |  
+| [ObjectVersion](Crm.Pricing.PromotionalPackages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Crm.Pricing.PromotionalPackages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Pricing.PromotionalPackages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Crm.Pricing.PromotionalPackages.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Crm.Pricing.PromotionalPackages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -86,148 +92,148 @@ Aggregate Tree
 
 Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Code
 
 Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (20)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **20**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (20)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **20**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.IncMax( o => o.Code, null, "00000")`
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
 
 ### Name
 
 The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (254)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForCustomerFilterXML
 
 When not null, the package is valid only for the customers, that match the filter. `Unit: Crm.Sales.CustomersRepository.TableName`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForDistributionChannelFilterXML
 
 When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. `Unit: Marketing.DistributionChannelsRepository.TableName`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForShipToCustomerFilterXML
 
 When not null, specifies validity condition for the Ship To Customer of the sales document. `Unit: Crm.Sales.CustomersRepository.TableName`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ValidFromDate
 
 When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ValidToDate
 
 When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -236,82 +242,82 @@ _Show in UI_: **ShownByDefault**
 
 Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
 
-_Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DocumentAmountType
 
 The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders. `Filter(multi eq)` `Introduced in version 25.1.1.66`
 
-_Type_: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 When not null, indicates that the package is valid only for the specified enterprise company. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompanyLocation
 
 The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. `Filter(multi eq)`
 
-_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForCustomer
 
 When not null, the package is valid only for the specified customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForDistributionChannel
 
 When not null, the package is valid only for the specified distribution channel of the sales order. `Filter(multi eq)`
 
-_Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForPriceList
 
 When not null, the package is valid only for the specified price list. `Filter(multi eq)`
 
-_Type_: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForShipToCustomer
 
 When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Sales.Customers.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ValidForTargetGroup
 
 When not null, the package is valid only for the specified customer target group. `Filter(multi eq)`
 
-_Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -321,90 +327,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

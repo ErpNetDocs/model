@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Communities.Social.ReactionsSummary View | ERP.net Domain Model </title>
+      <title>Communities.Social.ReactionsSummary (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Communities.Social.ReactionsSummary View | ERP.net Domain Model ">
+      <meta name="title" content="Communities.Social.ReactionsSummary (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Communities.Social.ReactionsSummary">
-<h1 id="communitiessocialreactionssummary-view">Communities.Social.ReactionsSummary View</h1>
+<h1 id="communitiessocialreactionssummary-view">Communities.Social.ReactionsSummary (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Communities.Social.html">Communities.Social</a></p>
-<p>Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary (Introduced in version 22.1.6.73)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{DataObjectId}: {SocialCommentId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>CannotBeShown</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Summary with the social reactions per comment and dataobject.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Communities.Social.html">Communities.Social</a><br>
+Repository: Communities.Social.ReactionsSummary<br>
+Introduced In Version: 22.1.6.73<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {DataObjectId}: {SocialCommentId}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  CannotBeShown</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -150,17 +151,17 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="cnt">Cnt</h3>
 <p>Count of social reactions. <code>Required</code></p>
-<p><em>Type</em>: <strong>int64</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reactiontype">ReactionType</h3>
 <p>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="Communities.Social.ReactionsSummary.html#reactiontype">ReactionType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Communities.Social.ReactionsSummary.html#reactiontype">ReactionType</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>ReactionType</code>(Communities.Social.ReactionsSummary.md#reactiontype) data attribute<br>
-<em>Allowed Values (Communities.Social.ReactionsSummaryRepository.ReactionType Enum Members)</em></p>
+Allowed Values (Communities.Social.ReactionsSummaryRepository.ReactionType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -171,50 +172,50 @@ Allowed values for the <code>ReactionType</code>(Communities.Social.ReactionsSum
 <tbody>
 <tr>
 <td>Like</td>
-<td>Like value. Stored as 'LIK'. <br> <em>Database Value:</em> 'LIK' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Like'</td>
+<td>Like value. Stored as 'LIK'. <br> Database Value: 'LIK' <br> Model Value: 0 <br> Domain API Value: 'Like'</td>
 </tr>
 <tr>
 <td>Love</td>
-<td>Love value. Stored as 'LOV'. <br> <em>Database Value:</em> 'LOV' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Love'</td>
+<td>Love value. Stored as 'LOV'. <br> Database Value: 'LOV' <br> Model Value: 1 <br> Domain API Value: 'Love'</td>
 </tr>
 <tr>
 <td>Haha</td>
-<td>Haha value. Stored as 'HAH'. <br> <em>Database Value:</em> 'HAH' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Haha'</td>
+<td>Haha value. Stored as 'HAH'. <br> Database Value: 'HAH' <br> Model Value: 2 <br> Domain API Value: 'Haha'</td>
 </tr>
 <tr>
 <td>Wow</td>
-<td>Wow value. Stored as 'WOW'. <br> <em>Database Value:</em> 'WOW' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Wow'</td>
+<td>Wow value. Stored as 'WOW'. <br> Database Value: 'WOW' <br> Model Value: 3 <br> Domain API Value: 'Wow'</td>
 </tr>
 <tr>
 <td>Sad</td>
-<td>Sad value. Stored as 'SAD'. <br> <em>Database Value:</em> 'SAD' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Sad'</td>
+<td>Sad value. Stored as 'SAD'. <br> Database Value: 'SAD' <br> Model Value: 4 <br> Domain API Value: 'Sad'</td>
 </tr>
 <tr>
 <td>Angry</td>
-<td>Angry value. Stored as 'ANG'. <br> <em>Database Value:</em> 'ANG' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Angry'</td>
+<td>Angry value. Stored as 'ANG'. <br> Database Value: 'ANG' <br> Model Value: 5 <br> Domain API Value: 'Angry'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
 <p>The extensible data object. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Object_Id</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Sys_Objects_Table.Object_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Sys_Objects_Table.Object_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="socialcomment">SocialComment</h3>
 <p>The social comment. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Comments_Table.Social_Comment_Id</code></p>
-<p><em>Type</em>: <strong><a href="Communities.Social.Comments.html">Comments</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cmm_Social_Comments_Table.Social_Comment_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Communities.Social.Comments.html">Comments</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cmm_Social_Comments_Table.Social_Comment_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Communities_Social_ReactionsSummary</p>

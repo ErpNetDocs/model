@@ -1,20 +1,22 @@
 ---
 uid: Systems.Core.AttributeChangesHistory
 ---
-# Systems.Core.AttributeChangesHistory View
+# Systems.Core.AttributeChangesHistory (View)
 
-**Namespace:** [Systems.Core](Systems.Core.md)  
 
-Each entry represents an entity attribute change with previous and new value. Entity: Sys_Attribute_Changes_History_View (Introduced in version 23.1.2.37)
+Each entry represents an entity attribute change with previous and new value.
 
-## Default Visualization
-Default Display Text Format:  
-_{RepositoryName}: {EntityItemId}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Systems.Core](Systems.Core.md)  
+Repository: Systems.Core.AttributeChangesHistory  
+Introduced In Version: 23.1.2.37  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {RepositoryName}: {EntityItemId}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -46,70 +48,70 @@ Aggregate Tree
 
 The name of the attribute. `Required` `Filter(eq)` `Inherited from Sys_Attribute_Changes_Table.Attribute_Name`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Attribute_Changes_Table.Attribute_Name**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Inherited From: **Sys_Attribute_Changes_Table.Attribute_Name**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### EntityItemId
 
 The id of the actual changed object, described by this change. `Required` `Filter(multi eq)` `Inherited from Sys_Object_Changes_Table.Entity_Item_Id`
 
-_Type_: **guid**  
-_Category_: **System**  
-_Inherited From_: **Sys_Object_Changes_Table.Entity_Item_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **guid**  
+Category: **System**  
+Inherited From: **Sys_Object_Changes_Table.Entity_Item_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### NewValue
 
 The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_Changes_Table.New_Value`
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Inherited From: **Sys_Attribute_Changes_Table.New_Value**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### PreviousValue
 
 The previous value. `Required` `Filter(eq)`
 
-_Type_: **string (max)**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (max)**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### RepositoryName
 
 The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Object_Changes_Table.Repository_Name**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Inherited From: **Sys_Object_Changes_Table.Repository_Name**  
+Supported Filters: **Equals, Like, EqualsIn**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### TimeUtc
 
 Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `Inherited from Sys_Object_Changesets_Table.Time_Utc`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Inherited From_: **Sys_Object_Changesets_Table.Time_Utc**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Default Value_: **CurrentDateTimeUtc**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Inherited From: **Sys_Object_Changesets_Table.Time_Utc**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Default Value: **CurrentDateTimeUtc**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -118,11 +120,11 @@ _Show in UI_: **ShownByDefault**
 
 The user which initiated the change. null when it is unknown. `Filter(multi eq)` `Inherited from Sys_Object_Changesets_Table.User_Id`
 
-_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Object_Changesets_Table.User_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Inherited From: **Sys_Object_Changesets_Table.User_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

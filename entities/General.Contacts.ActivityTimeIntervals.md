@@ -1,7 +1,7 @@
-# General.Contacts.ActivityTimeIntervals Entity
+# General.Contacts.ActivityTimeIntervals
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Activities.ActivityTimeIntervals](General.Activities.ActivityTimeIntervals.md)
+New name: [General.Activities.ActivityTimeIntervals](General.Activities.ActivityTimeIntervals.md)

@@ -1,7 +1,7 @@
-# Systems.Core.Config Entity
+# Systems.Core.Config
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Config.Config](Systems.Config.Config.md)
+New name: [Systems.Config.Config](Systems.Config.Config.md)

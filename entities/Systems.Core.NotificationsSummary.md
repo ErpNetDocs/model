@@ -1,20 +1,22 @@
 ---
 uid: Systems.Core.NotificationsSummary
 ---
-# Systems.Core.NotificationsSummary View
+# Systems.Core.NotificationsSummary (View)
 
-**Namespace:** [Systems.Core](Systems.Core.md)  
 
-Summary info for notifications, grouped by user and data object. Entity: Cmm_Notifications_Summary_View (Introduced in version 25.1.1.20)
+Summary info for notifications, grouped by user and data object.
 
-## Default Visualization
-Default Display Text Format:  
-_{DataObjectId}: {UserId}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Systems.Core](Systems.Core.md)  
+Repository: Systems.Core.NotificationsSummary  
+Introduced In Version: 25.1.1.20  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {DataObjectId}: {UserId}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -47,65 +49,65 @@ Aggregate Tree
 
 Last Notification Class. `Required` `Introduced in version 25.1.1.34`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### LastNotificationId
 
 The id of the last notification, related to this data object. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61`
 
-_Type_: **guid**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **guid**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### LastNotificationSubject
 
 The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)` `Inherited from Cmm_Notifications_Table.Subject`
 
-_Type_: **string (256) __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Notifications_Table.Subject**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **256**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (256) __nullable__**  
+Category: **System**  
+Inherited From: **Cmm_Notifications_Table.Subject**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **256**  
+Show in UI: **ShownByDefault**  
 
 ### LastNotificationTime
 
 The exact server time (in UTC), when the notification was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `Inherited from Cmm_Notifications_Table.Creation_Time_Utc`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Notifications_Table.Creation_Time_Utc**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Default Value_: **CurrentDateTimeUtc**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Inherited From: **Cmm_Notifications_Table.Creation_Time_Utc**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Default Value: **CurrentDateTimeUtc**  
+Show in UI: **ShownByDefault**  
 
 ### NotificationsCount
 
 Notifications Count. `Required`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### NotReadCount
 
 Not Read Count. `Required` `Filter(eq;ge;le)`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -114,21 +116,21 @@ _Show in UI_: **ShownByDefault**
 
 The data object about which the notification is created. Null means that the notification is not about any specific data object. `Filter(multi eq)` `Inherited from Cmm_Notifications_Table.Data_Object_Id`
 
-_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Notifications_Table.Data_Object_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
+Category: **System**  
+Inherited From: **Cmm_Notifications_Table.Data_Object_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### User
 
 The user, who is notified. `Required` `Filter(multi eq)` `Inherited from Cmm_Notifications_Table.User_Id`
 
-_Type_: **[Users](Systems.Security.Users.md)**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Notifications_Table.User_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md)**  
+Category: **System**  
+Inherited From: **Cmm_Notifications_Table.User_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

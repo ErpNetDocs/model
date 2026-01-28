@@ -1,20 +1,22 @@
 ---
 uid: Finance.Accounting.TrialBalanceDetailed
 ---
-# Finance.Accounting.TrialBalanceDetailed View
+# Finance.Accounting.TrialBalanceDetailed (View)
 
-**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
 
-Shows debit and credit turnovers and balances per account, broken down by analytical dimensions, cost and profit centers. Designed for detailed analysis and managerial reporting. Entity: Acc_Trial_Balance_Detailed (Introduced in version 25.1.3.22)
+Shows debit and credit turnovers and balances per account, broken down by analytical dimensions, cost and profit centers. Designed for detailed analysis and managerial reporting.
 
-## Default Visualization
-Default Display Text Format:  
-_{FromDate}: {ToDate}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Finance.Accounting](Finance.Accounting.md)  
+Repository: Finance.Accounting.TrialBalanceDetailed  
+Introduced In Version: 25.1.3.22  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {FromDate}: {ToDate}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -90,337 +92,337 @@ Aggregate Tree
 
 Closing Balance (debit balance is positive, credit - negative). `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ClosingBase
 
 Closing balance in base currency (debit balance is positive, credit - negative). `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ClosingCredit
 
 Closing balance when it is credit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ClosingCreditBase
 
 Closing balance in base currency when it is credit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ClosingDebit
 
 Closing balance when it is debit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ClosingDebitBase
 
 Closing balance in base currency when it is debit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ClosingReporting
 
 Closing balance in reporting currency. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Credit
 
 Credit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CreditBase
 
 Credit Base. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CreditReporting
 
 Credit Reporting. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Debit
 
 Debit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DebitBase
 
 Debit Base. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DebitReporting
 
 Debit Reporting. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### FromDate
 
 Period Start Date - Should be filtered with exact date. `Required` `Filter(eq)`
 
-_Type_: **date**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKey
 
 Item Key. `Required` `Filter(eq;like)`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel1Code
 
 Item Key Level 1 Code. `Required`
 
-_Type_: **string (40)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **40**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (40)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **40**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel1Name
 
 Item Key Level 1 Name. `Required`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel2Code
 
 Item Key Level 2 Code. `Required`
 
-_Type_: **string (40)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **40**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (40)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **40**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel2Name
 
 Item Key Level 2 Name. `Required`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel3Code
 
 Item Key Level 3 Code. `Required`
 
-_Type_: **string (40)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **40**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (40)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **40**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel3Name
 
 Item Key Level 3 Name. `Required`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel4Code
 
 Item Key Level 4 Code. `Required`
 
-_Type_: **string (40)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **40**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (40)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **40**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel4Name
 
 Item Key Level 4 Name. `Required`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel5Code
 
 Item Key Level 5 Code. `Required`
 
-_Type_: **string (40)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **40**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (40)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **40**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel5Name
 
 Item Key Level 5 Name. `Required`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Opening
 
 Opening balance (debit balance is positive, credit - negative). `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OpeningBase
 
 Opening balance in base currency (debit balance is positive, credit - negative). `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OpeningCredit
 
 Opening balance when it is credit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OpeningCreditBase
 
 Opening balance in base currency when it is credit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OpeningDebit
 
 Opening balance when it is debit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OpeningDebitBase
 
 Opening balance in base currency when it is debit. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OpeningReporting
 
 Opening balance in reporting currency. `Required` `Introduced in version 25.1.3.29`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ToDate
 
 Period End Date - Should be filtered with exact date. `Required` `Filter(eq)`
 
-_Type_: **date**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -429,199 +431,199 @@ _Show in UI_: **ShownByDefault**
 
 General Ledger Account. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Accounts_Table.Account_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Accounts](Finance.Accounting.Accounts.md)**  
+Category: **System**  
+Inherited From: **Acc_Accounts_Table.Account_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### CostCenter
 
 Cost Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CostCenters](Finance.Accounting.CostCenters.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Cost_Centers_Table.Cost_Center_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
+Category: **System**  
+Inherited From: **Acc_Cost_Centers_Table.Cost_Center_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Currency
 
 Currency. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Currencies_Table.Currency_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md)**  
+Category: **System**  
+Inherited From: **Gen_Currencies_Table.Currency_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 Enterprise Company. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Category: **System**  
+Inherited From: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompanyLocation
 
 Company Location / Branch. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
-_Category_: **System**  
-_Inherited From_: **Cm_Company_Locations_Table.Company_Location_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+Category: **System**  
+Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### ExampleVoucherLine
 
 This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Voucher_Lines_Table.Voucher_Line_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Voucher_Lines_Table.Voucher_Line_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)**  
+Category: **System**  
+Inherited From: **Acc_Voucher_Lines_Table.Voucher_Line_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level1AccountGroup
 
 Level 1 Account Group. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Account_Groups_Table.Account_Group_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Account_Groups_Table.Account_Group_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Category: **System**  
+Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level1AccountProperty
 
 Level 1 Account Property. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Properties_Table.Property_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Properties_Table.Property_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Category: **System**  
+Inherited From: **Gen_Properties_Table.Property_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level2AccountGroup
 
 Level 2 Account Group. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Account_Groups_Table.Account_Group_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Account_Groups_Table.Account_Group_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Category: **System**  
+Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level2AccountProperty
 
 Level 2 Account Property. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Properties_Table.Property_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Properties_Table.Property_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Category: **System**  
+Inherited From: **Gen_Properties_Table.Property_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level3AccountGroup
 
 Level 3 Account Group. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Account_Groups_Table.Account_Group_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Account_Groups_Table.Account_Group_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Category: **System**  
+Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level3AccountProperty
 
 Level 3 Account Property. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Properties_Table.Property_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Properties_Table.Property_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Category: **System**  
+Inherited From: **Gen_Properties_Table.Property_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level4AccountGroup
 
 Level 4 Account Group. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Account_Groups_Table.Account_Group_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Account_Groups_Table.Account_Group_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Category: **System**  
+Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level4AccountProperty
 
 Level 4 Account Property. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Properties_Table.Property_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Properties_Table.Property_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Category: **System**  
+Inherited From: **Gen_Properties_Table.Property_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level5AccountGroup
 
 Level 5 Account Group. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Account_Groups_Table.Account_Group_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Account_Groups_Table.Account_Group_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Category: **System**  
+Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level5AccountProperty
 
 Level 5 Account Property. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Properties_Table.Property_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Properties_Table.Property_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Category: **System**  
+Inherited From: **Gen_Properties_Table.Property_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Level6AccountGroup
 
 Level 6 Account Group. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Account_Groups_Table.Account_Group_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Account_Groups_Table.Account_Group_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Category: **System**  
+Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### ProfitCenter
 
 Profit Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id` `Introduced in version 25.1.3.28`
 
-_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Profit_Centers_Table.Profit_Center_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
+Category: **System**  
+Inherited From: **Acc_Profit_Centers_Table.Profit_Center_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

@@ -1,7 +1,7 @@
-# General.Contacts.ActivityTemplates Entity
+# General.Contacts.ActivityTemplates
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Activities.ActivityTemplates](General.Activities.ActivityTemplates.md)
+New name: [General.Activities.ActivityTemplates](General.Activities.ActivityTemplates.md)

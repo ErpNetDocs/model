@@ -1,7 +1,7 @@
-# Systems.Core.ScheduledDocumentEvents Entity
+# Systems.Core.ScheduledDocumentEvents
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.ScheduledDocumentEvents](Systems.Monitoring.ScheduledDocumentEvents.md)
+New name: [Systems.Monitoring.ScheduledDocumentEvents](Systems.Monitoring.ScheduledDocumentEvents.md)

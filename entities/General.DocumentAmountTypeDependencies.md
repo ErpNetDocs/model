@@ -1,7 +1,7 @@
-# General.DocumentAmountTypeDependencies Entity
+# General.DocumentAmountTypeDependencies
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Documents.DocumentAmountTypeDependencies](Systems.Documents.DocumentAmountTypeDependencies.md)
+New name: [Systems.Documents.DocumentAmountTypeDependencies](Systems.Documents.DocumentAmountTypeDependencies.md)

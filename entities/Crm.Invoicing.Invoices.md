@@ -1,28 +1,29 @@
 ---
 uid: Crm.Invoicing.Invoices
 ---
-# Crm.Invoicing.Invoices Entity
+# Crm.Invoicing.Invoices
 
-**Namespace:** [Crm.Invoicing](Crm.Invoicing.md)  
-**Inherited From:** [General.Documents.Documents](General.Documents.Documents.md)  
 
-Invoices issued by the enterprise companies. Entity: Crm_Invoices
+Invoices issued by the enterprise companies.
 
-## Default Visualization
-Default Display Text Format:  
-_{DocumentType.TypeName:T} {DocumentNo}{StateTagsAttribute}_  
-Default Search Members:  
-_DocumentNo_  
-Code Data Member:  
-_DocumentNo_  
-Category:  _Documents_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
-Layout category attribute:  _DocumentTypeId_  
+## General
+Namespace: [Crm.Invoicing](Crm.Invoicing.md)  
+Repository: Crm.Invoicing.Invoices  
+Inherited From: [General.Documents.Documents](General.Documents.Documents.md)  
+Base Table: Crm_Invoices  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {DocumentType.TypeName:T} {DocumentNo}{StateTagsAttribute}  
+Search Members: DocumentNo  
+Code Member: DocumentNo  
+Category:  Documents  
+Show in UI:  ShownByDefault  
+Layout category By:  DocumentTypeId  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -48,7 +49,6 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Invoicing.Invoices.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Invoicing.Invoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Invoicing.Invoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [AggregateLastUpdateTimeUtc](Crm.Invoicing.Invoices.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [AmountToPay](Crm.Invoicing.Invoices.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. 
 | [ApplyDate](Crm.Invoicing.Invoices.md#applydate) | date | When not null specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date. `Required` `Filter(ge;le)` 
 | [AutomaticOrderLinking](Crm.Invoicing.Invoices.md#automaticorderlinking) | boolean | Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release. `Required` `Default(false)` 
@@ -58,23 +58,18 @@ Aggregate Tree
 | [CreditNoteDescription](Crm.Invoicing.Invoices.md#creditnotedescription) | string (254) __nullable__ | Descriptions/reason for the credit note. 
 | [DeliveryDate](Crm.Invoicing.Invoices.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When null = document date. `Filter(ge;le)` 
 | [DeliveryTermsCode](Crm.Invoicing.Invoices.md#deliverytermscode) | [DeliveryTerms](Crm.Invoicing.Invoices.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
-| [DisplayText](Crm.Invoicing.Invoices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DocumentDate](Crm.Invoicing.Invoices.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Invoicing.Invoices.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Crm.Invoicing.Invoices.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Crm.Invoicing.Invoices.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Invoicing.Invoices.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ExternalId](Crm.Invoicing.Invoices.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Invoicing.Invoices.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FullState](Crm.Invoicing.Invoices.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [Id](Crm.Invoicing.Invoices.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) | [TransportMode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
 | [<s>IsReleased</s>](Crm.Invoicing.Invoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Crm.Invoicing.Invoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](Crm.Invoicing.Invoices.md#isvalidfield) | boolean | Used for internal purposes. true when the invoice is valid (released and not void) for summing. `Required` `Default(false)` `ReadOnly` 
 | [Notes](Crm.Invoicing.Invoices.md#notes) | string (254) __nullable__ | Notes for this Invoice. 
-| [ObjectVersion](Crm.Invoicing.Invoices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PaymentDueDate](Crm.Invoicing.Invoices.md#paymentduedate) | datetime __nullable__ | When not null specifies due date for the payment. `Filter(ge;le)` 
 | [PaymentDueStartDate](Crm.Invoicing.Invoices.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. `Filter(ge;le)` 
@@ -124,6 +119,18 @@ Aggregate Tree
 | [ToParty](Crm.Invoicing.Invoices.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Crm.Invoicing.Invoices.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Crm.Invoicing.Invoices.md#id) | guid |  
+| [ObjectVersion](Crm.Invoicing.Invoices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Crm.Invoicing.Invoices.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Invoicing.Invoices.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Crm.Invoicing.Invoices.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Crm.Invoicing.Invoices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -146,607 +153,607 @@ Aggregate Tree
 
 Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **HiddenByDefault**  
 
 ### AdjustmentTime
 
 Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### AdjustmentUser
 
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### AmountToPay
 
 The total amount to pay after all lines, discounts, and taxes.
 
-_Type_: **[Amount](../data-types.md#amount)**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Amount](../data-types.md#amount)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 ### ApplyDate
 
 When not null specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date. `Required` `Filter(ge;le)`
 
-_Type_: **date**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.DocumentDate`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.DocumentDate`
 ### AutomaticOrderLinking
 
 Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release. `Required` `Default(false)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CompleteTime
 
 Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationTime
 
 Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **CurrentDateTime**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **CurrentDateTime**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationUser
 
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### CreditNoteDescription
 
 Descriptions/reason for the credit note.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **HiddenByDefault**  
 
 ### DeliveryDate
 
 Date, when the delivery was effected. When null = document date. `Filter(ge;le)`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DeliveryTermsCode
 
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
-_Type_: **[DeliveryTerms](Crm.Invoicing.Invoices.md#deliverytermscode) __nullable__**  
-_Category_: **System**  
+Type: **[DeliveryTerms](Crm.Invoicing.Invoices.md#deliverytermscode) __nullable__**  
+Category: **System**  
 Generic enum type for DeliveryTerms properties  
-_Allowed Values (Regulatory.Intrastat.DeliveryTerms Enum Members)_  
+Allowed Values (Regulatory.Intrastat.DeliveryTerms Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| ExWorks | ExWorks value. Stored as 'EXW'. <br /> _Database Value:_ 'EXW' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'ExWorks' |
-| FrancoCarrier | FrancoCarrier value. Stored as 'FCA'. <br /> _Database Value:_ 'FCA' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'FrancoCarrier' |
-| FreeAlongsideShip | FreeAlongsideShip value. Stored as 'FAS'. <br /> _Database Value:_ 'FAS' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'FreeAlongsideShip' |
-| FreeOnBoard | FreeOnBoard value. Stored as 'FOB'. <br /> _Database Value:_ 'FOB' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'FreeOnBoard' |
-| CostAndFreightCF | CostAndFreightCF value. Stored as 'CFR'. <br /> _Database Value:_ 'CFR' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'CostAndFreightCF' |
-| CostInsuranceAndFreight | CostInsuranceAndFreight value. Stored as 'CIF'. <br /> _Database Value:_ 'CIF' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'CostInsuranceAndFreight' |
-| CarriagePaidTo | CarriagePaidTo value. Stored as 'CPT'. <br /> _Database Value:_ 'CPT' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'CarriagePaidTo' |
-| CarriageAndInsurancePaidTo | CarriageAndInsurancePaidTo value. Stored as 'CIP'. <br /> _Database Value:_ 'CIP' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'CarriageAndInsurancePaidTo' |
-| DeliveredAtPlace | DeliveredAtPlace value. Stored as 'DAP'. <br /> _Database Value:_ 'DAP' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'DeliveredAtPlace' |
-| DeliveredAtTerminal | DeliveredAtTerminal value. Stored as 'DAT'. <br /> _Database Value:_ 'DAT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'DeliveredAtTerminal' |
-| DeliveredDutyPaid | DeliveredDutyPaid value. Stored as 'DDP'. <br /> _Database Value:_ 'DDP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'DeliveredDutyPaid' |
-| DeliveredAtPlaceUnloaded | DeliveredAtPlaceUnloaded value. Stored as 'DPU'. <br /> _Database Value:_ 'DPU' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'DeliveredAtPlaceUnloaded' |
+| ExWorks | ExWorks value. Stored as 'EXW'. <br /> Database Value: 'EXW' <br /> Model Value: 0 <br /> Domain API Value: 'ExWorks' |
+| FrancoCarrier | FrancoCarrier value. Stored as 'FCA'. <br /> Database Value: 'FCA' <br /> Model Value: 1 <br /> Domain API Value: 'FrancoCarrier' |
+| FreeAlongsideShip | FreeAlongsideShip value. Stored as 'FAS'. <br /> Database Value: 'FAS' <br /> Model Value: 2 <br /> Domain API Value: 'FreeAlongsideShip' |
+| FreeOnBoard | FreeOnBoard value. Stored as 'FOB'. <br /> Database Value: 'FOB' <br /> Model Value: 3 <br /> Domain API Value: 'FreeOnBoard' |
+| CostAndFreightCF | CostAndFreightCF value. Stored as 'CFR'. <br /> Database Value: 'CFR' <br /> Model Value: 4 <br /> Domain API Value: 'CostAndFreightCF' |
+| CostInsuranceAndFreight | CostInsuranceAndFreight value. Stored as 'CIF'. <br /> Database Value: 'CIF' <br /> Model Value: 5 <br /> Domain API Value: 'CostInsuranceAndFreight' |
+| CarriagePaidTo | CarriagePaidTo value. Stored as 'CPT'. <br /> Database Value: 'CPT' <br /> Model Value: 6 <br /> Domain API Value: 'CarriagePaidTo' |
+| CarriageAndInsurancePaidTo | CarriageAndInsurancePaidTo value. Stored as 'CIP'. <br /> Database Value: 'CIP' <br /> Model Value: 7 <br /> Domain API Value: 'CarriageAndInsurancePaidTo' |
+| DeliveredAtPlace | DeliveredAtPlace value. Stored as 'DAP'. <br /> Database Value: 'DAP' <br /> Model Value: 8 <br /> Domain API Value: 'DeliveredAtPlace' |
+| DeliveredAtTerminal | DeliveredAtTerminal value. Stored as 'DAT'. <br /> Database Value: 'DAT' <br /> Model Value: 9 <br /> Domain API Value: 'DeliveredAtTerminal' |
+| DeliveredDutyPaid | DeliveredDutyPaid value. Stored as 'DDP'. <br /> Database Value: 'DDP' <br /> Model Value: 10 <br /> Domain API Value: 'DeliveredDutyPaid' |
+| DeliveredAtPlaceUnloaded | DeliveredAtPlaceUnloaded value. Stored as 'DPU'. <br /> Database Value: 'DPU' <br /> Model Value: 11 <br /> Domain API Value: 'DeliveredAtPlaceUnloaded' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.Lines.Select( c => InvoiceLinesRepository.DeliveryTermsCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
 ### DocumentDate
 
 The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **date**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Default Value_: **CurrentDate**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Default Value: **CurrentDate**  
+Show in UI: **ShownByDefault**  
 
 ### DocumentNo
 
 Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (20)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **20**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (20)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **20**  
+Show in UI: **ShownByDefault**  
 
 ### DocumentNotes
 
 Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **HiddenByDefault**  
 
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **1**  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **1**  
+Show in UI: **HiddenByDefault**  
 
 ### EntityName
 
 The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (64)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **CannotBeShown**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **CannotBeShown**  
 
 ### FullState
 
 Full state of the document based on its system and user state. [ReadOnly]
 
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 ### IntrastatTransactionNatureCode
 
 Transaction nature; used for Intrastat reporting.
 
-_Type_: **[TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) __nullable__**  
-_Category_: **System**  
+Type: **[TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) __nullable__**  
+Category: **System**  
 Generic enum type for TransactionNature properties  
-_Allowed Values (Regulatory.Intrastat.TransactionNature Enum Members)_  
+Allowed Values (Regulatory.Intrastat.TransactionNature Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| OutrightPurchaseOrSale | OutrightPurchaseOrSale value. Stored as '11'. <br /> _Database Value:_ '11' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'OutrightPurchaseOrSale' |
-| SupplyForSale | SupplyForSale value. Stored as '12'. <br /> _Database Value:_ '12' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'SupplyForSale' |
-| BarterTrade | BarterTrade value. Stored as '13'. <br /> _Database Value:_ '13' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'BarterTrade' |
-| FinancialLeasing | FinancialLeasing value. Stored as '14'. <br /> _Database Value:_ '14' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'FinancialLeasing' |
-| OtherTransactions | OtherTransactions value. Stored as '19'. <br /> _Database Value:_ '19' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'OtherTransactions' |
-| ReturnStokilizing | ReturnStokilizing value. Stored as '21'. <br /> _Database Value:_ '21' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'ReturnStokilizing' |
-| ReplacementFor<br />ReturnedGoods | ReplacementFor<br />ReturnedGoods value. Stored as '22'. <br /> _Database Value:_ '22' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'ReplacementFor<br />ReturnedGoods' |
-| ReplacementOfGoods<br />NotBeingReturned | ReplacementOfGoods<br />NotBeingReturned value. Stored as '23'. <br /> _Database Value:_ '23' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'ReplacementOfGoods<br />NotBeingReturned' |
-| ReturnOrExchange<br />OfOtherGoods | ReturnOrExchange<br />OfOtherGoods value. Stored as '29'. <br /> _Database Value:_ '29' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReturnOrExchange<br />OfOtherGoods' |
-| SpecificTransactions | SpecificTransactions value. Stored as '60'. <br /> _Database Value:_ '60' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'SpecificTransactions' |
-| OperationsOnJointProjects | OperationsOnJointProjects value. Stored as '70'. <br /> _Database Value:_ '70' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'OperationsOnJointProjects' |
-| TransactionsOf<br />ConstructionMaterials<br />AndEquipment | TransactionsOf<br />ConstructionMaterials<br />AndEquipment value. Stored as '80'. <br /> _Database Value:_ '80' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'TransactionsOf<br />ConstructionMaterials<br />AndEquipment' |
-| OtherTransactionsLeasing | OtherTransactionsLeasing value. Stored as '91'. <br /> _Database Value:_ '91' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'OtherTransactionsLeasing' |
-| OtherTransactionsOther | OtherTransactionsOther value. Stored as '99'. <br /> _Database Value:_ '99' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'OtherTransactionsOther' |
-| DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind | DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind value. Stored as '30'. <br /> _Database Value:_ '30' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind' |
-| GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender | GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender value. Stored as '41'. <br /> _Database Value:_ '41' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender' |
-| GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender | GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender value. Stored as '42'. <br /> _Database Value:_ '42' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender' |
-| GoodsThatAreReturned<br />ToSender | GoodsThatAreReturned<br />ToSender value. Stored as '51'. <br /> _Database Value:_ '51' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'GoodsThatAreReturned<br />ToSender' |
-| GoodsThatAreNot<br />ReturnedToSender | GoodsThatAreNot<br />ReturnedToSender value. Stored as '52'. <br /> _Database Value:_ '52' <br /> _Model Value:_ 18 <br /> _Domain API Value:_ 'GoodsThatAreNot<br />ReturnedToSender' |
+| OutrightPurchaseOrSale | OutrightPurchaseOrSale value. Stored as '11'. <br /> Database Value: '11' <br /> Model Value: 0 <br /> Domain API Value: 'OutrightPurchaseOrSale' |
+| SupplyForSale | SupplyForSale value. Stored as '12'. <br /> Database Value: '12' <br /> Model Value: 1 <br /> Domain API Value: 'SupplyForSale' |
+| BarterTrade | BarterTrade value. Stored as '13'. <br /> Database Value: '13' <br /> Model Value: 2 <br /> Domain API Value: 'BarterTrade' |
+| FinancialLeasing | FinancialLeasing value. Stored as '14'. <br /> Database Value: '14' <br /> Model Value: 3 <br /> Domain API Value: 'FinancialLeasing' |
+| OtherTransactions | OtherTransactions value. Stored as '19'. <br /> Database Value: '19' <br /> Model Value: 4 <br /> Domain API Value: 'OtherTransactions' |
+| ReturnStokilizing | ReturnStokilizing value. Stored as '21'. <br /> Database Value: '21' <br /> Model Value: 5 <br /> Domain API Value: 'ReturnStokilizing' |
+| ReplacementFor<br />ReturnedGoods | ReplacementFor<br />ReturnedGoods value. Stored as '22'. <br /> Database Value: '22' <br /> Model Value: 6 <br /> Domain API Value: 'ReplacementFor<br />ReturnedGoods' |
+| ReplacementOfGoods<br />NotBeingReturned | ReplacementOfGoods<br />NotBeingReturned value. Stored as '23'. <br /> Database Value: '23' <br /> Model Value: 7 <br /> Domain API Value: 'ReplacementOfGoods<br />NotBeingReturned' |
+| ReturnOrExchange<br />OfOtherGoods | ReturnOrExchange<br />OfOtherGoods value. Stored as '29'. <br /> Database Value: '29' <br /> Model Value: 8 <br /> Domain API Value: 'ReturnOrExchange<br />OfOtherGoods' |
+| SpecificTransactions | SpecificTransactions value. Stored as '60'. <br /> Database Value: '60' <br /> Model Value: 9 <br /> Domain API Value: 'SpecificTransactions' |
+| OperationsOnJointProjects | OperationsOnJointProjects value. Stored as '70'. <br /> Database Value: '70' <br /> Model Value: 10 <br /> Domain API Value: 'OperationsOnJointProjects' |
+| TransactionsOf<br />ConstructionMaterials<br />AndEquipment | TransactionsOf<br />ConstructionMaterials<br />AndEquipment value. Stored as '80'. <br /> Database Value: '80' <br /> Model Value: 11 <br /> Domain API Value: 'TransactionsOf<br />ConstructionMaterials<br />AndEquipment' |
+| OtherTransactionsLeasing | OtherTransactionsLeasing value. Stored as '91'. <br /> Database Value: '91' <br /> Model Value: 12 <br /> Domain API Value: 'OtherTransactionsLeasing' |
+| OtherTransactionsOther | OtherTransactionsOther value. Stored as '99'. <br /> Database Value: '99' <br /> Model Value: 13 <br /> Domain API Value: 'OtherTransactionsOther' |
+| DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind | DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind value. Stored as '30'. <br /> Database Value: '30' <br /> Model Value: 14 <br /> Domain API Value: 'DealsThatInclude<br />PropertyTransfers<br />WithoutFinancial<br />CompensationOr<br />CompensationIn<br />Kind' |
+| GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender | GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender value. Stored as '41'. <br /> Database Value: '41' <br /> Model Value: 15 <br /> Domain API Value: 'GoodsThatAreExpected<br />ToBeReturnedTo<br />Sender' |
+| GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender | GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender value. Stored as '42'. <br /> Database Value: '42' <br /> Model Value: 16 <br /> Domain API Value: 'GoodsThatAreNot<br />ExpectedToBeReturned<br />ToSender' |
+| GoodsThatAreReturned<br />ToSender | GoodsThatAreReturned<br />ToSender value. Stored as '51'. <br /> Database Value: '51' <br /> Model Value: 17 <br /> Domain API Value: 'GoodsThatAreReturned<br />ToSender' |
+| GoodsThatAreNot<br />ReturnedToSender | GoodsThatAreNot<br />ReturnedToSender value. Stored as '52'. <br /> Database Value: '52' <br /> Model Value: 18 <br /> Domain API Value: 'GoodsThatAreNot<br />ReturnedToSender' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.Lines.Select( c => InvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportModeCode
 
 Transport mode; used for Intrastat reporting.
 
-_Type_: **[TransportMode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) __nullable__**  
-_Category_: **System**  
+Type: **[TransportMode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) __nullable__**  
+Category: **System**  
 Generic enum type for TransportMode properties  
-_Allowed Values (Regulatory.Intrastat.TransportMode Enum Members)_  
+Allowed Values (Regulatory.Intrastat.TransportMode Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Shipping | Shipping value. Stored as '1'. <br /> _Database Value:_ '1' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Shipping' |
-| RailwayTransport | RailwayTransport value. Stored as '2'. <br /> _Database Value:_ '2' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'RailwayTransport' |
-| RoadTransport | RoadTransport value. Stored as '3'. <br /> _Database Value:_ '3' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'RoadTransport' |
-| AirTransport | AirTransport value. Stored as '4'. <br /> _Database Value:_ '4' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'AirTransport' |
-| Mail | Mail value. Stored as '5'. <br /> _Database Value:_ '5' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Mail' |
-| FixedTransport<br />Installations | FixedTransport<br />Installations value. Stored as '7'. <br /> _Database Value:_ '7' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'FixedTransport<br />Installations' |
-| RiverTransport | RiverTransport value. Stored as '8'. <br /> _Database Value:_ '8' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'RiverTransport' |
-| SelfPropelled | SelfPropelled value. Stored as '9'. <br /> _Database Value:_ '9' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'SelfPropelled' |
+| Shipping | Shipping value. Stored as '1'. <br /> Database Value: '1' <br /> Model Value: 0 <br /> Domain API Value: 'Shipping' |
+| RailwayTransport | RailwayTransport value. Stored as '2'. <br /> Database Value: '2' <br /> Model Value: 1 <br /> Domain API Value: 'RailwayTransport' |
+| RoadTransport | RoadTransport value. Stored as '3'. <br /> Database Value: '3' <br /> Model Value: 2 <br /> Domain API Value: 'RoadTransport' |
+| AirTransport | AirTransport value. Stored as '4'. <br /> Database Value: '4' <br /> Model Value: 3 <br /> Domain API Value: 'AirTransport' |
+| Mail | Mail value. Stored as '5'. <br /> Database Value: '5' <br /> Model Value: 4 <br /> Domain API Value: 'Mail' |
+| FixedTransport<br />Installations | FixedTransport<br />Installations value. Stored as '7'. <br /> Database Value: '7' <br /> Model Value: 5 <br /> Domain API Value: 'FixedTransport<br />Installations' |
+| RiverTransport | RiverTransport value. Stored as '8'. <br /> Database Value: '8' <br /> Model Value: 6 <br /> Domain API Value: 'RiverTransport' |
+| SelfPropelled | SelfPropelled value. Stored as '9'. <br /> Database Value: '9' <br /> Model Value: 7 <br /> Domain API Value: 'SelfPropelled' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.Lines.Select( c => InvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
 **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### IsSingleExecution
 
 Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### IsValidField
 
 Used for internal purposes. true when the invoice is valid (released and not void) for summing. `Required` `Default(false)` `ReadOnly`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **CannotBeShown**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **CannotBeShown**  
 
 ### Notes
 
 Notes for this Invoice.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **HiddenByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **HiddenByDefault**  
 
 ### ParentDocumentRelationshipType
 
 Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) __nullable__**  
-_Category_: **System**  
+Type: **[ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) __nullable__**  
+Category: **System**  
 Relationship between parent and child documents  
-_Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)_  
+Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Subtask | The child document is a sub-task of the parent document. (Complete child to complete parent) <br /> _Database Value:_ 'S' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Subtask' |
-| NextTask | The child document is next task of the parent document. (Complete parent to complete child) <br /> _Database Value:_ 'N' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'NextTask' |
-| IndependentTask | The document is not dependent of neither child nor parent document. <br /> _Database Value:_ 'I' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'IndependentTask' |
+| Subtask | The child document is a sub-task of the parent document. (Complete child to complete parent) <br /> Database Value: 'S' <br /> Model Value: 0 <br /> Domain API Value: 'Subtask' |
+| NextTask | The child document is next task of the parent document. (Complete parent to complete child) <br /> Database Value: 'N' <br /> Model Value: 1 <br /> Domain API Value: 'NextTask' |
+| IndependentTask | The document is not dependent of neither child nor parent document. <br /> Database Value: 'I' <br /> Model Value: 2 <br /> Domain API Value: 'IndependentTask' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### PaymentDueDate
 
 When not null specifies due date for the payment. `Filter(ge;le)`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))`
 ### PaymentDueStartDate
 
 The date when the payment becomes due for documents with one installment. `Filter(ge;le)`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))`
 ### PaymentTypeDescription
 
 Description of the payment type. Initially copied from the name of the Payment Type.
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.PaymentType.Name`
 ### PlanningOnly
 
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### ReadOnly
 
 True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### ReferenceDate
 
 Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **CurrentDate**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **CurrentDate**  
+Show in UI: **HiddenByDefault**  
 
 ### ReferenceDocumentNo
 
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (20) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **20**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (20) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **20**  
+Show in UI: **HiddenByDefault**  
 
 ### ReleaseTime
 
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### State
 
 The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[DocumentState](Crm.Invoicing.Invoices.md#state)**  
-_Category_: **System**  
+Type: **[DocumentState](Crm.Invoicing.Invoices.md#state)**  
+Category: **System**  
 Enumeration of document system states  
-_Allowed Values (General.Documents.DocumentState Enum Members)_  
+Allowed Values (General.Documents.DocumentState Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| New | New document, just created. Can be edited. (Stored as 0). <br /> _Database Value:_ 0 <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'New' |
-| Adjustment | Document which adjusts other released documents. (Stored as 5). <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Adjustment' |
-| Planned | Planned by the system for future releasing. (Stored as 10). <br /> _Database Value:_ 10 <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Planned' |
-| FirmPlanned | Planned by operator for future releasing. (Stored as 20). <br /> _Database Value:_ 20 <br /> _Model Value:_ 20 <br /> _Domain API Value:_ 'FirmPlanned' |
-| Released | Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br /> _Database Value:_ 30 <br /> _Model Value:_ 30 <br /> _Domain API Value:_ 'Released' |
-| Completed | Work has completed. (Stored as 40). <br /> _Database Value:_ 40 <br /> _Model Value:_ 40 <br /> _Domain API Value:_ 'Completed' |
-| Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br /> _Database Value:_ 50 <br /> _Model Value:_ 50 <br /> _Domain API Value:_ 'Closed' |
+| New | New document, just created. Can be edited. (Stored as 0). <br /> Database Value: 0 <br /> Model Value: 0 <br /> Domain API Value: 'New' |
+| Adjustment | Document which adjusts other released documents. (Stored as 5). <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'Adjustment' |
+| Planned | Planned by the system for future releasing. (Stored as 10). <br /> Database Value: 10 <br /> Model Value: 10 <br /> Domain API Value: 'Planned' |
+| FirmPlanned | Planned by operator for future releasing. (Stored as 20). <br /> Database Value: 20 <br /> Model Value: 20 <br /> Domain API Value: 'FirmPlanned' |
+| Released | Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br /> Database Value: 30 <br /> Model Value: 30 <br /> Domain API Value: 'Released' |
+| Completed | Work has completed. (Stored as 40). <br /> Database Value: 40 <br /> Model Value: 40 <br /> Domain API Value: 'Completed' |
+| Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br /> Database Value: 50 <br /> Model Value: 50 <br /> Domain API Value: 'Closed' |
 
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **HiddenByDefault**  
 
 ### StateTagsAttribute
 
 Specifies the state of the document.
 
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 ### TotalLineAmount
 
 The sum of Line Amounts from all document lines.
 
-_Type_: **[Amount](../data-types.md#amount)**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Amount](../data-types.md#amount)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 ### VATCashReportingMode
 
 When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. `Required` `Default(false)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `IIF( ( obj.EnterpriseCompany == null), False, obj.EnterpriseCompany.Company.IsVATCashReportingRegistered)`
 ### VATNotes
 
 Description of the operation that will be entered in the VAT ledgers.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **HiddenByDefault**  
 
 ### Void
 
 True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **boolean**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### VoidReason
 
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **HiddenByDefault**  
 
 ### VoidTime
 
 Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### VoidUser
 
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -755,13 +762,13 @@ _Show in UI_: **HiddenByDefault**
 
 The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 
-_Remarks_  
+Remarks  
 Supported permissions
 
 | Permission | Type |
@@ -773,241 +780,241 @@ Supported permissions
 
 The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Documents](General.Documents.Documents.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### AssignedToUser
 
 The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### CreditNoteOriginalInvoice
 
 When this is credit note, may contain the original Invoice. null for normal invoices or when the original document is unknown. `Filter(multi eq)`
 
-_Type_: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### CurrencyDirectory
 
 The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### Customer
 
 The customer to which the invoice is issued. `Required` `Filter(multi eq)`
 
-_Type_: **[Customers](Crm.Sales.Customers.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Customers](Crm.Sales.Customers.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DealType
 
 VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type. `Filter(multi eq)`
 
-_Type_: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.DocumentType.InvoicesOptions.FirstOrDefault( ).DefaultDealType`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DocumentCurrency
 
 The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DocumentType
 
 The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### EnterpriseCompanyLocation
 
 The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### FromCompanyDivision
 
 The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### FromParty
 
 The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Parties](General.Contacts.Parties.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Parties](General.Contacts.Parties.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### IntrastatTransportCountry
 
 Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)`
 
-_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Countries](General.Geography.Countries.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.Lines.Select( c => c.IntrastatTransportCountry).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
 In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Documents](General.Documents.Documents.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Documents](General.Documents.Documents.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### Parent
 
 In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Documents](General.Documents.Documents.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### PaymentAccount
 
 When not null, specifies the default payment account for the payment order. `Filter(multi eq)`
 
-_Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
 When not null specifies the payment type for the invoice. `Filter(multi eq)`
 
-_Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.Customer.DefaultPaymentType`
 ### PrimeCauseDocument
 
 The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Documents](General.Documents.Documents.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### ResponsiblePerson
 
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### ReverseOfDocument
 
 The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Documents](General.Documents.Documents.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### Sequence
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Sequences](Systems.Documents.Sequences.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Sequences](Systems.Documents.Sequences.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### ToCompanyDivision
 
 The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### ToParty
 
 The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.ObtainToParty( )`
 
 ### UserStatus
 
 The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
-_Type_: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 
 ## API Methods
@@ -1017,33 +1024,33 @@ Methods that can be invoked in public APIs.
 ### ChangeState
 
 Changes the document state to the specified new state              (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **void**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **newState**  
     The desired new state of the document  
-    _Type_: General.Documents.DocumentState  
+    Type: General.Documents.DocumentState  
     Enumeration of document system states  
-    _Allowed Values (General.Documents.DocumentState Enum Members)_  
+    Allowed Values (General.Documents.DocumentState Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | New | New document, just created. Can be edited. (Stored as 0). <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'New' |
-    | Adjustment | Document which adjusts other released documents. (Stored as 5). <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Adjustment' |
-    | Planned | Planned by the system for future releasing. (Stored as 10). <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Planned' |
-    | FirmPlanned | Planned by operator for future releasing. (Stored as 20). <br /> _Model Value:_ 20 <br /> _Domain API Value:_ 'FirmPlanned' |
-    | Released | Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br /> _Model Value:_ 30 <br /> _Domain API Value:_ 'Released' |
-    | Completed | Work has completed. (Stored as 40). <br /> _Model Value:_ 40 <br /> _Domain API Value:_ 'Completed' |
-    | Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br /> _Model Value:_ 50 <br /> _Domain API Value:_ 'Closed' |
+    | New | New document, just created. Can be edited. (Stored as 0). <br /> Model Value: 0 <br /> Domain API Value: 'New' |
+    | Adjustment | Document which adjusts other released documents. (Stored as 5). <br /> Model Value: 5 <br /> Domain API Value: 'Adjustment' |
+    | Planned | Planned by the system for future releasing. (Stored as 10). <br /> Model Value: 10 <br /> Domain API Value: 'Planned' |
+    | FirmPlanned | Planned by operator for future releasing. (Stored as 20). <br /> Model Value: 20 <br /> Domain API Value: 'FirmPlanned' |
+    | Released | Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br /> Model Value: 30 <br /> Domain API Value: 'Released' |
+    | Completed | Work has completed. (Stored as 40). <br /> Model Value: 40 <br /> Domain API Value: 'Completed' |
+    | Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br /> Model Value: 50 <br /> Domain API Value: 'Closed' |
 
 
   * **userStatus**  
     The desired new user status of the document. Can be null.  
-    _Type_: [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md)  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md)  
+     Optional: True  
+    Default Value: null  
 
 
 The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.
@@ -1051,39 +1058,39 @@ The process of changing the document state is very labor intensive and includes 
 ### ProcessSingleRoute
 
 Processes the document route.               (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **void**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **route**  
       
-    _Type_: [Routes](Systems.Documents.Routes.md)  
+    Type: [Routes](Systems.Documents.Routes.md)  
 
   * **processForLowerDocumentStates**  
       
-    _Type_: boolean  
+    Type: boolean  
 
 
 ### Complete
 
 Changes the document state to Completed with all Release-ed sub-documents              (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **void**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **completion**  
     How the sub-documents will be completed, if at all  
-    _Type_: General.Documents.DocumentCompletion  
+    Type: General.Documents.DocumentCompletion  
     Determines how Document will be completed  
-    _Allowed Values (General.Documents.DocumentCompletion Enum Members)_  
+    Allowed Values (General.Documents.DocumentCompletion Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | OnlyDocument | Only the document will be completed <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'OnlyDocument' |
-    | WithAllChildren | The document, along with is sub-documents, will be completed <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'WithAllChildren' |
-    | WithReleasedChildren | The document, along with its Release-ed sub-documents, will be completed <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'WithReleasedChildren' |
+    | OnlyDocument | Only the document will be completed <br /> Model Value: 0 <br /> Domain API Value: 'OnlyDocument' |
+    | WithAllChildren | The document, along with is sub-documents, will be completed <br /> Model Value: 1 <br /> Domain API Value: 'WithAllChildren' |
+    | WithReleasedChildren | The document, along with its Release-ed sub-documents, will be completed <br /> Model Value: 2 <br /> Domain API Value: 'WithReleasedChildren' |
 
 
 
@@ -1092,169 +1099,169 @@ The process of changing the document state is very labor intensive and includes 
 ### MakeVoid
 
 Makes the document void. The operation is irreversible.              (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **void**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **reason**  
     The reason for voiding the document.  
-    _Type_: string  
+    Type: string  
 
   * **voidType**  
     The type of void operation to execute.  
-    _Type_: General.Documents.DocumentsRepositoryBase.VoidType  
+    Type: General.Documents.DocumentsRepositoryBase.VoidType  
     Specifies the type of void operation  
-    _Allowed Values (General.Documents.DocumentsRepositoryBase.VoidType Enum Members)_  
+    Allowed Values (General.Documents.DocumentsRepositoryBase.VoidType Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | VoidDocument | Void only the document. If there are sub-documents, the operation might fail. <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'VoidDocument' |
-    | VoidWithSubDocuments | Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'VoidWithSubDocuments' |
-    | VoidWithReleased<br />SubDocuments | Void the document and all of its sub-documents, even the released ones. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'VoidWithReleased<br />SubDocuments' |
+    | VoidDocument | Void only the document. If there are sub-documents, the operation might fail. <br /> Model Value: 0 <br /> Domain API Value: 'VoidDocument' |
+    | VoidWithSubDocuments | Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br /> Model Value: 1 <br /> Domain API Value: 'VoidWithSubDocuments' |
+    | VoidWithReleased<br />SubDocuments | Void the document and all of its sub-documents, even the released ones. <br /> Model Value: 2 <br /> Domain API Value: 'VoidWithReleased<br />SubDocuments' |
 
-     _Optional_: True  
-    _Default Value_: VoidDocument  
+     Optional: True  
+    Default Value: VoidDocument  
 
   * **resetParentState**  
     Resets the parent state of document.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: True  
+    Type: boolean  
+     Optional: True  
+    Default Value: True  
 
 
 ### GetPrintout
 
 Gets a document printout as a file. The returned value is Base64 string representation of the file contents.             This method creates `DocumentPrint`(General.Documents.DocumentPrints.md).              (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **string**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **POST**  
+Return Type: **string**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **fileFormat**  
     The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: pdf  
+    Type: string  
+     Optional: True  
+    Default Value: pdf  
 
   * **printout**  
     The printout defined for the document type of the document. If null the default printout of the document type is used.  
-    _Type_: [Printouts](Systems.Documents.Printouts.md)  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: [Printouts](Systems.Documents.Printouts.md)  
+     Optional: True  
+    Default Value: null  
 
 
 ### Recalculate
 
 The document and all of its owned objects will be altered to become valid.              (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **void**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
 
 In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.
 
 ### GetAllParentDocuments
 
 Gets all parent documents, traversing the parent document chain by using the Parent property.              (Inherited from [Documents](General.Documents.Documents.md))  
-_Return Type_: **Collection Of [Documents](General.Documents.Documents.md)**  
-_Declaring Type_: **[Documents](General.Documents.Documents.md)**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [Documents](General.Documents.Documents.md)**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **includeSelf**  
     if set to true the current document is included.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
 
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

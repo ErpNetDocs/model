@@ -1,7 +1,7 @@
-# Crm.Distribution.SalesPersonTargets Entity
+# Crm.Distribution.SalesPersonTargets
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Crm.SalesForce.SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md)
+New name: [Crm.SalesForce.SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md)

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Projects.Agile.CaseDevelopments Entity | ERP.net Domain Model </title>
+      <title>Projects.Agile.CaseDevelopments | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Projects.Agile.CaseDevelopments Entity | ERP.net Domain Model ">
+      <meta name="title" content="Projects.Agile.CaseDevelopments | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,24 @@
         </div>
 
         <article data-uid="Projects.Agile.CaseDevelopments">
-<h1 id="projectsagilecasedevelopments-entity">Projects.Agile.CaseDevelopments Entity</h1>
+<h1 id="projectsagilecasedevelopments">Projects.Agile.CaseDevelopments</h1>
 
-<p><strong>Namespace:</strong> <a href="Projects.Agile.html">Projects.Agile</a></p>
-<p>Case Development. Entity: Apm_Case_Developments (Introduced in version 24.1.3.81)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{CreationTimeUtc} {ActionDescription} by {CreationUser}</em><br>
-Default Search Members:<br>
-<em>Case.Title</em><br>
-Name Data Member:<br>
-<em>Case.Title</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Case Development.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Projects.Agile.html">Projects.Agile</a><br>
+Repository: Projects.Agile.CaseDevelopments<br>
+Base Table: Apm_Case_Developments<br>
+Introduced In Version: 24.1.3.81<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {CreationTimeUtc} {ActionDescription} by {CreationUser}<br>
+Search Members: Case.Title<br>
+Name Member: Case.Title<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -139,24 +140,9 @@ Aggregate Root:<br>
 <td>Type of the development - Edit, Assignment, Resolve, etc. <code>Required</code> <code>Default(&quot;EDT&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
-<td><a href="Projects.Agile.CaseDevelopments.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Projects.Agile.CaseDevelopments.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">NewSystemState</a></td>
 <td><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></td>
 <td>When the development incurred changing the state of the case, contains the new state. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td><a href="Projects.Agile.CaseDevelopments.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 </tbody>
 </table>
@@ -187,37 +173,64 @@ Aggregate Root:<br>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Projects.Agile.CaseDevelopments.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Projects.Agile.CaseDevelopments.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Projects.Agile.CaseDevelopments.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actiondescription">ActionDescription</h3>
 <p>Specifies the latest action, dependent on DevelopmentType.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <p>The exact date and time (in UTC) when the development was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>datetime</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Default Value: <strong>CurrentDateTimeUtc</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="description">Description</h3>
 <p>Detailed description of the development. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="developmenttype">DevelopmentType</h3>
 <p>Type of the development - Edit, Assignment, Resolve, etc. <code>Required</code> <code>Default(&quot;EDT&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="Projects.Agile.CaseDevelopments.html#developmenttype">DevelopmentType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Projects.Agile.CaseDevelopments.html#developmenttype">DevelopmentType</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>DevelopmentType</code>(Projects.Agile.CaseDevelopments.md#developmenttype) data attribute<br>
-<em>Allowed Values (Projects.Agile.CaseDevelopmentsRepository.DevelopmentType Enum Members)</em></p>
+Allowed Values (Projects.Agile.CaseDevelopmentsRepository.DevelopmentType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -228,54 +241,40 @@ Allowed values for the <code>DevelopmentType</code>(Projects.Agile.CaseDevelopme
 <tbody>
 <tr>
 <td>Edit</td>
-<td>Edit. Stored as 'EDT'. <br> <em>Database Value:</em> 'EDT' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Edit'</td>
+<td>Edit. Stored as 'EDT'. <br> Database Value: 'EDT' <br> Model Value: 0 <br> Domain API Value: 'Edit'</td>
 </tr>
 <tr>
 <td>Assignment</td>
-<td>Assignment . Stored as 'ASN'. <br> <em>Database Value:</em> 'ASN' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Assignment'</td>
+<td>Assignment . Stored as 'ASN'. <br> Database Value: 'ASN' <br> Model Value: 1 <br> Domain API Value: 'Assignment'</td>
 </tr>
 <tr>
 <td>ChangeState</td>
-<td>Change state. Stored as 'STA'. <br> <em>Database Value:</em> 'STA' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'ChangeState'</td>
+<td>Change state. Stored as 'STA'. <br> Database Value: 'STA' <br> Model Value: 2 <br> Domain API Value: 'ChangeState'</td>
 </tr>
 <tr>
 <td>AssignmentH</td>
-<td>Assignment. Stored as 'ASH'. <br> <em>Database Value:</em> 'ASH' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'AssignmentH'</td>
+<td>Assignment. Stored as 'ASH'. <br> Database Value: 'ASH' <br> Model Value: 3 <br> Domain API Value: 'AssignmentH'</td>
 </tr>
 <tr>
 <td>ChangeStateH</td>
-<td>Change state. Stored as 'STH'. <br> <em>Database Value:</em> 'STH' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'ChangeStateH'</td>
+<td>Change state. Stored as 'STH'. <br> Database Value: 'STH' <br> Model Value: 4 <br> Domain API Value: 'ChangeStateH'</td>
 </tr>
 <tr>
 <td>Create</td>
-<td>Create. Stored as 'CRT'. <br> <em>Database Value:</em> 'CRT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Create'</td>
+<td>Create. Stored as 'CRT'. <br> Database Value: 'CRT' <br> Model Value: 5 <br> Domain API Value: 'Create'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Edit</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Edit</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="newsystemstate">NewSystemState</h3>
 <p>When the development incurred changing the state of the case, contains the new state. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
-<em>Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)</em></p>
+Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -286,135 +285,149 @@ Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemst
 <tbody>
 <tr>
 <td>BACKLOG</td>
-<td>The case is registered but not yet considered for work.. Stored as '1'. <br> <em>Database Value:</em> '1' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'BACKLOG'</td>
+<td>The case is registered but not yet considered for work.. Stored as '1'. <br> Database Value: '1' <br> Model Value: 0 <br> Domain API Value: 'BACKLOG'</td>
 </tr>
 <tr>
 <td>CONSIDER</td>
-<td>The case is under evaluation for possible execution.. Stored as '2'. <br> <em>Database Value:</em> '2' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CONSIDER'</td>
+<td>The case is under evaluation for possible execution.. Stored as '2'. <br> Database Value: '2' <br> Model Value: 1 <br> Domain API Value: 'CONSIDER'</td>
 </tr>
 <tr>
 <td>READY</td>
-<td>The case is approved and ready to be started.. Stored as '3'. <br> <em>Database Value:</em> '3' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'READY'</td>
+<td>The case is approved and ready to be started.. Stored as '3'. <br> Database Value: '3' <br> Model Value: 2 <br> Domain API Value: 'READY'</td>
 </tr>
 <tr>
 <td>INPROGRESS</td>
-<td>Work on the case is currently ongoing.. Stored as '4'. <br> <em>Database Value:</em> '4' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'INPROGRESS'</td>
+<td>Work on the case is currently ongoing.. Stored as '4'. <br> Database Value: '4' <br> Model Value: 3 <br> Domain API Value: 'INPROGRESS'</td>
 </tr>
 <tr>
 <td>WAITING</td>
-<td>The case is paused, waiting for input or conditions.. Stored as '5'. <br> <em>Database Value:</em> '5' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'WAITING'</td>
+<td>The case is paused, waiting for input or conditions.. Stored as '5'. <br> Database Value: '5' <br> Model Value: 4 <br> Domain API Value: 'WAITING'</td>
 </tr>
 <tr>
 <td>RESOLVED</td>
-<td>Work is completed; final review or confirmation may be pending.. Stored as '6'. <br> <em>Database Value:</em> '6' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'RESOLVED'</td>
+<td>Work is completed; final review or confirmation may be pending.. Stored as '6'. <br> Database Value: '6' <br> Model Value: 5 <br> Domain API Value: 'RESOLVED'</td>
 </tr>
 <tr>
 <td>CLOSED</td>
-<td>The case is finalized and officially closed.. Stored as '7'. <br> <em>Database Value:</em> '7' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CLOSED'</td>
+<td>The case is finalized and officially closed.. Stored as '7'. <br> Database Value: '7' <br> Model Value: 6 <br> Domain API Value: 'CLOSED'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assignedtouser">AssignedToUser</h3>
 <p>When the development incurred re-assignment, specifies the new user, to which the case is assigned. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="case">Case</h3>
 <p>The case of the case development. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Projects.Agile.Cases.html">Cases</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Projects.Agile.Cases.html">Cases</a></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationuser">CreationUser</h3>
 <p>The user, who created the development. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -425,35 +438,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R35899-3.html">R35899-3 CaseDevelopment - Creation User</a></li>

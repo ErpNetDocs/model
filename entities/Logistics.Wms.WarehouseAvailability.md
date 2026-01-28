@@ -1,20 +1,22 @@
 ---
 uid: Logistics.Wms.WarehouseAvailability
 ---
-# Logistics.Wms.WarehouseAvailability View
+# Logistics.Wms.WarehouseAvailability (View)
 
-**Namespace:** [Logistics.Wms](Logistics.Wms.md)  
 
-The availability of goods in the warehouse locations of the warehouse. Entity: Wms_Warehouse_Availability (Introduced in version 21.1.1.35)
+The availability of goods in the warehouse locations of the warehouse.
 
-## Default Visualization
-Default Display Text Format:  
-_{WarehouseId}: {WarehouseLocationId}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Logistics.Wms](Logistics.Wms.md)  
+Repository: Logistics.Wms.WarehouseAvailability  
+Introduced In Version: 21.1.1.35  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {WarehouseId}: {WarehouseLocationId}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -48,21 +50,21 @@ Aggregate Tree
 
 Currently available quantity in base measurement unit. `Required` `Filter(eq;ge;le)` `Introduced in version 22.1.5.25`
 
-_Type_: **decimal (38, 3)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 3)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### StandardQuantityAvailable
 
 Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. `Required` `Filter(eq;ge;le)` `Introduced in version 22.1.5.25`
 
-_Type_: **decimal (38, 3)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 3)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -71,71 +73,71 @@ _Show in UI_: **ShownByDefault**
 
 Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Logistic_Unit_Id`
 
-_Type_: **[LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Logistic_Unit_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Logistic_Unit_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Lot
 
 The lot which was transacted. null when the transaction was not for a specific lot. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Lot_Id`
 
-_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Lot_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Lot_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Product
 
 The product, which was transacted. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Product_Id`
 
-_Type_: **[Products](General.Products.Products.md)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Product_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Products](General.Products.Products.md)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Product_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProductVariant
 
 The product variant, which was transacted. null when the transaction was not for a product variant. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Product_Variant_Id`
 
-_Type_: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Product_Variant_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Product_Variant_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### SerialNumber
 
 The serial number which was transacted. null when the transaction was not for a specific serial number. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Serial_Number_Id`
 
-_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Serial_Number_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Serial_Number_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Warehouse
 
 The warehouse in which the transaction occurred. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Id`
 
-_Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Warehouse_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Warehouse_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### WarehouseLocation
 
 The warehouse location, where the transaction occurred. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Location_Id`
 
-_Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
-_Category_: **System**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Warehouse_Location_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
+Category: **System**  
+Inherited From: **Wms_Warehouse_Transactions_Table.Warehouse_Location_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Monitoring.LicenseHistory View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.LicenseHistory (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Monitoring.LicenseHistory View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.LicenseHistory (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,24 @@
         </div>
 
         <article data-uid="Systems.Monitoring.LicenseHistory">
-<h1 id="systemsmonitoringlicensehistory-view">Systems.Monitoring.LicenseHistory View</h1>
+<h1 id="systemsmonitoringlicensehistory-view">Systems.Monitoring.LicenseHistory (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Monitoring.html">Systems.Monitoring</a></p>
-<p>Historical licensing events for the instance. Entity: Dmv_License_History (Introduced in version 24.1.3.88)</p>
+<p>Historical licensing events for the instance.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Monitoring.html">Systems.Monitoring</a><br>
+Repository: Systems.Monitoring.LicenseHistory<br>
+Introduced In Version: 24.1.3.88<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>Systems.Dmv.LicenseHistory</strong><br>
-New name: <strong>Systems.Monitoring.LicenseHistory</strong><br>
-Version: <strong>24.1.5.35</strong><br>
-Case: <strong>35911</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{LicensingEvent}: {LicensingDate}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>DynamicViews</em><br>
-Show in UI:  <em>CannotBeShown</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: Systems.Dmv.LicenseHistory<br>
+New name: Systems.Monitoring.LicenseHistory<br>
+Version: 24.1.5.35<br>
+Case: 35911</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {LicensingEvent}: {LicensingDate}<br>
+Search Members:<br>
+Category:  DynamicViews<br>
+Show in UI:  CannotBeShown</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -163,64 +164,64 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="licensecode">LicenseCode</h3>
 <p>The code of the module or functionality, which is licensed. <code>Required</code> <code>Filter(multi eq;like)</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licensecount">LicenseCount</h3>
 <p>The number of licenses given (+) or taken (-). <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licensedescription">LicenseDescription</h3>
 <p>Description of the license code. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (max)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (max)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licenseenddate">LicenseEndDate</h3>
 <p>The date (inclusive), until the license is active. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licensescaletype">LicenseScaleType</h3>
 <p>Denotes whether the license supports counts, different from 0 and 1. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licensestartdate">LicenseStartDate</h3>
 <p>The date (inclusive), from which the license is active. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licensingdate">LicensingDate</h3>
 <p>The date, when the license was issued. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="licensingevent">LicensingEvent</h3>
 <p>Unique licensing event key. Can be used to group all license codes given with a single licensing event. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (128)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Systems_Monitoring_LicenseHistory</p>

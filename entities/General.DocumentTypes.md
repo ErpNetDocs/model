@@ -1,7 +1,7 @@
-# General.DocumentTypes Entity
+# General.DocumentTypes
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Documents.DocumentTypes](Systems.Documents.DocumentTypes.md)
+New name: [Systems.Documents.DocumentTypes](Systems.Documents.DocumentTypes.md)

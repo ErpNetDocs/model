@@ -1,20 +1,22 @@
 ---
 uid: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots
 ---
-# Logistics.Inventory.DemandManagement.AvailableToPromiseByLots View
+# Logistics.Inventory.DemandManagement.AvailableToPromiseByLots (View)
 
-**Namespace:** [Logistics.Inventory.DemandManagement](Logistics.Inventory.DemandManagement.md)  
 
-Quantities available to promise for the different date periods. Also contains the current and projected availability. The algorithm accounts for the quantities for each lot and separately for the quantities without lot. Entity: Inv_Demand_Management_ATP_By_Lots (Introduced in version 23.1.1.80)
+Quantities available to promise for the different date periods. Also contains the current and projected availability. The algorithm accounts for the quantities for each lot and separately for the quantities without lot.
 
-## Default Visualization
-Default Display Text Format:  
-_{ATPBaseValue}: {CurrentAvailabilityBaseValue}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _HiddenByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Logistics.Inventory.DemandManagement](Logistics.Inventory.DemandManagement.md)  
+Repository: Logistics.Inventory.DemandManagement.AvailableToPromiseByLots  
+Introduced In Version: 23.1.1.80  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {ATPBaseValue}: {CurrentAvailabilityBaseValue}  
+Search Members:   
+Category:  Views  
+Show in UI:  HiddenByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -49,61 +51,61 @@ Aggregate Tree
 
 Indicates the quantity available to promise (in a base unit). It is valid from this date on. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CurrentAvailabilityBase
 
 The current availability in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### FromDate
 
 Тhe date from which the available to promise quantity is valid. `Required` `Filter(eq;ge;le)`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### MovementsBase
 
 The sum of the quantity of all planned stock movements on this date in а base measurement unit. . `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### MovementsToDateBase
 
 The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ProjectedAvailabilityBase
 
 Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
-_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -112,41 +114,41 @@ _Show in UI_: **ShownByDefault**
 
 Тhe Enterprise Company, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Documents_Table.Enterprise_Company_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Category: **System**  
+Inherited From: **Gen_Documents_Table.Enterprise_Company_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Lot
 
 The Lot, for which the quantities are calculated. `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Lot_Id`
 
-_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Store_Order_Lines_Table.Lot_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+Category: **System**  
+Inherited From: **Inv_Store_Order_Lines_Table.Lot_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Product
 
 The Product, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Product_Id`
 
-_Type_: **[Products](General.Products.Products.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Store_Order_Lines_Table.Product_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Products](General.Products.Products.md)**  
+Category: **System**  
+Inherited From: **Inv_Store_Order_Lines_Table.Product_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Store
 
 The Store, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Id`
 
-_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Store_Orders_Table.Store_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Stores](Logistics.Inventory.Stores.md)**  
+Category: **System**  
+Inherited From: **Inv_Store_Orders_Table.Store_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

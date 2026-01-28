@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Security.TrustedApplications Entity | ERP.net Domain Model </title>
+      <title>Systems.Security.TrustedApplications | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Security.TrustedApplications Entity | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Security.TrustedApplications | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,24 @@
         </div>
 
         <article data-uid="Systems.Security.TrustedApplications">
-<h1 id="systemssecuritytrustedapplications-entity">Systems.Security.TrustedApplications Entity</h1>
+<h1 id="systemssecuritytrustedapplications">Systems.Security.TrustedApplications</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Security.html">Systems.Security</a></p>
-<p>Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applications (Introduced in version 19.1)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{Name}</em><br>
-Default Search Members:<br>
-<em>Name</em><br>
-Name Data Member:<br>
-<em>Name</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Application, which is trusted to access the ERP data.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Security.html">Systems.Security</a><br>
+Repository: Systems.Security.TrustedApplications<br>
+Base Table: Sec_Trusted_Applications<br>
+Introduced In Version: 19.1<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {Name}<br>
+Search Members: Name<br>
+Name Member: Name<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>3 - Track object and attribute changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  3 - Track object and attribute changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -128,11 +129,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Defines who is allowed to issue reference access tokens for this trusted application. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.16</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplications.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
-<td>datetime</td>
-<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
-</tr>
-<tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationsecrethash">ApplicationSecretHash</a></td>
 <td>string (250) <strong>nullable</strong></td>
 <td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></td>
@@ -156,26 +152,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Systems.Security.TrustedApplications.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
 <td>Date and time (in UTC) when the application was registered. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Security.TrustedApplications.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Systems.Security.TrustedApplications.html#externalid">ExternalId</a></td>
-<td>string</td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="Systems.Security.TrustedApplications.html#externalsystem">ExternalSystem</a></td>
-<td>string</td>
-<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="Systems.Security.TrustedApplications.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateascommunityuserallowed">ImpersonateAsCommunity<br>UserAllowed</a></td>
@@ -213,11 +189,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Notes for this TrustedApplication.</td>
 </tr>
 <tr>
-<td><a href="Systems.Security.TrustedApplications.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
-</tr>
-<tr>
 <td><a href="Systems.Security.TrustedApplications.html#scope">Scope</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). <code>Introduced in version 20.1</code></td>
@@ -251,6 +222,48 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Security.TrustedApplications.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.TrustedApplications.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.TrustedApplications.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.TrustedApplications.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.TrustedApplications.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
+<td><a href="Systems.Security.TrustedApplications.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="child-collections">Child Collections</h2>
 <table>
 <thead>
@@ -271,10 +284,10 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accesstokens">AccessTokens</h3>
 <p>Defines who is allowed to issue reference access tokens for this trusted application. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.16</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>AccessTokens</code>(Systems.Security.TrustedApplications.md#accesstokens) data attribute<br>
-<em>Allowed Values (Systems.Security.TrustedApplicationsRepository.AccessTokens Enum Members)</em></p>
+Allowed Values (Systems.Security.TrustedApplicationsRepository.AccessTokens Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -285,60 +298,53 @@ Allowed values for the <code>AccessTokens</code>(Systems.Security.TrustedApplica
 <tbody>
 <tr>
 <td>None</td>
-<td>Reference tokens cannot be issued. (Default). Stored as 'NON'. <br> <em>Database Value:</em> 'NON' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'None'</td>
+<td>Reference tokens cannot be issued. (Default). Stored as 'NON'. <br> Database Value: 'NON' <br> Model Value: 0 <br> Domain API Value: 'None'</td>
 </tr>
 <tr>
 <td>AuthenticatedUsers</td>
-<td>Any authenticated (logged-in) user may issue.. Stored as 'USR'. <br> <em>Database Value:</em> 'USR' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'AuthenticatedUsers'</td>
+<td>Any authenticated (logged-in) user may issue.. Stored as 'USR'. <br> Database Value: 'USR' <br> Model Value: 1 <br> Domain API Value: 'AuthenticatedUsers'</td>
 </tr>
 <tr>
 <td>AdministratorsOnly</td>
-<td>Only administrators may issue.. Stored as 'ADM'. <br> <em>Database Value:</em> 'ADM' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AdministratorsOnly'</td>
+<td>Only administrators may issue.. Stored as 'ADM'. <br> Database Value: 'ADM' <br> Model Value: 2 <br> Domain API Value: 'AdministratorsOnly'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>None</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
-<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>None</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applicationsecrethash">ApplicationSecretHash</h3>
 <p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>string (250) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>250</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (250) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>250</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applicationuri">ApplicationUri</h3>
 <p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (254)</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254)</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="basicauthenticationallowed">BasicAuthenticationAllowed</h3>
 <p>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="clienttype">ClientType</h3>
 <p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplications.md#clienttype) data attribute<br>
-<em>Allowed Values (Systems.Security.TrustedApplicationsRepository.ClientType Enum Members)</em></p>
+Allowed Values (Systems.Security.TrustedApplicationsRepository.ClientType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -349,216 +355,223 @@ Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplicati
 <tbody>
 <tr>
 <td>Confidential</td>
-<td>Confidential value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Confidential'</td>
+<td>Confidential value. Stored as 'C'. <br> Database Value: 'C' <br> Model Value: 0 <br> Domain API Value: 'Confidential'</td>
 </tr>
 <tr>
 <td>Public</td>
-<td>Public value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Public'</td>
+<td>Public value. Stored as 'P'. <br> Database Value: 'P' <br> Model Value: 1 <br> Domain API Value: 'Public'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Confidential</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Confidential</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <p>Date and time (in UTC) when the application was registered. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>CurrentDateTimeUtc</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impersonateascommunityuserallowed">ImpersonateAsCommunityUserAllowed</h3>
 <p>Allows the application to request login from external users and operate on their behalf. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impersonateasinternaluserallowed">ImpersonateAsInternalUserAllowed</h3>
 <p>Allows the application to request login from internal users and operate on their behalf. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impersonateloginurl">ImpersonateLoginUrl</h3>
 <p>The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.</p>
-<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impersonatelogouturl">ImpersonateLogoutUrl</h3>
 <p>The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.</p>
-<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isenabled">IsEnabled</h3>
 <p>Specifies whether the application is enabled for login. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
 <p>The multi-language name of the application. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (254)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this TrustedApplication.</p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scope">Scope</h3>
 <p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). <code>Introduced in version 20.1</code></p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemuserallowed">SystemUserAllowed</h3>
 <p>Allows this application to logon as a service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemuserloginurl">SystemUserLoginUrl</h3>
 <p>The URL, which will be used by the login process, when the application logs in as a service.</p>
-<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="systemuser">SystemUser</h3>
 <p>The user, which will be used when the application logins as a service. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -569,35 +582,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R30135.html">R30135 TrustedApplication - Set Creation Time</a></li>

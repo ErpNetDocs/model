@@ -1,29 +1,31 @@
 ---
 uid: Finance.Payments.PaymentBalances
 ---
-# Finance.Payments.PaymentBalances View
+# Finance.Payments.PaymentBalances (View)
 
-**Namespace:** [Finance.Payments](Finance.Payments.md)  
 
-Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View (Introduced in version 23.1.0.79)
+Represents the payment orders with their covered amounts.
+
+## General
+Namespace: [Finance.Payments](Finance.Payments.md)  
+Repository: Finance.Payments.PaymentBalances  
+Introduced In Version: 23.1.0.79  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Finance.Payments.OrderBalances**  
-New name: **Finance.Payments.PaymentBalances**  
-Version: **25.1.2.86**  
-Case: **38515**  
+Old name: Finance.Payments.OrderBalances  
+New name: Finance.Payments.PaymentBalances  
+Version: 25.1.2.86  
+Case: 38515  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{OrderAmountValue}: {PaidAmountValue}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {OrderAmountValue}: {PaidAmountValue}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -70,193 +72,193 @@ Aggregate Tree
 
 Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction`
 
-_Type_: **[Direction](Finance.Payments.PaymentBalances.md#direction)**  
-_Category_: **System**  
+Type: **[Direction](Finance.Payments.PaymentBalances.md#direction)**  
+Category: **System**  
 Allowed values for the `Direction`(Finance.Payments.PaymentBalances.md#direction) data attribute  
-_Allowed Values (Finance.Payments.PaymentBalancesRepository.Direction Enum Members)_  
+Allowed Values (Finance.Payments.PaymentBalancesRepository.Direction Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Outgoing | Outgoing value. Stored as 'I'. <br /> _Database Value:_ 'I' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Outgoing' |
-| Incoming | Incoming value. Stored as 'R'. <br /> _Database Value:_ 'R' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Incoming' |
+| Outgoing | Outgoing value. Stored as 'I'. <br /> Database Value: 'I' <br /> Model Value: 0 <br /> Domain API Value: 'Outgoing' |
+| Incoming | Incoming value. Stored as 'R'. <br /> Database Value: 'R' <br /> Model Value: 1 <br /> Domain API Value: 'Incoming' |
 
-_Inherited From_: **Cash_Payment_Orders_Table.Direction**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **Outgoing**  
-_Show in UI_: **ShownByDefault**  
+Inherited From: **Cash_Payment_Orders_Table.Direction**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **Outgoing**  
+Show in UI: **ShownByDefault**  
 
 ### DueDate
 
 The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Due_Date**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Due_Date**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DueStartDate
 
 The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Due_Start_Date**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Due_Start_Date**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DueStatus
 
 Due status of requested payment. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.74`
 
-_Type_: **[DueStatus](Finance.Payments.PaymentBalances.md#duestatus)**  
-_Category_: **System**  
+Type: **[DueStatus](Finance.Payments.PaymentBalances.md#duestatus)**  
+Category: **System**  
 Allowed values for the `DueStatus`(Finance.Payments.PaymentBalances.md#duestatus) data attribute  
-_Allowed Values (Finance.Payments.PaymentBalancesRepository.DueStatus Enum Members)_  
+Allowed Values (Finance.Payments.PaymentBalancesRepository.DueStatus Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Scheduled | Payment is not yet applicable (before due start date).. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Scheduled' |
-| Due | Payment is now payable and should be made before the due date.. Stored as 'D'. <br /> _Database Value:_ 'D' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Due' |
-| GracePeriod | Due date has passed, but still within the grace period (no penalties yet).. Stored as 'G'. <br /> _Database Value:_ 'G' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'GracePeriod' |
-| Overdue | Grace period has ended, and payment is now late.. Stored as 'O'. <br /> _Database Value:_ 'O' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Overdue' |
-| NotApplicable | Not Applicable for payment. Stored as 'N'. <br /> _Database Value:_ 'N' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'NotApplicable' |
+| Scheduled | Payment is not yet applicable (before due start date).. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 0 <br /> Domain API Value: 'Scheduled' |
+| Due | Payment is now payable and should be made before the due date.. Stored as 'D'. <br /> Database Value: 'D' <br /> Model Value: 1 <br /> Domain API Value: 'Due' |
+| GracePeriod | Due date has passed, but still within the grace period (no penalties yet).. Stored as 'G'. <br /> Database Value: 'G' <br /> Model Value: 2 <br /> Domain API Value: 'GracePeriod' |
+| Overdue | Grace period has ended, and payment is now late.. Stored as 'O'. <br /> Database Value: 'O' <br /> Model Value: 3 <br /> Domain API Value: 'Overdue' |
+| NotApplicable | Not Applicable for payment. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 4 <br /> Domain API Value: 'NotApplicable' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### IsInvoiced
 
 When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. `Required` `Filter(multi eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### OrderAmount
 
 The total amount that should be paid. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount`
 
-_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Total_Amount**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **Constant**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (18, 2)](../data-types.md#amount)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Total_Amount**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
 
 ### PaidAmount
 
 The paid amount. Taken from released payment transactions. `Currency: Currency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### PaymentStatus
 
 Payment Status	. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76`
 
-_Type_: **[PaymentStatus](Finance.Payments.PaymentBalances.md#paymentstatus)**  
-_Category_: **System**  
+Type: **[PaymentStatus](Finance.Payments.PaymentBalances.md#paymentstatus)**  
+Category: **System**  
 Allowed values for the `PaymentStatus`(Finance.Payments.PaymentBalances.md#paymentstatus) data attribute  
-_Allowed Values (Finance.Payments.PaymentBalancesRepository.PaymentStatus Enum Members)_  
+Allowed Values (Finance.Payments.PaymentBalancesRepository.PaymentStatus Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Unpaid | No payment has been made yet.. Stored as 'UN'. <br /> _Database Value:_ 'UN' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Unpaid' |
-| PartiallyPaid | A partial payment has been made, but the full amount is still outstanding.. Stored as 'PP'. <br /> _Database Value:_ 'PP' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'PartiallyPaid' |
-| Paid | The full payment has been completed.. Stored as 'PA'. <br /> _Database Value:_ 'PA' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Paid' |
-| Overpaid | More than the required amount has been paid.. Stored as 'OV'. <br /> _Database Value:_ 'OV' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Overpaid' |
-| Other | The payment is made in the opposite direction.. Stored as 'ER'. <br /> _Database Value:_ 'ER' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Other' |
+| Unpaid | No payment has been made yet.. Stored as 'UN'. <br /> Database Value: 'UN' <br /> Model Value: 0 <br /> Domain API Value: 'Unpaid' |
+| PartiallyPaid | A partial payment has been made, but the full amount is still outstanding.. Stored as 'PP'. <br /> Database Value: 'PP' <br /> Model Value: 1 <br /> Domain API Value: 'PartiallyPaid' |
+| Paid | The full payment has been completed.. Stored as 'PA'. <br /> Database Value: 'PA' <br /> Model Value: 2 <br /> Domain API Value: 'Paid' |
+| Overpaid | More than the required amount has been paid.. Stored as 'OV'. <br /> Database Value: 'OV' <br /> Model Value: 3 <br /> Domain API Value: 'Overpaid' |
+| Other | The payment is made in the opposite direction.. Stored as 'ER'. <br /> Database Value: 'ER' <br /> Model Value: 4 <br /> Domain API Value: 'Other' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### RefDocumentDate
 
 The date of the original document. null means that it is unknown. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Date`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Document_Date**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Document_Date**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.RefDocument.DocumentDate`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.RefDocument.DocumentDate`
 ### RefDocumentNo
 
 The number of the document which has created the payment order and is the basis for the payment. `Required` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_No`
 
-_Type_: **string (20)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Document_No**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **20**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (20)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Document_No**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **20**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.RefDocument.DocumentNo`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.RefDocument.DocumentNo`
 ### RefInvoiceDocumentDate
 
 The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Invoice_Document_Date**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Invoice_Document_Date**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.RefInvoiceDocument.DocumentDate`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.RefInvoiceDocument.DocumentDate`
 ### RefInvoiceDocumentNo
 
 The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No`
 
-_Type_: **string (20) __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Invoice_Document_No**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **20**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (20) __nullable__**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Invoice_Document_No**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **20**  
+Show in UI: **HiddenByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.RefInvoiceDocument.DocumentNo`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.RefInvoiceDocument.DocumentNo`
 ### RemainingAmount
 
 The amount that remains to be paid. `Currency: Currency` `Required` `Filter(eq;ge;le)` `Introduced in version 25.1.2.79`
 
-_Type_: **[Amount (18, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (18, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -265,102 +267,102 @@ _Show in UI_: **ShownByDefault**
 
 The currency of amounts. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Total_Amount_Currency_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Total_Amount_Currency_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 The enterprise company which issued the document. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Documents_Table.Enterprise_Company_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Category: **System**  
+Inherited From: **Gen_Documents_Table.Enterprise_Company_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### LocationParty
 
 Location or sub-party of the Party_Id in the order. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Location_Party_Id`
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Location_Party_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Location_Party_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### Party
 
 The party which is to pay or receive the amount. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Party_Id`
 
-_Type_: **[Parties](General.Contacts.Parties.md)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Party_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Party_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### PaymentOrder
 
 The payment order. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Payment_Order_Id`
 
-_Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Payment_Order_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Payment_Order_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### RefDocument
 
 The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Id`
 
-_Type_: **[Documents](General.Documents.Documents.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Document_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Document_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### RefDocumentType
 
 The type of the document which has created the payment order and is the basis for the payment. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Type_Id`
 
-_Type_: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Document_Type_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Document_Type_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.RefDocument.DocumentType`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.RefDocument.DocumentType`
 ### RefInvoiceDocument
 
 The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Id`
 
-_Type_: **[Documents](General.Documents.Documents.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Invoice_Document_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Invoice_Document_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
 ### RefInvoiceDocumentType
 
 The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id`
 
-_Type_: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
+Category: **System**  
+Inherited From: **Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **HiddenByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.RefInvoiceDocument.DocumentType`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.RefInvoiceDocument.DocumentType`
 
 ## API

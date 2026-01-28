@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Communities.Social.FollowedEntities View | ERP.net Domain Model </title>
+      <title>Communities.Social.FollowedEntities (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Communities.Social.FollowedEntities View | ERP.net Domain Model ">
+      <meta name="title" content="Communities.Social.FollowedEntities (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Communities.Social.FollowedEntities">
-<h1 id="communitiessocialfollowedentities-view">Communities.Social.FollowedEntities View</h1>
+<h1 id="communitiessocialfollowedentities-view">Communities.Social.FollowedEntities (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Communities.Social.html">Communities.Social</a></p>
-<p>Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities (Introduced in version 22.1.6.3)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{UserId}: {DataObjectId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>CannotBeShown</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Optimized view returning social followed entities by users.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Communities.Social.html">Communities.Social</a><br>
+Repository: Communities.Social.FollowedEntities<br>
+Introduced In Version: 22.1.6.3<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {UserId}: {DataObjectId}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  CannotBeShown</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -160,36 +161,36 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <p>The exact server time (in UTC), when the follow was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc</code> <code>Introduced in version 22.1.6.73</code></p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cmm_Social_Follows_Table.Creation_Time_Utc</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDateTimeUtc</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cmm_Social_Follows_Table.Creation_Time_Utc</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>CurrentDateTimeUtc</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The Id of the primary row to which the object is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Item_Id</code></p>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Sys_Objects_Table.Entity_Item_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>guid</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Sys_Objects_Table.Entity_Item_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entitytype">EntityType</h3>
 <p>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Sys_Objects_Table.Entity_Type</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Default Value</em>: ** **<br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Sys_Objects_Table.Entity_Type</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Default Value: ** **<br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="followlevel">FollowLevel</h3>
 <p>Indicates the level of user’s interest for this object. <code>Required</code> <code>Default(&quot;TAG&quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.Follow_Level</code> <code>Introduced in version 26.2.0.70</code></p>
-<p><em>Type</em>: <strong><a href="Communities.Social.FollowedEntities.html#followlevel">FollowLevel</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Communities.Social.FollowedEntities.html#followlevel">FollowLevel</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>FollowLevel</code>(Communities.Social.Follows.md#followlevel) data attribute<br>
-<em>Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)</em></p>
+Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -200,38 +201,38 @@ Allowed values for the <code>FollowLevel</code>(Communities.Social.Follows.md#fo
 <tbody>
 <tr>
 <td>Tagged</td>
-<td>Automatically followed due to mention or assignment.. Stored as 'TAG'. <br> <em>Database Value:</em> 'TAG' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Tagged'</td>
+<td>Automatically followed due to mention or assignment.. Stored as 'TAG'. <br> Database Value: 'TAG' <br> Model Value: 0 <br> Domain API Value: 'Tagged'</td>
 </tr>
 <tr>
 <td>Follow</td>
-<td>User willingly chose to follow this object.. Stored as 'FLW'. <br> <em>Database Value:</em> 'FLW' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Follow'</td>
+<td>User willingly chose to follow this object.. Stored as 'FLW'. <br> Database Value: 'FLW' <br> Model Value: 1 <br> Domain API Value: 'Follow'</td>
 </tr>
 <tr>
 <td>Favorite</td>
-<td>User marked this object as a favorite.. Stored as 'FAV'. <br> <em>Database Value:</em> 'FAV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Favorite'</td>
+<td>User marked this object as a favorite.. Stored as 'FAV'. <br> Database Value: 'FAV' <br> Model Value: 2 <br> Domain API Value: 'Favorite'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Inherited From</em>: <strong>Cmm_Social_Follows_Table.Follow_Level</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Tagged</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Inherited From: <strong>Cmm_Social_Follows_Table.Follow_Level</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Tagged</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
 <p>The object being followed by the user. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.Data_Object_Id</code> <code>Introduced in version 22.1.6.73</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cmm_Social_Follows_Table.Data_Object_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cmm_Social_Follows_Table.Data_Object_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
 <p>The user which follows the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.User_Id</code> <code>Introduced in version 22.1.6.73</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cmm_Social_Follows_Table.User_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cmm_Social_Follows_Table.User_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Communities_Social_FollowedEntities</p>

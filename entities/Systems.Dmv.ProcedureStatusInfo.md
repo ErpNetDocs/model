@@ -1,7 +1,7 @@
-# Systems.Dmv.ProcedureStatusInfo Entity
+# Systems.Dmv.ProcedureStatusInfo
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.ProcedureStatusInfo](Systems.Monitoring.ProcedureStatusInfo.md)
+New name: [Systems.Monitoring.ProcedureStatusInfo](Systems.Monitoring.ProcedureStatusInfo.md)

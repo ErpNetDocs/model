@@ -1,29 +1,31 @@
 ---
 uid: Systems.Monitoring.ExecStats
 ---
-# Systems.Monitoring.ExecStats View
+# Systems.Monitoring.ExecStats (View)
 
-**Namespace:** [Systems.Monitoring](Systems.Monitoring.md)  
 
-Execution statistics dynamic management view. Entity: Dmv_Exec_Stats (Introduced in version 23.1.0.19)
+Execution statistics dynamic management view.
+
+## General
+Namespace: [Systems.Monitoring](Systems.Monitoring.md)  
+Repository: Systems.Monitoring.ExecStats  
+Introduced In Version: 23.1.0.19  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Systems.Dmv.ExecStats**  
-New name: **Systems.Monitoring.ExecStats**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: Systems.Dmv.ExecStats  
+New name: Systems.Monitoring.ExecStats  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{Application}: {Database}_  
-Default Search Members:  
-__  
-Category:  _DynamicViews_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {Application}: {Database}  
+Search Members:   
+Category:  DynamicViews  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -53,105 +55,105 @@ Aggregate Tree
 
 The name of the application that executes the operation. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### AvgTimeMs
 
 Average time of operation execution. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **double**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **double**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Count
 
 The number of times the operation is executed since last statistics reset. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Database
 
 The database in which the operation is executed. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### IsLongPolling
 
 True if the operation is long polling. `Required` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Kind
 
 The operation kind. Various operation kinds exist, e.g. Db, Long Procs etc. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### MaxTimeMs
 
 The maximum time of one operation execution. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **double**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **double**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Operation
 
 The operation name. `Required` `Filter(like)`
 
-_Type_: **string (128)**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128)**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### StatisticsSince
 
 The date and time since when the statistics are collected. `Required` `Filter(ge;le)`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### TotalTimeMs
 
 Total time spent for the operation. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **double**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **double**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -161,9 +163,9 @@ Methods that can be invoked in public APIs.
 ### ResetStats
 
 Reset performace statistics  
-_Return Type_: **void**  
-_Declaring Type_: **[ExecStats](Systems.Monitoring.ExecStats.md)**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **[ExecStats](Systems.Monitoring.ExecStats.md)**  
+Domain API Request: **POST**  
 
 ## API
 

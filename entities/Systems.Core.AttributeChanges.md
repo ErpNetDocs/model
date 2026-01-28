@@ -1,20 +1,22 @@
 ---
 uid: Systems.Core.AttributeChanges
 ---
-# Systems.Core.AttributeChanges View
+# Systems.Core.AttributeChanges (View)
 
-**Namespace:** [Systems.Core](Systems.Core.md)  
 
-Attribute values of an object change. Entity: Sys_Attribute_Changes_View (Introduced in version 23.1.2.71)
+Attribute values of an object change.
 
-## Default Visualization
-Default Display Text Format:  
-_{ObjectChangeId}: {AttributeName}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Systems.Core](Systems.Core.md)  
+Repository: Systems.Core.AttributeChanges  
+Introduced In Version: 23.1.2.71  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {ObjectChangeId}: {AttributeName}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -44,25 +46,25 @@ Aggregate Root:
 
 The attribute name. `Required` `Filter(eq)` `Inherited from Sys_Attribute_Changes_Table.Attribute_Name`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Attribute_Changes_Table.Attribute_Name**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Inherited From: **Sys_Attribute_Changes_Table.Attribute_Name**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### NewValue
 
 The new value. `Filter(eq;like)` `Inherited from Sys_Attribute_Changes_Table.New_Value`
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Inherited From: **Sys_Attribute_Changes_Table.New_Value**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -71,12 +73,12 @@ _Show in UI_: **ShownByDefault**
 
 The object change. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_Changes_Table.Object_Change_Id` `Owner`
 
-_Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Attribute_Changes_Table.Object_Change_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
+Category: **System**  
+Inherited From: **Sys_Attribute_Changes_Table.Object_Change_Id**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

@@ -1,7 +1,7 @@
-# General.DocumentComments Entity
+# General.DocumentComments
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Documents.DocumentComments](General.Documents.DocumentComments.md)
+New name: [General.Documents.DocumentComments](General.Documents.DocumentComments.md)

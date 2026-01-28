@@ -1,28 +1,28 @@
 ---
 uid: General.EnterpriseCompanies
 ---
-# General.EnterpriseCompanies Entity
+# General.EnterpriseCompanies
 
-**Namespace:** [General](General.md)  
 
-The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Companies
+The companies in the enterprise that issue documents.
 
-## Default Visualization
-Default Display Text Format:  
-_{Company.PartyName:T}_  
-Default Search Members:  
-_Company.RegistrationNumber; Company.PartyName_  
-Code Data Member:  
-_Company.RegistrationNumber_  
-Name Data Member:  
-_Company.PartyName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [General](General.md)  
+Repository: General.EnterpriseCompanies  
+Base Table: Gen_Enterprise_Companies  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {Company.PartyName:T}  
+Search Members: Company.RegistrationNumber; Company.PartyName  
+Code Member: Company.RegistrationNumber  
+Name Member: Company.PartyName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _3 - Track object and attribute changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  3 - Track object and attribute changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -41,19 +41,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AggregateLastUpdateTimeUtc](General.EnterpriseCompanies.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime __nullable__ | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq;ge;le)` `Introduced in version 18.2` 
 | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. `Required` `Default("AVG")` 
 | [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)` 
 | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")` 
-| [DisplayText](General.EnterpriseCompanies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited. `Filter(ge;le)` 
 | [EndDateOfClosed<br />AccountingPeriod](General.EnterpriseCompanies.md#enddateofclosedaccountingperiod) | date __nullable__ | Indicates the date before which all accounting vouchers are permanently closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.1.0` 
-| [ExternalId](General.EnterpriseCompanies.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.EnterpriseCompanies.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [Id](General.EnterpriseCompanies.md#id) | guid |  
 | [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1` 
-| [ObjectVersion](General.EnterpriseCompanies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1` 
 | [ReportingCurrencyEndDate](General.EnterpriseCompanies.md#reportingcurrencyenddate) | date __nullable__ | Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated. `Filter(eq;ge;le)` `Introduced in version 26.1.3.79` 
 | [ReportingCurrency<br />ProcessedDate](General.EnterpriseCompanies.md#reportingcurrencyprocesseddate) | date __nullable__ | Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date. `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 25.1.3.24` 
@@ -74,6 +68,18 @@ Aggregate Tree
 | [ReportingCurrency](General.EnterpriseCompanies.md#reportingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93` |
 | [VATDocumentAmountType](General.EnterpriseCompanies.md#vatdocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount that is used to determine the amount of the VAT entries when they are generated. `Filter(multi eq)` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](General.EnterpriseCompanies.md#id) | guid |  
+| [ObjectVersion](General.EnterpriseCompanies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](General.EnterpriseCompanies.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](General.EnterpriseCompanies.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](General.EnterpriseCompanies.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](General.EnterpriseCompanies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -87,215 +93,215 @@ Aggregate Tree
 
 ## Attribute Details
 
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
 ### BIStartDate
 
 Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq;ge;le)` `Introduced in version 18.2`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultCostingMethod
 
 Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. `Required` `Default("AVG")`
 
-_Type_: **[DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod)**  
-_Category_: **System**  
+Type: **[DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod)**  
+Category: **System**  
 Allowed values for the `DefaultCostingMethod`(General.EnterpriseCompanies.md#defaultcostingmethod) data attribute  
-_Allowed Values (General.EnterpriseCompaniesRepository.DefaultCostingMethod Enum Members)_  
+Allowed Values (General.EnterpriseCompaniesRepository.DefaultCostingMethod Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| AverageCost | AverageCost value. Stored as 'AVG'. <br /> _Database Value:_ 'AVG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AverageCost' |
-| ExplicitlySpecifyLot | ExplicitlySpecifyLot value. Stored as 'EXP'. <br /> _Database Value:_ 'EXP' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ExplicitlySpecifyLot' |
-| SetByBlockedForDocument | SetByBlockedForDocument value. Stored as 'BLD'. <br /> _Database Value:_ 'BLD' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'SetByBlockedForDocument' |
+| AverageCost | AverageCost value. Stored as 'AVG'. <br /> Database Value: 'AVG' <br /> Model Value: 0 <br /> Domain API Value: 'AverageCost' |
+| ExplicitlySpecifyLot | ExplicitlySpecifyLot value. Stored as 'EXP'. <br /> Database Value: 'EXP' <br /> Model Value: 1 <br /> Domain API Value: 'ExplicitlySpecifyLot' |
+| SetByBlockedForDocument | SetByBlockedForDocument value. Stored as 'BLD'. <br /> Database Value: 'BLD' <br /> Model Value: 2 <br /> Domain API Value: 'SetByBlockedForDocument' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **AverageCost**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **AverageCost**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultCustomerCreditLimitBase
 
 Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)`
 
-_Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultLanguage
 
 The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")`
 
-_Type_: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__**  
-_Category_: **System**  
+Type: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__**  
+Category: **System**  
 Allowed values for the `DefaultLanguage`(General.EnterpriseCompanies.md#defaultlanguage) data attribute  
-_Allowed Values (General.EnterpriseCompaniesRepository.DefaultLanguage Enum Members)_  
+Allowed Values (General.EnterpriseCompaniesRepository.DefaultLanguage Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Bulgarian | Bulgarian value. Stored as 'bg'. <br /> _Database Value:_ 'bg' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Bulgarian' |
-| English | English value. Stored as 'en'. <br /> _Database Value:_ 'en' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'English' |
+| Bulgarian | Bulgarian value. Stored as 'bg'. <br /> Database Value: 'bg' <br /> Model Value: 0 <br /> Domain API Value: 'Bulgarian' |
+| English | English value. Stored as 'en'. <br /> Database Value: 'en' <br /> Model Value: 1 <br /> Domain API Value: 'English' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **English**  
-_Show in UI_: **CannotBeShown**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **English**  
+Show in UI: **CannotBeShown**  
 
 ### EditPeriodStartDate
 
 Start date of the priod when the documents can be edited. `Filter(ge;le)`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### EndDateOfClosedAccountingPeriod
 
 Indicates the date before which all accounting vouchers are permanently closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.1.0`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### IsActive
 
 Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### PrintImagesRetentionMonths
 
 A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1`
 
-_Type_: **int32**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **60**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **60**  
+Show in UI: **ShownByDefault**  
 
 ### ReportingCurrencyEndDate
 
 Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated. `Filter(eq;ge;le)` `Introduced in version 26.1.3.79`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ReportingCurrencyProcessedDate
 
 Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date. `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 25.1.3.24`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ReportingCurrencyRate
 
 Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date). `Filter(eq)` `Introduced in version 25.1.3.7`
 
-_Type_: **decimal (18, 6) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (18, 6) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ReportingCurrencyStartDate
 
 Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. `Filter(eq;ge;le)` `Introduced in version 25.1.3.2`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### UIBaseColor
 
 When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2`
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -304,13 +310,13 @@ _Show in UI_: **ShownByDefault**
 
 The access key, containing the permissions for this EnterpriseCompany. An empty value means that all users have unlimited permissions. `Filter(multi eq)`
 
-_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 
-_Remarks_  
+Remarks  
 Supported permissions
 
 | Permission | Type |
@@ -322,66 +328,66 @@ Supported permissions
 
 Product that is used for handling advances in trade documents. `Filter(multi eq)`
 
-_Type_: **[Products](General.Products.Products.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Products](General.Products.Products.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### BaseCurrency
 
 The base currency for summary reporting for this company. `Required` `Filter(multi eq)`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Company
 
 Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` `FilterableReference`
 
-_Type_: **[Companies](General.Contacts.Companies.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Companies](General.Contacts.Companies.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 ### ExchangeDifferenceCreditAccount
 
 Account for balancing accounting vouchers with credit difference due to currency exchanges. `Filter(multi eq)`
 
-_Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ExchangeDifferenceDebitAccount
 
 Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)`
 
-_Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ReportingCurrency
 
 Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### VATDocumentAmountType
 
 The document amount that is used to determine the amount of the VAT entries when they are generated. `Filter(multi eq)`
 
-_Type_: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -391,90 +397,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

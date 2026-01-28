@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Crm.Pricing.BonusPrograms Entity | ERP.net Domain Model </title>
+      <title>Crm.Pricing.BonusPrograms | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Crm.Pricing.BonusPrograms Entity | ERP.net Domain Model ">
+      <meta name="title" content="Crm.Pricing.BonusPrograms | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,28 +85,28 @@
         </div>
 
         <article data-uid="Crm.Pricing.BonusPrograms">
-<h1 id="crmpricingbonusprograms-entity">Crm.Pricing.BonusPrograms Entity</h1>
+<h1 id="crmpricingbonusprograms">Crm.Pricing.BonusPrograms</h1>
 
-<p><strong>Namespace:</strong> <a href="Crm.Pricing.html">Crm.Pricing</a></p>
-<p>Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document. Entity: Crm_Bonus_Programs</p>
+<p>Bonus programs allow automatic adding of new line with bonus product or automatic application of discount in a sales document.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Crm.Pricing.html">Crm.Pricing</a><br>
+Repository: Crm.Pricing.BonusPrograms<br>
+Base Table: Crm_Bonus_Programs<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>Crm.Marketing.BonusPrograms</strong><br>
-New name: <strong>Crm.Pricing.BonusPrograms</strong><br>
-Version: <strong>25.1.1.36</strong><br>
-Case: <strong>37717</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{Name:T}</em><br>
-Default Search Members:<br>
-<em>Name</em><br>
-Name Data Member:<br>
-<em>Name</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: Crm.Marketing.BonusPrograms<br>
+New name: Crm.Pricing.BonusPrograms<br>
+Version: 25.1.1.36<br>
+Case: 37717</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {Name:T}<br>
+Search Members: Name<br>
+Name Member: Name<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -131,11 +131,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Crm.Pricing.BonusPrograms.html#active">Active</a></td>
 <td>boolean <strong>nullable</strong></td>
 <td>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.BonusPrograms.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
-<td>datetime</td>
-<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></td>
@@ -208,34 +203,9 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Pricing.BonusPrograms.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.BonusPrograms.html#externalid">ExternalId</a></td>
-<td>string</td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.BonusPrograms.html#externalsystem">ExternalSystem</a></td>
-<td>string</td>
-<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.BonusPrograms.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
 <td>The name of the bonus program. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Pricing.BonusPrograms.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#priority">Priority</a></td>
@@ -331,6 +301,48 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pricing.BonusPrograms.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="child-collections">Child Collections</h2>
 <table>
 <thead>
@@ -351,25 +363,18 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
 <p>General condition if the bonus is active. The other conditions are verified only for active bonus programs. <code>Default(true)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
-<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>boolean <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusaction">BonusAction</h3>
 <p>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>BonusAction</code>(Crm.Pricing.BonusPrograms.md#bonusaction) data attribute<br>
-<em>Allowed Values (Crm.Pricing.BonusProgramsRepository.BonusAction Enum Members)</em></p>
+Allowed Values (Crm.Pricing.BonusProgramsRepository.BonusAction Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -380,162 +385,127 @@ Allowed values for the <code>BonusAction</code>(Crm.Pricing.BonusPrograms.md#bon
 <tbody>
 <tr>
 <td>Product</td>
-<td>Product value. Stored as 'P'. <br> <em>Database Value:</em> 'P' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Product'</td>
+<td>Product value. Stored as 'P'. <br> Database Value: 'P' <br> Model Value: 0 <br> Domain API Value: 'Product'</td>
 </tr>
 <tr>
 <td>Discount</td>
-<td>Discount value. Stored as 'D'. <br> <em>Database Value:</em> 'D' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Discount'</td>
+<td>Discount value. Stored as 'D'. <br> Database Value: 'D' <br> Model Value: 1 <br> Domain API Value: 'Discount'</td>
 </tr>
 <tr>
 <td>CascadeDiscount</td>
-<td>CascadeDiscount value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'CascadeDiscount'</td>
+<td>CascadeDiscount value. Stored as 'C'. <br> Database Value: 'C' <br> Model Value: 2 <br> Domain API Value: 'CascadeDiscount'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Discount</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Discount</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusdocumentamountpercent">BonusDocumentAmountPercent</h3>
 <p>The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null.</p>
-<p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="bonuslinediscountpercent">BonusLineDiscountPercent</h3>
 <p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount). <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (7, 6)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusproductquantity">BonusProductQuantity</h3>
 <p>The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Unit: BonusProductQuantityUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusproductquantitymultiplierforeachlotsize">BonusProductQuantityMultiplierForEachLotSize</h3>
 <p>When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditioncustomerfilterxml">ConditionCustomerFilterXML</h3>
 <p>When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
-<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiondistributionchannelfilterxml">ConditionDistributionChannelFilterXML</h3>
 <p>When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics. <code>Unit: Marketing.DistributionChannelsRepository.TableName</code></p>
-<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionfromdate">ConditionFromDate</h3>
 <p>Starting date of the bonus. null means that there is no starting date restriction. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>datetime <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionmaxamount">ConditionMaxAmount</h3>
 <p>If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionmaxquantity">ConditionMaxQuantity</h3>
 <p>When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionminamount">ConditionMinAmount</h3>
 <p>If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. <code>Currency: ConditionDocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionminquantity">ConditionMinQuantity</h3>
 <p>When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. <code>Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionshiptocustomerfilterxml">ConditionShipToCustomerFilterXML</h3>
 <p>When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
-<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiontodate">ConditionToDate</h3>
 <p>Ending date (inclusive) of the bonus. null means that there is no ending date restriction. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>datetime <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of the bonus program. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
 <p>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.BonusPrograms.html#priority">Priority</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Crm.Pricing.BonusPrograms.html#priority">Priority</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Crm.Pricing.BonusPrograms.md#priority) data attribute<br>
-<em>Allowed Values (Crm.Pricing.BonusProgramsRepository.Priority Enum Members)</em></p>
+Allowed Values (Crm.Pricing.BonusProgramsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -546,190 +516,232 @@ Allowed values for the <code>Priority</code>(Crm.Pricing.BonusPrograms.md#priori
 <tbody>
 <tr>
 <td>v_1Lowest</td>
-<td>v_1Lowest value. Stored as 0. <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'v_1Lowest'</td>
+<td>v_1Lowest value. Stored as 0. <br> Database Value: 0 <br> Model Value: 0 <br> Domain API Value: 'v_1Lowest'</td>
 </tr>
 <tr>
 <td>Two</td>
-<td>Two value. Stored as 1. <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Two'</td>
+<td>Two value. Stored as 1. <br> Database Value: 1 <br> Model Value: 1 <br> Domain API Value: 'Two'</td>
 </tr>
 <tr>
 <td>Three</td>
-<td>Three value. Stored as 2. <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Three'</td>
+<td>Three value. Stored as 2. <br> Database Value: 2 <br> Model Value: 2 <br> Domain API Value: 'Three'</td>
 </tr>
 <tr>
 <td>Four</td>
-<td>Four value. Stored as 3. <br> <em>Database Value:</em> 3 <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Four'</td>
+<td>Four value. Stored as 3. <br> Database Value: 3 <br> Model Value: 3 <br> Domain API Value: 'Four'</td>
 </tr>
 <tr>
 <td>v_5Highest</td>
-<td>v_5Highest value. Stored as 4. <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'v_5Highest'</td>
+<td>v_5Highest value. Stored as 4. <br> Database Value: 4 <br> Model Value: 4 <br> Domain API Value: 'v_5Highest'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>2</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>2</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="bonusdocumentamounttype">BonusDocumentAmountType</h3>
 <p>When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="bonusproduct">BonusProduct</h3>
 <p>The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusproductquantityunit">BonusProductQuantityUnit</h3>
 <p>The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="campaign">Campaign</h3>
 <p>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="companylocation">CompanyLocation</h3>
 <p>When set, specifies that the sales document must be of the specified enterprise company location. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditioncustomer">ConditionCustomer</h3>
 <p>When not null, specifies that the bonus should be applied only to the specified customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiondistributionchannel">ConditionDistributionChannel</h3>
 <p>When not null, specifies that the bonus should be applied only when the specified channel is used. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiondocumentcurrency">ConditionDocumentCurrency</h3>
 <p>Condition for the document amount. Should be not null if any of the amount conditions are not null. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionpricelist">ConditionPriceList</h3>
 <p>When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionproduct">ConditionProduct</h3>
 <p>When not null, specifies a conditional product, which is required to exist in the sales document in order for the bonus program to be applied. If a condition with multiple products is required, additional products can be added to Bonus Program Products. If null the other conditions should be evaluated against the whole order. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionproductgroup">ConditionProductGroup</h3>
 <p>When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionshiptocustomer">ConditionShipToCustomer</h3>
 <p>When not null, specifies that the bonus should be applied only when shipping to the specified customer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiontargetgroup">ConditionTargetGroup</h3>
 <p>When not null, specifies that the bonus should be applied only to the specified target customer group. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
 <p>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount that comes from the bonus program in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.66</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When set, specifies that the sales document must be of the specified enterprise company. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -740,35 +752,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R28343.html">R28343 BonusProgram - Enterprise Company</a></li>

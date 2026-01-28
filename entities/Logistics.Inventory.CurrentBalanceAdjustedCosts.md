@@ -1,20 +1,22 @@
 ---
 uid: Logistics.Inventory.CurrentBalanceAdjustedCosts
 ---
-# Logistics.Inventory.CurrentBalanceAdjustedCosts View
+# Logistics.Inventory.CurrentBalanceAdjustedCosts (View)
 
-**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
 
-The current inventory balances with adjustments, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balance_Adjusted_Costs (Introduced in version 24.1.5.34)
+The current inventory balances with adjustments, grouped by storage key (Store, Product, Lot, etc.).
 
-## Default Visualization
-Default Display Text Format:  
-_{BaseCostValue}: {EnterpriseCompanyId}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _HiddenByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Logistics.Inventory](Logistics.Inventory.md)  
+Repository: Logistics.Inventory.CurrentBalanceAdjustedCosts  
+Introduced In Version: 24.1.5.34  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {BaseCostValue}: {EnterpriseCompanyId}  
+Search Members:   
+Category:  Views  
+Show in UI:  HiddenByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -50,41 +52,41 @@ Aggregate Tree
 
 The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ProductCost
 
 The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### QuantityBase
 
 The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Quantity (38, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### StoreCost
 
 The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -93,72 +95,72 @@ _Show in UI_: **ShownByDefault**
 
 The enterprise company which issued the document. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Documents_Table.Enterprise_Company_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Category: **System**  
+Inherited From: **Gen_Documents_Table.Enterprise_Company_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Lot
 
 If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Lot_Id`
 
-_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Lot_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Lot_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Product
 
 The item that was received/issued. `Required` `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Product_Id` `FilterableReference`
 
-_Type_: **[Products](General.Products.Products.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Product_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Products](General.Products.Products.md)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Product_Id**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 ### ProductVariant
 
 If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Product_Variant_Id`
 
-_Type_: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Product_Variant_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Product_Variant_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### SerialNumber
 
 Item serial number for serialized items. null for non-serialized items. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Serial_Number_Id`
 
-_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Serial_Number_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Serial_Number_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Store
 
 The store from which the goods are received or issued. `Required` `Filter(multi eq)` `Inherited from Inv_Transactions_Table.Store_Id`
 
-_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transactions_Table.Store_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Stores](Logistics.Inventory.Stores.md)**  
+Category: **System**  
+Inherited From: **Inv_Transactions_Table.Store_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### StoreBin
 
 Store bin, from/to which the transaction was performed. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Store_Bin_Id`
 
-_Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Store_Bin_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Store_Bin_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Logistics.Inventory.StoreOrderLinesUnfulfilledView View | ERP.net Domain Model </title>
+      <title>Logistics.Inventory.StoreOrderLinesUnfulfilledView (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Logistics.Inventory.StoreOrderLinesUnfulfilledView View | ERP.net Domain Model ">
+      <meta name="title" content="Logistics.Inventory.StoreOrderLinesUnfulfilledView (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Logistics.Inventory.StoreOrderLinesUnfulfilledView">
-<h1 id="logisticsinventorystoreorderlinesunfulfilledview-view">Logistics.Inventory.StoreOrderLinesUnfulfilledView View</h1>
+<h1 id="logisticsinventorystoreorderlinesunfulfilledview-view">Logistics.Inventory.StoreOrderLinesUnfulfilledView (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Logistics.Inventory.html">Logistics.Inventory</a></p>
-<p>Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling. Entity: Inv_Store_Order_Lines_Unfulfilled_View (Introduced in version 21.1.1.16)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{StoreOrderLineId}: {StoreOrderId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>HiddenByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Returns the remaining (unfulfilled) quantity and cost for each Store Order Line in Store Orders, which are Planned, FirmPlanned or Released. Is_Fulfilled and Is_QuantityFulfilled can be used to filter out lines which appear fulfilled. For best performance, the store orders should be finished after fulfilling.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Logistics.Inventory.html">Logistics.Inventory</a><br>
+Repository: Logistics.Inventory.StoreOrderLinesUnfulfilledView<br>
+Introduced In Version: 21.1.1.16<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {StoreOrderLineId}: {StoreOrderId}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  HiddenByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -200,33 +201,33 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Gen_Documents_Table.Document_Date</code></p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Documents_Table.Document_Date</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDate</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Documents_Table.Document_Date</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>CurrentDate</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isfulfilled">IsFulfilled</h3>
 <p>Returns true/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isquantityfulfilled">IsQuantityFulfilled</h3>
 <p>Returns true/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movementtype">MovementType</h3>
 <p>Store order movement type. R=RECEIPT, I=ISSUE. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Orders_Table.Movement_Type</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#movementtype">MovementType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#movementtype">MovementType</a></strong><br>
+Category: <strong>System</strong><br>
 Specifies the movement type (direction) of a warehouse document.<br>
-<em>Allowed Values (Logistics.Inventory.MovementType Enum Members)</em></p>
+Allowed Values (Logistics.Inventory.MovementType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -237,92 +238,92 @@ Specifies the movement type (direction) of a warehouse document.<br>
 <tbody>
 <tr>
 <td>Issue</td>
-<td>Goods issue <br> <em>Database Value:</em> 'I' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Issue'</td>
+<td>Goods issue <br> Database Value: 'I' <br> Model Value: 0 <br> Domain API Value: 'Issue'</td>
 </tr>
 <tr>
 <td>Receipt</td>
-<td>Goods receive <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Receipt'</td>
+<td>Goods receive <br> Database Value: 'R' <br> Model Value: 1 <br> Domain API Value: 'Receipt'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Inherited From</em>: <strong>Inv_Store_Orders_Table.Movement_Type</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Receipt</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Inherited From: <strong>Inv_Store_Orders_Table.Movement_Type</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Receipt</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremaininglinecost">OrderRemainingLineCost</h3>
 <p>The remaining (unfulfilled) line cost of the order line. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 2)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremainingquantitybase">OrderRemainingQuantityBase</h3>
 <p>The remaining (unfulfilled) quantity of the order line in base measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 3)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
 <p>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Lot_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Order_Lines_Table.Lot_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Store_Order_Lines_Table.Lot_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The product which should be received/issued. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Product_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Order_Lines_Table.Product_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Store_Order_Lines_Table.Product_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <p>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Product_Variant_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Order_Lines_Table.Product_Variant_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Store_Order_Lines_Table.Product_Variant_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>Which serial number to receive/issue. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Serial_Number_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Order_Lines_Table.Serial_Number_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Store_Order_Lines_Table.Serial_Number_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
 <p>The designated warehouse for the operation. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Orders_Table.Store_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Orders_Table.Store_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Store_Orders_Table.Store_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storeorder">StoreOrder</h3>
 <p>Store Order. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Orders_Table.Store_Order_Id</code> <code>Introduced in version 24.1.1.78</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrders.html">StoreOrders</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Store_Orders_Table.Store_Order_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.StoreOrders.html">StoreOrders</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Store_Orders_Table.Store_Order_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storeorderline">StoreOrderLine</h3>
 <p>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Logistics_Inventory_StoreOrderLinesUnfulfilledView</p>

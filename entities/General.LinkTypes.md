@@ -1,7 +1,7 @@
-# General.LinkTypes Entity
+# General.LinkTypes
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Systems.Documents.LinkTypes](Systems.Documents.LinkTypes.md)
+New name: [Systems.Documents.LinkTypes](Systems.Documents.LinkTypes.md)

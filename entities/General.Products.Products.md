@@ -1,29 +1,29 @@
 ---
 uid: General.Products.Products
 ---
-# General.Products.Products Entity
+# General.Products.Products
 
-**Namespace:** [General.Products](General.Products.md)  
 
-Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated. Entity: Gen_Products
+Products are the different items in the enterprise, which can be purchased, stored, sold and depreciated.
 
-## Default Visualization
-Default Display Text Format:  
-_{Name:T}_  
-Default Search Members:  
-_PartNumber; Name_  
-Code Data Member:  
-_PartNumber_  
-Name Data Member:  
-_Name_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
-Layout category attribute:  _ProductTypeId_  
+## General
+Namespace: [General.Products](General.Products.md)  
+Repository: General.Products.Products  
+Base Table: Gen_Products  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {Name:T}  
+Search Members: PartNumber; Name  
+Code Member: PartNumber  
+Name Member: Name  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
+Layout category By:  ProductTypeId  
 
 ## Track Changes  
-Min level:  _2 - Track object changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  2 - Track object changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -47,20 +47,15 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. `Required` `Default("B ")` `Filter(eq)` 
 | [Active](General.Products.Products.md#active) | boolean | True if the product is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
-| [AggregateLastUpdateTimeUtc](General.Products.Products.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. `Required` `Default(false)` `Filter(eq)` 
 | [CatalogDescriptionHtml](General.Products.Products.md#catalogdescriptionhtml) | string (max) __nullable__ | Full HTML description of the product. Usually used for display on product catalogs, web pages, etc. 
 | [CostingMethod](General.Products.Products.md#costingmethod) | [CostingMethod](General.Products.Products.md#costingmethod) __nullable__ | Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost. 
 | [CreationTime](General.Products.Products.md#creationtime) | datetime __nullable__ | Date and time when the Product was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Products.Products.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Product. `Filter(like)` `ReadOnly` 
 | [Description](General.Products.Products.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of the product. 
-| [DisplayText](General.Products.Products.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 __nullable__ | Total default expiry period for the product (in days) from the date of production to the date of expiry. 
-| [ExternalId](General.Products.Products.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Products.Products.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")` 
 | [GuaranteePeriodDays](General.Products.Products.md#guaranteeperioddays) | int32 __nullable__ | Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others. 
-| [Id](General.Products.Products.md#id) | guid |  
 | [IsFeatured](General.Products.Products.md#isfeatured) | boolean | Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. `Required` `Default(false)` `Filter(eq)` 
 | [IsSerialized](General.Products.Products.md#isserialized) | boolean | True if the parts use/require serial numbers. `Required` `Default(false)` `Filter(eq)` 
 | [LotsIssue](General.Products.Products.md#lotsissue) | [LotsIssue](General.Products.Products.md#lotsissue) __nullable__ | Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO). 
@@ -68,7 +63,6 @@ Aggregate Tree
 | [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency` 
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of this product that has to be specified in any sale. 
 | [Name](General.Products.Products.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the item. `Required` `Filter(eq;like)` 
-| [ObjectVersion](General.Products.Products.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD` 
 | [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 __nullable__ | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
 | [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 __nullable__ | Number of days in the future for which to plan the demand and supply (null = Default of 180 days). 
@@ -102,6 +96,18 @@ Aggregate Tree
 | [PurchaseMeasurementUnit](General.Products.Products.md#purchasemeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Default measurement unit to use, when creating new purchase documents with this product. `Filter(multi eq)` |
 | [ValuationGroup](General.Products.Products.md#valuationgroup) | [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. `Filter(multi eq)` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](General.Products.Products.md#id) | guid |  
+| [ObjectVersion](General.Products.Products.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](General.Products.Products.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](General.Products.Products.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](General.Products.Products.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](General.Products.Products.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -128,444 +134,444 @@ Aggregate Tree
 
 Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. `Required` `Default("B ")` `Filter(eq)`
 
-_Type_: **[ABCClass](General.Products.Products.md#abcclass)**  
-_Category_: **System**  
+Type: **[ABCClass](General.Products.Products.md#abcclass)**  
+Category: **System**  
 Allowed values for the `ABCClass`(General.Products.Products.md#abcclass) data attribute  
-_Allowed Values (General.Products.ProductsRepository.ABCClass Enum Members)_  
+Allowed Values (General.Products.ProductsRepository.ABCClass Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| A | A value. Stored as 'A '. <br /> _Database Value:_ 'A ' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'A' |
-| B | B value. Stored as 'B '. <br /> _Database Value:_ 'B ' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'B' |
-| C | C value. Stored as 'C '. <br /> _Database Value:_ 'C ' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'C' |
+| A | A value. Stored as 'A '. <br /> Database Value: 'A ' <br /> Model Value: 0 <br /> Domain API Value: 'A' |
+| B | B value. Stored as 'B '. <br /> Database Value: 'B ' <br /> Model Value: 1 <br /> Domain API Value: 'B' |
+| C | C value. Stored as 'C '. <br /> Database Value: 'C ' <br /> Model Value: 2 <br /> Domain API Value: 'C' |
 
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **B**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **B**  
+Show in UI: **ShownByDefault**  
 
 ### Active
 
 True if the product is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### AllowVariableMeasurementRatios
 
 Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. `Required` `Default(false)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CatalogDescriptionHtml
 
 Full HTML description of the product. Usually used for display on product catalogs, web pages, etc.
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **CannotBeShown**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **CannotBeShown**  
 
 ### CostingMethod
 
 Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.
 
-_Type_: **[CostingMethod](General.Products.Products.md#costingmethod) __nullable__**  
-_Category_: **System**  
+Type: **[CostingMethod](General.Products.Products.md#costingmethod) __nullable__**  
+Category: **System**  
 Allowed values for the `CostingMethod`(General.Products.Products.md#costingmethod) data attribute  
-_Allowed Values (General.Products.ProductsRepository.CostingMethod Enum Members)_  
+Allowed Values (General.Products.ProductsRepository.CostingMethod Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| AverageCostFor<br />TheWholeProduct | AverageCostFor<br />TheWholeProduct value. Stored as 'AVG'. <br /> _Database Value:_ 'AVG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AverageCostFor<br />TheWholeProduct' |
-| SeparateCostForEachLot | SeparateCostForEachLot value. Stored as 'EXP'. <br /> _Database Value:_ 'EXP' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'SeparateCostForEachLot' |
-| AveragePartitioned<br />ByReservedForDocument | AveragePartitioned<br />ByReservedForDocument value. Stored as 'BLD'. <br /> _Database Value:_ 'BLD' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'AveragePartitioned<br />ByReservedForDocument' |
+| AverageCostFor<br />TheWholeProduct | AverageCostFor<br />TheWholeProduct value. Stored as 'AVG'. <br /> Database Value: 'AVG' <br /> Model Value: 0 <br /> Domain API Value: 'AverageCostFor<br />TheWholeProduct' |
+| SeparateCostForEachLot | SeparateCostForEachLot value. Stored as 'EXP'. <br /> Database Value: 'EXP' <br /> Model Value: 1 <br /> Domain API Value: 'SeparateCostForEachLot' |
+| AveragePartitioned<br />ByReservedForDocument | AveragePartitioned<br />ByReservedForDocument value. Stored as 'BLD'. <br /> Database Value: 'BLD' <br /> Model Value: 2 <br /> Domain API Value: 'AveragePartitioned<br />ByReservedForDocument' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationTime
 
 Date and time when the Product was created. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### CreationUser
 
 Login name of the user, who created the Product. `Filter(like)` `ReadOnly`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### Description
 
 The description of the product.
 
-_Type_: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ExpiryPeriodDays
 
 Total default expiry period for the product (in days) from the date of production to the date of expiry.
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### FlushingMethod
 
 Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")`
 
-_Type_: **[FlushingMethod](General.Products.Products.md#flushingmethod)**  
-_Category_: **System**  
+Type: **[FlushingMethod](General.Products.Products.md#flushingmethod)**  
+Category: **System**  
 Allowed values for the `FlushingMethod`(General.Products.Products.md#flushingmethod) data attribute  
-_Allowed Values (General.Products.ProductsRepository.FlushingMethod Enum Members)_  
+Allowed Values (General.Products.ProductsRepository.FlushingMethod Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Backward | Backward value. Stored as 'B'. <br /> _Database Value:_ 'B' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Backward' |
-| Forward | Forward value. Stored as 'F'. <br /> _Database Value:_ 'F' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Forward' |
-| Manual | Manual value. Stored as 'M'. <br /> _Database Value:_ 'M' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Manual' |
+| Backward | Backward value. Stored as 'B'. <br /> Database Value: 'B' <br /> Model Value: 0 <br /> Domain API Value: 'Backward' |
+| Forward | Forward value. Stored as 'F'. <br /> Database Value: 'F' <br /> Model Value: 1 <br /> Domain API Value: 'Forward' |
+| Manual | Manual value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Manual' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Manual**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Manual**  
+Show in UI: **ShownByDefault**  
 
 ### GuaranteePeriodDays
 
 Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others.
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### IsFeatured
 
 Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. `Required` `Default(false)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### IsSerialized
 
 True if the parts use/require serial numbers. `Required` `Default(false)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### LotsIssue
 
 Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO).
 
-_Type_: **[LotsIssue](General.Products.Products.md#lotsissue) __nullable__**  
-_Category_: **System**  
+Type: **[LotsIssue](General.Products.Products.md#lotsissue) __nullable__**  
+Category: **System**  
 Allowed values for the `LotsIssue`(General.Products.Products.md#lotsissue) data attribute  
-_Allowed Values (General.Products.ProductsRepository.LotsIssue Enum Members)_  
+Allowed Values (General.Products.ProductsRepository.LotsIssue Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| FirstInFirstOut | FirstInFirstOut value. Stored as 'FIFO'. <br /> _Database Value:_ 'FIFO' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'FirstInFirstOut' |
-| FirstExpireFirstOut | FirstExpireFirstOut value. Stored as 'FEFO'. <br /> _Database Value:_ 'FEFO' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'FirstExpireFirstOut' |
-| LastInFirstOut | LastInFirstOut value. Stored as 'LIFO'. <br /> _Database Value:_ 'LIFO' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'LastInFirstOut' |
+| FirstInFirstOut | FirstInFirstOut value. Stored as 'FIFO'. <br /> Database Value: 'FIFO' <br /> Model Value: 0 <br /> Domain API Value: 'FirstInFirstOut' |
+| FirstExpireFirstOut | FirstExpireFirstOut value. Stored as 'FEFO'. <br /> Database Value: 'FEFO' <br /> Model Value: 1 <br /> Domain API Value: 'FirstExpireFirstOut' |
+| LastInFirstOut | LastInFirstOut value. Stored as 'LIFO'. <br /> Database Value: 'LIFO' <br /> Model Value: 2 <br /> Domain API Value: 'LastInFirstOut' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ManufacturingPolicy
 
 Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")`
 
-_Type_: **string (3)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **3**  
-_Default Value_: **MTS**  
-_Show in UI_: **CannotBeShown**  
+Type: **string (3)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **3**  
+Default Value: **MTS**  
+Show in UI: **CannotBeShown**  
 
 ### MinimalSalesPricePerLot
 
 Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency`
 
-_Type_: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### MinimalSalesQuantityBase
 
 Minimal base quantity of this product that has to be specified in any sale.
 
-_Type_: **decimal (18, 3) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (18, 3) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Name
 
 Name of the item. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### PartNumber
 
 Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string (32)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **True**  
-_Maximum Length_: **32**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (32)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like, EqualsIn**  
+Supports Order By: **True**  
+Maximum Length: **32**  
+Show in UI: **ShownByDefault**  
 
 ### PlanningDemandTimeFenceDays
 
 Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days).
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### PlanningHorizonDays
 
 Number of days in the future for which to plan the demand and supply (null = Default of 180 days).
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **CannotBeShown**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **CannotBeShown**  
 
 ### PlanningTimeFenceDays
 
 Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **CannotBeShown**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **CannotBeShown**  
 
 ### ScrapRate
 
 Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)`
 
-_Type_: **decimal (7, 6)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (7, 6)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **ShownByDefault**  
 
 ### ShortName
 
 Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ShowInCatalog
 
 Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. `Required` `Default(false)` `Filter(multi eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### StandardCostPerLot
 
 Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount (18, 4)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Constant**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (18, 4)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
 
 ### StandardLotSizeBase
 
 The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. `Unit: BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
 
-_Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Constant**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
 
 ### StandardPricePerLot
 
 Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)`
 
-_Type_: **[Amount (18, 4)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Constant**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (18, 4)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
 
 ### SupplySchemaId
 
 The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)`
 
-_Type_: **guid __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **guid __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 ### UpdateTime
 
 Date and time when the Product was last updated. `Filter(ge;le)` `ReadOnly`
 
-_Type_: **datetime __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **HiddenByDefault**  
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **HiddenByDefault**  
 
 ### UpdateUser
 
 Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
 
 ### UseLots
 
 Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. `Required` `Default("A")`
 
-_Type_: **[UseLots](General.Products.Products.md#uselots)**  
-_Category_: **System**  
+Type: **[UseLots](General.Products.Products.md#uselots)**  
+Category: **System**  
 Allowed values for the `UseLots`(General.Products.Products.md#uselots) data attribute  
-_Allowed Values (General.Products.ProductsRepository.UseLots Enum Members)_  
+Allowed Values (General.Products.ProductsRepository.UseLots Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Allowed | Allowed value. Stored as 'A'. <br /> _Database Value:_ 'A' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Allowed' |
-| NotAllowed | NotAllowed value. Stored as 'N'. <br /> _Database Value:_ 'N' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'NotAllowed' |
-| Required | Required value. Stored as 'R'. <br /> _Database Value:_ 'R' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Required' |
+| Allowed | Allowed value. Stored as 'A'. <br /> Database Value: 'A' <br /> Model Value: 0 <br /> Domain API Value: 'Allowed' |
+| NotAllowed | NotAllowed value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 1 <br /> Domain API Value: 'NotAllowed' |
+| Required | Required value. Stored as 'R'. <br /> Database Value: 'R' <br /> Model Value: 2 <br /> Domain API Value: 'Required' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Allowed**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Allowed**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -574,131 +580,131 @@ _Show in UI_: **ShownByDefault**
 
 The base measurement category for quantities of this product. `Required` `Filter(multi eq)`
 
-_Type_: **[MeasurementCategories](General.Products.MeasurementCategories.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MeasurementCategories](General.Products.MeasurementCategories.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.ProductGroup.DefaultMeasurementUnit.MeasurementCategory`
 ### CargoType
 
 Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. `Filter(multi eq)`
 
-_Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### CostingCurrency
 
 Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. `Filter(multi eq)`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.ProductGroup.EnterpriseCompany`
 ### ExciseProductType
 
 Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45`
 
-_Type_: **[ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### IntrastatCommodityCode
 
 Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)`
 
-_Type_: **[CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### IntrastatSupplementaryUnit
 
 Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)`
 
-_Type_: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### MeasurementUnit
 
 Default measurement unit, when creating new documents with this product. `Required` `Filter(multi eq)`
 
-_Type_: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.ProductGroup.DefaultMeasurementUnit`
 ### OriginCountry
 
 Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. `Filter(multi eq)`
 
-_Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Countries](General.Geography.Countries.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProductGroup
 
 The product group, under which the product is categorized. `Required` `Filter(multi eq)`
 
-_Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProductGroups](General.Products.ProductGroups.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProductType
 
 The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. `Required` `Filter(multi eq)`
 
-_Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProductTypes](General.Products.ProductTypes.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.ProductGroup.GetDefaultProductTypeForNewProduct( )`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.ProductGroup.GetDefaultProductTypeForNewProduct( )`
 ### PurchaseMeasurementUnit
 
 Default measurement unit to use, when creating new purchase documents with this product. `Filter(multi eq)`
 
-_Type_: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ValuationGroup
 
 Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. `Filter(multi eq)`
 
-_Type_: **[ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -708,90 +714,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

@@ -1,7 +1,7 @@
-# General.DocumentJobs Entity
+# General.DocumentJobs
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Core.DocumentJobs](Systems.Core.DocumentJobs.md)
+New name: [Systems.Core.DocumentJobs](Systems.Core.DocumentJobs.md)

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Finance.Payments.PaymentBalances View | ERP.net Domain Model </title>
+      <title>Finance.Payments.PaymentBalances (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Finance.Payments.PaymentBalances View | ERP.net Domain Model ">
+      <meta name="title" content="Finance.Payments.PaymentBalances (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,24 @@
         </div>
 
         <article data-uid="Finance.Payments.PaymentBalances">
-<h1 id="financepaymentspaymentbalances-view">Finance.Payments.PaymentBalances View</h1>
+<h1 id="financepaymentspaymentbalances-view">Finance.Payments.PaymentBalances (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Finance.Payments.html">Finance.Payments</a></p>
-<p>Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View (Introduced in version 23.1.0.79)</p>
+<p>Represents the payment orders with their covered amounts.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Finance.Payments.html">Finance.Payments</a><br>
+Repository: Finance.Payments.PaymentBalances<br>
+Introduced In Version: 23.1.0.79<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>Finance.Payments.OrderBalances</strong><br>
-New name: <strong>Finance.Payments.PaymentBalances</strong><br>
-Version: <strong>25.1.2.86</strong><br>
-Case: <strong>38515</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{OrderAmountValue}: {PaidAmountValue}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: Finance.Payments.OrderBalances<br>
+New name: Finance.Payments.PaymentBalances<br>
+Version: 25.1.2.86<br>
+Case: 38515</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {OrderAmountValue}: {PaidAmountValue}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -245,10 +246,10 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="direction">Direction</h3>
 <p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Direction</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentBalances.html#direction">Direction</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Finance.Payments.PaymentBalances.html#direction">Direction</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Finance.Payments.PaymentBalances.md#direction) data attribute<br>
-<em>Allowed Values (Finance.Payments.PaymentBalancesRepository.Direction Enum Members)</em></p>
+Allowed Values (Finance.Payments.PaymentBalancesRepository.Direction Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -259,41 +260,41 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentBalances.m
 <tbody>
 <tr>
 <td>Outgoing</td>
-<td>Outgoing value. Stored as 'I'. <br> <em>Database Value:</em> 'I' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Outgoing'</td>
+<td>Outgoing value. Stored as 'I'. <br> Database Value: 'I' <br> Model Value: 0 <br> Domain API Value: 'Outgoing'</td>
 </tr>
 <tr>
 <td>Incoming</td>
-<td>Incoming value. Stored as 'R'. <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Incoming'</td>
+<td>Incoming value. Stored as 'R'. <br> Database Value: 'R' <br> Model Value: 1 <br> Domain API Value: 'Incoming'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Direction</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Outgoing</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Inherited From: <strong>Cash_Payment_Orders_Table.Direction</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Outgoing</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
 <p>The due date of the payment. null means there is no due date. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></p>
-<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Date</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>datetime <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Due_Date</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duestartdate">DueStartDate</h3>
 <p>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></p>
-<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Start_Date</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Due_Start_Date</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duestatus">DueStatus</h3>
 <p>Due status of requested payment. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.74</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentBalances.html#duestatus">DueStatus</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Finance.Payments.PaymentBalances.html#duestatus">DueStatus</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>DueStatus</code>(Finance.Payments.PaymentBalances.md#duestatus) data attribute<br>
-<em>Allowed Values (Finance.Payments.PaymentBalancesRepository.DueStatus Enum Members)</em></p>
+Allowed Values (Finance.Payments.PaymentBalancesRepository.DueStatus Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -304,58 +305,58 @@ Allowed values for the <code>DueStatus</code>(Finance.Payments.PaymentBalances.m
 <tbody>
 <tr>
 <td>Scheduled</td>
-<td>Payment is not yet applicable (before due start date).. Stored as 'S'. <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Scheduled'</td>
+<td>Payment is not yet applicable (before due start date).. Stored as 'S'. <br> Database Value: 'S' <br> Model Value: 0 <br> Domain API Value: 'Scheduled'</td>
 </tr>
 <tr>
 <td>Due</td>
-<td>Payment is now payable and should be made before the due date.. Stored as 'D'. <br> <em>Database Value:</em> 'D' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Due'</td>
+<td>Payment is now payable and should be made before the due date.. Stored as 'D'. <br> Database Value: 'D' <br> Model Value: 1 <br> Domain API Value: 'Due'</td>
 </tr>
 <tr>
 <td>GracePeriod</td>
-<td>Due date has passed, but still within the grace period (no penalties yet).. Stored as 'G'. <br> <em>Database Value:</em> 'G' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'GracePeriod'</td>
+<td>Due date has passed, but still within the grace period (no penalties yet).. Stored as 'G'. <br> Database Value: 'G' <br> Model Value: 2 <br> Domain API Value: 'GracePeriod'</td>
 </tr>
 <tr>
 <td>Overdue</td>
-<td>Grace period has ended, and payment is now late.. Stored as 'O'. <br> <em>Database Value:</em> 'O' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Overdue'</td>
+<td>Grace period has ended, and payment is now late.. Stored as 'O'. <br> Database Value: 'O' <br> Model Value: 3 <br> Domain API Value: 'Overdue'</td>
 </tr>
 <tr>
 <td>NotApplicable</td>
-<td>Not Applicable for payment. Stored as 'N'. <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'NotApplicable'</td>
+<td>Not Applicable for payment. Stored as 'N'. <br> Database Value: 'N' <br> Model Value: 4 <br> Domain API Value: 'NotApplicable'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isinvoiced">IsInvoiced</h3>
 <p>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderamount">OrderAmount</h3>
 <p>The total amount that should be paid. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Total_Amount</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Total_Amount</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paidamount">PaidAmount</h3>
 <p>The paid amount. Taken from released payment transactions. <code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymentstatus">PaymentStatus</h3>
 <p>Payment Status	. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentBalances.html#paymentstatus">PaymentStatus</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Finance.Payments.PaymentBalances.html#paymentstatus">PaymentStatus</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>PaymentStatus</code>(Finance.Payments.PaymentBalances.md#paymentstatus) data attribute<br>
-<em>Allowed Values (Finance.Payments.PaymentBalancesRepository.PaymentStatus Enum Members)</em></p>
+Allowed Values (Finance.Payments.PaymentBalancesRepository.PaymentStatus Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -366,158 +367,158 @@ Allowed values for the <code>PaymentStatus</code>(Finance.Payments.PaymentBalanc
 <tbody>
 <tr>
 <td>Unpaid</td>
-<td>No payment has been made yet.. Stored as 'UN'. <br> <em>Database Value:</em> 'UN' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Unpaid'</td>
+<td>No payment has been made yet.. Stored as 'UN'. <br> Database Value: 'UN' <br> Model Value: 0 <br> Domain API Value: 'Unpaid'</td>
 </tr>
 <tr>
 <td>PartiallyPaid</td>
-<td>A partial payment has been made, but the full amount is still outstanding.. Stored as 'PP'. <br> <em>Database Value:</em> 'PP' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'PartiallyPaid'</td>
+<td>A partial payment has been made, but the full amount is still outstanding.. Stored as 'PP'. <br> Database Value: 'PP' <br> Model Value: 1 <br> Domain API Value: 'PartiallyPaid'</td>
 </tr>
 <tr>
 <td>Paid</td>
-<td>The full payment has been completed.. Stored as 'PA'. <br> <em>Database Value:</em> 'PA' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Paid'</td>
+<td>The full payment has been completed.. Stored as 'PA'. <br> Database Value: 'PA' <br> Model Value: 2 <br> Domain API Value: 'Paid'</td>
 </tr>
 <tr>
 <td>Overpaid</td>
-<td>More than the required amount has been paid.. Stored as 'OV'. <br> <em>Database Value:</em> 'OV' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Overpaid'</td>
+<td>More than the required amount has been paid.. Stored as 'OV'. <br> Database Value: 'OV' <br> Model Value: 3 <br> Domain API Value: 'Overpaid'</td>
 </tr>
 <tr>
 <td>Other</td>
-<td>The payment is made in the opposite direction.. Stored as 'ER'. <br> <em>Database Value:</em> 'ER' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Other'</td>
+<td>The payment is made in the opposite direction.. Stored as 'ER'. <br> Database Value: 'ER' <br> Model Value: 4 <br> Domain API Value: 'Other'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
 <p>The date of the original document. null means that it is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></p>
-<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_Date</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>datetime <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Document_Date</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.RefDocument.DocumentDate</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.RefDocument.DocumentDate</code></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
 <p>The number of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></p>
-<p><em>Type</em>: <strong>string (20)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_No</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>20</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>string (20)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Document_No</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>20</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.RefDocument.DocumentNo</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.RefDocument.DocumentNo</code></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
 <p>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></p>
-<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>datetime <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
 <p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></p>
-<p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_No</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>20</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_No</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>20</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
 <h3 id="remainingamount">RemainingAmount</h3>
 <p>The amount that remains to be paid. <code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.79</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currency">Currency</h3>
 <p>The currency of amounts. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Total_Amount_Currency_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Total_Amount_Currency_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="locationparty">LocationParty</h3>
 <p>Location or sub-party of the Party_Id in the order. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Location_Party_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Location_Party_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Location_Party_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="party">Party</h3>
 <p>The party which is to pay or receive the amount. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Party_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Party_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Party_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymentorder">PaymentOrder</h3>
 <p>The payment order. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Payment_Order_Id</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Payment_Order_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Payment_Order_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refdocument">RefDocument</h3>
 <p>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Document_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refdocumenttype">RefDocumentType</h3>
 <p>The type of the document which has created the payment order and is the basis for the payment. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Type_Id</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_Type_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Document_Type_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.RefDocument.DocumentType</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.RefDocument.DocumentType</code></p>
 <h3 id="refinvoicedocument">RefInvoiceDocument</h3>
 <p>The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="refinvoicedocumenttype">RefInvoiceDocumentType</h3>
 <p>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.RefInvoiceDocument.DocumentType</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.RefInvoiceDocument.DocumentType</code></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:

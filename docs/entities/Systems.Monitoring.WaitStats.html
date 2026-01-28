@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Monitoring.WaitStats View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.WaitStats (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Monitoring.WaitStats View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.WaitStats (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Systems.Monitoring.WaitStats">
-<h1 id="systemsmonitoringwaitstats-view">Systems.Monitoring.WaitStats View</h1>
+<h1 id="systemsmonitoringwaitstats-view">Systems.Monitoring.WaitStats (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Monitoring.html">Systems.Monitoring</a></p>
-<p>Wait statistics dynamic management view. Entity: Dmv_Wait_Stats (Introduced in version 25.1.0.38)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{Database}: {WaitCategory}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>DynamicViews</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Wait statistics dynamic management view.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Monitoring.html">Systems.Monitoring</a><br>
+Repository: Systems.Monitoring.WaitStats<br>
+Introduced In Version: 25.1.0.38<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {Database}: {WaitCategory}<br>
+Search Members:<br>
+Category:  DynamicViews<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -173,90 +174,90 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="database">Database</h3>
 <p>The database in which the wait operation is located. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxholdlocktimems">MaxHoldLockTimeMs</h3>
 <p>Maximum time a lock was held, measured in milliseconds. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxwaittimems">MaxWaitTimeMs</h3>
 <p>Maximum wait time for acquiring a lock, measured in milliseconds.       . <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statisticssince">StatisticsSince</h3>
 <p>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalfailedattempts">TotalFailedAttempts</h3>
 <p>Indicates the total number of unsuccessful attempts to acquire locks. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalfailwaittimems">TotalFailWaitTimeMs</h3>
 <p>Общо време на изчакване за неуспешни заключвания, измерено в милисекунди. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalholdlocktimems">TotalHoldLockTimeMs</h3>
 <p>Indicates the total duration locks are held, measured in milliseconds. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totallocks">TotalLocks</h3>
 <p>The total number of locks. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalsuccesswaittimems">TotalSuccessWaitTimeMs</h3>
 <p>Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalwaitlocks">TotalWaitLocks</h3>
 <p>Indicates the total number of locks that have been acquired after waiting. <code>Required</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waitcategory">WaitCategory</h3>
 <p>The category of the wait operation. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (128)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="resetstats">ResetStats</h3>
 <p>Reset wait statistics<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Monitoring.WaitStats.html">WaitStats</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="Systems.Monitoring.WaitStats.html">WaitStats</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Systems_Monitoring_WaitStats</p>

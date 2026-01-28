@@ -1,35 +1,36 @@
 ---
 uid: Systems.Documents.Routes
 ---
-# Systems.Documents.Routes Entity
+# Systems.Documents.Routes
 
-**Namespace:** [Systems.Documents](Systems.Documents.md)  
 
-Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes
+Contains document routes, which specify which document generation procedures will be run upon document events.
+
+## General
+Namespace: [Systems.Documents](Systems.Documents.md)  
+Repository: Systems.Documents.Routes  
+Base Table: Wf_Routes  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Systems.Workflow.Routes**  
-New name: **Systems.Documents.Routes**  
-Version: **24.1.101.1**  
-Case: **36967**  
+Old name: Systems.Workflow.Routes  
+New name: Systems.Documents.Routes  
+Version: 24.1.101.1  
+Case: 36967  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{ProcedureName}_  
-Default Search Members:  
-_ProcedureName_  
-Name Data Member:  
-_ProcedureName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {ProcedureName}  
+Search Members: ProcedureName  
+Name Member: ProcedureName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -52,11 +53,8 @@ Aggregate Root:
 | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. `Required` `Default("A")` 
 | [DeactivationDate](Systems.Documents.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. `Filter(ge;le)` 
 | [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` 
-| [DisplayText](Systems.Documents.Routes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [Id](Systems.Documents.Routes.md#id) | guid |  
 | [NegativeConditionFilterXml](Systems.Documents.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route. `Unit: obj.DocumentType.EntityName` 
 | [Notes](Systems.Documents.Routes.md#notes) | string (254) __nullable__ | Notes for this Route. 
-| [ObjectVersion](Systems.Documents.Routes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")` 
 | [ProcedureName](Systems.Documents.Routes.md#procedurename) | string (254) | The system name of the generation procedure, which must be executed by the route. `Required` 
 | [ProcessEvent](Systems.Documents.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` `Filter(eq)` 
@@ -75,6 +73,15 @@ Aggregate Root:
 | [DestinationUserStatus](Systems.Documents.Routes.md#destinationuserstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user defined status to set to the generated document. `Filter(multi eq)` |
 | [DocumentType](Systems.Documents.Routes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type from which this route originates. Documents from this type generate sub-documents using this route. `Required` `Filter(multi eq)` `Owner` |
 
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Documents.Routes.md#id) | guid |  
+| [ObjectVersion](Systems.Documents.Routes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [DisplayText](Systems.Documents.Routes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
 ## Child Collections
 
 | Name | Type | Description |
@@ -92,255 +99,255 @@ Aggregate Root:
 
 The date from which (including) the route is active. The date is matched against the document date of the generating document. `Required` `Default(Today)` `Filter(ge;le)`
 
-_Type_: **date**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **CurrentDate**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **CurrentDate**  
+Show in UI: **ShownByDefault**  
 
 ### Active
 
 True if the route is active, otherwise 0. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### AllowedGenerationTypes
 
 Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). `Required` `Default("B")` `Filter(multi eq)`
 
-_Type_: **[AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes)**  
-_Category_: **System**  
+Type: **[AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes)**  
+Category: **System**  
 Allowed values for the `AllowedGenerationTypes`(Systems.Documents.Routes.md#allowedgenerationtypes) data attribute  
-_Allowed Values (Systems.Documents.RoutesRepository.AllowedGenerationTypes Enum Members)_  
+Allowed Values (Systems.Documents.RoutesRepository.AllowedGenerationTypes Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Auto | Auto value. Stored as 'A'. <br /> _Database Value:_ 'A' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Auto' |
-| BothAutoAndManually | BothAutoAndManually value. Stored as 'B'. <br /> _Database Value:_ 'B' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'BothAutoAndManually' |
-| Manually | Manually value. Stored as 'M'. <br /> _Database Value:_ 'M' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Manually' |
+| Auto | Auto value. Stored as 'A'. <br /> Database Value: 'A' <br /> Model Value: 0 <br /> Domain API Value: 'Auto' |
+| BothAutoAndManually | BothAutoAndManually value. Stored as 'B'. <br /> Database Value: 'B' <br /> Model Value: 1 <br /> Domain API Value: 'BothAutoAndManually' |
+| Manually | Manually value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Manually' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **BothAutoAndManually**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **BothAutoAndManually**  
+Show in UI: **ShownByDefault**  
 
 ### AllowObsoleteGeneration
 
 Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. `Required` `Default(false)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ConditionFilterXML
 
 Contains filter condition, which the document must match in order to execute the route. `Unit: obj.DocumentType.EntityName`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ConditionStatesBitMask
 
 The system states for which to execute the specified route. `Required` `Default(0)` `Filter(like)`
 
-_Type_: **[DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask)**  
-_Category_: **System**  
+Type: **[DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask)**  
+Category: **System**  
 Enumeration of document system states that can be combined in bit mask  
-_Allowed Values (General.Documents.DocumentStateFlags Enum Members)_  
+Allowed Values (General.Documents.DocumentStateFlags Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| New | New document, just created. Can be edited. (Stored as 1). <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'New' |
-| Planned | Planned by the system for future releasing. (Stored as 2). <br /> _Database Value:_ 2 <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Planned' |
-| FirmPlanned | Planned by operator for future releasing. (Stored as 4). <br /> _Database Value:_ 4 <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'FirmPlanned' |
-| Released | Released document. Changes can be applied only through adjustment documents. (Stored as 8). <br /> _Database Value:_ 8 <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'Released' |
-| Completed | Work has completed. (Stored as 16). <br /> _Database Value:_ 16 <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'Completed' |
-| Adjustment | Document which adjusts other released documents. (Stored as 32). <br /> _Database Value:_ 32 <br /> _Model Value:_ 32 <br /> _Domain API Value:_ 'Adjustment' |
-| Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 64). <br /> _Database Value:_ 64 <br /> _Model Value:_ 64 <br /> _Domain API Value:_ 'Closed' |
+| New | New document, just created. Can be edited. (Stored as 1). <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'New' |
+| Planned | Planned by the system for future releasing. (Stored as 2). <br /> Database Value: 2 <br /> Model Value: 2 <br /> Domain API Value: 'Planned' |
+| FirmPlanned | Planned by operator for future releasing. (Stored as 4). <br /> Database Value: 4 <br /> Model Value: 4 <br /> Domain API Value: 'FirmPlanned' |
+| Released | Released document. Changes can be applied only through adjustment documents. (Stored as 8). <br /> Database Value: 8 <br /> Model Value: 8 <br /> Domain API Value: 'Released' |
+| Completed | Work has completed. (Stored as 16). <br /> Database Value: 16 <br /> Model Value: 16 <br /> Domain API Value: 'Completed' |
+| Adjustment | Document which adjusts other released documents. (Stored as 32). <br /> Database Value: 32 <br /> Model Value: 32 <br /> Domain API Value: 'Adjustment' |
+| Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 64). <br /> Database Value: 64 <br /> Model Value: 64 <br /> Domain API Value: 'Closed' |
 
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **ShownByDefault**  
 
 ### ConnectedPartyCondition
 
 A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. `Required` `Default("A")`
 
-_Type_: **[ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition)**  
-_Category_: **System**  
+Type: **[ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition)**  
+Category: **System**  
 Allowed values for the `ConnectedPartyCondition`(Systems.Documents.Routes.md#connectedpartycondition) data attribute  
-_Allowed Values (Systems.Documents.RoutesRepository.ConnectedPartyCondition Enum Members)_  
+Allowed Values (Systems.Documents.RoutesRepository.ConnectedPartyCondition Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| AnyParty | AnyParty value. Stored as 'A'. <br /> _Database Value:_ 'A' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AnyParty' |
-| ConnectedParty | ConnectedParty value. Stored as 'C'. <br /> _Database Value:_ 'C' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ConnectedParty' |
-| UnconnectedParty | UnconnectedParty value. Stored as 'U'. <br /> _Database Value:_ 'U' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'UnconnectedParty' |
+| AnyParty | AnyParty value. Stored as 'A'. <br /> Database Value: 'A' <br /> Model Value: 0 <br /> Domain API Value: 'AnyParty' |
+| ConnectedParty | ConnectedParty value. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 1 <br /> Domain API Value: 'ConnectedParty' |
+| UnconnectedParty | UnconnectedParty value. Stored as 'U'. <br /> Database Value: 'U' <br /> Model Value: 2 <br /> Domain API Value: 'UnconnectedParty' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **AnyParty**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **AnyParty**  
+Show in UI: **ShownByDefault**  
 
 ### DeactivationDate
 
 The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. `Filter(ge;le)`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### DestinationState
 
 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required`
 
-_Type_: **[DocumentState](Systems.Documents.Routes.md#destinationstate)**  
-_Category_: **System**  
+Type: **[DocumentState](Systems.Documents.Routes.md#destinationstate)**  
+Category: **System**  
 Enumeration of document system states  
-_Allowed Values (General.Documents.DocumentState Enum Members)_  
+Allowed Values (General.Documents.DocumentState Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| New | New document, just created. Can be edited. (Stored as 0). <br /> _Database Value:_ 0 <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'New' |
-| Adjustment | Document which adjusts other released documents. (Stored as 5). <br /> _Database Value:_ 5 <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Adjustment' |
-| Planned | Planned by the system for future releasing. (Stored as 10). <br /> _Database Value:_ 10 <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Planned' |
-| FirmPlanned | Planned by operator for future releasing. (Stored as 20). <br /> _Database Value:_ 20 <br /> _Model Value:_ 20 <br /> _Domain API Value:_ 'FirmPlanned' |
-| Released | Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br /> _Database Value:_ 30 <br /> _Model Value:_ 30 <br /> _Domain API Value:_ 'Released' |
-| Completed | Work has completed. (Stored as 40). <br /> _Database Value:_ 40 <br /> _Model Value:_ 40 <br /> _Domain API Value:_ 'Completed' |
-| Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br /> _Database Value:_ 50 <br /> _Model Value:_ 50 <br /> _Domain API Value:_ 'Closed' |
+| New | New document, just created. Can be edited. (Stored as 0). <br /> Database Value: 0 <br /> Model Value: 0 <br /> Domain API Value: 'New' |
+| Adjustment | Document which adjusts other released documents. (Stored as 5). <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'Adjustment' |
+| Planned | Planned by the system for future releasing. (Stored as 10). <br /> Database Value: 10 <br /> Model Value: 10 <br /> Domain API Value: 'Planned' |
+| FirmPlanned | Planned by operator for future releasing. (Stored as 20). <br /> Database Value: 20 <br /> Model Value: 20 <br /> Domain API Value: 'FirmPlanned' |
+| Released | Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br /> Database Value: 30 <br /> Model Value: 30 <br /> Domain API Value: 'Released' |
+| Completed | Work has completed. (Stored as 40). <br /> Database Value: 40 <br /> Model Value: 40 <br /> Domain API Value: 'Completed' |
+| Closed | The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br /> Database Value: 50 <br /> Model Value: 50 <br /> Domain API Value: 'Closed' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### NegativeConditionFilterXml
 
 The negative condition should NOT be matched by the document in order to execute the route. `Unit: obj.DocumentType.EntityName`
 
-_Type_: **dataaccessfilter __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **dataaccessfilter __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Notes
 
 Notes for this Route.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### ParentDocumentRelationshipType
 
 Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")`
 
-_Type_: **[ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype)**  
-_Category_: **System**  
+Type: **[ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype)**  
+Category: **System**  
 Relationship between parent and child documents  
-_Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)_  
+Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Subtask | The child document is a sub-task of the parent document. (Complete child to complete parent) <br /> _Database Value:_ 'S' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Subtask' |
-| NextTask | The child document is next task of the parent document. (Complete parent to complete child) <br /> _Database Value:_ 'N' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'NextTask' |
-| IndependentTask | The document is not dependent of neither child nor parent document. <br /> _Database Value:_ 'I' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'IndependentTask' |
+| Subtask | The child document is a sub-task of the parent document. (Complete child to complete parent) <br /> Database Value: 'S' <br /> Model Value: 0 <br /> Domain API Value: 'Subtask' |
+| NextTask | The child document is next task of the parent document. (Complete parent to complete child) <br /> Database Value: 'N' <br /> Model Value: 1 <br /> Domain API Value: 'NextTask' |
+| IndependentTask | The document is not dependent of neither child nor parent document. <br /> Database Value: 'I' <br /> Model Value: 2 <br /> Domain API Value: 'IndependentTask' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **Subtask**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **Subtask**  
+Show in UI: **ShownByDefault**  
 
 ### ProcedureName
 
 The system name of the generation procedure, which must be executed by the route. `Required`
 
-_Type_: **string (254)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (254)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### ProcessEvent
 
 Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` `Filter(eq)`
 
-_Type_: **string (254)**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (254)**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### ReadOnly
 
 Indicates wheather the destination document shoul be read only. true - the destination document is read only. `Required` `Default(false)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### SchemaXML
 
 **OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61`
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **CannotBeShown**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **CannotBeShown**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -349,65 +356,65 @@ _Show in UI_: **CannotBeShown**
 
 The enterprise company for which this route is activated. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ConditionUserStatus
 
 The user-defined status, for which the document route is activated. `Filter(multi eq)`
 
-_Type_: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DestinationDocumentType
 
 The type of the document, that will be generated by executing the route. `Filter(multi eq)`
 
-_Type_: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DestinationEnterpriseCompany
 
 The enterprise company in which to generate the target document. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DestinationEnterpriseCompanyLocation
 
 The enterprise company location in which to generate the target document. `Filter(multi eq)`
 
-_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DestinationUserStatus
 
 The user defined status to set to the generated document. `Filter(multi eq)`
 
-_Type_: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DocumentType
 
 The document type from which this route originates. Documents from this type generate sub-documents using this route. `Required` `Filter(multi eq)` `Owner`
 
-_Type_: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -417,90 +424,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

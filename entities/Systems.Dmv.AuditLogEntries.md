@@ -1,7 +1,7 @@
-# Systems.Dmv.AuditLogEntries Entity
+# Systems.Dmv.AuditLogEntries
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.AuditLogSummary](Systems.Monitoring.AuditLogSummary.md)
+New name: [Systems.Monitoring.AuditLogSummary](Systems.Monitoring.AuditLogSummary.md)

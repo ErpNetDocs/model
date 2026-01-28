@@ -1,20 +1,22 @@
 ---
 uid: Communities.Social.ReactionsSummary
 ---
-# Communities.Social.ReactionsSummary View
+# Communities.Social.ReactionsSummary (View)
 
-**Namespace:** [Communities.Social](Communities.Social.md)  
 
-Summary with the social reactions per comment and dataobject. Entity: Cmm_Social_Reactions_Summary (Introduced in version 22.1.6.73)
+Summary with the social reactions per comment and dataobject.
 
-## Default Visualization
-Default Display Text Format:  
-_{DataObjectId}: {SocialCommentId}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _CannotBeShown_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Communities.Social](Communities.Social.md)  
+Repository: Communities.Social.ReactionsSummary  
+Introduced In Version: 22.1.6.73  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {DataObjectId}: {SocialCommentId}  
+Search Members:   
+Category:  Views  
+Show in UI:  CannotBeShown  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -43,33 +45,33 @@ Aggregate Tree
 
 Count of social reactions. `Required`
 
-_Type_: **int64**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int64**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ReactionType
 
 The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required`
 
-_Type_: **[ReactionType](Communities.Social.ReactionsSummary.md#reactiontype)**  
-_Category_: **System**  
+Type: **[ReactionType](Communities.Social.ReactionsSummary.md#reactiontype)**  
+Category: **System**  
 Allowed values for the `ReactionType`(Communities.Social.ReactionsSummary.md#reactiontype) data attribute  
-_Allowed Values (Communities.Social.ReactionsSummaryRepository.ReactionType Enum Members)_  
+Allowed Values (Communities.Social.ReactionsSummaryRepository.ReactionType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Like | Like value. Stored as 'LIK'. <br /> _Database Value:_ 'LIK' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Like' |
-| Love | Love value. Stored as 'LOV'. <br /> _Database Value:_ 'LOV' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Love' |
-| Haha | Haha value. Stored as 'HAH'. <br /> _Database Value:_ 'HAH' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Haha' |
-| Wow | Wow value. Stored as 'WOW'. <br /> _Database Value:_ 'WOW' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Wow' |
-| Sad | Sad value. Stored as 'SAD'. <br /> _Database Value:_ 'SAD' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Sad' |
-| Angry | Angry value. Stored as 'ANG'. <br /> _Database Value:_ 'ANG' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Angry' |
+| Like | Like value. Stored as 'LIK'. <br /> Database Value: 'LIK' <br /> Model Value: 0 <br /> Domain API Value: 'Like' |
+| Love | Love value. Stored as 'LOV'. <br /> Database Value: 'LOV' <br /> Model Value: 1 <br /> Domain API Value: 'Love' |
+| Haha | Haha value. Stored as 'HAH'. <br /> Database Value: 'HAH' <br /> Model Value: 2 <br /> Domain API Value: 'Haha' |
+| Wow | Wow value. Stored as 'WOW'. <br /> Database Value: 'WOW' <br /> Model Value: 3 <br /> Domain API Value: 'Wow' |
+| Sad | Sad value. Stored as 'SAD'. <br /> Database Value: 'SAD' <br /> Model Value: 4 <br /> Domain API Value: 'Sad' |
+| Angry | Angry value. Stored as 'ANG'. <br /> Database Value: 'ANG' <br /> Model Value: 5 <br /> Domain API Value: 'Angry' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -78,23 +80,23 @@ _Show in UI_: **ShownByDefault**
 
 The extensible data object. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id`
 
-_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Objects_Table.Object_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+Category: **System**  
+Inherited From: **Sys_Objects_Table.Object_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### SocialComment
 
 The social comment. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cmm_Social_Comments_Table.Social_Comment_Id`
 
-_Type_: **[Comments](Communities.Social.Comments.md)**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Social_Comments_Table.Social_Comment_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Comments](Communities.Social.Comments.md)**  
+Category: **System**  
+Inherited From: **Cmm_Social_Comments_Table.Social_Comment_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

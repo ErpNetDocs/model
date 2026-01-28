@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Documents.Printouts Entity | ERP.net Domain Model </title>
+      <title>Systems.Documents.Printouts | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Documents.Printouts Entity | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Documents.Printouts | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,28 +85,28 @@
         </div>
 
         <article data-uid="Systems.Documents.Printouts">
-<h1 id="systemsdocumentsprintouts-entity">Systems.Documents.Printouts Entity</h1>
+<h1 id="systemsdocumentsprintouts">Systems.Documents.Printouts</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Documents.html">Systems.Documents</a></p>
-<p>Contains data about binding of printout layouts to specific user-defined document types. Entity: Gen_Printouts</p>
+<p>Contains data about binding of printout layouts to specific user-defined document types.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Documents.html">Systems.Documents</a><br>
+Repository: Systems.Documents.Printouts<br>
+Base Table: Gen_Printouts<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>General.Printouts</strong><br>
-New name: <strong>Systems.Documents.Printouts</strong><br>
-Version: <strong>24.1.5.35</strong><br>
-Case: <strong>35911</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{Name}</em><br>
-Default Search Members:<br>
-<em>Name</em><br>
-Name Data Member:<br>
-<em>Name</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: General.Printouts<br>
+New name: Systems.Documents.Printouts<br>
+Version: 24.1.5.35<br>
+Case: 35911</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {Name}<br>
+Search Members: Name<br>
+Name Member: Name<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -154,16 +154,6 @@ Aggregate Root:<br>
 <td>Obsolete. Not used. <code>Default(&quot;default&quot;)</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Documents.Printouts.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Systems.Documents.Printouts.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Systems.Documents.Printouts.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
 <td>True if this is the default printout for the application form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -177,11 +167,6 @@ Aggregate Root:<br>
 <td><a href="Systems.Documents.Printouts.html#notes">Notes</a></td>
 <td>string (512) <strong>nullable</strong></td>
 <td>Notes for this Printout.</td>
-</tr>
-<tr>
-<td><a href="Systems.Documents.Printouts.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#ord">Ord</a></td>
@@ -237,13 +222,40 @@ Aggregate Root:<br>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Documents.Printouts.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Documents.Printouts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Systems.Documents.Printouts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowprintingonstate">AllowPrintingOnState</h3>
 <p>The user can print documents only with state equal or greater than Allow_Printing_On_State. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Documents.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>AllowPrintingOnState</code>(Systems.Documents.Printouts.md#allowprintingonstate) data attribute<br>
-<em>Allowed Values (Systems.Documents.PrintoutsRepository.AllowPrintingOnState Enum Members)</em></p>
+Allowed Values (Systems.Documents.PrintoutsRepository.AllowPrintingOnState Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -254,246 +266,246 @@ Allowed values for the <code>AllowPrintingOnState</code>(Systems.Documents.Print
 <tbody>
 <tr>
 <td>New</td>
-<td>New value. Stored as 0. <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+<td>New value. Stored as 0. <br> Database Value: 0 <br> Model Value: 0 <br> Domain API Value: 'New'</td>
 </tr>
 <tr>
 <td>Planned</td>
-<td>Planned value. Stored as 10. <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+<td>Planned value. Stored as 10. <br> Database Value: 10 <br> Model Value: 10 <br> Domain API Value: 'Planned'</td>
 </tr>
 <tr>
 <td>FirmPlanned</td>
-<td>FirmPlanned value. Stored as 20. <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+<td>FirmPlanned value. Stored as 20. <br> Database Value: 20 <br> Model Value: 20 <br> Domain API Value: 'FirmPlanned'</td>
 </tr>
 <tr>
 <td>Released</td>
-<td>Released value. Stored as 30. <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+<td>Released value. Stored as 30. <br> Database Value: 30 <br> Model Value: 30 <br> Domain API Value: 'Released'</td>
 </tr>
 <tr>
 <td>Completed</td>
-<td>Completed value. Stored as 40. <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+<td>Completed value. Stored as 40. <br> Database Value: 40 <br> Model Value: 40 <br> Domain API Value: 'Completed'</td>
 </tr>
 <tr>
 <td>Closed</td>
-<td>Closed value. Stored as 50. <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+<td>Closed value. Stored as 50. <br> Database Value: 50 <br> Model Value: 50 <br> Domain API Value: 'Closed'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applicationname">ApplicationName</h3>
 <p>The application which stored and uses the printout. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.Transaction.ApplicationName</code></p>
 <h3 id="backwardcompatibility">BackwardCompatibility</h3>
 <p>Obsolete. Not used. <code>Required</code> <code>Default(false)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="copies">Copies</h3>
 <p>Number of copies that should be printed when using direct printing. <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>1</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="definition">Definition</h3>
 <p>Obsolete. Not used.</p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="definitionformat">DefinitionFormat</h3>
 <p>Obsolete. Not used. <code>Default(&quot;default&quot;)</code></p>
-<p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>16</strong><br>
-<em>Default Value</em>: <strong>default</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>16</strong><br>
+Default Value: <strong>default</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <p>True if this is the default printout for the application form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of the printout. Unique within the application form. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Printout.</p>
-<p><em>Type</em>: <strong>string (512) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>512</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string (512) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>512</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ord">Ord</h3>
 <p>Order in the list of printouts when using direct printing. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ordfilterxml">OrdFilterXml</h3>
 <p>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command. <code>Unit: obj.DocumentType.EntityName</code></p>
-<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ordpriority">OrdPriority</h3>
 <p>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>int32 <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type to which this printout layout is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fiscalreceipttemplate">FiscalReceiptTemplate</h3>
 <p>Template for customizing the fiscal receipt. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.56</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Pos.FiscalReceiptTemplates.html">FiscalReceiptTemplates</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Pos.FiscalReceiptTemplates.html">FiscalReceiptTemplates</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printoutlayout">PrintoutLayout</h3>
 <p>The printout layout, that is bound to the document type. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.PrintoutLayouts.html">PrintoutLayouts</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.PrintoutLayouts.html">PrintoutLayouts</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="report">Report</h3>
 <p>If not null points to a custom report that indicates which data will be loaded in the printout. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DataSources.html">DataSources</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DataSources.html">DataSources</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -504,35 +516,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

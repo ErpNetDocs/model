@@ -1,7 +1,7 @@
-# General.DocumentParties Entity
+# General.DocumentParties
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Documents.DocumentParties](General.Documents.DocumentParties.md)
+New name: [General.Documents.DocumentParties](General.Documents.DocumentParties.md)

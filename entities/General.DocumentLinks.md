@@ -1,7 +1,7 @@
-# General.DocumentLinks Entity
+# General.DocumentLinks
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Documents.DocumentLinks](General.Documents.DocumentLinks.md)
+New name: [General.Documents.DocumentLinks](General.Documents.DocumentLinks.md)

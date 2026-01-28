@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Logistics.Inventory.CurrentBalances View | ERP.net Domain Model </title>
+      <title>Logistics.Inventory.CurrentBalances (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Logistics.Inventory.CurrentBalances View | ERP.net Domain Model ">
+      <meta name="title" content="Logistics.Inventory.CurrentBalances (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Logistics.Inventory.CurrentBalances">
-<h1 id="logisticsinventorycurrentbalances-view">Logistics.Inventory.CurrentBalances View</h1>
+<h1 id="logisticsinventorycurrentbalances-view">Logistics.Inventory.CurrentBalances (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Logistics.Inventory.html">Logistics.Inventory</a></p>
-<p>The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances (Introduced in version 22.1.4.33)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{BaseCostValue}: {EnterpriseCompanyId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>The current inventory balances, grouped by storage key (Store, Product, Lot, etc.).</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Logistics.Inventory.html">Logistics.Inventory</a><br>
+Repository: Logistics.Inventory.CurrentBalances<br>
+Introduced In Version: 22.1.4.33<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {BaseCostValue}: {EnterpriseCompanyId}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -185,83 +186,83 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecost">BaseCost</h3>
 <p>The cost of the inventory in base currency of the enterprise company. <code>Currency: EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productcost">ProductCost</h3>
 <p>The cost of the inventory in the products currency. <code>Currency: Product.CostingCurrency</code> <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="storecost">StoreCost</h3>
 <p>The cost of the inventory in the stores currency. <code>Currency: Store.Currency</code> <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code> <code>Introduced in version 24.1.0.7</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
 <p>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Lot_Id</code> <code>Introduced in version 24.1.0.7</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Lot_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Lot_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The item that was received/issued. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Product_Id</code> <code>Introduced in version 24.1.0.7</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Product_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Product_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <p>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Product_Variant_Id</code> <code>Introduced in version 24.1.0.7</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Product_Variant_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Product_Variant_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Serial_Number_Id</code> <code>Introduced in version 24.1.0.7</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Serial_Number_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Serial_Number_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
 <p>The store from which the goods are received or issued. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transactions_Table.Store_Id</code> <code>Introduced in version 24.1.0.7</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transactions_Table.Store_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transactions_Table.Store_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storebin">StoreBin</h3>
 <p>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Store_Bin_Id</code> <code>Introduced in version 24.1.0.7</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Store_Bin_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Store_Bin_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Logistics_Inventory_CurrentBalances</p>

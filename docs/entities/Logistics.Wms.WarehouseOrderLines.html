@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Logistics.Wms.WarehouseOrderLines Entity | ERP.net Domain Model </title>
+      <title>Logistics.Wms.WarehouseOrderLines | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Logistics.Wms.WarehouseOrderLines Entity | ERP.net Domain Model ">
+      <meta name="title" content="Logistics.Wms.WarehouseOrderLines | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,21 +85,23 @@
         </div>
 
         <article data-uid="Logistics.Wms.WarehouseOrderLines">
-<h1 id="logisticswmswarehouseorderlines-entity">Logistics.Wms.WarehouseOrderLines Entity</h1>
+<h1 id="logisticswmswarehouseorderlines">Logistics.Wms.WarehouseOrderLines</h1>
 
-<p><strong>Namespace:</strong> <a href="Logistics.Wms.html">Logistics.Wms</a></p>
-<p>A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lines (Introduced in version 20.1)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{LineNo}. {WarehouseOrder.DocumentNo} {WarehouseOrder.DocumentType.TypeName:T}</em><br>
-Default Search Members:<br>
-<em>WarehouseOrder.DocumentNo</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>A planned task (operation) in a warehouse order.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Logistics.Wms.html">Logistics.Wms</a><br>
+Repository: Logistics.Wms.WarehouseOrderLines<br>
+Base Table: Wms_Warehouse_Order_Lines<br>
+Introduced In Version: 20.1<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {LineNo}. {WarehouseOrder.DocumentNo} {WarehouseOrder.DocumentType.TypeName:T}<br>
+Search Members: WarehouseOrder.DocumentNo<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -122,16 +124,6 @@ Aggregate Root:<br>
 <td>The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Wms.WarehouseOrderLines.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseOrderLines.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#linegroupno">LineGroupNo</a></td>
 <td>int32</td>
 <td>Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 23.1.0.67</code></td>
@@ -145,11 +137,6 @@ Aggregate Root:<br>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Notes for this WarehouseOrderLine.</td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseOrderLines.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#parentlineno">ParentLineNo</a></td>
@@ -255,105 +242,111 @@ Aggregate Root:<br>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="currentbalancebase">CurrentBalanceBase</h3>
 <p>The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly.</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity</a></strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="linegroupno">LineGroupNo</h3>
 <p>Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 23.1.0.67</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>1</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
 <p>Unique consecutive line number within the order. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>( obj.WarehouseOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>( obj.WarehouseOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WarehouseOrderLine.</p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
 <p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
-<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>int32 <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity of the product, which should be processed. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantity">StandardQuantity</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, IIF( obj.Product.AllowVariableMeasurementRatios, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.QuantityBase))</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="tasktype">TaskType</h3>
 <p>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>
-<em>Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)</em></p>
+Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -364,231 +357,252 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.m
 <tbody>
 <tr>
 <td>Receive</td>
-<td>Receive value. Stored as 'REC'. <br> <em>Database Value:</em> 'REC' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Receive'</td>
+<td>Receive value. Stored as 'REC'. <br> Database Value: 'REC' <br> Model Value: 0 <br> Domain API Value: 'Receive'</td>
 </tr>
 <tr>
 <td>Dispatch</td>
-<td>Dispatch value. Stored as 'DIS'. <br> <em>Database Value:</em> 'DIS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Dispatch'</td>
+<td>Dispatch value. Stored as 'DIS'. <br> Database Value: 'DIS' <br> Model Value: 1 <br> Domain API Value: 'Dispatch'</td>
 </tr>
 <tr>
 <td>Move</td>
-<td>Move value. Stored as 'MOV'. <br> <em>Database Value:</em> 'MOV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Move'</td>
+<td>Move value. Stored as 'MOV'. <br> Database Value: 'MOV' <br> Model Value: 2 <br> Domain API Value: 'Move'</td>
 </tr>
 <tr>
 <td>Label</td>
-<td>Label value. Stored as 'LBL'. <br> <em>Database Value:</em> 'LBL' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Label'</td>
+<td>Label value. Stored as 'LBL'. <br> Database Value: 'LBL' <br> Model Value: 3 <br> Domain API Value: 'Label'</td>
 </tr>
 <tr>
 <td>Inspect</td>
-<td>Inspect value. Stored as 'INS'. <br> <em>Database Value:</em> 'INS' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Inspect'</td>
+<td>Inspect value. Stored as 'INS'. <br> Database Value: 'INS' <br> Model Value: 4 <br> Domain API Value: 'Inspect'</td>
 </tr>
 <tr>
 <td>Pack</td>
-<td>Pack value. Stored as 'PCK'. <br> <em>Database Value:</em> 'PCK' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Pack'</td>
+<td>Pack value. Stored as 'PCK'. <br> Database Value: 'PCK' <br> Model Value: 5 <br> Domain API Value: 'Pack'</td>
 </tr>
 <tr>
 <td>Unpack</td>
-<td>Unpack value. Stored as 'UPK'. <br> <em>Database Value:</em> 'UPK' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Unpack'</td>
+<td>Unpack value. Stored as 'UPK'. <br> Database Value: 'UPK' <br> Model Value: 6 <br> Domain API Value: 'Unpack'</td>
 </tr>
 <tr>
 <td>Kit</td>
-<td>Kit value. Stored as 'KIT'. <br> <em>Database Value:</em> 'KIT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'Kit'</td>
+<td>Kit value. Stored as 'KIT'. <br> Database Value: 'KIT' <br> Model Value: 7 <br> Domain API Value: 'Kit'</td>
 </tr>
 <tr>
 <td>Dekit</td>
-<td>Dekit value. Stored as 'DKT'. <br> <em>Database Value:</em> 'DKT' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'Dekit'</td>
+<td>Dekit value. Stored as 'DKT'. <br> Database Value: 'DKT' <br> Model Value: 8 <br> Domain API Value: 'Dekit'</td>
 </tr>
 <tr>
 <td>Count</td>
-<td>Count value. Stored as 'CNT'. <br> <em>Database Value:</em> 'CNT' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'Count'</td>
+<td>Count value. Stored as 'CNT'. <br> Database Value: 'CNT' <br> Model Value: 9 <br> Domain API Value: 'Count'</td>
 </tr>
 <tr>
 <td>UserTask</td>
-<td>UserTask value. Stored as 'TSK'. <br> <em>Database Value:</em> 'TSK' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'UserTask'</td>
+<td>UserTask value. Stored as 'TSK'. <br> Database Value: 'TSK' <br> Model Value: 10 <br> Domain API Value: 'UserTask'</td>
 </tr>
 <tr>
 <td>ComponentDispatch</td>
-<td>ComponentDispatch value. Stored as 'CDP'. <br> <em>Database Value:</em> 'CDP' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'ComponentDispatch'</td>
+<td>ComponentDispatch value. Stored as 'CDP'. <br> Database Value: 'CDP' <br> Model Value: 11 <br> Domain API Value: 'ComponentDispatch'</td>
 </tr>
 <tr>
 <td>ComponentReceive</td>
-<td>ComponentReceive value. Stored as 'CRC'. <br> <em>Database Value:</em> 'CRC' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'ComponentReceive'</td>
+<td>ComponentReceive value. Stored as 'CRC'. <br> Database Value: 'CRC' <br> Model Value: 12 <br> Domain API Value: 'ComponentReceive'</td>
 </tr>
 <tr>
 <td>Assemble</td>
-<td>Assemble value. Stored as 'ASM'. <br> <em>Database Value:</em> 'ASM' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'Assemble'</td>
+<td>Assemble value. Stored as 'ASM'. <br> Database Value: 'ASM' <br> Model Value: 13 <br> Domain API Value: 'Assemble'</td>
 </tr>
 <tr>
 <td>Disassemble</td>
-<td>Disassemble value. Stored as 'DSM'. <br> <em>Database Value:</em> 'DSM' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'Disassemble'</td>
+<td>Disassemble value. Stored as 'DSM'. <br> Database Value: 'DSM' <br> Model Value: 14 <br> Domain API Value: 'Disassemble'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.WarehouseOrder.TaskType</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.WarehouseOrder.TaskType</code></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
 <p>The owner document. The <see cref="WarehouseOrder"></see> to which this WarehouseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logisticunit">LogisticUnit</h3>
 <p>Logistic unit, which should be used in the operation. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The product, which should be used for the operation. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <p>The product variant, which should be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit of Quantity. null for operations, which are not quantity-related. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="towarehouselocation">ToWarehouseLocation</h3>
 <p>Destination warehouse location. null for operations, which do not specify destination location. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
 <p>Location, where the opeartion should be performed. null for operations, which do not require location. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="warehouseorder">WarehouseOrder</h3>
 <p>The <see cref="WarehouseOrder"></see> to which this WarehouseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
 <p>Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>obj.WarehouseOrder.WarehouseWorker</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.WarehouseOrder.WarehouseWorker</code></p>
 <h3 id="warehousezone">WarehouseZone</h3>
 <p>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.WarehouseLocation != null), obj.WarehouseLocation.WarehouseZone, obj.WarehouseZone)</code></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -599,35 +613,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R35081.html">R35081 WarehouseOrderLine - Check Warehouse Zone</a></li>

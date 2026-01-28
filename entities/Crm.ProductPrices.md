@@ -1,7 +1,7 @@
-# Crm.ProductPrices Entity
+# Crm.ProductPrices
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Crm.Pricing.ProductPrices](Crm.Pricing.ProductPrices.md)
+New name: [Crm.Pricing.ProductPrices](Crm.Pricing.ProductPrices.md)

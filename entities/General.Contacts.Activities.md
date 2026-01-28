@@ -1,7 +1,7 @@
-# General.Contacts.Activities Entity
+# General.Contacts.Activities
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Activities.Activities](General.Activities.Activities.md)
+New name: [General.Activities.Activities](General.Activities.Activities.md)

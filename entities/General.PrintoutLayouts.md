@@ -1,7 +1,7 @@
-# General.PrintoutLayouts Entity
+# General.PrintoutLayouts
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Documents.PrintoutLayouts](Systems.Documents.PrintoutLayouts.md)
+New name: [Systems.Documents.PrintoutLayouts](Systems.Documents.PrintoutLayouts.md)

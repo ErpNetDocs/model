@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Monitoring.ProcedureStatusInfo View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.ProcedureStatusInfo (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Monitoring.ProcedureStatusInfo View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.ProcedureStatusInfo (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,24 @@
         </div>
 
         <article data-uid="Systems.Monitoring.ProcedureStatusInfo">
-<h1 id="systemsmonitoringprocedurestatusinfo-view">Systems.Monitoring.ProcedureStatusInfo View</h1>
+<h1 id="systemsmonitoringprocedurestatusinfo-view">Systems.Monitoring.ProcedureStatusInfo (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Monitoring.html">Systems.Monitoring</a></p>
-<p>Dynamic management view for long running procedures. Entity: Dmv_Procedure_Status_Info (Introduced in version 23.1.1.53)</p>
+<p>Dynamic management view for long running procedures.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Monitoring.html">Systems.Monitoring</a><br>
+Repository: Systems.Monitoring.ProcedureStatusInfo<br>
+Introduced In Version: 23.1.1.53<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>Systems.Dmv.ProcedureStatusInfo</strong><br>
-New name: <strong>Systems.Monitoring.ProcedureStatusInfo</strong><br>
-Version: <strong>24.1.5.35</strong><br>
-Case: <strong>35911</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{StartTime}: {User}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>DynamicViews</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: Systems.Dmv.ProcedureStatusInfo<br>
+New name: Systems.Monitoring.ProcedureStatusInfo<br>
+Version: 24.1.5.35<br>
+Case: 35911</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {StartTime}: {User}<br>
+Search Members:<br>
+Category:  DynamicViews<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -168,74 +169,74 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completed">Completed</h3>
 <p>True if the procedure is completed. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="elapsedmin">ElapsedMin</h3>
 <p>The elapsed minutes of the procedure at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="elapsedpercent">ElapsedPercent</h3>
 <p>The elapsed percent of the procedure at the time of the request. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>double</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
 <p>The end time of the procedure. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="error">Error</h3>
 <p>If not null, this is the text of the exception that occured during the procedure execution. <code>Required</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (128)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="procedure">Procedure</h3>
 <p>The name of the procedure. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (128)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="properties">Properties</h3>
 <p>List of procedure status properties. <code>Required</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (128)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
 <p>The start time of the procedure. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
 <p>The user started the procedure. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>128</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (128)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Systems_Monitoring_ProcedureStatusInfo</p>

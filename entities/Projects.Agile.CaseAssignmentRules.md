@@ -1,24 +1,27 @@
 ---
 uid: Projects.Agile.CaseAssignmentRules
 ---
-# Projects.Agile.CaseAssignmentRules Entity
+# Projects.Agile.CaseAssignmentRules
 
-**Namespace:** [Projects.Agile](Projects.Agile.md)  
 
-Contains rules for automatically assigning cases to users based on the values of the case fields, such as project, project area, case category, system state, user state, etc. Entity: Apm_Case_Assignment_Rules (Introduced in version 25.1.3.5)
+Contains rules for automatically assigning cases to users based on the values of the case fields, such as project, project area, case category, system state, user state, etc.
 
-## Default Visualization
-Default Display Text Format:  
-_{RuleNo}: {AssignmentKind} {AssignToUser}_  
-Default Search Members:  
-__  
-Category:  _Settings_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Projects.Agile](Projects.Agile.md)  
+Repository: Projects.Agile.CaseAssignmentRules  
+Base Table: Apm_Case_Assignment_Rules  
+Introduced In Version: 25.1.3.5  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {RuleNo}: {AssignmentKind} {AssignToUser}  
+Search Members:   
+Category:  Settings  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -30,16 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AggregateLastUpdateTimeUtc](Projects.Agile.CaseAssignmentRules.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29` 
-| [DisplayText](Projects.Agile.CaseAssignmentRules.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](Projects.Agile.CaseAssignmentRules.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.Agile.CaseAssignmentRules.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)` 
-| [Id](Projects.Agile.CaseAssignmentRules.md#id) | guid |  
 | [IsActive](Projects.Agile.CaseAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Projects.Agile.CaseAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule. `Filter(like)` 
-| [ObjectVersion](Projects.Agile.CaseAssignmentRules.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | Priority when multiple rules match the criteria. `Required` `Default("3")` `Filter(eq)` 
 | [RuleNo](Projects.Agile.CaseAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule. `Required` `Filter(eq)` `ORD` 
 | [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) | [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__ | The system state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)` 
@@ -58,191 +55,203 @@ Aggregate Tree
 | [UserState](Projects.Agile.CaseAssignmentRules.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)` |
 
 
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Projects.Agile.CaseAssignmentRules.md#id) | guid |  
+| [ObjectVersion](Projects.Agile.CaseAssignmentRules.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Projects.Agile.CaseAssignmentRules.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Projects.Agile.CaseAssignmentRules.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Projects.Agile.CaseAssignmentRules.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Projects.Agile.CaseAssignmentRules.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+
 ## Attribute Details
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
 
 ### AssignmentKind
 
 Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29`
 
-_Type_: **[AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind)**  
-_Category_: **System**  
+Type: **[AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind)**  
+Category: **System**  
 Allowed values for the `AssignmentKind`(Projects.Agile.CaseAssignmentRules.md#assignmentkind) data attribute  
-_Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.AssignmentKind Enum Members)_  
+Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.AssignmentKind Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| AreaResponsible | Area Responsible. Stored as 'ARS'. <br /> _Database Value:_ 'ARS' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AreaResponsible' |
-| ProjectResponsible | Project Responsible. Stored as 'PRS'. <br /> _Database Value:_ 'PRS' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ProjectResponsible' |
-| CaseOwner | Case Owner. Stored as 'COW'. <br /> _Database Value:_ 'COW' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'CaseOwner' |
-| CurrentUser | Current User. Stored as 'CUS'. <br /> _Database Value:_ 'CUS' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'CurrentUser' |
-| SpecificUser | Specific User. Stored as 'SUS'. <br /> _Database Value:_ 'SUS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'SpecificUser' |
+| AreaResponsible | Area Responsible. Stored as 'ARS'. <br /> Database Value: 'ARS' <br /> Model Value: 0 <br /> Domain API Value: 'AreaResponsible' |
+| ProjectResponsible | Project Responsible. Stored as 'PRS'. <br /> Database Value: 'PRS' <br /> Model Value: 1 <br /> Domain API Value: 'ProjectResponsible' |
+| CaseOwner | Case Owner. Stored as 'COW'. <br /> Database Value: 'COW' <br /> Model Value: 2 <br /> Domain API Value: 'CaseOwner' |
+| CurrentUser | Current User. Stored as 'CUS'. <br /> Database Value: 'CUS' <br /> Model Value: 3 <br /> Domain API Value: 'CurrentUser' |
+| SpecificUser | Specific User. Stored as 'SUS'. <br /> Database Value: 'SUS' <br /> Model Value: 4 <br /> Domain API Value: 'SpecificUser' |
 
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **SpecificUser**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **Equals, Like, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **SpecificUser**  
+Show in UI: **ShownByDefault**  
 
 ### FromDate
 
 Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### IsActive
 
 Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### Notes
 
 Additional information or comments related to the rule. `Filter(like)`
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### Priority
 
 Priority when multiple rules match the criteria. `Required` `Default("3")` `Filter(eq)`
 
-_Type_: **[Priority](Projects.Agile.CaseAssignmentRules.md#priority)**  
-_Category_: **System**  
+Type: **[Priority](Projects.Agile.CaseAssignmentRules.md#priority)**  
+Category: **System**  
 Allowed values for the `Priority`(Projects.Agile.CaseAssignmentRules.md#priority) data attribute  
-_Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.Priority Enum Members)_  
+Allowed Values (Projects.Agile.CaseAssignmentRulesRepository.Priority Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Highest | Highest. Stored as '1'. <br /> _Database Value:_ '1' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Highest' |
-| High | High. Stored as '2'. <br /> _Database Value:_ '2' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'High' |
-| Medium | Medium. Stored as '3'. <br /> _Database Value:_ '3' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Medium' |
-| Low | Low. Stored as '4'. <br /> _Database Value:_ '4' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Low' |
-| Lowest | Lowest. Stored as '5'. <br /> _Database Value:_ '5' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Lowest' |
+| Highest | Highest. Stored as '1'. <br /> Database Value: '1' <br /> Model Value: 0 <br /> Domain API Value: 'Highest' |
+| High | High. Stored as '2'. <br /> Database Value: '2' <br /> Model Value: 1 <br /> Domain API Value: 'High' |
+| Medium | Medium. Stored as '3'. <br /> Database Value: '3' <br /> Model Value: 2 <br /> Domain API Value: 'Medium' |
+| Low | Low. Stored as '4'. <br /> Database Value: '4' <br /> Model Value: 3 <br /> Domain API Value: 'Low' |
+| Lowest | Lowest. Stored as '5'. <br /> Database Value: '5' <br /> Model Value: 4 <br /> Domain API Value: 'Lowest' |
 
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **Medium**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **Medium**  
+Show in UI: **ShownByDefault**  
 
 ### RuleNo
 
 Consecutive number of the rule. `Required` `Filter(eq)` `ORD`
 
-_Type_: **int32**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.SetRuleNo( )`
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `obj.SetRuleNo( )`
 ### SystemState
 
 The system state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)`
 
-_Type_: **[SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__**  
-_Category_: **System**  
+Type: **[SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__**  
+Category: **System**  
 Allowed values for the `SystemState`(Projects.Agile.Cases.md#systemstate) data attribute  
-_Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)_  
+Allowed Values (Projects.Agile.CasesRepository.SystemState Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| BACKLOG | The case is registered but not yet considered for work.. Stored as '1'. <br /> _Database Value:_ '1' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'BACKLOG' |
-| CONSIDER | The case is under evaluation for possible execution.. Stored as '2'. <br /> _Database Value:_ '2' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CONSIDER' |
-| READY | The case is approved and ready to be started.. Stored as '3'. <br /> _Database Value:_ '3' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'READY' |
-| INPROGRESS | Work on the case is currently ongoing.. Stored as '4'. <br /> _Database Value:_ '4' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'INPROGRESS' |
-| WAITING | The case is paused, waiting for input or conditions.. Stored as '5'. <br /> _Database Value:_ '5' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'WAITING' |
-| RESOLVED | Work is completed; final review or confirmation may be pending.. Stored as '6'. <br /> _Database Value:_ '6' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'RESOLVED' |
-| CLOSED | The case is finalized and officially closed.. Stored as '7'. <br /> _Database Value:_ '7' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'CLOSED' |
+| BACKLOG | The case is registered but not yet considered for work.. Stored as '1'. <br /> Database Value: '1' <br /> Model Value: 0 <br /> Domain API Value: 'BACKLOG' |
+| CONSIDER | The case is under evaluation for possible execution.. Stored as '2'. <br /> Database Value: '2' <br /> Model Value: 1 <br /> Domain API Value: 'CONSIDER' |
+| READY | The case is approved and ready to be started.. Stored as '3'. <br /> Database Value: '3' <br /> Model Value: 2 <br /> Domain API Value: 'READY' |
+| INPROGRESS | Work on the case is currently ongoing.. Stored as '4'. <br /> Database Value: '4' <br /> Model Value: 3 <br /> Domain API Value: 'INPROGRESS' |
+| WAITING | The case is paused, waiting for input or conditions.. Stored as '5'. <br /> Database Value: '5' <br /> Model Value: 4 <br /> Domain API Value: 'WAITING' |
+| RESOLVED | Work is completed; final review or confirmation may be pending.. Stored as '6'. <br /> Database Value: '6' <br /> Model Value: 5 <br /> Domain API Value: 'RESOLVED' |
+| CLOSED | The case is finalized and officially closed.. Stored as '7'. <br /> Database Value: '7' <br /> Model Value: 6 <br /> Domain API Value: 'CLOSED' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ToDate
 
 Ending date (inclusive) of rule validity. null means that the rule is valid forever. `Filter(eq;ge;le)`
 
-_Type_: **date __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -251,64 +260,64 @@ _Show in UI_: **ShownByDefault**
 
 The user who will be automatically assigned to the case when the rule conditions are matched. `Filter(multi eq)`
 
-_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### CaseCategory
 
 The case category to which the rule applies. null means the rule applies to all categories. `Filter(multi eq)`
 
-_Type_: **[CaseCategories](Projects.Agile.CaseCategories.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CaseCategories](Projects.Agile.CaseCategories.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Project
 
 The project to which the rule applies. null means the rule applies to all projects. `Filter(multi eq)`
 
-_Type_: **[Projects](Projects.Agile.Projects.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Projects](Projects.Agile.Projects.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProjectArea
 
 The project area to which the rule applies. null means the rule applies to all project areas. `Filter(multi eq)`
 
-_Type_: **[ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ProjectMilestone
 
 The project milestone to which the rule applies. null means the rule applies to all milestones. `Filter(multi eq)`
 
-_Type_: **[ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### StakeholderParty
 
 The stakeholder party to which the rule applies. null means the rule applies to all parties. `Filter(multi eq)`
 
-_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### UserState
 
 The user state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)`
 
-_Type_: **[UserStates](Projects.Agile.UserStates.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[UserStates](Projects.Agile.UserStates.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -318,90 +327,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

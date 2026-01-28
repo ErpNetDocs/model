@@ -1,20 +1,22 @@
 ---
 uid: Communities.Social.FollowedEntities
 ---
-# Communities.Social.FollowedEntities View
+# Communities.Social.FollowedEntities (View)
 
-**Namespace:** [Communities.Social](Communities.Social.md)  
 
-Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities (Introduced in version 22.1.6.3)
+Optimized view returning social followed entities by users.
 
-## Default Visualization
-Default Display Text Format:  
-_{UserId}: {DataObjectId}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _CannotBeShown_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Communities.Social](Communities.Social.md)  
+Repository: Communities.Social.FollowedEntities  
+Introduced In Version: 22.1.6.3  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {UserId}: {DataObjectId}  
+Search Members:   
+Category:  Views  
+Show in UI:  CannotBeShown  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -45,57 +47,57 @@ Aggregate Tree
 
 The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc` `Introduced in version 22.1.6.73`
 
-_Type_: **datetime**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Social_Follows_Table.Creation_Time_Utc**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Default Value_: **CurrentDateTimeUtc**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Category: **System**  
+Inherited From: **Cmm_Social_Follows_Table.Creation_Time_Utc**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **CurrentDateTimeUtc**  
+Show in UI: **ShownByDefault**  
 
 ### EntityItemId
 
 The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Item_Id`
 
-_Type_: **guid**  
-_Category_: **System**  
-_Inherited From_: **Sys_Objects_Table.Entity_Item_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **guid**  
+Category: **System**  
+Inherited From: **Sys_Objects_Table.Entity_Item_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EntityType
 
 The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Type`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Inherited From_: **Sys_Objects_Table.Entity_Type**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Default Value_: ** **  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Inherited From: **Sys_Objects_Table.Entity_Type**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Default Value: ** **  
+Show in UI: **ShownByDefault**  
 
 ### FollowLevel
 
 Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70`
 
-_Type_: **[FollowLevel](Communities.Social.FollowedEntities.md#followlevel)**  
-_Category_: **System**  
+Type: **[FollowLevel](Communities.Social.FollowedEntities.md#followlevel)**  
+Category: **System**  
 Allowed values for the `FollowLevel`(Communities.Social.Follows.md#followlevel) data attribute  
-_Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)_  
+Allowed Values (Communities.Social.FollowsRepository.FollowLevel Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Tagged | Automatically followed due to mention or assignment.. Stored as 'TAG'. <br /> _Database Value:_ 'TAG' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Tagged' |
-| Follow | User willingly chose to follow this object.. Stored as 'FLW'. <br /> _Database Value:_ 'FLW' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Follow' |
-| Favorite | User marked this object as a favorite.. Stored as 'FAV'. <br /> _Database Value:_ 'FAV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Favorite' |
+| Tagged | Automatically followed due to mention or assignment.. Stored as 'TAG'. <br /> Database Value: 'TAG' <br /> Model Value: 0 <br /> Domain API Value: 'Tagged' |
+| Follow | User willingly chose to follow this object.. Stored as 'FLW'. <br /> Database Value: 'FLW' <br /> Model Value: 1 <br /> Domain API Value: 'Follow' |
+| Favorite | User marked this object as a favorite.. Stored as 'FAV'. <br /> Database Value: 'FAV' <br /> Model Value: 2 <br /> Domain API Value: 'Favorite' |
 
-_Inherited From_: **Cmm_Social_Follows_Table.Follow_Level**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Default Value_: **Tagged**  
-_Show in UI_: **ShownByDefault**  
+Inherited From: **Cmm_Social_Follows_Table.Follow_Level**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **Tagged**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -104,21 +106,21 @@ _Show in UI_: **ShownByDefault**
 
 The object being followed by the user. `Required` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Data_Object_Id` `Introduced in version 22.1.6.73`
 
-_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Social_Follows_Table.Data_Object_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+Category: **System**  
+Inherited From: **Cmm_Social_Follows_Table.Data_Object_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### User
 
 The user which follows the object. `Required` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.User_Id` `Introduced in version 22.1.6.73`
 
-_Type_: **[Users](Systems.Security.Users.md)**  
-_Category_: **System**  
-_Inherited From_: **Cmm_Social_Follows_Table.User_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md)**  
+Category: **System**  
+Inherited From: **Cmm_Social_Follows_Table.User_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

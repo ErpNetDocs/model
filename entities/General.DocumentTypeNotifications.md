@@ -1,7 +1,7 @@
-# General.DocumentTypeNotifications Entity
+# General.DocumentTypeNotifications
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Documents.DocumentTypeNotifications](Systems.Documents.DocumentTypeNotifications.md)
+New name: [Systems.Documents.DocumentTypeNotifications](Systems.Documents.DocumentTypeNotifications.md)

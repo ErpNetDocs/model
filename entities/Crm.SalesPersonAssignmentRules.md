@@ -1,7 +1,7 @@
-# Crm.SalesPersonAssignmentRules Entity
+# Crm.SalesPersonAssignmentRules
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Crm.SalesForce.SalesPersonAssignmentRules](Crm.SalesForce.SalesPersonAssignmentRules.md)
+New name: [Crm.SalesForce.SalesPersonAssignmentRules](Crm.SalesForce.SalesPersonAssignmentRules.md)

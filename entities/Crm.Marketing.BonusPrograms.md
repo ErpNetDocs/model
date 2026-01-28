@@ -1,7 +1,7 @@
-# Crm.Marketing.BonusPrograms Entity
+# Crm.Marketing.BonusPrograms
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Crm.Pricing.BonusPrograms](Crm.Pricing.BonusPrograms.md)
+New name: [Crm.Pricing.BonusPrograms](Crm.Pricing.BonusPrograms.md)

@@ -1,7 +1,7 @@
-# Systems.Core.WebHooks Entity
+# Systems.Core.WebHooks
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Config.WebHooks](Systems.Config.WebHooks.md)
+New name: [Systems.Config.WebHooks](Systems.Config.WebHooks.md)

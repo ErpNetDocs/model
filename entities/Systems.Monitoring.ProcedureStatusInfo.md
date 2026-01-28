@@ -1,29 +1,31 @@
 ---
 uid: Systems.Monitoring.ProcedureStatusInfo
 ---
-# Systems.Monitoring.ProcedureStatusInfo View
+# Systems.Monitoring.ProcedureStatusInfo (View)
 
-**Namespace:** [Systems.Monitoring](Systems.Monitoring.md)  
 
-Dynamic management view for long running procedures. Entity: Dmv_Procedure_Status_Info (Introduced in version 23.1.1.53)
+Dynamic management view for long running procedures.
+
+## General
+Namespace: [Systems.Monitoring](Systems.Monitoring.md)  
+Repository: Systems.Monitoring.ProcedureStatusInfo  
+Introduced In Version: 23.1.1.53  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Systems.Dmv.ProcedureStatusInfo**  
-New name: **Systems.Monitoring.ProcedureStatusInfo**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: Systems.Dmv.ProcedureStatusInfo  
+New name: Systems.Monitoring.ProcedureStatusInfo  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{StartTime}: {User}_  
-Default Search Members:  
-__  
-Category:  _DynamicViews_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {StartTime}: {User}  
+Search Members:   
+Category:  DynamicViews  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -52,98 +54,98 @@ Aggregate Tree
 
 True if the procedure is completed. `Required` `Filter(eq)` `ORD`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### ElapsedMin
 
 The elapsed minutes of the procedure at the time of the request. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### ElapsedPercent
 
 The elapsed percent of the procedure at the time of the request. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **double**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **double**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### EndTime
 
 The end time of the procedure. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### Error
 
 If not null, this is the text of the exception that occured during the procedure execution. `Required` `ORD`
 
-_Type_: **string (128)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **True**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **True**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### Procedure
 
 The name of the procedure. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (128)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### Properties
 
 List of procedure status properties. `Required` `ORD`
 
-_Type_: **string (128)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **True**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **True**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### StartTime
 
 The start time of the procedure. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### User
 
 The user started the procedure. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **string (128)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **True**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

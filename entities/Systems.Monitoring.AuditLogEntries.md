@@ -1,35 +1,37 @@
 ---
 uid: Systems.Monitoring.AuditLogEntries
 ---
-# Systems.Monitoring.AuditLogEntries Entity
+# Systems.Monitoring.AuditLogEntries
 
-**Namespace:** [Systems.Monitoring](Systems.Monitoring.md)  
 
-Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log_Entries (Introduced in version 18.2)
+Each record represents the occurrence of one logged event.
+
+## General
+Namespace: [Systems.Monitoring](Systems.Monitoring.md)  
+Repository: Systems.Monitoring.AuditLogEntries  
+Base Table: Sys_Audit_Log_Entries  
+Introduced In Version: 18.2  
+API access:  ReadOnly  
 
 ## Renames
 
-Old name: **Systems.Core.AuditLogEntries**  
-New name: **Systems.Monitoring.AuditLogEntries**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: Systems.Core.AuditLogEntries  
+New name: Systems.Monitoring.AuditLogEntries  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{ApplicationName}_  
-Default Search Members:  
-_ApplicationName_  
-Name Data Member:  
-_ApplicationName_  
-Category:  _Definitions_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadOnly_  
+## Visualization
+Display Format: {ApplicationName}  
+Search Members: ApplicationName  
+Name Member: ApplicationName  
+Category:  Definitions  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _0 - Do not track changes_  
+Min level:  0 - Do not track changes  
+Max level:  0 - Do not track changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -41,20 +43,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AggregateLastUpdateTimeUtc](Systems.Monitoring.AuditLogEntries.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [ApplicationName](Systems.Monitoring.AuditLogEntries.md#applicationname) | string (64) __nullable__ | The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)` 
 | [Details](Systems.Monitoring.AuditLogEntries.md#details) | string (max) __nullable__ | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
-| [DisplayText](Systems.Monitoring.AuditLogEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EntityItemId](Systems.Monitoring.AuditLogEntries.md#entityitemid) | guid __nullable__ | The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)` 
 | [EntityName](Systems.Monitoring.AuditLogEntries.md#entityname) | string (64) __nullable__ | The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)` 
 | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)` 
 | [EventName](Systems.Monitoring.AuditLogEntries.md#eventname) | string (128) __nullable__ | Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)` 
 | [EventTimeUtc](Systems.Monitoring.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` 
 | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. `Required` `Filter(multi eq)` 
-| [ExternalId](Systems.Monitoring.AuditLogEntries.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Monitoring.AuditLogEntries.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [Id](Systems.Monitoring.AuditLogEntries.md#id) | guid |  
-| [ObjectVersion](Systems.Monitoring.AuditLogEntries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -64,187 +60,199 @@ Aggregate Tree
 | [User](Systems.Monitoring.AuditLogEntries.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. `Filter(multi eq)` |
 
 
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Monitoring.AuditLogEntries.md#id) | guid |  
+| [ObjectVersion](Systems.Monitoring.AuditLogEntries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Systems.Monitoring.AuditLogEntries.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Monitoring.AuditLogEntries.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Systems.Monitoring.AuditLogEntries.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Systems.Monitoring.AuditLogEntries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+
 ## Attribute Details
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
 
 ### ApplicationName
 
 The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### Details
 
 Detailed contents of the event. Contents depend on the Event Type and Event Name.
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### EntityItemId
 
 The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)`
 
-_Type_: **guid __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **guid __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### EntityName
 
 The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### EventClass
 
 The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)`
 
-_Type_: **[EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass)**  
-_Category_: **System**  
+Type: **[EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass)**  
+Category: **System**  
 Allowed values for the `EventClass`(Systems.Monitoring.AuditLogEntries.md#eventclass) data attribute  
-_Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Members)_  
+Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Entity | Entity value. Stored as 'E'. <br /> _Database Value:_ 'E' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Entity' |
-| Authentication | Authentication value. Stored as 'A'. <br /> _Database Value:_ 'A' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Authentication' |
-| Server | Server value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Server' |
-| Presence | Presence value. Stored as 'P'. <br /> _Database Value:_ 'P' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Presence' |
+| Entity | Entity value. Stored as 'E'. <br /> Database Value: 'E' <br /> Model Value: 0 <br /> Domain API Value: 'Entity' |
+| Authentication | Authentication value. Stored as 'A'. <br /> Database Value: 'A' <br /> Model Value: 1 <br /> Domain API Value: 'Authentication' |
+| Server | Server value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 2 <br /> Domain API Value: 'Server' |
+| Presence | Presence value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 3 <br /> Domain API Value: 'Presence' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### EventName
 
 Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)`
 
-_Type_: **string (128) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **128**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (128) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
 
 ### EventTimeUtc
 
 The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD`
 
-_Type_: **datetime**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Default Value_: **CurrentDateTime**  
-_Show in UI_: **ShownByDefault**  
+Type: **datetime**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Default Value: **CurrentDateTime**  
+Show in UI: **ShownByDefault**  
 
 ### EventType
 
 Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. `Required` `Filter(multi eq)`
 
-_Type_: **[EventType](Systems.Monitoring.AuditLogEntries.md#eventtype)**  
-_Category_: **System**  
+Type: **[EventType](Systems.Monitoring.AuditLogEntries.md#eventtype)**  
+Category: **System**  
 Allowed values for the `EventType`(Systems.Monitoring.AuditLogEntries.md#eventtype) data attribute  
-_Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventType Enum Members)_  
+Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| ReadOneRecordById | ReadOneRecordById value. Stored as 'EID'. <br /> _Database Value:_ 'EID' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'ReadOneRecordById' |
-| LoadManyRecords | LoadManyRecords value. Stored as 'ELD'. <br /> _Database Value:_ 'ELD' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'LoadManyRecords' |
-| CreateRecord | CreateRecord value. Stored as 'ECR'. <br /> _Database Value:_ 'ECR' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'CreateRecord' |
-| UpdateData | UpdateData value. Stored as 'EUP'. <br /> _Database Value:_ 'EUP' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'UpdateData' |
-| DeleteRecord | DeleteRecord value. Stored as 'EDE'. <br /> _Database Value:_ 'EDE' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'DeleteRecord' |
-| CallMethod | CallMethod value. Stored as 'EMT'. <br /> _Database Value:_ 'EMT' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'CallMethod' |
-| OtherEntityEvent | OtherEntityEvent value. Stored as 'ETH'. <br /> _Database Value:_ 'ETH' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'OtherEntityEvent' |
-| Login | Login value. Stored as 'AIN'. <br /> _Database Value:_ 'AIN' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'Login' |
-| LogOut | LogOut value. Stored as 'AOU'. <br /> _Database Value:_ 'AOU' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'LogOut' |
-| SignUp | SignUp value. Stored as 'AUP'. <br /> _Database Value:_ 'AUP' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'SignUp' |
-| LoginFailed | LoginFailed value. Stored as 'AFL'. <br /> _Database Value:_ 'AFL' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'LoginFailed' |
-| ChangePassword | ChangePassword value. Stored as 'APW'. <br /> _Database Value:_ 'APW' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'ChangePassword' |
-| OtherAuthEvent | OtherAuthEvent value. Stored as 'ATH'. <br /> _Database Value:_ 'ATH' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'OtherAuthEvent' |
-| OtherServerEvent | OtherServerEvent value. Stored as 'STH'. <br /> _Database Value:_ 'STH' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'OtherServerEvent' |
-| AuthPresenceChange | AuthPresenceChange value. Stored as 'APC'. <br /> _Database Value:_ 'APC' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'AuthPresenceChange' |
-| ChangePresenceToAvailable | ChangePresenceToAvailable value. Stored as 'PSA'. <br /> _Database Value:_ 'PSA' <br /> _Model Value:_ 15 <br /> _Domain API Value:_ 'ChangePresenceToAvailable' |
-| ChangePresenceToDND | ChangePresenceToDND value. Stored as 'PSD'. <br /> _Database Value:_ 'PSD' <br /> _Model Value:_ 16 <br /> _Domain API Value:_ 'ChangePresenceToDND' |
-| ChangePresenceToBusy | ChangePresenceToBusy value. Stored as 'PSB'. <br /> _Database Value:_ 'PSB' <br /> _Model Value:_ 17 <br /> _Domain API Value:_ 'ChangePresenceToBusy' |
-| ChangePresenceToAway | ChangePresenceToAway value. Stored as 'PSW'. <br /> _Database Value:_ 'PSW' <br /> _Model Value:_ 18 <br /> _Domain API Value:_ 'ChangePresenceToAway' |
-| ChangePresenceToOffline | ChangePresenceToOffline value. Stored as 'PSO'. <br /> _Database Value:_ 'PSO' <br /> _Model Value:_ 19 <br /> _Domain API Value:_ 'ChangePresenceToOffline' |
+| ReadOneRecordById | ReadOneRecordById value. Stored as 'EID'. <br /> Database Value: 'EID' <br /> Model Value: 0 <br /> Domain API Value: 'ReadOneRecordById' |
+| LoadManyRecords | LoadManyRecords value. Stored as 'ELD'. <br /> Database Value: 'ELD' <br /> Model Value: 1 <br /> Domain API Value: 'LoadManyRecords' |
+| CreateRecord | CreateRecord value. Stored as 'ECR'. <br /> Database Value: 'ECR' <br /> Model Value: 2 <br /> Domain API Value: 'CreateRecord' |
+| UpdateData | UpdateData value. Stored as 'EUP'. <br /> Database Value: 'EUP' <br /> Model Value: 3 <br /> Domain API Value: 'UpdateData' |
+| DeleteRecord | DeleteRecord value. Stored as 'EDE'. <br /> Database Value: 'EDE' <br /> Model Value: 4 <br /> Domain API Value: 'DeleteRecord' |
+| CallMethod | CallMethod value. Stored as 'EMT'. <br /> Database Value: 'EMT' <br /> Model Value: 5 <br /> Domain API Value: 'CallMethod' |
+| OtherEntityEvent | OtherEntityEvent value. Stored as 'ETH'. <br /> Database Value: 'ETH' <br /> Model Value: 6 <br /> Domain API Value: 'OtherEntityEvent' |
+| Login | Login value. Stored as 'AIN'. <br /> Database Value: 'AIN' <br /> Model Value: 7 <br /> Domain API Value: 'Login' |
+| LogOut | LogOut value. Stored as 'AOU'. <br /> Database Value: 'AOU' <br /> Model Value: 8 <br /> Domain API Value: 'LogOut' |
+| SignUp | SignUp value. Stored as 'AUP'. <br /> Database Value: 'AUP' <br /> Model Value: 9 <br /> Domain API Value: 'SignUp' |
+| LoginFailed | LoginFailed value. Stored as 'AFL'. <br /> Database Value: 'AFL' <br /> Model Value: 10 <br /> Domain API Value: 'LoginFailed' |
+| ChangePassword | ChangePassword value. Stored as 'APW'. <br /> Database Value: 'APW' <br /> Model Value: 11 <br /> Domain API Value: 'ChangePassword' |
+| OtherAuthEvent | OtherAuthEvent value. Stored as 'ATH'. <br /> Database Value: 'ATH' <br /> Model Value: 12 <br /> Domain API Value: 'OtherAuthEvent' |
+| OtherServerEvent | OtherServerEvent value. Stored as 'STH'. <br /> Database Value: 'STH' <br /> Model Value: 13 <br /> Domain API Value: 'OtherServerEvent' |
+| AuthPresenceChange | AuthPresenceChange value. Stored as 'APC'. <br /> Database Value: 'APC' <br /> Model Value: 14 <br /> Domain API Value: 'AuthPresenceChange' |
+| ChangePresenceToAvailable | ChangePresenceToAvailable value. Stored as 'PSA'. <br /> Database Value: 'PSA' <br /> Model Value: 15 <br /> Domain API Value: 'ChangePresenceToAvailable' |
+| ChangePresenceToDND | ChangePresenceToDND value. Stored as 'PSD'. <br /> Database Value: 'PSD' <br /> Model Value: 16 <br /> Domain API Value: 'ChangePresenceToDND' |
+| ChangePresenceToBusy | ChangePresenceToBusy value. Stored as 'PSB'. <br /> Database Value: 'PSB' <br /> Model Value: 17 <br /> Domain API Value: 'ChangePresenceToBusy' |
+| ChangePresenceToAway | ChangePresenceToAway value. Stored as 'PSW'. <br /> Database Value: 'PSW' <br /> Model Value: 18 <br /> Domain API Value: 'ChangePresenceToAway' |
+| ChangePresenceToOffline | ChangePresenceToOffline value. Stored as 'PSO'. <br /> Database Value: 'PSO' <br /> Model Value: 19 <br /> Domain API Value: 'ChangePresenceToOffline' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Id
 
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **HiddenByDefault**  
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -253,19 +261,19 @@ _Show in UI_: **HiddenByDefault**
 
 The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. `Filter(multi eq)`
 
-_Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### User
 
 The user account under which the event has occurred. Null only for events which are not user-specific. `Filter(multi eq)`
 
-_Type_: **[Users](Systems.Security.Users.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -275,90 +283,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

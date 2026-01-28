@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Finance.Accounting.CurrentBalances View | ERP.net Domain Model </title>
+      <title>Finance.Accounting.CurrentBalances (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Finance.Accounting.CurrentBalances View | ERP.net Domain Model ">
+      <meta name="title" content="Finance.Accounting.CurrentBalances (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Finance.Accounting.CurrentBalances">
-<h1 id="financeaccountingcurrentbalances-view">Finance.Accounting.CurrentBalances View</h1>
+<h1 id="financeaccountingcurrentbalances-view">Finance.Accounting.CurrentBalances (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Finance.Accounting.html">Finance.Accounting</a></p>
-<p>Contains live account balances calculated from all released accounting vouchers in the system. Reflects the up-to-date financial position, including transactions with future dates. Entity: Acc_Current_Balances (Introduced in version 25.1.3.29)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{EnterpriseCompanyId}: {EnterpriseCompanyLocationId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Contains live account balances calculated from all released accounting vouchers in the system. Reflects the up-to-date financial position, including transactions with future dates.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Finance.Accounting.html">Finance.Accounting</a><br>
+Repository: Finance.Accounting.CurrentBalances<br>
+Introduced In Version: 25.1.3.29<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {EnterpriseCompanyId}: {EnterpriseCompanyLocationId}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -180,85 +181,85 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="balance">Balance</h3>
 <p>Net current balance (Debit - Credit). <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 2)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="balancebase">BalanceBase</h3>
 <p>Current balance in base currency. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 2)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="balancereporting">BalanceReporting</h3>
 <p>Current balance in reporting currency. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 2)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="itemkey">ItemKey</h3>
 <p>Item Key. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>
 <p>Account reference. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Accounts_Table.Account_Id</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Acc_Accounts_Table.Account_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Acc_Accounts_Table.Account_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costcenter">CostCenter</h3>
 <p>Cost Center. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Cost_Centers_Table.Cost_Center_Id</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Acc_Cost_Centers_Table.Cost_Center_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Acc_Cost_Centers_Table.Cost_Center_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currency">Currency</h3>
 <p>Currency. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>Legal entity . <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>Optional location/branch filter. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
 <p>Profit Center. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Acc_Profit_Centers_Table.Profit_Center_Id</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Acc_Profit_Centers_Table.Profit_Center_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Acc_Profit_Centers_Table.Profit_Center_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Finance_Accounting_CurrentBalances</p>

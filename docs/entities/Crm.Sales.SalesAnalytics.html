@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Crm.Sales.SalesAnalytics View | ERP.net Domain Model </title>
+      <title>Crm.Sales.SalesAnalytics (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Crm.Sales.SalesAnalytics View | ERP.net Domain Model ">
+      <meta name="title" content="Crm.Sales.SalesAnalytics (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,19 @@
         </div>
 
         <article data-uid="Crm.Sales.SalesAnalytics">
-<h1 id="crmsalessalesanalytics-view">Crm.Sales.SalesAnalytics View</h1>
+<h1 id="crmsalessalesanalytics-view">Crm.Sales.SalesAnalytics (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Crm.Sales.html">Crm.Sales</a></p>
-<p>Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{SalesAnalyticId}: {DocumentDate}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadOnly</em></p>
+<p>Grouped sales data.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
+Repository: Crm.Sales.SalesAnalytics<br>
+Introduced In Version: 26.2.0.62<br>
+API access:  ReadOnly</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {SalesAnalyticId}: {DocumentDate}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -215,134 +216,134 @@ API access:  <em>ReadOnly</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdate">DocumentDate</h3>
 <p>Date to group for. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
 <p>Line Amount for date. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 2)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linediscountamount">LineDiscountAmount</h3>
 <p>Discount over Line Amount for Date. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 2)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 2)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>Base Quantity for Date. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 3)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesanalyticid">SalesAnalyticId</h3>
 <p>Row Id. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>guid</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <p>Standard Base Quantity for Date. <code>Required</code></p>
-<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>decimal (38, 3)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="customer">Customer</h3>
 <p>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Customers_Table.Customer_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Crm_Customers_Table.Customer_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dealer">Dealer</h3>
 <p>External Dealer for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Dealers_Table.Dealer_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Sales.Dealers.html">Dealers</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Dealers_Table.Dealer_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Sales.Dealers.html">Dealers</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Crm_Dealers_Table.Dealer_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
 <p>Distribution Channel for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Distribution_Channels_Table.Distribution_Channel_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Distribution_Channels_Table.Distribution_Channel_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Crm_Distribution_Channels_Table.Distribution_Channel_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
 <p>Currency for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endcustomerparty">EndCustomerParty</h3>
 <p>Unique party id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Parties_Table.Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Parties_Table.Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Parties_Table.Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The Enterprise Company to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>The Enterprise Company Location to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Products_Table.Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Products_Table.Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
 <p>Product Variant for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Gen_Product_Variants_Table.Product_Variant_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Gen_Product_Variants_Table.Product_Variant_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
 <p>Unique sales person for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Sales_Persons_Table.Sales_Person_Id</code></p>
-<p><em>Type</em>: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Crm_Sales_Persons_Table.Sales_Person_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Crm_Sales_Persons_Table.Sales_Person_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
 <p>Unique store Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Stores_Table.Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Stores_Table.Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Stores_Table.Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Crm_Sales_SalesAnalytics</p>

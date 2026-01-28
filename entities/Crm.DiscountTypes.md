@@ -1,7 +1,7 @@
-# Crm.DiscountTypes Entity
+# Crm.DiscountTypes
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Crm.Sales.DiscountTypes](Crm.Sales.DiscountTypes.md)
+New name: [Crm.Sales.DiscountTypes](Crm.Sales.DiscountTypes.md)

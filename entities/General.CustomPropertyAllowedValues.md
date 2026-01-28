@@ -1,7 +1,7 @@
-# General.CustomPropertyAllowedValues Entity
+# General.CustomPropertyAllowedValues
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Bpm.CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md)
+New name: [Systems.Bpm.CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md)

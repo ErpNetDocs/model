@@ -1,7 +1,7 @@
-# General.PartyLocationNumbers Entity
+# General.PartyLocationNumbers
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Contacts.PartyLocationNumbers](General.Contacts.PartyLocationNumbers.md)
+New name: [General.Contacts.PartyLocationNumbers](General.Contacts.PartyLocationNumbers.md)

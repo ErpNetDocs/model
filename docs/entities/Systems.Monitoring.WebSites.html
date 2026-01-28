@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Monitoring.WebSites View | ERP.net Domain Model </title>
+      <title>Systems.Monitoring.WebSites (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Monitoring.WebSites View | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Monitoring.WebSites (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,24 @@
         </div>
 
         <article data-uid="Systems.Monitoring.WebSites">
-<h1 id="systemsmonitoringwebsites-view">Systems.Monitoring.WebSites View</h1>
+<h1 id="systemsmonitoringwebsites-view">Systems.Monitoring.WebSites (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Monitoring.html">Systems.Monitoring</a></p>
-<p>Web sites dynamic management view. Entity: Dmv_Web_Sites (Introduced in version 23.1.1.43)</p>
+<p>Web sites dynamic management view.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Monitoring.html">Systems.Monitoring</a><br>
+Repository: Systems.Monitoring.WebSites<br>
+Introduced In Version: 23.1.1.43<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>Systems.Dmv.WebSites</strong><br>
-New name: <strong>Systems.Monitoring.WebSites</strong><br>
-Version: <strong>24.1.5.35</strong><br>
-Case: <strong>35911</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{RootUrl}: {Type}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>DynamicViews</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: Systems.Dmv.WebSites<br>
+New name: Systems.Monitoring.WebSites<br>
+Version: 24.1.5.35<br>
+Case: 35911</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {RootUrl}: {Type}<br>
+Search Members:<br>
+Category:  DynamicViews<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -143,52 +144,52 @@ API access:  <em>ReadWrite</em></p>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="issystemsite">IsSystemSite</h3>
 <p>Indicates whether this website is a system website. <code>Required</code> <code>Introduced in version 24.1.0.3</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="rooturl">RootUrl</h3>
 <p>The root URL of the web site. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (256)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>256</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (256)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>256</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
 <p>The current status of the web site. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (10)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>10</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (10)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>10</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="type">Type</h3>
 <p>The site type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (64)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (64)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>True</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="start">Start</h3>
 <p>Start web site<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Monitoring.WebSites.html">WebSites</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="Systems.Monitoring.WebSites.html">WebSites</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h3 id="stop">Stop</h3>
 <p>Stop web site<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Monitoring.WebSites.html">WebSites</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="Systems.Monitoring.WebSites.html">WebSites</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h3 id="restart">Restart</h3>
 <p>Restart web site<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong><a href="Systems.Monitoring.WebSites.html">WebSites</a></strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="Systems.Monitoring.WebSites.html">WebSites</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Systems_Monitoring_WebSites</p>

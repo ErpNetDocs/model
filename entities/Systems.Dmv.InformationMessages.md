@@ -1,7 +1,7 @@
-# Systems.Dmv.InformationMessages Entity
+# Systems.Dmv.InformationMessages
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.InformationMessagesSummary](Systems.Monitoring.InformationMessagesSummary.md)
+New name: [Systems.Monitoring.InformationMessagesSummary](Systems.Monitoring.InformationMessagesSummary.md)

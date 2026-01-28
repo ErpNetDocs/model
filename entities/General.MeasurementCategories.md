@@ -1,7 +1,7 @@
-# General.MeasurementCategories Entity
+# General.MeasurementCategories
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Products.MeasurementCategories](General.Products.MeasurementCategories.md)
+New name: [General.Products.MeasurementCategories](General.Products.MeasurementCategories.md)

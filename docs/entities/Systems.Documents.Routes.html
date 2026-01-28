@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Documents.Routes Entity | ERP.net Domain Model </title>
+      <title>Systems.Documents.Routes | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Documents.Routes Entity | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Documents.Routes | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,28 +85,28 @@
         </div>
 
         <article data-uid="Systems.Documents.Routes">
-<h1 id="systemsdocumentsroutes-entity">Systems.Documents.Routes Entity</h1>
+<h1 id="systemsdocumentsroutes">Systems.Documents.Routes</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Documents.html">Systems.Documents</a></p>
-<p>Contains document routes, which specify which document generation procedures will be run upon document events. Entity: Wf_Routes</p>
+<p>Contains document routes, which specify which document generation procedures will be run upon document events.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Documents.html">Systems.Documents</a><br>
+Repository: Systems.Documents.Routes<br>
+Base Table: Wf_Routes<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>Systems.Workflow.Routes</strong><br>
-New name: <strong>Systems.Documents.Routes</strong><br>
-Version: <strong>24.1.101.1</strong><br>
-Case: <strong>36967</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{ProcedureName}</em><br>
-Default Search Members:<br>
-<em>ProcedureName</em><br>
-Name Data Member:<br>
-<em>ProcedureName</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: Systems.Workflow.Routes<br>
+New name: Systems.Documents.Routes<br>
+Version: 24.1.101.1<br>
+Case: 36967</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {ProcedureName}<br>
+Search Members: ProcedureName<br>
+Name Member: ProcedureName<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -169,16 +169,6 @@ Aggregate Root:<br>
 <td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Documents.Routes.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Systems.Documents.Routes.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Systems.Documents.Routes.html#negativeconditionfilterxml">NegativeConditionFilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
 <td>The negative condition should NOT be matched by the document in order to execute the route. <code>Unit: obj.DocumentType.EntityName</code></td>
@@ -187,11 +177,6 @@ Aggregate Root:<br>
 <td><a href="Systems.Documents.Routes.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
 <td>Notes for this Route.</td>
-</tr>
-<tr>
-<td><a href="Systems.Documents.Routes.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -267,6 +252,33 @@ Aggregate Root:<br>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Documents.Routes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Documents.Routes.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Systems.Documents.Routes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="child-collections">Child Collections</h2>
 <table>
 <thead>
@@ -307,26 +319,26 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activationdate">ActivationDate</h3>
 <p>The date from which (including) the route is active. The date is matched against the document date of the generating document. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>date</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>CurrentDate</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>CurrentDate</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="active">Active</h3>
 <p>True if the route is active, otherwise 0. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowedgenerationtypes">AllowedGenerationTypes</h3>
 <p>Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). <code>Required</code> <code>Default(&quot;B&quot;)</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Documents.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>AllowedGenerationTypes</code>(Systems.Documents.Routes.md#allowedgenerationtypes) data attribute<br>
-<em>Allowed Values (Systems.Documents.RoutesRepository.AllowedGenerationTypes Enum Members)</em></p>
+Allowed Values (Systems.Documents.RoutesRepository.AllowedGenerationTypes Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -337,43 +349,43 @@ Allowed values for the <code>AllowedGenerationTypes</code>(Systems.Documents.Rou
 <tbody>
 <tr>
 <td>Auto</td>
-<td>Auto value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Auto'</td>
+<td>Auto value. Stored as 'A'. <br> Database Value: 'A' <br> Model Value: 0 <br> Domain API Value: 'Auto'</td>
 </tr>
 <tr>
 <td>BothAutoAndManually</td>
-<td>BothAutoAndManually value. Stored as 'B'. <br> <em>Database Value:</em> 'B' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'BothAutoAndManually'</td>
+<td>BothAutoAndManually value. Stored as 'B'. <br> Database Value: 'B' <br> Model Value: 1 <br> Domain API Value: 'BothAutoAndManually'</td>
 </tr>
 <tr>
 <td>Manually</td>
-<td>Manually value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Manually'</td>
+<td>Manually value. Stored as 'M'. <br> Database Value: 'M' <br> Model Value: 2 <br> Domain API Value: 'Manually'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>BothAutoAndManually</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>BothAutoAndManually</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowobsoletegeneration">AllowObsoleteGeneration</h3>
 <p>Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. <code>Required</code> <code>Default(false)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionfilterxml">ConditionFilterXML</h3>
 <p>Contains filter condition, which the document must match in order to execute the route. <code>Unit: obj.DocumentType.EntityName</code></p>
-<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionstatesbitmask">ConditionStatesBitMask</h3>
 <p>The system states for which to execute the specified route. <code>Required</code> <code>Default(0)</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.Routes.html#conditionstatesbitmask">DocumentStateFlags</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Documents.Routes.html#conditionstatesbitmask">DocumentStateFlags</a></strong><br>
+Category: <strong>System</strong><br>
 Enumeration of document system states that can be combined in bit mask<br>
-<em>Allowed Values (General.Documents.DocumentStateFlags Enum Members)</em></p>
+Allowed Values (General.Documents.DocumentStateFlags Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -384,44 +396,44 @@ Enumeration of document system states that can be combined in bit mask<br>
 <tbody>
 <tr>
 <td>New</td>
-<td>New document, just created. Can be edited. (Stored as 1). <br> <em>Database Value:</em> 1 <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'New'</td>
+<td>New document, just created. Can be edited. (Stored as 1). <br> Database Value: 1 <br> Model Value: 1 <br> Domain API Value: 'New'</td>
 </tr>
 <tr>
 <td>Planned</td>
-<td>Planned by the system for future releasing. (Stored as 2). <br> <em>Database Value:</em> 2 <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Planned'</td>
+<td>Planned by the system for future releasing. (Stored as 2). <br> Database Value: 2 <br> Model Value: 2 <br> Domain API Value: 'Planned'</td>
 </tr>
 <tr>
 <td>FirmPlanned</td>
-<td>Planned by operator for future releasing. (Stored as 4). <br> <em>Database Value:</em> 4 <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+<td>Planned by operator for future releasing. (Stored as 4). <br> Database Value: 4 <br> Model Value: 4 <br> Domain API Value: 'FirmPlanned'</td>
 </tr>
 <tr>
 <td>Released</td>
-<td>Released document. Changes can be applied only through adjustment documents. (Stored as 8). <br> <em>Database Value:</em> 8 <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'Released'</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 8). <br> Database Value: 8 <br> Model Value: 8 <br> Domain API Value: 'Released'</td>
 </tr>
 <tr>
 <td>Completed</td>
-<td>Work has completed. (Stored as 16). <br> <em>Database Value:</em> 16 <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'Completed'</td>
+<td>Work has completed. (Stored as 16). <br> Database Value: 16 <br> Model Value: 16 <br> Domain API Value: 'Completed'</td>
 </tr>
 <tr>
 <td>Adjustment</td>
-<td>Document which adjusts other released documents. (Stored as 32). <br> <em>Database Value:</em> 32 <br> <em>Model Value:</em> 32 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+<td>Document which adjusts other released documents. (Stored as 32). <br> Database Value: 32 <br> Model Value: 32 <br> Domain API Value: 'Adjustment'</td>
 </tr>
 <tr>
 <td>Closed</td>
-<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 64). <br> <em>Database Value:</em> 64 <br> <em>Model Value:</em> 64 <br> <em>Domain API Value:</em> 'Closed'</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 64). <br> Database Value: 64 <br> Model Value: 64 <br> Domain API Value: 'Closed'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="connectedpartycondition">ConnectedPartyCondition</h3>
 <p>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. <code>Required</code> <code>Default(&quot;A&quot;)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Documents.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>ConnectedPartyCondition</code>(Systems.Documents.Routes.md#connectedpartycondition) data attribute<br>
-<em>Allowed Values (Systems.Documents.RoutesRepository.ConnectedPartyCondition Enum Members)</em></p>
+Allowed Values (Systems.Documents.RoutesRepository.ConnectedPartyCondition Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -432,35 +444,35 @@ Allowed values for the <code>ConnectedPartyCondition</code>(Systems.Documents.Ro
 <tbody>
 <tr>
 <td>AnyParty</td>
-<td>AnyParty value. Stored as 'A'. <br> <em>Database Value:</em> 'A' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AnyParty'</td>
+<td>AnyParty value. Stored as 'A'. <br> Database Value: 'A' <br> Model Value: 0 <br> Domain API Value: 'AnyParty'</td>
 </tr>
 <tr>
 <td>ConnectedParty</td>
-<td>ConnectedParty value. Stored as 'C'. <br> <em>Database Value:</em> 'C' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ConnectedParty'</td>
+<td>ConnectedParty value. Stored as 'C'. <br> Database Value: 'C' <br> Model Value: 1 <br> Domain API Value: 'ConnectedParty'</td>
 </tr>
 <tr>
 <td>UnconnectedParty</td>
-<td>UnconnectedParty value. Stored as 'U'. <br> <em>Database Value:</em> 'U' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'UnconnectedParty'</td>
+<td>UnconnectedParty value. Stored as 'U'. <br> Database Value: 'U' <br> Model Value: 2 <br> Domain API Value: 'UnconnectedParty'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>AnyParty</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>AnyParty</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deactivationdate">DeactivationDate</h3>
 <p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>date <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationstate">DestinationState</h3>
 <p>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.Routes.html#destinationstate">DocumentState</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Documents.Routes.html#destinationstate">DocumentState</a></strong><br>
+Category: <strong>System</strong><br>
 Enumeration of document system states<br>
-<em>Allowed Values (General.Documents.DocumentState Enum Members)</em></p>
+Allowed Values (General.Documents.DocumentState Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -471,79 +483,58 @@ Enumeration of document system states<br>
 <tbody>
 <tr>
 <td>New</td>
-<td>New document, just created. Can be edited. (Stored as 0). <br> <em>Database Value:</em> 0 <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'New'</td>
+<td>New document, just created. Can be edited. (Stored as 0). <br> Database Value: 0 <br> Model Value: 0 <br> Domain API Value: 'New'</td>
 </tr>
 <tr>
 <td>Adjustment</td>
-<td>Document which adjusts other released documents. (Stored as 5). <br> <em>Database Value:</em> 5 <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Adjustment'</td>
+<td>Document which adjusts other released documents. (Stored as 5). <br> Database Value: 5 <br> Model Value: 5 <br> Domain API Value: 'Adjustment'</td>
 </tr>
 <tr>
 <td>Planned</td>
-<td>Planned by the system for future releasing. (Stored as 10). <br> <em>Database Value:</em> 10 <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Planned'</td>
+<td>Planned by the system for future releasing. (Stored as 10). <br> Database Value: 10 <br> Model Value: 10 <br> Domain API Value: 'Planned'</td>
 </tr>
 <tr>
 <td>FirmPlanned</td>
-<td>Planned by operator for future releasing. (Stored as 20). <br> <em>Database Value:</em> 20 <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'FirmPlanned'</td>
+<td>Planned by operator for future releasing. (Stored as 20). <br> Database Value: 20 <br> Model Value: 20 <br> Domain API Value: 'FirmPlanned'</td>
 </tr>
 <tr>
 <td>Released</td>
-<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> <em>Database Value:</em> 30 <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'Released'</td>
+<td>Released document. Changes can be applied only through adjustment documents. (Stored as 30). <br> Database Value: 30 <br> Model Value: 30 <br> Domain API Value: 'Released'</td>
 </tr>
 <tr>
 <td>Completed</td>
-<td>Work has completed. (Stored as 40). <br> <em>Database Value:</em> 40 <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'Completed'</td>
+<td>Work has completed. (Stored as 40). <br> Database Value: 40 <br> Model Value: 40 <br> Domain API Value: 'Completed'</td>
 </tr>
 <tr>
 <td>Closed</td>
-<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> <em>Database Value:</em> 50 <br> <em>Model Value:</em> 50 <br> <em>Domain API Value:</em> 'Closed'</td>
+<td>The document is audited and closed. Adjustments are not allowed, but reopening is allowed. (Stored as 50). <br> Database Value: 50 <br> Model Value: 50 <br> Domain API Value: 'Closed'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="negativeconditionfilterxml">NegativeConditionFilterXml</h3>
 <p>The negative condition should NOT be matched by the document in order to execute the route. <code>Unit: obj.DocumentType.EntityName</code></p>
-<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Route.</p>
-<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <p>Determines the default relationship type between the generated document and the parent document. <code>Required</code> <code>Default(&quot;S&quot;)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Documents.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></strong><br>
+Category: <strong>System</strong><br>
 Relationship between parent and child documents<br>
-<em>Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</em></p>
+Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -554,166 +545,187 @@ Relationship between parent and child documents<br>
 <tbody>
 <tr>
 <td>Subtask</td>
-<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> <em>Database Value:</em> 'S' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Subtask'</td>
+<td>The child document is a sub-task of the parent document. (Complete child to complete parent) <br> Database Value: 'S' <br> Model Value: 0 <br> Domain API Value: 'Subtask'</td>
 </tr>
 <tr>
 <td>NextTask</td>
-<td>The child document is next task of the parent document. (Complete parent to complete child) <br> <em>Database Value:</em> 'N' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'NextTask'</td>
+<td>The child document is next task of the parent document. (Complete parent to complete child) <br> Database Value: 'N' <br> Model Value: 1 <br> Domain API Value: 'NextTask'</td>
 </tr>
 <tr>
 <td>IndependentTask</td>
-<td>The document is not dependent of neither child nor parent document. <br> <em>Database Value:</em> 'I' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'IndependentTask'</td>
+<td>The document is not dependent of neither child nor parent document. <br> Database Value: 'I' <br> Model Value: 2 <br> Domain API Value: 'IndependentTask'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Subtask</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Subtask</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="procedurename">ProcedureName</h3>
 <p>The system name of the generation procedure, which must be executed by the route. <code>Required</code></p>
-<p><em>Type</em>: <strong>string (254)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="processevent">ProcessEvent</h3>
 <p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. <code>Required</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>string (254)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (254)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>254</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="readonly">ReadOnly</h3>
 <p>Indicates wheather the destination document shoul be read only. true - the destination document is read only. <code>Required</code> <code>Default(false)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
 <p><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conditionenterprisecompany">ConditionEnterpriseCompany</h3>
 <p>The enterprise company for which this route is activated. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionuserstatus">ConditionUserStatus</h3>
 <p>The user-defined status, for which the document route is activated. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationdocumenttype">DestinationDocumentType</h3>
 <p>The type of the document, that will be generated by executing the route. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationenterprisecompany">DestinationEnterpriseCompany</h3>
 <p>The enterprise company in which to generate the target document. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationenterprisecompanylocation">DestinationEnterpriseCompanyLocation</h3>
 <p>The enterprise company location in which to generate the target document. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationuserstatus">DestinationUserStatus</h3>
 <p>The user defined status to set to the generated document. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type from which this route originates. Documents from this type generate sub-documents using this route. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -724,35 +736,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R32282.html">R32282 WorkflowRoutes - Deleting Is Not Allowed</a></li>

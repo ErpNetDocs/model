@@ -1,7 +1,7 @@
-# General.MeasurementUnits Entity
+# General.MeasurementUnits
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [General.Products.MeasurementUnits](General.Products.MeasurementUnits.md)
+New name: [General.Products.MeasurementUnits](General.Products.MeasurementUnits.md)

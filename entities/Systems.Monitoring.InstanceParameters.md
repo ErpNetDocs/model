@@ -1,29 +1,31 @@
 ---
 uid: Systems.Monitoring.InstanceParameters
 ---
-# Systems.Monitoring.InstanceParameters View
+# Systems.Monitoring.InstanceParameters (View)
 
-**Namespace:** [Systems.Monitoring](Systems.Monitoring.md)  
 
-Parameters for this instance. Entity: Dmv_Instance_Parameters (Introduced in version 24.1.1.68)
+Parameters for this instance.
+
+## General
+Namespace: [Systems.Monitoring](Systems.Monitoring.md)  
+Repository: Systems.Monitoring.InstanceParameters  
+Introduced In Version: 24.1.1.68  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Systems.Dmv.InstanceParameters**  
-New name: **Systems.Monitoring.InstanceParameters**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: Systems.Dmv.InstanceParameters  
+New name: Systems.Monitoring.InstanceParameters  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{ParameterName}: {ParameterValue}_  
-Default Search Members:  
-__  
-Category:  _DynamicViews_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {ParameterName}: {ParameterValue}  
+Search Members:   
+Category:  DynamicViews  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -45,23 +47,23 @@ Aggregate Tree
 
 Name of parameter. `Required` `Filter(multi eq)`
 
-_Type_: **string (256)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Maximum Length_: **256**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (256)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Maximum Length: **256**  
+Show in UI: **ShownByDefault**  
 
 ### ParameterValue
 
 Value of parameter. `Required`
 
-_Type_: **string (256)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **256**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (256)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **256**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

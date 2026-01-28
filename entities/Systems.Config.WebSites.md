@@ -1,33 +1,36 @@
 ---
 uid: Systems.Config.WebSites
 ---
-# Systems.Config.WebSites Entity
+# Systems.Config.WebSites
 
-**Namespace:** [Systems.Config](Systems.Config.md)  
 
-Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites (Introduced in version 19.1)
+Contains the web sites, which are hosted for the database.
+
+## General
+Namespace: [Systems.Config](Systems.Config.md)  
+Repository: Systems.Config.WebSites  
+Base Table: Sys_Web_Sites  
+Introduced In Version: 19.1  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **Systems.Core.WebSites**  
-New name: **Systems.Config.WebSites**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: Systems.Core.WebSites  
+New name: Systems.Config.WebSites  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{RelativeUrl}: {WebSiteType}_  
-Default Search Members:  
-__  
-Category:  _Settings_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## Visualization
+Display Format: {RelativeUrl}: {WebSiteType}  
+Search Members:   
+Category:  Settings  
+Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  _3 - Track object and attribute changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  3 - Track object and attribute changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -39,15 +42,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AggregateLastUpdateTimeUtc](Systems.Config.WebSites.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Config.WebSites.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExternalId](Systems.Config.WebSites.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Config.WebSites.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [Id](Systems.Config.WebSites.md#id) | guid |  
 | [IsActive](Systems.Config.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)` 
 | [IsPrivate](Systems.Config.WebSites.md#isprivate) | boolean | Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. `Required` `Default(false)` `Filter(eq)` `Introduced in version 23.1.0.8` 
 | [Notes](Systems.Config.WebSites.md#notes) | string (max) __nullable__ | Notes for this WebSite. 
-| [ObjectVersion](Systems.Config.WebSites.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RelativeUrl](Systems.Config.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. `Filter(eq)` 
 | [SettingsJson](Systems.Config.WebSites.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37` 
 | [Uin](Systems.Config.WebSites.md#uin) | string (64) __nullable__ | For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . `Introduced in version 24.1.5.42` 
@@ -62,162 +59,174 @@ Aggregate Tree
 | [WebHost](Systems.Config.WebSites.md#webhost) | [WebHosts](Systems.Config.WebHosts.md) (nullable) | The web host in which to host the site. `Filter(multi eq)` |
 
 
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Config.WebSites.md#id) | guid |  
+| [ObjectVersion](Systems.Config.WebSites.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Systems.Config.WebSites.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Config.WebSites.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Systems.Config.WebSites.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Systems.Config.WebSites.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+
 ## Attribute Details
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
 
 ### IsActive
 
 Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### IsPrivate
 
 Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. `Required` `Default(false)` `Filter(eq)` `Introduced in version 23.1.0.8`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Notes
 
 Notes for this WebSite.
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### RelativeUrl
 
 The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. `Filter(eq)`
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### SettingsJson
 
 The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37`
 
-_Type_: **string (max) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### Uin
 
 For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . `Introduced in version 24.1.5.42`
 
-_Type_: **string (64) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 ### WebSiteType
 
 The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)`
 
-_Type_: **[WebSiteType](Systems.Config.WebSites.md#websitetype)**  
-_Category_: **System**  
+Type: **[WebSiteType](Systems.Config.WebSites.md#websitetype)**  
+Category: **System**  
 Allowed values for the `WebSiteType`(Systems.Config.WebSites.md#websitetype) data attribute  
-_Allowed Values (Systems.Config.WebSitesRepository.WebSiteType Enum Members)_  
+Allowed Values (Systems.Config.WebSitesRepository.WebSiteType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| DomainAPI | DomainAPI value. Stored as 'API'. <br /> _Database Value:_ 'API' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'DomainAPI' |
-| ClientCenter | Allows community users to access ERP resources. Requires working ID site.. Stored as 'CC'. <br /> _Database Value:_ 'CC' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ClientCenter' |
-| ECommerce | ECommerce value. Stored as 'EC'. <br /> _Database Value:_ 'EC' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ECommerce' |
-| LegalBG | LegalBG value. Stored as 'LEG'. <br /> _Database Value:_ 'LEG' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'LegalBG' |
-| SocialInteractions | SocialInteractions value. Stored as 'SI'. <br /> _Database Value:_ 'SI' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'SocialInteractions' |
-| DigitalMarketplace | DigitalMarketplace value. Stored as 'DM'. <br /> _Database Value:_ 'DM' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'DigitalMarketplace' |
-| WebClient | WebClient value. Stored as 'APP'. <br /> _Database Value:_ 'APP' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'WebClient' |
-| TableAPI | TableAPI value. Stored as 'TAP'. <br /> _Database Value:_ 'TAP' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'TableAPI' |
-| DataAccessAPI | DataAccessAPI value. Stored as 'DAP'. <br /> _Database Value:_ 'DAP' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'DataAccessAPI' |
-| LegalUK | LegalUK value. Stored as 'LUK'. <br /> _Database Value:_ 'LUK' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'LegalUK' |
-| OLAP | OLAP value. Stored as 'OLP'. <br /> _Database Value:_ 'OLP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'OLAP' |
-| MicrosoftSync | MicrosoftSync value. Stored as 'MSS'. <br /> _Database Value:_ 'MSS' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'MicrosoftSync' |
-| VideoConferencing | VideoConferencing value. Stored as 'VDC'. <br /> _Database Value:_ 'VDC' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'VideoConferencing' |
-| AIServer | AIServer value. Stored as 'AIS'. <br /> _Database Value:_ 'AIS' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'AIServer' |
+| DomainAPI | DomainAPI value. Stored as 'API'. <br /> Database Value: 'API' <br /> Model Value: 0 <br /> Domain API Value: 'DomainAPI' |
+| ClientCenter | Allows community users to access ERP resources. Requires working ID site.. Stored as 'CC'. <br /> Database Value: 'CC' <br /> Model Value: 1 <br /> Domain API Value: 'ClientCenter' |
+| ECommerce | ECommerce value. Stored as 'EC'. <br /> Database Value: 'EC' <br /> Model Value: 2 <br /> Domain API Value: 'ECommerce' |
+| LegalBG | LegalBG value. Stored as 'LEG'. <br /> Database Value: 'LEG' <br /> Model Value: 3 <br /> Domain API Value: 'LegalBG' |
+| SocialInteractions | SocialInteractions value. Stored as 'SI'. <br /> Database Value: 'SI' <br /> Model Value: 4 <br /> Domain API Value: 'SocialInteractions' |
+| DigitalMarketplace | DigitalMarketplace value. Stored as 'DM'. <br /> Database Value: 'DM' <br /> Model Value: 5 <br /> Domain API Value: 'DigitalMarketplace' |
+| WebClient | WebClient value. Stored as 'APP'. <br /> Database Value: 'APP' <br /> Model Value: 6 <br /> Domain API Value: 'WebClient' |
+| TableAPI | TableAPI value. Stored as 'TAP'. <br /> Database Value: 'TAP' <br /> Model Value: 7 <br /> Domain API Value: 'TableAPI' |
+| DataAccessAPI | DataAccessAPI value. Stored as 'DAP'. <br /> Database Value: 'DAP' <br /> Model Value: 8 <br /> Domain API Value: 'DataAccessAPI' |
+| LegalUK | LegalUK value. Stored as 'LUK'. <br /> Database Value: 'LUK' <br /> Model Value: 9 <br /> Domain API Value: 'LegalUK' |
+| OLAP | OLAP value. Stored as 'OLP'. <br /> Database Value: 'OLP' <br /> Model Value: 10 <br /> Domain API Value: 'OLAP' |
+| MicrosoftSync | MicrosoftSync value. Stored as 'MSS'. <br /> Database Value: 'MSS' <br /> Model Value: 11 <br /> Domain API Value: 'MicrosoftSync' |
+| VideoConferencing | VideoConferencing value. Stored as 'VDC'. <br /> Database Value: 'VDC' <br /> Model Value: 12 <br /> Domain API Value: 'VideoConferencing' |
+| AIServer | AIServer value. Stored as 'AIS'. <br /> Database Value: 'AIS' <br /> Model Value: 13 <br /> Domain API Value: 'AIServer' |
 
-_Supported Filters_: **Equals, EqualsIn**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -226,29 +235,29 @@ _Show in UI_: **ShownByDefault**
 
 The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. `Filter(multi eq)`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### TrustedApplication
 
 The trusted application related to this web site. `Filter(multi eq)` `Introduced in version 20.1`
 
-_Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### WebHost
 
 The web host in which to host the site. `Filter(multi eq)`
 
-_Type_: **[WebHosts](Systems.Config.WebHosts.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[WebHosts](Systems.Config.WebHosts.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -258,90 +267,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

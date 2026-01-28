@@ -1,20 +1,21 @@
 ---
 uid: Logistics.Inventory.TransactionCostCorrectionsSummary
 ---
-# Logistics.Inventory.TransactionCostCorrectionsSummary View
+# Logistics.Inventory.TransactionCostCorrectionsSummary (View)
 
-**Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
 
-Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary
+Summary of cost corrections, grouped by the line corrected.
 
-## Default Visualization
-Default Display Text Format:  
-_{BaseCostAdjustmentValue}: {CostCorrectionAmountValue}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Logistics.Inventory](Logistics.Inventory.md)  
+Repository: Logistics.Inventory.TransactionCostCorrectionsSummary  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {BaseCostAdjustmentValue}: {CostCorrectionAmountValue}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -47,41 +48,41 @@ Aggregate Root:
 
 The cost correction in Base currency. `Currency: TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CostCorrectionAmount
 
 The cost correction in the original currency of the store transaction. `Currency: TransactionObj.DocumentCurrency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ProductCostAdjustment
 
 The cost correction in Products currency. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### StoreCostAdjustment
 
 The cost correction in Stores currency. `Currency: TransactionObj.Store.Currency` `Required` `Filter(eq;ge;le)`
 
-_Type_: **[Amount (38, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (38, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -90,23 +91,23 @@ _Show in UI_: **ShownByDefault**
 
 Unique transaction line id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Transaction_Line_Id`
 
-_Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Transaction_Line_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Transaction_Line_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### TransactionObj
 
 The transaction to which the transaction line belongs. `Required` `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Transaction_Id` `Owner`
 
-_Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Transaction_Lines_Table.Transaction_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md)**  
+Category: **System**  
+Inherited From: **Inv_Transaction_Lines_Table.Transaction_Id**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

@@ -1,7 +1,7 @@
-# Logistics.CompositeProductComponents Entity
+# Logistics.CompositeProductComponents
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [General.Products.CompositeProductComponents](General.Products.CompositeProductComponents.md)
+New name: [General.Products.CompositeProductComponents](General.Products.CompositeProductComponents.md)

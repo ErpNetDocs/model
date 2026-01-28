@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Logistics.Inventory.TransactionCostCorrectionsSummary View | ERP.net Domain Model </title>
+      <title>Logistics.Inventory.TransactionCostCorrectionsSummary (View) | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Logistics.Inventory.TransactionCostCorrectionsSummary View | ERP.net Domain Model ">
+      <meta name="title" content="Logistics.Inventory.TransactionCostCorrectionsSummary (View) | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,18 +85,18 @@
         </div>
 
         <article data-uid="Logistics.Inventory.TransactionCostCorrectionsSummary">
-<h1 id="logisticsinventorytransactioncostcorrectionssummary-view">Logistics.Inventory.TransactionCostCorrectionsSummary View</h1>
+<h1 id="logisticsinventorytransactioncostcorrectionssummary-view">Logistics.Inventory.TransactionCostCorrectionsSummary (View)</h1>
 
-<p><strong>Namespace:</strong> <a href="Logistics.Inventory.html">Logistics.Inventory</a></p>
-<p>Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transaction_Cost_Corrections_Summary</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{BaseCostAdjustmentValue}: {CostCorrectionAmountValue}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Summary of cost corrections, grouped by the line corrected.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Logistics.Inventory.html">Logistics.Inventory</a><br>
+Repository: Logistics.Inventory.TransactionCostCorrectionsSummary<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {BaseCostAdjustmentValue}: {CostCorrectionAmountValue}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -160,49 +160,49 @@ Aggregate Root:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecostadjustment">BaseCostAdjustment</h3>
 <p>The cost correction in Base currency. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costcorrectionamount">CostCorrectionAmount</h3>
 <p>The cost correction in the original currency of the store transaction. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productcostadjustment">ProductCostAdjustment</h3>
 <p>The cost correction in Products currency. <code>Currency: TransactionLine.Product.CostingCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storecostadjustment">StoreCostAdjustment</h3>
 <p>The cost correction in Stores currency. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="transactionline">TransactionLine</h3>
 <p>Unique transaction line id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Transaction_Line_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Transaction_Line_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Transaction_Line_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactionobj">TransactionObj</h3>
 <p>The transaction to which the transaction line belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Transaction_Id</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Inv_Transaction_Lines_Table.Transaction_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a></strong><br>
+Category: <strong>System</strong><br>
+Inherited From: <strong>Inv_Transaction_Lines_Table.Transaction_Id</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Logistics_Inventory_TransactionCostCorrectionsSummary</p>

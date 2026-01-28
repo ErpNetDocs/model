@@ -1,7 +1,7 @@
-# Crm.PromotionalPackages Entity
+# Crm.PromotionalPackages
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.25).
+This entity type was renamed (in v.25).
 
-**New name:** [Crm.Pricing.PromotionalPackages](Crm.Pricing.PromotionalPackages.md)
+New name: [Crm.Pricing.PromotionalPackages](Crm.Pricing.PromotionalPackages.md)

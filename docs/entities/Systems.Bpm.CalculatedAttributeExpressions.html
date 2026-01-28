@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Systems.Bpm.CalculatedAttributeExpressions Entity | ERP.net Domain Model </title>
+      <title>Systems.Bpm.CalculatedAttributeExpressions | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Systems.Bpm.CalculatedAttributeExpressions Entity | ERP.net Domain Model ">
+      <meta name="title" content="Systems.Bpm.CalculatedAttributeExpressions | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,23 +85,23 @@
         </div>
 
         <article data-uid="Systems.Bpm.CalculatedAttributeExpressions">
-<h1 id="systemsbpmcalculatedattributeexpressions-entity">Systems.Bpm.CalculatedAttributeExpressions Entity</h1>
+<h1 id="systemsbpmcalculatedattributeexpressions">Systems.Bpm.CalculatedAttributeExpressions</h1>
 
-<p><strong>Namespace:</strong> <a href="Systems.Bpm.html">Systems.Bpm</a></p>
-<p>Represent an expression within the calculation of a calculated attribute. Entity: Sys_Calculated_Attribute_Expressions</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{CalculatedAttribute.Name}</em><br>
-Default Search Members:<br>
-<em>CalculatedAttribute.Name</em><br>
-Name Data Member:<br>
-<em>CalculatedAttribute.Name</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Represent an expression within the calculation of a calculated attribute.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Bpm.html">Systems.Bpm</a><br>
+Repository: Systems.Bpm.CalculatedAttributeExpressions<br>
+Base Table: Sys_Calculated_Attribute_Expressions<br>
+API access:  ReadWrite</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {CalculatedAttribute.Name}<br>
+Search Members: CalculatedAttribute.Name<br>
+Name Member: CalculatedAttribute.Name<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -119,29 +119,14 @@ Aggregate Root:<br>
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#expressionno">ExpressionNo</a></td>
 <td>int32</td>
 <td>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. <code>Required</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Notes for this CalculatedAttribute<br>Expression.</td>
-</tr>
-<tr>
-<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#operator">Operator</a></td>
@@ -197,53 +182,59 @@ Aggregate Root:<br>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="expressionno">ExpressionNo</h3>
 <p>Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. <code>Required</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Back-End Default Expression:</em><br>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Back-End Default Expression:<br>
 <code>( obj.CalculatedAttribute.Expressions.Select( c =&gt; c.ExpressionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Front-End Recalc Expressions:<br>
 <code>( obj.CalculatedAttribute.Expressions.Select( c =&gt; c.ExpressionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this CalculatedAttributeExpression.</p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operator">Operator</h3>
 <p>The exprssion operator. Available operators are limited to a pre-selected list of operators. <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#operator">ExpressionOperator</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#operator">ExpressionOperator</a></strong><br>
+Category: <strong>System</strong><br>
 Generic enum type for ExpressionOperator properties<br>
-<em>Allowed Values (Systems.Bpm.ExpressionOperator Enum Members)</em></p>
+Allowed Values (Systems.Bpm.ExpressionOperator Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -255,260 +246,260 @@ Generic enum type for ExpressionOperator properties<br>
 <tbody>
 <tr>
 <td>ADD</td>
-<td>ADD(Number1, Number2) =&gt; Numer1 + Number2.. Stored as 'ADD'. <br> <em>Database Value:</em> 'ADD' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ADD'</td>
+<td>ADD(Number1, Number2) =&gt; Numer1 + Number2.. Stored as 'ADD'. <br> Database Value: 'ADD' <br> Model Value: 0 <br> Domain API Value: 'ADD'</td>
 <td></td>
 </tr>
 <tr>
 <td>ADDDAYS</td>
-<td>ADDDAYS(Date, NumDays) =&gt; Adds the specified number of days to the date.. Stored as 'ADDDAYS'. <br> <em>Database Value:</em> 'ADDDAYS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ADDDAYS'</td>
+<td>ADDDAYS(Date, NumDays) =&gt; Adds the specified number of days to the date.. Stored as 'ADDDAYS'. <br> Database Value: 'ADDDAYS' <br> Model Value: 1 <br> Domain API Value: 'ADDDAYS'</td>
 <td></td>
 </tr>
 <tr>
 <td>AND</td>
-<td>AND(Condition1, Condition2) =&gt; Condition1 AND Condition2.. Stored as 'AND'. <br> <em>Database Value:</em> 'AND' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AND'</td>
+<td>AND(Condition1, Condition2) =&gt; Condition1 AND Condition2.. Stored as 'AND'. <br> Database Value: 'AND' <br> Model Value: 2 <br> Domain API Value: 'AND'</td>
 <td></td>
 </tr>
 <tr>
 <td>CAST</td>
-<td>CAST(Param, Type) =&gt; Casts the parameter to the specified type.. Stored as 'CAST'. <br> <em>Database Value:</em> 'CAST' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'CAST'</td>
+<td>CAST(Param, Type) =&gt; Casts the parameter to the specified type.. Stored as 'CAST'. <br> Database Value: 'CAST' <br> Model Value: 3 <br> Domain API Value: 'CAST'</td>
 <td></td>
 </tr>
 <tr>
 <td>CEILING</td>
-<td>CEILING(Number) =&gt; Rounds the number up to the next integer.. Stored as 'CEILING'. <br> <em>Database Value:</em> 'CEILING' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'CEILING'</td>
+<td>CEILING(Number) =&gt; Rounds the number up to the next integer.. Stored as 'CEILING'. <br> Database Value: 'CEILING' <br> Model Value: 4 <br> Domain API Value: 'CEILING'</td>
 <td></td>
 </tr>
 <tr>
 <td>CONCAT</td>
-<td>CONCAT(String1, String2) =&gt; Concatenates the strings.. Stored as 'CONCAT'. <br> <em>Database Value:</em> 'CONCAT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CONCAT'</td>
+<td>CONCAT(String1, String2) =&gt; Concatenates the strings.. Stored as 'CONCAT'. <br> Database Value: 'CONCAT' <br> Model Value: 5 <br> Domain API Value: 'CONCAT'</td>
 <td></td>
 </tr>
 <tr>
 <td>CONVERT</td>
-<td>CONVERT(Value, NewType) -&gt; Converts a value in the specified new type.. Stored as 'CONVERT'. <br> <em>Database Value:</em> 'CONVERT' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CONVERT'</td>
+<td>CONVERT(Value, NewType) -&gt; Converts a value in the specified new type.. Stored as 'CONVERT'. <br> Database Value: 'CONVERT' <br> Model Value: 6 <br> Domain API Value: 'CONVERT'</td>
 <td></td>
 </tr>
 <tr>
 <td>COUNT</td>
-<td>COUNT(List) -&gt; Gets the number of elements contained in the list. Stored as 'COUNT'. <br> <em>Database Value:</em> 'COUNT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'COUNT'</td>
+<td>COUNT(List) -&gt; Gets the number of elements contained in the list. Stored as 'COUNT'. <br> Database Value: 'COUNT' <br> Model Value: 7 <br> Domain API Value: 'COUNT'</td>
 <td></td>
 </tr>
 <tr>
 <td>DIVIDE</td>
-<td>DIVIDE(Number1, Number2) =&gt; Numer1 / Number2.. Stored as 'DIVIDE'. <br> <em>Database Value:</em> 'DIVIDE' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'DIVIDE'</td>
+<td>DIVIDE(Number1, Number2) =&gt; Numer1 / Number2.. Stored as 'DIVIDE'. <br> Database Value: 'DIVIDE' <br> Model Value: 8 <br> Domain API Value: 'DIVIDE'</td>
 <td></td>
 </tr>
 <tr>
 <td>IN</td>
-<td>IN(Input, List) =&gt; Returns whether the value of Input is among the specified in the list.. Stored as 'IN'. <br> <em>Database Value:</em> 'IN' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'IN'</td>
+<td>IN(Input, List) =&gt; Returns whether the value of Input is among the specified in the list.. Stored as 'IN'. <br> Database Value: 'IN' <br> Model Value: 9 <br> Domain API Value: 'IN'</td>
 <td></td>
 </tr>
 <tr>
 <td>IIF</td>
-<td>IIF(Condition, ResultTrue, ResultFalse) =&gt; Depending on Condition, returns the second or third argument.. Stored as 'IIF'. <br> <em>Database Value:</em> 'IIF' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'IIF'</td>
+<td>IIF(Condition, ResultTrue, ResultFalse) =&gt; Depending on Condition, returns the second or third argument.. Stored as 'IIF'. <br> Database Value: 'IIF' <br> Model Value: 10 <br> Domain API Value: 'IIF'</td>
 <td></td>
 </tr>
 <tr>
 <td>INCNUM</td>
-<td>The INCNUM operator increases the value of its parameter by 1. The operator can be used only for String values whоose last character is a number.. Stored as 'INCNUM'. <br> <em>Database Value:</em> 'INCNUM' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'INCNUM'</td>
+<td>The INCNUM operator increases the value of its parameter by 1. The operator can be used only for String values whоose last character is a number.. Stored as 'INCNUM'. <br> Database Value: 'INCNUM' <br> Model Value: 11 <br> Domain API Value: 'INCNUM'</td>
 <td></td>
 </tr>
 <tr>
 <td>EQUAL</td>
-<td>EQUAL(Value1, Value2) =&gt; Value1 = Value2.. Stored as 'EQUAL'. <br> <em>Database Value:</em> 'EQUAL' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'EQUAL'</td>
+<td>EQUAL(Value1, Value2) =&gt; Value1 = Value2.. Stored as 'EQUAL'. <br> Database Value: 'EQUAL' <br> Model Value: 12 <br> Domain API Value: 'EQUAL'</td>
 <td></td>
 </tr>
 <tr>
 <td>FILTER</td>
-<td>FILTER(List, Condition) =&gt; Filters the list by the condition.. Stored as 'FILTER'. <br> <em>Database Value:</em> 'FILTER' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'FILTER'</td>
+<td>FILTER(List, Condition) =&gt; Filters the list by the condition.. Stored as 'FILTER'. <br> Database Value: 'FILTER' <br> Model Value: 13 <br> Domain API Value: 'FILTER'</td>
 <td></td>
 </tr>
 <tr>
 <td>FIRST</td>
-<td>FIRST(List) =&gt; Returns the first element in the list.. Stored as 'FIRST'. <br> <em>Database Value:</em> 'FIRST' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'FIRST'</td>
+<td>FIRST(List) =&gt; Returns the first element in the list.. Stored as 'FIRST'. <br> Database Value: 'FIRST' <br> Model Value: 14 <br> Domain API Value: 'FIRST'</td>
 <td></td>
 </tr>
 <tr>
 <td>FLOOR</td>
-<td>FLOOR(Number) =&gt; Rounds down to integer.. Stored as 'FLOOR'. <br> <em>Database Value:</em> 'FLOOR' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'FLOOR'</td>
+<td>FLOOR(Number) =&gt; Rounds down to integer.. Stored as 'FLOOR'. <br> Database Value: 'FLOOR' <br> Model Value: 15 <br> Domain API Value: 'FLOOR'</td>
 <td></td>
 </tr>
 <tr>
 <td>FORMATSTRING</td>
-<td>FORMATSTRING(Object, Format) =&gt; Returns String, formatted by the rules in Format.. Stored as 'FORMATSTRING'. <br> <em>Database Value:</em> 'FORMATSTRING' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'FORMATSTRING'</td>
+<td>FORMATSTRING(Object, Format) =&gt; Returns String, formatted by the rules in Format.. Stored as 'FORMATSTRING'. <br> Database Value: 'FORMATSTRING' <br> Model Value: 16 <br> Domain API Value: 'FORMATSTRING'</td>
 <td></td>
 </tr>
 <tr>
 <td>GETVALUE</td>
-<td>GETVALUE(Value) =&gt; Get the value from the current object.. Stored as 'GETVALUE'. <br> <em>Database Value:</em> 'GETVALUE' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GETVALUE'</td>
+<td>GETVALUE(Value) =&gt; Get the value from the current object.. Stored as 'GETVALUE'. <br> Database Value: 'GETVALUE' <br> Model Value: 17 <br> Domain API Value: 'GETVALUE'</td>
 <td></td>
 </tr>
 <tr>
 <td>GETOBJVALUE</td>
-<td>GETOBJVALUE(Obj, Value) =&gt; obj.Value. Gets the specified value from the object.. Stored as 'GETOBJVALUE'. <br> <em>Database Value:</em> 'GETOBJVALUE' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GETOBJVALUE'</td>
+<td>GETOBJVALUE(Obj, Value) =&gt; obj.Value. Gets the specified value from the object.. Stored as 'GETOBJVALUE'. <br> Database Value: 'GETOBJVALUE' <br> Model Value: 18 <br> Domain API Value: 'GETOBJVALUE'</td>
 <td></td>
 </tr>
 <tr>
 <td>GT</td>
-<td>GT(Value1, Value2) =&gt; Value1 &gt; Value2.. Stored as 'GT'. <br> <em>Database Value:</em> 'GT' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'GT'</td>
+<td>GT(Value1, Value2) =&gt; Value1 &gt; Value2.. Stored as 'GT'. <br> Database Value: 'GT' <br> Model Value: 19 <br> Domain API Value: 'GT'</td>
 <td></td>
 </tr>
 <tr>
 <td>GTE</td>
-<td>GTE(Value1, Value2) =&gt; Value1 &gt;= Value2.. Stored as 'GTE'. <br> <em>Database Value:</em> 'GTE' <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'GTE'</td>
+<td>GTE(Value1, Value2) =&gt; Value1 &gt;= Value2.. Stored as 'GTE'. <br> Database Value: 'GTE' <br> Model Value: 20 <br> Domain API Value: 'GTE'</td>
 <td></td>
 </tr>
 <tr>
 <td>LIKE</td>
-<td>LIKE(String, Mask) =&gt; String LIKE Mask (%-match any string. _-match 1 char).. Stored as 'LIKE'. <br> <em>Database Value:</em> 'LIKE' <br> <em>Model Value:</em> 21 <br> <em>Domain API Value:</em> 'LIKE'</td>
+<td>LIKE(String, Mask) =&gt; String LIKE Mask (%-match any string. _-match 1 char).. Stored as 'LIKE'. <br> Database Value: 'LIKE' <br> Model Value: 21 <br> Domain API Value: 'LIKE'</td>
 <td></td>
 </tr>
 <tr>
 <td>LIST</td>
-<td>LIST(List, Attribute, Separator) =&gt; Returns list with the string values of the specified attribute of the list of objects. The values are separated by the specified separator. Stored as 'LIST'. <br> <em>Database Value:</em> 'LIST' <br> <em>Model Value:</em> 22 <br> <em>Domain API Value:</em> 'LIST'</td>
+<td>LIST(List, Attribute, Separator) =&gt; Returns list with the string values of the specified attribute of the list of objects. The values are separated by the specified separator. Stored as 'LIST'. <br> Database Value: 'LIST' <br> Model Value: 22 <br> Domain API Value: 'LIST'</td>
 <td></td>
 </tr>
 <tr>
 <td>LEFT</td>
-<td>LEFT(String, NumChars) =&gt; Gets the first characters of a string.. Stored as 'LEFT'. <br> <em>Database Value:</em> 'LEFT' <br> <em>Model Value:</em> 23 <br> <em>Domain API Value:</em> 'LEFT'</td>
+<td>LEFT(String, NumChars) =&gt; Gets the first characters of a string.. Stored as 'LEFT'. <br> Database Value: 'LEFT' <br> Model Value: 23 <br> Domain API Value: 'LEFT'</td>
 <td></td>
 </tr>
 <tr>
 <td>LEN</td>
-<td>LEN(String) =&gt; Returns the length of the string.. Stored as 'LEN'. <br> <em>Database Value:</em> 'LEN' <br> <em>Model Value:</em> 24 <br> <em>Domain API Value:</em> 'LEN'</td>
+<td>LEN(String) =&gt; Returns the length of the string.. Stored as 'LEN'. <br> Database Value: 'LEN' <br> Model Value: 24 <br> Domain API Value: 'LEN'</td>
 <td></td>
 </tr>
 <tr>
 <td>LT</td>
-<td>LT(Value1, Value2) =&gt; Value1 &lt; Value2.. Stored as 'LT'. <br> <em>Database Value:</em> 'LT' <br> <em>Model Value:</em> 25 <br> <em>Domain API Value:</em> 'LT'</td>
+<td>LT(Value1, Value2) =&gt; Value1 &lt; Value2.. Stored as 'LT'. <br> Database Value: 'LT' <br> Model Value: 25 <br> Domain API Value: 'LT'</td>
 <td></td>
 </tr>
 <tr>
 <td>LTE</td>
-<td>LTE(Value1, Value2) =&gt; Value1 &lt;= Value2.. Stored as 'LTE'. <br> <em>Database Value:</em> 'LTE' <br> <em>Model Value:</em> 26 <br> <em>Domain API Value:</em> 'LTE'</td>
+<td>LTE(Value1, Value2) =&gt; Value1 &lt;= Value2.. Stored as 'LTE'. <br> Database Value: 'LTE' <br> Model Value: 26 <br> Domain API Value: 'LTE'</td>
 <td></td>
 </tr>
 <tr>
 <td>MULTIPLY</td>
-<td>MULTIPLY(Number1, Number2) =&gt; Numer1 * Number2.. Stored as 'MULTIPLY'. <br> <em>Database Value:</em> 'MULTIPLY' <br> <em>Model Value:</em> 27 <br> <em>Domain API Value:</em> 'MULTIPLY'</td>
+<td>MULTIPLY(Number1, Number2) =&gt; Numer1 * Number2.. Stored as 'MULTIPLY'. <br> Database Value: 'MULTIPLY' <br> Model Value: 27 <br> Domain API Value: 'MULTIPLY'</td>
 <td></td>
 </tr>
 <tr>
 <td>NOT</td>
-<td>NOT(Condition) =&gt; NOT Condition.. Stored as 'NOT'. <br> <em>Database Value:</em> 'NOT' <br> <em>Model Value:</em> 28 <br> <em>Domain API Value:</em> 'NOT'</td>
+<td>NOT(Condition) =&gt; NOT Condition.. Stored as 'NOT'. <br> Database Value: 'NOT' <br> Model Value: 28 <br> Domain API Value: 'NOT'</td>
 <td></td>
 </tr>
 <tr>
 <td>OR</td>
-<td>OR(Condition1, Condition2) =&gt; Condition1 OR Condition2.. Stored as 'OR'. <br> <em>Database Value:</em> 'OR' <br> <em>Model Value:</em> 29 <br> <em>Domain API Value:</em> 'OR'</td>
+<td>OR(Condition1, Condition2) =&gt; Condition1 OR Condition2.. Stored as 'OR'. <br> Database Value: 'OR' <br> Model Value: 29 <br> Domain API Value: 'OR'</td>
 <td></td>
 </tr>
 <tr>
 <td>ORDERBY</td>
 <td>ORDERBY(Attribute, Order, Next_clause) =&gt; Clause, specifying a sort order according to Attribute and the specified order (ASC</td>
-<td>DESC).. Stored as 'ORDERBY'. <br> <em>Database Value:</em> 'ORDERBY' <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'ORDERBY'</td>
+<td>DESC).. Stored as 'ORDERBY'. <br> Database Value: 'ORDERBY' <br> Model Value: 30 <br> Domain API Value: 'ORDERBY'</td>
 </tr>
 <tr>
 <td>POS</td>
-<td>POS(Term, String) =&gt; Searches term in String, returns first position or -1 if not found.. Stored as 'POS'. <br> <em>Database Value:</em> 'POS' <br> <em>Model Value:</em> 31 <br> <em>Domain API Value:</em> 'POS'</td>
+<td>POS(Term, String) =&gt; Searches term in String, returns first position or -1 if not found.. Stored as 'POS'. <br> Database Value: 'POS' <br> Model Value: 31 <br> Domain API Value: 'POS'</td>
 <td></td>
 </tr>
 <tr>
 <td>REGEX</td>
-<td>REGEX(String, Mask) =&gt; Returns whether the string matches the regex mask.. Stored as 'REGEX'. <br> <em>Database Value:</em> 'REGEX' <br> <em>Model Value:</em> 32 <br> <em>Domain API Value:</em> 'REGEX'</td>
+<td>REGEX(String, Mask) =&gt; Returns whether the string matches the regex mask.. Stored as 'REGEX'. <br> Database Value: 'REGEX' <br> Model Value: 32 <br> Domain API Value: 'REGEX'</td>
 <td></td>
 </tr>
 <tr>
 <td>REPLACE</td>
-<td>REPLACE(String, OldValue, NewValue) =&gt; Replaces old with new value in string.. Stored as 'REPLACE'. <br> <em>Database Value:</em> 'REPLACE' <br> <em>Model Value:</em> 33 <br> <em>Domain API Value:</em> 'REPLACE'</td>
+<td>REPLACE(String, OldValue, NewValue) =&gt; Replaces old with new value in string.. Stored as 'REPLACE'. <br> Database Value: 'REPLACE' <br> Model Value: 33 <br> Domain API Value: 'REPLACE'</td>
 <td></td>
 </tr>
 <tr>
 <td>RIGHT</td>
-<td>RIGHT(String, NumChars) =&gt; Gets the last characters of a string.. Stored as 'RIGHT'. <br> <em>Database Value:</em> 'RIGHT' <br> <em>Model Value:</em> 34 <br> <em>Domain API Value:</em> 'RIGHT'</td>
+<td>RIGHT(String, NumChars) =&gt; Gets the last characters of a string.. Stored as 'RIGHT'. <br> Database Value: 'RIGHT' <br> Model Value: 34 <br> Domain API Value: 'RIGHT'</td>
 <td></td>
 </tr>
 <tr>
 <td>ROUND</td>
-<td>ROUND(Number, DecimalPlaces) =&gt; Rounds mathematically with the specified precision.. Stored as 'ROUND'. <br> <em>Database Value:</em> 'ROUND' <br> <em>Model Value:</em> 35 <br> <em>Domain API Value:</em> 'ROUND'</td>
+<td>ROUND(Number, DecimalPlaces) =&gt; Rounds mathematically with the specified precision.. Stored as 'ROUND'. <br> Database Value: 'ROUND' <br> Model Value: 35 <br> Domain API Value: 'ROUND'</td>
 <td></td>
 </tr>
 <tr>
 <td>SELECT</td>
-<td>SELECT(Repository, Clauses) =&gt; Gets the objects, matching the clauses.. Stored as 'SELECT'. <br> <em>Database Value:</em> 'SELECT' <br> <em>Model Value:</em> 36 <br> <em>Domain API Value:</em> 'SELECT'</td>
+<td>SELECT(Repository, Clauses) =&gt; Gets the objects, matching the clauses.. Stored as 'SELECT'. <br> Database Value: 'SELECT' <br> Model Value: 36 <br> Domain API Value: 'SELECT'</td>
 <td></td>
 </tr>
 <tr>
 <td>SORT</td>
 <td>SORT(List, Attribute, Order) =&gt; Sorts the list according to the attribute and the specified order (ASC</td>
-<td>DESC).. Stored as 'SORT'. <br> <em>Database Value:</em> 'SORT' <br> <em>Model Value:</em> 37 <br> <em>Domain API Value:</em> 'SORT'</td>
+<td>DESC).. Stored as 'SORT'. <br> Database Value: 'SORT' <br> Model Value: 37 <br> Domain API Value: 'SORT'</td>
 </tr>
 <tr>
 <td>SUBSTRING</td>
-<td>SUBSTRING(String, Start, Len) =&gt; Returns a sub-string with the specified start and length.. Stored as 'SUBSTRING'. <br> <em>Database Value:</em> 'SUBSTRING' <br> <em>Model Value:</em> 38 <br> <em>Domain API Value:</em> 'SUBSTRING'</td>
+<td>SUBSTRING(String, Start, Len) =&gt; Returns a sub-string with the specified start and length.. Stored as 'SUBSTRING'. <br> Database Value: 'SUBSTRING' <br> Model Value: 38 <br> Domain API Value: 'SUBSTRING'</td>
 <td></td>
 </tr>
 <tr>
 <td>SUM</td>
-<td>SUM(List, Value) =&gt; Returns the sum of Value for all elements in the list.. Stored as 'SUM'. <br> <em>Database Value:</em> 'SUM' <br> <em>Model Value:</em> 39 <br> <em>Domain API Value:</em> 'SUM'</td>
+<td>SUM(List, Value) =&gt; Returns the sum of Value for all elements in the list.. Stored as 'SUM'. <br> Database Value: 'SUM' <br> Model Value: 39 <br> Domain API Value: 'SUM'</td>
 <td></td>
 </tr>
 <tr>
 <td>TODAY</td>
-<td>TODAY() =&gt; Returns the current date.. Stored as 'TODAY'. <br> <em>Database Value:</em> 'TODAY' <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'TODAY'</td>
+<td>TODAY() =&gt; Returns the current date.. Stored as 'TODAY'. <br> Database Value: 'TODAY' <br> Model Value: 40 <br> Domain API Value: 'TODAY'</td>
 <td></td>
 </tr>
 <tr>
 <td>TOLOWER</td>
-<td>TOLOWER(String) =&gt; Returns the string, converted to lower-case.. Stored as 'TOLOWER'. <br> <em>Database Value:</em> 'TOLOWER' <br> <em>Model Value:</em> 41 <br> <em>Domain API Value:</em> 'TOLOWER'</td>
+<td>TOLOWER(String) =&gt; Returns the string, converted to lower-case.. Stored as 'TOLOWER'. <br> Database Value: 'TOLOWER' <br> Model Value: 41 <br> Domain API Value: 'TOLOWER'</td>
 <td></td>
 </tr>
 <tr>
 <td>TOP</td>
-<td>TOP(Number, Clauses) =&gt; Clause, returning only the first elements.. Stored as 'TOP'. <br> <em>Database Value:</em> 'TOP' <br> <em>Model Value:</em> 42 <br> <em>Domain API Value:</em> 'TOP'</td>
+<td>TOP(Number, Clauses) =&gt; Clause, returning only the first elements.. Stored as 'TOP'. <br> Database Value: 'TOP' <br> Model Value: 42 <br> Domain API Value: 'TOP'</td>
 <td></td>
 </tr>
 <tr>
 <td>TOUPPER</td>
-<td>TOUPPER(String) =&gt; Returns the string, converted to upper-case.. Stored as 'TOUPPER'. <br> <em>Database Value:</em> 'TOUPPER' <br> <em>Model Value:</em> 43 <br> <em>Domain API Value:</em> 'TOUPPER'</td>
+<td>TOUPPER(String) =&gt; Returns the string, converted to upper-case.. Stored as 'TOUPPER'. <br> Database Value: 'TOUPPER' <br> Model Value: 43 <br> Domain API Value: 'TOUPPER'</td>
 <td></td>
 </tr>
 <tr>
 <td>WHERE</td>
-<td>WHERE(Condition1, Condition2) =&gt; Clause, which filters by Condition1 AND Condition2.. Stored as 'WHERE'. <br> <em>Database Value:</em> 'WHERE' <br> <em>Model Value:</em> 44 <br> <em>Domain API Value:</em> 'WHERE'</td>
+<td>WHERE(Condition1, Condition2) =&gt; Clause, which filters by Condition1 AND Condition2.. Stored as 'WHERE'. <br> Database Value: 'WHERE' <br> Model Value: 44 <br> Domain API Value: 'WHERE'</td>
 <td></td>
 </tr>
 <tr>
 <td>INTERPOLATE</td>
-<td>INTERPOLATE(Object?, InterpolatedString) =&gt; Performs string interpolation, according to the context of the passed object.. Stored as 'INTERPOLATE'. <br> <em>Database Value:</em> 'INTERPOLATE' <br> <em>Model Value:</em> 45 <br> <em>Domain API Value:</em> 'INTERPOLATE'</td>
+<td>INTERPOLATE(Object?, InterpolatedString) =&gt; Performs string interpolation, according to the context of the passed object.. Stored as 'INTERPOLATE'. <br> Database Value: 'INTERPOLATE' <br> Model Value: 45 <br> Domain API Value: 'INTERPOLATE'</td>
 <td></td>
 </tr>
 <tr>
 <td>DATEDIFF</td>
-<td>DATEDIFF(DateTime, DateTime, Interval?) =&gt; Returns the difference between dates as the date difference for the specified interval type.. Stored as 'DATEDIFF'. <br> <em>Database Value:</em> 'DATEDIFF' <br> <em>Model Value:</em> 46 <br> <em>Domain API Value:</em> 'DATEDIFF'</td>
+<td>DATEDIFF(DateTime, DateTime, Interval?) =&gt; Returns the difference between dates as the date difference for the specified interval type.. Stored as 'DATEDIFF'. <br> Database Value: 'DATEDIFF' <br> Model Value: 46 <br> Domain API Value: 'DATEDIFF'</td>
 <td></td>
 </tr>
 <tr>
 <td>DATESPAN</td>
-<td>DATESPAN(DateTime, DateTime, Interval?) =&gt; Returns the difference between dates as a duration in the specified interval type. The interval is fulfilled when the same date and time is reached in the next interval.. Stored as 'DATESPAN'. <br> <em>Database Value:</em> 'DATESPAN' <br> <em>Model Value:</em> 47 <br> <em>Domain API Value:</em> 'DATESPAN'</td>
+<td>DATESPAN(DateTime, DateTime, Interval?) =&gt; Returns the difference between dates as a duration in the specified interval type. The interval is fulfilled when the same date and time is reached in the next interval.. Stored as 'DATESPAN'. <br> Database Value: 'DATESPAN' <br> Model Value: 47 <br> Domain API Value: 'DATESPAN'</td>
 <td></td>
 </tr>
 <tr>
 <td>IFERROR</td>
-<td>IFERROR(Value, ValueIfError) =&gt; Evaluates an expression and returns the value specified in the second parameter, if the expression returns an error. Otherwise returns the value of the expression itself.. Stored as 'IFERROR'. <br> <em>Database Value:</em> 'IFERROR' <br> <em>Model Value:</em> 48 <br> <em>Domain API Value:</em> 'IFERROR'</td>
+<td>IFERROR(Value, ValueIfError) =&gt; Evaluates an expression and returns the value specified in the second parameter, if the expression returns an error. Otherwise returns the value of the expression itself.. Stored as 'IFERROR'. <br> Database Value: 'IFERROR' <br> Model Value: 48 <br> Domain API Value: 'IFERROR'</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameter1type">Parameter1Type</h3>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter1type">ExpressionParameterType</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter1type">ExpressionParameterType</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
 Generic enum type for ExpressionParameterType properties<br>
-<em>Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)</em></p>
+Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -519,55 +510,55 @@ Generic enum type for ExpressionParameterType properties<br>
 <tbody>
 <tr>
 <td>Constant</td>
-<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> Database Value: 'CONST' <br> Model Value: 0 <br> Domain API Value: 'Constant'</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> Database Value: 'ATTRIB' <br> Model Value: 1 <br> Domain API Value: 'Attribute'</td>
 </tr>
 <tr>
 <td>Reference</td>
-<td>Reference to another object.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+<td>Reference to another object.. Stored as 'REF'. <br> Database Value: 'REF' <br> Model Value: 2 <br> Domain API Value: 'Reference'</td>
 </tr>
 <tr>
 <td>ChildList</td>
-<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> Database Value: 'CHILD' <br> Model Value: 3 <br> Domain API Value: 'ChildList'</td>
 </tr>
 <tr>
 <td>Expression</td>
-<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> Database Value: 'EXP' <br> Model Value: 4 <br> Domain API Value: 'Expression'</td>
 </tr>
 <tr>
 <td>Input</td>
-<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> Database Value: 'INPUT' <br> Model Value: 5 <br> Domain API Value: 'Input'</td>
 </tr>
 <tr>
 <td>Repository</td>
-<td>A repository.. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+<td>A repository.. Stored as 'REPO'. <br> Database Value: 'REPO' <br> Model Value: 6 <br> Domain API Value: 'Repository'</td>
 </tr>
 <tr>
 <td>System</td>
-<td>A system value.. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+<td>A system value.. Stored as 'SYS'. <br> Database Value: 'SYS' <br> Model Value: 7 <br> Domain API Value: 'System'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameter1value">Parameter1Value</h3>
 <p>The actual value of parameter 1.</p>
-<p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>256</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>256</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameter2type">Parameter2Type</h3>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter2type">ExpressionParameterType</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter2type">ExpressionParameterType</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
 Generic enum type for ExpressionParameterType properties<br>
-<em>Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)</em></p>
+Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -578,55 +569,55 @@ Generic enum type for ExpressionParameterType properties<br>
 <tbody>
 <tr>
 <td>Constant</td>
-<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> Database Value: 'CONST' <br> Model Value: 0 <br> Domain API Value: 'Constant'</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> Database Value: 'ATTRIB' <br> Model Value: 1 <br> Domain API Value: 'Attribute'</td>
 </tr>
 <tr>
 <td>Reference</td>
-<td>Reference to another object.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+<td>Reference to another object.. Stored as 'REF'. <br> Database Value: 'REF' <br> Model Value: 2 <br> Domain API Value: 'Reference'</td>
 </tr>
 <tr>
 <td>ChildList</td>
-<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> Database Value: 'CHILD' <br> Model Value: 3 <br> Domain API Value: 'ChildList'</td>
 </tr>
 <tr>
 <td>Expression</td>
-<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> Database Value: 'EXP' <br> Model Value: 4 <br> Domain API Value: 'Expression'</td>
 </tr>
 <tr>
 <td>Input</td>
-<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> Database Value: 'INPUT' <br> Model Value: 5 <br> Domain API Value: 'Input'</td>
 </tr>
 <tr>
 <td>Repository</td>
-<td>A repository.. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+<td>A repository.. Stored as 'REPO'. <br> Database Value: 'REPO' <br> Model Value: 6 <br> Domain API Value: 'Repository'</td>
 </tr>
 <tr>
 <td>System</td>
-<td>A system value.. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+<td>A system value.. Stored as 'SYS'. <br> Database Value: 'SYS' <br> Model Value: 7 <br> Domain API Value: 'System'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameter2value">Parameter2Value</h3>
 <p>The actual value of the parameter.</p>
-<p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>256</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>256</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameter3type">Parameter3Type</h3>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter3type">ExpressionParameterType</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Systems.Bpm.CalculatedAttributeExpressions.html#parameter3type">ExpressionParameterType</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
 Generic enum type for ExpressionParameterType properties<br>
-<em>Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)</em></p>
+Allowed Values (Systems.Bpm.ExpressionParameterType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -637,126 +628,147 @@ Generic enum type for ExpressionParameterType properties<br>
 <tbody>
 <tr>
 <td>Constant</td>
-<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> Database Value: 'CONST' <br> Model Value: 0 <br> Domain API Value: 'Constant'</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> Database Value: 'ATTRIB' <br> Model Value: 1 <br> Domain API Value: 'Attribute'</td>
 </tr>
 <tr>
 <td>Reference</td>
-<td>Reference to another object.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+<td>Reference to another object.. Stored as 'REF'. <br> Database Value: 'REF' <br> Model Value: 2 <br> Domain API Value: 'Reference'</td>
 </tr>
 <tr>
 <td>ChildList</td>
-<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> Database Value: 'CHILD' <br> Model Value: 3 <br> Domain API Value: 'ChildList'</td>
 </tr>
 <tr>
 <td>Expression</td>
-<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> Database Value: 'EXP' <br> Model Value: 4 <br> Domain API Value: 'Expression'</td>
 </tr>
 <tr>
 <td>Input</td>
-<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> Database Value: 'INPUT' <br> Model Value: 5 <br> Domain API Value: 'Input'</td>
 </tr>
 <tr>
 <td>Repository</td>
-<td>A repository.. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+<td>A repository.. Stored as 'REPO'. <br> Database Value: 'REPO' <br> Model Value: 6 <br> Domain API Value: 'Repository'</td>
 </tr>
 <tr>
 <td>System</td>
-<td>A system value.. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+<td>A system value.. Stored as 'SYS'. <br> Database Value: 'SYS' <br> Model Value: 7 <br> Domain API Value: 'System'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameter3value">Parameter3Value</h3>
 <p>The actual value of the parameter.</p>
-<p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>256</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>256</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculatedattribute">CalculatedAttribute</h3>
 <p>The <see cref="CalculatedAttribute"></see> to which this CalculatedAttributeExpression belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -767,35 +779,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R30668.html">R30668 CalculatedAttributeExpression - Max Parameter Value Length</a></li>

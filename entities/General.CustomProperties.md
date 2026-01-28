@@ -1,7 +1,7 @@
-# General.CustomProperties Entity
+# General.CustomProperties
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Bpm.CustomProperties](Systems.Bpm.CustomProperties.md)
+New name: [Systems.Bpm.CustomProperties](Systems.Bpm.CustomProperties.md)

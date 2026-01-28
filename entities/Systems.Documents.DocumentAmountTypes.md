@@ -1,38 +1,38 @@
 ---
 uid: Systems.Documents.DocumentAmountTypes
 ---
-# Systems.Documents.DocumentAmountTypes Entity
+# Systems.Documents.DocumentAmountTypes
 
-**Namespace:** [Systems.Documents](Systems.Documents.md)  
 
-Represents the different types of additional amounts which are calculated for the documents. Entity: Gen_Document_Amount_Types
+Represents the different types of additional amounts which are calculated for the documents.
+
+## General
+Namespace: [Systems.Documents](Systems.Documents.md)  
+Repository: Systems.Documents.DocumentAmountTypes  
+Base Table: Gen_Document_Amount_Types  
+API access:  ReadWrite  
 
 ## Renames
 
-Old name: **General.DocumentAmountTypes**  
-New name: **Systems.Documents.DocumentAmountTypes**  
-Version: **24.1.5.35**  
-Case: **35911**  
+Old name: General.DocumentAmountTypes  
+New name: Systems.Documents.DocumentAmountTypes  
+Version: 24.1.5.35  
+Case: 35911  
 
 
 
-## Default Visualization
-Default Display Text Format:  
-_{AmountTypeName:T}_  
-Default Search Members:  
-_AmountTypeCode; AmountTypeName_  
-Code Data Member:  
-_AmountTypeCode_  
-Name Data Member:  
-_AmountTypeName_  
-Category:  _Settings_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
-Layout category attribute:  _DistributeBy_  
+## Visualization
+Display Format: {AmountTypeName:T}  
+Search Members: AmountTypeCode; AmountTypeName  
+Code Member: AmountTypeCode  
+Name Member: AmountTypeName  
+Category:  Settings  
+Show in UI:  ShownByDefault  
+Layout category By:  DistributeBy  
 
 ## Track Changes  
-Min level:  _0 - Do not track changes_  
-Max level:  _4 - Track object attribute and blob changes_  
+Min level:  0 - Do not track changes  
+Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -48,7 +48,6 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AddToCustomer](Systems.Documents.DocumentAmountTypes.md#addtocustomer) | boolean | True means that the amount will be charged to the primary customer of the document. `Required` `Default(true)` 
 | [AddToLine](Systems.Documents.DocumentAmountTypes.md#addtoline) | boolean | True means that the resulting amount will be added to the amount of each respective line. `Required` `Default(true)` 
-| [AggregateLastUpdateTimeUtc](Systems.Documents.DocumentAmountTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__ | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. `Default(0)` 
 | [AmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#amountinputallowed) | boolean | True when the user is allowed to input fixed amount for distribution. `Required` `Default(false)` `Filter(eq)` 
 | [AmountTypeCode](Systems.Documents.DocumentAmountTypes.md#amounttypecode) | string (16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. `Required` `Filter(multi eq;like)` `ORD` 
@@ -56,13 +55,8 @@ Aggregate Tree
 | [BaseOnLines](Systems.Documents.DocumentAmountTypes.md#baseonlines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. `Required` `Default(true)` 
 | [DefaultPercent](Systems.Documents.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; null otherwise. 
 | [Description](Systems.Documents.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
-| [DisplayText](Systems.Documents.DocumentAmountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | Determines how the amount will be distributed among the document lines. `Required` `Default("AMOUNT")` `Filter(eq)` 
-| [ExternalId](Systems.Documents.DocumentAmountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Documents.DocumentAmountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [Id](Systems.Documents.DocumentAmountTypes.md#id) | guid |  
 | [IsActive](Systems.Documents.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
-| [ObjectVersion](Systems.Documents.DocumentAmountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PercentInputAllowed](Systems.Documents.DocumentAmountTypes.md#percentinputallowed) | boolean | True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)` 
 | [RoundScale](Systems.Documents.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
 | [UnitAmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. `Required` `Default(false)` `Filter(eq)` 
@@ -73,6 +67,18 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AccessKey](Systems.Documents.DocumentAmountTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this DocumentAmountType. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.1.24` |
 | [DistributeByMeasurement<br />Category](Systems.Documents.DocumentAmountTypes.md#distributebymeasurementcategory) | [MeasurementCategories](General.Products.MeasurementCategories.md) (nullable) | Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. `Filter(multi eq)` |
+
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Systems.Documents.DocumentAmountTypes.md#id) | guid |  
+| [ObjectVersion](Systems.Documents.DocumentAmountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Systems.Documents.DocumentAmountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Systems.Documents.DocumentAmountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Systems.Documents.DocumentAmountTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
+| [DisplayText](Systems.Documents.DocumentAmountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
 ## Child Collections
 
@@ -88,240 +94,240 @@ Aggregate Tree
 
 True means that the amount will be charged to the primary customer of the document. `Required` `Default(true)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### AddToLine
 
 True means that the resulting amount will be added to the amount of each respective line. `Required` `Default(true)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-_Type_: **datetime**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### AllowedDirections
 
 Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. `Default(0)`
 
-_Type_: **[AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__**  
-_Category_: **System**  
+Type: **[AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__**  
+Category: **System**  
 Allowed values for the `AllowedDirections`(Systems.Documents.DocumentAmountTypes.md#alloweddirections) data attribute  
-_Allowed Values (Systems.Documents.DocumentAmountTypesRepository.AllowedDirections Enum Members)_  
+Allowed Values (Systems.Documents.DocumentAmountTypesRepository.AllowedDirections Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| AllowAll | AllowAll value. Stored as 0. <br /> _Database Value:_ 0 <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AllowAll' |
-| AllowOnlyPositive | AllowOnlyPositive value. Stored as 1. <br /> _Database Value:_ 1 <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'AllowOnlyPositive' |
-| AllowOnlyNegative | AllowOnlyNegative value. Stored as (-1). <br /> _Database Value:_ -1 <br /> _Model Value:_ -1 <br /> _Domain API Value:_ 'AllowOnlyNegative' |
+| AllowAll | AllowAll value. Stored as 0. <br /> Database Value: 0 <br /> Model Value: 0 <br /> Domain API Value: 'AllowAll' |
+| AllowOnlyPositive | AllowOnlyPositive value. Stored as 1. <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'AllowOnlyPositive' |
+| AllowOnlyNegative | AllowOnlyNegative value. Stored as (-1). <br /> Database Value: -1 <br /> Model Value: -1 <br /> Domain API Value: 'AllowOnlyNegative' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **0**  
-_Show in UI_: **ShownByDefault**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **0**  
+Show in UI: **ShownByDefault**  
 
 ### AmountInputAllowed
 
 True when the user is allowed to input fixed amount for distribution. `Required` `Default(false)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
 
 ### AmountTypeCode
 
 A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes. `Required` `Filter(multi eq;like)` `ORD`
 
-_Type_: **string (16)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **True**  
-_Maximum Length_: **16**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (16)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, Like, EqualsIn**  
+Supports Order By: **True**  
+Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
 
-_Back-End Default Expression:_  
+Back-End Default Expression:  
 `obj.IncMax( o => o.AmountTypeCode, null, "000")`
 
 ### AmountTypeName
 
 The name of the amount type. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Like**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### BaseOnLines
 
 True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. `Required` `Default(true)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultPercent
 
 Default percent for amounts for which percent input is allowed; null otherwise.
 
-_Type_: **decimal (7, 6) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (7, 6) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `IIF( Not( obj.PercentInputAllowed), null, obj.DefaultPercent)`
 ### Description
 
 The description of this DocumentAmountType.
 
-_Type_: **string (254) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **254**  
-_Show in UI_: **ShownByDefault**  
-
-### DisplayText
-
-Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
-
-_Type_: **string**  
-_Category_: **Calculated Attributes**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
 
 ### DistributeBy
 
 Determines how the amount will be distributed among the document lines. `Required` `Default("AMOUNT")` `Filter(eq)`
 
-_Type_: **[DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby)**  
-_Category_: **System**  
+Type: **[DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby)**  
+Category: **System**  
 Allowed values for the `DistributeBy`(Systems.Documents.DocumentAmountTypes.md#distributeby) data attribute  
-_Allowed Values (Systems.Documents.DocumentAmountTypesRepository.DistributeBy Enum Members)_  
+Allowed Values (Systems.Documents.DocumentAmountTypesRepository.DistributeBy Enum Members)  
 
 | Value | Description |
 | ---- | --- |
-| Amount | Amount value. Stored as 'AMOUNT'. <br /> _Database Value:_ 'AMOUNT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Amount' |
-| Measurement | Measurement value. Stored as 'MEASUREMENT'. <br /> _Database Value:_ 'MEASUREMENT' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Measurement' |
-| ProductDefinition | ProductDefinition value. Stored as 'PRODUCT DEFINITION'. <br /> _Database Value:_ 'PRODUCT DEFINITION' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ProductDefinition' |
-| DealType | DealType value. Stored as 'DEAL TYPE'. <br /> _Database Value:_ 'DEAL TYPE' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'DealType' |
-| LineDiscount | Distributes the amount of the applied line discounts from this category to the corresponding line.. Stored as 'LINE DISCOUNT'. <br /> _Database Value:_ 'LINE DISCOUNT' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'LineDiscount' |
-| BonusProgram | Distributes the discount amount of the bonus programs from this category to the corresponding line.. Stored as 'BONUS PROGRAM'. <br /> _Database Value:_ 'BONUS PROGRAM' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'BonusProgram' |
-| PromotionalPackage | Distributes the discount amount of the promotional package from this category to the corresponding line.. Stored as 'PROMOTIONAL PACKAGE'. <br /> _Database Value:_ 'PROMOTIONAL PACKAGE' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'PromotionalPackage' |
+| Amount | Amount value. Stored as 'AMOUNT'. <br /> Database Value: 'AMOUNT' <br /> Model Value: 0 <br /> Domain API Value: 'Amount' |
+| Measurement | Measurement value. Stored as 'MEASUREMENT'. <br /> Database Value: 'MEASUREMENT' <br /> Model Value: 1 <br /> Domain API Value: 'Measurement' |
+| ProductDefinition | ProductDefinition value. Stored as 'PRODUCT DEFINITION'. <br /> Database Value: 'PRODUCT DEFINITION' <br /> Model Value: 2 <br /> Domain API Value: 'ProductDefinition' |
+| DealType | DealType value. Stored as 'DEAL TYPE'. <br /> Database Value: 'DEAL TYPE' <br /> Model Value: 3 <br /> Domain API Value: 'DealType' |
+| LineDiscount | Distributes the amount of the applied line discounts from this category to the corresponding line.. Stored as 'LINE DISCOUNT'. <br /> Database Value: 'LINE DISCOUNT' <br /> Model Value: 4 <br /> Domain API Value: 'LineDiscount' |
+| BonusProgram | Distributes the discount amount of the bonus programs from this category to the corresponding line.. Stored as 'BONUS PROGRAM'. <br /> Database Value: 'BONUS PROGRAM' <br /> Model Value: 5 <br /> Domain API Value: 'BonusProgram' |
+| PromotionalPackage | Distributes the discount amount of the promotional package from this category to the corresponding line.. Stored as 'PROMOTIONAL PACKAGE'. <br /> Database Value: 'PROMOTIONAL PACKAGE' <br /> Model Value: 6 <br /> Domain API Value: 'PromotionalPackage' |
 
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **Amount**  
-_Show in UI_: **ShownByDefault**  
-
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-_Type_: **string**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
-
-### Id
-
-_Type_: **guid**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **CannotBeShown**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **Amount**  
+Show in UI: **ShownByDefault**  
 
 ### IsActive
 
 True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
-
-### ObjectVersion
-
-The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
-
-_Type_: **int32**  
-_Category_: **Extensible Data Object**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: ****  
-_Show in UI_: **HiddenByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### PercentInputAllowed
 
 True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
 
 ### RoundScale
 
 The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
 
-_Type_: **int32 __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### UnitAmountInputAllowed
 
 Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. `Required` `Default(false)` `Filter(eq)`
 
-_Type_: **boolean**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Default Value_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **CannotBeShown**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
 
 
 ## Reference Details
@@ -330,14 +336,14 @@ _Show in UI_: **ShownByDefault**
 
 The access key, containing the permissions for this DocumentAmountType. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.1.24`
 
-_Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
-_Indexed_: **True**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **CannotBeShown**  
+Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **CannotBeShown**  
 
 
-_Remarks_  
+Remarks  
 Supported permissions
 
 | Permission | Type |
@@ -349,12 +355,12 @@ Supported permissions
 
 Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. `Filter(multi eq)`
 
-_Type_: **[MeasurementCategories](General.Products.MeasurementCategories.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **[MeasurementCategories](General.Products.MeasurementCategories.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
-_Front-End Recalc Expressions:_  
+Front-End Recalc Expressions:  
 `IIF( ( Convert( obj.DistributeBy, Int32) != 1), null, obj.DistributeByMeasurementCategory)`
 
 ## API Methods
@@ -364,90 +370,90 @@ Methods that can be invoked in public APIs.
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-_Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **GET**  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
 
 **Parameters**  
   * **customPropertyCode**  
     The code of the custom property  
-    _Type_: string  
+    Type: string  
 
   * **search**  
     The search text - searches by value or description. Can contain wildcard character %.  
-    _Type_: string  
-     _Optional_: True  
-    _Default Value_: null  
+    Type: string  
+     Optional: True  
+    Default Value: null  
 
   * **exactMatch**  
     If true the search text should be equal to the property value  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **orderByDescription**  
     If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    _Type_: boolean  
-     _Optional_: True  
-    _Default Value_: False  
+    Type: boolean  
+     Optional: True  
+    Default Value: False  
 
   * **top**  
     The top clause - default is 10  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 10  
+    Type: int32  
+     Optional: True  
+    Default Value: 10  
 
   * **skip**  
     The skip clause - default is 0  
-    _Type_: int32  
-     _Optional_: True  
-    _Default Value_: 0  
+    Type: int32  
+     Optional: True  
+    Default Value: 0  
 
 
 ### CreateNotification
 
 Create a notification immediately in a separate transaction, and send a real-time event to the user.  
-_Return Type_: **void**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 **Parameters**  
   * **user**  
     The user.  
-    _Type_: [Users](Systems.Security.Users.md)  
+    Type: [Users](Systems.Security.Users.md)  
 
   * **notificationClass**  
     The notification class.  
-    _Type_: string  
+    Type: string  
 
   * **subject**  
     The notification subject.  
-    _Type_: string  
+    Type: string  
 
   * **priority**  
     The notification priority.  
-    _Type_: Systems.Core.NotificationsRepository.Priority  
+    Type: Systems.Core.NotificationsRepository.Priority  
     Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
-    _Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)_  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
 
     | Value | Description |
     | ---- | --- |
-    | Background | Background value. Stored as 1. <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Background' |
-    | Low | Low value. Stored as 2. <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Low' |
-    | Normal | Normal value. Stored as 3. <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Normal' |
-    | High | High value. Stored as 4. <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'High' |
-    | Urgent | Urgent value. Stored as 5. <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Urgent' |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     _Optional_: True  
-    _Default Value_: Normal  
+     Optional: True  
+    Default Value: Normal  
 
 
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-_Return Type_: **EntityObject**  
-_Declaring Type_: **EntityObject**  
-_Domain API Request_: **POST**  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
 
 
 ## Business Rules

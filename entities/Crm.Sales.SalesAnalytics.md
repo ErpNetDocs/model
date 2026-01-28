@@ -1,20 +1,22 @@
 ---
 uid: Crm.Sales.SalesAnalytics
 ---
-# Crm.Sales.SalesAnalytics View
+# Crm.Sales.SalesAnalytics (View)
 
-**Namespace:** [Crm.Sales](Crm.Sales.md)  
 
-Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62)
+Grouped sales data.
 
-## Default Visualization
-Default Display Text Format:  
-_{SalesAnalyticId}: {DocumentDate}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadOnly_  
+## General
+Namespace: [Crm.Sales](Crm.Sales.md)  
+Repository: Crm.Sales.SalesAnalytics  
+Introduced In Version: 26.2.0.62  
+API access:  ReadOnly  
+
+## Visualization
+Display Format: {SalesAnalyticId}: {DocumentDate}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -56,60 +58,60 @@ Aggregate Tree
 
 Date to group for. `Required` `Filter(ge;le)` `ORD`
 
-_Type_: **date**  
-_Category_: **System**  
-_Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **True**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **True**  
+Show in UI: **ShownByDefault**  
 
 ### LineAmount
 
 Line Amount for date. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### LineDiscountAmount
 
 Discount over Line Amount for Date. `Required`
 
-_Type_: **decimal (38, 2)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 2)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### QuantityBase
 
 Base Quantity for Date. `Required`
 
-_Type_: **decimal (38, 3)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 3)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### SalesAnalyticId
 
 Row Id. `Required` `Filter(multi eq)`
 
-_Type_: **guid**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Show in UI_: **ShownByDefault**  
+Type: **guid**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### StandardQuantityBase
 
 Standard Base Quantity for Date. `Required`
 
-_Type_: **decimal (38, 3)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **decimal (38, 3)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -118,122 +120,122 @@ _Show in UI_: **ShownByDefault**
 
 Unique customer Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Customers_Table.Customer_Id`
 
-_Type_: **[Customers](Crm.Sales.Customers.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Customers_Table.Customer_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Customers](Crm.Sales.Customers.md)**  
+Category: **System**  
+Inherited From: **Crm_Customers_Table.Customer_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Dealer
 
 External Dealer for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Dealers_Table.Dealer_Id`
 
-_Type_: **[Dealers](Crm.Sales.Dealers.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Dealers_Table.Dealer_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Dealers](Crm.Sales.Dealers.md)**  
+Category: **System**  
+Inherited From: **Crm_Dealers_Table.Dealer_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### DistributionChannel
 
 Distribution Channel for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Distribution_Channels_Table.Distribution_Channel_Id`
 
-_Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Distribution_Channels_Table.Distribution_Channel_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
+Category: **System**  
+Inherited From: **Crm_Distribution_Channels_Table.Distribution_Channel_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### DocumentCurrency
 
 Currency for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Currencies_Table.Currency_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md)**  
+Category: **System**  
+Inherited From: **Gen_Currencies_Table.Currency_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### EndCustomerParty
 
 Unique party id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Parties_Table.Id`
 
-_Type_: **[Parties](General.Contacts.Parties.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Parties_Table.Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Parties](General.Contacts.Parties.md)**  
+Category: **System**  
+Inherited From: **Gen_Parties_Table.Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 The Enterprise Company to which this SalesAnalyticsEntry applies. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Category: **System**  
+Inherited From: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompanyLocation
 
 The Enterprise Company Location to which this SalesAnalyticsEntry applies. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id`
 
-_Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
-_Category_: **System**  
-_Inherited From_: **Cm_Company_Locations_Table.Company_Location_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+Category: **System**  
+Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Product
 
 Unique id of the item. `Required` `Default(New Guid)` `Filter(multi eq)` `ORD` `Inherited from Gen_Products_Table.Id`
 
-_Type_: **[Products](General.Products.Products.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Products_Table.Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Products](General.Products.Products.md)**  
+Category: **System**  
+Inherited From: **Gen_Products_Table.Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### ProductVariant
 
 Product Variant for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id`
 
-_Type_: **[ProductVariants](General.Products.ProductVariants.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Product_Variants_Table.Product_Variant_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProductVariants](General.Products.ProductVariants.md)**  
+Category: **System**  
+Inherited From: **Gen_Product_Variants_Table.Product_Variant_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### SalesPerson
 
 Unique sales person for this sales. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Crm_Sales_Persons_Table.Sales_Person_Id`
 
-_Type_: **[SalesPersons](Crm.SalesForce.SalesPersons.md)**  
-_Category_: **System**  
-_Inherited From_: **Crm_Sales_Persons_Table.Sales_Person_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md)**  
+Category: **System**  
+Inherited From: **Crm_Sales_Persons_Table.Sales_Person_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Store
 
 Unique store Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Stores_Table.Id`
 
-_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
-_Category_: **System**  
-_Inherited From_: **Inv_Stores_Table.Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Stores](Logistics.Inventory.Stores.md)**  
+Category: **System**  
+Inherited From: **Inv_Stores_Table.Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

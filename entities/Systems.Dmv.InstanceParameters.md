@@ -1,7 +1,7 @@
-# Systems.Dmv.InstanceParameters Entity
+# Systems.Dmv.InstanceParameters
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.InstanceParameters](Systems.Monitoring.InstanceParameters.md)
+New name: [Systems.Monitoring.InstanceParameters](Systems.Monitoring.InstanceParameters.md)

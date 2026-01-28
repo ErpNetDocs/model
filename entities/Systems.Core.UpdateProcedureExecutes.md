@@ -1,7 +1,7 @@
-# Systems.Core.UpdateProcedureExecutes Entity
+# Systems.Core.UpdateProcedureExecutes
 
-## Renamed entity
+## Renamed entity type
 
-This entity was renamed (in v.24).
+This entity type was renamed (in v.24).
 
-**New name:** [Systems.Monitoring.UpdateProcedureExecutes](Systems.Monitoring.UpdateProcedureExecutes.md)
+New name: [Systems.Monitoring.UpdateProcedureExecutes](Systems.Monitoring.UpdateProcedureExecutes.md)

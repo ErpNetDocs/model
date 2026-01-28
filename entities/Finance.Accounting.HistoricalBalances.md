@@ -1,20 +1,22 @@
 ---
 uid: Finance.Accounting.HistoricalBalances
 ---
-# Finance.Accounting.HistoricalBalances View
+# Finance.Accounting.HistoricalBalances (View)
 
-**Namespace:** [Finance.Accounting](Finance.Accounting.md)  
 
-Account balances with analytical dimensions as of the selected date. Entity: Acc_Historical_Balances (Introduced in version 25.1.2.93)
+Account balances with analytical dimensions as of the selected date.
 
-## Default Visualization
-Default Display Text Format:  
-_{BalanceValue}: {BalanceBaseValue}_  
-Default Search Members:  
-__  
-Category:  _Views_  
-Show in UI:  _ShownByDefault_  
-API access:  _ReadWrite_  
+## General
+Namespace: [Finance.Accounting](Finance.Accounting.md)  
+Repository: Finance.Accounting.HistoricalBalances  
+Introduced In Version: 25.1.2.93  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {BalanceValue}: {BalanceBaseValue}  
+Search Members:   
+Category:  Views  
+Show in UI:  ShownByDefault  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -49,52 +51,52 @@ Aggregate Tree
 
 Account balance in the original accounting currency as of the selected date. `Currency: Currency` `Required`
 
-_Type_: **[Amount (19, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (19, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### BalanceBase
 
 Account balance in the company’s base currency as of the selected date. `Currency: EnterpriseCompany.BaseCurrency` `Required`
 
-_Type_: **[Amount (19, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (19, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### BalanceReporting
 
 Account balance in the reporting currency as of the selected date. `Currency: EnterpriseCompany.ReportingCurrency` `Required`
 
-_Type_: **[Amount (19, 2)](../data-types.md#amount)**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Amount (19, 2)](../data-types.md#amount)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### Date
 
 The report shows balances as of this date. This is a required filter; if not set, the view returns no data. `Required` `Filter(eq)`
 
-_Type_: **date**  
-_Category_: **System**  
-_Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-_Show in UI_: **ShownByDefault**  
+Type: **date**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### ItemKey
 
 Combined analytical dimensions key used for grouping and filtering account balances. `Required` `Filter(eq;like)`
 
-_Type_: **string (64)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **64**  
-_Show in UI_: **ShownByDefault**  
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
 
 
 ## Reference Details
@@ -103,59 +105,59 @@ _Show in UI_: **ShownByDefault**
 
 The general ledger account for which the balance is calculated. Required field. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference`
 
-_Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Accounts_Table.Account_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Accounts](Finance.Accounting.Accounts.md)**  
+Category: **System**  
+Inherited From: **Acc_Accounts_Table.Account_Id**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### CostCenter
 
 The cost center associated with the account balance for analytical and reporting purposes. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id`
 
-_Type_: **[CostCenters](Finance.Accounting.CostCenters.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Cost_Centers_Table.Cost_Center_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
+Category: **System**  
+Inherited From: **Acc_Cost_Centers_Table.Cost_Center_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### Currency
 
 Currency in which the account balance is shown. Required field. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id` `FilterableReference`
 
-_Type_: **[Currencies](General.Currencies.Currencies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Currencies_Table.Currency_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[Currencies](General.Currencies.Currencies.md)**  
+Category: **System**  
+Inherited From: **Gen_Currencies_Table.Currency_Id**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### EnterpriseCompany
 
 The enterprise company whose accounts are being analyzed. Required for filtering accounting data. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id` `FilterableReference`
 
-_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
-_Category_: **System**  
-_Inherited From_: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+Category: **System**  
+Inherited From: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
+Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 ### ProfitCenter
 
 The profit center associated with the account balance for profit analysis and segment reporting. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id`
 
-_Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
-_Category_: **System**  
-_Inherited From_: **Acc_Profit_Centers_Table.Profit_Center_Id**  
-_Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
-_Show in UI_: **ShownByDefault**  
+Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
+Category: **System**  
+Inherited From: **Acc_Profit_Centers_Table.Profit_Center_Id**  
+Supported Filters: **Equals, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **ShownByDefault**  
 
 
 ## API

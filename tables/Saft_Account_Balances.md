@@ -15,6 +15,7 @@ Account balances for SAT-T reporting purpose . Entity: Saft_Account_Balances (In
 |[End_Balance_Base](#end_balance_base)|`decimal(38, 2)` |Start balance in base currency|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise company|
 |[From_Date](#from_date)|`date` |Filter date for start of period|
+|[Item_Key](#item_key)|`nvarchar(64)` |Item_Key|
 |[Start_Balance_Base](#start_balance_base)|`decimal(38, 2)` |Start balance in base currency|
 |[To_Date](#to_date)|`date` |Filter date for end of period|
 
@@ -157,6 +158,36 @@ Filter date for start of period
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Item_Key
+
+
+Item_Key
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Start_Balance_Base
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Logistics.Procurement.ProductSupply Entity | ERP.net Domain Model </title>
+      <title>Logistics.Procurement.ProductSupply | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Logistics.Procurement.ProductSupply Entity | ERP.net Domain Model ">
+      <meta name="title" content="Logistics.Procurement.ProductSupply | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,26 +85,27 @@
         </div>
 
         <article data-uid="Logistics.Procurement.ProductSupply">
-<h1 id="logisticsprocurementproductsupply-entity">Logistics.Procurement.ProductSupply Entity</h1>
+<h1 id="logisticsprocurementproductsupply">Logistics.Procurement.ProductSupply</h1>
 
-<p><strong>Namespace:</strong> <a href="Logistics.Procurement.html">Logistics.Procurement</a></p>
-<p>Contains supply rules, which are used by the procurement planning system. Entity: Gen_Product_Supply</p>
+<p>Contains supply rules, which are used by the procurement planning system.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Logistics.Procurement.html">Logistics.Procurement</a><br>
+Repository: Logistics.Procurement.ProductSupply<br>
+Base Table: Gen_Product_Supply<br>
+API access:  ReadWrite</p>
 <h2 id="renames">Renames</h2>
-<p>Old name: <strong>General.Products.ProductSupply</strong><br>
-New name: <strong>Logistics.Procurement.ProductSupply</strong><br>
-Version: <strong>25.1.1.48</strong><br>
-Case: <strong>37717</strong></p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{ProcurementType} {Product.PartNumber}: {Product.Name:T} ({Store.Name:T})</em><br>
-Default Search Members:<br>
-<em>Product.PartNumber; Product.Name</em><br>
-Category:  <em>Definitions</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
+<p>Old name: General.Products.ProductSupply<br>
+New name: Logistics.Procurement.ProductSupply<br>
+Version: 25.1.1.48<br>
+Case: 37717</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {ProcurementType} {Product.PartNumber}: {Product.Name:T} ({Store.Name:T})<br>
+Search Members: Product.PartNumber; Product.Name<br>
+Category:  Definitions<br>
+Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  <em>0 - Do not track changes</em><br>
-Max level:  <em>4 - Track object attribute and blob changes</em></p>
+<p>Min level:  0 - Do not track changes<br>
+Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -122,39 +123,14 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.Procurement.ProductSupply.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
-<td>datetime</td>
-<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
-</tr>
-<tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#buyername">BuyerName</a></td>
 <td>string (64) <strong>nullable</strong></td>
 <td>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.</td>
 </tr>
 <tr>
-<td><a href="Logistics.Procurement.ProductSupply.html#displaytext">DisplayText</a></td>
-<td>string</td>
-<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.ProductSupply.html#externalid">ExternalId</a></td>
-<td>string</td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.ProductSupply.html#externalsystem">ExternalSystem</a></td>
-<td>string</td>
-<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
-</tr>
-<tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#fixedorderquantitybase">FixedOrderQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Fixed order quantity under the FOQ &amp; EOQ replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.ProductSupply.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#isactive">IsActive</a></td>
@@ -170,11 +146,6 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 <td><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></td>
 <td><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></td>
 <td>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Procurement.ProductSupply.html#objectversion">ObjectVersion</a></td>
-<td>int32</td>
-<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderlotsizequantitybase">OrderLotSizeQuantityBase</a></td>
@@ -335,80 +306,87 @@ Max level:  <em>4 - Track object attribute and blob changes</em></p>
 </tr>
 </tbody>
 </table>
+<h2 id="system-attributes">System Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Procurement.ProductSupply.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.ProductSupply.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.ProductSupply.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.ProductSupply.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.ProductSupply.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.ProductSupply.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
-<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
-<p><em>Type</em>: <strong>datetime</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
 <h3 id="buyername">BuyerName</h3>
 <p>The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.</p>
-<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>64</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="displaytext">DisplayText</h3>
-<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Calculated Attributes</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
-<p><em>Type</em>: <strong>string</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fixedorderquantitybase">FixedOrderQuantityBase</h3>
 <p>Fixed order quantity under the FOQ &amp; EOQ replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
 <p>True if this product supply is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>True</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
 <p>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>True</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="manufacturingpolicy">ManufacturingPolicy</h3>
 <p>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. <code>Required</code> <code>Default(&quot;MTS&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>ManufacturingPolicy</code>(Logistics.Procurement.ProductSupply.md#manufacturingpolicy) data attribute<br>
-<em>Allowed Values (Logistics.Procurement.ProductSupplyRepository.ManufacturingPolicy Enum Members)</em></p>
+Allowed Values (Logistics.Procurement.ProductSupplyRepository.ManufacturingPolicy Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -419,47 +397,40 @@ Allowed values for the <code>ManufacturingPolicy</code>(Logistics.Procurement.Pr
 <tbody>
 <tr>
 <td>AssembleToOrder</td>
-<td>AssembleToOrder value. Stored as 'ATO'. <br> <em>Database Value:</em> 'ATO' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AssembleToOrder'</td>
+<td>AssembleToOrder value. Stored as 'ATO'. <br> Database Value: 'ATO' <br> Model Value: 0 <br> Domain API Value: 'AssembleToOrder'</td>
 </tr>
 <tr>
 <td>MakeToOrder</td>
-<td>MakeToOrder value. Stored as 'MTO'. <br> <em>Database Value:</em> 'MTO' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'MakeToOrder'</td>
+<td>MakeToOrder value. Stored as 'MTO'. <br> Database Value: 'MTO' <br> Model Value: 1 <br> Domain API Value: 'MakeToOrder'</td>
 </tr>
 <tr>
 <td>MakeToStock</td>
-<td>MakeToStock value. Stored as 'MTS'. <br> <em>Database Value:</em> 'MTS' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'MakeToStock'</td>
+<td>MakeToStock value. Stored as 'MTS'. <br> Database Value: 'MTS' <br> Model Value: 2 <br> Domain API Value: 'MakeToStock'</td>
 </tr>
 <tr>
 <td>EngineerToOrder</td>
-<td>EngineerToOrder value. Stored as 'ETO'. <br> <em>Database Value:</em> 'ETO' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'EngineerToOrder'</td>
+<td>EngineerToOrder value. Stored as 'ETO'. <br> Database Value: 'ETO' <br> Model Value: 3 <br> Domain API Value: 'EngineerToOrder'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>MakeToStock</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
-<h3 id="objectversion">ObjectVersion</h3>
-<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>Extensible Data Object</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: ****<br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>MakeToStock</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderlotsizequantitybase">OrderLotSizeQuantityBase</h3>
 <p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderlotsizingmethod">OrderLotSizingMethod</h3>
 <p>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. <code>Required</code> <code>Default(&quot;ROP&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>OrderLotSizingMethod</code>(Logistics.Procurement.ProductSupply.md#orderlotsizingmethod) data attribute<br>
-<em>Allowed Values (Logistics.Procurement.ProductSupplyRepository.OrderLotSizingMethod Enum Members)</em></p>
+Allowed Values (Logistics.Procurement.ProductSupplyRepository.OrderLotSizingMethod Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -470,85 +441,85 @@ Allowed values for the <code>OrderLotSizingMethod</code>(Logistics.Procurement.P
 <tbody>
 <tr>
 <td>EconomicOrderQuantity</td>
-<td>EconomicOrderQuantity value. Stored as 'EOQ'. <br> <em>Database Value:</em> 'EOQ' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'EconomicOrderQuantity'</td>
+<td>EconomicOrderQuantity value. Stored as 'EOQ'. <br> Database Value: 'EOQ' <br> Model Value: 0 <br> Domain API Value: 'EconomicOrderQuantity'</td>
 </tr>
 <tr>
 <td>FixedOrderQuantity</td>
-<td>FixedOrderQuantity value. Stored as 'FOQ'. <br> <em>Database Value:</em> 'FOQ' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'FixedOrderQuantity'</td>
+<td>FixedOrderQuantity value. Stored as 'FOQ'. <br> Database Value: 'FOQ' <br> Model Value: 1 <br> Domain API Value: 'FixedOrderQuantity'</td>
 </tr>
 <tr>
 <td>LotForLot</td>
-<td>LotForLot value. Stored as 'LFL'. <br> <em>Database Value:</em> 'LFL' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'LotForLot'</td>
+<td>LotForLot value. Stored as 'LFL'. <br> Database Value: 'LFL' <br> Model Value: 2 <br> Domain API Value: 'LotForLot'</td>
 </tr>
 <tr>
 <td>LotForPeriod</td>
-<td>LotForPeriod value. Stored as 'LFP'. <br> <em>Database Value:</em> 'LFP' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'LotForPeriod'</td>
+<td>LotForPeriod value. Stored as 'LFP'. <br> Database Value: 'LFP' <br> Model Value: 3 <br> Domain API Value: 'LotForPeriod'</td>
 </tr>
 <tr>
 <td>ReorderPoint</td>
-<td>ReorderPoint value. Stored as 'ROP'. <br> <em>Database Value:</em> 'ROP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'ReorderPoint'</td>
+<td>ReorderPoint value. Stored as 'ROP'. <br> Database Value: 'ROP' <br> Model Value: 4 <br> Domain API Value: 'ReorderPoint'</td>
 </tr>
 <tr>
 <td>ReorderPointWith<br>TimePlanning</td>
-<td>ReorderPointWith<br>TimePlanning value. Stored as 'ROT'. <br> <em>Database Value:</em> 'ROT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'ReorderPointWith<br>TimePlanning'</td>
+<td>ReorderPointWith<br>TimePlanning value. Stored as 'ROT'. <br> Database Value: 'ROT' <br> Model Value: 5 <br> Domain API Value: 'ReorderPointWith<br>TimePlanning'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>ReorderPoint</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>ReorderPoint</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ordermaximum">OrderMaximum</h3>
 <p>Order maximum when buying or making. null means no maximum. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderminimum">OrderMinimum</h3>
 <p>Minimum order quantity both for buying and making. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ordermultiple">OrderMultiple</h3>
 <p>True if the order qty should be multiple of lot size when buying or making. <code>Required</code> <code>Default(false)</code></p>
-<p><em>Type</em>: <strong>boolean</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderperiodplanningdays">OrderPeriodPlanningDays</h3>
 <p>For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.</p>
-<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>int32 <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderperiodstartdate">OrderPeriodStartDate</h3>
 <p>Start date of the first period under fixed period replenishment system. null - not yet specified. <code>Filter(ge;le)</code></p>
-<p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>datetime <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderpointquantitybase">OrderPointQuantityBase</h3>
 <p>Order point quantity under the OP replenishment system. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderpolicy">OrderPolicy</h3>
 <p>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. <code>Required</code> <code>Default(&quot;OPS&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.ProductSupply.html#orderpolicy">OrderPolicy</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#orderpolicy">OrderPolicy</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>OrderPolicy</code>(Logistics.Procurement.ProductSupply.md#orderpolicy) data attribute<br>
-<em>Allowed Values (Logistics.Procurement.ProductSupplyRepository.OrderPolicy Enum Members)</em></p>
+Allowed Values (Logistics.Procurement.ProductSupplyRepository.OrderPolicy Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -559,101 +530,101 @@ Allowed values for the <code>OrderPolicy</code>(Logistics.Procurement.ProductSup
 <tbody>
 <tr>
 <td>MaterialRequirements<br>Planning</td>
-<td>MaterialRequirements<br>Planning value. Stored as 'MRP'. <br> <em>Database Value:</em> 'MRP' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'MaterialRequirements<br>Planning'</td>
+<td>MaterialRequirements<br>Planning value. Stored as 'MRP'. <br> Database Value: 'MRP' <br> Model Value: 0 <br> Domain API Value: 'MaterialRequirements<br>Planning'</td>
 </tr>
 <tr>
 <td>OrderPointSystem</td>
-<td>OrderPointSystem value. Stored as 'OPS'. <br> <em>Database Value:</em> 'OPS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'OrderPointSystem'</td>
+<td>OrderPointSystem value. Stored as 'OPS'. <br> Database Value: 'OPS' <br> Model Value: 1 <br> Domain API Value: 'OrderPointSystem'</td>
 </tr>
 <tr>
 <td>OrderPointSystem<br>WithTimePlanning</td>
-<td>OrderPointSystem<br>WithTimePlanning value. Stored as 'OPT'. <br> <em>Database Value:</em> 'OPT' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'OrderPointSystem<br>WithTimePlanning'</td>
+<td>OrderPointSystem<br>WithTimePlanning value. Stored as 'OPT'. <br> Database Value: 'OPT' <br> Model Value: 2 <br> Domain API Value: 'OrderPointSystem<br>WithTimePlanning'</td>
 </tr>
 <tr>
 <td>PeriodicReviewSystem</td>
-<td>PeriodicReviewSystem value. Stored as 'PRS'. <br> <em>Database Value:</em> 'PRS' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'PeriodicReviewSystem'</td>
+<td>PeriodicReviewSystem value. Stored as 'PRS'. <br> Database Value: 'PRS' <br> Model Value: 3 <br> Domain API Value: 'PeriodicReviewSystem'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>OrderPointSystem</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>OrderPointSystem</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningannualcarryingcostpercent">PlanningAnnualCarryingCostPercent</h3>
 <p>The expected carrying cost as percentage of inventory cost. null means unknown.</p>
-<p><em>Type</em>: <strong>decimal (5, 4) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>decimal (5, 4) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningannualusagequantitybase">PlanningAnnualUsageQuantityBase</h3>
 <p>Average usage of the product for 1 year. NUL means unknown. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planninghorizondays">PlanningHorizonDays</h3>
 <p>Number of days in the future for which to plan the demand and supply. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="planningleadtimedays">PlanningLeadTimeDays</h3>
 <p>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>0</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<p><em>Front-End Recalc Expressions:</em><br>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
 <code>obj.PreferredSupplier.DefaultDeliveryTermDays</code></p>
 <h3 id="planningmaximuminventoryquantitybase">PlanningMaximumInventoryQuantityBase</h3>
 <p>Maximum inventory. null if N/A. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="planningordercostbasecurrency">PlanningOrderCostBaseCurrency</h3>
 <p>Projected cost to place an order and set-up equipment. <code>Currency: EnterpriseCompany.BaseCurrency</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 3)</a> <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (18, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningordercycledays">PlanningOrderCycleDays</h3>
 <p>Number of days in one period under fixed period replenishment system. null - not yet specified.</p>
-<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong>int32 <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningsafetystockquantitybase">PlanningSafetyStockQuantityBase</h3>
 <p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningtimefencedays">PlanningTimeFenceDays</h3>
 <p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. <code>Required</code> <code>Default(1)</code></p>
-<p><em>Type</em>: <strong>int32</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>1</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>1</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="procurementtype">ProcurementType</h3>
 <p>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. <code>Required</code> <code>Default(&quot;B&quot;)</code> <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.ProductSupply.html#procurementtype">ProcurementType</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
+<p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#procurementtype">ProcurementType</a></strong><br>
+Category: <strong>System</strong><br>
 Allowed values for the <code>ProcurementType</code>(Logistics.Procurement.ProductSupply.md#procurementtype) data attribute<br>
-<em>Allowed Values (Logistics.Procurement.ProductSupplyRepository.ProcurementType Enum Members)</em></p>
+Allowed Values (Logistics.Procurement.ProductSupplyRepository.ProcurementType Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -664,155 +635,197 @@ Allowed values for the <code>ProcurementType</code>(Logistics.Procurement.Produc
 <tbody>
 <tr>
 <td>Buy</td>
-<td>Buy value. Stored as 'B'. <br> <em>Database Value:</em> 'B' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Buy'</td>
+<td>Buy value. Stored as 'B'. <br> Database Value: 'B' <br> Model Value: 0 <br> Domain API Value: 'Buy'</td>
 </tr>
 <tr>
 <td>Make</td>
-<td>Make value. Stored as 'M'. <br> <em>Database Value:</em> 'M' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Make'</td>
+<td>Make value. Stored as 'M'. <br> Database Value: 'M' <br> Model Value: 1 <br> Domain API Value: 'Make'</td>
 </tr>
 <tr>
 <td>Transfer</td>
-<td>Transfer value. Stored as 'T'. <br> <em>Database Value:</em> 'T' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Transfer'</td>
+<td>Transfer value. Stored as 'T'. <br> Database Value: 'T' <br> Model Value: 2 <br> Domain API Value: 'Transfer'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>Equals</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Buy</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Buy</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
 <p>Standard cost for one lot of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Default Value</em>: <strong>Constant</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="supplyschemaid">SupplySchemaId</h3>
 <p>The supply schema to use for the distribution of the product among warehouses. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>CannotBeShown</strong></p>
+<p>Type: <strong>guid <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="id">Id</h3>
+<p>Type: <strong>guid</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+Default Value: <strong>NewGuid</strong><br>
+Show in UI: <strong>CannotBeShown</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
+<p>Type: <strong>int32</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultstorebin">DefaultStoreBin</h3>
 <p>Default store bin for new deliveries using this supply scheme. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fromstore">FromStore</h3>
 <p>Used when the Procurement_Type is Transfer. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>HiddenByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="generatedocumenttype">GenerateDocumentType</h3>
 <p>Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="preferredsupplier">PreferredSupplier</h3>
 <p>Preferred supplier for the product. null if there is no preferred supplier. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The <see cref="General.Products.Product"></see> to which this ProductSupply belongs. <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
 <p>Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
 <p>The store for which this rule is defined. When null, the rule is valid for all stores. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
+<p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
 <p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-<em>Return Type</em>: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>GET</strong></p>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>customPropertyCode</strong><br>
 The code of the custom property<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>search</strong><br>
 The search text - searches by value or description. Can contain wildcard character %.<br>
-<em>Type</em>: string<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: null</p>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
 </li>
 <li><p><strong>exactMatch</strong><br>
 If true the search text should be equal to the property value<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>orderByDescription</strong><br>
 If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-<em>Type</em>: boolean<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: False</p>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
 </li>
 <li><p><strong>top</strong><br>
 The top clause - default is 10<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 10</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
 </li>
 <li><p><strong>skip</strong><br>
 The skip clause - default is 0<br>
-<em>Type</em>: int32<br>
-<em>Optional</em>: True<br>
-<em>Default Value</em>: 0</p>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
 </li>
 </ul>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
-<em>Return Type</em>: <strong>void</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><p><strong>user</strong><br>
 The user.<br>
-<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+Type: <a href="Systems.Security.Users.html">Users</a></p>
 </li>
 <li><p><strong>notificationClass</strong><br>
 The notification class.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>subject</strong><br>
 The notification subject.<br>
-<em>Type</em>: string</p>
+Type: string</p>
 </li>
 <li><p><strong>priority</strong><br>
 The notification priority.<br>
-<em>Type</em>: Systems.Core.NotificationsRepository.Priority<br>
+Type: Systems.Core.NotificationsRepository.Priority<br>
 Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#priority) data attribute<br>
-<em>Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</em></p>
+Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 <table>
 <thead>
 <tr>
@@ -823,35 +836,35 @@ Allowed values for the <code>Priority</code>(Systems.Core.Notifications.md#prior
 <tbody>
 <tr>
 <td>Background</td>
-<td>Background value. Stored as 1. <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Background'</td>
+<td>Background value. Stored as 1. <br> Model Value: 1 <br> Domain API Value: 'Background'</td>
 </tr>
 <tr>
 <td>Low</td>
-<td>Low value. Stored as 2. <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Low'</td>
+<td>Low value. Stored as 2. <br> Model Value: 2 <br> Domain API Value: 'Low'</td>
 </tr>
 <tr>
 <td>Normal</td>
-<td>Normal value. Stored as 3. <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Normal'</td>
+<td>Normal value. Stored as 3. <br> Model Value: 3 <br> Domain API Value: 'Normal'</td>
 </tr>
 <tr>
 <td>High</td>
-<td>High value. Stored as 4. <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'High'</td>
+<td>High value. Stored as 4. <br> Model Value: 4 <br> Domain API Value: 'High'</td>
 </tr>
 <tr>
 <td>Urgent</td>
-<td>Urgent value. Stored as 5. <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Urgent'</td>
+<td>Urgent value. Stored as 5. <br> Model Value: 5 <br> Domain API Value: 'Urgent'</td>
 </tr>
 </tbody>
 </table>
-<p><em>Optional</em>: True<br>
-<em>Default Value</em>: Normal</p>
+<p>Optional: True<br>
+Default Value: Normal</p>
 </li>
 </ul>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-<em>Return Type</em>: <strong>EntityObject</strong><br>
-<em>Declaring Type</em>: <strong>EntityObject</strong><br>
-<em>Domain API Request</em>: <strong>POST</strong></p>
+Return Type: <strong>EntityObject</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R27435.html">R27435 ProductSupply - Store</a></li>
