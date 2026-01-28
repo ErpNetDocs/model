@@ -164,7 +164,8 @@ Allowed Values (Crm.Pos.SalesRepository.SaleKind Enum Members)
 | ---- | --- |
 | NormalSale | Normal sale. Stored as 'SAL'. <br /> Database Value: 'SAL' <br /> Model Value: 0 <br /> Domain API Value: 'NormalSale' |
 | ReturnOrrefund | Return/refund. Stored as 'RET'. <br /> Database Value: 'RET' <br /> Model Value: 1 <br /> Domain API Value: 'ReturnOrrefund' |
-| Mixed | Mixed. Stored as 'MIX'. <br /> Database Value: 'MIX' <br /> Model Value: 2 <br /> Domain API Value: 'Mixed' |
+| Invoice | Invoice value. Stored as 'INV'. <br /> Database Value: 'INV' <br /> Model Value: 2 <br /> Domain API Value: 'Invoice' |
+| CreditNote | CreditNote value. Stored as 'CRN'. <br /> Database Value: 'CRN' <br /> Model Value: 3 <br /> Domain API Value: 'CreditNote' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  

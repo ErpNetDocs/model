@@ -33,6 +33,7 @@ Aggregate Tree
 | [ItemKey](Saft.AccountBalances.md#itemkey) | string (64) | Item_Key. `Required` `Introduced in version 26.2.1.27` 
 | [StartBalanceBase](Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency. `Required` 
 | [ToDate](Saft.AccountBalances.md#todate) | date | Filter date for end of period. `Required` `Filter(eq)` 
+| [VouchersInPeriod](Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period. `Required` `Introduced in version 26.2.1.27` 
 
 ## References
 
@@ -92,6 +93,16 @@ Filter date for end of period. `Required` `Filter(eq)`
 Type: **date**  
 Category: **System**  
 Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### VouchersInPeriod
+
+Count of Vouchers in period. `Required` `Introduced in version 26.2.1.27`
+
+Type: **int32**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 

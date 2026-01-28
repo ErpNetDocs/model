@@ -15,8 +15,10 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 |[Max_No](#max_no)|`nvarchar(16)` |Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited.|
 |[Next_No](#next_no)|`nvarchar(16)` |The next consecutive number which will be assigned on the next request.|
 |[Pos_Device_Id](#pos_device_id)|`uniqueidentifier` |The POS device, for which the sequence is defined.|
+|[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |The POS location, for which the sequence is defined.|
 |[Pos_Sequence_Id](#pos_sequence_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
+|[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Kind of POS sale event.|
 
 ## Columns
 
@@ -167,6 +169,42 @@ The POS device, for which the sequence is defined.
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Pos_Location_Id
+
+
+The POS location, for which the sequence is defined.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Pos_Location_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Pos_Sequence_Id
 
 | Property | Value |
@@ -227,5 +265,36 @@ The POS device, for which the sequence is defined.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Sale_Kind
+
+
+Kind of POS sale event.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`SAL`, `RET`, `INV`, `CRN`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|SAL|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 

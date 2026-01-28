@@ -27,7 +27,7 @@ Stores header-level information for individual retail transactions processed thr
 |[Row_Version](#row_version)|`timestamp` ||
 |[Sale_Currency_Id](#sale_currency_id)|`uniqueidentifier` |Reference to the currency in which this POS sale is recorded.|
 |[Sale_Date](#sale_date)|`date` |Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.|
-|[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `MIX`|Kind of POS sale event. Typically it is "Normal sale".|
+|[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Kind of POS sale event. Typically it is "Normal sale".|
 |[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
 |[Terminal_Id](#terminal_id)|`uniqueidentifier` |Link to specific POS workspace terminal used.|
 |[Total_Amount](#total_amount)|`decimal(14, 2)` |Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).|
@@ -623,7 +623,7 @@ Kind of POS sale event. Typically it is "Normal sale".
 
 | Property | Value |
 | - | - |
-|Allowed Values|`SAL`, `RET`, `MIX`|
+|Allowed Values|`SAL`, `RET`, `INV`, `CRN`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|SAL|

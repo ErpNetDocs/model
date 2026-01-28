@@ -133,6 +133,16 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>string (16)</td>
 <td>The next consecutive number which will be assigned on the next request. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
+<tr>
+<td><a href="Crm.Pos.Sequences.html#poslocationid">PosLocationId</a></td>
+<td>guid <strong>nullable</strong></td>
+<td>The POS location, for which the sequence is defined. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.27</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.Sequences.html#salekind">SaleKind</a></td>
+<td><a href="Crm.Pos.Sequences.html#salekind">SaleKind</a></td>
+<td>Kind of POS sale event. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Introduced in version 26.2.1.27</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -218,6 +228,49 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="poslocationid">PosLocationId</h3>
+<p>The POS location, for which the sequence is defined. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.27</code></p>
+<p>Type: <strong>guid <strong>nullable</strong></strong><br>
+Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="salekind">SaleKind</h3>
+<p>Kind of POS sale event. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Introduced in version 26.2.1.27</code></p>
+<p>Type: <strong><a href="Crm.Pos.Sequences.html#salekind">SaleKind</a></strong><br>
+Category: <strong>System</strong><br>
+Allowed values for the <code>SaleKind</code>(Crm.Pos.Sales.md#salekind) data attribute<br>
+Allowed Values (Crm.Pos.SalesRepository.SaleKind Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NormalSale</td>
+<td>Normal sale. Stored as 'SAL'. <br> Database Value: 'SAL' <br> Model Value: 0 <br> Domain API Value: 'NormalSale'</td>
+</tr>
+<tr>
+<td>ReturnOrrefund</td>
+<td>Return/refund. Stored as 'RET'. <br> Database Value: 'RET' <br> Model Value: 1 <br> Domain API Value: 'ReturnOrrefund'</td>
+</tr>
+<tr>
+<td>Invoice</td>
+<td>Invoice value. Stored as 'INV'. <br> Database Value: 'INV' <br> Model Value: 2 <br> Domain API Value: 'Invoice'</td>
+</tr>
+<tr>
+<td>CreditNote</td>
+<td>CreditNote value. Stored as 'CRN'. <br> Database Value: 'CRN' <br> Model Value: 3 <br> Domain API Value: 'CreditNote'</td>
+</tr>
+</tbody>
+</table>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>NormalSale</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p>Type: <strong>guid</strong><br>

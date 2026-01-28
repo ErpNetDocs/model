@@ -36,6 +36,8 @@ Aggregate Tree
 | [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)` 
 | [MaxNo](Crm.Pos.Sequences.md#maxno) | string (16) __nullable__ | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
 | [NextNo](Crm.Pos.Sequences.md#nextno) | string (16) | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
+| [PosLocationId](Crm.Pos.Sequences.md#poslocationid) | guid __nullable__ | The POS location, for which the sequence is defined. `Filter(multi eq)` `Introduced in version 26.2.1.27` 
+| [SaleKind](Crm.Pos.Sequences.md#salekind) | [SaleKind](Crm.Pos.Sequences.md#salekind) | Kind of POS sale event. `Required` `Default("SAL")` `Introduced in version 26.2.1.27` 
 
 ## References
 
@@ -89,6 +91,37 @@ Category: **System**
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
+
+### PosLocationId
+
+The POS location, for which the sequence is defined. `Filter(multi eq)` `Introduced in version 26.2.1.27`
+
+Type: **guid __nullable__**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### SaleKind
+
+Kind of POS sale event. `Required` `Default("SAL")` `Introduced in version 26.2.1.27`
+
+Type: **[SaleKind](Crm.Pos.Sequences.md#salekind)**  
+Category: **System**  
+Allowed values for the `SaleKind`(Crm.Pos.Sales.md#salekind) data attribute  
+Allowed Values (Crm.Pos.SalesRepository.SaleKind Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| NormalSale | Normal sale. Stored as 'SAL'. <br /> Database Value: 'SAL' <br /> Model Value: 0 <br /> Domain API Value: 'NormalSale' |
+| ReturnOrrefund | Return/refund. Stored as 'RET'. <br /> Database Value: 'RET' <br /> Model Value: 1 <br /> Domain API Value: 'ReturnOrrefund' |
+| Invoice | Invoice value. Stored as 'INV'. <br /> Database Value: 'INV' <br /> Model Value: 2 <br /> Domain API Value: 'Invoice' |
+| CreditNote | CreditNote value. Stored as 'CRN'. <br /> Database Value: 'CRN' <br /> Model Value: 3 <br /> Domain API Value: 'CreditNote' |
+
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **NormalSale**  
 Show in UI: **ShownByDefault**  
 
 ### Id
