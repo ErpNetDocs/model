@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R39339 CustomerExternalAccess – Serviced By Enterprise Company Location Required | ERP.net Domain Model </title>
+      <title>R38379 Case Development - Notify All Case Implicit Followers | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R39339 CustomerExternalAccess – Serviced By Enterprise Company Location Required | ERP.net Domain Model ">
+      <meta name="title" content="R38379 Case Development - Notify All Case Implicit Followers | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39339.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39543.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r39339-customerexternalaccess--serviced-by-enterprise-company-location-required">R39339 CustomerExternalAccess – Serviced By Enterprise Company Location Required</h1>
+<h1 id="r38379-case-development---notify-all-case-implicit-followers">R38379 Case Development - Notify All Case Implicit Followers</h1>
 
 <table>
 <col style="width:25%">
@@ -93,19 +93,19 @@
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R39339</td>
+<td>R39543</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Crm.Sales.CustomerExternalAccess.html">Crm.Sales.CustomerExternalAccess</a></td>
+<td><a class="xref" href="../entities/Projects.Agile.CaseDevelopments.html">Projects.Agile.CaseDevelopments</a></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>ServicedByEnterpriseCompanyLocationRequired</td>
+<td>NotifyAllCaseImplicitFollowers</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>Customer, Customer.ServicedByEnterpriseCompanyLocation</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -113,46 +113,45 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>Commit</td>
-</tr>
-<tr>
-<td><strong>Record State</strong></td>
-<td>Inserted, Updated</td>
+<td>Committed</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
-<td>Normal</td>
+<td>Late</td>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
-<td>NO</td>
+<td>YES</td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>The rule validates that External Access can be created or updated only for Customers
-that have a Serviced By Enterprise Company Location defined.</td>
+<td><p>The rule performs the following steps to determine which users should be notified:</p>
+<ul>
+<li>Collect all non-null Case header references (e.g., Project, Project Area, Project Milestone, Sprint, Case Category, etc.)<br></li>
+<li>Build a list of referenced objects<br></li>
+<li>Retrieve users from FollowedEntities who follow any of these objects with FollowLevel = Favorite.<br></li>
+<li>Remove duplicate users and exclude CaseDevelopment.CreationUser<br>
+If any users are found, the rule creates a notification for each of them through the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.<br></li>
+</ul>
+</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule prevents creating External Access records that cannot be accessed in the
-Client Center. It ensures that External Access can be created only for Customers who
-have a Serviced By Enterprise Company Location defined.</td>
+<td>The rule notifies users who follow at Favorite level at least one entity referenced
+in the Case header when a Case Development is saved, so they receive timely updates
+about creations and changes on Cases related to objects of interest.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>External access cannot be activated for customer “{Customer.DisplayText}”.
-The Customer does not have a defined Serviced by Enterprise Company Location.
-<br><br>
-Please set a Serviced by Enterprise Company Location in the definition of
-“{Customer.DisplayText}” before creating an External Access record.</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: v. 26 SP8</td>
+<td>Introduced:</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
-<td>Yes</td>
+<td>YES</td>
 </tr>
 </tbody>
 </table>
@@ -162,7 +161,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sy
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39339.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39543.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
