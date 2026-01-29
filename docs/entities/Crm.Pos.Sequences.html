@@ -95,8 +95,9 @@ Base Table: Pos_Sequences<br>
 Introduced In Version: 19.1<br>
 API access:  ReadWrite</p>
 <h2 id="visualization">Visualization</h2>
-<p>Display Format: {Id}: {PosDeviceId}<br>
-Search Members:<br>
+<p>Display Format: {PosSequenceName:T}<br>
+Search Members: PosSequenceName<br>
+Name Member: PosSequenceName<br>
 Category:  Definitions<br>
 Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
@@ -134,14 +135,9 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>The next consecutive number which will be assigned on the next request. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
-<td><a href="Crm.Pos.Sequences.html#poslocationid">PosLocationId</a></td>
-<td>guid <strong>nullable</strong></td>
-<td>The POS location, for which the sequence is defined. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.27</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Pos.Sequences.html#salekind">SaleKind</a></td>
-<td><a href="Crm.Pos.Sequences.html#salekind">SaleKind</a></td>
-<td>Kind of POS sale event. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Introduced in version 26.2.1.27</code></td>
+<td><a href="Crm.Pos.Sequences.html#possequencename">PosSequenceName</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
+<td>The multi-language name of the sequence. <code>Filter(multi eq;like)</code> <code>Introduced in version 26.2.1.28</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,6 +155,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td><a href="Crm.Pos.Sequences.html#posdevice">PosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</td>
 <td>The POS device, for which the sequence is defined. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.Sequences.html#poslocation">PosLocation</a></td>
+<td><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</td>
+<td>The POS location, for which the sequence is defined. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.27</code></td>
 </tr>
 </tbody>
 </table>
@@ -229,48 +230,12 @@ Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="poslocationid">PosLocationId</h3>
-<p>The POS location, for which the sequence is defined. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.27</code></p>
-<p>Type: <strong>guid <strong>nullable</strong></strong><br>
-Indexed: <strong>True</strong><br>
+<h3 id="possequencename">PosSequenceName</h3>
+<p>The multi-language name of the sequence. <code>Filter(multi eq;like)</code> <code>Introduced in version 26.2.1.28</code></p>
+<p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
-Supported Filters: <strong>Equals, EqualsIn</strong><br>
-Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="salekind">SaleKind</h3>
-<p>Kind of POS sale event. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Introduced in version 26.2.1.27</code></p>
-<p>Type: <strong><a href="Crm.Pos.Sequences.html#salekind">SaleKind</a></strong><br>
-Category: <strong>System</strong><br>
-Allowed values for the <code>SaleKind</code>(Crm.Pos.Sales.md#salekind) data attribute<br>
-Allowed Values (Crm.Pos.SalesRepository.SaleKind Enum Members)</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NormalSale</td>
-<td>Normal sale. Stored as 'SAL'. <br> Database Value: 'SAL' <br> Model Value: 0 <br> Domain API Value: 'NormalSale'</td>
-</tr>
-<tr>
-<td>ReturnOrrefund</td>
-<td>Return/refund. Stored as 'RET'. <br> Database Value: 'RET' <br> Model Value: 1 <br> Domain API Value: 'ReturnOrrefund'</td>
-</tr>
-<tr>
-<td>Invoice</td>
-<td>Invoice value. Stored as 'INV'. <br> Database Value: 'INV' <br> Model Value: 2 <br> Domain API Value: 'Invoice'</td>
-</tr>
-<tr>
-<td>CreditNote</td>
-<td>CreditNote value. Stored as 'CRN'. <br> Database Value: 'CRN' <br> Model Value: 3 <br> Domain API Value: 'CreditNote'</td>
-</tr>
-</tbody>
-</table>
-<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
-Default Value: <strong>NormalSale</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p>Type: <strong>guid</strong><br>
@@ -321,7 +286,13 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
-Show in UI: <strong>CannotBeShown</strong></p>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="poslocation">PosLocation</h3>
+<p>The POS location, for which the sequence is defined. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.27</code></p>
+<p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>

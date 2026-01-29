@@ -17,8 +17,8 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 |[Pos_Device_Id](#pos_device_id)|`uniqueidentifier` |The POS device, for which the sequence is defined.|
 |[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |The POS location, for which the sequence is defined.|
 |[Pos_Sequence_Id](#pos_sequence_id)|`uniqueidentifier` `PK`||
+|[Pos_Sequence_Name](#pos_sequence_name)|`nvarchar(254)` `ML`|The multi-language name of the sequence.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Kind of POS sale event.|
 
 ## Columns
 
@@ -161,7 +161,7 @@ The POS device, for which the sequence is defined.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|no|
+|Visible|yes|
 
 #### Pos_Device_Id - Supported Filters
 
@@ -189,6 +189,7 @@ The POS location, for which the sequence is defined.
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Pos_Locations](Pos_Locations.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -239,6 +240,43 @@ The POS location, for which the sequence is defined.
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|yes|
 
+### Pos_Sequence_Name
+
+
+The multi-language name of the sequence.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Pos_Sequence_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -265,36 +303,5 @@ The POS location, for which the sequence is defined.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
-
-### Sale_Kind
-
-
-Kind of POS sale event.
-
-| Property | Value |
-| - | - |
-|Allowed Values|`SAL`, `RET`, `INV`, `CRN`|
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|SAL|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|3|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|char(3)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
 
 
