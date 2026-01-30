@@ -87,7 +87,7 @@
         <article data-uid="Crm.Sales.SalesOrders">
 <h1 id="crmsalessalesorders">Crm.Sales.SalesOrders</h1>
 
-<p>Sales order document headers.</p>
+<p>Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms. This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings. Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
 Repository: Crm.Sales.SalesOrders<br>
@@ -424,7 +424,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#endcustomerparty">EndCustomerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -1430,7 +1430,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endcustomerparty">EndCustomerParty</h3>
-<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
+<p>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

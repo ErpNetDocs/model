@@ -4,7 +4,7 @@ uid: Crm.Sales.CustomerProducts
 # Crm.Sales.CustomerProducts
 
 
-Contains the products, that are contracted (listed) with a customer.
+Customer Products represent the products that are contractually agreed and listed for a specific customer. This data type defines the set of products associated with a customer, including products that are contractually negotiated, approved for sale, or explicitly listed as available to that customer. Customer Products are used to support customer-specific assortments, sales restrictions, pricing agreements, and order validation, ensuring that only applicable products are offered and sold to the customer.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  

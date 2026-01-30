@@ -5,7 +5,7 @@
 
 Entity: [Crm.Sales.SalesAnalytics](~/entities/Crm.Sales.SalesAnalytics.md)
 
-Grouped sales data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62)
+Sales Analytics provides aggregated and structured sales data optimized for reporting and analysis. This data type contains pre-grouped sales measures and dimensions derived from sales documents, such as quantities, amounts, discounts, revenues, and related analytical attributes (e.g. customer, product, period, location). Sales Analytics is designed to support fast and consistent sales reporting, dashboards, KPIs, and business analysis, enabling users to analyze sales performance across different perspectives without processing raw transactional data. Entity: Crm_Sales_Analytics (Introduced in version 26.2.0.62)
 
 ## Summary
 

@@ -4,7 +4,7 @@ uid: Crm.Sales.SalesAnalytics
 # Crm.Sales.SalesAnalytics (View)
 
 
-Grouped sales data.
+Sales Analytics provides aggregated and structured sales data optimized for reporting and analysis. This data type contains pre-grouped sales measures and dimensions derived from sales documents, such as quantities, amounts, discounts, revenues, and related analytical attributes (e.g. customer, product, period, location). Sales Analytics is designed to support fast and consistent sales reporting, dashboards, KPIs, and business analysis, enabling users to analyze sales performance across different perspectives without processing raw transactional data.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  

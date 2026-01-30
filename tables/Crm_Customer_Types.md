@@ -5,7 +5,7 @@
 
 Entity: [Crm.Sales.CustomerTypes](~/entities/Crm.Sales.CustomerTypes.md)
 
-User defined customer type. Primarily used for customer definition security, because it has record level security, which is also applied to the individual customer definitions. Entity: Crm_Customer_Types
+Customer Types define user-defined categories used to classify customers within the sales domain. This data type is used to group customers for organizational, security, and behavioral purposes, allowing access control at type level so that users without permission for a given customer type cannot access the customer records belonging to it. Customer Types are also used to influence application behavior and user interface layout, enabling different screens, panels, and field configurations for customers of different types. Entity: Crm_Customer_Types
 
 ## Summary
 

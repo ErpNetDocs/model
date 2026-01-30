@@ -5,7 +5,7 @@
 
 Entity: [Crm.Sales.Customers](~/entities/Crm.Sales.Customers.md)
 
-Customer contracts list. For each combination of Enterprise Company and external Party there can be zero or one records of this. Entity: Crm_Customers
+Customers represent external persons or organizations that purchase goods or services from an enterprise company. This entity type defines the commercial relationship between an enterprise company and an external party acting as a customer, including sales terms, pricing, discounts, credit limits, tax settings, and other settings related to working with the customer. Customers are used across sales, orders, invoicing, deliveries, payments, CRM activities, and reporting. For each combination of enterprise company and external party, there can be zero or one Customer record, establishing that party as a customer of the enterprise company. Entity: Crm_Customers
 
 ## Summary
 

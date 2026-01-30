@@ -13,6 +13,7 @@ Contains the services, which can be performed. Entity: Srv_Services
 | - | - | --- |
 |[Is_Active](#is_active)|`bit` |Indicates wheather this service is currently used.|
 |[Measurement_Unit_Id](#measurement_unit_id)|`uniqueidentifier` |The measurement unit in which the service rendered to the customer is quantified|
+|[Operational_Procedure_Id](#operational_procedure_id)|`uniqueidentifier` |Operational Procedure|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Service_Code](#service_code)|`nvarchar(16)` |Unique code of the service.|
 |[Service_Id](#service_id)|`uniqueidentifier` `PK`||
@@ -34,7 +35,7 @@ Indicates wheather this service is currently used.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -70,7 +71,7 @@ The measurement unit in which the service rendered to the customer is quantified
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -93,6 +94,43 @@ The measurement unit in which the service rendered to the customer is quantified
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Operational_Procedure_Id
+
+
+Operational Procedure
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|6|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Op_Operational_Procedures](Op_Operational_Procedures.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Operational_Procedure_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -104,7 +142,7 @@ The measurement unit in which the service rendered to the customer is quantified
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -134,7 +172,7 @@ Unique code of the service.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|16|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -168,7 +206,7 @@ Unique code of the service.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -205,7 +243,7 @@ The name of the service.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

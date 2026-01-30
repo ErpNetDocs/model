@@ -4,7 +4,7 @@ uid: Crm.Sales.SalesOrderPromotionalPackages
 # Crm.Sales.SalesOrderPromotionalPackages
 
 
-The promotional packages, included in a sales order.
+Sales Order Promotional Packages represent promotional bundles or offers applied within a Sales Order. This data type defines the promotional packages included in a sales order, consisting of a predefined combination of products or services offered under special commercial conditions, such as bundled pricing, discounts, or promotional rules. Promotional packages are used to apply, track, and analyze promotions in sales orders, ensuring consistent pricing, correct fulfillment, and accurate reporting of promotion-driven sales.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  

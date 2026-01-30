@@ -5,7 +5,7 @@
 
 Entity: [Crm.Sales.CustomerExternalAccess](~/entities/Crm.Sales.CustomerExternalAccess.md)
 
-Defines the users permissions to specific customer data. Entity: Crm_Customer_External_Access (Introduced in version 25.1.2.51)
+Customer External Access defines which external users are allowed to access data related to a specific customer. This data type specifies external users and their access rights to customer-related information such as sales orders, invoices, payments, and other sales documents, intended for controlled access outside the internal user environment. It is used to securely expose customer data to external parties, ensuring appropriate visibility and separation from internal operational access. Entity: Crm_Customer_External_Access (Introduced in version 25.1.2.51)
 
 ## Owner Tables Hierarchy
 

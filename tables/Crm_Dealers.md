@@ -5,7 +5,7 @@
 
 Entity: [Crm.Sales.Dealers](~/entities/Crm.Sales.Dealers.md)
 
-External dealers. Entity: Crm_Dealers
+Dealers represent external parties that participate in or broker sales between the enterprise company and customers. This data type defines dealers involved in sales transactions, which can be specified in Sales Orders to indicate who assisted, referred, or intermediated the sale. Dealers are primarily used to track dealer involvement in sales and to support commission calculation, settlement, and reporting related to dealer-driven sales. Entity: Crm_Dealers
 
 ## Summary
 

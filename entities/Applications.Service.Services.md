@@ -44,6 +44,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. `Required` `Filter(multi eq)` |
+| [OperationalProcedure](Applications.Service.Services.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) (nullable) | Operational Procedure. `Filter(multi eq)` `Introduced in version 26.2.1.30` |
 
 
 ## System Attributes
@@ -170,6 +171,15 @@ Show in UI: **HiddenByDefault**
 The measurement unit in which the service rendered to the customer is quantified. `Required` `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### OperationalProcedure
+
+Operational Procedure. `Filter(multi eq)` `Introduced in version 26.2.1.30`
+
+Type: **[OperationalProcedures](Projects.Procedures.OperationalProcedures.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

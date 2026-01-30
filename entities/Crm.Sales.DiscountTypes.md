@@ -4,7 +4,7 @@ uid: Crm.Sales.DiscountTypes
 # Crm.Sales.DiscountTypes
 
 
-Contains the different types of discounts, which can be applied to sales lines. Different types of discounts can be combined for a single sales line.
+Discount Types define the classification and application rules for line discounts in sales documents. This data type specifies discount types that can be applied to sales order lines, including the discount level used in multi-level discounting. For each discount level, ERP.net selects one applicable discount and applies it to the line, while discounts from different levels can be combined (cascaded) to form the effective line discount.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  

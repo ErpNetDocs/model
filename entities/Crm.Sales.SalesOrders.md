@@ -4,7 +4,7 @@ uid: Crm.Sales.SalesOrders
 # Crm.Sales.SalesOrders
 
 
-Sales order document headers.
+Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms. This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings. Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -107,7 +107,7 @@ Aggregate Tree
 | [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The distribution channel, that is used to deliver the products. `Filter(multi eq)` |
 | [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Sales.SalesOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. `Filter(multi eq)` `Introduced in version 20.1` |
+| [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. `Filter(multi eq)` `Introduced in version 20.1` |
 | [EnterpriseCompany](Crm.Sales.SalesOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Crm.Sales.SalesOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FiscalPrinterPosDevice](Crm.Sales.SalesOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1` |
@@ -911,7 +911,7 @@ Show in UI: **ShownByDefault**
 
 ### EndCustomerParty
 
-The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. `Filter(multi eq)` `Introduced in version 20.1`
+The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. `Filter(multi eq)` `Introduced in version 20.1`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  

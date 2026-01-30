@@ -5,7 +5,7 @@
 
 Entity: [Crm.Sales.SalesOrders](~/entities/Crm.Sales.SalesOrders.md)
 
-Sales order document headers. Entity: Crm_Sales_Orders
+Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms. This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings. Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting. Entity: Crm_Sales_Orders
 
 ## Owner Tables Hierarchy
 
@@ -27,7 +27,7 @@ Sales order document headers. Entity: Crm_Sales_Orders
 |[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |The distribution channel, that is used to deliver the products|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the document; e.g. the currency of the amounts in the document|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
-|[End_Customer_Party_Id](#end_customer_party_id)|`uniqueidentifier` |The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.|
+|[End_Customer_Party_Id](#end_customer_party_id)|`uniqueidentifier` |The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.|
 |[Fiscal_Printer_Pos_Device_Id](#fiscal_printer_pos_device_id)|`uniqueidentifier` |For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.|
 |[Fiscal_Sales_Number](#fiscal_sales_number)|`nvarchar(32)` Readonly|Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.|
 |[From_Date](#from_date)|`date` |When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.|
@@ -494,7 +494,7 @@ The currency of the document; e.g. the currency of the amounts in the document
 ### End_Customer_Party_Id
 
 
-The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.
+The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.
 
 | Property | Value |
 | - | - |

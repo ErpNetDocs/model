@@ -4,7 +4,7 @@ uid: Crm.Sales.SalesOrderLines
 # Crm.Sales.SalesOrderLines
 
 
-Sales Orders detail records.
+Sales Order Lines represent the individual items or services ordered by a customer within a Sales Order. This data type defines the detailed line-level information of sales order documents, including product or service, ordered quantity, unit of measure, unit price, discounts, taxes, delivery requirements, and fulfillment-related settings. Sales Order Lines specify what is being sold and in what quantity and conditions, and are used as the operational basis for reservation, picking, delivery, invoicing, costing, and sales analysis.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  

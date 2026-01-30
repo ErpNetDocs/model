@@ -89,7 +89,7 @@
 
 <h2 id="entity">Entity</h2>
 <p>Entity: <a href="../entities/Crm.Sales.SalesOrders.html">Crm.Sales.SalesOrders</a></p>
-<p>Sales order document headers. Entity: Crm_Sales_Orders</p>
+<p>Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms. This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings. Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting. Entity: Crm_Sales_Orders</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
@@ -167,7 +167,7 @@
 <tr>
 <td><a href="#end_customer_party_id">End_Customer_Party_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.</td>
+<td>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.</td>
 </tr>
 <tr>
 <td><a href="#fiscal_printer_pos_device_id">Fiscal_Printer_Pos_Device_Id</a></td>
@@ -1759,7 +1759,7 @@
 </tbody>
 </table>
 <h3 id="end_customer_party_id">End_Customer_Party_Id</h3>
-<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.</p>
+<p>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.</p>
 <table>
 <thead>
 <tr>
