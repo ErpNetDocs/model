@@ -290,6 +290,8 @@
       href: Crm.Pos.Sales.md
     - name: Sequences
       href: Crm.Pos.Sequences.md
+    - name: SequenceSelectors
+      href: Crm.Pos.SequenceSelectors.md
     - name: Terminals
       href: Crm.Pos.Terminals.md
   - name: Presales
@@ -1312,6 +1314,8 @@
       href: Systems.Core.ReportQueries.md
     - name: Reports
       href: Systems.Core.Reports.md
+    - name: Sequences
+      href: Systems.Core.Sequences.md
   - name: Documents
     href: Systems.Documents.md
     items:

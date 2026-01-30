@@ -13272,6 +13272,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Pos.SequenceSelectors.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Pos.SequenceSelectors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Pos.Sequences.md",
       "output": {
         ".html": {
@@ -26441,6 +26451,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Pos_Sequence_Selectors.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Pos_Sequence_Selectors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Pos_Sequences.md",
       "output": {
         ".html": {
@@ -28335,6 +28355,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sys_Resolved_Conflicts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sys_Sequences.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sys_Sequences.html"
         }
       },
       "version": ""

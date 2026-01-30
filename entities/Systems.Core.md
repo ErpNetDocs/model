@@ -22,4 +22,5 @@ uid: Systems.Core
 - [ObjectVersions](Systems.Core.ObjectVersions.md)  
 - [ReportQueries](Systems.Core.ReportQueries.md)  
 - [Reports](Systems.Core.Reports.md)  
+- [Sequences](Systems.Core.Sequences.md)  
 

@@ -523,6 +523,7 @@
 * [Pos_Sale_Lines](Pos_Sale_Lines.md)
 * [Pos_Sale_Payments](Pos_Sale_Payments.md)
 * [Pos_Sales](Pos_Sales.md)
+* [Pos_Sequence_Selectors](Pos_Sequence_Selectors.md)
 * [Pos_Sequences](Pos_Sequences.md)
 * [Pos_Terminals](Pos_Terminals.md)
 
@@ -735,6 +736,7 @@
 * [Sys_Reference_Types](Sys_Reference_Types.md)
 * [Sys_Reports](Sys_Reports.md)
 * [Sys_Resolved_Conflicts](Sys_Resolved_Conflicts.md)
+* [Sys_Sequences](Sys_Sequences.md)
 * [Sys_Subsystems](Sys_Subsystems.md)
 * [Sys_Translations](Sys_Translations.md)
 * [Sys_Update_Procedure_Executes](Sys_Update_Procedure_Executes.md)

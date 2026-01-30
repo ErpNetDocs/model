@@ -442,6 +442,9 @@ references:
 - uid: Crm.Pos.Sales
   name: Crm.Pos.Sales
   href: entities/Crm.Pos.Sales.html
+- uid: Crm.Pos.SequenceSelectors
+  name: Crm.Pos.SequenceSelectors
+  href: entities/Crm.Pos.SequenceSelectors.html
 - uid: Crm.Pos.Sequences
   name: Crm.Pos.Sequences
   href: entities/Crm.Pos.Sequences.html
@@ -2218,6 +2221,9 @@ references:
 - uid: Systems.Core.Reports
   name: Systems.Core.Reports
   href: entities/Systems.Core.Reports.html
+- uid: Systems.Core.Sequences
+  name: Systems.Core.Sequences
+  href: entities/Systems.Core.Sequences.html
 - uid: Systems.Core.TextTranslations
   name: Systems.Core.TextTranslations Entity
   href: entities/Systems.Core.TextTranslations.html

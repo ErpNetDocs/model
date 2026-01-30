@@ -13,6 +13,7 @@
 * [Pos_Sale_Lines](Pos_Sale_Lines.md)
 * [Pos_Sale_Payments](Pos_Sale_Payments.md)
 * [Pos_Sales](Pos_Sales.md)
+* [Pos_Sequence_Selectors](Pos_Sequence_Selectors.md)
 * [Pos_Sequences](Pos_Sequences.md)
 * [Pos_Terminals](Pos_Terminals.md)
 

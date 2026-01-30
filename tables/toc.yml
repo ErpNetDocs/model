@@ -964,6 +964,8 @@
     href: Pos_Sale_Payments.md
   - name: Pos_Sales
     href: Pos_Sales.md
+  - name: Pos_Sequence_Selectors
+    href: Pos_Sequence_Selectors.md
   - name: Pos_Sequences
     href: Pos_Sequences.md
   - name: Pos_Terminals
@@ -1355,6 +1357,8 @@
     href: Sys_Reports.md
   - name: Sys_Resolved_Conflicts
     href: Sys_Resolved_Conflicts.md
+  - name: Sys_Sequences
+    href: Sys_Sequences.md
   - name: Sys_Subsystems
     href: Sys_Subsystems.md
   - name: Sys_Translations

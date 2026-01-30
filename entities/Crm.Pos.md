@@ -18,5 +18,6 @@ uid: Crm.Pos
 - [SalePayments](Crm.Pos.SalePayments.md)  
 - [Sales](Crm.Pos.Sales.md)  
 - [Sequences](Crm.Pos.Sequences.md)  
+- [SequenceSelectors](Crm.Pos.SequenceSelectors.md)  
 - [Terminals](Crm.Pos.Terminals.md)  
 
