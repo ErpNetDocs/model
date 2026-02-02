@@ -1837,6 +1837,9 @@ references:
 - uid: Projects.Procedures.ChecklistTemplates
   name: Projects.Procedures.ChecklistTemplates
   href: entities/Projects.Procedures.ChecklistTemplates.html
+- uid: Projects.Procedures.OperationalProcedureChecklistTemplates
+  name: Projects.Procedures.OperationalProcedureChecklistTemplates
+  href: entities/Projects.Procedures.OperationalProcedureChecklistTemplates.html
 - uid: Projects.Procedures.OperationalProcedureExecutions
   name: Projects.Procedures.OperationalProcedureExecutions
   href: entities/Projects.Procedures.OperationalProcedureExecutions.html
@@ -2221,9 +2224,6 @@ references:
 - uid: Systems.Core.Reports
   name: Systems.Core.Reports
   href: entities/Systems.Core.Reports.html
-- uid: Systems.Core.Sequences
-  name: Systems.Core.Sequences
-  href: entities/Systems.Core.Sequences.html
 - uid: Systems.Core.TextTranslations
   name: Systems.Core.TextTranslations Entity
   href: entities/Systems.Core.TextTranslations.html

@@ -29,6 +29,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Procedures.OperationalProcedures](Projects.Procedures.OperationalProcedures.md)  
+  * [Projects.Procedures.OperationalProcedureChecklistTemplates](Projects.Procedures.OperationalProcedureChecklistTemplates.md)  
 
 ## Attributes
 
@@ -62,6 +63,12 @@ Aggregate Tree
 | [ExternalSystem](Projects.Procedures.OperationalProcedures.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
 | [AggregateLastUpdateTimeUtc](Projects.Procedures.OperationalProcedures.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [DisplayText](Projects.Procedures.OperationalProcedures.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| ChecklistTemplates | [OperationalProcedureChecklistTemplates](Projects.Procedures.OperationalProcedureChecklistTemplates.md) | List of `OperationalProcedure<br />ChecklistTemplate`(Projects.Procedures.OperationalProcedure<br />ChecklistTemplates.md) child objects, based on the `Projects.Procedures.OperationalProcedure<br />ChecklistTemplate.OperationalProcedure`(Projects.Procedures.OperationalProcedure<br />ChecklistTemplates.md#operationalprocedure) back reference 
 
 
 ## Attribute Details

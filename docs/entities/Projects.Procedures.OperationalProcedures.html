@@ -107,7 +107,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Projects.Procedures.OperationalProcedures.html">Projects.Procedures.OperationalProcedures</a></li>
+<li><a href="Projects.Procedures.OperationalProcedures.html">Projects.Procedures.OperationalProcedures</a>
+<ul>
+<li><a href="Projects.Procedures.OperationalProcedureChecklistTemplates.html">Projects.Procedures.OperationalProcedureChecklistTemplates</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -227,6 +231,23 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td><a href="Projects.Procedures.OperationalProcedures.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChecklistTemplates</td>
+<td><a href="Projects.Procedures.OperationalProcedureChecklistTemplates.html">OperationalProcedureChecklistTemplates</a></td>
+<td>List of <code>OperationalProcedure&lt;br /&gt;ChecklistTemplate</code>(Projects.Procedures.OperationalProcedure<br>ChecklistTemplates.md) child objects, based on the <code>Projects.Procedures.OperationalProcedure&lt;br /&gt;ChecklistTemplate.OperationalProcedure</code>(Projects.Procedures.OperationalProcedure<br>ChecklistTemplates.md#operationalprocedure) back reference</td>
 </tr>
 </tbody>
 </table>

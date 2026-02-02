@@ -11632,6 +11632,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R39484.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39484.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R39538.md",
       "output": {
         ".html": {
@@ -18576,6 +18586,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Projects.Procedures.ChecklistTemplates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Projects.Procedures.OperationalProcedureChecklistTemplates.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Projects.Procedures.OperationalProcedureChecklistTemplates.html"
         }
       },
       "version": ""
@@ -26245,6 +26265,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Op_Checklist_Templates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Op_Operational_Procedure_Checklist_Templates.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Op_Operational_Procedure_Checklist_Templates.html"
         }
       },
       "version": ""

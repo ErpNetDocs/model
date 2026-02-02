@@ -1109,6 +1109,8 @@
       href: Projects.Procedures.ChecklistTemplateItems.md
     - name: ChecklistTemplates
       href: Projects.Procedures.ChecklistTemplates.md
+    - name: OperationalProcedureChecklistTemplates
+      href: Projects.Procedures.OperationalProcedureChecklistTemplates.md
     - name: OperationalProcedureExecutions
       href: Projects.Procedures.OperationalProcedureExecutions.md
     - name: OperationalProcedures

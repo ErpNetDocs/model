@@ -121,6 +121,11 @@
 <td>Receipt document number.</td>
 </tr>
 <tr>
+<td><a href="#fiscal_sales_number">Fiscal_Sales_Number</a></td>
+<td><code>nvarchar(32)</code></td>
+<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</td>
+</tr>
+<tr>
 <td><a href="#is_voided">Is_Voided</a></td>
 <td><code>bit</code></td>
 <td>Marked true if sale is canceled/voided.</td>
@@ -198,17 +203,17 @@
 <tr>
 <td><a href="#total_amount">Total_Amount</a></td>
 <td><code>decimal(14, 2)</code></td>
-<td>Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).</td>
+<td>Total gross amount in the sale currency.</td>
 </tr>
 <tr>
 <td><a href="#total_amount_base">Total_Amount_Base</a></td>
 <td><code>decimal(14, 2)</code></td>
-<td>Total net amount in base currency (positive for normal sale, negative for returns/refunds).</td>
+<td>Total gross amount in base currency.</td>
 </tr>
 <tr>
 <td><a href="#total_amount_reporting">Total_Amount_Reporting</a></td>
 <td><code>decimal(14, 2)</code></td>
-<td>Total net amount in reporting currency (if applicable).</td>
+<td>Total gross amount in reporting currency (if applicable).</td>
 </tr>
 <tr>
 <td><a href="#voided_at">Voided_At</a></td>
@@ -715,6 +720,125 @@
 <td>Like</td>
 <td>None</td>
 <td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fiscal_sales_number">Fiscal_Sales_Number</h3>
+<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(32) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fiscal_sales_number---supported-filters">Fiscal_Sales_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -2544,7 +2668,7 @@
 </tbody>
 </table>
 <h3 id="total_amount">Total_Amount</h3>
-<p>Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).</p>
+<p>Total gross amount in the sale currency.</p>
 <table>
 <thead>
 <tr>
@@ -2663,7 +2787,7 @@
 </tbody>
 </table>
 <h3 id="total_amount_base">Total_Amount_Base</h3>
-<p>Total net amount in base currency (positive for normal sale, negative for returns/refunds).</p>
+<p>Total gross amount in base currency.</p>
 <table>
 <thead>
 <tr>
@@ -2788,7 +2912,7 @@
 </tbody>
 </table>
 <h3 id="total_amount_reporting">Total_Amount_Reporting</h3>
-<p>Total net amount in reporting currency (if applicable).</p>
+<p>Total gross amount in reporting currency (if applicable).</p>
 <table>
 <thead>
 <tr>

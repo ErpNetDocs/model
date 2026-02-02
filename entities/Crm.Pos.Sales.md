@@ -38,15 +38,16 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed). `Filter(eq;ge;le)` 
 | [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number. `Required` `Filter(eq;like)` 
+| [FiscalSalesNumber](Crm.Pos.Sales.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq)` `Introduced in version 26.2.1.33` 
 | [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided. `Required` `Default(false)` `Filter(eq)` 
 | [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)` 
 | [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)` 
 | [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)` 
-| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total net amount in the sale currency (positive for normal sale, negative for returns/refunds). `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47` 
-| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total net amount in base currency (positive for normal sale, negative for returns/refunds). `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)` 
-| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total net amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)` 
+| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency. `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47` 
+| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in base currency. `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)` 
+| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total gross amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)` 
 | [VoidedAt](Crm.Pos.Sales.md#voidedat) | datetime __nullable__ | Date and time when the document was voided. `Filter(eq;ge;le)` 
 
 ## References
@@ -105,6 +106,17 @@ Category: **System**
 Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
 Maximum Length: **25**  
+Show in UI: **ShownByDefault**  
+
+### FiscalSalesNumber
+
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq)` `Introduced in version 26.2.1.33`
+
+Type: **string (32) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Maximum Length: **32**  
 Show in UI: **ShownByDefault**  
 
 ### IsVoided
@@ -193,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmount
 
-Total net amount in the sale currency (positive for normal sale, negative for returns/refunds). `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47`
+Total gross amount in the sale currency. `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -203,7 +215,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountBase
 
-Total net amount in base currency (positive for normal sale, negative for returns/refunds). `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
+Total gross amount in base currency. `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -213,7 +225,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountReporting
 
-Total net amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)`
+Total gross amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  

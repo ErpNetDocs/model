@@ -15,6 +15,7 @@ Stores header-level information for individual retail transactions processed thr
 |[Closed_By_Id](#closed_by_id)|`uniqueidentifier` |The operator who finalized or closed the sale (may differ from opener).|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |Set for known customers (e.g. loyalty program), otherwise null.|
 |[Document_Number](#document_number)|`nvarchar(25)` |Receipt document number.|
+|[Fiscal_Sales_Number](#fiscal_sales_number)|`nvarchar(32)` |Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.|
 |[Is_Voided](#is_voided)|`bit` |Marked true if sale is canceled/voided.|
 |[Location_Id](#location_id)|`uniqueidentifier` |Link to location where the sale occurred.|
 |[Opened_At](#opened_at)|`datetime` |Time of the opening of the POS sale.|
@@ -30,9 +31,9 @@ Stores header-level information for individual retail transactions processed thr
 |[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Kind of POS sale event. Typically it is "Normal sale".|
 |[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
 |[Terminal_Id](#terminal_id)|`uniqueidentifier` |Link to specific POS workspace terminal used.|
-|[Total_Amount](#total_amount)|`decimal(14, 2)` |Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).|
-|[Total_Amount_Base](#total_amount_base)|`decimal(14, 2)` |Total net amount in base currency (positive for normal sale, negative for returns/refunds).|
-|[Total_Amount_Reporting](#total_amount_reporting)|`decimal(14, 2)` |Total net amount in reporting currency (if applicable).|
+|[Total_Amount](#total_amount)|`decimal(14, 2)` |Total gross amount in the sale currency.|
+|[Total_Amount_Base](#total_amount_base)|`decimal(14, 2)` |Total gross amount in base currency.|
+|[Total_Amount_Reporting](#total_amount_reporting)|`decimal(14, 2)` |Total gross amount in reporting currency (if applicable).|
 |[Voided_At](#voided_at)|`datetime` |Date and time when the document was voided.|
 |[Voided_By_Id](#voided_by_id)|`uniqueidentifier` |The operator who voided the document.|
 
@@ -185,6 +186,42 @@ Receipt document number.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Fiscal_Sales_Number
+
+
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|32|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(32) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Fiscal_Sales_Number - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Voided
 
@@ -730,7 +767,7 @@ Link to specific POS workspace terminal used.
 ### Total_Amount
 
 
-Total net amount in the sale currency (positive for normal sale, negative for returns/refunds).
+Total gross amount in the sale currency.
 
 | Property | Value |
 | - | - |
@@ -766,7 +803,7 @@ Total net amount in the sale currency (positive for normal sale, negative for re
 ### Total_Amount_Base
 
 
-Total net amount in base currency (positive for normal sale, negative for returns/refunds).
+Total gross amount in base currency.
 
 | Property | Value |
 | - | - |
@@ -803,7 +840,7 @@ Total net amount in base currency (positive for normal sale, negative for return
 ### Total_Amount_Reporting
 
 
-Total net amount in reporting currency (if applicable).
+Total gross amount in reporting currency (if applicable).
 
 | Property | Value |
 | - | - |
