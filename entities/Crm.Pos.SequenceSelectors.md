@@ -40,9 +40,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.SequenceSelectors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Identifies the company for which the sequence selection applies; null means the rule applies to all companies. `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Pos.SequenceSelectors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Identifies the company for which the sequence selection applies; null means the rule applies to all companies. `Required` `Filter(multi eq)` |
 | [PosDevice](Crm.Pos.SequenceSelectors.md#posdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | Identifies the POS device used to determine the sequence; null means all devices are applicable. `Filter(multi eq)` |
 | [PosLocation](Crm.Pos.SequenceSelectors.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | Identifies the POS location used in sequence selection; null means all locations are applicable. `Filter(multi eq)` |
+| [PosTerminal](Crm.Pos.SequenceSelectors.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. `Filter(multi eq)` `Introduced in version 26.2.1.37` |
 | [Sequence](Crm.Pos.SequenceSelectors.md#sequence) | [Sequences](Systems.Core.Sequences.md) | References the sequence definition selected for the given POS context. `Required` `Filter(multi eq)` |
 
 
@@ -156,9 +157,9 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-Identifies the company for which the sequence selection applies; null means the rule applies to all companies. `Filter(multi eq)`
+Identifies the company for which the sequence selection applies; null means the rule applies to all companies. `Required` `Filter(multi eq)`
 
-Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
@@ -178,6 +179,15 @@ Show in UI: **ShownByDefault**
 Identifies the POS location used in sequence selection; null means all locations are applicable. `Filter(multi eq)`
 
 Type: **[Locations](Crm.Pos.Locations.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### PosTerminal
+
+Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. `Filter(multi eq)` `Introduced in version 26.2.1.37`
+
+Type: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

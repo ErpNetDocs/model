@@ -405,7 +405,7 @@ The unique code of the party
 |RTF|no|
 |Sortable|yes|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|nvarchar(16)|
 |UI Memo Editor|no|
 |UI Width|120|

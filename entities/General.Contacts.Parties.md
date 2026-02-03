@@ -43,7 +43,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [GLN](General.Contacts.Parties.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` 
 | [IsActive](General.Contacts.Parties.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` 
-| [PartyCode](General.Contacts.Parties.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` 
+| [PartyCode](General.Contacts.Parties.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` 
 | [PartyCreationTime](General.Contacts.Parties.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` 
 | [PartyCreationUser](General.Contacts.Parties.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` 
 | [PartyName](General.Contacts.Parties.md#partyname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ReadOnly` 
@@ -113,12 +113,12 @@ Show in UI: **ShownByDefault**
 
 ### PartyCode
 
-The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly`
+The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly`
 
 Type: **string (16)**  
 Indexed: **True**  
 Category: **System**  
-Supported Filters: **Equals, Like**  
+Supported Filters: **Equals, Like, EqualsIn**  
 Supports Order By: **True**  
 Maximum Length: **16**  
 Show in UI: **ShownByDefault**  

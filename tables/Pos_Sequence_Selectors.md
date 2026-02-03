@@ -15,6 +15,7 @@ Maps point-of-sale context data to the appropriate sequence definition used for 
 |[Notes](#notes)|`nvarchar(max)` |Stores optional descriptive notes; null means no additional information is provided.|
 |[Pos_Device_Id](#pos_device_id)|`uniqueidentifier` |Identifies the POS device used to determine the sequence; null means all devices are applicable.|
 |[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |Identifies the POS location used in sequence selection; null means all locations are applicable.|
+|[Pos_Terminal_Id](#pos_terminal_id)|`uniqueidentifier` |Identifies the POS terminal used to determine the sequence; null means all terminals are applicable.|
 |[Row_Version](#row_version)|`timestamp` |Used for concurrency control to track changes to the record.|
 |[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Specifies the type of sale that determines which sequence is selected.|
 |[Sequence_Id](#sequence_id)|`uniqueidentifier` |References the sequence definition selected for the given POS context.|
@@ -47,7 +48,7 @@ Identifies the company for which the sequence selection applies; null means the 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -57,7 +58,7 @@ Identifies the company for which the sequence selection applies; null means the 
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Notes
 
@@ -158,6 +159,43 @@ Identifies the POS location used in sequence selection; null means all locations
 |Visible|yes|
 
 #### Pos_Location_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Pos_Terminal_Id
+
+
+Identifies the POS terminal used to determine the sequence; null means all terminals are applicable.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Terminals](Pos_Terminals.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Pos_Terminal_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
