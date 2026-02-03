@@ -130,14 +130,14 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If WarehouseLocation != NULL
-AND WarehouseZone != NULL
-validate, that:
-WarehouseZone == WarehouseLocation.WarehouseZone</td>
+<td>When both Warehouse Location and Warehouse Zone are filled in the line, check that the
+selected Warehouse Zone is the same as the location’s zone, or is a parent zone of it
+(directly or through one or more parents)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>The rule validates that the lines does not contain Locations from another Zone</td>
+<td>The rule validates that the lines does not contain Locations from another Zone,
+i.e. the selected Warehouse Zone must match the Location’s Zone or a parent Zone of it.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
