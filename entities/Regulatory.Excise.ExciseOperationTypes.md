@@ -4,7 +4,7 @@ uid: Regulatory.Excise.ExciseOperationTypes
 # Regulatory.Excise.ExciseOperationTypes
 
 
-Obsolete. Not used. (Types of excise operations. Used by general documents to specify the operation type according to the excise classifications.).
+Obsolete. Not used. (Types of excise operations. Used by general documents to specify the operation type according to the excise classifications.)
 
 ## General
 Namespace: [Regulatory.Excise](Regulatory.Excise.md)  

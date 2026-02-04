@@ -4,7 +4,7 @@ uid: Crm.SalesForce.SalesPersonTargetLines
 # Crm.SalesForce.SalesPersonTargetLines
 
 
-Detail records (lines) of targets for sales persons.
+Detail records (lines) of targets for sales persons
 
 ## General
 Namespace: [Crm.SalesForce](Crm.SalesForce.md)  
@@ -44,25 +44,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PeriodDate](Crm.SalesForce.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). `Required` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.43` 
-| [PeriodMonth](Crm.SalesForce.SalesPersonTargetLines.md#periodmonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)` 
-| [PeriodYear](Crm.SalesForce.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)` 
-| [TargetAmount](Crm.SalesForce.SalesPersonTargetLines.md#targetamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. `Currency: TargetAmountCurrency` 
-| [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. `Required` `Default("SALES")` `Filter(multi eq)` 
-| [TargetValue](Crm.SalesForce.SalesPersonTargetLines.md#targetvalue) | decimal (9, 2) | Value of target. Meaning depends on target type. `Required` `Default(0)` 
-| [TargetWeight](Crm.SalesForce.SalesPersonTargetLines.md#targetweight) | decimal (5, 2) | Relative weight of target, comparatively to other targets. `Required` `Default(1)` 
+| [PeriodDate](Crm.SalesForce.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes) 
+| [PeriodMonth](Crm.SalesForce.SalesPersonTargetLines.md#periodmonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year) 
+| [PeriodYear](Crm.SalesForce.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year) 
+| [TargetAmount](Crm.SalesForce.SalesPersonTargetLines.md#targetamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value 
+| [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs 
+| [TargetValue](Crm.SalesForce.SalesPersonTargetLines.md#targetvalue) | decimal (9, 2) | Value of target. Meaning depends on target type 
+| [TargetWeight](Crm.SalesForce.SalesPersonTargetLines.md#targetweight) | decimal (5, 2) | Relative weight of target, comparatively to other targets 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BonusProgram](Crm.SalesForce.SalesPersonTargetLines.md#bonusprogram) | [BonusPrograms](Crm.Pricing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. `Filter(multi eq)` |
+| [BonusProgram](Crm.SalesForce.SalesPersonTargetLines.md#bonusprogram) | [BonusPrograms](Crm.Pricing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, NULL otherwise |
 | [Document](Crm.SalesForce.SalesPersonTargetLines.md#document) | [SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md) | The owner document. The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` |
-| [ProductGroup](Crm.SalesForce.SalesPersonTargetLines.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. `Filter(multi eq)` |
-| [PromotionalPackage](Crm.SalesForce.SalesPersonTargetLines.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. `Filter(multi eq)` |
-| [SalesPerson](Crm.SalesForce.SalesPersonTargetLines.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | Sales person to whom the target is assigned. `Required` `Filter(multi eq)` |
+| [ProductGroup](Crm.SalesForce.SalesPersonTargetLines.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined |
+| [PromotionalPackage](Crm.SalesForce.SalesPersonTargetLines.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, NULL otherwise |
+| [SalesPerson](Crm.SalesForce.SalesPersonTargetLines.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | Sales person to whom the target is assigned |
 | [SalesPersonTarget](Crm.SalesForce.SalesPersonTargetLines.md#salespersontarget) | [SalesPersonTargets](Crm.SalesForce.SalesPersonTargets.md) | The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [TargetAmountCurrency](Crm.SalesForce.SalesPersonTargetLines.md#targetamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Deprecated - use currency in document header. `Filter(multi eq)` |
+| [TargetAmountCurrency](Crm.SalesForce.SalesPersonTargetLines.md#targetamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Deprecated - use currency in document header |
 
 
 ## System Attributes
@@ -78,7 +78,7 @@ Aggregate Root:
 
 ### PeriodDate
 
-Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). `Required` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.43`
+Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)
 
 Type: **datetime**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### PeriodMonth
 
-Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)`
+Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)
 
 Type: **byte**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### PeriodYear
 
-Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)`
+Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)
 
 Type: **int16**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetAmount
 
-Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. `Currency: TargetAmountCurrency`
+Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **CannotBeShown**
 
 ### TargetType
 
-Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. `Required` `Default("SALES")` `Filter(multi eq)`
+Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs
 
 Type: **[TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetValue
 
-Value of target. Meaning depends on target type. `Required` `Default(0)`
+Value of target. Meaning depends on target type
 
 Type: **decimal (9, 2)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetWeight
 
-Relative weight of target, comparatively to other targets. `Required` `Default(1)`
+Relative weight of target, comparatively to other targets
 
 Type: **decimal (5, 2)**  
 Category: **System**  
@@ -193,7 +193,7 @@ Show in UI: **HiddenByDefault**
 
 ### BonusProgram
 
-Bonus program Id when the target type is BONUS, null otherwise. `Filter(multi eq)`
+Bonus program Id when the target type is BONUS, NULL otherwise
 
 Type: **[BonusPrograms](Crm.Pricing.BonusPrograms.md) (nullable)**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductGroup
 
-Product group for which the target is defined. `Filter(multi eq)`
+Product group for which the target is defined
 
 Type: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 Category: **System**  
@@ -225,7 +225,7 @@ Front-End Recalc Expressions:
 `obj.SalesPersonTarget.ProductGroup`
 ### PromotionalPackage
 
-Promotional Package Id when the target type is PROMO, null otherwise. `Filter(multi eq)`
+Promotional Package Id when the target type is PROMO, NULL otherwise
 
 Type: **[PromotionalPackages](Crm.Pricing.PromotionalPackages.md) (nullable)**  
 Category: **System**  
@@ -234,7 +234,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesPerson
 
-Sales person to whom the target is assigned. `Required` `Filter(multi eq)`
+Sales person to whom the target is assigned
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md)**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetAmountCurrency
 
-Deprecated - use currency in document header. `Filter(multi eq)`
+Deprecated - use currency in document header
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  

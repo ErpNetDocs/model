@@ -128,27 +128,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#basequantity">BaseQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity, expressed in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The quantity, expressed in the base measurement category of the product.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#expirationdate">ExpirationDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Expiration date of the goods. null means unknown or N/A. <code>Filter(multi eq;ge;le)</code></td>
+<td>Expiration date of the goods. NULL means unknown or N/A.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#grossweight">GrossWeight</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Gross weight in kilograms (kg). null means unknown. <code>Filter(eq;ge;le)</code></td>
+<td>Gross weight in kilograms (kg). NULL means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive position within the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Consecutive position within the logistic unit.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#lotnumber">LotNumber</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The production lot number. null means unknown. <code>Filter(multi eq;like)</code></td>
+<td>The production lot number. NULL means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#notes">Notes</a></td>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
+<td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#standardquantity">StandardQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity, expessed in the standard measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The quantity, expessed in the standard measurement unit of the product.</td>
 </tr>
 </tbody>
 </table>
@@ -180,32 +180,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#logisticunit">LogisticUnit</a></td>
 <td><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a></td>
-<td>The containing logistic unit. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The containing logistic unit.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The lot of the product. Null means unknown or that the product does not use lots. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.0</code></td>
+<td>The lot of the product. Null means unknown or that the product does not use lots.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which is contained in the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product, which is contained in the logistic unit.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>The product variant of the product. Null means unknown or that the product does not have variants. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.0</code></td>
+<td>The product variant of the product. Null means unknown or that the product does not have variants.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of the quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of the quantity.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnitContents.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>The serial number of the product. Null means unknown or that product is not serialized. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.0</code></td>
+<td>The serial number of the product. Null means unknown or that product is not serialized.</td>
 </tr>
 </tbody>
 </table>
@@ -238,7 +238,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basequantity">BaseQuantity</h3>
-<p>The quantity, expressed in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The quantity, expressed in the base measurement category of the product.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -247,21 +247,21 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.BaseQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="expirationdate">ExpirationDate</h3>
-<p>Expiration date of the goods. null means unknown or N/A. <code>Filter(multi eq;ge;le)</code></p>
+<p>Expiration date of the goods. NULL means unknown or N/A.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="grossweight">GrossWeight</h3>
-<p>Gross weight in kilograms (kg). null means unknown. <code>Filter(eq;ge;le)</code></p>
+<p>Gross weight in kilograms (kg). NULL means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive position within the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Consecutive position within the logistic unit.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -272,7 +272,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.LogisticUnit.Contents.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="lotnumber">LotNumber</h3>
-<p>The production lot number. null means unknown. <code>Filter(multi eq;like)</code></p>
+<p>The production lot number. NULL means unknown.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -288,14 +288,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
+<p>Quantity of the product in the logistic unit. Expressed in the specified measurement unit.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
-<p>The quantity, expessed in the standard measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The quantity, expessed in the standard measurement unit of the product.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -326,7 +326,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="logisticunit">LogisticUnit</h3>
-<p>The containing logistic unit. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The containing logistic unit.</p>
 <p>Type: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -334,25 +334,25 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The lot of the product. Null means unknown or that the product does not use lots. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.0</code></p>
+<p>The lot of the product. Null means unknown or that the product does not use lots.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product, which is contained in the logistic unit. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product, which is contained in the logistic unit.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>The product variant of the product. Null means unknown or that the product does not have variants. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.0</code></p>
+<p>The product variant of the product. Null means unknown or that the product does not have variants.</p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of the quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of the quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -360,7 +360,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>The serial number of the product. Null means unknown or that product is not serialized. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.0</code></p>
+<p>The serial number of the product. Null means unknown or that product is not serialized.</p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

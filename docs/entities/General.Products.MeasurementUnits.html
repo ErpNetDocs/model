@@ -127,7 +127,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#code">Code</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>When not null, contains unique measurement unit code. <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>When not null, contains unique measurement unit code.</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#description">Description</a></td>
@@ -137,27 +137,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#divisor">Divisor</a></td>
 <td>decimal (9, 3)</td>
-<td>Divisor of the relative value of the measurement unit against other units (divisor when converting to base). <code>Required</code> <code>Default(1)</code></td>
+<td>Divisor of the relative value of the measurement unit against other units (divisor when converting to base)</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#isdefaultunit">IsDefaultUnit</a></td>
 <td>boolean</td>
-<td>True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>1 if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#multiplier">Multiplier</a></td>
 <td>decimal (9, 3)</td>
-<td>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). <code>Required</code> <code>Default(1)</code></td>
+<td>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a></td>
-<td>Name of the measurement unit. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Name of the measurement unit</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#systemunit">SystemUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html#systemunit">SystemUnit</a> <strong>nullable</strong></td>
-<td>Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. <code>Filter(eq;like)</code></td>
+<td>Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH</td>
 </tr>
 </tbody>
 </table>
@@ -174,7 +174,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#measurementcategory">MeasurementCategory</a></td>
 <td><a href="General.Products.MeasurementCategories.html">MeasurementCategories</a></td>
-<td>Base measurement category Id. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Base measurement category Id</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#id">Id</a></td>
 <td>guid</td>
-<td></td>
+<td>Unique measurement unit Id</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementUnits.html#objectversion">ObjectVersion</a></td>
@@ -207,7 +207,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>When not null, contains unique measurement unit code. <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>When not null, contains unique measurement unit code.</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -223,7 +223,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="divisor">Divisor</h3>
-<p>Divisor of the relative value of the measurement unit against other units (divisor when converting to base). <code>Required</code> <code>Default(1)</code></p>
+<p>Divisor of the relative value of the measurement unit against other units (divisor when converting to base)</p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -231,7 +231,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefaultunit">IsDefaultUnit</h3>
-<p>True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>1 if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="multiplier">Multiplier</h3>
-<p>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). <code>Required</code> <code>Default(1)</code></p>
+<p>Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)</p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -247,7 +247,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the measurement unit. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Name of the measurement unit</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -255,7 +255,7 @@ Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemunit">SystemUnit</h3>
-<p>Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. <code>Filter(eq;like)</code></p>
+<p>Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html#systemunit">SystemUnit</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemUnit</code>(General.Products.MeasurementUnits.md#systemunit) data attribute<br>
@@ -306,6 +306,7 @@ Allowed Values (General.Products.MeasurementUnitsRepository.SystemUnit Enum Memb
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
+<p>Unique measurement unit Id</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -328,7 +329,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="measurementcategory">MeasurementCategory</h3>
-<p>Base measurement category Id. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Base measurement category Id</p>
 <p>Type: <strong><a href="General.Products.MeasurementCategories.html">MeasurementCategories</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

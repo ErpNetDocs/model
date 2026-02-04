@@ -130,22 +130,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.ActivityTemplates.html#additionaldays">AdditionalDays</a></td>
 <td>int32</td>
-<td>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. <code>Required</code> <code>Default(0)</code></td>
+<td>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTemplates.html#remindertime">ReminderTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>The time of the day for the reminder. <code>Filter(ge;le)</code></td>
+<td>The time of the day for the reminder</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTemplates.html#sourcedatefield">SourceDateField</a></td>
 <td>string (64)</td>
-<td>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></td>
+<td>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTemplates.html#starttime">StartTime</a></td>
 <td>time</td>
-<td>The time of the day when the activity starts. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The time of the day when the activity starts</td>
 </tr>
 </tbody>
 </table>
@@ -162,12 +162,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.ActivityTemplates.html#responsibleparty">ResponsibleParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>If Null the user that starts the generation route is responsible party of the activity. <code>Filter(multi eq)</code></td>
+<td>If Null the user that starts the generation route is responsible party of the activity.</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTemplates.html#route">Route</a></td>
 <td><a href="Systems.Documents.Routes.html">Routes</a></td>
-<td>The route that uses this template. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The route that uses this template</td>
 </tr>
 </tbody>
 </table>
@@ -223,7 +223,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="additionaldays">AdditionalDays</h3>
-<p>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. <code>Required</code> <code>Default(0)</code></p>
+<p>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -231,7 +231,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="remindertime">ReminderTime</h3>
-<p>The time of the day for the reminder. <code>Filter(ge;le)</code></p>
+<p>The time of the day for the reminder</p>
 <p>Type: <strong>time <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -240,7 +240,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.StartTime &gt; FromMinutes( 30)), ( obj.StartTime - FromMinutes( 30)), obj.StartTime)</code></p>
 <h3 id="sourcedatefield">SourceDateField</h3>
-<p>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></p>
+<p>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -248,7 +248,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>The time of the day when the activity starts. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The time of the day when the activity starts</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -298,13 +298,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="responsibleparty">ResponsibleParty</h3>
-<p>If Null the user that starts the generation route is responsible party of the activity. <code>Filter(multi eq)</code></p>
+<p>If Null the user that starts the generation route is responsible party of the activity.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="route">Route</h3>
-<p>The route that uses this template. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The route that uses this template</p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html">Routes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

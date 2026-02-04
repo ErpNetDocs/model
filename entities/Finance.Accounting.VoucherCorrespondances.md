@@ -39,10 +39,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
-| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
+| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal (18, 2) | Obsolete. Not used. 
+| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal (18, 2) | Obsolete. Not used. 
 | [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#creditvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the credited account). `Required` `Filter(multi eq)` 
-| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
+| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used. 
 | [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). `Required` `Filter(multi eq)` 
 
 ## References
@@ -65,7 +65,7 @@ Aggregate Root:
 
 ### AmountBase
 
-Obsolete. Not used. `Required` `Default(0)`
+Obsolete. Not used.
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditAmount
 
-Obsolete. Not used. `Required` `Default(0)`
+Obsolete. Not used.
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### DebitAmount
 
-Obsolete. Not used. `Required` `Default(0)`
+Obsolete. Not used.
 
 Type: **decimal (18, 2)**  
 Category: **System**  

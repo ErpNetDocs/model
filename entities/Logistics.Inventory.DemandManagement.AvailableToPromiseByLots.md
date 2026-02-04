@@ -28,28 +28,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#atpbase) | [Quantity (38, 3)](../data-types.md#quantity) | Indicates the quantity available to promise (in a base unit). It is valid from this date on. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#currentavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The current availability in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [FromDate](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#fromdate) | datetime | Тhe date from which the available to promise quantity is valid. `Required` `Filter(eq;ge;le)` 
-| [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementsbase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements on this date in а base measurement unit. . `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementstodatebase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#projectedavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#atpbase) | [Quantity (38, 3)](../data-types.md#quantity) | Indicates the quantity available to promise (in a base unit). It is valid from this date on. 
+| [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#currentavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The current availability in а base measurement unit. 
+| [FromDate](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#fromdate) | datetime | Тhe date from which the available to promise quantity is valid. 
+| [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementsbase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements on this date in а base measurement unit.  
+| [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#movementstodatebase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. 
+| [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#projectedavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id` |
-| [Lot](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, for which the quantities are calculated. `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Lot_Id` |
-| [Product](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Product_Id` |
-| [Store](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#store) | [Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Id` |
+| [EnterpriseCompany](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Тhe Enterprise Company, for which the quantities are calculated. |
+| [Lot](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, for which the quantities are calculated. |
+| [Product](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#product) | [Products](General.Products.Products.md) | The Product, for which the quantities are calculated. |
+| [Store](Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.md#store) | [Stores](Logistics.Inventory.Stores.md) | The Store, for which the quantities are calculated. |
 
 
 ## Attribute Details
 
 ### ATPBase
 
-Indicates the quantity available to promise (in a base unit). It is valid from this date on. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
+Indicates the quantity available to promise (in a base unit). It is valid from this date on.
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### CurrentAvailabilityBase
 
-The current availability in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
+The current availability in а base measurement unit.
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Тhe date from which the available to promise quantity is valid. `Required` `Filter(eq;ge;le)`
+Тhe date from which the available to promise quantity is valid.
 
 Type: **datetime**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### MovementsBase
 
-The sum of the quantity of all planned stock movements on this date in а base measurement unit. . `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
+The sum of the quantity of all planned stock movements on this date in а base measurement unit.
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### MovementsToDateBase
 
-The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
+The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectedAvailabilityBase
 
-Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
+Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-Тhe Enterprise Company, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id`
+Тhe Enterprise Company, for which the quantities are calculated.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-The Lot, for which the quantities are calculated. `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Lot_Id`
+The Lot, for which the quantities are calculated.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The Product, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Product_Id`
+The Product, for which the quantities are calculated.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The Store, for which the quantities are calculated. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Id`
+The Store, for which the quantities are calculated.
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

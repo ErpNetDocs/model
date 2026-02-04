@@ -87,7 +87,7 @@
         <article data-uid="Crm.Presales.Offers">
 <h1 id="crmpresalesoffers">Crm.Presales.Offers</h1>
 
-<p>Offers (quotes) for sales of products. Can contain variants and choice groups. The user can select some approved lines and generate Sales Order.</p>
+<p>Offers (quotes) for sales of products. Can contain variants and choice groups. The user can select some approved lines and generate Sales Order</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Presales.html">Crm.Presales</a><br>
 Repository: Crm.Presales.Offers<br>
@@ -140,7 +140,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#acceptedon">AcceptedOn</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date on which the customer accepted the offer. null if the offer is not yet accepted or the date is unknown. <code>Filter(ge;le)</code></td>
+<td>The date on which the customer has accepted the offer.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#adjustmentnumber">AdjustmentNumber</a></td>
@@ -205,12 +205,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#notes">Notes</a></td>
@@ -225,7 +225,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The last term for payment. <code>Filter(ge;le)</code></td>
+<td>The last term for payment</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#planningonly">PlanningOnly</a></td>
@@ -255,7 +255,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null, specifies required delivery date for all offer lines. When the lines contain different delivery dates, this is null. <code>Filter(ge;le)</code></td>
+<td>When not NULL, specifies required delivery date for all offer lines. When the lines contain different delivery dates, this is NULL.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#state">State</a></td>
@@ -270,7 +270,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#validtill">ValidTill</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Last date when the offer is valid. null means the offer has no specific validity date. <code>Filter(ge;le)</code></td>
+<td>Date till which the offer is valid. If not entered - the offer is not time limited</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#void">Void</a></td>
@@ -327,17 +327,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>The customer to which the products are offered. <code>Filter(multi eq)</code></td>
+<td>The customer to which the products are offered.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#deal">Deal</a></td>
 <td><a href="Crm.Presales.Deals.html">Deals</a> (nullable)</td>
-<td>The opportunity (deal) on which this offer is based. <code>Filter(multi eq)</code></td>
+<td>The opportunity (deal) on which this offer is based.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency in which the document is issued. All amounts are in this currency. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency in which the document is issued. All amounts are in this currency</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#documenttype">DocumentType</a></td>
@@ -347,7 +347,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#endcustomerparty">EndCustomerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></td>
+<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -382,12 +382,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>Way of payment. null means that no specific way of payment was offered. <code>Filter(multi eq)</code></td>
+<td>Way of payment. NULL means that no specific way of payment was offered</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#pricelist">PriceList</a></td>
 <td><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</td>
-<td>The price list, based on which the prices are selected. Initially copied from the definition of the Customer. <code>Filter(multi eq)</code></td>
+<td>The price list, based on which the prices are selected. Initially copied from the definition of the Customer.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -397,7 +397,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#recipientperson">RecipientPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The offer recipient. It should be employee of the customer. null means that there is no default recipient or he/she is unknown. <code>Filter(multi eq)</code></td>
+<td>The offer recipient. It should be employee of the customer. NULL means that there is no default recipient or he/she is unknown</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#responsibleperson">ResponsiblePerson</a></td>
@@ -412,7 +412,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</td>
-<td>Responsible sales person. null when no sales person was assigned. <code>Filter(multi eq)</code></td>
+<td>The sales person that is responsible for the offer</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#sequence">Sequence</a></td>
@@ -422,12 +422,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Offers.html#shiptocustomer">ShipToCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies that the products must be delivered to this customer. The sales conditions depend on this customer but the invoice is issued to the main customer.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store, from which the products will be sold. When null, the store is unknown or N/A. <code>Filter(multi eq)</code></td>
+<td>The store, from which the products will be sold. When NULL, the store is unknown or N/A.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Offers.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -552,7 +552,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="acceptedon">AcceptedOn</h3>
-<p>The date on which the customer accepted the offer. null if the offer is not yet accepted or the date is unknown. <code>Filter(ge;le)</code></p>
+<p>The date on which the customer has accepted the offer.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -655,7 +655,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -663,7 +663,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -710,7 +710,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>The last term for payment. <code>Filter(ge;le)</code></p>
+<p>The last term for payment</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -758,7 +758,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<p>When not null, specifies required delivery date for all offer lines. When the lines contain different delivery dates, this is null. <code>Filter(ge;le)</code></p>
+<p>When not NULL, specifies required delivery date for all offer lines. When the lines contain different delivery dates, this is NULL.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -823,7 +823,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="validtill">ValidTill</h3>
-<p>Last date when the offer is valid. null means the offer has no specific validity date. <code>Filter(ge;le)</code></p>
+<p>Date till which the offer is valid. If not entered - the offer is not time limited</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -955,19 +955,19 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The customer to which the products are offered. <code>Filter(multi eq)</code></p>
+<p>The customer to which the products are offered.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deal">Deal</h3>
-<p>The opportunity (deal) on which this offer is based. <code>Filter(multi eq)</code></p>
+<p>The opportunity (deal) on which this offer is based.</p>
 <p>Type: <strong><a href="Crm.Presales.Deals.html">Deals</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency in which the document is issued. All amounts are in this currency. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency in which the document is issued. All amounts are in this currency</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -984,7 +984,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endcustomerparty">EndCustomerParty</h3>
-<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></p>
+<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1031,7 +1031,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>Way of payment. null means that no specific way of payment was offered. <code>Filter(multi eq)</code></p>
+<p>Way of payment. NULL means that no specific way of payment was offered</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1039,7 +1039,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ShipToCustomer.DefaultPaymentType.IfNullThen( obj.Customer.DefaultPaymentType).IfNullThen( obj.PaymentType)</code></p>
 <h3 id="pricelist">PriceList</h3>
-<p>The price list, based on which the prices are selected. Initially copied from the definition of the Customer. <code>Filter(multi eq)</code></p>
+<p>The price list, based on which the prices are selected. Initially copied from the definition of the Customer.</p>
 <p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1052,7 +1052,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="recipientperson">RecipientPerson</h3>
-<p>The offer recipient. It should be employee of the customer. null means that there is no default recipient or he/she is unknown. <code>Filter(multi eq)</code></p>
+<p>The offer recipient. It should be employee of the customer. NULL means that there is no default recipient or he/she is unknown</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1070,7 +1070,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>Responsible sales person. null when no sales person was assigned. <code>Filter(multi eq)</code></p>
+<p>The sales person that is responsible for the offer</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1084,7 +1084,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
-<p>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies that the products must be delivered to this customer. The sales conditions depend on this customer but the invoice is issued to the main customer.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1092,7 +1092,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>DetermineShipToCustomer( obj.Transaction, obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.Customer)</code></p>
 <h3 id="store">Store</h3>
-<p>The store, from which the products will be sold. When null, the store is unknown or N/A. <code>Filter(multi eq)</code></p>
+<p>The store, from which the products will be sold. When NULL, the store is unknown or N/A.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

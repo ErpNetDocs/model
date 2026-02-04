@@ -51,9 +51,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.Documents.DocumentParties.md#document) | [Documents](General.Documents.Documents.md) | The document in which the party plays a role. `Required` `Filter(multi eq)` `Owner` |
-| [Party](General.Documents.DocumentParties.md#party) | [Parties](General.Contacts.Parties.md) | The party, which plays a role in the document. `Required` `Filter(multi eq)` |
-| [Role](General.Documents.DocumentParties.md#role) | [DocumentPartyRoles](Systems.Documents.DocumentPartyRoles.md) | The role of the party in the document. `Required` `Filter(multi eq)` |
+| [Document](General.Documents.DocumentParties.md#document) | [Documents](General.Documents.Documents.md) | The document in which the party plays a role. |
+| [Party](General.Documents.DocumentParties.md#party) | [Parties](General.Contacts.Parties.md) | The party, which plays a role in the document. |
+| [Role](General.Documents.DocumentParties.md#role) | [DocumentPartyRoles](Systems.Documents.DocumentPartyRoles.md) | The role of the party in the document. |
 
 
 ## System Attributes
@@ -112,7 +112,7 @@ Show in UI: **HiddenByDefault**
 
 ### Document
 
-The document in which the party plays a role. `Required` `Filter(multi eq)` `Owner`
+The document in which the party plays a role.
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **CannotBeShown**
 
 ### Party
 
-The party, which plays a role in the document. `Required` `Filter(multi eq)`
+The party, which plays a role in the document.
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### Role
 
-The role of the party in the document. `Required` `Filter(multi eq)`
+The role of the party in the document.
 
 Type: **[DocumentPartyRoles](Systems.Documents.DocumentPartyRoles.md)**  
 Category: **System**  

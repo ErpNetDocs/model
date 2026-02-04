@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Todo.TaskItems.html#completeddatetimeutc">CompletedDateTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates (in UTC) when the task item was completed. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>Indicates (in UTC) when the task item was completed.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.TaskItems.html#createddatetimeutc">CreatedDateTimeUtc</a></td>
 <td>datetime</td>
-<td>Indicates (in UTC) when the task item was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>Indicates (in UTC) when the task item was created.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.TaskItems.html#iscompleted">IsCompleted</a></td>
 <td>boolean</td>
-<td>Indicates whether the task item is completed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>Indicates whether the task item is completed.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.TaskItems.html#notes">Notes</a></td>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Todo.TaskItems.html#title">Title</a></td>
 <td>string (254)</td>
-<td>A brief description of the task item. <code>Required</code> <code>Filter(like)</code></td>
+<td>A brief description of the task item.</td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Todo.TaskItems.html#task">Task</a></td>
 <td><a href="Projects.Todo.Tasks.html">Tasks</a></td>
-<td>The task to which this item is part of. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The task to which this item is part of.</td>
 </tr>
 </tbody>
 </table>
@@ -192,14 +192,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completeddatetimeutc">CompletedDateTimeUtc</h3>
-<p>Indicates (in UTC) when the task item was completed. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>Indicates (in UTC) when the task item was completed.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createddatetimeutc">CreatedDateTimeUtc</h3>
-<p>Indicates (in UTC) when the task item was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>Indicates (in UTC) when the task item was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -207,7 +207,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="iscompleted">IsCompleted</h3>
-<p>Indicates whether the task item is completed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>Indicates whether the task item is completed.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -224,7 +224,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="title">Title</h3>
-<p>A brief description of the task item. <code>Required</code> <code>Filter(like)</code></p>
+<p>A brief description of the task item.</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -253,7 +253,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="task">Task</h3>
-<p>The task to which this item is part of. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The task to which this item is part of.</p>
 <p>Type: <strong><a href="Projects.Todo.Tasks.html">Tasks</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

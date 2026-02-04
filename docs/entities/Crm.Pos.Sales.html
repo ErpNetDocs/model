@@ -127,67 +127,67 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Sales.html#closedat">ClosedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When the sale was finalized (paid, voided, or completed). <code>Filter(eq;ge;le)</code></td>
+<td>When the sale was finalized (paid, voided, or completed).</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#documentnumber">DocumentNumber</a></td>
 <td>string (25)</td>
-<td>Receipt document number. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Receipt document number.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#fiscalsalesnumber">FiscalSalesNumber</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.33</code></td>
+<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#isvoided">IsVoided</a></td>
 <td>boolean</td>
-<td>Marked true if sale is canceled/voided. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>Marked true if sale is canceled/voided.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#openedat">OpenedAt</a></td>
 <td>datetime</td>
-<td>Time of the opening of the POS sale. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Time of the opening of the POS sale.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#originalsalenumber">OriginalSaleNumber</a></td>
 <td>string (25) <strong>nullable</strong></td>
-<td>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq;like)</code></td>
+<td>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#saledate">SaleDate</a></td>
 <td>date</td>
-<td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></td>
 <td><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></td>
-<td>Kind of POS sale event. Typically it is &quot;Normal sale&quot;. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Filter(eq)</code></td>
+<td>Kind of POS sale event. Typically it is &quot;Normal sale&quot;.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#salestage">SaleStage</a></td>
 <td><a href="Crm.Pos.Sales.html#salestage">SaleStage</a></td>
-<td>General stage of the sale. Finalized sales must have matching amounts between header and detail lines. <code>Required</code> <code>Default(&quot;NEW&quot;)</code> <code>Filter(eq)</code></td>
+<td>General stage of the sale. Finalized sales must have matching amounts between header and detail lines.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Total gross amount in the sale currency. <code>Currency: SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.47</code></td>
+<td>Total gross amount in the sale currency.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#totalamountbase">TotalAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Total gross amount in base currency. <code>Currency: Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Total gross amount in base currency.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#totalamountreporting">TotalAmountReporting</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>Total gross amount in reporting currency (if applicable). <code>Currency: Location.EnterpriseCompany.ReportingCurrency</code> <code>Filter(eq;ge;le)</code></td>
+<td>Total gross amount in reporting currency (if applicable).</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#voidedat">VoidedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time when the document was voided. <code>Filter(eq;ge;le)</code></td>
+<td>Date and time when the document was voided.</td>
 </tr>
 </tbody>
 </table>
@@ -204,52 +204,52 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Sales.html#closedby">ClosedBy</a></td>
 <td><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</td>
-<td>The operator who finalized or closed the sale (may differ from opener). <code>Filter(multi eq)</code></td>
+<td>The operator who finalized or closed the sale (may differ from opener).</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>Set for known customers (e.g. loyalty program), otherwise null. <code>Filter(multi eq)</code></td>
+<td>Set for known customers (e.g. loyalty program), otherwise null.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#location">Location</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>Link to location where the sale occurred. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Link to location where the sale occurred.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#openedby">OpenedBy</a></td>
 <td><a href="Crm.Pos.Operators.html">Operators</a></td>
-<td>The operator who created the sale. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The operator who created the sale.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#operator">Operator</a></td>
 <td><a href="Crm.Pos.Operators.html">Operators</a></td>
-<td>Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#originalsale">OriginalSale</a></td>
 <td><a href="Crm.Pos.Sales.html">Sales</a> (nullable)</td>
-<td>Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). <code>Filter(multi eq)</code></td>
+<td>Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>Set when there is single payment type (method) for the whole sale. null when there are multiple payments. <code>Filter(multi eq)</code></td>
+<td>Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#salecurrency">SaleCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>Reference to the currency in which this POS sale is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.47</code></td>
+<td>Reference to the currency in which this POS sale is recorded.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#terminal">Terminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a></td>
-<td>Link to specific POS workspace terminal used. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Link to specific POS workspace terminal used.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#voidedby">VoidedBy</a></td>
 <td><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</td>
-<td>The operator who voided the document. <code>Filter(multi eq)</code></td>
+<td>The operator who voided the document.</td>
 </tr>
 </tbody>
 </table>
@@ -319,14 +319,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="closedat">ClosedAt</h3>
-<p>When the sale was finalized (paid, voided, or completed). <code>Filter(eq;ge;le)</code></p>
+<p>When the sale was finalized (paid, voided, or completed).</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentnumber">DocumentNumber</h3>
-<p>Receipt document number. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Receipt document number.</p>
 <p>Type: <strong>string (25)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -334,7 +334,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>25</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fiscalsalesnumber">FiscalSalesNumber</h3>
-<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.33</code></p>
+<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -342,7 +342,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isvoided">IsVoided</h3>
-<p>Marked true if sale is canceled/voided. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>Marked true if sale is canceled/voided.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -350,7 +350,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="openedat">OpenedAt</h3>
-<p>Time of the opening of the POS sale. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Time of the opening of the POS sale.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -358,7 +358,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="originalsalenumber">OriginalSaleNumber</h3>
-<p>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. <code>Filter(eq;like)</code></p>
+<p>Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.</p>
 <p>Type: <strong>string (25) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -366,7 +366,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>25</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="saledate">SaleDate</h3>
-<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -374,7 +374,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salekind">SaleKind</h3>
-<p>Kind of POS sale event. Typically it is &quot;Normal sale&quot;. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Filter(eq)</code></p>
+<p>Kind of POS sale event. Typically it is &quot;Normal sale&quot;.</p>
 <p>Type: <strong><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SaleKind</code>(Crm.Pos.Sales.md#salekind) data attribute<br>
@@ -410,7 +410,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>NormalSale</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salestage">SaleStage</h3>
-<p>General stage of the sale. Finalized sales must have matching amounts between header and detail lines. <code>Required</code> <code>Default(&quot;NEW&quot;)</code> <code>Filter(eq)</code></p>
+<p>General stage of the sale. Finalized sales must have matching amounts between header and detail lines.</p>
 <p>Type: <strong><a href="Crm.Pos.Sales.html#salestage">SaleStage</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SaleStage</code>(Crm.Pos.Sales.md#salestage) data attribute<br>
@@ -438,28 +438,28 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>New</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
-<p>Total gross amount in the sale currency. <code>Currency: SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.47</code></p>
+<p>Total gross amount in the sale currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalamountbase">TotalAmountBase</h3>
-<p>Total gross amount in base currency. <code>Currency: Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Total gross amount in base currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalamountreporting">TotalAmountReporting</h3>
-<p>Total gross amount in reporting currency (if applicable). <code>Currency: Location.EnterpriseCompany.ReportingCurrency</code> <code>Filter(eq;ge;le)</code></p>
+<p>Total gross amount in reporting currency (if applicable).</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="voidedat">VoidedAt</h3>
-<p>Date and time when the document was voided. <code>Filter(eq;ge;le)</code></p>
+<p>Date and time when the document was voided.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -509,50 +509,50 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="closedby">ClosedBy</h3>
-<p>The operator who finalized or closed the sale (may differ from opener). <code>Filter(multi eq)</code></p>
+<p>The operator who finalized or closed the sale (may differ from opener).</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>Set for known customers (e.g. loyalty program), otherwise null. <code>Filter(multi eq)</code></p>
+<p>Set for known customers (e.g. loyalty program), otherwise null.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="location">Location</h3>
-<p>Link to location where the sale occurred. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Link to location where the sale occurred.</p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="openedby">OpenedBy</h3>
-<p>The operator who created the sale. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The operator who created the sale.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operator">Operator</h3>
-<p>Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="originalsale">OriginalSale</h3>
-<p>Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). <code>Filter(multi eq)</code></p>
+<p>Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).</p>
 <p>Type: <strong><a href="Crm.Pos.Sales.html">Sales</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>Set when there is single payment type (method) for the whole sale. null when there are multiple payments. <code>Filter(multi eq)</code></p>
+<p>Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salecurrency">SaleCurrency</h3>
-<p>Reference to the currency in which this POS sale is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.47</code></p>
+<p>Reference to the currency in which this POS sale is recorded.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -560,13 +560,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.Location.EnterpriseCompany.BaseCurrency</code></p>
 <h3 id="terminal">Terminal</h3>
-<p>Link to specific POS workspace terminal used. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Link to specific POS workspace terminal used.</p>
 <p>Type: <strong><a href="Crm.Pos.Terminals.html">Terminals</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="voidedby">VoidedBy</h3>
-<p>The operator who voided the document. <code>Filter(multi eq)</code></p>
+<p>The operator who voided the document.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

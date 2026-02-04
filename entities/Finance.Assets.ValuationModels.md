@@ -4,7 +4,7 @@ uid: Finance.Assets.ValuationModels
 # Finance.Assets.ValuationModels
 
 
-Valuation models stand for the different valuations an asset can have. For example Accounting, Tax, External Financial Reports, etc. All asset transactions are posted for specific valuation model, but are usually automatically copied to other models.
+Valuation models stand for the different valuations an asset can have. For example Accounting, Tax, External Financial Reports, etc. All asset transactions are posted for specific valuation model, but are usually automatically copied to other models
 
 ## General
 Namespace: [Finance.Assets](Finance.Assets.md)  
@@ -33,14 +33,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. 
 | [Name](Finance.Assets.ValuationModels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ValuationModel. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#defaultdepreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. `Filter(multi eq)` |
+| [DefaultDepreciationMethod](Finance.Assets.ValuationModels.md#defaultdepreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable) | Obsolete. Not used. |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Tree
 
 ### IsSystem
 
-Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user.
 
 Type: **boolean**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultDepreciationMethod
 
-Obsolete. Not used. `Filter(multi eq)`
+Obsolete. Not used.
 
 Type: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md) (nullable)**  
 Category: **System**  

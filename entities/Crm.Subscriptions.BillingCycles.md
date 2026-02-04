@@ -34,17 +34,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Subscriptions.BillingCycles.md#isactive) | boolean | Indicates whether the current Billing cycle is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [Name](Crm.Subscriptions.BillingCycles.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the billing cycle. `Required` `Filter(eq;like)` 
+| [IsActive](Crm.Subscriptions.BillingCycles.md#isactive) | boolean | Indicates whether the current Billing cycle is active. 
+| [Name](Crm.Subscriptions.BillingCycles.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the billing cycle. 
 | [Notes](Crm.Subscriptions.BillingCycles.md#notes) | string (max) __nullable__ | Notes for this BillingCycle. 
-| [NumberOfMonths](Crm.Subscriptions.BillingCycles.md#numberofmonths) | byte | Number of months between billings. `Required` `Default(1)` `Filter(eq;ge;le)` 
-| [StartingDayOfMonth](Crm.Subscriptions.BillingCycles.md#startingdayofmonth) | byte | On which date of the month the bills are issued. `Required` `Default(1)` `Filter(eq;ge;le)` 
+| [NumberOfMonths](Crm.Subscriptions.BillingCycles.md#numberofmonths) | byte | Number of months between billings. 
+| [StartingDayOfMonth](Crm.Subscriptions.BillingCycles.md#startingdayofmonth) | byte | On which date of the month the bills are issued. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Subscriptions.BillingCycles.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Specifies the enterprise company for which the cycle will be valid. null means that it is valid for all enterprise companies. `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Subscriptions.BillingCycles.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Specifies the enterprise company for which the cycle will be valid. NULL means that it is valid for all enterprise companies. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Billing cycle is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Billing cycle is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the billing cycle. `Required` `Filter(eq;like)`
+Multi-language name of the billing cycle.
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfMonths
 
-Number of months between billings. `Required` `Default(1)` `Filter(eq;ge;le)`
+Number of months between billings.
 
 Type: **byte**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### StartingDayOfMonth
 
-On which date of the month the bills are issued. `Required` `Default(1)` `Filter(eq;ge;le)`
+On which date of the month the bills are issued.
 
 Type: **byte**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-Specifies the enterprise company for which the cycle will be valid. null means that it is valid for all enterprise companies. `Filter(multi eq)`
+Specifies the enterprise company for which the cycle will be valid. NULL means that it is valid for all enterprise companies.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Indexed: **True**  

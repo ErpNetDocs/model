@@ -35,16 +35,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service. `Required` `Filter(eq;like)` 
+| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service. 
+| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates whether this service is currently used. 
+| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified. `Required` `Filter(multi eq)` |
-| [OperationalProcedure](Applications.Service.Services.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) (nullable) | Operational Procedure. `Filter(multi eq)` `Introduced in version 26.2.1.30` |
+| [MeasurementUnit](Applications.Service.Services.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit in which the service rendered to the customer is quantified |
+| [OperationalProcedure](Applications.Service.Services.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) (nullable) | Operational Procedure |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the service. `Required` `Filter(eq;like)` `ORD`
+Unique code of the service.
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -84,7 +84,7 @@ Back-End Default Expression:
 
 ### IsActive
 
-Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)`
+Indicates whether this service is currently used.
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the service. `Required` `Filter(eq;like)`
+The name of the service.
 
 Type: **string (254)**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **HiddenByDefault**
 
 ### MeasurementUnit
 
-The measurement unit in which the service rendered to the customer is quantified. `Required` `Filter(multi eq)`
+The measurement unit in which the service rendered to the customer is quantified
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -177,7 +177,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationalProcedure
 
-Operational Procedure. `Filter(multi eq)` `Introduced in version 26.2.1.30`
+Operational Procedure
 
 Type: **[OperationalProcedures](Projects.Procedures.OperationalProcedures.md) (nullable)**  
 Category: **System**  

@@ -36,14 +36,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Name](Finance.Accounting.Templates.md#name) | string (254) | The name of this Template. `Required` `Filter(like)` 
-| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (2000) __nullable__ | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
-| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (max) __nullable__ | Template voucher description. Can use field substitutes, surrounded with square brackets. 
+| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (2000) __nullable__ | Determines the source for the document date of the generated vouchers. If not specified the voucher date is set as usual. 
+| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (max) __nullable__ | Template voucher description. Can use field substitutes, surrounded with square brackets 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.Templates.md#route) | [Routes](Systems.Documents.Routes.md) | The route which activates the template. `Required` `Filter(multi eq)` `Owner` |
+| [Route](Finance.Accounting.Templates.md#route) | [Routes](Systems.Documents.Routes.md) | The route which activates the template |
 
 
 ## System Attributes
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### VoucherDateSource
 
-Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual.
+Determines the source for the document date of the generated vouchers. If not specified the voucher date is set as usual.
 
 Type: **string (2000) __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### VoucherDescriptionMask
 
-Template voucher description. Can use field substitutes, surrounded with square brackets.
+Template voucher description. Can use field substitutes, surrounded with square brackets
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **HiddenByDefault**
 
 ### Route
 
-The route which activates the template. `Required` `Filter(multi eq)` `Owner`
+The route which activates the template
 
 Type: **[Routes](Systems.Documents.Routes.md)**  
 Indexed: **True**  

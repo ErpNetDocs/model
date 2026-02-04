@@ -58,7 +58,7 @@ Aggregate Tree
 | [CompleteTime](Applications.Service.ServiceActivities.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Applications.Service.ServiceActivities.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Applications.Service.ServiceActivities.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CreditLimitOverride](Applications.Service.ServiceActivities.md#creditlimitoverride) | boolean | Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. `Required` `Default(false)` `Filter(eq)` 
+| [CreditLimitOverride](Applications.Service.ServiceActivities.md#creditlimitoverride) | boolean | Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. 
 | [DeadlineTime](Applications.Service.ServiceActivities.md#deadlinetime) | datetime __nullable__ | The deadline for the task. null if there is no deadline. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [DocumentDate](Applications.Service.ServiceActivities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Applications.Service.ServiceActivities.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -76,7 +76,7 @@ Aggregate Tree
 | [Priority](Applications.Service.ServiceActivities.md#priority) | [Priority](Applications.Service.ServiceActivities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important). `Required` `Default(3)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [Private](Applications.Service.ServiceActivities.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [ReadOnly](Applications.Service.ServiceActivities.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReceiverPersonName](Applications.Service.ServiceActivities.md#receiverpersonname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Copy of the name of the receiver at the time the activity was signed. `Filter(like)` 
+| [ReceiverPersonName](Applications.Service.ServiceActivities.md#receiverpersonname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Copy of the name of the receiver at the time the activity was signed 
 | [ReferenceDate](Applications.Service.ServiceActivities.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Applications.Service.ServiceActivities.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Applications.Service.ServiceActivities.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -100,28 +100,28 @@ Aggregate Tree
 | [AssignedToUser](Applications.Service.ServiceActivities.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ContactPerson](Applications.Service.ServiceActivities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [CurrencyDirectory](Applications.Service.ServiceActivities.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Applications.Service.ServiceActivities.md#customer) | [Customers](Crm.Sales.Customers.md) | The receiver of the work. `Required` `Filter(multi eq)` |
-| [DefaultServiceObject](Applications.Service.ServiceActivities.md#defaultserviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | Default service object for materials and services lines. `Filter(multi eq)` |
+| [Customer](Applications.Service.ServiceActivities.md#customer) | [Customers](Crm.Sales.Customers.md) | The receiver of the work |
+| [DefaultServiceObject](Applications.Service.ServiceActivities.md#defaultserviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | Default service object for materials and services lines in this service activity. |
 | [DocumentType](Applications.Service.ServiceActivities.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Applications.Service.ServiceActivities.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Applications.Service.ServiceActivities.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Applications.Service.ServiceActivities.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Applications.Service.ServiceActivities.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [LocationPartyContact<br />Mechanism](Applications.Service.ServiceActivities.md#locationpartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The location where or the communication line used to conduct the work. `Filter(multi eq)` |
+| [LocationPartyContact<br />Mechanism](Applications.Service.ServiceActivities.md#locationpartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The location or the communication line used to conduct the work |
 | [MasterDocument](Applications.Service.ServiceActivities.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [OwnerParty](Applications.Service.ServiceActivities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [Parent](Applications.Service.ServiceActivities.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Applications.Service.ServiceActivities.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ProjectTask](Applications.Service.ServiceActivities.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
-| [ReceiverPerson](Applications.Service.ServiceActivities.md#receiverperson) | [Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the customers company, that received and signed for the service. `Filter(multi eq)` |
+| [ReceiverPerson](Applications.Service.ServiceActivities.md#receiverperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person from the customers company, that received and signed for the service |
 | [ResponsibleParty](Applications.Service.ServiceActivities.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [ResponsiblePerson](Applications.Service.ServiceActivities.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Applications.Service.ServiceActivities.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Applications.Service.ServiceActivities.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ServiceAgreement](Applications.Service.ServiceActivities.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | The service agreement under which the work was done. `Filter(multi eq)` |
-| [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. `Filter(multi eq)` |
+| [ServiceAgreement](Applications.Service.ServiceActivities.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | The service agreement under which the work was done |
+| [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. |
 | [SocialGroup](Applications.Service.ServiceActivities.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). `Filter(multi eq)` `Introduced in version 23.1.1.3` (Inherited from [Activities](General.Activities.Activities.md)) |
-| [Store](Applications.Service.ServiceActivities.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which materials are taken. `Filter(multi eq)` |
+| [Store](Applications.Service.ServiceActivities.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which materials are taken |
 | [TargetParty](Applications.Service.ServiceActivities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [ToCompanyDivision](Applications.Service.ServiceActivities.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Applications.Service.ServiceActivities.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -227,7 +227,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditLimitOverride
 
-Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. `Required` `Default(false)` `Filter(eq)`
+Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.
 
 Type: **boolean**  
 Category: **System**  
@@ -443,7 +443,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReceiverPersonName
 
-Copy of the name of the receiver at the time the activity was signed. `Filter(like)`
+Copy of the name of the receiver at the time the activity was signed
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -737,7 +737,7 @@ Show in UI: **HiddenByDefault**
 
 ### Customer
 
-The receiver of the work. `Required` `Filter(multi eq)`
+The receiver of the work
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Category: **System**  
@@ -748,7 +748,7 @@ Front-End Recalc Expressions:
 `obj.ShipToCustomer.DetermineCustomerFromShipToCustomer( obj.EnterpriseCompany, obj.Customer)`
 ### DefaultServiceObject
 
-Default service object for materials and services lines. `Filter(multi eq)`
+Default service object for materials and services lines in this service activity.
 
 Type: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 Category: **System**  
@@ -806,7 +806,7 @@ Show in UI: **HiddenByDefault**
 
 ### LocationPartyContactMechanism
 
-The location where or the communication line used to conduct the work. `Filter(multi eq)`
+The location or the communication line used to conduct the work
 
 Type: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable)**  
 Category: **System**  
@@ -865,7 +865,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiverPerson
 
-The id of the person from the customers company, that received and signed for the service. `Filter(multi eq)`
+The person from the customers company, that received and signed for the service
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -911,7 +911,7 @@ Show in UI: **HiddenByDefault**
 
 ### ServiceAgreement
 
-The service agreement under which the work was done. `Filter(multi eq)`
+The service agreement under which the work was done
 
 Type: **[ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable)**  
 Category: **System**  
@@ -920,7 +920,7 @@ Show in UI: **ShownByDefault**
 
 ### ShipToCustomer
 
-Specific customer location of the main customer that receives the work. `Filter(multi eq)`
+Specific customer location of the main customer that receives the work.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -940,7 +940,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The default store from which materials are taken. `Filter(multi eq)`
+The default store from which materials are taken
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  

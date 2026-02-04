@@ -34,16 +34,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#completedatutc) | datetime | When the procedure was completed. `Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [StartedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#startedatutc) | datetime | When the procedure was started. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
-| [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | Current status. `Required` `Default("NEW")` `Filter(multi eq)` 
+| [CompletedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#completedatutc) | datetime | When the procedure was completed. 
+| [StartedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#startedatutc) | datetime | When the procedure was started. 
+| [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | Current status. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [OperationalProcedure](Projects.Procedures.OperationalProcedureExecutions.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) | Which procedure is executed. `Required` `Filter(multi eq)` |
-| [SubjectDataObject](Projects.Procedures.OperationalProcedureExecutions.md#subjectdataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which the procedure is executed. `Required` `Filter(multi eq)` |
+| [OperationalProcedure](Projects.Procedures.OperationalProcedureExecutions.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) | Which procedure is executed. |
+| [SubjectDataObject](Projects.Procedures.OperationalProcedureExecutions.md#subjectdataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which the procedure is executed. |
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### CompletedAtUtc
 
-When the procedure was completed. `Required` `Filter(eq;ge;le)` `ReadOnly`
+When the procedure was completed.
 
 Type: **datetime**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### StartedAtUtc
 
-When the procedure was started. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
+When the procedure was started.
 
 Type: **datetime**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-Current status. `Required` `Default("NEW")` `Filter(multi eq)`
+Current status.
 
 Type: **[Status](Projects.Procedures.OperationalProcedureExecutions.md#status)**  
 Category: **System**  
@@ -172,7 +172,7 @@ Show in UI: **HiddenByDefault**
 
 ### OperationalProcedure
 
-Which procedure is executed. `Required` `Filter(multi eq)`
+Which procedure is executed.
 
 Type: **[OperationalProcedures](Projects.Procedures.OperationalProcedures.md)**  
 Indexed: **True**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 ### SubjectDataObject
 
-The object, for which the procedure is executed. `Required` `Filter(multi eq)`
+The object, for which the procedure is executed.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Indexed: **True**  

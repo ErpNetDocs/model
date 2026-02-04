@@ -34,24 +34,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CoveredByGuarantee](Applications.Service.ServiceActivityMaterials.md#coveredbyguarantee) | boolean | True when the used material is covered by the guarantee. `Required` `Default(false)` 
-| [LineNo](Applications.Service.ServiceActivityMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
-| [Quantity](Applications.Service.ServiceActivityMaterials.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the product, that was used. `Unit: QuantityUnit` `Required` 
-| [QuantityBase](Applications.Service.ServiceActivityMaterials.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
-| [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [CoveredByGuarantee](Applications.Service.ServiceActivityMaterials.md#coveredbyguarantee) | boolean | True when the used material is covered by the guarantee. 
+| [LineNo](Applications.Service.ServiceActivityMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. 
+| [Quantity](Applications.Service.ServiceActivityMaterials.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the product, that was used 
+| [QuantityBase](Applications.Service.ServiceActivityMaterials.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. 
+| [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Applications.Service.ServiceActivityMaterials.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The owner document. The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` |
-| [LineStore](Applications.Service.ServiceActivityMaterials.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which the product was taken. null = use the store from the header. `Filter(multi eq)` |
-| [Lot](Applications.Service.ServiceActivityMaterials.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product used as material. null means that the lot is unknown or will be specified at a later stage (in a store order. etc.). `Filter(multi eq)` `Introduced in version 25.1.1.39` |
-| [Product](Applications.Service.ServiceActivityMaterials.md#product) | [Products](General.Products.Products.md) | The product, which was used as material. `Required` `Filter(multi eq)` |
-| [QuantityUnit](Applications.Service.ServiceActivityMaterials.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. Initially is set to the default unit for the product. `Required` `Filter(multi eq)` |
-| [SerialNumber](Applications.Service.ServiceActivityMaterials.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number of the product used as material. null means that the number is unknown or will be specified at a later stage (in a store order, etc.). `Filter(multi eq)` `Introduced in version 25.1.1.26` |
+| [LineStore](Applications.Service.ServiceActivityMaterials.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which the product was taken. If empty - use the store from the service activity |
+| [Lot](Applications.Service.ServiceActivityMaterials.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product used as material. NULL means that the lot is unknown or will be specified at a later stage (in a store order. etc.) |
+| [Product](Applications.Service.ServiceActivityMaterials.md#product) | [Products](General.Products.Products.md) | The product, which was used as material. |
+| [QuantityUnit](Applications.Service.ServiceActivityMaterials.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. Initially is set to the default unit for the product |
+| [SerialNumber](Applications.Service.ServiceActivityMaterials.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number of the product used as material. NULL means that the number is unknown or will be specified at a later stage (in a store order, etc.) |
 | [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ServiceObject](Applications.Service.ServiceActivityMaterials.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object for which the material is used. null means unkown object or N/A. `Filter(multi eq)` |
+| [ServiceObject](Applications.Service.ServiceActivityMaterials.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object for which the material from this line is used. If service object is unknown or there isn't service object then this field should be blank. |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### CoveredByGuarantee
 
-True when the used material is covered by the guarantee. `Required` `Default(false)`
+True when the used material is covered by the guarantee.
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required`
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 Type: **int32**  
 Category: **System**  
@@ -99,7 +99,7 @@ Front-End Recalc Expressions:
 `( obj.ServiceActivity.Materials.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
-Quantity of the product, that was used. `Unit: QuantityUnit` `Required`
+Quantity of the product, that was used
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
+The equivalence of Quantity in the base measurement category of the product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -124,7 +124,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### LineStore
 
-The store from which the product was taken. null = use the store from the header. `Filter(multi eq)`
+The store from which the product was taken. If empty - use the store from the service activity
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -195,7 +195,7 @@ Front-End Recalc Expressions:
 `obj.ServiceActivity.Store`
 ### Lot
 
-The lot of the product used as material. null means that the lot is unknown or will be specified at a later stage (in a store order. etc.). `Filter(multi eq)` `Introduced in version 25.1.1.39`
+The lot of the product used as material. NULL means that the lot is unknown or will be specified at a later stage (in a store order. etc.)
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product, which was used as material. `Required` `Filter(multi eq)`
+The product, which was used as material.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -213,7 +213,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity. Initially is set to the default unit for the product. `Required` `Filter(multi eq)`
+The measurement unit of Quantity. Initially is set to the default unit for the product
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -224,7 +224,7 @@ Front-End Recalc Expressions:
 `obj.Product.MeasurementUnit`
 ### SerialNumber
 
-The serial number of the product used as material. null means that the number is unknown or will be specified at a later stage (in a store order, etc.). `Filter(multi eq)` `Introduced in version 25.1.1.26`
+The serial number of the product used as material. NULL means that the number is unknown or will be specified at a later stage (in a store order, etc.)
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -244,7 +244,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceObject
 
-The service object for which the material is used. null means unkown object or N/A. `Filter(multi eq)`
+The service object for which the material from this line is used. If service object is unknown or there isn't service object then this field should be blank.
 
 Type: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 Category: **System**  

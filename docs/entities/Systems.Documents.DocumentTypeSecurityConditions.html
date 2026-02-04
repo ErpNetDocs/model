@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeSecurityConditions.html#conditionfilterxml">ConditionFilterXml</a></td>
 <td>dataaccessfilter</td>
-<td>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. <code>Unit: obj.DocumentType.EntityName</code> <code>Required</code></td>
+<td>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeSecurityConditions.html#description">Description</a></td>
@@ -136,7 +136,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
 <td><a href="Systems.Documents.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
-<td>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></td>
+<td>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.</td>
 </tr>
 </tbody>
 </table>
@@ -153,12 +153,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeSecurityConditions.html#documentaccesskey">DocumentAccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">AccessKeys</a></td>
-<td>The access key, which will be used to secure new documents, when this rule is selected. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The access key, which will be used to secure new documents, when this rule is selected.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeSecurityConditions.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type, whose documents will be secured by the current rule. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type, whose documents will be secured by the current rule.</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="conditionfilterxml">ConditionFilterXml</h3>
-<p>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. <code>Unit: obj.DocumentType.EntityName</code> <code>Required</code></p>
+<p>Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.</p>
 <p>Type: <strong>dataaccessfilter</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -206,7 +206,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></p>
+<p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeSecurityConditions.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for Priority properties<br>
@@ -268,7 +268,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentaccesskey">DocumentAccessKey</h3>
-<p>The access key, which will be used to secure new documents, when this rule is selected. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The access key, which will be used to secure new documents, when this rule is selected.</p>
 <p>Type: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -298,7 +298,7 @@ Supported permissions</p>
 </tbody>
 </table>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type, whose documents will be secured by the current rule. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type, whose documents will be secured by the current rule.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -41,20 +41,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](General.Activities.ActivityTimeIntervals.md#date) | date | The date on which the work was performed. `Required` `Filter(eq;ge;le)` 
-| [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
-| [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
-| [Notes](General.Activities.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval. 
-| [StartTime](General.Activities.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
-| [State](General.Activities.ActivityTimeIntervals.md#state) | [DocumentState](General.Activities.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
+| [Date](General.Activities.ActivityTimeIntervals.md#date) | date | The date on which the work was performed 
+| [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date' 
+| [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed 
+| [Notes](General.Activities.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval 
+| [StartTime](General.Activities.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date' 
+| [State](General.Activities.ActivityTimeIntervals.md#state) | [DocumentState](General.Activities.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. NULL when the state is unknown. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Activities.ActivityTimeIntervals.md#activity) | [Activities](General.Activities.Activities.md) | The activity for which the time interval is recorded. `Required` `Filter(multi eq)` |
-| [Party](General.Activities.ActivityTimeIntervals.md#party) | [Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded. `Required` `Filter(multi eq)` |
-| [UserStatus](General.Activities.ActivityTimeIntervals.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. `Filter(multi eq)` |
+| [Activity](General.Activities.ActivityTimeIntervals.md#activity) | [Activities](General.Activities.Activities.md) | The activity for which the time interval is recorded |
+| [Party](General.Activities.ActivityTimeIntervals.md#party) | [Parties](General.Contacts.Parties.md) | The party for which the time interval is recorded |
+| [UserStatus](General.Activities.ActivityTimeIntervals.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of the primary activity in the moment the time interval was created. NULL when the user status is unknown. |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### Date
 
-The date on which the work was performed. `Required` `Filter(eq;ge;le)`
+The date on which the work was performed
 
 Type: **date**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### EndTime
 
-The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)`
+The ending time of the time interval within 'Date'
 
 Type: **time**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionCompletePercent
 
-Percent of task completed. `Required` `Default(0)` `Filter(ge;le)`
+Percent of task completed
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -106,7 +106,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( obj.Activity.PlannedDurationMinutes ?? 0) == 0), 0, Min( 0.9, Round( Max( 0, ( obj.Transaction.Clone( ).Query( ).Where( ti => ( ti.Activity == obj.Activity)).ToList( ).Where( ti => ( ( ti != obj) AndAlso ( ti.Date.Add( ti.EndTime) <= obj.Date.Add( obj.EndTime)))).OrderBy( ti => ti.Date.Add( ti.EndTime)).Select( ti => ti.ExecutionCompletePercent).LastOrDefault( ) + Convert( ( Convert( ( obj.EndTime - obj.StartTime).TotalMinutes, Nullable`1) / Convert( obj.Activity.PlannedDurationMinutes, Nullable`1)), Decimal))), 2)))`
 ### Notes
 
-Notes for the time interval.
+Notes for the time interval
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The starting time of the time interval within 'Date'. `Required` `Filter(ge;le)`
+The starting time of the time interval within 'Date'
 
 Type: **time**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-The state of the primary activity in the moment the time interval was created. null when the state is unknown.
+The state of the primary activity in the moment the time interval was created. NULL when the state is unknown.
 
 Type: **[DocumentState](General.Activities.ActivityTimeIntervals.md#state) __nullable__**  
 Category: **System**  
@@ -212,7 +212,7 @@ Show in UI: **HiddenByDefault**
 
 ### Activity
 
-The activity for which the time interval is recorded. `Required` `Filter(multi eq)`
+The activity for which the time interval is recorded
 
 Type: **[Activities](General.Activities.Activities.md)**  
 Indexed: **True**  
@@ -222,7 +222,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-The party for which the time interval is recorded. `Required` `Filter(multi eq)`
+The party for which the time interval is recorded
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -231,7 +231,7 @@ Show in UI: **ShownByDefault**
 
 ### UserStatus
 
-The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. `Filter(multi eq)`
+The user status of the primary activity in the moment the time interval was created. NULL when the user status is unknown.
 
 Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
 Category: **System**  

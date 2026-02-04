@@ -4,7 +4,7 @@ uid: Crm.Pos.SequenceSelectors
 # Crm.Pos.SequenceSelectors
 
 
-Maps point-of-sale context data to the appropriate sequence definition used for number generation.
+Maps point-of-sale context data to the appropriate sequence definition.
 
 ## General
 Namespace: [Crm.Pos](Crm.Pos.md)  
@@ -34,17 +34,17 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Crm.Pos.SequenceSelectors.md#notes) | string (max) __nullable__ | Stores optional descriptive notes; null means no additional information is provided. 
-| [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | Specifies the type of sale that determines which sequence is selected. `Required` `Default("SAL")` `Filter(multi eq)` 
+| [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | Specifies the type of sale that determines which sequence is selected. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.SequenceSelectors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Identifies the company for which the sequence selection applies; null means the rule applies to all companies. `Required` `Filter(multi eq)` |
-| [PosDevice](Crm.Pos.SequenceSelectors.md#posdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | Identifies the POS device used to determine the sequence; null means all devices are applicable. `Filter(multi eq)` |
-| [PosLocation](Crm.Pos.SequenceSelectors.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | Identifies the POS location used in sequence selection; null means all locations are applicable. `Filter(multi eq)` |
-| [PosTerminal](Crm.Pos.SequenceSelectors.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. `Filter(multi eq)` `Introduced in version 26.2.1.37` |
-| [Sequence](Crm.Pos.SequenceSelectors.md#sequence) | [Sequences](Systems.Core.Sequences.md) | References the sequence definition selected for the given POS context. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Pos.SequenceSelectors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Identifies the company for which the sequence selection applies; null means the rule applies to all companies. |
+| [PosDevice](Crm.Pos.SequenceSelectors.md#posdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | Identifies the POS device used to determine the sequence; null means all devices are applicable. |
+| [PosLocation](Crm.Pos.SequenceSelectors.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | Identifies the POS location used in sequence selection; null means all locations are applicable. |
+| [PosTerminal](Crm.Pos.SequenceSelectors.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. |
+| [Sequence](Crm.Pos.SequenceSelectors.md#sequence) | [Sequences](Systems.Core.Sequences.md) | References the sequence definition selected for the given POS context. |
 
 
 ## System Attributes
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleKind
 
-Specifies the type of sale that determines which sequence is selected. `Required` `Default("SAL")` `Filter(multi eq)`
+Specifies the type of sale that determines which sequence is selected.
 
 Type: **[SaleKind](Crm.Pos.SequenceSelectors.md#salekind)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-Identifies the company for which the sequence selection applies; null means the rule applies to all companies. `Required` `Filter(multi eq)`
+Identifies the company for which the sequence selection applies; null means the rule applies to all companies.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### PosDevice
 
-Identifies the POS device used to determine the sequence; null means all devices are applicable. `Filter(multi eq)`
+Identifies the POS device used to determine the sequence; null means all devices are applicable.
 
 Type: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### PosLocation
 
-Identifies the POS location used in sequence selection; null means all locations are applicable. `Filter(multi eq)`
+Identifies the POS location used in sequence selection; null means all locations are applicable.
 
 Type: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### PosTerminal
 
-Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. `Filter(multi eq)` `Introduced in version 26.2.1.37`
+Identifies the POS terminal used to determine the sequence; null means all terminals are applicable.
 
 Type: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Sequence
 
-References the sequence definition selected for the given POS context. `Required` `Filter(multi eq)`
+References the sequence definition selected for the given POS context.
 
 Type: **[Sequences](Systems.Core.Sequences.md)**  
 Category: **System**  

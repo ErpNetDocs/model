@@ -35,26 +35,26 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.Operations.md#active) | boolean | Indicates whether the current operation is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
+| [Active](Production.Resources.Operations.md#active) | boolean | Indicates whether the current operation is active. 
 | [Description](Production.Resources.Operations.md#description) | string (max) __nullable__ | The description of this Operation. 
-| [MinimumConcurrent<br />StartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
-| [MoveTimeMinutes](Production.Resources.Operations.md#movetimeminutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. `Required` `Default(0)` 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting 
+| [MoveTimeMinutes](Production.Resources.Operations.md#movetimeminutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. 
 | [Name](Production.Resources.Operations.md#name) | string (50) | The name of this Operation. `Required` `Filter(like)` 
-| [RunTimeMinutes](Production.Resources.Operations.md#runtimeminutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. `Required` `Default(0)` 
-| [ScrapRate](Production.Resources.Operations.md#scraprate) | decimal (7, 6) __nullable__ | The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated. 
-| [SetupTimeMinutes](Production.Resources.Operations.md#setuptimeminutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. `Required` `Default(0)` 
-| [StandardPricePerHour](Production.Resources.Operations.md#standardpriceperhour) | decimal (18, 6) | Standard price for 1 hour work for this operation. `Required` `Default(0)` 
+| [RunTimeMinutes](Production.Resources.Operations.md#runtimeminutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. 
+| [ScrapRate](Production.Resources.Operations.md#scraprate) | decimal (7, 6) __nullable__ | The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated. 
+| [SetupTimeMinutes](Production.Resources.Operations.md#setuptimeminutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. 
+| [StandardPricePerHour](Production.Resources.Operations.md#standardpriceperhour) | decimal (18, 6) | Standard price for 1 hour work for this operation. 
 | [Tooling](Production.Resources.Operations.md#tooling) | string (254) __nullable__ | Short description of the needed instruments for the operation. 
-| [UseQuantityBase](Production.Resources.Operations.md#usequantitybase) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
-| [WaitTimeMinutes](Production.Resources.Operations.md#waittimeminutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. `Required` `Default(0)` 
+| [UseQuantityBase](Production.Resources.Operations.md#usequantitybase) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource 
+| [WaitTimeMinutes](Production.Resources.Operations.md#waittimeminutes) | int32 | The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [OperationGroup](Production.Resources.Operations.md#operationgroup) | [OperationGroups](Production.Resources.OperationGroups.md) | The <see cref="OperationGroup"/> to which this Operation belongs. `Required` `Filter(multi eq)` `Owner` |
-| [OperationInstructions](Production.Resources.Operations.md#operationinstructions) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Full instructions for the operation. `Filter(multi eq)` |
-| [WorkgroupResource](Production.Resources.Operations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | When not null, specifies the Workgroup Resource, which is required by the operation. `Filter(multi eq)` |
+| [OperationInstructions](Production.Resources.Operations.md#operationinstructions) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Full instructions for the operation. |
+| [WorkgroupResource](Production.Resources.Operations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | When not NULL, specifies the Workgroup Resource, which is required by the operation. |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current operation is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+Indicates whether the current operation is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### MinimumConcurrentStartTimeMinutes
 
-How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
+How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### MoveTimeMinutes
 
-The time required for the product to move to the next operation. During this time no resource is allocated. `Required` `Default(0)`
+The time required for the product to move to the next operation. During this time no resource is allocated.
 
 Type: **int32**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### RunTimeMinutes
 
-The time required to process one product lot. The run time is calculated for each produced lot. `Required` `Default(0)`
+The time required to process one product lot. The run time is calculated for each produced lot.
 
 Type: **int32**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### ScrapRate
 
-The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.
+The percentage (0..1) of scrap usually occurring during the production operation. NULL means that the scrap rate cannot be generally calculated.
 
 Type: **decimal (7, 6) __nullable__**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupTimeMinutes
 
-The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. `Required` `Default(0)`
+The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.
 
 Type: **int32**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardPricePerHour
 
-Standard price for 1 hour work for this operation. `Required` `Default(0)`
+Standard price for 1 hour work for this operation.
 
 Type: **decimal (18, 6)**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantityBase
 
-Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)`
+Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### WaitTimeMinutes
 
-The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. `Required` `Default(0)`
+The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.
 
 Type: **int32**  
 Category: **System**  
@@ -243,7 +243,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationInstructions
 
-Full instructions for the operation. `Filter(multi eq)`
+Full instructions for the operation.
 
 Type: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 Category: **System**  
@@ -252,7 +252,7 @@ Show in UI: **CannotBeShown**
 
 ### WorkgroupResource
 
-When not null, specifies the Workgroup Resource, which is required by the operation. `Filter(multi eq)`
+When not NULL, specifies the Workgroup Resource, which is required by the operation.
 
 Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
 Category: **System**  

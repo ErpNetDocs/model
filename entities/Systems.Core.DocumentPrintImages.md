@@ -41,14 +41,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrintImage](Systems.Core.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. `Required` 
-| [PrintImageFormat](Systems.Core.DocumentPrintImages.md#printimageformat) | string (3) | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. `Required` `Default("CDS")` 
+| [PrintImage](Systems.Core.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. 
+| [PrintImageFormat](Systems.Core.DocumentPrintImages.md#printimageformat) | string (3) | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrintoutLayout](Systems.Core.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](Systems.Documents.PrintoutLayouts.md) | The print layout, which was used for the current printout. `Required` `Filter(multi eq)` |
+| [PrintoutLayout](Systems.Core.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](Systems.Documents.PrintoutLayouts.md) | The print layout, which was used for the current printout. |
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### PrintImage
 
-The data of the printout, stored in the format, specified in Print Image Format. `Required`
+The data of the printout, stored in the format, specified in Print Image Format.
 
 Type: **byte[]**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintImageFormat
 
-The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. `Required` `Default("CDS")`
+The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported.
 
 Type: **string (3)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **HiddenByDefault**
 
 ### PrintoutLayout
 
-The print layout, which was used for the current printout. `Required` `Filter(multi eq)`
+The print layout, which was used for the current printout.
 
 Type: **[PrintoutLayouts](Systems.Documents.PrintoutLayouts.md)**  
 Category: **System**  

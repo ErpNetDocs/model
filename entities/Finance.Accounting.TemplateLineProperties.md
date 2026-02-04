@@ -36,17 +36,17 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ConstantValueId](Finance.Accounting.TemplateLineProperties.md#constantvalueid) | guid __nullable__ | The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. `Filter(multi eq)` 
-| [IsDebit](Finance.Accounting.TemplateLineProperties.md#isdebit) | boolean | If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. `Required` `Default(true)` `Filter(eq)` 
-| [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#propertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant). 
-| [PropertyNo](Finance.Accounting.TemplateLineProperties.md#propertyno) | int32 | The ordinal position of the property value in the item key of the account. `Required` `Filter(eq)` 
-| [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#propertyvaluesource) | string (2000) | Source for the property value according to the chosen source type. `Required` 
-| [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#propertyvaluesourcetype) | string (64) | Type of source for the property value. For example: System properties, User properties for document, Constant, ... `Required` 
+| [IsDebit](Finance.Accounting.TemplateLineProperties.md#isdebit) | boolean | If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account. 
+| [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#propertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is "Constant"). 
+| [PropertyNo](Finance.Accounting.TemplateLineProperties.md#propertyno) | int32 | The ordinal position of the property value in the item key of the account. 
+| [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#propertyvaluesource) | string (2000) | Source for the property value according to the chosen source type. 
+| [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#propertyvaluesourcetype) | string (64) | Type of source for the property value. For example: System properties, User properties for document, Constant, ... 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Finance.Accounting.TemplateLineProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The property which value will be included in the item key of the account. `Required` `Filter(multi eq)` |
+| [Property](Finance.Accounting.TemplateLineProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The property which value will be included in the item key of the account. |
 | [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) | [TemplateLines](Finance.Accounting.TemplateLines.md) | The <see cref="TemplateLine"/> to which this TemplateLineProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDebit
 
-If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. `Required` `Default(true)` `Filter(eq)`
+If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account.
 
 Type: **boolean**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **CannotBeShown**
 
 ### PropertyDescription
 
-Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
+Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is "Constant").
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **HiddenByDefault**
 
 ### PropertyNo
 
-The ordinal position of the property value in the item key of the account. `Required` `Filter(eq)`
+The ordinal position of the property value in the item key of the account.
 
 Type: **int32**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyValueSource
 
-Source for the property value according to the chosen source type. `Required`
+Source for the property value according to the chosen source type.
 
 Type: **string (2000)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyValueSourceType
 
-Type of source for the property value. For example: System properties, User properties for document, Constant, ... `Required`
+Type of source for the property value. For example: System properties, User properties for document, Constant, ...
 
 Type: **string (64)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **HiddenByDefault**
 
 ### Property
 
-The property which value will be included in the item key of the account. `Required` `Filter(multi eq)`
+The property which value will be included in the item key of the account.
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  

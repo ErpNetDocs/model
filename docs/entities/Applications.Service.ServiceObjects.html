@@ -123,7 +123,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current service object is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.53</code></td>
+<td>Indicates whether the current service object is active.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#name">Name</a></td>
@@ -138,7 +138,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#serialnumber">SerialNumber</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The serial number of the item, that is being serviced. <code>Filter(like)</code></td>
+<td>The serial number of the item, that is being serviced.</td>
 </tr>
 </tbody>
 </table>
@@ -160,27 +160,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</td>
-<td>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.74</code></td>
+<td>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When not-null identifies the product, from which the service object was created. <code>Filter(multi eq)</code></td>
+<td>When not-NULL identifies the product, from which the service object was created</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#serialnumberobj">SerialNumberObj</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. <code>Filter(multi eq)</code></td>
+<td>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#servicedproduct">ServicedProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. <code>Filter(multi eq)</code></td>
+<td>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceObjects.html#serviceobjecttype">ServiceObjectType</a></td>
 <td><a href="Applications.Service.ServiceObjectTypes.html">ServiceObjectTypes</a> (nullable)</td>
-<td>When not null specifies the type of the service object. <code>Filter(multi eq)</code></td>
+<td>When not NULL specifies the type of the service object</td>
 </tr>
 </tbody>
 </table>
@@ -228,7 +228,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current service object is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.53</code></p>
+<p>Indicates whether the current service object is active.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -254,7 +254,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>The serial number of the item, that is being serviced. <code>Filter(like)</code></p>
+<p>The serial number of the item, that is being serviced.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -313,20 +313,20 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.74</code></p>
+<p>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>When not-null identifies the product, from which the service object was created. <code>Filter(multi eq)</code></p>
+<p>When not-NULL identifies the product, from which the service object was created</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumberobj">SerialNumberObj</h3>
-<p>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. <code>Filter(multi eq)</code></p>
+<p>Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data.</p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -334,13 +334,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.SerialNumber != null), null, obj.SerialNumberObj)</code></p>
 <h3 id="servicedproduct">ServicedProduct</h3>
-<p>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. <code>Filter(multi eq)</code></p>
+<p>The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serviceobjecttype">ServiceObjectType</h3>
-<p>When not null specifies the type of the service object. <code>Filter(multi eq)</code></p>
+<p>When not NULL specifies the type of the service object</p>
 <p>Type: <strong><a href="Applications.Service.ServiceObjectTypes.html">ServiceObjectTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

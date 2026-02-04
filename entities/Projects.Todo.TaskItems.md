@@ -36,17 +36,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedDateTimeUtc](Projects.Todo.TaskItems.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task item was completed. `Filter(eq;ge;le)` `ReadOnly` 
-| [CreatedDateTimeUtc](Projects.Todo.TaskItems.md#createddatetimeutc) | datetime | Indicates (in UTC) when the task item was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
-| [IsCompleted](Projects.Todo.TaskItems.md#iscompleted) | boolean | Indicates whether the task item is completed. `Required` `Default(false)` `Filter(eq)` 
+| [CompletedDateTimeUtc](Projects.Todo.TaskItems.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task item was completed. 
+| [CreatedDateTimeUtc](Projects.Todo.TaskItems.md#createddatetimeutc) | datetime | Indicates (in UTC) when the task item was created. 
+| [IsCompleted](Projects.Todo.TaskItems.md#iscompleted) | boolean | Indicates whether the task item is completed. 
 | [Notes](Projects.Todo.TaskItems.md#notes) | string (max) __nullable__ | Notes for this TaskItem. `Introduced in version 23.1.1.48` 
-| [Title](Projects.Todo.TaskItems.md#title) | string (254) | A brief description of the task item. `Required` `Filter(like)` 
+| [Title](Projects.Todo.TaskItems.md#title) | string (254) | A brief description of the task item. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Task](Projects.Todo.TaskItems.md#task) | [Tasks](Projects.Todo.Tasks.md) | The task to which this item is part of. `Required` `Filter(multi eq)` `Owner` |
+| [Task](Projects.Todo.TaskItems.md#task) | [Tasks](Projects.Todo.Tasks.md) | The task to which this item is part of. |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### CompletedDateTimeUtc
 
-Indicates (in UTC) when the task item was completed. `Filter(eq;ge;le)` `ReadOnly`
+Indicates (in UTC) when the task item was completed.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### CreatedDateTimeUtc
 
-Indicates (in UTC) when the task item was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
+Indicates (in UTC) when the task item was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### IsCompleted
 
-Indicates whether the task item is completed. `Required` `Default(false)` `Filter(eq)`
+Indicates whether the task item is completed.
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Title
 
-A brief description of the task item. `Required` `Filter(like)`
+A brief description of the task item.
 
 Type: **string (254)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **HiddenByDefault**
 
 ### Task
 
-The task to which this item is part of. `Required` `Filter(multi eq)` `Owner`
+The task to which this item is part of.
 
 Type: **[Tasks](Projects.Todo.Tasks.md)**  
 Indexed: **True**  

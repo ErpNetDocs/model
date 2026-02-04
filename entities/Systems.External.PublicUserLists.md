@@ -44,7 +44,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. `Filter(multi eq)` |
+| [EnterpriseCompany](Systems.External.PublicUserLists.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. |
 
 
 ## System Attributes
@@ -147,7 +147,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies. `Filter(multi eq)`
+The enterprise company to which this list belongs. Null means that the list is available to services offered by all enterprise companies.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  

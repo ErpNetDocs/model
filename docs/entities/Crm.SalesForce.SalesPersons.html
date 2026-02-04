@@ -125,7 +125,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#commissionpercent">CommissionPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>The percentage (0..1) of commission percent. null means that there is no commission percent.</td>
+<td>The percentage (0..1) of commission percent. NULL means that there is no commission percent.</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#commissionpolicyid">CommissionPolicyId</a></td>
@@ -135,17 +135,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#contractenddate">ContractEndDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></td>
+<td>The ending date of the contract with the sales person. NULL when the sales person is still active.</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#contractstartdate">ContractStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></td>
+<td>The starting date of the contract with the sales person. NULL when it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.</td>
 </tr>
 </tbody>
 </table>
@@ -167,17 +167,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. <code>Filter(multi eq)</code></td>
+<td>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>Base personal record. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
+<td>Base personal record</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersons.html#salespersongroup">SalesPersonGroup</a></td>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html">SalesPersonGroups</a></td>
-<td>The sales person group to which this sales person is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The sales person group to which this sales person is assigned.</td>
 </tr>
 </tbody>
 </table>
@@ -225,7 +225,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="commissionpercent">CommissionPercent</h3>
-<p>The percentage (0..1) of commission percent. null means that there is no commission percent.</p>
+<p>The percentage (0..1) of commission percent. NULL means that there is no commission percent.</p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -238,21 +238,21 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="contractenddate">ContractEndDate</h3>
-<p>The ending date of the contract with the sales person. null when the sales person is still active. <code>Filter(ge;le)</code></p>
+<p>The ending date of the contract with the sales person. NULL when the sales person is still active.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contractstartdate">ContractStartDate</h3>
-<p>The starting date of the contract with the sales person. null when it is unknown. <code>Filter(ge;le)</code></p>
+<p>The starting date of the contract with the sales person. NULL when it is unknown.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -309,13 +309,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. <code>Filter(multi eq)</code></p>
+<p>The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.</p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>Base personal record. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
+<p>Base personal record</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -323,7 +323,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salespersongroup">SalesPersonGroup</h3>
-<p>The sales person group to which this sales person is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The sales person group to which this sales person is assigned.</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersonGroups.html">SalesPersonGroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

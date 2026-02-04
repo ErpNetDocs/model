@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#converttobasedivisor">ConvertToBaseDivisor</a></td>
 <td>decimal (9, 3)</td>
-<td>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></td>
+<td>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#converttobasemultiplier">ConvertToBaseMultiplier</a></td>
 <td>decimal (9, 3)</td>
-<td>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></td>
+<td>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#destquantity">DestQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>Quantity in some of the base units, that equals Source_Quantity. <code>Unit: DestQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
+<td>Quantity in some of the base units, that equals Source_Quantity</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#sourcequantity">SourceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>The quantity in the non-base unit. <code>Unit: SourceQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
+<td>The quantity in the non-base unit</td>
 </tr>
 </tbody>
 </table>
@@ -153,22 +153,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#destquantityunit">DestQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#measurementcategory">MeasurementCategory</a></td>
 <td><a href="General.Products.MeasurementCategories.html">MeasurementCategories</a></td>
-<td>The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product for which we specify conversion ratios. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The product for which we specify conversion ratios</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#sourcequantityunit">SourceQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The non-base measurement unit for which we specify convertion ratio. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The non-base measurement unit for which we specify convertion ratio</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="converttobasedivisor">ConvertToBaseDivisor</h3>
-<p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></p>
+<p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -210,7 +210,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Back-End Default Expression:<br>
 <code>( ( obj.DestQuantity.Value * obj.DestQuantityUnit.Multiplier) * obj.SourceQuantityUnit.Divisor)</code></p>
 <h3 id="converttobasemultiplier">ConvertToBaseMultiplier</h3>
-<p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. <code>Required</code></p>
+<p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.</p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,7 +219,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Back-End Default Expression:<br>
 <code>( ( obj.SourceQuantity.Value * obj.SourceQuantityUnit.Multiplier) * obj.DestQuantityUnit.Divisor)</code></p>
 <h3 id="destquantity">DestQuantity</h3>
-<p>Quantity in some of the base units, that equals Source_Quantity. <code>Unit: DestQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
+<p>Quantity in some of the base units, that equals Source_Quantity</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -227,7 +227,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sourcequantity">SourceQuantity</h3>
-<p>The quantity in the non-base unit. <code>Unit: SourceQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
+<p>The quantity in the non-base unit</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,13 +257,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="destquantityunit">DestQuantityUnit</h3>
-<p>The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="measurementcategory">MeasurementCategory</h3>
-<p>The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category.</p>
 <p>Type: <strong><a href="General.Products.MeasurementCategories.html">MeasurementCategories</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -274,7 +274,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.SourceQuantityUnit.MeasurementCategory</code></p>
 <h3 id="product">Product</h3>
-<p>The product for which we specify conversion ratios. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The product for which we specify conversion ratios</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -282,7 +282,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sourcequantityunit">SourceQuantityUnit</h3>
-<p>The non-base measurement unit for which we specify convertion ratio. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The non-base measurement unit for which we specify convertion ratio</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

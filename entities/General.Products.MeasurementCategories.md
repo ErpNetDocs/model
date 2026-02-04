@@ -43,7 +43,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsDefault](General.Products.MeasurementCategories.md#isdefault) | boolean | True=This category is the default category; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
+| [IsDefault](General.Products.MeasurementCategories.md#isdefault) | boolean | 1=This category is the default category; 0=otherwise 
 | [Name](General.Products.MeasurementCategories.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of this MeasurementCategory. `Required` `Filter(eq;like)` 
 
 
@@ -51,7 +51,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.MeasurementCategories.md#id) | guid |  
+| [Id](General.Products.MeasurementCategories.md#id) | guid | Unique measurement category Id 
 | [ObjectVersion](General.Products.MeasurementCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](General.Products.MeasurementCategories.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](General.Products.MeasurementCategories.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### IsDefault
 
-True=This category is the default category; false=otherwise. `Required` `Default(false)` `Filter(eq)`
+1=This category is the default category; 0=otherwise
 
 Type: **boolean**  
 Category: **System**  
@@ -90,6 +90,8 @@ Supports Order By: **False**
 Show in UI: **ShownByDefault**  
 
 ### Id
+
+Unique measurement category Id
 
 Type: **guid**  
 Indexed: **True**  

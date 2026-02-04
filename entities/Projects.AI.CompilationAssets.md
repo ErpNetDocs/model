@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetKey](Projects.AI.CompilationAssets.md#assetkey) | string (128) | The key of the data asset. `Required` `Filter(eq;like)` `ReadOnly` 
-| [Value](Projects.AI.CompilationAssets.md#value) | string (max) __nullable__ | The value of the data asset. `Filter(eq;like)` `ReadOnly` 
+| [AssetKey](Projects.AI.CompilationAssets.md#assetkey) | string (128) | The key of the data asset. 
+| [Value](Projects.AI.CompilationAssets.md#value) | string (max) __nullable__ | The value of the data asset. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Compilation](Projects.AI.CompilationAssets.md#compilation) | [Compilations](Projects.AI.Compilations.md) | The compilation of the data asset. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [Compilation](Projects.AI.CompilationAssets.md#compilation) | [Compilations](Projects.AI.Compilations.md) | The compilation of the data asset. |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### AssetKey
 
-The key of the data asset. `Required` `Filter(eq;like)` `ReadOnly`
+The key of the data asset.
 
 Type: **string (128)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-The value of the data asset. `Filter(eq;like)` `ReadOnly`
+The value of the data asset.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### Compilation
 
-The compilation of the data asset. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
+The compilation of the data asset.
 
 Type: **[Compilations](Projects.AI.Compilations.md)**  
 Indexed: **True**  

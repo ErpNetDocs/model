@@ -33,24 +33,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message. 
-| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses. `Filter(like)` 
-| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created. `Required` `Default(Now)` `Filter(ge;le)` 
-| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address. `Required` `Filter(like)` 
-| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | True when the message is stored in encrypted format. `Required` `Default(false)` `Filter(eq)` 
-| [IsRead](Applications.Mail.Messages.md#isread) | boolean | True when the message was read by the user. `Required` `Default(false)` `Filter(eq)` 
-| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received. `Filter(ge;le)` 
-| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent. `Filter(ge;le)` 
-| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server. `Filter(eq)` `ORD` 
-| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject. `Filter(like)` 
-| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses. `Filter(like)` 
+| [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message 
+| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses 
+| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created 
+| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address 
+| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | 1 when the message is stored in encrypted format 
+| [IsRead](Applications.Mail.Messages.md#isread) | boolean | 1 when the message was read by the user 
+| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received 
+| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent 
+| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server 
+| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject 
+| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The folder where the message belongs. `Required` `Filter(multi eq)` |
-| [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. `Filter(multi eq)` |
+| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The folder where the message belongs |
+| [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party |
 
 
 ## System Attributes
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### Body
 
-The body of the message.
+The body of the message
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **HiddenByDefault**
 
 ### CcEmailAddressList
 
-Semicolon-separated list of Cc email addresses. `Filter(like)`
+Semicolon-separated list of Cc email addresses
 
 Type: **string (2048) __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationDateTime
 
-Date and time when the message was created. `Required` `Default(Now)` `Filter(ge;le)`
+Date and time when the message was created
 
 Type: **datetime**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **HiddenByDefault**
 
 ### FromEmailAddress
 
-Sending email address. `Required` `Filter(like)`
+Sending email address
 
 Type: **string (512)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### IsEncrypted
 
-True when the message is stored in encrypted format. `Required` `Default(false)` `Filter(eq)`
+1 when the message is stored in encrypted format
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### IsRead
 
-True when the message was read by the user. `Required` `Default(false)` `Filter(eq)`
+1 when the message was read by the user
 
 Type: **boolean**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceivedDateTime
 
-Date and time when the message was received. `Filter(ge;le)`
+Date and time when the message was received
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### SentDateTime
 
-Date and time when the message was sent. `Filter(ge;le)`
+Date and time when the message was sent
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### ServerMessageID
 
-Message ID as it appears on the mail server. `Filter(eq)` `ORD`
+Message ID as it appears on the mail server
 
 Type: **string (256) __nullable__**  
 Indexed: **True**  
@@ -173,7 +173,7 @@ Show in UI: **CannotBeShown**
 
 ### Subject
 
-The message subject. `Filter(like)`
+The message subject
 
 Type: **string (1024) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### ToEmailAddressList
 
-Semicolon-separated list of receiving email addresses. `Filter(like)`
+Semicolon-separated list of receiving email addresses
 
 Type: **string (2048) __nullable__**  
 Category: **System**  
@@ -257,7 +257,7 @@ Show in UI: **HiddenByDefault**
 
 ### MailBoxFolder
 
-The folder where the message belongs. `Required` `Filter(multi eq)`
+The folder where the message belongs
 
 Type: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 Indexed: **True**  
@@ -267,7 +267,7 @@ Show in UI: **HiddenByDefault**
 
 ### RelatedToParty
 
-The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. `Filter(multi eq)`
+The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  

@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string (254) | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(eq;like)` 
+| [FullPath](Production.Resources.OperationGroups.md#fullpath) | string (254) | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. 
 | [Name](Production.Resources.OperationGroups.md#name) | string (64) | The name of this OperationGroup. `Required` `Filter(like)` 
-| [Parent](Production.Resources.OperationGroups.md#parent) | string (254) | Path of parent group. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
+| [Parent](Production.Resources.OperationGroups.md#parent) | string (254) | Path of parent group 
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### FullPath
 
-The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(eq;like)`
+The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character.
 
 Type: **string (254)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### Parent
 
-Path of parent group. `Required` `Default("/")` `Filter(eq;like)` `ORD`
+Path of parent group
 
 Type: **string (254)**  
 Indexed: **True**  

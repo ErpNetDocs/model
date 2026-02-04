@@ -41,7 +41,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group. `Filter(multi eq)` |
+| [DefaultValuationModel](Finance.Assets.AssetGroups.md#defaultvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) (nullable) | Default valuation model when creating new assets from this group |
 | [Parent](Finance.Assets.AssetGroups.md#parent) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | Parent asset group in the hierarchy. `Filter(multi eq)` |
 
 
@@ -146,7 +146,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultValuationModel
 
-Default valuation model when creating new assets from this group. `Filter(multi eq)`
+Default valuation model when creating new assets from this group
 
 Type: **[ValuationModels](Finance.Assets.ValuationModels.md) (nullable)**  
 Category: **System**  

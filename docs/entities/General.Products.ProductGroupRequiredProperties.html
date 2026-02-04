@@ -87,7 +87,7 @@
         <article data-uid="General.Products.ProductGroupRequiredProperties">
 <h1 id="generalproductsproductgrouprequiredproperties">General.Products.ProductGroupRequiredProperties</h1>
 
-<p>Contains the properties, that are required to be set, when creating new products in the category and its sub-categories.</p>
+<p>Contains the properties, that are required to be set, when creating new products in the category and its sub-categories</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="General.Products.html">General.Products</a><br>
 Repository: General.Products.ProductGroupRequiredProperties<br>
@@ -136,12 +136,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
-<td>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. <code>Required</code> <code>Default(0)</code></td>
+<td>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#required">Required</a></td>
 <td>boolean</td>
-<td>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. <code>Required</code> <code>Default(false)</code></td>
+<td>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.</td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#property">Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
-<td>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'.</td>
 </tr>
 </tbody>
 </table>
@@ -218,7 +218,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="propertyno">PropertyNo</h3>
-<p>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. <code>Required</code> <code>Default(0)</code></p>
+<p>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -230,7 +230,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ProductGroup.RequiredProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="required">Required</h3>
-<p>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. <code>Required</code> <code>Default(false)</code></p>
+<p>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -267,7 +267,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="property">Property</h3>
-<p>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'.</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

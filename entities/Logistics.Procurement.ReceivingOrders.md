@@ -58,14 +58,14 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Procurement.ReceivingOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Procurement.ReceivingOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Procurement.ReceivingOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [InvoiceDocumentNo](Logistics.Procurement.ReceivingOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. `Filter(eq)` 
-| [<s>IsReleased</s>](Logistics.Procurement.ReceivingOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [InvoiceDocumentNo](Logistics.Procurement.ReceivingOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. 
+| [<s>IsReleased</s>](Logistics.Procurement.ReceivingOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [Notes](Logistics.Procurement.ReceivingOrders.md#notes) | string (254) __nullable__ | Notes for this ReceivingOrder. 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Logistics.Procurement.ReceivingOrders.md#paymentduedate) | datetime __nullable__ | Due date for the payment. When null, the payment due date is the documents date. `Filter(ge;le)` 
-| [PlannedDeliveryDate](Logistics.Procurement.ReceivingOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines. `Filter(ge;le)` 
-| [PlannedReleaseDate](Logistics.Procurement.ReceivingOrders.md#plannedreleasedate) | datetime __nullable__ | The date, when the document is planned to be realeased. `Filter(ge;le)` 
+| [PaymentDueDate](Logistics.Procurement.ReceivingOrders.md#paymentduedate) | datetime __nullable__ | Due date for the payment. When null, the payment due date is the documents date. 
+| [PlannedDeliveryDate](Logistics.Procurement.ReceivingOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines. 
+| [PlannedReleaseDate](Logistics.Procurement.ReceivingOrders.md#plannedreleasedate) | datetime __nullable__ | The date, when the document is planned to be realeased. 
 | [PlanningOnly](Logistics.Procurement.ReceivingOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PurchaseLotDescription](Logistics.Procurement.ReceivingOrders.md#purchaselotdescription) | string (254) __nullable__ | Description of the purchase lot for the whole document. It is set for the lots created by this receiving order. 
 | [ReadOnly](Logistics.Procurement.ReceivingOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -87,7 +87,7 @@ Aggregate Tree
 | [AdjustedDocument](Logistics.Procurement.ReceivingOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Procurement.ReceivingOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Logistics.Procurement.ReceivingOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentCurrency](Logistics.Procurement.ReceivingOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. `Required` `Filter(multi eq)` |
+| [DocumentCurrency](Logistics.Procurement.ReceivingOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. |
 | [DocumentType](Logistics.Procurement.ReceivingOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Procurement.ReceivingOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Logistics.Procurement.ReceivingOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -95,16 +95,16 @@ Aggregate Tree
 | [FromParty](Logistics.Procurement.ReceivingOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Logistics.Procurement.ReceivingOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Procurement.ReceivingOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PaymentAccount](Logistics.Procurement.ReceivingOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Payment account that is used for the payments of this delivery. `Filter(multi eq)` |
-| [PaymentType](Logistics.Procurement.ReceivingOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. `Filter(multi eq)` |
+| [PaymentAccount](Logistics.Procurement.ReceivingOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Payment account that is used for the payments of this delivery. |
+| [PaymentType](Logistics.Procurement.ReceivingOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not NULL specifies the payment type for the sales order |
 | [PrimeCauseDocument](Logistics.Procurement.ReceivingOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PurchaseOrder](Logistics.Procurement.ReceivingOrders.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order which is received with this receiving order. `Filter(multi eq)` |
-| [PurchasePriceList](Logistics.Procurement.ReceivingOrders.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. `Filter(multi eq)` |
+| [PurchaseOrder](Logistics.Procurement.ReceivingOrders.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order which is received with this receiving order. |
+| [PurchasePriceList](Logistics.Procurement.ReceivingOrders.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually. |
 | [ResponsiblePerson](Logistics.Procurement.ReceivingOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Logistics.Procurement.ReceivingOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Logistics.Procurement.ReceivingOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Store](Logistics.Procurement.ReceivingOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods were received. `Filter(multi eq)` |
-| [Supplier](Logistics.Procurement.ReceivingOrders.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the products for this receiving order. `Required` `Filter(multi eq)` |
+| [Store](Logistics.Procurement.ReceivingOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods were received. |
+| [Supplier](Logistics.Procurement.ReceivingOrders.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the products for this receiving order. |
 | [ToCompanyDivision](Logistics.Procurement.ReceivingOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Procurement.ReceivingOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Procurement.ReceivingOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -273,7 +273,7 @@ Show in UI: **HiddenByDefault**
 
 ### InvoiceDocumentNo
 
-Contains the purchase invoice number when it is known in advance, null otherwise. `Filter(eq)`
+Contains the purchase invoice number when it is known in advance, null otherwise.
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -284,7 +284,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -295,7 +295,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -336,7 +336,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-Due date for the payment. When null, the payment due date is the documents date. `Filter(ge;le)`
+Due date for the payment. When null, the payment due date is the documents date.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -351,7 +351,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 ### PlannedDeliveryDate
 
-When not null, specifies the planned delivery date for all lines. `Filter(ge;le)`
+When not null, specifies the planned delivery date for all lines.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -366,7 +366,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))`
 ### PlannedReleaseDate
 
-The date, when the document is planned to be realeased. `Filter(ge;le)`
+The date, when the document is planned to be realeased.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -628,7 +628,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentCurrency
 
-The currency of the unit prices and amounts in the document. `Required` `Filter(multi eq)`
+The currency of the unit prices and amounts in the document.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -709,7 +709,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentAccount
 
-Payment account that is used for the payments of this delivery. `Filter(multi eq)`
+Payment account that is used for the payments of this delivery.
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -720,7 +720,7 @@ Front-End Recalc Expressions:
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
-When not null specifies the payment type for the sales order. `Filter(multi eq)`
+When not NULL specifies the payment type for the sales order
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -739,7 +739,7 @@ Show in UI: **HiddenByDefault**
 
 ### PurchaseOrder
 
-The purchase order which is received with this receiving order. `Filter(multi eq)`
+The purchase order which is received with this receiving order.
 
 Type: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
 Indexed: **True**  
@@ -749,7 +749,7 @@ Show in UI: **HiddenByDefault**
 
 ### PurchasePriceList
 
-The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. `Filter(multi eq)`
+The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.
 
 Type: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 Category: **System**  
@@ -787,7 +787,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-The store in which the goods were received. `Filter(multi eq)`
+The store in which the goods were received.
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -798,7 +798,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => c.LineStore).Distinct( ).OnlyIfSingle( )`
 ### Supplier
 
-The supplier of the products for this receiving order. `Required` `Filter(multi eq)`
+The supplier of the products for this receiving order.
 
 Type: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 Indexed: **True**  

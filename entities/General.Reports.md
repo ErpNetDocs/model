@@ -38,10 +38,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsTable](General.Reports.md#istable) | boolean | If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. . `Required` `Default(true)` `Filter(eq)` 
+| [IsTable](General.Reports.md#istable) | boolean | If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml.  
 | [Name](General.Reports.md#name) | string (64) | The name of this Report. `Required` `Filter(eq;like)` 
-| [QueryName](General.Reports.md#queryname) | string (128) | The name of the query or table that is used for root reference point of the loaded data. `Required` `Filter(eq;like)` 
-| [ShowParentTables](General.Reports.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br />Queries_Table are automaticaly included in the report or not. `Required` `Default(false)` 
+| [QueryName](General.Reports.md#queryname) | string (128) | The name of the query or table that is used for root reference point of the loaded data. 
+| [ShowParentTables](General.Reports.md#showparenttables) | boolean | Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br />Queries_Table are automaticaly included in the report or not. 
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### IsTable
 
-If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml. . `Required` `Default(true)` `Filter(eq)`
+If True the Query_Name is name of a table, otherwise is name of a query that can be filtered with Filter_Xml.
 
 Type: **boolean**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### QueryName
 
-The name of the query or table that is used for root reference point of the loaded data. `Required` `Filter(eq;like)`
+The name of the query or table that is used for root reference point of the loaded data.
 
 Type: **string (128)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### ShowParentTables
 
-Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. `Required` `Default(false)`
+Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.
 
 Type: **boolean**  
 Category: **System**  

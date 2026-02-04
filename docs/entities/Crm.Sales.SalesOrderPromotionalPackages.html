@@ -87,7 +87,9 @@
         <article data-uid="Crm.Sales.SalesOrderPromotionalPackages">
 <h1 id="crmsalessalesorderpromotionalpackages">Crm.Sales.SalesOrderPromotionalPackages</h1>
 
-<p>Sales Order Promotional Packages represent promotional bundles or offers applied within a Sales Order. This data type defines the promotional packages included in a sales order, consisting of a predefined combination of products or services offered under special commercial conditions, such as bundled pricing, discounts, or promotional rules. Promotional packages are used to apply, track, and analyze promotions in sales orders, ensuring consistent pricing, correct fulfillment, and accurate reporting of promotion-driven sales.</p>
+<p>Sales Order Promotional Packages represent promotional bundles or offers applied within a Sales Order.</p>
+<p>This data type defines the promotional packages included in a sales order, consisting of a predefined combination of products or services offered under special commercial conditions, such as bundled pricing, discounts, or promotional rules.</p>
+<p>Promotional packages are used to apply, track, and analyze promotions in sales orders, ensuring consistent pricing, correct fulfillment, and accurate reporting of promotion-driven sales.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
 Repository: Crm.Sales.SalesOrderPromotionalPackages<br>
@@ -121,12 +123,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#linenumber">LineNumber</a></td>
 <td>int32</td>
-<td>Consecutive line number of the package, unique within the document. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Consecutive line number of the package, unique within the document.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#numberofpackages">NumberOfPackages</a></td>
 <td>int32</td>
-<td>Number of packages sold. <code>Required</code> <code>Default(0)</code></td>
+<td>Number of packages sold</td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +150,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#promotionalpackage">PromotionalPackage</a></td>
 <td><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a></td>
-<td>The type of promotional package sold. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of promotional package sold</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#salesorder">SalesOrder</a></td>
@@ -186,7 +188,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="linenumber">LineNumber</h3>
-<p>Consecutive line number of the package, unique within the document. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Consecutive line number of the package, unique within the document.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -197,7 +199,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="numberofpackages">NumberOfPackages</h3>
-<p>Number of packages sold. <code>Required</code> <code>Default(0)</code></p>
+<p>Number of packages sold</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -234,7 +236,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="promotionalpackage">PromotionalPackage</h3>
-<p>The type of promotional package sold. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of promotional package sold</p>
 <p>Type: <strong><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -44,14 +44,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnChildRows](Systems.Core.ReportQueries.md#dependsonchildrows) | boolean | If True the data in the current report table contains only the rows that have child rows in sub-tables. `Required` `Default(false)` 
-| [ExtensionsList](Systems.Core.ReportQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
-| [FilterXml](Systems.Core.ReportQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table. `Unit: obj.Report.QueryName` 
-| [ReferencePath](Systems.Core.ReportQueries.md#referencepath) | string (512) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required` 
-| [ShowCustomProperties](Systems.Core.ReportQueries.md#showcustomproperties) | boolean | True to include the custom properties. `Required` `Default(false)` 
-| [ShowTextColumns](Systems.Core.ReportQueries.md#showtextcolumns) | boolean | True to include text descriptions for certain columns. `Required` `Default(false)` 
-| [TableName](Systems.Core.ReportQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
-| [UniqueName](Systems.Core.ReportQueries.md#uniquename) | string (64) __nullable__ | The name of the data table in the printout datasource. If null the Reference_Path is used. 
+| [DependsOnChildRows](Systems.Core.ReportQueries.md#dependsonchildrows) | boolean | If True the data in the current report table contains only the rows that have child rows in sub-tables. 
+| [ExtensionsList](Systems.Core.ReportQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query 
+| [FilterXml](Systems.Core.ReportQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table 
+| [ReferencePath](Systems.Core.ReportQueries.md#referencepath) | string (512) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. 
+| [ShowCustomProperties](Systems.Core.ReportQueries.md#showcustomproperties) | boolean | True to include the custom properties. 
+| [ShowTextColumns](Systems.Core.ReportQueries.md#showtextcolumns) | boolean | True to include text descriptions for certain columns. 
+| [TableName](Systems.Core.ReportQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL. 
+| [UniqueName](Systems.Core.ReportQueries.md#uniquename) | string (64) __nullable__ | The name of the data table in the printout datasource. If NULL the Reference_Path is used. 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### DependsOnChildRows
 
-If True the data in the current report table contains only the rows that have child rows in sub-tables. `Required` `Default(false)`
+If True the data in the current report table contains only the rows that have child rows in sub-tables.
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### ExtensionsList
 
-A comma separated list of report extension names. An extension is set of additional fields that participate in the query.
+A comma separated list of report extension names. An extension is set of additional fields that participate in the query
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### FilterXml
 
-Filter for the loaded table. `Unit: obj.Report.QueryName`
+Filter for the loaded table
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferencePath
 
-A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required`
+A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document.
 
 Type: **string (512)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### ShowCustomProperties
 
-True to include the custom properties. `Required` `Default(false)`
+True to include the custom properties.
 
 Type: **boolean**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **CannotBeShown**
 
 ### ShowTextColumns
 
-True to include text descriptions for certain columns. `Required` `Default(false)`
+True to include text descriptions for certain columns.
 
 Type: **boolean**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **CannotBeShown**
 
 ### TableName
 
-The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.
+The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### UniqueName
 
-The name of the data table in the printout datasource. If null the Reference_Path is used.
+The name of the data table in the printout datasource. If NULL the Reference_Path is used.
 
 Type: **string (64) __nullable__**  
 Category: **System**  

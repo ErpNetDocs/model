@@ -4,7 +4,7 @@ uid: Saft.AccountBalances
 # Saft.AccountBalances (View)
 
 
-Account balances for SAT-T reporting purpose .
+Account balances for SAT-T reporting purpose 
 
 ## General
 Namespace: [Saft](Saft.md)  
@@ -28,26 +28,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndBalanceBase](Saft.AccountBalances.md#endbalancebase) | decimal (38, 2) | Start balance in base currency. `Required` 
-| [FromDate](Saft.AccountBalances.md#fromdate) | date | Filter date for start of period. `Required` `Filter(eq)` 
-| [ItemKey](Saft.AccountBalances.md#itemkey) | string (64) | Item_Key. `Required` `Introduced in version 26.2.1.27` 
-| [StartBalanceBase](Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency. `Required` 
-| [ToDate](Saft.AccountBalances.md#todate) | date | Filter date for end of period. `Required` `Filter(eq)` 
-| [VouchersInPeriod](Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period. `Required` `Introduced in version 26.2.1.27` 
+| [EndBalanceBase](Saft.AccountBalances.md#endbalancebase) | decimal (38, 2) | Start balance in base currency 
+| [FromDate](Saft.AccountBalances.md#fromdate) | date | Filter date for start of period 
+| [ItemKey](Saft.AccountBalances.md#itemkey) | string (64) | Item_Key 
+| [StartBalanceBase](Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency 
+| [ToDate](Saft.AccountBalances.md#todate) | date | Filter date for end of period 
+| [VouchersInPeriod](Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Saft.AccountBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Account. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` |
-| [EnterpriseCompany](Saft.AccountBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise company. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_<br />Companies_Table.Enterprise_Company_Id` |
+| [Account](Saft.AccountBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Account |
+| [EnterpriseCompany](Saft.AccountBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise company |
 
 
 ## Attribute Details
 
 ### EndBalanceBase
 
-Start balance in base currency. `Required`
+Start balance in base currency
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -57,7 +57,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Filter date for start of period. `Required` `Filter(eq)`
+Filter date for start of period
 
 Type: **date**  
 Category: **System**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item_Key. `Required` `Introduced in version 26.2.1.27`
+Item_Key
 
 Type: **string (64)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### StartBalanceBase
 
-Start balance in base currency. `Required`
+Start balance in base currency
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Filter date for end of period. `Required` `Filter(eq)`
+Filter date for end of period
 
 Type: **date**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### VouchersInPeriod
 
-Count of Vouchers in period. `Required` `Introduced in version 26.2.1.27`
+Count of Vouchers in period
 
 Type: **int32**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### Account
 
-Account. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id`
+Account
 
 Type: **[Accounts](Finance.Accounting.Accounts.md)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-Enterprise company. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id`
+Enterprise company
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

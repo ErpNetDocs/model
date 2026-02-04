@@ -131,7 +131,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Resources.ResourceGroups.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Resource group name. Unique within its parent. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Resource group name. Unique within its parent</td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Resources.ResourceGroups.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. <code>Filter(multi eq)</code></td>
+<td>The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL</td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceGroups.html#parent">Parent</a></td>
@@ -218,7 +218,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="name">Name</h3>
-<p>Resource group name. Unique within its parent. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Resource group name. Unique within its parent</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -268,7 +268,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. <code>Filter(multi eq)</code></p>
+<p>The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

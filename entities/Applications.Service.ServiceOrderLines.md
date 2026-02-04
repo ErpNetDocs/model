@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Applications.Service.ServiceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
-| [SymptomDescription](Applications.Service.ServiceOrderLines.md#symptomdescription) | string (254) __nullable__ | Description or synopsis of the symptoms of the failed object. `Filter(like)` 
+| [LineNo](Applications.Service.ServiceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. 
+| [SymptomDescription](Applications.Service.ServiceOrderLines.md#symptomdescription) | string (254) __nullable__ | Description or synopsis of the symptoms of the failed object. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceObject](Applications.Service.ServiceOrderLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is experiencing the symptoms and needs repair. `Required` `Filter(multi eq)` |
+| [ServiceObject](Applications.Service.ServiceOrderLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is experiencing the symptoms and needs repair. |
 | [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) | [ServiceOrders](Applications.Service.ServiceOrders.md) | The <see cref="ServiceOrder"/> to which this ServiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)`
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 Type: **int32**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `( obj.ServiceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### SymptomDescription
 
-Description or synopsis of the symptoms of the failed object. `Filter(like)`
+Description or synopsis of the symptoms of the failed object.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **HiddenByDefault**
 
 ### ServiceObject
 
-The service object, which is experiencing the symptoms and needs repair. `Required` `Filter(multi eq)`
+The service object, which is experiencing the symptoms and needs repair.
 
 Type: **[ServiceObjects](Applications.Service.ServiceObjects.md)**  
 Category: **System**  

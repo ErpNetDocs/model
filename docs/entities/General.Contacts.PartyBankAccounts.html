@@ -122,32 +122,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#bankaccountcode">BankAccountCode</a></td>
 <td>string (50)</td>
-<td>The code of the account, usually the IBAN code. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The code of the account, usually the IBAN code</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#bankaddress">BankAddress</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments.</td>
+<td>The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#bankbranchname">BankBranchName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (100)</a> <strong>nullable</strong></td>
-<td>The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments.</td>
+<td>The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#bankcode">BankCode</a></td>
 <td>string (30) <strong>nullable</strong></td>
-<td>The code of the bank, usually the BIC code. <code>Filter(eq)</code></td>
+<td>The code of the bank, usually the BIC code</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#bankname">BankName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (100)</a> <strong>nullable</strong></td>
-<td>The full name of the bank. <code>Filter(like)</code></td>
+<td>The full name of the bank</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True if the this is the default account for the party. Only one default per party is allowed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>1 if the this is the default account for the party. Only one default per party is allowed</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyBankAccounts.html#notes">Notes</a></td>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="bankaccountcode">BankAccountCode</h3>
-<p>The code of the account, usually the IBAN code. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The code of the account, usually the IBAN code</p>
 <p>Type: <strong>string (50)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -210,21 +210,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bankaddress">BankAddress</h3>
-<p>The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments.</p>
+<p>The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bankbranchname">BankBranchName</h3>
-<p>The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments.</p>
+<p>The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (100)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bankcode">BankCode</h3>
-<p>The code of the bank, usually the BIC code. <code>Filter(eq)</code></p>
+<p>The code of the bank, usually the BIC code</p>
 <p>Type: <strong>string (30) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -232,14 +232,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>30</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bankname">BankName</h3>
-<p>The full name of the bank. <code>Filter(like)</code></p>
+<p>The full name of the bank</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (100)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True if the this is the default account for the party. Only one default per party is allowed. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>1 if the this is the default account for the party. Only one default per party is allowed</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

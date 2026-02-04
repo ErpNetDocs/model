@@ -87,7 +87,7 @@
         <article data-uid="Systems.Security.UserProviderTokens">
 <h1 id="systemssecurityuserprovidertokens">Systems.Security.UserProviderTokens</h1>
 
-<p>Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication.</p>
+<p>Stores verification tokens for users - e.g. tokens for email, phone or two-factor authentication</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Systems.Security.html">Systems.Security</a><br>
 Repository: Systems.Security.UserProviderTokens<br>
@@ -122,12 +122,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#loginprovidername">LoginProviderName</a></td>
 <td>string (450)</td>
-<td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#tokenname">TokenName</a></td>
 <td>string (450)</td>
-<td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></td>
+<td>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#tokenvalue">TokenValue</a></td>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserProviderTokens.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>User for which we store tokens. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>User for which we store tokens</td>
 </tr>
 </tbody>
 </table>
@@ -182,7 +182,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="loginprovidername">LoginProviderName</h3>
-<p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc</p>
 <p>Type: <strong>string (450)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -190,7 +190,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>450</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tokenname">TokenName</h3>
-<p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). <code>Required</code> <code>Filter(eq)</code></p>
+<p>What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)</p>
 <p>Type: <strong>string (450)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -228,7 +228,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
-<p>User for which we store tokens. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>User for which we store tokens</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

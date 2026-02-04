@@ -35,33 +35,33 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) | [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) __nullable__ | If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. 
-| [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)` 
-| [DueDate](Finance.Payments.BulkPaymentOrderLines.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(ge;le)` 
-| [InstallmentNumber](Finance.Payments.BulkPaymentOrderLines.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. 
-| [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency` 
-| [IsAmountWithVAT](Finance.Payments.BulkPaymentOrderLines.md#isamountwithvat) | boolean | Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)` 
+| [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) | [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) __nullable__ | If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified 
+| [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). 
+| [DueDate](Finance.Payments.BulkPaymentOrderLines.md#duedate) | datetime __nullable__ | The due date of the payment. NULL means there is no due date 
+| [InstallmentNumber](Finance.Payments.BulkPaymentOrderLines.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. NULL means that the payment is not part of a payment plan 
+| [InvoiceAmount](Finance.Payments.BulkPaymentOrderLines.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount) 
+| [IsAmountWithVAT](Finance.Payments.BulkPaymentOrderLines.md#isamountwithvat) | boolean | Is_Amount_With_VAT=1 if the requested amount includes VAT 
 | [Notes](Finance.Payments.BulkPaymentOrderLines.md#notes) | string (254) __nullable__ | Notes for this BulkPaymentOrderLine. 
-| [RefDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refdocumentdate) | datetime __nullable__ | The date of the base document. null means that it is unknown. `Filter(ge;le)` 
-| [RefDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refdocumentno) | string (20) | The number of the document which is the basis for the payment. `Required` 
-| [RefInvoiceApplyDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoiceapplydate) | datetime __nullable__ | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. `Filter(ge;le)` 
-| [RefInvoiceDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(ge;le)` 
-| [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. 
-| [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
+| [RefDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refdocumentdate) | datetime __nullable__ | The date of the base document. NULL means that it is unknown 
+| [RefDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refdocumentno) | string (20) | The number of the document which is the basis for the payment 
+| [RefInvoiceApplyDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoiceapplydate) | datetime __nullable__ | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. 
+| [RefInvoiceDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown. 
+| [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice. 
+| [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) | [BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md) | The <see cref="BulkPaymentOrder"/> to which this BulkPaymentOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [InvoiceAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#invoiceamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency of Invoice Amount. `Filter(multi eq)` |
-| [LocationParty](Finance.Payments.BulkPaymentOrderLines.md#locationparty) | [Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id. `Filter(multi eq)` |
-| [Party](Finance.Payments.BulkPaymentOrderLines.md#party) | [Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. `Required` `Filter(multi eq)` |
-| [PaymentAccount](Finance.Payments.BulkPaymentOrderLines.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the payment account that is expected or will be used by the payment transaction. `Filter(multi eq)` |
-| [PaymentType](Finance.Payments.BulkPaymentOrderLines.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Expected payment type. When null, there is no expectation for payment type. `Filter(multi eq)` |
-| [RefDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The type of the document which is the basis for the payment. `Required` `Filter(multi eq)` |
-| [RefInvoiceDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)` |
-| [TotalAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#totalamountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Total Amount. `Required` `Filter(multi eq)` |
+| [InvoiceAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#invoiceamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency of Invoice Amount |
+| [LocationParty](Finance.Payments.BulkPaymentOrderLines.md#locationparty) | [Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id |
+| [Party](Finance.Payments.BulkPaymentOrderLines.md#party) | [Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount |
+| [PaymentAccount](Finance.Payments.BulkPaymentOrderLines.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not NULL, specifies the payment account that is expected or will be used by the payment transaction |
+| [PaymentType](Finance.Payments.BulkPaymentOrderLines.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Expected payment type. When null, there is no expectation for payment type. |
+| [RefDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The type of the document which is the basis for the payment |
+| [RefInvoiceDocumentType](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The document type of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice. |
+| [TotalAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#totalamountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Total Amount |
 
 
 ## System Attributes
@@ -77,7 +77,7 @@ Aggregate Root:
 
 ### BillTo
 
-If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified.
+If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), NULL = unidentified
 
 Type: **[BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **HiddenByDefault**
 
 ### Direction
 
-Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("I")` `Filter(eq)`
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
 
 Type: **[Direction](Finance.Payments.BulkPaymentOrderLines.md#direction)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDate
 
-The due date of the payment. null means there is no due date. `Filter(ge;le)`
+The due date of the payment. NULL means there is no due date
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### InstallmentNumber
 
-Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan.
+Consequtive installment number. Used for identifying the payment when using payment plans. NULL means that the payment is not part of a payment plan
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoiceAmount
 
-The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency`
+The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsAmountWithVAT
 
-Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)`
+Is_Amount_With_VAT=1 if the requested amount includes VAT
 
 Type: **boolean**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **HiddenByDefault**
 
 ### RefDocumentDate
 
-The date of the base document. null means that it is unknown. `Filter(ge;le)`
+The date of the base document. NULL means that it is unknown
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### RefDocumentNo
 
-The number of the document which is the basis for the payment. `Required`
+The number of the document which is the basis for the payment
 
 Type: **string (20)**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### RefInvoiceApplyDate
 
-The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. `Filter(ge;le)`
+The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -197,7 +197,7 @@ Show in UI: **ShownByDefault**
 
 ### RefInvoiceDocumentDate
 
-The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(ge;le)`
+The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -207,7 +207,7 @@ Show in UI: **HiddenByDefault**
 
 ### RefInvoiceDocumentNo
 
-The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.
+The number of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -218,7 +218,7 @@ Show in UI: **HiddenByDefault**
 
 ### TotalAmount
 
-Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)`
+Total amount that should be payed
 
 Type: **[Amount (18, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoiceAmountCurrency
 
-The currency of Invoice Amount. `Filter(multi eq)`
+The currency of Invoice Amount
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -281,7 +281,7 @@ Show in UI: **HiddenByDefault**
 
 ### LocationParty
 
-Location or sub-party of the Party_Id. `Filter(multi eq)`
+Location or sub-party of the Party_Id
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -290,7 +290,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The party which is to pay or receive the amount. `Required` `Filter(multi eq)`
+The party which is to pay or receive the amount
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -301,7 +301,7 @@ Front-End Recalc Expressions:
 `obj.LocationParty.ParentParty`
 ### PaymentAccount
 
-When not null, specifies the payment account that is expected or will be used by the payment transaction. `Filter(multi eq)`
+When not NULL, specifies the payment account that is expected or will be used by the payment transaction
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -312,7 +312,7 @@ Front-End Recalc Expressions:
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
-Expected payment type. When null, there is no expectation for payment type. `Filter(multi eq)`
+Expected payment type. When null, there is no expectation for payment type.
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -321,7 +321,7 @@ Show in UI: **ShownByDefault**
 
 ### RefDocumentType
 
-The type of the document which is the basis for the payment. `Required` `Filter(multi eq)`
+The type of the document which is the basis for the payment
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  
@@ -330,7 +330,7 @@ Show in UI: **ShownByDefault**
 
 ### RefInvoiceDocumentType
 
-The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)`
+The document type of the invoice which is related and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -339,7 +339,7 @@ Show in UI: **HiddenByDefault**
 
 ### TotalAmountCurrency
 
-The currency of Total Amount. `Required` `Filter(multi eq)`
+The currency of Total Amount
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  

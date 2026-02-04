@@ -87,7 +87,9 @@
         <article data-uid="Crm.Sales.CustomerExternalAccess">
 <h1 id="crmsalescustomerexternalaccess">Crm.Sales.CustomerExternalAccess</h1>
 
-<p>Customer External Access defines which external users are allowed to access data related to a specific customer. This data type specifies external users and their access rights to customer-related information such as sales orders, invoices, payments, and other sales documents, intended for controlled access outside the internal user environment. It is used to securely expose customer data to external parties, ensuring appropriate visibility and separation from internal operational access.</p>
+<p>Customer External Access defines which external users are allowed to access data related to a specific customer.</p>
+<p>This data type specifies external users and their access rights to customer-related information such as sales orders, invoices, payments, and other sales documents, intended for controlled access outside the internal user environment.</p>
+<p>It is used to securely expose customer data to external parties, ensuring appropriate visibility and separation from internal operational access.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
 Repository: Crm.Sales.CustomerExternalAccess<br>
@@ -122,7 +124,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#daysbackaccess">DaysBackAccess</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The maximum number of past days the user is allowed to view. If null, the access is unlimited. <code>Default(30)</code> <code>Filter(eq;ge;le)</code></td>
+<td>The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#notes">Notes</a></td>
@@ -132,7 +134,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#role">Role</a></td>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#role">Role</a></td>
-<td>The role of the user, defines the granted access. <code>Required</code> <code>Default(&quot;L30&quot;)</code> <code>Filter(eq)</code></td>
+<td>The role of the user, defines the granted access.</td>
 </tr>
 </tbody>
 </table>
@@ -149,12 +151,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The customer whose data is being accessed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The customer whose data is being accessed.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerExternalAccess.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user to whom the access is granted. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user to whom the access is granted.</td>
 </tr>
 </tbody>
 </table>
@@ -187,7 +189,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="daysbackaccess">DaysBackAccess</h3>
-<p>The maximum number of past days the user is allowed to view. If null, the access is unlimited. <code>Default(30)</code> <code>Filter(eq;ge;le)</code></p>
+<p>The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -203,7 +205,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="role">Role</h3>
-<p>The role of the user, defines the granted access. <code>Required</code> <code>Default(&quot;L30&quot;)</code> <code>Filter(eq)</code></p>
+<p>The role of the user, defines the granted access.</p>
 <p>Type: <strong><a href="Crm.Sales.CustomerExternalAccess.html#role">Role</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Role</code>(Crm.Sales.CustomerExternalAccess.md#role) data attribute<br>
@@ -269,7 +271,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="customer">Customer</h3>
-<p>The customer whose data is being accessed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The customer whose data is being accessed.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -277,7 +279,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user to whom the access is granted. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user to whom the access is granted.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

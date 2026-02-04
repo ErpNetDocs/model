@@ -4,7 +4,7 @@ uid: Projects.AI.Compilations
 # Projects.AI.Compilations
 
 
-Compilation is created, when a Model is being compiled through the AI provider into a conversational model.
+Compilation is a conversation-ready build of a model. It is created through the Build compilation function of a model.
 
 ## General
 Namespace: [Projects.AI](Projects.AI.md)  
@@ -35,20 +35,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BuildLog](Projects.AI.Compilations.md#buildlog) | string (max) __nullable__ | Detailed log of the build process of the compilation. `ReadOnly` 
-| [CompiledModelName](Projects.AI.Compilations.md#compiledmodelname) | string (256) __nullable__ | The name of the model, which was created in the providers space, as a result of the compilation. `Filter(eq;like)` `ReadOnly` 
-| [CompletionTimeUtc](Projects.AI.Compilations.md#completiontimeutc) | datetime __nullable__ | The time, when the compilation has completed. `Filter(eq;ge;le)` `ORD` `ReadOnly` 
-| [ErrorMessage](Projects.AI.Compilations.md#errormessage) | string (max) __nullable__ | Human-readable error message indicating the problem, when a build is not successful. `ReadOnly` 
-| [IsSuccessful](Projects.AI.Compilations.md#issuccessful) | boolean | Indicated whether the build process was successful and the compilation can be used for conversations. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [StartTimeUtc](Projects.AI.Compilations.md#starttimeutc) | datetime | The time, when the compilation was started. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` 
-| [Status](Projects.AI.Compilations.md#status) | [Status](Projects.AI.Compilations.md#status) | The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted. `Required` `Default("N")` `Filter(multi eq)` `ReadOnly` 
+| [BuildLog](Projects.AI.Compilations.md#buildlog) | string (max) __nullable__ | Detailed log of the build process of the compilation. 
+| [CompiledModelName](Projects.AI.Compilations.md#compiledmodelname) | string (256) __nullable__ | The name of the model, which was created in the providers space, as a result of the compilation. 
+| [CompletionTimeUtc](Projects.AI.Compilations.md#completiontimeutc) | datetime __nullable__ | The time, when the compilation has completed. 
+| [ErrorMessage](Projects.AI.Compilations.md#errormessage) | string (max) __nullable__ | Human-readable error message indicating the problem, when a build is not successful. 
+| [IsSuccessful](Projects.AI.Compilations.md#issuccessful) | boolean | Indicated whether the build process was successful and the compilation can be used for conversations. 
+| [StartTimeUtc](Projects.AI.Compilations.md#starttimeutc) | datetime | The time, when the compilation was started. 
+| [Status](Projects.AI.Compilations.md#status) | [Status](Projects.AI.Compilations.md#status) | The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Model](Projects.AI.Compilations.md#model) | [Models](Projects.AI.Models.md) | The model, on which the compilation is based. `Required` `Filter(multi eq)` `ReadOnly` |
-| [User](Projects.AI.Compilations.md#user) | [Users](Systems.Security.Users.md) | The user, who started the compilation. `Required` `Filter(multi eq)` `ReadOnly` |
+| [Model](Projects.AI.Compilations.md#model) | [Models](Projects.AI.Models.md) | The model, on which the compilation is based. |
+| [User](Projects.AI.Compilations.md#user) | [Users](Systems.Security.Users.md) | The user, who started the compilation. |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### BuildLog
 
-Detailed log of the build process of the compilation. `ReadOnly`
+Detailed log of the build process of the compilation.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### CompiledModelName
 
-The name of the model, which was created in the providers space, as a result of the compilation. `Filter(eq;like)` `ReadOnly`
+The name of the model, which was created in the providers space, as a result of the compilation.
 
 Type: **string (256) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### CompletionTimeUtc
 
-The time, when the compilation has completed. `Filter(eq;ge;le)` `ORD` `ReadOnly`
+The time, when the compilation has completed.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### ErrorMessage
 
-Human-readable error message indicating the problem, when a build is not successful. `ReadOnly`
+Human-readable error message indicating the problem, when a build is not successful.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSuccessful
 
-Indicated whether the build process was successful and the compilation can be used for conversations. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Indicated whether the build process was successful and the compilation can be used for conversations.
 
 Type: **boolean**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTimeUtc
 
-The time, when the compilation was started. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly`
+The time, when the compilation was started.
 
 Type: **datetime**  
 Indexed: **True**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted. `Required` `Default("N")` `Filter(multi eq)` `ReadOnly`
+The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.
 
 Type: **[Status](Projects.AI.Compilations.md#status)**  
 Category: **System**  
@@ -222,7 +222,7 @@ Show in UI: **HiddenByDefault**
 
 ### Model
 
-The model, on which the compilation is based. `Required` `Filter(multi eq)` `ReadOnly`
+The model, on which the compilation is based.
 
 Type: **[Models](Projects.AI.Models.md)**  
 Indexed: **True**  
@@ -232,7 +232,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user, who started the compilation. `Required` `Filter(multi eq)` `ReadOnly`
+The user, who started the compilation.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

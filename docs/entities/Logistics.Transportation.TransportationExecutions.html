@@ -201,12 +201,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutions.html#executiondate">ExecutionDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. <code>Filter(ge;le)</code></td>
+<td>Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutions.html#executiontime">ExecutionTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. <code>Filter(ge;le)</code></td>
+<td>Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutions.html#fullstate">FullState</a></td>
@@ -333,7 +333,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutions.html#geopoint">GeoPoint</a></td>
 <td><a href="General.Geography.GeoPoints.html">GeoPoints</a> (nullable)</td>
-<td>Specifies the execution geographic point, if it is the same for all lines. null means that the lines have different geographic points. <code>Filter(multi eq)</code></td>
+<td>Specifies the execution geographic point, if it is the same for all lines. NULL means that the lines have different geographic points.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutions.html#masterdocument">MasterDocument</a></td>
@@ -577,7 +577,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="executiondate">ExecutionDate</h3>
-<p>Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. <code>Filter(ge;le)</code></p>
+<p>Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -586,7 +586,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; TransportationExecutionLinesRepository.ExecutionDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="executiontime">ExecutionTime</h3>
-<p>Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. <code>Filter(ge;le)</code></p>
+<p>Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.</p>
 <p>Type: <strong>time <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -884,7 +884,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="geopoint">GeoPoint</h3>
-<p>Specifies the execution geographic point, if it is the same for all lines. null means that the lines have different geographic points. <code>Filter(multi eq)</code></p>
+<p>Specifies the execution geographic point, if it is the same for all lines. NULL means that the lines have different geographic points.</p>
 <p>Type: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

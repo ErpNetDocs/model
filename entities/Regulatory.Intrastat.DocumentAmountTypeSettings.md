@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AddToInvoicedValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | True= to add the amount to the invoiced value, false=otherwise. `Required` `Default(false)` 
-| [AddToStatisticalValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | True= to add the amount to the statistical value, false=otherwise. `Required` `Default(false)` 
+| [AddToInvoicedValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | 1= to add the amount to the invoiced value, 0=otherwise 
+| [AddToStatisticalValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | 1= to add the amount to the statistical value, 0=otherwise 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](Regulatory.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The amount type which will be added to the invoiced or the statistical value. `Required` `Filter(multi eq)` `Owner` |
-| [EnterpriseCompany](Regulatory.Intrastat.DocumentAmountTypeSettings.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the setting is valid. `Required` `Filter(multi eq)` |
+| [DocumentAmountType](Regulatory.Intrastat.DocumentAmountTypeSettings.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The amount type which will be added to the invoiced or the statistical value |
+| [EnterpriseCompany](Regulatory.Intrastat.DocumentAmountTypeSettings.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the setting is valid |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### AddToInvoicedValue
 
-True= to add the amount to the invoiced value, false=otherwise. `Required` `Default(false)`
+1= to add the amount to the invoiced value, 0=otherwise
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### AddToStatisticalValue
 
-True= to add the amount to the statistical value, false=otherwise. `Required` `Default(false)`
+1= to add the amount to the statistical value, 0=otherwise
 
 Type: **boolean**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentAmountType
 
-The amount type which will be added to the invoiced or the statistical value. `Required` `Filter(multi eq)` `Owner`
+The amount type which will be added to the invoiced or the statistical value
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which the setting is valid. `Required` `Filter(multi eq)`
+The enterprise company for which the setting is valid
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  

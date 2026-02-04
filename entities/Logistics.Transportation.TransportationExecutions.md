@@ -67,8 +67,8 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Transportation.TransportationExecutions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Transportation.TransportationExecutions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Transportation.TransportationExecutions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ExecutionDate](Logistics.Transportation.TransportationExecutions.md#executiondate) | date __nullable__ | Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. `Filter(ge;le)` 
-| [ExecutionTime](Logistics.Transportation.TransportationExecutions.md#executiontime) | time __nullable__ | Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. `Filter(ge;le)` 
+| [ExecutionDate](Logistics.Transportation.TransportationExecutions.md#executiondate) | date __nullable__ | Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates. 
+| [ExecutionTime](Logistics.Transportation.TransportationExecutions.md#executiontime) | time __nullable__ | Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times. 
 | [FullState](Logistics.Transportation.TransportationExecutions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Logistics.Transportation.TransportationExecutions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Transportation.TransportationExecutions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Transportation.TransportationExecutions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -96,7 +96,7 @@ Aggregate Tree
 | [EnterpriseCompanyLocation](Logistics.Transportation.TransportationExecutions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Transportation.TransportationExecutions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Transportation.TransportationExecutions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [GeoPoint](Logistics.Transportation.TransportationExecutions.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Specifies the execution geographic point, if it is the same for all lines. null means that the lines have different geographic points. `Filter(multi eq)` |
+| [GeoPoint](Logistics.Transportation.TransportationExecutions.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Specifies the execution geographic point, if it is the same for all lines. NULL means that the lines have different geographic points. |
 | [MasterDocument](Logistics.Transportation.TransportationExecutions.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Transportation.TransportationExecutions.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Logistics.Transportation.TransportationExecutions.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -261,7 +261,7 @@ Show in UI: **CannotBeShown**
 
 ### ExecutionDate
 
-Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. `Filter(ge;le)`
+Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -273,7 +273,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => TransportationExecutionLinesRepository.ExecutionDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### ExecutionTime
 
-Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. `Filter(ge;le)`
+Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -602,7 +602,7 @@ Show in UI: **HiddenByDefault**
 
 ### GeoPoint
 
-Specifies the execution geographic point, if it is the same for all lines. null means that the lines have different geographic points. `Filter(multi eq)`
+Specifies the execution geographic point, if it is the same for all lines. NULL means that the lines have different geographic points.
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 Category: **System**  

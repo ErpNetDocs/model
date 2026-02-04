@@ -35,18 +35,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Marketing.Competitors.md#fromdate) | datetime __nullable__ | Start date when this company became a competitor. `Default(Today)` `Filter(ge;le)` `Introduced in version 25.1.0.62` 
-| [IsActive](Crm.Marketing.Competitors.md#isactive) | boolean | Indicates whether the current Competitor is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [FromDate](Crm.Marketing.Competitors.md#fromdate) | datetime __nullable__ | Start date when this company became a competitor. 
+| [IsActive](Crm.Marketing.Competitors.md#isactive) | boolean | Indicates whether the current Competitor is active. 
 | [Name](Crm.Marketing.Competitors.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Competitor. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.Competitors.md#notes) | string (max) __nullable__ | Notes for this Competitor. 
-| [ToDate](Crm.Marketing.Competitors.md#todate) | datetime __nullable__ | Date until which this company was considered a competitor. The field is blank if the company is still a competitor. `Filter(ge;le)` `Introduced in version 25.1.0.62` 
+| [ToDate](Crm.Marketing.Competitors.md#todate) | datetime __nullable__ | Date until which this company was considered a competitor. The field is blank if the company is still a competitor. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Marketing.Competitors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Our enterprise company, for which we are defining the competitor. null means that the competitor is defined for all the companies in the ERP instance. `Filter(multi eq)` |
-| [Party](Crm.Marketing.Competitors.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | When not null, specifies the party of the competitor. `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Marketing.Competitors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Our enterprise company, for which we are defining the competitor. NULL means that the competitor is defined for all the companies in the ERP instance. |
+| [Party](Crm.Marketing.Competitors.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | When not null, specifies the party of the competitor. |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Aggregate Tree
 
 ### FromDate
 
-Start date when this company became a competitor. `Default(Today)` `Filter(ge;le)` `Introduced in version 25.1.0.62`
+Start date when this company became a competitor.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Competitor is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Competitor is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Date until which this company was considered a competitor. The field is blank if the company is still a competitor. `Filter(ge;le)` `Introduced in version 25.1.0.62`
+Date until which this company was considered a competitor. The field is blank if the company is still a competitor.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-Our enterprise company, for which we are defining the competitor. null means that the competitor is defined for all the companies in the ERP instance. `Filter(multi eq)`
+Our enterprise company, for which we are defining the competitor. NULL means that the competitor is defined for all the companies in the ERP instance.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-When not null, specifies the party of the competitor. `Filter(multi eq)`
+When not null, specifies the party of the competitor.
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  

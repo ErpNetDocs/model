@@ -35,36 +35,36 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The desired description of Conditional Property in order for the template line to match. 
-| [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyvalue) | string (254) __nullable__ | The desired value of Conditional Property in order for the template line to match. 
-| [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Fixed scrap quantity for setup. `Unit: UsageUnit` `Required` `Default(0)` 
+| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the chosen conditional property value 
+| [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyvalue) | string (254) __nullable__ | When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in "Conditional Property" equals the specified value 
+| [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Fixed scrap quantity for setup. 
 | [<s>IngredientId</s>](Production.Technologies.PrincipalRecipeIngredients.md#ingredientid) | guid | **OBSOLETE! Do not use!** The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes. `Obsolete` `Required` `Default(New Guid)` `Filter(multi eq)` `Obsoleted in version 22.1.6.61` 
-| [IngredientName](Production.Technologies.PrincipalRecipeIngredients.md#ingredientname) | string (254) | The principal name of the ingredient. `Required` `Filter(like)` 
-| [LineOrd](Production.Technologies.PrincipalRecipeIngredients.md#lineord) | int32 | The position of the line in the recipe model. `Required` 
-| [ScrapRate](Production.Technologies.PrincipalRecipeIngredients.md#scraprate) | decimal (7, 6) | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` `Filter(ge;le)` 
-| [UsageQuantity](Production.Technologies.PrincipalRecipeIngredients.md#usagequantity) | [Quantity (18, 6)](../data-types.md#quantity) __nullable__ | Quantity to be consumed from the material. null means that the quantity is specified with formula. `Unit: UsageUnit` `Default(1)` `Filter(ge;le)` 
-| [UsageQuantityFormula](Production.Technologies.PrincipalRecipeIngredients.md#usagequantityformula) | string (max) __nullable__ | Specifies formula for the usage quantity. The formula can reference properties in `&lt;Prop_Name&gt;` style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity. 
+| [IngredientName](Production.Technologies.PrincipalRecipeIngredients.md#ingredientname) | string (254) | The principal name of the ingredient. 
+| [LineOrd](Production.Technologies.PrincipalRecipeIngredients.md#lineord) | int32 | The position of the line in the recipe model 
+| [ScrapRate](Production.Technologies.PrincipalRecipeIngredients.md#scraprate) | decimal (7, 6) | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. 
+| [UsageQuantity](Production.Technologies.PrincipalRecipeIngredients.md#usagequantity) | [Quantity (18, 6)](../data-types.md#quantity) __nullable__ | Quantity to be consumed from the material. NULL means that the quantity is specified with formula 
+| [UsageQuantityFormula](Production.Technologies.PrincipalRecipeIngredients.md#usagequantityformula) | string (max) __nullable__ | Specifies formula for the usage quantity. The formula can reference properties in [Property_Code] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty](Production.Technologies.PrincipalRecipeIngredients.md#conditionalproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. `Filter(multi eq)` |
-| [ConditionalProperty<br />AllowedValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyallowedvalue) | [CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md) (nullable) | When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. `Filter(multi eq)` |
-| [DefaultMaterial](Production.Technologies.PrincipalRecipeIngredients.md#defaultmaterial) | [Products](General.Products.Products.md) (nullable) | If not null, points to default product for this ingredient. `Filter(multi eq)` |
-| [DefaultStore](Production.Technologies.PrincipalRecipeIngredients.md#defaultstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which to retrieve the material. `Filter(multi eq)` |
-| [MaterialFromProperty](Production.Technologies.PrincipalRecipeIngredients.md#materialfromproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. `Filter(multi eq)` |
-| [MaterialGroup](Production.Technologies.PrincipalRecipeIngredients.md#materialgroup) | [ProductGroups](General.Products.ProductGroups.md) | Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). `Required` `Filter(multi eq)` |
-| [Operation](Production.Technologies.PrincipalRecipeIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. `Filter(multi eq)` |
+| [ConditionalProperty](Production.Technologies.PrincipalRecipeIngredients.md#conditionalproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not NULL, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product |
+| [ConditionalProperty<br />AllowedValue](Production.Technologies.PrincipalRecipeIngredients.md#conditionalpropertyallowedvalue) | [CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md) (nullable) | When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in "Conditional Property" equals the specified value |
+| [DefaultMaterial](Production.Technologies.PrincipalRecipeIngredients.md#defaultmaterial) | [Products](General.Products.Products.md) (nullable) | If not NULL, points to default product for this ingredient |
+| [DefaultStore](Production.Technologies.PrincipalRecipeIngredients.md#defaultstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which to retrieve the material. |
+| [MaterialFromProperty](Production.Technologies.PrincipalRecipeIngredients.md#materialfromproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not NULL, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. |
+| [MaterialGroup](Production.Technologies.PrincipalRecipeIngredients.md#materialgroup) | [ProductGroups](General.Products.ProductGroups.md) | Filter for choosing specific material in the recipe (Gen_Product_Groups_Table) |
+| [Operation](Production.Technologies.PrincipalRecipeIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. |
 | [PrincipalRecipe](Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The <see cref="PrincipalRecipe"/> to which this PrincipalRecipeIngredient belongs. `Required` `Filter(multi eq)` `Owner` |
-| [UsageUnit](Production.Technologies.PrincipalRecipeIngredients.md#usageunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit. `Required` `Filter(multi eq)` |
+| [UsageUnit](Production.Technologies.PrincipalRecipeIngredients.md#usageunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Technologies.PrincipalRecipeIngredients.md#id) | guid |  
+| [Id](Production.Technologies.PrincipalRecipeIngredients.md#id) | guid | The Id of the recipe ingredient. This changes for each different line of each different recipe in contrast to the ingredient id, which might be the same for many principal recipes 
 | [ObjectVersion](Production.Technologies.PrincipalRecipeIngredients.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](Production.Technologies.PrincipalRecipeIngredients.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### ConditionalPropertyDescription
 
-The desired description of Conditional Property in order for the template line to match.
+Description of the chosen conditional property value
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionalPropertyValue
 
-The desired value of Conditional Property in order for the template line to match.
+When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in "Conditional Property" equals the specified value
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### FixedScrapQuantity
 
-Fixed scrap quantity for setup. `Unit: UsageUnit` `Required` `Default(0)`
+Fixed scrap quantity for setup.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **CannotBeShown**
 
 ### IngredientName
 
-The principal name of the ingredient. `Required` `Filter(like)`
+The principal name of the ingredient.
 
 Type: **string (254)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Front-End Recalc Expressions:
 `obj.DefaultMaterial.Name`
 ### LineOrd
 
-The position of the line in the recipe model. `Required`
+The position of the line in the recipe model
 
 Type: **int32**  
 Category: **System**  
@@ -143,7 +143,7 @@ Front-End Recalc Expressions:
 `( obj.PrincipalRecipe.Ingredients.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)`
 ### ScrapRate
 
-The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` `Filter(ge;le)`
+The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe.
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### UsageQuantity
 
-Quantity to be consumed from the material. null means that the quantity is specified with formula. `Unit: UsageUnit` `Default(1)` `Filter(ge;le)`
+Quantity to be consumed from the material. NULL means that the quantity is specified with formula
 
 Type: **[Quantity (18, 6)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -167,7 +167,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.UsageQuantityFormula != null), null, obj.UsageQuantity)`
 ### UsageQuantityFormula
 
-Specifies formula for the usage quantity. The formula can reference properties in `&lt;Prop_Name&gt;` style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.
+Specifies formula for the usage quantity. The formula can reference properties in [Property_Code] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -179,6 +179,8 @@ Show in UI: **ShownByDefault**
 Front-End Recalc Expressions:  
 `IIF( ( obj.UsageQuantity != null), null, obj.UsageQuantityFormula)`
 ### Id
+
+The Id of the recipe ingredient. This changes for each different line of each different recipe in contrast to the ingredient id, which might be the same for many principal recipes
 
 Type: **guid**  
 Indexed: **True**  
@@ -212,7 +214,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConditionalProperty
 
-When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. `Filter(multi eq)`
+When not NULL, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
@@ -221,7 +223,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionalPropertyAllowedValue
 
-When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. `Filter(multi eq)`
+When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in "Conditional Property" equals the specified value
 
 Type: **[CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md) (nullable)**  
 Category: **System**  
@@ -230,7 +232,7 @@ Show in UI: **CannotBeShown**
 
 ### DefaultMaterial
 
-If not null, points to default product for this ingredient. `Filter(multi eq)`
+If not NULL, points to default product for this ingredient
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -239,7 +241,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultStore
 
-The default store from which to retrieve the material. `Filter(multi eq)`
+The default store from which to retrieve the material.
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -248,7 +250,7 @@ Show in UI: **ShownByDefault**
 
 ### MaterialFromProperty
 
-When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. `Filter(multi eq)`
+When not NULL, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain.
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
@@ -257,7 +259,7 @@ Show in UI: **ShownByDefault**
 
 ### MaterialGroup
 
-Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). `Required` `Filter(multi eq)`
+Filter for choosing specific material in the recipe (Gen_Product_Groups_Table)
 
 Type: **[ProductGroups](General.Products.ProductGroups.md)**  
 Category: **System**  
@@ -266,7 +268,7 @@ Show in UI: **ShownByDefault**
 
 ### Operation
 
-Specifies for which operation this ingredient will be used. `Filter(multi eq)`
+Specifies for which operation this ingredient will be used.
 
 Type: **[Operations](Production.Resources.Operations.md) (nullable)**  
 Category: **System**  
@@ -285,7 +287,7 @@ Show in UI: **ShownByDefault**
 
 ### UsageUnit
 
-The measurement unit of Usage_Quantity. The selected item must support the specified unit. `Required` `Filter(multi eq)`
+The measurement unit of Usage_Quantity. The selected item must support the specified unit
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  

@@ -33,16 +33,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal (17, 5) | Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)` 
-| [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed. `Required` `Filter(eq;ge;le)` 
-| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal (17, 5) | Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)` 
+| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal (17, 5) | Accumulates actual value for the measure. 
+| [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed. 
+| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal (17, 5) | Accumulates target value for the measure. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataMeasure](Applications.DataWarehouse.DataValues.md#datameasure) | [DataMeasures](Applications.DataWarehouse.DataMeasures.md) | The measure for which the data is recorded. `Required` `Filter(multi eq)` |
-| [EnterpriseCompany](Applications.DataWarehouse.DataValues.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company for which the data is recorded. `Required` `Filter(multi eq)` |
+| [DataMeasure](Applications.DataWarehouse.DataValues.md#datameasure) | [DataMeasures](Applications.DataWarehouse.DataMeasures.md) | The measure for which the data is recorded. |
+| [EnterpriseCompany](Applications.DataWarehouse.DataValues.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company for which the data is recorded. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### ActualValue
 
-Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)`
+Accumulates actual value for the measure.
 
 Type: **decimal (17, 5)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### Date
 
-The date for which the measure is recorded. All records with dates within each period are summed. `Required` `Filter(eq;ge;le)`
+The date for which the measure is recorded. All records with dates within each period are summed.
 
 Type: **date**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetValue
 
-Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)`
+Accumulates target value for the measure.
 
 Type: **decimal (17, 5)**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataMeasure
 
-The measure for which the data is recorded. `Required` `Filter(multi eq)`
+The measure for which the data is recorded.
 
 Type: **[DataMeasures](Applications.DataWarehouse.DataMeasures.md)**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The Enterprise Company for which the data is recorded. `Required` `Filter(multi eq)`
+The Enterprise Company for which the data is recorded.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

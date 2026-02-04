@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Systems.Security.Roles.md#isactive) | boolean | Indicates whether the current Role is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.1.97` 
+| [IsActive](Systems.Security.Roles.md#isactive) | boolean | Indicates whether the current Role is active. 
 | [Name](Systems.Security.Roles.md#name) | string (254) | The name of this Role. `Required` `Filter(eq;like)` `ORD` 
 | [RoleDescription](Systems.Security.Roles.md#roledescription) | string (max) __nullable__ | Description of the role. 
-| [VisualStyle](Systems.Security.Roles.md#visualstyle) | string (64) __nullable__ | The default visual style for the user interface. 
+| [VisualStyle](Systems.Security.Roles.md#visualstyle) | string (64) __nullable__ | Default visual style for current role 
 
 
 ## System Attributes
@@ -55,7 +55,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Role is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.1.97`
+Indicates whether the current Role is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### VisualStyle
 
-The default visual style for the user interface.
+Default visual style for current role
 
 Type: **string (64) __nullable__**  
 Category: **System**  

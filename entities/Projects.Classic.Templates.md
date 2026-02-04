@@ -36,7 +36,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Projects.Classic.Templates.md#notes) | string (max) __nullable__ | Notes for this Template. 
-| [ProjectTemplateName](Projects.Classic.Templates.md#projecttemplatename) | string (254) | The name of the project template. `Required` 
+| [ProjectTemplateName](Projects.Classic.Templates.md#projecttemplatename) | string (254) | The name of the project template. 
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTemplateName
 
-The name of the project template. `Required`
+The name of the project template.
 
 Type: **string (254)**  
 Category: **System**  

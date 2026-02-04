@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Projects.Classic.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
-| [WorkTypeName](Projects.Classic.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type. `Required` `Filter(eq;like)` 
+| [IsActive](Projects.Classic.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents. 
+| [WorkTypeName](Projects.Classic.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BilledWithProduct](Projects.Classic.TypeWorkTypes.md#billedwithproduct) | [Products](General.Products.Products.md) (nullable) | The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. `Filter(multi eq)` |
+| [BilledWithProduct](Projects.Classic.TypeWorkTypes.md#billedwithproduct) | [Products](General.Products.Products.md) (nullable) | The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. NULL means that the work type cannot be billed |
 | [ProjectType](Projects.Classic.TypeWorkTypes.md#projecttype) | [ProjectTypes](Projects.Classic.ProjectTypes.md) | The <see cref="ProjectType"/> to which this TypeWorkType belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### IsActive
 
-True when the work type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)`
+True when the work type is currently active and selectable in new documents.
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkTypeName
 
-The name of the work type. `Required` `Filter(eq;like)`
+The name of the work type.
 
 Type: **string (254)**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### BilledWithProduct
 
-The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. null means that the work type cannot be billed. `Filter(multi eq)`
+The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. NULL means that the work type cannot be billed
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  

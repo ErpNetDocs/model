@@ -33,15 +33,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.Follows.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)` 
-| [FollowLevel](Communities.Social.Follows.md#followlevel) | [FollowLevel](Communities.Social.Follows.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Introduced in version 26.2.0.70` 
+| [CreationTimeUtc](Communities.Social.Follows.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. 
+| [FollowLevel](Communities.Social.Follows.md#followlevel) | [FollowLevel](Communities.Social.Follows.md#followlevel) | Indicates the level of user’s interest for this object. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.Social.Follows.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object being followed by the user. `Required` `Filter(multi eq)` |
-| [User](Communities.Social.Follows.md#user) | [Users](Systems.Security.Users.md) | The user which follows the object. `Required` `Filter(multi eq)` |
+| [DataObject](Communities.Social.Follows.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object being followed by the user. |
+| [User](Communities.Social.Follows.md#user) | [Users](Systems.Security.Users.md) | The user which follows the object. |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)`
+The exact server time (in UTC), when the follow was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### FollowLevel
 
-Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Introduced in version 26.2.0.70`
+Indicates the level of user’s interest for this object.
 
 Type: **[FollowLevel](Communities.Social.Follows.md#followlevel)**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataObject
 
-The object being followed by the user. `Required` `Filter(multi eq)`
+The object being followed by the user.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Indexed: **True**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user which follows the object. `Required` `Filter(multi eq)`
+The user which follows the object.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string (254) | The full path of the item. `Required` `Default("")` `Filter(eq;like)` 
-| [Name](Production.Resources.FunctionGroups.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of the function group. `Required` `Filter(like)` 
-| [Parent](Production.Resources.FunctionGroups.md#parent) | string (254) | The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
+| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string (254) | The full path of the item. 
+| [Name](Production.Resources.FunctionGroups.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of the function group 
+| [Parent](Production.Resources.FunctionGroups.md#parent) | string (254) | The path of the parent item. 
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### FullPath
 
-The full path of the item. `Required` `Default("")` `Filter(eq;like)`
+The full path of the item.
 
 Type: **string (254)**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **CannotBeShown**
 
 ### Name
 
-The name of the function group. `Required` `Filter(like)`
+The name of the function group
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Parent
 
-The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD`
+The path of the parent item.
 
 Type: **string (254)**  
 Indexed: **True**  

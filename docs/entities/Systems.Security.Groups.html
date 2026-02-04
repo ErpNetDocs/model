@@ -125,12 +125,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.Groups.html#editperioddays">EditPeriodDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of days before which the documents can not be corrected, released or voided.</td>
+<td>The number of days before which the documents can not be corrected, released or voided</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Groups.html#grouptype">GroupType</a></td>
 <td><a href="Systems.Security.Groups.html#grouptype">GroupType</a></td>
-<td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. <code>Required</code> <code>Default(&quot;G&quot;)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Groups.html#name">Name</a></td>
@@ -157,7 +157,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.Groups.html#groupforuser">GroupForUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>When Group_Type=U, contains the user for which the group is defined, null otherwise. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>When the group is for one user, contains the user for which the group is defined, NULL otherwise</td>
 </tr>
 </tbody>
 </table>
@@ -222,14 +222,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="editperioddays">EditPeriodDays</h3>
-<p>The number of days before which the documents can not be corrected, released or voided.</p>
+<p>The number of days before which the documents can not be corrected, released or voided</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="grouptype">GroupType</h3>
-<p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. <code>Required</code> <code>Default(&quot;G&quot;)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody</p>
 <p>Type: <strong><a href="Systems.Security.Groups.html#grouptype">GroupType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>GroupType</code>(Systems.Security.Groups.md#grouptype) data attribute<br>
@@ -327,7 +327,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="groupforuser">GroupForUser</h3>
-<p>When Group_Type=U, contains the user for which the group is defined, null otherwise. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>When the group is for one user, contains the user for which the group is defined, NULL otherwise</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

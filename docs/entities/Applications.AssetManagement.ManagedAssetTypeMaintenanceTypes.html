@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#defaultparameterchange">DefaultParameterChange</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.</td>
+<td>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means, that maintenances are not scheduled based on parameter change.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#defaultscheduledays">DefaultScheduleDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.</td>
+<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in days.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#defaultschedulemonths">DefaultScheduleMonths</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.</td>
+<td>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in months.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#notes">Notes</a></td>
@@ -154,12 +154,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></td>
-<td>The allowed maintenance type for the asset type. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The allowed maintenance type for the asset type.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html#managedassettype">ManagedAssetType</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssetTypes.html">ManagedAssetTypes</a></td>
-<td>The asset type for which the allowed maintenance type is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The asset type for which the allowed maintenance type is defined.</td>
 </tr>
 </tbody>
 </table>
@@ -192,21 +192,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultparameterchange">DefaultParameterChange</h3>
-<p>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change.</p>
+<p>Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means, that maintenances are not scheduled based on parameter change.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultscheduledays">DefaultScheduleDays</h3>
-<p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days.</p>
+<p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in days.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultschedulemonths">DefaultScheduleMonths</h3>
-<p>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months.</p>
+<p>Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. NULL means that there is no default schedule in months.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -243,13 +243,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenancetype">MaintenanceType</h3>
-<p>The allowed maintenance type for the asset type. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The allowed maintenance type for the asset type.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedassettype">ManagedAssetType</h3>
-<p>The asset type for which the allowed maintenance type is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The asset type for which the allowed maintenance type is defined.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssetTypes.html">ManagedAssetTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

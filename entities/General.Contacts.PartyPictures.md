@@ -36,10 +36,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Comments](General.Contacts.PartyPictures.md#comments) | string (254) __nullable__ | Notes for this party picture. 
-| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | True=This is the default picture for the party; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
-| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. `Required` `Default(false)` `Filter(eq)` 
-| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be null if we insert only some comments. 
-| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting. `Required` `Filter(eq)` 
+| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | If checked specifies that this picture is used by default for this party in reports. 
+| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. 
+| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be NULL if we insert only some comments. 
+| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting 
 
 ## References
 
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-True=This is the default picture for the party; false=otherwise. `Required` `Default(false)` `Filter(eq)`
+If checked specifies that this picture is used by default for this party in reports.
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Front-End Recalc Expressions:
 `( obj.Party.Pictures.Take( 1).Count( ) == 0)`
 ### IsLogo
 
-If checked specifies that this picture is used to visualize the logo of this party in the system. `Required` `Default(false)` `Filter(eq)`
+If checked specifies that this picture is used to visualize the logo of this party in the system.
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Picture
 
-The actual party picture data. Can be null if we insert only some comments.
+The actual party picture data. Can be NULL if we insert only some comments.
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### PictureNo
 
-Unique picture number within the party. Also used for sorting. `Required` `Filter(eq)`
+Unique picture number within the party. Also used for sorting
 
 Type: **int32**  
 Category: **System**  

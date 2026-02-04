@@ -35,15 +35,15 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Name](General.Resources.WorkSchedules.md#name) | string (64) | The name of this WorkSchedule. `Required` `Filter(like)` 
-| [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 __nullable__ | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
-| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month. `Required` `Filter(multi eq)` 
+| [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 __nullable__ | Number of days in a recurring period. Valid only when Recurrence_Type=D 
+| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month 
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Resources.WorkSchedules.md#id) | guid |  
+| [Id](General.Resources.WorkSchedules.md#id) | guid | work schedule id 
 | [ObjectVersion](General.Resources.WorkSchedules.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](General.Resources.WorkSchedules.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](General.Resources.WorkSchedules.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfDays
 
-Number of days in a recurring period. Valid only when Recurrence_Type=D.
+Number of days in a recurring period. Valid only when Recurrence_Type=D
 
 Type: **int16 __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### RecurrenceType
 
-D=recurring each X days; W=recurring each week; M=recurring each month. `Required` `Filter(multi eq)`
+D=recurring each X days; W=recurring each week; M=recurring each month
 
 Type: **[RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype)**  
 Category: **System**  
@@ -100,6 +100,8 @@ Supports Order By: **False**
 Show in UI: **ShownByDefault**  
 
 ### Id
+
+work schedule id
 
 Type: **guid**  
 Indexed: **True**  

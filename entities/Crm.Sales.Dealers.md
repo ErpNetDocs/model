@@ -4,7 +4,11 @@ uid: Crm.Sales.Dealers
 # Crm.Sales.Dealers
 
 
-Dealers represent external parties that participate in or broker sales between the enterprise company and customers. This data type defines dealers involved in sales transactions, which can be specified in Sales Orders to indicate who assisted, referred, or intermediated the sale. Dealers are primarily used to track dealer involvement in sales and to support commission calculation, settlement, and reporting related to dealer-driven sales.
+Dealers represent external parties that participate in or broker sales between the enterprise company and customers.
+    
+This data type defines dealers involved in sales transactions, which can be specified in Sales Orders to indicate who assisted, referred, or intermediated the sale.
+
+Dealers are primarily used to track dealer involvement in sales and to support commission calculation, settlement, and reporting related to dealer-driven sales.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -42,17 +46,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Sales.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
-| [IsActive](Crm.Sales.Dealers.md#isactive) | boolean | Indicates whether the current Dealer is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22` 
+| [FromDate](Crm.Sales.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship 
+| [IsActive](Crm.Sales.Dealers.md#isactive) | boolean | Indicates whether the current Dealer is active. 
 | [Notes](Crm.Sales.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
-| [ThruDate](Crm.Sales.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
+| [ThruDate](Crm.Sales.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. NULL for active dealers 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Sales.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. `Filter(multi eq)` |
-| [Party](Crm.Sales.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Sales.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded |
+| [Party](Crm.Sales.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer |
 
 
 ## System Attributes
@@ -71,7 +75,7 @@ Aggregate Tree
 
 ### FromDate
 
-Start of the dealer relationship. `Default(Today)` `Filter(ge;le)`
+Start of the dealer relationship
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -82,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Dealer is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22`
+Indicates whether the current Dealer is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -104,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Termination date of the dealership. null for active dealers. `Filter(ge;le)`
+Termination date of the dealership. NULL for active dealers
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -176,7 +180,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which this dealer is recorded. `Filter(multi eq)`
+The enterprise company for which this dealer is recorded
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -185,7 +189,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The base party record of the dealer. `Required` `Filter(multi eq)`
+The base party record of the dealer
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  

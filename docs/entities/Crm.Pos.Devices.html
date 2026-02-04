@@ -122,32 +122,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.Devices.html#deviceregistrationno">DeviceRegistrationNo</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. <code>Filter(multi eq;like)</code></td>
+<td>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
 <td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
-<td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. <code>Required</code> <code>Default(&quot;OTH&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#electronicaddress">ElectronicAddress</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://&lt;addr&gt;&quot;, etc. <code>Filter(multi eq;like)</code></td>
+<td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.</addr></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the device is currently active and can be choosen from drop-downs in new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
+<td>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a></td>
 <td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> <strong>nullable</strong></td>
-<td>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
+<td>The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#settingsjson">SettingsJson</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</td>
+<td>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.</td>
 </tr>
 </tbody>
 </table>
@@ -164,7 +164,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.Devices.html#posterminal">PosTerminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a></td>
-<td>The POS terminal, to which this device is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The POS terminal, to which this device is attached.</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="deviceregistrationno">DeviceRegistrationNo</h3>
-<p>The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. <code>Filter(multi eq;like)</code></p>
+<p>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -205,7 +205,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="devicetype">DeviceType</h3>
-<p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. <code>Required</code> <code>Default(&quot;OTH&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</p>
 <p>Type: <strong><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DeviceType</code>(Crm.Pos.Devices.md#devicetype) data attribute<br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Other</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="electronicaddress">ElectronicAddress</h3>
-<p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://&lt;addr&gt;&quot;, etc. <code>Filter(multi eq;like)</code></p>
+<p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.</addr></p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -249,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the device is currently active and can be choosen from drop-downs in new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></p>
+<p>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -257,7 +257,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="protocolname">ProtocolName</h3>
-<p>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
+<p>The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
 <p>Type: <strong><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ProtocolName</code>(Crm.Pos.Devices.md#protocolname) data attribute<br>
@@ -280,7 +280,7 @@ Allowed Values (Crm.Pos.DevicesRepository.ProtocolName Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
-<p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</p>
+<p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -310,7 +310,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="posterminal">PosTerminal</h3>
-<p>The POS terminal, to which this device is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The POS terminal, to which this device is attached.</p>
 <p>Type: <strong><a href="Crm.Pos.Terminals.html">Terminals</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of service for which the invoicing is specified. `Unit: Service.MeasurementUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice 
+| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of service for which the invoicing is specified 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Applications.Service.ServiceInvoicing.md#product) | [Products](General.Products.Products.md) | The product that should be invoiced. `Required` `Filter(multi eq)` |
-| [Service](Applications.Service.ServiceInvoicing.md#service) | [Services](Applications.Service.Services.md) | The service for which the invoicing instructions are. `Required` `Filter(multi eq)` `Owner` |
+| [Product](Applications.Service.ServiceInvoicing.md#product) | [Products](General.Products.Products.md) | The product that should be invoiced |
+| [Service](Applications.Service.ServiceInvoicing.md#service) | [Services](Applications.Service.Services.md) | The service for which the invoicing instructions are |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### QuantityOfProduct
 
-The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)`
+The quantity to invoice
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityOfService
 
-The quantity of service for which the invoicing is specified. `Unit: Service.MeasurementUnit` `Required` `Default(1)` `Filter(ge;le)`
+The quantity of service for which the invoicing is specified
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product that should be invoiced. `Required` `Filter(multi eq)`
+The product that should be invoiced
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### Service
 
-The service for which the invoicing instructions are. `Required` `Filter(multi eq)` `Owner`
+The service for which the invoicing instructions are
 
 Type: **[Services](Applications.Service.Services.md)**  
 Category: **System**  

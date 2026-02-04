@@ -46,19 +46,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExpectedWeight](Logistics.Common.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)` 
-| [IsActive](Logistics.Common.LogisticUnits.md#isactive) | boolean | Indicates whether the logistic unit is currently active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.2.11` 
-| [MeasuredWeight](Logistics.Common.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
+| [ExpectedWeight](Logistics.Common.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown.  
+| [IsActive](Logistics.Common.LogisticUnits.md#isactive) | boolean | Indicates whether the logistic unit is currently active. 
+| [MeasuredWeight](Logistics.Common.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown.  
 | [Notes](Logistics.Common.LogisticUnits.md#notes) | string (max) __nullable__ | Notes for this LogisticUnit. `Filter(like)` 
-| [SerialCode](Logistics.Common.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD` 
+| [SerialCode](Logistics.Common.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.Common.LogisticUnits.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | General type of the cargo of the logistic unit. null means unknown or N/A. `Filter(multi eq)` |
-| [LogisticUnitType](Logistics.Common.LogisticUnits.md#logisticunittype) | [LogisticUnitTypes](Logistics.Common.LogisticUnitTypes.md) (nullable) | The type of the logistic unit. null means the type is currently unknown. `Filter(multi eq)` |
-| [RepresentedAsProduct](Logistics.Common.LogisticUnits.md#representedasproduct) | [Products](General.Products.Products.md) (nullable) | When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. `Filter(multi eq)` |
+| [CargoType](Logistics.Common.LogisticUnits.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | General type of the cargo of the logistic unit. NULL means unknown or N/A. |
+| [LogisticUnitType](Logistics.Common.LogisticUnits.md#logisticunittype) | [LogisticUnitTypes](Logistics.Common.LogisticUnitTypes.md) (nullable) | The type of the logistic unit. NULL means the type is currently unknown. |
+| [RepresentedAsProduct](Logistics.Common.LogisticUnits.md#representedasproduct) | [Products](General.Products.Products.md) (nullable) | When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item. |
 
 
 ## System Attributes
@@ -84,7 +84,7 @@ Aggregate Tree
 
 ### ExpectedWeight
 
-Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)`
+Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown.
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the logistic unit is currently active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.2.11`
+Indicates whether the logistic unit is currently active.
 
 Type: **boolean**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasuredWeight
 
-Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)`
+Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown.
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialCode
 
-Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD`
+Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -200,7 +200,7 @@ Show in UI: **HiddenByDefault**
 
 ### CargoType
 
-General type of the cargo of the logistic unit. null means unknown or N/A. `Filter(multi eq)`
+General type of the cargo of the logistic unit. NULL means unknown or N/A.
 
 Type: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
 Category: **System**  
@@ -209,7 +209,7 @@ Show in UI: **ShownByDefault**
 
 ### LogisticUnitType
 
-The type of the logistic unit. null means the type is currently unknown. `Filter(multi eq)`
+The type of the logistic unit. NULL means the type is currently unknown.
 
 Type: **[LogisticUnitTypes](Logistics.Common.LogisticUnitTypes.md) (nullable)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Show in UI: **ShownByDefault**
 
 ### RepresentedAsProduct
 
-When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. `Filter(multi eq)`
+When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Indexed: **True**  

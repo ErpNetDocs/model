@@ -42,8 +42,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChildCaseCategory](Projects.Agile.CaseCategoryRelationships.md#childcasecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category that is a child (sub-category) of the parent category. `Required` `Filter(multi eq)` `Owner` |
-| [ParentCaseCategory](Projects.Agile.CaseCategoryRelationships.md#parentcasecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category that is a parent. `Required` `Filter(multi eq)` |
+| [ChildCaseCategory](Projects.Agile.CaseCategoryRelationships.md#childcasecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category that is a child (sub-category) of the parent category. |
+| [ParentCaseCategory](Projects.Agile.CaseCategoryRelationships.md#parentcasecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category that is a parent. |
 
 
 ## System Attributes
@@ -101,7 +101,7 @@ Show in UI: **HiddenByDefault**
 
 ### ChildCaseCategory
 
-The category that is a child (sub-category) of the parent category. `Required` `Filter(multi eq)` `Owner`
+The category that is a child (sub-category) of the parent category.
 
 Type: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentCaseCategory
 
-The category that is a parent. `Required` `Filter(multi eq)`
+The category that is a parent.
 
 Type: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 Indexed: **True**  

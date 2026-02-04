@@ -122,37 +122,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#batchnumber">BatchNumber</a></td>
 <td>string (30)</td>
-<td>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+<td>Production batch of the Excise Stamps</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#endnumber">EndNumber</a></td>
 <td>string (30)</td>
-<td>End number of the lot. <code>Required</code></td>
+<td>End number of the lot</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Is Active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Is Active</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#prefix">Prefix</a></td>
 <td>string (30) <strong>nullable</strong></td>
-<td>Specifies the prefix that is used in forming the value of the &quot;BatchNumber&quot; field. <code>Filter(eq;like)</code> <code>Introduced in version 24.1.2.1</code></td>
+<td>Specifies the prefix that is used in forming the value of the &quot;BatchNumber&quot; field.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#purchaselotnumber">PurchaseLotNumber</a></td>
 <td>string (30)</td>
-<td>Type and number of the document with which the excise stamps were received from the customs administration. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Type and number of the document with which the excise stamps were received from the customs administration.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#quantity">Quantity</a></td>
 <td>int32</td>
-<td>Number of excise stamps in the lot. <code>Required</code> <code>Default(0)</code></td>
+<td>Number of excise stamps in the lot</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#startnumber">StartNumber</a></td>
 <td>string (30)</td>
-<td>Start number of the lot. <code>Required</code></td>
+<td>Start number of the lot</td>
 </tr>
 </tbody>
 </table>
@@ -169,7 +169,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampLots.html#exciseproducttype">ExciseProductType</a></td>
 <td><a href="Regulatory.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</td>
-<td>Specifies the Excise Product Type of the Excise Stamps in the lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.53</code></td>
+<td>Specifies the Excise Product Type of the Excise Stamps in the lot.</td>
 </tr>
 </tbody>
 </table>
@@ -217,7 +217,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="batchnumber">BatchNumber</h3>
-<p>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
+<p>Production batch of the Excise Stamps</p>
 <p>Type: <strong>string (30)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -228,7 +228,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( IsNullOrEmpty( obj.Prefix), Concat( obj.StartNumber, &quot;-&quot;, obj.Quantity.ToString( )), Concat( new [] {obj.Prefix, &quot;-&quot;, obj.StartNumber, &quot;-&quot;, obj.Quantity.ToString( )}))</code></p>
 <h3 id="endnumber">EndNumber</h3>
-<p>End number of the lot. <code>Required</code></p>
+<p>End number of the lot</p>
 <p>Type: <strong>string (30)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -238,7 +238,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.Quantity &gt; 0), obj.StartNumber, null).AddToNumberInString( Convert( ( obj.Quantity - 1), BigInteger), null)</code></p>
 <h3 id="isactive">IsActive</h3>
-<p>Is Active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Is Active</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -246,7 +246,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="prefix">Prefix</h3>
-<p>Specifies the prefix that is used in forming the value of the &quot;BatchNumber&quot; field. <code>Filter(eq;like)</code> <code>Introduced in version 24.1.2.1</code></p>
+<p>Specifies the prefix that is used in forming the value of the &quot;BatchNumber&quot; field.</p>
 <p>Type: <strong>string (30) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -254,7 +254,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>30</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaselotnumber">PurchaseLotNumber</h3>
-<p>Type and number of the document with which the excise stamps were received from the customs administration. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Type and number of the document with which the excise stamps were received from the customs administration.</p>
 <p>Type: <strong>string (30)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>30</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Number of excise stamps in the lot. <code>Required</code> <code>Default(0)</code></p>
+<p>Number of excise stamps in the lot</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -270,7 +270,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startnumber">StartNumber</h3>
-<p>Start number of the lot. <code>Required</code></p>
+<p>Start number of the lot</p>
 <p>Type: <strong>string (30)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="exciseproducttype">ExciseProductType</h3>
-<p>Specifies the Excise Product Type of the Excise Stamps in the lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.53</code></p>
+<p>Specifies the Excise Product Type of the Excise Stamps in the lot.</p>
 <p>Type: <strong><a href="Regulatory.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

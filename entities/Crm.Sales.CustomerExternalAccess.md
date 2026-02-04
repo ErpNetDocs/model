@@ -4,7 +4,11 @@ uid: Crm.Sales.CustomerExternalAccess
 # Crm.Sales.CustomerExternalAccess
 
 
-Customer External Access defines which external users are allowed to access data related to a specific customer. This data type specifies external users and their access rights to customer-related information such as sales orders, invoices, payments, and other sales documents, intended for controlled access outside the internal user environment. It is used to securely expose customer data to external parties, ensuring appropriate visibility and separation from internal operational access.
+Customer External Access defines which external users are allowed to access data related to a specific customer.
+
+This data type specifies external users and their access rights to customer-related information such as sales orders, invoices, payments, and other sales documents, intended for controlled access outside the internal user environment.
+
+It is used to securely expose customer data to external parties, ensuring appropriate visibility and separation from internal operational access.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -36,16 +40,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DaysBackAccess](Crm.Sales.CustomerExternalAccess.md#daysbackaccess) | int32 __nullable__ | The maximum number of past days the user is allowed to view. If null, the access is unlimited. `Default(30)` `Filter(eq;ge;le)` 
+| [DaysBackAccess](Crm.Sales.CustomerExternalAccess.md#daysbackaccess) | int32 __nullable__ | The maximum number of past days the user is allowed to view. If NULL, the access is unlimited. 
 | [Notes](Crm.Sales.CustomerExternalAccess.md#notes) | string (max) __nullable__ | Notes for this External Access. 
-| [Role](Crm.Sales.CustomerExternalAccess.md#role) | [Role](Crm.Sales.CustomerExternalAccess.md#role) | The role of the user, defines the granted access. `Required` `Default("L30")` `Filter(eq)` 
+| [Role](Crm.Sales.CustomerExternalAccess.md#role) | [Role](Crm.Sales.CustomerExternalAccess.md#role) | The role of the user, defines the granted access. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Customer](Crm.Sales.CustomerExternalAccess.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer whose data is being accessed. `Required` `Filter(multi eq)` `Owner` |
-| [User](Crm.Sales.CustomerExternalAccess.md#user) | [Users](Systems.Security.Users.md) | The user to whom the access is granted. `Required` `Filter(multi eq)` |
+| [Customer](Crm.Sales.CustomerExternalAccess.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer whose data is being accessed. |
+| [User](Crm.Sales.CustomerExternalAccess.md#user) | [Users](Systems.Security.Users.md) | The user to whom the access is granted. |
 
 
 ## System Attributes
@@ -61,7 +65,7 @@ Aggregate Root:
 
 ### DaysBackAccess
 
-The maximum number of past days the user is allowed to view. If null, the access is unlimited. `Default(30)` `Filter(eq;ge;le)`
+The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -83,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### Role
 
-The role of the user, defines the granted access. `Required` `Default("L30")` `Filter(eq)`
+The role of the user, defines the granted access.
 
 Type: **[Role](Crm.Sales.CustomerExternalAccess.md#role)**  
 Category: **System**  
@@ -138,7 +142,7 @@ Show in UI: **HiddenByDefault**
 
 ### Customer
 
-The customer whose data is being accessed. `Required` `Filter(multi eq)` `Owner`
+The customer whose data is being accessed.
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Indexed: **True**  
@@ -149,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user to whom the access is granted. `Required` `Filter(multi eq)`
+The user to whom the access is granted.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountRequiredProperties.html#keyorder">KeyOrder</a></td>
 <td>int32</td>
-<td>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. <code>Required</code></td>
+<td>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountRequiredProperties.html#keyproperty">KeyProperty</a></td>
 <td>boolean</td>
-<td>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes</td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountRequiredProperties.html#property">Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
-<td>A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="keyorder">KeyOrder</h3>
-<p>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. <code>Required</code></p>
+<p>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Account.RequiredProperties.Select( c =&gt; c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="keyproperty">KeyProperty</h3>
-<p>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -230,7 +230,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="property">Property</h3>
-<p>A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

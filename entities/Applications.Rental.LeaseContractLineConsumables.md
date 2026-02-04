@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)` 
-| [LineNo](Applications.Rental.LeaseContractLineConsumables.md#lineno) | int32 | Consecutive number of the consumable within the lease contract line. `Required` `Filter(eq;ge;le)` 
+| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the current consumable is given. 
+| [LineNo](Applications.Rental.LeaseContractLineConsumables.md#lineno) | int32 | Consecutive number of the consumable within the lease contract line. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantityUnit](Applications.Rental.LeaseContractLineConsumables.md#consumablequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)` |
-| [LeaseLine](Applications.Rental.LeaseContractLineConsumables.md#leaseline) | [LeaseContractLines](Applications.Rental.LeaseContractLines.md) | Lease line with which the current consumable is given. `Required` `Filter(multi eq)` `Owner` |
-| [Product](Applications.Rental.LeaseContractLineConsumables.md#product) | [Products](General.Products.Products.md) | The consumable to be sold accompanying the asset. `Required` `Filter(multi eq)` |
-| [Store](Applications.Rental.LeaseContractLineConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | Store from which the consumable is issued. `Required` `Filter(multi eq)` |
+| [ConsumableQuantityUnit](Applications.Rental.LeaseContractLineConsumables.md#consumablequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Consumable Quantity. |
+| [LeaseLine](Applications.Rental.LeaseContractLineConsumables.md#leaseline) | [LeaseContractLines](Applications.Rental.LeaseContractLines.md) | Lease line with which the current consumable is given. |
+| [Product](Applications.Rental.LeaseContractLineConsumables.md#product) | [Products](General.Products.Products.md) | The consumable to be sold accompanying the asset. |
+| [Store](Applications.Rental.LeaseContractLineConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | Store from which the consumable is issued. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### ConsumableQuantity
 
-The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)`
+Specifies what quantity of the current consumable is given.
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the consumable within the lease contract line. `Required` `Filter(eq;ge;le)`
+Consecutive number of the consumable within the lease contract line.
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsumableQuantityUnit
 
-The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)`
+The measurement unit of Consumable Quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### LeaseLine
 
-Lease line with which the current consumable is given. `Required` `Filter(multi eq)` `Owner`
+Lease line with which the current consumable is given.
 
 Type: **[LeaseContractLines](Applications.Rental.LeaseContractLines.md)**  
 Indexed: **True**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The consumable to be sold accompanying the asset. `Required` `Filter(multi eq)`
+The consumable to be sold accompanying the asset.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-Store from which the consumable is issued. `Required` `Filter(multi eq)`
+Store from which the consumable is issued.
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

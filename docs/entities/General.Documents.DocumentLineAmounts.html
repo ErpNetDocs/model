@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentLineAmounts.html#linepercent">LinePercent</a></td>
 <td>decimal (14, 6)</td>
-<td>The percent of the additional amount which should be distributed over the current line. <code>Required</code> <code>Default(0)</code></td>
+<td>The percent of the additional amount which should be distributed over the current line.</td>
 </tr>
 </tbody>
 </table>
@@ -153,17 +153,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentLineAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
-<td>The type of amount for which the distribution pattern is specified. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of amount for which the distribution pattern is specified.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentLineAmounts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentLineAmounts.html#referenceddocument">ReferencedDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). <code>Filter(multi eq)</code></td>
+<td>When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated).</td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +202,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linepercent">LinePercent</h3>
-<p>The percent of the additional amount which should be distributed over the current line. <code>Required</code> <code>Default(0)</code></p>
+<p>The percent of the additional amount which should be distributed over the current line.</p>
 <p>Type: <strong>decimal (14, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -240,19 +240,19 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The type of amount for which the distribution pattern is specified. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of amount for which the distribution pattern is specified.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referenceddocument">ReferencedDocument</h3>
-<p>When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). <code>Filter(multi eq)</code></p>
+<p>When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated).</p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

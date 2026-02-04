@@ -4,7 +4,7 @@ uid: Regulatory.Excise.ExciseProducts
 # Regulatory.Excise.ExciseProducts
 
 
-Excise product codes are defined by the taxation and customs authorities. For EU, these are 4-letter codes, similar to T200, S200, B000, etc. .
+Excise product codes are defined by the taxation and customs authorities. For EU, these are 4-letter codes, similar to T200, S200, B000, etc. 
 
 ## General
 Namespace: [Regulatory.Excise](Regulatory.Excise.md)  
@@ -36,13 +36,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Regulatory.Excise.ExciseProducts.md#code) | string (32) | The unique code of the ExciseProduct. `Required` `Filter(multi eq;like)` `ORD` 
-| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string. `Required` `Filter(like)` 
+| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseProductCategory](Regulatory.Excise.ExciseProducts.md#exciseproductcategory) | [ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md) | The category of the excise product. `Required` `Filter(multi eq)` |
+| [ExciseProductCategory](Regulatory.Excise.ExciseProducts.md#exciseproductcategory) | [ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md) | The category of the excise product. |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage string. `Required` `Filter(like)`
+Multilanguage string
 
 Type: **[MultilanguageString (500)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseProductCategory
 
-The category of the excise product. `Required` `Filter(multi eq)`
+The category of the excise product.
 
 Type: **[ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md)**  
 Category: **System**  

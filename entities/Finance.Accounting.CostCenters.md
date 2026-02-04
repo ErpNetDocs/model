@@ -4,7 +4,7 @@ uid: Finance.Accounting.CostCenters
 # Finance.Accounting.CostCenters
 
 
-Defines cost centers and their relation to profit centers.
+Organizational units used to track and control expenses. Cost centers allow allocation and monitoring of costs for departments, projects, or functional areas.
 
 ## General
 Namespace: [Finance.Accounting](Finance.Accounting.md)  
@@ -33,17 +33,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Finance.Accounting.CostCenters.md#isactive) | boolean | Indicates whether the current Cost Center is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.0.7` 
+| [IsActive](Finance.Accounting.CostCenters.md#isactive) | boolean | Indicates whether the current Cost Center is active. 
 | [Name](Finance.Accounting.CostCenters.md#name) | string (254) | The name of this CostCenter. `Required` `Filter(like)` 
 | [Notes](Finance.Accounting.CostCenters.md#notes) | string (254) __nullable__ | Notes for this CostCenter. 
-| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal (18, 4) | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)` 
+| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal (18, 4) | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Parent](Finance.Accounting.CostCenters.md#parent) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Parent cost center, null if this is root cost center. `Filter(multi eq)` |
-| [TransferCostToProfitCenter](Finance.Accounting.CostCenters.md#transfercosttoprofitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. `Filter(multi eq)` |
+| [TransferCostToProfitCenter](Finance.Accounting.CostCenters.md#transfercosttoprofitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Points to the profit center to which to transfer the cost. Valid only for leaf cost centers |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Cost Center is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.0.7`
+Indicates whether the current Cost Center is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### RelativeWeight
 
-The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)`
+The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.
 
 Type: **decimal (18, 4)**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### TransferCostToProfitCenter
 
-Points to the profit center to which to transfer the cost. Valid only for leaf cost centers. `Filter(multi eq)`
+Points to the profit center to which to transfer the cost. Valid only for leaf cost centers
 
 Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 Category: **System**  

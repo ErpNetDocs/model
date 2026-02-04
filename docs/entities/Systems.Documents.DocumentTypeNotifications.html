@@ -126,27 +126,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#documentevent">DocumentEvent</a></td>
 <td>string (254)</td>
-<td>The event which will trigger the notification. <code>Required</code> <code>Default(&quot;StateChanging&quot;)</code> <code>Filter(eq)</code></td>
+<td>The event which will trigger the notification</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#filterxml">FilterXML</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Filtering condition for the document. Only documents which match the filter will trigger the event.</td>
+<td>Filtering condition for the document. Only documents which match the filter will trigger the event</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#statebitmask">StateBitMask</a></td>
 <td>int32</td>
-<td>The document states that will trigger the event. <code>Required</code> <code>Default(0)</code></td>
+<td>The document states that will trigger the event</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></td>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></td>
-<td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. <code>Required</code> <code>Default(&quot;*&quot;)</code></td>
+<td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#toemailaddresslist">ToEmailAddressList</a></td>
 <td>string (2048)</td>
-<td>List of email addressess to be notified. <code>Required</code></td>
+<td>List of E-mail addresses to be notified</td>
 </tr>
 </tbody>
 </table>
@@ -163,12 +163,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type for which this notification is set. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type for which this notification is set.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#userstatus">UserStatus</a></td>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>When not null, specifies that the event will be triggered only on this user status. <code>Filter(multi eq)</code></td>
+<td>When not empty, specifies that the event will be triggered only on this user status</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentevent">DocumentEvent</h3>
-<p>The event which will trigger the notification. <code>Required</code> <code>Default(&quot;StateChanging&quot;)</code> <code>Filter(eq)</code></p>
+<p>The event which will trigger the notification</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -210,7 +210,7 @@ Maximum Length: <strong>254</strong><br>
 Default Value: <strong>StateChanging</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="filterxml">FilterXML</h3>
-<p>Filtering condition for the document. Only documents which match the filter will trigger the event.</p>
+<p>Filtering condition for the document. Only documents which match the filter will trigger the event</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -218,7 +218,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statebitmask">StateBitMask</h3>
-<p>The document states that will trigger the event. <code>Required</code> <code>Default(0)</code></p>
+<p>The document states that will trigger the event</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -226,7 +226,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statuschangedirection">StatusChangeDirection</h3>
-<p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. <code>Required</code> <code>Default(&quot;*&quot;)</code></p>
+<p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>StatusChangeDirection</code>(Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) data attribute<br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>AnyChange</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="toemailaddresslist">ToEmailAddressList</h3>
-<p>List of email addressess to be notified. <code>Required</code></p>
+<p>List of E-mail addresses to be notified</p>
 <p>Type: <strong>string (2048)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -292,14 +292,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type for which this notification is set. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type for which this notification is set.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<p>When not null, specifies that the event will be triggered only on this user status. <code>Filter(multi eq)</code></p>
+<p>When not empty, specifies that the event will be triggered only on this user status</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

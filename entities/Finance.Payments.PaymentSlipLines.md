@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Finance.Payments.PaymentSlipLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)` 
-| [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
+| [Amount](Finance.Payments.PaymentSlipLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order 
+| [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this payment slip line 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PaymentOrder](Finance.Payments.PaymentSlipLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this payment slip line. `Required` `Filter(multi eq)` |
+| [PaymentOrder](Finance.Payments.PaymentSlipLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this payment slip line |
 | [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) | [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) | The <see cref="PaymentSlipAmount"/> to which this PaymentSlipLine belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
 
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Amount
 
-The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)`
+The part of the total amount in the payment slip amount, that is distributed to the specified payment order
 
 Type: **[Amount (10, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Front-End Recalc Expressions:
 `obj.CoveredOrderAmount.ConvertTo( obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
 ### CoveredOrderAmount
 
-The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)`
+The part of the original payment order amount, that is covered by this payment slip line
 
 Type: **[Amount (10, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentOrder
 
-The payment order, that is covered by this payment slip line. `Required` `Filter(multi eq)`
+The payment order, that is covered by this payment slip line
 
 Type: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 Indexed: **True**  

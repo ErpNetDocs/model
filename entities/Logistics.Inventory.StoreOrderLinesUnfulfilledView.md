@@ -28,32 +28,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date` 
-| [IsFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns true/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. `Required` `Filter(multi eq)` 
-| [IsQuantityFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns true/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. `Required` `Filter(multi eq)` 
-| [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Movement_Type` 
-| [OrderRemainingLineCost](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremaininglinecost) | decimal (38, 2) | The remaining (unfulfilled) line cost of the order line. `Required` `Filter(multi eq;ge;le)` 
-| [OrderRemainingQuantityBase](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremainingquantitybase) | decimal (38, 3) | The remaining (unfulfilled) quantity of the order line in base measurement unit. `Required` `Filter(multi eq;ge;le)` 
+| [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime | The date on which the document was issued. 
+| [IsFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. 
+| [IsQuantityFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. 
+| [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE 
+| [OrderRemainingLineCost](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremaininglinecost) | decimal (38, 2) | The remaining (unfulfilled) line cost of the order line. 
+| [OrderRemainingQuantityBase](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremainingquantitybase) | decimal (38, 3) | The remaining (unfulfilled) quantity of the order line in base measurement unit. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id` |
-| [Lot](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Lot_Id` |
-| [Product](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#product) | [Products](General.Products.Products.md) | The product which should be received/issued. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Product_Id` |
-| [ProductVariant](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Product_Variant_Id` |
-| [SerialNumber](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` `Inherited from Inv_Store_Order_<br />Lines_Table.Serial_Number_Id` |
-| [Store](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#store) | [Stores](Logistics.Inventory.Stores.md) | The designated warehouse for the operation. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Id` |
-| [StoreOrder](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#storeorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | Store Order. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Order_Id` `Introduced in version 24.1.1.78` |
-| [StoreOrderLine](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#storeorderline) | [StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable) | The line, containing the ordered quantity, which this execution line executes. `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Parent_Store_Order_<br />Line_Id` `FilterableReference` |
+| [EnterpriseCompany](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. |
+| [Lot](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement |
+| [Product](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#product) | [Products](General.Products.Products.md) | The product which should be received/issued. |
+| [ProductVariant](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. |
+| [SerialNumber](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. NULL means that serial number is unknown or not applicable |
+| [Store](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#store) | [Stores](Logistics.Inventory.Stores.md) | The designated warehouse for the operation. |
+| [StoreOrder](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#storeorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | Store Order |
+| [StoreOrderLine](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#storeorderline) | [StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable) | The line, containing the ordered quantity, which this execution line executes. |
 
 
 ## Attribute Details
 
 ### DocumentDate
 
-The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date`
+The date on which the document was issued.
 
 Type: **datetime**  
 Category: **System**  
@@ -65,7 +65,7 @@ Show in UI: **ShownByDefault**
 
 ### IsFulfilled
 
-Returns true/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. `Required` `Filter(multi eq)`
+Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### IsQuantityFulfilled
 
-Returns true/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. `Required` `Filter(multi eq)`
+Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### MovementType
 
-Store order movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Movement_Type`
+Store order movement type. R=RECEIPT, I=ISSUE
 
 Type: **[MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderRemainingLineCost
 
-The remaining (unfulfilled) line cost of the order line. `Required` `Filter(multi eq;ge;le)`
+The remaining (unfulfilled) line cost of the order line.
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderRemainingQuantityBase
 
-The remaining (unfulfilled) quantity of the order line in base measurement unit. `Required` `Filter(multi eq;ge;le)`
+The remaining (unfulfilled) quantity of the order line in base measurement unit.
 
 Type: **decimal (38, 3)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company which issued the document. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id`
+The enterprise company which issued the document.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Lot_Id`
+If non-null, contains the specific lot to use for the movement
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product which should be received/issued. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Product_Id`
+The product which should be received/issued.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductVariant
 
-If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Product_Variant_Id`
+If specified determines which product variant of the current product in this line is used.
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` `Inherited from Inv_Store_Order_Lines_Table.Serial_Number_Id`
+Which serial number to receive/issue. NULL means that serial number is unknown or not applicable
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-The designated warehouse for the operation. `Required` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Id`
+The designated warehouse for the operation.
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  
@@ -188,7 +188,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreOrder
 
-Store Order. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Store_Order_Id` `Introduced in version 24.1.1.78`
+Store Order
 
 Type: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 Category: **System**  
@@ -199,7 +199,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreOrderLine
 
-The line, containing the ordered quantity, which this execution line executes. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Parent_Store_Order_Line_Id` `FilterableReference`
+The line, containing the ordered quantity, which this execution line executes.
 
 Type: **[StoreOrderLines](Logistics.Inventory.StoreOrderLines.md) (nullable)**  
 Category: **System**  

@@ -87,7 +87,7 @@
         <article data-uid="Systems.Core.ObjectFiles">
 <h1 id="systemscoreobjectfiles">Systems.Core.ObjectFiles</h1>
 
-<p>Contains files attached to objects.</p>
+<p>Contains files attached to objects</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Systems.Core.html">Systems.Core</a><br>
 Repository: Systems.Core.ObjectFiles<br>
@@ -120,77 +120,77 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#accesspermission">AccessPermission</a></td>
 <td><a href="Systems.Core.ObjectFiles.html#accesspermission">AccessPermission</a></td>
-<td>Indicates who has permission to access this file. <code>Required</code> <code>Default(&quot;IN&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.56</code></td>
+<td>Indicates who has permission to access this file.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
 <td><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></td>
-<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. <code>Required</code> <code>Default(&quot;EMB&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>Time (in UTC), when the file was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
+<td>Time (in UTC), when the file was created.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#embeddedfilecontents">EmbeddedFileContents</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>Contains the contents of the file, when it is embedded in the database. null for linked files.</td>
+<td>Contains the contents of the file, when it is embedded in the database. NULL for linked files</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#embeddedthumbnailcontents">EmbeddedThumbnailContents</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>Contains the compressed and/or resized contents of the file if applicable. <code>ReadOnly</code> <code>Introduced in version 24.1.1.85</code></td>
+<td>Contains the compressed and/or resized contents of the file if applicable.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#filename">FileName</a></td>
 <td>string (254)</td>
-<td>The file name of the linked or embedded file. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The file name of the linked or embedded file</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#filesizebytes">FileSizeBytes</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The file size in bytes. If empty the file size is unknown. <code>Introduced in version 22.1.5.46</code></td>
+<td>The file size in bytes. If empty the file size is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime</td>
-<td>Time (in UTC), when the file was last updated. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
+<td>Time (in UTC), when the file was last updated.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#linkedfilepath">LinkedFilePath</a></td>
 <td>string (1024) <strong>nullable</strong></td>
-<td>When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. <code>Filter(eq;like)</code></td>
+<td>When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#mediaheight">MediaHeight</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Used (non-null) only for media files. Specifies the width for displaying the media. <code>Introduced in version 20.1</code></td>
+<td>Used (non-null) only for media files. Specifies the width for displaying the media.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#mediatype">MediaType</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. <code>Introduced in version 20.1</code></td>
+<td>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#mediawidth">MediaWidth</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Used (non-null) only for media files. Specifies the width for displaying the media. <code>Introduced in version 20.1</code></td>
+<td>Used (non-null) only for media files. Specifies the width for displaying the media.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>User notes for the file attachment.</td>
+<td>User notes for the file attachment</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#purposecode">PurposeCode</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. <code>Filter(eq)</code></td>
+<td>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#section">Section</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>A section name used to group files. <code>Introduced in version 21.1.1.84</code></td>
+<td>A section name used to group files</td>
 </tr>
 </tbody>
 </table>
@@ -207,17 +207,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, who created the file record. null if it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td>The user, who created the file record. NULL if it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#lastupdateuser">LastUpdateUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, who performed the last update to the file record. null if it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td>The user, who performed the last update to the file record. NULL if it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#object">Object</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The object to which the file is attached. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The object to which the file is attached</td>
 </tr>
 </tbody>
 </table>
@@ -265,7 +265,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accesspermission">AccessPermission</h3>
-<p>Indicates who has permission to access this file. <code>Required</code> <code>Default(&quot;IN&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.56</code></p>
+<p>Indicates who has permission to access this file.</p>
 <p>Type: <strong><a href="Systems.Core.ObjectFiles.html#accesspermission">AccessPermission</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AccessPermission</code>(Systems.Core.ObjectFiles.md#accesspermission) data attribute<br>
@@ -297,7 +297,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Internal</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contentlocation">ContentLocation</h3>
-<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. <code>Required</code> <code>Default(&quot;EMB&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
+<p>The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.</p>
 <p>Type: <strong><a href="Systems.Core.ObjectFiles.html#contentlocation">ContentLocation</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ContentLocation</code>(Systems.Core.ObjectFiles.md#contentlocation) data attribute<br>
@@ -329,7 +329,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Embedded</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>Time (in UTC), when the file was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
+<p>Time (in UTC), when the file was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -337,21 +337,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="embeddedfilecontents">EmbeddedFileContents</h3>
-<p>Contains the contents of the file, when it is embedded in the database. null for linked files.</p>
+<p>Contains the contents of the file, when it is embedded in the database. NULL for linked files</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>Delay Loaded Attributes</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="embeddedthumbnailcontents">EmbeddedThumbnailContents</h3>
-<p>Contains the compressed and/or resized contents of the file if applicable. <code>ReadOnly</code> <code>Introduced in version 24.1.1.85</code></p>
+<p>Contains the compressed and/or resized contents of the file if applicable.</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>Delay Loaded Attributes</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="filename">FileName</h3>
-<p>The file name of the linked or embedded file. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The file name of the linked or embedded file</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -359,14 +359,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="filesizebytes">FileSizeBytes</h3>
-<p>The file size in bytes. If empty the file size is unknown. <code>Introduced in version 22.1.5.46</code></p>
+<p>The file size in bytes. If empty the file size is unknown.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
-<p>Time (in UTC), when the file was last updated. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
+<p>Time (in UTC), when the file was last updated.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -374,7 +374,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linkedfilepath">LinkedFilePath</h3>
-<p>When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. <code>Filter(eq;like)</code></p>
+<p>When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files</p>
 <p>Type: <strong>string (1024) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -382,14 +382,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>1024</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="mediaheight">MediaHeight</h3>
-<p>Used (non-null) only for media files. Specifies the width for displaying the media. <code>Introduced in version 20.1</code></p>
+<p>Used (non-null) only for media files. Specifies the width for displaying the media.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="mediatype">MediaType</h3>
-<p>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. <code>Introduced in version 20.1</code></p>
+<p>For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.</p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -397,14 +397,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="mediawidth">MediaWidth</h3>
-<p>Used (non-null) only for media files. Specifies the width for displaying the media. <code>Introduced in version 20.1</code></p>
+<p>Used (non-null) only for media files. Specifies the width for displaying the media.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>User notes for the file attachment.</p>
+<p>User notes for the file attachment</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -412,7 +412,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purposecode">PurposeCode</h3>
-<p>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. <code>Filter(eq)</code></p>
+<p>Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -420,7 +420,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="section">Section</h3>
-<p>A section name used to group files. <code>Introduced in version 21.1.1.84</code></p>
+<p>A section name used to group files</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -471,19 +471,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user, who created the file record. null if it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
+<p>The user, who created the file record. NULL if it is unknown.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastupdateuser">LastUpdateUser</h3>
-<p>The user, who performed the last update to the file record. null if it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
+<p>The user, who performed the last update to the file record. NULL if it is unknown.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="object">Object</h3>
-<p>The object to which the file is attached. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The object to which the file is attached</p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

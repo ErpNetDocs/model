@@ -39,7 +39,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. `Filter(multi eq)` |
+| [AccessKey](Logistics.Procurement.SupplierTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key required for accessing all suppliers of this supplier type. |
 
 
 ## System Attributes
@@ -131,7 +131,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The access key required for accessing all suppliers of this supplier type. `Filter(multi eq)`
+The access key required for accessing all suppliers of this supplier type.
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  

@@ -33,15 +33,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | Specifies the amount type from the Vat Entry which will be accumulated. `Required` `Filter(multi eq)` 
+| [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | Specifies the amount type from the Vat Entry which will be accumulated 
 | [Notes](Regulatory.Vat.BoxTypeDealTypes.md#notes) | string (max) __nullable__ | Notes for this BoxTypeDealType. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BoxType](Regulatory.Vat.BoxTypeDealTypes.md#boxtype) | [BoxTypes](Regulatory.Vat.BoxTypes.md) | The type of box in a VAT declaration. `Required` `Filter(multi eq)` |
-| [DealType](Regulatory.Vat.BoxTypeDealTypes.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | Deal Type for the box. `Required` `Filter(multi eq)` |
+| [BoxType](Regulatory.Vat.BoxTypeDealTypes.md#boxtype) | [BoxTypes](Regulatory.Vat.BoxTypes.md) | The type of box in a VAT declaration. |
+| [DealType](Regulatory.Vat.BoxTypeDealTypes.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | Deal Type for the box. |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### AmountCategory
 
-Specifies the amount type from the Vat Entry which will be accumulated. `Required` `Filter(multi eq)`
+Specifies the amount type from the Vat Entry which will be accumulated
 
 Type: **[AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory)**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **HiddenByDefault**
 
 ### BoxType
 
-The type of box in a VAT declaration. `Required` `Filter(multi eq)`
+The type of box in a VAT declaration.
 
 Type: **[BoxTypes](Regulatory.Vat.BoxTypes.md)**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### DealType
 
-Deal Type for the box. `Required` `Filter(multi eq)`
+Deal Type for the box.
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md)**  
 Category: **System**  

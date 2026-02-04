@@ -122,12 +122,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#date">Date</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. <code>Filter(multi eq;ge;le)</code></td>
+<td>The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#isdismissed">IsDismissed</a></td>
 <td>boolean</td>
-<td>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+<td>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#notes">Notes</a></td>
@@ -137,7 +137,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#trackedparametervalue">TrackedParameterValue</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. <code>Filter(multi eq;ge;le)</code></td>
+<td>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</td>
 </tr>
 </tbody>
 </table>
@@ -154,12 +154,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></td>
-<td>The type of maintenance, which will be performed. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of maintenance, which will be performed.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetScheduledMaintenances.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
-<td>The asset, which will be maintained. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The asset, which will be maintained.</td>
 </tr>
 </tbody>
 </table>
@@ -192,14 +192,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="date">Date</h3>
-<p>The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. <code>Filter(multi eq;ge;le)</code></p>
+<p>The date, when the maintenance is planned. NULL means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdismissed">IsDismissed</h3>
-<p>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
+<p>Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trackedparametervalue">TrackedParameterValue</h3>
-<p>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. <code>Filter(multi eq;ge;le)</code></p>
+<p>The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. NULL means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -244,13 +244,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenancetype">MaintenanceType</h3>
-<p>The type of maintenance, which will be performed. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of maintenance, which will be performed.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The asset, which will be maintained. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The asset, which will be maintained.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

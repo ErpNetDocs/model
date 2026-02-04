@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Resources.Resources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group. `Required` `Filter(eq;like)` 
+| [Name](General.Resources.Resources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group 
 | [Notes](General.Resources.Resources.md#notes) | string (max) __nullable__ | Notes for this Resource. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostingCurrency](General.Resources.Resources.md#costingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency in which resource costs are specified. Required only if resource costs will be specified. `Filter(multi eq)` |
+| [CostingCurrency](General.Resources.Resources.md#costingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency in which resource costs are specified. Required only if resource costs will be specified. |
 | [ResourceGroup](General.Resources.Resources.md#resourcegroup) | [ResourceGroups](General.Resources.ResourceGroups.md) | The <see cref="ResourceGroup"/> to which this Resource belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### Name
 
-Resource name. Unique within the resource group. `Required` `Filter(eq;like)`
+Resource name. Unique within the resource group
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **HiddenByDefault**
 
 ### CostingCurrency
 
-The currency in which resource costs are specified. Required only if resource costs will be specified. `Filter(multi eq)`
+The currency in which resource costs are specified. Required only if resource costs will be specified.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  

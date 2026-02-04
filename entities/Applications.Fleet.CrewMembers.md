@@ -4,7 +4,7 @@ uid: Applications.Fleet.CrewMembers
 # Applications.Fleet.CrewMembers
 
 
-Contains the memnbers of vehicle crews.
+Contains the memnbers of vehicle crews
 
 ## General
 Namespace: [Applications.Fleet](Applications.Fleet.md)  
@@ -36,14 +36,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.Fleet.CrewMembers.md#notes) | string (254) __nullable__ | Notes for this CrewMember. 
-| [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 __nullable__ | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader. 
+| [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 __nullable__ | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Crews](Applications.Fleet.Crews.md) | The crew to which this member belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Person](Applications.Fleet.CrewMembers.md#person) | [Persons](General.Contacts.Persons.md) | The crew member person. `Required` `Filter(multi eq)` |
+| [Crew](Applications.Fleet.CrewMembers.md#crew) | [Crews](Applications.Fleet.Crews.md) | Id of the crew |
+| [Person](Applications.Fleet.CrewMembers.md#person) | [Persons](General.Contacts.Persons.md) | The crew member person |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### OrdinalPos
 
-Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader.
+Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **HiddenByDefault**
 
 ### Crew
 
-The crew to which this member belongs. `Required` `Filter(multi eq)` `Owner`
+Id of the crew
 
 Type: **[Crews](Applications.Fleet.Crews.md)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### Person
 
-The crew member person. `Required` `Filter(multi eq)`
+The crew member person
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  

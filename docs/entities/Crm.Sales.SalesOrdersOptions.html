@@ -87,7 +87,7 @@
         <article data-uid="Crm.Sales.SalesOrdersOptions">
 <h1 id="crmsalessalesordersoptions">Crm.Sales.SalesOrdersOptions</h1>
 
-<p>Options for sales orders of specific user defined document type.</p>
+<p>Options for sales orders of specific user defined document type</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
 Repository: Crm.Sales.SalesOrdersOptions<br>
@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></td>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></td>
-<td>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). <code>Required</code> <code>Default(&quot;A&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#availablequantityonly">AvailableQuantityOnly</a></td>
 <td>boolean</td>
-<td>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#minimumamount">MinimumAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>When not null, specifies minimal total amount of the sales order, which is required for order releasing. <code>Currency: MinimumAmountCurrency</code></td>
+<td>When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></td>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></td>
-<td>Terms on which the shipment of the products in the sales order is allowed. <code>Required</code> <code>Default(&quot;A&quot;)</code></td>
+<td>Terms on which the shipment of the products in the sales order is allowed.</td>
 </tr>
 </tbody>
 </table>
@@ -153,22 +153,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#dealdocumenttype">DealDocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. <code>Filter(multi eq)</code></td>
+<td>If filled then new deals from the specified type are created automatically by the sales orders that aren't assigned to existing deals.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type for which the sales order option applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type for which the sales order option applies.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#minimumamountcurrency">MinimumAmountCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The currency of Minimal Amount. <code>Filter(multi eq)</code></td>
+<td>The currency of Minimal Amount</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#vatdeviationdocumentamounttype">VATDeviationDocument<br>AmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
-<td>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. <code>Filter(multi eq)</code></td>
+<td>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT.</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alloweddirections">AllowedDirections</h3>
-<p>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). <code>Required</code> <code>Default(&quot;A&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrdersOptions.html#alloweddirections">AllowedDirections</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AllowedDirections</code>(Crm.Sales.SalesOrdersOptions.md#alloweddirections) data attribute<br>
@@ -237,7 +237,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>AllowAnyButNotBoth</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="availablequantityonly">AvailableQuantityOnly</h3>
-<p>When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -245,14 +245,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="minimumamount">MinimumAmount</h3>
-<p>When not null, specifies minimal total amount of the sales order, which is required for order releasing. <code>Currency: MinimumAmountCurrency</code></p>
+<p>When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shipmentallowance">ShipmentAllowance</h3>
-<p>Terms on which the shipment of the products in the sales order is allowed. <code>Required</code> <code>Default(&quot;A&quot;)</code></p>
+<p>Terms on which the shipment of the products in the sales order is allowed.</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ShipmentAllowance</code>(Crm.Sales.SalesOrdersOptions.md#shipmentallowance) data attribute<br>
@@ -306,26 +306,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dealdocumenttype">DealDocumentType</h3>
-<p>If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. <code>Filter(multi eq)</code></p>
+<p>If filled then new deals from the specified type are created automatically by the sales orders that aren't assigned to existing deals.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type for which the sales order option applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type for which the sales order option applies.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="minimumamountcurrency">MinimumAmountCurrency</h3>
-<p>The currency of Minimal Amount. <code>Filter(multi eq)</code></p>
+<p>The currency of Minimal Amount</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</h3>
-<p>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. <code>Filter(multi eq)</code></p>
+<p>Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

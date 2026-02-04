@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly` 
-| [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly` 
+| [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the consumed quantity issued from the store. 
+| [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumptionOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumptionorderline) | [ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md) | Consumption order line which requested the Consumed_Quantity. `Required` `Filter(multi eq)` `ReadOnly` |
-| [OutputOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#outputorderline) | [OutputOrderLines](Production.ShopFloor.OutputOrderLines.md) | The output order line for which the distribution is recorded. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [ConsumptionOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumptionorderline) | [ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md) | Consumption order line which requested the consumed quantity |
+| [OutputOrderLine](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#outputorderline) | [OutputOrderLines](Production.ShopFloor.OutputOrderLines.md) | The output order line for which the distribution is recorded. |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### ConsumedCost
 
-Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly`
+Cost of the consumed quantity issued from the store.
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedQuantity
 
-Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly`
+Part of the quantity in the consumption order line which was used for the product in the output order line.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsumptionOrderLine
 
-Consumption order line which requested the Consumed_Quantity. `Required` `Filter(multi eq)` `ReadOnly`
+Consumption order line which requested the consumed quantity
 
 Type: **[ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)**  
 Indexed: **True**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### OutputOrderLine
 
-The output order line for which the distribution is recorded. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
+The output order line for which the distribution is recorded.
 
 Type: **[OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
 Indexed: **True**  

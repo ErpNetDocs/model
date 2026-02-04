@@ -35,27 +35,27 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat (which uses the common abbreviations). `Required` 
-| [InvoicedValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency. `Currency: IntrastatDeclaration.BaseCurrency` `Required` 
-| [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. `Required` `Default("NEW")` 
-| [LineNo](Regulatory.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration. `Required` `Filter(eq)` 
-| [NetMassKg](Regulatory.Intrastat.DeclarationLines.md#netmasskg) | decimal (14, 3) | Net mass of the goods in kg. `Required` `Filter(multi eq)` 
-| [QuantitySupplementaryUnit](Regulatory.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal (10, 0) __nullable__ | Quantity of the goods in the supplementary unit. null when no supplementary unit is specified. 
-| [StatisticalValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) __nullable__ | Statistical value of the goods in the base currency. `Currency: IntrastatDeclaration.BaseCurrency` 
-| [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification. `Required` 
-| [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used. `Required` 
+| [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat 
+| [InvoicedValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency 
+| [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted 
+| [LineNo](Regulatory.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration 
+| [NetMassKg](Regulatory.Intrastat.DeclarationLines.md#netmasskg) | decimal (14, 3) | Net mass of the goods in kg 
+| [QuantitySupplementaryUnit](Regulatory.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal (10, 0) __nullable__ | Quantity of the goods in the supplementary unit 
+| [StatisticalValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) __nullable__ | Statistical value of the goods in the base currency 
+| [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification 
+| [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](Regulatory.Intrastat.DeclarationLines.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) | Administrative region of the enterprise company at the time of the declaration. `Required` `Filter(multi eq)` |
-| [IntrastatCommodityCode](Regulatory.Intrastat.DeclarationLines.md#intrastatcommoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) | The commodity code of the goods, according to the Intrastat commodity classification. `Required` `Filter(multi eq)` |
-| [IntrastatDeclaration](Regulatory.Intrastat.DeclarationLines.md#intrastatdeclaration) | [Declarations](Regulatory.Intrastat.Declarations.md) | The intrastat declaration, to which this line belongs. `Required` `Filter(multi eq)` `Owner` |
-| [OriginCountry](Regulatory.Intrastat.DeclarationLines.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | The country of origin of the goods. null for outbound declarations. `Filter(multi eq)` |
-| [Party](Regulatory.Intrastat.DeclarationLines.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Partner to whom the goods are dispatched, or partner from whom the goods are received. `Filter(multi eq)` `Introduced in version 22.1.5.58` |
-| [PartyCountry](Regulatory.Intrastat.DeclarationLines.md#partycountry) | [Countries](General.Geography.Countries.md) | The country of the partner. `Required` `Filter(multi eq)` |
-| [TransportCountry](Regulatory.Intrastat.DeclarationLines.md#transportcountry) | [Countries](General.Geography.Countries.md) | The country of the transportation company. `Required` `Filter(multi eq)` |
+| [AdministrativeRegion](Regulatory.Intrastat.DeclarationLines.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) | Administrative region of the enterprise company at the time of the declaration |
+| [IntrastatCommodityCode](Regulatory.Intrastat.DeclarationLines.md#intrastatcommoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) | The commodity code of the goods, according to the Intrastat commodity classification |
+| [IntrastatDeclaration](Regulatory.Intrastat.DeclarationLines.md#intrastatdeclaration) | [Declarations](Regulatory.Intrastat.Declarations.md) | The intrastat declaration, to which this line belongs |
+| [OriginCountry](Regulatory.Intrastat.DeclarationLines.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | The country of origin of the goods. NULL for outbound declarations |
+| [Party](Regulatory.Intrastat.DeclarationLines.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Partner to whom the goods are dispatched, or partner from whom the goods are received. |
+| [PartyCountry](Regulatory.Intrastat.DeclarationLines.md#partycountry) | [Countries](General.Geography.Countries.md) | The country of the partner |
+| [TransportCountry](Regulatory.Intrastat.DeclarationLines.md#transportcountry) | [Countries](General.Geography.Countries.md) | The country of the transportation company |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### DeliveryTerms
 
-Delivery terms - classification according to Intrastat (which uses the common abbreviations). `Required`
+Delivery terms - classification according to Intrastat
 
 Type: **[DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoicedValueAmountBase
 
-Invoiced value of the goods in the base currency. `Currency: IntrastatDeclaration.BaseCurrency` `Required`
+Invoiced value of the goods in the base currency
 
 Type: **[Amount (10, 0)](../data-types.md#amount)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### LineAction
 
-Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. `Required` `Default("NEW")`
+Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted
 
 Type: **[LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consequtive line number within the intrastat declaration. `Required` `Filter(eq)`
+Consequtive line number within the intrastat declaration
 
 Type: **int32**  
 Category: **System**  
@@ -145,7 +145,7 @@ Front-End Recalc Expressions:
 `( obj.IntrastatDeclaration.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NetMassKg
 
-Net mass of the goods in kg. `Required` `Filter(multi eq)`
+Net mass of the goods in kg
 
 Type: **decimal (14, 3)**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantitySupplementaryUnit
 
-Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.
+Quantity of the goods in the supplementary unit
 
 Type: **decimal (10, 0) __nullable__**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### StatisticalValueAmountBase
 
-Statistical value of the goods in the base currency. `Currency: IntrastatDeclaration.BaseCurrency`
+Statistical value of the goods in the base currency
 
 Type: **[Amount (10, 0)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -175,7 +175,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionNature
 
-Transaction nature, according to the Intrastat classification. `Required`
+Transaction nature, according to the Intrastat classification
 
 Type: **[TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature)**  
 Category: **System**  
@@ -210,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportMode
 
-Transportation mode - type of transportation used. `Required`
+Transportation mode - type of transportation used
 
 Type: **[TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode)**  
 Category: **System**  
@@ -266,7 +266,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdministrativeRegion
 
-Administrative region of the enterprise company at the time of the declaration. `Required` `Filter(multi eq)`
+Administrative region of the enterprise company at the time of the declaration
 
 Type: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md)**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **ShownByDefault**
 
 ### IntrastatCommodityCode
 
-The commodity code of the goods, according to the Intrastat commodity classification. `Required` `Filter(multi eq)`
+The commodity code of the goods, according to the Intrastat commodity classification
 
 Type: **[CommodityCodes](Regulatory.Intrastat.CommodityCodes.md)**  
 Category: **System**  
@@ -284,7 +284,7 @@ Show in UI: **ShownByDefault**
 
 ### IntrastatDeclaration
 
-The intrastat declaration, to which this line belongs. `Required` `Filter(multi eq)` `Owner`
+The intrastat declaration, to which this line belongs
 
 Type: **[Declarations](Regulatory.Intrastat.Declarations.md)**  
 Indexed: **True**  
@@ -295,7 +295,7 @@ Show in UI: **ShownByDefault**
 
 ### OriginCountry
 
-The country of origin of the goods. null for outbound declarations. `Filter(multi eq)`
+The country of origin of the goods. NULL for outbound declarations
 
 Type: **[Countries](General.Geography.Countries.md) (nullable)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-Partner to whom the goods are dispatched, or partner from whom the goods are received. `Filter(multi eq)` `Introduced in version 22.1.5.58`
+Partner to whom the goods are dispatched, or partner from whom the goods are received.
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -313,7 +313,7 @@ Show in UI: **ShownByDefault**
 
 ### PartyCountry
 
-The country of the partner. `Required` `Filter(multi eq)`
+The country of the partner
 
 Type: **[Countries](General.Geography.Countries.md)**  
 Category: **System**  
@@ -322,7 +322,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportCountry
 
-The country of the transportation company. `Required` `Filter(multi eq)`
+The country of the transportation company
 
 Type: **[Countries](General.Geography.Countries.md)**  
 Category: **System**  

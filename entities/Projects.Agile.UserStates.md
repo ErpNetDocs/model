@@ -4,7 +4,7 @@ uid: Projects.Agile.UserStates
 # Projects.Agile.UserStates
 
 
-Workflow states for the case categories.
+Workflow states for the case categories
 
 ## General
 Namespace: [Projects.Agile](Projects.Agile.md)  
@@ -35,12 +35,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.Agile.UserStates.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Short explanation for this state, visible to users when selected. `Filter(like)` `Introduced in version 26.1.4.39` 
-| [IsActive](Projects.Agile.UserStates.md#isactive) | boolean | Specifies whether the user state can be set to cases. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Projects.Agile.UserStates.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the user state. `Required` `Filter(eq;like)` 
-| [Notes](Projects.Agile.UserStates.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` `Introduced in version 26.1.4.39` 
-| [Ord](Projects.Agile.UserStates.md#ord) | int32 | Unique ordinal position of the state within the system state. `Required` `Filter(eq;ge;le)` `ORD` 
-| [SystemState](Projects.Agile.UserStates.md#systemstate) | [SystemState](Projects.Agile.UserStates.md#systemstate) | The system state, which this state extends. `Required` `Filter(multi eq)` `ORD` 
+| [Description](Projects.Agile.UserStates.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Short explanation for this state, visible to users when selected. 
+| [IsActive](Projects.Agile.UserStates.md#isactive) | boolean | Specifies whether the user state can be set to cases. 
+| [Name](Projects.Agile.UserStates.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the user state. 
+| [Notes](Projects.Agile.UserStates.md#notes) | string (max) __nullable__ | Notes 
+| [Ord](Projects.Agile.UserStates.md#ord) | int32 | Unique ordinal position of the state within the system state. 
+| [SystemState](Projects.Agile.UserStates.md#systemstate) | [SystemState](Projects.Agile.UserStates.md#systemstate) | The system state, which this state extends. 
 
 
 ## System Attributes
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### Description
 
-Short explanation for this state, visible to users when selected. `Filter(like)` `Introduced in version 26.1.4.39`
+Short explanation for this state, visible to users when selected.
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the user state can be set to cases. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the user state can be set to cases.
 
 Type: **boolean**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the user state. `Required` `Filter(eq;like)`
+Multi-language name of the user state.
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes. `Filter(like)` `Introduced in version 26.1.4.39`
+Notes
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### Ord
 
-Unique ordinal position of the state within the system state. `Required` `Filter(eq;ge;le)` `ORD`
+Unique ordinal position of the state within the system state.
 
 Type: **int32**  
 Indexed: **True**  
@@ -123,7 +123,7 @@ Front-End Recalc Expressions:
 `obj.SetUserStateOrd( obj.SystemState)`
 ### SystemState
 
-The system state, which this state extends. `Required` `Filter(multi eq)` `ORD`
+The system state, which this state extends.
 
 Type: **[SystemState](Projects.Agile.UserStates.md#systemstate)**  
 Category: **System**  

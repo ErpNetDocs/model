@@ -37,16 +37,16 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetMaintenance<br />Schedule. 
-| [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 __nullable__ | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. `Filter(multi eq;ge;le)` 
-| [ScheduleDays](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#scheduledays) | int32 __nullable__ | Number of days between planned maintenances. null means that the schedule is not planned based on days. 
-| [ScheduleMonths](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#schedulemonths) | int32 __nullable__ | Number of months between planned maintenances. null means that the schedule is not planned based on months. 
+| [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 __nullable__ | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change. 
+| [ScheduleDays](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#scheduledays) | int32 __nullable__ | Number of days between planned maintenances. NULL means that the schedule is not planned based on days. 
+| [ScheduleMonths](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#schedulemonths) | int32 __nullable__ | Number of months between planned maintenances. NULL means that the schedule is not planned based on months. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceType](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | What type of maintenance is scheduled. `Required` `Filter(multi eq)` |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset for which the maintenance schedule applies. `Required` `Filter(multi eq)` `Owner` |
+| [MaintenanceType](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | What type of maintenance is scheduled. |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset for which the maintenance schedule applies. |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### ParameterChangeDelta
 
-The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. `Filter(multi eq;ge;le)`
+The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### ScheduleDays
 
-Number of days between planned maintenances. null means that the schedule is not planned based on days.
+Number of days between planned maintenances. NULL means that the schedule is not planned based on days.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ScheduleMonths
 
-Number of months between planned maintenances. null means that the schedule is not planned based on months.
+Number of months between planned maintenances. NULL means that the schedule is not planned based on months.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaintenanceType
 
-What type of maintenance is scheduled. `Required` `Filter(multi eq)`
+What type of maintenance is scheduled.
 
 Type: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAsset
 
-The managed asset for which the maintenance schedule applies. `Required` `Filter(multi eq)` `Owner`
+The managed asset for which the maintenance schedule applies.
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 Indexed: **True**  

@@ -87,7 +87,7 @@
         <article data-uid="Finance.Accounting.FinancialStatementNodeCorrespondances">
 <h1 id="financeaccountingfinancialstatementnodecorrespondances">Finance.Accounting.FinancialStatementNodeCorrespondances</h1>
 
-<p>Contains the actual correspondance filters, which specify how each financial statement node is calculated.</p>
+<p>Specifies how each node in a financial statement is calculated by linking it to account filters. These correspondences determine which accounts, ranges, or rules contribute to each line.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Finance.Accounting.html">Finance.Accounting</a><br>
 Repository: Finance.Accounting.FinancialStatementNodeCorrespondances<br>
@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#multiplier">Multiplier</a></td>
 <td>decimal (18, 0)</td>
-<td>Factor by which the correspondence balance will be multiplied. <code>Required</code> <code>Default(1)</code></td>
+<td>Factor by which the correspondence balance will be multiplied.</td>
 </tr>
 </tbody>
 </table>
@@ -138,12 +138,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#accountgroup">AccountGroup</a></td>
 <td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></td>
-<td>Main account group determining the correspondances for which the balances are summed. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Main account group determining the correspondences for which the balances are summed.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#correspondantaccountgroup">CorrespondantAccountGroup</a></td>
 <td><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</td>
-<td>Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. <code>Filter(multi eq)</code></td>
+<td>Correspondent account group determining the correspondences for which the balances are summed. If not specified means that the balances of all correspondences for the main account group are summed.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#financialstatementnode">FinancialStatementNode</a></td>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="multiplier">Multiplier</h3>
-<p>Factor by which the correspondence balance will be multiplied. <code>Required</code> <code>Default(1)</code></p>
+<p>Factor by which the correspondence balance will be multiplied.</p>
 <p>Type: <strong>decimal (18, 0)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -211,13 +211,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accountgroup">AccountGroup</h3>
-<p>Main account group determining the correspondances for which the balances are summed. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Main account group determining the correspondences for which the balances are summed.</p>
 <p>Type: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="correspondantaccountgroup">CorrespondantAccountGroup</h3>
-<p>Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. <code>Filter(multi eq)</code></p>
+<p>Correspondent account group determining the correspondences for which the balances are summed. If not specified means that the balances of all correspondences for the main account group are summed.</p>
 <p>Type: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -58,13 +58,13 @@ Aggregate Tree
 | [AdjustmentNumber](Logistics.Transportation.TransportationOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Logistics.Transportation.TransportationOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Logistics.Transportation.TransportationOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ArrivalDate](Logistics.Transportation.TransportationOrders.md#arrivaldate) | date | Planned arrival date. `Required` `Filter(ge;le)` 
-| [ArrivalTime](Logistics.Transportation.TransportationOrders.md#arrivaltime) | time | Planned arrival time. `Required` `Filter(ge;le)` 
+| [ArrivalDate](Logistics.Transportation.TransportationOrders.md#arrivaldate) | date | Planned arrival date. 
+| [ArrivalTime](Logistics.Transportation.TransportationOrders.md#arrivaltime) | time | Planned arrival time. 
 | [CompleteTime](Logistics.Transportation.TransportationOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Logistics.Transportation.TransportationOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Transportation.TransportationOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DepartureDate](Logistics.Transportation.TransportationOrders.md#departuredate) | date | Planned departure date. `Required` `Filter(ge;le)` 
-| [DepartureTime](Logistics.Transportation.TransportationOrders.md#departuretime) | time | Planned departure time. `Required` `Filter(ge;le)` 
+| [DepartureDate](Logistics.Transportation.TransportationOrders.md#departuredate) | date | Planned departure date. 
+| [DepartureTime](Logistics.Transportation.TransportationOrders.md#departuretime) | time | Planned departure time. 
 | [DocumentDate](Logistics.Transportation.TransportationOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Logistics.Transportation.TransportationOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Logistics.Transportation.TransportationOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -91,14 +91,14 @@ Aggregate Tree
 | [AccessKey](Logistics.Transportation.TransportationOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Logistics.Transportation.TransportationOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Transportation.TransportationOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Carrier](Logistics.Transportation.TransportationOrders.md#carrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier chosen for this transportation. null when the transportation is done with own transport. `Filter(multi eq)` |
-| [Crew](Logistics.Transportation.TransportationOrders.md#crew) | [Crews](Applications.Fleet.Crews.md) (nullable) | The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. `Filter(multi eq)` `Introduced in version 18.2` |
+| [Carrier](Logistics.Transportation.TransportationOrders.md#carrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier chosen for this transportation. NULL when the transportation is done with own transport. |
+| [Crew](Logistics.Transportation.TransportationOrders.md#crew) | [Crews](Applications.Fleet.Crews.md) (nullable) | The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. |
 | [CurrencyDirectory](Logistics.Transportation.TransportationOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Logistics.Transportation.TransportationOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Transportation.TransportationOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Logistics.Transportation.TransportationOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Transportation.TransportationOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [FromGeoPoint](Logistics.Transportation.TransportationOrders.md#fromgeopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point from which the route begins. `Required` `Filter(multi eq)` |
+| [FromGeoPoint](Logistics.Transportation.TransportationOrders.md#fromgeopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point from which the route begins. |
 | [FromParty](Logistics.Transportation.TransportationOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Logistics.Transportation.TransportationOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Transportation.TransportationOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -107,10 +107,10 @@ Aggregate Tree
 | [ReverseOfDocument](Logistics.Transportation.TransportationOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Logistics.Transportation.TransportationOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Logistics.Transportation.TransportationOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ToGeoPoint](Logistics.Transportation.TransportationOrders.md#togeopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point at which the route ends. `Required` `Filter(multi eq)` |
+| [ToGeoPoint](Logistics.Transportation.TransportationOrders.md#togeopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point at which the route ends. |
 | [ToParty](Logistics.Transportation.TransportationOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TransportationMode](Logistics.Transportation.TransportationOrders.md#transportationmode) | [TransportationModes](Logistics.Transportation.TransportationModes.md) (nullable) | The mode of transportation which should be used for this order. null when it is unknown or doesn't matter. `Filter(multi eq)` |
-| [TransportationVehicle](Logistics.Transportation.TransportationOrders.md#transportationvehicle) | [TransportationVehicles](Logistics.Transportation.TransportationVehicles.md) (nullable) | The own transportation vehicle, which will be used for the transportation. `Filter(multi eq)` |
+| [TransportationMode](Logistics.Transportation.TransportationOrders.md#transportationmode) | [TransportationModes](Logistics.Transportation.TransportationModes.md) (nullable) | The mode of transportation which should be used for this order. NULL when it is unknown or doesn't matter. |
+| [TransportationVehicle](Logistics.Transportation.TransportationOrders.md#transportationvehicle) | [TransportationVehicles](Logistics.Transportation.TransportationVehicles.md) (nullable) | The own transportation vehicle, which will be used for the transportation. |
 | [UserStatus](Logistics.Transportation.TransportationOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 
 
@@ -177,7 +177,7 @@ Show in UI: **HiddenByDefault**
 
 ### ArrivalDate
 
-Planned arrival date. `Required` `Filter(ge;le)`
+Planned arrival date.
 
 Type: **date**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### ArrivalTime
 
-Planned arrival time. `Required` `Filter(ge;le)`
+Planned arrival time.
 
 Type: **time**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **HiddenByDefault**
 
 ### DepartureDate
 
-Planned departure date. `Required` `Filter(ge;le)`
+Planned departure date.
 
 Type: **date**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **ShownByDefault**
 
 ### DepartureTime
 
-Planned departure time. `Required` `Filter(ge;le)`
+Planned departure time.
 
 Type: **time**  
 Category: **System**  
@@ -568,7 +568,7 @@ Show in UI: **ShownByDefault**
 
 ### Carrier
 
-The carrier chosen for this transportation. null when the transportation is done with own transport. `Filter(multi eq)`
+The carrier chosen for this transportation. NULL when the transportation is done with own transport.
 
 Type: **[Carriers](Logistics.Shipment.Carriers.md) (nullable)**  
 Category: **System**  
@@ -577,7 +577,7 @@ Show in UI: **ShownByDefault**
 
 ### Crew
 
-The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. `Filter(multi eq)` `Introduced in version 18.2`
+The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier.
 
 Type: **[Crews](Applications.Fleet.Crews.md) (nullable)**  
 Category: **System**  
@@ -633,7 +633,7 @@ Show in UI: **HiddenByDefault**
 
 ### FromGeoPoint
 
-The geographic point from which the route begins. `Required` `Filter(multi eq)`
+The geographic point from which the route begins.
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md)**  
 Category: **System**  
@@ -717,7 +717,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToGeoPoint
 
-The geographic point at which the route ends. `Required` `Filter(multi eq)`
+The geographic point at which the route ends.
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md)**  
 Category: **System**  
@@ -738,7 +738,7 @@ Back-End Default Expression:
 
 ### TransportationMode
 
-The mode of transportation which should be used for this order. null when it is unknown or doesn't matter. `Filter(multi eq)`
+The mode of transportation which should be used for this order. NULL when it is unknown or doesn't matter.
 
 Type: **[TransportationModes](Logistics.Transportation.TransportationModes.md) (nullable)**  
 Category: **System**  
@@ -747,7 +747,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportationVehicle
 
-The own transportation vehicle, which will be used for the transportation. `Filter(multi eq)`
+The own transportation vehicle, which will be used for the transportation.
 
 Type: **[TransportationVehicles](Logistics.Transportation.TransportationVehicles.md) (nullable)**  
 Category: **System**  

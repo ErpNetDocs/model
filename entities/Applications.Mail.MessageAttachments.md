@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttachmentContent](Applications.Mail.MessageAttachments.md#attachmentcontent) | byte[] __nullable__ | The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason. 
-| [ContentDescriptors](Applications.Mail.MessageAttachments.md#contentdescriptors) | string (4000) __nullable__ | Content flags, like "Content-Type: text/plain; charset=utf-8". 
-| [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)` 
+| [AttachmentContent](Applications.Mail.MessageAttachments.md#attachmentcontent) | byte[] __nullable__ | The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason 
+| [ContentDescriptors](Applications.Mail.MessageAttachments.md#contentdescriptors) | string (4000) __nullable__ | Content flags, like "Content-Type: text/plain; charset=utf-8" 
+| [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | 1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail 
 | [Name](Applications.Mail.MessageAttachments.md#name) | string (128) __nullable__ | The name of this MessageAttachment. `Filter(eq;like)` 
 
 ## References
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### AttachmentContent
 
-The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason.
+The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ContentDescriptors
 
-Content flags, like "Content-Type: text/plain; charset=utf-8".
+Content flags, like "Content-Type: text/plain; charset=utf-8"
 
 Type: **string (4000) __nullable__**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### ContentDownloaded
 
-True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)`
+1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail
 
 Type: **boolean**  
 Category: **System**  

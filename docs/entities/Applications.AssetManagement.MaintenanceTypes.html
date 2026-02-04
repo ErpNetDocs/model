@@ -123,22 +123,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique code of the maintenance type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Unique code of the maintenance type.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#defaultparameterchange">DefaultParameterChange</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.</td>
+<td>Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#defaultscheduledays">DefaultScheduleDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.</td>
+<td>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#defaultschedulemonths">DefaultScheduleMonths</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.</td>
+<td>Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#description">Description</a></td>
@@ -148,7 +148,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Multilanguage name of the maintenance type. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Multilanguage name of the maintenance type.</td>
 </tr>
 </tbody>
 </table>
@@ -165,12 +165,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#maintenancetypegroup">MaintenanceTypeGroup</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypeGroups.html">MaintenanceTypeGroups</a></td>
-<td>The group, to which this maintenance type belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The group, to which this maintenance type belongs.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html#trackedparameter">TrackedParameter</a></td>
 <td><a href="Applications.AssetManagement.TrackedParameters.html">TrackedParameters</a> (nullable)</td>
-<td>Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. <code>Filter(multi eq)</code></td>
+<td>Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.</td>
 </tr>
 </tbody>
 </table>
@@ -218,7 +218,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique code of the maintenance type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Unique code of the maintenance type.</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -227,21 +227,21 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultparameterchange">DefaultParameterChange</h3>
-<p>Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.</p>
+<p>Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultscheduledays">DefaultScheduleDays</h3>
-<p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.</p>
+<p>Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultschedulemonths">DefaultScheduleMonths</h3>
-<p>Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.</p>
+<p>Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -255,7 +255,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage name of the maintenance type. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Multilanguage name of the maintenance type.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -305,14 +305,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenancetypegroup">MaintenanceTypeGroup</h3>
-<p>The group, to which this maintenance type belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The group, to which this maintenance type belongs.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.MaintenanceTypeGroups.html">MaintenanceTypeGroups</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trackedparameter">TrackedParameter</h3>
-<p>Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. <code>Filter(multi eq)</code></p>
+<p>Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.TrackedParameters.html">TrackedParameters</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceInvoicing.html#quantityofproduct">QuantityOfProduct</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity to invoice. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+<td>The quantity to invoice</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceInvoicing.html#quantityofservice">QuantityOfService</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of service for which the invoicing is specified. <code>Unit: Service.MeasurementUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+<td>The quantity of service for which the invoicing is specified</td>
 </tr>
 </tbody>
 </table>
@@ -143,12 +143,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceInvoicing.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product that should be invoiced. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product that should be invoiced</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceInvoicing.html#service">Service</a></td>
 <td><a href="Applications.Service.Services.html">Services</a></td>
-<td>The service for which the invoicing instructions are. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The service for which the invoicing instructions are</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="quantityofproduct">QuantityOfProduct</h3>
-<p>The quantity to invoice. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
+<p>The quantity to invoice</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -189,7 +189,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityofservice">QuantityOfService</h3>
-<p>The quantity of service for which the invoicing is specified. <code>Unit: Service.MeasurementUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
+<p>The quantity of service for which the invoicing is specified</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -219,13 +219,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<p>The product that should be invoiced. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product that should be invoiced</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="service">Service</h3>
-<p>The service for which the invoicing instructions are. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The service for which the invoicing instructions are</p>
 <p>Type: <strong><a href="Applications.Service.Services.html">Services</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

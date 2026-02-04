@@ -122,32 +122,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#countedquantitybase">CountedQuantityBase</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation. <code>Filter(eq;ge;le)</code></td>
+<td>The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#lastaggregatedat">LastAggregatedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date and time when the counted quantities were last aggregated into this line. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>The date and time when the counted quantities were last aggregated into this line.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></td>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></td>
-<td>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. <code>Required</code> <code>Default(&quot;CRT&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#session">Session</a></td>
 <td>int32</td>
-<td>The counting session in which this result was recorded. <code>Required</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>The counting session in which this result was recorded.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#snapshotdatetime">SnapshotDateTime</a></td>
 <td>datetime</td>
-<td>The date and time when the availability snapshot for this line was created. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>The date and time when the availability snapshot for this line was created.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#snapshotquantitybase">SnapshotQuantityBase</a></td>
 <td>decimal (12, 3)</td>
-<td>The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.</td>
 </tr>
 </tbody>
 </table>
@@ -164,47 +164,47 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#baseunit">BaseUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The product’s base measurement unit. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The product’s base measurement unit.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#logisticunit">LogisticUnit</a></td>
 <td><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</td>
-<td>The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>Batch/lot of the product, when applicable. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>Batch/lot of the product, when applicable.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product stored at the specified warehouse location. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The product stored at the specified warehouse location.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number of the product, when serialized tracking is enabled. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>Serial number of the product, when serialized tracking is enabled.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#variant">Variant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>Product variant (e.g. size, color, configuration), when tracked. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>Product variant (e.g. size, color, configuration), when tracked.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#warehouselocation">WarehouseLocation</a></td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></td>
-<td>The warehouse location included in the reconciliation. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The warehouse location included in the reconciliation.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#warehousereconciliation">WarehouseReconciliation</a></td>
 <td><a href="Logistics.Wms.WarehouseReconciliations.html">WarehouseReconciliations</a></td>
-<td>The source document to which this detail refers. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
+<td>The source document to which this detail refers.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#warehousezone">WarehouseZone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a></td>
-<td>The warehouse zone to which the location belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The warehouse zone to which the location belongs.</td>
 </tr>
 </tbody>
 </table>
@@ -237,21 +237,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="countedquantitybase">CountedQuantityBase</h3>
-<p>The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation. <code>Filter(eq;ge;le)</code></p>
+<p>The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastaggregatedat">LastAggregatedAt</h3>
-<p>The date and time when the counted quantities were last aggregated into this line. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>The date and time when the counted quantities were last aggregated into this line.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reviewstatus">ReviewStatus</h3>
-<p>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. <code>Required</code> <code>Default(&quot;CRT&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ReviewStatus</code>(Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) data attribute<br>
@@ -295,21 +295,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Created</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="session">Session</h3>
-<p>The counting session in which this result was recorded. <code>Required</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>The counting session in which this result was recorded.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="snapshotdatetime">SnapshotDateTime</h3>
-<p>The date and time when the availability snapshot for this line was created. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>The date and time when the availability snapshot for this line was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="snapshotquantitybase">SnapshotQuantityBase</h3>
-<p>The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.</p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -338,50 +338,50 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="baseunit">BaseUnit</h3>
-<p>The product’s base measurement unit. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The product’s base measurement unit.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logisticunit">LogisticUnit</h3>
-<p>The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.</p>
 <p>Type: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>Batch/lot of the product, when applicable. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>Batch/lot of the product, when applicable.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product stored at the specified warehouse location. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The product stored at the specified warehouse location.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number of the product, when serialized tracking is enabled. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>Serial number of the product, when serialized tracking is enabled.</p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="variant">Variant</h3>
-<p>Product variant (e.g. size, color, configuration), when tracked. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>Product variant (e.g. size, color, configuration), when tracked.</p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
-<p>The warehouse location included in the reconciliation. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The warehouse location included in the reconciliation.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousereconciliation">WarehouseReconciliation</h3>
-<p>The source document to which this detail refers. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
+<p>The source document to which this detail refers.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseReconciliations.html">WarehouseReconciliations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -389,7 +389,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousezone">WarehouseZone</h3>
-<p>The warehouse zone to which the location belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The warehouse zone to which the location belongs.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

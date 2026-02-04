@@ -87,7 +87,9 @@
         <article data-uid="Crm.Sales.SalesAnalytics">
 <h1 id="crmsalessalesanalytics-view">Crm.Sales.SalesAnalytics (View)</h1>
 
-<p>Sales Analytics provides aggregated and structured sales data optimized for reporting and analysis. This data type contains pre-grouped sales measures and dimensions derived from sales documents, such as quantities, amounts, discounts, revenues, and related analytical attributes (e.g. customer, product, period, location). Sales Analytics is designed to support fast and consistent sales reporting, dashboards, KPIs, and business analysis, enabling users to analyze sales performance across different perspectives without processing raw transactional data.</p>
+<p>Sales Analytics provides aggregated and structured sales data optimized for reporting and analysis.</p>
+<p>This data type contains pre-grouped sales measures and dimensions derived from sales documents, such as quantities, amounts, discounts, revenues, and related analytical attributes (e.g. customer, product, period, location).</p>
+<p>Sales Analytics is designed to support fast and consistent sales reporting, dashboards, KPIs, and business analysis, enabling users to analyze sales performance across different perspectives without processing raw transactional data.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
 Repository: Crm.Sales.SalesAnalytics<br>
@@ -117,22 +119,22 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#documentdate">DocumentDate</a></td>
 <td>date</td>
-<td>Date to group for. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+<td>Date to group for</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#lineamount">LineAmount</a></td>
 <td>decimal (38, 2)</td>
-<td>Line Amount for date. <code>Required</code></td>
+<td>Line Amount for date</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#linediscountamount">LineDiscountAmount</a></td>
 <td>decimal (38, 2)</td>
-<td>Discount over Line Amount for Date. <code>Required</code></td>
+<td>Discount over Line Amount for Date</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#quantitybase">QuantityBase</a></td>
 <td>decimal (38, 3)</td>
-<td>Base Quantity for Date. <code>Required</code></td>
+<td>Base Quantity for Date</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#salesanalyticid">SalesAnalyticId</a></td>
@@ -142,7 +144,7 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#standardquantitybase">StandardQuantityBase</a></td>
 <td>decimal (38, 3)</td>
-<td>Standard Base Quantity for Date. <code>Required</code></td>
+<td>Standard Base Quantity for Date</td>
 </tr>
 </tbody>
 </table>
@@ -159,84 +161,84 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></td>
+<td>Unique customer Id.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#dealer">Dealer</a></td>
 <td><a href="Crm.Sales.Dealers.html">Dealers</a></td>
-<td>External Dealer for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Dealers_Table.Dealer_Id</code></td>
+<td>External Dealer for this sales</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#distributionchannel">DistributionChannel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></td>
-<td>Distribution Channel for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Distribution_&lt;br /&gt;Channels_Table.Distribution_Channel_Id</code></td>
+<td>Distribution Channel for this sales</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>Currency for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></td>
+<td>Currency for this sales</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#endcustomerparty">EndCustomerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Unique party id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Parties_Table.Id</code></td>
+<td>Unique party id.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The Enterprise Company to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_&lt;br /&gt;Companies_Table.Enterprise_Company_Id</code></td>
+<td>The Enterprise Company to which this SalesAnalyticsEntry applies.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
-<td>The Enterprise Company Location to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></td>
+<td>The Enterprise Company Location to which this SalesAnalyticsEntry applies.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></td>
+<td>Unique id of the item.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a></td>
-<td>Product Variant for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></td>
+<td>Product Variant for this sales</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></td>
-<td>Unique sales person for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Sales_Persons_Table.Sales_Person_Id</code></td>
+<td>Unique sales person for this sales</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Unique store Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Stores_Table.Id</code></td>
+<td>Unique store Id.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdate">DocumentDate</h3>
-<p>Date to group for. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
+<p>Date to group for</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>Line Amount for date. <code>Required</code></p>
+<p>Line Amount for date</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linediscountamount">LineDiscountAmount</h3>
-<p>Discount over Line Amount for Date. <code>Required</code></p>
+<p>Discount over Line Amount for Date</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Base Quantity for Date. <code>Required</code></p>
+<p>Base Quantity for Date</p>
 <p>Type: <strong>decimal (38, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -249,7 +251,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>Standard Base Quantity for Date. <code>Required</code></p>
+<p>Standard Base Quantity for Date</p>
 <p>Type: <strong>decimal (38, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,7 +259,7 @@ Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="customer">Customer</h3>
-<p>Unique customer Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Customers_Table.Customer_Id</code></p>
+<p>Unique customer Id.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Customers_Table.Customer_Id</strong><br>
@@ -265,7 +267,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dealer">Dealer</h3>
-<p>External Dealer for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Dealers_Table.Dealer_Id</code></p>
+<p>External Dealer for this sales</p>
 <p>Type: <strong><a href="Crm.Sales.Dealers.html">Dealers</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Dealers_Table.Dealer_Id</strong><br>
@@ -273,7 +275,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
-<p>Distribution Channel for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Distribution_Channels_Table.Distribution_Channel_Id</code></p>
+<p>Distribution Channel for this sales</p>
 <p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Distribution_Channels_Table.Distribution_Channel_Id</strong><br>
@@ -281,7 +283,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>Currency for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Currencies_Table.Currency_Id</code></p>
+<p>Currency for this sales</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Currencies_Table.Currency_Id</strong><br>
@@ -289,7 +291,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endcustomerparty">EndCustomerParty</h3>
-<p>Unique party id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Parties_Table.Id</code></p>
+<p>Unique party id.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Parties_Table.Id</strong><br>
@@ -297,7 +299,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id</code></p>
+<p>The Enterprise Company to which this SalesAnalyticsEntry applies.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Enterprise_Companies_Table.Enterprise_Company_Id</strong><br>
@@ -305,7 +307,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The Enterprise Company Location to which this SalesAnalyticsEntry applies. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cm_Company_Locations_Table.Company_Location_Id</code></p>
+<p>The Enterprise Company Location to which this SalesAnalyticsEntry applies.</p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
@@ -313,7 +315,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>Unique id of the item. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Inherited from Gen_Products_Table.Id</code></p>
+<p>Unique id of the item.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Products_Table.Id</strong><br>
@@ -321,7 +323,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>Product Variant for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Product_Variants_Table.Product_Variant_Id</code></p>
+<p>Product Variant for this sales</p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Product_Variants_Table.Product_Variant_Id</strong><br>
@@ -329,7 +331,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>Unique sales person for this sales. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Sales_Persons_Table.Sales_Person_Id</code></p>
+<p>Unique sales person for this sales</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Sales_Persons_Table.Sales_Person_Id</strong><br>
@@ -337,7 +339,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>Unique store Id. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Stores_Table.Id</code></p>
+<p>Unique store Id.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Stores_Table.Id</strong><br>

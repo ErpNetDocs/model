@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#conditionalpropertydescription">ConditionalProperty<br>Description</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>The desired description of Conditional Property in order for the template line to match.</td>
+<td>Description of the chosen conditional property value</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#conditionalpropertyvalue">ConditionalPropertyValue</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The desired value of Conditional Property in order for the template line to match.</td>
+<td>When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in &quot;Conditional Property&quot; equals the specified value</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#fixedscrapquantity">FixedScrapQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Fixed scrap quantity for setup. <code>Unit: UsageUnit</code> <code>Required</code> <code>Default(0)</code></td>
+<td>Fixed scrap quantity for setup.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#ingredientid"><s>IngredientId</s></a></td>
@@ -141,27 +141,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#ingredientname">IngredientName</a></td>
 <td>string (254)</td>
-<td>The principal name of the ingredient. <code>Required</code> <code>Filter(like)</code></td>
+<td>The principal name of the ingredient.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>The position of the line in the recipe model. <code>Required</code></td>
+<td>The position of the line in the recipe model</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
-<td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+<td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#usagequantity">UsageQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 6)</a> <strong>nullable</strong></td>
-<td>Quantity to be consumed from the material. null means that the quantity is specified with formula. <code>Unit: UsageUnit</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+<td>Quantity to be consumed from the material. NULL means that the quantity is specified with formula</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#usagequantityformula">UsageQuantityFormula</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Specifies formula for the usage quantity. The formula can reference properties in <code>&amp;lt;Prop_Name&amp;gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</td>
+<td>Specifies formula for the usage quantity. The formula can reference properties in [Property_Code] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity</td>
 </tr>
 </tbody>
 </table>
@@ -178,37 +178,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#conditionalproperty">ConditionalProperty</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</td>
-<td>When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. <code>Filter(multi eq)</code></td>
+<td>When not NULL, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#conditionalpropertyallowedvalue">ConditionalProperty<br>AllowedValue</a></td>
 <td><a href="Systems.Bpm.CustomPropertyAllowedValues.html">CustomPropertyAllowedValues</a> (nullable)</td>
-<td>When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. <code>Filter(multi eq)</code></td>
+<td>When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in &quot;Conditional Property&quot; equals the specified value</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#defaultmaterial">DefaultMaterial</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>If not null, points to default product for this ingredient. <code>Filter(multi eq)</code></td>
+<td>If not NULL, points to default product for this ingredient</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#defaultstore">DefaultStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The default store from which to retrieve the material. <code>Filter(multi eq)</code></td>
+<td>The default store from which to retrieve the material.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#materialfromproperty">MaterialFromProperty</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</td>
-<td>When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. <code>Filter(multi eq)</code></td>
+<td>When not NULL, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#materialgroup">MaterialGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a></td>
-<td>Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Filter for choosing specific material in the recipe (Gen_Product_Groups_Table)</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#operation">Operation</a></td>
 <td><a href="Production.Resources.Operations.html">Operations</a> (nullable)</td>
-<td>Specifies for which operation this ingredient will be used. <code>Filter(multi eq)</code></td>
+<td>Specifies for which operation this ingredient will be used.</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#principalrecipe">PrincipalRecipe</a></td>
@@ -218,7 +218,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#usageunit">UsageUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Usage_Quantity. The selected item must support the specified unit. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Usage_Quantity. The selected item must support the specified unit</td>
 </tr>
 </tbody>
 </table>
@@ -235,7 +235,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#id">Id</a></td>
 <td>guid</td>
-<td></td>
+<td>The Id of the recipe ingredient. This changes for each different line of each different recipe in contrast to the ingredient id, which might be the same for many principal recipes</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#objectversion">ObjectVersion</a></td>
@@ -251,14 +251,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="conditionalpropertydescription">ConditionalPropertyDescription</h3>
-<p>The desired description of Conditional Property in order for the template line to match.</p>
+<p>Description of the chosen conditional property value</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionalpropertyvalue">ConditionalPropertyValue</h3>
-<p>The desired value of Conditional Property in order for the template line to match.</p>
+<p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in &quot;Conditional Property&quot; equals the specified value</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -266,7 +266,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fixedscrapquantity">FixedScrapQuantity</h3>
-<p>Fixed scrap quantity for setup. <code>Unit: UsageUnit</code> <code>Required</code> <code>Default(0)</code></p>
+<p>Fixed scrap quantity for setup.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -281,7 +281,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="ingredientname">IngredientName</h3>
-<p>The principal name of the ingredient. <code>Required</code> <code>Filter(like)</code></p>
+<p>The principal name of the ingredient.</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -291,7 +291,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DefaultMaterial.Name</code></p>
 <h3 id="lineord">LineOrd</h3>
-<p>The position of the line in the recipe model. <code>Required</code></p>
+<p>The position of the line in the recipe model</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -302,7 +302,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.PrincipalRecipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
+<p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe.</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -310,7 +310,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usagequantity">UsageQuantity</h3>
-<p>Quantity to be consumed from the material. null means that the quantity is specified with formula. <code>Unit: UsageUnit</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
+<p>Quantity to be consumed from the material. NULL means that the quantity is specified with formula</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 6)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -320,7 +320,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.UsageQuantityFormula != null), null, obj.UsageQuantity)</code></p>
 <h3 id="usagequantityformula">UsageQuantityFormula</h3>
-<p>Specifies formula for the usage quantity. The formula can reference properties in <code>&amp;lt;Prop_Name&amp;gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</p>
+<p>Specifies formula for the usage quantity. The formula can reference properties in [Property_Code] style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -330,6 +330,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.UsageQuantity != null), null, obj.UsageQuantityFormula)</code></p>
 <h3 id="id">Id</h3>
+<p>The Id of the recipe ingredient. This changes for each different line of each different recipe in contrast to the ingredient id, which might be the same for many principal recipes</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -352,43 +353,43 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conditionalproperty">ConditionalProperty</h3>
-<p>When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. <code>Filter(multi eq)</code></p>
+<p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionalpropertyallowedvalue">ConditionalPropertyAllowedValue</h3>
-<p>When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. <code>Filter(multi eq)</code></p>
+<p>When not NULL, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in &quot;Conditional Property&quot; equals the specified value</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomPropertyAllowedValues.html">CustomPropertyAllowedValues</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="defaultmaterial">DefaultMaterial</h3>
-<p>If not null, points to default product for this ingredient. <code>Filter(multi eq)</code></p>
+<p>If not NULL, points to default product for this ingredient</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultstore">DefaultStore</h3>
-<p>The default store from which to retrieve the material. <code>Filter(multi eq)</code></p>
+<p>The default store from which to retrieve the material.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="materialfromproperty">MaterialFromProperty</h3>
-<p>When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. <code>Filter(multi eq)</code></p>
+<p>When not NULL, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain.</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="materialgroup">MaterialGroup</h3>
-<p>Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Filter for choosing specific material in the recipe (Gen_Product_Groups_Table)</p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operation">Operation</h3>
-<p>Specifies for which operation this ingredient will be used. <code>Filter(multi eq)</code></p>
+<p>Specifies for which operation this ingredient will be used.</p>
 <p>Type: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -401,7 +402,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usageunit">UsageUnit</h3>
-<p>The measurement unit of Usage_Quantity. The selected item must support the specified unit. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Usage_Quantity. The selected item must support the specified unit</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -4,7 +4,7 @@ uid: Production.ShopFloor.OutputOrderConsumptionLines
 # Production.ShopFloor.OutputOrderConsumptionLines
 
 
-The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders.
+The internal production consumption of materials. Used only for control purposes - for comparison with the active consumption orders. Warehouse and accounting are still updated only by Consumption Orders
 
 ## General
 Namespace: [Production.ShopFloor](Production.ShopFloor.md)  
@@ -34,9 +34,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforrun) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material for the operation. `Unit: QuantityUnit` `Required` `Default(0)` 
-| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforscrap) | [Quantity (18, 3)](../data-types.md#quantity) | The scrapped quantity of the material for this operation. `Unit: QuantityUnit` `Required` `Default(0)` 
-| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation. `Unit: QuantityUnit` `Required` `Default(0)` 
+| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforrun) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material for the operation. 
+| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforscrap) | [Quantity (18, 3)](../data-types.md#quantity) | The scrapped quantity of the material for this operation. 
+| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation. 
 | [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderConsumptionLine. 
 
@@ -45,13 +45,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Production.ShopFloor.OutputOrderConsumptionLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The owner document. The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` |
-| [LineWorkOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | Work order for the line. Initially copied from the header (if there work order is not null). `Required` `Filter(multi eq)` |
-| [Material](Production.ShopFloor.OutputOrderConsumptionLines.md#material) | [Products](General.Products.Products.md) | The consumed material. `Required` `Filter(multi eq)` |
+| [LineWorkOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | Work order for the line. Initially copied from the header (if there work order is not null) |
+| [Material](Production.ShopFloor.OutputOrderConsumptionLines.md#material) | [Products](General.Products.Products.md) | The consumed material |
 | [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [QuantityUnit](Production.ShopFloor.OutputOrderConsumptionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit for the consumed quantity for setup, run and scrap. `Required` `Filter(multi eq)` |
-| [ScrapType](Production.ShopFloor.OutputOrderConsumptionLines.md#scraptype) | [ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable) | When Consumed_Quantity_<br />For_Scrap &lt;&gt; 0 denotes the reason for the scrap. `Filter(multi eq)` |
-| [WorkOrderItem](Production.ShopFloor.OutputOrderConsumptionLines.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, for which the consumption is recorded. `Required` `Filter(multi eq)` |
-| [WorkOrderItemOperation](Production.ShopFloor.OutputOrderConsumptionLines.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable) | The operation in which the material was consumed. null = unknown. `Filter(multi eq)` |
+| [QuantityUnit](Production.ShopFloor.OutputOrderConsumptionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit for the consumed quantity for setup, run and scrap. |
+| [ScrapType](Production.ShopFloor.OutputOrderConsumptionLines.md#scraptype) | [ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable) | When Consumed_Quantity_<br />For_Scrap <> 0 denotes the reason for the scrap |
+| [WorkOrderItem](Production.ShopFloor.OutputOrderConsumptionLines.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, for which the consumption is recorded. |
+| [WorkOrderItemOperation](Production.ShopFloor.OutputOrderConsumptionLines.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable) | The operation in which the material was consumed. NULL = unknown |
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### ConsumedQuantityForRun
 
-The consumed quantity of the material for the operation. `Unit: QuantityUnit` `Required` `Default(0)`
+The consumed quantity of the material for the operation.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedQuantityForScrap
 
-The scrapped quantity of the material for this operation. `Unit: QuantityUnit` `Required` `Default(0)`
+The scrapped quantity of the material for this operation.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedQuantityForSetup
 
-The consumed quantity of the material while setting up the operation. `Unit: QuantityUnit` `Required` `Default(0)`
+The consumed quantity of the material while setting up the operation.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### LineWorkOrder
 
-Work order for the line. Initially copied from the header (if there work order is not null). `Required` `Filter(multi eq)`
+Work order for the line. Initially copied from the header (if there work order is not null)
 
 Type: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Front-End Recalc Expressions:
 `obj.OutputOrder.WorkOrder`
 ### Material
 
-The consumed material. `Required` `Filter(multi eq)`
+The consumed material
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -199,7 +199,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityUnit
 
-The measurement unit for the consumed quantity for setup, run and scrap. `Required` `Filter(multi eq)`
+The measurement unit for the consumed quantity for setup, run and scrap.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -210,7 +210,7 @@ Front-End Recalc Expressions:
 `obj.Material.MeasurementUnit`
 ### ScrapType
 
-When Consumed_Quantity_For_Scrap &lt;&gt; 0 denotes the reason for the scrap. `Filter(multi eq)`
+When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap
 
 Type: **[ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable)**  
 Category: **System**  
@@ -219,7 +219,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkOrderItem
 
-The work order item, for which the consumption is recorded. `Required` `Filter(multi eq)`
+The work order item, for which the consumption is recorded.
 
 Type: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 Indexed: **True**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkOrderItemOperation
 
-The operation in which the material was consumed. null = unknown. `Filter(multi eq)`
+The operation in which the material was consumed. NULL = unknown
 
 Type: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable)**  
 Category: **System**  

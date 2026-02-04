@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. `Required` `Filter(multi eq)` 
+| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. 
 | [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (max) __nullable__ | Notes for this ProductTypeTaxGroup. `Filter(eq;like)` 
-| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. `Required` `Filter(multi eq)` 
+| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The product type for which the tax group is specified. `Required` `Filter(multi eq)` `Owner` |
+| [ProductType](Crm.Pos.ProductTypeTaxGroups.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The product type for which the tax group is specified. |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### ApplicableLegislation
 
-The legislation, for which the tax group is applicable. `Required` `Filter(multi eq)`
+The legislation, for which the tax group is applicable.
 
 Type: **[ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxGroup
 
-The tax group of the product type within the specified applicable legislation. `Required` `Filter(multi eq)`
+The tax group of the product type within the specified applicable legislation.
 
 Type: **[TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup)**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProductType
 
-The product type for which the tax group is specified. `Required` `Filter(multi eq)` `Owner`
+The product type for which the tax group is specified.
 
 Type: **[ProductTypes](General.Products.ProductTypes.md)**  
 Indexed: **True**  

@@ -87,7 +87,7 @@
         <article data-uid="Applications.Fleet.VehicleEquipment">
 <h1 id="applicationsfleetvehicleequipment">Applications.Fleet.VehicleEquipment</h1>
 
-<p>Contains the actual and history of equipment, installed on the vehicles.</p>
+<p>Contains the actual and history of equipment, installed on the vehicles</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Applications.Fleet.html">Applications.Fleet</a><br>
 Repository: Applications.Fleet.VehicleEquipment<br>
@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#enddate">EndDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date when the equipment was removed. null when the equipment is still installed on the vehicle. <code>Filter(ge;le)</code></td>
+<td>The date when the equipment was removed. NULL when the equipment is still installed on the vehicle</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the installed equipment.</td>
+<td>Notes for the installed equipment</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#quantity">Quantity</a></td>
 <td>int32</td>
-<td>Quantity of the equipment. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+<td>Quantity of the equipment</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#startdate">StartDate</a></td>
 <td>date</td>
-<td>The installation date of the equipment. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The installation date of the equipment</td>
 </tr>
 </tbody>
 </table>
@@ -153,12 +153,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#equipmenttype">EquipmentType</a></td>
 <td><a href="Applications.Fleet.EquipmentTypes.html">EquipmentTypes</a></td>
-<td>The type of equipment installed on the vehicle. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of equipment installed on the vehicle</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleEquipment.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a></td>
-<td>The vehicle that is holding the equipment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The vehicle that is holding the equipment</td>
 </tr>
 </tbody>
 </table>
@@ -191,14 +191,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>The date when the equipment was removed. null when the equipment is still installed on the vehicle. <code>Filter(ge;le)</code></p>
+<p>The date when the equipment was removed. NULL when the equipment is still installed on the vehicle</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the installed equipment.</p>
+<p>Notes for the installed equipment</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -206,7 +206,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the equipment. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
+<p>Quantity of the equipment</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -214,7 +214,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>The installation date of the equipment. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The installation date of the equipment</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -243,13 +243,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="equipmenttype">EquipmentType</h3>
-<p>The type of equipment installed on the vehicle. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of equipment installed on the vehicle</p>
 <p>Type: <strong><a href="Applications.Fleet.EquipmentTypes.html">EquipmentTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehicle">Vehicle</h3>
-<p>The vehicle that is holding the equipment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The vehicle that is holding the equipment</p>
 <p>Type: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -4,7 +4,7 @@ uid: Crm.Presales.OffersOptions
 # Crm.Presales.OffersOptions
 
 
-Contains options for user defined document types for Offers.
+Contains options for user defined document types for Offers
 
 ## General
 Namespace: [Crm.Presales](Crm.Presales.md)  
@@ -40,8 +40,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealDocumentType](Crm.Presales.OffersOptions.md#dealdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. `Filter(multi eq)` |
-| [DocumentType](Crm.Presales.OffersOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which the offer option applies. `Required` `Filter(multi eq)` `Owner` |
+| [DealDocumentType](Crm.Presales.OffersOptions.md#dealdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | If filled then new deals from the specified type are created automatically by the sales orders that aren't assigned to existing deals. |
+| [DocumentType](Crm.Presales.OffersOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which the offer option applies. |
 
 
 ## System Attributes
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealDocumentType
 
-If filled then new opportunities (deals) from the specified type will be created automatically for the offers that aren't assigned to existing opportunities. Used for automating opportunity management. `Filter(multi eq)`
+If filled then new deals from the specified type are created automatically by the sales orders that aren't assigned to existing deals.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The document type for which the offer option applies. `Required` `Filter(multi eq)` `Owner`
+The document type for which the offer option applies.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  

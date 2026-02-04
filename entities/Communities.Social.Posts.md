@@ -33,16 +33,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.Posts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. `Required` `Filter(ge;le)` 
-| [LastInteractionTimeUtc](Communities.Social.Posts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` `Filter(ge;le)` 
-| [PostText](Communities.Social.Posts.md#posttext) | string (max) | The post contents in clear text. `Required` 
+| [CreationTimeUtc](Communities.Social.Posts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. 
+| [LastInteractionTimeUtc](Communities.Social.Posts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. 
+| [PostText](Communities.Social.Posts.md#posttext) | string (max) | The post contents in clear text. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SocialGroup](Communities.Social.Posts.md#socialgroup) | [Groups](Communities.Social.Groups.md) | The group in which the post is made. `Required` `Filter(multi eq)` |
-| [User](Communities.Social.Posts.md#user) | [Users](Systems.Security.Users.md) | The user, who made the post. `Required` `Filter(multi eq)` |
+| [SocialGroup](Communities.Social.Posts.md#socialgroup) | [Groups](Communities.Social.Groups.md) | The group in which the post is made. |
+| [User](Communities.Social.Posts.md#user) | [Users](Systems.Security.Users.md) | The user, who made the post. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the post was created. `Required` `Filter(ge;le)`
+The exact server time (in UTC), when the post was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### LastInteractionTimeUtc
 
-The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` `Filter(ge;le)`
+The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.
 
 Type: **datetime**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### PostText
 
-The post contents in clear text. `Required`
+The post contents in clear text.
 
 Type: **string (max)**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **HiddenByDefault**
 
 ### SocialGroup
 
-The group in which the post is made. `Required` `Filter(multi eq)`
+The group in which the post is made.
 
 Type: **[Groups](Communities.Social.Groups.md)**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user, who made the post. `Required` `Filter(multi eq)`
+The user, who made the post.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

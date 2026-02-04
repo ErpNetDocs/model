@@ -37,41 +37,41 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.39` 
-| [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work. `Filter(like)` 
-| [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date. `Filter(ge;le)` 
-| [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time. `Filter(ge;le)` 
+| [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed. 
+| [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state. 
+| [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created. 
+| [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work. 
+| [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date. 
+| [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time. 
 | [EstimatedTimeHours](Projects.Agile.Cases.md#estimatedtimehours) | decimal (8, 2) __nullable__ | Estimation of the required work effort in hours. 
 | [FullState](Projects.Agile.Cases.md#fullstate) | int32 | Full state of the case based on its system and user state. [ReadOnly] 
-| [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
+| [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state. 
 | [LoggedTime](Projects.Agile.Cases.md#loggedtime) | decimal (0, 0) | Total duration of the logged time for the case (in hours). [ReadOnly] 
 | [Number](Projects.Agile.Cases.md#number) | int32 | The unique number of the Case. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` `Introduced in version 24.1.3.86` 
-| [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest). `Required` `Default(7)` `Filter(eq)` 
-| [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. `Filter(eq;ge;le)` `Introduced in version 26.1.4.53` 
-| [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case. `Required` `Default("1")` `Filter(multi eq)` `ReadOnly` 
-| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title. `Required` `Filter(like)` 
-| [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
+| [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest). 
+| [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution. 
+| [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved. 
+| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. 
+| [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case. 
+| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title. 
+| [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignedToUser](Projects.Agile.Cases.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The internal user to which the case is assigned. `Filter(multi eq)` |
-| [CaseCategory](Projects.Agile.Cases.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category of the case. This also determines the workflow for the case. `Required` `Filter(multi eq)` |
-| [DuplicateOfCase](Projects.Agile.Cases.md#duplicateofcase) | [Cases](Projects.Agile.Cases.md) (nullable) | References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. `Filter(multi eq)` `Introduced in version 25.1.3.24` |
-| [OwnerUser](Projects.Agile.Cases.md#owneruser) | [Users](Systems.Security.Users.md) | The user responsible for managing and overseeing the case. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76` |
+| [AssignedToUser](Projects.Agile.Cases.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The internal user to which the case is assigned. |
+| [CaseCategory](Projects.Agile.Cases.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category of the case. This also determines the workflow for the case. |
+| [DuplicateOfCase](Projects.Agile.Cases.md#duplicateofcase) | [Cases](Projects.Agile.Cases.md) (nullable) | References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. |
+| [OwnerUser](Projects.Agile.Cases.md#owneruser) | [Users](Systems.Security.Users.md) | The user responsible for managing and overseeing the case. |
 | [Parent](Projects.Agile.Cases.md#parent) | [Cases](Projects.Agile.Cases.md) (nullable) | Specified when this is a sub-case to another case. `Filter(multi eq)` |
-| [Project](Projects.Agile.Cases.md#project) | [Projects](Projects.Agile.Projects.md) | The project to which the case is assigned. `Required` `Filter(multi eq)` |
-| [ProjectArea](Projects.Agile.Cases.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The are to which the case is assigned. `Filter(multi eq)` |
-| [ProjectMilestone](Projects.Agile.Cases.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | Determines the milestone for which the case must be resolved. `Filter(multi eq)` |
-| [SocialGroup](Projects.Agile.Cases.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Specified, when the case is assigned to a group of users. `Filter(multi eq)` |
-| [Sprint](Projects.Agile.Cases.md#sprint) | [Sprints](Projects.Agile.Sprints.md) (nullable) | The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). `Filter(multi eq)` `Introduced in version 26.1.4.33` |
-| [StakeholderParty](Projects.Agile.Cases.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). `Filter(multi eq)` `Introduced in version 25.1.2.70` |
-| [UserState](Projects.Agile.Cases.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user-defined sub-state of the case. `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.0.97` |
+| [Project](Projects.Agile.Cases.md#project) | [Projects](Projects.Agile.Projects.md) | The project to which the case is assigned. |
+| [ProjectArea](Projects.Agile.Cases.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The area to which the case is assigned. |
+| [ProjectMilestone](Projects.Agile.Cases.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | Determines the milestone for which the case must be resolved. |
+| [SocialGroup](Projects.Agile.Cases.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Specified, when the case is assigned to a group of users. |
+| [Sprint](Projects.Agile.Cases.md#sprint) | [Sprints](Projects.Agile.Sprints.md) (nullable) | The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). |
+| [StakeholderParty](Projects.Agile.Cases.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). |
+| [UserState](Projects.Agile.Cases.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user-defined sub-state of the case. |
 
 
 ## System Attributes
@@ -96,7 +96,7 @@ Aggregate Tree
 
 ### ClosedTimeUTC
 
-Indicates the time (in UTC) when the case was closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
+Indicates the time (in UTC) when the case was closed.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsiderTimeUTC
 
-Indicates the time (in UTC) when the case has changed to consider state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.39`
+Indicates the time (in UTC) when the case has changed to consider state.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationTimeUtc
 
-The exact date and time (in UTC) when the case was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
+The exact date and time (in UTC) when the case was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### Description
 
-Description of the required work. `Filter(like)`
+Description of the required work.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDate
 
-Specified when the case has specific due date. `Filter(ge;le)`
+Specified when the case has specific due date.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### DueTime
 
-Specified when the case has specific due time. `Filter(ge;le)`
+Specified when the case has specific due time.
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **HiddenByDefault**
 
 ### InProgressTimeUTC
 
-Indicates the time (in UTC) when the case has changed to in-progress state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
+Indicates the time (in UTC) when the case has changed to in-progress state.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -209,7 +209,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority of the case, on a scale from 1 (highest) to 7 (lowest). `Required` `Default(7)` `Filter(eq)`
+Priority of the case, on a scale from 1 (highest) to 7 (lowest).
 
 Type: **[Priority](Projects.Agile.Cases.md#priority)**  
 Category: **System**  
@@ -233,7 +233,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadyTimeUTC
 
-Indicates the time (in UTC) when the case has become ready for execution. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
+Indicates the time (in UTC) when the case has become ready for execution.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -243,7 +243,7 @@ Show in UI: **HiddenByDefault**
 
 ### ResolvedTimeUTC
 
-Indicates the time (in UTC) when the case was resolved. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
+Indicates the time (in UTC) when the case was resolved.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -253,7 +253,7 @@ Show in UI: **HiddenByDefault**
 
 ### StoryPoints
 
-When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. `Filter(eq;ge;le)` `Introduced in version 26.1.4.53`
+When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -263,7 +263,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemState
 
-The base state of the case. `Required` `Default("1")` `Filter(multi eq)` `ReadOnly`
+The base state of the case.
 
 Type: **[SystemState](Projects.Agile.Cases.md#systemstate)**  
 Category: **System**  
@@ -287,7 +287,7 @@ Show in UI: **HiddenByDefault**
 
 ### Title
 
-Case short title. `Required` `Filter(like)`
+Case short title.
 
 Type: **string (128)**  
 Category: **System**  
@@ -298,7 +298,7 @@ Show in UI: **ShownByDefault**
 
 ### WaitingTimeUTC
 
-Indicates the time (in UTC) when the case has changed to waiting state. `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93`
+Indicates the time (in UTC) when the case has changed to waiting state.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -370,7 +370,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssignedToUser
 
-The internal user to which the case is assigned. `Filter(multi eq)`
+The internal user to which the case is assigned.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  
@@ -382,7 +382,7 @@ Front-End Recalc Expressions:
 `obj.DetermineAssignToUser( obj.SystemState, obj.Project, obj.CaseCategory, obj.ProjectArea, obj.ProjectMilestone, obj.StakeholderParty, obj.UserState).IfNullThen( obj.AssignedToUser)`
 ### CaseCategory
 
-The category of the case. This also determines the workflow for the case. `Required` `Filter(multi eq)`
+The category of the case. This also determines the workflow for the case.
 
 Type: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 Indexed: **True**  
@@ -392,7 +392,7 @@ Show in UI: **ShownByDefault**
 
 ### DuplicateOfCase
 
-References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. `Filter(multi eq)` `Introduced in version 25.1.3.24`
+References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.
 
 Type: **[Cases](Projects.Agile.Cases.md) (nullable)**  
 Category: **System**  
@@ -401,7 +401,7 @@ Show in UI: **HiddenByDefault**
 
 ### OwnerUser
 
-The user responsible for managing and overseeing the case. `Required` `Filter(multi eq)` `Introduced in version 25.1.2.76`
+The user responsible for managing and overseeing the case.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  
@@ -420,7 +420,7 @@ Show in UI: **ShownByDefault**
 
 ### Project
 
-The project to which the case is assigned. `Required` `Filter(multi eq)`
+The project to which the case is assigned.
 
 Type: **[Projects](Projects.Agile.Projects.md)**  
 Indexed: **True**  
@@ -430,7 +430,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectArea
 
-The are to which the case is assigned. `Filter(multi eq)`
+The area to which the case is assigned.
 
 Type: **[ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable)**  
 Indexed: **True**  
@@ -440,7 +440,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectMilestone
 
-Determines the milestone for which the case must be resolved. `Filter(multi eq)`
+Determines the milestone for which the case must be resolved.
 
 Type: **[ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable)**  
 Indexed: **True**  
@@ -450,7 +450,7 @@ Show in UI: **ShownByDefault**
 
 ### SocialGroup
 
-Specified, when the case is assigned to a group of users. `Filter(multi eq)`
+Specified, when the case is assigned to a group of users.
 
 Type: **[Groups](Communities.Social.Groups.md) (nullable)**  
 Indexed: **True**  
@@ -460,7 +460,7 @@ Show in UI: **ShownByDefault**
 
 ### Sprint
 
-The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). `Filter(multi eq)` `Introduced in version 26.1.4.33`
+The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work).
 
 Type: **[Sprints](Projects.Agile.Sprints.md) (nullable)**  
 Category: **System**  
@@ -469,7 +469,7 @@ Show in UI: **ShownByDefault**
 
 ### StakeholderParty
 
-The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). `Filter(multi eq)` `Introduced in version 25.1.2.70`
+The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -478,7 +478,7 @@ Show in UI: **ShownByDefault**
 
 ### UserState
 
-The user-defined sub-state of the case. `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.0.97`
+The user-defined sub-state of the case.
 
 Type: **[UserStates](Projects.Agile.UserStates.md) (nullable)**  
 Category: **System**  

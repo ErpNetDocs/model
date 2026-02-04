@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContributionTime](Projects.Classic.ProjectRiskDiscussion.md#contributiontime) | datetime | The time, when the message was contributed. `Required` `Default(Now)` `Filter(eq;ge;le)` `ReadOnly` 
-| [LastEditTime](Projects.Classic.ProjectRiskDiscussion.md#lastedittime) | datetime __nullable__ | Contains the last edit time of the message. null if the message was never edited. `Filter(eq;ge;le)` `ReadOnly` 
-| [Message](Projects.Classic.ProjectRiskDiscussion.md#message) | string (max) | The contents of the message. `Required` 
+| [ContributionTime](Projects.Classic.ProjectRiskDiscussion.md#contributiontime) | datetime | The time, when the message was contributed. 
+| [LastEditTime](Projects.Classic.ProjectRiskDiscussion.md#lastedittime) | datetime __nullable__ | Contains the last edit time of the message. NULL if the message was never edited 
+| [Message](Projects.Classic.ProjectRiskDiscussion.md#message) | string (max) | The contents of the message. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContributedByUser](Projects.Classic.ProjectRiskDiscussion.md#contributedbyuser) | [Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. `Required` `Filter(multi eq)` `ReadOnly` |
+| [ContributedByUser](Projects.Classic.ProjectRiskDiscussion.md#contributedbyuser) | [Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. |
 | [ProjectRisk](Projects.Classic.ProjectRiskDiscussion.md#projectrisk) | [ProjectRisks](Projects.Classic.ProjectRisks.md) | The <see cref="ProjectRisk"/> to which this ProjectRiskDiscussion belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### ContributionTime
 
-The time, when the message was contributed. `Required` `Default(Now)` `Filter(eq;ge;le)` `ReadOnly`
+The time, when the message was contributed.
 
 Type: **datetime**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### LastEditTime
 
-Contains the last edit time of the message. null if the message was never edited. `Filter(eq;ge;le)` `ReadOnly`
+Contains the last edit time of the message. NULL if the message was never edited
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### Message
 
-The contents of the message. `Required`
+The contents of the message.
 
 Type: **string (max)**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **HiddenByDefault**
 
 ### ContributedByUser
 
-The user, who contributed (wrote) the message. `Required` `Filter(multi eq)` `ReadOnly`
+The user, who contributed (wrote) the message.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

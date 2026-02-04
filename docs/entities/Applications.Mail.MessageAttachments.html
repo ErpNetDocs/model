@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#attachmentcontent">AttachmentContent</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason.</td>
+<td>The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#contentdescriptors">ContentDescriptors</a></td>
 <td>string (4000) <strong>nullable</strong></td>
-<td>Content flags, like &quot;Content-Type: text/plain; charset=utf-8&quot;.</td>
+<td>Content flags, like &quot;Content-Type: text/plain; charset=utf-8&quot;</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#contentdownloaded">ContentDownloaded</a></td>
 <td>boolean</td>
-<td>True when the content is included, false when this is only an empty container. Content should be included when sending mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.MessageAttachments.html#name">Name</a></td>
@@ -186,14 +186,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="attachmentcontent">AttachmentContent</h3>
-<p>The actual content of the attachment. null when the content is not downloaded or is unknown for some other reason.</p>
+<p>The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contentdescriptors">ContentDescriptors</h3>
-<p>Content flags, like &quot;Content-Type: text/plain; charset=utf-8&quot;.</p>
+<p>Content flags, like &quot;Content-Type: text/plain; charset=utf-8&quot;</p>
 <p>Type: <strong>string (4000) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -201,7 +201,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>4000</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contentdownloaded">ContentDownloaded</h3>
-<p>True when the content is included, false when this is only an empty container. Content should be included when sending mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

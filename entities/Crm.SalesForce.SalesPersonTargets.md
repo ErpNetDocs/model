@@ -67,8 +67,8 @@ Aggregate Tree
 | [DocumentVersion](Crm.SalesForce.SalesPersonTargets.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.SalesForce.SalesPersonTargets.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Crm.SalesForce.SalesPersonTargets.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Crm.SalesForce.SalesPersonTargets.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Crm.SalesForce.SalesPersonTargets.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Crm.SalesForce.SalesPersonTargets.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Crm.SalesForce.SalesPersonTargets.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Crm.SalesForce.SalesPersonTargets.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.SalesForce.SalesPersonTargets.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Crm.SalesForce.SalesPersonTargets.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.SalesForce.SalesPersonTargets.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -98,12 +98,12 @@ Aggregate Tree
 | [MasterDocument](Crm.SalesForce.SalesPersonTargets.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Crm.SalesForce.SalesPersonTargets.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Crm.SalesForce.SalesPersonTargets.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ProductGroup](Crm.SalesForce.SalesPersonTargets.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. Serves as default for the lines. `Filter(multi eq)` |
+| [ProductGroup](Crm.SalesForce.SalesPersonTargets.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. Serves as default for the lines. |
 | [ResponsiblePerson](Crm.SalesForce.SalesPersonTargets.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Crm.SalesForce.SalesPersonTargets.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SalesPerson](Crm.SalesForce.SalesPersonTargets.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Sales person to whom the target is assigned. Serves as default for the lines. `Filter(multi eq)` |
+| [SalesPerson](Crm.SalesForce.SalesPersonTargets.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Sales person to whom the target is assigned. Serves as default for the lines. |
 | [Sequence](Crm.SalesForce.SalesPersonTargets.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TargetCurrency](Crm.SalesForce.SalesPersonTargets.md#targetcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Denotes the currency of amount targets. Required when amount targets are present in the documnet. `Filter(multi eq)` |
+| [TargetCurrency](Crm.SalesForce.SalesPersonTargets.md#targetcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Denotes the currency of amount targets. Required when amount targets are present in the documnet. |
 | [ToCompanyDivision](Crm.SalesForce.SalesPersonTargets.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.SalesForce.SalesPersonTargets.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Crm.SalesForce.SalesPersonTargets.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -272,7 +272,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -283,7 +283,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -631,7 +631,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProductGroup
 
-Product group for which the target is defined. Serves as default for the lines. `Filter(multi eq)`
+Product group for which the target is defined. Serves as default for the lines.
 
 Type: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 Category: **System**  
@@ -660,7 +660,7 @@ Show in UI: **HiddenByDefault**
 
 ### SalesPerson
 
-Sales person to whom the target is assigned. Serves as default for the lines. `Filter(multi eq)`
+Sales person to whom the target is assigned. Serves as default for the lines.
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable)**  
 Category: **System**  
@@ -680,7 +680,7 @@ Show in UI: **HiddenByDefault**
 
 ### TargetCurrency
 
-Denotes the currency of amount targets. Required when amount targets are present in the documnet. `Filter(multi eq)`
+Denotes the currency of amount targets. Required when amount targets are present in the documnet.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  

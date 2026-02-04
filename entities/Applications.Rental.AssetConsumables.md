@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required` 
+| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the current consumable is used. 
 | [Notes](Applications.Rental.AssetConsumables.md#notes) | string (max) __nullable__ | Notes for this AssetConsumable. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantityUnit](Applications.Rental.AssetConsumables.md#consumablequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)` |
-| [Product](Applications.Rental.AssetConsumables.md#product) | [Products](General.Products.Products.md) | The consumable which is offered accompanying the asset rental. `Required` `Filter(multi eq)` |
-| [RentalAsset](Applications.Rental.AssetConsumables.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | The rental asset for which the consumable would be offered. `Required` `Filter(multi eq)` `Owner` |
-| [Store](Applications.Rental.AssetConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which contains the consumable. `Required` `Filter(multi eq)` |
+| [ConsumableQuantityUnit](Applications.Rental.AssetConsumables.md#consumablequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of the consumable quantity. |
+| [Product](Applications.Rental.AssetConsumables.md#product) | [Products](General.Products.Products.md) | The consumable which is used. |
+| [RentalAsset](Applications.Rental.AssetConsumables.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | Rental asset for which the current consumable is used. |
+| [Store](Applications.Rental.AssetConsumables.md#store) | [Stores](Logistics.Inventory.Stores.md) | Store from which the consumable is issued. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### ConsumableQuantity
 
-Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required`
+Specifies what quantity of the current consumable is used.
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsumableQuantityUnit
 
-The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)`
+The measurement unit of the consumable quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The consumable which is offered accompanying the asset rental. `Required` `Filter(multi eq)`
+The consumable which is used.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAsset
 
-The rental asset for which the consumable would be offered. `Required` `Filter(multi eq)` `Owner`
+Rental asset for which the current consumable is used.
 
 Type: **[Assets](Applications.Rental.Assets.md)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The store which contains the consumable. `Required` `Filter(multi eq)`
+Store from which the consumable is issued.
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

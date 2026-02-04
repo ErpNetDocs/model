@@ -124,7 +124,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransactionEntryTemplates.html#documentnotesfixedtext">DocumentNotesFixedText</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.</td>
+<td>Specifies the text for the document notes in the created entry in the VAT ledgers. In case, the text is not set, the notes will be taken from the document.</td>
 </tr>
 </tbody>
 </table>
@@ -141,12 +141,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransactionEntryTemplates.html#dealtype">DealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a></td>
-<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Obsolete. Not used.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransactionEntryTemplates.html#route">Route</a></td>
 <td><a href="Systems.Documents.Routes.html">Routes</a></td>
-<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Obsolete. Not used.</td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentnotesfixedtext">DocumentNotesFixedText</h3>
-<p>Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.</p>
+<p>Specifies the text for the document notes in the created entry in the VAT ledgers. In case, the text is not set, the notes will be taken from the document.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -245,13 +245,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dealtype">DealType</h3>
-<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Obsolete. Not used.</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="route">Route</h3>
-<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Obsolete. Not used.</p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html">Routes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -36,16 +36,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). `Filter(like)` 
+| [Notes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. `Required` `Filter(multi eq)` |
-| [DocumentType](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner` |
-| [TaxCodeEntry](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#taxcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met. `Required` `Filter(multi eq)` |
+| [DealType](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. |
+| [DocumentType](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. |
+| [Profile](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. |
+| [TaxCodeEntry](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#taxcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). `Filter(like)`
+Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealType
 
-The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. `Required` `Filter(multi eq)`
+The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined.
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md)**  
 Indexed: **True**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)`
+The ERP.net document type under which this mapping rule should be applied.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner`
+The SAF-T profile this mapping belongs to.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxCodeEntry
 
-The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met. `Required` `Filter(multi eq)`
+The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met.
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Indexed: **True**  

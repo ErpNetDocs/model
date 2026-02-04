@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Logistics.Wms.WarehouseReconciliationLines.md#lineno) | int32 | Consecutive number of the line in the document. `Required` `Filter(eq)` `ORD` 
+| [LineNo](Logistics.Wms.WarehouseReconciliationLines.md#lineno) | int32 | Consecutive number of the line in the document. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Wms.WarehouseReconciliationLines.md#document) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | The owner document. Reconciliation document this line belongs to. `Required` `Filter(multi eq)` |
-| [WarehouseLocation](Logistics.Wms.WarehouseReconciliationLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | Warehouse location to be counted. `Required` `Filter(multi eq)` |
-| [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationLines.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | Reconciliation document this line belongs to. `Required` `Filter(multi eq)` `Owner` |
-| [WarehouseWorker](Logistics.Wms.WarehouseReconciliationLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Worker (human or robot) assigned to perform the counting. `Filter(multi eq)` |
-| [WarehouseZone](Logistics.Wms.WarehouseReconciliationLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. `Filter(multi eq)` `Introduced in version 26.2.1.16` |
+| [WarehouseLocation](Logistics.Wms.WarehouseReconciliationLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | Warehouse location to be counted. |
+| [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationLines.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | Reconciliation document this line belongs to. |
+| [WarehouseWorker](Logistics.Wms.WarehouseReconciliationLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Worker (human or robot) assigned to perform the counting. |
+| [WarehouseZone](Logistics.Wms.WarehouseReconciliationLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line in the document. `Required` `Filter(eq)` `ORD`
+Consecutive number of the line in the document.
 
 Type: **int32**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseLocation
 
-Warehouse location to be counted. `Required` `Filter(multi eq)`
+Warehouse location to be counted.
 
 Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
 Indexed: **True**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseReconciliation
 
-Reconciliation document this line belongs to. `Required` `Filter(multi eq)` `Owner`
+Reconciliation document this line belongs to.
 
 Type: **[WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md)**  
 Indexed: **True**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseWorker
 
-Worker (human or robot) assigned to perform the counting. `Filter(multi eq)`
+Worker (human or robot) assigned to perform the counting.
 
 Type: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 Indexed: **True**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseZone
 
-Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. `Filter(multi eq)` `Introduced in version 26.2.1.16`
+Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders.
 
 Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 Category: **System**  

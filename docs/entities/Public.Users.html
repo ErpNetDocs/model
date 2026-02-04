@@ -87,7 +87,7 @@
         <article data-uid="Public.Users">
 <h1 id="publicusers-view">Public.Users (View)</h1>
 
-<p>Public users profile data.</p>
+<p>Virtual view returning profile data for the logged in user</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Public.html">Public</a><br>
 Repository: Public.Users<br>
@@ -117,27 +117,27 @@ Show in UI:  CannotBeShown</p>
 <tr>
 <td><a href="Public.Users.html#email">Email</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>Inherited from Sec_Users_Table.Email</code></td>
+<td>Unique email of the user. Can be NULL because there may be login providers that don't use emails.</td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#isadmin">IsAdmin</a></td>
 <td>boolean</td>
-<td>True if the user is administrator, otherwise 0. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Inherited from Sec_Users_Table.Is_Admin</code></td>
+<td>1 if the user is administrator, otherwise 0.</td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#login">Login</a></td>
 <td>string (64)</td>
-<td>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>Inherited from Sec_Users_Table.Login</code></td>
+<td>The login name of the user, which is usually the email</td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The full name of the user. <code>Required</code> <code>Filter(like)</code> <code>Inherited from Sec_Users_Table.User_Name</code></td>
+<td>The full name of the user</td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#phonenumber">PhoneNumber</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Inherited from Sec_Users_Table.Phone_Number</code></td>
+<td>Used only for two-factor authentication. NULL when phone-based two-factor is not used.</td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#userid">UserId</a></td>
@@ -159,18 +159,18 @@ Show in UI:  CannotBeShown</p>
 <tr>
 <td><a href="Public.Users.html#domain">Domain</a></td>
 <td><a href="Systems.Security.Domains.html">Domains</a> (nullable)</td>
-<td>The domain, to which the user belongs. <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.Domain_Id</code></td>
+<td>The domain, to which the user belongs.</td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.Person_Id</code></td>
+<td>The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="email">Email</h3>
-<p>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Filter(multi eq;like)</code> <code>Inherited from Sec_Users_Table.Email</code></p>
+<p>Unique email of the user. Can be NULL because there may be login providers that don't use emails.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.Email</strong><br>
@@ -179,7 +179,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isadmin">IsAdmin</h3>
-<p>True if the user is administrator, otherwise 0. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Inherited from Sec_Users_Table.Is_Admin</code></p>
+<p>1 if the user is administrator, otherwise 0.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.Is_Admin</strong><br>
@@ -188,7 +188,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="login">Login</h3>
-<p>The login name of the user, which is usually the email. <code>Required</code> <code>Filter(multi eq;like)</code> <code>Inherited from Sec_Users_Table.Login</code></p>
+<p>The login name of the user, which is usually the email</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.Login</strong><br>
@@ -197,7 +197,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The full name of the user. <code>Required</code> <code>Filter(like)</code> <code>Inherited from Sec_Users_Table.User_Name</code></p>
+<p>The full name of the user</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.User_Name</strong><br>
@@ -205,7 +205,7 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="phonenumber">PhoneNumber</h3>
-<p>Used only for two-factor authentication. null when phone-based two-factor is not used. <code>Filter(eq;like)</code> <code>Inherited from Sec_Users_Table.Phone_Number</code></p>
+<p>Used only for two-factor authentication. NULL when phone-based two-factor is not used.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.Phone_Number</strong><br>
@@ -221,14 +221,14 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="domain">Domain</h3>
-<p>The domain, to which the user belongs. <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.Domain_Id</code></p>
+<p>The domain, to which the user belongs.</p>
 <p>Type: <strong><a href="Systems.Security.Domains.html">Domains</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.Domain_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.Person_Id</code></p>
+<p>The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sec_Users_Table.Person_Id</strong><br>

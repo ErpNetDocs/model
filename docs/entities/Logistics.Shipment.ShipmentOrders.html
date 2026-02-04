@@ -200,12 +200,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -240,7 +240,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>datetime</td>
-<td>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly earlier. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly earlier.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#state">State</a></td>
@@ -307,7 +307,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>The customer, to which we are shipping. <code>Filter(multi eq)</code></td>
+<td>The customer, to which we are shipping.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#documenttype">DocumentType</a></td>
@@ -337,7 +337,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#issuedbyperson">IssuedByPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person who signed for the shipment. <code>Filter(multi eq)</code></td>
+<td>The person who signed for the shipment.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#masterdocument">MasterDocument</a></td>
@@ -357,7 +357,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#receivedbyperson">ReceivedByPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person who should receive the goods for/from the shipment . <code>Filter(multi eq)</code></td>
+<td>The person who received the goods for/from the shipment.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#responsibleperson">ResponsiblePerson</a></td>
@@ -377,12 +377,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#shipfromstore">ShipFromStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>The store from which the shipment should be effected. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The store from which the shipment should be effected</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#shiptopartycontactmechanism">ShipToPartyContact<br>Mechanism</a></td>
 <td><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a></td>
-<td>Destination address where the goods should be shipped. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Destination address where the goods should be shipped.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -603,7 +603,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -611,7 +611,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -689,7 +689,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly earlier. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly earlier.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -876,7 +876,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The customer, to which we are shipping. <code>Filter(multi eq)</code></p>
+<p>The customer, to which we are shipping.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -914,7 +914,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issuedbyperson">IssuedByPerson</h3>
-<p>The person who signed for the shipment. <code>Filter(multi eq)</code></p>
+<p>The person who signed for the shipment.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -941,7 +941,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="receivedbyperson">ReceivedByPerson</h3>
-<p>The person who should receive the goods for/from the shipment . <code>Filter(multi eq)</code></p>
+<p>The person who received the goods for/from the shipment.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -965,13 +965,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="shipfromstore">ShipFromStore</h3>
-<p>The store from which the shipment should be effected. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The store from which the shipment should be effected</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shiptopartycontactmechanism">ShipToPartyContactMechanism</h3>
-<p>Destination address where the goods should be shipped. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Destination address where the goods should be shipped.</p>
 <p>Type: <strong><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

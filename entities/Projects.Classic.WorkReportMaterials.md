@@ -35,16 +35,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Quantity](Projects.Classic.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)` 
-| [QuantityBase](Projects.Classic.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly` 
+| [Quantity](Projects.Classic.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material. 
+| [QuantityBase](Projects.Classic.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaterialProduct](Projects.Classic.WorkReportMaterials.md#materialproduct) | [Products](General.Products.Products.md) | The consumed material. `Required` `Filter(multi eq)` |
-| [ProjectTask](Projects.Classic.WorkReportMaterials.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The project task for which the materials are reported. `Required` `Filter(multi eq)` |
-| [QuantityUnit](Projects.Classic.WorkReportMaterials.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. `Required` `Filter(multi eq)` |
+| [MaterialProduct](Projects.Classic.WorkReportMaterials.md#materialproduct) | [Products](General.Products.Products.md) | The consumed material. |
+| [ProjectTask](Projects.Classic.WorkReportMaterials.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The project task for which the materials are reported. |
+| [QuantityUnit](Projects.Classic.WorkReportMaterials.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. |
 | [WorkReport](Projects.Classic.WorkReportMaterials.md#workreport) | [WorkReports](Projects.Classic.WorkReports.md) | The <see cref="WorkReport"/> to which this WorkReportMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### Quantity
 
-The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)`
+The consumed quantity of the material.
 
 Type: **decimal (9, 3)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly`
+The equivalence of Quantity in the base measurement unit of the Material.
 
 Type: **decimal (9, 3)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaterialProduct
 
-The consumed material. `Required` `Filter(multi eq)`
+The consumed material.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTask
 
-The project task for which the materials are reported. `Required` `Filter(multi eq)`
+The project task for which the materials are reported.
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md)**  
 Category: **System**  
@@ -140,7 +140,7 @@ Front-End Recalc Expressions:
 `obj.WorkReport.ProjectTask`
 ### QuantityUnit
 
-The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. `Required` `Filter(multi eq)`
+The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  

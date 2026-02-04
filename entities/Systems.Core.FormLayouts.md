@@ -42,24 +42,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Core.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout. `Required` `Filter(eq)` `ORD` 
-| [Category](Systems.Core.FormLayouts.md#category) | string (36) __nullable__ | The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type. `Filter(eq)` `Introduced in version 23.1.1.25` 
-| [FormName](Systems.Core.FormLayouts.md#formname) | string (128) | The form, for which the layout is applied. `Required` `Filter(eq;like)` 
+| [ApplicationName](Systems.Core.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout. 
+| [Category](Systems.Core.FormLayouts.md#category) | string (36) __nullable__ | The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type. 
+| [FormName](Systems.Core.FormLayouts.md#formname) | string (128) | The form, for which the layout is applied. 
 | [Layout](Systems.Core.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. 
-| [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. `Required` `Default("U")` 
-| [LayoutName](Systems.Core.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)` 
-| [<s>LayoutXml</s>](Systems.Core.FormLayouts.md#layoutxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Layout xml - not used. `Obsolete` `Obsoleted in version 22.1.6.61` 
-| [<s>MachineName</s>](Systems.Core.FormLayouts.md#machinename) | string (128) __nullable__ | **OBSOLETE! Do not use!** The machine name - not used. `Obsolete` `Filter(eq;like)` `Obsoleted in version 22.1.6.61` 
-| [PanelName](Systems.Core.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)` 
-| [UserName](Systems.Core.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)` 
+| [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. 
+| [LayoutName](Systems.Core.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names. 
+| [<s>LayoutXml</s>](Systems.Core.FormLayouts.md#layoutxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Layout xml - not used. 
+| [<s>MachineName</s>](Systems.Core.FormLayouts.md#machinename) | string (128) __nullable__ | **OBSOLETE! Do not use!** The machine name - not used. 
+| [PanelName](Systems.Core.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied. 
+| [UserName](Systems.Core.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. NULL means that the layout is applied for all users. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Core.FormLayouts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the layout view. `Filter(multi eq)` |
-| [InheritFormLayout](Systems.Core.FormLayouts.md#inheritformlayout) | [FormLayouts](Systems.Core.FormLayouts.md) (nullable) | Specified when the current layout inherits from another layout. `Filter(multi eq)` `Introduced in version 25.1.1.56` |
-| [Role](Systems.Core.FormLayouts.md#role) | [Roles](Systems.Security.Roles.md) (nullable) | The role, for which the layout is applied. `Filter(multi eq)` |
+| [AccessKey](Systems.Core.FormLayouts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The security access key which controls the access to the layout view |
+| [InheritFormLayout](Systems.Core.FormLayouts.md#inheritformlayout) | [FormLayouts](Systems.Core.FormLayouts.md) (nullable) | Specified when the current layout inherits from another layout |
+| [Role](Systems.Core.FormLayouts.md#role) | [Roles](Systems.Security.Roles.md) (nullable) | The role, for which the layout is applied. |
 
 
 ## System Attributes
@@ -78,7 +78,7 @@ Aggregate Tree
 
 ### ApplicationName
 
-The application, which consumes the layout. `Required` `Filter(eq)` `ORD`
+The application, which consumes the layout.
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### Category
 
-The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type. `Filter(eq)` `Introduced in version 23.1.1.25`
+The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type.
 
 Type: **string (36) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### FormName
 
-The form, for which the layout is applied. `Required` `Filter(eq;like)`
+The form, for which the layout is applied.
 
 Type: **string (128)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### LayoutFormat
 
-The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. `Required` `Default("U")`
+The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.
 
 Type: **[LayoutFormat](Systems.Core.FormLayouts.md#layoutformat)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### LayoutName
 
-The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)`
+The name of a named layout. Standard layouts have empty string names.
 
 Type: **string (64)**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### LayoutXml
 
-**OBSOLETE! Do not use!** Layout xml - not used. `Obsolete` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** Layout xml - not used.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### MachineName
 
-**OBSOLETE! Do not use!** The machine name - not used. `Obsolete` `Filter(eq;like)` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** The machine name - not used.
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -175,7 +175,7 @@ Show in UI: **ShownByDefault**
 
 ### PanelName
 
-The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)`
+The visual panel, for which the layout is applied.
 
 Type: **string (64)**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### UserName
 
-The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)`
+The user for which the layout is applied. NULL means that the layout is applied for all users.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -260,7 +260,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The security access key which controls the access to the layout view. `Filter(multi eq)`
+The security access key which controls the access to the layout view
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  
@@ -278,7 +278,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### InheritFormLayout
 
-Specified when the current layout inherits from another layout. `Filter(multi eq)` `Introduced in version 25.1.1.56`
+Specified when the current layout inherits from another layout
 
 Type: **[FormLayouts](Systems.Core.FormLayouts.md) (nullable)**  
 Category: **System**  
@@ -287,7 +287,7 @@ Show in UI: **ShownByDefault**
 
 ### Role
 
-The role, for which the layout is applied. `Filter(multi eq)`
+The role, for which the layout is applied.
 
 Type: **[Roles](Systems.Security.Roles.md) (nullable)**  
 Category: **System**  

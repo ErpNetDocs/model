@@ -41,7 +41,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Project](Projects.Classic.ProjectWorkElements.md#project) | [Projects](Projects.Classic.Projects.md) | The <see cref="Project"/> to which this ProjectWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ProjectTypeWorkElement](Projects.Classic.ProjectWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.Classic.TypeWorkElements.md) | The work element from the project type on which the current work element is based. `Required` `Filter(multi eq)` |
+| [ProjectTypeWorkElement](Projects.Classic.ProjectWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.Classic.TypeWorkElements.md) | The work element from the project type on which the current work element is based. |
 
 
 ## System Attributes
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTypeWorkElement
 
-The work element from the project type on which the current work element is based. `Required` `Filter(multi eq)`
+The work element from the project type on which the current work element is based.
 
 Type: **[TypeWorkElements](Projects.Classic.TypeWorkElements.md)**  
 Category: **System**  

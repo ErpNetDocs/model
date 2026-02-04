@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal (14, 3) | The custom percent for the current product and amount type. `Required` `Default(0)` 
+| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal (14, 3) | The custom percent for the current product and amount type. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmountType](General.Products.ProductDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. `Required` `Filter(multi eq)` |
+| [DocumentAmountType](General.Products.ProductDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. |
 | [Product](General.Products.ProductDocumentAmounts.md#product) | [Products](General.Products.Products.md) | The <see cref="Product"/> to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### LinePercent
 
-The custom percent for the current product and amount type. `Required` `Default(0)`
+The custom percent for the current product and amount type.
 
 Type: **decimal (14, 3)**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentAmountType
 
-The amount type for which the custom percent is defined. `Required` `Filter(multi eq)`
+The amount type for which the custom percent is defined.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  

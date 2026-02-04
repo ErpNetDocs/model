@@ -133,37 +133,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultdeliverytermdays">DefaultDeliveryTermDays</a></td>
 <td>int32</td>
-<td>Default term in days for goods delivery, starting at the day of sending the purchase order. <code>Required</code> <code>Default(0)</code></td>
+<td>Default term in days for goods delivery, starting at the day of sending the purchase order</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymentstartdays">DefaultPaymentStartDays</a></td>
 <td>int32</td>
-<td>Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. <code>Required</code> <code>Default(0)</code></td>
+<td>Number of days until the payment becomes executable. 0 means that the payment is executable at all times.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymenttermdays">DefaultPaymentTermDays</a></td>
 <td>int32</td>
-<td>Default payment term in days, starting from the date of receiving the invoice. <code>Required</code> <code>Default(0)</code></td>
+<td>Default payment term in days, starting from the date of receiving the invoice</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date on which this party became a supplier or the date, when the supplier contract was signed. <code>Filter(ge;le)</code></td>
+<td>The date on which this party became a supplier or the date, when the supplier contract was signed.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current supplier is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Indicates whether the current supplier is active.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#number">Number</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>The unique supplier number. <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>The unique supplier number.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date (inclusive) on which this party ceased to be a supplier. <code>Filter(ge;le)</code></td>
+<td>The date (inclusive) on which this party ceased to be a supplier.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#updatetime">UpdateTime</a></td>
@@ -190,22 +190,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultcurrency">DefaultCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The default currency for purchases from this supplier. null means there is no default. <code>Filter(multi eq)</code></td>
+<td>The default currency for purchases from this supplier. NULL means there is no default</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymentaccount">DefaultPaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>When not null, specifies the default payment account which should be used for new purchase document for this supplier. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies the default payment account which should be used for new purchase document for this supplier.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymenttype">DefaultPaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>When not null, specifies the default payment type which should be used for new purchase document for this supplier. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies the default payment type which should be used for new purchase document for this supplier.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpurchasepricelist">DefaultPurchasePriceList</a></td>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</td>
-<td>The default purchase price list, which shall be used for new purchase documents for this supplier. <code>Filter(multi eq)</code></td>
+<td>The default purchase price list, which shall be used for new purchase documents for this supplier.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -215,12 +215,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party who is the supplier for the enterprise company. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
+<td>The party who is the supplier for the enterprise company.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#suppliertype">SupplierType</a></td>
 <td><a href="Logistics.Procurement.SupplierTypes.html">SupplierTypes</a> (nullable)</td>
-<td>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records.</td>
 </tr>
 </tbody>
 </table>
@@ -283,7 +283,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="defaultdeliverytermdays">DefaultDeliveryTermDays</h3>
-<p>Default term in days for goods delivery, starting at the day of sending the purchase order. <code>Required</code> <code>Default(0)</code></p>
+<p>Default term in days for goods delivery, starting at the day of sending the purchase order</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -291,7 +291,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymentstartdays">DefaultPaymentStartDays</h3>
-<p>Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. <code>Required</code> <code>Default(0)</code></p>
+<p>Number of days until the payment becomes executable. 0 means that the payment is executable at all times.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -299,7 +299,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymenttermdays">DefaultPaymentTermDays</h3>
-<p>Default payment term in days, starting from the date of receiving the invoice. <code>Required</code> <code>Default(0)</code></p>
+<p>Default payment term in days, starting from the date of receiving the invoice</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -307,14 +307,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>The date on which this party became a supplier or the date, when the supplier contract was signed. <code>Filter(ge;le)</code></p>
+<p>The date on which this party became a supplier or the date, when the supplier contract was signed.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current supplier is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Indicates whether the current supplier is active.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -322,7 +322,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="number">Number</h3>
-<p>The unique supplier number. <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>The unique supplier number.</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -333,7 +333,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Number, null, &quot;00000&quot;)</code></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>The date (inclusive) on which this party ceased to be a supplier. <code>Filter(ge;le)</code></p>
+<p>The date (inclusive) on which this party ceased to be a supplier.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -398,25 +398,25 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultcurrency">DefaultCurrency</h3>
-<p>The default currency for purchases from this supplier. null means there is no default. <code>Filter(multi eq)</code></p>
+<p>The default currency for purchases from this supplier. NULL means there is no default</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymentaccount">DefaultPaymentAccount</h3>
-<p>When not null, specifies the default payment account which should be used for new purchase document for this supplier. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies the default payment account which should be used for new purchase document for this supplier.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymenttype">DefaultPaymentType</h3>
-<p>When not null, specifies the default payment type which should be used for new purchase document for this supplier. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies the default payment type which should be used for new purchase document for this supplier.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpurchasepricelist">DefaultPurchasePriceList</h3>
-<p>The default purchase price list, which shall be used for new purchase documents for this supplier. <code>Filter(multi eq)</code></p>
+<p>The default purchase price list, which shall be used for new purchase documents for this supplier.</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -428,7 +428,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>The party who is the supplier for the enterprise company. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
+<p>The party who is the supplier for the enterprise company.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -436,7 +436,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="suppliertype">SupplierType</h3>
-<p>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records.</p>
 <p>Type: <strong><a href="Logistics.Procurement.SupplierTypes.html">SupplierTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

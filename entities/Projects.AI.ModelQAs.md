@@ -36,21 +36,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Answer](Projects.AI.ModelQAs.md#answer) | string (max) | Desired answer. `Required` `Filter(like)` 
-| [CreationTimeUtc](Projects.AI.ModelQAs.md#creationtimeutc) | datetime | The time when the QA was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
-| [DeactivatonTimeUtc](Projects.AI.ModelQAs.md#deactivatontimeutc) | datetime __nullable__ | The time when the QA was deactivated. `Filter(eq;ge;le)` `ReadOnly` 
-| [IsActive](Projects.AI.ModelQAs.md#isactive) | boolean | Indicates whether to include this QA in future builds. `Required` `Default(true)` `Filter(eq)` 
+| [Answer](Projects.AI.ModelQAs.md#answer) | string (max) | Desired answer. 
+| [CreationTimeUtc](Projects.AI.ModelQAs.md#creationtimeutc) | datetime | The time when the QA was created. 
+| [DeactivatonTimeUtc](Projects.AI.ModelQAs.md#deactivatontimeutc) | datetime __nullable__ | The time when the QA was deactivated. 
+| [IsActive](Projects.AI.ModelQAs.md#isactive) | boolean | Indicates whether to include this QA in future builds. 
 | [Notes](Projects.AI.ModelQAs.md#notes) | string (max) __nullable__ | Notes for this ModelQA. 
-| [QAType](Projects.AI.ModelQAs.md#qatype) | [QAType](Projects.AI.ModelQAs.md#qatype) | Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs. `Required` `Default("T")` `Filter(eq)` 
-| [Question](Projects.AI.ModelQAs.md#question) | string (max) | User question. `Required` `Filter(like)` 
-| [Section](Projects.AI.ModelQAs.md#section) | string (128) | Free text organizational section of the QA. `Required` 
+| [QAType](Projects.AI.ModelQAs.md#qatype) | [QAType](Projects.AI.ModelQAs.md#qatype) | Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs. 
+| [Question](Projects.AI.ModelQAs.md#question) | string (max) | User question. 
+| [Section](Projects.AI.ModelQAs.md#section) | string (128) | Free text organizational section of the QA. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AddedByUser](Projects.AI.ModelQAs.md#addedbyuser) | [Users](Systems.Security.Users.md) | The user which added the QA. `Required` `Filter(multi eq)` `ReadOnly` |
-| [Model](Projects.AI.ModelQAs.md#model) | [Models](Projects.AI.Models.md) | The model to which the question belongs. `Required` `Filter(multi eq)` `Owner` |
+| [AddedByUser](Projects.AI.ModelQAs.md#addedbyuser) | [Users](Systems.Security.Users.md) | The user which added the QA. |
+| [Model](Projects.AI.ModelQAs.md#model) | [Models](Projects.AI.Models.md) | The model to which the question belongs. |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### Answer
 
-Desired answer. `Required` `Filter(like)`
+Desired answer.
 
 Type: **string (max)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The time when the QA was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
+The time when the QA was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### DeactivatonTimeUtc
 
-The time when the QA was deactivated. `Filter(eq;ge;le)` `ReadOnly`
+The time when the QA was deactivated.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether to include this QA in future builds. `Required` `Default(true)` `Filter(eq)`
+Indicates whether to include this QA in future builds.
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### QAType
 
-Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs. `Required` `Default("T")` `Filter(eq)`
+Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.
 
 Type: **[QAType](Projects.AI.ModelQAs.md#qatype)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### Question
 
-User question. `Required` `Filter(like)`
+User question.
 
 Type: **string (max)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### Section
 
-Free text organizational section of the QA. `Required`
+Free text organizational section of the QA.
 
 Type: **string (128)**  
 Category: **System**  
@@ -193,7 +193,7 @@ Show in UI: **HiddenByDefault**
 
 ### AddedByUser
 
-The user which added the QA. `Required` `Filter(multi eq)` `ReadOnly`
+The user which added the QA.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  
@@ -203,7 +203,7 @@ Show in UI: **ShownByDefault**
 
 ### Model
 
-The model to which the question belongs. `Required` `Filter(multi eq)` `Owner`
+The model to which the question belongs.
 
 Type: **[Models](Projects.AI.Models.md)**  
 Indexed: **True**  

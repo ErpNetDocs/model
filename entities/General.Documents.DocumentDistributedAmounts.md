@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](General.Documents.DocumentDistributedAmounts.md#amount) | [Amount (14, 2)](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)` 
-| [BaseAmount](General.Documents.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). . `Currency: GetDocumentCurrency()` `Introduced in version 22.1.4.44` 
+| [Amount](General.Documents.DocumentDistributedAmounts.md#amount) | [Amount (14, 2)](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. 
+| [BaseAmount](General.Documents.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system).  
 | [DocumentLineId](General.Documents.DocumentDistributedAmounts.md#documentlineid) | guid __nullable__ | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 
 ## References
@@ -53,8 +53,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](General.Documents.DocumentDistributedAmounts.md#document) | [Documents](General.Documents.Documents.md) | The <see cref="Document"/> to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner` |
-| [DocumentAmountType](General.Documents.DocumentDistributedAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The type of amount which is distributed. `Required` `Filter(multi eq)` |
-| [ReferencedDocument](General.Documents.DocumentDistributedAmounts.md#referenceddocument) | [Documents](General.Documents.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. `Filter(multi eq)` |
+| [DocumentAmountType](General.Documents.DocumentDistributedAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The type of amount which is distributed. |
+| [ReferencedDocument](General.Documents.DocumentDistributedAmounts.md#referenceddocument) | [Documents](General.Documents.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### Amount
 
-The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)`
+The amount which has beed distributed over the current line. The amount is in the currency of the document.
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseAmount
 
-The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). . `Currency: GetDocumentCurrency()` `Introduced in version 22.1.4.44`
+The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system).
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **CannotBeShown**
 
 ### DocumentAmountType
 
-The type of amount which is distributed. `Required` `Filter(multi eq)`
+The type of amount which is distributed.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferencedDocument
 
-In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. `Filter(multi eq)`
+In not null the Document_Line_Id is a line of the document with Referenced_Document_Id
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Indexed: **True**  

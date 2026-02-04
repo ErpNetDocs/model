@@ -122,42 +122,42 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#backgroundcolor">BackgroundColor</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</td>
+<td>When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#backgroundimage">BackgroundImage</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>The background image to be used for web visualization of the catalog. null means that background image won't be displayed.</td>
+<td>The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPosition<br>Horizontal</a></td>
 <td><a href="General.Products.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPosition<br>Horizontal</a></td>
-<td>Horizontal position of the Background Image. L=Left, C=Center, R=Right. <code>Required</code> <code>Default(&quot;L&quot;)</code></td>
+<td>Horizontal position of the Background Image. L=Left, C=Center, R=Right.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#backgroundpositionvertical">BackgroundPositionVertical</a></td>
 <td><a href="General.Products.ProductCatalogs.html#backgroundpositionvertical">BackgroundPositionVertical</a></td>
-<td>Vertical position of the Background Image. T=Top, C=Center, B=Bottom. <code>Required</code> <code>Default(&quot;T&quot;)</code></td>
+<td>Vertical position of the Background Image. T=Top, C=Center, B=Bottom.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#backgroundrepeat">BackgroundRepeat</a></td>
 <td><a href="General.Products.ProductCatalogs.html#backgroundrepeat">BackgroundRepeat</a></td>
-<td>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
+<td>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique catalog code. <code>Required</code></td>
+<td>Unique catalog code.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#footerhtml">FooterHtml</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</td>
+<td>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#headerhtml">HeaderHtml</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</td>
+<td>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#logo">Logo</a></td>
@@ -167,7 +167,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Product catalog name (multilanguage). <code>Required</code></td>
+<td>Product catalog name (multilanguage).</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#notes">Notes</a></td>
@@ -189,12 +189,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#rootproductgroup">RootProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a></td>
-<td>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductCatalogs.html#website">WebSite</a></td>
 <td><a href="Systems.Config.WebSites.html">WebSites</a> (nullable)</td>
-<td>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.</td>
 </tr>
 </tbody>
 </table>
@@ -242,21 +242,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="backgroundcolor">BackgroundColor</h3>
-<p>When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</p>
+<p>When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="backgroundimage">BackgroundImage</h3>
-<p>The background image to be used for web visualization of the catalog. null means that background image won't be displayed.</p>
+<p>The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="backgroundpositionhorizontal">BackgroundPositionHorizontal</h3>
-<p>Horizontal position of the Background Image. L=Left, C=Center, R=Right. <code>Required</code> <code>Default(&quot;L&quot;)</code></p>
+<p>Horizontal position of the Background Image. L=Left, C=Center, R=Right.</p>
 <p>Type: <strong><a href="General.Products.ProductCatalogs.html#backgroundpositionhorizontal">BackgroundPosition<br>Horizontal</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>BackgroundPositionHorizontal</code>(General.Products.ProductCatalogs.md#backgroundpositionhorizontal) data attribute<br>
@@ -288,7 +288,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Left</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="backgroundpositionvertical">BackgroundPositionVertical</h3>
-<p>Vertical position of the Background Image. T=Top, C=Center, B=Bottom. <code>Required</code> <code>Default(&quot;T&quot;)</code></p>
+<p>Vertical position of the Background Image. T=Top, C=Center, B=Bottom.</p>
 <p>Type: <strong><a href="General.Products.ProductCatalogs.html#backgroundpositionvertical">BackgroundPositionVertical</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>BackgroundPositionVertical</code>(General.Products.ProductCatalogs.md#backgroundpositionvertical) data attribute<br>
@@ -320,7 +320,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Top</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="backgroundrepeat">BackgroundRepeat</h3>
-<p>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. <code>Required</code> <code>Default(&quot;R&quot;)</code></p>
+<p>Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.</p>
 <p>Type: <strong><a href="General.Products.ProductCatalogs.html#backgroundrepeat">BackgroundRepeat</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>BackgroundRepeat</code>(General.Products.ProductCatalogs.md#backgroundrepeat) data attribute<br>
@@ -356,7 +356,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>RepeatBothVerticallyAndHorizontally</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique catalog code. <code>Required</code></p>
+<p>Unique catalog code.</p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -364,7 +364,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="footerhtml">FooterHtml</h3>
-<p>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.</p>
+<p>The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -372,7 +372,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="headerhtml">HeaderHtml</h3>
-<p>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.</p>
+<p>The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -387,7 +387,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Product catalog name (multilanguage). <code>Required</code></p>
+<p>Product catalog name (multilanguage).</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -445,13 +445,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="rootproductgroup">RootProductGroup</h3>
-<p>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.</p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="website">WebSite</h3>
-<p>The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.</p>
 <p>Type: <strong><a href="Systems.Config.WebSites.html">WebSites</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

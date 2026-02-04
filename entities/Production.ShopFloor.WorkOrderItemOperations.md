@@ -4,7 +4,7 @@ uid: Production.ShopFloor.WorkOrderItemOperations
 # Production.ShopFloor.WorkOrderItemOperations
 
 
-The operations that are performed to produce the product.
+The operations that are performed to produce the product
 
 ## General
 Namespace: [Production.ShopFloor](Production.ShopFloor.md)  
@@ -35,29 +35,29 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualenddatetime) | datetime __nullable__ | The date/time when the operation has completed. null means that the operation is not completed. `Filter(ge;le)` 
-| [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime __nullable__ | The date/time when the operation has started. null means that the has not started yet. `Filter(ge;le)` 
-| [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing. `Required` `Filter(eq;like)` 
-| [MinimumConcurrent<br />StartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
-| [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` 
+| [ActualEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualenddatetime) | datetime __nullable__ | The date/time when the operation has completed. NULL means that the operation is not completed. 
+| [ActualStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#actualstartdatetime) | datetime __nullable__ | The date/time when the operation has started. NULL means that the has not started yet 
+| [LineOrd](Production.ShopFloor.WorkOrderItemOperations.md#lineord) | int32 | Order of the line within the work order routing 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting 
+| [MoveTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes 
 | [Notes](Production.ShopFloor.WorkOrderItemOperations.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemOperation. 
 | [OperationDescription](Production.ShopFloor.WorkOrderItemOperations.md#operationdescription) | string (max) __nullable__ | The short description of the operation. 
-| [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#runtimeminutes) | int32 | Time for production of one lot of the produced item in minutes. `Required` `Default(0)` 
-| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledenddatetime) | datetime __nullable__ | The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). `Filter(ge;le)` 
-| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledstartdatetime) | datetime __nullable__ | The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). `Filter(ge;le)` 
-| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal (7, 6) | Projected scrap rate of the operation. `Required` `Default(0)` 
-| [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes. `Required` `Default(0)` 
-| [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step. 
-| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` 
-| [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
+| [RunTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#runtimeminutes) | int32 | Time for production of one lot of the produced item in minutes 
+| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledenddatetime) | datetime __nullable__ | The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only) 
+| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItemOperations.md#scheduledstartdatetime) | datetime __nullable__ | The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders) 
+| [ScrapRate](Production.ShopFloor.WorkOrderItemOperations.md#scraprate) | decimal (7, 6) | Projected scrap rate of the operation 
+| [SetupTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment in minutes 
+| [Tooling](Production.ShopFloor.WorkOrderItemOperations.md#tooling) | string (max) __nullable__ | Description of the instruments that are used fot this operation. 
+| [UseQuantity](Production.ShopFloor.WorkOrderItemOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the resource, that should be allocated for the operation 
+| [WaitTimeMinutes](Production.ShopFloor.WorkOrderItemOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The performed operation. `Filter(multi eq)` |
-| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. null means that no resource will be locked for the operation. `Required` `Filter(multi eq)` |
-| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. `Required` `Filter(multi eq)` `Owner` |
+| [Operation](Production.ShopFloor.WorkOrderItemOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The performed operation. |
+| [WorkgroupResource](Production.ShopFloor.WorkOrderItemOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The resource that will be used for the operation. NULL means that no resource will be locked for the operation |
+| [WorkOrderItem](Production.ShopFloor.WorkOrderItemOperations.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, containing the line. |
 
 
 ## System Attributes
@@ -79,7 +79,7 @@ Aggregate Root:
 
 ### ActualEndDateTime
 
-The date/time when the operation has completed. null means that the operation is not completed. `Filter(ge;le)`
+The date/time when the operation has completed. NULL means that the operation is not completed.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ActualStartDateTime
 
-The date/time when the operation has started. null means that the has not started yet. `Filter(ge;le)`
+The date/time when the operation has started. NULL means that the has not started yet
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-Order of the line within the work order routing. `Required` `Filter(eq;like)`
+Order of the line within the work order routing
 
 Type: **int32**  
 Category: **System**  
@@ -114,7 +114,7 @@ Front-End Recalc Expressions:
 `( obj.WorkOrderItem.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### MinimumConcurrentStartTimeMinutes
 
-How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
+How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### MoveTimeMinutes
 
-Time to move the lot to the next operation in minutes. `Required` `Default(0)`
+Time to move the lot to the next operation in minutes
 
 Type: **int32**  
 Category: **System**  
@@ -159,7 +159,7 @@ Front-End Recalc Expressions:
 `obj.Operation.Name`
 ### RunTimeMinutes
 
-Time for production of one lot of the produced item in minutes. `Required` `Default(0)`
+Time for production of one lot of the produced item in minutes
 
 Type: **int32**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### ScheduledEndDateTime
 
-The date/time when the operation is scheduled to complete. null means that there is still no plan when the operation will finish (for new orders only). `Filter(ge;le)`
+The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -180,7 +180,7 @@ Show in UI: **ShownByDefault**
 
 ### ScheduledStartDateTime
 
-The date/time when the operation is planned to start. null means that there is still no plan when to start the operaion (only for new work orders). `Filter(ge;le)`
+The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### ScrapRate
 
-Projected scrap rate of the operation. `Required` `Default(0)`
+Projected scrap rate of the operation
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -201,7 +201,7 @@ Show in UI: **CannotBeShown**
 
 ### SetupTimeMinutes
 
-Time needed to setup the equipment in minutes. `Required` `Default(0)`
+Time needed to setup the equipment in minutes
 
 Type: **int32**  
 Category: **System**  
@@ -212,7 +212,7 @@ Show in UI: **ShownByDefault**
 
 ### Tooling
 
-The tools needed for the routing step.
+Description of the instruments that are used fot this operation.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -223,7 +223,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantity
 
-Quantity of the resource, that should be allocated for the operation. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)`
+Quantity of the resource, that should be allocated for the operation
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -234,7 +234,7 @@ Show in UI: **ShownByDefault**
 
 ### WaitTimeMinutes
 
-Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)`
+Wait time (drying, cooling, etc.) after the operation in minutes
 
 Type: **int32**  
 Category: **System**  
@@ -277,7 +277,7 @@ Show in UI: **HiddenByDefault**
 
 ### Operation
 
-The performed operation. `Filter(multi eq)`
+The performed operation.
 
 Type: **[Operations](Production.Resources.Operations.md) (nullable)**  
 Category: **System**  
@@ -286,7 +286,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkgroupResource
 
-The resource that will be used for the operation. null means that no resource will be locked for the operation. `Required` `Filter(multi eq)`
+The resource that will be used for the operation. NULL means that no resource will be locked for the operation
 
 Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 Category: **System**  
@@ -295,7 +295,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkOrderItem
 
-The work order item, containing the line. `Required` `Filter(multi eq)` `Owner`
+The work order item, containing the line.
 
 Type: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 Indexed: **True**  

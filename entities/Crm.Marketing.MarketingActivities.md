@@ -4,7 +4,7 @@ uid: Crm.Marketing.MarketingActivities
 # Crm.Marketing.MarketingActivities
 
 
-Marketing activity, part of a marketing campaign.
+Marketing activity, part of a marketing campaign
 
 ## General
 Namespace: [Crm.Marketing](Crm.Marketing.md)  
@@ -50,7 +50,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivitiesCreated](Crm.Marketing.MarketingActivities.md#activitiescreated) | boolean | True if the related activites are already created. Related activity can be created for each member of the target group. `Required` `Default(false)` 
+| [ActivitiesCreated](Crm.Marketing.MarketingActivities.md#activitiescreated) | boolean | 1 if the related activites are already created. Related activity can be created for each member of the target group. 
 | [AdjustmentNumber](Crm.Marketing.MarketingActivities.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Marketing.MarketingActivities.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Marketing.MarketingActivities.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -64,7 +64,7 @@ Aggregate Tree
 | [DocumentVersion](Crm.Marketing.MarketingActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EndTime](Crm.Marketing.MarketingActivities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [EntityName](Crm.Marketing.MarketingActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency 
 | [FullState](Crm.Marketing.MarketingActivities.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [<s>IsReleased</s>](Crm.Marketing.MarketingActivities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [IsSingleExecution](Crm.Marketing.MarketingActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Activities.Activities.md)) 
@@ -96,7 +96,7 @@ Aggregate Tree
 | [AccessKey](Crm.Marketing.MarketingActivities.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Crm.Marketing.MarketingActivities.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Crm.Marketing.MarketingActivities.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Campaign](Crm.Marketing.MarketingActivities.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | The marketing campaing, to which this activity belongs. `Filter(multi eq)` |
+| [Campaign](Crm.Marketing.MarketingActivities.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | The marketing campaing, to which this activity belongs |
 | [ContactPerson](Crm.Marketing.MarketingActivities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [CurrencyDirectory](Crm.Marketing.MarketingActivities.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Crm.Marketing.MarketingActivities.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -114,7 +114,7 @@ Aggregate Tree
 | [ReverseOfDocument](Crm.Marketing.MarketingActivities.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Crm.Marketing.MarketingActivities.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [SocialGroup](Crm.Marketing.MarketingActivities.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). `Filter(multi eq)` `Introduced in version 23.1.1.3` (Inherited from [Activities](General.Activities.Activities.md)) |
-| [TargetGroup](Crm.Marketing.MarketingActivities.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | The target group of parties to be treated by this activity. `Filter(multi eq)` |
+| [TargetGroup](Crm.Marketing.MarketingActivities.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | The target group of parties to be treated by this activity |
 | [TargetParty](Crm.Marketing.MarketingActivities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [ToCompanyDivision](Crm.Marketing.MarketingActivities.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.Marketing.MarketingActivities.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -155,7 +155,7 @@ Aggregate Tree
 
 ### ActivitiesCreated
 
-True if the related activites are already created. Related activity can be created for each member of the target group. `Required` `Default(false)`
+1 if the related activites are already created. Related activity can be created for each member of the target group.
 
 Type: **boolean**  
 Category: **System**  
@@ -308,7 +308,7 @@ Show in UI: **CannotBeShown**
 
 ### ForecastedCost
 
-Forecasted cost of the activity in base currency. `Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
+Forecasted cost of the activity in base currency
 
 Type: **[Amount (18, 0)](../data-types.md#amount)**  
 Category: **System**  
@@ -710,7 +710,7 @@ Show in UI: **ShownByDefault**
 
 ### Campaign
 
-The marketing campaing, to which this activity belongs. `Filter(multi eq)`
+The marketing campaing, to which this activity belongs
 
 Type: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
 Category: **System**  
@@ -878,7 +878,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetGroup
 
-The target group of parties to be treated by this activity. `Filter(multi eq)`
+The target group of parties to be treated by this activity
 
 Type: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 Category: **System**  

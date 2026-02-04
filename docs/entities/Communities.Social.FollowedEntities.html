@@ -87,7 +87,7 @@
         <article data-uid="Communities.Social.FollowedEntities">
 <h1 id="communitiessocialfollowedentities-view">Communities.Social.FollowedEntities (View)</h1>
 
-<p>Optimized view returning social followed entities by users.</p>
+<p>Optimized view returning social followed entities by users</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Communities.Social.html">Communities.Social</a><br>
 Repository: Communities.Social.FollowedEntities<br>
@@ -117,7 +117,7 @@ Show in UI:  CannotBeShown</p>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the follow was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc</code> <code>Introduced in version 22.1.6.73</code></td>
+<td>The exact server time (in UTC), when the follow was created.</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#entityitemid">EntityItemId</a></td>
@@ -127,7 +127,7 @@ Show in UI:  CannotBeShown</p>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#entitytype">EntityType</a></td>
 <td>string (64)</td>
-<td>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></td>
+<td>The entity type of the row to which the object is bound</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#followlevel">FollowLevel</a></td>
@@ -149,18 +149,18 @@ Show in UI:  CannotBeShown</p>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The object being followed by the user. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.Data_Object_Id</code> <code>Introduced in version 22.1.6.73</code></td>
+<td>The object being followed by the user.</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user which follows the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.User_Id</code> <code>Introduced in version 22.1.6.73</code></td>
+<td>The user which follows the object.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC), when the follow was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc</code> <code>Introduced in version 22.1.6.73</code></p>
+<p>The exact server time (in UTC), when the follow was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cmm_Social_Follows_Table.Creation_Time_Utc</strong><br>
@@ -176,7 +176,7 @@ Inherited From: <strong>Sys_Objects_Table.Entity_Item_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entitytype">EntityType</h3>
-<p>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Entity_Type</code></p>
+<p>The entity type of the row to which the object is bound</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Objects_Table.Entity_Type</strong><br>
@@ -220,14 +220,14 @@ Default Value: <strong>Tagged</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
-<p>The object being followed by the user. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.Data_Object_Id</code> <code>Introduced in version 22.1.6.73</code></p>
+<p>The object being followed by the user.</p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cmm_Social_Follows_Table.Data_Object_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user which follows the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cmm_Social_Follows_Table.User_Id</code> <code>Introduced in version 22.1.6.73</code></p>
+<p>The user which follows the object.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cmm_Social_Follows_Table.User_Id</strong><br>

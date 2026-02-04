@@ -87,7 +87,9 @@
         <article data-uid="Crm.Sales.SalesOrders">
 <h1 id="crmsalessalesorders">Crm.Sales.SalesOrders</h1>
 
-<p>Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms. This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings. Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting.</p>
+<p>Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms.</p>
+<p>This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings.</p>
+<p>Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Sales.html">Crm.Sales</a><br>
 Repository: Crm.Sales.SalesOrders<br>
@@ -162,7 +164,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#applytradeconditions">ApplyTradeConditions</a></td>
 <td>boolean <strong>nullable</strong></td>
-<td>Specifies whether the system should apply standard pricing and discounts to this document. <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></td>
+<td>Specifies whether the system should apply standard pricing and discounts to this document.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#completetime">CompleteTime</a></td>
@@ -182,22 +184,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#creditlimitoverride">CreditLimitOverride</a></td>
 <td>boolean</td>
-<td>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#customerpurchaseorderdate">CustomerPurchaseOrderDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Issue date of the referent customer purchase order. <code>Filter(ge;le)</code></td>
+<td>Date of the customer's purchase order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#customerpurchaseorderno">CustomerPurchaseOrderNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>Reference number of the customer's purchase order. <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Reference number of the customer's purchase order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#deliverytermscode">DeliveryTermsCode</a></td>
 <td><a href="Crm.Sales.SalesOrders.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></td>
-<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#documentdate">DocumentDate</a></td>
@@ -227,12 +229,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fiscalsalesnumber">FiscalSalesNumber</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. <code>Filter(multi eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 19.1</code></td>
+<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
+<td>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fullstate">FullState</a></td>
@@ -242,27 +244,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
 <td><a href="Crm.Sales.SalesOrders.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></td>
-<td>Transaction nature; used for Intrastat reporting.</td>
+<td>Transaction nature; used for Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#intrastattransportmodecode">IntrastatTransportModeCode</a></td>
 <td><a href="Crm.Sales.SalesOrders.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></td>
-<td>Transport mode; used for Intrastat reporting.</td>
+<td>Transport mode; used for Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#isvalidfield">IsValidField</a></td>
 <td>boolean</td>
-<td>True when the order is valid (e.g. released and not void). Used for internal processing. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
+<td>1 when the order is valid (e.g. released and not void). Used for internal processing.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#notes"><s>Notes</s></a></td>
@@ -277,12 +279,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The last term for the payment of the sales order. <code>Filter(ge;le)</code></td>
+<td>The last term for the payment of the sales order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#paymentduestartdate">PaymentDueStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date when the payment becomes due for documents with one installment. null when the document is with multiple installments. <code>Filter(ge;le)</code></td>
+<td>The date when the payment becomes due for documents with one installment.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#planningonly">PlanningOnly</a></td>
@@ -312,7 +314,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. <code>Filter(ge;le)</code></td>
+<td>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#state">State</a></td>
@@ -327,7 +329,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
+<td>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#totallineamount">TotalLineAmount</a></td>
@@ -389,32 +391,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The primary customer, which placed the sales order. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The primary customer, which placed the sales order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#deal">Deal</a></td>
 <td><a href="Crm.Presales.Deals.html">Deals</a> (nullable)</td>
-<td>The opportunity (deal) on which this order is based. <code>Filter(multi eq)</code></td>
+<td>The opportunity (deal) on which this order is based</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#dealer">Dealer</a></td>
 <td><a href="Crm.Sales.Dealers.html">Dealers</a> (nullable)</td>
-<td>The external dealer, associated with the sales order. <code>Filter(multi eq)</code></td>
+<td>The external dealer, associated with the sales order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#dealtype">DealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. <code>Filter(multi eq)</code></td>
+<td>Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#distributionchannel">DistributionChannel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
-<td>The distribution channel, that is used to deliver the products. <code>Filter(multi eq)</code></td>
+<td>Distribution channel used to deliver the products</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency of the document; e.g. the currency of the amounts in the document. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency of the document; e.g. the currency of the amounts in the document</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#documenttype">DocumentType</a></td>
@@ -424,7 +426,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#endcustomerparty">EndCustomerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -439,7 +441,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fiscalprinterposdevice">FiscalPrinterPosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</td>
-<td>For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fromcompanydivision">FromCompanyDivision</a></td>
@@ -454,7 +456,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
-<td>Country of origin of the transport company; used for Intrastat reporting. <code>Filter(multi eq)</code></td>
+<td>Country of origin of the transport company; used for Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#masterdocument">MasterDocument</a></td>
@@ -469,32 +471,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>When not null, the payment account, where the payment is expected. null=no expectation for account. <code>Filter(multi eq)</code></td>
+<td>When not NULL, the payment account, where the payment is expected. NULL=no expectation for account</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>When not null specifies the payment type for the sales order. <code>Filter(multi eq)</code></td>
+<td>When not NULL specifies the payment type for the sales order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</td>
-<td>For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#posoperator">PosOperator</a></td>
 <td><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</td>
-<td>For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#posterminal">PosTerminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</td>
-<td>For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#pricelist">PriceList</a></td>
 <td><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</td>
-<td>The price list to be used for determining product prices in the lines. <code>Filter(multi eq)</code></td>
+<td>The price list to be used for determining product prices in the lines</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -509,12 +511,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#returnforinvoice">ReturnForInvoice</a></td>
 <td><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</td>
-<td>When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. <code>Filter(multi eq)</code></td>
+<td>When specified indicates that some of the goods sold in the sales orders invoiced with 'Return for invoice' are returned with the current document.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#returnforsalesorder">ReturnForSalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
-<td>When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. <code>Filter(multi eq;like)</code></td>
+<td>When specified indicates that some of the goods sold in 'Return for sales order' are returned with the current document.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#reverseofdocument">ReverseOfDocument</a></td>
@@ -524,7 +526,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</td>
-<td>Internal company sales person. <code>Filter(multi eq)</code></td>
+<td>Internal company sales person</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#sequence">Sequence</a></td>
@@ -534,17 +536,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#shiptocustomer">ShipToCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. <code>Filter(multi eq)</code></td>
+<td>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#shiptopartycontactmechanism">ShipToPartyContact<br>Mechanism</a></td>
 <td><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a> (nullable)</td>
-<td>The contact mechanism (address) to whih to ship the sales order. <code>Filter(multi eq)</code></td>
+<td>The contact mechanism (address) to whih to ship the sales order</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. <code>Filter(multi eq)</code></td>
+<td>The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -709,7 +711,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="applytradeconditions">ApplyTradeConditions</h3>
-<p>Specifies whether the system should apply standard pricing and discounts to this document. <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></p>
+<p>Specifies whether the system should apply standard pricing and discounts to this document.</p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -742,7 +744,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditlimitoverride">CreditLimitOverride</h3>
-<p>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -750,14 +752,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customerpurchaseorderdate">CustomerPurchaseOrderDate</h3>
-<p>Issue date of the referent customer purchase order. <code>Filter(ge;le)</code></p>
+<p>Date of the customer's purchase order</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customerpurchaseorderno">CustomerPurchaseOrderNo</h3>
-<p>Reference number of the customer's purchase order. <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Reference number of the customer's purchase order</p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -766,7 +768,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="deliverytermscode">DeliveryTermsCode</h3>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
+<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for DeliveryTerms properties<br>
@@ -878,7 +880,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="fiscalsalesnumber">FiscalSalesNumber</h3>
-<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. <code>Filter(multi eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 19.1</code></p>
+<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -886,7 +888,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
+<p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -902,7 +904,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
-<p>Transaction nature; used for Intrastat reporting.</p>
+<p>Transaction nature; used for Intrastat reporting</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransactionNature properties<br>
@@ -999,7 +1001,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
-<p>Transport mode; used for Intrastat reporting.</p>
+<p>Transport mode; used for Intrastat reporting</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransportMode properties<br>
@@ -1052,7 +1054,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1060,7 +1062,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1068,7 +1070,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isvalidfield">IsValidField</h3>
-<p>True when the order is valid (e.g. released and not void). Used for internal processing. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
+<p>1 when the order is valid (e.g. released and not void). Used for internal processing.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -1115,7 +1117,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>The last term for the payment of the sales order. <code>Filter(ge;le)</code></p>
+<p>The last term for the payment of the sales order</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1124,7 +1126,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentTermDays != 0), obj.ShipToCustomer.DefaultPaymentTermDays, obj.Customer.DefaultPaymentTermDays), Double))</code></p>
 <h3 id="paymentduestartdate">PaymentDueStartDate</h3>
-<p>The date when the payment becomes due for documents with one installment. null when the document is with multiple installments. <code>Filter(ge;le)</code></p>
+<p>The date when the payment becomes due for documents with one installment.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1172,7 +1174,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<p>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. <code>Filter(ge;le)</code></p>
+<p>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1237,7 +1239,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. <code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
+<p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1378,26 +1380,26 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The primary customer, which placed the sales order. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The primary customer, which placed the sales order</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deal">Deal</h3>
-<p>The opportunity (deal) on which this order is based. <code>Filter(multi eq)</code></p>
+<p>The opportunity (deal) on which this order is based</p>
 <p>Type: <strong><a href="Crm.Presales.Deals.html">Deals</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="dealer">Dealer</h3>
-<p>The external dealer, associated with the sales order. <code>Filter(multi eq)</code></p>
+<p>The external dealer, associated with the sales order</p>
 <p>Type: <strong><a href="Crm.Sales.Dealers.html">Dealers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="dealtype">DealType</h3>
-<p>Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. <code>Filter(multi eq)</code></p>
+<p>Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1405,7 +1407,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; c.LineDealType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
-<p>The distribution channel, that is used to deliver the products. <code>Filter(multi eq)</code></p>
+<p>Distribution channel used to deliver the products</p>
 <p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1413,7 +1415,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ShipToCustomer.DefaultDistributionChannel.IfNullThen( obj.Customer.DefaultDistributionChannel).IfNullThen( obj.DistributionChannel)</code></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency of the document; e.g. the currency of the amounts in the document. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency of the document; e.g. the currency of the amounts in the document</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1430,7 +1432,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endcustomerparty">EndCustomerParty</h3>
-<p>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
+<p>The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1451,7 +1453,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fiscalprinterposdevice">FiscalPrinterPosDevice</h3>
-<p>For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.</p>
 <p>Type: <strong><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1469,7 +1471,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
-<p>Country of origin of the transport company; used for Intrastat reporting. <code>Filter(multi eq)</code></p>
+<p>Country of origin of the transport company; used for Intrastat reporting</p>
 <p>Type: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1491,7 +1493,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>When not null, the payment account, where the payment is expected. null=no expectation for account. <code>Filter(multi eq)</code></p>
+<p>When not NULL, the payment account, where the payment is expected. NULL=no expectation for account</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1500,7 +1502,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <code>DeterminePaymentAccount( obj.Transaction, obj.Customer, obj.ShipToCustomer, obj.PaymentType, obj.PaymentAccount)</code>
 <code>obj.PaymentPlans.Select( c =&gt; c.PaymentAccount).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>When not null specifies the payment type for the sales order. <code>Filter(multi eq)</code></p>
+<p>When not NULL specifies the payment type for the sales order</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1509,25 +1511,25 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <code>obj.ShipToCustomer.DefaultPaymentType.IfNullThen( obj.Customer.DefaultPaymentType).IfNullThen( obj.PaymentType)</code>
 <code>obj.PaymentPlans.Select( c =&gt; c.PaymentType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="poslocation">PosLocation</h3>
-<p>For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.</p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posoperator">PosOperator</h3>
-<p>For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posterminal">PosTerminal</h3>
-<p>For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.</p>
 <p>Type: <strong><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pricelist">PriceList</h3>
-<p>The price list to be used for determining product prices in the lines. <code>Filter(multi eq)</code></p>
+<p>The price list to be used for determining product prices in the lines</p>
 <p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1546,14 +1548,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="returnforinvoice">ReturnForInvoice</h3>
-<p>When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. <code>Filter(multi eq)</code></p>
+<p>When specified indicates that some of the goods sold in the sales orders invoiced with 'Return for invoice' are returned with the current document.</p>
 <p>Type: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="returnforsalesorder">ReturnForSalesOrder</h3>
-<p>When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. <code>Filter(multi eq;like)</code></p>
+<p>When specified indicates that some of the goods sold in 'Return for sales order' are returned with the current document.</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1566,7 +1568,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>Internal company sales person. <code>Filter(multi eq)</code></p>
+<p>Internal company sales person</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1581,7 +1583,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
-<p>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. <code>Filter(multi eq)</code></p>
+<p>The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1589,7 +1591,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>DetermineShipToCustomer( obj.Transaction, obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.Customer, obj.ShipToCustomer)</code></p>
 <h3 id="shiptopartycontactmechanism">ShipToPartyContactMechanism</h3>
-<p>The contact mechanism (address) to whih to ship the sales order. <code>Filter(multi eq)</code></p>
+<p>The contact mechanism (address) to whih to ship the sales order</p>
 <p>Type: <strong><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1598,7 +1600,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ShipToCustomer.Party.DefaultContactMechanism.IfNullThen( obj.Customer.Party.DefaultContactMechanism)</code></p>
 <h3 id="store">Store</h3>
-<p>The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. <code>Filter(multi eq)</code></p>
+<p>The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

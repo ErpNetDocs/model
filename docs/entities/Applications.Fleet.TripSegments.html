@@ -87,7 +87,7 @@
         <article data-uid="Applications.Fleet.TripSegments">
 <h1 id="applicationsfleettripsegments">Applications.Fleet.TripSegments</h1>
 
-<p>Represents the segments which comprise the route of the trips.</p>
+<p>Represents the segments which comprise the route of the trips</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Applications.Fleet.html">Applications.Fleet</a><br>
 Repository: Applications.Fleet.TripSegments<br>
@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#endingtimestamp">EndingTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The ending date and time of the travel on the segment. <code>Filter(ge;le)</code></td>
+<td>The ending date and time of the travel on the segment</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#mileage">Mileage</a></td>
 <td>decimal (9, 0) <strong>nullable</strong></td>
-<td>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.</td>
+<td>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Notes for the segment.</td>
+<td>Notes for the segment</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#startingtimestamp">StartingTimestamp</a></td>
 <td>datetime</td>
-<td>The starting date and time of the travel on the segment. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The starting date and time of the travel on the segment</td>
 </tr>
 </tbody>
 </table>
@@ -153,17 +153,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#endingmappoint">EndingMapPoint</a></td>
 <td><a href="General.Geography.MapPoints.html">MapPoints</a></td>
-<td>The ending geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The ending geographical point of the route segment</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#startingmappoint">StartingMapPoint</a></td>
 <td><a href="General.Geography.MapPoints.html">MapPoints</a></td>
-<td>The starting geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The starting geographical point of the route segment</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#trip">Trip</a></td>
 <td><a href="Applications.Fleet.Trips.html">Trips</a></td>
-<td>The trip for which the segment is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The trip for which the segment is defined</td>
 </tr>
 </tbody>
 </table>
@@ -196,21 +196,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="endingtimestamp">EndingTimestamp</h3>
-<p>The ending date and time of the travel on the segment. <code>Filter(ge;le)</code></p>
+<p>The ending date and time of the travel on the segment</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="mileage">Mileage</h3>
-<p>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage.</p>
+<p>Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage</p>
 <p>Type: <strong>decimal (9, 0) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the segment.</p>
+<p>Notes for the segment</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -218,7 +218,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startingtimestamp">StartingTimestamp</h3>
-<p>The starting date and time of the travel on the segment. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The starting date and time of the travel on the segment</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -247,19 +247,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="endingmappoint">EndingMapPoint</h3>
-<p>The ending geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The ending geographical point of the route segment</p>
 <p>Type: <strong><a href="General.Geography.MapPoints.html">MapPoints</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startingmappoint">StartingMapPoint</h3>
-<p>The starting geographical point of the route segment. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The starting geographical point of the route segment</p>
 <p>Type: <strong><a href="General.Geography.MapPoints.html">MapPoints</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trip">Trip</h3>
-<p>The trip for which the segment is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The trip for which the segment is defined</p>
 <p>Type: <strong><a href="Applications.Fleet.Trips.html">Trips</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

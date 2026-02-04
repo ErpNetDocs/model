@@ -33,18 +33,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. `Required` `Filter(eq;ge;le)` `ORD` 
+| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created. 
 | [DurationHours](Projects.Agile.TimeEntries.md#durationhours) | decimal (0, 0) | Total duration of the logged time (in hours). [ReadOnly] 
-| [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(eq;ge;le)` 
-| [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes. `Filter(like)` 
-| [StartTime](Projects.Agile.TimeEntries.md#starttime) | time | The start time of the logged work. Stored in the local time zone of the user. `Required` `Filter(eq;ge;le)` `ORD` 
+| [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. 
+| [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes 
+| [StartTime](Projects.Agile.TimeEntries.md#starttime) | time | The start time of the logged work. Stored in the local time zone of the user. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Case](Projects.Agile.TimeEntries.md#case) | [Cases](Projects.Agile.Cases.md) | The case for which the time is recorded. `Required` `Filter(multi eq)` |
-| [User](Projects.Agile.TimeEntries.md#user) | [Users](Systems.Security.Users.md) | The user for whom the time is recorded. `Required` `Filter(multi eq)` `ReadOnly` |
+| [Case](Projects.Agile.TimeEntries.md#case) | [Cases](Projects.Agile.Cases.md) | The case for which the time is recorded. |
+| [User](Projects.Agile.TimeEntries.md#user) | [Users](Systems.Security.Users.md) | The user for whom the time is recorded. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Date
 
-The date for which the time entry is created. `Required` `Filter(eq;ge;le)` `ORD`
+The date for which the time entry is created.
 
 Type: **date**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### EndTime
 
-The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. `Filter(eq;ge;le)`
+The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes. `Filter(like)`
+Notes
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The start time of the logged work. Stored in the local time zone of the user. `Required` `Filter(eq;ge;le)` `ORD`
+The start time of the logged work. Stored in the local time zone of the user.
 
 Type: **time**  
 Category: **System**  
@@ -175,7 +175,7 @@ Show in UI: **HiddenByDefault**
 
 ### Case
 
-The case for which the time is recorded. `Required` `Filter(multi eq)`
+The case for which the time is recorded.
 
 Type: **[Cases](Projects.Agile.Cases.md)**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user for whom the time is recorded. `Required` `Filter(multi eq)` `ReadOnly`
+The user for whom the time is recorded.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

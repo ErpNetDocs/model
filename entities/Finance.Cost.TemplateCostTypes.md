@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)` 
+| [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The <see cref="Template"/> to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner` |
-| [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. `Required` `Filter(multi eq)` |
+| [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. |
 
 
 ## System Attributes
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### HierarchyLevel
 
-The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)`
+The level in the hierarchy on which this cost is incurred (0..9)
 
 Type: **int32**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### CostType
 
-The Cost Type for which the hierarchy is specified. `Required` `Filter(multi eq)`
+The Cost Type for which the hierarchy is specified.
 
 Type: **[CostTypes](Finance.Cost.CostTypes.md)**  
 Category: **System**  

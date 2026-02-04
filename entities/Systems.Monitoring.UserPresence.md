@@ -4,7 +4,7 @@ uid: Systems.Monitoring.UserPresence
 # Systems.Monitoring.UserPresence (View)
 
 
-Tracks user availability and status changes in real time.
+Tracks user availability and status changes in real time
 
 ## General
 Namespace: [Systems.Monitoring](Systems.Monitoring.md)  
@@ -28,17 +28,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LastUpdateTimeUtc](Systems.Monitoring.UserPresence.md#lastupdatetimeutc) | datetime | Timestamp (UTC) of the last status update. `Required` `Filter(ge;le)` `ORD` `ReadOnly` 
-| [Status](Systems.Monitoring.UserPresence.md#status) | [Status](Systems.Monitoring.UserPresence.md#status) | The user's current presence status. `Required` `Filter(multi eq)` `ReadOnly` 
+| [LastUpdateTimeUtc](Systems.Monitoring.UserPresence.md#lastupdatetimeutc) | datetime | Timestamp (UTC) of the last status update. 
+| [Status](Systems.Monitoring.UserPresence.md#status) | [Status](Systems.Monitoring.UserPresence.md#status) | The user's current presence status. 
 | [UserId](Systems.Monitoring.UserPresence.md#userid) | guid | Unique identifier for the user. `Required` `Filter(multi eq)` `ReadOnly` 
-| [UserLogin](Systems.Monitoring.UserPresence.md#userlogin) | string (64) | The username used to log in. `Required` `Filter(multi eq;like)` `ReadOnly` 
+| [UserLogin](Systems.Monitoring.UserPresence.md#userlogin) | string (64) | The username used to log in. 
 
 
 ## Attribute Details
 
 ### LastUpdateTimeUtc
 
-Timestamp (UTC) of the last status update. `Required` `Filter(ge;le)` `ORD` `ReadOnly`
+Timestamp (UTC) of the last status update.
 
 Type: **datetime**  
 Category: **System**  
@@ -48,7 +48,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-The user's current presence status. `Required` `Filter(multi eq)` `ReadOnly`
+The user's current presence status.
 
 Type: **[Status](Systems.Monitoring.UserPresence.md#status)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### UserLogin
 
-The username used to log in. `Required` `Filter(multi eq;like)` `ReadOnly`
+The username used to log in.
 
 Type: **string (64)**  
 Category: **System**  

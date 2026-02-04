@@ -4,7 +4,11 @@ uid: Crm.Sales.SalesOrderPromotionalPackages
 # Crm.Sales.SalesOrderPromotionalPackages
 
 
-Sales Order Promotional Packages represent promotional bundles or offers applied within a Sales Order. This data type defines the promotional packages included in a sales order, consisting of a predefined combination of products or services offered under special commercial conditions, such as bundled pricing, discounts, or promotional rules. Promotional packages are used to apply, track, and analyze promotions in sales orders, ensuring consistent pricing, correct fulfillment, and accurate reporting of promotion-driven sales.
+Sales Order Promotional Packages represent promotional bundles or offers applied within a Sales Order.
+    
+This data type defines the promotional packages included in a sales order, consisting of a predefined combination of products or services offered under special commercial conditions, such as bundled pricing, discounts, or promotional rules.
+
+Promotional packages are used to apply, track, and analyze promotions in sales orders, ensuring consistent pricing, correct fulfillment, and accurate reporting of promotion-driven sales.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -35,15 +39,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. `Required` `Filter(eq)` 
-| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. `Required` `Default(0)` 
+| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. 
+| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Crm.Sales.SalesOrderPromotionalPackages.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The owner document. The <see cref="SalesOrder"/> to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` |
-| [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) | The type of promotional package sold. `Required` `Filter(multi eq)` |
+| [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) | The type of promotional package sold |
 | [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -60,7 +64,7 @@ Aggregate Root:
 
 ### LineNumber
 
-Consecutive line number of the package, unique within the document. `Required` `Filter(eq)`
+Consecutive line number of the package, unique within the document.
 
 Type: **int32**  
 Category: **System**  
@@ -75,7 +79,7 @@ Front-End Recalc Expressions:
 `( obj.SalesOrder.PromotionalPackages.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)`
 ### NumberOfPackages
 
-Number of packages sold. `Required` `Default(0)`
+Number of packages sold
 
 Type: **int32**  
 Category: **System**  
@@ -128,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### PromotionalPackage
 
-The type of promotional package sold. `Required` `Filter(multi eq)`
+The type of promotional package sold
 
 Type: **[PromotionalPackages](Crm.Pricing.PromotionalPackages.md)**  
 Category: **System**  

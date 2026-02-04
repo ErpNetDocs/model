@@ -4,7 +4,7 @@ uid: Systems.Security.UserProviderLogins
 # Systems.Security.UserProviderLogins
 
 
-External login providers.
+External login providers
 
 ## General
 Namespace: [Systems.Security](Systems.Security.md)  
@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string (450) | The key, which the provider provided for logging the user. `Required` `Filter(multi eq)` 
-| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1` 
+| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string (450) | The key, which the provider provided for logging the user. 
+| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderLogins.md#user) | [Users](Systems.Security.Users.md) | The user for which the login is defined. `Required` `Filter(multi eq)` `Owner` |
+| [User](Systems.Security.UserProviderLogins.md#user) | [Users](Systems.Security.Users.md) | The user for which the login is defined. |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### ProviderKey
 
-The key, which the provider provided for logging the user. `Required` `Filter(multi eq)`
+The key, which the provider provided for logging the user.
 
 Type: **string (450)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ProviderName
 
-The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1`
+The system name of the authentication provider. It should be already registered for the domain.
 
 Type: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **HiddenByDefault**
 
 ### User
 
-The user for which the login is defined. `Required` `Filter(multi eq)` `Owner`
+The user for which the login is defined.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

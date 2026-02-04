@@ -122,32 +122,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#activatedat">ActivatedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Timestamp when the sprint was activated. <code>Filter(eq;ge;le)</code></td>
+<td>Timestamp when the sprint was activated.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#enddate">EndDate</a></td>
 <td>date</td>
-<td>End date of the sprint’s timebox. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>End date of the sprint’s timebox.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#goal">Goal</a></td>
 <td>string (500) <strong>nullable</strong></td>
-<td>Short description of the main objectives or focus for the sprint. <code>Filter(eq;like)</code></td>
+<td>Short description of the main objectives or focus for the sprint.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#name">Name</a></td>
 <td>string (100)</td>
-<td>Human-readable sprint name, e.g. “Sprint 14”. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Human-readable sprint name, e.g. “Sprint 14”</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#startdate">StartDate</a></td>
 <td>date</td>
-<td>Start date of the sprint’s timebox. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Start date of the sprint’s timebox.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#state">State</a></td>
 <td><a href="Projects.Agile.Sprints.html#state">State</a></td>
-<td>Current sprint status: Planned, Active, Completed, Cancelled. <code>Required</code> <code>Default(&quot;PLN&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>Current sprint status: Planned, Active, Completed, Cancelled.</td>
 </tr>
 </tbody>
 </table>
@@ -164,12 +164,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#project">Project</a></td>
 <td><a href="Projects.Agile.Projects.html">Projects</a></td>
-<td>Project to which this sprint belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Project to which this sprint belongs.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Sprints.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.Social.Groups.html">Groups</a> (nullable)</td>
-<td>Team (social group) responsible for the sprint. null if the sprint applies to the entire project without team distinction. <code>Filter(multi eq)</code></td>
+<td>Team (social group) responsible for the sprint. NULL if the sprint applies to the entire project without team distinction</td>
 </tr>
 </tbody>
 </table>
@@ -217,21 +217,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activatedat">ActivatedAt</h3>
-<p>Timestamp when the sprint was activated. <code>Filter(eq;ge;le)</code></p>
+<p>Timestamp when the sprint was activated.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enddate">EndDate</h3>
-<p>End date of the sprint’s timebox. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>End date of the sprint’s timebox.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="goal">Goal</h3>
-<p>Short description of the main objectives or focus for the sprint. <code>Filter(eq;like)</code></p>
+<p>Short description of the main objectives or focus for the sprint.</p>
 <p>Type: <strong>string (500) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>500</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Human-readable sprint name, e.g. “Sprint 14”. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Human-readable sprint name, e.g. “Sprint 14”</p>
 <p>Type: <strong>string (100)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -247,14 +247,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>100</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>Start date of the sprint’s timebox. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Start date of the sprint’s timebox.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>Current sprint status: Planned, Active, Completed, Cancelled. <code>Required</code> <code>Default(&quot;PLN&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>Current sprint status: Planned, Active, Completed, Cancelled.</p>
 <p>Type: <strong><a href="Projects.Agile.Sprints.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(Projects.Agile.Sprints.md#state) data attribute<br>
@@ -333,14 +333,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
-<p>Project to which this sprint belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Project to which this sprint belongs.</p>
 <p>Type: <strong><a href="Projects.Agile.Projects.html">Projects</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>Team (social group) responsible for the sprint. null if the sprint applies to the entire project without team distinction. <code>Filter(multi eq)</code></p>
+<p>Team (social group) responsible for the sprint. NULL if the sprint applies to the entire project without team distinction</p>
 <p>Type: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

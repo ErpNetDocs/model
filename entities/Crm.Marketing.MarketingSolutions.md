@@ -36,7 +36,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.MarketingSolutions.md#code) | string (32) | The unique code of the MarketingSolution. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Crm.Marketing.MarketingSolutions.md#isactive) | boolean | Indicates whether the current Marketing solution is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [IsActive](Crm.Marketing.MarketingSolutions.md#isactive) | boolean | Indicates whether the current Marketing solution is active. 
 | [Name](Crm.Marketing.MarketingSolutions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this MarketingSolution. `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.MarketingSolutions.md#notes) | string (max) __nullable__ | Notes for this MarketingSolution. 
 
@@ -44,9 +44,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompanySizeClass](Crm.Marketing.MarketingSolutions.md#companysizeclass) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | The company size class, for which this solution is appropriate. null if not applicable. `Filter(multi eq)` |
-| [EnterpriseCompany](Crm.Marketing.MarketingSolutions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company offering this marketing solution. `Required` `Filter(multi eq)` |
-| [Industry](Crm.Marketing.MarketingSolutions.md#industry) | [Industries](Crm.Marketing.Industries.md) (nullable) | The industry, for which this solution is appropriate. null if not applicable. `Filter(multi eq)` |
+| [CompanySizeClass](Crm.Marketing.MarketingSolutions.md#companysizeclass) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | The company size class, for which this solution is appropriate. NULL if not applicable. |
+| [EnterpriseCompany](Crm.Marketing.MarketingSolutions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company offering this marketing solution. |
+| [Industry](Crm.Marketing.MarketingSolutions.md#industry) | [Industries](Crm.Marketing.Industries.md) (nullable) | The industry, for which this solution is appropriate. NULL if not applicable. |
 
 
 ## System Attributes
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Marketing solution is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Marketing solution is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -171,7 +171,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompanySizeClass
 
-The company size class, for which this solution is appropriate. null if not applicable. `Filter(multi eq)`
+The company size class, for which this solution is appropriate. NULL if not applicable.
 
 Type: **[CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable)**  
 Category: **System**  
@@ -180,7 +180,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company offering this marketing solution. `Required` `Filter(multi eq)`
+The enterprise company offering this marketing solution.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### Industry
 
-The industry, for which this solution is appropriate. null if not applicable. `Filter(multi eq)`
+The industry, for which this solution is appropriate. NULL if not applicable.
 
 Type: **[Industries](Crm.Marketing.Industries.md) (nullable)**  
 Category: **System**  

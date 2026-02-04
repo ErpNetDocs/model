@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the deal. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Consecutive number of the line within the deal</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes.</td>
+<td>Notes</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></td>
-<td>When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). <code>Unit: QuantityUnit</code></td>
+<td>When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)</td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#deal">Deal</a></td>
 <td><a href="Crm.Presales.Deals.html">Deals</a></td>
-<td>Deal. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Deal</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#document">Document</a></td>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, to which the client has interest. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product, to which the client has interest.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.DealLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Quantity.</td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the deal. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Consecutive number of the line within the deal</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -207,7 +207,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Deal.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<p>Notes.</p>
+<p>Notes</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). <code>Unit: QuantityUnit</code></p>
+<p>When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -244,7 +244,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="deal">Deal</h3>
-<p>Deal. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Deal</p>
 <p>Type: <strong><a href="Crm.Presales.Deals.html">Deals</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -259,13 +259,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product, to which the client has interest. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product, to which the client has interest.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

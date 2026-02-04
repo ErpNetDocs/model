@@ -48,10 +48,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EmbeddedFileContents](General.Documents.DocumentFileAttachments.md#embeddedfilecontents) | byte[] __nullable__ | The contents of the embedded file. null when the file is linked. 
-| [FileName](General.Documents.DocumentFileAttachments.md#filename) | string (128) | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. `Required` 
-| [IsLinked](General.Documents.DocumentFileAttachments.md#islinked) | boolean | True when the document is linked (ony file name is kept). false when the document is embedded. `Required` `Default(false)` `Filter(eq)` 
-| [LinkedFilePath](General.Documents.DocumentFileAttachments.md#linkedfilepath) | string (254) __nullable__ | Path to the linked file. null when the file is embedded. 
+| [EmbeddedFileContents](General.Documents.DocumentFileAttachments.md#embeddedfilecontents) | byte[] __nullable__ | The contents of the embedded file. NULL when the file is linked 
+| [FileName](General.Documents.DocumentFileAttachments.md#filename) | string (128) | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file 
+| [IsLinked](General.Documents.DocumentFileAttachments.md#islinked) | boolean | 1 when the document is linked (ony file name is kept). 0 when the document is embedded 
+| [LinkedFilePath](General.Documents.DocumentFileAttachments.md#linkedfilepath) | string (254) __nullable__ | Path to the linked file. NULL when the file is embedded 
 | [Notes](General.Documents.DocumentFileAttachments.md#notes) | string (max) __nullable__ | Notes for this DocumentFileAttachment. 
 
 ## References
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### EmbeddedFileContents
 
-The contents of the embedded file. null when the file is linked.
+The contents of the embedded file. NULL when the file is linked
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **CannotBeShown**
 
 ### FileName
 
-The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. `Required`
+The display name of the file. Initially set to the file name (without path) of the linked or the embedded file
 
 Type: **string (128)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### IsLinked
 
-True when the document is linked (ony file name is kept). false when the document is embedded. `Required` `Default(false)` `Filter(eq)`
+1 when the document is linked (ony file name is kept). 0 when the document is embedded
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### LinkedFilePath
 
-Path to the linked file. null when the file is embedded.
+Path to the linked file. NULL when the file is embedded
 
 Type: **string (254) __nullable__**  
 Category: **System**  

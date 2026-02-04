@@ -35,24 +35,24 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompetitorPrice](Crm.Marketing.MarketingActivityLines.md#competitorprice) | decimal (15, 5) __nullable__ | Price of the competitor. 
-| [InStoreAvailableQuantity](Crm.Marketing.MarketingActivityLines.md#instoreavailablequantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | The quantity found in store (in Quantity Unit). null means that count was not performed. `Unit: OrderQuantityUnit` `Filter(eq;ge;le)` 
+| [CompetitorPrice](Crm.Marketing.MarketingActivityLines.md#competitorprice) | decimal (15, 5) __nullable__ | Price of the competitor 
+| [InStoreAvailableQuantity](Crm.Marketing.MarketingActivityLines.md#instoreavailablequantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | The quantity found in store (in Quantity Unit). NULL means that count was not performed. 
 | [InStoreLocation](Crm.Marketing.MarketingActivityLines.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. 
-| [InStorePrice](Crm.Marketing.MarketingActivityLines.md#instoreprice) | decimal (15, 5) __nullable__ | Price displayed in store. `Filter(eq;ge;le)` 
-| [LineNo](Crm.Marketing.MarketingActivityLines.md#lineno) | int32 | Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
+| [InStorePrice](Crm.Marketing.MarketingActivityLines.md#instoreprice) | decimal (15, 5) __nullable__ | Price displayed in store. 
+| [LineNo](Crm.Marketing.MarketingActivityLines.md#lineno) | int32 | Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc. 
 | [Notes](Crm.Marketing.MarketingActivityLines.md#notes) | string (max) __nullable__ | Notes for this MarketingActivityLine. 
-| [OrderQuantity](Crm.Marketing.MarketingActivityLines.md#orderquantity) | [Quantity (15, 3)](../data-types.md#quantity) __nullable__ | Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation. `Unit: OrderQuantityUnit` `Filter(eq;ge;le)` 
+| [OrderQuantity](Crm.Marketing.MarketingActivityLines.md#orderquantity) | [Quantity (15, 3)](../data-types.md#quantity) __nullable__ | Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Competitor](Crm.Marketing.MarketingActivityLines.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | Competitor where marketing activity was held. `Filter(multi eq)` |
+| [Competitor](Crm.Marketing.MarketingActivityLines.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | Competitor where marketing activity was held. |
 | [Document](Crm.Marketing.MarketingActivityLines.md#document) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | The owner document. Marketing activity. `Required` `Filter(multi eq)` |
-| [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` `Owner` |
-| [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) | Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)` |
-| [OrderQuantityUnit](Crm.Marketing.MarketingActivityLines.md#orderquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit of In_Store_Available_<br />Quantity and Order_Quantity. `Filter(multi eq)` |
-| [Product](Crm.Marketing.MarketingActivityLines.md#product) | [Products](General.Products.Products.md) | The specific product that was target of the marketing activity. `Required` `Filter(multi eq)` |
+| [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity |
+| [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) | Describes what the purpose of the marketing activity is. |
+| [OrderQuantityUnit](Crm.Marketing.MarketingActivityLines.md#orderquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit of In_Store_Available_<br />Quantity and Order_Quantity. |
+| [Product](Crm.Marketing.MarketingActivityLines.md#product) | [Products](General.Products.Products.md) | The specific product that was target of the marketing activity. |
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Root:
 
 ### CompetitorPrice
 
-Price of the competitor.
+Price of the competitor
 
 Type: **decimal (15, 5) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### InStoreAvailableQuantity
 
-The quantity found in store (in Quantity Unit). null means that count was not performed. `Unit: OrderQuantityUnit` `Filter(eq;ge;le)`
+The quantity found in store (in Quantity Unit). NULL means that count was not performed.
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### InStorePrice
 
-Price displayed in store. `Filter(eq;ge;le)`
+Price displayed in store.
 
 Type: **decimal (15, 5) __nullable__**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)`
+Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
 
 Type: **int32**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderQuantity
 
-Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation. `Unit: OrderQuantityUnit` `Filter(eq;ge;le)`
+Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.
 
 Type: **[Quantity (15, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -177,7 +177,7 @@ Show in UI: **HiddenByDefault**
 
 ### Competitor
 
-Competitor where marketing activity was held. `Filter(multi eq)`
+Competitor where marketing activity was held.
 
 Type: **[Competitors](Crm.Marketing.Competitors.md) (nullable)**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### MarketingActivity
 
-Marketing activity. `Required` `Filter(multi eq)` `Owner`
+Marketing activity
 
 Type: **[MarketingActivities](Crm.Marketing.MarketingActivities.md)**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### MarketingActivityLineType
 
-Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)`
+Describes what the purpose of the marketing activity is.
 
 Type: **[MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md)**  
 Category: **System**  
@@ -214,7 +214,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderQuantityUnit
 
-The measurement unit of In_Store_Available_Quantity and Order_Quantity. `Filter(multi eq)`
+The measurement unit of In_Store_Available_Quantity and Order_Quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
@@ -225,7 +225,7 @@ Front-End Recalc Expressions:
 `obj.Product.MeasurementUnit`
 ### Product
 
-The specific product that was target of the marketing activity. `Required` `Filter(multi eq)`
+The specific product that was target of the marketing activity.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  

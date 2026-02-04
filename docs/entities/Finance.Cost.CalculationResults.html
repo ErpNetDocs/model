@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#fullcost">FullCost</a></td>
 <td>decimal (14, 2)</td>
-<td>The full cost of the specified quantity. <code>Required</code> <code>Default(0)</code></td>
+<td>The full cost of the specified quantity</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the calculation. <code>Required</code></td>
+<td>Consecutive number of the line within the calculation</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#projectid">ProjectId</a></td>
@@ -136,7 +136,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#quantity">Quantity</a></td>
 <td>decimal (14, 3)</td>
-<td>The quantity of the product. <code>Required</code> <code>Default(0)</code></td>
+<td>The quantity of the product</td>
 </tr>
 </tbody>
 </table>
@@ -158,27 +158,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. <code>Filter(multi eq)</code></td>
+<td>The Lot to which the cost was allocated. When NULL, the cost was not allocated to any specific Lot.</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The Product to which the cost was allocated. When NULL, the cost was not allocated to any specific Product.</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#profitcenter">ProfitCenter</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</td>
-<td>The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. <code>Filter(multi eq)</code></td>
+<td>The Profit Center to which the cost was allocated. When NULL, the cost was not allocated to any specific Profit Center.</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
-<td>The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. <code>Filter(multi eq)</code></td>
+<td>The Sales Order to which the cost was allocated. When NULL, the cost was not allocated to any specific Sales Order.</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationResults.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</td>
-<td>The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. <code>Filter(multi eq)</code></td>
+<td>The Workgroup to which the cost was allocated. When NULL, the cost was not allocated to any specific Workgroup.</td>
 </tr>
 </tbody>
 </table>
@@ -211,7 +211,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fullcost">FullCost</h3>
-<p>The full cost of the specified quantity. <code>Required</code> <code>Default(0)</code></p>
+<p>The full cost of the specified quantity</p>
 <p>Type: <strong>decimal (14, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the calculation. <code>Required</code></p>
+<p>Consecutive number of the line within the calculation</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -236,7 +236,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the product. <code>Required</code> <code>Default(0)</code></p>
+<p>The quantity of the product</p>
 <p>Type: <strong>decimal (14, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -274,31 +274,31 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. <code>Filter(multi eq)</code></p>
+<p>The Lot to which the cost was allocated. When NULL, the cost was not allocated to any specific Lot.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The Product to which the cost was allocated. When NULL, the cost was not allocated to any specific Product.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
-<p>The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. <code>Filter(multi eq)</code></p>
+<p>The Profit Center to which the cost was allocated. When NULL, the cost was not allocated to any specific Profit Center.</p>
 <p>Type: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
-<p>The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. <code>Filter(multi eq)</code></p>
+<p>The Sales Order to which the cost was allocated. When NULL, the cost was not allocated to any specific Sales Order.</p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workgroup">Workgroup</h3>
-<p>The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. <code>Filter(multi eq)</code></p>
+<p>The Workgroup to which the cost was allocated. When NULL, the cost was not allocated to any specific Workgroup.</p>
 <p>Type: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

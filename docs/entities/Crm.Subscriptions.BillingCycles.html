@@ -122,12 +122,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Subscriptions.BillingCycles.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Billing cycle is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></td>
+<td>Indicates whether the current Billing cycle is active.</td>
 </tr>
 <tr>
 <td><a href="Crm.Subscriptions.BillingCycles.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>Multi-language name of the billing cycle. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Multi-language name of the billing cycle.</td>
 </tr>
 <tr>
 <td><a href="Crm.Subscriptions.BillingCycles.html#notes">Notes</a></td>
@@ -137,12 +137,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Subscriptions.BillingCycles.html#numberofmonths">NumberOfMonths</a></td>
 <td>byte</td>
-<td>Number of months between billings. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Number of months between billings.</td>
 </tr>
 <tr>
 <td><a href="Crm.Subscriptions.BillingCycles.html#startingdayofmonth">StartingDayOfMonth</a></td>
 <td>byte</td>
-<td>On which date of the month the bills are issued. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code></td>
+<td>On which date of the month the bills are issued.</td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Subscriptions.BillingCycles.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>Specifies the enterprise company for which the cycle will be valid. null means that it is valid for all enterprise companies. <code>Filter(multi eq)</code></td>
+<td>Specifies the enterprise company for which the cycle will be valid. NULL means that it is valid for all enterprise companies.</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Billing cycle is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></p>
+<p>Indicates whether the current Billing cycle is active.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multi-language name of the billing cycle. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Multi-language name of the billing cycle.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -230,7 +230,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="numberofmonths">NumberOfMonths</h3>
-<p>Number of months between billings. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Number of months between billings.</p>
 <p>Type: <strong>byte</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -238,7 +238,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startingdayofmonth">StartingDayOfMonth</h3>
-<p>On which date of the month the bills are issued. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code></p>
+<p>On which date of the month the bills are issued.</p>
 <p>Type: <strong>byte</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -289,7 +289,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Specifies the enterprise company for which the cycle will be valid. null means that it is valid for all enterprise companies. <code>Filter(multi eq)</code></p>
+<p>Specifies the enterprise company for which the cycle will be valid. NULL means that it is valid for all enterprise companies.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

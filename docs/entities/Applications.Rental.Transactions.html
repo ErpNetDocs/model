@@ -87,7 +87,7 @@
         <article data-uid="Applications.Rental.Transactions">
 <h1 id="applicationsrentaltransactions">Applications.Rental.Transactions</h1>
 
-<p>Contains all transactions of Record of Handover / Handing-Over Record .</p>
+<p>Contains all transactions of Record of Handover / Handing-Over Record</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Applications.Rental.html">Applications.Rental</a><br>
 Repository: Applications.Rental.Transactions<br>
@@ -200,12 +200,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -250,12 +250,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Transaction Timestamp. <code>Filter(multi eq;ge;le)</code></td>
+<td>Exact time at which the actions from rent transaction are performed. If the transaction contains actions at different times then this fields should by empty.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#transactiontype">TransactionType</a></td>
 <td><a href="Applications.Rental.Transactions.html#transactiontype">TransactionType</a> <strong>nullable</strong></td>
-<td>Transaction Type. <code>Filter(eq;like)</code></td>
+<td>Transaction type for the entire rent transaction. If the transaction contains actions of different type then this fields should by empty.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#void">Void</a></td>
@@ -337,12 +337,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#leasecontract">LeaseContract</a></td>
 <td><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a> (nullable)</td>
-<td>Lease Contract. <code>Filter(multi eq)</code></td>
+<td>Rent contract for which this rent transaction contains actions. If the transaction contains actions from different contracts then this fields should by empty.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#lesseecustomer">LesseeCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>Lessee Customer. <code>Filter(multi eq)</code></td>
+<td>Lessee for which this rent transaction contains actions. If the transaction contains actions for different lessees then this fields should by empty.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.Transactions.html#masterdocument">MasterDocument</a></td>
@@ -593,7 +593,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -601,7 +601,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -734,14 +734,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Transaction Timestamp. <code>Filter(multi eq;ge;le)</code></p>
+<p>Exact time at which the actions from rent transaction are performed. If the transaction contains actions at different times then this fields should by empty.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactiontype">TransactionType</h3>
-<p>Transaction Type. <code>Filter(eq;like)</code></p>
+<p>Transaction type for the entire rent transaction. If the transaction contains actions of different type then this fields should by empty.</p>
 <p>Type: <strong><a href="Applications.Rental.Transactions.html#transactiontype">TransactionType</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TransactionType</code>(Applications.Rental.Transactions.md#transactiontype) data attribute<br>
@@ -933,13 +933,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="leasecontract">LeaseContract</h3>
-<p>Lease Contract. <code>Filter(multi eq)</code></p>
+<p>Rent contract for which this rent transaction contains actions. If the transaction contains actions from different contracts then this fields should by empty.</p>
 <p>Type: <strong><a href="Applications.Rental.LeaseContracts.html">LeaseContracts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lesseecustomer">LesseeCustomer</h3>
-<p>Lessee Customer. <code>Filter(multi eq)</code></p>
+<p>Lessee for which this rent transaction contains actions. If the transaction contains actions for different lessees then this fields should by empty.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

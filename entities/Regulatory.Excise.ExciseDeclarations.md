@@ -57,7 +57,7 @@ Aggregate Tree
 | [DocumentNotes](Regulatory.Excise.ExciseDeclarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Excise.ExciseDeclarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Excise.ExciseDeclarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [FromDate](Regulatory.Excise.ExciseDeclarations.md#fromdate) | date | Start date of the period fot which the Excise declaration is made. `Required` `Filter(multi eq;ge;le)` 
+| [FromDate](Regulatory.Excise.ExciseDeclarations.md#fromdate) | date | Start date of the period fot which the Excise declaration is made. 
 | [FullState](Regulatory.Excise.ExciseDeclarations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Regulatory.Excise.ExciseDeclarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Excise.ExciseDeclarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Excise.ExciseDeclarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -67,7 +67,7 @@ Aggregate Tree
 | [ReleaseTime](Regulatory.Excise.ExciseDeclarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Regulatory.Excise.ExciseDeclarations.md#state) | [DocumentState](Regulatory.Excise.ExciseDeclarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Regulatory.Excise.ExciseDeclarations.md#statetagsattribute) | string | Specifies the state of the document. 
-| [ToDate](Regulatory.Excise.ExciseDeclarations.md#todate) | date | End date of the period fot which the Excise declaration is made. `Required` `Filter(eq;ge;le)` 
+| [ToDate](Regulatory.Excise.ExciseDeclarations.md#todate) | date | End date of the period fot which the Excise declaration is made. 
 | [Void](Regulatory.Excise.ExciseDeclarations.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Regulatory.Excise.ExciseDeclarations.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Regulatory.Excise.ExciseDeclarations.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -80,7 +80,7 @@ Aggregate Tree
 | [AccessKey](Regulatory.Excise.ExciseDeclarations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Regulatory.Excise.ExciseDeclarations.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Regulatory.Excise.ExciseDeclarations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [BaseCurrency](Regulatory.Excise.ExciseDeclarations.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for Enterprise Company at the moment of Excise Declaration creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.60` |
+| [BaseCurrency](Regulatory.Excise.ExciseDeclarations.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for Enterprise Company at the moment of Excise Declaration creation. |
 | [CurrencyDirectory](Regulatory.Excise.ExciseDeclarations.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Regulatory.Excise.ExciseDeclarations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Regulatory.Excise.ExciseDeclarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -90,11 +90,11 @@ Aggregate Tree
 | [MasterDocument](Regulatory.Excise.ExciseDeclarations.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Regulatory.Excise.ExciseDeclarations.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Regulatory.Excise.ExciseDeclarations.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReportingPerson](Regulatory.Excise.ExciseDeclarations.md#reportingperson) | [Persons](General.Contacts.Persons.md) | This is the person submitting the declaration. `Required` `Filter(multi eq)` |
+| [ReportingPerson](Regulatory.Excise.ExciseDeclarations.md#reportingperson) | [Persons](General.Contacts.Persons.md) | This is the person submitting the declaration. |
 | [ResponsiblePerson](Regulatory.Excise.ExciseDeclarations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Regulatory.Excise.ExciseDeclarations.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Regulatory.Excise.ExciseDeclarations.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TaxWarehouse](Regulatory.Excise.ExciseDeclarations.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) | Our warehouse, dispatching the goods. `Required` `Filter(multi eq)` |
+| [TaxWarehouse](Regulatory.Excise.ExciseDeclarations.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) | Our warehouse, dispatching the goods. |
 | [ToCompanyDivision](Regulatory.Excise.ExciseDeclarations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Regulatory.Excise.ExciseDeclarations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Regulatory.Excise.ExciseDeclarations.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -252,7 +252,7 @@ Show in UI: **CannotBeShown**
 
 ### FromDate
 
-Start date of the period fot which the Excise declaration is made. `Required` `Filter(multi eq;ge;le)`
+Start date of the period fot which the Excise declaration is made.
 
 Type: **date**  
 Category: **System**  
@@ -379,7 +379,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToDate
 
-End date of the period fot which the Excise declaration is made. `Required` `Filter(eq;ge;le)`
+End date of the period fot which the Excise declaration is made.
 
 Type: **date**  
 Category: **System**  
@@ -533,7 +533,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseCurrency
 
-The base currency for Enterprise Company at the moment of Excise Declaration creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.60`
+The base currency for Enterprise Company at the moment of Excise Declaration creation.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -633,7 +633,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReportingPerson
 
-This is the person submitting the declaration. `Required` `Filter(multi eq)`
+This is the person submitting the declaration.
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  
@@ -671,7 +671,7 @@ Show in UI: **HiddenByDefault**
 
 ### TaxWarehouse
 
-Our warehouse, dispatching the goods. `Required` `Filter(multi eq)`
+Our warehouse, dispatching the goods.
 
 Type: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md)**  
 Category: **System**  

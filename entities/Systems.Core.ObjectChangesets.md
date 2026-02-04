@@ -36,15 +36,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Core.ObjectChangesets.md#applicationname) | string (max) __nullable__ | The application which requested the change. null when it is unknown. `Filter(eq)` 
-| [ServerVersion](Systems.Core.ObjectChangesets.md#serverversion) | string (16) | The version of the application server at the time of the change. `Required` 
-| [TimeUtc](Systems.Core.ObjectChangesets.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` 
+| [ApplicationName](Systems.Core.ObjectChangesets.md#applicationname) | string (max) __nullable__ | The application which requested the change. NULL when it is unknown. 
+| [ServerVersion](Systems.Core.ObjectChangesets.md#serverversion) | string (16) | The version of the application server at the time of the change. 
+| [TimeUtc](Systems.Core.ObjectChangesets.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Core.ObjectChangesets.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. null when it is unknown. `Filter(multi eq)` |
+| [User](Systems.Core.ObjectChangesets.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user which initiated the change. NULL when it is unknown. |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### ApplicationName
 
-The application which requested the change. null when it is unknown. `Filter(eq)`
+The application which requested the change. NULL when it is unknown.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### ServerVersion
 
-The version of the application server at the time of the change. `Required`
+The version of the application server at the time of the change.
 
 Type: **string (16)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### TimeUtc
 
-Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD`
+Date and time (in Utc) when the changeset was processed by the server.
 
 Type: **datetime**  
 Indexed: **True**  
@@ -165,7 +165,7 @@ Show in UI: **HiddenByDefault**
 
 ### User
 
-The user which initiated the change. null when it is unknown. `Filter(multi eq)`
+The user which initiated the change. NULL when it is unknown.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  

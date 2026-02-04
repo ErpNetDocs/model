@@ -4,7 +4,7 @@ uid: Production.Resources.WorkgroupResources
 # Production.Resources.WorkgroupResources
 
 
-Describes the availability of resources in the active workgroups.
+Describes the availability of resources in the active workgroups
 
 ## General
 Namespace: [Production.Resources](Production.Resources.md)  
@@ -35,16 +35,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.WorkgroupResources.md#active) | boolean | Indicates whether the current workgroup resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
-| [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. `Unit: Resource.PrimaryUnit` `Required` `Default(0)` 
-| [Notes](Production.Resources.WorkgroupResources.md#notes) | string (254) __nullable__ | User notes for the workgroup resource. 
+| [Active](Production.Resources.WorkgroupResources.md#active) | boolean | Indicates whether the current workgroup resource is active. 
+| [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources 
+| [Notes](Production.Resources.WorkgroupResources.md#notes) | string (254) __nullable__ | User notes for the workgroup resource 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Resource](Production.Resources.WorkgroupResources.md#resource) | [Resources](Production.Resources.Resources.md) | The contained resource type. `Required` `Filter(multi eq)` |
-| [Workgroup](Production.Resources.WorkgroupResources.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) | Id of the workgroup, containing the resource. `Required` `Filter(multi eq)` `Owner` |
+| [Resource](Production.Resources.WorkgroupResources.md#resource) | [Resources](Production.Resources.Resources.md) | The contained resource type |
+| [Workgroup](Production.Resources.WorkgroupResources.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) | Id of the workgroup, containing the resource |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current workgroup resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+Indicates whether the current workgroup resource is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableQuantity
 
-Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. `Unit: Resource.PrimaryUnit` `Required` `Default(0)`
+Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-User notes for the workgroup resource.
+User notes for the workgroup resource
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **HiddenByDefault**
 
 ### Resource
 
-The contained resource type. `Required` `Filter(multi eq)`
+The contained resource type
 
 Type: **[Resources](Production.Resources.Resources.md)**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### Workgroup
 
-Id of the workgroup, containing the resource. `Required` `Filter(multi eq)` `Owner`
+Id of the workgroup, containing the resource
 
 Type: **[Workgroups](Production.Resources.Workgroups.md)**  
 Category: **System**  

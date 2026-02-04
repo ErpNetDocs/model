@@ -4,7 +4,7 @@ uid: Finance.Accounting.FinancialStatementNodeCorrespondances
 # Finance.Accounting.FinancialStatementNodeCorrespondances
 
 
-Contains the actual correspondance filters, which specify how each financial statement node is calculated.
+Specifies how each node in a financial statement is calculated by linking it to account filters. These correspondences determine which accounts, ranges, or rules contribute to each line.
 
 ## General
 Namespace: [Finance.Accounting](Finance.Accounting.md)  
@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. `Required` `Default(1)` 
+| [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountGroup](Finance.Accounting.FinancialStatementNodeCorrespondances.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Main account group determining the correspondances for which the balances are summed. `Required` `Filter(multi eq)` |
-| [CorrespondantAccountGroup](Finance.Accounting.FinancialStatementNodeCorrespondances.md#correspondantaccountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. `Filter(multi eq)` |
+| [AccountGroup](Finance.Accounting.FinancialStatementNodeCorrespondances.md#accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Main account group determining the correspondences for which the balances are summed. |
+| [CorrespondantAccountGroup](Finance.Accounting.FinancialStatementNodeCorrespondances.md#correspondantaccountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Correspondent account group determining the correspondences for which the balances are summed. If not specified means that the balances of all correspondences for the main account group are summed. |
 | [FinancialStatementNode](Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) | [FinancialStatementNodes](Finance.Accounting.FinancialStatementNodes.md) | The <see cref="Financial<br />StatementNode"/> to which this FinancialStatement<br />NodeCorrespondance belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Multiplier
 
-Factor by which the correspondence balance will be multiplied. `Required` `Default(1)`
+Factor by which the correspondence balance will be multiplied.
 
 Type: **decimal (18, 0)**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccountGroup
 
-Main account group determining the correspondances for which the balances are summed. `Required` `Filter(multi eq)`
+Main account group determining the correspondences for which the balances are summed.
 
 Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### CorrespondantAccountGroup
 
-Correspondant account group determining the correspondances for which the balances are summed. If null means that the balances of all correspondances for the main account group are summed. `Filter(multi eq)`
+Correspondent account group determining the correspondences for which the balances are summed. If not specified means that the balances of all correspondences for the main account group are summed.
 
 Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  

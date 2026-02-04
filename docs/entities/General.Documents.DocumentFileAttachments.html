@@ -130,22 +130,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#embeddedfilecontents">EmbeddedFileContents</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>The contents of the embedded file. null when the file is linked.</td>
+<td>The contents of the embedded file. NULL when the file is linked</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#filename">FileName</a></td>
 <td>string (128)</td>
-<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></td>
+<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#islinked">IsLinked</a></td>
 <td>boolean</td>
-<td>True when the document is linked (ony file name is kept). false when the document is embedded. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>1 when the document is linked (ony file name is kept). 0 when the document is embedded</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#linkedfilepath">LinkedFilePath</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Path to the linked file. null when the file is embedded.</td>
+<td>Path to the linked file. NULL when the file is embedded</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#notes">Notes</a></td>
@@ -200,14 +200,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="embeddedfilecontents">EmbeddedFileContents</h3>
-<p>The contents of the embedded file. null when the file is linked.</p>
+<p>The contents of the embedded file. NULL when the file is linked</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="filename">FileName</h3>
-<p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file. <code>Required</code></p>
+<p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file</p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="islinked">IsLinked</h3>
-<p>True when the document is linked (ony file name is kept). false when the document is embedded. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>1 when the document is linked (ony file name is kept). 0 when the document is embedded</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -223,7 +223,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linkedfilepath">LinkedFilePath</h3>
-<p>Path to the linked file. null when the file is embedded.</p>
+<p>Path to the linked file. NULL when the file is embedded</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

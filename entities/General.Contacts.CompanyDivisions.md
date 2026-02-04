@@ -42,10 +42,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Contacts.CompanyDivisions.md#code) | string (10) | Company division code, unique within the company. `Required` `Filter(eq;like)` 
+| [Code](General.Contacts.CompanyDivisions.md#code) | string (10) | The unique code of the division in the company  
 | [GLN](General.Contacts.CompanyDivisions.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](General.Contacts.CompanyDivisions.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [Name](General.Contacts.CompanyDivisions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language company divsion name. `Required` `Filter(eq;like)` 
+| [Name](General.Contacts.CompanyDivisions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language company divsion name 
 | [PartyCode](General.Contacts.CompanyDivisions.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyDivisions.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.CompanyDivisions.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -62,7 +62,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AdministrativeRegion](General.Contacts.CompanyDivisions.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Area](General.Contacts.CompanyDivisions.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
-| [Company](General.Contacts.CompanyDivisions.md#company) | [Companies](General.Contacts.Companies.md) | The company to which this company division belongs. `Required` `Filter(multi eq)` |
+| [Company](General.Contacts.CompanyDivisions.md#company) | [Companies](General.Contacts.Companies.md) | The owner company of the division |
 | [DefaultProductCodingSystem](General.Contacts.CompanyDivisions.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [ParentParty](General.Contacts.CompanyDivisions.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 
@@ -94,7 +94,7 @@ Aggregate Tree
 
 ### Code
 
-Company division code, unique within the company. `Required` `Filter(eq;like)`
+The unique code of the division in the company
 
 Type: **string (10)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language company divsion name. `Required` `Filter(eq;like)`
+Multi-language company divsion name
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -330,7 +330,7 @@ Show in UI: **ShownByDefault**
 
 ### Company
 
-The company to which this company division belongs. `Required` `Filter(multi eq)`
+The owner company of the division
 
 Type: **[Companies](General.Contacts.Companies.md)**  
 Indexed: **True**  

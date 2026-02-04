@@ -4,7 +4,11 @@ uid: Crm.Sales.SalesOrders
 # Crm.Sales.SalesOrders
 
 
-Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms. This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings. Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting.
+Sales Orders represent customer commitments to purchase goods or services from the enterprise company under defined commercial terms.
+    
+This data type records the header information of sales order documents, including the customer, order date, status, currency, pricing and discount rules, delivery terms, payment conditions, and other commercial settings.
+
+Sales Orders are a central element in the order-to-cash process and are used as the basis for delivery, invoicing, revenue recognition, payments, and sales reporting.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -52,40 +56,40 @@ Aggregate Tree
 | [AdjustmentTime](Crm.Sales.SalesOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Sales.SalesOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AmountToPay](Crm.Sales.SalesOrders.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. 
-| [ApplyTradeConditions](Crm.Sales.SalesOrders.md#applytradeconditions) | boolean __nullable__ | Specifies whether the system should apply standard pricing and discounts to this document. `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53` 
+| [ApplyTradeConditions](Crm.Sales.SalesOrders.md#applytradeconditions) | boolean __nullable__ | Specifies whether the system should apply standard pricing and discounts to this document. 
 | [CompleteTime](Crm.Sales.SalesOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Sales.SalesOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Sales.SalesOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CreditLimitOverride](Crm.Sales.SalesOrders.md#creditlimitoverride) | boolean | Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. `Required` `Default(false)` `Filter(eq)` 
-| [CustomerPurchaseOrderDate](Crm.Sales.SalesOrders.md#customerpurchaseorderdate) | date __nullable__ | Issue date of the referent customer purchase order. `Filter(ge;le)` 
-| [CustomerPurchaseOrderNo](Crm.Sales.SalesOrders.md#customerpurchaseorderno) | string (20) __nullable__ | Reference number of the customer's purchase order. `Filter(eq;like)` `ORD` 
-| [DeliveryTermsCode](Crm.Sales.SalesOrders.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
+| [CreditLimitOverride](Crm.Sales.SalesOrders.md#creditlimitoverride) | boolean | Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables 
+| [CustomerPurchaseOrderDate](Crm.Sales.SalesOrders.md#customerpurchaseorderdate) | date __nullable__ | Date of the customer's purchase order 
+| [CustomerPurchaseOrderNo](Crm.Sales.SalesOrders.md#customerpurchaseorderno) | string (20) __nullable__ | Reference number of the customer's purchase order 
+| [DeliveryTermsCode](Crm.Sales.SalesOrders.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting 
 | [DocumentDate](Crm.Sales.SalesOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Sales.SalesOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Crm.Sales.SalesOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Crm.Sales.SalesOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Sales.SalesOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq;like)` `ReadOnly` `Introduced in version 19.1` 
-| [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date __nullable__ | When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. `Filter(ge;le)` `Introduced in version 20.1` 
+| [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown. 
+| [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date __nullable__ | When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A. 
 | [FullState](Crm.Sales.SalesOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
-| [IntrastatTransportModeCode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [<s>IsReleased</s>](Crm.Sales.SalesOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | True when the order is valid (e.g. released and not void). Used for internal processing. `Required` `Default(false)` `ReadOnly` 
+| [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
+| [IntrastatTransportModeCode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
+| [<s>IsReleased</s>](Crm.Sales.SalesOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | 1 when the order is valid (e.g. released and not void). Used for internal processing. 
 | [<s>Notes</s>](Crm.Sales.SalesOrders.md#notes) | string (254) __nullable__ | **OBSOLETE! Do not use!** Notes for this SalesOrder. `Obsolete` `Obsoleted in version 24.1.1.4` 
 | [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Crm.Sales.SalesOrders.md#paymentduedate) | datetime __nullable__ | The last term for the payment of the sales order. `Filter(ge;le)` 
-| [PaymentDueStartDate](Crm.Sales.SalesOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. null when the document is with multiple installments. `Filter(ge;le)` 
+| [PaymentDueDate](Crm.Sales.SalesOrders.md#paymentduedate) | datetime __nullable__ | The last term for the payment of the sales order 
+| [PaymentDueStartDate](Crm.Sales.SalesOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. 
 | [PlanningOnly](Crm.Sales.SalesOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Sales.SalesOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Crm.Sales.SalesOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Crm.Sales.SalesOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Crm.Sales.SalesOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RequiredDeliveryDate](Crm.Sales.SalesOrders.md#requireddeliverydate) | date __nullable__ | The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. `Filter(ge;le)` 
+| [RequiredDeliveryDate](Crm.Sales.SalesOrders.md#requireddeliverydate) | date __nullable__ | The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. 
 | [State](Crm.Sales.SalesOrders.md#state) | [DocumentState](Crm.Sales.SalesOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Crm.Sales.SalesOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [ToDate](Crm.Sales.SalesOrders.md#todate) | date __nullable__ | When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. `Filter(ge;le)` `Introduced in version 20.1` 
+| [ToDate](Crm.Sales.SalesOrders.md#todate) | date __nullable__ | When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A. 
 | [TotalLineAmount](Crm.Sales.SalesOrders.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. 
 | [Void](Crm.Sales.SalesOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Crm.Sales.SalesOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -100,38 +104,38 @@ Aggregate Tree
 | [AdjustedDocument](Crm.Sales.SalesOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Crm.Sales.SalesOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Crm.Sales.SalesOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Crm.Sales.SalesOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer, which placed the sales order. `Required` `Filter(multi eq)` |
-| [Deal](Crm.Sales.SalesOrders.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this order is based. `Filter(multi eq)` |
-| [Dealer](Crm.Sales.SalesOrders.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, associated with the sales order. `Filter(multi eq)` |
-| [DealType](Crm.Sales.SalesOrders.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
-| [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The distribution channel, that is used to deliver the products. `Filter(multi eq)` |
-| [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document. `Required` `Filter(multi eq)` |
+| [Customer](Crm.Sales.SalesOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer, which placed the sales order |
+| [Deal](Crm.Sales.SalesOrders.md#deal) | [Deals](Crm.Presales.Deals.md) (nullable) | The opportunity (deal) on which this order is based |
+| [Dealer](Crm.Sales.SalesOrders.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, associated with the sales order |
+| [DealType](Crm.Sales.SalesOrders.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. |
+| [DistributionChannel](Crm.Sales.SalesOrders.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Distribution channel used to deliver the products |
+| [DocumentCurrency](Crm.Sales.SalesOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the document; e.g. the currency of the amounts in the document |
 | [DocumentType](Crm.Sales.SalesOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. `Filter(multi eq)` `Introduced in version 20.1` |
+| [EndCustomerParty](Crm.Sales.SalesOrders.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. |
 | [EnterpriseCompany](Crm.Sales.SalesOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Crm.Sales.SalesOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [FiscalPrinterPosDevice](Crm.Sales.SalesOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1` |
+| [FiscalPrinterPosDevice](Crm.Sales.SalesOrders.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale. |
 | [FromCompanyDivision](Crm.Sales.SalesOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Crm.Sales.SalesOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [IntrastatTransportCountry](Crm.Sales.SalesOrders.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)` |
+| [IntrastatTransportCountry](Crm.Sales.SalesOrders.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting |
 | [MasterDocument](Crm.Sales.SalesOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Crm.Sales.SalesOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PaymentAccount](Crm.Sales.SalesOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, the payment account, where the payment is expected. null=no expectation for account. `Filter(multi eq)` |
-| [PaymentType](Crm.Sales.SalesOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. `Filter(multi eq)` |
-| [PosLocation](Crm.Sales.SalesOrders.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1` |
-| [PosOperator](Crm.Sales.SalesOrders.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1` |
-| [PosTerminal](Crm.Sales.SalesOrders.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1` |
-| [PriceList](Crm.Sales.SalesOrders.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | The price list to be used for determining product prices in the lines. `Filter(multi eq)` |
+| [PaymentAccount](Crm.Sales.SalesOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not NULL, the payment account, where the payment is expected. NULL=no expectation for account |
+| [PaymentType](Crm.Sales.SalesOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not NULL specifies the payment type for the sales order |
+| [PosLocation](Crm.Sales.SalesOrders.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale. |
+| [PosOperator](Crm.Sales.SalesOrders.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale. |
+| [PosTerminal](Crm.Sales.SalesOrders.md#posterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale. |
+| [PriceList](Crm.Sales.SalesOrders.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | The price list to be used for determining product prices in the lines |
 | [PrimeCauseDocument](Crm.Sales.SalesOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Crm.Sales.SalesOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReturnForInvoice](Crm.Sales.SalesOrders.md#returnforinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. `Filter(multi eq)` |
-| [ReturnForSalesOrder](Crm.Sales.SalesOrders.md#returnforsalesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. `Filter(multi eq;like)` |
+| [ReturnForInvoice](Crm.Sales.SalesOrders.md#returnforinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When specified indicates that some of the goods sold in the sales orders invoiced with 'Return for invoice' are returned with the current document. |
+| [ReturnForSalesOrder](Crm.Sales.SalesOrders.md#returnforsalesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When specified indicates that some of the goods sold in 'Return for sales order' are returned with the current document. |
 | [ReverseOfDocument](Crm.Sales.SalesOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SalesPerson](Crm.Sales.SalesOrders.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Internal company sales person. `Filter(multi eq)` |
+| [SalesPerson](Crm.Sales.SalesOrders.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Internal company sales person |
 | [Sequence](Crm.Sales.SalesOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ShipToCustomer](Crm.Sales.SalesOrders.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)` |
-| [ShipToPartyContact<br />Mechanism](Crm.Sales.SalesOrders.md#shiptopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The contact mechanism (address) to whih to ship the sales order. `Filter(multi eq)` |
-| [Store](Crm.Sales.SalesOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. `Filter(multi eq)` |
+| [ShipToCustomer](Crm.Sales.SalesOrders.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer |
+| [ShipToPartyContact<br />Mechanism](Crm.Sales.SalesOrders.md#shiptopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable) | The contact mechanism (address) to whih to ship the sales order |
+| [Store](Crm.Sales.SalesOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines |
 | [ToCompanyDivision](Crm.Sales.SalesOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.Sales.SalesOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Crm.Sales.SalesOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -212,7 +216,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyTradeConditions
 
-Specifies whether the system should apply standard pricing and discounts to this document. `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53`
+Specifies whether the system should apply standard pricing and discounts to this document.
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -257,7 +261,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditLimitOverride
 
-Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. `Required` `Default(false)` `Filter(eq)`
+Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables
 
 Type: **boolean**  
 Category: **System**  
@@ -268,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### CustomerPurchaseOrderDate
 
-Issue date of the referent customer purchase order. `Filter(ge;le)`
+Date of the customer's purchase order
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -278,7 +282,7 @@ Show in UI: **HiddenByDefault**
 
 ### CustomerPurchaseOrderNo
 
-Reference number of the customer's purchase order. `Filter(eq;like)` `ORD`
+Reference number of the customer's purchase order
 
 Type: **string (20) __nullable__**  
 Indexed: **True**  
@@ -290,7 +294,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeliveryTermsCode
 
-Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
+Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 
 Type: **[DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) __nullable__**  
 Category: **System**  
@@ -378,7 +382,7 @@ Show in UI: **CannotBeShown**
 
 ### FiscalSalesNumber
 
-Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq;like)` `ReadOnly` `Introduced in version 19.1`
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -389,7 +393,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. `Filter(ge;le)` `Introduced in version 20.1`
+When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -411,7 +415,7 @@ Show in UI: **HiddenByDefault**
 
 ### IntrastatTransactionNatureCode
 
-Transaction nature; used for Intrastat reporting.
+Transaction nature; used for Intrastat reporting
 
 Type: **[TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__**  
 Category: **System**  
@@ -448,7 +452,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportModeCode
 
-Transport mode; used for Intrastat reporting.
+Transport mode; used for Intrastat reporting
 
 Type: **[TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__**  
 Category: **System**  
@@ -474,7 +478,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -485,7 +489,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -496,7 +500,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsValidField
 
-True when the order is valid (e.g. released and not void). Used for internal processing. `Required` `Default(false)` `ReadOnly`
+1 when the order is valid (e.g. released and not void). Used for internal processing.
 
 Type: **boolean**  
 Category: **System**  
@@ -537,7 +541,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-The last term for the payment of the sales order. `Filter(ge;le)`
+The last term for the payment of the sales order
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -549,7 +553,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentTermDays != 0), obj.ShipToCustomer.DefaultPaymentTermDays, obj.Customer.DefaultPaymentTermDays), Double))`
 ### PaymentDueStartDate
 
-The date when the payment becomes due for documents with one installment. null when the document is with multiple installments. `Filter(ge;le)`
+The date when the payment becomes due for documents with one installment.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -615,7 +619,7 @@ Show in UI: **HiddenByDefault**
 
 ### RequiredDeliveryDate
 
-The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. `Filter(ge;le)`
+The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -662,7 +666,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToDate
 
-When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. `Filter(ge;le)` `Introduced in version 20.1`
+When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -837,7 +841,7 @@ Show in UI: **HiddenByDefault**
 
 ### Customer
 
-The primary customer, which placed the sales order. `Required` `Filter(multi eq)`
+The primary customer, which placed the sales order
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Indexed: **True**  
@@ -847,7 +851,7 @@ Show in UI: **ShownByDefault**
 
 ### Deal
 
-The opportunity (deal) on which this order is based. `Filter(multi eq)`
+The opportunity (deal) on which this order is based
 
 Type: **[Deals](Crm.Presales.Deals.md) (nullable)**  
 Category: **System**  
@@ -856,7 +860,7 @@ Show in UI: **HiddenByDefault**
 
 ### Dealer
 
-The external dealer, associated with the sales order. `Filter(multi eq)`
+The external dealer, associated with the sales order
 
 Type: **[Dealers](Crm.Sales.Dealers.md) (nullable)**  
 Category: **System**  
@@ -865,7 +869,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealType
 
-Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)`
+Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type.
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 Category: **System**  
@@ -876,7 +880,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DistributionChannel
 
-The distribution channel, that is used to deliver the products. `Filter(multi eq)`
+Distribution channel used to deliver the products
 
 Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 Category: **System**  
@@ -887,7 +891,7 @@ Front-End Recalc Expressions:
 `obj.ShipToCustomer.DefaultDistributionChannel.IfNullThen( obj.Customer.DefaultDistributionChannel).IfNullThen( obj.DistributionChannel)`
 ### DocumentCurrency
 
-The currency of the document; e.g. the currency of the amounts in the document. `Required` `Filter(multi eq)`
+The currency of the document; e.g. the currency of the amounts in the document
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -911,7 +915,7 @@ Show in UI: **ShownByDefault**
 
 ### EndCustomerParty
 
-The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition. `Filter(multi eq)` `Introduced in version 20.1`
+The end customer is the final recipient or user of the goods or services in the sales transaction. It is used when the Customer (the party you sell to and invoice) is an intermediary (e.g., distributor or reseller), but you still need to record who the sale is ultimately for (the customer of your customer) for internal tracking and reporting purposes. The end customer is stored for information and analysis only and does not affect the commercial relationship or invoicing. Any Party can be selected, even if it does not have a Customer definition.
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -941,7 +945,7 @@ Show in UI: **HiddenByDefault**
 
 ### FiscalPrinterPosDevice
 
-For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
+For POS sales, specifies the fiscal printer. NULL when the sales is not a POS sale.
 
 Type: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 Category: **System**  
@@ -968,7 +972,7 @@ Show in UI: **HiddenByDefault**
 
 ### IntrastatTransportCountry
 
-Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)`
+Country of origin of the transport company; used for Intrastat reporting
 
 Type: **[Countries](General.Geography.Countries.md) (nullable)**  
 Category: **System**  
@@ -999,7 +1003,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentAccount
 
-When not null, the payment account, where the payment is expected. null=no expectation for account. `Filter(multi eq)`
+When not NULL, the payment account, where the payment is expected. NULL=no expectation for account
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -1011,7 +1015,7 @@ Front-End Recalc Expressions:
 `obj.PaymentPlans.Select( c => c.PaymentAccount).Distinct( ).OnlyIfSingle( )`
 ### PaymentType
 
-When not null specifies the payment type for the sales order. `Filter(multi eq)`
+When not NULL specifies the payment type for the sales order
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -1023,7 +1027,7 @@ Front-End Recalc Expressions:
 `obj.PaymentPlans.Select( c => c.PaymentType).Distinct( ).OnlyIfSingle( )`
 ### PosLocation
 
-For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
+For POS sales, specifies the POS location, in which the sale is performed. NULL when the sales is not a POS sale.
 
 Type: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 Category: **System**  
@@ -1032,7 +1036,7 @@ Show in UI: **ShownByDefault**
 
 ### PosOperator
 
-For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
+For POS sales, specifies the POS operator, who created the sale. NULL when the sale is not a POS sale.
 
 Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 Category: **System**  
@@ -1041,7 +1045,7 @@ Show in UI: **ShownByDefault**
 
 ### PosTerminal
 
-For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
+For POS sales, specifies the POS terminal, on which the sale is entered. NULL when the sales is not a POS sale.
 
 Type: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 Category: **System**  
@@ -1050,7 +1054,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceList
 
-The price list to be used for determining product prices in the lines. `Filter(multi eq)`
+The price list to be used for determining product prices in the lines
 
 Type: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
 Category: **System**  
@@ -1078,7 +1082,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReturnForInvoice
 
-When specified indicates that some of the goods sold in the sales orders invoiced with Return_For_Invoice_Id are returned with the current document. `Filter(multi eq)`
+When specified indicates that some of the goods sold in the sales orders invoiced with 'Return for invoice' are returned with the current document.
 
 Type: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
 Indexed: **True**  
@@ -1088,7 +1092,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReturnForSalesOrder
 
-When specified indicates that some of the goods sold in Return_For_Sales_Order_Id are returned with the current document. `Filter(multi eq;like)`
+When specified indicates that some of the goods sold in 'Return for sales order' are returned with the current document.
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Indexed: **True**  
@@ -1107,7 +1111,7 @@ Show in UI: **HiddenByDefault**
 
 ### SalesPerson
 
-Internal company sales person. `Filter(multi eq)`
+Internal company sales person
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable)**  
 Indexed: **True**  
@@ -1128,7 +1132,7 @@ Show in UI: **HiddenByDefault**
 
 ### ShipToCustomer
 
-The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)`
+The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -1139,7 +1143,7 @@ Front-End Recalc Expressions:
 `DetermineShipToCustomer( obj.Transaction, obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.Customer, obj.ShipToCustomer)`
 ### ShipToPartyContactMechanism
 
-The contact mechanism (address) to whih to ship the sales order. `Filter(multi eq)`
+The contact mechanism (address) to whih to ship the sales order
 
 Type: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable)**  
 Indexed: **True**  
@@ -1151,7 +1155,7 @@ Front-End Recalc Expressions:
 `obj.ShipToCustomer.Party.DefaultContactMechanism.IfNullThen( obj.Customer.Party.DefaultContactMechanism)`
 ### Store
 
-The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. `Filter(multi eq)`
+The store from which to issue the sales order. NULL means that there is no store associated with the sales order or there are different stores for some of the lines
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  

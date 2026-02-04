@@ -47,18 +47,18 @@ Aggregate Root:
 | [DefaultPropertyValue](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvalue) | string (254) __nullable__ | The default value of the property when creating new documents. 
 | [DefaultProperty<br />ValueDescription](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. 
 | [DefaultValueId](Systems.Documents.DocumentTypeProperties.md#defaultvalueid) | guid __nullable__ | Internal Id of the default value of the property. `Filter(multi eq)` 
-| [LineNo](Systems.Documents.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type. `Required` `Filter(ge;le)` `ORD` 
-| [Required](Systems.Documents.DocumentTypeProperties.md#required) | boolean | True if the property is required when creating documents of this type. `Required` `Default(false)` `Filter(eq)` 
-| [RequiredFromDate](Systems.Documents.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
-| [RequiredThruDate](Systems.Documents.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
+| [LineNo](Systems.Documents.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type 
+| [Required](Systems.Documents.DocumentTypeProperties.md#required) | boolean | 1 if the property is required when creating documents of this type 
+| [RequiredFromDate](Systems.Documents.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. 
+| [RequiredThruDate](Systems.Documents.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Systems.Documents.DocumentTypeProperties.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, for which to add user-defined properties. `Required` `Filter(multi eq)` `Owner` |
-| [EnterpriseCompany](Systems.Documents.DocumentTypeProperties.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the current rule is valid only for the specified company. `Filter(multi eq)` |
-| [Property](Systems.Documents.DocumentTypeProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined property, which should be added. `Required` `Filter(multi eq)` |
+| [DocumentType](Systems.Documents.DocumentTypeProperties.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, for which to add user-defined properties. |
+| [EnterpriseCompany](Systems.Documents.DocumentTypeProperties.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the current rule is valid only for the specified company. |
+| [Property](Systems.Documents.DocumentTypeProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined property, which should be added. |
 
 
 ## System Attributes
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Line number, unique within the document type. `Required` `Filter(ge;le)` `ORD`
+Line number, unique within the document type
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Front-End Recalc Expressions:
 `( obj.DocumentType.DocumentTypeProperties.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Required
 
-True if the property is required when creating documents of this type. `Required` `Default(false)` `Filter(eq)`
+1 if the property is required when creating documents of this type
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiredFromDate
 
-When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)`
+When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiredThruDate
 
-When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. `Filter(ge;le)`
+When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -182,7 +182,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The document type, for which to add user-defined properties. `Required` `Filter(multi eq)` `Owner`
+The document type, for which to add user-defined properties.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  
@@ -193,7 +193,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-When not null, specifies that the current rule is valid only for the specified company. `Filter(multi eq)`
+When not null, specifies that the current rule is valid only for the specified company.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **HiddenByDefault**
 
 ### Property
 
-The user-defined property, which should be added. `Required` `Filter(multi eq)`
+The user-defined property, which should be added.
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  

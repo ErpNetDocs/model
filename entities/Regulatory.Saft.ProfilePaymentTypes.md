@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfilePaymentTypes.md#notes) | string (max) __nullable__ | Additional information or comments for this entry. `Filter(like)` 
+| [Notes](Regulatory.Saft.ProfilePaymentTypes.md#notes) | string (max) __nullable__ | Additional information or comments for this entry. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PaymentMechanismCodeEntry](Regulatory.Saft.ProfilePaymentTypes.md#paymentmechanismcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Payment Mechanism used when generating the SAFT file. `Required` `Filter(multi eq)` |
-| [PaymentType](Regulatory.Saft.ProfilePaymentTypes.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) | PaymentType used for this SAFT profile. `Required` `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfilePaymentTypes.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | Identifier of the SAFT profile associated with this payment type. `Required` `Filter(multi eq)` `Owner` |
+| [PaymentMechanismCodeEntry](Regulatory.Saft.ProfilePaymentTypes.md#paymentmechanismcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Payment Mechanism used when generating the SAFT file. |
+| [PaymentType](Regulatory.Saft.ProfilePaymentTypes.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) | PaymentType used for this SAFT profile |
+| [Profile](Regulatory.Saft.ProfilePaymentTypes.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | Identifier of the SAFT profile associated with this payment type. |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional information or comments for this entry. `Filter(like)`
+Additional information or comments for this entry.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentMechanismCodeEntry
 
-Payment Mechanism used when generating the SAFT file. `Required` `Filter(multi eq)`
+Payment Mechanism used when generating the SAFT file.
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Indexed: **True**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentType
 
-PaymentType used for this SAFT profile. `Required` `Filter(multi eq)`
+PaymentType used for this SAFT profile
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md)**  
 Indexed: **True**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-Identifier of the SAFT profile associated with this payment type. `Required` `Filter(multi eq)` `Owner`
+Identifier of the SAFT profile associated with this payment type.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  

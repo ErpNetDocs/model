@@ -4,7 +4,7 @@ uid: Crm.Marketing.ProductDistributionChannels
 # Crm.Marketing.ProductDistributionChannels
 
 
-Channel assignments (listing) for products.
+Channel assignments (listing) for products
 
 ## General
 Namespace: [Crm.Marketing](Crm.Marketing.md)  
@@ -35,18 +35,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Marketing.ProductDistributionChannels.md#fromdate) | date __nullable__ | When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Default(Today)` `Filter(ge;le)` 
-| [IsActive](Crm.Marketing.ProductDistributionChannels.md#isactive) | boolean | Is this product listing active? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
-| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: Product.CostingCurrency` 
+| [FromDate](Crm.Marketing.ProductDistributionChannels.md#fromdate) | date __nullable__ | When the product was listed. NULL-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does) 
+| [IsActive](Crm.Marketing.ProductDistributionChannels.md#isactive) | boolean | Is this product listing active? 1=Yes, 0=No 
+| [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement. 
 | [MinimalSalesQuantityBase](Crm.Marketing.ProductDistributionChannels.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of the current product that has to be specified in any sale for this distribution channel. 
-| [ToDate](Crm.Marketing.ProductDistributionChannels.md#todate) | date __nullable__ | When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Filter(ge;le)` 
+| [ToDate](Crm.Marketing.ProductDistributionChannels.md#todate) | date __nullable__ | When the product was de-listed. NULL=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributionChannel](Crm.Marketing.ProductDistributionChannels.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) | The distribution channel in which the product is listed. `Required` `Filter(multi eq)` |
-| [Product](Crm.Marketing.ProductDistributionChannels.md#product) | [Products](General.Products.Products.md) | The listed product. `Required` `Filter(multi eq)` `Owner` |
+| [DistributionChannel](Crm.Marketing.ProductDistributionChannels.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) | The distribution channel in which the product is listed |
+| [Product](Crm.Marketing.ProductDistributionChannels.md#product) | [Products](General.Products.Products.md) | The listed product |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### FromDate
 
-When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Default(Today)` `Filter(ge;le)`
+When the product was listed. NULL-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Is this product listing active? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)`
+Is this product listing active? 1=Yes, 0=No
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### MinimalSalesPricePerLot
 
-Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: Product.CostingCurrency`
+Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.
 
 Type: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Filter(ge;le)`
+When the product was de-listed. NULL=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **HiddenByDefault**
 
 ### DistributionChannel
 
-The distribution channel in which the product is listed. `Required` `Filter(multi eq)`
+The distribution channel in which the product is listed
 
 Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md)**  
 Indexed: **True**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The listed product. `Required` `Filter(multi eq)` `Owner`
+The listed product
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  

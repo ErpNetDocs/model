@@ -42,12 +42,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AutoApplyDiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | [DiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated. `Required` `Default("1")` `Filter(multi eq)` `Introduced in version 23.1.2.8` 
+| [AutoApplyDiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | [DiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated. 
 | [Description](Crm.Pricing.PriceLists.md#description) | string (max) __nullable__ | The description of this PriceList. 
-| [FromDate](Crm.Pricing.PriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list. `Filter(eq;ge;le)` 
-| [IsActive](Crm.Pricing.PriceLists.md#isactive) | boolean | Indicates whether the current Price List is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [FromDate](Crm.Pricing.PriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list 
+| [IsActive](Crm.Pricing.PriceLists.md#isactive) | boolean | Indicates whether the current Price List is active. 
 | [Name](Crm.Pricing.PriceLists.md#name) | string (50) | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` 
-| [ThruDate](Crm.Pricing.PriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list. `Filter(eq;ge;le)` 
+| [ThruDate](Crm.Pricing.PriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### AutoApplyDiscountLevel
 
-Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated. `Required` `Default("1")` `Filter(multi eq)` `Introduced in version 23.1.2.8`
+Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated.
 
 Type: **[DiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel)**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Starting validity of the price list. `Filter(eq;ge;le)`
+Starting validity of the price list
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Price List is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Price List is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending validity of the price list. `Filter(eq;ge;le)`
+Ending validity of the price list
 
 Type: **datetime __nullable__**  
 Category: **System**  

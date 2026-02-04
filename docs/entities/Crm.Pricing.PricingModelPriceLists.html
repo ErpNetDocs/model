@@ -87,7 +87,7 @@
         <article data-uid="Crm.Pricing.PricingModelPriceLists">
 <h1 id="crmpricingpricingmodelpricelists">Crm.Pricing.PricingModelPriceLists</h1>
 
-<p>The price lists, which are updated by the pricing model.</p>
+<p>The price lists, which are updated by the pricing model</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Pricing.html">Crm.Pricing</a><br>
 Repository: Crm.Pricing.PricingModelPriceLists<br>
@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>The consecutive number of this price list within the pricing model. <code>Required</code></td>
+<td>The consecutive number of this price list within the pricing model</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#marginpercent">MarginPercent</a></td>
 <td>decimal (6, 5) <strong>nullable</strong></td>
-<td>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.</td>
+<td>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way</td>
 </tr>
 </tbody>
 </table>
@@ -143,12 +143,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#pricelist">PriceList</a></td>
 <td><a href="Crm.Pricing.PriceLists.html">PriceLists</a></td>
-<td>The price list, which is included in the pricing model. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The price list, which is included in the pricing model</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelPriceLists.html#pricingmodel">PricingModel</a></td>
 <td><a href="Crm.Pricing.PricingModels.html">PricingModels</a></td>
-<td>The pricing model, for which the price list is listed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The pricing model, for which the price list is listed</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>The consecutive number of this price list within the pricing model. <code>Required</code></p>
+<p>The consecutive number of this price list within the pricing model</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.PricingModel.PriceLists.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="marginpercent">MarginPercent</h3>
-<p>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.</p>
+<p>Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way</p>
 <p>Type: <strong>decimal (6, 5) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -221,13 +221,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="pricelist">PriceList</h3>
-<p>The price list, which is included in the pricing model. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The price list, which is included in the pricing model</p>
 <p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
-<p>The pricing model, for which the price list is listed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The pricing model, for which the price list is listed</p>
 <p>Type: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

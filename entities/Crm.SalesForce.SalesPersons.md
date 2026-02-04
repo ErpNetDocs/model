@@ -41,20 +41,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommissionPercent](Crm.SalesForce.SalesPersons.md#commissionpercent) | decimal (7, 6) __nullable__ | The percentage (0..1) of commission percent. null means that there is no commission percent. 
+| [CommissionPercent](Crm.SalesForce.SalesPersons.md#commissionpercent) | decimal (7, 6) __nullable__ | The percentage (0..1) of commission percent. NULL means that there is no commission percent. 
 | [CommissionPolicyId](Crm.SalesForce.SalesPersons.md#commissionpolicyid) | guid __nullable__ | Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)` 
-| [ContractEndDate](Crm.SalesForce.SalesPersons.md#contractenddate) | datetime __nullable__ | The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)` 
-| [ContractStartDate](Crm.SalesForce.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)` 
-| [IsActive](Crm.SalesForce.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. `Required` `Default(true)` `Filter(eq)` 
+| [ContractEndDate](Crm.SalesForce.SalesPersons.md#contractenddate) | datetime __nullable__ | The ending date of the contract with the sales person. NULL when the sales person is still active. 
+| [ContractStartDate](Crm.SalesForce.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. NULL when it is unknown. 
+| [IsActive](Crm.SalesForce.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](Crm.SalesForce.SalesPersons.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this SalesPerson applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
-| [EnterpriseCompanyLocation](Crm.SalesForce.SalesPersons.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. `Filter(multi eq)` |
-| [Person](Crm.SalesForce.SalesPersons.md#person) | [Persons](General.Contacts.Persons.md) | Base personal record. `Required` `Filter(multi eq)` `FilterableReference` |
-| [SalesPersonGroup](Crm.SalesForce.SalesPersons.md#salespersongroup) | [SalesPersonGroups](Crm.SalesForce.SalesPersonGroups.md) | The sales person group to which this sales person is assigned. `Required` `Filter(multi eq)` |
+| [EnterpriseCompanyLocation](Crm.SalesForce.SalesPersons.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location. |
+| [Person](Crm.SalesForce.SalesPersons.md#person) | [Persons](General.Contacts.Persons.md) | Base personal record |
+| [SalesPersonGroup](Crm.SalesForce.SalesPersons.md#salespersongroup) | [SalesPersonGroups](Crm.SalesForce.SalesPersonGroups.md) | The sales person group to which this sales person is assigned. |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### CommissionPercent
 
-The percentage (0..1) of commission percent. null means that there is no commission percent.
+The percentage (0..1) of commission percent. NULL means that there is no commission percent.
 
 Type: **decimal (7, 6) __nullable__**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **CannotBeShown**
 
 ### ContractEndDate
 
-The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)`
+The ending date of the contract with the sales person. NULL when the sales person is still active.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### ContractStartDate
 
-The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)`
+The starting date of the contract with the sales person. NULL when it is unknown.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.
 
 Type: **boolean**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. null means that the sales person is not assigned to any enterprise location. `Filter(multi eq)`
+The enterprise company location, to which the sales person is assigned. The sales person is allowed to sell to other locations, but this is the default location. NULL means that the sales person is not assigned to any enterprise location.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
@@ -203,7 +203,7 @@ Show in UI: **ShownByDefault**
 
 ### Person
 
-Base personal record. `Required` `Filter(multi eq)` `FilterableReference`
+Base personal record
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Indexed: **True**  
@@ -214,7 +214,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesPersonGroup
 
-The sales person group to which this sales person is assigned. `Required` `Filter(multi eq)`
+The sales person group to which this sales person is assigned.
 
 Type: **[SalesPersonGroups](Crm.SalesForce.SalesPersonGroups.md)**  
 Category: **System**  

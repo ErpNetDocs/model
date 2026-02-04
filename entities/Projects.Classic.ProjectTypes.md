@@ -36,14 +36,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Projects.Classic.ProjectTypes.md#name) | string (254) | The name of the project type. `Required` `Filter(eq;like)` 
+| [Name](Projects.Classic.ProjectTypes.md#name) | string (254) | The name of the project type. 
 | [Notes](Projects.Classic.ProjectTypes.md#notes) | string (max) __nullable__ | Notes for this ProjectType. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.Classic.ProjectTypes.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null means that the project type is specific to the enterprise company. `Filter(multi eq)` |
+| [EnterpriseCompany](Projects.Classic.ProjectTypes.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not NULL means that the project type is specific to the enterprise company |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### Name
 
-The name of the project type. `Required` `Filter(eq;like)`
+The name of the project type.
 
 Type: **string (254)**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-When not null means that the project type is specific to the enterprise company. `Filter(multi eq)`
+When not NULL means that the project type is specific to the enterprise company
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  

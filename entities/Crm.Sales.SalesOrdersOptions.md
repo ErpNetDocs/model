@@ -4,7 +4,7 @@ uid: Crm.Sales.SalesOrdersOptions
 # Crm.Sales.SalesOrdersOptions
 
 
-Options for sales orders of specific user defined document type.
+Options for sales orders of specific user defined document type
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -35,19 +35,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). `Required` `Default("A")` `Filter(multi eq)` 
-| [AvailableQuantityOnly](Crm.Sales.SalesOrdersOptions.md#availablequantityonly) | boolean | When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). `Required` `Default(false)` `Filter(eq)` 
-| [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#minimumamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not null, specifies minimal total amount of the sales order, which is required for order releasing. `Currency: MinimumAmountCurrency` 
-| [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | Terms on which the shipment of the products in the sales order is allowed. `Required` `Default("A")` 
+| [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default) 
+| [AvailableQuantityOnly](Crm.Sales.SalesOrdersOptions.md#availablequantityonly) | boolean | When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP) 
+| [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#minimumamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not NULL, specifies minimal total amount of the sales order, which is required for order releasing. 
+| [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | Terms on which the shipment of the products in the sales order is allowed. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealDocumentType](Crm.Sales.SalesOrdersOptions.md#dealdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. `Filter(multi eq)` |
-| [DocumentType](Crm.Sales.SalesOrdersOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which the sales order option applies. `Required` `Filter(multi eq)` `Owner` |
-| [MinimumAmountCurrency](Crm.Sales.SalesOrdersOptions.md#minimumamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency of Minimal Amount. `Filter(multi eq)` |
-| [VATDeviationDocument<br />AmountType](Crm.Sales.SalesOrdersOptions.md#vatdeviationdocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. `Filter(multi eq)` |
+| [DealDocumentType](Crm.Sales.SalesOrdersOptions.md#dealdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | If filled then new deals from the specified type are created automatically by the sales orders that aren't assigned to existing deals. |
+| [DocumentType](Crm.Sales.SalesOrdersOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which the sales order option applies. |
+| [MinimumAmountCurrency](Crm.Sales.SalesOrdersOptions.md#minimumamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency of Minimal Amount |
+| [VATDeviationDocument<br />AmountType](Crm.Sales.SalesOrdersOptions.md#vatdeviationdocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### AllowedDirections
 
-Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). `Required` `Default("A")` `Filter(multi eq)`
+Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)
 
 Type: **[AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableQuantityOnly
 
-When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). `Required` `Default(false)` `Filter(eq)`
+When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### MinimumAmount
 
-When not null, specifies minimal total amount of the sales order, which is required for order releasing. `Currency: MinimumAmountCurrency`
+When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### ShipmentAllowance
 
-Terms on which the shipment of the products in the sales order is allowed. `Required` `Default("A")`
+Terms on which the shipment of the products in the sales order is allowed.
 
 Type: **[ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealDocumentType
 
-If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. `Filter(multi eq)`
+If filled then new deals from the specified type are created automatically by the sales orders that aren't assigned to existing deals.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The document type for which the sales order option applies. `Required` `Filter(multi eq)` `Owner`
+The document type for which the sales order option applies.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### MinimumAmountCurrency
 
-The currency of Minimal Amount. `Filter(multi eq)`
+The currency of Minimal Amount
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### VATDeviationDocumentAmountType
 
-Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. `Filter(multi eq)`
+Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
 Category: **System**  

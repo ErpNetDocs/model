@@ -4,7 +4,7 @@ uid: Production.Resources.Resources
 # Production.Resources.Resources
 
 
-Resource types available to production.
+Resource types available to production
 
 ## General
 Namespace: [Production.Resources](Production.Resources.md)  
@@ -35,29 +35,29 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
-| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Resources.md#notes) | string (254) __nullable__ | User notes for the resource. 
-| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production. `Required` `Default(0)` 
-| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. . `Unit: SetupScrapUnit` `Required` `Default(0)` 
-| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
-| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency` 
+| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active. 
+| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource 
+| [Notes](Production.Resources.Resources.md#notes) | string (254) __nullable__ | User notes for the resource 
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production 
+| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production.  
+| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. 
+| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Primary measurement unit for quantities of the resource. `Required` `Filter(multi eq)` |
-| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. `Filter(multi eq)` |
-| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group. `Required` `Filter(multi eq)` `Owner` |
-| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity. `Required` `Filter(multi eq)` |
+| [PrimaryUnit](Production.Resources.Resources.md#primaryunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Primary measurement unit for quantities of the resource |
+| [ResourceCurrency](Production.Resources.Resources.md#resourcecurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Currency for this resource. This currency applies for the standard price and cost per hour. |
+| [ResourceGroup](Production.Resources.Resources.md#resourcegroup) | [ResourceGroups](Production.Resources.ResourceGroups.md) | The Id of the containing resource group |
+| [SetupScrapUnit](Production.Resources.Resources.md#setupscrapunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement units of Setup_Scrap_Quantity |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Resources.md#id) | guid |  
+| [Id](Production.Resources.Resources.md#id) | guid | Unique resource id 
 | [ObjectVersion](Production.Resources.Resources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](Production.Resources.Resources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+Indicates whether the current resource is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the resource. `Required` `Filter(like)`
+Name of the resource
 
 Type: **string (64)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-User notes for the resource.
+User notes for the resource
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupDurationHours
 
-The usual duration of setup when changing production. `Required` `Default(0)`
+The usual duration of setup when changing production
 
 Type: **decimal (6, 2)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupScrapQuantity
 
-The usual quantity of fixed scrap occurring when changing production. . `Unit: SetupScrapUnit` `Required` `Default(0)`
+The usual quantity of fixed scrap occurring when changing production.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardCostPerHour
 
-Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. `Currency: ResourceCurrency`
+Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.
 
 Type: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardPricePerHour
 
-Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. `Currency: ResourceCurrency`
+Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.
 
 Type: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -146,6 +146,8 @@ Supports Order By: **False**
 Show in UI: **ShownByDefault**  
 
 ### Id
+
+Unique resource id
 
 Type: **guid**  
 Indexed: **True**  
@@ -179,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### PrimaryUnit
 
-Primary measurement unit for quantities of the resource. `Required` `Filter(multi eq)`
+Primary measurement unit for quantities of the resource
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -188,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceCurrency
 
-Currency for this resource. This currency applies for the standard price and cost per hour. `Filter(multi eq)`
+Currency for this resource. This currency applies for the standard price and cost per hour.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -197,7 +199,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceGroup
 
-The Id of the containing resource group. `Required` `Filter(multi eq)` `Owner`
+The Id of the containing resource group
 
 Type: **[ResourceGroups](Production.Resources.ResourceGroups.md)**  
 Indexed: **True**  
@@ -208,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupScrapUnit
 
-The measurement units of Setup_Scrap_Quantity. `Required` `Filter(multi eq)`
+The measurement units of Setup_Scrap_Quantity
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  

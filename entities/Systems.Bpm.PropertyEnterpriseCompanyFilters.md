@@ -44,13 +44,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. `Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomProperty<br />AllowedValuesRepository.TableName)` 
+| [FilterXml](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current filter is specifed. |
 | [Property](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The <see cref="CustomProperty"/> to which this PropertyEnterprise<br />CompanyFilter belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### FilterXml
 
-When not null, specifies a filter for the allowed values of the property for the specified enterprise company. `Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomPropertyAllowedValuesRepository.TableName)`
+When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which the current filter is specifed. `Required` `Filter(multi eq)`
+The enterprise company for which the current filter is specifed.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  

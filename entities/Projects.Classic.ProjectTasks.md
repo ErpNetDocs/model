@@ -37,25 +37,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetLaborAmount](Projects.Classic.ProjectTasks.md#budgetlaboramount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency` 
-| [FinishDateTime](Projects.Classic.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [BudgetLaborAmount](Projects.Classic.ProjectTasks.md#budgetlaboramount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated 
+| [FinishDateTime](Projects.Classic.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish. 
 | [Notes](Projects.Classic.ProjectTasks.md#notes) | string (max) __nullable__ | Notes for this ProjectTask. 
-| [PlannedDurationHours](Projects.Classic.ProjectTasks.md#planneddurationhours) | decimal (8, 2) | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)` 
-| [ProjectTaskNo](Projects.Classic.ProjectTasks.md#projecttaskno) | int32 | Consecutive task number, unique within the project. `Required` 
-| [StartDateTime](Projects.Classic.ProjectTasks.md#startdatetime) | datetime | The date and time when the task is planned to start. `Required` `Default(Now)` `Filter(eq;ge;le)` 
-| [TaskName](Projects.Classic.ProjectTasks.md#taskname) | string (254) | The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)` 
+| [PlannedDurationHours](Projects.Classic.ProjectTasks.md#planneddurationhours) | decimal (8, 2) | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. 
+| [ProjectTaskNo](Projects.Classic.ProjectTasks.md#projecttaskno) | int32 | Consecutive task number, unique within the project. 
+| [StartDateTime](Projects.Classic.ProjectTasks.md#startdatetime) | datetime | The date and time when the task is planned to start. 
+| [TaskName](Projects.Classic.ProjectTasks.md#taskname) | string (254) | The short name of the task. It is best practice to contain the target of the task. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](Projects.Classic.ProjectTasks.md#activity) | [Activities](General.Activities.Activities.md) (nullable) | The Id of the Cm_Activity created for this task. null means that activity is still not created. `Filter(multi eq)` |
-| [Project](Projects.Classic.ProjectTasks.md#project) | [Projects](Projects.Classic.Projects.md) | The project, to which this task belongs. `Required` `Filter(multi eq)` |
-| [ProjectWorkElement](Projects.Classic.ProjectTasks.md#projectworkelement) | [ProjectWorkElements](Projects.Classic.ProjectWorkElements.md) | The work element under which the task is filed. `Required` `Filter(multi eq)` |
-| [Resource](Projects.Classic.ProjectTasks.md#resource) | [Resources](Projects.Classic.Resources.md) (nullable) | The resource, which is required for the task. null means - do not plan any resource. `Filter(multi eq)` |
-| [ResponsibleParty](Projects.Classic.ProjectTasks.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. `Filter(multi eq)` |
-| [TaskType](Projects.Classic.ProjectTasks.md#tasktype) | [TaskTypes](Projects.Classic.TaskTypes.md) | The type of the task. Determines the work type of the tasks, default billing rules, etc. `Required` `Filter(multi eq)` |
-| [WorkType](Projects.Classic.ProjectTasks.md#worktype) | [TypeWorkTypes](Projects.Classic.TypeWorkTypes.md) (nullable) | Type of work to be done. null means that type of work is undetermined yet. `Filter(multi eq)` |
+| [Activity](Projects.Classic.ProjectTasks.md#activity) | [Activities](General.Activities.Activities.md) (nullable) | The Id of the Cm_Activity created for this task. NULL means that activity is still not created |
+| [Project](Projects.Classic.ProjectTasks.md#project) | [Projects](Projects.Classic.Projects.md) | The project, to which this task belongs. |
+| [ProjectWorkElement](Projects.Classic.ProjectTasks.md#projectworkelement) | [ProjectWorkElements](Projects.Classic.ProjectWorkElements.md) | The work element under which the task is filed. |
+| [Resource](Projects.Classic.ProjectTasks.md#resource) | [Resources](Projects.Classic.Resources.md) (nullable) | The resource, which is required for the task. NULL means - do not plan any resource |
+| [ResponsibleParty](Projects.Classic.ProjectTasks.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined |
+| [TaskType](Projects.Classic.ProjectTasks.md#tasktype) | [TaskTypes](Projects.Classic.TaskTypes.md) | The type of the task. Determines the work type of the tasks, default billing rules, etc. |
+| [WorkType](Projects.Classic.ProjectTasks.md#worktype) | [TypeWorkTypes](Projects.Classic.TypeWorkTypes.md) (nullable) | Type of work to be done. NULL means that type of work is undetermined yet. |
 
 
 ## System Attributes
@@ -83,7 +83,7 @@ Aggregate Tree
 
 ### BudgetLaborAmount
 
-Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency`
+Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated
 
 Type: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( obj.PlannedDurationHours != 0) AndAlso ( obj.WorkType != null)), obj.CalculateBudgetLaborAmount( ), new Amount( 0, obj.Project.BudgetingCurrency))`
 ### FinishDateTime
 
-The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)`
+The date and time when the task is planned to finish.
 
 Type: **datetime**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### PlannedDurationHours
 
-Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)`
+Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.
 
 Type: **decimal (8, 2)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTaskNo
 
-Consecutive task number, unique within the project. `Required`
+Consecutive task number, unique within the project.
 
 Type: **int32**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDateTime
 
-The date and time when the task is planned to start. `Required` `Default(Now)` `Filter(eq;ge;le)`
+The date and time when the task is planned to start.
 
 Type: **datetime**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### TaskName
 
-The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)`
+The short name of the task. It is best practice to contain the target of the task.
 
 Type: **string (254)**  
 Category: **System**  
@@ -222,7 +222,7 @@ Show in UI: **HiddenByDefault**
 
 ### Activity
 
-The Id of the Cm_Activity created for this task. null means that activity is still not created. `Filter(multi eq)`
+The Id of the Cm_Activity created for this task. NULL means that activity is still not created
 
 Type: **[Activities](General.Activities.Activities.md) (nullable)**  
 Category: **System**  
@@ -231,7 +231,7 @@ Show in UI: **CannotBeShown**
 
 ### Project
 
-The project, to which this task belongs. `Required` `Filter(multi eq)`
+The project, to which this task belongs.
 
 Type: **[Projects](Projects.Classic.Projects.md)**  
 Indexed: **True**  
@@ -241,7 +241,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectWorkElement
 
-The work element under which the task is filed. `Required` `Filter(multi eq)`
+The work element under which the task is filed.
 
 Type: **[ProjectWorkElements](Projects.Classic.ProjectWorkElements.md)**  
 Category: **System**  
@@ -250,7 +250,7 @@ Show in UI: **ShownByDefault**
 
 ### Resource
 
-The resource, which is required for the task. null means - do not plan any resource. `Filter(multi eq)`
+The resource, which is required for the task. NULL means - do not plan any resource
 
 Type: **[Resources](Projects.Classic.Resources.md) (nullable)**  
 Category: **System**  
@@ -259,7 +259,7 @@ Show in UI: **CannotBeShown**
 
 ### ResponsibleParty
 
-The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. `Filter(multi eq)`
+The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -268,7 +268,7 @@ Show in UI: **ShownByDefault**
 
 ### TaskType
 
-The type of the task. Determines the work type of the tasks, default billing rules, etc. `Required` `Filter(multi eq)`
+The type of the task. Determines the work type of the tasks, default billing rules, etc.
 
 Type: **[TaskTypes](Projects.Classic.TaskTypes.md)**  
 Category: **System**  
@@ -277,7 +277,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkType
 
-Type of work to be done. null means that type of work is undetermined yet. `Filter(multi eq)`
+Type of work to be done. NULL means that type of work is undetermined yet.
 
 Type: **[TypeWorkTypes](Projects.Classic.TypeWorkTypes.md) (nullable)**  
 Category: **System**  

@@ -35,19 +35,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD` 
-| [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
-| [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
-| [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
+| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type. 
+| [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change. 
+| [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days. 
+| [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months. 
 | [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
-| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
+| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenanceTypeGroup](Applications.AssetManagement.MaintenanceTypes.md#maintenancetypegroup) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) | The group, to which this maintenance type belongs. `Required` `Filter(multi eq)` |
-| [TrackedParameter](Applications.AssetManagement.MaintenanceTypes.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable) | Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. `Filter(multi eq)` |
+| [MaintenanceTypeGroup](Applications.AssetManagement.MaintenanceTypes.md#maintenancetypegroup) | [MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md) | The group, to which this maintenance type belongs. |
+| [TrackedParameter](Applications.AssetManagement.MaintenanceTypes.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable) | Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter. |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD`
+Unique code of the maintenance type.
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultParameterChange
 
-Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.
+Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultScheduleDays
 
-Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.
+Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultScheduleMonths
 
-Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.
+Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the maintenance type. `Required` `Filter(eq;like)`
+Multilanguage name of the maintenance type.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaintenanceTypeGroup
 
-The group, to which this maintenance type belongs. `Required` `Filter(multi eq)`
+The group, to which this maintenance type belongs.
 
 Type: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
 Indexed: **True**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### TrackedParameter
 
-Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. `Filter(multi eq)`
+Specifies the parameter, on which the next scheduled maintenance will be based. NULL means that there is no default schedule, based on parameter.
 
 Type: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable)**  
 Category: **System**  

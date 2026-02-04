@@ -126,7 +126,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.CodingSystems.html#isunique">IsUnique</a></td>
 <td>boolean</td>
-<td>True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>True when the coding system can contain only unique product codes. False - duplicated product codes are allowed.</td>
 </tr>
 <tr>
 <td><a href="General.Products.CodingSystems.html#name">Name</a></td>
@@ -148,7 +148,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.CodingSystems.html#defaultmeasurementunit">DefaultMeasurementUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>When not null, specifies a measurement unit to be used as default, instead of the products default unit. <code>Filter(multi eq)</code></td>
+<td>When not empty, specifies a measurement unit to be used as default, instead of the products default unit</td>
 </tr>
 </tbody>
 </table>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isunique">IsUnique</h3>
-<p>True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>True when the coding system can contain only unique product codes. False - duplicated product codes are allowed.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -262,7 +262,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultmeasurementunit">DefaultMeasurementUnit</h3>
-<p>When not null, specifies a measurement unit to be used as default, instead of the products default unit. <code>Filter(multi eq)</code></p>
+<p>When not empty, specifies a measurement unit to be used as default, instead of the products default unit</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

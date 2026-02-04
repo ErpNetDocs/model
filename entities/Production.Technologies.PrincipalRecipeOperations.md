@@ -35,30 +35,30 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The desired description of the Conditional Property. . 
-| [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertyvalue) | string (254) __nullable__ | The desired value of the Conditional Property. . 
-| [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#lineord) | int32 | Consecutive line number within the principal recipe. `Required` 
-| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting. 
-| [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` `Filter(ge;le)` 
+| [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The desired description of the Conditional Property.  
+| [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertyvalue) | string (254) __nullable__ | The desired value of the Conditional Property.  
+| [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#lineord) | int32 | Consecutive line number within the principal recipe. 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of the previous operation can this operation start. NULL means that this operation should wait the previous operation to finish before starting 
+| [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes 
 | [Notes](Production.Technologies.PrincipalRecipeOperations.md#notes) | string (254) __nullable__ | Notes for this PrincipalRecipeOperation. 
 | [OperationDescription](Production.Technologies.PrincipalRecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. Initially copied from the generic operation definition. 
-| [RunTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)` 
-| [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
-| [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` `Filter(ge;le)` 
-| [Tooling](Production.Technologies.PrincipalRecipeOperations.md#tooling) | string (254) __nullable__ | The tools needed for the routing step. 
-| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [WaitTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` `Filter(ge;le)` 
+| [RunTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for one piece in the standard measurement unit of the product 
+| [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation 
+| [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment 
+| [Tooling](Production.Technologies.PrincipalRecipeOperations.md#tooling) | string (254) __nullable__ | The tools needed for the routing step 
+| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation 
+| [WaitTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionalProperty](Production.Technologies.PrincipalRecipeOperations.md#conditionalproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. `Filter(multi eq)` |
-| [Operation](Production.Technologies.PrincipalRecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The generic operation definition. The data is copied locally and can be modified for this specific record. `Filter(multi eq)` |
-| [OperationInstruction](Production.Technologies.PrincipalRecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. `Filter(multi eq)` |
+| [ConditionalProperty](Production.Technologies.PrincipalRecipeOperations.md#conditionalproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not NULL, specifies that, when creating recipe, the operation will be added only if this property is set for the main product |
+| [Operation](Production.Technologies.PrincipalRecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The generic operation definition. The data is copied locally and can be modified for this specific record. |
+| [OperationInstruction](Production.Technologies.PrincipalRecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format |
 | [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The <see cref="PrincipalRecipe"/> to which this PrincipalRecipeOperation belongs. `Required` `Filter(multi eq)` `Owner` |
-| [UseQuantityUnit](Production.Technologies.PrincipalRecipeOperations.md#usequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Use_Quantity. `Required` `Filter(multi eq)` |
-| [WorkgroupResource](Production.Technologies.PrincipalRecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. `Required` `Filter(multi eq)` |
+| [UseQuantityUnit](Production.Technologies.PrincipalRecipeOperations.md#usequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Use_Quantity |
+| [WorkgroupResource](Production.Technologies.PrincipalRecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | Required workgroup resource for the operation. NULL means that no resource is required or the resource will be specified later |
 
 
 ## System Attributes
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### ConditionalPropertyDescription
 
-The desired description of the Conditional Property. .
+The desired description of the Conditional Property.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionalPropertyValue
 
-The desired value of the Conditional Property. .
+The desired value of the Conditional Property.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-Consecutive line number within the principal recipe. `Required`
+Consecutive line number within the principal recipe.
 
 Type: **int32**  
 Category: **System**  
@@ -110,7 +110,7 @@ Front-End Recalc Expressions:
 `( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)`
 ### MinimumConcurrentStartTimeMinutes
 
-How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.
+How many minutes after the start of the previous operation can this operation start. NULL means that this operation should wait the previous operation to finish before starting
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### MoveTimeMinutes
 
-Time to move the lot to the next operation in minutes. `Required` `Default(0)` `Filter(ge;le)`
+Time to move the lot to the next operation in minutes
 
 Type: **int32**  
 Category: **System**  
@@ -157,7 +157,7 @@ Front-End Recalc Expressions:
 `obj.Operation.Description`
 ### RunTimeMinutes
 
-Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)`
+Duration of the operation for one piece in the standard measurement unit of the product
 
 Type: **int32**  
 Category: **System**  
@@ -170,7 +170,7 @@ Front-End Recalc Expressions:
 `obj.Operation.RunTimeMinutes`
 ### ScrapRate
 
-Standard rate of scrap during the operation. `Required` `Default(0)`
+Standard rate of scrap during the operation
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupTimeMinutes
 
-Time needed to setup the equipment. `Required` `Default(0)` `Filter(ge;le)`
+Time needed to setup the equipment
 
 Type: **int32**  
 Category: **System**  
@@ -194,7 +194,7 @@ Front-End Recalc Expressions:
 `obj.Operation.SetupTimeMinutes`
 ### Tooling
 
-The tools needed for the routing step.
+The tools needed for the routing step
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantity
 
-Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
+Quantity of the workgroup resource that should be allocated for the operation
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Front-End Recalc Expressions:
 `obj.Operation.UseQuantityBase`
 ### WaitTimeMinutes
 
-Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` `Filter(ge;le)`
+Wait time (drying, cooling, etc.) after the operation in minutes
 
 Type: **int32**  
 Category: **System**  
@@ -263,7 +263,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConditionalProperty
 
-When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. `Filter(multi eq)`
+When not NULL, specifies that, when creating recipe, the operation will be added only if this property is set for the main product
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### Operation
 
-The generic operation definition. The data is copied locally and can be modified for this specific record. `Filter(multi eq)`
+The generic operation definition. The data is copied locally and can be modified for this specific record.
 
 Type: **[Operations](Production.Resources.Operations.md) (nullable)**  
 Category: **System**  
@@ -281,7 +281,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationInstruction
 
-Link to additional data, containing instructions in external format. `Filter(multi eq)`
+Link to additional data, containing instructions in external format
 
 Type: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 Category: **System**  
@@ -300,7 +300,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantityUnit
 
-The measurement unit of Use_Quantity. `Required` `Filter(multi eq)`
+The measurement unit of Use_Quantity
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -311,7 +311,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.WorkgroupResource.Resource != null), obj.WorkgroupResource.Resource.PrimaryUnit, obj.UseQuantityUnit)`
 ### WorkgroupResource
 
-Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. `Required` `Filter(multi eq)`
+Required workgroup resource for the operation. NULL means that no resource is required or the resource will be specified later
 
 Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 Category: **System**  

@@ -130,7 +130,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.MeasurementCategories.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True=This category is the default category; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>1=This category is the default category; 0=otherwise</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementCategories.html#name">Name</a></td>
@@ -152,7 +152,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.MeasurementCategories.html#id">Id</a></td>
 <td>guid</td>
-<td></td>
+<td>Unique measurement category Id</td>
 </tr>
 <tr>
 <td><a href="General.Products.MeasurementCategories.html#objectversion">ObjectVersion</a></td>
@@ -200,7 +200,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isdefault">IsDefault</h3>
-<p>True=This category is the default category; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>1=This category is the default category; 0=otherwise</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -216,6 +216,7 @@ Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
+<p>Unique measurement category Id</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

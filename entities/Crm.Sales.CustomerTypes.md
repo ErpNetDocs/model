@@ -4,7 +4,11 @@ uid: Crm.Sales.CustomerTypes
 # Crm.Sales.CustomerTypes
 
 
-Customer Types define user-defined categories used to classify customers within the sales domain. This data type is used to group customers for organizational, security, and behavioral purposes, allowing access control at type level so that users without permission for a given customer type cannot access the customer records belonging to it. Customer Types are also used to influence application behavior and user interface layout, enabling different screens, panels, and field configurations for customers of different types.
+Customer Types define user-defined categories used to classify customers within the sales domain.
+    
+This data type is used to group customers for organizational, security, and behavioral purposes, allowing access control at type level so that users without permission for a given customer type cannot access the customer records belonging to it.
+
+Customer Types are also used to influence application behavior and user interface layout, enabling different screens, panels, and field configurations for customers of different types.
 
 ## General
 Namespace: [Crm.Sales](Crm.Sales.md)  
@@ -42,7 +46,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Sales.CustomerTypes.md#isactive) | boolean | Indicates whether the current Customer type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [IsActive](Crm.Sales.CustomerTypes.md#isactive) | boolean | Indicates whether the current Customer type is active. 
 | [Name](Crm.Sales.CustomerTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CustomerType. `Required` `Filter(eq;like)` 
 
 ## References
@@ -68,7 +72,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Customer type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Customer type is active.
 
 Type: **boolean**  
 Category: **System**  

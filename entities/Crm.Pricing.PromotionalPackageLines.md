@@ -4,7 +4,7 @@ uid: Crm.Pricing.PromotionalPackageLines
 # Crm.Pricing.PromotionalPackageLines
 
 
-Detail records (lines) of promotional package definition.
+Detail records (lines) of promotional package definition
 
 ## General
 Namespace: [Crm.Pricing](Crm.Pricing.md)  
@@ -44,20 +44,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNumber](Crm.Pricing.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number. `Required` 
-| [Quantity](Crm.Pricing.PromotionalPackageLines.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. `Required` `Default("R")` 
-| [StandardDiscount<br />PercentAdjust](Crm.Pricing.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal (7, 6) | The value of change (in percents) for the standard discount. `Required` `Default(0)` 
-| [UnitPrice](Crm.Pricing.PromotionalPackageLines.md#unitprice) | [Amount (13, 5)](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When null, the package specifies only discount. `Currency: UnitPriceCurrency` 
+| [LineNumber](Crm.Pricing.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number 
+| [Quantity](Crm.Pricing.PromotionalPackageLines.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. 
+| [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies the way in which to change the standard discount 
+| [StandardDiscount<br />PercentAdjust](Crm.Pricing.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal (7, 6) | Specifies the amount of change (in percent) for the standard discount 
+| [UnitPrice](Crm.Pricing.PromotionalPackageLines.md#unitprice) | [Amount (13, 5)](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When NULL, the package specifies only discount 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Lot](Crm.Pricing.PromotionalPackageLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. `Filter(multi eq)` `Introduced in version 19.1` |
-| [Product](Crm.Pricing.PromotionalPackageLines.md#product) | [Products](General.Products.Products.md) | The product, which is included in the promotional package. `Required` `Filter(multi eq)` |
+| [Lot](Crm.Pricing.PromotionalPackageLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. |
+| [Product](Crm.Pricing.PromotionalPackageLines.md#product) | [Products](General.Products.Products.md) | The product, which is included in the promotional package |
 | [PromotionalPackage](Crm.Pricing.PromotionalPackageLines.md#promotionalpackage) | [PromotionalPackages](Crm.Pricing.PromotionalPackages.md) | The <see cref="Promotional<br />Package"/> to which this PromotionalPackageLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [UnitPriceCurrency](Crm.Pricing.PromotionalPackageLines.md#unitpricecurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Currency of the unit price. null if the package specifies only discount. `Filter(multi eq)` |
+| [UnitPriceCurrency](Crm.Pricing.PromotionalPackageLines.md#unitpricecurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Currency of the unit price. NULL if the package specifies only discount |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### LineNumber
 
-Consecutive line number. `Required`
+Consecutive line number
 
 Type: **int32**  
 Category: **System**  
@@ -88,7 +88,7 @@ Front-End Recalc Expressions:
 `( obj.PromotionalPackage.Lines.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Quantity
 
-The quantity of the product in the package in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)`
+The quantity of the product in the package in the base measurement unit of the Product.
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardDiscountAdjustOrReplace
 
-Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. `Required` `Default("R")`
+Specifies the way in which to change the standard discount
 
 Type: **[StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardDiscountPercentAdjust
 
-The value of change (in percents) for the standard discount. `Required` `Default(0)`
+Specifies the amount of change (in percent) for the standard discount
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### UnitPrice
 
-When not null specifies directly unit price for the product. When null, the package specifies only discount. `Currency: UnitPriceCurrency`
+When not null specifies directly unit price for the product. When NULL, the package specifies only discount
 
 Type: **[Amount (13, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -172,7 +172,7 @@ Show in UI: **HiddenByDefault**
 
 ### Lot
 
-The Product lot number in the promotional package. `Filter(multi eq)` `Introduced in version 19.1`
+The Product lot number in the promotional package.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product, which is included in the promotional package. `Required` `Filter(multi eq)`
+The product, which is included in the promotional package
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -201,7 +201,7 @@ Show in UI: **ShownByDefault**
 
 ### UnitPriceCurrency
 
-Currency of the unit price. null if the package specifies only discount. `Filter(multi eq)`
+Currency of the unit price. NULL if the package specifies only discount
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  

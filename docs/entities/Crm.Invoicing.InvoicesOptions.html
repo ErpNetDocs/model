@@ -87,7 +87,7 @@
         <article data-uid="Crm.Invoicing.InvoicesOptions">
 <h1 id="crminvoicinginvoicesoptions">Crm.Invoicing.InvoicesOptions</h1>
 
-<p>Default options for user document types for Invoices.</p>
+<p>Default options for user document types for Invoices</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Crm.Invoicing.html">Crm.Invoicing</a><br>
 Repository: Crm.Invoicing.InvoicesOptions<br>
@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#createsvatentries">CreatesVATEntries</a></td>
 <td>boolean</td>
-<td>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. <code>Required</code> <code>Default(true)</code></td>
+<td>Specifies whether voiding the invoice should create automatically voiding VAT entry.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></td>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></td>
-<td>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></td>
+<td>Restricts the sign of the line amounts of the invoices - positive, negative or all amounts.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#totalamountsignrestriction">TotalAmountSignRestriction</a></td>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#totalamountsignrestriction">SignRestriction</a></td>
-<td>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></td>
+<td>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</td>
 </tr>
 </tbody>
 </table>
@@ -148,17 +148,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#defaultdealtype">DefaultDealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>When not null, specifies default VAT deal type. <code>Filter(multi eq)</code></td>
+<td>When not NULL, specifies default VAT deal type.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type for which the invoice option applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type for which the invoice option applies.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#vatdeviationdocumentamounttype">VATDeviationDocument<br>AmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
-<td>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. <code>Filter(multi eq)</code></td>
+<td>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT.</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createsvatentries">CreatesVATEntries</h3>
-<p>Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. <code>Required</code> <code>Default(true)</code></p>
+<p>Specifies whether voiding the invoice should create automatically voiding VAT entry.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -199,7 +199,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="signrestriction">SignRestriction</h3>
-<p>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></p>
+<p>Restricts the sign of the line amounts of the invoices - positive, negative or all amounts.</p>
 <p>Type: <strong><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for SignRestriction properties<br>
@@ -231,7 +231,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalamountsignrestriction">TotalAmountSignRestriction</h3>
-<p>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></p>
+<p>Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts</p>
 <p>Type: <strong><a href="Crm.Invoicing.InvoicesOptions.html#totalamountsignrestriction">SignRestriction</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for SignRestriction properties<br>
@@ -285,20 +285,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultdealtype">DefaultDealType</h3>
-<p>When not null, specifies default VAT deal type. <code>Filter(multi eq)</code></p>
+<p>When not NULL, specifies default VAT deal type.</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type for which the invoice option applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type for which the invoice option applies.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatdeviationdocumentamounttype">VATDeviationDocumentAmountType</h3>
-<p>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT. <code>Filter(multi eq)</code></p>
+<p>Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

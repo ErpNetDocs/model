@@ -34,30 +34,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowAddress](Applications.PersonalData.ProcessingConsents.md#allowaddress) | boolean | Allows the processing of the physical address. `Required` `Default(false)` `Filter(eq)` 
-| [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#allowbasicdata) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. `Required` `Default(false)` `Filter(eq)` 
-| [AllowEmail](Applications.PersonalData.ProcessingConsents.md#allowemail) | boolean | Allows the processing of the email address. `Required` `Default(false)` `Filter(eq)` 
-| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string (max) __nullable__ | Comma-separated list of other types of data, which was allowed for processing with this consent. `Filter(eq)` 
-| [AllowPhone](Applications.PersonalData.ProcessingConsents.md#allowphone) | boolean | Allows the processing of the telephone number. `Required` `Default(false)` `Filter(eq)` 
+| [AllowAddress](Applications.PersonalData.ProcessingConsents.md#allowaddress) | boolean | Allows the processing of the physical address. 
+| [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#allowbasicdata) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. 
+| [AllowEmail](Applications.PersonalData.ProcessingConsents.md#allowemail) | boolean | Allows the processing of the email address. 
+| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string (max) __nullable__ | Comma-separated list of other types of data, which was allowed for processing with this consent. 
+| [AllowPhone](Applications.PersonalData.ProcessingConsents.md#allowphone) | boolean | Allows the processing of the telephone number. 
 | [ConsentImage](Applications.PersonalData.ProcessingConsents.md#consentimage) | byte[] __nullable__ | If not null, it is a graphical image, containing additional information for the consent. 
-| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (max) __nullable__ | The actual text of the consent. `Filter(like)` 
-| [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). `Required` `Filter(eq)` 
-| [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given. `Required` `Filter(ge;le)` 
-| [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. `Required` `Default(true)` `Filter(eq)` 
-| [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. `Required` `Default(false)` `Filter(eq)` 
+| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (max) __nullable__ | The actual text of the consent. 
+| [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). 
+| [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given. 
+| [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. 
+| [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. 
 | [Notes](Applications.PersonalData.ProcessingConsents.md#notes) | string (max) __nullable__ | Notes for this ProcessingConsent. 
-| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)` 
-| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)` 
-| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)` 
-| [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime __nullable__ | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. `Filter(ge;le)` 
+| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the email of the parent. 
+| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the name of the parent. 
+| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the phone number of the parent. 
+| [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime __nullable__ | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Applications.PersonalData.ProcessingConsents.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. `Filter(multi eq)` |
-| [PersonalDataProcess](Applications.PersonalData.ProcessingConsents.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. `Filter(multi eq)` |
-| [User](Applications.PersonalData.ProcessingConsents.md#user) | [Users](Systems.Security.Users.md) | The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. `Required` `Filter(multi eq)` |
+| [Person](Applications.PersonalData.ProcessingConsents.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. |
+| [PersonalDataProcess](Applications.PersonalData.ProcessingConsents.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. |
+| [User](Applications.PersonalData.ProcessingConsents.md#user) | [Users](Systems.Security.Users.md) | The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. |
 
 
 ## System Attributes
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### AllowAddress
 
-Allows the processing of the physical address. `Required` `Default(false)` `Filter(eq)`
+Allows the processing of the physical address.
 
 Type: **boolean**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowBasicData
 
-Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. `Required` `Default(false)` `Filter(eq)`
+Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.
 
 Type: **boolean**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowEmail
 
-Allows the processing of the email address. `Required` `Default(false)` `Filter(eq)`
+Allows the processing of the email address.
 
 Type: **boolean**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowOtherData
 
-Comma-separated list of other types of data, which was allowed for processing with this consent. `Filter(eq)`
+Comma-separated list of other types of data, which was allowed for processing with this consent.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowPhone
 
-Allows the processing of the telephone number. `Required` `Default(false)` `Filter(eq)`
+Allows the processing of the telephone number.
 
 Type: **boolean**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsentText
 
-The actual text of the consent. `Filter(like)`
+The actual text of the consent.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsentType
 
-The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). `Required` `Filter(eq)`
+The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).
 
 Type: **[ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### GivenOnUtc
 
-The date and time (in Utc), when the consent was given. `Required` `Filter(ge;le)`
+The date and time (in Utc), when the consent was given.
 
 Type: **datetime**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. `Required` `Default(true)` `Filter(eq)`
+Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.
 
 Type: **boolean**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### IsChild
 
-Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. `Required` `Default(false)` `Filter(eq)`
+Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.
 
 Type: **boolean**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentEmail
 
-When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)`
+When a parental rights holder gives a consent for a child, contains the email of the parent.
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -228,7 +228,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentName
 
-When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)`
+When a parental rights holder gives a consent for a child, contains the name of the parent.
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentPhone
 
-When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)`
+When a parental rights holder gives a consent for a child, contains the phone number of the parent.
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -250,7 +250,7 @@ Show in UI: **ShownByDefault**
 
 ### RetractedOnUtc
 
-The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. `Filter(ge;le)`
+The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -322,7 +322,7 @@ Show in UI: **HiddenByDefault**
 
 ### Person
 
-The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. `Filter(multi eq)`
+The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -331,7 +331,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonalDataProcess
 
-The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. `Filter(multi eq)`
+The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes.
 
 Type: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 Category: **System**  
@@ -340,7 +340,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. `Required` `Filter(multi eq)`
+The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

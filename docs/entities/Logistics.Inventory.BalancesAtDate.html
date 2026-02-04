@@ -87,7 +87,7 @@
         <article data-uid="Logistics.Inventory.BalancesAtDate">
 <h1 id="logisticsinventorybalancesatdate-view">Logistics.Inventory.BalancesAtDate (View)</h1>
 
-<p>The inventory balances at specific date, grouped by storage key (Store, Product, Lot, etc.).</p>
+<p>View past inventory balances as they were on a specific date. Filter by the 'Date' column to select the date for which you want to retrieve stock levels. This report provides a snapshot of inventory at that moment in time, helping with audits, stock analysis, and historical tracking.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="Logistics.Inventory.html">Logistics.Inventory</a><br>
 Repository: Logistics.Inventory.BalancesAtDate<br>
@@ -117,27 +117,27 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#basecost">BaseCost</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The cost of the inventory in base currency of the enterprise company. <code>Currency: EnterpriseCompany.BaseCurrency</code> <code>Required</code></td>
+<td>The cost of the inventory in base currency of the enterprise company.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#date">Date</a></td>
 <td>date</td>
-<td>The date parameter used to compute the balances. <code>Required</code> <code>Filter(eq)</code></td>
+<td>The date parameter used to compute the balances.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#productcost">ProductCost</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The cost of the inventory in the products currency. <code>Currency: Product.CostingCurrency</code> <code>Required</code></td>
+<td>The cost of the inventory in the products currency.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
+<td>The quantity of the stock received/issued in base measurement unit</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#storecost">StoreCost</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The cost of the inventory in the stores currency. <code>Currency: Store.Currency</code> <code>Required</code></td>
+<td>The cost of the inventory in the stores currency.</td>
 </tr>
 </tbody>
 </table>
@@ -154,71 +154,71 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code></td>
+<td>The enterprise company</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_&lt;br /&gt;Lines_Table.Lot_Id</code></td>
+<td>If non-null, contains the specific lot to use for the movement</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_&lt;br /&gt;Lines_Table.Product_Id</code></td>
+<td>The product</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_&lt;br /&gt;Lines_Table.Product_Variant_Id</code></td>
+<td>If specified determines which product variant of the current product in this line is used.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_&lt;br /&gt;Lines_Table.Serial_Number_Id</code></td>
+<td>Item serial number for serialized items. NULL for non-serialized items</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>The store. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transactions_Table.Store_Id</code></td>
+<td>The store</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.BalancesAtDate.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_&lt;br /&gt;Lines_Table.Store_Bin_Id</code></td>
+<td>Store bin, from/to which the transaction was performed.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecost">BaseCost</h3>
-<p>The cost of the inventory in base currency of the enterprise company. <code>Currency: EnterpriseCompany.BaseCurrency</code> <code>Required</code></p>
+<p>The cost of the inventory in base currency of the enterprise company.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="date">Date</h3>
-<p>The date parameter used to compute the balances. <code>Required</code> <code>Filter(eq)</code></p>
+<p>The date parameter used to compute the balances.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productcost">ProductCost</h3>
-<p>The cost of the inventory in the products currency. <code>Currency: Product.CostingCurrency</code> <code>Required</code></p>
+<p>The cost of the inventory in the products currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
+<p>The quantity of the stock received/issued in base measurement unit</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storecost">StoreCost</h3>
-<p>The cost of the inventory in the stores currency. <code>Currency: Store.Currency</code> <code>Required</code></p>
+<p>The cost of the inventory in the stores currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -226,49 +226,49 @@ Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code></p>
+<p>The enterprise company</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Lot_Id</code></p>
+<p>If non-null, contains the specific lot to use for the movement</p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Transaction_Lines_Table.Lot_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Product_Id</code></p>
+<p>The product</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Transaction_Lines_Table.Product_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Product_Variant_Id</code></p>
+<p>If specified determines which product variant of the current product in this line is used.</p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Transaction_Lines_Table.Product_Variant_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Serial_Number_Id</code></p>
+<p>Item serial number for serialized items. NULL for non-serialized items</p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Transaction_Lines_Table.Serial_Number_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The store. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Transactions_Table.Store_Id</code></p>
+<p>The store</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Transactions_Table.Store_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code> <code>Inherited from Inv_Transaction_Lines_Table.Store_Bin_Id</code></p>
+<p>Store bin, from/to which the transaction was performed.</p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Transaction_Lines_Table.Store_Bin_Id</strong><br>

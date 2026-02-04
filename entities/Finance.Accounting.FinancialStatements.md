@@ -4,7 +4,7 @@ uid: Finance.Accounting.FinancialStatements
 # Finance.Accounting.FinancialStatements
 
 
-Contains the user-defined financial statement definitions.
+Defines user-created financial statement reports, such as income statements or balance sheets. Each definition includes a structure and calculation logic managed through linked nodes.
 
 ## General
 Namespace: [Finance.Accounting](Finance.Accounting.md)  
@@ -36,8 +36,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Accounting.FinancialStatements.md#code) | string (3) | Unique identifying code of the financial statement. `Required` `Filter(eq;like)` `ORD` 
-| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement. `Required` `Filter(eq;like)` 
+| [Code](Finance.Accounting.FinancialStatements.md#code) | string (3) | Unique identifying code of the financial statement. 
+| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement. 
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### Code
 
-Unique identifying code of the financial statement. `Required` `Filter(eq;like)` `ORD`
+Unique identifying code of the financial statement.
 
 Type: **string (3)**  
 Indexed: **True**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the financial statement. `Required` `Filter(eq;like)`
+Name of the financial statement.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

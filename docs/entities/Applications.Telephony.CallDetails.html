@@ -121,32 +121,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#calledpartynumber">CalledPartyNumber</a></td>
 <td>string (80)</td>
-<td>The voice number of the party, which received the call. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The voice number of the party, which received the call</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#callingpartynumber">CallingPartyNumber</a></td>
 <td>string (80)</td>
-<td>The voice number of the originating party of the call. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The voice number of the originating party of the call</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#calltype">CallType</a></td>
 <td><a href="Applications.Telephony.CallDetails.html#calltype">CallType</a></td>
-<td>P=Phone; V=Video; M=Message/SMS. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(eq)</code></td>
+<td>P=Phone; V=Video; M=Message/SMS</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#calluniqueid">CallUniqueId</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</td>
+<td>The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#durationseconds">DurationSeconds</a></td>
 <td>int32</td>
-<td>The duration of the call (in seconds). <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+<td>The duration of the call (in seconds)</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>The starting date and time of the call. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The starting date and time of the call</td>
 </tr>
 </tbody>
 </table>
@@ -163,22 +163,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#calledparty">CalledParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party, which received the call. null when the party was not determined successfully. <code>Filter(multi eq)</code></td>
+<td>The party, which received the call. NULL when the party was not determined successfully</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#callingparty">CallingParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party, which originated the call.  null when the party was not determined successfully. <code>Filter(multi eq)</code></td>
+<td>The party, which originated the call.  NULL when the party was not determined successfully</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#externalcompany">ExternalCompany</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
-<td>The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. <code>Filter(multi eq)</code></td>
+<td>The company of the external party. It can be the party itself, or the parent party, whichever is company. NULL when the company cannot be determined</td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#externalparty">ExternalParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. <code>Filter(multi eq)</code></td>
+<td>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. NULL when the respective party was null, or when no external party participated in the call</td>
 </tr>
 </tbody>
 </table>
@@ -226,7 +226,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="calledpartynumber">CalledPartyNumber</h3>
-<p>The voice number of the party, which received the call. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The voice number of the party, which received the call</p>
 <p>Type: <strong>string (80)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -234,7 +234,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>80</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="callingpartynumber">CallingPartyNumber</h3>
-<p>The voice number of the originating party of the call. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The voice number of the originating party of the call</p>
 <p>Type: <strong>string (80)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -242,7 +242,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>80</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="calltype">CallType</h3>
-<p>P=Phone; V=Video; M=Message/SMS. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(eq)</code></p>
+<p>P=Phone; V=Video; M=Message/SMS</p>
 <p>Type: <strong><a href="Applications.Telephony.CallDetails.html#calltype">CallType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>CallType</code>(Applications.Telephony.CallDetails.md#calltype) data attribute<br>
@@ -274,7 +274,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Phone</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="calluniqueid">CallUniqueId</h3>
-<p>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</p>
+<p>The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -282,7 +282,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="durationseconds">DurationSeconds</h3>
-<p>The duration of the call (in seconds). <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
+<p>The duration of the call (in seconds)</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -290,7 +290,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>The starting date and time of the call. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The starting date and time of the call</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -340,25 +340,25 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calledparty">CalledParty</h3>
-<p>The party, which received the call. null when the party was not determined successfully. <code>Filter(multi eq)</code></p>
+<p>The party, which received the call. NULL when the party was not determined successfully</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="callingparty">CallingParty</h3>
-<p>The party, which originated the call.  null when the party was not determined successfully. <code>Filter(multi eq)</code></p>
+<p>The party, which originated the call.  NULL when the party was not determined successfully</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="externalcompany">ExternalCompany</h3>
-<p>The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. <code>Filter(multi eq)</code></p>
+<p>The company of the external party. It can be the party itself, or the parent party, whichever is company. NULL when the company cannot be determined</p>
 <p>Type: <strong><a href="General.Contacts.Companies.html">Companies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="externalparty">ExternalParty</h3>
-<p>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. <code>Filter(multi eq)</code></p>
+<p>It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. NULL when the respective party was null, or when no external party participated in the call</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

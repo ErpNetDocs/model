@@ -123,27 +123,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique (within the location) short code, e.g., DINING, ZONE-A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Unique (within the location) short code, e.g., DINING, ZONE-A.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the POS location area  is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Indicates whether the POS location area  is currently active.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>User-friendly name (e.g., &quot;Main Dining Hall&quot;). <code>Required</code> <code>Filter(like)</code></td>
+<td>User-friendly name (e.g., 'Main Dining Hall').</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the location area. <code>Filter(like)</code></td>
+<td>Notes for the location area.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#ord">Ord</a></td>
 <td>int32</td>
-<td>Sort order within the location. Controls display order in UI components. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>Sort order within the location. Controls display order in UI components.</td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +160,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.LocationAreas.html#location">Location</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>Parent shop, salon or facility. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Parent shop, salon or facility.</td>
 </tr>
 </tbody>
 </table>
@@ -193,7 +193,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique (within the location) short code, e.g., DINING, ZONE-A. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Unique (within the location) short code, e.g., DINING, ZONE-A.</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -202,7 +202,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the POS location area  is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Indicates whether the POS location area  is currently active.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -210,14 +210,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>User-friendly name (e.g., &quot;Main Dining Hall&quot;). <code>Required</code> <code>Filter(like)</code></p>
+<p>User-friendly name (e.g., 'Main Dining Hall').</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the location area. <code>Filter(like)</code></p>
+<p>Notes for the location area.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -225,7 +225,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ord">Ord</h3>
-<p>Sort order within the location. Controls display order in UI components. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>Sort order within the location. Controls display order in UI components.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -259,7 +259,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="location">Location</h3>
-<p>Parent shop, salon or facility. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Parent shop, salon or facility.</p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

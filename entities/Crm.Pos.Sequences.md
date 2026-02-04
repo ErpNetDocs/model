@@ -34,17 +34,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)` 
-| [MaxNo](Crm.Pos.Sequences.md#maxno) | string (16) __nullable__ | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
-| [NextNo](Crm.Pos.Sequences.md#nextno) | string (16) | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
-| [PosSequenceName](Crm.Pos.Sequences.md#possequencename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The multi-language name of the sequence. `Filter(multi eq;like)` `Introduced in version 26.2.1.28` 
+| [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. 
+| [MaxNo](Crm.Pos.Sequences.md#maxno) | string (16) __nullable__ | Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited. 
+| [NextNo](Crm.Pos.Sequences.md#nextno) | string (16) | The next consecutive number which will be assigned on the next request. 
+| [PosSequenceName](Crm.Pos.Sequences.md#possequencename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The multi-language name of the sequence. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | The POS device, for which the sequence is defined. `Filter(multi eq)` |
-| [PosLocation](Crm.Pos.Sequences.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | The POS location, for which the sequence is defined. `Filter(multi eq)` `Introduced in version 26.2.1.27` |
+| [PosDevice](Crm.Pos.Sequences.md#posdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | The POS device, for which the sequence is defined. |
+| [PosLocation](Crm.Pos.Sequences.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | The POS location, for which the sequence is defined. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)`
+Indicates whether this sequence is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### MaxNo
 
-Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)`
+Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited.
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### NextNo
 
-The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)`
+The next consecutive number which will be assigned on the next request.
 
 Type: **string (16)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### PosSequenceName
 
-The multi-language name of the sequence. `Filter(multi eq;like)` `Introduced in version 26.2.1.28`
+The multi-language name of the sequence.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **HiddenByDefault**
 
 ### PosDevice
 
-The POS device, for which the sequence is defined. `Filter(multi eq)`
+The POS device, for which the sequence is defined.
 
 Type: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 Indexed: **True**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### PosLocation
 
-The POS location, for which the sequence is defined. `Filter(multi eq)` `Introduced in version 26.2.1.27`
+The POS location, for which the sequence is defined.
 
 Type: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 Category: **System**  

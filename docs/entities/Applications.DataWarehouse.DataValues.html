@@ -121,17 +121,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#actualvalue">ActualValue</a></td>
 <td>decimal (17, 5)</td>
-<td>Accumulates actual value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td>Accumulates actual value for the measure.</td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#date">Date</a></td>
 <td>date</td>
-<td>The date for which the measure is recorded. All records with dates within each period are summed. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The date for which the measure is recorded. All records with dates within each period are summed.</td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#targetvalue">TargetValue</a></td>
 <td>decimal (17, 5)</td>
-<td>Accumulates target value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
+<td>Accumulates target value for the measure.</td>
 </tr>
 </tbody>
 </table>
@@ -148,12 +148,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#datameasure">DataMeasure</a></td>
 <td><a href="Applications.DataWarehouse.DataMeasures.html">DataMeasures</a></td>
-<td>The measure for which the data is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measure for which the data is recorded.</td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The Enterprise Company for which the data is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The Enterprise Company for which the data is recorded.</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualvalue">ActualValue</h3>
-<p>Accumulates actual value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
+<p>Accumulates actual value for the measure.</p>
 <p>Type: <strong>decimal (17, 5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -209,14 +209,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="date">Date</h3>
-<p>The date for which the measure is recorded. All records with dates within each period are summed. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The date for which the measure is recorded. All records with dates within each period are summed.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetvalue">TargetValue</h3>
-<p>Accumulates target value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
+<p>Accumulates target value for the measure.</p>
 <p>Type: <strong>decimal (17, 5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -267,13 +267,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datameasure">DataMeasure</h3>
-<p>The measure for which the data is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measure for which the data is recorded.</p>
 <p>Type: <strong><a href="Applications.DataWarehouse.DataMeasures.html">DataMeasures</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company for which the data is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The Enterprise Company for which the data is recorded.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

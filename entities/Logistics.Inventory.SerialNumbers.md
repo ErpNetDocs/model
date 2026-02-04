@@ -35,20 +35,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string (40) | The serial number text. `Required` `Filter(multi eq;like)` 
+| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string (40) | The serial number text 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Logistics.Inventory.SerialNumbers.md#product) | [Products](General.Products.Products.md) | The product, to which the serial number is bound. `Required` `Filter(multi eq)` `Owner` |
+| [Product](Logistics.Inventory.SerialNumbers.md#product) | [Products](General.Products.Products.md) | The product, to which the serial number is bound |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.SerialNumbers.md#id) | guid |  
+| [Id](Logistics.Inventory.SerialNumbers.md#id) | guid | Unique serial number Id 
 | [ObjectVersion](Logistics.Inventory.SerialNumbers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](Logistics.Inventory.SerialNumbers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -57,7 +57,7 @@ Aggregate Root:
 
 ### SerialNumberField
 
-The serial number text. `Required` `Filter(multi eq;like)`
+The serial number text
 
 Type: **string (40)**  
 Category: **System**  
@@ -67,6 +67,8 @@ Maximum Length: **40**
 Show in UI: **ShownByDefault**  
 
 ### Id
+
+Unique serial number Id
 
 Type: **guid**  
 Indexed: **True**  
@@ -100,7 +102,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product, to which the serial number is bound. `Required` `Filter(multi eq)` `Owner`
+The product, to which the serial number is bound
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  

@@ -130,12 +130,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentComments.html#comment">Comment</a></td>
 <td>string (254)</td>
-<td>The user comment. <code>Required</code></td>
+<td>The user comment.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentComments.html#commenttimestamp">CommentTimestamp</a></td>
 <td>datetime</td>
-<td>The exact timestamp of the comment. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
+<td>The exact timestamp of the comment</td>
 </tr>
 </tbody>
 </table>
@@ -152,17 +152,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentComments.html#assigntouser">AssignToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. <code>Filter(multi eq)</code></td>
+<td>When not NULL means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentComments.html#document">Document</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>The document to which to attach the comment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document to which to attach the comment</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentComments.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who created the comment. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user, who created the comment</td>
 </tr>
 </tbody>
 </table>
@@ -195,7 +195,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="comment">Comment</h3>
-<p>The user comment. <code>Required</code></p>
+<p>The user comment.</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -203,7 +203,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="commenttimestamp">CommentTimestamp</h3>
-<p>The exact timestamp of the comment. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
+<p>The exact timestamp of the comment</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -233,13 +233,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assigntouser">AssignToUser</h3>
-<p>When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. <code>Filter(multi eq)</code></p>
+<p>When not NULL means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="document">Document</h3>
-<p>The document to which to attach the comment. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document to which to attach the comment</p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -247,7 +247,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who created the comment. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user, who created the comment</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

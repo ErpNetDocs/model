@@ -4,7 +4,7 @@ uid: Systems.Bpm.PropertiesCategories
 # Systems.Bpm.PropertiesCategories
 
 
-Categories of properties.
+Define categories that organize stored attributes into logical groups. Use categories to group related stored attributes and make them easier to manage and navigate.
 
 ## General
 Namespace: [Systems.Bpm](Systems.Bpm.md)  

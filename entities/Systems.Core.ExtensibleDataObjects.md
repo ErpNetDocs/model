@@ -4,7 +4,7 @@ uid: Systems.Core.ExtensibleDataObjects
 # Systems.Core.ExtensibleDataObjects
 
 
-Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type.
+Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type
 
 ## General
 Namespace: [Systems.Core](Systems.Core.md)  
@@ -33,22 +33,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Systems.Core.ExtensibleDataObjects.md#creationtimeutc) | datetime __nullable__ | The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. `Filter(ge;le)` `ORD` `Introduced in version 19.1` 
+| [CreationTimeUtc](Systems.Core.ExtensibleDataObjects.md#creationtimeutc) | datetime __nullable__ | The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown. 
 | [EntityItemId](Systems.Core.ExtensibleDataObjects.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` 
-| [EntityType](Systems.Core.ExtensibleDataObjects.md#entitytype) | string (64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)` 
-| [ExternalId](Systems.Core.ExtensibleDataObjects.md#externalid) | string (254) __nullable__ | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. `Filter(multi eq)` `ORD` `Introduced in version 24.1.0.89` 
-| [ExternalSystem](Systems.Core.ExtensibleDataObjects.md#externalsystem) | string (64) __nullable__ | The name of the external system from which the object is imported/synchronized. `Filter(multi eq)` `Introduced in version 24.1.0.89` 
-| [IsDeleted](Systems.Core.ExtensibleDataObjects.md#isdeleted) | boolean | Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
-| [LastUpdateTimeUtc](Systems.Core.ExtensibleDataObjects.md#lastupdatetimeutc) | datetime __nullable__ | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `ORD` `Introduced in version 19.1` 
-| [LatestVersion](Systems.Core.ExtensibleDataObjects.md#latestversion) | int32 | The latest saved version of the object. Starts from 1 and increments with 1 for each new version. `Required` `Default(1)` 
+| [EntityType](Systems.Core.ExtensibleDataObjects.md#entitytype) | string (64) | The entity type of the row to which the object is bound 
+| [ExternalId](Systems.Core.ExtensibleDataObjects.md#externalid) | string (254) __nullable__ | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. 
+| [ExternalSystem](Systems.Core.ExtensibleDataObjects.md#externalsystem) | string (64) __nullable__ | The name of the external system from which the object is imported/synchronized. 
+| [IsDeleted](Systems.Core.ExtensibleDataObjects.md#isdeleted) | boolean | Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. 
+| [LastUpdateTimeUtc](Systems.Core.ExtensibleDataObjects.md#lastupdatetimeutc) | datetime __nullable__ | The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown. 
+| [LatestVersion](Systems.Core.ExtensibleDataObjects.md#latestversion) | int32 | The latest saved version of the object. Starts from 1 and increments with 1 for each new version. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Systems.Core.ExtensibleDataObjects.md#creationuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who created the object represented by this system object . null means that it is unknown. `Filter(multi eq)` `Introduced in version 19.1` |
-| [Folder](Systems.Core.ExtensibleDataObjects.md#folder) | [Folders](General.Files.Folders.md) (nullable) | The owner folder of the object. `Filter(multi eq)` `Introduced in version 26.2.0.13` |
-| [LastUpdateUser](Systems.Core.ExtensibleDataObjects.md#lastupdateuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who made the last modification of the object represented by this system object . null means that it is unknown. `Filter(multi eq)` `Introduced in version 19.1` |
+| [CreationUser](Systems.Core.ExtensibleDataObjects.md#creationuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who created the object represented by this system object . NULL means that it is unknown. |
+| [Folder](Systems.Core.ExtensibleDataObjects.md#folder) | [Folders](General.Files.Folders.md) (nullable) | The owner folder of the object. |
+| [LastUpdateUser](Systems.Core.ExtensibleDataObjects.md#lastupdateuser) | [Users](Systems.Security.Users.md) (nullable) | The user, who made the last modification of the object represented by this system object . NULL means that it is unknown. |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. `Filter(ge;le)` `ORD` `Introduced in version 19.1`
+The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.
 
 Type: **datetime __nullable__**  
 Indexed: **True**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(eq)`
+The entity type of the row to which the object is bound
 
 Type: **string (64)**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### ExternalId
 
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. `Filter(multi eq)` `ORD` `Introduced in version 24.1.0.89`
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems.
 
 Type: **string (254) __nullable__**  
 Indexed: **True**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### ExternalSystem
 
-The name of the external system from which the object is imported/synchronized. `Filter(multi eq)` `Introduced in version 24.1.0.89`
+The name of the external system from which the object is imported/synchronized.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDeleted
 
-Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1`
+Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.
 
 Type: **boolean**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateTimeUtc
 
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `ORD` `Introduced in version 19.1`
+The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown.
 
 Type: **datetime __nullable__**  
 Indexed: **True**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### LatestVersion
 
-The latest saved version of the object. Starts from 1 and increments with 1 for each new version. `Required` `Default(1)`
+The latest saved version of the object. Starts from 1 and increments with 1 for each new version.
 
 Type: **int32**  
 Category: **System**  
@@ -191,7 +191,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationUser
 
-The user, who created the object represented by this system object . null means that it is unknown. `Filter(multi eq)` `Introduced in version 19.1`
+The user, who created the object represented by this system object . NULL means that it is unknown.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### Folder
 
-The owner folder of the object. `Filter(multi eq)` `Introduced in version 26.2.0.13`
+The owner folder of the object.
 
 Type: **[Folders](General.Files.Folders.md) (nullable)**  
 Indexed: **True**  
@@ -210,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateUser
 
-The user, who made the last modification of the object represented by this system object . null means that it is unknown. `Filter(multi eq)` `Introduced in version 19.1`
+The user, who made the last modification of the object represented by this system object . NULL means that it is unknown.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  

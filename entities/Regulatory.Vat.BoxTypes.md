@@ -4,7 +4,7 @@ uid: Regulatory.Vat.BoxTypes
 # Regulatory.Vat.BoxTypes
 
 
-The types of boxes in a VAT declaration. .
+The types of boxes in a VAT declaration. 
 
 ## General
 Namespace: [Regulatory.Vat](Regulatory.Vat.md)  
@@ -35,17 +35,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculationType](Regulatory.Vat.BoxTypes.md#calculationtype) | [CalculationType](Regulatory.Vat.BoxTypes.md#calculationtype) | Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. `Required` `Default("DT")` `Filter(multi eq)` `Introduced in version 22.1.5.90` 
+| [CalculationType](Regulatory.Vat.BoxTypes.md#calculationtype) | [CalculationType](Regulatory.Vat.BoxTypes.md#calculationtype) | Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. 
 | [Code](Regulatory.Vat.BoxTypes.md#code) | string (32) | The unique code of the BoxType. `Required` `Filter(multi eq)` 
-| [Name](Regulatory.Vat.BoxTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name for this box type. (Miltilanguage string). `Required` `Filter(like)` 
+| [Name](Regulatory.Vat.BoxTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name for this box type. (Miltilanguage string) 
 | [Notes](Regulatory.Vat.BoxTypes.md#notes) | string (max) __nullable__ | Notes for this BoxType. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculatedAttribute](Regulatory.Vat.BoxTypes.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) (nullable) | The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(multi eq)` `Introduced in version 22.1.5.97` |
-| [Country](Regulatory.Vat.BoxTypes.md#country) | [Countries](General.Geography.Countries.md) | The Country for which this type of box is declared. `Required` `Filter(multi eq)` |
+| [CalculatedAttribute](Regulatory.Vat.BoxTypes.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) (nullable) | The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". |
+| [Country](Regulatory.Vat.BoxTypes.md#country) | [Countries](General.Geography.Countries.md) | The Country for which this type of box is declared. |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Tree
 
 ### CalculationType
 
-Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. `Required` `Default("DT")` `Filter(multi eq)` `Introduced in version 22.1.5.90`
+Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field.
 
 Type: **[CalculationType](Regulatory.Vat.BoxTypes.md#calculationtype)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name for this box type. (Miltilanguage string). `Required` `Filter(like)`
+The name for this box type. (Miltilanguage string)
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -177,7 +177,7 @@ Show in UI: **HiddenByDefault**
 
 ### CalculatedAttribute
 
-The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(multi eq)` `Introduced in version 22.1.5.97`
+The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute".
 
 Type: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) (nullable)**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **ShownByDefault**
 
 ### Country
 
-The Country for which this type of box is declared. `Required` `Filter(multi eq)`
+The Country for which this type of box is declared.
 
 Type: **[Countries](General.Geography.Countries.md)**  
 Indexed: **True**  

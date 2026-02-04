@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
-<td>The consecutive number (position) of the property within the current product type. <code>Required</code></td>
+<td>The consecutive number (position) of the property within the current product type.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#required">Required</a></td>
 <td>boolean</td>
-<td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. <code>Required</code> <code>Default(false)</code></td>
+<td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.</td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#property">Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
-<td>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'.</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="propertyno">PropertyNo</h3>
-<p>The consecutive number (position) of the property within the current product type. <code>Required</code></p>
+<p>The consecutive number (position) of the property within the current product type.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ProductType.PurchaseInvoiceLineProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="required">Required</h3>
-<p>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. <code>Required</code> <code>Default(false)</code></p>
+<p>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -230,7 +230,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="property">Property</h3>
-<p>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'.</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#contributiontime">ContributionTime</a></td>
 <td>datetime</td>
-<td>The time, when the message was contributed. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>The time, when the message was contributed.</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#lastedittime">LastEditTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>Contains the last edit time of the message. NULL if the message was never edited</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#message">Message</a></td>
 <td>string (max)</td>
-<td>The contents of the message. <code>Required</code></td>
+<td>The contents of the message.</td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#contributedbyuser">ContributedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who contributed (wrote) the message. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The user, who contributed (wrote) the message.</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#projectrisk">ProjectRisk</a></td>
@@ -186,7 +186,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contributiontime">ContributionTime</h3>
-<p>The time, when the message was contributed. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>The time, when the message was contributed.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -194,14 +194,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastedittime">LastEditTime</h3>
-<p>Contains the last edit time of the message. null if the message was never edited. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>Contains the last edit time of the message. NULL if the message was never edited</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="message">Message</h3>
-<p>The contents of the message. <code>Required</code></p>
+<p>The contents of the message.</p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -231,7 +231,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="contributedbyuser">ContributedByUser</h3>
-<p>The user, who contributed (wrote) the message. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The user, who contributed (wrote) the message.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

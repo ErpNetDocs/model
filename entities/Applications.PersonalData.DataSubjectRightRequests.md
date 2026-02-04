@@ -33,20 +33,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#completedonutc) | datetime __nullable__ | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. `Filter(ge;le)` 
-| [CreatedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#createdonutc) | datetime | The date and time (in UTC), when the request was created. `Required` `Default(Now)` `Filter(ge;le)` 
+| [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#completedonutc) | datetime __nullable__ | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. 
+| [CreatedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#createdonutc) | datetime | The date and time (in UTC), when the request was created. 
 | [Notes](Applications.PersonalData.DataSubjectRightRequests.md#notes) | string (max) __nullable__ | This should usually contain detailed implementation notes. 
-| [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. `Required` `Filter(eq)` 
-| [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. `Required` 
+| [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. 
+| [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedByUser](Applications.PersonalData.DataSubjectRightRequests.md#completedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. `Filter(multi eq)` `ReadOnly` |
-| [CreatedByUser](Applications.PersonalData.DataSubjectRightRequests.md#createdbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. `Filter(multi eq)` `ReadOnly` |
-| [EnterpriseCompany](Applications.PersonalData.DataSubjectRightRequests.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, to which the request was made. `Required` `Filter(multi eq)` |
-| [Person](Applications.PersonalData.DataSubjectRightRequests.md#person) | [Persons](General.Contacts.Persons.md) | The person, whose data will be corrected with the request. . `Required` `Filter(multi eq)` |
+| [CompletedByUser](Applications.PersonalData.DataSubjectRightRequests.md#completedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. |
+| [CreatedByUser](Applications.PersonalData.DataSubjectRightRequests.md#createdbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. |
+| [EnterpriseCompany](Applications.PersonalData.DataSubjectRightRequests.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, to which the request was made. |
+| [Person](Applications.PersonalData.DataSubjectRightRequests.md#person) | [Persons](General.Contacts.Persons.md) | The person, whose data will be corrected with the request. |
 
 
 ## System Attributes
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### CompletedOnUtc
 
-Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. `Filter(ge;le)`
+Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### CreatedOnUtc
 
-The date and time (in UTC), when the request was created. `Required` `Default(Now)` `Filter(ge;le)`
+The date and time (in UTC), when the request was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### RequestedRight
 
-The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. `Required` `Filter(eq)`
+The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.
 
 Type: **[RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. `Required`
+The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.
 
 Type: **[Status](Applications.PersonalData.DataSubjectRightRequests.md#status)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompletedByUser
 
-The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. `Filter(multi eq)` `ReadOnly`
+The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### CreatedByUser
 
-The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. `Filter(multi eq)` `ReadOnly`
+The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
@@ -220,7 +220,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company, to which the request was made. `Required` `Filter(multi eq)`
+The enterprise company, to which the request was made.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### Person
 
-The person, whose data will be corrected with the request. . `Required` `Filter(multi eq)`
+The person, whose data will be corrected with the request.
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  

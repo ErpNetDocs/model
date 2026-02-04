@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string (64) | The attribute, which will be tested. `Required` 
-| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")` 
-| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. `Required` 
+| [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string (64) | The attribute, which will be tested. 
+| [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. 
+| [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. 
 | [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRuleCondition. `Introduced in version 20.1` 
 | [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string (254) __nullable__ | The value against which the data attribute will be tested. 
 
@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. `Required` `Filter(multi eq)` `Owner` |
+| [UserBusinessRule](Systems.Bpm.UserBusinessRuleConditions.md#userbusinessrule) | [UserBusinessRules](Systems.Bpm.UserBusinessRules.md) | The business rule, for which the condition is defined. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### AttributeName
 
-The attribute, which will be tested. `Required`
+The attribute, which will be tested.
 
 Type: **string (64)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### ComparisonType
 
-How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")`
+How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value.
 
 Type: **[ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionNo
 
-Unique consecutive number of the condition within the business rule. `Required`
+Unique consecutive number of the condition within the business rule.
 
 Type: **int32**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **HiddenByDefault**
 
 ### UserBusinessRule
 
-The business rule, for which the condition is defined. `Required` `Filter(multi eq)` `Owner`
+The business rule, for which the condition is defined.
 
 Type: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
 Category: **System**  

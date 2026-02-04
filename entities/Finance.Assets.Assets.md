@@ -36,23 +36,23 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Finance.Assets.Assets.md#code) | string (20) | The unique code of the Asset. `Required` `Filter(eq;like)` `ORD` 
-| [DeploymentDate](Finance.Assets.Assets.md#deploymentdate) | datetime __nullable__ | Date, when the asset is first deployed. Null if the asset is not deployed yet. `Filter(ge;le)` 
-| [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)` 
+| [DeploymentDate](Finance.Assets.Assets.md#deploymentdate) | datetime __nullable__ | Date, when the asset is first deployed. Not specified if the asset is not deployed yet. 
+| [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. 
 | [Name](Finance.Assets.Assets.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
 | [Notes](Finance.Assets.Assets.md#notes) | string (254) __nullable__ | Notes for this Asset. 
-| [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset. `Required` `Filter(ge;le)` 
-| [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (30) __nullable__ | Serial number of the asset. `Filter(eq)` 
+| [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset. 
+| [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (30) __nullable__ | Serial number of the asset. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetCategory](Finance.Assets.Assets.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. `Required` `Filter(multi eq)` |
-| [AssetGroup](Finance.Assets.Assets.md#assetgroup) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | The asset group to which this asset belongs. `Filter(multi eq)` |
+| [AssetCategory](Finance.Assets.Assets.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. |
+| [AssetGroup](Finance.Assets.Assets.md#assetgroup) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | The asset group to which this asset belongs. |
 | [EnterpriseCompany](Finance.Assets.Assets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this Asset applies. `Required` `Filter(multi eq)` |
-| [ManagedAsset](Finance.Assets.Assets.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. `Filter(multi eq)` `Introduced in version 24.1.4.74` |
-| [PrimaryValuationModel](Finance.Assets.Assets.md#primaryvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
-| [ValuationCurrency](Finance.Assets.Assets.md#valuationcurrency) | [Currencies](General.Currencies.Currencies.md) | Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. `Required` `Filter(multi eq)` |
+| [ManagedAsset](Finance.Assets.Assets.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. |
+| [PrimaryValuationModel](Finance.Assets.Assets.md#primaryvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Obsolete. Not used. |
+| [ValuationCurrency](Finance.Assets.Assets.md#valuationcurrency) | [Currencies](General.Currencies.Currencies.md) | Currency in which changes of the asset's value characteristics are stored. |
 
 
 ## System Attributes
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### DeploymentDate
 
-Date, when the asset is first deployed. Null if the asset is not deployed yet. `Filter(ge;le)`
+Date, when the asset is first deployed. Not specified if the asset is not deployed yet.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)`
+Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.
 
 Type: **boolean**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseDate
 
-Original purchase date of the asset. `Required` `Filter(ge;le)`
+Original purchase date of the asset.
 
 Type: **datetime**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Serial number of the asset. `Filter(eq)`
+Serial number of the asset.
 
 Type: **string (30) __nullable__**  
 Category: **System**  
@@ -208,7 +208,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssetCategory
 
-The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. `Required` `Filter(multi eq)`
+The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.
 
 Type: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### AssetGroup
 
-The asset group to which this asset belongs. `Filter(multi eq)`
+The asset group to which this asset belongs.
 
 Type: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
 Category: **System**  
@@ -235,7 +235,7 @@ Show in UI: **HiddenByDefault**
 
 ### ManagedAsset
 
-Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. `Filter(multi eq)` `Introduced in version 24.1.4.74`
+Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable)**  
 Indexed: **True**  
@@ -245,7 +245,7 @@ Show in UI: **ShownByDefault**
 
 ### PrimaryValuationModel
 
-Obsolete. Not used. `Required` `Filter(multi eq)`
+Obsolete. Not used.
 
 Type: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 Category: **System**  
@@ -254,7 +254,7 @@ Show in UI: **ShownByDefault**
 
 ### ValuationCurrency
 
-Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. `Required` `Filter(multi eq)`
+Currency in which changes of the asset's value characteristics are stored.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  

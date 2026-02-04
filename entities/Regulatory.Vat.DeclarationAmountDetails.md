@@ -28,23 +28,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Regulatory.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) | The amount of the operation according to the category. `Currency: BaseCurrency` `Required` 
+| [Amount](Regulatory.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) | The amount of the operation according to the category. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BaseCurrency](Regulatory.Vat.DeclarationAmountDetails.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for Enterprise Company at the moment of entry generation. `Required` `Filter(multi eq)` `Inherited from VAT_Entries_Table.Base_Currency_Id` `Introduced in version 25.1.3.53` |
-| [Box](Regulatory.Vat.DeclarationAmountDetails.md#box) | [BoxTypes](Regulatory.Vat.BoxTypes.md) | The type of box in a VAT declaration. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Box_Types_Table.Box_Type_Id` |
-| [Declaration](Regulatory.Vat.DeclarationAmountDetails.md#declaration) | [Declarations](Regulatory.Vat.Declarations.md) | The VAT declaration. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Declarations_Table.Declaration_Id` |
-| [VATEntry](Regulatory.Vat.DeclarationAmountDetails.md#vatentry) | [Entries](Regulatory.Vat.Entries.md) | Unique identification number of this VAT entry. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Entries_Table.Entry_Id` |
+| [Box](Regulatory.Vat.DeclarationAmountDetails.md#box) | [BoxTypes](Regulatory.Vat.BoxTypes.md) | The type of box in a VAT declaration. |
+| [Declaration](Regulatory.Vat.DeclarationAmountDetails.md#declaration) | [Declarations](Regulatory.Vat.Declarations.md) | The VAT declaration |
+| [VATEntry](Regulatory.Vat.DeclarationAmountDetails.md#vatentry) | [Entries](Regulatory.Vat.Entries.md) | Unique identification number of this VAT entry. |
 
 
 ## Attribute Details
 
 ### Amount
 
-The amount of the operation according to the category. `Currency: BaseCurrency` `Required`
+The amount of the operation according to the category.
 
 Type: **[Amount (15, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### Box
 
-The type of box in a VAT declaration. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Box_Types_Table.Box_Type_Id`
+The type of box in a VAT declaration.
 
 Type: **[BoxTypes](Regulatory.Vat.BoxTypes.md)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### Declaration
 
-The VAT declaration. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Declarations_Table.Declaration_Id`
+The VAT declaration
 
 Type: **[Declarations](Regulatory.Vat.Declarations.md)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### VATEntry
 
-Unique identification number of this VAT entry. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from VAT_Entries_Table.Entry_Id`
+Unique identification number of this VAT entry.
 
 Type: **[Entries](Regulatory.Vat.Entries.md)**  
 Category: **System**  

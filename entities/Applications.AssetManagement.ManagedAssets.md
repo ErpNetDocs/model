@@ -41,20 +41,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssets.md#code) | string (16) | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. `Required` `Filter(eq;like)` 
-| [IsActive](Applications.AssetManagement.ManagedAssets.md#isactive) | boolean | Indicates whether the current Managed Asset is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.1.73` 
-| [Name](Applications.AssetManagement.ManagedAssets.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the managed asset (multi-language). `Required` `Filter(eq;like)` 
+| [Code](Applications.AssetManagement.ManagedAssets.md#code) | string (16) | Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. 
+| [IsActive](Applications.AssetManagement.ManagedAssets.md#isactive) | boolean | Indicates whether the current Managed Asset is active. 
+| [Name](Applications.AssetManagement.ManagedAssets.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the managed asset (multi-language). 
 | [Notes](Applications.AssetManagement.ManagedAssets.md#notes) | string (max) __nullable__ | Notes for this ManagedAsset. 
-| [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#registrationnumber) | string (32) __nullable__ | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. `Filter(eq;like)` 
+| [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#registrationnumber) | string (32) __nullable__ | Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which the managed asset belongs. `Filter(multi eq)` |
-| [FixedAsset](Applications.AssetManagement.ManagedAssets.md#fixedasset) | [Assets](Finance.Assets.Assets.md) (nullable) | The currently managed fixed asset. null means that no fixed asset is currently managed. `Filter(multi eq)` `Introduced in version 25.1.1.93` |
-| [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#managedassetgroup) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. `Required` `Filter(multi eq)` |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Applications.AssetManagement.ManagedAssets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which the managed asset belongs. |
+| [FixedAsset](Applications.AssetManagement.ManagedAssets.md#fixedasset) | [Assets](Finance.Assets.Assets.md) (nullable) | The currently managed fixed asset. NULL means that no fixed asset is currently managed. |
+| [ManagedAssetGroup](Applications.AssetManagement.ManagedAssets.md#managedassetgroup) | [ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md) | The organizational group of the asset. Used for organizational purposes only. |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssets.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. |
 
 
 ## System Attributes
@@ -83,7 +83,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company. `Required` `Filter(eq;like)`
+Unique code of the managed asset. The code is unique among all managed assets in the same enterprise company.
 
 Type: **string (16)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Managed Asset is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.1.73`
+Indicates whether the current Managed Asset is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the managed asset (multi-language). `Required` `Filter(eq;like)`
+Name of the managed asset (multi-language).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationNumber
 
-Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. `Filter(eq;like)`
+Registration number of the asset with the national registration authorities. NULL means the registation number is unknown or N/A.
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -199,7 +199,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company to which the managed asset belongs. `Filter(multi eq)`
+The enterprise company to which the managed asset belongs.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Indexed: **True**  
@@ -209,7 +209,7 @@ Show in UI: **ShownByDefault**
 
 ### FixedAsset
 
-The currently managed fixed asset. null means that no fixed asset is currently managed. `Filter(multi eq)` `Introduced in version 25.1.1.93`
+The currently managed fixed asset. NULL means that no fixed asset is currently managed.
 
 Type: **[Assets](Finance.Assets.Assets.md) (nullable)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAssetGroup
 
-The organizational group of the asset. Used for organizational purposes only. `Required` `Filter(multi eq)`
+The organizational group of the asset. Used for organizational purposes only.
 
 Type: **[ManagedAssetGroups](Applications.AssetManagement.ManagedAssetGroups.md)**  
 Indexed: **True**  
@@ -228,7 +228,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAssetType
 
-The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc. `Required` `Filter(multi eq)`
+The type of the asset. Determines the tracked parameters for the asset, the applicable maintenance types, etc.
 
 Type: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 Category: **System**  

@@ -49,24 +49,24 @@ Aggregate Tree
 | [AdjustmentNumber](Logistics.Procurement.PurchaseInvoices.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Logistics.Procurement.PurchaseInvoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Logistics.Procurement.PurchaseInvoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ApplyDate](Logistics.Procurement.PurchaseInvoices.md#applydate) | date | Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date. `Required` `Filter(ge;le)` 
+| [ApplyDate](Logistics.Procurement.PurchaseInvoices.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period. 
 | [CompleteTime](Logistics.Procurement.PurchaseInvoices.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Logistics.Procurement.PurchaseInvoices.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Procurement.PurchaseInvoices.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CreditNoteReason](Logistics.Procurement.PurchaseInvoices.md#creditnotereason) | string (254) __nullable__ | Reason for the debit/credit note. 
-| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting. 
+| [CreditNoteReason](Logistics.Procurement.PurchaseInvoices.md#creditnotereason) | string (254) __nullable__ | Reason for the debit/credit note 
+| [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting 
 | [DocumentDate](Logistics.Procurement.PurchaseInvoices.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Logistics.Procurement.PurchaseInvoices.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Logistics.Procurement.PurchaseInvoices.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Procurement.PurchaseInvoices.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Procurement.PurchaseInvoices.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Procurement.PurchaseInvoices.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
-| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [<s>IsReleased</s>](Logistics.Procurement.PurchaseInvoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Logistics.Procurement.PurchaseInvoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
+| [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
+| [<s>IsReleased</s>](Logistics.Procurement.PurchaseInvoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Logistics.Procurement.PurchaseInvoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime __nullable__ | Due date for paying the invoice. null means to use the default . `Filter(ge;le)` 
+| [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime __nullable__ | Due date for paying the invoice. NULL means to use the default  
 | [PlanningOnly](Logistics.Procurement.PurchaseInvoices.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Procurement.PurchaseInvoices.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Logistics.Procurement.PurchaseInvoices.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -74,7 +74,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Procurement.PurchaseInvoices.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Procurement.PurchaseInvoices.md#state) | [DocumentState](Logistics.Procurement.PurchaseInvoices.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Procurement.PurchaseInvoices.md#statetagsattribute) | string | Specifies the state of the document. 
-| [VATCashReportingMode](Logistics.Procurement.PurchaseInvoices.md#vatcashreportingmode) | boolean | When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries. `Required` `Default(false)` `Filter(multi eq)` 
+| [VATCashReportingMode](Logistics.Procurement.PurchaseInvoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. 
 | [VATNotes](Logistics.Procurement.PurchaseInvoices.md#vatnotes) | string (254) __nullable__ | Description of the operation that will be entered in the VAT ledgers. 
 | [Void](Logistics.Procurement.PurchaseInvoices.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Logistics.Procurement.PurchaseInvoices.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -88,31 +88,31 @@ Aggregate Tree
 | [AccessKey](Logistics.Procurement.PurchaseInvoices.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Logistics.Procurement.PurchaseInvoices.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Procurement.PurchaseInvoices.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [CostCenter](Logistics.Procurement.PurchaseInvoices.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost center for which the amount from this document will be accounted. `Filter(multi eq)` |
-| [CreditNoteOriginal<br />PurchaseInvoice](Logistics.Procurement.PurchaseInvoices.md#creditnoteoriginalpurchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The original invoice, which is debited/credited with this note. `Filter(multi eq)` |
+| [CostCenter](Logistics.Procurement.PurchaseInvoices.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost center for which the amount from this document will be accounted. |
+| [CreditNoteOriginal<br />PurchaseInvoice](Logistics.Procurement.PurchaseInvoices.md#creditnoteoriginalpurchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The original invoice, which is debited/credited with this note |
 | [CurrencyDirectory](Logistics.Procurement.PurchaseInvoices.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DealType](Logistics.Procurement.PurchaseInvoices.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. `Filter(multi eq)` |
-| [DocumentCurrency](Logistics.Procurement.PurchaseInvoices.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. `Required` `Filter(multi eq)` |
+| [DealType](Logistics.Procurement.PurchaseInvoices.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. |
+| [DocumentCurrency](Logistics.Procurement.PurchaseInvoices.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. |
 | [DocumentType](Logistics.Procurement.PurchaseInvoices.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Procurement.PurchaseInvoices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseInvoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Procurement.PurchaseInvoices.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Procurement.PurchaseInvoices.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoices.md#intrastatdestinationregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. `Filter(multi eq)` |
-| [IntrastatTransportCountry](Logistics.Procurement.PurchaseInvoices.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)` |
+| [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoices.md#intrastatdestinationregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document. |
+| [IntrastatTransportCountry](Logistics.Procurement.PurchaseInvoices.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting |
 | [MasterDocument](Logistics.Procurement.PurchaseInvoices.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Procurement.PurchaseInvoices.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PaymentAccount](Logistics.Procurement.PurchaseInvoices.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account for the payment order. `Filter(multi eq)` |
-| [PaymentType](Logistics.Procurement.PurchaseInvoices.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. `Filter(multi eq)` |
+| [PaymentAccount](Logistics.Procurement.PurchaseInvoices.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not NULL, specifies the default payment account for the payment order |
+| [PaymentType](Logistics.Procurement.PurchaseInvoices.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated |
 | [PrimeCauseDocument](Logistics.Procurement.PurchaseInvoices.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PurchaseOrder](Logistics.Procurement.PurchaseInvoices.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order that was sent to the supplier and is the base for the invoice. null means there is no linked PO and 3 way check won't be performed. `Filter(multi eq)` |
-| [PurchasePriceList](Logistics.Procurement.PurchaseInvoices.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. `Filter(multi eq)` |
-| [ReceivingOrder](Logistics.Procurement.PurchaseInvoices.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable) | The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. `Filter(multi eq)` |
+| [PurchaseOrder](Logistics.Procurement.PurchaseInvoices.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed |
+| [PurchasePriceList](Logistics.Procurement.PurchaseInvoices.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually. |
+| [ReceivingOrder](Logistics.Procurement.PurchaseInvoices.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable) | The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO |
 | [ResponsiblePerson](Logistics.Procurement.PurchaseInvoices.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Logistics.Procurement.PurchaseInvoices.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SaleDealType](Logistics.Procurement.PurchaseInvoices.md#saledealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. `Filter(multi eq)` |
+| [SaleDealType](Logistics.Procurement.PurchaseInvoices.md#saledealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. |
 | [Sequence](Logistics.Procurement.PurchaseInvoices.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Supplier](Logistics.Procurement.PurchaseInvoices.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the purchase, who is issuing the document. `Required` `Filter(multi eq)` |
+| [Supplier](Logistics.Procurement.PurchaseInvoices.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier of the purchase, who is issuing the document. |
 | [ToCompanyDivision](Logistics.Procurement.PurchaseInvoices.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Procurement.PurchaseInvoices.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Procurement.PurchaseInvoices.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyDate
 
-Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date. `Required` `Filter(ge;le)`
+Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.
 
 Type: **date**  
 Category: **System**  
@@ -228,7 +228,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditNoteReason
 
-Reason for the debit/credit note.
+Reason for the debit/credit note
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **ShownByDefault**
 
 ### DeliveryTermsCode
 
-Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
+Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting
 
 Type: **[DeliveryTerms](Logistics.Procurement.PurchaseInvoices.md#deliverytermscode) __nullable__**  
 Category: **System**  
@@ -337,7 +337,7 @@ Show in UI: **HiddenByDefault**
 
 ### IntrastatTransactionNatureCode
 
-Transaction nature; used for Intrastat reporting.
+Transaction nature; used for Intrastat reporting
 
 Type: **[TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__**  
 Category: **System**  
@@ -374,7 +374,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => PurchaseInvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportModeCode
 
-Transport mode; used for Intrastat reporting.
+Transport mode; used for Intrastat reporting
 
 Type: **[TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__**  
 Category: **System**  
@@ -400,7 +400,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => PurchaseInvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -411,7 +411,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -441,7 +441,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-Due date for paying the invoice. null means to use the default . `Filter(ge;le)`
+Due date for paying the invoice. NULL means to use the default
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -541,7 +541,7 @@ Show in UI: **HiddenByDefault**
 
 ### VATCashReportingMode
 
-When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries. `Required` `Default(false)` `Filter(multi eq)`
+When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
 
 Type: **boolean**  
 Category: **System**  
@@ -709,7 +709,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCenter
 
-Cost center for which the amount from this document will be accounted. `Filter(multi eq)`
+Cost center for which the amount from this document will be accounted.
 
 Type: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 Category: **System**  
@@ -718,7 +718,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditNoteOriginalPurchaseInvoice
 
-The original invoice, which is debited/credited with this note. `Filter(multi eq)`
+The original invoice, which is debited/credited with this note
 
 Type: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable)**  
 Indexed: **True**  
@@ -737,7 +737,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealType
 
-Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. `Filter(multi eq)`
+Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 Category: **System**  
@@ -748,7 +748,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DocumentCurrency
 
-The currency of the unit prices and amounts in the document. `Required` `Filter(multi eq)`
+The currency of the unit prices and amounts in the document.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -806,7 +806,7 @@ Show in UI: **HiddenByDefault**
 
 ### IntrastatDestinationRegion
 
-Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. `Filter(multi eq)`
+Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.
 
 Type: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 Category: **System**  
@@ -818,7 +818,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => c.IntrastatDestinationRegion).Distinct( ).OnlyIfSingle( )`
 ### IntrastatTransportCountry
 
-Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)`
+Country of origin of the transport company; used for Intrastat reporting
 
 Type: **[Countries](General.Geography.Countries.md) (nullable)**  
 Category: **System**  
@@ -849,7 +849,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentAccount
 
-When not null, specifies the default payment account for the payment order. `Filter(multi eq)`
+When not NULL, specifies the default payment account for the payment order
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -860,7 +860,7 @@ Front-End Recalc Expressions:
 `obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))`
 ### PaymentType
 
-The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. `Filter(multi eq)`
+The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -881,7 +881,7 @@ Show in UI: **HiddenByDefault**
 
 ### PurchaseOrder
 
-The purchase order that was sent to the supplier and is the base for the invoice. null means there is no linked PO and 3 way check won't be performed. `Filter(multi eq)`
+The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed
 
 Type: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
 Indexed: **True**  
@@ -891,7 +891,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchasePriceList
 
-The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. `Filter(multi eq)`
+The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.
 
 Type: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 Category: **System**  
@@ -900,7 +900,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceivingOrder
 
-The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. `Filter(multi eq)`
+The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO
 
 Type: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable)**  
 Indexed: **True**  
@@ -928,7 +928,7 @@ Show in UI: **HiddenByDefault**
 
 ### SaleDealType
 
-Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. `Filter(multi eq)`
+Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 Category: **System**  
@@ -948,7 +948,7 @@ Show in UI: **HiddenByDefault**
 
 ### Supplier
 
-The supplier of the purchase, who is issuing the document. `Required` `Filter(multi eq)`
+The supplier of the purchase, who is issuing the document.
 
 Type: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 Indexed: **True**  

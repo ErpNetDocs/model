@@ -4,7 +4,7 @@ uid: General.EnterpriseCompanies
 # General.EnterpriseCompanies
 
 
-The companies in the enterprise that issue documents.
+The companies in the enterprise that issue documents
 
 ## General
 Namespace: [General](General.md)  
@@ -41,32 +41,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime __nullable__ | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq;ge;le)` `Introduced in version 18.2` 
-| [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. `Required` `Default("AVG")` 
-| [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)` 
-| [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")` 
-| [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited. `Filter(ge;le)` 
-| [EndDateOfClosed<br />AccountingPeriod](General.EnterpriseCompanies.md#enddateofclosedaccountingperiod) | date __nullable__ | Indicates the date before which all accounting vouchers are permanently closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.1.0` 
-| [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1` 
-| [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1` 
-| [ReportingCurrencyEndDate](General.EnterpriseCompanies.md#reportingcurrencyenddate) | date __nullable__ | Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated. `Filter(eq;ge;le)` `Introduced in version 26.1.3.79` 
-| [ReportingCurrency<br />ProcessedDate](General.EnterpriseCompanies.md#reportingcurrencyprocesseddate) | date __nullable__ | Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date. `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 25.1.3.24` 
-| [ReportingCurrencyRate](General.EnterpriseCompanies.md#reportingcurrencyrate) | decimal (18, 6) __nullable__ | Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date). `Filter(eq)` `Introduced in version 25.1.3.7` 
-| [ReportingCurrencyStartDate](General.EnterpriseCompanies.md#reportingcurrencystartdate) | date __nullable__ | Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. `Filter(eq;ge;le)` `Introduced in version 25.1.3.2` 
-| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2` 
+| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime __nullable__ | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". 
+| [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost 
+| [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. 
+| [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). 
+| [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited 
+| [EndDateOfClosed<br />AccountingPeriod](General.EnterpriseCompanies.md#enddateofclosedaccountingperiod) | date __nullable__ | Indicates the date before which all accounting vouchers are permanently closed. 
+| [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. 
+| [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. 
+| [ReportingCurrencyEndDate](General.EnterpriseCompanies.md#reportingcurrencyenddate) | date __nullable__ | Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated. 
+| [ReportingCurrency<br />ProcessedDate](General.EnterpriseCompanies.md#reportingcurrencyprocesseddate) | date __nullable__ | Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date. 
+| [ReportingCurrencyRate](General.EnterpriseCompanies.md#reportingcurrencyrate) | decimal (18, 6) __nullable__ | Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date). 
+| [ReportingCurrencyStartDate](General.EnterpriseCompanies.md#reportingcurrencystartdate) | date __nullable__ | Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. 
+| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | Base color of the current theme 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccessKey](General.EnterpriseCompanies.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this EnterpriseCompany. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
-| [AdvanceProduct](General.EnterpriseCompanies.md#advanceproduct) | [Products](General.Products.Products.md) (nullable) | Product that is used for handling advances in trade documents. `Filter(multi eq)` |
-| [BaseCurrency](General.EnterpriseCompanies.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for this company. `Required` `Filter(multi eq)` |
-| [Company](General.EnterpriseCompanies.md#company) | [Companies](General.Contacts.Companies.md) | Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` `FilterableReference` |
-| [ExchangeDifference<br />CreditAccount](General.EnterpriseCompanies.md#exchangedifferencecreditaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with credit difference due to currency exchanges. `Filter(multi eq)` |
-| [ExchangeDifference<br />DebitAccount](General.EnterpriseCompanies.md#exchangedifferencedebitaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)` |
-| [ReportingCurrency](General.EnterpriseCompanies.md#reportingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93` |
-| [VATDocumentAmountType](General.EnterpriseCompanies.md#vatdocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount that is used to determine the amount of the VAT entries when they are generated. `Filter(multi eq)` |
+| [AdvanceProduct](General.EnterpriseCompanies.md#advanceproduct) | [Products](General.Products.Products.md) (nullable) | Product that is used for handling advances in trade documents. |
+| [BaseCurrency](General.EnterpriseCompanies.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for this company. |
+| [Company](General.EnterpriseCompanies.md#company) | [Companies](General.Contacts.Companies.md) | Contains the base company data on which this enterprise company is based. |
+| [ExchangeDifference<br />CreditAccount](General.EnterpriseCompanies.md#exchangedifferencecreditaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with credit difference due to currency exchanges |
+| [ExchangeDifference<br />DebitAccount](General.EnterpriseCompanies.md#exchangedifferencedebitaccount) | [Accounts](Finance.Accounting.Accounts.md) (nullable) | Account for balancing accounting vouchers with debit difference due to currency exchanges |
+| [ReportingCurrency](General.EnterpriseCompanies.md#reportingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Used for preparing accounting reports in a currency required for internal or external reporting purposes. |
+| [VATDocumentAmountType](General.EnterpriseCompanies.md#vatdocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount that is used to determine the amount of the VAT entries when they are generated. |
 
 
 ## System Attributes
@@ -95,7 +95,7 @@ Aggregate Tree
 
 ### BIStartDate
 
-Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq;ge;le)` `Introduced in version 18.2`
+Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date".
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultCostingMethod
 
-Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. `Required` `Default("AVG")`
+Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost
 
 Type: **[DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultCustomerCreditLimitBase
 
-Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)`
+Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultLanguage
 
-The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")`
+The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).
 
 Type: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **CannotBeShown**
 
 ### EditPeriodStartDate
 
-Start date of the priod when the documents can be edited. `Filter(ge;le)`
+Start date of the priod when the documents can be edited
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### EndDateOfClosedAccountingPeriod
 
-Indicates the date before which all accounting vouchers are permanently closed. `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.1.0`
+Indicates the date before which all accounting vouchers are permanently closed.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1`
+Indicates whether the current Enterprise company  is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintImagesRetentionMonths
 
-A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1`
+A period of months for which the printed images of the documents will be kept.
 
 Type: **int32**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyEndDate
 
-Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated. `Filter(eq;ge;le)` `Introduced in version 26.1.3.79`
+Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyProcessedDate
 
-Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date. `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 25.1.3.24`
+Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -216,7 +216,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyRate
 
-Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date). `Filter(eq)` `Introduced in version 25.1.3.7`
+Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).
 
 Type: **decimal (18, 6) __nullable__**  
 Category: **System**  
@@ -226,7 +226,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyStartDate
 
-Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. `Filter(eq;ge;le)` `Introduced in version 25.1.3.2`
+Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -236,7 +236,7 @@ Show in UI: **ShownByDefault**
 
 ### UIBaseColor
 
-When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2`
+Base color of the current theme
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -326,7 +326,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### AdvanceProduct
 
-Product that is used for handling advances in trade documents. `Filter(multi eq)`
+Product that is used for handling advances in trade documents.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -335,7 +335,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseCurrency
 
-The base currency for summary reporting for this company. `Required` `Filter(multi eq)`
+The base currency for summary reporting for this company.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -344,7 +344,7 @@ Show in UI: **ShownByDefault**
 
 ### Company
 
-Contains the base company data on which this enterprise company is based. `Required` `Filter(multi eq)` `FilterableReference`
+Contains the base company data on which this enterprise company is based.
 
 Type: **[Companies](General.Contacts.Companies.md)**  
 Indexed: **True**  
@@ -355,7 +355,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangeDifferenceCreditAccount
 
-Account for balancing accounting vouchers with credit difference due to currency exchanges. `Filter(multi eq)`
+Account for balancing accounting vouchers with credit difference due to currency exchanges
 
 Type: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
 Category: **System**  
@@ -364,7 +364,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangeDifferenceDebitAccount
 
-Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)`
+Account for balancing accounting vouchers with debit difference due to currency exchanges
 
 Type: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
 Category: **System**  
@@ -373,7 +373,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrency
 
-Used for preparing accounting reports in a currency required for internal or external reporting purposes. `Filter(multi eq)` `Introduced in version 25.1.2.93`
+Used for preparing accounting reports in a currency required for internal or external reporting purposes.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -382,7 +382,7 @@ Show in UI: **ShownByDefault**
 
 ### VATDocumentAmountType
 
-The document amount that is used to determine the amount of the VAT entries when they are generated. `Filter(multi eq)`
+The document amount that is used to determine the amount of the VAT entries when they are generated.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
 Category: **System**  

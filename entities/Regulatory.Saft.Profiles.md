@@ -4,7 +4,7 @@ uid: Regulatory.Saft.Profiles
 # Regulatory.Saft.Profiles
 
 
-SAF-T export profiles.
+SAF-T export profiles
 
 ## General
 Namespace: [Regulatory.Saft](Regulatory.Saft.md)  
@@ -44,9 +44,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Regulatory.Saft.Profiles.md#isactive) | boolean | Indicates whether the current profile is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 26.2.0.53` 
-| [Name](Regulatory.Saft.Profiles.md#name) | string (254) | Descriptive name of the SAF-T profile. `Required` `Filter(eq;like)` 
-| [Notes](Regulatory.Saft.Profiles.md#notes) | string (max) __nullable__ | Additional information about the profile. `Filter(like)` 
+| [IsActive](Regulatory.Saft.Profiles.md#isactive) | boolean | Indicates whether the current profile is active. 
+| [Name](Regulatory.Saft.Profiles.md#name) | string (254) | Descriptive name of the SAF-T profile. 
+| [Notes](Regulatory.Saft.Profiles.md#notes) | string (max) __nullable__ | Additional information about the profile. 
 
 
 ## System Attributes
@@ -80,7 +80,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current profile is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 26.2.0.53`
+Indicates whether the current profile is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Descriptive name of the SAF-T profile. `Required` `Filter(eq;like)`
+Descriptive name of the SAF-T profile.
 
 Type: **string (254)**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information about the profile. `Filter(like)`
+Additional information about the profile.
 
 Type: **string (max) __nullable__**  
 Category: **System**  

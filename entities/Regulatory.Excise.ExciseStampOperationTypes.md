@@ -35,14 +35,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Box1Effect](Regulatory.Excise.ExciseStampOperationTypes.md#box1effect) | [ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box1effect) | Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. `Required` `Default("N")` 
-| [Box2Effect](Regulatory.Excise.ExciseStampOperationTypes.md#box2effect) | [ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box2effect) | Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. `Required` `Default("N")` 
-| [Box3Effect](Regulatory.Excise.ExciseStampOperationTypes.md#box3effect) | [ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box3effect) | Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. `Required` `Default("N")` 
+| [Box1Effect](Regulatory.Excise.ExciseStampOperationTypes.md#box1effect) | [ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box1effect) | Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. 
+| [Box2Effect](Regulatory.Excise.ExciseStampOperationTypes.md#box2effect) | [ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box2effect) | Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. 
+| [Box3Effect](Regulatory.Excise.ExciseStampOperationTypes.md#box3effect) | [ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box3effect) | Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. 
 | [Code](Regulatory.Excise.ExciseStampOperationTypes.md#code) | string (32) | The unique code of the ExciseStampOperationType. `Required` `Filter(multi eq)` `ORD` 
-| [IsWholeLot](Regulatory.Excise.ExciseStampOperationTypes.md#iswholelot) | boolean __nullable__ | Specifies for this Excise Stamp Operation Type, that when selecting a Excise Stamp Lot within the Excise Stamp Operation line, the entire quantity from the chosen Excise Stamp Lot is copied. `Filter(eq)` `Introduced in version 24.1.1.80` 
-| [Name](Regulatory.Excise.ExciseStampOperationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of operation (multi-language string). `Required` `Filter(like)` 
-| [RequireProduct](Regulatory.Excise.ExciseStampOperationTypes.md#requireproduct) | boolean __nullable__ | Specifies whether for this operation type, the Product field is mandatory in the Excise Stamp Operation line. `Filter(eq)` `Introduced in version 24.1.1.91` 
-| [TrackSequence](Regulatory.Excise.ExciseStampOperationTypes.md#tracksequence) | boolean __nullable__ | Checks for this Excise Stamp Operation Type, when entering numbers, the sequence of previously entered numbers is preserved. `Filter(eq)` `Introduced in version 24.1.1.82` 
+| [IsWholeLot](Regulatory.Excise.ExciseStampOperationTypes.md#iswholelot) | boolean __nullable__ | Specifies for this Excise Stamp Operation Type, that when selecting a Excise Stamp Lot within the Excise Stamp Operation line, the entire quantity from the chosen Excise Stamp Lot is copied. 
+| [Name](Regulatory.Excise.ExciseStampOperationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of operation (multi-language string). 
+| [RequireProduct](Regulatory.Excise.ExciseStampOperationTypes.md#requireproduct) | boolean __nullable__ | Specifies whether for this operation type, the Product field is mandatory in the Excise Stamp Operation line. 
+| [TrackSequence](Regulatory.Excise.ExciseStampOperationTypes.md#tracksequence) | boolean __nullable__ | Checks for this Excise Stamp Operation Type, when entering numbers, the sequence of previously entered numbers is preserved. 
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### Box1Effect
 
-Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. `Required` `Default("N")`
+Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.
 
 Type: **[ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box1effect)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### Box2Effect
 
-Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. `Required` `Default("N")`
+Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.
 
 Type: **[ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box2effect)**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### Box3Effect
 
-Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration. `Required` `Default("N")`
+Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.
 
 Type: **[ExciseStampOperation<br />TypeEnum](Regulatory.Excise.ExciseStampOperationTypes.md#box3effect)**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 ### IsWholeLot
 
-Specifies for this Excise Stamp Operation Type, that when selecting a Excise Stamp Lot within the Excise Stamp Operation line, the entire quantity from the chosen Excise Stamp Lot is copied. `Filter(eq)` `Introduced in version 24.1.1.80`
+Specifies for this Excise Stamp Operation Type, that when selecting a Excise Stamp Lot within the Excise Stamp Operation line, the entire quantity from the chosen Excise Stamp Lot is copied.
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of operation (multi-language string). `Required` `Filter(like)`
+Name of operation (multi-language string).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### RequireProduct
 
-Specifies whether for this operation type, the Product field is mandatory in the Excise Stamp Operation line. `Filter(eq)` `Introduced in version 24.1.1.91`
+Specifies whether for this operation type, the Product field is mandatory in the Excise Stamp Operation line.
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### TrackSequence
 
-Checks for this Excise Stamp Operation Type, when entering numbers, the sequence of previously entered numbers is preserved. `Filter(eq)` `Introduced in version 24.1.1.82`
+Checks for this Excise Stamp Operation Type, when entering numbers, the sequence of previously entered numbers is preserved.
 
 Type: **boolean __nullable__**  
 Category: **System**  

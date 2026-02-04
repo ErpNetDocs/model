@@ -40,15 +40,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)` 
-| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string (2) | Two letter ISO language code. Sub-tags are currently not supported. `Required` 
+| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. 
+| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string (2) | Two letter ISO language code. Sub-tags are currently not supported. 
 | [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string (max) __nullable__ | Notes for this WebSiteLanguage. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>WebSite</s>](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` |
+| [<s>WebSite</s>](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site, for which the language is specified. |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### IsActive
 
-Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)`
+Specifies whether the support for the language is activated and should be published on the web.
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### LanguageCode
 
-Two letter ISO language code. Sub-tags are currently not supported. `Required`
+Two letter ISO language code. Sub-tags are currently not supported.
 
 Type: **string (2)**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **HiddenByDefault**
 
 ### WebSite
 
-**OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner`
+**OBSOLETE! Do not use!** The web site, for which the language is specified.
 
 Type: **[WebSites](Applications.Cms.WebSites.md)**  
 Category: **System**  
