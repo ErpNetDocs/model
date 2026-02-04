@@ -42,7 +42,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Projects.Classic.Resources.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company owning the resource |
+| [EnterpriseCompany](Projects.Classic.Resources.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company owning the resource. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -112,7 +112,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company owning the resource
+The enterprise company owning the resource. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

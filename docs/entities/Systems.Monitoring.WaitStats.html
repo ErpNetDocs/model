@@ -117,63 +117,63 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#database">Database</a></td>
 <td>string (64)</td>
-<td>The database in which the wait operation is located</td>
+<td>The database in which the wait operation is located. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#maxholdlocktimems">MaxHoldLockTimeMs</a></td>
 <td>double</td>
-<td>Maximum time a lock was held, measured in milliseconds.</td>
+<td>Maximum time a lock was held, measured in milliseconds. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#maxwaittimems">MaxWaitTimeMs</a></td>
 <td>double</td>
-<td>Maximum wait time for acquiring a lock, measured in milliseconds.</td>
+<td>Maximum wait time for acquiring a lock, measured in milliseconds.       . <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#statisticssince">StatisticsSince</a></td>
 <td>datetime</td>
-<td>The date and time since when the statistics are collected</td>
+<td>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#totalfailedattempts">TotalFailedAttempts</a></td>
 <td>double</td>
-<td>Indicates the total number of unsuccessful attempts to acquire locks.</td>
+<td>Indicates the total number of unsuccessful attempts to acquire locks. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#totalfailwaittimems">TotalFailWaitTimeMs</a></td>
 <td>double</td>
-<td>Общо време на изчакване за неуспешни заключвания, измерено в милисекунди.</td>
+<td>Общо време на изчакване за неуспешни заключвания, измерено в милисекунди. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#totalholdlocktimems">TotalHoldLockTimeMs</a></td>
 <td>double</td>
-<td>Indicates the total duration locks are held, measured in milliseconds.</td>
+<td>Indicates the total duration locks are held, measured in milliseconds. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#totallocks">TotalLocks</a></td>
 <td>double</td>
-<td>The total number of locks.</td>
+<td>The total number of locks. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#totalsuccesswaittimems">TotalSuccessWaitTimeMs</a></td>
 <td>double</td>
-<td>Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds.</td>
+<td>Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#totalwaitlocks">TotalWaitLocks</a></td>
 <td>double</td>
-<td>Indicates the total number of locks that have been acquired after waiting.</td>
+<td>Indicates the total number of locks that have been acquired after waiting. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.WaitStats.html#waitcategory">WaitCategory</a></td>
 <td>string (128)</td>
-<td>The category of the wait operation.</td>
+<td>The category of the wait operation. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="database">Database</h3>
-<p>The database in which the wait operation is located</p>
+<p>The database in which the wait operation is located. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -181,70 +181,70 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxholdlocktimems">MaxHoldLockTimeMs</h3>
-<p>Maximum time a lock was held, measured in milliseconds.</p>
+<p>Maximum time a lock was held, measured in milliseconds. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxwaittimems">MaxWaitTimeMs</h3>
-<p>Maximum wait time for acquiring a lock, measured in milliseconds.</p>
+<p>Maximum wait time for acquiring a lock, measured in milliseconds.       . <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statisticssince">StatisticsSince</h3>
-<p>The date and time since when the statistics are collected</p>
+<p>The date and time since when the statistics are collected. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalfailedattempts">TotalFailedAttempts</h3>
-<p>Indicates the total number of unsuccessful attempts to acquire locks.</p>
+<p>Indicates the total number of unsuccessful attempts to acquire locks. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalfailwaittimems">TotalFailWaitTimeMs</h3>
-<p>Общо време на изчакване за неуспешни заключвания, измерено в милисекунди.</p>
+<p>Общо време на изчакване за неуспешни заключвания, измерено в милисекунди. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalholdlocktimems">TotalHoldLockTimeMs</h3>
-<p>Indicates the total duration locks are held, measured in milliseconds.</p>
+<p>Indicates the total duration locks are held, measured in milliseconds. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totallocks">TotalLocks</h3>
-<p>The total number of locks.</p>
+<p>The total number of locks. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalsuccesswaittimems">TotalSuccessWaitTimeMs</h3>
-<p>Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds.</p>
+<p>Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalwaitlocks">TotalWaitLocks</h3>
-<p>Indicates the total number of locks that have been acquired after waiting.</p>
+<p>Indicates the total number of locks that have been acquired after waiting. <code>Required</code></p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waitcategory">WaitCategory</h3>
-<p>The category of the wait operation.</p>
+<p>The category of the wait operation. <code>Required</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

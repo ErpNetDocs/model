@@ -35,22 +35,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Procedures.OperationalProcedures.md#code) | string (32) | Short unique code for search/reference. 
-| [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | Storage format of the content. 
-| [CreationTimeUtc](Projects.Procedures.OperationalProcedures.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the procedure was created. 
-| [EntityType](Projects.Procedures.OperationalProcedures.md#entitytype) | string (128) __nullable__ | Name of entity to which the procedure applies 
-| [LastUpdateTimeUtc](Projects.Procedures.OperationalProcedures.md#lastupdatetimeutc) | datetime | The exact date and time (in UTC) when the procedure was last updated. 
-| [Notes](Projects.Procedures.OperationalProcedures.md#notes) | string (max) __nullable__ | Notes for the procedure. 
-| [ProcedureContent](Projects.Procedures.OperationalProcedures.md#procedurecontent) | string (max) __nullable__ | The content of the procedure. 
-| [Status](Projects.Procedures.OperationalProcedures.md#status) | [Status](Projects.Procedures.OperationalProcedures.md#status) | Lifecycle state (Draft/Active/Obsolete). 
-| [Title](Projects.Procedures.OperationalProcedures.md#title) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Procedure name. 
+| [Code](Projects.Procedures.OperationalProcedures.md#code) | string (32) | Short unique code for search/reference. `Required` `Filter(eq;like)` `ORD` 
+| [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | Storage format of the content. `Required` `Default("MKD")` `Filter(eq)` 
+| [CreationTimeUtc](Projects.Procedures.OperationalProcedures.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the procedure was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
+| [EntityType](Projects.Procedures.OperationalProcedures.md#entitytype) | string (128) __nullable__ | Name of entity to which the procedure applies. `Filter(eq)` 
+| [LastUpdateTimeUtc](Projects.Procedures.OperationalProcedures.md#lastupdatetimeutc) | datetime | The exact date and time (in UTC) when the procedure was last updated. `Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [Notes](Projects.Procedures.OperationalProcedures.md#notes) | string (max) __nullable__ | Notes for the procedure. `Filter(like)` 
+| [ProcedureContent](Projects.Procedures.OperationalProcedures.md#procedurecontent) | string (max) __nullable__ | The content of the procedure. `Filter(like)` 
+| [Status](Projects.Procedures.OperationalProcedures.md#status) | [Status](Projects.Procedures.OperationalProcedures.md#status) | Lifecycle state (Draft/Active/Obsolete). `Required` `Default("DRF")` `Filter(multi eq)` 
+| [Title](Projects.Procedures.OperationalProcedures.md#title) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Procedure name. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Projects.Procedures.OperationalProcedures.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the user permissions for this Operational Procedure. |
-| [OwnerRole](Projects.Procedures.OperationalProcedures.md#ownerrole) | [Roles](Systems.Security.Roles.md) (nullable) | Responsible role (content owner). |
+| [AccessKey](Projects.Procedures.OperationalProcedures.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the user permissions for this Operational Procedure. `Required` `Filter(multi eq)` |
+| [OwnerRole](Projects.Procedures.OperationalProcedures.md#ownerrole) | [Roles](Systems.Security.Roles.md) (nullable) | Responsible role (content owner). `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### Code
 
-Short unique code for search/reference.
+Short unique code for search/reference. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### ContentFormat
 
-Storage format of the content.
+Storage format of the content. `Required` `Default("MKD")` `Filter(eq)`
 
 Type: **[ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The exact date and time (in UTC) when the procedure was created.
+The exact date and time (in UTC) when the procedure was created. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-Name of entity to which the procedure applies
+Name of entity to which the procedure applies. `Filter(eq)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateTimeUtc
 
-The exact date and time (in UTC) when the procedure was last updated.
+The exact date and time (in UTC) when the procedure was last updated. `Required` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the procedure.
+Notes for the procedure. `Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcedureContent
 
-The content of the procedure.
+The content of the procedure. `Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-Lifecycle state (Draft/Active/Obsolete).
+Lifecycle state (Draft/Active/Obsolete). `Required` `Default("DRF")` `Filter(multi eq)`
 
 Type: **[Status](Projects.Procedures.OperationalProcedures.md#status)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### Title
 
-Procedure name.
+Procedure name. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -251,7 +251,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this Operational Procedure.
+The access key, containing the user permissions for this Operational Procedure. `Required` `Filter(multi eq)`
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 Category: **System**  
@@ -269,7 +269,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### OwnerRole
 
-Responsible role (content owner).
+Responsible role (content owner). `Filter(multi eq)`
 
 Type: **[Roles](Systems.Security.Roles.md) (nullable)**  
 Category: **System**  

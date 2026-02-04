@@ -35,30 +35,30 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineOrd](Production.Technologies.RecipeOperations.md#lineord) | int32 | Order of the operation within the recipe 
-| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting 
-| [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes 
+| [LineOrd](Production.Technologies.RecipeOperations.md#lineord) | int32 | Order of the operation within the recipe. `Required` 
+| [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.RecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
+| [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` 
 | [Notes](Production.Technologies.RecipeOperations.md#notes) | string (254) __nullable__ | Notes for this RecipeOperation. 
 | [OperationDescription](Production.Technologies.RecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. 
 | [<s>RoutingOperationId</s>](Production.Technologies.RecipeOperations.md#routingoperationid) | guid __nullable__ | **OBSOLETE! Do not use!** Not used. `Obsolete` `Filter(multi eq)` `Obsoleted in version 22.1.6.61` 
-| [RunTimeMinutes](Production.Technologies.RecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for standard lot of the product 
-| [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation 
-| [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment 
-| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. 
-| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) | Standard price for 1 hour work 
-| [Tooling](Production.Technologies.RecipeOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step 
-| [UseQuantity](Production.Technologies.RecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation 
-| [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes 
+| [RunTimeMinutes](Production.Technologies.RecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for standard lot of the product. `Required` `Default(0)` 
+| [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
+| [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` 
+| [StandardCostPerHour](Production.Technologies.RecipeOperations.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency` 
+| [StandardPricePerHour](Production.Technologies.RecipeOperations.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) | Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` 
+| [Tooling](Production.Technologies.RecipeOperations.md#tooling) | string (max) __nullable__ | The tools needed for the routing step. 
+| [UseQuantity](Production.Technologies.RecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` 
+| [WaitTimeMinutes](Production.Technologies.RecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Operation](Production.Technologies.RecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not NULL used to load the details. If NULL the details (times, scrap rates, etc.) must be entered manually |
-| [OperationInstruction](Production.Technologies.RecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format |
+| [Operation](Production.Technologies.RecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. `Filter(multi eq)` |
+| [OperationInstruction](Production.Technologies.RecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. `Filter(multi eq)` |
 | [Recipe](Production.Technologies.RecipeOperations.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The <see cref="Recipe"/> to which this RecipeOperation belongs. `Required` `Filter(multi eq)` `Owner` |
-| [UseQuantityUnit](Production.Technologies.RecipeOperations.md#usequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Use_Quantity |
-| [WorkgroupResource](Production.Technologies.RecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. NULL means that no resource is needed or it will be specfied at a later stage |
+| [UseQuantityUnit](Production.Technologies.RecipeOperations.md#usequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Use_Quantity. `Required` `Filter(multi eq)` |
+| [WorkgroupResource](Production.Technologies.RecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### LineOrd
 
-Order of the operation within the recipe
+Order of the operation within the recipe. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -89,7 +89,7 @@ Front-End Recalc Expressions:
 `( obj.Recipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)`
 ### MinimumConcurrentStartTimeMinutes
 
-How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting
+How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### MoveTimeMinutes
 
-Time to move the lot to the next operation in minutes
+Time to move the lot to the next operation in minutes. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **CannotBeShown**
 
 ### RunTimeMinutes
 
-Duration of the operation for standard lot of the product
+Duration of the operation for standard lot of the product. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### ScrapRate
 
-Standard rate of scrap during the operation
+Standard rate of scrap during the operation. `Required` `Default(0)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupTimeMinutes
 
-Time needed to setup the equipment
+Time needed to setup the equipment. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardCostPerHour
 
-Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe.
+Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency`
 
 Type: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardPricePerHour
 
-Standard price for 1 hour work
+Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)`
 
 Type: **[Amount (18, 6)](../data-types.md#amount)**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### Tooling
 
-The tools needed for the routing step
+The tools needed for the routing step.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantity
 
-Quantity of the workgroup resource that should be allocated for the operation
+Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)`
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### WaitTimeMinutes
 
-Wait time (drying, cooling, etc.) after the operation in minutes
+Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -260,7 +260,7 @@ Show in UI: **HiddenByDefault**
 
 ### Operation
 
-Standard operation Id. If not NULL used to load the details. If NULL the details (times, scrap rates, etc.) must be entered manually
+Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. `Filter(multi eq)`
 
 Type: **[Operations](Production.Resources.Operations.md) (nullable)**  
 Category: **System**  
@@ -269,7 +269,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationInstruction
 
-Link to additional data, containing instructions in external format
+Link to additional data, containing instructions in external format. `Filter(multi eq)`
 
 Type: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
 Category: **System**  
@@ -289,7 +289,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantityUnit
 
-The measurement unit of Use_Quantity
+The measurement unit of Use_Quantity. `Required` `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -298,7 +298,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkgroupResource
 
-The exact workgroup resource that is engaged in the operation. NULL means that no resource is needed or it will be specfied at a later stage
+The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. `Required` `Filter(multi eq)`
 
 Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
 Category: **System**  

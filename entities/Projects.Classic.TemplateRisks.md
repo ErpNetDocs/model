@@ -36,9 +36,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.Classic.TemplateRisks.md#description) | string (max) __nullable__ | The description of this TemplateRisk. 
-| [ImpactPercent](Projects.Classic.TemplateRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. 
-| [ProbabilityPercent](Projects.Classic.TemplateRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring. 
-| [RiskName](Projects.Classic.TemplateRisks.md#riskname) | string (254) | The name of the risk. 
+| [ImpactPercent](Projects.Classic.TemplateRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
+| [ProbabilityPercent](Projects.Classic.TemplateRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring. `Required` `Default(0)` 
+| [RiskName](Projects.Classic.TemplateRisks.md#riskname) | string (254) | The name of the risk. `Required` 
 
 ## References
 
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### ImpactPercent
 
-The impact of the risk to the project, expressed as percentage of the total project value.
+The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### ProbabilityPercent
 
-The probability of the risk occurring.
+The probability of the risk occurring. `Required` `Default(0)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### RiskName
 
-The name of the risk.
+The name of the risk. `Required`
 
 Type: **string (254)**  
 Category: **System**  

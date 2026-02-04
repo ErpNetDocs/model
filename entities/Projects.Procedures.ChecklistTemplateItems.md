@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsRequired](Projects.Procedures.ChecklistTemplateItems.md#isrequired) | boolean | Required item. 
-| [LineNo](Projects.Procedures.ChecklistTemplateItems.md#lineno) | int32 | Item order. 
-| [Text](Projects.Procedures.ChecklistTemplateItems.md#text) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | What must be done/checked. 
+| [IsRequired](Projects.Procedures.ChecklistTemplateItems.md#isrequired) | boolean | Required item. `Required` `Default(true)` `Filter(eq)` 
+| [LineNo](Projects.Procedures.ChecklistTemplateItems.md#lineno) | int32 | Item order. `Required` `Filter(eq)` 
+| [Text](Projects.Procedures.ChecklistTemplateItems.md#text) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | What must be done/checked. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChecklistTemplate](Projects.Procedures.ChecklistTemplateItems.md#checklisttemplate) | [ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md) | Parent template. |
+| [ChecklistTemplate](Projects.Procedures.ChecklistTemplateItems.md#checklisttemplate) | [ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md) | Parent template. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### IsRequired
 
-Required item.
+Required item. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Item order.
+Item order. `Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -86,7 +86,7 @@ Front-End Recalc Expressions:
 `( obj.ChecklistTemplate.Items.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Text
 
-What must be done/checked.
+What must be done/checked. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### ChecklistTemplate
 
-Parent template.
+Parent template. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md)**  
 Indexed: **True**  

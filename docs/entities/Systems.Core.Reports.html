@@ -126,12 +126,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.Reports.html#layoutformat">LayoutFormat</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Format specifier of the layout. Recognized by the application</td>
+<td>Format specifier of the layout. Recognized by the application. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#name">Name</a></td>
 <td>string (254)</td>
-<td>The name of the report</td>
+<td>Multi-language report name. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#notes">Notes</a></td>
@@ -141,32 +141,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.Reports.html#onerow">OneRow</a></td>
 <td>boolean</td>
-<td>True means that report can be used for one-row forms only. False means that the report can be used for navigators only.</td>
+<td>True means that report can be used for one-row forms only. False means that the report can be used for navigators only. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#queryname">QueryName</a></td>
 <td>string (128)</td>
-<td>The primary query for the report. This is the base query for the custom data source.</td>
+<td>The query on which the report is based. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#reportbinarylayout">ReportBinaryLayout</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>The printout layout, when the format requires binary storage. Alternative to Report_Layout</td>
+<td>The printout layout, when the format requires binary storage. Alternative to Report_Layout.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#reportlayout">ReportLayout</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The way that the report will appear on the screen or on paper.</td>
+<td>The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#templatefilterxml">TemplateFilterXml</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.</td>
+<td>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Reports.html#templatepriority">TemplatePriority</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.</td>
+<td>Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.</td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.Reports.html#datasource">DataSource</a></td>
 <td><a href="Systems.Documents.DataSources.html">DataSources</a> (nullable)</td>
-<td>The custom data source for the report. If empty only the primary query participates in the report.</td>
+<td>Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -231,7 +231,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="layoutformat">LayoutFormat</h3>
-<p>Format specifier of the layout. Recognized by the application</p>
+<p>Format specifier of the layout. Recognized by the application. <code>Filter(multi eq)</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the report</p>
+<p>Multi-language report name. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>512</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="onerow">OneRow</h3>
-<p>True means that report can be used for one-row forms only. False means that the report can be used for navigators only.</p>
+<p>True means that report can be used for one-row forms only. False means that the report can be used for navigators only. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -263,7 +263,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="queryname">QueryName</h3>
-<p>The primary query for the report. This is the base query for the custom data source.</p>
+<p>The query on which the report is based. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -271,14 +271,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reportbinarylayout">ReportBinaryLayout</h3>
-<p>The printout layout, when the format requires binary storage. Alternative to Report_Layout</p>
+<p>The printout layout, when the format requires binary storage. Alternative to Report_Layout.</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="reportlayout">ReportLayout</h3>
-<p>The way that the report will appear on the screen or on paper.</p>
+<p>The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -286,7 +286,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="templatefilterxml">TemplateFilterXml</h3>
-<p>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.</p>
+<p>Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -294,7 +294,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="templatepriority">TemplatePriority</h3>
-<p>Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.</p>
+<p>Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -344,7 +344,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datasource">DataSource</h3>
-<p>The custom data source for the report. If empty only the primary query participates in the report.</p>
+<p>Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DataSources.html">DataSources</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

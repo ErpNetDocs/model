@@ -130,12 +130,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#schemaxml">SchemaXML</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Obsolete. Not used. (Used by the schematic control)</td>
+<td>Obsolete. Not used. (Used by the schematic control).</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#transittimedays">TransitTimeDays</a></td>
 <td>int32</td>
-<td>Obsolete. Not used. (Time needed for the delivery of the goods using this route)</td>
+<td>Obsolete. Not used. (Time needed for the delivery of the goods using this route). <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -152,12 +152,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#destinationstore">DestinationStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#sourcestore">SourceStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#supplyschema"><s>SupplySchema</s></a></td>
@@ -203,7 +203,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
-<p>Obsolete. Not used. (Used by the schematic control)</p>
+<p>Obsolete. Not used. (Used by the schematic control).</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -211,7 +211,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transittimedays">TransitTimeDays</h3>
-<p>Obsolete. Not used. (Time needed for the delivery of the goods using this route)</p>
+<p>Obsolete. Not used. (Time needed for the delivery of the goods using this route). <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -241,13 +241,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="destinationstore">DestinationStore</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sourcestore">SourceStore</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

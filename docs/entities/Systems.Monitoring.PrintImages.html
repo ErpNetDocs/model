@@ -122,43 +122,43 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#documententityname">DocumentEntityName</a></td>
 <td>string (64)</td>
-<td>The entity name of the document type.</td>
+<td>The entity name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#printoutlayoutname">PrintoutLayoutName</a></td>
 <td>string (64)</td>
-<td>Printout layout name.</td>
+<td>Printout layout name. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#printscount">PrintsCount</a></td>
 <td>int32</td>
-<td>Total number of prints.</td>
+<td>Total number of prints. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#sizemb">SizeMB</a></td>
 <td>decimal (12, 3)</td>
-<td>Total size of the print in megabytes.</td>
+<td>Total size of the print in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#typename">TypeName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the document type.</td>
+<td>Name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#unitsizemb">UnitSizeMB</a></td>
 <td>decimal (12, 3)</td>
-<td>Average print size in megabytes.</td>
+<td>Average print size in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.PrintImages.html#year">Year</a></td>
 <td>string (30)</td>
-<td>The year to which the current data refers.</td>
+<td>The year to which the current data refers. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>Introduced in version 24.1.3.32</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documententityname">DocumentEntityName</h3>
-<p>The entity name of the document type.</p>
+<p>The entity name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -166,7 +166,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printoutlayoutname">PrintoutLayoutName</h3>
-<p>Printout layout name.</p>
+<p>Printout layout name. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -174,35 +174,35 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printscount">PrintsCount</h3>
-<p>Total number of prints.</p>
+<p>Total number of prints. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sizemb">SizeMB</h3>
-<p>Total size of the print in megabytes.</p>
+<p>Total size of the print in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="typename">TypeName</h3>
-<p>Name of the document type.</p>
+<p>Name of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="unitsizemb">UnitSizeMB</h3>
-<p>Average print size in megabytes.</p>
+<p>Average print size in megabytes. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="year">Year</h3>
-<p>The year to which the current data refers.</p>
+<p>The year to which the current data refers. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>Introduced in version 24.1.3.32</code></p>
 <p>Type: <strong>string (30)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

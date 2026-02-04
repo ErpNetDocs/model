@@ -44,23 +44,23 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExecutionDate](Logistics.Transportation.TransportationExecutionLines.md#executiondate) | date | The date when the operation was executed. 
-| [ExecutionTime](Logistics.Transportation.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed. 
-| [LineNo](Logistics.Transportation.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution. 
+| [ExecutionDate](Logistics.Transportation.TransportationExecutionLines.md#executiondate) | date | The date when the operation was executed. `Required` `Filter(ge;le)` 
+| [ExecutionTime](Logistics.Transportation.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed. `Required` `Filter(ge;le)` 
+| [LineNo](Logistics.Transportation.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution. `Required` 
 | [Notes](Logistics.Transportation.TransportationExecutionLines.md#notes) | string (max) __nullable__ | Notes for this Transportation<br />ExecutionLine. 
-| [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other. 
-| [PalletNumber](Logistics.Transportation.TransportationExecutionLines.md#palletnumber) | string (32) __nullable__ | Pallet number, when applicable. NULL when unknown or not applicable. 
-| [PalletsCount](Logistics.Transportation.TransportationExecutionLines.md#palletscount) | int32 __nullable__ | Number of pallets affected by this operation. NULL when unknown or N/A. 
-| [VolumeCbm](Logistics.Transportation.TransportationExecutionLines.md#volumecbm) | int32 __nullable__ | Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A. 
-| [WeightKg](Logistics.Transportation.TransportationExecutionLines.md#weightkg) | int32 __nullable__ | Cargo weight in kg, affected by this operation. NULL when unknown or N/A. 
+| [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other. `Required` 
+| [PalletNumber](Logistics.Transportation.TransportationExecutionLines.md#palletnumber) | string (32) __nullable__ | Pallet number, when applicable. null when unknown or not applicable. 
+| [PalletsCount](Logistics.Transportation.TransportationExecutionLines.md#palletscount) | int32 __nullable__ | Number of pallets affected by this operation. null when unknown or N/A. 
+| [VolumeCbm](Logistics.Transportation.TransportationExecutionLines.md#volumecbm) | int32 __nullable__ | Cargo volume in cubic meters, affected by this operation. null when unknown or N/A. 
+| [WeightKg](Logistics.Transportation.TransportationExecutionLines.md#weightkg) | int32 __nullable__ | Cargo weight in kg, affected by this operation. null when unknown or N/A. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Transportation.TransportationExecutionLines.md#document) | [TransportationExecutions](Logistics.Transportation.TransportationExecutions.md) | The owner document. The <see cref="Transportation<br />Execution"/> to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` |
-| [ExecutionOfTransportation<br />OrderLine](Logistics.Transportation.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Transportation.TransportationOrderLines.md) | The transportation order line, which is executed. |
-| [GeoPoint](Logistics.Transportation.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. |
+| [ExecutionOfTransportation<br />OrderLine](Logistics.Transportation.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Transportation.TransportationOrderLines.md) | The transportation order line, which is executed. `Required` `Filter(multi eq)` |
+| [GeoPoint](Logistics.Transportation.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. `Required` `Filter(multi eq)` |
 | [TransportationExecution](Logistics.Transportation.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Transportation.TransportationExecutions.md) | The <see cref="Transportation<br />Execution"/> to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -77,7 +77,7 @@ Aggregate Root:
 
 ### ExecutionDate
 
-The date when the operation was executed.
+The date when the operation was executed. `Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -92,7 +92,7 @@ Front-End Recalc Expressions:
 `obj.TransportationExecution.ExecutionDate`
 ### ExecutionTime
 
-The time when the operation was executed.
+The time when the operation was executed. `Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  
@@ -107,7 +107,7 @@ Front-End Recalc Expressions:
 `obj.TransportationExecution.ExecutionTime`
 ### LineNo
 
-Consecutive line number within this execution.
+Consecutive line number within this execution. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationType
 
-The type of operation being executed. L=Loading; U=Unloading; O=Other.
+The type of operation being executed. L=Loading; U=Unloading; O=Other. `Required`
 
 Type: **[OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype)**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### PalletNumber
 
-Pallet number, when applicable. NULL when unknown or not applicable.
+Pallet number, when applicable. null when unknown or not applicable.
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### PalletsCount
 
-Number of pallets affected by this operation. NULL when unknown or N/A.
+Number of pallets affected by this operation. null when unknown or N/A.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### VolumeCbm
 
-Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A.
+Cargo volume in cubic meters, affected by this operation. null when unknown or N/A.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -183,7 +183,7 @@ Show in UI: **ShownByDefault**
 
 ### WeightKg
 
-Cargo weight in kg, affected by this operation. NULL when unknown or N/A.
+Cargo weight in kg, affected by this operation. null when unknown or N/A.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -235,7 +235,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionOfTransportationOrderLine
 
-The transportation order line, which is executed.
+The transportation order line, which is executed. `Required` `Filter(multi eq)`
 
 Type: **[TransportationOrderLines](Logistics.Transportation.TransportationOrderLines.md)**  
 Category: **System**  
@@ -244,7 +244,7 @@ Show in UI: **ShownByDefault**
 
 ### GeoPoint
 
-The geographic point, where the operation is executed.
+The geographic point, where the operation is executed. `Required` `Filter(multi eq)`
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md)**  
 Category: **System**  

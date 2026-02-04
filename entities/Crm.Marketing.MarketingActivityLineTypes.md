@@ -36,8 +36,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.MarketingActivityLineTypes.md#code) | string (32) | The unique code of the MarketingActivityLineType. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Crm.Marketing.MarketingActivityLineTypes.md#isactive) | boolean | Indicates whether the current Marketing Activity Line Type is active. 
-| [Name](Crm.Marketing.MarketingActivityLineTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language field 
+| [IsActive](Crm.Marketing.MarketingActivityLineTypes.md#isactive) | boolean | Indicates whether the current Marketing Activity Line Type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [Name](Crm.Marketing.MarketingActivityLineTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language field. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.MarketingActivityLineTypes.md#notes) | string (max) __nullable__ | Notes for this MarketingActivityLineType. 
 
 
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Marketing Activity Line Type is active.
+Indicates whether the current Marketing Activity Line Type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language field
+Multi-language field. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

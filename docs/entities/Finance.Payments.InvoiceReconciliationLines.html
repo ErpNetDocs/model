@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.InvoiceReconciliationLines.html#coveredinvoiceamount">CoveredInvoiceAmount</a></td>
 <td>decimal (14, 2)</td>
-<td>Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.</td>
+<td>Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.InvoiceReconciliationLines.html#invoicedocument">InvoiceDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.InvoiceReconciliationLines.html#invoicereconciliation"><s>InvoiceReconciliation</s></a></td>
@@ -152,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.InvoiceReconciliationLines.html#paymenttransactiondocument">PaymentTransactionDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -185,7 +185,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="coveredinvoiceamount">CoveredInvoiceAmount</h3>
-<p>Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.</p>
+<p>Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (14, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="invoicedocument">InvoiceDocument</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -230,7 +230,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttransactiondocument">PaymentTransactionDocument</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

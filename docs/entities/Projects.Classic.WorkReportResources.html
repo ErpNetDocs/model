@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#actualendtime">ActualEndTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Optionally, specifies the actual date and time when the resource usage ended.</td>
+<td>Optionally, specifies the actual date and time when the resource usage ended. <code>Filter(eq;ge;le;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#actualstarttime">ActualStartTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Optionally, specifies the actual date and time when the resource usage began.</td>
+<td>Optionally, specifies the actual date and time when the resource usage began. <code>Filter(eq;ge;le;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#totalresourceusagehours">TotalResourceUsageHours</a></td>
 <td>decimal (18, 2)</td>
-<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</td>
+<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,17 +148,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></td>
-<td>The project task for which the work is reported.</td>
+<td>The project task for which the work is reported. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>The resource, for which usage is reported.</td>
+<td>The resource, for which usage is reported. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#resourceinstance">ResourceInstance</a></td>
 <td><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</td>
-<td>The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.</td>
+<td>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#workreport">WorkReport</a></td>
@@ -196,21 +196,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualendtime">ActualEndTime</h3>
-<p>Optionally, specifies the actual date and time when the resource usage ended.</p>
+<p>Optionally, specifies the actual date and time when the resource usage ended. <code>Filter(eq;ge;le;like)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="actualstarttime">ActualStartTime</h3>
-<p>Optionally, specifies the actual date and time when the resource usage began.</p>
+<p>Optionally, specifies the actual date and time when the resource usage began. <code>Filter(eq;ge;le;like)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalresourceusagehours">TotalResourceUsageHours</h3>
-<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</p>
+<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -240,7 +240,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The project task for which the work is reported.</p>
+<p>The project task for which the work is reported. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -250,13 +250,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.WorkReport.ProjectTask</code></p>
 <h3 id="resource">Resource</h3>
-<p>The resource, for which usage is reported.</p>
+<p>The resource, for which usage is reported. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resourceinstance">ResourceInstance</h3>
-<p>The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.</p>
+<p>The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. <code>Filter(multi eq;like)</code></p>
 <p>Type: <strong><a href="General.Resources.ResourceInstances.html">ResourceInstances</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>

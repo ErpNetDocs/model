@@ -139,12 +139,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.CaseCategoryRelationships.html#childcasecategory">ChildCaseCategory</a></td>
 <td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The category that is a child (sub-category) of the parent category.</td>
+<td>The category that is a child (sub-category) of the parent category. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseCategoryRelationships.html#parentcasecategory">ParentCaseCategory</a></td>
 <td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The category that is a parent.</td>
+<td>The category that is a parent. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -206,14 +206,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="childcasecategory">ChildCaseCategory</h3>
-<p>The category that is a child (sub-category) of the parent category.</p>
+<p>The category that is a child (sub-category) of the parent category. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentcasecategory">ParentCaseCategory</h3>
-<p>The category that is a parent.</p>
+<p>The category that is a parent. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -129,7 +129,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Distributors.html#flatcommisionpercentage">FlatCommisionPercentage</a></td>
 <td>decimal (7, 6)</td>
-<td>Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br>ve/qunatity considerations</td>
+<td>Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br>ve/qunatity considerations. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +146,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Distributors.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Base party Id</td>
+<td>Base party Id. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="flatcommisionpercentage">FlatCommisionPercentage</h3>
-<p>Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations</p>
+<p>Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -245,7 +245,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<p>Base party Id</p>
+<p>Base party Id. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

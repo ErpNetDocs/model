@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.AssetManagement.ManagedAssetLinks.md#enddate) | datetime __nullable__ | End date of asset group management. NULL means that end date is not set or unknown. 
-| [FromDate](Applications.AssetManagement.ManagedAssetLinks.md#fromdate) | datetime | Start date of asset group management. 
-| [IsCurrent](Applications.AssetManagement.ManagedAssetLinks.md#iscurrent) | boolean | Indicates that this group of assets is currently being managed. 
+| [EndDate](Applications.AssetManagement.ManagedAssetLinks.md#enddate) | datetime __nullable__ | End date of asset group management. null means that end date is not set or unknown. `Filter(eq;ge;le)` 
+| [FromDate](Applications.AssetManagement.ManagedAssetLinks.md#fromdate) | datetime | Start date of asset group management. `Required` `Default(Today)` `Filter(eq;ge;le)` 
+| [IsCurrent](Applications.AssetManagement.ManagedAssetLinks.md#iscurrent) | boolean | Indicates that this group of assets is currently being managed. `Required` `Default(true)` `Filter(eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FixedAsset](Applications.AssetManagement.ManagedAssetLinks.md#fixedasset) | [Assets](Finance.Assets.Assets.md) (nullable) | The linked fixed asset that is managed. NULL means that no fixed asset is linked. |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetLinks.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset under which the assets are managed. |
-| [RentalAsset](Applications.AssetManagement.ManagedAssetLinks.md#rentalasset) | [Assets](Applications.Rental.Assets.md) (nullable) | The linked rental asset that is managed. NULL means that no rental asset is linked. |
-| [ServiceObject](Applications.AssetManagement.ManagedAssetLinks.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The linked service object that is managed. NULL means that no service object is linked. |
-| [Vehicle](Applications.AssetManagement.ManagedAssetLinks.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) (nullable) | The linked vehicle that is managed. NULL means that no vehicle is linked. |
+| [FixedAsset](Applications.AssetManagement.ManagedAssetLinks.md#fixedasset) | [Assets](Finance.Assets.Assets.md) (nullable) | The linked fixed asset that is managed. null means that no fixed asset is linked. `Filter(multi eq)` |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetLinks.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset under which the assets are managed. `Required` `Filter(multi eq)` `Owner` |
+| [RentalAsset](Applications.AssetManagement.ManagedAssetLinks.md#rentalasset) | [Assets](Applications.Rental.Assets.md) (nullable) | The linked rental asset that is managed. null means that no rental asset is linked. `Filter(multi eq)` |
+| [ServiceObject](Applications.AssetManagement.ManagedAssetLinks.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The linked service object that is managed. null means that no service object is linked. `Filter(multi eq)` |
+| [Vehicle](Applications.AssetManagement.ManagedAssetLinks.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) (nullable) | The linked vehicle that is managed. null means that no vehicle is linked. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### EndDate
 
-End date of asset group management. NULL means that end date is not set or unknown.
+End date of asset group management. null means that end date is not set or unknown. `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Start date of asset group management.
+Start date of asset group management. `Required` `Default(Today)` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### IsCurrent
 
-Indicates that this group of assets is currently being managed.
+Indicates that this group of assets is currently being managed. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **HiddenByDefault**
 
 ### FixedAsset
 
-The linked fixed asset that is managed. NULL means that no fixed asset is linked.
+The linked fixed asset that is managed. null means that no fixed asset is linked. `Filter(multi eq)`
 
 Type: **[Assets](Finance.Assets.Assets.md) (nullable)**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAsset
 
-The managed asset under which the assets are managed.
+The managed asset under which the assets are managed. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 Indexed: **True**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAsset
 
-The linked rental asset that is managed. NULL means that no rental asset is linked.
+The linked rental asset that is managed. null means that no rental asset is linked. `Filter(multi eq)`
 
 Type: **[Assets](Applications.Rental.Assets.md) (nullable)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceObject
 
-The linked service object that is managed. NULL means that no service object is linked.
+The linked service object that is managed. null means that no service object is linked. `Filter(multi eq)`
 
 Type: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### Vehicle
 
-The linked vehicle that is managed. NULL means that no vehicle is linked.
+The linked vehicle that is managed. null means that no vehicle is linked. `Filter(multi eq)`
 
 Type: **[Vehicles](Applications.Fleet.Vehicles.md) (nullable)**  
 Category: **System**  

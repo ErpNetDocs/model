@@ -126,17 +126,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#diagnostictroublecode">DiagnosticTroubleCode</a></td>
 <td>string (5)</td>
-<td>Standartized OBD-II diagnostic trouble code.</td>
+<td>Standartized OBD-II diagnostic trouble code. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#manufacturertroublecode">ManufacturerTroubleCode</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Non-standard manufacturer-specific trouble code. NULL when it is not available.</td>
+<td>Non-standard manufacturer-specific trouble code. null when it is not available.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#occurencedatetime">OccurenceDateTime</a></td>
 <td>datetime</td>
-<td>Date and time (UTC) when the trouble was detected.</td>
+<td>Date and time (UTC) when the trouble was detected. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a></td>
-<td>The vehicle, which has experienced the trouble.</td>
+<td>The vehicle, which has experienced the trouble. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="diagnostictroublecode">DiagnosticTroubleCode</h3>
-<p>Standartized OBD-II diagnostic trouble code.</p>
+<p>Standartized OBD-II diagnostic trouble code. <code>Required</code></p>
 <p>Type: <strong>string (5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -217,7 +217,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>5</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="manufacturertroublecode">ManufacturerTroubleCode</h3>
-<p>Non-standard manufacturer-specific trouble code. NULL when it is not available.</p>
+<p>Non-standard manufacturer-specific trouble code. null when it is not available.</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -225,7 +225,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="occurencedatetime">OccurenceDateTime</h3>
-<p>Date and time (UTC) when the trouble was detected.</p>
+<p>Date and time (UTC) when the trouble was detected. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -275,7 +275,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="vehicle">Vehicle</h3>
-<p>The vehicle, which has experienced the trouble.</p>
+<p>The vehicle, which has experienced the trouble. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

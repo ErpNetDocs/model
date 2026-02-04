@@ -34,15 +34,15 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.Classic.TaskTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Multilanguage description of the task type. 
-| [DisplayOrder](Projects.Classic.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). 
+| [DisplayOrder](Projects.Classic.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). `Required` `Default(1)` 
 | [Icon](Projects.Classic.TaskTypes.md#icon) | byte[] __nullable__ | Icon representing the task type. Preferrably 32x32 pixels. 
-| [Name](Projects.Classic.TaskTypes.md#name) | [MultilanguageString (max)](../data-types.md#multilanguagestring) | The multilanguage task type name. 
+| [Name](Projects.Classic.TaskTypes.md#name) | [MultilanguageString (max)](../data-types.md#multilanguagestring) | The multilanguage task type name. `Required` `Filter(multi eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.Classic.TaskTypes.md#projecttype) | [ProjectTypes](Projects.Classic.ProjectTypes.md) (nullable) | When not NULL, specifies that this task type can be used only for projects of the specified type. |
+| [ProjectType](Projects.Classic.TaskTypes.md#projecttype) | [ProjectTypes](Projects.Classic.ProjectTypes.md) (nullable) | When not null, specifies that this task type can be used only for projects of the specified type. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### DisplayOrder
 
-Display order position of the task. Lowest numbers are shown first (on top).
+Display order position of the task. Lowest numbers are shown first (on top). `Required` `Default(1)`
 
 Type: **int32**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The multilanguage task type name.
+The multilanguage task type name. `Required` `Filter(multi eq;like)`
 
 Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProjectType
 
-When not NULL, specifies that this task type can be used only for projects of the specified type.
+When not null, specifies that this task type can be used only for projects of the specified type. `Filter(multi eq)`
 
 Type: **[ProjectTypes](Projects.Classic.ProjectTypes.md) (nullable)**  
 Category: **System**  

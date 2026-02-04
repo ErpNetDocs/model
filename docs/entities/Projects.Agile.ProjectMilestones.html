@@ -122,12 +122,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.ProjectMilestones.html#completiondate">CompletionDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Planned completion date for the milestone</td>
+<td>Planned completion date for the milestone. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectMilestones.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the milestone is active for new cases</td>
+<td>Specifies whether the milestone is active for new cases. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectMilestones.html#name">Name</a></td>
@@ -149,12 +149,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.ProjectMilestones.html#project">Project</a></td>
 <td><a href="Projects.Agile.Projects.html">Projects</a> (nullable)</td>
-<td>Specified for local project milestones. NULL means the milestone is global and assignable for all projects.</td>
+<td>Specified for local project milestones. null means the milestone is global and assignable for all projects. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectMilestones.html#projectgroup">ProjectGroup</a></td>
 <td><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</td>
-<td>Specified for milestones that are applicable to all projects within the project group. NULL means the milestone is global, unless it is linked to a specific project.</td>
+<td>Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,14 +202,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completiondate">CompletionDate</h3>
-<p>Planned completion date for the milestone</p>
+<p>Planned completion date for the milestone. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the milestone is active for new cases</p>
+<p>Specifies whether the milestone is active for new cases. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -267,14 +267,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
-<p>Specified for local project milestones. NULL means the milestone is global and assignable for all projects.</p>
+<p>Specified for local project milestones. null means the milestone is global and assignable for all projects. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Agile.Projects.html">Projects</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectgroup">ProjectGroup</h3>
-<p>Specified for milestones that are applicable to all projects within the project group. NULL means the milestone is global, unless it is linked to a specific project.</p>
+<p>Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></p>
 <p>Type: <strong><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

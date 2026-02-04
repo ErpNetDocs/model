@@ -44,19 +44,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | Determines the visibility of rows in this table depending on the rows in the sub-tables 
-| [ExtensionsList](Systems.Documents.DataSourceQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query 
-| [FilterXml](Systems.Documents.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the data from the current table. 
-| [FirstRow](Systems.Documents.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. 
-| [ReferencePath](Systems.Documents.DataSourceQueries.md#referencepath) | string (max) | A sequence of tables ordered by their references. 
-| [TableName](Systems.Documents.DataSourceQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL. 
-| [UniqueName](Systems.Documents.DataSourceQueries.md#uniquename) | string (64) __nullable__ | If not empty for the current query will be created separate set of tables with unique prefix in their names.  
+| [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. `Required` `Default(0)` 
+| [ExtensionsList](Systems.Documents.DataSourceQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
+| [FilterXml](Systems.Documents.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table. `Unit: obj.GetTableName()` 
+| [FirstRow](Systems.Documents.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. `Required` `Default(false)` 
+| [ReferencePath](Systems.Documents.DataSourceQueries.md#referencepath) | string (max) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required` 
+| [TableName](Systems.Documents.DataSourceQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
+| [UniqueName](Systems.Documents.DataSourceQueries.md#uniquename) | string (64) __nullable__ | The name of the data table in the printout datasource. If null the Reference_Path is used. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](Systems.Documents.DataSourceQueries.md#datasource) | [DataSources](Systems.Documents.DataSources.md) | The report of the query. |
+| [DataSource](Systems.Documents.DataSourceQueries.md#datasource) | [DataSources](Systems.Documents.DataSources.md) | The report of the query. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### DependsOnChildRows
 
-Determines the visibility of rows in this table depending on the rows in the sub-tables
+Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. `Required` `Default(0)`
 
 Type: **[DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### ExtensionsList
 
-A comma separated list of report extension names. An extension is set of additional fields that participate in the query
+A comma separated list of report extension names. An extension is set of additional fields that participate in the query.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### FilterXml
 
-Filter for the data from the current table.
+Filter for the loaded table. `Unit: obj.GetTableName()`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### FirstRow
 
-Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.
+Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferencePath
 
-A sequence of tables ordered by their references.
+A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required`
 
 Type: **string (max)**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### TableName
 
-The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.
+The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **ShownByDefault**
 
 ### UniqueName
 
-If not empty for the current query will be created separate set of tables with unique prefix in their names.
+The name of the data table in the printout datasource. If null the Reference_Path is used.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataSource
 
-The report of the query.
+The report of the query. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DataSources](Systems.Documents.DataSources.md)**  
 Category: **System**  

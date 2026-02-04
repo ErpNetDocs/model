@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LinePercent](Regulatory.Vat.DealTypeDocumentAmounts.md#linepercent) | decimal (14, 3) | Percent by which additional amount is calculated. 
+| [LinePercent](Regulatory.Vat.DealTypeDocumentAmounts.md#linepercent) | decimal (14, 3) | Percent by which additional amount is calculated. `Required` `Default(0)` 
 | [Notes](Regulatory.Vat.DealTypeDocumentAmounts.md#notes) | string (max) __nullable__ | Notes for this DealTypeDocumentAmount. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Regulatory.Vat.DealTypeDocumentAmounts.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | Deal type for which is calculated additional amount. |
-| [DocumentAmountType](Regulatory.Vat.DealTypeDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | Type of additional amount which is calculated for the documents. |
+| [DealType](Regulatory.Vat.DealTypeDocumentAmounts.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | Deal type for which is calculated additional amount. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [DocumentAmountType](Regulatory.Vat.DealTypeDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | Type of additional amount which is calculated for the documents. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### LinePercent
 
-Percent by which additional amount is calculated.
+Percent by which additional amount is calculated. `Required` `Default(0)`
 
 Type: **decimal (14, 3)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealType
 
-Deal type for which is calculated additional amount.
+Deal type for which is calculated additional amount. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md)**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentAmountType
 
-Type of additional amount which is calculated for the documents.
+Type of additional amount which is calculated for the documents. `Required` `Filter(multi eq)`
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  

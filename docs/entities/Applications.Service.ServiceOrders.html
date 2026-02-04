@@ -200,12 +200,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -302,7 +302,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The client, requesting servicing.</td>
+<td>The client, requesting servicing. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#documenttype">DocumentType</a></td>
@@ -362,17 +362,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#serviceagreement">ServiceAgreement</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a> (nullable)</td>
-<td>When not NULL denotes that the order will be bound to the terms in the specified agreement.</td>
+<td>When not null denotes that the order will be bound to the terms in the specified agreement. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#shiptocustomer">ShipToCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>Customer location of the main customer from which the service object is taken.</td>
+<td>Customer location of the main customer from which the service object is taken. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.</td>
+<td>The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrders.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -593,7 +593,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -601,7 +601,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -859,7 +859,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The client, requesting servicing.</p>
+<p>The client, requesting servicing. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -938,13 +938,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
-<p>When not NULL denotes that the order will be bound to the terms in the specified agreement.</p>
+<p>When not null denotes that the order will be bound to the terms in the specified agreement. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
-<p>Customer location of the main customer from which the service object is taken.</p>
+<p>Customer location of the main customer from which the service object is taken. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -952,7 +952,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Customer.DetermineShipToCustomer( obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.ShipToCustomer)</code></p>
 <h3 id="store">Store</h3>
-<p>The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.</p>
+<p>The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

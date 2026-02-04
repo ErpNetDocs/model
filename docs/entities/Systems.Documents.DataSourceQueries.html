@@ -126,37 +126,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
 <td><a href="Systems.Documents.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
-<td>Determines the visibility of rows in this table depending on the rows in the sub-tables</td>
+<td>Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#extensionslist">ExtensionsList</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</td>
+<td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#filterxml">FilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>Filter for the data from the current table.</td>
+<td>Filter for the loaded table. <code>Unit: obj.GetTableName()</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#firstrow">FirstRow</a></td>
 <td>boolean</td>
-<td>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.</td>
+<td>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#referencepath">ReferencePath</a></td>
 <td>string (max)</td>
-<td>A sequence of tables ordered by their references.</td>
+<td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br>Enterprise_Company_<br>Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#tablename">TableName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</td>
+<td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#uniquename">UniqueName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>If not empty for the current query will be created separate set of tables with unique prefix in their names.</td>
+<td>The name of the data table in the printout datasource. If null the Reference_Path is used.</td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#datasource">DataSource</a></td>
 <td><a href="Systems.Documents.DataSources.html">DataSources</a></td>
-<td>The report of the query.</td>
+<td>The report of the query. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -206,7 +206,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dependsonchildrows">DependsOnChildRows</h3>
-<p>Determines the visibility of rows in this table depending on the rows in the sub-tables</p>
+<p>Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DependsOnChildRows</code>(Systems.Documents.DataSourceQueries.md#dependsonchildrows) data attribute<br>
@@ -238,7 +238,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="extensionslist">ExtensionsList</h3>
-<p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</p>
+<p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -246,14 +246,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="filterxml">FilterXml</h3>
-<p>Filter for the data from the current table.</p>
+<p>Filter for the loaded table. <code>Unit: obj.GetTableName()</code></p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="firstrow">FirstRow</h3>
-<p>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.</p>
+<p>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -261,7 +261,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referencepath">ReferencePath</h3>
-<p>A sequence of tables ordered by their references.</p>
+<p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -269,7 +269,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tablename">TableName</h3>
-<p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</p>
+<p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -277,7 +277,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="uniquename">UniqueName</h3>
-<p>If not empty for the current query will be created separate set of tables with unique prefix in their names.</p>
+<p>The name of the data table in the printout datasource. If null the Reference_Path is used.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -307,7 +307,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datasource">DataSource</h3>
-<p>The report of the query.</p>
+<p>The report of the query. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.DataSources.html">DataSources</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

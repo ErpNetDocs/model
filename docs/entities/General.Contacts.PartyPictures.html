@@ -126,22 +126,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>If checked specifies that this picture is used by default for this party in reports.</td>
+<td>True=This is the default picture for the party; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#islogo">IsLogo</a></td>
 <td>boolean</td>
-<td>If checked specifies that this picture is used to visualize the logo of this party in the system.</td>
+<td>If checked specifies that this picture is used to visualize the logo of this party in the system. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#picture">Picture</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>The actual party picture data. Can be NULL if we insert only some comments.</td>
+<td>The actual party picture data. Can be null if we insert only some comments.</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
-<td>Unique picture number within the party. Also used for sorting</td>
+<td>Unique picture number within the party. Also used for sorting. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -199,7 +199,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>If checked specifies that this picture is used by default for this party in reports.</p>
+<p>True=This is the default picture for the party; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -209,7 +209,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Party.Pictures.Take( 1).Count( ) == 0)</code></p>
 <h3 id="islogo">IsLogo</h3>
-<p>If checked specifies that this picture is used to visualize the logo of this party in the system.</p>
+<p>If checked specifies that this picture is used to visualize the logo of this party in the system. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -217,14 +217,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="picture">Picture</h3>
-<p>The actual party picture data. Can be NULL if we insert only some comments.</p>
+<p>The actual party picture data. Can be null if we insert only some comments.</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<p>Unique picture number within the party. Also used for sorting</p>
+<p>Unique picture number within the party. Also used for sorting. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

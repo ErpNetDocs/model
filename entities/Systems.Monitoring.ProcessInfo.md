@@ -37,17 +37,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CPUUtilization](Systems.Monitoring.ProcessInfo.md#cpuutilization) | double | CPU utilization by the process in percents 
-| [MemoryMB](Systems.Monitoring.ProcessInfo.md#memorymb) | decimal (12, 3) | The memory used by the process in Megabytes 
-| [ProcessId](Systems.Monitoring.ProcessInfo.md#processid) | int32 | The id of process 
-| [ProcessName](Systems.Monitoring.ProcessInfo.md#processname) | string (256) | The name of process 
+| [CPUUtilization](Systems.Monitoring.ProcessInfo.md#cpuutilization) | double | CPU utilization by the process in percents. `Required` `Filter(eq;ge;le)` `ORD` 
+| [MemoryMB](Systems.Monitoring.ProcessInfo.md#memorymb) | decimal (12, 3) | The memory used by the process in Megabytes. `Required` `Filter(eq;ge;le)` `ORD` 
+| [ProcessId](Systems.Monitoring.ProcessInfo.md#processid) | int32 | The id of process. `Required` `Filter(eq)` 
+| [ProcessName](Systems.Monitoring.ProcessInfo.md#processname) | string (256) | The name of process. `Required` `Filter(eq;like)` `ORD` 
 
 
 ## Attribute Details
 
 ### CPUUtilization
 
-CPU utilization by the process in percents
+CPU utilization by the process in percents. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **double**  
 Category: **System**  
@@ -57,7 +57,7 @@ Show in UI: **ShownByDefault**
 
 ### MemoryMB
 
-The memory used by the process in Megabytes
+The memory used by the process in Megabytes. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessId
 
-The id of process
+The id of process. `Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessName
 
-The name of process
+The name of process. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (256)**  
 Category: **System**  

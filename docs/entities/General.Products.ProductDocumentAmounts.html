@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductDocumentAmounts.html#linepercent">LinePercent</a></td>
 <td>decimal (14, 3)</td>
-<td>The custom percent for the current product and amount type.</td>
+<td>The custom percent for the current product and amount type. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductDocumentAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
-<td>The amount type for which the custom percent is defined.</td>
+<td>The amount type for which the custom percent is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDocumentAmounts.html#product">Product</a></td>
@@ -176,7 +176,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="linepercent">LinePercent</h3>
-<p>The custom percent for the current product and amount type.</p>
+<p>The custom percent for the current product and amount type. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (14, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -206,7 +206,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The amount type for which the custom percent is defined.</p>
+<p>The amount type for which the custom percent is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

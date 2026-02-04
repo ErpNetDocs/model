@@ -35,21 +35,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AutoUpdateToLatestBuild](Projects.AI.Models.md#autoupdatetolatestbuild) | boolean | Indicates whether to automatically update Conversation Build to the latest successful build. 
-| [BuildAssistant](Projects.AI.Models.md#buildassistant) | boolean | Specifies whether the model should produce an AI assistant. 
-| [IsDefault](Projects.AI.Models.md#isdefault) | boolean | Specifies whether this is the default model which will handle AI prompts. 
-| [Name](Projects.AI.Models.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the model. 
+| [AutoUpdateToLatestBuild](Projects.AI.Models.md#autoupdatetolatestbuild) | boolean | Indicates whether to automatically update Conversation Build to the latest successful build. `Required` `Default(true)` 
+| [BuildAssistant](Projects.AI.Models.md#buildassistant) | boolean | Specifies whether the model should produce an AI assistant. `Required` `Default(true)` `Introduced in version 24.1.5.31` 
+| [IsDefault](Projects.AI.Models.md#isdefault) | boolean | Specifies whether this is the default model which will handle AI prompts. `Required` `Default(false)` `Filter(eq)` `Introduced in version 24.1.3.23` 
+| [Name](Projects.AI.Models.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the model. `Required` `Filter(like)` 
 | [Notes](Projects.AI.Models.md#notes) | string (max) __nullable__ | Notes for this Model. 
-| [SystemMessage](Projects.AI.Models.md#systemmessage) | string (max) __nullable__ | Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot. 
+| [SystemMessage](Projects.AI.Models.md#systemmessage) | string (max) __nullable__ | Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot. `Introduced in version 24.1.3.7` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConversationalCompilation](Projects.AI.Models.md#conversationalcompilation) | [Compilations](Projects.AI.Compilations.md) (nullable) | The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. NULL means the model cannot be used for conversations. |
+| [ConversationalCompilation](Projects.AI.Models.md#conversationalcompilation) | [Compilations](Projects.AI.Compilations.md) (nullable) | The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. null means the model cannot be used for conversations. `Filter(multi eq)` `Introduced in version 24.1.2.11` |
 | [Parent](Projects.AI.Models.md#parent) | [Models](Projects.AI.Models.md) (nullable) | A model, which contains the current model. When building a parent model, it will consume all QAs from all child models. `Filter(multi eq)` |
-| [Provider](Projects.AI.Models.md#provider) | [Providers](Projects.AI.Providers.md) (nullable) | The provider and base model, which should be fine-tuned with the domain specific knowledge. NULL means that this model cannot by compiled and can only be used as a child for another model. |
-| [VirtualUser](Projects.AI.Models.md#virtualuser) | [Users](Systems.Security.Users.md) (nullable) | The virtual user, which will answer in chats on behalf of the model. NULL means the model cannot be used in chat. Each model should have different virtual user. |
+| [Provider](Projects.AI.Models.md#provider) | [Providers](Projects.AI.Providers.md) (nullable) | The provider and base model, which should be fine-tuned with the domain specific knowledge. null means that this model cannot by compiled and can only be used as a child for another model. `Filter(multi eq)` `Introduced in version 24.1.3.3` |
+| [VirtualUser](Projects.AI.Models.md#virtualuser) | [Users](Systems.Security.Users.md) (nullable) | The virtual user, which will answer in chats on behalf of the model. null means the model cannot be used in chat. Each model should have different virtual user. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -74,7 +74,7 @@ Aggregate Tree
 
 ### AutoUpdateToLatestBuild
 
-Indicates whether to automatically update Conversation Build to the latest successful build.
+Indicates whether to automatically update Conversation Build to the latest successful build. `Required` `Default(true)`
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### BuildAssistant
 
-Specifies whether the model should produce an AI assistant.
+Specifies whether the model should produce an AI assistant. `Required` `Default(true)` `Introduced in version 24.1.5.31`
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-Specifies whether this is the default model which will handle AI prompts.
+Specifies whether this is the default model which will handle AI prompts. `Required` `Default(false)` `Filter(eq)` `Introduced in version 24.1.3.23`
 
 Type: **boolean**  
 Indexed: **True**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the model.
+Multi-language name of the model. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemMessage
 
-Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.
+Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot. `Introduced in version 24.1.3.7`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConversationalCompilation
 
-The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. NULL means the model cannot be used for conversations.
+The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. null means the model cannot be used for conversations. `Filter(multi eq)` `Introduced in version 24.1.2.11`
 
 Type: **[Compilations](Projects.AI.Compilations.md) (nullable)**  
 Indexed: **True**  
@@ -222,7 +222,7 @@ Show in UI: **ShownByDefault**
 
 ### Provider
 
-The provider and base model, which should be fine-tuned with the domain specific knowledge. NULL means that this model cannot by compiled and can only be used as a child for another model.
+The provider and base model, which should be fine-tuned with the domain specific knowledge. null means that this model cannot by compiled and can only be used as a child for another model. `Filter(multi eq)` `Introduced in version 24.1.3.3`
 
 Type: **[Providers](Projects.AI.Providers.md) (nullable)**  
 Indexed: **True**  
@@ -232,7 +232,7 @@ Show in UI: **ShownByDefault**
 
 ### VirtualUser
 
-The virtual user, which will answer in chats on behalf of the model. NULL means the model cannot be used in chat. Each model should have different virtual user.
+The virtual user, which will answer in chats on behalf of the model. null means the model cannot be used in chat. Each model should have different virtual user. `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  

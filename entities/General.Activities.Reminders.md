@@ -44,16 +44,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsDefault](General.Activities.Reminders.md#isdefault) | boolean | 1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form 
-| [IsDismissed](General.Activities.Reminders.md#isdismissed) | boolean | When 1 the reminder was dismissed by the user; the initial value is 0 
-| [Notes](General.Activities.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task 
-| [ReminderTime](General.Activities.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user 
+| [IsDefault](General.Activities.Reminders.md#isdefault) | boolean | True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. `Required` `Default(false)` `Filter(eq)` 
+| [IsDismissed](General.Activities.Reminders.md#isdismissed) | boolean | When true the reminder was dismissed by the user; the initial value is false. `Required` `Default(false)` `Filter(eq)` 
+| [Notes](General.Activities.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task. 
+| [ReminderTime](General.Activities.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user. `Required` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Activities.Reminders.md#activity) | [Activities](General.Activities.Activities.md) | The activity to which this reminder is attached |
+| [Activity](General.Activities.Reminders.md#activity) | [Activities](General.Activities.Activities.md) | The activity to which this reminder is attached. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### IsDefault
 
-1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form
+True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDismissed
 
-When 1 the reminder was dismissed by the user; the initial value is 0
+When true the reminder was dismissed by the user; the initial value is false. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes that describe this specific reminder for the task
+Notes that describe this specific reminder for the task.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### ReminderTime
 
-The time when the alarm should snooze to the user
+The time when the alarm should snooze to the user. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **HiddenByDefault**
 
 ### Activity
 
-The activity to which this reminder is attached
+The activity to which this reminder is attached. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Activities](General.Activities.Activities.md)**  
 Category: **System**  

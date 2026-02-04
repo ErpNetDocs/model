@@ -124,57 +124,57 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Mail.Messages.html#body">Body</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The body of the message</td>
+<td>The body of the message.</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#ccemailaddresslist">CcEmailAddressList</a></td>
 <td>string (2048) <strong>nullable</strong></td>
-<td>Semicolon-separated list of Cc email addresses</td>
+<td>Semicolon-separated list of Cc email addresses. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#creationdatetime">CreationDateTime</a></td>
 <td>datetime</td>
-<td>Date and time when the message was created</td>
+<td>Date and time when the message was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#fromemailaddress">FromEmailAddress</a></td>
 <td>string (512)</td>
-<td>Sending email address</td>
+<td>Sending email address. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#isencrypted">IsEncrypted</a></td>
 <td>boolean</td>
-<td>1 when the message is stored in encrypted format</td>
+<td>True when the message is stored in encrypted format. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#isread">IsRead</a></td>
 <td>boolean</td>
-<td>1 when the message was read by the user</td>
+<td>True when the message was read by the user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#receiveddatetime">ReceivedDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time when the message was received</td>
+<td>Date and time when the message was received. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#sentdatetime">SentDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time when the message was sent</td>
+<td>Date and time when the message was sent. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#servermessageid">ServerMessageID</a></td>
 <td>string (256) <strong>nullable</strong></td>
-<td>Message ID as it appears on the mail server</td>
+<td>Message ID as it appears on the mail server. <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#subject">Subject</a></td>
 <td>string (1024) <strong>nullable</strong></td>
-<td>The message subject</td>
+<td>The message subject. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#toemailaddresslist">ToEmailAddressList</a></td>
 <td>string (2048) <strong>nullable</strong></td>
-<td>Semicolon-separated list of receiving email addresses</td>
+<td>Semicolon-separated list of receiving email addresses. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -191,12 +191,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Mail.Messages.html#mailboxfolder">MailBoxFolder</a></td>
 <td><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></td>
-<td>The folder where the message belongs</td>
+<td>The folder where the message belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#relatedtoparty">RelatedToParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party</td>
+<td>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -261,7 +261,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="body">Body</h3>
-<p>The body of the message</p>
+<p>The body of the message.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -269,7 +269,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ccemailaddresslist">CcEmailAddressList</h3>
-<p>Semicolon-separated list of Cc email addresses</p>
+<p>Semicolon-separated list of Cc email addresses. <code>Filter(like)</code></p>
 <p>Type: <strong>string (2048) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -277,7 +277,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2048</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationdatetime">CreationDateTime</h3>
-<p>Date and time when the message was created</p>
+<p>Date and time when the message was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -285,7 +285,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fromemailaddress">FromEmailAddress</h3>
-<p>Sending email address</p>
+<p>Sending email address. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (512)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -293,7 +293,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>512</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isencrypted">IsEncrypted</h3>
-<p>1 when the message is stored in encrypted format</p>
+<p>True when the message is stored in encrypted format. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isread">IsRead</h3>
-<p>1 when the message was read by the user</p>
+<p>True when the message was read by the user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -309,21 +309,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receiveddatetime">ReceivedDateTime</h3>
-<p>Date and time when the message was received</p>
+<p>Date and time when the message was received. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sentdatetime">SentDateTime</h3>
-<p>Date and time when the message was sent</p>
+<p>Date and time when the message was sent. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="servermessageid">ServerMessageID</h3>
-<p>Message ID as it appears on the mail server</p>
+<p>Message ID as it appears on the mail server. <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -332,7 +332,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>256</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="subject">Subject</h3>
-<p>The message subject</p>
+<p>The message subject. <code>Filter(like)</code></p>
 <p>Type: <strong>string (1024) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -340,7 +340,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>1024</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="toemailaddresslist">ToEmailAddressList</h3>
-<p>Semicolon-separated list of receiving email addresses</p>
+<p>Semicolon-separated list of receiving email addresses. <code>Filter(like)</code></p>
 <p>Type: <strong>string (2048) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -391,14 +391,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailboxfolder">MailBoxFolder</h3>
-<p>The folder where the message belongs</p>
+<p>The folder where the message belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="relatedtoparty">RelatedToParty</h3>
-<p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party</p>
+<p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

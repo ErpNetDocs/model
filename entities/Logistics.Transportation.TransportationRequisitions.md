@@ -73,10 +73,10 @@ Aggregate Tree
 | [ReferenceDate](Logistics.Transportation.TransportationRequisitions.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Logistics.Transportation.TransportationRequisitions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Logistics.Transportation.TransportationRequisitions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RequestedArrivalDate](Logistics.Transportation.TransportationRequisitions.md#requestedarrivaldate) | date | Requested arrival date. NULL when no specific date is requested. 
-| [RequestedArrivalTime](Logistics.Transportation.TransportationRequisitions.md#requestedarrivaltime) | time __nullable__ | Requested arrival time. NULL when no specific time is requested. 
-| [RequestedDepartureDate](Logistics.Transportation.TransportationRequisitions.md#requesteddeparturedate) | date | Requested date of departure. NULL when no specific date is requested. 
-| [RequestedDepartureTime](Logistics.Transportation.TransportationRequisitions.md#requesteddeparturetime) | time __nullable__ | Requested time of departure. NULL when no specific time is requested. 
+| [RequestedArrivalDate](Logistics.Transportation.TransportationRequisitions.md#requestedarrivaldate) | date | Requested arrival date. null when no specific date is requested. `Required` `Filter(ge;le)` 
+| [RequestedArrivalTime](Logistics.Transportation.TransportationRequisitions.md#requestedarrivaltime) | time __nullable__ | Requested arrival time. null when no specific time is requested. `Filter(ge;le)` 
+| [RequestedDepartureDate](Logistics.Transportation.TransportationRequisitions.md#requesteddeparturedate) | date | Requested date of departure. null when no specific date is requested. `Required` `Filter(ge;le)` 
+| [RequestedDepartureTime](Logistics.Transportation.TransportationRequisitions.md#requesteddeparturetime) | time __nullable__ | Requested time of departure. null when no specific time is requested. `Filter(ge;le)` 
 | [State](Logistics.Transportation.TransportationRequisitions.md#state) | [DocumentState](Logistics.Transportation.TransportationRequisitions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Transportation.TransportationRequisitions.md#statetagsattribute) | string | Specifies the state of the document. 
 | [Void](Logistics.Transportation.TransportationRequisitions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -105,12 +105,12 @@ Aggregate Tree
 | [Sequence](Logistics.Transportation.TransportationRequisitions.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Logistics.Transportation.TransportationRequisitions.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Transportation.TransportationRequisitions.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TransportFromGeoPoint](Logistics.Transportation.TransportationRequisitions.md#transportfromgeopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Geographical location of the loading, if available. |
-| [TransportFromParty](Logistics.Transportation.TransportationRequisitions.md#transportfromparty) | [Parties](General.Contacts.Parties.md) | Shipping party. |
-| [TransportFromParty<br />ContactMechanism](Logistics.Transportation.TransportationRequisitions.md#transportfrompartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | Loading address. |
-| [TransportToGeoPoint](Logistics.Transportation.TransportationRequisitions.md#transporttogeopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Geographical location of the unloading, if available. |
-| [TransportToParty](Logistics.Transportation.TransportationRequisitions.md#transporttoparty) | [Parties](General.Contacts.Parties.md) | Receiving party. |
-| [TransportToParty<br />ContactMechanism](Logistics.Transportation.TransportationRequisitions.md#transporttopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | Unload address. |
+| [TransportFromGeoPoint](Logistics.Transportation.TransportationRequisitions.md#transportfromgeopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Geographical location of the loading, if available. `Filter(multi eq)` |
+| [TransportFromParty](Logistics.Transportation.TransportationRequisitions.md#transportfromparty) | [Parties](General.Contacts.Parties.md) | Shipping party. `Required` `Filter(multi eq)` |
+| [TransportFromParty<br />ContactMechanism](Logistics.Transportation.TransportationRequisitions.md#transportfrompartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | Loading address. `Required` `Filter(multi eq)` |
+| [TransportToGeoPoint](Logistics.Transportation.TransportationRequisitions.md#transporttogeopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Geographical location of the unloading, if available. `Filter(multi eq)` |
+| [TransportToParty](Logistics.Transportation.TransportationRequisitions.md#transporttoparty) | [Parties](General.Contacts.Parties.md) | Receiving party. `Required` `Filter(multi eq)` |
+| [TransportToParty<br />ContactMechanism](Logistics.Transportation.TransportationRequisitions.md#transporttopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | Unload address. `Required` `Filter(multi eq)` |
 | [UserStatus](Logistics.Transportation.TransportationRequisitions.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 
 
@@ -350,7 +350,7 @@ Show in UI: **HiddenByDefault**
 
 ### RequestedArrivalDate
 
-Requested arrival date. NULL when no specific date is requested.
+Requested arrival date. null when no specific date is requested. `Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -360,7 +360,7 @@ Show in UI: **ShownByDefault**
 
 ### RequestedArrivalTime
 
-Requested arrival time. NULL when no specific time is requested.
+Requested arrival time. null when no specific time is requested. `Filter(ge;le)`
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -370,7 +370,7 @@ Show in UI: **ShownByDefault**
 
 ### RequestedDepartureDate
 
-Requested date of departure. NULL when no specific date is requested.
+Requested date of departure. null when no specific date is requested. `Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -380,7 +380,7 @@ Show in UI: **ShownByDefault**
 
 ### RequestedDepartureTime
 
-Requested time of departure. NULL when no specific time is requested.
+Requested time of departure. null when no specific time is requested. `Filter(ge;le)`
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -702,7 +702,7 @@ Back-End Default Expression:
 
 ### TransportFromGeoPoint
 
-Geographical location of the loading, if available.
+Geographical location of the loading, if available. `Filter(multi eq)`
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 Category: **System**  
@@ -711,7 +711,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportFromParty
 
-Shipping party.
+Shipping party. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -720,7 +720,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportFromPartyContactMechanism
 
-Loading address.
+Loading address. `Required` `Filter(multi eq)`
 
 Type: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md)**  
 Category: **System**  
@@ -729,7 +729,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportToGeoPoint
 
-Geographical location of the unloading, if available.
+Geographical location of the unloading, if available. `Filter(multi eq)`
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 Category: **System**  
@@ -738,7 +738,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportToParty
 
-Receiving party.
+Receiving party. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -747,7 +747,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportToPartyContactMechanism
 
-Unload address.
+Unload address. `Required` `Filter(multi eq)`
 
 Type: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md)**  
 Category: **System**  

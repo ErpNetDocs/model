@@ -136,17 +136,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Customers.html#active">Active</a></td>
 <td>boolean</td>
-<td>1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents</td>
+<td>True if the customer is active, false - not to list in combo boxes for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#allowuseasprimarycustomer">AllowUseAsPrimaryCustomer</a></td>
 <td>boolean</td>
-<td>Specifies whether to allow the customer to be used as primary customer in a sales deal.</td>
+<td>Specifies whether to allow the customer to be used as primary customer in a sales deal. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#allowuseasshiptocustomer">AllowUseAsShipToCustomer</a></td>
 <td>boolean</td>
-<td>True to allow the customer to be used as ship to customer in a sales deal.</td>
+<td>True to allow the customer to be used as ship to customer in a sales deal. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#creationtime">CreationTime</a></td>
@@ -161,47 +161,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Customers.html#creditlimit">CreditLimit</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>Total credit limit for the customer in the enterprise company base currency. null means there is no limit.</td>
+<td>Total credit limit for the customer in the enterprise company base currency. null means there is no limit. <code>Currency: EnterpriseCompany?.BaseCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultdeliverytermdays">DefaultDeliveryTermDays</a></td>
 <td>int32</td>
-<td>Default term in days for goods delivery, starting at the day of sale</td>
+<td>Default term in days for goods delivery, starting at the day of sale. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultpaymentstartdays">DefaultPaymentStartDays</a></td>
 <td>int32</td>
-<td>Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.</td>
+<td>Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultpaymenttermdays">DefaultPaymentTermDays</a></td>
 <td>int32</td>
-<td>Default payment term in days when issuing documents for this customer</td>
+<td>Default payment term in days when issuing documents for this customer. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date of the customer relationship</td>
+<td>Start date of the customer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#graceperioddays">GracePeriodDays</a></td>
 <td>int32</td>
-<td>Number of days after the payment deadline, during which the system still allows new sales orders for the customer.</td>
+<td>Number of days after the payment deadline, during which the system still allows new sales orders for the customer. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#number">Number</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Unique customer number</td>
+<td>Unique customer number. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#persistsalesorderslots">PersistSalesOrdersLots</a></td>
 <td>boolean</td>
-<td>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.</td>
+<td>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of customer relationship termination. NULL for active customers.</td>
+<td>The date of customer relationship termination. null for active customers. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#updatetime">UpdateTime</a></td>
@@ -228,57 +228,57 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Customers.html#collectionsresponsibleemployee">CollectionsResponsible<br>Employee</a></td>
 <td><a href="General.Contacts.CompanyEmployees.html">CompanyEmployees</a> (nullable)</td>
-<td>The employee, who is responsible for the collections from the customer</td>
+<td>The employee, who is responsible for the collections from the customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#customertype">CustomerType</a></td>
 <td><a href="Crm.Sales.CustomerTypes.html">CustomerTypes</a> (nullable)</td>
-<td>The user-defined type of this customer. NULL when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes</td>
+<td>The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultcurrency">DefaultCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The default currency to use when creating new documents for this customer.</td>
+<td>The default currency to use when creating new documents for this customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultdistributionchannel">DefaultDistributionChannel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
-<td>The default distribution channel used when selling to the customer</td>
+<td>The default distribution channel used when selling to the customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultpaymentaccount">DefaultPaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>The default payment account to use when creating new documents for this customer</td>
+<td>The default payment account to use when creating new documents for this customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultpaymenttype">DefaultPaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>Specifies default payment type for the sales, offers and invoices for this customer.</td>
+<td>If not null, specifies default payment type for the sales, offers and invoices for this customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#defaultpricelist">DefaultPriceList</a></td>
 <td><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</td>
-<td>If not NULL, specifies default price list when selling to this customer</td>
+<td>If not null, specifies default price list when selling to this customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies.</td>
+<td>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Base party Id</td>
+<td>Base party Id. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</td>
-<td>The default sales person for new sales documents for this customer</td>
+<td>The default sales person for new sales documents for this customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Customers.html#servicedbyenterprisecompanylocation">ServicedByEnterprise<br>CompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location, which sells to this client by default.</td>
+<td>The enterprise company location, which sells to this client by default. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -348,7 +348,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents</p>
+<p>True if the customer is active, false - not to list in combo boxes for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -356,7 +356,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowuseasprimarycustomer">AllowUseAsPrimaryCustomer</h3>
-<p>Specifies whether to allow the customer to be used as primary customer in a sales deal.</p>
+<p>Specifies whether to allow the customer to be used as primary customer in a sales deal. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -364,7 +364,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowuseasshiptocustomer">AllowUseAsShipToCustomer</h3>
-<p>True to allow the customer to be used as ship to customer in a sales deal.</p>
+<p>True to allow the customer to be used as ship to customer in a sales deal. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -387,7 +387,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditlimit">CreditLimit</h3>
-<p>Total credit limit for the customer in the enterprise company base currency. null means there is no limit.</p>
+<p>Total credit limit for the customer in the enterprise company base currency. null means there is no limit. <code>Currency: EnterpriseCompany?.BaseCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -398,7 +398,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)</code></p>
 <h3 id="defaultdeliverytermdays">DefaultDeliveryTermDays</h3>
-<p>Default term in days for goods delivery, starting at the day of sale</p>
+<p>Default term in days for goods delivery, starting at the day of sale. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -406,7 +406,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymentstartdays">DefaultPaymentStartDays</h3>
-<p>Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.</p>
+<p>Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -414,7 +414,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymenttermdays">DefaultPaymentTermDays</h3>
-<p>Default payment term in days when issuing documents for this customer</p>
+<p>Default payment term in days when issuing documents for this customer. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -422,7 +422,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Start date of the customer relationship</p>
+<p>Start date of the customer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -430,7 +430,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="graceperioddays">GracePeriodDays</h3>
-<p>Number of days after the payment deadline, during which the system still allows new sales orders for the customer.</p>
+<p>Number of days after the payment deadline, during which the system still allows new sales orders for the customer. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -438,7 +438,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="number">Number</h3>
-<p>Unique customer number</p>
+<p>Unique customer number. <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -449,7 +449,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Number, null, &quot;000000&quot;)</code></p>
 <h3 id="persistsalesorderslots">PersistSalesOrdersLots</h3>
-<p>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.</p>
+<p>If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -457,7 +457,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>The date of customer relationship termination. NULL for active customers.</p>
+<p>The date of customer relationship termination. null for active customers. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -522,20 +522,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="collectionsresponsibleemployee">CollectionsResponsibleEmployee</h3>
-<p>The employee, who is responsible for the collections from the customer</p>
+<p>The employee, who is responsible for the collections from the customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyEmployees.html">CompanyEmployees</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customertype">CustomerType</h3>
-<p>The user-defined type of this customer. NULL when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes</p>
+<p>The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.CustomerTypes.html">CustomerTypes</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultcurrency">DefaultCurrency</h3>
-<p>The default currency to use when creating new documents for this customer.</p>
+<p>The default currency to use when creating new documents for this customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -543,13 +543,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.EnterpriseCompany.BaseCurrency</code></p>
 <h3 id="defaultdistributionchannel">DefaultDistributionChannel</h3>
-<p>The default distribution channel used when selling to the customer</p>
+<p>The default distribution channel used when selling to the customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymentaccount">DefaultPaymentAccount</h3>
-<p>The default payment account to use when creating new documents for this customer</p>
+<p>The default payment account to use when creating new documents for this customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -557,19 +557,19 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DefaultPaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.DefaultPaymentAccount)</code></p>
 <h3 id="defaultpaymenttype">DefaultPaymentType</h3>
-<p>Specifies default payment type for the sales, offers and invoices for this customer.</p>
+<p>If not null, specifies default payment type for the sales, offers and invoices for this customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpricelist">DefaultPriceList</h3>
-<p>If not NULL, specifies default price list when selling to this customer</p>
+<p>If not null, specifies default price list when selling to this customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies.</p>
+<p>The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -578,7 +578,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Transaction.CurrentEnterpriseCompany</code></p>
 <h3 id="party">Party</h3>
-<p>Base party Id</p>
+<p>Base party Id. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -586,14 +586,14 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>The default sales person for new sales documents for this customer</p>
+<p>The default sales person for new sales documents for this customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="servicedbyenterprisecompanylocation">ServicedByEnterpriseCompanyLocation</h3>
-<p>The enterprise company location, which sells to this client by default.</p>
+<p>The enterprise company location, which sells to this client by default. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -133,17 +133,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#expectedweight">ExpectedWeight</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown.</td>
+<td>Expected weight in KG. Used for planning purposes. null means unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the logistic unit is currently active.</td>
+<td>Indicates whether the logistic unit is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.2.11</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#measuredweight">MeasuredWeight</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown.</td>
+<td>Actual measured weight of the unit in KG. null means unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#notes">Notes</a></td>
@@ -153,7 +153,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#serialcode">SerialCode</a></td>
 <td>string (32)</td>
-<td>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.</td>
+<td>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -170,17 +170,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#cargotype">CargoType</a></td>
 <td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a> (nullable)</td>
-<td>General type of the cargo of the logistic unit. NULL means unknown or N/A.</td>
+<td>General type of the cargo of the logistic unit. null means unknown or N/A. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#logisticunittype">LogisticUnitType</a></td>
 <td><a href="Logistics.Common.LogisticUnitTypes.html">LogisticUnitTypes</a> (nullable)</td>
-<td>The type of the logistic unit. NULL means the type is currently unknown.</td>
+<td>The type of the logistic unit. null means the type is currently unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#representedasproduct">RepresentedAsProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.</td>
+<td>When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -250,14 +250,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="expectedweight">ExpectedWeight</h3>
-<p>Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown.</p>
+<p>Expected weight in KG. Used for planning purposes. null means unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the logistic unit is currently active.</p>
+<p>Indicates whether the logistic unit is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.2.11</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -265,7 +265,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="measuredweight">MeasuredWeight</h3>
-<p>Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown.</p>
+<p>Actual measured weight of the unit in KG. null means unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -280,7 +280,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialcode">SerialCode</h3>
-<p>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.</p>
+<p>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (32)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -332,19 +332,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="cargotype">CargoType</h3>
-<p>General type of the cargo of the logistic unit. NULL means unknown or N/A.</p>
+<p>General type of the cargo of the logistic unit. null means unknown or N/A. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logisticunittype">LogisticUnitType</h3>
-<p>The type of the logistic unit. NULL means the type is currently unknown.</p>
+<p>The type of the logistic unit. null means the type is currently unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Common.LogisticUnitTypes.html">LogisticUnitTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="representedasproduct">RepresentedAsProduct</h3>
-<p>When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.</p>
+<p>When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. null means that the unit is not a tradeable item. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

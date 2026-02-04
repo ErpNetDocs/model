@@ -28,24 +28,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.FollowedEntities.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. 
+| [CreationTimeUtc](Communities.Social.FollowedEntities.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc` `Introduced in version 22.1.6.73` 
 | [EntityItemId](Communities.Social.FollowedEntities.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Item_Id` 
-| [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound 
+| [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Type` 
 | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.Social.FollowedEntities.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object being followed by the user. |
-| [User](Communities.Social.FollowedEntities.md#user) | [Users](Systems.Security.Users.md) | The user which follows the object. |
+| [DataObject](Communities.Social.FollowedEntities.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object being followed by the user. `Required` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Data_Object_Id` `Introduced in version 22.1.6.73` |
+| [User](Communities.Social.FollowedEntities.md#user) | [Users](Systems.Security.Users.md) | The user which follows the object. `Required` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.User_Id` `Introduced in version 22.1.6.73` |
 
 
 ## Attribute Details
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the follow was created.
+The exact server time (in UTC), when the follow was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc` `Introduced in version 22.1.6.73`
 
 Type: **datetime**  
 Category: **System**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-The entity type of the row to which the object is bound
+The entity type of the row to which the object is bound. `Required` `Default(" ")` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Type`
 
 Type: **string (64)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### DataObject
 
-The object being followed by the user.
+The object being followed by the user. `Required` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Data_Object_Id` `Introduced in version 22.1.6.73`
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user which follows the object.
+The user which follows the object. `Required` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.User_Id` `Introduced in version 22.1.6.73`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

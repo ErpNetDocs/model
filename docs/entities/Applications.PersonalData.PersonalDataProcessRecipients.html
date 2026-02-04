@@ -139,12 +139,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcessRecipients.html#personaldataprocess">PersonalDataProcess</a></td>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a></td>
-<td>The process, whose data is disclosed to the recipient.</td>
+<td>The process, whose data is disclosed to the recipient. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.PersonalDataProcessRecipients.html#recipientparty">RecipientParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The recipient, to whom the data is disclosed.</td>
+<td>The recipient, to whom the data is disclosed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -207,14 +207,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
-<p>The process, whose data is disclosed to the recipient.</p>
+<p>The process, whose data is disclosed to the recipient. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="recipientparty">RecipientParty</h3>
-<p>The recipient, to whom the data is disclosed.</p>
+<p>The recipient, to whom the data is disclosed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

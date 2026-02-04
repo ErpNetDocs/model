@@ -127,17 +127,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Represents whether the POS terminal is active and can be chosen from drop-downs for new records.</td>
+<td>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#posterminalcode">PosTerminalCode</a></td>
 <td>string (16)</td>
-<td>Unique (within the location) code of the POS terminal.</td>
+<td>Unique (within the location) code of the POS terminal. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#posterminalname">PosTerminalName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc.</td>
+<td>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -154,12 +154,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#defaultfiscalprinterposdevice">DefaultFiscalPrinter<br>PosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</td>
-<td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.</td>
+<td>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Terminals.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>The POS location, where the terminal is located.</td>
+<td>The POS location, where the terminal is located. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -224,7 +224,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Represents whether the POS terminal is active and can be chosen from drop-downs for new records.</p>
+<p>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -232,7 +232,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posterminalcode">PosTerminalCode</h3>
-<p>Unique (within the location) code of the POS terminal.</p>
+<p>Unique (within the location) code of the POS terminal. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -240,7 +240,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posterminalname">PosTerminalName</h3>
-<p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc.</p>
+<p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -290,13 +290,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</h3>
-<p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.</p>
+<p>The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<p>The POS location, where the terminal is located.</p>
+<p>The POS location, where the terminal is located. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

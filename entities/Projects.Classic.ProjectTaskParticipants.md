@@ -36,15 +36,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Projects.Classic.ProjectTaskParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskParticipant. 
-| [NotifyOnStatusChange](Projects.Classic.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes. 
-| [WorkLoadPercent](Projects.Classic.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task. 
+| [NotifyOnStatusChange](Projects.Classic.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes. `Required` `Default(true)` 
+| [WorkLoadPercent](Projects.Classic.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task. `Required` `Default(1)` `Filter(eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ParticipantPerson](Projects.Classic.ProjectTaskParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) | The person, who is planned to participate in the project task |
-| [ProjectTask](Projects.Classic.ProjectTaskParticipants.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The project task for which the participant is planned. |
+| [ParticipantPerson](Projects.Classic.ProjectTaskParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) | The person, who is planned to participate in the project task. `Required` `Filter(multi eq)` |
+| [ProjectTask](Projects.Classic.ProjectTaskParticipants.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The project task for which the participant is planned. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### NotifyOnStatusChange
 
-Specifies whether the participant should be notified on task status changes.
+Specifies whether the participant should be notified on task status changes. `Required` `Default(true)`
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkLoadPercent
 
-The planned work load (in percents) of the participant for this task.
+The planned work load (in percents) of the participant for this task. `Required` `Default(1)` `Filter(eq)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParticipantPerson
 
-The person, who is planned to participate in the project task
+The person, who is planned to participate in the project task. `Required` `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTask
 
-The project task for which the participant is planned.
+The project task for which the participant is planned. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md)**  
 Indexed: **True**  

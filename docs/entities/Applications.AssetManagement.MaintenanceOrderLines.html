@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the maintenance order.</td>
+<td>Consecutive line number, unique within the maintenance order. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#nextservicedate">NextServiceDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.</td>
+<td>Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#nextservicetrackedparametervalue">NextServiceTracked<br>ParameterValue</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.</td>
+<td>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#notes">Notes</a></td>
@@ -163,12 +163,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></td>
-<td>The type of maintenance performed.</td>
+<td>The type of maintenance performed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
-<td>The maintained asset.</td>
+<td>The maintained asset. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the maintenance order.</p>
+<p>Consecutive line number, unique within the maintenance order. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -212,14 +212,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.MaintenanceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="nextservicedate">NextServiceDate</h3>
-<p>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.</p>
+<p>Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="nextservicetrackedparametervalue">NextServiceTrackedParameterValue</h3>
-<p>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.</p>
+<p>Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -271,13 +271,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maintenancetype">MaintenanceType</h3>
-<p>The type of maintenance performed.</p>
+<p>The type of maintenance performed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The maintained asset.</p>
+<p>The maintained asset. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

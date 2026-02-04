@@ -122,22 +122,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductVariants.html#barcode">BarCode</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>When specified, it contains a bar code which uniquely identifies the product variant.</td>
+<td>When specified, it contains a bar code which uniquely identifies the product variant. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductVariants.html#code">Code</a></td>
 <td>string (16)</td>
-<td>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.</td>
+<td>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductVariants.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (512)</a> <strong>nullable</strong></td>
-<td>Product variant name. It is the concatenation of the names of the color, size and style.</td>
+<td>Product variant name. It is the concatenation of the names of the color, size and style. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductVariants.html#shortcode">ShortCode</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).</td>
+<td>Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes). <code>Filter(eq;like)</code> <code>Introduced in version 23.1.1.19</code></td>
 </tr>
 </tbody>
 </table>
@@ -154,22 +154,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductVariants.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product for which this variant is defined.</td>
+<td>The product for which this variant is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductVariants.html#variantcolor">VariantColor</a></td>
 <td><a href="General.Products.VariantColors.html">VariantColors</a> (nullable)</td>
-<td>The color of the variant. NULL means that the variant does not have a specific color.</td>
+<td>The color of the variant. null means that the variant does not have a specific color. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductVariants.html#variantsize">VariantSize</a></td>
 <td><a href="General.Products.VariantSizes.html">VariantSizes</a> (nullable)</td>
-<td>The size of the variant. NULL means that the variant does not have a specific size.</td>
+<td>The size of the variant. null means that the variant does not have a specific size. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductVariants.html#variantstyle">VariantStyle</a></td>
 <td><a href="General.Products.VariantStyles.html">VariantStyles</a> (nullable)</td>
-<td>The style of the variant. NULL means that the variant does not have a specific style.</td>
+<td>The style of the variant. null means that the variant does not have a specific style. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="barcode">BarCode</h3>
-<p>When specified, it contains a bar code which uniquely identifies the product variant.</p>
+<p>When specified, it contains a bar code which uniquely identifies the product variant. <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -211,7 +211,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.</p>
+<p>The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Product variant name. It is the concatenation of the names of the color, size and style.</p>
+<p>Product variant name. It is the concatenation of the names of the color, size and style. <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (512)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -230,7 +230,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>Join( &quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
 <h3 id="shortcode">ShortCode</h3>
-<p>Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).</p>
+<p>Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes). <code>Filter(eq;like)</code> <code>Introduced in version 23.1.1.19</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -260,7 +260,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<p>The product for which this variant is defined.</p>
+<p>The product for which this variant is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -268,19 +268,19 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="variantcolor">VariantColor</h3>
-<p>The color of the variant. NULL means that the variant does not have a specific color.</p>
+<p>The color of the variant. null means that the variant does not have a specific color. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.VariantColors.html">VariantColors</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="variantsize">VariantSize</h3>
-<p>The size of the variant. NULL means that the variant does not have a specific size.</p>
+<p>The size of the variant. null means that the variant does not have a specific size. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.VariantSizes.html">VariantSizes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="variantstyle">VariantStyle</h3>
-<p>The style of the variant. NULL means that the variant does not have a specific style.</p>
+<p>The style of the variant. null means that the variant does not have a specific style. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.VariantStyles.html">VariantStyles</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

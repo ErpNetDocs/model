@@ -170,12 +170,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#defaultduedatein">DefaultDueDateIn</a></td>
 <td>datetime</td>
-<td>The date, when the goods are expected to be received in the destination warehouse</td>
+<td>The date, when the goods are expected to be received in the destination warehouse. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#defaultduedateout">DefaultDueDateOut</a></td>
 <td>datetime</td>
-<td>The date, when the transfer is scheduled to issue the goods from the source warehouse</td>
+<td>The date, when the transfer is scheduled to issue the goods from the source warehouse. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#documentdate">DocumentDate</a></td>
@@ -210,12 +210,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#notes">Notes</a></td>
@@ -265,7 +265,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#status">Status</a></td>
 <td><a href="Logistics.Inventory.TransferOrders.html#status">Status</a></td>
-<td>Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)</td>
+<td>Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released). <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#void">Void</a></td>
@@ -347,7 +347,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#fromstore">FromStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Specifies the store, from which the goods will be issued.</td>
+<td>Specifies the store, from which the goods will be issued. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#masterdocument">MasterDocument</a></td>
@@ -392,7 +392,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#tostore">ToStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Specifies the store, in which the goods will be received.</td>
+<td>Specifies the store, in which the goods will be received. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrders.html#userstatus">UserStatus</a></td>
@@ -553,7 +553,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="defaultduedatein">DefaultDueDateIn</h3>
-<p>The date, when the goods are expected to be received in the destination warehouse</p>
+<p>The date, when the goods are expected to be received in the destination warehouse. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -563,7 +563,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; TransferOrderLinesRepository.DueDateInAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="defaultduedateout">DefaultDueDateOut</h3>
-<p>The date, when the transfer is scheduled to issue the goods from the source warehouse</p>
+<p>The date, when the transfer is scheduled to issue the goods from the source warehouse. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -623,7 +623,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -631,7 +631,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -772,7 +772,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)</p>
+<p>Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released). <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.TransferOrders.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Logistics.Inventory.TransferOrders.md#status) data attribute<br>
@@ -957,7 +957,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fromstore">FromStore</h3>
-<p>Specifies the store, from which the goods will be issued.</p>
+<p>Specifies the store, from which the goods will be issued. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1017,7 +1017,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.ObtainToParty( )</code></p>
 <h3 id="tostore">ToStore</h3>
-<p>Specifies the store, in which the goods will be received.</p>
+<p>Specifies the store, in which the goods will be received. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -36,14 +36,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentNotesFixedText](Logistics.Inventory.TransactionEntryTemplates.md#documentnotesfixedtext) | string (max) __nullable__ | Specifies the text for the document notes in the created entry in the VAT ledgers. In case, the text is not set, the notes will be taken from the document.  
+| [DocumentNotesFixedText](Logistics.Inventory.TransactionEntryTemplates.md#documentnotesfixedtext) | string (max) __nullable__ | Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | Obsolete. Not used. |
-| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | Obsolete. Not used. |
+| [DealType](Logistics.Inventory.TransactionEntryTemplates.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [Route](Logistics.Inventory.TransactionEntryTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### DocumentNotesFixedText
 
-Specifies the text for the document notes in the created entry in the VAT ledgers. In case, the text is not set, the notes will be taken from the document.
+Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealType
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **ShownByDefault**
 
 ### Route
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Filter(multi eq)`
 
 Type: **[Routes](Systems.Documents.Routes.md)**  
 Indexed: **True**  

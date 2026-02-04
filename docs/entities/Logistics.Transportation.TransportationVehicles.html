@@ -127,17 +127,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#code">Code</a></td>
 <td>string (16)</td>
-<td>The unique code (or call sign) of this transportation vehicle.</td>
+<td>The unique code (or call sign) of this transportation vehicle. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#maxcargoweightkg">MaxCargoWeightKg</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.</td>
+<td>The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#maxpalletscount">MaxPalletsCount</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.</td>
+<td>The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#notes">Notes</a></td>
@@ -159,27 +159,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#cargotype">CargoType</a></td>
 <td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></td>
-<td>The cargo type supported by this transportation vehicle.</td>
+<td>The cargo type supported by this transportation vehicle. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#carrier">Carrier</a></td>
 <td><a href="Logistics.Shipment.Carriers.html">Carriers</a> (nullable)</td>
-<td>The carrier, operating the vehicle. NULL for our own vehicles.</td>
+<td>The carrier, operating the vehicle. null for our own vehicles. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.9</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company to which the transportation vehicle will be bound.</td>
+<td>The enterprise company to which the transportation vehicle will be bound. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#transportationmode">TransportationMode</a></td>
 <td><a href="Logistics.Transportation.TransportationModes.html">TransportationModes</a></td>
-<td>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.</td>
+<td>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationVehicles.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a></td>
-<td>The definition of the base vehicle.</td>
+<td>The definition of the base vehicle. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -212,7 +212,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code (or call sign) of this transportation vehicle.</p>
+<p>The unique code (or call sign) of this transportation vehicle. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -221,14 +221,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxcargoweightkg">MaxCargoWeightKg</h3>
-<p>The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.</p>
+<p>The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxpalletscount">MaxPalletsCount</h3>
-<p>The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced.</p>
+<p>The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -265,31 +265,31 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="cargotype">CargoType</h3>
-<p>The cargo type supported by this transportation vehicle.</p>
+<p>The cargo type supported by this transportation vehicle. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="carrier">Carrier</h3>
-<p>The carrier, operating the vehicle. NULL for our own vehicles.</p>
+<p>The carrier, operating the vehicle. null for our own vehicles. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.9</code></p>
 <p>Type: <strong><a href="Logistics.Shipment.Carriers.html">Carriers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company to which the transportation vehicle will be bound.</p>
+<p>The enterprise company to which the transportation vehicle will be bound. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transportationmode">TransportationMode</h3>
-<p>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode.</p>
+<p>The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Transportation.TransportationModes.html">TransportationModes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehicle">Vehicle</h3>
-<p>The definition of the base vehicle.</p>
+<p>The definition of the base vehicle. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Cost.CostTypes.md#code) | string (10) | Unique cost type code. Used for charting 
-| [IsActive](Finance.Cost.CostTypes.md#isactive) | boolean | Indicates whether this cost type is active and usable for choosing in new documents. 
-| [Name](Finance.Cost.CostTypes.md#name) | string (254) | Multilanguage cost type name 
+| [Code](Finance.Cost.CostTypes.md#code) | string (10) | Unique cost type code. Used for charting. `Required` `Filter(eq)` `ORD` 
+| [IsActive](Finance.Cost.CostTypes.md#isactive) | boolean | Indicates whether this cost type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53` 
+| [Name](Finance.Cost.CostTypes.md#name) | string (254) | Multilanguage cost type name. `Required` `Filter(like)` 
 
 
 ## System Attributes
@@ -55,7 +55,7 @@ Aggregate Tree
 
 ### Code
 
-Unique cost type code. Used for charting
+Unique cost type code. Used for charting. `Required` `Filter(eq)` `ORD`
 
 Type: **string (10)**  
 Indexed: **True**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether this cost type is active and usable for choosing in new documents.
+Indicates whether this cost type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53`
 
 Type: **boolean**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage cost type name
+Multilanguage cost type name. `Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  

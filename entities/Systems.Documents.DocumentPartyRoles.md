@@ -44,8 +44,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Documents.DocumentPartyRoles.md#code) | string (32) | The code of the role. 
-| [Name](Systems.Documents.DocumentPartyRoles.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Party role name. 
+| [Code](Systems.Documents.DocumentPartyRoles.md#code) | string (32) | Code. `Required` `Filter(eq;like)` `ORD` 
+| [Name](Systems.Documents.DocumentPartyRoles.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Systems.Documents.DocumentPartyRoles.md#notes) | string (max) __nullable__ | Notes for this DocumentPartyRole. 
 
 
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### Code
 
-The code of the role.
+Code. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Party role name.
+Party role name (multi-language). `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

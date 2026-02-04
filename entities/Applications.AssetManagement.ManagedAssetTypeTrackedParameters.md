@@ -42,8 +42,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the tracked parameter is defined. |
-| [TrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The parameter, which will be tracked for assets of the specified type. |
+| [ManagedAssetType](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#managedassettype) | [ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md) | The asset type for which the tracked parameter is defined. `Required` `Filter(multi eq)` `Owner` |
+| [TrackedParameter](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The parameter, which will be tracked for assets of the specified type. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -102,7 +102,7 @@ Show in UI: **HiddenByDefault**
 
 ### ManagedAssetType
 
-The asset type for which the tracked parameter is defined.
+The asset type for which the tracked parameter is defined. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[ManagedAssetTypes](Applications.AssetManagement.ManagedAssetTypes.md)**  
 Indexed: **True**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### TrackedParameter
 
-The parameter, which will be tracked for assets of the specified type.
+The parameter, which will be tracked for assets of the specified type. `Required` `Filter(multi eq)`
 
 Type: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
 Category: **System**  

@@ -39,18 +39,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsPublished](Applications.Cms.WebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. 
-| [LocalUrl](Applications.Cms.WebModules.md#localurl) | string (128) __nullable__ | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. 
+| [IsPublished](Applications.Cms.WebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` 
+| [LocalUrl](Applications.Cms.WebModules.md#localurl) | string (128) __nullable__ | The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` 
 | [ModulePicture](Applications.Cms.WebModules.md#modulepicture) | byte[] __nullable__ | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. 
-| [ModuleType](Applications.Cms.WebModules.md#moduletype) | [ModuleType](Applications.Cms.WebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. 
-| [Name](Applications.Cms.WebModules.md#name) | string (512) | Multilanguage Module name. This is used as a title when displaying the web Module. 
+| [ModuleType](Applications.Cms.WebModules.md#moduletype) | [ModuleType](Applications.Cms.WebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` 
+| [Name](Applications.Cms.WebModules.md#name) | string (512) | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [<s>Parent</s>](Applications.Cms.WebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` |
-| [<s>WebSite</s>](Applications.Cms.WebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. |
+| [<s>WebSite</s>](Applications.Cms.WebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### IsPublished
 
-Specifies whether the module is published and will be showed in the web site.
+Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### LocalUrl
 
-The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.
+The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### ModuleType
 
-Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.
+Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)`
 
 Type: **[ModuleType](Applications.Cms.WebModules.md#moduletype)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage Module name. This is used as a title when displaying the web Module.
+Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)`
 
 Type: **string (512)**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **ShownByDefault**
 
 ### WebSite
 
-**OBSOLETE! Do not use!** The web site to which the module belongs.
+**OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner`
 
 Type: **[WebSites](Applications.Cms.WebSites.md)**  
 Category: **System**  

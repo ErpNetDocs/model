@@ -33,7 +33,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Logistics.Inventory.ScrapTypes.md#description) | string (254) __nullable__ | The description of this ScrapType. `Filter(like)` 
-| [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | 1=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap 
+| [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. `Required` `Default(true)` `Filter(eq)` 
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPlanned
 
-1=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap
+True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

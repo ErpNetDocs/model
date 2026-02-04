@@ -182,7 +182,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#creditlimitoverride">CreditLimitOverride</a></td>
 <td>boolean</td>
-<td>Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.</td>
+<td>Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#deadlinetime">DeadlineTime</a></td>
@@ -272,7 +272,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#receiverpersonname">ReceiverPersonName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>Copy of the name of the receiver at the time the activity was signed</td>
+<td>Copy of the name of the receiver at the time the activity was signed. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#referencedate">ReferenceDate</a></td>
@@ -379,12 +379,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The receiver of the work</td>
+<td>The receiver of the work. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#defaultserviceobject">DefaultServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</td>
-<td>Default service object for materials and services lines in this service activity.</td>
+<td>Default service object for materials and services lines. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#documenttype">DocumentType</a></td>
@@ -414,7 +414,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#locationpartycontactmechanism">LocationPartyContact<br>Mechanism</a></td>
 <td><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a> (nullable)</td>
-<td>The location or the communication line used to conduct the work</td>
+<td>The location where or the communication line used to conduct the work. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#masterdocument">MasterDocument</a></td>
@@ -444,7 +444,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#receiverperson">ReceiverPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person from the customers company, that received and signed for the service</td>
+<td>The id of the person from the customers company, that received and signed for the service. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#responsibleparty">ResponsibleParty</a></td>
@@ -469,12 +469,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#serviceagreement">ServiceAgreement</a></td>
 <td><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a> (nullable)</td>
-<td>The service agreement under which the work was done</td>
+<td>The service agreement under which the work was done. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#shiptocustomer">ShipToCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>Specific customer location of the main customer that receives the work.</td>
+<td>Specific customer location of the main customer that receives the work. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#socialgroup">SocialGroup</a></td>
@@ -484,7 +484,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The default store from which materials are taken</td>
+<td>The default store from which materials are taken. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#targetparty">TargetParty</a></td>
@@ -680,7 +680,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditlimitoverride">CreditLimitOverride</h3>
-<p>Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.</p>
+<p>Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -878,7 +878,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="receiverpersonname">ReceiverPersonName</h3>
-<p>Copy of the name of the receiver at the time the activity was signed</p>
+<p>Copy of the name of the receiver at the time the activity was signed. <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -1152,7 +1152,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The receiver of the work</p>
+<p>The receiver of the work. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1160,7 +1160,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ShipToCustomer.DetermineCustomerFromShipToCustomer( obj.EnterpriseCompany, obj.Customer)</code></p>
 <h3 id="defaultserviceobject">DefaultServiceObject</h3>
-<p>Default service object for materials and services lines in this service activity.</p>
+<p>Default service object for materials and services lines. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1200,7 +1200,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="locationpartycontactmechanism">LocationPartyContactMechanism</h3>
-<p>The location or the communication line used to conduct the work</p>
+<p>The location where or the communication line used to conduct the work. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.PartyContactMechanisms.html">PartyContactMechanisms</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1241,7 +1241,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receiverperson">ReceiverPerson</h3>
-<p>The person from the customers company, that received and signed for the service</p>
+<p>The id of the person from the customers company, that received and signed for the service. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1272,13 +1272,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="serviceagreement">ServiceAgreement</h3>
-<p>The service agreement under which the work was done</p>
+<p>The service agreement under which the work was done. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Service.ServiceAgreements.html">ServiceAgreements</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shiptocustomer">ShipToCustomer</h3>
-<p>Specific customer location of the main customer that receives the work.</p>
+<p>Specific customer location of the main customer that receives the work. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1292,7 +1292,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The default store from which materials are taken</p>
+<p>The default store from which materials are taken. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

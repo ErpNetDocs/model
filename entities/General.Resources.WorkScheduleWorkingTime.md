@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DayNo](General.Resources.WorkScheduleWorkingTime.md#dayno) | int32 | Consequtive day in the work schedule recurrence, starting at 1 
-| [EndTime](General.Resources.WorkScheduleWorkingTime.md#endtime) | time | End of working time period 
-| [StartTime](General.Resources.WorkScheduleWorkingTime.md#starttime) | time | Start of working time period on the day, specified by Day_No 
+| [DayNo](General.Resources.WorkScheduleWorkingTime.md#dayno) | int32 | Consequtive day in the work schedule recurrence, starting at 1. `Required` 
+| [EndTime](General.Resources.WorkScheduleWorkingTime.md#endtime) | time | End of working time period. `Required` `Filter(ge;le)` 
+| [StartTime](General.Resources.WorkScheduleWorkingTime.md#starttime) | time | Start of working time period on the day, specified by Day_No. `Required` `Filter(ge;le)` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### DayNo
 
-Consequtive day in the work schedule recurrence, starting at 1
+Consequtive day in the work schedule recurrence, starting at 1. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### EndTime
 
-End of working time period
+End of working time period. `Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-Start of working time period on the day, specified by Day_No
+Start of working time period on the day, specified by Day_No. `Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  

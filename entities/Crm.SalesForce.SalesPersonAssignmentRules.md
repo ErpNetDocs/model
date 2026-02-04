@@ -42,23 +42,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. 
-| [FromDate](Crm.SalesForce.SalesPersonAssignmentRules.md#fromdate) | datetime __nullable__ | Starting date of rule validity. NULL means no from date restriction. 
-| [IsActive](Crm.SalesForce.SalesPersonAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. 
-| [Notes](Crm.SalesForce.SalesPersonAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule. 
-| [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | Priority when multiple rules match the criteria. 
-| [RuleNo](Crm.SalesForce.SalesPersonAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule within the selected enterprise company. 
-| [ToDate](Crm.SalesForce.SalesPersonAssignmentRules.md#todate) | datetime __nullable__ | Ending date (inclusive) of rule validity. NULL means that the rule is valid forever. 
+| [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. `Required` `Default("C")` `Filter(eq)` 
+| [FromDate](Crm.SalesForce.SalesPersonAssignmentRules.md#fromdate) | datetime __nullable__ | Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)` 
+| [IsActive](Crm.SalesForce.SalesPersonAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)` 
+| [Notes](Crm.SalesForce.SalesPersonAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule. `Filter(like)` 
+| [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | Priority when multiple rules match the criteria. `Required` `Default("3")` `Filter(eq)` `Introduced in version 25.1.0.23` 
+| [RuleNo](Crm.SalesForce.SalesPersonAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule within the selected enterprise company. `Required` `Filter(eq)` `ORD` 
+| [ToDate](Crm.SalesForce.SalesPersonAssignmentRules.md#todate) | datetime __nullable__ | Ending date (inclusive) of rule validity. null means that the rule is valid forever. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompanyDivision](Crm.SalesForce.SalesPersonAssignmentRules.md#companydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | Our division, which is in charge of the deal. |
-| [CustomerType](Crm.SalesForce.SalesPersonAssignmentRules.md#customertype) | [CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable) | The type of the customer. |
-| [EnterpriseCompany](Crm.SalesForce.SalesPersonAssignmentRules.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the rule applies. |
-| [SalesArea](Crm.SalesForce.SalesPersonAssignmentRules.md#salesarea) | [Areas](General.Geography.Areas.md) (nullable) | The sales area, where the customer is located. |
-| [SalesPerson](Crm.SalesForce.SalesPersonAssignmentRules.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | The sales person to be assigned by the rule. |
+| [CompanyDivision](Crm.SalesForce.SalesPersonAssignmentRules.md#companydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | Our division, which is in charge of the deal. `Filter(multi eq)` |
+| [CustomerType](Crm.SalesForce.SalesPersonAssignmentRules.md#customertype) | [CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable) | The type of the customer. `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.SalesForce.SalesPersonAssignmentRules.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the rule applies. `Required` `Filter(multi eq)` |
+| [SalesArea](Crm.SalesForce.SalesPersonAssignmentRules.md#salesarea) | [Areas](General.Geography.Areas.md) (nullable) | The sales area, where the customer is located. `Filter(multi eq)` |
+| [SalesPerson](Crm.SalesForce.SalesPersonAssignmentRules.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | The sales person to be assigned by the rule. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -77,7 +77,7 @@ Aggregate Tree
 
 ### ApplyTo
 
-Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.
+Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. `Required` `Default("C")` `Filter(eq)`
 
 Type: **[ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Starting date of rule validity. NULL means no from date restriction.
+Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current rule is active.
+Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments related to the rule.
+Additional information or comments related to the rule. `Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority when multiple rules match the criteria.
+Priority when multiple rules match the criteria. `Required` `Default("3")` `Filter(eq)` `Introduced in version 25.1.0.23`
 
 Type: **[Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### RuleNo
 
-Consecutive number of the rule within the selected enterprise company.
+Consecutive number of the rule within the selected enterprise company. `Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -165,7 +165,7 @@ Front-End Recalc Expressions:
 `obj.SetRuleNo( obj.EnterpriseCompany)`
 ### ToDate
 
-Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.
+Ending date (inclusive) of rule validity. null means that the rule is valid forever. `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -237,7 +237,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompanyDivision
 
-Our division, which is in charge of the deal.
+Our division, which is in charge of the deal. `Filter(multi eq)`
 
 Type: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 Category: **System**  
@@ -246,7 +246,7 @@ Show in UI: **ShownByDefault**
 
 ### CustomerType
 
-The type of the customer.
+The type of the customer. `Filter(multi eq)`
 
 Type: **[CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable)**  
 Category: **System**  
@@ -255,7 +255,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which the rule applies.
+The enterprise company for which the rule applies. `Required` `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
@@ -265,7 +265,7 @@ Show in UI: **HiddenByDefault**
 
 ### SalesArea
 
-The sales area, where the customer is located.
+The sales area, where the customer is located. `Filter(multi eq)`
 
 Type: **[Areas](General.Geography.Areas.md) (nullable)**  
 Category: **System**  
@@ -274,7 +274,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesPerson
 
-The sales person to be assigned by the rule.
+The sales person to be assigned by the rule. `Required` `Filter(multi eq)`
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md)**  
 Category: **System**  

@@ -28,10 +28,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Application](Systems.Monitoring.AppsPerformance.md#application) | string (64) | The name of the application that executes the operation 
-| [BusyTimeHoursPerDay](Systems.Monitoring.AppsPerformance.md#busytimehoursperday) | double | Busy time in percentage per day 
-| [BusyTimePercentage](Systems.Monitoring.AppsPerformance.md#busytimepercentage) | double | Busy time in percentage 
-| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | double | The total number of requests the application has made to the server 
+| [Application](Systems.Monitoring.AppsPerformance.md#application) | string (64) | The name of the application that executes the operation. `Required` `Filter(eq;ge;le)` `ORD` 
+| [BusyTimeHoursPerDay](Systems.Monitoring.AppsPerformance.md#busytimehoursperday) | double | Busy time in percentage per day. `Required` `Filter(ge;le)` `ORD` 
+| [BusyTimePercentage](Systems.Monitoring.AppsPerformance.md#busytimepercentage) | double | Busy time in percentage. `Required` `Filter(ge;le)` `ORD` 
+| [Requests](Systems.Monitoring.AppsPerformance.md#requests) | double | The number of requests per minute the application has made to the server. `Required` `Filter(eq;like)` `ORD` 
 | [StatisticsSince](Systems.Monitoring.AppsPerformance.md#statisticssince) | datetime | The date and time since when the statistics are collected. `Required` `Filter(ge;le)` `ORD` `Introduced in version 25.1.3.60` 
 
 
@@ -39,7 +39,7 @@ Aggregate Tree
 
 ### Application
 
-The name of the application that executes the operation
+The name of the application that executes the operation. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **string (64)**  
 Category: **System**  
@@ -50,7 +50,7 @@ Show in UI: **ShownByDefault**
 
 ### BusyTimeHoursPerDay
 
-Busy time in percentage per day
+Busy time in percentage per day. `Required` `Filter(ge;le)` `ORD`
 
 Type: **double**  
 Category: **System**  
@@ -60,7 +60,7 @@ Show in UI: **ShownByDefault**
 
 ### BusyTimePercentage
 
-Busy time in percentage
+Busy time in percentage. `Required` `Filter(ge;le)` `ORD`
 
 Type: **double**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### Requests
 
-The total number of requests the application has made to the server
+The number of requests per minute the application has made to the server. `Required` `Filter(eq;like)` `ORD`
 
 Type: **double**  
 Category: **System**  

@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileParties.html#isrelated">IsRelated</a></td>
 <td>boolean</td>
-<td>Mark if the party is a related entity.</td>
+<td>Mark if the party is a related entity. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileParties.html#relationenddate">RelationEndDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date when the relation ends (if applicable).</td>
+<td>Date when the relation ends (if applicable). <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileParties.html#relationstartdate">RelationStartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date from which the relation starts.</td>
+<td>Date from which the relation starts. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -149,17 +149,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileParties.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>If the party is an internal group company, select it (optional).</td>
+<td>If the party is an internal group company, select it (optional). <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileParties.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Business partner (customer, supplier, or person).</td>
+<td>Business partner (customer, supplier, or person). <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileParties.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>SAF-T profile this party belongs to.</td>
+<td>SAF-T profile this party belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -192,7 +192,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isrelated">IsRelated</h3>
-<p>Mark if the party is a related entity.</p>
+<p>Mark if the party is a related entity. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -200,14 +200,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="relationenddate">RelationEndDate</h3>
-<p>Date when the relation ends (if applicable).</p>
+<p>Date when the relation ends (if applicable). <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="relationstartdate">RelationStartDate</h3>
-<p>Date from which the relation starts.</p>
+<p>Date from which the relation starts. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -236,20 +236,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>If the party is an internal group company, select it (optional).</p>
+<p>If the party is an internal group company, select it (optional). <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>Business partner (customer, supplier, or person).</p>
+<p>Business partner (customer, supplier, or person). <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>SAF-T profile this party belongs to.</p>
+<p>SAF-T profile this party belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

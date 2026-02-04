@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#linegroupno">LineGroupNo</a></td>
 <td>int32</td>
-<td>Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.</td>
+<td>Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 23.1.0.67</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Unique consecutive line number within the order.</td>
+<td>Unique consecutive line number within the order. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#notes">Notes</a></td>
@@ -141,27 +141,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line.</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity of the product, which should be operated.</td>
+<td>The quantity of the product, which should be processed. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>Quantity in the base measurement unit of the product.</td>
+<td>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#standardquantity">StandardQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></td>
-<td>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.</td>
+<td>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -183,47 +183,47 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#logisticunit">LogisticUnit</a></td>
 <td><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</td>
-<td>Logistic unit, which should be used in the operation.</td>
+<td>Logistic unit, which should be used in the operation. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The lot of the product, which should be operated. NULL for operations, which are not lot-specific, or when any lot can be used.</td>
+<td>The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line.</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product, which should be operated.</td>
+<td>The product, which should be used for the operation. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>The product variant, which should be used.</td>
+<td>The product variant, which should be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit of Quantity.</td>
+<td>The measurement unit of Quantity. null for operations, which are not quantity-related. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number of the product. NULL means that the serial number is unknown or not applicable.</td>
+<td>The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#towarehouselocation">ToWarehouseLocation</a></td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</td>
-<td>Destination warehouse location. NULL for operations, which do not specify destination location.</td>
+<td>Destination warehouse location. null for operations, which do not specify destination location. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#warehouselocation">WarehouseLocation</a></td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</td>
-<td>Location, where the opeartion should be performed. NULL for operations, which do not require location.</td>
+<td>Location, where the opeartion should be performed. null for operations, which do not require location. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#warehouseorder">WarehouseOrder</a></td>
@@ -233,12 +233,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#warehouseworker">WarehouseWorker</a></td>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</td>
-<td>The human or robot worker, which should execute the line. NULL means that the line is shared among all workers, assigned to the order.</td>
+<td>Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#warehousezone">WarehouseZone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</td>
-<td>The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone.</td>
+<td>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -278,7 +278,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="linegroupno">LineGroupNo</h3>
-<p>Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.</p>
+<p>Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 23.1.0.67</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -286,7 +286,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Unique consecutive line number within the order.</p>
+<p>Unique consecutive line number within the order. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -305,14 +305,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line.</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the product, which should be operated.</p>
+<p>The quantity of the product, which should be processed. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -320,7 +320,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base measurement unit of the product.</p>
+<p>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -331,7 +331,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantity">StandardQuantity</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -342,7 +342,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="tasktype">TaskType</h3>
-<p>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.</p>
+<p>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>
@@ -454,37 +454,37 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logisticunit">LogisticUnit</h3>
-<p>Logistic unit, which should be used in the operation.</p>
+<p>Logistic unit, which should be used in the operation. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></p>
 <p>Type: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The lot of the product, which should be operated. NULL for operations, which are not lot-specific, or when any lot can be used.</p>
+<p>The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line.</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product, which should be operated.</p>
+<p>The product, which should be used for the operation. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>The product variant, which should be used.</p>
+<p>The product variant, which should be used. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity.</p>
+<p>The measurement unit of Quantity. null for operations, which are not quantity-related. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -492,19 +492,19 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number of the product. NULL means that the serial number is unknown or not applicable.</p>
+<p>The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="towarehouselocation">ToWarehouseLocation</h3>
-<p>Destination warehouse location. NULL for operations, which do not specify destination location.</p>
+<p>Destination warehouse location. null for operations, which do not specify destination location. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
-<p>Location, where the opeartion should be performed. NULL for operations, which do not require location.</p>
+<p>Location, where the opeartion should be performed. null for operations, which do not require location. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -518,7 +518,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
-<p>The human or robot worker, which should execute the line. NULL means that the line is shared among all workers, assigned to the order.</p>
+<p>Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -528,7 +528,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.WarehouseOrder.WarehouseWorker</code></p>
 <h3 id="warehousezone">WarehouseZone</h3>
-<p>The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone.</p>
+<p>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

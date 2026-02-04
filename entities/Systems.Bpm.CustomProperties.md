@@ -45,26 +45,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowedValuesEntityName](Systems.Bpm.CustomProperties.md#allowedvaluesentityname) | string (64) __nullable__ | When not NULL, specifies that the allowed values are retrieved from the specified entity 
-| [AllowedValuesFilterXML](Systems.Bpm.CustomProperties.md#allowedvaluesfilterxml) | dataaccessfilter __nullable__ | When not NULL specifies the filter to apply when extracting allowed values from entity 
-| [Code](Systems.Bpm.CustomProperties.md#code) | string (40) | Unique property code. 
-| [EntityName](Systems.Bpm.CustomProperties.md#entityname) | string (64) | The entity for which the property is applicable. 
-| [Hint](Systems.Bpm.CustomProperties.md#hint) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the property. 
-| [IsActive](Systems.Bpm.CustomProperties.md#isactive) | boolean | Indicates whether this custom property is active 
-| [KeyOrder](Systems.Bpm.CustomProperties.md#keyorder) | byte __nullable__ | When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis 
-| [LimitToAllowedValues](Systems.Bpm.CustomProperties.md#limittoallowedvalues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value. 
-| [MaskLength](Systems.Bpm.CustomProperties.md#masklength) | int16 __nullable__ | Limits te length of the property value to the specified number of characters. Null means no limitation 
+| [AllowedValuesEntityName](Systems.Bpm.CustomProperties.md#allowedvaluesentityname) | string (64) __nullable__ | When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)` 
+| [AllowedValuesFilterXML](Systems.Bpm.CustomProperties.md#allowedvaluesfilterxml) | dataaccessfilter __nullable__ | When not null specifies the filter to apply when extracting allowed values from entity. `Unit: obj.AllowedValuesEntityName` 
+| [Code](Systems.Bpm.CustomProperties.md#code) | string (40) | Unique property code. `Required` `Filter(multi eq;like)` `ORD` 
+| [EntityName](Systems.Bpm.CustomProperties.md#entityname) | string (64) | The entity for which the property is applicable. `Required` `Filter(eq)` `ORD` 
+| [Hint](Systems.Bpm.CustomProperties.md#hint) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the property. `Filter(multi eq;like)` `Introduced in version 20.1` 
+| [IsActive](Systems.Bpm.CustomProperties.md#isactive) | boolean | Indicates whether this custom property is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.3.19` 
+| [KeyOrder](Systems.Bpm.CustomProperties.md#keyorder) | byte __nullable__ | When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis. 
+| [LimitToAllowedValues](Systems.Bpm.CustomProperties.md#limittoallowedvalues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value. `Required` `Default(false)` `Filter(eq)` 
+| [MaskLength](Systems.Bpm.CustomProperties.md#masklength) | int16 __nullable__ | Limits te length of the property value to the specified number of characters. Null means no limitation. 
 | [Name](Systems.Bpm.CustomProperties.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CustomProperty. `Required` `Filter(like)` 
 | [Notes](Systems.Bpm.CustomProperties.md#notes) | string (max) __nullable__ | Notes for this CustomProperty. `Introduced in version 20.1` 
-| [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. 
+| [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. `Required` `Default("T")` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowedValuesParent<br />Property](Systems.Bpm.CustomProperties.md#allowedvaluesparentproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Specifies the user defined property, which is used for filtering the allowed values by value of the parent property |
-| [AllowedValuesProperty](Systems.Bpm.CustomProperties.md#allowedvaluesproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. |
-| [PropertiesCategory](Systems.Bpm.CustomProperties.md#propertiescategory) | [PropertiesCategories](Systems.Bpm.PropertiesCategories.md) (nullable) | When not null, categorizes the property under a category. |
+| [AllowedValuesParent<br />Property](Systems.Bpm.CustomProperties.md#allowedvaluesparentproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. `Filter(multi eq)` |
+| [AllowedValuesProperty](Systems.Bpm.CustomProperties.md#allowedvaluesproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. `Filter(multi eq)` |
+| [PropertiesCategory](Systems.Bpm.CustomProperties.md#propertiescategory) | [PropertiesCategories](Systems.Bpm.PropertiesCategories.md) (nullable) | When not null, categorizes the property under a category. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### AllowedValuesEntityName
 
-When not NULL, specifies that the allowed values are retrieved from the specified entity
+When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowedValuesFilterXML
 
-When not NULL specifies the filter to apply when extracting allowed values from entity
+When not null specifies the filter to apply when extracting allowed values from entity. `Unit: obj.AllowedValuesEntityName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique property code.
+Unique property code. `Required` `Filter(multi eq;like)` `ORD`
 
 Type: **string (40)**  
 Indexed: **True**  
@@ -126,7 +126,7 @@ Back-End Default Expression:
 
 ### EntityName
 
-The entity for which the property is applicable.
+The entity for which the property is applicable. `Required` `Filter(eq)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -138,7 +138,7 @@ Show in UI: **HiddenByDefault**
 
 ### Hint
 
-The hint, which is displayed alongside the property.
+The hint, which is displayed alongside the property. `Filter(multi eq;like)` `Introduced in version 20.1`
 
 Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether this custom property is active
+Indicates whether this custom property is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.3.19`
 
 Type: **boolean**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **ShownByDefault**
 
 ### KeyOrder
 
-When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis
+When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.
 
 Type: **byte __nullable__**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **ShownByDefault**
 
 ### LimitToAllowedValues
 
-When true, allows the property to be set only to allowed value. When false, the property can have any value.
+When true, allows the property to be set only to allowed value. When false, the property can have any value. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -180,7 +180,7 @@ Show in UI: **ShownByDefault**
 
 ### MaskLength
 
-Limits te length of the property value to the specified number of characters. Null means no limitation
+Limits te length of the property value to the specified number of characters. Null means no limitation.
 
 Type: **int16 __nullable__**  
 Category: **System**  
@@ -212,7 +212,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyType
 
-Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.
+Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. `Required` `Default("T")`
 
 Type: **[PropertyType](Systems.Bpm.CustomProperties.md#propertytype)**  
 Category: **System**  
@@ -295,7 +295,7 @@ Show in UI: **HiddenByDefault**
 
 ### AllowedValuesParentProperty
 
-Specifies the user defined property, which is used for filtering the allowed values by value of the parent property
+Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowedValuesProperty
 
-When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.
+When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
@@ -313,7 +313,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertiesCategory
 
-When not null, categorizes the property under a category.
+When not null, categorizes the property under a category. `Filter(multi eq)`
 
 Type: **[PropertiesCategories](Systems.Bpm.PropertiesCategories.md) (nullable)**  
 Indexed: **True**  

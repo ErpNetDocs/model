@@ -59,8 +59,8 @@ Aggregate Tree
 | [DocumentVersion](Finance.Payments.PaymentSlips.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Payments.PaymentSlips.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Finance.Payments.PaymentSlips.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Finance.Payments.PaymentSlips.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Finance.Payments.PaymentSlips.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Finance.Payments.PaymentSlips.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Finance.Payments.PaymentSlips.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentSlips.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentSlips.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PaymentSlipNo](Finance.Payments.PaymentSlips.md#paymentslipno) | string (20) __nullable__ | When not null, contains the number of the slip, as issued by the banking institution. 
 | [PlanningOnly](Finance.Payments.PaymentSlips.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -83,7 +83,7 @@ Aggregate Tree
 | [AdjustedDocument](Finance.Payments.PaymentSlips.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Finance.Payments.PaymentSlips.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Finance.Payments.PaymentSlips.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentCurrency](Finance.Payments.PaymentSlips.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the amounts in this document |
+| [DocumentCurrency](Finance.Payments.PaymentSlips.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the amounts in this document. `Required` `Filter(multi eq)` |
 | [DocumentType](Finance.Payments.PaymentSlips.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Finance.Payments.PaymentSlips.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Finance.Payments.PaymentSlips.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -91,8 +91,8 @@ Aggregate Tree
 | [FromParty](Finance.Payments.PaymentSlips.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Finance.Payments.PaymentSlips.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Finance.Payments.PaymentSlips.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PaymentAccount](Finance.Payments.PaymentSlips.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The account towards which the payments was effected |
-| [PaymentType](Finance.Payments.PaymentSlips.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not NULL specifies the payment type for the sales order |
+| [PaymentAccount](Finance.Payments.PaymentSlips.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The account towards which the payments was effected. `Filter(multi eq)` |
+| [PaymentType](Finance.Payments.PaymentSlips.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the sales order. `Filter(multi eq)` |
 | [PrimeCauseDocument](Finance.Payments.PaymentSlips.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Finance.Payments.PaymentSlips.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Finance.Payments.PaymentSlips.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -265,7 +265,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -276,7 +276,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -558,7 +558,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentCurrency
 
-The currency of the amounts in this document
+The currency of the amounts in this document. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -634,7 +634,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentAccount
 
-The account towards which the payments was effected
+The account towards which the payments was effected. `Filter(multi eq)`
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -645,7 +645,7 @@ Front-End Recalc Expressions:
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
-When not NULL specifies the payment type for the sales order
+When not null specifies the payment type for the sales order. `Filter(multi eq)`
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  

@@ -126,37 +126,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#applyto">ApplyTo</a></td>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#applyto">ApplyTo</a></td>
-<td>Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.</td>
+<td>Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Starting date of rule validity. NULL means no from date restriction.</td>
+<td>Starting date of rule validity. null means no from date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current rule is active.</td>
+<td>Indicates whether the current rule is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information or comments related to the rule.</td>
+<td>Additional information or comments related to the rule. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#priority">Priority</a></td>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#priority">Priority</a></td>
-<td>Priority when multiple rules match the criteria.</td>
+<td>Priority when multiple rules match the criteria. <code>Required</code> <code>Default(&quot;3&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.23</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#ruleno">RuleNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the rule within the selected enterprise company.</td>
+<td>Consecutive number of the rule within the selected enterprise company. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#todate">ToDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.</td>
+<td>Ending date (inclusive) of rule validity. null means that the rule is valid forever. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,27 +173,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#companydivision">CompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>Our division, which is in charge of the deal.</td>
+<td>Our division, which is in charge of the deal. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#customertype">CustomerType</a></td>
 <td><a href="Crm.Sales.CustomerTypes.html">CustomerTypes</a> (nullable)</td>
-<td>The type of the customer.</td>
+<td>The type of the customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for which the rule applies.</td>
+<td>The enterprise company for which the rule applies. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#salesarea">SalesArea</a></td>
 <td><a href="General.Geography.Areas.html">Areas</a> (nullable)</td>
-<td>The sales area, where the customer is located.</td>
+<td>The sales area, where the customer is located. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></td>
-<td>The sales person to be assigned by the rule.</td>
+<td>The sales person to be assigned by the rule. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -241,7 +241,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applyto">ApplyTo</h3>
-<p>Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.</p>
+<p>Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#applyto">ApplyTo</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ApplyTo</code>(Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) data attribute<br>
@@ -269,14 +269,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Customers</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date of rule validity. NULL means no from date restriction.</p>
+<p>Starting date of rule validity. null means no from date restriction. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current rule is active.</p>
+<p>Indicates whether the current rule is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -284,7 +284,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional information or comments related to the rule.</p>
+<p>Additional information or comments related to the rule. <code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -292,7 +292,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority when multiple rules match the criteria.</p>
+<p>Priority when multiple rules match the criteria. <code>Required</code> <code>Default(&quot;3&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.23</code></p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersonAssignmentRules.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Crm.SalesForce.SalesPersonAssignmentRules.md#priority) data attribute<br>
@@ -332,7 +332,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Medium</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ruleno">RuleNo</h3>
-<p>Consecutive number of the rule within the selected enterprise company.</p>
+<p>Consecutive number of the rule within the selected enterprise company. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -343,7 +343,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.SetRuleNo( obj.EnterpriseCompany)</code></p>
 <h3 id="todate">ToDate</h3>
-<p>Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.</p>
+<p>Ending date (inclusive) of rule validity. null means that the rule is valid forever. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -393,32 +393,32 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="companydivision">CompanyDivision</h3>
-<p>Our division, which is in charge of the deal.</p>
+<p>Our division, which is in charge of the deal. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customertype">CustomerType</h3>
-<p>The type of the customer.</p>
+<p>The type of the customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.CustomerTypes.html">CustomerTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the rule applies.</p>
+<p>The enterprise company for which the rule applies. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="salesarea">SalesArea</h3>
-<p>The sales area, where the customer is located.</p>
+<p>The sales area, where the customer is located. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Geography.Areas.html">Areas</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>The sales person to be assigned by the rule.</p>
+<p>The sales person to be assigned by the rule. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

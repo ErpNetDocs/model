@@ -36,7 +36,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.Classic.TypeRoles.md#description) | string (max) __nullable__ | The description of this TypeRole. 
-| [RoleName](Projects.Classic.TypeRoles.md#rolename) | string (255) | The name of the participant role 
+| [RoleName](Projects.Classic.TypeRoles.md#rolename) | string (255) | The name of the participant role. `Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### RoleName
 
-The name of the participant role
+The name of the participant role. `Required` `Filter(multi eq;like)`
 
 Type: **string (255)**  
 Category: **System**  

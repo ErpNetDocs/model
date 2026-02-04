@@ -121,42 +121,42 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#catchquantity">CatchQuantity</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.</td>
+<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The creation time in UTC.</td>
+<td>The creation time in UTC. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></td>
-<td>Direction of the transaction - I=IN, O=OUT.</td>
+<td>Direction of the transaction - I=IN, O=OUT. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#isautoaccepted">IsAutoAccepted</a></td>
 <td>boolean</td>
-<td>Auto-flag indicating that the product was accepted as correct without being physically counted.</td>
+<td>Auto-flag indicating that the product was accepted as correct without being physically counted. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.1.3.87</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#quantity">Quantity</a></td>
 <td>decimal (12, 3)</td>
-<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.</td>
+<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>Quantity in the base measurement unit of the product.</td>
+<td>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.5.9</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#standardquantity">StandardQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.</td>
+<td>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.5.9</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
-<td>The type of the task (operation), which was transacted.</td>
+<td>The type of the task (operation), which was transacted. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.15</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,62 +173,62 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#catchquantityunit">CatchQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.</td>
+<td>The measurement unit of the catch quantity. null when catch measurement is not configured for the product. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The creation user.</td>
+<td>The creation user. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#logisticunit">LogisticUnit</a></td>
 <td><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</td>
-<td>Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.</td>
+<td>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The lot which was transacted. NULL when the transaction was not for a specific lot.</td>
+<td>The lot which was transacted. null when the transaction was not for a specific lot. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which was transacted.</td>
+<td>The product, which was transacted. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>The product variant, which was transacted. NULL when the transaction was not for a product variant.</td>
+<td>The product variant, which was transacted. null when the transaction was not for a product variant. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of quantity.</td>
+<td>The measurement unit of quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>The serial number which was transacted. NULL when the transaction was not for a specific serial number.</td>
+<td>The serial number which was transacted. null when the transaction was not for a specific serial number. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse in which the transaction occurred.</td>
+<td>The warehouse in which the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#warehouselocation">WarehouseLocation</a></td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></td>
-<td>The warehouse location, where the transaction occurred.</td>
+<td>The warehouse location, where the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#warehouseorder">WarehouseOrder</a></td>
 <td><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a> (nullable)</td>
-<td>The order which created this transaction. NULL when this transaction was not based on order.</td>
+<td>The order which created this transaction. null when this transaction was not based on order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#warehouseorderline">WarehouseOrderLine</a></td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</td>
-<td>The order line which created this transaction. NULL when this transaction was not based on order line.</td>
+<td>The order line which created this transaction. null when this transaction was not based on order line. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -276,14 +276,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="catchquantity">CatchQuantity</h3>
-<p>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.</p>
+<p>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The creation time in UTC.</p>
+<p>The creation time in UTC. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -291,7 +291,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Direction of the transaction - I=IN, O=OUT.</p>
+<p>Direction of the transaction - I=IN, O=OUT. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Logistics.Wms.WarehouseTransactions.md#direction) data attribute<br>
@@ -319,7 +319,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>IN</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isautoaccepted">IsAutoAccepted</h3>
-<p>Auto-flag indicating that the product was accepted as correct without being physically counted.</p>
+<p>Auto-flag indicating that the product was accepted as correct without being physically counted. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.1.3.87</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -327,7 +327,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.</p>
+<p>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -335,21 +335,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base measurement unit of the product.</p>
+<p>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.5.9</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
-<p>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.</p>
+<p>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.5.9</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tasktype">TaskType</h3>
-<p>The type of the task (operation), which was transacted.</p>
+<p>The type of the task (operation), which was transacted. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.15</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>
@@ -471,79 +471,79 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="catchquantityunit">CatchQuantityUnit</h3>
-<p>The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.</p>
+<p>The measurement unit of the catch quantity. null when catch measurement is not configured for the product. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<p>The creation user.</p>
+<p>The creation user. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logisticunit">LogisticUnit</h3>
-<p>Logistic unit, which was transacted. NULL when the transaction was not for a logistic unit.</p>
+<p>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The lot which was transacted. NULL when the transaction was not for a specific lot.</p>
+<p>The lot which was transacted. null when the transaction was not for a specific lot. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product, which was transacted.</p>
+<p>The product, which was transacted. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>The product variant, which was transacted. NULL when the transaction was not for a product variant.</p>
+<p>The product variant, which was transacted. null when the transaction was not for a product variant. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of quantity.</p>
+<p>The measurement unit of quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>The serial number which was transacted. NULL when the transaction was not for a specific serial number.</p>
+<p>The serial number which was transacted. null when the transaction was not for a specific serial number. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse in which the transaction occurred.</p>
+<p>The warehouse in which the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
-<p>The warehouse location, where the transaction occurred.</p>
+<p>The warehouse location, where the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseorder">WarehouseOrder</h3>
-<p>The order which created this transaction. NULL when this transaction was not based on order.</p>
+<p>The order which created this transaction. null when this transaction was not based on order. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseorderline">WarehouseOrderLine</h3>
-<p>The order line which created this transaction. NULL when this transaction was not based on order line.</p>
+<p>The order line which created this transaction. null when this transaction was not based on order line. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

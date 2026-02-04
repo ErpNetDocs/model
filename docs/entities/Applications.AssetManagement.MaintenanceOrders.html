@@ -386,12 +386,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrders.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a> (nullable)</td>
-<td>The type of maintenance, which will be performed. NULL means that will be more than one type of maintenance performed.</td>
+<td>The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrders.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</td>
-<td>The asset, which will be maintained. NULL means that more than one asset will be maintained.</td>
+<td>The asset, which will be maintained. null means that more than one asset will be maintained. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrders.html#masterdocument">MasterDocument</a></td>
@@ -441,7 +441,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrders.html#servicecenter">ServiceCenter</a></td>
 <td><a href="Applications.AssetManagement.ServiceCenters.html">ServiceCenters</a></td>
-<td>The service center, which will perform the maintenance.</td>
+<td>The service center, which will perform the maintenance. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrders.html#socialgroup">SocialGroup</a></td>
@@ -1124,13 +1124,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="maintenancetype">MaintenanceType</h3>
-<p>The type of maintenance, which will be performed. NULL means that will be more than one type of maintenance performed.</p>
+<p>The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The asset, which will be maintained. NULL means that more than one asset will be maintained.</p>
+<p>The asset, which will be maintained. null means that more than one asset will be maintained. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1195,7 +1195,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="servicecenter">ServiceCenter</h3>
-<p>The service center, which will perform the maintenance.</p>
+<p>The service center, which will perform the maintenance. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ServiceCenters.html">ServiceCenters</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

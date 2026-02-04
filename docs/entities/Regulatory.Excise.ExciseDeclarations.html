@@ -195,7 +195,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#fromdate">FromDate</a></td>
 <td>date</td>
-<td>Start date of the period fot which the Excise declaration is made.</td>
+<td>Start date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#fullstate">FullState</a></td>
@@ -245,7 +245,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#todate">ToDate</a></td>
 <td>date</td>
-<td>End date of the period fot which the Excise declaration is made.</td>
+<td>End date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#void">Void</a></td>
@@ -297,7 +297,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#basecurrency">BaseCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The base currency for Enterprise Company at the moment of Excise Declaration creation.</td>
+<td>The base currency for Enterprise Company at the moment of Excise Declaration creation. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.60</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#currencydirectory">CurrencyDirectory</a></td>
@@ -347,7 +347,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#reportingperson">ReportingPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>This is the person submitting the declaration.</td>
+<td>This is the person submitting the declaration. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#responsibleperson">ResponsiblePerson</a></td>
@@ -367,7 +367,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#taxwarehouse">TaxWarehouse</a></td>
 <td><a href="Regulatory.Excise.TaxWarehouses.html">TaxWarehouses</a></td>
-<td>Our warehouse, dispatching the goods.</td>
+<td>Our warehouse, dispatching the goods. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseDeclarations.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -576,7 +576,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Start date of the period fot which the Excise declaration is made.</p>
+<p>Start date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -715,7 +715,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>End date of the period fot which the Excise declaration is made.</p>
+<p>End date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -841,7 +841,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="basecurrency">BaseCurrency</h3>
-<p>The base currency for Enterprise Company at the moment of Excise Declaration creation.</p>
+<p>The base currency for Enterprise Company at the moment of Excise Declaration creation. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.60</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -910,7 +910,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="reportingperson">ReportingPerson</h3>
-<p>This is the person submitting the declaration.</p>
+<p>This is the person submitting the declaration. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -936,7 +936,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="taxwarehouse">TaxWarehouse</h3>
-<p>Our warehouse, dispatching the goods.</p>
+<p>Our warehouse, dispatching the goods. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Excise.TaxWarehouses.html">TaxWarehouses</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

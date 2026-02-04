@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#basecostadjustment">BaseCostAdjustment</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The amount of correction (plus or minus) for the Base Cost field of the transaction line.</td>
+<td>The amount of correction (plus or minus) for the Base Cost field of the transaction line. <code>Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#costcorrectionamount">CostCorrectionAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The amount of correction (plus or minus) for the Amount field of the transaction line.</td>
+<td>The amount of correction (plus or minus) for the Amount field of the transaction line. <code>Currency: TransactionLine.TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#productcostadjustment">ProductCostAdjustment</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The amount of correction (plus or minus) for the Product Cost field of the transaction line.</td>
+<td>The amount of correction (plus or minus) for the Product Cost field of the transaction line. <code>Currency: TransactionLine.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#storecostadjustment">StoreCostAdjustment</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The amount of correction (plus or minus) for the Store Cost field of the transaction line.</td>
+<td>The amount of correction (plus or minus) for the Store Cost field of the transaction line. <code>Currency: TransactionLine.TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></td>
-<td>Store transaction line that is corrected with the correction amount.</td>
+<td>The transaction line, which is corrected. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecostadjustment">BaseCostAdjustment</h3>
-<p>The amount of correction (plus or minus) for the Base Cost field of the transaction line.</p>
+<p>The amount of correction (plus or minus) for the Base Cost field of the transaction line. <code>Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costcorrectionamount">CostCorrectionAmount</h3>
-<p>The amount of correction (plus or minus) for the Amount field of the transaction line.</p>
+<p>The amount of correction (plus or minus) for the Amount field of the transaction line. <code>Currency: TransactionLine.TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -212,7 +212,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productcostadjustment">ProductCostAdjustment</h3>
-<p>The amount of correction (plus or minus) for the Product Cost field of the transaction line.</p>
+<p>The amount of correction (plus or minus) for the Product Cost field of the transaction line. <code>Currency: TransactionLine.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -220,7 +220,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storecostadjustment">StoreCostAdjustment</h3>
-<p>The amount of correction (plus or minus) for the Store Cost field of the transaction line.</p>
+<p>The amount of correction (plus or minus) for the Store Cost field of the transaction line. <code>Currency: TransactionLine.TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -265,7 +265,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
-<p>Store transaction line that is corrected with the correction amount.</p>
+<p>The transaction line, which is corrected. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

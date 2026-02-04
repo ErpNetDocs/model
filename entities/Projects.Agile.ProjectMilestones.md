@@ -34,16 +34,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletionDate](Projects.Agile.ProjectMilestones.md#completiondate) | date __nullable__ | Planned completion date for the milestone 
-| [IsActive](Projects.Agile.ProjectMilestones.md#isactive) | boolean | Specifies whether the milestone is active for new cases 
+| [CompletionDate](Projects.Agile.ProjectMilestones.md#completiondate) | date __nullable__ | Planned completion date for the milestone. `Filter(eq;ge;le)` 
+| [IsActive](Projects.Agile.ProjectMilestones.md#isactive) | boolean | Specifies whether the milestone is active for new cases. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Projects.Agile.ProjectMilestones.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ProjectMilestone. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Project](Projects.Agile.ProjectMilestones.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | Specified for local project milestones. NULL means the milestone is global and assignable for all projects. |
-| [ProjectGroup](Projects.Agile.ProjectMilestones.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | Specified for milestones that are applicable to all projects within the project group. NULL means the milestone is global, unless it is linked to a specific project. |
+| [Project](Projects.Agile.ProjectMilestones.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | Specified for local project milestones. null means the milestone is global and assignable for all projects. `Filter(multi eq)` |
+| [ProjectGroup](Projects.Agile.ProjectMilestones.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. `Filter(multi eq)` `Introduced in version 26.1.4.49` |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### CompletionDate
 
-Planned completion date for the milestone
+Planned completion date for the milestone. `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the milestone is active for new cases
+Specifies whether the milestone is active for new cases. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **HiddenByDefault**
 
 ### Project
 
-Specified for local project milestones. NULL means the milestone is global and assignable for all projects.
+Specified for local project milestones. null means the milestone is global and assignable for all projects. `Filter(multi eq)`
 
 Type: **[Projects](Projects.Agile.Projects.md) (nullable)**  
 Indexed: **True**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectGroup
 
-Specified for milestones that are applicable to all projects within the project group. NULL means the milestone is global, unless it is linked to a specific project.
+Specified for milestones that are applicable to all projects within the project group. null means the milestone is global, unless it is linked to a specific project. `Filter(multi eq)` `Introduced in version 26.1.4.49`
 
 Type: **[ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable)**  
 Category: **System**  

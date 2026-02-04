@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#fromdate">FromDate</a></td>
 <td>date</td>
-<td>The date on which the asset is assigned to the location.</td>
+<td>The date on which the asset is assigned to the location. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#notes">Notes</a></td>
@@ -144,17 +144,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
-<td>The enterprise company location, where the asset is assigned.</td>
+<td>The enterprise company location, where the asset is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
-<td>The asset, whose location is recorded.</td>
+<td>The asset, whose location is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLocations.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.</td>
+<td>The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -187,7 +187,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>The date on which the asset is assigned to the location.</p>
+<p>The date on which the asset is assigned to the location. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -225,14 +225,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location, where the asset is assigned.</p>
+<p>The enterprise company location, where the asset is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The asset, whose location is recorded.</p>
+<p>The asset, whose location is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -240,7 +240,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.</p>
+<p>The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

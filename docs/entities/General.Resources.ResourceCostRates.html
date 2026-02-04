@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#fromdate">FromDate</a></td>
 <td>date</td>
-<td>Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.</td>
+<td>Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#notes">Notes</a></td>
@@ -131,17 +131,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#overtimerateperhour">OvertimeRatePerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 4)</a> <strong>nullable</strong></td>
-<td>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.</td>
+<td>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. <code>Currency: Resource.CostingCurrency</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#perusecost">PerUseCost</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>One-time cost for each usage of the resource in the resources costing currency.</td>
+<td>One-time cost for each usage of the resource in the resources costing currency. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#standardrateperhour">StandardRatePerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 4)</a></td>
-<td>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.</td>
+<td>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for which the cost is defined.</td>
+<td>The enterprise company for which the cost is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceCostRates.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>The resource for which the cost rate is defined.</td>
+<td>The resource for which the cost rate is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.</p>
+<p>Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -211,14 +211,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="overtimerateperhour">OvertimeRatePerHour</h3>
-<p>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.</p>
+<p>The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. <code>Currency: Resource.CostingCurrency</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 4)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="perusecost">PerUseCost</h3>
-<p>One-time cost for each usage of the resource in the resources costing currency.</p>
+<p>One-time cost for each usage of the resource in the resources costing currency. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -226,7 +226,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardrateperhour">StandardRatePerHour</h3>
-<p>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.</p>
+<p>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 4)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -255,13 +255,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the cost is defined.</p>
+<p>The enterprise company for which the cost is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resource">Resource</h3>
-<p>The resource for which the cost rate is defined.</p>
+<p>The resource for which the cost rate is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

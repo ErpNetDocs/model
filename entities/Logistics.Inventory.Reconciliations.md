@@ -59,12 +59,12 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Inventory.Reconciliations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.Reconciliations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Inventory.Reconciliations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.Reconciliations.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Logistics.Inventory.Reconciliations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Logistics.Inventory.Reconciliations.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Logistics.Inventory.Reconciliations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.Reconciliations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.Reconciliations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.Reconciliations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.Reconciliations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) | [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) __nullable__ | Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. 
+| [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) | [ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) __nullable__ | Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. `Filter(multi eq)` `Introduced in version 24.1.3.67` 
 | [ReferenceDate](Logistics.Inventory.Reconciliations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Logistics.Inventory.Reconciliations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Logistics.Inventory.Reconciliations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -83,10 +83,10 @@ Aggregate Tree
 | [AdjustedDocument](Logistics.Inventory.Reconciliations.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Inventory.Reconciliations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Logistics.Inventory.Reconciliations.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DefaultProductGroup](Logistics.Inventory.Reconciliations.md#defaultproductgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | When not null is used to filter the product chooser for the lines. |
-| [DefaultStore](Logistics.Inventory.Reconciliations.md#defaultstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line. |
-| [DefaultStoreBin](Logistics.Inventory.Reconciliations.md#defaultstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The default store bin for the lines. When null, lines can specify different bins. |
-| [DefaultValuationGroup](Logistics.Inventory.Reconciliations.md#defaultvaluationgroup) | [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group by default for which available products are loaded. |
+| [DefaultProductGroup](Logistics.Inventory.Reconciliations.md#defaultproductgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | When not null is used to filter the product chooser for the lines. `Filter(multi eq)` |
+| [DefaultStore](Logistics.Inventory.Reconciliations.md#defaultstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default (but not mandatory) store for the lines. null means that the store should be choosed for each line. `Filter(multi eq)` |
+| [DefaultStoreBin](Logistics.Inventory.Reconciliations.md#defaultstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The default store bin for the lines. When null, lines can specify different bins. `Filter(multi eq)` |
+| [DefaultValuationGroup](Logistics.Inventory.Reconciliations.md#defaultvaluationgroup) | [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group by default for which available products are loaded. `Filter(multi eq)` |
 | [DocumentType](Logistics.Inventory.Reconciliations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Inventory.Reconciliations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Logistics.Inventory.Reconciliations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -267,7 +267,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -278,7 +278,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -330,7 +330,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReconciliationType
 
-Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled.
+Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. `Filter(multi eq)` `Introduced in version 24.1.3.67`
 
 Type: **[ReconciliationType](Logistics.Inventory.Reconciliations.md#reconciliationtype) __nullable__**  
 Category: **System**  
@@ -567,7 +567,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultProductGroup
 
-When not null is used to filter the product chooser for the lines.
+When not null is used to filter the product chooser for the lines. `Filter(multi eq)`
 
 Type: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 Category: **System**  
@@ -576,7 +576,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultStore
 
-Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.
+Default (but not mandatory) store for the lines. null means that the store should be choosed for each line. `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -585,7 +585,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultStoreBin
 
-The default store bin for the lines. When null, lines can specify different bins.
+The default store bin for the lines. When null, lines can specify different bins. `Filter(multi eq)`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -594,7 +594,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultValuationGroup
 
-Valuation group by default for which available products are loaded.
+Valuation group by default for which available products are loaded. `Filter(multi eq)`
 
 Type: **[ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
 Category: **System**  

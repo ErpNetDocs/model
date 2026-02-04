@@ -44,9 +44,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowExplicitNumbering](Systems.Documents.SequenceGenerators.md#allowexplicitnumbering) | boolean | Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual. 
-| [NextValue](Systems.Documents.SequenceGenerators.md#nextvalue) | string (16) | The next number that will be issued by the sequence 
-| [SequencePriority](Systems.Documents.SequenceGenerators.md#sequencepriority) | int32 | The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True 
+| [AllowExplicitNumbering](Systems.Documents.SequenceGenerators.md#allowexplicitnumbering) | boolean | Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). `Required` `Default(false)` 
+| [NextValue](Systems.Documents.SequenceGenerators.md#nextvalue) | string (16) | The next number that will be issued by the sequence. `Required` `Default("0000000001")` 
+| [SequencePriority](Systems.Documents.SequenceGenerators.md#sequencepriority) | int32 | The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. `Required` `Default(1)` 
 
 ## References
 
@@ -54,7 +54,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [EnterpriseCompany](Systems.Documents.SequenceGenerators.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this SequenceGenerator applies. `Required` `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](Systems.Documents.SequenceGenerators.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. `Filter(multi eq)` |
-| [ResponsiblePerson](Systems.Documents.SequenceGenerators.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | If this column is filled then the generator is designated for use only in documents with the specified responsible person. |
+| [ResponsiblePerson](Systems.Documents.SequenceGenerators.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | If specified then the generator is designated for use only in documents with that Responsible_Person_Id. `Filter(multi eq)` |
 | [Sequence](Systems.Documents.SequenceGenerators.md#sequence) | [Sequences](Systems.Documents.Sequences.md) | The <see cref="Sequence"/> to which this SequenceGenerator belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### AllowExplicitNumbering
 
-Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.
+Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **HiddenByDefault**
 
 ### NextValue
 
-The next number that will be issued by the sequence
+The next number that will be issued by the sequence. `Required` `Default("0000000001")`
 
 Type: **string (16)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### SequencePriority
 
-The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True
+The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. `Required` `Default(1)`
 
 Type: **int32**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### ResponsiblePerson
 
-If this column is filled then the generator is designated for use only in documents with the specified responsible person.
+If specified then the generator is designated for use only in documents with that Responsible_Person_Id. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  

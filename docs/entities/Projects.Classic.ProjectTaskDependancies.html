@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskDependancies.html#dependancytype">DependancyType</a></td>
 <td><a href="Projects.Classic.ProjectTaskDependancies.html#dependancytype">DependancyType</a></td>
-<td>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)</td>
+<td>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). <code>Required</code> <code>Default(&quot;FS&quot;)</code></td>
 </tr>
 </tbody>
 </table>
@@ -138,12 +138,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskDependancies.html#dependsontask">DependsOnTask</a></td>
 <td><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></td>
-<td>The task on which Project_Task depends</td>
+<td>The task on which Project_Task depends. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskDependancies.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></td>
-<td>The task which depends on another task</td>
+<td>The task which depends on another task. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +176,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dependancytype">DependancyType</h3>
-<p>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)</p>
+<p>FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). <code>Required</code> <code>Default(&quot;FS&quot;)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTaskDependancies.html#dependancytype">DependancyType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DependancyType</code>(Projects.Classic.ProjectTaskDependancies.md#dependancytype) data attribute<br>
@@ -238,13 +238,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dependsontask">DependsOnTask</h3>
-<p>The task on which Project_Task depends</p>
+<p>The task on which Project_Task depends. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The task which depends on another task</p>
+<p>The task which depends on another task. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

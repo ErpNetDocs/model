@@ -201,12 +201,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.WorkReports.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReports.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReports.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -343,12 +343,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.WorkReports.html#project">Project</a></td>
 <td><a href="Projects.Classic.Projects.html">Projects</a></td>
-<td>The project for which the work report is recorded.</td>
+<td>The project for which the work report is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReports.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a> (nullable)</td>
-<td>The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks.</td>
+<td>The project task for which the work report is recorded. null means that the report contains entries for many project tasks. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReports.html#responsibleperson">ResponsiblePerson</a></td>
@@ -589,7 +589,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -597,7 +597,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -908,13 +908,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="project">Project</h3>
-<p>The project for which the work report is recorded.</p>
+<p>The project for which the work report is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.Projects.html">Projects</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks.</p>
+<p>The project task for which the work report is recorded. null means that the report contains entries for many project tasks. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

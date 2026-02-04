@@ -121,27 +121,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#creationtimeutc">CreationTimeUTC</a></td>
 <td>datetime</td>
-<td>The timestamp when the counting entry was recorded (UTC).</td>
+<td>The timestamp when the counting entry was recorded (UTC). <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity entered during the counting process, in the entered measurement unit.</td>
+<td>The quantity entered during the counting process, in the entered measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The converted quantity in the product’s base measurement unit.</td>
+<td>The converted quantity in the product’s base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#session">Session</a></td>
 <td>int32</td>
-<td>The counting session number to which this entry belongs.</td>
+<td>The counting session number to which this entry belongs. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.</td>
+<td>The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,57 +158,57 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user who recorded the counting entry.</td>
+<td>The user who recorded the counting entry. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#logisticunit">LogisticUnit</a></td>
 <td><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</td>
-<td>The logistic unit involved in the counting, when applicable.</td>
+<td>The logistic unit involved in the counting, when applicable. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>Batch/lot of the product, when applicable.</td>
+<td>Batch/lot of the product, when applicable. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product that was counted.</td>
+<td>The product that was counted. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit used when entering the quantity.</td>
+<td>The measurement unit used when entering the quantity. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number, when serialized tracking is enabled.</td>
+<td>Serial number, when serialized tracking is enabled. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#sourcedocument">SourceDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>Requisition, reconciliation, or other document which initiated the counting.</td>
+<td>Requisition, reconciliation, or other document which initiated the counting. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#variant">Variant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>Product variant (e.g. size, color, configuration), when tracked.</td>
+<td>Product variant (e.g. size, color, configuration), when tracked. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#warehouselocation">WarehouseLocation</a></td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></td>
-<td>The warehouse location where the counting occurred.</td>
+<td>The warehouse location where the counting occurred. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#warehouseorder">WarehouseOrder</a></td>
 <td><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></td>
-<td>Warehouse order which initiated the counting.</td>
+<td>Warehouse order which initiated the counting. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#warehouseorderline">WarehouseOrderLine</a></td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</td>
-<td>Indicates for which Warehouse Order line this count entry was recorded.</td>
+<td>Indicates for which Warehouse Order line this count entry was recorded. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.16</code></td>
 </tr>
 </tbody>
 </table>
@@ -256,35 +256,35 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUTC</h3>
-<p>The timestamp when the counting entry was recorded (UTC).</p>
+<p>The timestamp when the counting entry was recorded (UTC). <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity entered during the counting process, in the entered measurement unit.</p>
+<p>The quantity entered during the counting process, in the entered measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The converted quantity in the product’s base measurement unit.</p>
+<p>The converted quantity in the product’s base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="session">Session</h3>
-<p>The counting session number to which this entry belongs.</p>
+<p>The counting session number to which this entry belongs. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.</p>
+<p>The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -334,69 +334,69 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user who recorded the counting entry.</p>
+<p>The user who recorded the counting entry. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logisticunit">LogisticUnit</h3>
-<p>The logistic unit involved in the counting, when applicable.</p>
+<p>The logistic unit involved in the counting, when applicable. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>Batch/lot of the product, when applicable.</p>
+<p>Batch/lot of the product, when applicable. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product that was counted.</p>
+<p>The product that was counted. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit used when entering the quantity.</p>
+<p>The measurement unit used when entering the quantity. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number, when serialized tracking is enabled.</p>
+<p>Serial number, when serialized tracking is enabled. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sourcedocument">SourceDocument</h3>
-<p>Requisition, reconciliation, or other document which initiated the counting.</p>
+<p>Requisition, reconciliation, or other document which initiated the counting. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="variant">Variant</h3>
-<p>Product variant (e.g. size, color, configuration), when tracked.</p>
+<p>Product variant (e.g. size, color, configuration), when tracked. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
-<p>The warehouse location where the counting occurred.</p>
+<p>The warehouse location where the counting occurred. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseorder">WarehouseOrder</h3>
-<p>Warehouse order which initiated the counting.</p>
+<p>Warehouse order which initiated the counting. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseorderline">WarehouseOrderLine</h3>
-<p>Indicates for which Warehouse Order line this count entry was recorded.</p>
+<p>Indicates for which Warehouse Order line this count entry was recorded. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.16</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseOrderLines.html">WarehouseOrderLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

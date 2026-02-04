@@ -40,9 +40,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#defaultbin) | [StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. |
+| [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#defaultbin) | [StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. `Required` `Filter(multi eq)` |
 | [Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) | [Products](General.Products.Products.md) | The <see cref="General.Products.Product"/> to which this ProductDefaultStoreBin belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Store](Logistics.Inventory.ProductDefaultStoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. |
+| [Store](Logistics.Inventory.ProductDefaultStoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -90,7 +90,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultBin
 
-The default bin, which should be used for this product.
+The default bin, which should be used for this product. `Required` `Filter(multi eq)`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The store, for which the default bin is specified.
+The store, for which the default bin is specified. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

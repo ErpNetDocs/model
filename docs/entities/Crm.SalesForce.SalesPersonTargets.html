@@ -205,12 +205,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -347,7 +347,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#productgroup">ProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
-<td>Product group for which the target is defined. Serves as default for the lines.</td>
+<td>Product group for which the target is defined. Serves as default for the lines. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#responsibleperson">ResponsiblePerson</a></td>
@@ -362,7 +362,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</td>
-<td>Sales person to whom the target is assigned. Serves as default for the lines.</td>
+<td>Sales person to whom the target is assigned. Serves as default for the lines. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#sequence">Sequence</a></td>
@@ -372,7 +372,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#targetcurrency">TargetCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>Denotes the currency of amount targets. Required when amount targets are present in the documnet.</td>
+<td>Denotes the currency of amount targets. Required when amount targets are present in the documnet. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargets.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -593,7 +593,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -601,7 +601,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -912,7 +912,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<p>Product group for which the target is defined. Serves as default for the lines.</p>
+<p>Product group for which the target is defined. Serves as default for the lines. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -932,7 +932,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>Sales person to whom the target is assigned. Serves as default for the lines.</p>
+<p>Sales person to whom the target is assigned. Serves as default for the lines. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -946,7 +946,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="targetcurrency">TargetCurrency</h3>
-<p>Denotes the currency of amount targets. Required when amount targets are present in the documnet.</p>
+<p>Denotes the currency of amount targets. Required when amount targets are present in the documnet. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

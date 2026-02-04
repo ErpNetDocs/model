@@ -127,22 +127,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The first date when the contact mechanism was valid. NULL means unknown date</td>
+<td>The first date when the contact mechanism was valid. null means unknown date. <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True if the contact mechanism is currently active and can be used to contact the party.</td>
+<td>True if the contact mechanism is currently active and can be used to contact the party. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1 - when this is the default contact mechanism for this party; 0 - otherwise</td>
+<td>True - when this is the default contact mechanism for this party; false - otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Consecutive number of the contact information. The number is unique within the party.</td>
+<td>Consecutive number of the contact information. The number is unique within the party. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#name">Name</a></td>
@@ -152,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#nonsolicitation">NonSolicitation</a></td>
 <td>boolean</td>
-<td>If 1 then Don't use the mechanism for solicitation purposes</td>
+<td>If true then Don't use the mechanism for solicitation purposes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#notes">Notes</a></td>
@@ -162,7 +162,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid</td>
+<td>The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -184,12 +184,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#contactmechanism">ContactMechanism</a></td>
 <td><a href="General.Contacts.ContactMechanisms.html">ContactMechanisms</a></td>
-<td>The contact mechanism of the party</td>
+<td>Returns this <code>PartyContactMechanism</code>(General.Contacts.PartyContactMechanisms.md). DO NOT USE! Kept for backward compatibility.             When a contact mechanism is set, the old inner contact mechanism becomes an orphan.              If the orphan is newly added in this transaction it is deleted.</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#contactmechanismpurpose">ContactMechanismPurpose</a></td>
 <td><a href="General.Contacts.ContactMechanismPurposes.html">ContactMechanismPurposes</a> (nullable)</td>
-<td>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.</td>
+<td>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#geopoint">GeoPoint</a></td>
@@ -199,12 +199,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party, having the contact mechanism</td>
+<td>The party, having the contact mechanism. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#personaldataprocess">PersonalDataProcess</a></td>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</td>
-<td>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.</td>
+<td>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 </tbody>
 </table>
@@ -221,7 +221,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#id">Id</a></td>
 <td>guid</td>
-<td>Unique party contact mechanism Id</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#objectversion">ObjectVersion</a></td>
@@ -293,7 +293,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Address</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>The first date when the contact mechanism was valid. NULL means unknown date</p>
+<p>The first date when the contact mechanism was valid. null means unknown date. <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>True if the contact mechanism is currently active and can be used to contact the party.</p>
+<p>True if the contact mechanism is currently active and can be used to contact the party. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -309,7 +309,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>1 - when this is the default contact mechanism for this party; 0 - otherwise</p>
+<p>True - when this is the default contact mechanism for this party; false - otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -317,7 +317,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Consecutive number of the contact information. The number is unique within the party.</p>
+<p>Consecutive number of the contact information. The number is unique within the party. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -336,7 +336,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="nonsolicitation">NonSolicitation</h3>
-<p>If 1 then Don't use the mechanism for solicitation purposes</p>
+<p>If true then Don't use the mechanism for solicitation purposes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -352,14 +352,13 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid</p>
+<p>The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
-<p>Unique party contact mechanism Id</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -388,7 +387,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contactmechanism">ContactMechanism</h3>
-<p>The contact mechanism of the party</p>
+<p>Returns this <code>PartyContactMechanism</code>(General.Contacts.PartyContactMechanisms.md). DO NOT USE! Kept for backward compatibility.             When a contact mechanism is set, the old inner contact mechanism becomes an orphan.              If the orphan is newly added in this transaction it is deleted.</p>
 <p>Type: <strong><a href="General.Contacts.ContactMechanisms.html">ContactMechanisms</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -396,7 +395,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="contactmechanismpurpose">ContactMechanismPurpose</h3>
-<p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.</p>
+<p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="General.Contacts.ContactMechanismPurposes.html">ContactMechanismPurposes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -408,7 +407,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>The party, having the contact mechanism</p>
+<p>The party, having the contact mechanism. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -416,7 +415,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personaldataprocess">PersonalDataProcess</h3>
-<p>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.</p>
+<p>The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="Applications.PersonalData.PersonalDataProcesses.html">PersonalDataProcesses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

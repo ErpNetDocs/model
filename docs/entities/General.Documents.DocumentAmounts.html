@@ -126,32 +126,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#baseamount">BaseAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.</td>
+<td>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#inputamount">InputAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>When not null, specifies directly the amount of the additional amount.</td>
+<td>When not null, specifies directly the amount of the additional amount. <code>Currency: GetInputAmountCurrency()</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#inputpercent">InputPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).</td>
+<td>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#inputunitamount">InputUnitAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></td>
-<td>Input unit amount for the calculation of the current amount.</td>
+<td>Input unit amount for the calculation of the current amount. <code>Currency: GetInputAmountCurrency()</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#totaldistributedamount">TotalDistributedAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.</td>
+<td>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#usercanchangeinput">UserCanChangeInput</a></td>
 <td>boolean</td>
-<td>1 if the user, entering the document is allowed to change the default input percent</td>
+<td>True if the user, entering the document is allowed to change the default input percent. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,17 +173,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
-<td>The type of the amount.</td>
+<td>The type of the amount. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#inputamountcurrency">InputAmountCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.</td>
+<td>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentAmounts.html#inputunit">InputUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>Measurement unit of the input unit amount.</td>
+<td>Measurement unit of the input unit amount. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -233,14 +233,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="baseamount">BaseAmount</h3>
-<p>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.</p>
+<p>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="inputamount">InputAmount</h3>
-<p>When not null, specifies directly the amount of the additional amount.</p>
+<p>When not null, specifies directly the amount of the additional amount. <code>Currency: GetInputAmountCurrency()</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -249,7 +249,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)</code></p>
 <h3 id="inputpercent">InputPercent</h3>
-<p>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).</p>
+<p>When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). <code>Filter(ge;le)</code></p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -260,7 +260,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentAmountType.DefaultPercent</code></p>
 <h3 id="inputunitamount">InputUnitAmount</h3>
-<p>Input unit amount for the calculation of the current amount.</p>
+<p>Input unit amount for the calculation of the current amount. <code>Currency: GetInputAmountCurrency()</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -269,14 +269,14 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)</code></p>
 <h3 id="totaldistributedamount">TotalDistributedAmount</h3>
-<p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.</p>
+<p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usercanchangeinput">UserCanChangeInput</h3>
-<p>1 if the user, entering the document is allowed to change the default input percent</p>
+<p>True if the user, entering the document is allowed to change the default input percent. <code>Required</code> <code>Default(true)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -314,13 +314,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The type of the amount.</p>
+<p>The type of the amount. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="inputamountcurrency">InputAmountCurrency</h3>
-<p>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.</p>
+<p>When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -328,7 +328,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)</code></p>
 <h3 id="inputunit">InputUnit</h3>
-<p>Measurement unit of the input unit amount.</p>
+<p>Measurement unit of the input unit amount. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

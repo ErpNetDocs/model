@@ -40,8 +40,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Finance.Accounting.TemplateRouteLinks.md#route) | [Routes](Systems.Documents.Routes.md) | Route for which the specified template will be activated |
-| [Template](Finance.Accounting.TemplateRouteLinks.md#template) | [Templates](Finance.Accounting.Templates.md) | Template that will be activated for the specified route |
+| [Route](Finance.Accounting.TemplateRouteLinks.md#route) | [Routes](Systems.Documents.Routes.md) | Route for which the specified template will be activated. `Required` `Filter(multi eq)` `Owner` |
+| [Template](Finance.Accounting.TemplateRouteLinks.md#template) | [Templates](Finance.Accounting.Templates.md) | Template that will be activated for the specified route. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### Route
 
-Route for which the specified template will be activated
+Route for which the specified template will be activated. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Routes](Systems.Documents.Routes.md)**  
 Indexed: **True**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### Template
 
-Template that will be activated for the specified route
+Template that will be activated for the specified route. `Required` `Filter(multi eq)`
 
 Type: **[Templates](Finance.Accounting.Templates.md)**  
 Category: **System**  

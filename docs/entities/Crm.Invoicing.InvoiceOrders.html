@@ -156,7 +156,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#applydate">ApplyDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.</td>
+<td>Apply date to be passed to the invoice. When not null specifies that the VAT entry should be applied for a different period than that specified by the document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#completetime">CompleteTime</a></td>
@@ -181,7 +181,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#deliverydate">DeliveryDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date, when the delivery was effected. When NULL = document date</td>
+<td>Date, when the delivery was effected. When null = document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#documentdate">DocumentDate</a></td>
@@ -216,12 +216,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#notes">Notes</a></td>
@@ -236,17 +236,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not NULL specifies due date for the payment</td>
+<td>When not null specifies due date for the payment. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#paymentduestartdate">PaymentDueStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date when the payment becomes due for documents with one installment.</td>
+<td>The date when the payment becomes due for documents with one installment. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#paymenttypedescription">PaymentTypeDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Description of the payment type. Initially copied from the name of the Payment Type</td>
+<td>Description of the payment type. Initially copied from the name of the Payment Type. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#planningonly">PlanningOnly</a></td>
@@ -333,12 +333,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#creditnoteoriginalinvoice">CreditNoteOriginalInvoice</a></td>
 <td><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</td>
-<td>When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown.</td>
+<td>When the order is for credit note, may contain the original Invoice. null for normal orders or when the original document is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#creditnoteoriginalinvoiceorder">CreditNoteOriginal<br>InvoiceOrder</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a> (nullable)</td>
-<td>When the invoice is a credit note, can specify the original Invoice Order, on which this is based. NULL for normal invoice orders or when the original document is unknown.</td>
+<td>When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#currencydirectory">CurrencyDirectory</a></td>
@@ -348,17 +348,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The primary customer to whom to invoice</td>
+<td>The primary customer to whom to invoice. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#dealtype">DealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries.</td>
+<td>VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency in which the document is issued. All amounts are in this currency</td>
+<td>The currency in which the document is issued. All amounts are in this currency. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#documenttype">DocumentType</a></td>
@@ -398,12 +398,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>When not NULL, specifies the default payment account for the payment order</td>
+<td>When not null, specifies the default payment account for the payment order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>When not NULL specifies the payment type for the invoice</td>
+<td>When not null specifies the payment type for the invoice. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -423,7 +423,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
-<td>Provides default value and filter for the lines.</td>
+<td>Default value and filter for the lines. Used to differenciate the invoice order for each sales order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrders.html#sequence">Sequence</a></td>
@@ -576,7 +576,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="applydate">ApplyDate</h3>
-<p>Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.</p>
+<p>Apply date to be passed to the invoice. When not null specifies that the VAT entry should be applied for a different period than that specified by the document date. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -614,7 +614,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="deliverydate">DeliveryDate</h3>
-<p>Date, when the delivery was effected. When NULL = document date</p>
+<p>Date, when the delivery was effected. When null = document date. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -671,7 +671,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -679,7 +679,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -726,7 +726,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>When not NULL specifies due date for the payment</p>
+<p>When not null specifies due date for the payment. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -735,7 +735,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))</code></p>
 <h3 id="paymentduestartdate">PaymentDueStartDate</h3>
-<p>The date when the payment becomes due for documents with one installment.</p>
+<p>The date when the payment becomes due for documents with one installment. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -744,7 +744,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))</code></p>
 <h3 id="paymenttypedescription">PaymentTypeDescription</h3>
-<p>Description of the payment type. Initially copied from the name of the Payment Type</p>
+<p>Description of the payment type. Initially copied from the name of the Payment Type. <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -966,14 +966,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creditnoteoriginalinvoice">CreditNoteOriginalInvoice</h3>
-<p>When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown.</p>
+<p>When the order is for credit note, may contain the original Invoice. null for normal orders or when the original document is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creditnoteoriginalinvoiceorder">CreditNoteOriginalInvoiceOrder</h3>
-<p>When the invoice is a credit note, can specify the original Invoice Order, on which this is based. NULL for normal invoice orders or when the original document is unknown.</p>
+<p>When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -986,13 +986,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The primary customer to whom to invoice</p>
+<p>The primary customer to whom to invoice. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dealtype">DealType</h3>
-<p>VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries.</p>
+<p>VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1000,7 +1000,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; c.LineDealType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency in which the document is issued. All amounts are in this currency</p>
+<p>The currency in which the document is issued. All amounts are in this currency. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1052,7 +1052,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>When not NULL, specifies the default payment account for the payment order</p>
+<p>When not null, specifies the default payment account for the payment order. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1060,7 +1060,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>When not NULL specifies the payment type for the invoice</p>
+<p>When not null specifies the payment type for the invoice. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1087,7 +1087,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
-<p>Provides default value and filter for the lines.</p>
+<p>Default value and filter for the lines. Used to differenciate the invoice order for each sales order. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

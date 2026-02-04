@@ -122,22 +122,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#historyvisiblesincetimeutc">HistoryVisibleSinceTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.</td>
+<td>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. null removes the cutoff, exposing the full history. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#jointimeutc">JoinTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the user joined the group.</td>
+<td>The exact server time (in UTC), when the user joined the group. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#lastseentimeutc">LastSeenTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.</td>
+<td>The time (in UTC) until the group member caught up with the content in the corresponding group. null indicates that the group has no content or the member has never interacted with it. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#role">Role</a></td>
 <td><a href="Communities.Social.GroupMembers.html#role">Role</a></td>
-<td>Member role in a group. Defaults to member.</td>
+<td>Member role in a group. Defaults to member. <code>Required</code> <code>Default(&quot;M&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 23.1.1.95</code></td>
 </tr>
 </tbody>
 </table>
@@ -154,12 +154,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.Social.Groups.html">Groups</a></td>
-<td>The group in which the user participates.</td>
+<td>The group in which the user participates. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.GroupMembers.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who is a member of the group.</td>
+<td>The user, who is a member of the group. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -192,14 +192,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="historyvisiblesincetimeutc">HistoryVisibleSinceTimeUtc</h3>
-<p>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.</p>
+<p>Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. null removes the cutoff, exposing the full history. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="jointimeutc">JoinTimeUtc</h3>
-<p>The exact server time (in UTC), when the user joined the group.</p>
+<p>The exact server time (in UTC), when the user joined the group. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -207,14 +207,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastseentimeutc">LastSeenTimeUtc</h3>
-<p>The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.</p>
+<p>The time (in UTC) until the group member caught up with the content in the corresponding group. null indicates that the group has no content or the member has never interacted with it. <code>Filter(ge;le)</code> <code>Introduced in version 26.1.4.14</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="role">Role</h3>
-<p>Member role in a group. Defaults to member.</p>
+<p>Member role in a group. Defaults to member. <code>Required</code> <code>Default(&quot;M&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 23.1.1.95</code></p>
 <p>Type: <strong><a href="Communities.Social.GroupMembers.html#role">Role</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Role</code>(Communities.Social.GroupMembers.md#role) data attribute<br>
@@ -268,14 +268,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>The group in which the user participates.</p>
+<p>The group in which the user participates. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Communities.Social.Groups.html">Groups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who is a member of the group.</p>
+<p>The user, who is a member of the group. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

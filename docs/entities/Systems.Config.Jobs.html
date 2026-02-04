@@ -127,22 +127,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.Jobs.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the job is active and ready for running.</td>
+<td>Specifies whether the job is active and ready for running. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Jobs.html#jobconfigurations">JobConfigurations</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The field specifies additional parameters for the execution of the Job in JSON format. NULL means that there are no specific parameters.</td>
+<td>The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. <code>Filter(like)</code> <code>Introduced in version 25.1.3.15</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Jobs.html#jobtype">JobType</a></td>
 <td><a href="Systems.Config.Jobs.html#jobtype">JobType</a></td>
-<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.</td>
+<td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Jobs.html#name">Name</a></td>
 <td>string (254)</td>
-<td>The name of the job.</td>
+<td>The name of the job. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Jobs.html#notes">Notes</a></td>
@@ -152,12 +152,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.Jobs.html#runonidle">RunOnIdle</a></td>
 <td>boolean</td>
-<td>Specifies whether to automatically run the job when the server is idle.</td>
+<td>Specifies whether to automatically run the job when the server is idle. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Jobs.html#schedule">Schedule</a></td>
 <td><a href="Systems.Config.Jobs.html#schedule">Schedule</a></td>
-<td>Defines the execution schedule of the Job.</td>
+<td>Defines the execution schedule of the Job. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.62</code></td>
 </tr>
 </tbody>
 </table>
@@ -205,7 +205,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the job is active and ready for running.</p>
+<p>Specifies whether the job is active and ready for running. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -213,7 +213,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="jobconfigurations">JobConfigurations</h3>
-<p>The field specifies additional parameters for the execution of the Job in JSON format. NULL means that there are no specific parameters.</p>
+<p>The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. <code>Filter(like)</code> <code>Introduced in version 25.1.3.15</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -221,7 +221,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="jobtype">JobType</h3>
-<p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.</p>
+<p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Config.Jobs.html#jobtype">JobType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>JobType</code>(Systems.Config.Jobs.md#jobtype) data attribute<br>
@@ -288,7 +288,7 @@ Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the job.</p>
+<p>The name of the job. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -305,7 +305,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="runonidle">RunOnIdle</h3>
-<p>Specifies whether to automatically run the job when the server is idle.</p>
+<p>Specifies whether to automatically run the job when the server is idle. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -313,7 +313,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schedule">Schedule</h3>
-<p>Defines the execution schedule of the Job.</p>
+<p>Defines the execution schedule of the Job. <code>Required</code> <code>Default(&quot;NON&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.62</code></p>
 <p>Type: <strong><a href="Systems.Config.Jobs.html#schedule">Schedule</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Schedule</code>(Systems.Config.Jobs.md#schedule) data attribute<br>

@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.CrewMembers.html#ordinalpos">OrdinalPos</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader</td>
+<td>Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader.</td>
 </tr>
 </tbody>
 </table>
@@ -143,12 +143,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.CrewMembers.html#crew">Crew</a></td>
 <td><a href="Applications.Fleet.Crews.html">Crews</a></td>
-<td>Id of the crew</td>
+<td>The crew to which this member belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.CrewMembers.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The crew member person</td>
+<td>The crew member person. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -189,7 +189,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ordinalpos">OrdinalPos</h3>
-<p>Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader</p>
+<p>Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -218,14 +218,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="crew">Crew</h3>
-<p>Id of the crew</p>
+<p>The crew to which this member belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.Fleet.Crews.html">Crews</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>The crew member person</p>
+<p>The crew member person. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

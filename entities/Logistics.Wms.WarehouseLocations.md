@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse. 
+| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. |
-| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. |
+| [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. `Required` `Filter(multi eq)` `Owner` |
+| [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### LocationAddress
 
-The address of the location. Should be unique within the warehouse.
+The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)`
 
 Type: **string (32)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **HiddenByDefault**
 
 ### Warehouse
 
-The warehouse containing the location.
+The warehouse containing the location. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseZone
 
-The zone, which contains the location.
+The zone, which contains the location. `Required` `Filter(multi eq)`
 
 Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
 Category: **System**  

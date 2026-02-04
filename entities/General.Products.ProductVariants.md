@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BarCode](General.Products.ProductVariants.md#barcode) | string (16) __nullable__ | When specified, it contains a bar code which uniquely identifies the product variant. 
-| [Code](General.Products.ProductVariants.md#code) | string (16) | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. 
-| [Name](General.Products.ProductVariants.md#name) | [MultilanguageString (512)](../data-types.md#multilanguagestring) __nullable__ | Product variant name. It is the concatenation of the names of the color, size and style. 
-| [ShortCode](General.Products.ProductVariants.md#shortcode) | string (32) __nullable__ | Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes). 
+| [BarCode](General.Products.ProductVariants.md#barcode) | string (16) __nullable__ | When specified, it contains a bar code which uniquely identifies the product variant. `Filter(eq;like)` `ORD` 
+| [Code](General.Products.ProductVariants.md#code) | string (16) | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. `Required` `Filter(eq;like)` `ReadOnly` 
+| [Name](General.Products.ProductVariants.md#name) | [MultilanguageString (512)](../data-types.md#multilanguagestring) __nullable__ | Product variant name. It is the concatenation of the names of the color, size and style. `ReadOnly` 
+| [ShortCode](General.Products.ProductVariants.md#shortcode) | string (32) __nullable__ | Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes). `Filter(eq;like)` `Introduced in version 23.1.1.19` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](General.Products.ProductVariants.md#product) | [Products](General.Products.Products.md) | The product for which this variant is defined. |
-| [VariantColor](General.Products.ProductVariants.md#variantcolor) | [VariantColors](General.Products.VariantColors.md) (nullable) | The color of the variant. NULL means that the variant does not have a specific color. |
-| [VariantSize](General.Products.ProductVariants.md#variantsize) | [VariantSizes](General.Products.VariantSizes.md) (nullable) | The size of the variant. NULL means that the variant does not have a specific size. |
-| [VariantStyle](General.Products.ProductVariants.md#variantstyle) | [VariantStyles](General.Products.VariantStyles.md) (nullable) | The style of the variant. NULL means that the variant does not have a specific style. |
+| [Product](General.Products.ProductVariants.md#product) | [Products](General.Products.Products.md) | The product for which this variant is defined. `Required` `Filter(multi eq)` `Owner` |
+| [VariantColor](General.Products.ProductVariants.md#variantcolor) | [VariantColors](General.Products.VariantColors.md) (nullable) | The color of the variant. null means that the variant does not have a specific color. `Filter(multi eq)` |
+| [VariantSize](General.Products.ProductVariants.md#variantsize) | [VariantSizes](General.Products.VariantSizes.md) (nullable) | The size of the variant. null means that the variant does not have a specific size. `Filter(multi eq)` |
+| [VariantStyle](General.Products.ProductVariants.md#variantstyle) | [VariantStyles](General.Products.VariantStyles.md) (nullable) | The style of the variant. null means that the variant does not have a specific style. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### BarCode
 
-When specified, it contains a bar code which uniquely identifies the product variant.
+When specified, it contains a bar code which uniquely identifies the product variant. `Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.
+The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. `Required` `Filter(eq;like)` `ReadOnly`
 
 Type: **string (16)**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Product variant name. It is the concatenation of the names of the color, size and style.
+Product variant name. It is the concatenation of the names of the color, size and style. `ReadOnly`
 
 Type: **[MultilanguageString (512)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Front-End Recalc Expressions:
 `Join( " ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
 ### ShortCode
 
-Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).
+Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes). `Filter(eq;like)` `Introduced in version 23.1.1.19`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product for which this variant is defined.
+The product for which this variant is defined. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### VariantColor
 
-The color of the variant. NULL means that the variant does not have a specific color.
+The color of the variant. null means that the variant does not have a specific color. `Filter(multi eq)`
 
 Type: **[VariantColors](General.Products.VariantColors.md) (nullable)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### VariantSize
 
-The size of the variant. NULL means that the variant does not have a specific size.
+The size of the variant. null means that the variant does not have a specific size. `Filter(multi eq)`
 
 Type: **[VariantSizes](General.Products.VariantSizes.md) (nullable)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### VariantStyle
 
-The style of the variant. NULL means that the variant does not have a specific style.
+The style of the variant. null means that the variant does not have a specific style. `Filter(multi eq)`
 
 Type: **[VariantStyles](General.Products.VariantStyles.md) (nullable)**  
 Category: **System**  

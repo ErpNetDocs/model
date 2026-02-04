@@ -121,37 +121,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Resources.html#active">Active</a></td>
 <td>boolean</td>
-<td>Indicates whether the current resource is active.</td>
+<td>Indicates whether the current resource is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#name">Name</a></td>
 <td>string (64)</td>
-<td>Name of the resource</td>
+<td>Name of the resource. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>User notes for the resource</td>
+<td>User notes for the resource.</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#setupdurationhours">SetupDurationHours</a></td>
 <td>decimal (6, 2)</td>
-<td>The usual duration of setup when changing production</td>
+<td>The usual duration of setup when changing production. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#setupscrapquantity">SetupScrapQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The usual quantity of fixed scrap occurring when changing production.</td>
+<td>The usual quantity of fixed scrap occurring when changing production. . <code>Unit: SetupScrapUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#standardcostperhour">StandardCostPerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></td>
-<td>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.</td>
+<td>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#standardpriceperhour">StandardPricePerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></td>
-<td>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.</td>
+<td>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,22 +168,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Resources.html#primaryunit">PrimaryUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>Primary measurement unit for quantities of the resource</td>
+<td>Primary measurement unit for quantities of the resource. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#resourcecurrency">ResourceCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>Currency for this resource. This currency applies for the standard price and cost per hour.</td>
+<td>Currency for this resource. This currency applies for the standard price and cost per hour. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#resourcegroup">ResourceGroup</a></td>
 <td><a href="Production.Resources.ResourceGroups.html">ResourceGroups</a></td>
-<td>The Id of the containing resource group</td>
+<td>The Id of the containing resource group. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#setupscrapunit">SetupScrapUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement units of Setup_Scrap_Quantity</td>
+<td>The measurement units of Setup_Scrap_Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -200,7 +200,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Resources.html#id">Id</a></td>
 <td>guid</td>
-<td>Unique resource id</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#objectversion">ObjectVersion</a></td>
@@ -233,7 +233,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Indicates whether the current resource is active.</p>
+<p>Indicates whether the current resource is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the resource</p>
+<p>Name of the resource. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -249,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>User notes for the resource</p>
+<p>User notes for the resource.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,7 +257,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setupdurationhours">SetupDurationHours</h3>
-<p>The usual duration of setup when changing production</p>
+<p>The usual duration of setup when changing production. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (6, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -265,7 +265,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setupscrapquantity">SetupScrapQuantity</h3>
-<p>The usual quantity of fixed scrap occurring when changing production.</p>
+<p>The usual quantity of fixed scrap occurring when changing production. . <code>Unit: SetupScrapUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -273,21 +273,20 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardcostperhour">StandardCostPerHour</h3>
-<p>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.</p>
+<p>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
-<p>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.</p>
+<p>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used. <code>Currency: ResourceCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
-<p>Unique resource id</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -310,19 +309,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="primaryunit">PrimaryUnit</h3>
-<p>Primary measurement unit for quantities of the resource</p>
+<p>Primary measurement unit for quantities of the resource. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resourcecurrency">ResourceCurrency</h3>
-<p>Currency for this resource. This currency applies for the standard price and cost per hour.</p>
+<p>Currency for this resource. This currency applies for the standard price and cost per hour. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resourcegroup">ResourceGroup</h3>
-<p>The Id of the containing resource group</p>
+<p>The Id of the containing resource group. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Production.Resources.ResourceGroups.html">ResourceGroups</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -330,7 +329,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setupscrapunit">SetupScrapUnit</h3>
-<p>The measurement units of Setup_Scrap_Quantity</p>
+<p>The measurement units of Setup_Scrap_Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

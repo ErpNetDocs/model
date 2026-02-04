@@ -53,27 +53,27 @@ Aggregate Tree
 | [AdjustmentTime](Production.ShopFloor.WorkOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Production.ShopFloor.WorkOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CompleteTime](Production.ShopFloor.WorkOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CompletionDate](Production.ShopFloor.WorkOrders.md#completiondate) | datetime __nullable__ | Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed. 
+| [CompletionDate](Production.ShopFloor.WorkOrders.md#completiondate) | datetime __nullable__ | Scheduled date of completion. Specifies the date when the workorder was completed. null means that the order is not yet completed. `Filter(ge;le)` 
 | [CreationTime](Production.ShopFloor.WorkOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Production.ShopFloor.WorkOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentDate](Production.ShopFloor.WorkOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Production.ShopFloor.WorkOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Production.ShopFloor.WorkOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Production.ShopFloor.WorkOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DueDate](Production.ShopFloor.WorkOrders.md#duedate) | datetime __nullable__ | The final due date, when the production should be ready. 
-| [DurationHour](Production.ShopFloor.WorkOrders.md#durationhour) | decimal (10, 0) | The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders) 
+| [DueDate](Production.ShopFloor.WorkOrders.md#duedate) | datetime __nullable__ | The final due date, when the production should be ready. `Filter(ge;le)` 
+| [DurationHour](Production.ShopFloor.WorkOrders.md#durationhour) | decimal (10, 0) | The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders). `Required` `Default(0)` 
 | [EntityName](Production.ShopFloor.WorkOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Production.ShopFloor.WorkOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Production.ShopFloor.WorkOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Production.ShopFloor.WorkOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
-| [Notes](Production.ShopFloor.WorkOrders.md#notes) | string (max) __nullable__ | User notes for the production order 
+| [<s>IsReleased</s>](Production.ShopFloor.WorkOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Production.ShopFloor.WorkOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [Notes](Production.ShopFloor.WorkOrders.md#notes) | string (max) __nullable__ | User notes for the production order. 
 | [ParentDocument<br />RelationshipType](Production.ShopFloor.WorkOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Production.ShopFloor.WorkOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Production.ShopFloor.WorkOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Priority](Production.ShopFloor.WorkOrders.md#priority) | [Priority](Production.ShopFloor.WorkOrders.md#priority) | Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest 
+| [Priority](Production.ShopFloor.WorkOrders.md#priority) | [Priority](Production.ShopFloor.WorkOrders.md#priority) | Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest. `Required` `Default(3)` `Filter(ge;le)` 
 | [ReadOnly](Production.ShopFloor.WorkOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Production.ShopFloor.WorkOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Production.ShopFloor.WorkOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReleaseDate](Production.ShopFloor.WorkOrders.md#releasedate) | datetime __nullable__ | Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order. 
+| [ReleaseDate](Production.ShopFloor.WorkOrders.md#releasedate) | datetime __nullable__ | Scheduled release date. Specifies the date when the order is planned/released to production. null means that still there is no plan for releasing the order. `Filter(ge;le)` 
 | [ReleaseTime](Production.ShopFloor.WorkOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Production.ShopFloor.WorkOrders.md#state) | [DocumentState](Production.ShopFloor.WorkOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Production.ShopFloor.WorkOrders.md#statetagsattribute) | string | Specifies the state of the document. 
@@ -90,8 +90,8 @@ Aggregate Tree
 | [AdjustedDocument](Production.ShopFloor.WorkOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Production.ShopFloor.WorkOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Production.ShopFloor.WorkOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DefaultMaterialsStore](Production.ShopFloor.WorkOrders.md#defaultmaterialsstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default materials store for the ingredients |
-| [DefaultOutputStore](Production.ShopFloor.WorkOrders.md#defaultoutputstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default output store for the finished products |
+| [DefaultMaterialsStore](Production.ShopFloor.WorkOrders.md#defaultmaterialsstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default materials store for the ingredients. `Filter(multi eq)` |
+| [DefaultOutputStore](Production.ShopFloor.WorkOrders.md#defaultoutputstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default output store for the finished products. `Filter(multi eq)` |
 | [DocumentType](Production.ShopFloor.WorkOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Production.ShopFloor.WorkOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Production.ShopFloor.WorkOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -106,7 +106,7 @@ Aggregate Tree
 | [ToCompanyDivision](Production.ShopFloor.WorkOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Production.ShopFloor.WorkOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Production.ShopFloor.WorkOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Workgroup](Production.ShopFloor.WorkOrders.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The workgroup which performs the operations |
+| [Workgroup](Production.ShopFloor.WorkOrders.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The workgroup which performs the operations. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -183,7 +183,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompletionDate
 
-Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.
+Scheduled date of completion. Specifies the date when the workorder was completed. null means that the order is not yet completed. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -263,7 +263,7 @@ Show in UI: **HiddenByDefault**
 
 ### DueDate
 
-The final due date, when the production should be ready.
+The final due date, when the production should be ready. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 ### DurationHour
 
-The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)
+The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders). `Required` `Default(0)`
 
 Type: **decimal (10, 0)**  
 Category: **System**  
@@ -306,7 +306,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -317,7 +317,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -328,7 +328,7 @@ Show in UI: **HiddenByDefault**
 
 ### Notes
 
-User notes for the production order
+User notes for the production order.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -369,7 +369,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest
+Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest. `Required` `Default(3)` `Filter(ge;le)`
 
 Type: **[Priority](Production.ShopFloor.WorkOrders.md#priority)**  
 Category: **System**  
@@ -424,7 +424,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReleaseDate
 
-Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.
+Scheduled release date. Specifies the date when the order is planned/released to production. null means that still there is no plan for releasing the order. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -633,7 +633,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultMaterialsStore
 
-Default materials store for the ingredients
+Default materials store for the ingredients. `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -644,7 +644,7 @@ Front-End Recalc Expressions:
 `obj.ItemIngredients.Select( c => c.Store).Distinct( ).OnlyIfSingle( )`
 ### DefaultOutputStore
 
-Default output store for the finished products
+Default output store for the finished products. `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -790,7 +790,7 @@ Show in UI: **HiddenByDefault**
 
 ### Workgroup
 
-The workgroup which performs the operations
+The workgroup which performs the operations. `Filter(multi eq)`
 
 Type: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 Category: **System**  

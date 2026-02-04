@@ -36,19 +36,19 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Finance.Payments.PaymentSlipAmounts.md#description) | string (254) __nullable__ | Description of the payed amount. The numbers of the documents which are payed for example. 
-| [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). 
-| [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). 
-| [LineNo](Finance.Payments.PaymentSlipAmounts.md#lineno) | int32 | The number of the line within the payment 
+| [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | [Direction](Finance.Payments.PaymentSlipAmounts.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Filter(eq)` 
+| [IsPartyPayment](Finance.Payments.PaymentSlipAmounts.md#ispartypayment) | boolean | Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)` 
+| [LineNo](Finance.Payments.PaymentSlipAmounts.md#lineno) | int32 | The number of the line within the payment. `Required` 
 | [PartyName](Finance.Payments.PaymentSlipAmounts.md#partyname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
-| [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#paymentdate) | datetime | The date on which the payment is done. 
-| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines. 
+| [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#paymentdate) | datetime | The date on which the payment is done. `Required` `Filter(ge;le)` 
+| [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't entered in the database yet. |
-| [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. |
+| [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. `Filter(multi eq)` |
+| [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. `Filter(multi eq)` |
 | [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) | The <see cref="PaymentSlip"/> to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Direction
 
-Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Filter(eq)`
 
 Type: **[Direction](Finance.Payments.PaymentSlipAmounts.md#direction)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPartyPayment
 
-Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).
+Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)`
 
 Type: **boolean**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **CannotBeShown**
 
 ### LineNo
 
-The number of the line within the payment
+The number of the line within the payment. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -138,7 +138,7 @@ Front-End Recalc Expressions:
 `obj.Party.ObtainPartyName( )`
 ### PaymentDate
 
-The date on which the payment is done.
+The date on which the payment is done. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -150,7 +150,7 @@ Front-End Recalc Expressions:
 `obj.PaymentSlip.DocumentDate`
 ### TotalAmount
 
-The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.
+The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency`
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -192,7 +192,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't entered in the database yet.
+The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -201,7 +201,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentReason
 
-The reason for the payment, as defined in Payment Reasons.
+The reason for the payment, as defined in Payment Reasons. `Filter(multi eq)`
 
 Type: **[PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
 Category: **System**  

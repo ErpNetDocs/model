@@ -127,7 +127,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this payment account is currently used.</td>
+<td>Indicates wheather the payment account is currently used (active). <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#name">Name</a></td>
@@ -137,7 +137,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#usebasecurrency">UseBaseCurrency</a></td>
 <td>boolean</td>
-<td>When enabled, this setting restricts the payment account to use only the base currency.</td>
+<td>When enabled, this setting restricts the payment account to use only the base currency. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 26.1.4.36</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,12 +159,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#bankaccount">BankAccount</a></td>
 <td><a href="General.Contacts.PartyBankAccounts.html">PartyBankAccounts</a> (nullable)</td>
-<td>The bank account, which is represented by this payment account.</td>
+<td>The bank account, which is represented by this payment account. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#currency">Currency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency in which the movements for this payment account will be recorded.</td>
+<td>The currency in which the movements for this payment account will be recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -179,7 +179,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.</td>
+<td>Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -238,7 +238,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, null, &quot;00000&quot;)</code></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this payment account is currently used.</p>
+<p>Indicates wheather the payment account is currently used (active). <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -253,7 +253,7 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usebasecurrency">UseBaseCurrency</h3>
-<p>When enabled, this setting restricts the payment account to use only the base currency.</p>
+<p>When enabled, this setting restricts the payment account to use only the base currency. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 26.1.4.36</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -338,13 +338,13 @@ Supported permissions</p>
 </tbody>
 </table>
 <h3 id="bankaccount">BankAccount</h3>
-<p>The bank account, which is represented by this payment account.</p>
+<p>The bank account, which is represented by this payment account. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.PartyBankAccounts.html">PartyBankAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currency">Currency</h3>
-<p>The currency in which the movements for this payment account will be recorded.</p>
+<p>The currency in which the movements for this payment account will be recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -362,7 +362,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.</p>
+<p>Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

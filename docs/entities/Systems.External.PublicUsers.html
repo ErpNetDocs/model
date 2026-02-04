@@ -131,52 +131,52 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#address">Address</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>The primary address of the user. Can be specified with latin or local characters.</td>
+<td>The primary address of the user. Can be specified with latin or local characters. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#alternateemail">AlternateEmail</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Alternate email of the user. Can be used for backup email for password restore.</td>
+<td>Alternate email of the user. Can be used for backup email for password restore. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#city">City</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The state of residence of the user. Can be specified with latin or local letters.</td>
+<td>The state of residence of the user. Can be specified with latin or local letters. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#companyname">CompanyName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the company, for which the user works, as specified by the user.</td>
+<td>The name of the company, for which the user works, as specified by the user. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#country">Country</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The country of residence of the user, with latin letters.</td>
+<td>The country of residence of the user, with latin letters. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#createdon">CreatedOn</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date and time when the user was created.</td>
+<td>The date and time when the user was created. <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#email">Email</a></td>
 <td>string (64)</td>
-<td>The primary email of the user. Used for notifications and password restore.</td>
+<td>The primary email of the user. Used for notifications and password restore. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#firstname">FirstName</a></td>
 <td>string (64)</td>
-<td>First name of the user.</td>
+<td>First name of the user. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the user account is active and access should be allowed.</td>
+<td>Specifies whether the user account is active and access should be allowed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#lastname">LastName</a></td>
 <td>string (64)</td>
-<td>Last name of the user.</td>
+<td>Last name of the user. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#notes">Notes</a></td>
@@ -186,32 +186,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordalgorithm">PasswordAlgorithm</a></td>
 <td>string (16)</td>
-<td>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.</td>
+<td>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordhash">PasswordHash</a></td>
 <td>string (128)</td>
-<td>Actual password storage. The format of the contents is determined by Password Algorithm.</td>
+<td>Actual password storage. The format of the contents is determined by Password Algorithm. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordrecoverycode">PasswordRecoveryCode</a></td>
 <td>guid <strong>nullable</strong></td>
-<td>Automatically generated unique code for the last password recovery attempt</td>
+<td>Automatically generated unique code for the last password recovery attempt. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#passwordrecoverycreationtime">PasswordRecovery<br>CreationTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time when the last password recovery code was created</td>
+<td>Date and time when the last password recovery code was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#phonenumber">PhoneNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>The primary phone number of the user.</td>
+<td>The primary phone number of the user. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#postalcode">PostalCode</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>The postal code of the default address of the user.</td>
+<td>The postal code of the default address of the user. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#profilepicture">ProfilePicture</a></td>
@@ -221,7 +221,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#state">State</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The state of residence of the user within the country. Can be specified with latin or local characters.</td>
+<td>The state of residence of the user within the country. Can be specified with latin or local characters. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -238,17 +238,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
-<td>Link to an internal company record, specified by internal employee.</td>
+<td>Link to an internal company record, specified by internal employee. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>Link to an internal person record. Usually specified by internal employee, but can also be an automated process.</td>
+<td>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#publicuserlist"><s>PublicUserList</s></a></td>
 <td><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></td>
-<td><strong>OBSOLETE! Do not use!</strong> The list in which the user account is saved.</td>
+<td><strong>OBSOLETE! Do not use!</strong> The list in which the user account is saved. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code></td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +304,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>1024</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="address">Address</h3>
-<p>The primary address of the user. Can be specified with latin or local characters.</p>
+<p>The primary address of the user. Can be specified with latin or local characters. <code>Filter(like)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -312,7 +312,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="alternateemail">AlternateEmail</h3>
-<p>Alternate email of the user. Can be used for backup email for password restore.</p>
+<p>Alternate email of the user. Can be used for backup email for password restore. <code>Filter(like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -320,7 +320,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="city">City</h3>
-<p>The state of residence of the user. Can be specified with latin or local letters.</p>
+<p>The state of residence of the user. Can be specified with latin or local letters. <code>Filter(like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -328,7 +328,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="companyname">CompanyName</h3>
-<p>The name of the company, for which the user works, as specified by the user.</p>
+<p>The name of the company, for which the user works, as specified by the user. <code>Filter(like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -336,7 +336,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="country">Country</h3>
-<p>The country of residence of the user, with latin letters.</p>
+<p>The country of residence of the user, with latin letters. <code>Filter(like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -344,7 +344,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createdon">CreatedOn</h3>
-<p>The date and time when the user was created.</p>
+<p>The date and time when the user was created. <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -352,7 +352,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="email">Email</h3>
-<p>The primary email of the user. Used for notifications and password restore.</p>
+<p>The primary email of the user. Used for notifications and password restore. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -360,7 +360,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="firstname">FirstName</h3>
-<p>First name of the user.</p>
+<p>First name of the user. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -368,7 +368,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the user account is active and access should be allowed.</p>
+<p>Specifies whether the user account is active and access should be allowed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -376,7 +376,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastname">LastName</h3>
-<p>Last name of the user.</p>
+<p>Last name of the user. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -392,7 +392,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="passwordalgorithm">PasswordAlgorithm</h3>
-<p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.</p>
+<p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -400,7 +400,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="passwordhash">PasswordHash</h3>
-<p>Actual password storage. The format of the contents is determined by Password Algorithm.</p>
+<p>Actual password storage. The format of the contents is determined by Password Algorithm. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -408,20 +408,20 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="passwordrecoverycode">PasswordRecoveryCode</h3>
-<p>Automatically generated unique code for the last password recovery attempt</p>
+<p>Automatically generated unique code for the last password recovery attempt. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>guid <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="passwordrecoverycreationtime">PasswordRecoveryCreationTime</h3>
-<p>Date and time when the last password recovery code was created</p>
+<p>Date and time when the last password recovery code was created. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="phonenumber">PhoneNumber</h3>
-<p>The primary phone number of the user.</p>
+<p>The primary phone number of the user. <code>Filter(like)</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -429,7 +429,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="postalcode">PostalCode</h3>
-<p>The postal code of the default address of the user.</p>
+<p>The postal code of the default address of the user. <code>Filter(like)</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -444,7 +444,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>The state of residence of the user within the country. Can be specified with latin or local characters.</p>
+<p>The state of residence of the user within the country. Can be specified with latin or local characters. <code>Filter(like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -495,19 +495,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="company">Company</h3>
-<p>Link to an internal company record, specified by internal employee.</p>
+<p>Link to an internal company record, specified by internal employee. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Companies.html">Companies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process.</p>
+<p>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="publicuserlist">PublicUserList</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The list in which the user account is saved.</p>
+<p><strong>OBSOLETE! Do not use!</strong> The list in which the user account is saved. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code></p>
 <p>Type: <strong><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

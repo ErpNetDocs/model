@@ -35,16 +35,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal (6, 5) | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price 
-| [IsActive](Crm.Pricing.PricingModels.md#isactive) | boolean | Indicates whether the current Pricing model is active. 
-| [Name](Crm.Pricing.PricingModels.md#name) | string (254) | The name of the pricing model 
+| [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal (6, 5) | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. `Required` `Default(0)` 
+| [IsActive](Crm.Pricing.PricingModels.md#isactive) | boolean | Indicates whether the current Pricing model is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [Name](Crm.Pricing.PricingModels.md#name) | string (254) | The name of the pricing model. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Crm.Pricing.PricingModels.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the prices will be calculated |
-| [PurchasePriceList](Crm.Pricing.PricingModels.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) | Purchase price list Id, which will be used to get the purchase price of the products |
+| [Currency](Crm.Pricing.PricingModels.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the prices will be calculated. `Required` `Filter(multi eq)` |
+| [PurchasePriceList](Crm.Pricing.PricingModels.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) | Purchase price list Id, which will be used to get the purchase price of the products. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### DefaultMarginPercent
 
-Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price
+Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. `Required` `Default(0)`
 
 Type: **decimal (6, 5)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Pricing model is active.
+Indicates whether the current Pricing model is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the pricing model
+The name of the pricing model. `Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **HiddenByDefault**
 
 ### Currency
 
-The currency in which the prices will be calculated
+The currency in which the prices will be calculated. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchasePriceList
 
-Purchase price list Id, which will be used to get the purchase price of the products
+Purchase price list Id, which will be used to get the purchase price of the products. `Required` `Filter(multi eq)`
 
 Type: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md)**  
 Category: **System**  

@@ -42,14 +42,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Config.Translations.md#active) | boolean | True when the translation is verified and activated. 
-| [ApplicationName](Systems.Config.Translations.md#applicationname) | string (50) __nullable__ | The application, containing the resource. For base resource types (T,C,H), this is NULL 
-| [CreationTime](Systems.Config.Translations.md#creationtime) | datetime | Timestamp when the translation was first created 
-| [Language](Systems.Config.Translations.md#language) | string (8) | The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian. 
-| [ResourceId](Systems.Config.Translations.md#resourceid) | string (800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code 
-| [ResourceType](Systems.Config.Translations.md#resourcetype) | [ResourceType](Systems.Config.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String 
-| [TranslationField](Systems.Config.Translations.md#translationfield) | string (max) | The translated text 
-| [UpdateTime](Systems.Config.Translations.md#updatetime) | datetime | When the translation was last updated 
+| [Active](Systems.Config.Translations.md#active) | boolean | True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)` 
+| [ApplicationName](Systems.Config.Translations.md#applicationname) | string (50) __nullable__ | The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD` 
+| [CreationTime](Systems.Config.Translations.md#creationtime) | datetime | Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
+| [Language](Systems.Config.Translations.md#language) | string (8) | The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian. `Required` `Default("en")` `Filter(eq)` 
+| [ResourceId](Systems.Config.Translations.md#resourceid) | string (800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)` 
+| [ResourceType](Systems.Config.Translations.md#resourcetype) | [ResourceType](Systems.Config.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)` 
+| [TranslationField](Systems.Config.Translations.md#translationfield) | string (max) | The translated text. `Required` 
+| [UpdateTime](Systems.Config.Translations.md#updatetime) | datetime | When the translation was last updated. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### Active
 
-True when the translation is verified and activated.
+True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -81,7 +81,7 @@ Front-End Recalc Expressions:
 `IIF( Not( IsNullOrEmpty( obj.TranslationField)), True, obj.Active)`
 ### ApplicationName
 
-The application, containing the resource. For base resource types (T,C,H), this is NULL
+The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD`
 
 Type: **string (50) __nullable__**  
 Indexed: **True**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTime
 
-Timestamp when the translation was first created
+Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### Language
 
-The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian.
+The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian. `Required` `Default("en")` `Filter(eq)`
 
 Type: **string (8)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceId
 
-The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code
+The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)`
 
 Type: **string (800)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceType
 
-T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String
+T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)`
 
 Type: **[ResourceType](Systems.Config.Translations.md#resourcetype)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### TranslationField
 
-The translated text
+The translated text. `Required`
 
 Type: **string (max)**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### UpdateTime
 
-When the translation was last updated
+When the translation was last updated. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  

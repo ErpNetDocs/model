@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string (450) | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc 
-| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string (450) | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery) 
+| [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string (450) | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)` 
+| [TokenName](Systems.Security.UserProviderTokens.md#tokenname) | string (450) | What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)` 
 | [TokenValue](Systems.Security.UserProviderTokens.md#tokenvalue) | string (max) __nullable__ | Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Security.UserProviderTokens.md#user) | [Users](Systems.Security.Users.md) | User for which we store tokens |
+| [User](Systems.Security.UserProviderTokens.md#user) | [Users](Systems.Security.Users.md) | User for which we store tokens. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### LoginProviderName
 
-Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc
+Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)`
 
 Type: **string (450)**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### TokenName
 
-What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)
+What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery). `Required` `Filter(eq)`
 
 Type: **string (450)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **HiddenByDefault**
 
 ### User
 
-User for which we store tokens
+User for which we store tokens. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

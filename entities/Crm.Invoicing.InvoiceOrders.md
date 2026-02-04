@@ -50,25 +50,25 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Invoicing.InvoiceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Invoicing.InvoiceOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Invoicing.InvoiceOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime __nullable__ | Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date. 
+| [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime __nullable__ | Apply date to be passed to the invoice. When not null specifies that the VAT entry should be applied for a different period than that specified by the document date. `Filter(ge;le)` 
 | [CompleteTime](Crm.Invoicing.InvoiceOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Invoicing.InvoiceOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreditNoteDescription](Crm.Invoicing.InvoiceOrders.md#creditnotedescription) | string (254) __nullable__ | Descriptions/reason for the credit note. 
-| [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When NULL = document date 
+| [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When null = document date. `Filter(ge;le)` 
 | [DocumentDate](Crm.Invoicing.InvoiceOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Crm.Invoicing.InvoiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Crm.Invoicing.InvoiceOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Crm.Invoicing.InvoiceOrders.md#notes) | string (254) __nullable__ | Notes for this InvoiceOrder. 
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Crm.Invoicing.InvoiceOrders.md#paymentduedate) | datetime __nullable__ | When not NULL specifies due date for the payment 
-| [PaymentDueStartDate](Crm.Invoicing.InvoiceOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. 
-| [PaymentTypeDescription](Crm.Invoicing.InvoiceOrders.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type 
+| [PaymentDueDate](Crm.Invoicing.InvoiceOrders.md#paymentduedate) | datetime __nullable__ | When not null specifies due date for the payment. `Filter(ge;le)` 
+| [PaymentDueStartDate](Crm.Invoicing.InvoiceOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. `Filter(ge;le)` 
+| [PaymentTypeDescription](Crm.Invoicing.InvoiceOrders.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type. `Required` 
 | [PlanningOnly](Crm.Invoicing.InvoiceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Invoicing.InvoiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Crm.Invoicing.InvoiceOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -88,12 +88,12 @@ Aggregate Tree
 | [AccessKey](Crm.Invoicing.InvoiceOrders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Crm.Invoicing.InvoiceOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Crm.Invoicing.InvoiceOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [CreditNoteOriginalInvoice](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown. |
-| [CreditNoteOriginal<br />InvoiceOrder](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) (nullable) | When the invoice is a credit note, can specify the original Invoice Order, on which this is based. NULL for normal invoice orders or when the original document is unknown. |
+| [CreditNoteOriginalInvoice](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoice) | [Invoices](Crm.Invoicing.Invoices.md) (nullable) | When the order is for credit note, may contain the original Invoice. null for normal orders or when the original document is unknown. `Filter(multi eq)` |
+| [CreditNoteOriginal<br />InvoiceOrder](Crm.Invoicing.InvoiceOrders.md#creditnoteoriginalinvoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) (nullable) | When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. `Filter(multi eq)` |
 | [CurrencyDirectory](Crm.Invoicing.InvoiceOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Crm.Invoicing.InvoiceOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer to whom to invoice |
-| [DealType](Crm.Invoicing.InvoiceOrders.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. |
-| [DocumentCurrency](Crm.Invoicing.InvoiceOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document is issued. All amounts are in this currency |
+| [Customer](Crm.Invoicing.InvoiceOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The primary customer to whom to invoice. `Required` `Filter(multi eq)` |
+| [DealType](Crm.Invoicing.InvoiceOrders.md#dealtype) | [DealTypes](Regulatory.Vat.DealTypes.md) (nullable) | VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. `Filter(multi eq)` |
+| [DocumentCurrency](Crm.Invoicing.InvoiceOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)` |
 | [DocumentType](Crm.Invoicing.InvoiceOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Crm.Invoicing.InvoiceOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Crm.Invoicing.InvoiceOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -101,12 +101,12 @@ Aggregate Tree
 | [FromParty](Crm.Invoicing.InvoiceOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Crm.Invoicing.InvoiceOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Crm.Invoicing.InvoiceOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [PaymentAccount](Crm.Invoicing.InvoiceOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not NULL, specifies the default payment account for the payment order |
-| [PaymentType](Crm.Invoicing.InvoiceOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not NULL specifies the payment type for the invoice |
+| [PaymentAccount](Crm.Invoicing.InvoiceOrders.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account for the payment order. `Filter(multi eq)` |
+| [PaymentType](Crm.Invoicing.InvoiceOrders.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null specifies the payment type for the invoice. `Filter(multi eq)` |
 | [PrimeCauseDocument](Crm.Invoicing.InvoiceOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Crm.Invoicing.InvoiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Crm.Invoicing.InvoiceOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Provides default value and filter for the lines. |
+| [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Default value and filter for the lines. Used to differenciate the invoice order for each sales order. `Filter(multi eq)` |
 | [Sequence](Crm.Invoicing.InvoiceOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Crm.Invoicing.InvoiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.Invoicing.InvoiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -176,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyDate
 
-Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.
+Apply date to be passed to the invoice. When not null specifies that the VAT entry should be applied for a different period than that specified by the document date. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeliveryDate
 
-Date, when the delivery was effected. When NULL = document date
+Date, when the delivery was effected. When null = document date. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -318,7 +318,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -359,7 +359,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-When not NULL specifies due date for the payment
+When not null specifies due date for the payment. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -371,7 +371,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))`
 ### PaymentDueStartDate
 
-The date when the payment becomes due for documents with one installment.
+The date when the payment becomes due for documents with one installment. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -383,7 +383,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))`
 ### PaymentTypeDescription
 
-Description of the payment type. Initially copied from the name of the Payment Type
+Description of the payment type. Initially copied from the name of the Payment Type. `Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -627,7 +627,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditNoteOriginalInvoice
 
-When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown.
+When the order is for credit note, may contain the original Invoice. null for normal orders or when the original document is unknown. `Filter(multi eq)`
 
 Type: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
 Indexed: **True**  
@@ -637,7 +637,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditNoteOriginalInvoiceOrder
 
-When the invoice is a credit note, can specify the original Invoice Order, on which this is based. NULL for normal invoice orders or when the original document is unknown.
+When the invoice is a credit note, can specify the original Invoice Order, on which this is based. null for normal invoice orders or when the original document is unknown. `Filter(multi eq)`
 
 Type: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) (nullable)**  
 Indexed: **True**  
@@ -656,7 +656,7 @@ Show in UI: **HiddenByDefault**
 
 ### Customer
 
-The primary customer to whom to invoice
+The primary customer to whom to invoice. `Required` `Filter(multi eq)`
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Category: **System**  
@@ -665,7 +665,7 @@ Show in UI: **ShownByDefault**
 
 ### DealType
 
-VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries.
+VAT deal type for this invoice order. This deal type is copied to the invoice to create VAT entries. `Filter(multi eq)`
 
 Type: **[DealTypes](Regulatory.Vat.DealTypes.md) (nullable)**  
 Category: **System**  
@@ -676,7 +676,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => c.LineDealType).Distinct( ).OnlyIfSingle( )`
 ### DocumentCurrency
 
-The currency in which the document is issued. All amounts are in this currency
+The currency in which the document is issued. All amounts are in this currency. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -752,7 +752,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentAccount
 
-When not NULL, specifies the default payment account for the payment order
+When not null, specifies the default payment account for the payment order. `Filter(multi eq)`
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -763,7 +763,7 @@ Front-End Recalc Expressions:
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentType
 
-When not NULL specifies the payment type for the invoice
+When not null specifies the payment type for the invoice. `Filter(multi eq)`
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -802,7 +802,7 @@ Show in UI: **HiddenByDefault**
 
 ### SalesOrder
 
-Provides default value and filter for the lines.
+Default value and filter for the lines. Used to differenciate the invoice order for each sales order. `Filter(multi eq)`
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Indexed: **True**  

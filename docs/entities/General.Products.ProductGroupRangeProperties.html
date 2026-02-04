@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></td>
 <td><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></td>
-<td>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;</td>
+<td>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroupRangeProperties.html#topropertyvalue">ToPropertyValue</a></td>
@@ -158,7 +158,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductGroupRangeProperties.html#property">Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
-<td>The property whose values will be altered.</td>
+<td>The property whose values will be altered. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="rangetype">RangeType</h3>
-<p>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;</p>
+<p>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. <code>Required</code> <code>Default(&quot;R&quot;)</code></p>
 <p>Type: <strong><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>RangeType</code>(General.Products.ProductGroupRangeProperties.md#rangetype) data attribute<br>
@@ -273,7 +273,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="property">Property</h3>
-<p>The property whose values will be altered.</p>
+<p>The property whose values will be altered. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

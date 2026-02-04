@@ -47,22 +47,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccrueExciseDuty](Regulatory.Excise.ExciseAdministrativeDocuments.md#accrueexciseduty) | boolean | Accrue Excise Duty 
+| [AccrueExciseDuty](Regulatory.Excise.ExciseAdministrativeDocuments.md#accrueexciseduty) | boolean | Accrue Excise Duty. `Required` `Default(false)` `Filter(eq)` `Introduced in version 22.1.5.62` 
 | [AdjustmentNumber](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Administrative<br />ReferenceCode](Regulatory.Excise.ExciseAdministrativeDocuments.md#administrativereferencecode) | string (32) __nullable__ | The reference code, returned the customs authorities, when the document is exported to them. NULL means the document is not yet exported to the authorities. 
+| [Administrative<br />ReferenceCode](Regulatory.Excise.ExciseAdministrativeDocuments.md#administrativereferencecode) | string (32) __nullable__ | The reference code, returned the customs authorities, when the document is exported to them. null means the document is not yet exported to the authorities. 
 | [CompleteTime](Regulatory.Excise.ExciseAdministrativeDocuments.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Regulatory.Excise.ExciseAdministrativeDocuments.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Regulatory.Excise.ExciseAdministrativeDocuments.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Direction](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | [MovementType](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | Indicates whether the document is Receipt or Issue of the Tax Wharehouse 
+| [Direction](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | [MovementType](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse. `Required` `Default("I")` `Filter(multi eq)` `Introduced in version 22.1.5.53` 
 | [DocumentDate](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Excise.ExciseAdministrativeDocuments.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Regulatory.Excise.ExciseAdministrativeDocuments.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [IsDeferredSubmission](Regulatory.Excise.ExciseAdministrativeDocuments.md#isdeferredsubmission) | boolean | Indicates whether the movement has begun under the cover of a paper administrative document. 
+| [IsDeferredSubmission](Regulatory.Excise.ExciseAdministrativeDocuments.md#isdeferredsubmission) | boolean | Indicates whether the movement has begun under the cover of a paper administrative document. `Required` `Default(false)` 
 | [ParentDocument<br />RelationshipType](Regulatory.Excise.ExciseAdministrativeDocuments.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Excise.ExciseAdministrativeDocuments.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Excise.ExciseAdministrativeDocuments.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Regulatory.Excise.ExciseAdministrativeDocuments.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -83,27 +83,27 @@ Aggregate Tree
 | [AccessKey](Regulatory.Excise.ExciseAdministrativeDocuments.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Regulatory.Excise.ExciseAdministrativeDocuments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [BaseCurrency](Regulatory.Excise.ExciseAdministrativeDocuments.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for Enterprise Company at the moment of Excise Administrative Document creation. |
+| [BaseCurrency](Regulatory.Excise.ExciseAdministrativeDocuments.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for Enterprise Company at the moment of Excise Administrative Document creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61` |
 | [CurrencyDirectory](Regulatory.Excise.ExciseAdministrativeDocuments.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DeliveryParty](Regulatory.Excise.ExciseAdministrativeDocuments.md#deliveryparty) | [Parties](General.Contacts.Parties.md) (nullable) | Indicates the party where the goods are send/received. NULL means it is the same as Other Party. |
+| [DeliveryParty](Regulatory.Excise.ExciseAdministrativeDocuments.md#deliveryparty) | [Parties](General.Contacts.Parties.md) (nullable) | Indicates the party where the goods are send/received. null means it is the same as Other Party. `Filter(multi eq)` `Introduced in version 24.1.0.10` |
 | [DocumentType](Regulatory.Excise.ExciseAdministrativeDocuments.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Regulatory.Excise.ExciseAdministrativeDocuments.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Regulatory.Excise.ExciseAdministrativeDocuments.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Regulatory.Excise.ExciseAdministrativeDocuments.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Regulatory.Excise.ExciseAdministrativeDocuments.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Regulatory.Excise.ExciseAdministrativeDocuments.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OtherParty](Regulatory.Excise.ExciseAdministrativeDocuments.md#otherparty) | [Parties](General.Contacts.Parties.md) | The other party, sending or receiving the goods. |
+| [OtherParty](Regulatory.Excise.ExciseAdministrativeDocuments.md#otherparty) | [Parties](General.Contacts.Parties.md) | The other party, sending or receiving the goods. `Required` `Filter(multi eq)` |
 | [Parent](Regulatory.Excise.ExciseAdministrativeDocuments.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Regulatory.Excise.ExciseAdministrativeDocuments.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReportingPerson](Regulatory.Excise.ExciseAdministrativeDocuments.md#reportingperson) | [Persons](General.Contacts.Persons.md) (nullable) | This is the person submitting the declaration. |
+| [ReportingPerson](Regulatory.Excise.ExciseAdministrativeDocuments.md#reportingperson) | [Persons](General.Contacts.Persons.md) (nullable) | This is the person submitting the declaration. `Filter(multi eq)` `Introduced in version 21.1.3.92` |
 | [ResponsiblePerson](Regulatory.Excise.ExciseAdministrativeDocuments.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Regulatory.Excise.ExciseAdministrativeDocuments.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Regulatory.Excise.ExciseAdministrativeDocuments.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TaxWarehouse](Regulatory.Excise.ExciseAdministrativeDocuments.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) | Our warehouse, dispatching the goods (Consignor). |
+| [TaxWarehouse](Regulatory.Excise.ExciseAdministrativeDocuments.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) | Our warehouse, dispatching the goods (Consignor). `Required` `Filter(multi eq)` |
 | [ToCompanyDivision](Regulatory.Excise.ExciseAdministrativeDocuments.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Regulatory.Excise.ExciseAdministrativeDocuments.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TransportationCarrier](Regulatory.Excise.ExciseAdministrativeDocuments.md#transportationcarrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier used for the transportation of the goods. |
-| [TransportationVehicle](Regulatory.Excise.ExciseAdministrativeDocuments.md#transportationvehicle) | [TransportationVehicles](Logistics.Transportation.TransportationVehicles.md) (nullable) | The vehicle, used for the transportation of the goods. |
+| [TransportationCarrier](Regulatory.Excise.ExciseAdministrativeDocuments.md#transportationcarrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier used for the transportation of the goods. `Filter(multi eq)` |
+| [TransportationVehicle](Regulatory.Excise.ExciseAdministrativeDocuments.md#transportationvehicle) | [TransportationVehicles](Logistics.Transportation.TransportationVehicles.md) (nullable) | The vehicle, used for the transportation of the goods. `Filter(multi eq)` |
 | [UserStatus](Regulatory.Excise.ExciseAdministrativeDocuments.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 
 
@@ -138,7 +138,7 @@ Aggregate Tree
 
 ### AccrueExciseDuty
 
-Accrue Excise Duty
+Accrue Excise Duty. `Required` `Default(false)` `Filter(eq)` `Introduced in version 22.1.5.62`
 
 Type: **boolean**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdministrativeReferenceCode
 
-The reference code, returned the customs authorities, when the document is exported to them. NULL means the document is not yet exported to the authorities.
+The reference code, returned the customs authorities, when the document is exported to them. null means the document is not yet exported to the authorities.
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -224,7 +224,7 @@ Show in UI: **HiddenByDefault**
 
 ### Direction
 
-Indicates whether the document is Receipt or Issue of the Tax Wharehouse
+Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse. `Required` `Default("I")` `Filter(multi eq)` `Introduced in version 22.1.5.53`
 
 Type: **[MovementType](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction)**  
 Category: **System**  
@@ -311,7 +311,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsDeferredSubmission
 
-Indicates whether the movement has begun under the cover of a paper administrative document.
+Indicates whether the movement has begun under the cover of a paper administrative document. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -573,7 +573,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseCurrency
 
-The base currency for Enterprise Company at the moment of Excise Administrative Document creation.
+The base currency for Enterprise Company at the moment of Excise Administrative Document creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.61`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -596,7 +596,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeliveryParty
 
-Indicates the party where the goods are send/received. NULL means it is the same as Other Party.
+Indicates the party where the goods are send/received. null means it is the same as Other Party. `Filter(multi eq)` `Introduced in version 24.1.0.10`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -662,7 +662,7 @@ Show in UI: **HiddenByDefault**
 
 ### OtherParty
 
-The other party, sending or receiving the goods.
+The other party, sending or receiving the goods. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -691,7 +691,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReportingPerson
 
-This is the person submitting the declaration.
+This is the person submitting the declaration. `Filter(multi eq)` `Introduced in version 21.1.3.92`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -727,7 +727,7 @@ Show in UI: **HiddenByDefault**
 
 ### TaxWarehouse
 
-Our warehouse, dispatching the goods (Consignor).
+Our warehouse, dispatching the goods (Consignor). `Required` `Filter(multi eq)`
 
 Type: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md)**  
 Category: **System**  
@@ -757,7 +757,7 @@ Back-End Default Expression:
 
 ### TransportationCarrier
 
-The carrier used for the transportation of the goods.
+The carrier used for the transportation of the goods. `Filter(multi eq)`
 
 Type: **[Carriers](Logistics.Shipment.Carriers.md) (nullable)**  
 Category: **System**  
@@ -766,7 +766,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportationVehicle
 
-The vehicle, used for the transportation of the goods.
+The vehicle, used for the transportation of the goods. `Filter(multi eq)`
 
 Type: **[TransportationVehicles](Logistics.Transportation.TransportationVehicles.md) (nullable)**  
 Category: **System**  

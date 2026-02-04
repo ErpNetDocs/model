@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Agile.UserStateCaseCategories.md#notes) | string (max) __nullable__ | Additional information or comments. 
+| [Notes](Projects.Agile.UserStateCaseCategories.md#notes) | string (max) __nullable__ | Additional information or comments. `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CaseCategory](Projects.Agile.UserStateCaseCategories.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category in which the user state will be used. |
-| [UserState](Projects.Agile.UserStateCaseCategories.md#userstate) | [UserStates](Projects.Agile.UserStates.md) | The user state that will be used in the selected case category. |
+| [CaseCategory](Projects.Agile.UserStateCaseCategories.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category in which the user state will be used. `Required` `Filter(multi eq)` |
+| [UserState](Projects.Agile.UserStateCaseCategories.md#userstate) | [UserStates](Projects.Agile.UserStates.md) | The user state that will be used in the selected case category. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional information or comments.
+Additional information or comments. `Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **HiddenByDefault**
 
 ### CaseCategory
 
-The category in which the user state will be used.
+The category in which the user state will be used. `Required` `Filter(multi eq)`
 
 Type: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 Indexed: **True**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### UserState
 
-The user state that will be used in the selected case category.
+The user state that will be used in the selected case category. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[UserStates](Projects.Agile.UserStates.md)**  
 Category: **System**  

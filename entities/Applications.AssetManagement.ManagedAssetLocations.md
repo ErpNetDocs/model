@@ -36,16 +36,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location. 
+| [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location. `Required` `Default(Now)` `Filter(ge;le)` 
 | [Notes](Applications.AssetManagement.ManagedAssetLocations.md#notes) | string (max) __nullable__ | Might contain additional notes for the exact location of the asset within the enterprise company location. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompanyLocation](Applications.AssetManagement.ManagedAssetLocations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location, where the asset is assigned. |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, whose location is recorded. |
-| [ResponsiblePerson](Applications.AssetManagement.ManagedAssetLocations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person. |
+| [EnterpriseCompanyLocation](Applications.AssetManagement.ManagedAssetLocations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location, where the asset is assigned. `Required` `Filter(multi eq)` |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetLocations.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The asset, whose location is recorded. `Required` `Filter(multi eq)` `Owner` |
+| [ResponsiblePerson](Applications.AssetManagement.ManagedAssetLocations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### FromDate
 
-The date on which the asset is assigned to the location.
+The date on which the asset is assigned to the location. `Required` `Default(Now)` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location, where the asset is assigned.
+The enterprise company location, where the asset is assigned. `Required` `Filter(multi eq)`
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Indexed: **True**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAsset
 
-The asset, whose location is recorded.
+The asset, whose location is recorded. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 Indexed: **True**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### ResponsiblePerson
 
-The responsible person, to which the asset is assigned. NULL when the asset is not assigned to any particular responsible person.
+The responsible person, to which the asset is assigned. null when the asset is not assigned to any particular responsible person. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Indexed: **True**  

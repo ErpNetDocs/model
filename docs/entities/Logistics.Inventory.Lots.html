@@ -109,21 +109,62 @@ Max level:  4 - Track object attribute and blob changes</p>
 <li><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a></li>
 </ul>
 <h2 id="attributes">Attributes</h2>
-<p>| Name | Type | Description |
-| ---- | ---- | --- |
-| <a href="Logistics.Inventory.Lots.html#alcoholicstrength">AlcoholicStrength</a> | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.
-| <a href="Logistics.Inventory.Lots.html#description">Description</a> | <a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong> | The description of this Lot.
-| <a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a> | datetime <strong>nullable</strong> | Expiry date for this lot.
-| <a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a> | string (50) <strong>nullable</strong> | The license number for this lot. Null when license number is N/A or unknown.
-| <a href="Logistics.Inventory.Lots.html#number">Number</a> | string (30) | The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code>
-| <a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a> | guid <strong>nullable</strong> | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code>
-| <a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a> | string (30) <strong>nullable</strong> | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.
-| <a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a> | date <strong>nullable</strong> | The date of the first receipt of products in this lot.
-| <a href="Logistics.Inventory.Lots.html#status">Status</a> | <a href="Logistics.Inventory.Lots.html#status">Status</a> | Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#alcoholicstrength">AlcoholicStrength</a></td>
+<td>decimal (5, 2)</td>
+<td>Percentage of pure alcohol used in excise duty reporting. <code>Required</code> <code>Default(0)</code> <code>Introduced in version 22.1.6.66</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#description">Description</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
+<td>The description of this Lot.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Expiry date for this lot. <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a></td>
+<td>string (50) <strong>nullable</strong></td>
+<td>The license number for this lot. Null when license number is N/A or unknown.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#number">Number</a></td>
+<td>string (30)</td>
+<td>The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a></td>
+<td>guid <strong>nullable</strong></td>
+<td>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a></td>
+<td>string (30) <strong>nullable</strong></td>
+<td>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a></td>
+<td>date <strong>nullable</strong></td>
+<td>The date of the first receipt of products in this lot. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
+<td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
+<td>Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References</h2>
 <table>
 <thead>
@@ -137,32 +178,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#blockedfordocument">BlockedForDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>If non-null, contains the document for which the lot is blocked</td>
+<td>If non-null, contains the document for which the lot is blocked. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#blockedforparty">BlockedForParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>Non-NULL when the warehouse lot is blocked specifically for some party</td>
+<td>Non-null when the warehouse lot is blocked specifically for some party. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#certificatedocument">CertificateDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>Document, containing the certificate for this lot.</td>
+<td>Document, containing the certificate for this lot. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#excisemeasuringtransaction">ExciseMeasuringTransaction</a></td>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</td>
-<td>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</td>
+<td>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.59</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product to which the lot is bound</td>
+<td>The product to which the lot is bound. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#receiptstoretransaction">ReceiptStoreTransaction</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a> (nullable)</td>
-<td>The store receipt transaction, which created the lot. NULL if the lot is manually created</td>
+<td>The store receipt transaction, which created the lot. null if the lot is manually created. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -210,7 +251,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alcoholicstrength">AlcoholicStrength</h3>
-<p>Percentage of pure alcohol used in excise duty reporting.</p>
+<p>Percentage of pure alcohol used in excise duty reporting. <code>Required</code> <code>Default(0)</code> <code>Introduced in version 22.1.6.66</code></p>
 <p>Type: <strong>decimal (5, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -225,7 +266,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="expirydate">ExpiryDate</h3>
-<p>Expiry date for this lot.</p>
+<p>Expiry date for this lot. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -257,7 +298,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="purchaselotnumber">PurchaseLotNumber</h3>
-<p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.</p>
+<p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. <code>Filter(like)</code></p>
 <p>Type: <strong>string (30) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -265,18 +306,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>30</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receiptdate">ReceiptDate</h3>
-<p>The date of the first receipt of products in this lot.</p>
+<p>The date of the first receipt of products in this lot. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use</p>
+<p>Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Logistics.Inventory.Lots.md#status) data attribute<br>
@@ -355,38 +392,38 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="blockedfordocument">BlockedForDocument</h3>
-<p>If non-null, contains the document for which the lot is blocked</p>
+<p>If non-null, contains the document for which the lot is blocked. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="blockedforparty">BlockedForParty</h3>
-<p>Non-NULL when the warehouse lot is blocked specifically for some party</p>
+<p>Non-null when the warehouse lot is blocked specifically for some party. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="certificatedocument">CertificateDocument</h3>
-<p>Document, containing the certificate for this lot.</p>
+<p>Document, containing the certificate for this lot. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="excisemeasuringtransaction">ExciseMeasuringTransaction</h3>
-<p>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.</p>
+<p>When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.59</code></p>
 <p>Type: <strong><a href="Regulatory.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product to which the lot is bound</p>
+<p>The product to which the lot is bound. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receiptstoretransaction">ReceiptStoreTransaction</h3>
-<p>The store receipt transaction, which created the lot. NULL if the lot is manually created</p>
+<p>The store receipt transaction, which created the lot. null if the lot is manually created. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactions.html">StoreTransactions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

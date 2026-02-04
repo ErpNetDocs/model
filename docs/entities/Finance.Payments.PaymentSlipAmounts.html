@@ -126,17 +126,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></td>
-<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).</td>
+<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#ispartypayment">IsPartyPayment</a></td>
 <td>boolean</td>
-<td>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).</td>
+<td>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>The number of the line within the payment</td>
+<td>The number of the line within the payment. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#partyname">PartyName</a></td>
@@ -146,12 +146,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#paymentdate">PaymentDate</a></td>
 <td>datetime</td>
-<td>The date on which the payment is done.</td>
+<td>The date on which the payment is done. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.</td>
+<td>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. <code>Currency: PaymentSlip.DocumentCurrency</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,12 +168,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't entered in the database yet.</td>
+<td>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#paymentreason">PaymentReason</a></td>
 <td><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</td>
-<td>The reason for the payment, as defined in Payment Reasons.</td>
+<td>The reason for the payment, as defined in Payment Reasons. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#paymentslip">PaymentSlip</a></td>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).</p>
+<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#direction) data attribute<br>
@@ -263,7 +263,7 @@ Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ispartypayment">IsPartyPayment</h3>
-<p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).</p>
+<p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). <code>Required</code> <code>Default(true)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>The number of the line within the payment</p>
+<p>The number of the line within the payment. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -291,7 +291,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Party.ObtainPartyName( )</code></p>
 <h3 id="paymentdate">PaymentDate</h3>
-<p>The date on which the payment is done.</p>
+<p>The date on which the payment is done. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -300,7 +300,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PaymentSlip.DocumentDate</code></p>
 <h3 id="totalamount">TotalAmount</h3>
-<p>The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.</p>
+<p>The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. <code>Currency: PaymentSlip.DocumentCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -329,13 +329,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
-<p>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't entered in the database yet.</p>
+<p>The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymentreason">PaymentReason</h3>
-<p>The reason for the payment, as defined in Payment Reasons.</p>
+<p>The reason for the payment, as defined in Payment Reasons. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

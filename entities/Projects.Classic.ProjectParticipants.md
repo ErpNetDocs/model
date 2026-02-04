@@ -41,9 +41,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ParticipantParty](Projects.Classic.ProjectParticipants.md#participantparty) | [Parties](General.Contacts.Parties.md) | The party Id of the participant |
-| [Project](Projects.Classic.ProjectParticipants.md#project) | [Projects](Projects.Classic.Projects.md) | The project in which the participant will participate |
-| [ProjectTypeRole](Projects.Classic.ProjectParticipants.md#projecttyperole) | [TypeRoles](Projects.Classic.TypeRoles.md) (nullable) | The role which the participant will play in the project. NULL means that the role is undefined |
+| [ParticipantParty](Projects.Classic.ProjectParticipants.md#participantparty) | [Parties](General.Contacts.Parties.md) | The party Id of the participant. `Required` `Filter(multi eq)` |
+| [Project](Projects.Classic.ProjectParticipants.md#project) | [Projects](Projects.Classic.Projects.md) | The project in which the participant will participate. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectTypeRole](Projects.Classic.ProjectParticipants.md#projecttyperole) | [TypeRoles](Projects.Classic.TypeRoles.md) (nullable) | The role which the participant will play in the project. null means that the role is undefined. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -102,7 +102,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParticipantParty
 
-The party Id of the participant
+The party Id of the participant. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### Project
 
-The project in which the participant will participate
+The project in which the participant will participate. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Projects](Projects.Classic.Projects.md)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTypeRole
 
-The role which the participant will play in the project. NULL means that the role is undefined
+The role which the participant will play in the project. null means that the role is undefined. `Filter(multi eq)`
 
 Type: **[TypeRoles](Projects.Classic.TypeRoles.md) (nullable)**  
 Category: **System**  

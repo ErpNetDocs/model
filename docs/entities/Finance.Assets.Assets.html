@@ -128,12 +128,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Assets.Assets.html#deploymentdate">DeploymentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date, when the asset is first deployed. Not specified if the asset is not deployed yet.</td>
+<td>Date, when the asset is first deployed. Null if the asset is not deployed yet. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.</td>
+<td>Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#name">Name</a></td>
@@ -148,12 +148,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Assets.Assets.html#purchasedate">PurchaseDate</a></td>
 <td>datetime</td>
-<td>Original purchase date of the asset.</td>
+<td>Original purchase date of the asset. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#serialnumber">SerialNumber</a></td>
 <td>string (30) <strong>nullable</strong></td>
-<td>Serial number of the asset.</td>
+<td>Serial number of the asset. <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -170,12 +170,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Assets.Assets.html#assetcategory">AssetCategory</a></td>
 <td><a href="Finance.Assets.AssetCategories.html">AssetCategories</a></td>
-<td>The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.</td>
+<td>The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#assetgroup">AssetGroup</a></td>
 <td><a href="Finance.Assets.AssetGroups.html">AssetGroups</a> (nullable)</td>
-<td>The asset group to which this asset belongs.</td>
+<td>The asset group to which this asset belongs. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -185,17 +185,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Assets.Assets.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</td>
-<td>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.</td>
+<td>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.74</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#primaryvaluationmodel">PrimaryValuationModel</a></td>
 <td><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#valuationcurrency">ValuationCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>Currency in which changes of the asset's value characteristics are stored.</td>
+<td>Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -252,14 +252,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deploymentdate">DeploymentDate</h3>
-<p>Date, when the asset is first deployed. Not specified if the asset is not deployed yet.</p>
+<p>Date, when the asset is first deployed. Null if the asset is not deployed yet. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.</p>
+<p>Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -282,14 +282,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchasedate">PurchaseDate</h3>
-<p>Original purchase date of the asset.</p>
+<p>Original purchase date of the asset. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number of the asset.</p>
+<p>Serial number of the asset. <code>Filter(eq)</code></p>
 <p>Type: <strong>string (30) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -340,13 +340,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assetcategory">AssetCategory</h3>
-<p>The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.</p>
+<p>The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Assets.AssetCategories.html">AssetCategories</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="assetgroup">AssetGroup</h3>
-<p>The asset group to which this asset belongs.</p>
+<p>The asset group to which this asset belongs. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Assets.AssetGroups.html">AssetGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -358,20 +358,20 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.</p>
+<p>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.74</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="primaryvaluationmodel">PrimaryValuationModel</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="valuationcurrency">ValuationCurrency</h3>
-<p>Currency in which changes of the asset's value characteristics are stored.</p>
+<p>Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

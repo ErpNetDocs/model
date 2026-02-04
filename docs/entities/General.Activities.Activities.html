@@ -177,7 +177,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#deadlinetime">DeadlineTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The deadline for the task. NULL if there is no deadline</td>
+<td>The deadline for the task. null if there is no deadline. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#documentdate">DocumentDate</a></td>
@@ -202,7 +202,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#endtime">EndTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Currently planned ending time of the task</td>
+<td>Currently planned ending time of the task. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#entityname">EntityName</a></td>
@@ -217,12 +217,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#notes">Notes</a></td>
@@ -237,7 +237,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#planneddurationminutes">PlannedDurationMinutes</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Total planned duration of the activity</td>
+<td>Total planned duration of the activity, regardless of the current execution status. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#planningonly">PlanningOnly</a></td>
@@ -247,12 +247,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#priority">Priority</a></td>
 <td><a href="General.Activities.Activities.html#priority">Priority</a></td>
-<td>Priority on the scale from 1 (least important) to 5 (very important)</td>
+<td>Priority on the scale from 1 (least important) to 5 (very important). <code>Required</code> <code>Default(3)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#private">Private</a></td>
 <td>boolean</td>
-<td>1 if the task is visible only to its owner; 0 if this is publicly visible task</td>
+<td>True if the task is visible only to its owner; false if this is publicly visible task. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#readonly">ReadOnly</a></td>
@@ -277,12 +277,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#remindertime">ReminderTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.</td>
+<td>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>Currently planned starting time of the task</td>
+<td>Currently planned starting time of the task. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#state">State</a></td>
@@ -297,12 +297,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#subject">Subject</a></td>
 <td>string (254)</td>
-<td>Task primary subject (required)</td>
+<td>Task primary subject (required). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#systemtype">SystemType</a></td>
 <td><a href="General.Activities.Activities.html#systemtype">SystemType</a></td>
-<td>T=Task; C=Communication; M=Meeting</td>
+<td>T=Task; C=Communication; M=Meeting. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#void">Void</a></td>
@@ -354,7 +354,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#contactperson">ContactPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The contact person, from the side of the Target Party.</td>
+<td>The contact person, from the side of the Target Party. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#currencydirectory">CurrencyDirectory</a></td>
@@ -394,7 +394,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#ownerparty">OwnerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party that owns the task. Initially this is the party that has created the task</td>
+<td>The party that owns the task. Initially this is the party that has created the task. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#parent">Parent</a></td>
@@ -409,12 +409,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a> (nullable)</td>
-<td>The project task for which the work is performed. NULL when the activity is not related to a project task.</td>
+<td>The project task for which the work is performed. null when the activity is not related to a project task. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#responsibleparty">ResponsibleParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Who is responsible for executing the task. Initially this is the owner of the task</td>
+<td>Who is responsible for executing the task. Initially this is the owner of the task. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#responsibleperson">ResponsiblePerson</a></td>
@@ -434,12 +434,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.Activities.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.Social.Groups.html">Groups</a> (nullable)</td>
-<td>Associates the activity with the specified social group. NULL means that this event is not related to a social group and might be publicly visible (can still be marked as private).</td>
+<td>Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). <code>Filter(multi eq)</code> <code>Introduced in version 23.1.1.3</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#targetparty">TargetParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>External participant or target of the task</td>
+<td>External participant or target of the task. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Activities.Activities.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -620,7 +620,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="deadlinetime">DeadlineTime</h3>
-<p>The deadline for the task. NULL if there is no deadline</p>
+<p>The deadline for the task. null if there is no deadline. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -661,7 +661,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>Currently planned ending time of the task</p>
+<p>Currently planned ending time of the task. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -684,7 +684,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -692,7 +692,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -739,7 +739,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planneddurationminutes">PlannedDurationMinutes</h3>
-<p>Total planned duration of the activity</p>
+<p>Total planned duration of the activity, regardless of the current execution status. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -754,7 +754,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority on the scale from 1 (least important) to 5 (very important)</p>
+<p>Priority on the scale from 1 (least important) to 5 (very important). <code>Required</code> <code>Default(3)</code></p>
 <p>Type: <strong><a href="General.Activities.Activities.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for Priority properties<br>
@@ -794,7 +794,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>3</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="private">Private</h3>
-<p>1 if the task is visible only to its owner; 0 if this is publicly visible task</p>
+<p>True if the task is visible only to its owner; false if this is publicly visible task. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -833,14 +833,14 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="remindertime">ReminderTime</h3>
-<p>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.</p>
+<p>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>Currently planned starting time of the task</p>
+<p>Currently planned starting time of the task. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -903,7 +903,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="subject">Subject</h3>
-<p>Task primary subject (required)</p>
+<p>Task primary subject (required). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -913,7 +913,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>GetSystemSubject( obj.SystemType, obj.TargetParty)</code></p>
 <h3 id="systemtype">SystemType</h3>
-<p>T=Task; C=Communication; M=Meeting</p>
+<p>T=Task; C=Communication; M=Meeting. <code>Required</code></p>
 <p>Type: <strong><a href="General.Activities.Activities.html#systemtype">SystemType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemType</code>(General.Activities.Activities.md#systemtype) data attribute<br>
@@ -1063,7 +1063,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contactperson">ContactPerson</h3>
-<p>The contact person, from the side of the Target Party.</p>
+<p>The contact person, from the side of the Target Party. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1114,7 +1114,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ownerparty">OwnerParty</h3>
-<p>The party that owns the task. Initially this is the party that has created the task</p>
+<p>The party that owns the task. Initially this is the party that has created the task. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1134,13 +1134,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The project task for which the work is performed. NULL when the activity is not related to a project task.</p>
+<p>The project task for which the work is performed. null when the activity is not related to a project task. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="responsibleparty">ResponsibleParty</h3>
-<p>Who is responsible for executing the task. Initially this is the owner of the task</p>
+<p>Who is responsible for executing the task. Initially this is the owner of the task. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1165,13 +1165,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>Associates the activity with the specified social group. NULL means that this event is not related to a social group and might be publicly visible (can still be marked as private).</p>
+<p>Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). <code>Filter(multi eq)</code> <code>Introduced in version 23.1.1.3</code></p>
 <p>Type: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetparty">TargetParty</h3>
-<p>External participant or target of the task</p>
+<p>External participant or target of the task. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

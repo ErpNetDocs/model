@@ -42,21 +42,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Systems.Config.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. 
-| [IsPrivate](Systems.Config.WebSites.md#isprivate) | boolean | Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. 
+| [IsActive](Systems.Config.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)` 
+| [IsPrivate](Systems.Config.WebSites.md#isprivate) | boolean | Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. `Required` `Default(false)` `Filter(eq)` `Introduced in version 23.1.0.8` 
 | [Notes](Systems.Config.WebSites.md#notes) | string (max) __nullable__ | Notes for this WebSite. 
-| [RelativeUrl](Systems.Config.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host. 
-| [SettingsJson](Systems.Config.WebSites.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website. 
-| [Uin](Systems.Config.WebSites.md#uin) | string (64) __nullable__ | For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance.  
-| [WebSiteType](Systems.Config.WebSites.md#websitetype) | [WebSiteType](Systems.Config.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. 
+| [RelativeUrl](Systems.Config.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. `Filter(eq)` 
+| [SettingsJson](Systems.Config.WebSites.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37` 
+| [Uin](Systems.Config.WebSites.md#uin) | string (64) __nullable__ | For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . `Introduced in version 24.1.5.42` 
+| [WebSiteType](Systems.Config.WebSites.md#websitetype) | [WebSiteType](Systems.Config.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Systems.Config.WebSites.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific. |
-| [TrustedApplication](Systems.Config.WebSites.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site |
-| [WebHost](Systems.Config.WebSites.md#webhost) | [WebHosts](Systems.Config.WebHosts.md) (nullable) | The web host in which to host the site. |
+| [EnterpriseCompany](Systems.Config.WebSites.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. `Filter(multi eq)` |
+| [TrustedApplication](Systems.Config.WebSites.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | The trusted application related to this web site. `Filter(multi eq)` `Introduced in version 20.1` |
+| [WebHost](Systems.Config.WebSites.md#webhost) | [WebHosts](Systems.Config.WebHosts.md) (nullable) | The web host in which to host the site. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the web site is active and will be instantiated upon next web server restart.
+Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPrivate
 
-Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.
+Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. `Required` `Default(false)` `Filter(eq)` `Introduced in version 23.1.0.8`
 
 Type: **boolean**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### RelativeUrl
 
-The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.
+The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. `Filter(eq)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### SettingsJson
 
-The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.
+The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### Uin
 
-For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance.
+For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . `Introduced in version 24.1.5.42`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### WebSiteType
 
-The type of web site - Api, Client Center, Id, etc.
+The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)`
 
 Type: **[WebSiteType](Systems.Config.WebSites.md#websitetype)**  
 Category: **System**  
@@ -233,7 +233,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.
+The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -242,7 +242,7 @@ Show in UI: **ShownByDefault**
 
 ### TrustedApplication
 
-The trusted application related to this web site
+The trusted application related to this web site. `Filter(multi eq)` `Introduced in version 20.1`
 
 Type: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
 Category: **System**  
@@ -251,7 +251,7 @@ Show in UI: **ShownByDefault**
 
 ### WebHost
 
-The web host in which to host the site.
+The web host in which to host the site. `Filter(multi eq)`
 
 Type: **[WebHosts](Systems.Config.WebHosts.md) (nullable)**  
 Indexed: **True**  

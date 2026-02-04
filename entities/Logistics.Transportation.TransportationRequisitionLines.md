@@ -43,20 +43,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentsDescription](Logistics.Transportation.TransportationRequisitionLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. 
+| [ContentsDescription](Logistics.Transportation.TransportationRequisitionLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. `Required` 
 | [LineNo](Logistics.Transportation.TransportationRequisitionLines.md#lineno) | int32 | Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
-| [PalletsCount](Logistics.Transportation.TransportationRequisitionLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. NULL when it is unknown. 
-| [ParentLineNo](Logistics.Transportation.TransportationRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line. 
-| [VolumeCbm](Logistics.Transportation.TransportationRequisitionLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). NULL when it is unknown. 
-| [WeightKg](Logistics.Transportation.TransportationRequisitionLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). NULL when it is unknown. 
+| [PalletsCount](Logistics.Transportation.TransportationRequisitionLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. null when it is unknown. 
+| [ParentLineNo](Logistics.Transportation.TransportationRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
+| [VolumeCbm](Logistics.Transportation.TransportationRequisitionLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). null when it is unknown. 
+| [WeightKg](Logistics.Transportation.TransportationRequisitionLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). null when it is unknown. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.Transportation.TransportationRequisitionLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. |
+| [CargoType](Logistics.Transportation.TransportationRequisitionLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. `Required` `Filter(multi eq)` |
 | [Document](Logistics.Transportation.TransportationRequisitionLines.md#document) | [TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md) | The owner document. The <see cref="Transportation<br />Requisition"/> to which this Transportation<br />RequisitionLine belongs. `Required` `Filter(multi eq)` |
-| [ParentDocument](Logistics.Transportation.TransportationRequisitionLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. NULL when the current line does not execute another line. |
+| [ParentDocument](Logistics.Transportation.TransportationRequisitionLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [TransportationRequisition](Logistics.Transportation.TransportationRequisitionLines.md#transportationrequisition) | [TransportationRequisitions](Logistics.Transportation.TransportationRequisitions.md) | The <see cref="Transportation<br />Requisition"/> to which this Transportation<br />RequisitionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### ContentsDescription
 
-Textual description of the cargo contents.
+Textual description of the cargo contents. `Required`
 
 Type: **string (128)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Front-End Recalc Expressions:
 `( obj.TransportationRequisition.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### PalletsCount
 
-Number of palettes comprising the cargo. NULL when it is unknown.
+Number of palettes comprising the cargo. null when it is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### VolumeCbm
 
-The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.
+The volume of the cargo, in CBM (cubic meters). null when it is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### WeightKg
 
-The weight of the cargo, in KG (kilogramms). NULL when it is unknown.
+The weight of the cargo, in KG (kilogramms). null when it is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -171,7 +171,7 @@ Show in UI: **HiddenByDefault**
 
 ### CargoType
 
-The type of the transported cargo.
+The type of the transported cargo. `Required` `Filter(multi eq)`
 
 Type: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocument
 
-The document, which the current line executes. NULL when the current line does not execute another line.
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  

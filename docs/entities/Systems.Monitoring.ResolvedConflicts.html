@@ -126,42 +126,42 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#conflictdescription">ConflictDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (400)</a></td>
-<td>Description of the conflict.</td>
+<td>Description of the conflict. <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#resolveconfirmedbyuser">ResolveConfirmedByUser</a></td>
 <td>boolean</td>
-<td>True, when the conflict resolution was manually confirmed by user.</td>
+<td>True, when the conflict resolution was manually confirmed by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#resolveconfirmedtime">ResolveConfirmedTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Time when the conflict resolution was confirmed by the user.</td>
+<td>Time when the conflict resolution was confirmed by the user. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#resolvedescription">ResolveDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (400)</a></td>
-<td>Description of the resolution of the conflict.</td>
+<td>Description of the resolution of the conflict. <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#resolvedtime">ResolvedTime</a></td>
 <td>datetime</td>
-<td>Time when the resolution of the conflict was made.</td>
+<td>Time when the resolution of the conflict was made. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#revisedbyuser">RevisedByUser</a></td>
 <td>boolean</td>
-<td>True, when the conflict resolution was revised (reviewed) manually by user.</td>
+<td>True, when the conflict resolution was revised (reviewed) manually by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#tablename">TableName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a></td>
-<td>Name of the table in which the conflict has occurred.</td>
+<td>Name of the table in which the conflict has occurred. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ResolvedConflicts.html#url">URL</a></td>
 <td>string (254)</td>
-<td>URL of the item (the row) for which the conflict occurred.</td>
+<td>URL of the item (the row) for which the conflict occurred. <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -209,14 +209,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="conflictdescription">ConflictDescription</h3>
-<p>Description of the conflict.</p>
+<p>Description of the conflict. <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (400)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resolveconfirmedbyuser">ResolveConfirmedByUser</h3>
-<p>True, when the conflict resolution was manually confirmed by user.</p>
+<p>True, when the conflict resolution was manually confirmed by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -224,7 +224,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resolveconfirmedtime">ResolveConfirmedTime</h3>
-<p>Time when the conflict resolution was confirmed by the user.</p>
+<p>Time when the conflict resolution was confirmed by the user. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -233,14 +233,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>DateTime.Now</code></p>
 <h3 id="resolvedescription">ResolveDescription</h3>
-<p>Description of the resolution of the conflict.</p>
+<p>Description of the resolution of the conflict. <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (400)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resolvedtime">ResolvedTime</h3>
-<p>Time when the resolution of the conflict was made.</p>
+<p>Time when the resolution of the conflict was made. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -248,7 +248,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="revisedbyuser">RevisedByUser</h3>
-<p>True, when the conflict resolution was revised (reviewed) manually by user.</p>
+<p>True, when the conflict resolution was revised (reviewed) manually by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -256,14 +256,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tablename">TableName</h3>
-<p>Name of the table in which the conflict has occurred.</p>
+<p>Name of the table in which the conflict has occurred. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="url">URL</h3>
-<p>URL of the item (the row) for which the conflict occurred.</p>
+<p>URL of the item (the row) for which the conflict occurred. <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

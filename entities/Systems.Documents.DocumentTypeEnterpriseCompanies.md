@@ -49,8 +49,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Systems.Documents.DocumentTypeEnterpriseCompanies.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which visibility (availability) is set. |
-| [EnterpriseCompany](Systems.Documents.DocumentTypeEnterpriseCompanies.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current document type is visible (available). |
+| [DocumentType](Systems.Documents.DocumentTypeEnterpriseCompanies.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which visibility (availability) is set. `Required` `Filter(multi eq)` `Owner` |
+| [EnterpriseCompany](Systems.Documents.DocumentTypeEnterpriseCompanies.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the current document type is visible (available). `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -98,7 +98,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The document type for which visibility (availability) is set.
+The document type for which visibility (availability) is set. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which the current document type is visible (available).
+The enterprise company for which the current document type is visible (available). `Required` `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

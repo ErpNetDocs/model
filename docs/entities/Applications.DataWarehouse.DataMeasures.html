@@ -123,22 +123,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique measure code.</td>
+<td>Unique measure code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#greenzonespreadpercent">GreenZoneSpreadPercent</a></td>
 <td>decimal (3, 2)</td>
-<td>The plus or minus percent, by which the goal can be missed, but still considered achieved.</td>
+<td>The plus or minus percent, by which the goal can be missed, but still considered achieved. <code>Required</code> <code>Default(0.2)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#horizontaltrendspreadpercent">HorizontalTrend<br>SpreadPercent</a></td>
 <td>decimal (3, 2)</td>
-<td>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.</td>
+<td>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. <code>Required</code> <code>Default(0.01)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#name">Name</a></td>
 <td>string (254)</td>
-<td>The name of the measure (multilanguage).</td>
+<td>The name of the measure (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#notes">Notes</a></td>
@@ -148,7 +148,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#period">Period</a></td>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#period">Period</a></td>
-<td>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</td>
+<td>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. <code>Required</code> <code>Default(&quot;Q&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +165,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataMeasures.html#datameasuregroup">DataMeasureGroup</a></td>
 <td><a href="Applications.DataWarehouse.DataMeasureGroups.html">DataMeasureGroups</a></td>
-<td>The group to which this measure belongs.</td>
+<td>The group to which this measure belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -213,7 +213,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique measure code.</p>
+<p>Unique measure code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -222,7 +222,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="greenzonespreadpercent">GreenZoneSpreadPercent</h3>
-<p>The plus or minus percent, by which the goal can be missed, but still considered achieved.</p>
+<p>The plus or minus percent, by which the goal can be missed, but still considered achieved. <code>Required</code> <code>Default(0.2)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -230,7 +230,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0.2</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="horizontaltrendspreadpercent">HorizontalTrendSpreadPercent</h3>
-<p>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.</p>
+<p>The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. <code>Required</code> <code>Default(0.01)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -238,7 +238,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0.01</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the measure (multilanguage).</p>
+<p>The name of the measure (multilanguage). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -254,7 +254,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="period">Period</h3>
-<p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.</p>
+<p>The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. <code>Required</code> <code>Default(&quot;Q&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Applications.DataWarehouse.DataMeasures.html#period">Period</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Period</code>(Applications.DataWarehouse.DataMeasures.md#period) data attribute<br>
@@ -333,7 +333,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="datameasuregroup">DataMeasureGroup</h3>
-<p>The group to which this measure belongs.</p>
+<p>The group to which this measure belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.DataWarehouse.DataMeasureGroups.html">DataMeasureGroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

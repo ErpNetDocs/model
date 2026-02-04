@@ -40,9 +40,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CustomerProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#customerproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined customer property that shall be copied |
-| [DocumentProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documentproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined document property in which to copy the customers property value |
-| [DocumentType](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which the current definitions apply. |
+| [CustomerProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#customerproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined customer property that shall be copied. `Required` `Filter(multi eq)` |
+| [DocumentProperty](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documentproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined document property in which to copy the customers property value. `Required` `Filter(multi eq)` |
+| [DocumentType](Crm.Sales.DefaultSalesOrderDocumentProperties.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which the current definitions apply. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -90,7 +90,7 @@ Show in UI: **HiddenByDefault**
 
 ### CustomerProperty
 
-The user-defined customer property that shall be copied
+The user-defined customer property that shall be copied. `Required` `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentProperty
 
-The user-defined document property in which to copy the customers property value
+The user-defined document property in which to copy the customers property value. `Required` `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The document type for which the current definitions apply.
+The document type for which the current definitions apply. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  

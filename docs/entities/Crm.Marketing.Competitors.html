@@ -126,12 +126,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.Competitors.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date when this company became a competitor.</td>
+<td>Start date when this company became a competitor. <code>Default(Today)</code> <code>Filter(ge;le)</code> <code>Introduced in version 25.1.0.62</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.Competitors.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Competitor is active.</td>
+<td>Indicates whether the current Competitor is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.Competitors.html#name">Name</a></td>
@@ -146,7 +146,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.Competitors.html#todate">ToDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date until which this company was considered a competitor. The field is blank if the company is still a competitor.</td>
+<td>Date until which this company was considered a competitor. The field is blank if the company is still a competitor. <code>Filter(ge;le)</code> <code>Introduced in version 25.1.0.62</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,12 +163,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.Competitors.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>Our enterprise company, for which we are defining the competitor. NULL means that the competitor is defined for all the companies in the ERP instance.</td>
+<td>Our enterprise company, for which we are defining the competitor. null means that the competitor is defined for all the companies in the ERP instance. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.Competitors.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>When not null, specifies the party of the competitor.</td>
+<td>When not null, specifies the party of the competitor. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Start date when this company became a competitor.</p>
+<p>Start date when this company became a competitor. <code>Default(Today)</code> <code>Filter(ge;le)</code> <code>Introduced in version 25.1.0.62</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Competitor is active.</p>
+<p>Indicates whether the current Competitor is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -264,7 +264,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>Date until which this company was considered a competitor. The field is blank if the company is still a competitor.</p>
+<p>Date until which this company was considered a competitor. The field is blank if the company is still a competitor. <code>Filter(ge;le)</code> <code>Introduced in version 25.1.0.62</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -314,13 +314,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Our enterprise company, for which we are defining the competitor. NULL means that the competitor is defined for all the companies in the ERP instance.</p>
+<p>Our enterprise company, for which we are defining the competitor. null means that the competitor is defined for all the companies in the ERP instance. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>When not null, specifies the party of the competitor.</p>
+<p>When not null, specifies the party of the competitor. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

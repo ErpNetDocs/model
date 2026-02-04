@@ -128,12 +128,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start of the dealer relationship</td>
+<td>Start of the dealer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Dealer is active.</td>
+<td>Indicates whether the current Dealer is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.5.22</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#notes">Notes</a></td>
@@ -143,7 +143,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Termination date of the dealership. NULL for active dealers</td>
+<td>Termination date of the dealership. null for active dealers. <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -160,12 +160,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company for which this dealer is recorded</td>
+<td>The enterprise company for which this dealer is recorded. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The base party record of the dealer</td>
+<td>The base party record of the dealer. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -213,7 +213,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Start of the dealer relationship</p>
+<p>Start of the dealer relationship. <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -221,7 +221,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Dealer is active.</p>
+<p>Indicates whether the current Dealer is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.5.22</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -237,7 +237,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Termination date of the dealership. NULL for active dealers</p>
+<p>Termination date of the dealership. null for active dealers. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -287,13 +287,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which this dealer is recorded</p>
+<p>The enterprise company for which this dealer is recorded. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>The base party record of the dealer</p>
+<p>The base party record of the dealer. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

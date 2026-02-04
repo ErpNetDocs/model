@@ -120,22 +120,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.VehicleLocationHistoryRecords.html#currentspeedkmh">CurrentSpeedKmH</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The current speed of the vehicle in km/h. NULL means the speed is unknown.</td>
+<td>The current speed of the vehicle in km/h. null means the speed is unknown. <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleLocationHistoryRecords.html#latitude">Latitude</a></td>
 <td>decimal (10, 7)</td>
-<td>Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].</td>
+<td>Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleLocationHistoryRecords.html#longitude">Longitude</a></td>
 <td>decimal (10, 7)</td>
-<td>Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].</td>
+<td>Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleLocationHistoryRecords.html#time">Time</a></td>
 <td>datetime</td>
-<td>The time, for which the location is stored.</td>
+<td>The time, for which the location is stored. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -152,7 +152,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.VehicleLocationHistoryRecords.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a></td>
-<td>The vehicle, whose location is being stored.</td>
+<td>The vehicle, whose location is being stored. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -200,28 +200,28 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="currentspeedkmh">CurrentSpeedKmH</h3>
-<p>The current speed of the vehicle in km/h. NULL means the speed is unknown.</p>
+<p>The current speed of the vehicle in km/h. null means the speed is unknown. <code>Introduced in version 19.1</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="latitude">Latitude</h3>
-<p>Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].</p>
+<p>Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code></p>
 <p>Type: <strong>decimal (10, 7)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="longitude">Longitude</h3>
-<p>Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].</p>
+<p>Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code></p>
 <p>Type: <strong>decimal (10, 7)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="time">Time</h3>
-<p>The time, for which the location is stored.</p>
+<p>The time, for which the location is stored. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="vehicle">Vehicle</h3>
-<p>The vehicle, whose location is being stored.</p>
+<p>The vehicle, whose location is being stored. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -33,21 +33,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalledPartyNumber](Applications.Telephony.CallDetails.md#calledpartynumber) | string (80) | The voice number of the party, which received the call 
-| [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string (80) | The voice number of the originating party of the call 
-| [CallType](Applications.Telephony.CallDetails.md#calltype) | [CallType](Applications.Telephony.CallDetails.md#calltype) | P=Phone; V=Video; M=Message/SMS 
-| [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string (32) __nullable__ | The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes 
-| [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds) 
-| [StartTime](Applications.Telephony.CallDetails.md#starttime) | datetime | The starting date and time of the call 
+| [CalledPartyNumber](Applications.Telephony.CallDetails.md#calledpartynumber) | string (80) | The voice number of the party, which received the call. `Required` `Filter(eq;like)` 
+| [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string (80) | The voice number of the originating party of the call. `Required` `Filter(eq;like)` 
+| [CallType](Applications.Telephony.CallDetails.md#calltype) | [CallType](Applications.Telephony.CallDetails.md#calltype) | P=Phone; V=Video; M=Message/SMS. `Required` `Default("P")` `Filter(eq)` 
+| [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string (32) __nullable__ | The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes. 
+| [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds). `Required` `Default(0)` `Filter(ge;le)` 
+| [StartTime](Applications.Telephony.CallDetails.md#starttime) | datetime | The starting date and time of the call. `Required` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalledParty](Applications.Telephony.CallDetails.md#calledparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which received the call. NULL when the party was not determined successfully |
-| [CallingParty](Applications.Telephony.CallDetails.md#callingparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which originated the call.  NULL when the party was not determined successfully |
-| [ExternalCompany](Applications.Telephony.CallDetails.md#externalcompany) | [Companies](General.Contacts.Companies.md) (nullable) | The company of the external party. It can be the party itself, or the parent party, whichever is company. NULL when the company cannot be determined |
-| [ExternalParty](Applications.Telephony.CallDetails.md#externalparty) | [Parties](General.Contacts.Parties.md) (nullable) | It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. NULL when the respective party was null, or when no external party participated in the call |
+| [CalledParty](Applications.Telephony.CallDetails.md#calledparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which received the call. null when the party was not determined successfully. `Filter(multi eq)` |
+| [CallingParty](Applications.Telephony.CallDetails.md#callingparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which originated the call.  null when the party was not determined successfully. `Filter(multi eq)` |
+| [ExternalCompany](Applications.Telephony.CallDetails.md#externalcompany) | [Companies](General.Contacts.Companies.md) (nullable) | The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. `Filter(multi eq)` |
+| [ExternalParty](Applications.Telephony.CallDetails.md#externalparty) | [Parties](General.Contacts.Parties.md) (nullable) | It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### CalledPartyNumber
 
-The voice number of the party, which received the call
+The voice number of the party, which received the call. `Required` `Filter(eq;like)`
 
 Type: **string (80)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### CallingPartyNumber
 
-The voice number of the originating party of the call
+The voice number of the originating party of the call. `Required` `Filter(eq;like)`
 
 Type: **string (80)**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### CallType
 
-P=Phone; V=Video; M=Message/SMS
+P=Phone; V=Video; M=Message/SMS. `Required` `Default("P")` `Filter(eq)`
 
 Type: **[CallType](Applications.Telephony.CallDetails.md#calltype)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### CallUniqueId
 
-The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes
+The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### DurationSeconds
 
-The duration of the call (in seconds)
+The duration of the call (in seconds). `Required` `Default(0)` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The starting date and time of the call
+The starting date and time of the call. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **HiddenByDefault**
 
 ### CalledParty
 
-The party, which received the call. NULL when the party was not determined successfully
+The party, which received the call. null when the party was not determined successfully. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### CallingParty
 
-The party, which originated the call.  NULL when the party was not determined successfully
+The party, which originated the call.  null when the party was not determined successfully. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -220,7 +220,7 @@ Show in UI: **ShownByDefault**
 
 ### ExternalCompany
 
-The company of the external party. It can be the party itself, or the parent party, whichever is company. NULL when the company cannot be determined
+The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. `Filter(multi eq)`
 
 Type: **[Companies](General.Contacts.Companies.md) (nullable)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### ExternalParty
 
-It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. NULL when the respective party was null, or when no external party participated in the call
+It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  

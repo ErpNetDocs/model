@@ -241,7 +241,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#tasktype">TaskType</a></td>
 <td><a href="Logistics.Wms.WarehouseOrders.html#tasktype">TaskType</a> <strong>nullable</strong></td>
-<td>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.</td>
+<td>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.28</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#void">Void</a></td>
@@ -368,12 +368,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse, where the order will be executed.</td>
+<td>The warehouse, where the order will be executed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#warehouseworker">WarehouseWorker</a></td>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</td>
-<td>When set, denotes that the whole order is assigned to the specified worker.</td>
+<td>When set, denotes that the whole order is assigned to the specified worker. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></td>
 </tr>
 </tbody>
 </table>
@@ -704,7 +704,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="tasktype">TaskType</h3>
-<p>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.</p>
+<p>The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.28</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseOrders.html#tasktype">TaskType</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>
@@ -1002,13 +1002,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse, where the order will be executed.</p>
+<p>The warehouse, where the order will be executed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
-<p>When set, denotes that the whole order is assigned to the specified worker.</p>
+<p>When set, denotes that the whole order is assigned to the specified worker. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

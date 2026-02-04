@@ -40,8 +40,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | The responsible party (usually employee) of the store. |
-| [Store](Logistics.Inventory.StoreResponsibleParties.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store for which we specify the responsible party. |
+| [ResponsibleParty](Logistics.Inventory.StoreResponsibleParties.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | The responsible party (usually employee) of the store. `Required` `Filter(multi eq)` |
+| [Store](Logistics.Inventory.StoreResponsibleParties.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store for which we specify the responsible party. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### ResponsibleParty
 
-The responsible party (usually employee) of the store.
+The responsible party (usually employee) of the store. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The store for which we specify the responsible party.
+The store for which we specify the responsible party. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

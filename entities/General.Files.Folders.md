@@ -34,14 +34,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Files.Folders.md#name) | string (128) | Name of the folder. Unique within its parent folder. 
+| [Name](General.Files.Folders.md#name) | string (128) | Name of the folder. Unique within its parent folder. `Required` `Filter(multi eq;like)` 
 | [Notes](General.Files.Folders.md#notes) | string (max) __nullable__ | Notes for this Folder. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.Files.Folders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users. |
+| [AccessKey](General.Files.Folders.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. `Filter(multi eq)` |
 | [Parent](General.Files.Folders.md#parent) | [Folders](General.Files.Folders.md) (nullable) | Parent folder. null if this is root folder. `Filter(multi eq)` |
 
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### Name
 
-Name of the folder. Unique within its parent folder.
+Name of the folder. Unique within its parent folder. `Required` `Filter(multi eq;like)`
 
 Type: **string (128)**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, required to unlock the folder contents. NULL means the folder is unprotected and accessible to all internal users.
+The access key, required to unlock the folder contents. null means the folder is unprotected and accessible to all internal users. `Filter(multi eq)`
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  

@@ -44,16 +44,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionFilterXml](Systems.Documents.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. 
+| [ConditionFilterXml](Systems.Documents.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. `Unit: obj.DocumentType.EntityName` `Required` 
 | [Description](Systems.Documents.DocumentTypeSecurityConditions.md#description) | string (254) | The description of this DocumentTypeSecurity<br />Condition. `Required` `Filter(eq;like)` 
-| [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. 
+| [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAccessKey](Systems.Documents.DocumentTypeSecurityConditions.md#documentaccesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. |
-| [DocumentType](Systems.Documents.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. |
+| [DocumentAccessKey](Systems.Documents.DocumentTypeSecurityConditions.md#documentaccesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. `Required` `Filter(multi eq)` |
+| [DocumentType](Systems.Documents.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### ConditionFilterXml
 
-Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.
+Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match. `Unit: obj.DocumentType.EntityName` `Required`
 
 Type: **dataaccessfilter**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.
+Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)`
 
 Type: **[Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentAccessKey
 
-The access key, which will be used to secure new documents, when this rule is selected.
+The access key, which will be used to secure new documents, when this rule is selected. `Required` `Filter(multi eq)`
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md)**  
 Category: **System**  
@@ -162,7 +162,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### DocumentType
 
-The document type, whose documents will be secured by the current rule.
+The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  

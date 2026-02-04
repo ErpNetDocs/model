@@ -128,17 +128,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypes.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique code of the asset type.</td>
+<td>Unique code of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the asset type is active for choosing in drop-down choices.</td>
+<td>Specifies whether the asset type is active for choosing in drop-down choices. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Multilanguage name of the asset type.</td>
+<td>Multilanguage name of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetTypes.html#notes">Notes</a></td>
@@ -213,7 +213,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique code of the asset type.</p>
+<p>Unique code of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -222,7 +222,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the asset type is active for choosing in drop-down choices.</p>
+<p>Specifies whether the asset type is active for choosing in drop-down choices. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -230,7 +230,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage name of the asset type.</p>
+<p>Multilanguage name of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>

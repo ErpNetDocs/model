@@ -101,8 +101,8 @@ Aggregate Tree
 | [EnterpriseCompanyLocation](Applications.AssetManagement.MaintenanceOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Applications.AssetManagement.MaintenanceOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Applications.AssetManagement.MaintenanceOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [MaintenanceType](Applications.AssetManagement.MaintenanceOrders.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) (nullable) | The type of maintenance, which will be performed. NULL means that will be more than one type of maintenance performed. |
-| [ManagedAsset](Applications.AssetManagement.MaintenanceOrders.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | The asset, which will be maintained. NULL means that more than one asset will be maintained. |
+| [MaintenanceType](Applications.AssetManagement.MaintenanceOrders.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) (nullable) | The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. `Filter(multi eq)` |
+| [ManagedAsset](Applications.AssetManagement.MaintenanceOrders.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | The asset, which will be maintained. null means that more than one asset will be maintained. `Filter(multi eq)` |
 | [MasterDocument](Applications.AssetManagement.MaintenanceOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [OwnerParty](Applications.AssetManagement.MaintenanceOrders.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [Parent](Applications.AssetManagement.MaintenanceOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -112,7 +112,7 @@ Aggregate Tree
 | [ResponsiblePerson](Applications.AssetManagement.MaintenanceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Applications.AssetManagement.MaintenanceOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Applications.AssetManagement.MaintenanceOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ServiceCenter](Applications.AssetManagement.MaintenanceOrders.md#servicecenter) | [ServiceCenters](Applications.AssetManagement.ServiceCenters.md) | The service center, which will perform the maintenance. |
+| [ServiceCenter](Applications.AssetManagement.MaintenanceOrders.md#servicecenter) | [ServiceCenters](Applications.AssetManagement.ServiceCenters.md) | The service center, which will perform the maintenance. `Required` `Filter(multi eq)` |
 | [SocialGroup](Applications.AssetManagement.MaintenanceOrders.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). `Filter(multi eq)` `Introduced in version 23.1.1.3` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [TargetParty](Applications.AssetManagement.MaintenanceOrders.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Activities.Activities.md)) |
 | [ToCompanyDivision](Applications.AssetManagement.MaintenanceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -752,7 +752,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaintenanceType
 
-The type of maintenance, which will be performed. NULL means that will be more than one type of maintenance performed.
+The type of maintenance, which will be performed. null means that will be more than one type of maintenance performed. `Filter(multi eq)`
 
 Type: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) (nullable)**  
 Category: **System**  
@@ -761,7 +761,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAsset
 
-The asset, which will be maintained. NULL means that more than one asset will be maintained.
+The asset, which will be maintained. null means that more than one asset will be maintained. `Filter(multi eq)`
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable)**  
 Indexed: **True**  
@@ -856,7 +856,7 @@ Show in UI: **HiddenByDefault**
 
 ### ServiceCenter
 
-The service center, which will perform the maintenance.
+The service center, which will perform the maintenance. `Required` `Filter(multi eq)`
 
 Type: **[ServiceCenters](Applications.AssetManagement.ServiceCenters.md)**  
 Category: **System**  

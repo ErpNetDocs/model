@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.AssetConsumables.html#consumablequantity">ConsumableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>Specifies what quantity of the current consumable is used.</td>
+<td>Specifies what quantity of the consumable should be offered for each rented asset. <code>Unit: ConsumableQuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetConsumables.html#notes">Notes</a></td>
@@ -143,22 +143,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.AssetConsumables.html#consumablequantityunit">ConsumableQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of the consumable quantity.</td>
+<td>The measurement unit of Consumable Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetConsumables.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The consumable which is used.</td>
+<td>The consumable which is offered accompanying the asset rental. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetConsumables.html#rentalasset">RentalAsset</a></td>
 <td><a href="Applications.Rental.Assets.html">Assets</a></td>
-<td>Rental asset for which the current consumable is used.</td>
+<td>The rental asset for which the consumable would be offered. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.AssetConsumables.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>Store from which the consumable is issued.</td>
+<td>The store which contains the consumable. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="consumablequantity">ConsumableQuantity</h3>
-<p>Specifies what quantity of the current consumable is used.</p>
+<p>Specifies what quantity of the consumable should be offered for each rented asset. <code>Unit: ConsumableQuantityUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -228,26 +228,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumablequantityunit">ConsumableQuantityUnit</h3>
-<p>The measurement unit of the consumable quantity.</p>
+<p>The measurement unit of Consumable Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The consumable which is used.</p>
+<p>The consumable which is offered accompanying the asset rental. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
-<p>Rental asset for which the current consumable is used.</p>
+<p>The rental asset for which the consumable would be offered. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.Rental.Assets.html">Assets</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>Store from which the consumable is issued.</p>
+<p>The store which contains the consumable. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -34,24 +34,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BackgroundColor](General.Products.ProductCatalogs.md#backgroundcolor) | int32 __nullable__ | When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
-| [BackgroundImage](General.Products.ProductCatalogs.md#backgroundimage) | byte[] __nullable__ | The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed. 
-| [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right. 
-| [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom. 
-| [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. 
-| [Code](General.Products.ProductCatalogs.md#code) | string (16) | Unique catalog code. 
-| [FooterHtml](General.Products.ProductCatalogs.md#footerhtml) | string (max) __nullable__ | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer. 
-| [HeaderHtml](General.Products.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header. 
+| [BackgroundColor](General.Products.ProductCatalogs.md#backgroundcolor) | int32 __nullable__ | When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
+| [BackgroundImage](General.Products.ProductCatalogs.md#backgroundimage) | byte[] __nullable__ | The background image to be used for web visualization of the catalog. null means that background image won't be displayed. 
+| [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right. `Required` `Default("L")` 
+| [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom. `Required` `Default("T")` 
+| [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. `Required` `Default("R")` 
+| [Code](General.Products.ProductCatalogs.md#code) | string (16) | Unique catalog code. `Required` 
+| [FooterHtml](General.Products.ProductCatalogs.md#footerhtml) | string (max) __nullable__ | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer. 
+| [HeaderHtml](General.Products.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
 | [Logo](General.Products.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. 
-| [Name](General.Products.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). 
+| [Name](General.Products.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
 | [Notes](General.Products.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [RootProductGroup](General.Products.ProductCatalogs.md#rootproductgroup) | [ProductGroups](General.Products.ProductGroups.md) | The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. |
-| [WebSite](General.Products.ProductCatalogs.md#website) | [WebSites](Systems.Config.WebSites.md) (nullable) | The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site. |
+| [RootProductGroup](General.Products.ProductCatalogs.md#rootproductgroup) | [ProductGroups](General.Products.ProductGroups.md) | The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. `Required` `Filter(multi eq)` |
+| [WebSite](General.Products.ProductCatalogs.md#website) | [WebSites](Systems.Config.WebSites.md) (nullable) | The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. `Filter(multi eq)` `Introduced in version 19.1` |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### BackgroundColor
 
-When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.
+When not null, specifies the background color to use for visualization of the catalog. The color is in RGBA color format.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundImage
 
-The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed.
+The background image to be used for web visualization of the catalog. null means that background image won't be displayed.
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundPositionHorizontal
 
-Horizontal position of the Background Image. L=Left, C=Center, R=Right.
+Horizontal position of the Background Image. L=Left, C=Center, R=Right. `Required` `Default("L")`
 
 Type: **[BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundPositionVertical
 
-Vertical position of the Background Image. T=Top, C=Center, B=Bottom.
+Vertical position of the Background Image. T=Top, C=Center, B=Bottom. `Required` `Default("T")`
 
 Type: **[BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundRepeat
 
-Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.
+Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat. `Required` `Default("R")`
 
 Type: **[BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique catalog code.
+Unique catalog code. `Required`
 
 Type: **string (16)**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### FooterHtml
 
-The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer.
+The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. null means that there shouldn't be any user-defined footer.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -173,7 +173,7 @@ Show in UI: **CannotBeShown**
 
 ### HeaderHtml
 
-The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header.
+The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Product catalog name (multilanguage).
+Product catalog name (multilanguage). `Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -277,7 +277,7 @@ Show in UI: **HiddenByDefault**
 
 ### RootProductGroup
 
-The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups.
+The root (starting) product group of the catalog. Each catalog starts from a root product group and includes the products in the sub-groups. `Required` `Filter(multi eq)`
 
 Type: **[ProductGroups](General.Products.ProductGroups.md)**  
 Category: **System**  
@@ -286,7 +286,7 @@ Show in UI: **ShownByDefault**
 
 ### WebSite
 
-The ECommerce web site, which will be used to host the product catalog. When NULL, the product catalog would not be hosted with internal ECommerce site.
+The ECommerce web site, which will be used to host the product catalog. When null, the product catalog would not be hosted with internal ECommerce site. `Filter(multi eq)` `Introduced in version 19.1`
 
 Type: **[WebSites](Systems.Config.WebSites.md) (nullable)**  
 Indexed: **True**  

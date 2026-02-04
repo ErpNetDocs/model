@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? 1-active for choosing; 0-otherwise 
-| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the crew (multilanguage) 
+| [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? true-active for choosing; false-otherwise. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the crew (multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.Crews.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the crew |
+| [EnterpriseCompany](Applications.Fleet.Crews.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the crew. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Active
 
-Is the crew active? 1-active for choosing; 0-otherwise
+Is the crew active? true-active for choosing; false-otherwise. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the crew (multilanguage)
+The name of the crew (multilanguage). `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company operating the crew
+The enterprise company operating the crew. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

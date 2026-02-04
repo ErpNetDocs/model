@@ -41,7 +41,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ProjectTemplate](Projects.Classic.TemplateWorkElements.md#projecttemplate) | [Templates](Projects.Classic.Templates.md) | The <see cref="Template"/> to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ProjectTypeWorkElement](Projects.Classic.TemplateWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.Classic.TypeWorkElements.md) | The work element from the project type, which shall be copied as work element in new projects, based on this template. |
+| [ProjectTypeWorkElement](Projects.Classic.TemplateWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.Classic.TypeWorkElements.md) | The work element from the project type, which shall be copied as work element in new projects, based on this template. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTypeWorkElement
 
-The work element from the project type, which shall be copied as work element in new projects, based on this template.
+The work element from the project type, which shall be copied as work element in new projects, based on this template. `Required` `Filter(multi eq)`
 
 Type: **[TypeWorkElements](Projects.Classic.TypeWorkElements.md)**  
 Category: **System**  

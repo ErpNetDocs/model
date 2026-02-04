@@ -42,10 +42,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BillTo](General.Contacts.CompanyLocations.md#billto) | [BillTo](General.Contacts.CompanyLocations.md#billto) __nullable__ | If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in sales documents when the company and the location are customers. 
+| [BillTo](General.Contacts.CompanyLocations.md#billto) | [BillTo](General.Contacts.CompanyLocations.md#billto) __nullable__ | If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified. 
 | [GLN](General.Contacts.CompanyLocations.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](General.Contacts.CompanyLocations.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the company location. 
+| [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the company location. `Required` `Filter(eq;like)` 
 | [PartyCode](General.Contacts.CompanyLocations.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyLocations.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.CompanyLocations.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -64,7 +64,7 @@ Aggregate Tree
 | [AccessKey](General.Contacts.CompanyLocations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this CompanyLocation. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [AdministrativeRegion](General.Contacts.CompanyLocations.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Area](General.Contacts.CompanyLocations.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
-| [Company](General.Contacts.CompanyLocations.md#company) | [Companies](General.Contacts.Companies.md) | The company to which this location belongs. |
+| [Company](General.Contacts.CompanyLocations.md#company) | [Companies](General.Contacts.Companies.md) | The company to which this location belongs. `Required` `Filter(multi eq)` |
 | [DefaultProductCodingSystem](General.Contacts.CompanyLocations.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [ParentParty](General.Contacts.CompanyLocations.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 
@@ -96,7 +96,7 @@ Aggregate Tree
 
 ### BillTo
 
-If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in sales documents when the company and the location are customers.
+If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified.
 
 Type: **[BillTo](General.Contacts.CompanyLocations.md#billto) __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### LocationName
 
-The name of the company location.
+The name of the company location. `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -368,7 +368,7 @@ Show in UI: **ShownByDefault**
 
 ### Company
 
-The company to which this location belongs.
+The company to which this location belongs. `Required` `Filter(multi eq)`
 
 Type: **[Companies](General.Contacts.Companies.md)**  
 Indexed: **True**  

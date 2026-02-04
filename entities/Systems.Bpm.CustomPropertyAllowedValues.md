@@ -45,12 +45,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Bpm.CustomPropertyAllowedValues.md#active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. 
-| [Description](Systems.Bpm.CustomPropertyAllowedValues.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. 
+| [Active](Systems.Bpm.CustomPropertyAllowedValues.md#active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. `Required` `Default(true)` `Filter(eq)` 
+| [Description](Systems.Bpm.CustomPropertyAllowedValues.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. `Filter(eq;like)` 
 | [LongDescription](Systems.Bpm.CustomPropertyAllowedValues.md#longdescription) | string (max) __nullable__ | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
 | [ParentAllowedValueId](Systems.Bpm.CustomPropertyAllowedValues.md#parentallowedvalueid) | guid __nullable__ | The value of the parent property, for which this allowed value is valid. `Filter(multi eq)` 
 | [Picture](Systems.Bpm.CustomPropertyAllowedValues.md#picture) | byte[] __nullable__ | When not null, specifies a picture representation of the allowed value. 
-| [PropertyAllowedValueField](Systems.Bpm.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string (254) | The actual allowed value. 
+| [PropertyAllowedValueField](Systems.Bpm.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string (254) | The actual allowed value. `Required` `Filter(eq;like)` `ORD` 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### Active
 
-Specifies whether the allowed value is active and can be used when selecting property values.
+Specifies whether the allowed value is active and can be used when selecting property values. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table.
+The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyAllowedValueField
 
-The actual allowed value.
+The actual allowed value. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (254)**  
 Category: **System**  

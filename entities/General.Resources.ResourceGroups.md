@@ -37,13 +37,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent 
+| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Resources.ResourceGroups.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL |
+| [EnterpriseCompany](General.Resources.ResourceGroups.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. `Filter(multi eq)` |
 | [Parent](General.Resources.ResourceGroups.md#parent) | [ResourceGroups](General.Resources.ResourceGroups.md) (nullable) | The parent resource group or null if this is root group. `Filter(multi eq)` |
 
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### Name
 
-Resource group name. Unique within its parent
+Resource group name. Unique within its parent. `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL
+The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  

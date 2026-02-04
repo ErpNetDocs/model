@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>The consecutive line number within the control document.</td>
+<td>The consecutive line number within the control document. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#notes">Notes</a></td>
@@ -203,47 +203,47 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseinvoice">PurchaseInvoice</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a> (nullable)</td>
-<td>The purchase invoice which is to be or was executed. Null when the data is unknown.</td>
+<td>The purchase invoice which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseinvoiceline">PurchaseInvoiceLine</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoiceLines.html">PurchaseInvoiceLines</a> (nullable)</td>
-<td>The purchase invoice line which is to be or was executed. Null when the data is unknown.</td>
+<td>The purchase invoice line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseoperationtype"><s>PurchaseOperationType</s></a></td>
 <td><a href="Logistics.Procurement.PurchaseOperationTypes.html">PurchaseOperationTypes</a> (nullable)</td>
-<td><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user.</td>
+<td><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseorder">PurchaseOrder</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a> (nullable)</td>
-<td>The purchase order which is to be or was executed. Null when the data is unknown.</td>
+<td>The purchase order which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaseorderline">PurchaseOrderLine</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html">PurchaseOrderLines</a> (nullable)</td>
-<td>The purchase order line which is to be or was executed. Null when the data is unknown.</td>
+<td>The purchase order line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaserequisition">PurchaseRequisition</a></td>
 <td><a href="Logistics.Procurement.Requisitions.html">Requisitions</a> (nullable)</td>
-<td>The purchase requisition which is to be or was executed. Null when the data is unknown.</td>
+<td>The purchase requisition which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#purchaserequisitionline">PurchaseRequisitionLine</a></td>
 <td><a href="Logistics.Procurement.RequisitionLines.html">RequisitionLines</a> (nullable)</td>
-<td>The purchase requisition line which is to be or was executed. Null when the data is unknown.</td>
+<td>The purchase requisition line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#receivingorder">ReceivingOrder</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a> (nullable)</td>
-<td>The receiving order which is to be or was executed. Null when the data is unknown.</td>
+<td>The receiving order which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseControlDocumentLines.html#receivingorderline">ReceivingOrderLine</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html">ReceivingOrderLines</a> (nullable)</td>
-<td>The receiving order line which is to be or was executed. Null when the data is unknown.</td>
+<td>The receiving order line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +304,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>The consecutive line number within the control document.</p>
+<p>The consecutive line number within the control document. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -398,55 +398,55 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaseinvoice">PurchaseInvoice</h3>
-<p>The purchase invoice which is to be or was executed. Null when the data is unknown.</p>
+<p>The purchase invoice which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaseinvoiceline">PurchaseInvoiceLine</h3>
-<p>The purchase invoice line which is to be or was executed. Null when the data is unknown.</p>
+<p>The purchase invoice line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseInvoiceLines.html">PurchaseInvoiceLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaseoperationtype">PurchaseOperationType</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user.</p>
+<p><strong>OBSOLETE! Do not use!</strong> The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseOperationTypes.html">PurchaseOperationTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
-<p>The purchase order which is to be or was executed. Null when the data is unknown.</p>
+<p>The purchase order which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaseorderline">PurchaseOrderLine</h3>
-<p>The purchase order line which is to be or was executed. Null when the data is unknown.</p>
+<p>The purchase order line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseOrderLines.html">PurchaseOrderLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaserequisition">PurchaseRequisition</h3>
-<p>The purchase requisition which is to be or was executed. Null when the data is unknown.</p>
+<p>The purchase requisition which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.Requisitions.html">Requisitions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchaserequisitionline">PurchaseRequisitionLine</h3>
-<p>The purchase requisition line which is to be or was executed. Null when the data is unknown.</p>
+<p>The purchase requisition line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.RequisitionLines.html">RequisitionLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receivingorder">ReceivingOrder</h3>
-<p>The receiving order which is to be or was executed. Null when the data is unknown.</p>
+<p>The receiving order which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receivingorderline">ReceivingOrderLine</h3>
-<p>The receiving order line which is to be or was executed. Null when the data is unknown.</p>
+<p>The receiving order line which is to be or was executed. Null when the data is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.ReceivingOrderLines.html">ReceivingOrderLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

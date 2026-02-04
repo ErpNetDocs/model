@@ -37,32 +37,32 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContactMechanismType](General.Contacts.PartyContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.PartyContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone. `Required` `Default("A")` `Filter(multi eq)` (Inherited from [ContactMechanisms](General.Contacts.ContactMechanisms.md)) 
-| [FromDate](General.Contacts.PartyContactMechanisms.md#fromdate) | datetime __nullable__ | The first date when the contact mechanism was valid. NULL means unknown date 
-| [IsActive](General.Contacts.PartyContactMechanisms.md#isactive) | boolean | True if the contact mechanism is currently active and can be used to contact the party. 
-| [IsDefault](General.Contacts.PartyContactMechanisms.md#isdefault) | boolean | 1 - when this is the default contact mechanism for this party; 0 - otherwise 
-| [LineOrd](General.Contacts.PartyContactMechanisms.md#lineord) | int32 | Consecutive number of the contact information. The number is unique within the party. 
+| [FromDate](General.Contacts.PartyContactMechanisms.md#fromdate) | datetime __nullable__ | The first date when the contact mechanism was valid. null means unknown date. `Default(Today)` `Filter(eq;ge;le)` 
+| [IsActive](General.Contacts.PartyContactMechanisms.md#isactive) | boolean | True if the contact mechanism is currently active and can be used to contact the party. `Required` `Default(true)` `Filter(eq)` 
+| [IsDefault](General.Contacts.PartyContactMechanisms.md#isdefault) | boolean | True - when this is the default contact mechanism for this party; false - otherwise. `Required` `Default(false)` `Filter(eq)` 
+| [LineOrd](General.Contacts.PartyContactMechanisms.md#lineord) | int32 | Consecutive number of the contact information. The number is unique within the party. `Required` 
 | [Name](General.Contacts.PartyContactMechanisms.md#name) | string (254) | Contact mechanism description. `Required` `Filter(eq;like)` (Inherited from [ContactMechanisms](General.Contacts.ContactMechanisms.md)) 
-| [NonSolicitation](General.Contacts.PartyContactMechanisms.md#nonsolicitation) | boolean | If 1 then Don't use the mechanism for solicitation purposes 
+| [NonSolicitation](General.Contacts.PartyContactMechanisms.md#nonsolicitation) | boolean | If true then Don't use the mechanism for solicitation purposes. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.PartyContactMechanisms.md#notes) | string (254) __nullable__ | Notes for this PartyContactMechanism. 
-| [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime __nullable__ | The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid 
+| [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime __nullable__ | The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AdministrativeRegion](General.Contacts.PartyContactMechanisms.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2` (Inherited from [ContactMechanisms](General.Contacts.ContactMechanisms.md)) |
-| [ContactMechanism](General.Contacts.PartyContactMechanisms.md#contactmechanism) | [ContactMechanisms](General.Contacts.ContactMechanisms.md) | The contact mechanism of the party |
-| [ContactMechanismPurpose](General.Contacts.PartyContactMechanisms.md#contactmechanismpurpose) | [ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md) (nullable) | The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. |
+| [ContactMechanism](General.Contacts.PartyContactMechanisms.md#contactmechanism) | [ContactMechanisms](General.Contacts.ContactMechanisms.md) | Returns this `PartyContactMechanism`(General.Contacts.PartyContactMechanisms.md). DO NOT USE! Kept for backward compatibility.             When a contact mechanism is set, the old inner contact mechanism becomes an orphan.              If the orphan is newly added in this transaction it is deleted. |
+| [ContactMechanismPurpose](General.Contacts.PartyContactMechanisms.md#contactmechanismpurpose) | [ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md) (nullable) | The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. `Filter(multi eq)` `Introduced in version 18.2` |
 | [GeoPoint](General.Contacts.PartyContactMechanisms.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2` (Inherited from [ContactMechanisms](General.Contacts.ContactMechanisms.md)) |
-| [Party](General.Contacts.PartyContactMechanisms.md#party) | [Parties](General.Contacts.Parties.md) | The party, having the contact mechanism |
-| [PersonalDataProcess](General.Contacts.PartyContactMechanisms.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. |
+| [Party](General.Contacts.PartyContactMechanisms.md#party) | [Parties](General.Contacts.Parties.md) | The party, having the contact mechanism. `Required` `Filter(multi eq)` `Owner` |
+| [PersonalDataProcess](General.Contacts.PartyContactMechanisms.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. `Filter(multi eq)` `Introduced in version 18.2` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyContactMechanisms.md#id) | guid | Unique party contact mechanism Id 
+| [Id](General.Contacts.PartyContactMechanisms.md#id) | guid |  
 | [ObjectVersion](General.Contacts.PartyContactMechanisms.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](General.Contacts.PartyContactMechanisms.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-The first date when the contact mechanism was valid. NULL means unknown date
+The first date when the contact mechanism was valid. null means unknown date. `Default(Today)` `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True if the contact mechanism is currently active and can be used to contact the party.
+True if the contact mechanism is currently active and can be used to contact the party. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-1 - when this is the default contact mechanism for this party; 0 - otherwise
+True - when this is the default contact mechanism for this party; false - otherwise. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-Consecutive number of the contact information. The number is unique within the party.
+Consecutive number of the contact information. The number is unique within the party. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### NonSolicitation
 
-If 1 then Don't use the mechanism for solicitation purposes
+If true then Don't use the mechanism for solicitation purposes. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid
+The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -187,8 +187,6 @@ Supports Order By: **False**
 Show in UI: **ShownByDefault**  
 
 ### Id
-
-Unique party contact mechanism Id
 
 Type: **guid**  
 Indexed: **True**  
@@ -231,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactMechanism
 
-The contact mechanism of the party
+Returns this `PartyContactMechanism`(General.Contacts.PartyContactMechanisms.md). DO NOT USE! Kept for backward compatibility.             When a contact mechanism is set, the old inner contact mechanism becomes an orphan.              If the orphan is newly added in this transaction it is deleted.
 
 Type: **[ContactMechanisms](General.Contacts.ContactMechanisms.md)**  
 Indexed: **True**  
@@ -242,7 +240,7 @@ Show in UI: **CannotBeShown**
 
 ### ContactMechanismPurpose
 
-The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.
+The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. `Filter(multi eq)` `Introduced in version 18.2`
 
 Type: **[ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md) (nullable)**  
 Category: **System**  
@@ -260,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-The party, having the contact mechanism
+The party, having the contact mechanism. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -271,7 +269,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonalDataProcess
 
-The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown.
+The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. `Filter(multi eq)` `Introduced in version 18.2`
 
 Type: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 Category: **System**  

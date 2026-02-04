@@ -34,35 +34,35 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Consumed quantity in the operation. 
-| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The requested quantity equivalence in the base measurement category of the requested material. 
-| [ConsumedStandard<br />QuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios. 
-| [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). 
+| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Requested quantity of the material. `Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)` 
+| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The requested quantity equivalence in the base measurement category of the requested material. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [ConsumedStandard<br />QuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). `Required` `Filter(eq)` `ReadOnly` 
 | [CurrentBalanceBase](Production.ShopFloor.ConsumptionOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order 
+| [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order. `Required` 
 | [Notes](Production.ShopFloor.ConsumptionOrderLines.md#notes) | string (max) __nullable__ | Notes for this ConsumptionOrderLine. 
-| [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime __nullable__ | The scheduled date, when the material is needed. 
+| [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime __nullable__ | The scheduled date, when the material is needed. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantityUnit](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit of the consumed quantity in the operation. |
+| [ConsumedQuantityUnit](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit of the requested quantity. `Required` `Filter(multi eq)` |
 | [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) | [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md) | The <see cref="ConsumptionOrder"/> to which this ConsumptionOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Document](Production.ShopFloor.ConsumptionOrderLines.md#document) | [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md) | The owner document. The <see cref="ConsumptionOrder"/> to which this ConsumptionOrderLine belongs. `Required` `Filter(multi eq)` |
-| [Lot](Production.ShopFloor.ConsumptionOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Lot from which to get the material. If not specified (default) - Any lot can be used. |
-| [Product](Production.ShopFloor.ConsumptionOrderLines.md#product) | [Products](General.Products.Products.md) | The requested material. |
-| [SerialNumber](Production.ShopFloor.ConsumptionOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product. NULL means that the serial number is unknown or not applicable. |
-| [Store](Production.ShopFloor.ConsumptionOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store, from which the material is requested. |
-| [StoreBin](Production.ShopFloor.ConsumptionOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | If not NULL, specifies that the material has to be consumed from specific store bin |
-| [WorkOrderItemIngredient](Production.ShopFloor.ConsumptionOrderLines.md#workorderitemingredient) | [WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md) | The Work Order Item Ingredient for which we are ordering materials. |
+| [Lot](Production.ShopFloor.ConsumptionOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If not null, specifies that the material has to be consumed from specific lot. `Filter(multi eq)` |
+| [Product](Production.ShopFloor.ConsumptionOrderLines.md#product) | [Products](General.Products.Products.md) | The requested material. `Required` `Filter(multi eq)` |
+| [SerialNumber](Production.ShopFloor.ConsumptionOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not null, specifies that the material has to be consumed with specific serial number. `Filter(multi eq)` |
+| [Store](Production.ShopFloor.ConsumptionOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store, from which the material is requested. `Filter(multi eq)` |
+| [StoreBin](Production.ShopFloor.ConsumptionOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | If not null, specifies that the material has to be consumed from specific store bin. `Filter(multi eq)` |
+| [WorkOrderItemIngredient](Production.ShopFloor.ConsumptionOrderLines.md#workorderitemingredient) | [WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md) | The Work Order Item Ingredient for which we are ordering materials. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.ShopFloor.ConsumptionOrderLines.md#id) | guid | Unique order lline Id 
+| [Id](Production.ShopFloor.ConsumptionOrderLines.md#id) | guid |  
 | [ObjectVersion](Production.ShopFloor.ConsumptionOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](Production.ShopFloor.ConsumptionOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### ConsumedQuantity
 
-Consumed quantity in the operation.
+Requested quantity of the material. `Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ConsumedQuantityUnit == null), null, IIF( ( obj.WorkOrderItemIngredient != null), obj.WorkOrderItemIngredient.GetSumConsumedQuantity( obj.ConsumedQuantityUnit), obj.ConsumedQuantity))`
 ### ConsumedQuantityBase
 
-The requested quantity equivalence in the base measurement category of the requested material.
+The requested quantity equivalence in the base measurement category of the requested material. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConsumedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -113,7 +113,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedStandardQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConsumptionType
 
-Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).
+Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). `Required` `Filter(eq)` `ReadOnly`
 
 Type: **[ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineOrd
 
-Non-unique line number within the order
+Non-unique line number within the order. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **HiddenByDefault**
 
 ### ScheduledDateTime
 
-The scheduled date, when the material is needed.
+The scheduled date, when the material is needed. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -178,8 +178,6 @@ Supports Order By: **False**
 Show in UI: **HiddenByDefault**  
 
 ### Id
-
-Unique order lline Id
 
 Type: **guid**  
 Indexed: **True**  
@@ -213,7 +211,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsumedQuantityUnit
 
-Measurement unit of the consumed quantity in the operation.
+Measurement unit of the requested quantity. `Required` `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -245,7 +243,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-Lot from which to get the material. If not specified (default) - Any lot can be used.
+If not null, specifies that the material has to be consumed from specific lot. `Filter(multi eq)`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -254,7 +252,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The requested material.
+The requested material. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -265,7 +263,7 @@ Front-End Recalc Expressions:
 `obj.WorkOrderItemIngredient.Material`
 ### SerialNumber
 
-Serial number of the product. NULL means that the serial number is unknown or not applicable.
+If not null, specifies that the material has to be consumed with specific serial number. `Filter(multi eq)`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -274,7 +272,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-The store, from which the material is requested.
+The store, from which the material is requested. `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -288,7 +286,7 @@ Front-End Recalc Expressions:
 `obj.ConsumptionOrder.Store`
 ### StoreBin
 
-If not NULL, specifies that the material has to be consumed from specific store bin
+If not null, specifies that the material has to be consumed from specific store bin. `Filter(multi eq)`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -297,7 +295,7 @@ Show in UI: **HiddenByDefault**
 
 ### WorkOrderItemIngredient
 
-The Work Order Item Ingredient for which we are ordering materials.
+The Work Order Item Ingredient for which we are ordering materials. `Required` `Filter(multi eq)`
 
 Type: **[WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)**  
 Indexed: **True**  

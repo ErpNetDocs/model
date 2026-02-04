@@ -126,42 +126,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
 <td>boolean</td>
-<td>If True the data in the current report table contains only the rows that have child rows in sub-tables.</td>
+<td>If True the data in the current report table contains only the rows that have child rows in sub-tables. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#extensionslist">ExtensionsList</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</td>
+<td>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#filterxml">FilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>Filter for the loaded table</td>
+<td>Filter for the loaded table. <code>Unit: obj.Report.QueryName</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#referencepath">ReferencePath</a></td>
 <td>string (512)</td>
-<td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br>Enterprise_Company_<br>Id/Company_Id - will load the definition of the company for the enterprise company of a document.</td>
+<td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br>Enterprise_Company_<br>Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#showcustomproperties">ShowCustomProperties</a></td>
 <td>boolean</td>
-<td>True to include the custom properties.</td>
+<td>True to include the custom properties. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#showtextcolumns">ShowTextColumns</a></td>
 <td>boolean</td>
-<td>True to include text descriptions for certain columns.</td>
+<td>True to include text descriptions for certain columns. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#tablename">TableName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</td>
+<td>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ReportQueries.html#uniquename">UniqueName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the data table in the printout datasource. If NULL the Reference_Path is used.</td>
+<td>The name of the data table in the printout datasource. If null the Reference_Path is used.</td>
 </tr>
 </tbody>
 </table>
@@ -211,7 +211,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dependsonchildrows">DependsOnChildRows</h3>
-<p>If True the data in the current report table contains only the rows that have child rows in sub-tables.</p>
+<p>If True the data in the current report table contains only the rows that have child rows in sub-tables. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="extensionslist">ExtensionsList</h3>
-<p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query</p>
+<p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -227,14 +227,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="filterxml">FilterXml</h3>
-<p>Filter for the loaded table</p>
+<p>Filter for the loaded table. <code>Unit: obj.Report.QueryName</code></p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referencepath">ReferencePath</h3>
-<p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document.</p>
+<p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></p>
 <p>Type: <strong>string (512)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -242,7 +242,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>512</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="showcustomproperties">ShowCustomProperties</h3>
-<p>True to include the custom properties.</p>
+<p>True to include the custom properties. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -250,7 +250,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="showtextcolumns">ShowTextColumns</h3>
-<p>True to include text descriptions for certain columns.</p>
+<p>True to include text descriptions for certain columns. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -258,7 +258,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="tablename">TableName</h3>
-<p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL.</p>
+<p>The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -266,7 +266,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="uniquename">UniqueName</h3>
-<p>The name of the data table in the printout datasource. If NULL the Reference_Path is used.</p>
+<p>The name of the data table in the printout datasource. If null the Reference_Path is used.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

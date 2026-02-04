@@ -45,16 +45,16 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DocumentLineId](General.Documents.DocumentLineAmounts.md#documentlineid) | guid | The line for which the distribution pattern is specified. `Required` `Filter(multi eq)` 
-| [LinePercent](General.Documents.DocumentLineAmounts.md#linepercent) | decimal (14, 6) | The percent of the additional amount which should be distributed over the current line. 
+| [LinePercent](General.Documents.DocumentLineAmounts.md#linepercent) | decimal (14, 6) | The percent of the additional amount which should be distributed over the current line. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](General.Documents.DocumentLineAmounts.md#document) | [Documents](General.Documents.Documents.md) | The <see cref="Document"/> to which this DocumentLineAmount belongs. `Required` `Filter(multi eq)` `Owner` |
-| [DocumentAmountType](General.Documents.DocumentLineAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The type of amount for which the distribution pattern is specified. |
-| [Product](General.Documents.DocumentLineAmounts.md#product) | [Products](General.Products.Products.md) | The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. |
-| [ReferencedDocument](General.Documents.DocumentLineAmounts.md#referenceddocument) | [Documents](General.Documents.Documents.md) (nullable) | When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). |
+| [DocumentAmountType](General.Documents.DocumentLineAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The type of amount for which the distribution pattern is specified. `Required` `Filter(multi eq)` |
+| [Product](General.Documents.DocumentLineAmounts.md#product) | [Products](General.Products.Products.md) | The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. `Required` `Filter(multi eq)` |
+| [ReferencedDocument](General.Documents.DocumentLineAmounts.md#referenceddocument) | [Documents](General.Documents.Documents.md) (nullable) | When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### LinePercent
 
-The percent of the additional amount which should be distributed over the current line.
+The percent of the additional amount which should be distributed over the current line. `Required` `Default(0)`
 
 Type: **decimal (14, 6)**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **CannotBeShown**
 
 ### DocumentAmountType
 
-The type of amount for which the distribution pattern is specified.
+The type of amount for which the distribution pattern is specified. `Required` `Filter(multi eq)`
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes.
+The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferencedDocument
 
-When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated).
+When not null, specifies that this distribution is specified for a referenced document (not the document for which the amount is calculated). `Filter(multi eq)`
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Indexed: **True**  

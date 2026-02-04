@@ -46,17 +46,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Sales.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship 
-| [IsActive](Crm.Sales.Dealers.md#isactive) | boolean | Indicates whether the current Dealer is active. 
+| [FromDate](Crm.Sales.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
+| [IsActive](Crm.Sales.Dealers.md#isactive) | boolean | Indicates whether the current Dealer is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22` 
 | [Notes](Crm.Sales.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
-| [ThruDate](Crm.Sales.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. NULL for active dealers 
+| [ThruDate](Crm.Sales.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Sales.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded |
-| [Party](Crm.Sales.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer |
+| [EnterpriseCompany](Crm.Sales.Dealers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this dealer is recorded. `Filter(multi eq)` |
+| [Party](Crm.Sales.Dealers.md#party) | [Parties](General.Contacts.Parties.md) | The base party record of the dealer. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### FromDate
 
-Start of the dealer relationship
+Start of the dealer relationship. `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Dealer is active.
+Indicates whether the current Dealer is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22`
 
 Type: **boolean**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Termination date of the dealership. NULL for active dealers
+Termination date of the dealership. null for active dealers. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -180,7 +180,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which this dealer is recorded
+The enterprise company for which this dealer is recorded. `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The base party record of the dealer
+The base party record of the dealer. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  

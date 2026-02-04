@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.ActivityResources.html#resourceusagepercent">ResourceUsagePercent</a></td>
 <td>decimal (18, 4)</td>
-<td>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.</td>
+<td>The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.ActivityResources.html#resource">Resource</a></td>
 <td><a href="General.Resources.Resources.html">Resources</a></td>
-<td>The resource, which is required by the activity.</td>
+<td>The resource, which is required by the activity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>255</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resourceusagepercent">ResourceUsagePercent</h3>
-<p>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.</p>
+<p>The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong>decimal (18, 4)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -231,7 +231,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resource">Resource</h3>
-<p>The resource, which is required by the activity.</p>
+<p>The resource, which is required by the activity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Resources.Resources.html">Resources</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

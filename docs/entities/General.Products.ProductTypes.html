@@ -132,37 +132,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductTypes.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>When checked specifies that this type is set by default for new products unless another type is specified in the product groups.</td>
+<td>When checked specifies that this type is set by default for new products unless another type is specified in the product groups. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#isfixedasset">IsFixedAsset</a></td>
 <td>boolean</td>
-<td>Determines whether assets are acquired or retired when products from this type are purchased or sold.</td>
+<td>True when assets are acquired or retired when products from this type are purchased or sold. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#isserviceactivityservice">IsServiceActivityService</a></td>
 <td>boolean</td>
-<td>1 when the product corresponds to service used in service documents (like service activities)</td>
+<td>True when the product corresponds to service used in service documents (like service activities). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#isserviced">IsServiced</a></td>
 <td>boolean</td>
-<td>Determines whether for the products of this type can be created service agreements.</td>
+<td>True when the products of this type create service agreements and can be serviced. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#isshipped">IsShipped</a></td>
 <td>boolean</td>
-<td>Determines whether the products from this type are shipped after sales.</td>
+<td>True when the products from this type are being shipped after sales. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#isstocked">IsStocked</a></td>
 <td>boolean</td>
-<td>1=The products of this type are stocked in a warehouse; 0=otherwise (services)</td>
+<td>True=The products of this type are stocked in a warehouse; false=otherwise (services). <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#lotautocreation">LotAutoCreation</a></td>
 <td>boolean</td>
-<td>If checked specifies that lots are automatically created by the receiving orders with which the products are received.</td>
+<td>If checked specifies that lots are automatically created by the receiving orders with which the products are received. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypes.html#name">Name</a></td>
@@ -248,7 +248,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, null, &quot;00000&quot;)</code></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>When checked specifies that this type is set by default for new products unless another type is specified in the product groups.</p>
+<p>When checked specifies that this type is set by default for new products unless another type is specified in the product groups. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -256,7 +256,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isfixedasset">IsFixedAsset</h3>
-<p>Determines whether assets are acquired or retired when products from this type are purchased or sold.</p>
+<p>True when assets are acquired or retired when products from this type are purchased or sold. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -264,7 +264,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isserviceactivityservice">IsServiceActivityService</h3>
-<p>1 when the product corresponds to service used in service documents (like service activities)</p>
+<p>True when the product corresponds to service used in service documents (like service activities). <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -272,7 +272,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isserviced">IsServiced</h3>
-<p>Determines whether for the products of this type can be created service agreements.</p>
+<p>True when the products of this type create service agreements and can be serviced. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -280,7 +280,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isshipped">IsShipped</h3>
-<p>Determines whether the products from this type are shipped after sales.</p>
+<p>True when the products from this type are being shipped after sales. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -288,7 +288,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isstocked">IsStocked</h3>
-<p>1=The products of this type are stocked in a warehouse; 0=otherwise (services)</p>
+<p>True=The products of this type are stocked in a warehouse; false=otherwise (services). <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -296,7 +296,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lotautocreation">LotAutoCreation</h3>
-<p>If checked specifies that lots are automatically created by the receiving orders with which the products are received.</p>
+<p>If checked specifies that lots are automatically created by the receiving orders with which the products are received. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

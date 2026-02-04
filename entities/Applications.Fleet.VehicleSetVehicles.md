@@ -36,13 +36,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string (254) __nullable__ | Notes for this VehicleSetVehicle. `Filter(like)` 
-| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 __nullable__ | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle 
+| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 __nullable__ | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Vehicle](Applications.Fleet.VehicleSetVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The Vehicle which is part of the vehicle set |
+| [Vehicle](Applications.Fleet.VehicleSetVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The Vehicle which is part of the vehicle set. `Required` `Filter(multi eq)` |
 | [VehicleSet](Applications.Fleet.VehicleSetVehicles.md#vehicleset) | [VehicleSets](Applications.Fleet.VehicleSets.md) | The <see cref="VehicleSet"/> to which this VehicleSetVehicle belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### OrdinalPos
 
-Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle
+Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle. `Filter(ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **HiddenByDefault**
 
 ### Vehicle
 
-The Vehicle which is part of the vehicle set
+The Vehicle which is part of the vehicle set. `Required` `Filter(multi eq)`
 
 Type: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 Category: **System**  

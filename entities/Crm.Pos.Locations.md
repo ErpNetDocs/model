@@ -37,15 +37,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. 
-| [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string (16) | Unique (with the enterprise company) code of this POS location. 
+| [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. `Default(true)` `Filter(eq)` 
+| [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string (16) | Unique (with the enterprise company) code of this POS location. `Required` `Filter(multi eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. |
-| [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. |
+| [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. `Required` `Filter(multi eq)` |
+| [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.
+Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. `Default(true)` `Filter(eq)`
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### PosLocationCode
 
-Unique (with the enterprise company) code of this POS location.
+Unique (with the enterprise company) code of this POS location. `Required` `Filter(multi eq;like)`
 
 Type: **string (16)**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company of the POS location.
+The enterprise company of the POS location. `Required` `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location.
+The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. `Required` `Filter(multi eq)`
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Indexed: **True**  

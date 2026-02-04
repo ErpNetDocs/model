@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | 1 if the vehicle set is active for choosing; 0 - otherwise 
-| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set 
+| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | True if the vehicle set is active for choosing; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set |
+| [EnterpriseCompany](Applications.Fleet.VehicleSets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company operating the vehicle set. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Active
 
-1 if the vehicle set is active for choosing; 0 - otherwise
+True if the vehicle set is active for choosing; false - otherwise. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the vehicle set
+Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company operating the vehicle set
+The enterprise company operating the vehicle set. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

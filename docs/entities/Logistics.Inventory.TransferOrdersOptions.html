@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrdersOptions.html#availablequantityonly">AvailableQuantityOnly</a></td>
 <td>boolean</td>
-<td>Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity.</td>
+<td>Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrdersOptions.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type, for which these options apply.</td>
+<td>The document type, for which these options apply. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -171,7 +171,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="availablequantityonly">AvailableQuantityOnly</h3>
-<p>Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity.</p>
+<p>Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -201,7 +201,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type, for which these options apply.</p>
+<p>The document type, for which these options apply. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

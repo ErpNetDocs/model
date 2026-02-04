@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency). 
-| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency. 
-| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event. 
-| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment. 
-| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID). 
+| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency). `Currency: AmountCurrency` `Required` `Filter(eq;ge;le)` 
+| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency. `Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
+| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event. `Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment. `Filter(like)` 
+| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID). `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountCurrency](Crm.Pos.SalePayments.md#amountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Amount. |
-| [PaymentType](Crm.Pos.SalePayments.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) | The payment type (method) for this payment. |
-| [PosSale](Crm.Pos.SalePayments.md#possale) | [Sales](Crm.Pos.Sales.md) | The POS sale to which this specifies a payment. |
+| [AmountCurrency](Crm.Pos.SalePayments.md#amountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Amount. `Required` `Filter(multi eq)` |
+| [PaymentType](Crm.Pos.SalePayments.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) | The payment type (method) for this payment. `Required` `Filter(multi eq)` |
+| [PosSale](Crm.Pos.SalePayments.md#possale) | [Sales](Crm.Pos.Sales.md) | The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Amount
 
-Amount paid (in Amount Currency).
+Amount paid (in Amount Currency). `Currency: AmountCurrency` `Required` `Filter(eq;ge;le)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountBase
 
-Amount in base currency.
+Amount in base currency. `Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### CreatedAt
 
-Timestamp of the payment event.
+Timestamp of the payment event. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the sale payment.
+Notes for the sale payment. `Filter(like)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Reference
 
-Optional external reference (e.g. card transaction ID).
+Optional external reference (e.g. card transaction ID). `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **HiddenByDefault**
 
 ### AmountCurrency
 
-The currency of Amount.
+The currency of Amount. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentType
 
-The payment type (method) for this payment.
+The payment type (method) for this payment. `Required` `Filter(multi eq)`
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md)**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### PosSale
 
-The POS sale to which this specifies a payment.
+The POS sale to which this specifies a payment. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Sales](Crm.Pos.Sales.md)**  
 Indexed: **True**  

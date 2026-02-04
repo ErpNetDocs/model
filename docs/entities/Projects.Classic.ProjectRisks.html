@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#createdate">CreateDate</a></td>
 <td>date</td>
-<td>The creation date of the project risk.</td>
+<td>The creation date of the project risk. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#description">Description</a></td>
@@ -131,32 +131,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#impactpercent">ImpactPercent</a></td>
 <td>decimal (3, 2)</td>
-<td>The impact of the risk to the project, expressed as percentage of the total project value.</td>
+<td>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#probabilitypercent">ProbabilityPercent</a></td>
 <td>decimal (3, 2)</td>
-<td>The probability of the risk occurring.</td>
+<td>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#resolutionstrategy">ResolutionStrategy</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The strategy chosen to handle the risk</td>
+<td>The strategy chosen to handle the risk. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#resolved">Resolved</a></td>
 <td>boolean</td>
-<td>1 if the risk is resolved</td>
+<td>True if the risk is resolved. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#resolvedate">ResolveDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date on which the risk is resolved</td>
+<td>The date on which the risk is resolved. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#riskname">RiskName</a></td>
 <td>string (254)</td>
-<td>The short name of the risk.</td>
+<td>The short name of the risk. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,12 +173,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#project">Project</a></td>
 <td><a href="Projects.Classic.Projects.html">Projects</a></td>
-<td>The project for which this risk applies.</td>
+<td>The project for which this risk applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRisks.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person who is responsible for handling the risk</td>
+<td>The person who is responsible for handling the risk. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -228,7 +228,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdate">CreateDate</h3>
-<p>The creation date of the project risk.</p>
+<p>The creation date of the project risk. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -244,7 +244,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impactpercent">ImpactPercent</h3>
-<p>The impact of the risk to the project, expressed as percentage of the total project value.</p>
+<p>The impact of the risk to the project, expressed as percentage of the total project value. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -252,7 +252,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="probabilitypercent">ProbabilityPercent</h3>
-<p>The probability of the risk occurring.</p>
+<p>The probability of the risk occurring. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -260,7 +260,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resolutionstrategy">ResolutionStrategy</h3>
-<p>The strategy chosen to handle the risk</p>
+<p>The strategy chosen to handle the risk. <code>Filter(eq)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -268,7 +268,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resolved">Resolved</h3>
-<p>1 if the risk is resolved</p>
+<p>True if the risk is resolved. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -276,14 +276,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resolvedate">ResolveDate</h3>
-<p>The date on which the risk is resolved</p>
+<p>The date on which the risk is resolved. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="riskname">RiskName</h3>
-<p>The short name of the risk.</p>
+<p>The short name of the risk. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -313,14 +313,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
-<p>The project for which this risk applies.</p>
+<p>The project for which this risk applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.Classic.Projects.html">Projects</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>The person who is responsible for handling the risk</p>
+<p>The person who is responsible for handling the risk. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

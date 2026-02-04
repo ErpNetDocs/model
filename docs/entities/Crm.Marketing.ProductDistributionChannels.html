@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When the product was listed. NULL-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)</td>
+<td>When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Is this product listing active? 1=Yes, 0=No</td>
+<td>Is this product listing active? true=Yes, false=No. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#minimalsalespriceperlot">MinimalSalesPricePerLot</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></td>
-<td>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.</td>
+<td>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: Product.CostingCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#minimalsalesquantitybase">MinimalSalesQuantityBase</a></td>
@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When the product was de-listed. NULL=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)</td>
+<td>When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#distributionchannel">DistributionChannel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></td>
-<td>The distribution channel in which the product is listed</td>
+<td>The distribution channel in which the product is listed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.ProductDistributionChannels.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The listed product</td>
+<td>The listed product. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>When the product was listed. NULL-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)</p>
+<p>When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Is this product listing active? 1=Yes, 0=No</p>
+<p>Is this product listing active? true=Yes, false=No. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -212,7 +212,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="minimalsalespriceperlot">MinimalSalesPricePerLot</h3>
-<p>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.</p>
+<p>Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. <code>Currency: Product.CostingCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -226,7 +226,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>When the product was de-listed. NULL=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)</p>
+<p>When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -255,14 +255,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="distributionchannel">DistributionChannel</h3>
-<p>The distribution channel in which the product is listed</p>
+<p>The distribution channel in which the product is listed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The listed product</p>
+<p>The listed product. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

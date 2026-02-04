@@ -132,17 +132,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Parties.html#gln">GLN</a></td>
 <td>string (13) <strong>nullable</strong></td>
-<td>Global Location Number - provides the global supply chain solution for the identification of physical locations and legal entities. Used by EDI (Electronic Data Interchange) systems.</td>
+<td>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the current party is active in the system or not.</td>
+<td>Specifies whether the current party is active in the system or not. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#partycode">PartyCode</a></td>
 <td>string (16)</td>
-<td>The unique code of the party</td>
+<td>The unique code of the party. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#partycreationtime">PartyCreationTime</a></td>
@@ -157,7 +157,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Parties.html#partyname">PartyName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The name of the party</td>
+<td>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#partynotes">PartyNotes</a></td>
@@ -167,12 +167,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Parties.html#partytype">PartyType</a></td>
 <td><a href="General.Contacts.Parties.html#partytype">PartyType</a></td>
-<td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division</td>
+<td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#partyuniquenumber">PartyUniqueNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Unique number of the party (National number for persons, Registration number for companies).</td>
+<td>Unique number of the party (National number for persons, Registration number for companies). <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#partyupdatetime">PartyUpdateTime</a></td>
@@ -199,22 +199,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Parties.html#administrativeregion">AdministrativeRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</td>
-<td>The administrative region in which the party is situated.</td>
+<td>The administrative region in which the party is situated. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#area">Area</a></td>
 <td><a href="General.Geography.Areas.html">Areas</a> (nullable)</td>
-<td>The area in which the party is situated.</td>
+<td>The area in which the party is situated. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#defaultproductcodingsystem">DefaultProductCodingSystem</a></td>
 <td><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</td>
-<td>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</td>
+<td>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Parties.html#parentparty">ParentParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to.</td>
+<td>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +304,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="gln">GLN</h3>
-<p>Global Location Number - provides the global supply chain solution for the identification of physical locations and legal entities. Used by EDI (Electronic Data Interchange) systems.</p>
+<p>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p>Type: <strong>string (13) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -313,7 +313,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>13</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the current party is active in the system or not.</p>
+<p>Specifies whether the current party is active in the system or not. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="partycode">PartyCode</h3>
-<p>The unique code of the party</p>
+<p>The unique code of the party. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -347,7 +347,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="partyname">PartyName</h3>
-<p>The name of the party</p>
+<p>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -363,7 +363,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="partytype">PartyType</h3>
-<p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division</p>
+<p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html#partytype">PartyType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the PartyType data attribute<br>
@@ -403,7 +403,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Person</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="partyuniquenumber">PartyUniqueNumber</h3>
-<p>Unique number of the party (National number for persons, Registration number for companies).</p>
+<p>Unique number of the party (National number for persons, Registration number for companies). <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -470,25 +470,25 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
-<p>The administrative region in which the party is situated.</p>
+<p>The administrative region in which the party is situated. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="area">Area</h3>
-<p>The area in which the party is situated.</p>
+<p>The area in which the party is situated. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Geography.Areas.html">Areas</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultproductcodingsystem">DefaultProductCodingSystem</h3>
-<p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports.</p>
+<p>When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.CodingSystems.html">CodingSystems</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentparty">ParentParty</h3>
-<p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to.</p>
+<p>Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

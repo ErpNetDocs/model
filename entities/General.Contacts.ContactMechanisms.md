@@ -33,22 +33,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone 
-| [Name](General.Contacts.ContactMechanisms.md#name) | string (254) | Contact mechanism description 
+| [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone. `Required` `Default("A")` `Filter(multi eq)` 
+| [Name](General.Contacts.ContactMechanisms.md#name) | string (254) | Contact mechanism description. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdministrativeRegion](General.Contacts.ContactMechanisms.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. |
-| [GeoPoint](General.Contacts.ContactMechanisms.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. |
+| [AdministrativeRegion](General.Contacts.ContactMechanisms.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2` |
+| [GeoPoint](General.Contacts.ContactMechanisms.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.ContactMechanisms.md#id) | guid | Unique contact mechanism Id 
+| [Id](General.Contacts.ContactMechanisms.md#id) | guid |  
 | [ObjectVersion](General.Contacts.ContactMechanisms.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](General.Contacts.ContactMechanisms.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](General.Contacts.ContactMechanisms.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### ContactMechanismType
 
-A=Address; E=e-mail; T=Telephone
+A=Address; E=e-mail; T=Telephone. `Required` `Default("A")` `Filter(multi eq)`
 
 Type: **[ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype)**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Contact mechanism description
+Contact mechanism description. `Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -96,8 +96,6 @@ Maximum Length: **254**
 Show in UI: **ShownByDefault**  
 
 ### Id
-
-Unique contact mechanism Id
 
 Type: **guid**  
 Indexed: **True**  
@@ -161,7 +159,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdministrativeRegion
 
-The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A.
+The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2`
 
 Type: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
 Category: **System**  
@@ -170,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### GeoPoint
 
-The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A.
+The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2`
 
 Type: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
 Category: **System**  

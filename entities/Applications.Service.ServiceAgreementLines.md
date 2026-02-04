@@ -35,22 +35,22 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineEndDateTime](Applications.Service.ServiceAgreementLines.md#lineenddatetime) | datetime | The ending date and time of the agreement coverage for the current line. 
-| [LineNo](Applications.Service.ServiceAgreementLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. 
-| [LineStartDateTime](Applications.Service.ServiceAgreementLines.md#linestartdatetime) | datetime | The starting date and time of the agreement coverage for the current line. 
+| [LineEndDateTime](Applications.Service.ServiceAgreementLines.md#lineenddatetime) | datetime | The ending date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)` 
+| [LineNo](Applications.Service.ServiceAgreementLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
+| [LineStartDateTime](Applications.Service.ServiceAgreementLines.md#linestartdatetime) | datetime | The starting date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)` 
 | [Notes](Applications.Service.ServiceAgreementLines.md#notes) | string (254) __nullable__ | Notes for this ServiceAgreementLine. 
-| [ParentLineNo](Applications.Service.ServiceAgreementLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line. 
-| [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal (14, 3) | The quantity of the service object that is included in the agreement 
+| [ParentLineNo](Applications.Service.ServiceAgreementLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Introduced in version 22.1.5.18` 
+| [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal (14, 3) | The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Applications.Service.ServiceAgreementLines.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The owner document. The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)` |
-| [ParentDocument](Applications.Service.ServiceAgreementLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. NULL when the current line does not execute another line. |
+| [ParentDocument](Applications.Service.ServiceAgreementLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ServiceObject](Applications.Service.ServiceAgreementLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is covered by the current agreement. |
-| [ServiceType](Applications.Service.ServiceAgreementLines.md#servicetype) | [ServiceTypes](Applications.Service.ServiceTypes.md) | The type (level) of service that is agreed |
+| [ServiceObject](Applications.Service.ServiceAgreementLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is covered by the current agreement. `Required` `Filter(multi eq)` |
+| [ServiceType](Applications.Service.ServiceAgreementLines.md#servicetype) | [ServiceTypes](Applications.Service.ServiceTypes.md) | The type (level) of service that is agreed. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### LineEndDateTime
 
-The ending date and time of the agreement coverage for the current line.
+The ending date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -81,7 +81,7 @@ Front-End Recalc Expressions:
 `obj.ServiceAgreement.EndDateTime`
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -96,7 +96,7 @@ Front-End Recalc Expressions:
 `( obj.ServiceAgreement.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStartDateTime
 
-The starting date and time of the agreement coverage for the current line.
+The starting date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Introduced in version 22.1.5.18`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity of the service object that is included in the agreement
+The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)`
 
 Type: **decimal (14, 3)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocument
 
-The document, which the current line executes. NULL when the current line does not execute another line.
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceObject
 
-The service object, which is covered by the current agreement.
+The service object, which is covered by the current agreement. `Required` `Filter(multi eq)`
 
 Type: **[ServiceObjects](Applications.Service.ServiceObjects.md)**  
 Category: **System**  
@@ -214,7 +214,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceType
 
-The type (level) of service that is agreed
+The type (level) of service that is agreed. `Required` `Filter(multi eq)`
 
 Type: **[ServiceTypes](Applications.Service.ServiceTypes.md)**  
 Category: **System**  

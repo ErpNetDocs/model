@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanTemplates.html#assetlife">AssetLife</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Asset life in months by default for the depreciation plans created by this template. If not entered then the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</td>
+<td>Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</td>
 </tr>
 </tbody>
 </table>
@@ -138,17 +138,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanTemplates.html#assetcategory">AssetCategory</a></td>
 <td><a href="Finance.Assets.AssetCategories.html">AssetCategories</a></td>
-<td>Asset category for which this template is defined.</td>
+<td>Asset category for which this template is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanTemplates.html#depreciationmethod">DepreciationMethod</a></td>
 <td><a href="Finance.Assets.DepreciationMethods.html">DepreciationMethods</a></td>
-<td>Depreciation method by default for the depreciation plans created by this template.</td>
+<td>Depreciation method by default for the depreciation plans created by this template. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlanTemplates.html#valuationmodel">ValuationModel</a></td>
 <td><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></td>
-<td>Valuation model for which this template is defined.</td>
+<td>Valuation model for which this template is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="assetlife">AssetLife</h3>
-<p>Asset life in months by default for the depreciation plans created by this template. If not entered then the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</p>
+<p>Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -210,7 +210,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assetcategory">AssetCategory</h3>
-<p>Asset category for which this template is defined.</p>
+<p>Asset category for which this template is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Finance.Assets.AssetCategories.html">AssetCategories</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -218,13 +218,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="depreciationmethod">DepreciationMethod</h3>
-<p>Depreciation method by default for the depreciation plans created by this template.</p>
+<p>Depreciation method by default for the depreciation plans created by this template. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Assets.DepreciationMethods.html">DepreciationMethods</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="valuationmodel">ValuationModel</h3>
-<p>Valuation model for which this template is defined.</p>
+<p>Valuation model for which this template is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

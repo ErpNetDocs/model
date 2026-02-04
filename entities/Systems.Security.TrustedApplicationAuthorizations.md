@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#granttimeutc) | datetime | The time (in UTC) when the authorization was granted. 
-| [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#isrevoked) | boolean | Specifies whether the grant is explicitly revoked. 
+| [GrantTimeUtc](Systems.Security.TrustedApplicationAuthorizations.md#granttimeutc) | datetime | The time (in UTC) when the authorization was granted. `Required` `Default(NowUtc)` `Filter(ge;le)` 
+| [IsRevoked](Systems.Security.TrustedApplicationAuthorizations.md#isrevoked) | boolean | Specifies whether the grant is explicitly revoked. `Required` `Default(false)` 
 | [Notes](Systems.Security.TrustedApplicationAuthorizations.md#notes) | string (max) __nullable__ | Notes for this TrustedApplication<br />Authorization. 
-| [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime __nullable__ | The start of the validitiy of the authorization. NULL means that there is no restriction. 
-| [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime __nullable__ | The time (in UTC) when the grant expires. NULL means that there is no time restriction. 
+| [ValidFromUtc](Systems.Security.TrustedApplicationAuthorizations.md#validfromutc) | datetime __nullable__ | The start of the validitiy of the authorization. null means that there is no restriction. `Filter(ge;le)` 
+| [ValidUntilUtc](Systems.Security.TrustedApplicationAuthorizations.md#validuntilutc) | datetime __nullable__ | The time (in UTC) when the grant expires. null means that there is no time restriction. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContextUser](Systems.Security.TrustedApplicationAuthorizations.md#contextuser) | [Users](Systems.Security.Users.md) | The user, whose permissions are granted to the application. |
-| [GrantingUser](Systems.Security.TrustedApplicationAuthorizations.md#grantinguser) | [Users](Systems.Security.Users.md) | The user, who authorized the application. |
-| [TrustedApplication](Systems.Security.TrustedApplicationAuthorizations.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) | The application, which is authorized. |
+| [ContextUser](Systems.Security.TrustedApplicationAuthorizations.md#contextuser) | [Users](Systems.Security.Users.md) | The user, whose permissions are granted to the application. `Required` `Filter(multi eq)` |
+| [GrantingUser](Systems.Security.TrustedApplicationAuthorizations.md#grantinguser) | [Users](Systems.Security.Users.md) | The user, who authorized the application. `Required` `Filter(multi eq)` |
+| [TrustedApplication](Systems.Security.TrustedApplicationAuthorizations.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) | The application, which is authorized. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### GrantTimeUtc
 
-The time (in UTC) when the authorization was granted.
+The time (in UTC) when the authorization was granted. `Required` `Default(NowUtc)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### IsRevoked
 
-Specifies whether the grant is explicitly revoked.
+Specifies whether the grant is explicitly revoked. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFromUtc
 
-The start of the validitiy of the authorization. NULL means that there is no restriction.
+The start of the validitiy of the authorization. null means that there is no restriction. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidUntilUtc
 
-The time (in UTC) when the grant expires. NULL means that there is no time restriction.
+The time (in UTC) when the grant expires. null means that there is no time restriction. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **HiddenByDefault**
 
 ### ContextUser
 
-The user, whose permissions are granted to the application.
+The user, whose permissions are granted to the application. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### GrantingUser
 
-The user, who authorized the application.
+The user, who authorized the application. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### TrustedApplication
 
-The application, which is authorized.
+The application, which is authorized. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[TrustedApplications](Systems.Security.TrustedApplications.md)**  
 Category: **System**  

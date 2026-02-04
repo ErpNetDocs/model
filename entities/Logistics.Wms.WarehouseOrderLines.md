@@ -36,32 +36,32 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrentBalanceBase](Logistics.Wms.WarehouseOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [LineGroupNo](Logistics.Wms.WarehouseOrderLines.md#linegroupno) | int32 | Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. 
-| [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. 
+| [LineGroupNo](Logistics.Wms.WarehouseOrderLines.md#linegroupno) | int32 | Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67` 
+| [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. `Required` `Filter(eq)` 
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseOrderLine. 
-| [ParentLineNo](Logistics.Wms.WarehouseOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. 
-| [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, which should be operated. 
-| [QuantityBase](Logistics.Wms.WarehouseOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. 
-| [StandardQuantity](Logistics.Wms.WarehouseOrderLines.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
-| [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. 
+| [ParentLineNo](Logistics.Wms.WarehouseOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26` 
+| [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [QuantityBase](Logistics.Wms.WarehouseOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 22.1.4.41` 
+| [StandardQuantity](Logistics.Wms.WarehouseOrderLines.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42` 
+| [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Wms.WarehouseOrderLines.md#document) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | The owner document. The <see cref="WarehouseOrder"/> to which this WarehouseOrderLine belongs. `Required` `Filter(multi eq)` |
-| [LogisticUnit](Logistics.Wms.WarehouseOrderLines.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | Logistic unit, which should be used in the operation. |
-| [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be operated. NULL for operations, which are not lot-specific, or when any lot can be used. |
-| [ParentDocument](Logistics.Wms.WarehouseOrderLines.md#parentdocument) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. |
-| [Product](Logistics.Wms.WarehouseOrderLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which should be operated. |
-| [ProductVariant](Logistics.Wms.WarehouseOrderLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which should be used. |
-| [QuantityUnit](Logistics.Wms.WarehouseOrderLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit of Quantity. |
-| [SerialNumber](Logistics.Wms.WarehouseOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product. NULL means that the serial number is unknown or not applicable. |
-| [ToWarehouseLocation](Logistics.Wms.WarehouseOrderLines.md#towarehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Destination warehouse location. NULL for operations, which do not specify destination location. |
-| [WarehouseLocation](Logistics.Wms.WarehouseOrderLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Location, where the opeartion should be performed. NULL for operations, which do not require location. |
+| [LogisticUnit](Logistics.Wms.WarehouseOrderLines.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | Logistic unit, which should be used in the operation. `Filter(multi eq)` `Introduced in version 21.1.1.18` |
+| [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. `Filter(multi eq)` |
+| [ParentDocument](Logistics.Wms.WarehouseOrderLines.md#parentdocument) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26` |
+| [Product](Logistics.Wms.WarehouseOrderLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which should be used for the operation. `Filter(multi eq)` |
+| [ProductVariant](Logistics.Wms.WarehouseOrderLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which should be used. `Filter(multi eq)` `Introduced in version 21.1.1.18` |
+| [QuantityUnit](Logistics.Wms.WarehouseOrderLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit of Quantity. null for operations, which are not quantity-related. `Filter(multi eq)` |
+| [SerialNumber](Logistics.Wms.WarehouseOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. `Filter(multi eq)` |
+| [ToWarehouseLocation](Logistics.Wms.WarehouseOrderLines.md#towarehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Destination warehouse location. null for operations, which do not specify destination location. `Filter(multi eq)` |
+| [WarehouseLocation](Logistics.Wms.WarehouseOrderLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Location, where the opeartion should be performed. null for operations, which do not require location. `Filter(multi eq)` |
 | [WarehouseOrder](Logistics.Wms.WarehouseOrderLines.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | The <see cref="WarehouseOrder"/> to which this WarehouseOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [WarehouseWorker](Logistics.Wms.WarehouseOrderLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | The human or robot worker, which should execute the line. NULL means that the line is shared among all workers, assigned to the order. |
-| [WarehouseZone](Logistics.Wms.WarehouseOrderLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone. |
+| [WarehouseWorker](Logistics.Wms.WarehouseOrderLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. `Filter(multi eq)` |
+| [WarehouseZone](Logistics.Wms.WarehouseOrderLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -87,7 +87,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineGroupNo
 
-Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.
+Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67`
 
 Type: **int32**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineNo
 
-Unique consecutive line number within the order.
+Unique consecutive line number within the order. `Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. null when the current line does not execute another line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-The quantity of the product, which should be operated.
+The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity in the base measurement unit of the product.
+Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 22.1.4.41`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -160,7 +160,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantity
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -175,7 +175,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### TaskType
 
-The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.
+The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. `Required` `Filter(multi eq)`
 
 Type: **[TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype)**  
 Category: **System**  
@@ -253,7 +253,7 @@ Show in UI: **ShownByDefault**
 
 ### LogisticUnit
 
-Logistic unit, which should be used in the operation.
+Logistic unit, which should be used in the operation. `Filter(multi eq)` `Introduced in version 21.1.1.18`
 
 Type: **[LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable)**  
 Category: **System**  
@@ -262,7 +262,7 @@ Show in UI: **HiddenByDefault**
 
 ### Lot
 
-The lot of the product, which should be operated. NULL for operations, which are not lot-specific, or when any lot can be used.
+The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. `Filter(multi eq)`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -271,7 +271,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentDocument
 
-The document, which the current line executes. null when the current line does not execute another line.
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26`
 
 Type: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable)**  
 Category: **System**  
@@ -280,7 +280,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product, which should be operated.
+The product, which should be used for the operation. `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -289,7 +289,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductVariant
 
-The product variant, which should be used.
+The product variant, which should be used. `Filter(multi eq)` `Introduced in version 21.1.1.18`
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -298,7 +298,7 @@ Show in UI: **HiddenByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity.
+The measurement unit of Quantity. null for operations, which are not quantity-related. `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
@@ -309,7 +309,7 @@ Front-End Recalc Expressions:
 `obj.Product.MeasurementUnit`
 ### SerialNumber
 
-Serial number of the product. NULL means that the serial number is unknown or not applicable.
+The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. `Filter(multi eq)`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -318,7 +318,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToWarehouseLocation
 
-Destination warehouse location. NULL for operations, which do not specify destination location.
+Destination warehouse location. null for operations, which do not specify destination location. `Filter(multi eq)`
 
 Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable)**  
 Category: **System**  
@@ -327,7 +327,7 @@ Show in UI: **HiddenByDefault**
 
 ### WarehouseLocation
 
-Location, where the opeartion should be performed. NULL for operations, which do not require location.
+Location, where the opeartion should be performed. null for operations, which do not require location. `Filter(multi eq)`
 
 Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable)**  
 Category: **System**  
@@ -347,7 +347,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseWorker
 
-The human or robot worker, which should execute the line. NULL means that the line is shared among all workers, assigned to the order.
+Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. `Filter(multi eq)`
 
 Type: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 Category: **System**  
@@ -361,7 +361,7 @@ Front-End Recalc Expressions:
 `obj.WarehouseOrder.WarehouseWorker`
 ### WarehouseZone
 
-The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone.
+The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. `Filter(multi eq)`
 
 Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 Category: **System**  

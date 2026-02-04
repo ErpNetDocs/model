@@ -33,18 +33,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date __nullable__ | The ending date of the agreement with this carrier. NULL for agreements which are still active. 
-| [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier. 
-| [Code](Logistics.Shipment.Carriers.md#code) | string (16) | Unique carrier code (or call sign). The code is unique within all enterprise companies. 
-| [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active. 
+| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date __nullable__ | The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)` 
+| [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier. `Required` `Default(Today)` `Filter(eq;ge;le)` 
+| [Code](Logistics.Shipment.Carriers.md#code) | string (16) | Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD` 
+| [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Logistics.Shipment.Carriers.md#notes) | string (max) __nullable__ | Notes for this Carrier. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Shipment.Carriers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which signed the carrier agreement. |
-| [Supplier](Logistics.Shipment.Carriers.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier contract with the carrier. |
+| [EnterpriseCompany](Logistics.Shipment.Carriers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which signed the carrier agreement. `Required` `Filter(multi eq)` |
+| [Supplier](Logistics.Shipment.Carriers.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) | The supplier contract with the carrier. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### AgreementEndDate
 
-The ending date of the agreement with this carrier. NULL for agreements which are still active.
+The ending date of the agreement with this carrier. null for agreements which are still active. `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### AgreementStartDate
 
-The start date of the agreement with this carrier.
+The start date of the agreement with this carrier. `Required` `Default(Today)` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique carrier code (or call sign). The code is unique within all enterprise companies.
+Unique carrier code (or call sign). The code is unique within all enterprise companies. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the carrier agreement is active.
+Specifies whether the carrier agreement is active. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -180,7 +180,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company which signed the carrier agreement.
+The enterprise company which signed the carrier agreement. `Required` `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### Supplier
 
-The supplier contract with the carrier.
+The supplier contract with the carrier. `Required` `Filter(multi eq)`
 
 Type: **[Suppliers](Logistics.Procurement.Suppliers.md)**  
 Category: **System**  

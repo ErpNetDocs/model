@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.PropertyEnterpriseCompanyFilters.html#filterxml">FilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, specifies a filter for the allowed values of the property for the specified enterprise company.</td>
+<td>When not null, specifies a filter for the allowed values of the property for the specified enterprise company. <code>Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomProperty&lt;br /&gt;AllowedValuesRepository.TableName)</code></td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +143,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.PropertyEnterpriseCompanyFilters.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for which the current filter is specifed.</td>
+<td>The enterprise company for which the current filter is specifed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.PropertyEnterpriseCompanyFilters.html#property">Property</a></td>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="filterxml">FilterXml</h3>
-<p>When not null, specifies a filter for the allowed values of the property for the specified enterprise company.</p>
+<p>When not null, specifies a filter for the allowed values of the property for the specified enterprise company. <code>Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomPropertyAllowedValuesRepository.TableName)</code></p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -210,7 +210,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the current filter is specifed.</p>
+<p>The enterprise company for which the current filter is specifed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

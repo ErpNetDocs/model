@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | 1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. 
+| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2` 
 | [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfilePlan. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenancePlan](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The maintenance plan, which is included in the profile. |
-| [MaintenanceProfile](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceprofile) | [MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) | The maintenance profile, which includes the plan. |
+| [MaintenancePlan](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The maintenance plan, which is included in the profile. `Required` `Filter(multi eq)` |
+| [MaintenanceProfile](Applications.Fleet.MaintenanceProfilePlans.md#maintenanceprofile) | [MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) | The maintenance profile, which includes the plan. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### IsActive
 
-1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.
+True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2`
 
 Type: **boolean**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaintenancePlan
 
-The maintenance plan, which is included in the profile.
+The maintenance plan, which is included in the profile. `Required` `Filter(multi eq)`
 
 Type: **[MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### MaintenanceProfile
 
-The maintenance profile, which includes the plan.
+The maintenance profile, which includes the plan. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)**  
 Category: **System**  

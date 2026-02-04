@@ -52,27 +52,27 @@ Aggregate Tree
 | [CompleteTime](Crm.Presales.Deals.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Presales.Deals.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Presales.Deals.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DealStatus](Crm.Presales.Deals.md#dealstatus) | [DealStatus](Crm.Presales.Deals.md#dealstatus) | Current status of this deal. 
+| [DealStatus](Crm.Presales.Deals.md#dealstatus) | [DealStatus](Crm.Presales.Deals.md#dealstatus) | Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. `Required` `Default("INP")` `Filter(multi eq)` 
 | [DocumentDate](Crm.Presales.Deals.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Presales.Deals.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Crm.Presales.Deals.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Crm.Presales.Deals.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Presales.Deals.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ExpectedRevenue](Crm.Presales.Deals.md#expectedrevenue) | [Amount (18, 2)](../data-types.md#amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. 
+| [ExpectedRevenue](Crm.Presales.Deals.md#expectedrevenue) | [Amount (18, 2)](../data-types.md#amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)` 
 | [FullState](Crm.Presales.Deals.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Crm.Presales.Deals.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Crm.Presales.Deals.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Crm.Presales.Deals.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Crm.Presales.Deals.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Crm.Presales.Deals.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Presales.Deals.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Crm.Presales.Deals.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Presales.Deals.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Crm.Presales.Deals.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Crm.Presales.Deals.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Crm.Presales.Deals.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RevenueEndDate](Crm.Presales.Deals.md#revenueenddate) | datetime | Expected date on which the last revenue from this deal will occur. 
-| [RevenueStartDate](Crm.Presales.Deals.md#revenuestartdate) | datetime | Expected date on which revenue from this deal will start. 
+| [RevenueEndDate](Crm.Presales.Deals.md#revenueenddate) | datetime | Expected date on which the last revenue from this deal will occur. `Required` `Default(Today)` `Filter(ge;le)` 
+| [RevenueStartDate](Crm.Presales.Deals.md#revenuestartdate) | datetime | Expected date on which revenue from this deal will start. `Required` `Default(Today)` `Filter(ge;le)` 
 | [State](Crm.Presales.Deals.md#state) | [DocumentState](Crm.Presales.Deals.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Crm.Presales.Deals.md#statetagsattribute) | string | Specifies the state of the document. 
-| [SuccessProbability](Crm.Presales.Deals.md#successprobability) | decimal (3, 2) | Probability of success of that deal in percents. 
+| [SuccessProbability](Crm.Presales.Deals.md#successprobability) | decimal (3, 2) | Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15). `Required` `Default(0)` 
 | [Void](Crm.Presales.Deals.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Crm.Presales.Deals.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Crm.Presales.Deals.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -85,22 +85,22 @@ Aggregate Tree
 | [AccessKey](Crm.Presales.Deals.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Crm.Presales.Deals.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Crm.Presales.Deals.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Campaign](Crm.Presales.Deals.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | The marketing campaign to which this opportunity belongs. |
+| [Campaign](Crm.Presales.Deals.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | The marketing campaign to which this opportunity belongs. `Filter(multi eq)` `Introduced in version 24.1.0.67` |
 | [CurrencyDirectory](Crm.Presales.Deals.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Dealer](Crm.Presales.Deals.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, which provided the opportunity |
+| [Dealer](Crm.Presales.Deals.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, which provided the opportunity. `Filter(multi eq)` |
 | [DocumentType](Crm.Presales.Deals.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Crm.Presales.Deals.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Crm.Presales.Deals.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ExpectedRevenueCurrency](Crm.Presales.Deals.md#expectedrevenuecurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Expected Revenue |
+| [ExpectedRevenueCurrency](Crm.Presales.Deals.md#expectedrevenuecurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Expected Revenue. `Required` `Filter(multi eq)` |
 | [FromCompanyDivision](Crm.Presales.Deals.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Crm.Presales.Deals.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [LeadingSalesPerson](Crm.Presales.Deals.md#leadingsalesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | The sales person, responsible for the opportunity |
-| [LostToCompetitor](Crm.Presales.Deals.md#losttocompetitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | When not null, specifies the competitor to which we lost the deal. |
-| [LostToCompetitorSolution](Crm.Presales.Deals.md#losttocompetitorsolution) | [CompetitorSolutions](Crm.Marketing.CompetitorSolutions.md) (nullable) | When not null, specifies the competitor solution to which we lost the deal. |
-| [MarketingSolution](Crm.Presales.Deals.md#marketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | The marketing solution, in which the potential client is interested. |
+| [LeadingSalesPerson](Crm.Presales.Deals.md#leadingsalesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | The sales person, responsible for the opportunity. `Required` `Filter(multi eq)` |
+| [LostToCompetitor](Crm.Presales.Deals.md#losttocompetitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | When not null, specifies the competitor to which we lost the deal. `Filter(multi eq)` `Introduced in version 22.1.4.72` |
+| [LostToCompetitorSolution](Crm.Presales.Deals.md#losttocompetitorsolution) | [CompetitorSolutions](Crm.Marketing.CompetitorSolutions.md) (nullable) | When not null, specifies the competitor solution to which we lost the deal. `Filter(multi eq)` `Introduced in version 22.1.4.72` |
+| [MarketingSolution](Crm.Presales.Deals.md#marketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | The marketing solution, in which the potential client is interested. `Filter(multi eq)` `Introduced in version 22.1.4.42` |
 | [MasterDocument](Crm.Presales.Deals.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Crm.Presales.Deals.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Party](Crm.Presales.Deals.md#party) | [Parties](General.Contacts.Parties.md) | The prospect customers party. The party might not yet have a customer record. |
+| [Party](Crm.Presales.Deals.md#party) | [Parties](General.Contacts.Parties.md) | The prospect customers party. The party might not yet have a customer record. `Required` `Filter(multi eq)` |
 | [PrimeCauseDocument](Crm.Presales.Deals.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Crm.Presales.Deals.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Crm.Presales.Deals.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -205,7 +205,7 @@ Show in UI: **HiddenByDefault**
 
 ### DealStatus
 
-Current status of this deal.
+Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. `Required` `Default("INP")` `Filter(multi eq)`
 
 Type: **[DealStatus](Crm.Presales.Deals.md#dealstatus)**  
 Category: **System**  
@@ -283,7 +283,7 @@ Show in UI: **CannotBeShown**
 
 ### ExpectedRevenue
 
-Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.
+Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)`
 
 Type: **[Amount (18, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -315,7 +315,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -399,7 +399,7 @@ Show in UI: **HiddenByDefault**
 
 ### RevenueEndDate
 
-Expected date on which the last revenue from this deal will occur.
+Expected date on which the last revenue from this deal will occur. `Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -412,7 +412,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.RevenueStartDate >= obj.RevenueEndDate), obj.RevenueStartDate, obj.RevenueEndDate)`
 ### RevenueStartDate
 
-Expected date on which revenue from this deal will start.
+Expected date on which revenue from this deal will start. `Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -457,7 +457,7 @@ Show in UI: **HiddenByDefault**
 
 ### SuccessProbability
 
-Probability of success of that deal in percents.
+Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15). `Required` `Default(0)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -612,7 +612,7 @@ Show in UI: **ShownByDefault**
 
 ### Campaign
 
-The marketing campaign to which this opportunity belongs.
+The marketing campaign to which this opportunity belongs. `Filter(multi eq)` `Introduced in version 24.1.0.67`
 
 Type: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
 Category: **System**  
@@ -630,7 +630,7 @@ Show in UI: **HiddenByDefault**
 
 ### Dealer
 
-The external dealer, which provided the opportunity
+The external dealer, which provided the opportunity. `Filter(multi eq)`
 
 Type: **[Dealers](Crm.Sales.Dealers.md) (nullable)**  
 Category: **System**  
@@ -668,7 +668,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExpectedRevenueCurrency
 
-The currency of Expected Revenue
+The currency of Expected Revenue. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -700,7 +700,7 @@ Show in UI: **HiddenByDefault**
 
 ### LeadingSalesPerson
 
-The sales person, responsible for the opportunity
+The sales person, responsible for the opportunity. `Required` `Filter(multi eq)`
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md)**  
 Category: **System**  
@@ -709,7 +709,7 @@ Show in UI: **ShownByDefault**
 
 ### LostToCompetitor
 
-When not null, specifies the competitor to which we lost the deal.
+When not null, specifies the competitor to which we lost the deal. `Filter(multi eq)` `Introduced in version 22.1.4.72`
 
 Type: **[Competitors](Crm.Marketing.Competitors.md) (nullable)**  
 Category: **System**  
@@ -718,7 +718,7 @@ Show in UI: **ShownByDefault**
 
 ### LostToCompetitorSolution
 
-When not null, specifies the competitor solution to which we lost the deal.
+When not null, specifies the competitor solution to which we lost the deal. `Filter(multi eq)` `Introduced in version 22.1.4.72`
 
 Type: **[CompetitorSolutions](Crm.Marketing.CompetitorSolutions.md) (nullable)**  
 Category: **System**  
@@ -727,7 +727,7 @@ Show in UI: **ShownByDefault**
 
 ### MarketingSolution
 
-The marketing solution, in which the potential client is interested.
+The marketing solution, in which the potential client is interested. `Filter(multi eq)` `Introduced in version 22.1.4.42`
 
 Type: **[MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable)**  
 Category: **System**  
@@ -756,7 +756,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The prospect customers party. The party might not yet have a customer record.
+The prospect customers party. The party might not yet have a customer record. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  

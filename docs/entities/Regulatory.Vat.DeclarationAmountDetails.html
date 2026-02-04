@@ -117,7 +117,7 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationAmountDetails.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount (15, 2)</a></td>
-<td>The amount of the operation according to the category.</td>
+<td>The amount of the operation according to the category. <code>Currency: BaseCurrency</code> <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -139,23 +139,23 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationAmountDetails.html#box">Box</a></td>
 <td><a href="Regulatory.Vat.BoxTypes.html">BoxTypes</a></td>
-<td>The type of box in a VAT declaration.</td>
+<td>The type of box in a VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Box_Types_Table.Box_Type_Id</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationAmountDetails.html#declaration">Declaration</a></td>
 <td><a href="Regulatory.Vat.Declarations.html">Declarations</a></td>
-<td>The VAT declaration</td>
+<td>The VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Declarations_Table.Declaration_Id</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationAmountDetails.html#vatentry">VATEntry</a></td>
 <td><a href="Regulatory.Vat.Entries.html">Entries</a></td>
-<td>Unique identification number of this VAT entry.</td>
+<td>Unique identification number of this VAT entry. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Entries_Table.Entry_Id</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>The amount of the operation according to the category.</p>
+<p>The amount of the operation according to the category. <code>Currency: BaseCurrency</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (15, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -170,7 +170,7 @@ Inherited From: <strong>VAT_Entries_Table.Base_Currency_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="box">Box</h3>
-<p>The type of box in a VAT declaration.</p>
+<p>The type of box in a VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Box_Types_Table.Box_Type_Id</code></p>
 <p>Type: <strong><a href="Regulatory.Vat.BoxTypes.html">BoxTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>VAT_Box_Types_Table.Box_Type_Id</strong><br>
@@ -178,7 +178,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="declaration">Declaration</h3>
-<p>The VAT declaration</p>
+<p>The VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Declarations_Table.Declaration_Id</code></p>
 <p>Type: <strong><a href="Regulatory.Vat.Declarations.html">Declarations</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>VAT_Declarations_Table.Declaration_Id</strong><br>
@@ -186,7 +186,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatentry">VATEntry</h3>
-<p>Unique identification number of this VAT entry.</p>
+<p>Unique identification number of this VAT entry. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Entries_Table.Entry_Id</code></p>
 <p>Type: <strong><a href="Regulatory.Vat.Entries.html">Entries</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>VAT_Entries_Table.Entry_Id</strong><br>

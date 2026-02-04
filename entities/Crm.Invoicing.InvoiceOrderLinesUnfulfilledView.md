@@ -30,27 +30,27 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsFulfilled](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. 
-| [IsQuantityFulfilled](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. 
-| [OrderRemainingLineAmount](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#orderremaininglineamount) | decimal (38, 2) | The uninvoiced (unfulfilled) line amount of the invoice order line. 
-| [OrderRemaining<br />StandardQuantity](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#orderremainingstandardquantity) | decimal (38, 6) | The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit. 
+| [IsFulfilled](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. `Required` `Filter(eq)` 
+| [IsQuantityFulfilled](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. `Required` `Filter(eq)` 
+| [OrderRemainingLineAmount](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#orderremaininglineamount) | decimal (38, 2) | The uninvoiced (unfulfilled) line amount of the invoice order line. `Required` `Filter(multi eq;ge;le)` 
+| [OrderRemaining<br />StandardQuantity](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#orderremainingstandardquantity) | decimal (38, 6) | The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [InvoiceOrder](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#invoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The invoice order to which the invoice order line belongs. |
-| [InvoiceOrderLine](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | The line containing the ordered quantity and amount. |
-| [SalesOrder](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When not NULL specifies the sales order that is ordered to be invoiced by the invoice order line. |
-| [SalesOrderLine](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#salesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | When not NULL specifies the sales order line that is ordered to be invoiced by the invoice order line. |
-| [TransactionLine](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable) | When not NULL specifies the store transaction line that is to be invoiced by the invoice order line. |
+| [InvoiceOrder](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#invoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The invoice order to which the invoice order line belongs. `Required` `Filter(multi eq)` `Inherited from Crm_Invoice_Order_<br />Lines_Table.Invoice_Order_Id` `Introduced in version 24.1.5.19` `Owner` |
+| [InvoiceOrderLine](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | Invoice order line which is invoiced by this line. `Filter(multi eq)` `Inherited from Crm_Invoice_Lines_Table.Invoice_Order_Line_Id` `Introduced in version 24.1.5.19` `FilterableReference` |
+| [SalesOrder](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | When not null specifies the Sales Order that is ordered to be invoiced by this line. `Filter(multi eq)` `Inherited from Crm_Invoice_Order_<br />Lines_Table.Sales_Order_Id` `Introduced in version 24.1.5.19` |
+| [SalesOrderLine](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#salesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | When not null specifies the Sales Order line that is ordered to be invoiced by this line. `Filter(multi eq)` `Inherited from Crm_Invoice_Order_<br />Lines_Table.Sales_Order_Line_Id` `Introduced in version 24.1.5.19` |
+| [TransactionLine](Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable) | The store transaction line that is to be invoiced by this line, for Business Reason = S. `Filter(multi eq)` `Inherited from Crm_Invoice_Order_<br />Lines_Table.Transaction_Line_Id` `Introduced in version 24.1.5.19` |
 
 
 ## Attribute Details
 
 ### IsFulfilled
 
-Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.
+Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. `Required` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -60,7 +60,7 @@ Show in UI: **ShownByDefault**
 
 ### IsQuantityFulfilled
 
-Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.
+Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. `Required` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderRemainingLineAmount
 
-The uninvoiced (unfulfilled) line amount of the invoice order line.
+The uninvoiced (unfulfilled) line amount of the invoice order line. `Required` `Filter(multi eq;ge;le)`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderRemainingStandardQuantity
 
-The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.
+The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit. `Required` `Filter(multi eq;ge;le)`
 
 Type: **decimal (38, 6)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoiceOrder
 
-The invoice order to which the invoice order line belongs.
+The invoice order to which the invoice order line belongs. `Required` `Filter(multi eq)` `Inherited from Crm_Invoice_Order_Lines_Table.Invoice_Order_Id` `Introduced in version 24.1.5.19` `Owner`
 
 Type: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoiceOrderLine
 
-The line containing the ordered quantity and amount.
+Invoice order line which is invoiced by this line. `Filter(multi eq)` `Inherited from Crm_Invoice_Lines_Table.Invoice_Order_Line_Id` `Introduced in version 24.1.5.19` `FilterableReference`
 
 Type: **[InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesOrder
 
-When not NULL specifies the sales order that is ordered to be invoiced by the invoice order line.
+When not null specifies the Sales Order that is ordered to be invoiced by this line. `Filter(multi eq)` `Inherited from Crm_Invoice_Order_Lines_Table.Sales_Order_Id` `Introduced in version 24.1.5.19`
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesOrderLine
 
-When not NULL specifies the sales order line that is ordered to be invoiced by the invoice order line.
+When not null specifies the Sales Order line that is ordered to be invoiced by this line. `Filter(multi eq)` `Inherited from Crm_Invoice_Order_Lines_Table.Sales_Order_Line_Id` `Introduced in version 24.1.5.19`
 
 Type: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionLine
 
-When not NULL specifies the store transaction line that is to be invoiced by the invoice order line.
+The store transaction line that is to be invoiced by this line, for Business Reason = S. `Filter(multi eq)` `Inherited from Crm_Invoice_Order_Lines_Table.Transaction_Line_Id` `Introduced in version 24.1.5.19`
 
 Type: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable)**  
 Category: **System**  

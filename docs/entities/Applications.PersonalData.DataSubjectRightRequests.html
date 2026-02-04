@@ -121,12 +121,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#completedonutc">CompletedOnUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</td>
+<td>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdonutc">CreatedOnUtc</a></td>
 <td>datetime</td>
-<td>The date and time (in UTC), when the request was created.</td>
+<td>The date and time (in UTC), when the request was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#notes">Notes</a></td>
@@ -136,12 +136,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></td>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></td>
-<td>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.</td>
+<td>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></td>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></td>
-<td>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.</td>
+<td>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,22 +158,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#completedbyuser">CompletedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.</td>
+<td>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#createdbyuser">CreatedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.</td>
+<td>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company, to which the request was made.</td>
+<td>The enterprise company, to which the request was made. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.PersonalData.DataSubjectRightRequests.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The person, whose data will be corrected with the request.</td>
+<td>The person, whose data will be corrected with the request. . <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -221,14 +221,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completedonutc">CompletedOnUtc</h3>
-<p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</p>
+<p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createdonutc">CreatedOnUtc</h3>
-<p>The date and time (in UTC), when the request was created.</p>
+<p>The date and time (in UTC), when the request was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -244,7 +244,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requestedright">RequestedRight</h3>
-<p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other.</p>
+<p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>RequestedRight</code>(Applications.PersonalData.DataSubjectRightRequests.md#requestedright) data attribute<br>
@@ -287,7 +287,7 @@ Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Req
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.</p>
+<p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. <code>Required</code></p>
 <p>Type: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Applications.PersonalData.DataSubjectRightRequests.md#status) data attribute<br>
@@ -369,25 +369,25 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="completedbyuser">CompletedByUser</h3>
-<p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.</p>
+<p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createdbyuser">CreatedByUser</h3>
-<p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.</p>
+<p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company, to which the request was made.</p>
+<p>The enterprise company, to which the request was made. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>The person, whose data will be corrected with the request.</p>
+<p>The person, whose data will be corrected with the request. . <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

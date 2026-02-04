@@ -28,28 +28,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit) 
-| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency 
-| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency 
-| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key 
+| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit). `Required` 
+| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency. `Required` 
+| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency. `Required` 
+| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.CurrentBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Account reference |
-| [CostCenter](Finance.Accounting.CurrentBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center |
-| [Currency](Finance.Accounting.CurrentBalances.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
-| [EnterpriseCompany](Finance.Accounting.CurrentBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Legal entity |
-| [EnterpriseCompanyLocation](Finance.Accounting.CurrentBalances.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Optional location/branch filter |
-| [ProfitCenter](Finance.Accounting.CurrentBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center |
+| [Account](Finance.Accounting.CurrentBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Account reference. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference` |
+| [CostCenter](Finance.Accounting.CurrentBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id` |
+| [Currency](Finance.Accounting.CurrentBalances.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id` |
+| [EnterpriseCompany](Finance.Accounting.CurrentBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Legal entity . `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_<br />Companies_Table.Enterprise_Company_Id` `FilterableReference` |
+| [EnterpriseCompanyLocation](Finance.Accounting.CurrentBalances.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Optional location/branch filter. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id` `FilterableReference` |
+| [ProfitCenter](Finance.Accounting.CurrentBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id` |
 
 
 ## Attribute Details
 
 ### Balance
 
-Net current balance (Debit - Credit)
+Net current balance (Debit - Credit). `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Current balance in base currency
+Current balance in base currency. `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Current balance in reporting currency
+Current balance in reporting currency. `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key
+Item Key. `Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Account
 
-Account reference
+Account reference. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference`
 
 Type: **[Accounts](Finance.Accounting.Accounts.md)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCenter
 
-Cost Center
+Cost Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id`
 
 Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### Currency
 
-Currency
+Currency. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-Legal entity
+Legal entity . `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id` `FilterableReference`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompanyLocation
 
-Optional location/branch filter
+Optional location/branch filter. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id` `FilterableReference`
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### ProfitCenter
 
-Profit Center
+Profit Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id`
 
 Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
 Category: **System**  

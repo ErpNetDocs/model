@@ -36,19 +36,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.Workgroups.md#active) | boolean | Indicates whether the current workgroup is active. 
-| [<s>CostCurrency</s>](Production.Resources.Workgroups.md#costcurrency) | string (3) __nullable__ | **OBSOLETE! Do not use!** Not used. 
-| [FullPath](Production.Resources.Workgroups.md#fullpath) | string (254) __nullable__ | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. 
-| [Name](Production.Resources.Workgroups.md#name) | string (64) | Name of the workgroup 
-| [Notes](Production.Resources.Workgroups.md#notes) | string (254) __nullable__ | User notes for the workgroup 
-| [Parent](Production.Resources.Workgroups.md#parent) | string (255) | Path-like parent workgroup name 
+| [Active](Production.Resources.Workgroups.md#active) | boolean | Indicates whether the current workgroup is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
+| [<s>CostCurrency</s>](Production.Resources.Workgroups.md#costcurrency) | string (3) __nullable__ | **OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61` 
+| [FullPath](Production.Resources.Workgroups.md#fullpath) | string (254) __nullable__ | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")` `Filter(eq)` 
+| [Name](Production.Resources.Workgroups.md#name) | string (64) | Name of the workgroup. `Required` `Filter(like)` 
+| [Notes](Production.Resources.Workgroups.md#notes) | string (254) __nullable__ | User notes for the workgroup. 
+| [Parent](Production.Resources.Workgroups.md#parent) | string (255) | Path-like parent workgroup name. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Workgroups.md#id) | guid | Unique workgroup auto-generated Id 
+| [Id](Production.Resources.Workgroups.md#id) | guid |  
 | [ObjectVersion](Production.Resources.Workgroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](Production.Resources.Workgroups.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Production.Resources.Workgroups.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### Active
 
-Indicates whether the current workgroup is active.
+Indicates whether the current workgroup is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
 
 Type: **boolean**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCurrency
 
-**OBSOLETE! Do not use!** Not used.
+**OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61`
 
 Type: **string (3) __nullable__**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **CannotBeShown**
 
 ### FullPath
 
-The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.
+The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")` `Filter(eq)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **CannotBeShown**
 
 ### Name
 
-Name of the workgroup
+Name of the workgroup. `Required` `Filter(like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-User notes for the workgroup
+User notes for the workgroup.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### Parent
 
-Path-like parent workgroup name
+Path-like parent workgroup name. `Required` `Default("/")` `Filter(eq;like)` `ORD`
 
 Type: **string (255)**  
 Indexed: **True**  
@@ -135,8 +135,6 @@ Default Value: **/**
 Show in UI: **CannotBeShown**  
 
 ### Id
-
-Unique workgroup auto-generated Id
 
 Type: **guid**  
 Indexed: **True**  

@@ -34,17 +34,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Projects.AI.TrainingConversations.md#creationtimeutc) | datetime | The date and time (UTC) when the conversation was created. 
-| [LastUpdateTimeUtc](Projects.AI.TrainingConversations.md#lastupdatetimeutc) | datetime | Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate. 
-| [Notes](Projects.AI.TrainingConversations.md#notes) | string (max) __nullable__ | Notes for this training conversation 
-| [Origin](Projects.AI.TrainingConversations.md#origin) | [Origin](Projects.AI.TrainingConversations.md#origin) | Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc. 
+| [CreationTimeUtc](Projects.AI.TrainingConversations.md#creationtimeutc) | datetime | The date and time (UTC) when the conversation was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` 
+| [LastUpdateTimeUtc](Projects.AI.TrainingConversations.md#lastupdatetimeutc) | datetime | Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate. `Required` `Filter(ge;le)` `ORD` `ReadOnly` 
+| [Notes](Projects.AI.TrainingConversations.md#notes) | string (max) __nullable__ | Notes for this training conversation. 
+| [Origin](Projects.AI.TrainingConversations.md#origin) | [Origin](Projects.AI.TrainingConversations.md#origin) | Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc. `Required` `Default("USR")` `Filter(multi eq)` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Model](Projects.AI.TrainingConversations.md#model) | [Models](Projects.AI.Models.md) | The model, which is being trained. |
-| [OriginDataObject](Projects.AI.TrainingConversations.md#origindataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable) | The object, whose data was used to initially create the conversation. NULL means the object is unknown or not a data object. |
+| [Model](Projects.AI.TrainingConversations.md#model) | [Models](Projects.AI.Models.md) | The model, which is being trained. `Required` `Filter(multi eq)` |
+| [OriginDataObject](Projects.AI.TrainingConversations.md#origindataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable) | The object, whose data was used to initially create the conversation. null means the object is unknown or not a data object. `Filter(multi eq)` `ReadOnly` |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The date and time (UTC) when the conversation was created.
+The date and time (UTC) when the conversation was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateTimeUtc
 
-Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate.
+Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate. `Required` `Filter(ge;le)` `ORD` `ReadOnly`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for this training conversation
+Notes for this training conversation.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### Origin
 
-Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.
+Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc. `Required` `Default("USR")` `Filter(multi eq)` `ReadOnly`
 
 Type: **[Origin](Projects.AI.TrainingConversations.md#origin)**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **HiddenByDefault**
 
 ### Model
 
-The model, which is being trained.
+The model, which is being trained. `Required` `Filter(multi eq)`
 
 Type: **[Models](Projects.AI.Models.md)**  
 Indexed: **True**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### OriginDataObject
 
-The object, whose data was used to initially create the conversation. NULL means the object is unknown or not a data object.
+The object, whose data was used to initially create the conversation. null means the object is unknown or not a data object. `Filter(multi eq)` `ReadOnly`
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
 Indexed: **True**  

@@ -36,17 +36,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Subscriptions.SubscriptionLines.md#lineno) | int32 | Consecutive number of the line within the subscription. 
+| [LineNo](Crm.Subscriptions.SubscriptionLines.md#lineno) | int32 | Consecutive number of the line within the subscription. `Required` `Filter(eq)` `ORD` 
 | [Notes](Crm.Subscriptions.SubscriptionLines.md#notes) | string (max) __nullable__ | Notes for this SubscriptionLine. 
-| [Quantity](Crm.Subscriptions.SubscriptionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, which should be billed. 
-| [SpecificDiscountPercent](Crm.Subscriptions.SubscriptionLines.md#specificdiscountpercent) | decimal (7, 6) __nullable__ | The specific discount to apply for this line. 
+| [Quantity](Crm.Subscriptions.SubscriptionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, which should be billed. `Unit: QuantityUnit` `Required` `Filter(ge;le)` 
+| [SpecificDiscountPercent](Crm.Subscriptions.SubscriptionLines.md#specificdiscountpercent) | decimal (7, 6) __nullable__ | The specific discount to apply for this line. `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Crm.Subscriptions.SubscriptionLines.md#product) | [Products](General.Products.Products.md) | The product to be billed |
-| [QuantityUnit](Crm.Subscriptions.SubscriptionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. |
+| [Product](Crm.Subscriptions.SubscriptionLines.md#product) | [Products](General.Products.Products.md) | The product to be billed. `Required` `Filter(multi eq)` |
+| [QuantityUnit](Crm.Subscriptions.SubscriptionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 | [Subscription](Crm.Subscriptions.SubscriptionLines.md#subscription) | [Subscriptions](Crm.Subscriptions.Subscriptions.md) | The <see cref="Subscription"/> to which this SubscriptionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line within the subscription.
+Consecutive number of the line within the subscription. `Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity, which should be billed.
+The quantity, which should be billed. `Unit: QuantityUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### SpecificDiscountPercent
 
-The specific discount to apply for this line.
+The specific discount to apply for this line. `Default(0)`
 
 Type: **decimal (7, 6) __nullable__**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product to be billed
+The product to be billed. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity.
+The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Indexed: **True**  

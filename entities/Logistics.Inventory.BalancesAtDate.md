@@ -28,30 +28,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. 
-| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances. 
-| [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency. 
-| [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit 
-| [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency. 
+| [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
+| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances. `Required` `Filter(eq)` 
+| [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required` 
+| [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Logistics.Inventory.BalancesAtDate.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company |
-| [Lot](Logistics.Inventory.BalancesAtDate.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement |
-| [Product](Logistics.Inventory.BalancesAtDate.md#product) | [Products](General.Products.Products.md) | The product |
-| [ProductVariant](Logistics.Inventory.BalancesAtDate.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. |
-| [SerialNumber](Logistics.Inventory.BalancesAtDate.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. NULL for non-serialized items |
-| [Store](Logistics.Inventory.BalancesAtDate.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store |
-| [StoreBin](Logistics.Inventory.BalancesAtDate.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Store bin, from/to which the transaction was performed. |
+| [EnterpriseCompany](Logistics.Inventory.BalancesAtDate.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id` |
+| [Lot](Logistics.Inventory.BalancesAtDate.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Lot_Id` |
+| [Product](Logistics.Inventory.BalancesAtDate.md#product) | [Products](General.Products.Products.md) | The product. `Required` `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Product_Id` |
+| [ProductVariant](Logistics.Inventory.BalancesAtDate.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Product_Variant_Id` |
+| [SerialNumber](Logistics.Inventory.BalancesAtDate.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serialized items. `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Serial_Number_Id` |
+| [Store](Logistics.Inventory.BalancesAtDate.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store. `Required` `Filter(multi eq)` `Inherited from Inv_Transactions_Table.Store_Id` |
+| [StoreBin](Logistics.Inventory.BalancesAtDate.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | Store bin, from/to which the transaction was performed. `Filter(multi eq)` `Inherited from Inv_Transaction_<br />Lines_Table.Store_Bin_Id` |
 
 
 ## Attribute Details
 
 ### BaseCost
 
-The cost of the inventory in base currency of the enterprise company.
+The cost of the inventory in base currency of the enterprise company. `Currency: EnterpriseCompany.BaseCurrency` `Required`
 
 Type: **[Amount (38, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -61,7 +61,7 @@ Show in UI: **ShownByDefault**
 
 ### Date
 
-The date parameter used to compute the balances.
+The date parameter used to compute the balances. `Required` `Filter(eq)`
 
 Type: **date**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCost
 
-The cost of the inventory in the products currency.
+The cost of the inventory in the products currency. `Currency: Product.CostingCurrency` `Required`
 
 Type: **[Amount (38, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The quantity of the stock received/issued in base measurement unit
+The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreCost
 
-The cost of the inventory in the stores currency.
+The cost of the inventory in the stores currency. `Currency: Store.Currency` `Required`
 
 Type: **[Amount (38, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company
+The enterprise company. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-If non-null, contains the specific lot to use for the movement
+If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Lot_Id`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product
+The product. `Required` `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Product_Id`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductVariant
 
-If specified determines which product variant of the current product in this line is used.
+If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Product_Variant_Id`
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **HiddenByDefault**
 
 ### SerialNumber
 
-Item serial number for serialized items. NULL for non-serialized items
+Item serial number for serialized items. null for non-serialized items. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Serial_Number_Id`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-The store
+The store. `Required` `Filter(multi eq)` `Inherited from Inv_Transactions_Table.Store_Id`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreBin
 
-Store bin, from/to which the transaction was performed.
+Store bin, from/to which the transaction was performed. `Filter(multi eq)` `Inherited from Inv_Transaction_Lines_Table.Store_Bin_Id`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  

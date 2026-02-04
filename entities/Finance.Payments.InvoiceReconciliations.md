@@ -83,8 +83,8 @@ Aggregate Tree
 | [AdjustedDocument](Finance.Payments.InvoiceReconciliations.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Finance.Payments.InvoiceReconciliations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Finance.Payments.InvoiceReconciliations.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DefaultInvoiceDocument](Finance.Payments.InvoiceReconciliations.md#defaultinvoicedocument) | [Documents](General.Documents.Documents.md) (nullable) | Default invoice document for the lines. |
-| [DefaultPayment<br />TransactionDocument](Finance.Payments.InvoiceReconciliations.md#defaultpaymenttransactiondocument) | [Documents](General.Documents.Documents.md) (nullable) | Default payment transaction document for the lines. |
+| [DefaultInvoiceDocument](Finance.Payments.InvoiceReconciliations.md#defaultinvoicedocument) | [Documents](General.Documents.Documents.md) (nullable) | Default invoice document for the lines. `Filter(multi eq)` |
+| [DefaultPayment<br />TransactionDocument](Finance.Payments.InvoiceReconciliations.md#defaultpaymenttransactiondocument) | [Documents](General.Documents.Documents.md) (nullable) | Default payment transaction document for the lines. `Filter(multi eq)` |
 | [DocumentType](Finance.Payments.InvoiceReconciliations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Finance.Payments.InvoiceReconciliations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Finance.Payments.InvoiceReconciliations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -524,7 +524,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultInvoiceDocument
 
-Default invoice document for the lines.
+Default invoice document for the lines. `Filter(multi eq)`
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Indexed: **True**  
@@ -534,7 +534,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentTransactionDocument
 
-Default payment transaction document for the lines.
+Default payment transaction document for the lines. `Filter(multi eq)`
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Indexed: **True**  

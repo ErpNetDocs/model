@@ -51,7 +51,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [<s>Parent</s>](Applications.Cms.ProductCatalogWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
-| [ProductCatalog](Applications.Cms.ProductCatalogWebModules.md#productcatalog) | [ProductCatalogs](General.Products.ProductCatalogs.md) | The product catalog, which is represented by this web module. |
+| [ProductCatalog](Applications.Cms.ProductCatalogWebModules.md#productcatalog) | [ProductCatalogs](General.Products.ProductCatalogs.md) | The product catalog, which is represented by this web module. `Required` `Filter(multi eq)` |
 | [<s>WebSite</s>](Applications.Cms.ProductCatalogWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
 
 
@@ -171,7 +171,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCatalog
 
-The product catalog, which is represented by this web module.
+The product catalog, which is represented by this web module. `Required` `Filter(multi eq)`
 
 Type: **[ProductCatalogs](General.Products.ProductCatalogs.md)**  
 Category: **System**  

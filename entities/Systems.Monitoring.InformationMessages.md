@@ -42,13 +42,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [InformationMessageTime](Systems.Monitoring.InformationMessages.md#informationmessagetime) | datetime | Date and time when thet message occurred. 
-| [InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR' 
-| [MachineName](Systems.Monitoring.InformationMessages.md#machinename) | string (128) | Machine name of the computer from which the process which creates the message has been initiated. 
-| [Message](Systems.Monitoring.InformationMessages.md#message) | string (max) | The actual content of the information message. 
-| [ProcessDescription](Systems.Monitoring.InformationMessages.md#processdescription) | string (254) | Name or description of the process that creates the message. 
-| [URL](Systems.Monitoring.InformationMessages.md#url) | string (254) __nullable__ | URL of the record that has posted the information message 
-| [UserName](Systems.Monitoring.InformationMessages.md#username) | string (128) | Login name of the user that has initiated the process which creates the message. 
+| [InformationMessageTime](Systems.Monitoring.InformationMessages.md#informationmessagetime) | datetime | Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
+| [InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly` 
+| [MachineName](Systems.Monitoring.InformationMessages.md#machinename) | string (128) | Machine name of the computer from which the process which creates the message has been initiated. `Required` `ReadOnly` 
+| [Message](Systems.Monitoring.InformationMessages.md#message) | string (max) | The actual content of the information message. `Required` `Filter(like)` `ReadOnly` 
+| [ProcessDescription](Systems.Monitoring.InformationMessages.md#processdescription) | string (254) | Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly` 
+| [URL](Systems.Monitoring.InformationMessages.md#url) | string (254) __nullable__ | URL of the record that has posted the information message. `Filter(eq)` 
+| [UserName](Systems.Monitoring.InformationMessages.md#username) | string (128) | Login name of the user that has initiated the process which creates the message. `Required` `Filter(eq)` `ReadOnly` 
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### InformationMessageTime
 
-Date and time when thet message occurred.
+Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### InformationMessageType
 
-Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'
+Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly`
 
 Type: **[InformationMessageType](Systems.Monitoring.InformationMessages.md#informationmessagetype)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### MachineName
 
-Machine name of the computer from which the process which creates the message has been initiated.
+Machine name of the computer from which the process which creates the message has been initiated. `Required` `ReadOnly`
 
 Type: **string (128)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### Message
 
-The actual content of the information message.
+The actual content of the information message. `Required` `Filter(like)` `ReadOnly`
 
 Type: **string (max)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessDescription
 
-Name or description of the process that creates the message.
+Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly`
 
 Type: **string (254)**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### URL
 
-URL of the record that has posted the information message
+URL of the record that has posted the information message. `Filter(eq)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### UserName
 
-Login name of the user that has initiated the process which creates the message.
+Login name of the user that has initiated the process which creates the message. `Required` `Filter(eq)` `ReadOnly`
 
 Type: **string (128)**  
 Category: **System**  

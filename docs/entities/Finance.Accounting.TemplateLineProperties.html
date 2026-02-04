@@ -126,27 +126,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#isdebit">IsDebit</a></td>
 <td>boolean</td>
-<td>If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account.</td>
+<td>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertydescription">PropertyDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is &quot;Constant&quot;).</td>
+<td>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
-<td>The ordinal position of the property value in the item key of the account.</td>
+<td>The ordinal position of the property value in the item key of the account. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyvaluesource">PropertyValueSource</a></td>
 <td>string (2000)</td>
-<td>Source for the property value according to the chosen source type.</td>
+<td>Source for the property value according to the chosen source type. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyvaluesourcetype">PropertyValueSourceType</a></td>
 <td>string (64)</td>
-<td>Type of source for the property value. For example: System properties, User properties for document, Constant, ...</td>
+<td>Type of source for the property value. For example: System properties, User properties for document, Constant, ... <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#property">Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
-<td>The property which value will be included in the item key of the account.</td>
+<td>The property which value will be included in the item key of the account. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#templateline">TemplateLine</a></td>
@@ -207,7 +207,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdebit">IsDebit</h3>
-<p>If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account.</p>
+<p>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -215,21 +215,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="propertydescription">PropertyDescription</h3>
-<p>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is &quot;Constant&quot;).</p>
+<p>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="propertyno">PropertyNo</h3>
-<p>The ordinal position of the property value in the item key of the account.</p>
+<p>The ordinal position of the property value in the item key of the account. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="propertyvaluesource">PropertyValueSource</h3>
-<p>Source for the property value according to the chosen source type.</p>
+<p>Source for the property value according to the chosen source type. <code>Required</code></p>
 <p>Type: <strong>string (2000)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -237,7 +237,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2000</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="propertyvaluesourcetype">PropertyValueSourceType</h3>
-<p>Type of source for the property value. For example: System properties, User properties for document, Constant, ...</p>
+<p>Type of source for the property value. For example: System properties, User properties for document, Constant, ... <code>Required</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -267,7 +267,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
-<p>The property which value will be included in the item key of the account.</p>
+<p>The property which value will be included in the item key of the account. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

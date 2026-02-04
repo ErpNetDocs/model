@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Applications.AssetManagement.MaintenanceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the maintenance order. 
-| [NextServiceDate](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicedate) | date __nullable__ | Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used. 
-| [NextServiceTracked<br />ParameterValue](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicetrackedparametervalue) | int32 __nullable__ | Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used. 
+| [LineNo](Applications.AssetManagement.MaintenanceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the maintenance order. `Required` 
+| [NextServiceDate](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicedate) | date __nullable__ | Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. `Filter(ge;le)` 
+| [NextServiceTracked<br />ParameterValue](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicetrackedparametervalue) | int32 __nullable__ | Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used. 
 | [Notes](Applications.AssetManagement.MaintenanceOrderLines.md#notes) | string (max) __nullable__ | Notes for this MaintenanceOrderLine. 
 
 ## References
@@ -46,8 +46,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Document](Applications.AssetManagement.MaintenanceOrderLines.md#document) | [MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md) | The owner document. The <see cref="MaintenanceOrder"/> to which this MaintenanceOrderLine belongs. `Required` `Filter(multi eq)` |
 | [MaintenanceOrder](Applications.AssetManagement.MaintenanceOrderLines.md#maintenanceorder) | [MaintenanceOrders](Applications.AssetManagement.MaintenanceOrders.md) | The <see cref="MaintenanceOrder"/> to which this MaintenanceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [MaintenanceType](Applications.AssetManagement.MaintenanceOrderLines.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance performed. |
-| [ManagedAsset](Applications.AssetManagement.MaintenanceOrderLines.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The maintained asset. |
+| [MaintenanceType](Applications.AssetManagement.MaintenanceOrderLines.md#maintenancetype) | [MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md) | The type of maintenance performed. `Required` `Filter(multi eq)` |
+| [ManagedAsset](Applications.AssetManagement.MaintenanceOrderLines.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The maintained asset. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive line number, unique within the maintenance order.
+Consecutive line number, unique within the maintenance order. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -78,7 +78,7 @@ Front-End Recalc Expressions:
 `( obj.MaintenanceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### NextServiceDate
 
-Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.
+Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. `Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### NextServiceTrackedParameterValue
 
-Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. NULL means that default scheduling should be used.
+Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### MaintenanceType
 
-The type of maintenance performed.
+The type of maintenance performed. `Required` `Filter(multi eq)`
 
 Type: **[MaintenanceTypes](Applications.AssetManagement.MaintenanceTypes.md)**  
 Category: **System**  
@@ -171,7 +171,7 @@ Show in UI: **ShownByDefault**
 
 ### ManagedAsset
 
-The maintained asset.
+The maintained asset. `Required` `Filter(multi eq)`
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 Indexed: **True**  

@@ -43,9 +43,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencySign](General.Currencies.Currencies.md#currencysign) | string (4) | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. 
+| [CurrencySign](General.Currencies.Currencies.md#currencysign) | string (4) | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD` 
 | [Name](General.Currencies.Currencies.md#name) | string (50) | The name of this Currency. `Required` `Filter(like)` 
-| [ShowOrder](General.Currencies.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. 
+| [ShowOrder](General.Currencies.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. `Required` `Default(0)` 
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Tree
 
 ### CurrencySign
 
-The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.
+The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (4)**  
 Indexed: **True**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### ShowOrder
 
-The order in which to show the currency in combo boxes, etc.
+The order in which to show the currency in combo boxes, etc. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  

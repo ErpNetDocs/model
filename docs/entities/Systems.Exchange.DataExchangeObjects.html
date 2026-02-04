@@ -122,32 +122,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#createdon">CreatedOn</a></td>
 <td>datetime</td>
-<td>The time (in UTC) when the object is created.</td>
+<td>The time (in UTC) when the object is created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#exchangemessage">ExchangeMessage</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Status message for this object after the last exchange attempt.</td>
+<td>Status message for this object after the last exchange attempt. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#exchangeresult">ExchangeResult</a></td>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#exchangeresult">ExchangeResult</a></td>
-<td>Transfer status.</td>
+<td>Transfer status. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#mode">Mode</a></td>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#mode">Mode</a></td>
-<td>Operation mode for the object when transferring.</td>
+<td>Operation mode for the object when transferring. <code>Required</code> <code>Default(&quot;MER&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the exchanged object</td>
+<td>Notes for the exchanged object. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#reason">Reason</a></td>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#reason">Reason</a></td>
-<td>Reason for adding the object.</td>
+<td>Reason for adding the object. <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -164,12 +164,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#dataexchange">DataExchange</a></td>
 <td><a href="Systems.Exchange.DataExchanges.html">DataExchanges</a></td>
-<td>The exchange of the object.</td>
+<td>The exchange of the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The data object which will be transferred.</td>
+<td>The data object which will be transferred. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdon">CreatedOn</h3>
-<p>The time (in UTC) when the object is created.</p>
+<p>The time (in UTC) when the object is created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -211,7 +211,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>DateTime.UtcNow</code></p>
 <h3 id="exchangemessage">ExchangeMessage</h3>
-<p>Status message for this object after the last exchange attempt.</p>
+<p>Status message for this object after the last exchange attempt. <code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="exchangeresult">ExchangeResult</h3>
-<p>Transfer status.</p>
+<p>Transfer status. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchangeObjects.html#exchangeresult">ExchangeResult</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ExchangeResult</code>(Systems.Exchange.DataExchangeObjects.md#exchangeresult) data attribute<br>
@@ -251,7 +251,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>NotStarted</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="mode">Mode</h3>
-<p>Operation mode for the object when transferring.</p>
+<p>Operation mode for the object when transferring. <code>Required</code> <code>Default(&quot;MER&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchangeObjects.html#mode">Mode</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Mode</code>(Systems.Exchange.DataExchangeObjects.md#mode) data attribute<br>
@@ -279,7 +279,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Merge</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the exchanged object</p>
+<p>Notes for the exchanged object. <code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -287,7 +287,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reason">Reason</h3>
-<p>Reason for adding the object.</p>
+<p>Reason for adding the object. <code>Required</code> <code>Default(&quot;C&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchangeObjects.html#reason">Reason</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Reason</code>(Systems.Exchange.DataExchangeObjects.md#reason) data attribute<br>
@@ -345,7 +345,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataexchange">DataExchange</h3>
-<p>The exchange of the object.</p>
+<p>The exchange of the object. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchanges.html">DataExchanges</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -353,7 +353,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dataobject">DataObject</h3>
-<p>The data object which will be transferred.</p>
+<p>The data object which will be transferred. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

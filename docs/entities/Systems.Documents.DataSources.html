@@ -130,22 +130,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DataSources.html#basequeryname">BaseQueryName</a></td>
 <td>string (128)</td>
-<td>Name of the root query of the data source. Can be table name.</td>
+<td>The name of the query or table that is used for root reference point of the loaded data. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSources.html#datasourcetype">DataSourceType</a></td>
 <td><a href="Systems.Documents.DataSources.html#datasourcetype">DataSourceType</a></td>
-<td>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE</td>
+<td>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . <code>Required</code> <code>Default(&quot;M&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSources.html#name">Name</a></td>
 <td>string (64)</td>
-<td>Name of the data source.</td>
+<td>The name of the data source. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSources.html#showparenttables">ShowParentTables</a></td>
 <td>boolean</td>
-<td>Indicates whether the unchecked tables that exist in a reference path of a checked table are participating in the data</td>
+<td>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_<br>Queries_Table are automaticaly included in the report or not. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -210,7 +210,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basequeryname">BaseQueryName</h3>
-<p>Name of the root query of the data source. Can be table name.</p>
+<p>The name of the query or table that is used for root reference point of the loaded data. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -218,7 +218,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="datasourcetype">DataSourceType</h3>
-<p>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE</p>
+<p>'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . <code>Required</code> <code>Default(&quot;M&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DataSources.html#datasourcetype">DataSourceType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DataSourceType</code>(Systems.Documents.DataSources.md#datasourcetype) data attribute<br>
@@ -250,7 +250,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>MultiTable</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the data source.</p>
+<p>The name of the data source. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -258,7 +258,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="showparenttables">ShowParentTables</h3>
-<p>Indicates whether the unchecked tables that exist in a reference path of a checked table are participating in the data</p>
+<p>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

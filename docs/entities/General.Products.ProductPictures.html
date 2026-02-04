@@ -126,27 +126,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1=This is the default picture for the product and the size class; 0=otherwise</td>
+<td>True=This is the default picture for the product and the size class; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#lastupdatetime">LastUpdateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The exact server time, when the picture was last updated. Set automatically.</td>
+<td>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picture">Picture</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>The actual product picture. Can be NULL if we insert only some comments</td>
+<td>The actual product picture. Can be null if we insert only some comments.</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
-<td>Unique picture number within the product. Also used for sorting</td>
+<td>Unique picture number within the product. Also used for sorting. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a></td>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> <strong>nullable</strong></td>
-<td>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified.</td>
+<td>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</td>
 </tr>
 </tbody>
 </table>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>1=This is the default picture for the product and the size class; 0=otherwise</p>
+<p>True=This is the default picture for the product and the size class; false=otherwise. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -214,21 +214,21 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Product.Pictures.Take( 2).Count( ) == 1)</code></p>
 <h3 id="lastupdatetime">LastUpdateTime</h3>
-<p>The exact server time, when the picture was last updated. Set automatically.</p>
+<p>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="picture">Picture</h3>
-<p>The actual product picture. Can be NULL if we insert only some comments</p>
+<p>The actual product picture. Can be null if we insert only some comments.</p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<p>Unique picture number within the product. Also used for sorting</p>
+<p>Unique picture number within the product. Also used for sorting. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -239,7 +239,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="picturesizeclass">PictureSizeClass</h3>
-<p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified.</p>
+<p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</p>
 <p>Type: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>PictureSizeClass</code>(General.Products.ProductPictures.md#picturesizeclass) data attribute<br>

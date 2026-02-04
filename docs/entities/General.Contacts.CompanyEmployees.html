@@ -122,22 +122,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#contractcode">ContractCode</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Number or code of this company employee's contract. One employee can have more than one contract with particular company.</td>
+<td>Contract number or code, unique within the company. One employee can have more than one contract. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#contractenddate">ContractEndDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>End date of the employee contract, null if the contract is still valid.</td>
+<td>End date of the employee contract, null if the contract is still valid. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#contractstartdate">ContractStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date of the employee contract. Null if it is unkown.</td>
+<td>Start date of the employee contract. Null if it is unkown. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Employee is active.</td>
+<td>Indicates whether the current Employee is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.5.22</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#notes">Notes</a></td>
@@ -159,17 +159,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a></td>
-<td>The company for which this employee works.</td>
+<td>The company for which this employee works. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#companydepartment">CompanyDepartment</a></td>
 <td><a href="General.Contacts.CompanyDepartments.html">CompanyDepartments</a> (nullable)</td>
-<td>The department in which this employee is working. NULL means this information is unknown</td>
+<td>The department in which this employee is working. null means this information is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyEmployees.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The personal data of the employee.</td>
+<td>The personal data of the employee. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contractcode">ContractCode</h3>
-<p>Number or code of this company employee's contract. One employee can have more than one contract with particular company.</p>
+<p>Contract number or code, unique within the company. One employee can have more than one contract. <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -212,21 +212,21 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.ContractCode, e =&gt; ( e.Company == obj.Company), &quot;00000&quot;)</code></p>
 <h3 id="contractenddate">ContractEndDate</h3>
-<p>End date of the employee contract, null if the contract is still valid.</p>
+<p>End date of the employee contract, null if the contract is still valid. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contractstartdate">ContractStartDate</h3>
-<p>Start date of the employee contract. Null if it is unkown.</p>
+<p>Start date of the employee contract. Null if it is unkown. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Employee is active.</p>
+<p>Indicates whether the current Employee is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.5.22</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -264,19 +264,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="company">Company</h3>
-<p>The company for which this employee works.</p>
+<p>The company for which this employee works. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="companydepartment">CompanyDepartment</h3>
-<p>The department in which this employee is working. NULL means this information is unknown</p>
+<p>The department in which this employee is working. null means this information is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyDepartments.html">CompanyDepartments</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>The personal data of the employee.</p>
+<p>The personal data of the employee. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -34,10 +34,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.Agile.ProjectTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project type. 
+| [Description](Projects.Agile.ProjectTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project type. `Filter(like)` `Introduced in version 25.1.3.29` 
 | [Icon](Projects.Agile.ProjectTypes.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
-| [IsActive](Projects.Agile.ProjectTypes.md#isactive) | boolean | Specifies whether the project type is active for new projects. 
-| [Name](Projects.Agile.ProjectTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the project type. 
+| [IsActive](Projects.Agile.ProjectTypes.md#isactive) | boolean | Specifies whether the project type is active for new projects. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Projects.Agile.ProjectTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the project type. `Required` `Filter(like)` 
 
 
 ## System Attributes
@@ -56,7 +56,7 @@ Aggregate Tree
 
 ### Description
 
-Description of the project type.
+Description of the project type. `Filter(like)` `Introduced in version 25.1.3.29`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the project type is active for new projects.
+Specifies whether the project type is active for new projects. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the project type.
+Multi-language name of the project type. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

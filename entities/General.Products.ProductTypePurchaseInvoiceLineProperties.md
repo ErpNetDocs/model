@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type. 
-| [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. 
+| [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type. `Required` 
+| [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. `Required` `Default(false)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The <see cref="ProductType"/> to which this ProductTypePurchase<br />InvoiceLineProperty belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. |
+| [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### PropertyNo
 
-The consecutive number (position) of the property within the current product type.
+The consecutive number (position) of the property within the current product type. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `( obj.ProductType.PurchaseInvoiceLineProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Required
 
-True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.
+True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Property
 
-The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'.
+The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. `Required` `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  

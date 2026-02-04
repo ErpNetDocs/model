@@ -120,22 +120,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumedquantity">ConsumedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Consumed quantity in the operation.</td>
+<td>Requested quantity of the material. <code>Unit: ConsumedQuantityUnit</code> <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumedquantitybase">ConsumedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The requested quantity equivalence in the base measurement category of the requested material.</td>
+<td>The requested quantity equivalence in the base measurement category of the requested material. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumedstandardquantitybase">ConsumedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptiontype">ConsumptionType</a></td>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptiontype">ConsumptionType</a></td>
-<td>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).</td>
+<td>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). <code>Required</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -145,7 +145,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Non-unique line number within the order</td>
+<td>Non-unique line number within the order. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#notes">Notes</a></td>
@@ -155,7 +155,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#scheduleddatetime">ScheduledDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The scheduled date, when the material is needed.</td>
+<td>The scheduled date, when the material is needed. <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -172,7 +172,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumedquantityunit">ConsumedQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>Measurement unit of the consumed quantity in the operation.</td>
+<td>Measurement unit of the requested quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptionorder">ConsumptionOrder</a></td>
@@ -187,32 +187,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>Lot from which to get the material. If not specified (default) - Any lot can be used.</td>
+<td>If not null, specifies that the material has to be consumed from specific lot. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The requested material.</td>
+<td>The requested material. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number of the product. NULL means that the serial number is unknown or not applicable.</td>
+<td>If not null, specifies that the material has to be consumed with specific serial number. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store, from which the material is requested.</td>
+<td>The store, from which the material is requested. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>If not NULL, specifies that the material has to be consumed from specific store bin</td>
+<td>If not null, specifies that the material has to be consumed from specific store bin. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#workorderitemingredient">WorkOrderItemIngredient</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html">WorkOrderItemIngredients</a></td>
-<td>The Work Order Item Ingredient for which we are ordering materials.</td>
+<td>The Work Order Item Ingredient for which we are ordering materials. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -229,7 +229,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#id">Id</a></td>
 <td>guid</td>
-<td>Unique order lline Id</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#objectversion">ObjectVersion</a></td>
@@ -245,7 +245,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="consumedquantity">ConsumedQuantity</h3>
-<p>Consumed quantity in the operation.</p>
+<p>Requested quantity of the material. <code>Unit: ConsumedQuantityUnit</code> <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -254,7 +254,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.ConsumedQuantityUnit == null), null, IIF( ( obj.WorkOrderItemIngredient != null), obj.WorkOrderItemIngredient.GetSumConsumedQuantity( obj.ConsumedQuantityUnit), obj.ConsumedQuantity))</code></p>
 <h3 id="consumedquantitybase">ConsumedQuantityBase</h3>
-<p>The requested quantity equivalence in the base measurement category of the requested material.</p>
+<p>The requested quantity equivalence in the base measurement category of the requested material. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -265,7 +265,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="consumedstandardquantitybase">ConsumedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -276,7 +276,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedStandardQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="consumptiontype">ConsumptionType</h3>
-<p>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).</p>
+<p>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). <code>Required</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptiontype">ConsumptionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ConsumptionType</code>(Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) data attribute<br>
@@ -312,7 +312,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Non-unique line number within the order</p>
+<p>Non-unique line number within the order. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -331,14 +331,13 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="scheduleddatetime">ScheduledDateTime</h3>
-<p>The scheduled date, when the material is needed.</p>
+<p>The scheduled date, when the material is needed. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="id">Id</h3>
-<p>Unique order lline Id</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -361,7 +360,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="consumedquantityunit">ConsumedQuantityUnit</h3>
-<p>Measurement unit of the consumed quantity in the operation.</p>
+<p>Measurement unit of the requested quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -384,13 +383,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>Lot from which to get the material. If not specified (default) - Any lot can be used.</p>
+<p>If not null, specifies that the material has to be consumed from specific lot. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The requested material.</p>
+<p>The requested material. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -398,13 +397,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.WorkOrderItemIngredient.Material</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number of the product. NULL means that the serial number is unknown or not applicable.</p>
+<p>If not null, specifies that the material has to be consumed with specific serial number. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The store, from which the material is requested.</p>
+<p>The store, from which the material is requested. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -414,13 +413,13 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ConsumptionOrder.Store</code></p>
 <h3 id="storebin">StoreBin</h3>
-<p>If not NULL, specifies that the material has to be consumed from specific store bin</p>
+<p>If not null, specifies that the material has to be consumed from specific store bin. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="workorderitemingredient">WorkOrderItemIngredient</h3>
-<p>The Work Order Item Ingredient for which we are ordering materials.</p>
+<p>The Work Order Item Ingredient for which we are ordering materials. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderItemIngredients.html">WorkOrderItemIngredients</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

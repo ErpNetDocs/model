@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#allowoverexecution">AllowOverExecution</a></td>
 <td>boolean</td>
-<td>If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line</td>
+<td>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,42 +130,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#finished">Finished</a></td>
 <td>boolean <strong>nullable</strong></td>
-<td>1 if this transaction entry completes the operation. 0 if there might be more entries</td>
+<td>True if this transaction entry completes the operation. false if there might be more entries. <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>standard guarantee period in days. Can be set only if the product type is serviced.</td>
+<td>Guarantee period in days for the offered product. null for non-serviced products.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linebasecost">LineBaseCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the enterprise company</td>
+<td>The cost of the transaction in the currency of the enterprise company. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linecost">LineCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.</td>
+<td>Total cost for the line. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linedocumentcost">LineDocumentCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the document</td>
+<td>The cost of the transaction in the currency of the document. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the store transaction.</td>
+<td>Line number, unique within the store transaction. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineproductcost">LineProductCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the product</td>
+<td>The cost of the transaction in the currency of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linestorecost">LineStoreCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the warehouse</td>
+<td>The cost of the transaction in the currency of the warehouse. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#notes">Notes</a></td>
@@ -180,37 +180,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit</td>
+<td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of the stock received/issued in base measurement unit</td>
+<td>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#temporderno">TempOrderNo</a></td>
 <td>string (50) <strong>nullable</strong></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Exact time when the transaction changes the cost of the product.</td>
+<td>Exact time when the transaction changes the cost of the product. <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#unitcost">UnitCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
-<td>Cost for 1 of the specified quantity</td>
+<td>Cost for 1 of the specified quantity. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -232,52 +232,52 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>If non-null, contains the specific lot to use for the movement</td>
+<td>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#originalproduct">OriginalProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead.</td>
+<td>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#parentstoreorderline">ParentStoreOrderLine</a></td>
 <td><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</td>
-<td>The line, containing the ordered quantity, which this execution line executes.</td>
+<td>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The item that was received/issued</td>
+<td>The item that was received/issued. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#productcode">ProductCode</a></td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
-<td>Selects the product through some of the product codes.</td>
+<td>Used to set the Product_Id thru the coding systems. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#productvariant">ProductVariant</a></td>
 <td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>If specified determines which product variant of the current product in this line is used.</td>
+<td>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. NULL means that the quantity is specified only in base measurement unit</td>
+<td>The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number of the product. NULL means that the serial number is unknown or not applicable.</td>
+<td>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>Store bin, from/to which the transaction was performed.</td>
+<td>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#transactionobj">TransactionObj</a></td>
@@ -315,7 +315,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowoverexecution">AllowOverExecution</h3>
-<p>If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line</p>
+<p>When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -330,7 +330,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>1 if this transaction entry completes the operation. 0 if there might be more entries</p>
+<p>True if this transaction entry completes the operation. false if there might be more entries. <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -338,7 +338,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="guaranteeperioddays">GuaranteePeriodDays</h3>
-<p>standard guarantee period in days. Can be set only if the product type is serviced.</p>
+<p>Guarantee period in days for the offered product. null for non-serviced products.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -347,7 +347,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.GuaranteePeriodDays</code></p>
 <h3 id="linebasecost">LineBaseCost</h3>
-<p>The cost of the transaction in the currency of the enterprise company</p>
+<p>The cost of the transaction in the currency of the enterprise company. <code>Currency: TransactionObj.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -355,7 +355,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="linecost">LineCost</h3>
-<p>Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.</p>
+<p>Total cost for the line. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -363,7 +363,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linedocumentcost">LineDocumentCost</h3>
-<p>The cost of the transaction in the currency of the document</p>
+<p>The cost of the transaction in the currency of the document. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -371,7 +371,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the store transaction.</p>
+<p>Line number, unique within the store transaction. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -382,7 +382,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.TransactionObj.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lineproductcost">LineProductCost</h3>
-<p>The cost of the transaction in the currency of the product</p>
+<p>The cost of the transaction in the currency of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -390,7 +390,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="linestorecost">LineStoreCost</h3>
-<p>The cost of the transaction in the currency of the warehouse</p>
+<p>The cost of the transaction in the currency of the warehouse. <code>Currency: TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -413,14 +413,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit</p>
+<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -428,7 +428,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity of the stock received/issued in base measurement unit</p>
+<p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -440,7 +440,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -451,7 +451,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="temporderno">TempOrderNo</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used. <code>Filter(eq)</code></p>
 <p>Type: <strong>string (50) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -459,7 +459,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Exact time when the transaction changes the cost of the product.</p>
+<p>Exact time when the transaction changes the cost of the product. <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -467,7 +467,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="unitcost">UnitCost</h3>
-<p>Cost for 1 of the specified quantity</p>
+<p>Cost for 1 of the specified quantity. <code>Currency: TransactionObj.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -504,14 +504,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>If non-null, contains the specific lot to use for the movement</p>
+<p>If non-null, contains the specific lot to use for the movement. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="originalproduct">OriginalProduct</h3>
-<p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead.</p>
+<p>When specified, contains the original product, which was ordered to be received or issued. The actual product is recorded in the Product field. Deprecated. Use Parent Store Order Line.Product instead. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -519,21 +519,21 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product</code></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentstoreorderline">ParentStoreOrderLine</h3>
-<p>The line, containing the ordered quantity, which this execution line executes.</p>
+<p>The line, containing the ordered quantity, which this execution line executes. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreOrderLines.html">StoreOrderLines</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The item that was received/issued</p>
+<p>The item that was received/issued. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -542,31 +542,31 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.OriginalProduct</code></p>
 <h3 id="productcode">ProductCode</h3>
-<p>Selects the product through some of the product codes.</p>
+<p>Used to set the Product_Id thru the coding systems. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="productvariant">ProductVariant</h3>
-<p>If specified determines which product variant of the current product in this line is used.</p>
+<p>If specified determines which product variant of the current product in this line is used. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. NULL means that the quantity is specified only in base measurement unit</p>
+<p>The measurement unit of Quantity. null means that the quantity is specified only in base measurement unit. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number of the product. NULL means that the serial number is unknown or not applicable.</p>
+<p>Item serial number for serialized items. null for non-serialized items. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>Store bin, from/to which the transaction was performed.</p>
+<p>Store bin, from/to which the transaction was performed. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

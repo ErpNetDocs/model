@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActualEndTime](Projects.Classic.WorkReportResources.md#actualendtime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage ended. 
-| [ActualStartTime](Projects.Classic.WorkReportResources.md#actualstarttime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage began. 
-| [TotalResourceUsageHours](Projects.Classic.WorkReportResources.md#totalresourceusagehours) | decimal (18, 2) | The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. 
+| [ActualEndTime](Projects.Classic.WorkReportResources.md#actualendtime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage ended. `Filter(eq;ge;le;like)` 
+| [ActualStartTime](Projects.Classic.WorkReportResources.md#actualstarttime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage began. `Filter(eq;ge;le;like)` 
+| [TotalResourceUsageHours](Projects.Classic.WorkReportResources.md#totalresourceusagehours) | decimal (18, 2) | The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. `Required` `Default(0)` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTask](Projects.Classic.WorkReportResources.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The project task for which the work is reported. |
-| [Resource](Projects.Classic.WorkReportResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which usage is reported. |
-| [ResourceInstance](Projects.Classic.WorkReportResources.md#resourceinstance) | [ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used. |
+| [ProjectTask](Projects.Classic.WorkReportResources.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The project task for which the work is reported. `Required` `Filter(multi eq)` |
+| [Resource](Projects.Classic.WorkReportResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which usage is reported. `Required` `Filter(multi eq)` |
+| [ResourceInstance](Projects.Classic.WorkReportResources.md#resourceinstance) | [ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. `Filter(multi eq;like)` |
 | [WorkReport](Projects.Classic.WorkReportResources.md#workreport) | [WorkReports](Projects.Classic.WorkReports.md) | The <see cref="WorkReport"/> to which this WorkReportResource belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### ActualEndTime
 
-Optionally, specifies the actual date and time when the resource usage ended.
+Optionally, specifies the actual date and time when the resource usage ended. `Filter(eq;ge;le;like)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### ActualStartTime
 
-Optionally, specifies the actual date and time when the resource usage began.
+Optionally, specifies the actual date and time when the resource usage began. `Filter(eq;ge;le;like)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalResourceUsageHours
 
-The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.
+The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. `Required` `Default(0)` `Filter(eq;like)`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProjectTask
 
-The project task for which the work is reported.
+The project task for which the work is reported. `Required` `Filter(multi eq)`
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Front-End Recalc Expressions:
 `obj.WorkReport.ProjectTask`
 ### Resource
 
-The resource, for which usage is reported.
+The resource, for which usage is reported. `Required` `Filter(multi eq)`
 
 Type: **[Resources](General.Resources.Resources.md)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceInstance
 
-The concrete resource instance used. NULL when no concrete resource was used or there is no data whether concrete resource was used.
+The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. `Filter(multi eq;like)`
 
 Type: **[ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
 Category: **System**  

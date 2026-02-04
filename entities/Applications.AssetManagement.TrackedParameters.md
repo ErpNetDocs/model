@@ -35,9 +35,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.TrackedParameters.md#code) | string (16) | Unique code of the asset parameter. 
-| [IsActive](Applications.AssetManagement.TrackedParameters.md#isactive) | boolean | Specifies whether the parameter is active for choosing in drop downs. 
-| [Name](Applications.AssetManagement.TrackedParameters.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the asset parameter. 
+| [Code](Applications.AssetManagement.TrackedParameters.md#code) | string (16) | Unique code of the asset parameter. `Required` `Filter(multi eq;like)` `ORD` 
+| [IsActive](Applications.AssetManagement.TrackedParameters.md#isactive) | boolean | Specifies whether the parameter is active for choosing in drop downs. `Required` `Default(true)` `Filter(multi eq)` 
+| [Name](Applications.AssetManagement.TrackedParameters.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the asset parameter. `Required` `Filter(multi eq;like)` 
 | [Notes](Applications.AssetManagement.TrackedParameters.md#notes) | string (max) __nullable__ | Notes for this TrackedParameter. `Filter(like)` 
 
 
@@ -57,7 +57,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the asset parameter.
+Unique code of the asset parameter. `Required` `Filter(multi eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the parameter is active for choosing in drop downs.
+Specifies whether the parameter is active for choosing in drop downs. `Required` `Default(true)` `Filter(multi eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the asset parameter.
+Multilanguage name of the asset parameter. `Required` `Filter(multi eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

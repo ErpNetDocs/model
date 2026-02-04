@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#amountpercent">AmountPercent</a></td>
 <td>decimal (6, 5) <strong>nullable</strong></td>
-<td>Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way</td>
+<td>Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#amountperunit">AmountPerUnit</a></td>
 <td><a href="../data-types.html#amount">Amount (9, 2)</a> <strong>nullable</strong></td>
-<td>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way</td>
+<td>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. <code>Currency: PricingModel.Currency</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>The consequtive number of the cost within the pricing model</td>
+<td>The consequtive number of the cost within the pricing model. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -148,17 +148,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
-<td>The cost type, which is listed for the pricing model</td>
+<td>The cost type, which is listed for the pricing model. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#measurementunit">MeasurementUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way</td>
+<td>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModelCosts.html#pricingmodel">PricingModel</a></td>
 <td><a href="Crm.Pricing.PricingModels.html">PricingModels</a></td>
-<td>Pricing model, for which the cost is defined</td>
+<td>Pricing model, for which the cost is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -191,21 +191,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountpercent">AmountPercent</h3>
-<p>Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way</p>
+<p>Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.</p>
 <p>Type: <strong>decimal (6, 5) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="amountperunit">AmountPerUnit</h3>
-<p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way</p>
+<p>Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. <code>Currency: PricingModel.Currency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (9, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>The consequtive number of the cost within the pricing model</p>
+<p>The consequtive number of the cost within the pricing model. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -238,19 +238,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costtype">CostType</h3>
-<p>The cost type, which is listed for the pricing model</p>
+<p>The cost type, which is listed for the pricing model. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="measurementunit">MeasurementUnit</h3>
-<p>The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way</p>
+<p>The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>
-<p>Pricing model, for which the cost is defined</p>
+<p>Pricing model, for which the cost is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

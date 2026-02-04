@@ -125,32 +125,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#active">Active</a></td>
 <td>boolean</td>
-<td>True when the mail box is active for mail sinchronization, sending and receiving</td>
+<td>True when the mail box is active for mail sinchronization, sending and receiving. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#emailaddress">EmailAddress</a></td>
 <td>string (254)</td>
-<td>The email address associated with this mail box</td>
+<td>The email address associated with this mail box. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1 when this is the default mailbox for the user.</td>
+<td>True when this is the default mailbox for the user. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#isencrypted">IsEncrypted</a></td>
 <td>boolean</td>
-<td>1 when the mailbox messages are stored in encrypted format</td>
+<td>True when the mailbox messages are stored in encrypted format. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#resetonnextsync">ResetOnNextSync</a></td>
 <td>boolean</td>
-<td>Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset</td>
+<td>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#sendserveraddress">SendServerAddress</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server</td>
+<td>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#sentitemsfoldername">SentItemsFolderName</a></td>
@@ -160,27 +160,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#signaturehtml">SignatureHtml</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached</td>
+<td>Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#syncpassword">SyncPassword</a></td>
 <td>string (512) <strong>nullable</strong></td>
-<td>The password to supply to the server when retrieving email. NULL when the connection is not set up or the server does not require user name</td>
+<td>The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a></td>
 <td><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> <strong>nullable</strong></td>
-<td>Synchronization protocol, 'POP3', 'IMAP' or 'Microsoft Exchange'. NULL means that syncrhonization is not setup</td>
+<td>Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#syncserveraddress">SyncServerAddress</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Incoming and outgoing mail server internet address. NULL when synchronization is not set up</td>
+<td>Incoming and outgoing mail server internet address. null when synchronization is not setup.</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#syncusername">SyncUserName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>User name to supply to the server, when retrieving email. NULL when the connection is not set up or the server does not require user name</td>
+<td>User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +197,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#owneruser">OwnerUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who owns the mailbox</td>
+<td>The user, who owns the mailbox. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -262,7 +262,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>True when the mail box is active for mail sinchronization, sending and receiving</p>
+<p>True when the mail box is active for mail sinchronization, sending and receiving. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -270,7 +270,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="emailaddress">EmailAddress</h3>
-<p>The email address associated with this mail box</p>
+<p>The email address associated with this mail box. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -278,7 +278,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>1 when this is the default mailbox for the user.</p>
+<p>True when this is the default mailbox for the user. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -286,7 +286,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isencrypted">IsEncrypted</h3>
-<p>1 when the mailbox messages are stored in encrypted format</p>
+<p>True when the mailbox messages are stored in encrypted format. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -294,7 +294,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resetonnextsync">ResetOnNextSync</h3>
-<p>Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset</p>
+<p>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -302,7 +302,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sendserveraddress">SendServerAddress</h3>
-<p>The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server</p>
+<p>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -318,7 +318,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="signaturehtml">SignatureHtml</h3>
-<p>Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached</p>
+<p>Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -326,7 +326,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="syncpassword">SyncPassword</h3>
-<p>The password to supply to the server when retrieving email. NULL when the connection is not set up or the server does not require user name</p>
+<p>The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.</p>
 <p>Type: <strong>string (512) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -334,7 +334,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>512</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="syncprotocol">SyncProtocol</h3>
-<p>Synchronization protocol, 'POP3', 'IMAP' or 'Microsoft Exchange'. NULL means that syncrhonization is not setup</p>
+<p>Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.</p>
 <p>Type: <strong><a href="Applications.Mail.Boxes.html#syncprotocol">SyncProtocol</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SyncProtocol</code>(Applications.Mail.Boxes.md#syncprotocol) data attribute<br>
@@ -369,7 +369,7 @@ Allowed Values (Applications.Mail.BoxesRepository.SyncProtocol Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="syncserveraddress">SyncServerAddress</h3>
-<p>Incoming and outgoing mail server internet address. NULL when synchronization is not set up</p>
+<p>Incoming and outgoing mail server internet address. null when synchronization is not setup.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -377,7 +377,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="syncusername">SyncUserName</h3>
-<p>User name to supply to the server, when retrieving email. NULL when the connection is not set up or the server does not require user name</p>
+<p>User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -428,7 +428,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="owneruser">OwnerUser</h3>
-<p>The user, who owns the mailbox</p>
+<p>The user, who owns the mailbox. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

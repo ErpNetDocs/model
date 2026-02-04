@@ -129,7 +129,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The initial date of the listing. NULL when the initial date is unknown</td>
+<td>The initial date of the listing. null when the initial date is unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#instorelocation">InStoreLocation</a></td>
@@ -139,32 +139,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#instoremaxquantity">InStoreMaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></td>
-<td>Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit</td>
+<td>Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Unit: InStoreQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#instoreminquantity">InStoreMinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></td>
-<td>Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit</td>
+<td>Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Unit: InStoreQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this customer product definition is active</td>
+<td>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Notes for the listing</td>
+<td>Notes for the listing.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#ordermultiple">OrderMultiple</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></td>
-<td>Determines the step when the system offers a quantity to order</td>
+<td>Determines the step when the system offers a quantity to order. <code>Unit: InStoreQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The final date of the listing. NULL when the final date is unknown</td>
+<td>The final date of the listing. null when the final date is unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,27 +181,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#companydivision">CompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>When the customer is a company, denotes the division for which the product is listed. NULL when the customer is not a company or when the listing is not division specific</td>
+<td>When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#companylocation">CompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>When the customer is a company, denotes the location for which the product is listed. NULL when the customer is not a company or when the listing is not location specific</td>
+<td>When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>Customer, for which the product is listed</td>
+<td>Customer, for which the product is listed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#instorequantityunit">InStoreQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>Location in store, like row, stand, etc.</td>
+<td>Location in store, like row, stand, etc. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.CustomerProducts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which is listed for the customer</td>
+<td>The product, which is listed for the customer. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
 </tr>
 </tbody>
 </table>
@@ -234,7 +234,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>The initial date of the listing. NULL when the initial date is unknown</p>
+<p>The initial date of the listing. null when the initial date is unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -249,21 +249,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instoremaxquantity">InStoreMaxQuantity</h3>
-<p>Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit</p>
+<p>Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Unit: InStoreQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instoreminquantity">InStoreMinQuantity</h3>
-<p>Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit</p>
+<p>Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Unit: InStoreQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this customer product definition is active</p>
+<p>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the listing</p>
+<p>Notes for the listing.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -279,14 +279,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ordermultiple">OrderMultiple</h3>
-<p>Determines the step when the system offers a quantity to order</p>
+<p>Determines the step when the system offers a quantity to order. <code>Unit: InStoreQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>The final date of the listing. NULL when the final date is unknown</p>
+<p>The final date of the listing. null when the final date is unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -315,19 +315,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="companydivision">CompanyDivision</h3>
-<p>When the customer is a company, denotes the division for which the product is listed. NULL when the customer is not a company or when the listing is not division specific</p>
+<p>When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="companylocation">CompanyLocation</h3>
-<p>When the customer is a company, denotes the location for which the product is listed. NULL when the customer is not a company or when the listing is not location specific</p>
+<p>When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>Customer, for which the product is listed</p>
+<p>Customer, for which the product is listed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -335,7 +335,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instorequantityunit">InStoreQuantityUnit</h3>
-<p>Location in store, like row, stand, etc.</p>
+<p>Location in store, like row, stand, etc. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -343,7 +343,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="product">Product</h3>
-<p>The product, which is listed for the customer</p>
+<p>The product, which is listed for the customer. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

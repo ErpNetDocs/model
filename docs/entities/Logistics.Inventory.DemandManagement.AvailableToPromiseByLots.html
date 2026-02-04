@@ -117,32 +117,32 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#atpbase">ATPBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>Indicates the quantity available to promise (in a base unit). It is valid from this date on.</td>
+<td>Indicates the quantity available to promise (in a base unit). It is valid from this date on. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#currentavailabilitybase">CurrentAvailabilityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>The current availability in а base measurement unit.</td>
+<td>The current availability in а base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#fromdate">FromDate</a></td>
 <td>datetime</td>
-<td>Тhe date from which the available to promise quantity is valid.</td>
+<td>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#movementsbase">MovementsBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>The sum of the quantity of all planned stock movements on this date in а base measurement unit.</td>
+<td>The sum of the quantity of all planned stock movements on this date in а base measurement unit. . <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#movementstodatebase">MovementsToDateBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.</td>
+<td>The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#projectedavailabilitybase">ProjectedAvailabilityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.</td>
+<td>Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,63 +159,63 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>Тhe Enterprise Company, for which the quantities are calculated.</td>
+<td>Тhe Enterprise Company, for which the quantities are calculated. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The Lot, for which the quantities are calculated.</td>
+<td>The Lot, for which the quantities are calculated. <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_&lt;br /&gt;Lines_Table.Lot_Id</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The Product, for which the quantities are calculated.</td>
+<td>The Product, for which the quantities are calculated. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_&lt;br /&gt;Lines_Table.Product_Id</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>The Store, for which the quantities are calculated.</td>
+<td>The Store, for which the quantities are calculated. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Orders_Table.Store_Id</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="atpbase">ATPBase</h3>
-<p>Indicates the quantity available to promise (in a base unit). It is valid from this date on.</p>
+<p>Indicates the quantity available to promise (in a base unit). It is valid from this date on. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currentavailabilitybase">CurrentAvailabilityBase</h3>
-<p>The current availability in а base measurement unit.</p>
+<p>The current availability in а base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Тhe date from which the available to promise quantity is valid.</p>
+<p>Тhe date from which the available to promise quantity is valid. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movementsbase">MovementsBase</h3>
-<p>The sum of the quantity of all planned stock movements on this date in а base measurement unit.</p>
+<p>The sum of the quantity of all planned stock movements on this date in а base measurement unit. . <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movementstodatebase">MovementsToDateBase</h3>
-<p>The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.</p>
+<p>The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectedavailabilitybase">ProjectedAvailabilityBase</h3>
-<p>Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.</p>
+<p>Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -223,28 +223,28 @@ Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Тhe Enterprise Company, for which the quantities are calculated.</p>
+<p>Тhe Enterprise Company, for which the quantities are calculated. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Gen_Documents_Table.Enterprise_Company_Id</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The Lot, for which the quantities are calculated.</p>
+<p>The Lot, for which the quantities are calculated. <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Lot_Id</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Store_Order_Lines_Table.Lot_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The Product, for which the quantities are calculated.</p>
+<p>The Product, for which the quantities are calculated. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Order_Lines_Table.Product_Id</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Store_Order_Lines_Table.Product_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The Store, for which the quantities are calculated.</p>
+<p>The Store, for which the quantities are calculated. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Inv_Store_Orders_Table.Store_Id</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Inv_Store_Orders_Table.Store_Id</strong><br>

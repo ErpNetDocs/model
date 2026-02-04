@@ -121,27 +121,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#objectcontents">ObjectContents</a></td>
 <td>byte[]</td>
-<td>The compressed contents of the object.</td>
+<td>The compressed contents of the object. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#serverversion">ServerVersion</a></td>
 <td>string (15) <strong>nullable</strong></td>
-<td>The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). NULL means the version is unknown.</td>
+<td>The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#version">Version</a></td>
 <td>int32</td>
-<td>The version number of the version, stored in the current row, starting from 1.</td>
+<td>The version number of the version, stored in the current row, starting from 1. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#versiontime">VersionTime</a></td>
 <td>datetime</td>
-<td>The timestamp when the version was saved.</td>
+<td>The timestamp when the version was saved. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></td>
 <td><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></td>
-<td>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.</td>
+<td>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#object">Object</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The object, for which a version is stored.</td>
+<td>The object, for which a version is stored. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectVersions.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, which saved the version.</td>
+<td>The user, which saved the version. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -196,14 +196,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="objectcontents">ObjectContents</h3>
-<p>The compressed contents of the object.</p>
+<p>The compressed contents of the object. <code>Required</code></p>
 <p>Type: <strong>byte[]</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="serverversion">ServerVersion</h3>
-<p>The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). NULL means the version is unknown.</p>
+<p>The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.</p>
 <p>Type: <strong>string (15) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -211,21 +211,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>15</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="version">Version</h3>
-<p>The version number of the version, stored in the current row, starting from 1.</p>
+<p>The version number of the version, stored in the current row, starting from 1. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="versiontime">VersionTime</h3>
-<p>The timestamp when the version was saved.</p>
+<p>The timestamp when the version was saved. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="versiontype">VersionType</h3>
-<p>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.</p>
+<p>Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. <code>Required</code></p>
 <p>Type: <strong><a href="Systems.Core.ObjectVersions.html#versiontype">VersionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>VersionType</code>(Systems.Core.ObjectVersions.md#versiontype) data attribute<br>
@@ -274,7 +274,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="object">Object</h3>
-<p>The object, for which a version is stored.</p>
+<p>The object, for which a version is stored. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -282,7 +282,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user, which saved the version.</p>
+<p>The user, which saved the version. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

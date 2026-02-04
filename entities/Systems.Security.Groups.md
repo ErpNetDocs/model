@@ -34,8 +34,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 __nullable__ | The number of days before which the documents can not be corrected, released or voided 
-| [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody 
+| [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 __nullable__ | The number of days before which the documents can not be corrected, released or voided. 
+| [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `Filter(eq)` `ReadOnly` 
 | [Name](Systems.Security.Groups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
 | [Notes](Systems.Security.Groups.md#notes) | string (254) __nullable__ | Notes for this Group. 
 
@@ -43,7 +43,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Users](Systems.Security.Users.md) (nullable) | When the group is for one user, contains the user for which the group is defined, NULL otherwise |
+| [GroupForUser](Systems.Security.Groups.md#groupforuser) | [Users](Systems.Security.Users.md) (nullable) | When Group_Type=U, contains the user for which the group is defined, null otherwise. `Filter(multi eq)` `ReadOnly` |
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### EditPeriodDays
 
-The number of days before which the documents can not be corrected, released or voided
+The number of days before which the documents can not be corrected, released or voided.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### GroupType
 
-Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody
+Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `Filter(eq)` `ReadOnly`
 
 Type: **[GroupType](Systems.Security.Groups.md#grouptype)**  
 Category: **System**  
@@ -183,7 +183,7 @@ Show in UI: **HiddenByDefault**
 
 ### GroupForUser
 
-When the group is for one user, contains the user for which the group is defined, NULL otherwise
+When Group_Type=U, contains the user for which the group is defined, null otherwise. `Filter(multi eq)` `ReadOnly`
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  

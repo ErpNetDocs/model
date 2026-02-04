@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.ProjectTypeCaseCategories.html#casecategory">CaseCategory</a></td>
 <td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The case category that а project with this type can have.</td>
+<td>The case category that а project with this type can have. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectTypeCaseCategories.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.Agile.ProjectTypes.html">ProjectTypes</a></td>
-<td>The project type for which we specify the case category.</td>
+<td>The project type for which we specify the case category. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -192,7 +192,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="casecategory">CaseCategory</h3>
-<p>The case category that а project with this type can have.</p>
+<p>The case category that а project with this type can have. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -200,7 +200,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projecttype">ProjectType</h3>
-<p>The project type for which we specify the case category.</p>
+<p>The project type for which we specify the case category. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Agile.ProjectTypes.html">ProjectTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

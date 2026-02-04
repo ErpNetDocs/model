@@ -36,13 +36,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Regulatory.Excise.ExciseProducts.md#code) | string (32) | The unique code of the ExciseProduct. `Required` `Filter(multi eq;like)` `ORD` 
-| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string 
+| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseProductCategory](Regulatory.Excise.ExciseProducts.md#exciseproductcategory) | [ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md) | The category of the excise product. |
+| [ExciseProductCategory](Regulatory.Excise.ExciseProducts.md#exciseproductcategory) | [ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md) | The category of the excise product. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage string
+Multilanguage string. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (500)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseProductCategory
 
-The category of the excise product.
+The category of the excise product. `Required` `Filter(multi eq)`
 
 Type: **[ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md)**  
 Category: **System**  

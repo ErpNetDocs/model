@@ -44,18 +44,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification 
-| [FilterXML](Systems.Documents.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event 
-| [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event 
-| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*' 
-| [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of E-mail addresses to be notified 
+| [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)` 
+| [FilterXML](Systems.Documents.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event. 
+| [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event. `Required` `Default(0)` 
+| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. `Required` `Default("*")` 
+| [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of email addressess to be notified. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Systems.Documents.DocumentTypeNotifications.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which this notification is set. |
-| [UserStatus](Systems.Documents.DocumentTypeNotifications.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | When not empty, specifies that the event will be triggered only on this user status |
+| [DocumentType](Systems.Documents.DocumentTypeNotifications.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type for which this notification is set. `Required` `Filter(multi eq)` `Owner` |
+| [UserStatus](Systems.Documents.DocumentTypeNotifications.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | When not null, specifies that the event will be triggered only on this user status. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### DocumentEvent
 
-The event which will trigger the notification
+The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **HiddenByDefault**
 
 ### FilterXML
 
-Filtering condition for the document. Only documents which match the filter will trigger the event
+Filtering condition for the document. Only documents which match the filter will trigger the event.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### StateBitMask
 
-The document states that will trigger the event
+The document states that will trigger the event. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### StatusChangeDirection
 
-Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'
+Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. `Required` `Default("*")`
 
 Type: **[StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToEmailAddressList
 
-List of E-mail addresses to be notified
+List of email addressess to be notified. `Required`
 
 Type: **string (2048)**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The document type for which this notification is set.
+The document type for which this notification is set. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### UserStatus
 
-When not empty, specifies that the event will be triggered only on this user status
+When not null, specifies that the event will be triggered only on this user status. `Filter(multi eq)`
 
 Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
 Category: **System**  

@@ -36,14 +36,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string (16) | Unique code of the cost template. 
-| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string (254) | Name of the cost template. 
+| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string (16) | Unique code of the cost template. `Required` `Filter(eq)` 
+| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string (254) | Name of the cost template. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.Templates.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the calculations, based on the template |
+| [Currency](Finance.Cost.Templates.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the calculations, based on the template. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### CostTemplateCode
 
-Unique code of the cost template.
+Unique code of the cost template. `Required` `Filter(eq)`
 
 Type: **string (16)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### CostTemplateName
 
-Name of the cost template.
+Name of the cost template. `Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### Currency
 
-The currency of the calculations, based on the template
+The currency of the calculations, based on the template. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  

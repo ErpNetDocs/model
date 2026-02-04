@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#debitcreditindicator">DebitCreditIndicator</a></td>
 <td><a href="Regulatory.Saft.ProfilePayments.html#debitcreditindicator">DebitCreditIndicator</a></td>
-<td>Debit/credit indicator for SAF-T payment lines.</td>
+<td>Debit/credit indicator for SAF-T payment lines. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#direction">Direction</a></td>
 <td><a href="Regulatory.Saft.ProfilePayments.html#direction">Direction</a></td>
-<td>Payment direction.</td>
+<td>Payment direction. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#partytype">PartyType</a></td>
 <td><a href="Regulatory.Saft.ProfilePayments.html#partytype">PartyType</a></td>
-<td>Counterparty type to be populated in SAF-T: Supplier, Customer, None.</td>
+<td>Counterparty type to be populated in SAF-T: Supplier, Customer, None. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -149,27 +149,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>ERP.net document type that is the source of the payment.</td>
+<td>ERP.net document type that is the source of the payment. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a></td>
-<td>description: Payment account – cash desk/bank account used for the payment.</td>
+<td>Description: Payment account – cash desk/bank account used for the payment. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#paymentreason">PaymentReason</a></td>
 <td><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</td>
-<td>Payment reason/classification.</td>
+<td>Payment reason/classification. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>Identifier of the SAFT profile associated with this settings.</td>
+<td>Identifier of the SAFT profile associated with this settings. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePayments.html#saftaccountcodeentry">SaftAccountCodeEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
-<td>Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine).</td>
+<td>Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine). <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="debitcreditindicator">DebitCreditIndicator</h3>
-<p>Debit/credit indicator for SAF-T payment lines.</p>
+<p>Debit/credit indicator for SAF-T payment lines. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfilePayments.html#debitcreditindicator">DebitCreditIndicator</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DebitCreditIndicator</code>(Regulatory.Saft.ProfilePayments.md#debitcreditindicator) data attribute<br>
@@ -229,7 +229,7 @@ Allowed Values (Regulatory.Saft.ProfilePaymentsRepository.DebitCreditIndicator E
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Payment direction.</p>
+<p>Payment direction. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfilePayments.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Regulatory.Saft.ProfilePayments.md#direction) data attribute<br>
@@ -256,7 +256,7 @@ Allowed Values (Regulatory.Saft.ProfilePaymentsRepository.Direction Enum Members
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="partytype">PartyType</h3>
-<p>Counterparty type to be populated in SAF-T: Supplier, Customer, None.</p>
+<p>Counterparty type to be populated in SAF-T: Supplier, Customer, None. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfilePayments.html#partytype">PartyType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>PartyType</code>(Regulatory.Saft.ProfilePayments.md#partytype) data attribute<br>
@@ -309,26 +309,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>ERP.net document type that is the source of the payment.</p>
+<p>ERP.net document type that is the source of the payment. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>description: Payment account – cash desk/bank account used for the payment.</p>
+<p>Description: Payment account – cash desk/bank account used for the payment. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymentreason">PaymentReason</h3>
-<p>Payment reason/classification.</p>
+<p>Payment reason/classification. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentReasons.html">PaymentReasons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>Identifier of the SAFT profile associated with this settings.</p>
+<p>Identifier of the SAFT profile associated with this settings. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -336,7 +336,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="saftaccountcodeentry">SaftAccountCodeEntry</h3>
-<p>Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine).</p>
+<p>Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine). <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

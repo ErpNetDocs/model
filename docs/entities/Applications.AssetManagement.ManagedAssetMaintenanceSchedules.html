@@ -127,17 +127,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#parameterchangedelta">ParameterChangeDelta</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.</td>
+<td>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#scheduledays">ScheduleDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of days between planned maintenances. NULL means that the schedule is not planned based on days.</td>
+<td>Number of days between planned maintenances. null means that the schedule is not planned based on days.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#schedulemonths">ScheduleMonths</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of months between planned maintenances. NULL means that the schedule is not planned based on months.</td>
+<td>Number of months between planned maintenances. null means that the schedule is not planned based on months.</td>
 </tr>
 </tbody>
 </table>
@@ -154,12 +154,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#maintenancetype">MaintenanceType</a></td>
 <td><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></td>
-<td>What type of maintenance is scheduled.</td>
+<td>What type of maintenance is scheduled. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
-<td>The managed asset for which the maintenance schedule applies.</td>
+<td>The managed asset for which the maintenance schedule applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -200,21 +200,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parameterchangedelta">ParameterChangeDelta</h3>
-<p>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.</p>
+<p>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scheduledays">ScheduleDays</h3>
-<p>Number of days between planned maintenances. NULL means that the schedule is not planned based on days.</p>
+<p>Number of days between planned maintenances. null means that the schedule is not planned based on days.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schedulemonths">ScheduleMonths</h3>
-<p>Number of months between planned maintenances. NULL means that the schedule is not planned based on months.</p>
+<p>Number of months between planned maintenances. null means that the schedule is not planned based on months.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -243,13 +243,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenancetype">MaintenanceType</h3>
-<p>What type of maintenance is scheduled.</p>
+<p>What type of maintenance is scheduled. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.MaintenanceTypes.html">MaintenanceTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The managed asset for which the maintenance schedule applies.</p>
+<p>The managed asset for which the maintenance schedule applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

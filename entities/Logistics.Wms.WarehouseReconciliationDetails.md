@@ -36,26 +36,26 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation. 
-| [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line. 
-| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. 
-| [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded. 
-| [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created. 
-| [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. 
+| [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation. `Filter(eq;ge;le)` 
+| [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line. `Filter(eq;ge;le)` `ReadOnly` 
+| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. `Required` `Default("CRT")` `Filter(multi eq)` 
+| [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded. `Required` `Filter(eq)` `ReadOnly` 
+| [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created. `Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. `Required` `Filter(eq;ge;le)` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseUnit](Logistics.Wms.WarehouseReconciliationDetails.md#baseunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The product’s base measurement unit. |
-| [LogisticUnit](Logistics.Wms.WarehouseReconciliationDetails.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit. |
-| [Lot](Logistics.Wms.WarehouseReconciliationDetails.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Batch/lot of the product, when applicable. |
-| [Product](Logistics.Wms.WarehouseReconciliationDetails.md#product) | [Products](General.Products.Products.md) (nullable) | The product stored at the specified warehouse location. |
-| [SerialNumber](Logistics.Wms.WarehouseReconciliationDetails.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product, when serialized tracking is enabled. |
-| [Variant](Logistics.Wms.WarehouseReconciliationDetails.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. |
-| [WarehouseLocation](Logistics.Wms.WarehouseReconciliationDetails.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location included in the reconciliation. |
-| [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationDetails.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | The source document to which this detail refers. |
-| [WarehouseZone](Logistics.Wms.WarehouseReconciliationDetails.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The warehouse zone to which the location belongs. |
+| [BaseUnit](Logistics.Wms.WarehouseReconciliationDetails.md#baseunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The product’s base measurement unit. `Filter(multi eq)` `ReadOnly` |
+| [LogisticUnit](Logistics.Wms.WarehouseReconciliationDetails.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit. `Filter(multi eq)` `ReadOnly` |
+| [Lot](Logistics.Wms.WarehouseReconciliationDetails.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Batch/lot of the product, when applicable. `Filter(multi eq)` `ReadOnly` |
+| [Product](Logistics.Wms.WarehouseReconciliationDetails.md#product) | [Products](General.Products.Products.md) (nullable) | The product stored at the specified warehouse location. `Filter(multi eq)` `ReadOnly` |
+| [SerialNumber](Logistics.Wms.WarehouseReconciliationDetails.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product, when serialized tracking is enabled. `Filter(multi eq)` `ReadOnly` |
+| [Variant](Logistics.Wms.WarehouseReconciliationDetails.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. `Filter(multi eq)` `ReadOnly` |
+| [WarehouseLocation](Logistics.Wms.WarehouseReconciliationDetails.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location included in the reconciliation. `Required` `Filter(multi eq)` `ReadOnly` |
+| [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationDetails.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | The source document to which this detail refers. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [WarehouseZone](Logistics.Wms.WarehouseReconciliationDetails.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The warehouse zone to which the location belongs. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### CountedQuantityBase
 
-The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.
+The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation. `Filter(eq;ge;le)`
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LastAggregatedAt
 
-The date and time when the counted quantities were last aggregated into this line.
+The date and time when the counted quantities were last aggregated into this line. `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### ReviewStatus
 
-Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.
+Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. `Required` `Default("CRT")` `Filter(multi eq)`
 
 Type: **[ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-The counting session in which this result was recorded.
+The counting session in which this result was recorded. `Required` `Filter(eq)` `ReadOnly`
 
 Type: **int32**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### SnapshotDateTime
 
-The date and time when the availability snapshot for this line was created.
+The date and time when the availability snapshot for this line was created. `Required` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### SnapshotQuantityBase
 
-The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.
+The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. `Required` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### BaseUnit
 
-The product’s base measurement unit.
+The product’s base measurement unit. `Filter(multi eq)` `ReadOnly`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### LogisticUnit
 
-The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.
+The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit. `Filter(multi eq)` `ReadOnly`
 
 Type: **[LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable)**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-Batch/lot of the product, when applicable.
+Batch/lot of the product, when applicable. `Filter(multi eq)` `ReadOnly`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -203,7 +203,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product stored at the specified warehouse location.
+The product stored at the specified warehouse location. `Filter(multi eq)` `ReadOnly`
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -212,7 +212,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Serial number of the product, when serialized tracking is enabled.
+Serial number of the product, when serialized tracking is enabled. `Filter(multi eq)` `ReadOnly`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -221,7 +221,7 @@ Show in UI: **ShownByDefault**
 
 ### Variant
 
-Product variant (e.g. size, color, configuration), when tracked.
+Product variant (e.g. size, color, configuration), when tracked. `Filter(multi eq)` `ReadOnly`
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -230,7 +230,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseLocation
 
-The warehouse location included in the reconciliation.
+The warehouse location included in the reconciliation. `Required` `Filter(multi eq)` `ReadOnly`
 
 Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
 Indexed: **True**  
@@ -240,7 +240,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseReconciliation
 
-The source document to which this detail refers.
+The source document to which this detail refers. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 Type: **[WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md)**  
 Indexed: **True**  
@@ -251,7 +251,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseZone
 
-The warehouse zone to which the location belongs.
+The warehouse zone to which the location belongs. `Required` `Filter(multi eq)` `ReadOnly`
 
 Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md)**  
 Indexed: **True**  

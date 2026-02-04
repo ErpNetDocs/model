@@ -36,34 +36,34 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed). 
-| [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number. 
-| [FiscalSalesNumber](Crm.Pos.Sales.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown. 
-| [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided. 
-| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. 
-| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. 
-| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. 
-| [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale". 
-| [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. 
-| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency. 
-| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in base currency. 
-| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total gross amount in reporting currency (if applicable). 
-| [VoidedAt](Crm.Pos.Sales.md#voidedat) | datetime __nullable__ | Date and time when the document was voided. 
+| [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed). `Filter(eq;ge;le)` 
+| [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number. `Required` `Filter(eq;like)` 
+| [FiscalSalesNumber](Crm.Pos.Sales.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq)` `Introduced in version 26.2.1.33` 
+| [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided. `Required` `Default(false)` `Filter(eq)` 
+| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. `Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)` 
+| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)` 
+| [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)` 
+| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency. `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47` 
+| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in base currency. `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)` 
+| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total gross amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)` 
+| [VoidedAt](Crm.Pos.Sales.md#voidedat) | datetime __nullable__ | Date and time when the document was voided. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedBy](Crm.Pos.Sales.md#closedby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who finalized or closed the sale (may differ from opener). |
-| [Customer](Crm.Pos.Sales.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Set for known customers (e.g. loyalty program), otherwise null. |
-| [Location](Crm.Pos.Sales.md#location) | [Locations](Crm.Pos.Locations.md) | Link to location where the sale occurred. |
-| [OpenedBy](Crm.Pos.Sales.md#openedby) | [Operators](Crm.Pos.Operators.md) | The operator who created the sale. |
-| [Operator](Crm.Pos.Sales.md#operator) | [Operators](Crm.Pos.Operators.md) | Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator. |
-| [OriginalSale](Crm.Pos.Sales.md#originalsale) | [Sales](Crm.Pos.Sales.md) (nullable) | Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). |
-| [PaymentType](Crm.Pos.Sales.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments. |
-| [SaleCurrency](Crm.Pos.Sales.md#salecurrency) | [Currencies](General.Currencies.Currencies.md) | Reference to the currency in which this POS sale is recorded. |
-| [Terminal](Crm.Pos.Sales.md#terminal) | [Terminals](Crm.Pos.Terminals.md) | Link to specific POS workspace terminal used. |
-| [VoidedBy](Crm.Pos.Sales.md#voidedby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who voided the document. |
+| [ClosedBy](Crm.Pos.Sales.md#closedby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who finalized or closed the sale (may differ from opener). `Filter(multi eq)` |
+| [Customer](Crm.Pos.Sales.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Set for known customers (e.g. loyalty program), otherwise null. `Filter(multi eq)` |
+| [Location](Crm.Pos.Sales.md#location) | [Locations](Crm.Pos.Locations.md) | Link to location where the sale occurred. `Required` `Filter(multi eq)` |
+| [OpenedBy](Crm.Pos.Sales.md#openedby) | [Operators](Crm.Pos.Operators.md) | The operator who created the sale. `Required` `Filter(multi eq)` |
+| [Operator](Crm.Pos.Sales.md#operator) | [Operators](Crm.Pos.Operators.md) | Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator. `Required` `Filter(multi eq)` |
+| [OriginalSale](Crm.Pos.Sales.md#originalsale) | [Sales](Crm.Pos.Sales.md) (nullable) | Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). `Filter(multi eq)` |
+| [PaymentType](Crm.Pos.Sales.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Set when there is single payment type (method) for the whole sale. null when there are multiple payments. `Filter(multi eq)` |
+| [SaleCurrency](Crm.Pos.Sales.md#salecurrency) | [Currencies](General.Currencies.Currencies.md) | Reference to the currency in which this POS sale is recorded. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.47` |
+| [Terminal](Crm.Pos.Sales.md#terminal) | [Terminals](Crm.Pos.Terminals.md) | Link to specific POS workspace terminal used. `Required` `Filter(multi eq)` |
+| [VoidedBy](Crm.Pos.Sales.md#voidedby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who voided the document. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -89,7 +89,7 @@ Aggregate Tree
 
 ### ClosedAt
 
-When the sale was finalized (paid, voided, or completed).
+When the sale was finalized (paid, voided, or completed). `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentNumber
 
-Receipt document number.
+Receipt document number. `Required` `Filter(eq;like)`
 
 Type: **string (25)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### FiscalSalesNumber
 
-Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq)` `Introduced in version 26.2.1.33`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### IsVoided
 
-Marked true if sale is canceled/voided.
+Marked true if sale is canceled/voided. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### OpenedAt
 
-Time of the opening of the POS sale.
+Time of the opening of the POS sale. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### OriginalSaleNumber
 
-Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.
+Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. `Filter(eq;like)`
 
 Type: **string (25) __nullable__**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleDate
 
-Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.
+Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleKind
 
-Kind of POS sale event. Typically it is "Normal sale".
+Kind of POS sale event. Typically it is "Normal sale". `Required` `Default("SAL")` `Filter(eq)`
 
 Type: **[SaleKind](Crm.Pos.Sales.md#salekind)**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleStage
 
-General stage of the sale. Finalized sales must have matching amounts between header and detail lines.
+General stage of the sale. Finalized sales must have matching amounts between header and detail lines. `Required` `Default("NEW")` `Filter(eq)`
 
 Type: **[SaleStage](Crm.Pos.Sales.md#salestage)**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmount
 
-Total gross amount in the sale currency.
+Total gross amount in the sale currency. `Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -215,7 +215,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountBase
 
-Total gross amount in base currency.
+Total gross amount in base currency. `Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -225,7 +225,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountReporting
 
-Total gross amount in reporting currency (if applicable).
+Total gross amount in reporting currency (if applicable). `Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -235,7 +235,7 @@ Show in UI: **ShownByDefault**
 
 ### VoidedAt
 
-Date and time when the document was voided.
+Date and time when the document was voided. `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### ClosedBy
 
-The operator who finalized or closed the sale (may differ from opener).
+The operator who finalized or closed the sale (may differ from opener). `Filter(multi eq)`
 
 Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 Category: **System**  
@@ -316,7 +316,7 @@ Show in UI: **ShownByDefault**
 
 ### Customer
 
-Set for known customers (e.g. loyalty program), otherwise null.
+Set for known customers (e.g. loyalty program), otherwise null. `Filter(multi eq)`
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -325,7 +325,7 @@ Show in UI: **ShownByDefault**
 
 ### Location
 
-Link to location where the sale occurred.
+Link to location where the sale occurred. `Required` `Filter(multi eq)`
 
 Type: **[Locations](Crm.Pos.Locations.md)**  
 Indexed: **True**  
@@ -335,7 +335,7 @@ Show in UI: **ShownByDefault**
 
 ### OpenedBy
 
-The operator who created the sale.
+The operator who created the sale. `Required` `Filter(multi eq)`
 
 Type: **[Operators](Crm.Pos.Operators.md)**  
 Category: **System**  
@@ -344,7 +344,7 @@ Show in UI: **ShownByDefault**
 
 ### Operator
 
-Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.
+Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator. `Required` `Filter(multi eq)`
 
 Type: **[Operators](Crm.Pos.Operators.md)**  
 Category: **System**  
@@ -353,7 +353,7 @@ Show in UI: **ShownByDefault**
 
 ### OriginalSale
 
-Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).
+Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). `Filter(multi eq)`
 
 Type: **[Sales](Crm.Pos.Sales.md) (nullable)**  
 Category: **System**  
@@ -362,7 +362,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentType
 
-Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.
+Set when there is single payment type (method) for the whole sale. null when there are multiple payments. `Filter(multi eq)`
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -371,7 +371,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleCurrency
 
-Reference to the currency in which this POS sale is recorded.
+Reference to the currency in which this POS sale is recorded. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.47`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -383,7 +383,7 @@ Back-End Default Expression:
 
 ### Terminal
 
-Link to specific POS workspace terminal used.
+Link to specific POS workspace terminal used. `Required` `Filter(multi eq)`
 
 Type: **[Terminals](Crm.Pos.Terminals.md)**  
 Category: **System**  
@@ -392,7 +392,7 @@ Show in UI: **ShownByDefault**
 
 ### VoidedBy
 
-The operator who voided the document.
+The operator who voided the document. `Filter(multi eq)`
 
 Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 Category: **System**  

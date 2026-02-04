@@ -120,7 +120,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a></td>
 <td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a> <strong>nullable</strong></td>
-<td>VAT code, which will be used when Cash Reporting mode is used for the entry</td>
+<td>VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#vatcode">VATCode</a></td>
@@ -142,7 +142,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>Document type that generates VAT entries.</td>
+<td>Document type that generates VAT entries. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -190,7 +190,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="cashreportingvatcode">CashReportingVATCode</h3>
-<p>VAT code, which will be used when Cash Reporting mode is used for the entry</p>
+<p>VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.</p>
 <p>Type: <strong><a href="Finance.Vat.BGVATDocumentTypeVATCodes.html#cashreportingvatcode">CashReportingVATCode</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>CashReportingVATCode</code>(Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) data attribute<br>
@@ -447,7 +447,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>Document type that generates VAT entries.</p>
+<p>Document type that generates VAT entries. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

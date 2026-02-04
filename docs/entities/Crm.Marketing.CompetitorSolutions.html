@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of solution</td>
+<td>Name of solution. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#notes">Notes</a></td>
@@ -144,22 +144,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#companysizeclass">CompanySizeClass</a></td>
 <td><a href="Crm.Marketing.CompanySizeClasses.html">CompanySizeClasses</a> (nullable)</td>
-<td>When not null, specifies the company size, for which the solution is targeted.</td>
+<td>When not null, specifies the company size, for which the solution is targeted. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#competitor">Competitor</a></td>
 <td><a href="Crm.Marketing.Competitors.html">Competitors</a></td>
-<td>Competitor to our marketing solutions.</td>
+<td>Competitor to our marketing solutions. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#industry">Industry</a></td>
 <td><a href="Crm.Marketing.Industries.html">Industries</a> (nullable)</td>
-<td>When not null, specifies the industry, for which the solution is targeted.</td>
+<td>When not null, specifies the industry, for which the solution is targeted. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#ourmarketingsolution">OurMarketingSolution</a></td>
 <td><a href="Crm.Marketing.MarketingSolutions.html">MarketingSolutions</a> (nullable)</td>
-<td>Our marketing solution, which is competing with the competitor solution.</td>
+<td>Our marketing solution, which is competing with the competitor solution. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -192,7 +192,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="name">Name</h3>
-<p>Name of solution</p>
+<p>Name of solution. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -229,26 +229,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="companysizeclass">CompanySizeClass</h3>
-<p>When not null, specifies the company size, for which the solution is targeted.</p>
+<p>When not null, specifies the company size, for which the solution is targeted. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.CompanySizeClasses.html">CompanySizeClasses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="competitor">Competitor</h3>
-<p>Competitor to our marketing solutions.</p>
+<p>Competitor to our marketing solutions. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Crm.Marketing.Competitors.html">Competitors</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="industry">Industry</h3>
-<p>When not null, specifies the industry, for which the solution is targeted.</p>
+<p>When not null, specifies the industry, for which the solution is targeted. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.Industries.html">Industries</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ourmarketingsolution">OurMarketingSolution</h3>
-<p>Our marketing solution, which is competing with the competitor solution.</p>
+<p>Our marketing solution, which is competing with the competitor solution. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.MarketingSolutions.html">MarketingSolutions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

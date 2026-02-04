@@ -122,12 +122,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#code">Code</a></td>
 <td>string (16)</td>
-<td>The payment type unique code</td>
+<td>The payment type unique code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates wheather the payment type is active and usable for choosing in new documents.</td>
+<td>Indicates wheather the payment type is active and usable for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#name">Name</a></td>
@@ -137,7 +137,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#systemtype">SystemType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html#systemtype">SystemType</a> <strong>nullable</strong></td>
-<td>Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer</td>
+<td>Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.</td>
 </tr>
 </tbody>
 </table>
@@ -154,7 +154,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#defaultpaymentaccount">DefaultPaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>When not NULL specifies the default payment account to use associated with this payment type</td>
+<td>When not null specifies the default payment account to use associated with this payment type. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTypes.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -207,7 +207,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The payment type unique code</p>
+<p>The payment type unique code. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -218,7 +218,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, null, &quot;00000&quot;)</code></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates wheather the payment type is active and usable for choosing in new documents.</p>
+<p>Indicates wheather the payment type is active and usable for choosing in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -233,7 +233,7 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemtype">SystemType</h3>
-<p>Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer</p>
+<p>Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html#systemtype">SystemType</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemType</code>(Finance.Payments.PaymentTypes.md#systemtype) data attribute<br>
@@ -343,7 +343,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultpaymentaccount">DefaultPaymentAccount</h3>
-<p>When not NULL specifies the default payment account to use associated with this payment type</p>
+<p>When not null specifies the default payment account to use associated with this payment type. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

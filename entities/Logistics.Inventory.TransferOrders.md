@@ -52,16 +52,16 @@ Aggregate Tree
 | [CompleteTime](Logistics.Inventory.TransferOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Logistics.Inventory.TransferOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Inventory.TransferOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DefaultDueDateIn](Logistics.Inventory.TransferOrders.md#defaultduedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse 
-| [DefaultDueDateOut](Logistics.Inventory.TransferOrders.md#defaultduedateout) | datetime | The date, when the transfer is scheduled to issue the goods from the source warehouse 
+| [DefaultDueDateIn](Logistics.Inventory.TransferOrders.md#defaultduedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. `Required` `Default(Today)` `Filter(ge;le)` 
+| [DefaultDueDateOut](Logistics.Inventory.TransferOrders.md#defaultduedateout) | datetime | The date, when the transfer is scheduled to issue the goods from the source warehouse. `Required` `Default(Today)` `Filter(ge;le)` 
 | [DocumentDate](Logistics.Inventory.TransferOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Logistics.Inventory.TransferOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Logistics.Inventory.TransferOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Inventory.TransferOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.TransferOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Inventory.TransferOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.TransferOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Logistics.Inventory.TransferOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Logistics.Inventory.TransferOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Logistics.Inventory.TransferOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Logistics.Inventory.TransferOrders.md#notes) | string (max) __nullable__ | Notes for this TransferOrder. 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.TransferOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.TransferOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.TransferOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -71,7 +71,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Inventory.TransferOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Inventory.TransferOrders.md#state) | [DocumentState](Logistics.Inventory.TransferOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Inventory.TransferOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Status](Logistics.Inventory.TransferOrders.md#status) | [Status](Logistics.Inventory.TransferOrders.md#status) | Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released) 
+| [Status](Logistics.Inventory.TransferOrders.md#status) | [Status](Logistics.Inventory.TransferOrders.md#status) | Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released). `Required` `Default(1)` 
 | [Void](Logistics.Inventory.TransferOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Logistics.Inventory.TransferOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Logistics.Inventory.TransferOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -90,7 +90,7 @@ Aggregate Tree
 | [EnterpriseCompanyLocation](Logistics.Inventory.TransferOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Inventory.TransferOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Inventory.TransferOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [FromStore](Logistics.Inventory.TransferOrders.md#fromstore) | [Stores](Logistics.Inventory.Stores.md) | Specifies the store, from which the goods will be issued. |
+| [FromStore](Logistics.Inventory.TransferOrders.md#fromstore) | [Stores](Logistics.Inventory.Stores.md) | Specifies the store, from which the goods will be issued. `Required` `Filter(multi eq)` |
 | [MasterDocument](Logistics.Inventory.TransferOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Inventory.TransferOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Logistics.Inventory.TransferOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -99,7 +99,7 @@ Aggregate Tree
 | [Sequence](Logistics.Inventory.TransferOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Logistics.Inventory.TransferOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Inventory.TransferOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ToStore](Logistics.Inventory.TransferOrders.md#tostore) | [Stores](Logistics.Inventory.Stores.md) | Specifies the store, in which the goods will be received. |
+| [ToStore](Logistics.Inventory.TransferOrders.md#tostore) | [Stores](Logistics.Inventory.Stores.md) | Specifies the store, in which the goods will be received. `Required` `Filter(multi eq)` |
 | [UserStatus](Logistics.Inventory.TransferOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 
 
@@ -198,7 +198,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultDueDateIn
 
-The date, when the goods are expected to be received in the destination warehouse
+The date, when the goods are expected to be received in the destination warehouse. `Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -211,7 +211,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => TransferOrderLinesRepository.DueDateInAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### DefaultDueDateOut
 
-The date, when the transfer is scheduled to issue the goods from the source warehouse
+The date, when the transfer is scheduled to issue the goods from the source warehouse. `Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -292,7 +292,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -303,7 +303,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -432,7 +432,7 @@ Show in UI: **HiddenByDefault**
 
 ### Status
 
-Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released)
+Obsolete. Not used. (Status of the transfer document: 1-Open for editing; 2-Released). `Required` `Default(1)`
 
 Type: **[Status](Logistics.Inventory.TransferOrders.md#status)**  
 Category: **System**  
@@ -651,7 +651,7 @@ Show in UI: **HiddenByDefault**
 
 ### FromStore
 
-Specifies the store, from which the goods will be issued.
+Specifies the store, from which the goods will be issued. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Indexed: **True**  
@@ -739,7 +739,7 @@ Back-End Default Expression:
 
 ### ToStore
 
-Specifies the store, in which the goods will be received.
+Specifies the store, in which the goods will be received. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

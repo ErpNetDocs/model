@@ -41,8 +41,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CaseCategory](Projects.Agile.ProjectTypeCaseCategories.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The case category that а project with this type can have. |
-| [ProjectType](Projects.Agile.ProjectTypeCaseCategories.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | The project type for which we specify the case category. |
+| [CaseCategory](Projects.Agile.ProjectTypeCaseCategories.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The case category that а project with this type can have. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectType](Projects.Agile.ProjectTypeCaseCategories.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | The project type for which we specify the case category. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -90,7 +90,7 @@ Show in UI: **HiddenByDefault**
 
 ### CaseCategory
 
-The case category that а project with this type can have.
+The case category that а project with this type can have. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[CaseCategories](Projects.Agile.CaseCategories.md)**  
 Indexed: **True**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectType
 
-The project type for which we specify the case category.
+The project type for which we specify the case category. `Required` `Filter(multi eq)`
 
 Type: **[ProjectTypes](Projects.Agile.ProjectTypes.md)**  
 Indexed: **True**  

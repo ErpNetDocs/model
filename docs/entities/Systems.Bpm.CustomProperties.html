@@ -132,47 +132,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#allowedvaluesentityname">AllowedValuesEntityName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>When not NULL, specifies that the allowed values are retrieved from the specified entity</td>
+<td>When not null, specifies that the allowed values are retrieved from the specified entity. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#allowedvaluesfilterxml">AllowedValuesFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not NULL specifies the filter to apply when extracting allowed values from entity</td>
+<td>When not null specifies the filter to apply when extracting allowed values from entity. <code>Unit: obj.AllowedValuesEntityName</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#code">Code</a></td>
 <td>string (40)</td>
-<td>Unique property code.</td>
+<td>Unique property code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#entityname">EntityName</a></td>
 <td>string (64)</td>
-<td>The entity for which the property is applicable.</td>
+<td>The entity for which the property is applicable. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#hint">Hint</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (max)</a> <strong>nullable</strong></td>
-<td>The hint, which is displayed alongside the property.</td>
+<td>The hint, which is displayed alongside the property. <code>Filter(multi eq;like)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this custom property is active</td>
+<td>Indicates whether this custom property is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.3.19</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#keyorder">KeyOrder</a></td>
 <td>byte <strong>nullable</strong></td>
-<td>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis</td>
+<td>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.</td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#limittoallowedvalues">LimitToAllowedValues</a></td>
 <td>boolean</td>
-<td>When true, allows the property to be set only to allowed value. When false, the property can have any value.</td>
+<td>When true, allows the property to be set only to allowed value. When false, the property can have any value. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#masklength">MaskLength</a></td>
 <td>int16 <strong>nullable</strong></td>
-<td>Limits te length of the property value to the specified number of characters. Null means no limitation</td>
+<td>Limits te length of the property value to the specified number of characters. Null means no limitation.</td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#name">Name</a></td>
@@ -187,7 +187,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#propertytype">PropertyType</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html#propertytype">PropertyType</a></td>
-<td>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.</td>
+<td>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. <code>Required</code> <code>Default(&quot;T&quot;)</code></td>
 </tr>
 </tbody>
 </table>
@@ -204,17 +204,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#allowedvaluesparentproperty">AllowedValuesParent<br>Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</td>
-<td>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property</td>
+<td>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#allowedvaluesproperty">AllowedValuesProperty</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</td>
-<td>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.</td>
+<td>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CustomProperties.html#propertiescategory">PropertiesCategory</a></td>
 <td><a href="Systems.Bpm.PropertiesCategories.html">PropertiesCategories</a> (nullable)</td>
-<td>When not null, categorizes the property under a category.</td>
+<td>When not null, categorizes the property under a category. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -284,7 +284,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowedvaluesentityname">AllowedValuesEntityName</h3>
-<p>When not NULL, specifies that the allowed values are retrieved from the specified entity</p>
+<p>When not null, specifies that the allowed values are retrieved from the specified entity. <code>Filter(eq)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -292,14 +292,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowedvaluesfilterxml">AllowedValuesFilterXML</h3>
-<p>When not NULL specifies the filter to apply when extracting allowed values from entity</p>
+<p>When not null specifies the filter to apply when extracting allowed values from entity. <code>Unit: obj.AllowedValuesEntityName</code></p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique property code.</p>
+<p>Unique property code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (40)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -310,7 +310,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, null, &quot;00000&quot;)</code></p>
 <h3 id="entityname">EntityName</h3>
-<p>The entity for which the property is applicable.</p>
+<p>The entity for which the property is applicable. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -319,14 +319,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="hint">Hint</h3>
-<p>The hint, which is displayed alongside the property.</p>
+<p>The hint, which is displayed alongside the property. <code>Filter(multi eq;like)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (max)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this custom property is active</p>
+<p>Indicates whether this custom property is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.3.19</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -334,14 +334,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="keyorder">KeyOrder</h3>
-<p>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis</p>
+<p>When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.</p>
 <p>Type: <strong>byte <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="limittoallowedvalues">LimitToAllowedValues</h3>
-<p>When true, allows the property to be set only to allowed value. When false, the property can have any value.</p>
+<p>When true, allows the property to be set only to allowed value. When false, the property can have any value. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -349,7 +349,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="masklength">MaskLength</h3>
-<p>Limits te length of the property value to the specified number of characters. Null means no limitation</p>
+<p>Limits te length of the property value to the specified number of characters. Null means no limitation.</p>
 <p>Type: <strong>int16 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -372,7 +372,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="propertytype">PropertyType</h3>
-<p>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.</p>
+<p>Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. <code>Required</code> <code>Default(&quot;T&quot;)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html#propertytype">PropertyType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>PropertyType</code>(Systems.Bpm.CustomProperties.md#propertytype) data attribute<br>
@@ -451,19 +451,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="allowedvaluesparentproperty">AllowedValuesParentProperty</h3>
-<p>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property</p>
+<p>Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowedvaluesproperty">AllowedValuesProperty</h3>
-<p>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.</p>
+<p>When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="propertiescategory">PropertiesCategory</h3>
-<p>When not null, categorizes the property under a category.</p>
+<p>When not null, categorizes the property under a category. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.PropertiesCategories.html">PropertiesCategories</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

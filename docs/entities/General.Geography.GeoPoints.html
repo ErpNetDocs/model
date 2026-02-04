@@ -121,22 +121,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Geography.GeoPoints.html#address">Address</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>The descriptive physical address, related to this geo point.</td>
+<td>The descriptive physical address, related to this geo point. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.GeoPoints.html#latitude">Latitude</a></td>
 <td>decimal (10, 7)</td>
-<td>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].</td>
+<td>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.GeoPoints.html#longitude">Longitude</a></td>
 <td>decimal (10, 7)</td>
-<td>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].</td>
+<td>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Geography.GeoPoints.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></td>
-<td>Geo point short name (Multilanguage)</td>
+<td>Geo point short name (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Geography.GeoPoints.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company.</td>
+<td>The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="address">Address</h3>
-<p>The descriptive physical address, related to this geo point.</p>
+<p>The descriptive physical address, related to this geo point. <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="latitude">Latitude</h3>
-<p>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].</p>
+<p>Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range <code>-90, 90</code>. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (10, 7)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -217,7 +217,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="longitude">Longitude</h3>
-<p>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].</p>
+<p>Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range <code>-180, 180</code>. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (10, 7)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -225,7 +225,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Geo point short name (Multilanguage)</p>
+<p>Geo point short name (Multilanguage). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -275,7 +275,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company.</p>
+<p>The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

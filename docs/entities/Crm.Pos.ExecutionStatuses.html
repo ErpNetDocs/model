@@ -123,27 +123,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc.</td>
+<td>Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#executionstage">ExecutionStage</a></td>
 <td><a href="Crm.Pos.ExecutionStatuses.html#executionstage">ExecutionStage</a></td>
-<td>The system-defined stage under which is the current status.</td>
+<td>The system-defined stage under which is the current status. <code>Required</code> <code>Default(&quot;PND&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the POS execution status is currently active.</td>
+<td>Indicates whether the POS execution status is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, &quot;Scheduled&quot;, &quot;Ready-to-serve&quot;, etc.</td>
+<td>Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, &quot;Scheduled&quot;, &quot;Ready-to-serve&quot;, etc. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#ord">Ord</a></td>
 <td>int32</td>
-<td>The sort order of the status within the stage.</td>
+<td>The sort order of the status within the stage. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -160,12 +160,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>When specified, means that the status applies only to the specified enterprise company. NULL means the status is applicable to all enterprise companies.</td>
+<td>When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionStatuses.html#location">Location</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</td>
-<td>When specified, means that the status applies only to the specified location. NULL means the status is applicable to all locations.</td>
+<td>When specified, means that the status applies only to the specified location. null means the status is applicable to all locations. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -213,7 +213,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc.</p>
+<p>Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -222,7 +222,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="executionstage">ExecutionStage</h3>
-<p>The system-defined stage under which is the current status.</p>
+<p>The system-defined stage under which is the current status. <code>Required</code> <code>Default(&quot;PND&quot;)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pos.ExecutionStatuses.html#executionstage">ExecutionStage</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ExecutionStage</code>(Crm.Pos.ExecutionStatuses.md#executionstage) data attribute<br>
@@ -258,7 +258,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Pending</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the POS execution status is currently active.</p>
+<p>Indicates whether the POS execution status is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -266,14 +266,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, &quot;Scheduled&quot;, &quot;Ready-to-serve&quot;, etc.</p>
+<p>Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, &quot;Scheduled&quot;, &quot;Ready-to-serve&quot;, etc. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ord">Ord</h3>
-<p>The sort order of the status within the stage.</p>
+<p>The sort order of the status within the stage. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -327,14 +327,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>When specified, means that the status applies only to the specified enterprise company. NULL means the status is applicable to all enterprise companies.</p>
+<p>When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="location">Location</h3>
-<p>When specified, means that the status applies only to the specified location. NULL means the status is applicable to all locations.</p>
+<p>When specified, means that the status applies only to the specified location. null means the status is applicable to all locations. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

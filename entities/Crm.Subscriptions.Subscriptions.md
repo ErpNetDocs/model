@@ -34,17 +34,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription. 
+| [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
 | [Notes](Crm.Subscriptions.Subscriptions.md#notes) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Notes for this Subscription. `Filter(like)` 
-| [ToDate](Crm.Subscriptions.Subscriptions.md#todate) | date __nullable__ | The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended. 
+| [ToDate](Crm.Subscriptions.Subscriptions.md#todate) | date __nullable__ | The final date of the subscription if it is time fenced. null means that the subscription is currently open-ended. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BillingCycle](Crm.Subscriptions.Subscriptions.md#billingcycle) | [BillingCycles](Crm.Subscriptions.BillingCycles.md) (nullable) | The cycle which to use for billing purposes. NULL means that there would be no automatic billing for this subscription. |
-| [Customer](Crm.Subscriptions.Subscriptions.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer of the subscription. |
-| [EnterpriseCompany](Crm.Subscriptions.Subscriptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which issues the subscription. |
+| [BillingCycle](Crm.Subscriptions.Subscriptions.md#billingcycle) | [BillingCycles](Crm.Subscriptions.BillingCycles.md) (nullable) | The cycle which to use for billing purposes. null means that there would be no automatic billing for this subscription. `Filter(multi eq)` |
+| [Customer](Crm.Subscriptions.Subscriptions.md#customer) | [Customers](Crm.Sales.Customers.md) | The customer of the subscription. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Subscriptions.Subscriptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which issues the subscription. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### FromDate
 
-The starting date of the subscription.
+The starting date of the subscription. `Required` `Default(NowUtc)` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended.
+The final date of the subscription if it is time fenced. null means that the subscription is currently open-ended. `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **HiddenByDefault**
 
 ### BillingCycle
 
-The cycle which to use for billing purposes. NULL means that there would be no automatic billing for this subscription.
+The cycle which to use for billing purposes. null means that there would be no automatic billing for this subscription. `Filter(multi eq)`
 
 Type: **[BillingCycles](Crm.Subscriptions.BillingCycles.md) (nullable)**  
 Indexed: **True**  
@@ -172,7 +172,7 @@ Show in UI: **ShownByDefault**
 
 ### Customer
 
-The customer of the subscription.
+The customer of the subscription. `Required` `Filter(multi eq)`
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Indexed: **True**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company, which issues the subscription.
+The enterprise company, which issues the subscription. `Required` `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  

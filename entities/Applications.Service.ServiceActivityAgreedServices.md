@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line. 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line. `Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ServiceActivityService](Applications.Service.ServiceActivityAgreedServices.md#serviceactivityservice) | [ServiceActivityServices](Applications.Service.ServiceActivityServices.md) | The <see cref="ServiceActivity<br />Service"/> to which this ServiceActivity<br />AgreedService belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
-| [ServiceAgreementService](Applications.Service.ServiceActivityAgreedServices.md#serviceagreementservice) | [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md) | Service agreement service line that records the paid or agreed in advance service or product. |
+| [ServiceAgreementService](Applications.Service.ServiceActivityAgreedServices.md#serviceagreementservice) | [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md) | Service agreement service line that records the paid or agreed in advance service or product. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
 ## System Attributes
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### AgreedQuantity
 
-Quantity from the service agreement service line that is accounted for this service activity service line.
+Quantity from the service agreement service line that is accounted for this service activity service line. `Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceAgreementService
 
-Service agreement service line that records the paid or agreed in advance service or product.
+Service agreement service line that records the paid or agreed in advance service or product. `Required` `Filter(multi eq)` `ReadOnly`
 
 Type: **[ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md)**  
 Category: **System**  

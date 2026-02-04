@@ -34,16 +34,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Payments.PaymentTypes.md#code) | string (16) | The payment type unique code 
-| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. 
+| [Code](Finance.Payments.PaymentTypes.md#code) | string (16) | The payment type unique code. `Required` `Filter(eq;like)` `ORD` 
+| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
 | [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this PaymentType. `Required` `Filter(like)` 
-| [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__ | Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer 
+| [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__ | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPaymentAccount](Finance.Payments.PaymentTypes.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not NULL specifies the default payment account to use associated with this payment type |
+| [DefaultPaymentAccount](Finance.Payments.PaymentTypes.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null specifies the default payment account to use associated with this payment type. `Filter(multi eq)` |
 | [EnterpriseCompany](Finance.Payments.PaymentTypes.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PaymentType applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
 
 
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Code
 
-The payment type unique code
+The payment type unique code. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -78,7 +78,7 @@ Back-End Default Expression:
 
 ### IsActive
 
-Indicates wheather the payment type is active and usable for choosing in new documents.
+Indicates wheather the payment type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1`
 
 Type: **boolean**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemType
 
-Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer
+Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer.
 
 Type: **[SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultPaymentAccount
 
-When not NULL specifies the default payment account to use associated with this payment type
+When not null specifies the default payment account to use associated with this payment type. `Filter(multi eq)`
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  

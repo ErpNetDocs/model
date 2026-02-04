@@ -34,21 +34,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#coveredbyguarantee) | boolean | True when the performed service is covered by the guarantee. 
-| [LineNo](Applications.Service.ServiceActivityServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. 
-| [Notes](Applications.Service.ServiceActivityServices.md#notes) | string (254) __nullable__ | Short notes for the service 
-| [Quantity](Applications.Service.ServiceActivityServices.md#quantity) | [Quantity (9, 2)](../data-types.md#quantity) | The quantity of the service in the measurement unit of the service 
-| [ServiceName](Applications.Service.ServiceActivityServices.md#servicename) | string (254) | Description of the conducted service. The description may vary (contains additional information) from the standard name of the service. 
+| [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#coveredbyguarantee) | boolean | True when the performed service is covered by the guarantee. `Required` `Default(false)` 
+| [LineNo](Applications.Service.ServiceActivityServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
+| [Notes](Applications.Service.ServiceActivityServices.md#notes) | string (254) __nullable__ | Short notes for the service. 
+| [Quantity](Applications.Service.ServiceActivityServices.md#quantity) | [Quantity (9, 2)](../data-types.md#quantity) | The quantity of the service in the measurement unit of the service. `Unit: Service.MeasurementUnit` `Required` `Default(1)` 
+| [ServiceName](Applications.Service.ServiceActivityServices.md#servicename) | string (254) | Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Applications.Service.ServiceActivityServices.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The owner document. The <see cref="ServiceActivity"/> to which this ServiceActivityService belongs. `Required` `Filter(multi eq)` |
-| [PerformedByPerson](Applications.Service.ServiceActivityServices.md#performedbyperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person from the enterprise company that actually performed the work |
-| [Service](Applications.Service.ServiceActivityServices.md#service) | [Services](Applications.Service.Services.md) | The type of service that is conducted |
+| [PerformedByPerson](Applications.Service.ServiceActivityServices.md#performedbyperson) | [Persons](General.Contacts.Persons.md) (nullable) | The id of the person from the enterprise company that actually performed the work. `Filter(multi eq)` |
+| [Service](Applications.Service.ServiceActivityServices.md#service) | [Services](Applications.Service.Services.md) | The type of service that is conducted. `Required` `Filter(multi eq)` |
 | [ServiceActivity](Applications.Service.ServiceActivityServices.md#serviceactivity) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The <see cref="ServiceActivity"/> to which this ServiceActivityService belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ServiceObject](Applications.Service.ServiceActivityServices.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object that was serviced with the service from this line. If service object is unknown or there isn't service object then this field should be blank. |
+| [ServiceObject](Applications.Service.ServiceActivityServices.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object that was serviced. null means that it is unknown or N/A. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### CoveredByGuarantee
 
-True when the performed service is covered by the guarantee.
+True when the performed service is covered by the guarantee. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -96,7 +96,7 @@ Front-End Recalc Expressions:
 `( obj.ServiceActivity.Services.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-Short notes for the service
+Short notes for the service.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity of the service in the measurement unit of the service
+The quantity of the service in the measurement unit of the service. `Unit: Service.MeasurementUnit` `Required` `Default(1)`
 
 Type: **[Quantity (9, 2)](../data-types.md#quantity)**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceName
 
-Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.
+Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. `Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### PerformedByPerson
 
-The person from the enterprise company that actually performed the work
+The id of the person from the enterprise company that actually performed the work. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 ### Service
 
-The type of service that is conducted
+The type of service that is conducted. `Required` `Filter(multi eq)`
 
 Type: **[Services](Applications.Service.Services.md)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceObject
 
-The service object that was serviced with the service from this line. If service object is unknown or there isn't service object then this field should be blank.
+The service object that was serviced. null means that it is unknown or N/A. `Filter(multi eq)`
 
 Type: **[ServiceObjects](Applications.Service.ServiceObjects.md) (nullable)**  
 Category: **System**  

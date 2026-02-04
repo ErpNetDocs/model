@@ -35,18 +35,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pos.ExecutionStatuses.md#code) | string (16) | Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. 
-| [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | The system-defined stage under which is the current status. 
-| [IsActive](Crm.Pos.ExecutionStatuses.md#isactive) | boolean | Indicates whether the POS execution status is currently active. 
-| [Name](Crm.Pos.ExecutionStatuses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. 
-| [Ord](Crm.Pos.ExecutionStatuses.md#ord) | int32 | The sort order of the status within the stage. 
+| [Code](Crm.Pos.ExecutionStatuses.md#code) | string (16) | Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD` 
+| [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | [ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage) | The system-defined stage under which is the current status. `Required` `Default("PND")` `Filter(multi eq)` 
+| [IsActive](Crm.Pos.ExecutionStatuses.md#isactive) | boolean | Indicates whether the POS execution status is currently active. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Crm.Pos.ExecutionStatuses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` `Filter(eq;like)` 
+| [Ord](Crm.Pos.ExecutionStatuses.md#ord) | int32 | The sort order of the status within the stage. `Required` `Filter(eq;ge;le)` `ORD` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Crm.Pos.ExecutionStatuses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When specified, means that the status applies only to the specified enterprise company. NULL means the status is applicable to all enterprise companies. |
-| [Location](Crm.Pos.ExecutionStatuses.md#location) | [Locations](Crm.Pos.Locations.md) (nullable) | When specified, means that the status applies only to the specified location. NULL means the status is applicable to all locations. |
+| [EnterpriseCompany](Crm.Pos.ExecutionStatuses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. `Filter(multi eq)` |
+| [Location](Crm.Pos.ExecutionStatuses.md#location) | [Locations](Crm.Pos.Locations.md) (nullable) | When specified, means that the status applies only to the specified location. null means the status is applicable to all locations. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### Code
 
-Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc.
+Unique short descriptive code of the user status. Used for display constrained devices, import/export matching, etc. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionStage
 
-The system-defined stage under which is the current status.
+The system-defined stage under which is the current status. `Required` `Default("PND")` `Filter(multi eq)`
 
 Type: **[ExecutionStage](Crm.Pos.ExecutionStatuses.md#executionstage)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the POS execution status is currently active.
+Indicates whether the POS execution status is currently active. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc.
+Name of the execution status. Should be action-oriented, e.g. reflect the NEXT action which should be taken (and not what is completed). For example, "Scheduled", "Ready-to-serve", etc. `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### Ord
 
-The sort order of the status within the stage.
+The sort order of the status within the stage. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-When specified, means that the status applies only to the specified enterprise company. NULL means the status is applicable to all enterprise companies.
+When specified, means that the status applies only to the specified enterprise company. null means the status is applicable to all enterprise companies. `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Indexed: **True**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### Location
 
-When specified, means that the status applies only to the specified location. NULL means the status is applicable to all locations.
+When specified, means that the status applies only to the specified location. null means the status is applicable to all locations. `Filter(multi eq)`
 
 Type: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 Indexed: **True**  

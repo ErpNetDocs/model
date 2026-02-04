@@ -40,8 +40,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Crm.Marketing.TargetGroupMembers.md#party) | [Parties](General.Contacts.Parties.md) | The member party. |
-| [TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) | The target group, which includes the member party. |
+| [Party](Crm.Marketing.TargetGroupMembers.md#party) | [Parties](General.Contacts.Parties.md) | The member party. `Required` `Filter(multi eq)` |
+| [TargetGroup](Crm.Marketing.TargetGroupMembers.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) | The target group, which includes the member party. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The member party.
+The member party. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetGroup
 
-The target group, which includes the member party.
+The target group, which includes the member party. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[TargetGroups](Crm.Marketing.TargetGroups.md)**  
 Indexed: **True**  

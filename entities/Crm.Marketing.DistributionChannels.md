@@ -34,10 +34,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.DistributionChannels.md#code) | string (10) | Unique distribution channel code 
-| [Description](Crm.Marketing.DistributionChannels.md#description) | string (max) __nullable__ | Full description of the distribution channel 
-| [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? 1=Yes, 0=No 
-| [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel 
+| [Code](Crm.Marketing.DistributionChannels.md#code) | string (10) | Unique distribution channel code. `Required` `Filter(eq;like)` 
+| [Description](Crm.Marketing.DistributionChannels.md#description) | string (max) __nullable__ | Full description of the distribution channel. 
+| [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
+| [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. `Required` `Filter(eq;like)` 
 
 
 ## System Attributes
@@ -56,7 +56,7 @@ Aggregate Tree
 
 ### Code
 
-Unique distribution channel code
+Unique distribution channel code. `Required` `Filter(eq;like)`
 
 Type: **string (10)**  
 Category: **System**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Full description of the distribution channel
+Full description of the distribution channel.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Is the channel active for new sales? 1=Yes, 0=No
+Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the distribution channel
+Multi-language name of the distribution channel. `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

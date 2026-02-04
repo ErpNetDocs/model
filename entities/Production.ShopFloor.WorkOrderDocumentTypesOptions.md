@@ -44,14 +44,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | Specifies whether the document is for Production or Decomposition purposes. 
+| [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | Specifies whether the document is for Production or Decomposition purposes. `Required` `Default("P")` `Filter(eq)` `Introduced in version 25.1.0.76` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletingOutput<br />OrderDocumentType](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type |
-| [DocumentType](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | User-defined Work Order document type |
+| [CompletingOutput<br />OrderDocumentType](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type. `Filter(multi eq)` |
+| [DocumentType](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | User-defined Work Order document type. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### ProductionМode
 
-Specifies whether the document is for Production or Decomposition purposes.
+Specifies whether the document is for Production or Decomposition purposes. `Required` `Default("P")` `Filter(eq)` `Introduced in version 25.1.0.76`
 
 Type: **[ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompletingOutputOrderDocumentType
 
-User-defined Completing Output Order document type
+User-defined Completing Output Order document type. `Filter(multi eq)`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-User-defined Work Order document type
+User-defined Work Order document type. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  

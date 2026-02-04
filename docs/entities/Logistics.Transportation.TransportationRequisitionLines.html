@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#contentsdescription">ContentsDescription</a></td>
 <td>string (128)</td>
-<td>Textual description of the cargo contents.</td>
+<td>Textual description of the cargo contents. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#lineno">LineNo</a></td>
@@ -135,22 +135,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#palletscount">PalletsCount</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of palettes comprising the cargo. NULL when it is unknown.</td>
+<td>Number of palettes comprising the cargo. null when it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#volumecbm">VolumeCbm</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.</td>
+<td>The volume of the cargo, in CBM (cubic meters). null when it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#weightkg">WeightKg</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The weight of the cargo, in KG (kilogramms). NULL when it is unknown.</td>
+<td>The weight of the cargo, in KG (kilogramms). null when it is unknown.</td>
 </tr>
 </tbody>
 </table>
@@ -167,7 +167,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#cargotype">CargoType</a></td>
 <td><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></td>
-<td>The type of the transported cargo.</td>
+<td>The type of the transported cargo. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#document">Document</a></td>
@@ -177,7 +177,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationRequisitionLines.html#transportationrequisition">TransportationRequisition</a></td>
@@ -215,7 +215,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentsdescription">ContentsDescription</h3>
-<p>Textual description of the cargo contents.</p>
+<p>Textual description of the cargo contents. <code>Required</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -234,28 +234,28 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.TransportationRequisition.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="palletscount">PalletsCount</h3>
-<p>Number of palettes comprising the cargo. NULL when it is unknown.</p>
+<p>Number of palettes comprising the cargo. null when it is unknown.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(eq)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="volumecbm">VolumeCbm</h3>
-<p>The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.</p>
+<p>The volume of the cargo, in CBM (cubic meters). null when it is unknown.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="weightkg">WeightKg</h3>
-<p>The weight of the cargo, in KG (kilogramms). NULL when it is unknown.</p>
+<p>The weight of the cargo, in KG (kilogramms). null when it is unknown.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -284,7 +284,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="cargotype">CargoType</h3>
-<p>The type of the transported cargo.</p>
+<p>The type of the transported cargo. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -297,7 +297,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

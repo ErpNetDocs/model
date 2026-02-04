@@ -51,7 +51,7 @@ Aggregate Tree
 | [AdjustmentTime](Logistics.Inventory.StoreTransactions.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Logistics.Inventory.StoreTransactions.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CompleteTime](Logistics.Inventory.StoreTransactions.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). 
+| [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document. `Required` `ReadOnly` 
 | [CreationTime](Logistics.Inventory.StoreTransactions.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Inventory.StoreTransactions.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentDate](Logistics.Inventory.StoreTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -60,11 +60,11 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Inventory.StoreTransactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.StoreTransactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Inventory.StoreTransactions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.StoreTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsScrap](Logistics.Inventory.StoreTransactions.md#isscrap) | boolean | 0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap. 
-| [IsSingleExecution](Logistics.Inventory.StoreTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
-| [IsValidField](Logistics.Inventory.StoreTransactions.md#isvalidfield) | boolean | Managed by the system and used only for integrity purposes. Do not use. 
-| [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | Transaction movement type. R=RECEIPT, I=ISSUE 
+| [<s>IsReleased</s>](Logistics.Inventory.StoreTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsScrap](Logistics.Inventory.StoreTransactions.md#isscrap) | boolean | False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. `Required` `Default(false)` `Filter(eq)` 
+| [IsSingleExecution](Logistics.Inventory.StoreTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [IsValidField](Logistics.Inventory.StoreTransactions.md#isvalidfield) | boolean | Managed by the system and used only for integrity purposes. Do not use. `Required` `Default(false)` `ReadOnly` 
+| [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | Transaction movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)` 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreTransactions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreTransactions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.StoreTransactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.StoreTransactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -86,23 +86,23 @@ Aggregate Tree
 | [AdjustedDocument](Logistics.Inventory.StoreTransactions.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Inventory.StoreTransactions.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Logistics.Inventory.StoreTransactions.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentCurrency](Logistics.Inventory.StoreTransactions.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document amounts are recorded. |
+| [DocumentCurrency](Logistics.Inventory.StoreTransactions.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document amounts are recorded. `Required` `Filter(multi eq)` |
 | [DocumentType](Logistics.Inventory.StoreTransactions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Inventory.StoreTransactions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Logistics.Inventory.StoreTransactions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Inventory.StoreTransactions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Inventory.StoreTransactions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [IssuingPerson](Logistics.Inventory.StoreTransactions.md#issuingperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, responsible for the issuing of the document. |
+| [IssuingPerson](Logistics.Inventory.StoreTransactions.md#issuingperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, responsible for the issuing of the document. `Filter(multi eq)` |
 | [MasterDocument](Logistics.Inventory.StoreTransactions.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Inventory.StoreTransactions.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ParentStoreOrder](Logistics.Inventory.StoreTransactions.md#parentstoreorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) (nullable) | The parent (generating) store order. Deprecated, use the Parent Document reference. |
+| [ParentStoreOrder](Logistics.Inventory.StoreTransactions.md#parentstoreorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) (nullable) | The parent (generating) store order. Deprecated, use the Parent Document reference. `Filter(multi eq)` |
 | [PrimeCauseDocument](Logistics.Inventory.StoreTransactions.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReceivingPerson](Logistics.Inventory.StoreTransactions.md#receivingperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, to which the document was sent. |
+| [ReceivingPerson](Logistics.Inventory.StoreTransactions.md#receivingperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, to which the document was sent. `Filter(multi eq)` |
 | [ResponsiblePerson](Logistics.Inventory.StoreTransactions.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Logistics.Inventory.StoreTransactions.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ScrapType](Logistics.Inventory.StoreTransactions.md#scraptype) | [ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable) | Type of scrap (scrap reason). NULL if the transaction is not scrap |
+| [ScrapType](Logistics.Inventory.StoreTransactions.md#scraptype) | [ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable) | Type of scrap (scrap reason). null if the transaction is not scrap. `Filter(multi eq)` |
 | [Sequence](Logistics.Inventory.StoreTransactions.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Store](Logistics.Inventory.StoreTransactions.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store from which the goods are received or issued. |
+| [Store](Logistics.Inventory.StoreTransactions.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store from which the goods are received or issued. `Required` `Filter(multi eq)` |
 | [ToCompanyDivision](Logistics.Inventory.StoreTransactions.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Inventory.StoreTransactions.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Inventory.StoreTransactions.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### CostSource
 
-Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).
+Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document. `Required` `ReadOnly`
 
 Type: **[CostSource](Logistics.Inventory.StoreTransactions.md#costsource)**  
 Category: **System**  
@@ -293,7 +293,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsScrap
 
-0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.
+False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -315,7 +315,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -326,7 +326,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsValidField
 
-Managed by the system and used only for integrity purposes. Do not use.
+Managed by the system and used only for integrity purposes. Do not use. `Required` `Default(false)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -337,7 +337,7 @@ Show in UI: **CannotBeShown**
 
 ### MovementType
 
-Transaction movement type. R=RECEIPT, I=ISSUE
+Transaction movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)`
 
 Type: **[MovementType](Logistics.Inventory.StoreTransactions.md#movementtype)**  
 Category: **System**  
@@ -616,7 +616,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentCurrency
 
-The currency in which the document amounts are recorded.
+The currency in which the document amounts are recorded. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -672,7 +672,7 @@ Show in UI: **HiddenByDefault**
 
 ### IssuingPerson
 
-The person, responsible for the issuing of the document.
+The person, responsible for the issuing of the document. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -701,7 +701,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentStoreOrder
 
-The parent (generating) store order. Deprecated, use the Parent Document reference.
+The parent (generating) store order. Deprecated, use the Parent Document reference. `Filter(multi eq)`
 
 Type: **[StoreOrders](Logistics.Inventory.StoreOrders.md) (nullable)**  
 Indexed: **True**  
@@ -721,7 +721,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReceivingPerson
 
-The person, to which the document was sent.
+The person, to which the document was sent. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -748,7 +748,7 @@ Show in UI: **HiddenByDefault**
 
 ### ScrapType
 
-Type of scrap (scrap reason). NULL if the transaction is not scrap
+Type of scrap (scrap reason). null if the transaction is not scrap. `Filter(multi eq)`
 
 Type: **[ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable)**  
 Category: **System**  
@@ -766,7 +766,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-The store from which the goods are received or issued.
+The store from which the goods are received or issued. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Indexed: **True**  

@@ -44,14 +44,14 @@ Aggregate Tree
 | [Description](Systems.Bpm.PropertyValues.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The actual description value of the property for the specified entity (the entity with the specified Id). 
 | [EntityItemId](Systems.Bpm.PropertyValues.md#entityitemid) | guid | The Id of the actual entity for which the value is specified. `Required` `Filter(multi eq)` 
 | [Picture](Systems.Bpm.PropertyValues.md#picture) | byte[] __nullable__ | The actual picture of the property for the specified entity (the entity with the specified Id). 
-| [PropertyValueField](Systems.Bpm.PropertyValues.md#propertyvaluefield) | string (254) __nullable__ | The actual value of the property for the specified entity (the entity with the specified Id). 
+| [PropertyValueField](Systems.Bpm.PropertyValues.md#propertyvaluefield) | string (254) __nullable__ | The actual value of the property for the specified entity (the entity with the specified Id). `Filter(eq)` 
 | [ValueId](Systems.Bpm.PropertyValues.md#valueid) | guid __nullable__ | The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. null for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values. `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Systems.Bpm.PropertyValues.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The property, whose value is stored here. |
+| [Property](Systems.Bpm.PropertyValues.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The property, whose value is stored here. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyValueField
 
-The actual value of the property for the specified entity (the entity with the specified Id).
+The actual value of the property for the specified entity (the entity with the specified Id). `Filter(eq)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### Property
 
-The property, whose value is stored here.
+The property, whose value is stored here. `Required` `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Indexed: **True**  

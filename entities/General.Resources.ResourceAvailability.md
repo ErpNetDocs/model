@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableResources](General.Resources.ResourceAvailability.md#availableresources) | decimal (12, 2) | The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. 
-| [FromDate](General.Resources.ResourceAvailability.md#fromdate) | date | The date from which availability starts. 
-| [ToDate](General.Resources.ResourceAvailability.md#todate) | date __nullable__ | The date to which the availability continues. When NULL, the availability continues infinitely. 
+| [AvailableResources](General.Resources.ResourceAvailability.md#availableresources) | decimal (12, 2) | The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)` 
+| [FromDate](General.Resources.ResourceAvailability.md#fromdate) | date | The date from which availability starts. `Required` `Filter(ge;le)` 
+| [ToDate](General.Resources.ResourceAvailability.md#todate) | date __nullable__ | The date to which the availability continues. When null, the availability continues infinitely. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Resource](General.Resources.ResourceAvailability.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which we provide availability. |
+| [Resource](General.Resources.ResourceAvailability.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which we provide availability. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### AvailableResources
 
-The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.
+The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)`
 
 Type: **decimal (12, 2)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-The date from which availability starts.
+The date from which availability starts. `Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-The date to which the availability continues. When NULL, the availability continues infinitely.
+The date to which the availability continues. When null, the availability continues infinitely. `Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **HiddenByDefault**
 
 ### Resource
 
-The resource, for which we provide availability.
+The resource, for which we provide availability. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Resources](General.Resources.Resources.md)**  
 Category: **System**  

@@ -41,20 +41,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](Crm.Sales.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period 
-| [IsActive](Crm.Sales.ForecastItems.md#isactive) | boolean | Indicates whether the current Forecast item is active. 
-| [Quantity](Crm.Sales.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product 
+| [Date](Crm.Sales.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. `Required` `Filter(ge;le)` 
+| [IsActive](Crm.Sales.ForecastItems.md#isactive) | boolean | Indicates whether the current Forecast item is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [Quantity](Crm.Sales.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](Crm.Sales.ForecastItems.md#country) | [Countries](General.Geography.Countries.md) (nullable) | The country for which the forecast is made. When NULL, the forecast is country neutral. |
-| [Customer](Crm.Sales.ForecastItems.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer for which the forecast is made. When NULL, the forecast is not for any specfic customer. |
-| [Dealer](Crm.Sales.ForecastItems.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The dealer for which the forecast is made. When NULL, the forecast is not for any specfic dealer. |
-| [Product](Crm.Sales.ForecastItems.md#product) | [Products](General.Products.Products.md) | The product for which the forecast is made. |
-| [SalesPerson](Crm.Sales.ForecastItems.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | The sales person for which the forecast is made. When NULL, the forecast is not for any specfic sales person. |
-| [Store](Crm.Sales.ForecastItems.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which is expected to sell the products. |
+| [Country](Crm.Sales.ForecastItems.md#country) | [Countries](General.Geography.Countries.md) (nullable) | The country for which the forecast is made. When null, the forecast is country neutral. `Filter(multi eq)` |
+| [Customer](Crm.Sales.ForecastItems.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | The customer for which the forecast is made. When null, the forecast is not for any specfic customer. `Filter(multi eq)` |
+| [Dealer](Crm.Sales.ForecastItems.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. `Filter(multi eq)` |
+| [Product](Crm.Sales.ForecastItems.md#product) | [Products](General.Products.Products.md) | The product for which the forecast is made. `Required` `Filter(multi eq)` |
+| [SalesPerson](Crm.Sales.ForecastItems.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. `Filter(multi eq)` |
+| [Store](Crm.Sales.ForecastItems.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store which is expected to sell the products. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### Date
 
-The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period
+The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Forecast item is active.
+Indicates whether the current Forecast item is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The forecasted sales quantity in the base measurement category of the product
+The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **HiddenByDefault**
 
 ### Country
 
-The country for which the forecast is made. When NULL, the forecast is country neutral.
+The country for which the forecast is made. When null, the forecast is country neutral. `Filter(multi eq)`
 
 Type: **[Countries](General.Geography.Countries.md) (nullable)**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### Customer
 
-The customer for which the forecast is made. When NULL, the forecast is not for any specfic customer.
+The customer for which the forecast is made. When null, the forecast is not for any specfic customer. `Filter(multi eq)`
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### Dealer
 
-The dealer for which the forecast is made. When NULL, the forecast is not for any specfic dealer.
+The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. `Filter(multi eq)`
 
 Type: **[Dealers](Crm.Sales.Dealers.md) (nullable)**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product for which the forecast is made.
+The product for which the forecast is made. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -203,7 +203,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesPerson
 
-The sales person for which the forecast is made. When NULL, the forecast is not for any specfic sales person.
+The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. `Filter(multi eq)`
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable)**  
 Category: **System**  
@@ -212,7 +212,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The store which is expected to sell the products.
+The store which is expected to sell the products. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

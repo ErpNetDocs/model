@@ -122,22 +122,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#answer">Answer</a></td>
 <td>string (max)</td>
-<td>Desired answer.</td>
+<td>Desired answer. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The time when the QA was created.</td>
+<td>The time when the QA was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#deactivatontimeutc">DeactivatonTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time when the QA was deactivated.</td>
+<td>The time when the QA was deactivated. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether to include this QA in future builds.</td>
+<td>Indicates whether to include this QA in future builds. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#notes">Notes</a></td>
@@ -147,17 +147,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#qatype">QAType</a></td>
 <td><a href="Projects.AI.ModelQAs.html#qatype">QAType</a></td>
-<td>Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.</td>
+<td>Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs. <code>Required</code> <code>Default(&quot;T&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#question">Question</a></td>
 <td>string (max)</td>
-<td>User question.</td>
+<td>User question. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#section">Section</a></td>
 <td>string (128)</td>
-<td>Free text organizational section of the QA.</td>
+<td>Free text organizational section of the QA. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -174,12 +174,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#addedbyuser">AddedByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user which added the QA.</td>
+<td>The user which added the QA. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.ModelQAs.html#model">Model</a></td>
 <td><a href="Projects.AI.Models.html">Models</a></td>
-<td>The model to which the question belongs.</td>
+<td>The model to which the question belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -212,7 +212,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="answer">Answer</h3>
-<p>Desired answer.</p>
+<p>Desired answer. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -220,7 +220,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The time when the QA was created.</p>
+<p>The time when the QA was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -228,14 +228,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deactivatontimeutc">DeactivatonTimeUtc</h3>
-<p>The time when the QA was deactivated.</p>
+<p>The time when the QA was deactivated. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether to include this QA in future builds.</p>
+<p>Indicates whether to include this QA in future builds. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -251,7 +251,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="qatype">QAType</h3>
-<p>Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.</p>
+<p>Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs. <code>Required</code> <code>Default(&quot;T&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Projects.AI.ModelQAs.html#qatype">QAType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>QAType</code>(Projects.AI.ModelQAs.md#qatype) data attribute<br>
@@ -279,7 +279,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Training</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="question">Question</h3>
-<p>User question.</p>
+<p>User question. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -287,7 +287,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="section">Section</h3>
-<p>Free text organizational section of the QA.</p>
+<p>Free text organizational section of the QA. <code>Required</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -317,14 +317,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="addedbyuser">AddedByUser</h3>
-<p>The user which added the QA.</p>
+<p>The user which added the QA. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="model">Model</h3>
-<p>The model to which the question belongs.</p>
+<p>The model to which the question belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.AI.Models.html">Models</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

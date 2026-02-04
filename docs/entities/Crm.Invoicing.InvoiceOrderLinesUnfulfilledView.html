@@ -117,22 +117,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#isfulfilled">IsFulfilled</a></td>
 <td>boolean</td>
-<td>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</td>
+<td>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#isquantityfulfilled">IsQuantityFulfilled</a></td>
 <td>boolean</td>
-<td>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</td>
+<td>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#orderremaininglineamount">OrderRemainingLineAmount</a></td>
 <td>decimal (38, 2)</td>
-<td>The uninvoiced (unfulfilled) line amount of the invoice order line.</td>
+<td>The uninvoiced (unfulfilled) line amount of the invoice order line. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#orderremainingstandardquantity">OrderRemaining<br>StandardQuantity</a></td>
 <td>decimal (38, 6)</td>
-<td>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.</td>
+<td>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -149,54 +149,54 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#invoiceorder">InvoiceOrder</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></td>
-<td>The invoice order to which the invoice order line belongs.</td>
+<td>The invoice order to which the invoice order line belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_&lt;br /&gt;Lines_Table.Invoice_Order_Id</code> <code>Introduced in version 24.1.5.19</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#invoiceorderline">InvoiceOrderLine</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html">InvoiceOrderLines</a> (nullable)</td>
-<td>The line containing the ordered quantity and amount.</td>
+<td>Invoice order line which is invoiced by this line. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Lines_Table.Invoice_Order_Line_Id</code> <code>Introduced in version 24.1.5.19</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
-<td>When not NULL specifies the sales order that is ordered to be invoiced by the invoice order line.</td>
+<td>When not null specifies the Sales Order that is ordered to be invoiced by this line. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_&lt;br /&gt;Lines_Table.Sales_Order_Id</code> <code>Introduced in version 24.1.5.19</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#salesorderline">SalesOrderLine</a></td>
 <td><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</td>
-<td>When not NULL specifies the sales order line that is ordered to be invoiced by the invoice order line.</td>
+<td>When not null specifies the Sales Order line that is ordered to be invoiced by this line. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_&lt;br /&gt;Lines_Table.Sales_Order_Line_Id</code> <code>Introduced in version 24.1.5.19</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</td>
-<td>When not NULL specifies the store transaction line that is to be invoiced by the invoice order line.</td>
+<td>The store transaction line that is to be invoiced by this line, for Business Reason = S. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_&lt;br /&gt;Lines_Table.Transaction_Line_Id</code> <code>Introduced in version 24.1.5.19</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isfulfilled">IsFulfilled</h3>
-<p>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</p>
+<p>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isquantityfulfilled">IsQuantityFulfilled</h3>
-<p>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</p>
+<p>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremaininglineamount">OrderRemainingLineAmount</h3>
-<p>The uninvoiced (unfulfilled) line amount of the invoice order line.</p>
+<p>The uninvoiced (unfulfilled) line amount of the invoice order line. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremainingstandardquantity">OrderRemainingStandardQuantity</h3>
-<p>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.</p>
+<p>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>decimal (38, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="invoiceorder">InvoiceOrder</h3>
-<p>The invoice order to which the invoice order line belongs.</p>
+<p>The invoice order to which the invoice order line belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_Lines_Table.Invoice_Order_Id</code> <code>Introduced in version 24.1.5.19</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Crm.Invoicing.InvoiceOrders.html">InvoiceOrders</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Invoice_Order_Lines_Table.Invoice_Order_Id</strong><br>
@@ -212,7 +212,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="invoiceorderline">InvoiceOrderLine</h3>
-<p>The line containing the ordered quantity and amount.</p>
+<p>Invoice order line which is invoiced by this line. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Lines_Table.Invoice_Order_Line_Id</code> <code>Introduced in version 24.1.5.19</code> <code>FilterableReference</code></p>
 <p>Type: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html">InvoiceOrderLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Invoice_Lines_Table.Invoice_Order_Line_Id</strong><br>
@@ -220,21 +220,21 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
-<p>When not NULL specifies the sales order that is ordered to be invoiced by the invoice order line.</p>
+<p>When not null specifies the Sales Order that is ordered to be invoiced by this line. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_Lines_Table.Sales_Order_Id</code> <code>Introduced in version 24.1.5.19</code></p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Invoice_Order_Lines_Table.Sales_Order_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesorderline">SalesOrderLine</h3>
-<p>When not NULL specifies the sales order line that is ordered to be invoiced by the invoice order line.</p>
+<p>When not null specifies the Sales Order line that is ordered to be invoiced by this line. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_Lines_Table.Sales_Order_Line_Id</code> <code>Introduced in version 24.1.5.19</code></p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Invoice_Order_Lines_Table.Sales_Order_Line_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
-<p>When not NULL specifies the store transaction line that is to be invoiced by the invoice order line.</p>
+<p>The store transaction line that is to be invoiced by this line, for Business Reason = S. <code>Filter(multi eq)</code> <code>Inherited from Crm_Invoice_Order_Lines_Table.Transaction_Line_Id</code> <code>Introduced in version 24.1.5.19</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Crm_Invoice_Order_Lines_Table.Transaction_Line_Id</strong><br>

@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePaymentTypes.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information or comments for this entry.</td>
+<td>Additional information or comments for this entry. <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -139,17 +139,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePaymentTypes.html#paymentmechanismcodeentry">PaymentMechanismCodeEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
-<td>Payment Mechanism used when generating the SAFT file.</td>
+<td>Payment Mechanism used when generating the SAFT file. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePaymentTypes.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a></td>
-<td>PaymentType used for this SAFT profile</td>
+<td>PaymentType used for this SAFT profile. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfilePaymentTypes.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>Identifier of the SAFT profile associated with this payment type.</td>
+<td>Identifier of the SAFT profile associated with this payment type. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -182,7 +182,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="notes">Notes</h3>
-<p>Additional information or comments for this entry.</p>
+<p>Additional information or comments for this entry. <code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -212,21 +212,21 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentmechanismcodeentry">PaymentMechanismCodeEntry</h3>
-<p>Payment Mechanism used when generating the SAFT file.</p>
+<p>Payment Mechanism used when generating the SAFT file. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>PaymentType used for this SAFT profile</p>
+<p>PaymentType used for this SAFT profile. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>Identifier of the SAFT profile associated with this payment type.</p>
+<p>Identifier of the SAFT profile associated with this payment type. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

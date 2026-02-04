@@ -34,16 +34,16 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Applications.Service.ServiceTypes.md#description) | string (max) __nullable__ | The description of this ServiceType. 
-| [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents. 
-| [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | This service will be used when service agreement is automaticaly generated 
+| [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
+| [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | True when this is the default service type for the service object type. false otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Applications.Service.ServiceTypes.md#name) | string (254) | The name of this ServiceType. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Applications.Service.ServiceTypes.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | A price list to be used when a service activity is invoiced |
-| [ServiceObjectType](Applications.Service.ServiceTypes.md#serviceobjecttype) | [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | The type of the service object for which this service type is designed. |
+| [PriceList](Applications.Service.ServiceTypes.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | When not null, specifies the price list that should be applied when invoicing service activities. `Filter(multi eq)` |
+| [ServiceObjectType](Applications.Service.ServiceTypes.md#serviceobjecttype) | [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | The service object type to which this service type is applicable. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True when the service type is currently active and selectable in new documents.
+True when the service type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-This service will be used when service agreement is automaticaly generated
+True when this is the default service type for the service object type. false otherwise. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **HiddenByDefault**
 
 ### PriceList
 
-A price list to be used when a service activity is invoiced
+When not null, specifies the price list that should be applied when invoicing service activities. `Filter(multi eq)`
 
 Type: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
 Category: **System**  
@@ -177,7 +177,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceObjectType
 
-The type of the service object for which this service type is designed.
+The service object type to which this service type is applicable. `Filter(multi eq)`
 
 Type: **[ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
 Category: **System**  

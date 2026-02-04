@@ -121,37 +121,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Load.html#calendardate">CalendarDate</a></td>
 <td>datetime</td>
-<td>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day</td>
+<td>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#priority">Priority</a></td>
 <td><a href="Production.Resources.Load.html#priority">Priority</a></td>
-<td>Priority of the allocation. 1=Lowest ... 5=Highest</td>
+<td>Priority of the allocation. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#timetype">TimeType</a></td>
 <td><a href="Production.Resources.Load.html#timetype">TimeType</a></td>
-<td>S=Setup; R=Run; W=Wait; M=Move</td>
+<td>S=Setup; R=Run; W=Wait; M=Move. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#usageendtime">UsageEndTime</a></td>
 <td>datetime</td>
-<td>The ending time of the planned usage.</td>
+<td>The ending time of the planned usage. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#usagequantity">UsageQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 0)</a></td>
-<td>Quantity of the resource, which will be used for production</td>
+<td>Quantity of the resource, which will be used for production. <code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#usagestarttime">UsageStartTime</a></td>
 <td>datetime</td>
-<td>The starting time of the planned usage.</td>
+<td>The starting time of the planned usage. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#usagetimeminutes">UsageTimeMinutes</a></td>
 <td>int32</td>
-<td>Time allocated for the operation in minutes</td>
+<td>Time allocated for the operation in minutes. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Load.html#workgroupresource">WorkgroupResource</a></td>
 <td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></td>
-<td>The exact resource being utilised</td>
+<td>The exact resource being utilised. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#workorderitemoperation">WorkOrderItemOperation</a></td>
@@ -206,14 +206,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="calendardate">CalendarDate</h3>
-<p>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day</p>
+<p>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the allocation. 1=Lowest ... 5=Highest</p>
+<p>Priority of the allocation. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></p>
 <p>Type: <strong><a href="Production.Resources.Load.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Production.Resources.Load.md#priority) data attribute<br>
@@ -253,7 +253,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>3</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timetype">TimeType</h3>
-<p>S=Setup; R=Run; W=Wait; M=Move</p>
+<p>S=Setup; R=Run; W=Wait; M=Move. <code>Required</code> <code>Default(&quot;R&quot;)</code></p>
 <p>Type: <strong><a href="Production.Resources.Load.html#timetype">TimeType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TimeType</code>(Production.Resources.Load.md#timetype) data attribute<br>
@@ -289,14 +289,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Run</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usageendtime">UsageEndTime</h3>
-<p>The ending time of the planned usage.</p>
+<p>The ending time of the planned usage. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usagequantity">UsageQuantity</h3>
-<p>Quantity of the resource, which will be used for production</p>
+<p>Quantity of the resource, which will be used for production. <code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 0)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -304,14 +304,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usagestarttime">UsageStartTime</h3>
-<p>The starting time of the planned usage.</p>
+<p>The starting time of the planned usage. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usagetimeminutes">UsageTimeMinutes</h3>
-<p>Time allocated for the operation in minutes</p>
+<p>Time allocated for the operation in minutes. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -341,7 +341,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="workgroupresource">WorkgroupResource</h3>
-<p>The exact resource being utilised</p>
+<p>The exact resource being utilised. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#boxcount">BoxCount</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The count of boxes in which the goods are packaged. NULL means unknown</td>
+<td>The count of boxes in which the goods are packaged. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,42 +130,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>1 if this shipment should prohibit further shipments for the sales order line</td>
+<td>True if this shipment should prohibit further shipments for the sales order line. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#grossweightkg">GrossWeightkg</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The gross weight of the whole line in kilogramms. NULL means unknown</td>
+<td>The gross weight of the whole line in kilogramms. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>standard guarantee period in days. Can be set only if the product type is serviced.</td>
+<td>Guarantee period in days for the offered product. null for non-serviced products.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#heightm">Heightm</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The height of the package in meters. NULL means unknown</td>
+<td>The height of the package in meters. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#lengthm">Lengthm</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The length of the package in meters. NULL means unknown</td>
+<td>The length of the package in meters. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique for the shipment</td>
+<td>Line number, unique for the shipment. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#linerequireddeliverydate">LineRequiredDeliveryDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly</td>
+<td>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#netweightkg">NetWeightkg</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The net weight of the entire batch of goods in kilograms. NULL means unknown</td>
+<td>The net weight of the entire batch of goods in kilograms. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#notes">Notes</a></td>
@@ -175,12 +175,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#palletno">PalletNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the pallet in which the goods are packaged. NULL means unknown</td>
+<td>The number of the pallet in which the goods are packaged. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#product">Product</a></td>
@@ -190,27 +190,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity to be shipped</td>
+<td>The quantity to be shipped. <code>Unit: QuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The equivalence of Quantity in the base measurement category of the product.</td>
+<td>The equivalence of Quantity in the base measurement category of the product. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#volumel">Volumel</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The volume in litres of the whole batch. NULL means unknown</td>
+<td>The volume in litres of the whole batch. null means unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#widthm">Widthm</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>The width of the package in meters. NULL means unknown</td>
+<td>The width of the package in meters. null means unknown.</td>
 </tr>
 </tbody>
 </table>
@@ -232,27 +232,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The store lot from which to take the goods</td>
+<td>The store lot from which to take the goods. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#parentsalesorderline">ParentSalesOrderLine</a></td>
 <td><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></td>
-<td>Sales order line which is shipped</td>
+<td>Sales order line which is shipped. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity</td>
+<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>Serial number of the product. NULL means that the serial number is unknown or not applicable.</td>
+<td>The serial number of the shipped product. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#shipment">Shipment</a></td>
@@ -262,17 +262,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#shipmentorderline">ShipmentOrderLine</a></td>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html">ShipmentOrderLines</a> (nullable)</td>
-<td>Shipment order line for which this quantity is shipped.</td>
+<td>Shipment order line for which this quantity is shipped. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>The store bin from which to take the goods</td>
+<td>The store bin from which to take the goods. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentLines.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</td>
-<td>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product.</td>
+<td>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -305,7 +305,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="boxcount">BoxCount</h3>
-<p>The count of boxes in which the goods are packaged. NULL means unknown</p>
+<p>The count of boxes in which the goods are packaged. null means unknown.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -319,7 +319,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>1 if this shipment should prohibit further shipments for the sales order line</p>
+<p>True if this shipment should prohibit further shipments for the sales order line. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -327,14 +327,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="grossweightkg">GrossWeightkg</h3>
-<p>The gross weight of the whole line in kilogramms. NULL means unknown</p>
+<p>The gross weight of the whole line in kilogramms. null means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="guaranteeperioddays">GuaranteePeriodDays</h3>
-<p>standard guarantee period in days. Can be set only if the product type is serviced.</p>
+<p>Guarantee period in days for the offered product. null for non-serviced products.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -343,21 +343,21 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.ParentSalesOrderLine.Product.ProductType.IsServiced, obj.ParentSalesOrderLine.Product.GuaranteePeriodDays, null)</code></p>
 <h3 id="heightm">Heightm</h3>
-<p>The height of the package in meters. NULL means unknown</p>
+<p>The height of the package in meters. null means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lengthm">Lengthm</h3>
-<p>The length of the package in meters. NULL means unknown</p>
+<p>The length of the package in meters. null means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique for the shipment</p>
+<p>Line number, unique for the shipment. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -368,7 +368,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Shipment.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linerequireddeliverydate">LineRequiredDeliveryDate</h3>
-<p>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly</p>
+<p>Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -379,7 +379,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Shipment.RequiredDeliveryDate</code></p>
 <h3 id="netweightkg">NetWeightkg</h3>
-<p>The net weight of the entire batch of goods in kilograms. NULL means unknown</p>
+<p>The net weight of the entire batch of goods in kilograms. null means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -394,14 +394,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="palletno">PalletNo</h3>
-<p>The number of the pallet in which the goods are packaged. NULL means unknown</p>
+<p>The number of the pallet in which the goods are packaged. null means unknown.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(multi eq)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -415,7 +415,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity to be shipped</p>
+<p>The quantity to be shipped. <code>Unit: QuantityUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -424,7 +424,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ParentSalesOrderLine.Quantity</code></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement category of the product.</p>
+<p>The equivalence of Quantity in the base measurement category of the product. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -435,7 +435,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -446,14 +446,14 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="volumel">Volumel</h3>
-<p>The volume in litres of the whole batch. NULL means unknown</p>
+<p>The volume in litres of the whole batch. null means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="widthm">Widthm</h3>
-<p>The width of the package in meters. NULL means unknown</p>
+<p>The width of the package in meters. null means unknown.</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -489,7 +489,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The store lot from which to take the goods</p>
+<p>The store lot from which to take the goods. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -497,21 +497,21 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ParentSalesOrderLine.Lot</code></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentsalesorderline">ParentSalesOrderLine</h3>
-<p>Sales order line which is shipped</p>
+<p>Sales order line which is shipped. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrderLines.html">SalesOrderLines</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity</p>
+<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -519,7 +519,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ParentSalesOrderLine.QuantityUnit</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>Serial number of the product. NULL means that the serial number is unknown or not applicable.</p>
+<p>The serial number of the shipped product. null means that serial number is unknown or not applicable. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -533,20 +533,20 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shipmentorderline">ShipmentOrderLine</h3>
-<p>Shipment order line for which this quantity is shipped.</p>
+<p>Shipment order line for which this quantity is shipped. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Shipment.ShipmentOrderLines.html">ShipmentOrderLines</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>The store bin from which to take the goods</p>
+<p>The store bin from which to take the goods. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
-<p>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product.</p>
+<p>The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

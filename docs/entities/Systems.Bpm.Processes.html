@@ -136,7 +136,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#islandscape">IsLandscape</a></td>
 <td>boolean</td>
-<td>Specifies whether the process diagram is intended to be viewed in landscape mode.</td>
+<td>Specifies whether the process diagram is intended to be viewed in landscape mode. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#name">Name</a></td>
@@ -151,17 +151,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#schemaformat">SchemaFormat</a></td>
 <td>string (1)</td>
-<td>Application specific format of the Schema Layout.</td>
+<td>Application specific format of the Schema Layout. <code>Required</code> <code>Default(&quot;D&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#schemalayout">SchemaLayout</a></td>
 <td>string (max)</td>
-<td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.</td>
+<td>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#startevent">StartEvent</a></td>
 <td>string (3) <strong>nullable</strong></td>
-<td>USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process</td>
+<td>USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.</td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.Processes.html#startroleid">StartRoleId</a></td>
@@ -244,7 +244,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="islandscape">IsLandscape</h3>
-<p>Specifies whether the process diagram is intended to be viewed in landscape mode.</p>
+<p>Specifies whether the process diagram is intended to be viewed in landscape mode. <code>Required</code> <code>Default(true)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -267,7 +267,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2000</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schemaformat">SchemaFormat</h3>
-<p>Application specific format of the Schema Layout.</p>
+<p>Application specific format of the Schema Layout. <code>Required</code> <code>Default(&quot;D&quot;)</code></p>
 <p>Type: <strong>string (1)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -276,7 +276,7 @@ Maximum Length: <strong>1</strong><br>
 Default Value: <strong>D</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schemalayout">SchemaLayout</h3>
-<p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.</p>
+<p>Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. <code>Required</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -284,7 +284,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startevent">StartEvent</h3>
-<p>USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process</p>
+<p>USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.</p>
 <p>Type: <strong>string (3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

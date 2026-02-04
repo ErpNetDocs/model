@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionsOptions.html#resettransactionsstateonreleasing">ResetTransactions<br>StateOnReleasing</a></td>
 <td>boolean</td>
-<td>When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents.</td>
+<td>When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionsOptions.html#scheduledocumentevents">ScheduleDocumentEvents</a></td>
 <td>boolean</td>
-<td>Indicates wheather the document events caused by the cost correction should be scheduled for later procession.</td>
+<td>Indicates wheather the document events caused by the cost correction should be scheduled for later procession. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +143,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionsOptions.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type for which we specify the options.</td>
+<td>The document type for which we specify the options. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +176,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="resettransactionsstateonreleasing">ResetTransactionsStateOnReleasing</h3>
-<p>When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents.</p>
+<p>When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -184,7 +184,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scheduledocumentevents">ScheduleDocumentEvents</h3>
-<p>Indicates wheather the document events caused by the cost correction should be scheduled for later procession.</p>
+<p>Indicates wheather the document events caused by the cost correction should be scheduled for later procession. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -214,7 +214,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type for which we specify the options.</p>
+<p>The document type for which we specify the options. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

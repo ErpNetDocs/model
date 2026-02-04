@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. 
-| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string (32) | The code of the product in the specified coding system 
+| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. `Required` `Default(true)` `Filter(eq)` 
+| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string (32) | The code of the product in the specified coding system. `Required` `Filter(eq;like)` `ORD` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified |
-| [Product](General.Products.ProductCodes.md#product) | [Products](General.Products.Products.md) | The product for which the code is specified |
+| [CodingSystem](General.Products.ProductCodes.md#codingsystem) | [CodingSystems](General.Products.CodingSystems.md) | The coding system in which the product code is specified. `Required` `Filter(multi eq)` |
+| [Product](General.Products.ProductCodes.md#product) | [Products](General.Products.Products.md) | The product for which the code is specified. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Active
 
-True when the code is active and can be selected in new documents.
+True when the code is active and can be selected in new documents. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCodeField
 
-The code of the product in the specified coding system
+The code of the product in the specified coding system. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -114,7 +114,7 @@ Show in UI: **HiddenByDefault**
 
 ### CodingSystem
 
-The coding system in which the product code is specified
+The coding system in which the product code is specified. `Required` `Filter(multi eq)`
 
 Type: **[CodingSystems](General.Products.CodingSystems.md)**  
 Indexed: **True**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product for which the code is specified
+The product for which the code is specified. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  

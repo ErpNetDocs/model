@@ -43,9 +43,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Transportation.TransportationModes.md#code) | string (8) | Unique transportation mode code. 
-| [Name](Logistics.Transportation.TransportationModes.md#name) | string (254) | Multilanguage name of the mode of transportation. 
-| [SystemIcon](Logistics.Transportation.TransportationModes.md#systemicon) | string (1) | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. 
+| [Code](Logistics.Transportation.TransportationModes.md#code) | string (8) | Unique transportation mode code. `Required` `Filter(eq;like)` `ORD` 
+| [Name](Logistics.Transportation.TransportationModes.md#name) | string (254) | Multilanguage name of the mode of transportation. `Required` `Filter(eq;like)` 
+| [SystemIcon](Logistics.Transportation.TransportationModes.md#systemicon) | string (1) | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. `Required` `Default("O")` 
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Tree
 
 ### Code
 
-Unique transportation mode code.
+Unique transportation mode code. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (8)**  
 Indexed: **True**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the mode of transportation.
+Multilanguage name of the mode of transportation. `Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemIcon
 
-Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.
+Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. `Required` `Default("O")`
 
 Type: **string (1)**  
 Category: **System**  

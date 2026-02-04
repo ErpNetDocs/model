@@ -35,19 +35,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount (14, 2)](../data-types.md#amount) | Value of the acquired or retired asset. 
-| [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line. 
-| [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. 
+| [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount (14, 2)](../data-types.md#amount) | Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)` 
+| [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2` 
+| [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](Finance.Assets.AssetOrderLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is acquired or retired. |
+| [Asset](Finance.Assets.AssetOrderLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is acquired or retired. `Required` `Filter(multi eq)` |
 | [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) | [AssetOrders](Finance.Assets.AssetOrders.md) | The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [AssetValueCurrency](Finance.Assets.AssetOrderLines.md#assetvaluecurrency) | [Currencies](General.Currencies.Currencies.md) | Currency of Asset Value. |
+| [AssetValueCurrency](Finance.Assets.AssetOrderLines.md#assetvaluecurrency) | [Currencies](General.Currencies.Currencies.md) | Currency of Asset Value. `Required` `Filter(multi eq)` |
 | [Document](Finance.Assets.AssetOrderLines.md#document) | [AssetOrders](Finance.Assets.AssetOrders.md) | The owner document. The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` |
-| [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. NULL when the current line does not execute another line. |
+| [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 18.2` |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### AssetValue
 
-Value of the acquired or retired asset.
+Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.
+Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### Asset
 
-The asset that is acquired or retired.
+The asset that is acquired or retired. `Required` `Filter(multi eq)`
 
 Type: **[Assets](Finance.Assets.Assets.md)**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### AssetValueCurrency
 
-Currency of Asset Value.
+Currency of Asset Value. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocument
 
-The document, which the current line executes. NULL when the current line does not execute another line.
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 18.2`
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  

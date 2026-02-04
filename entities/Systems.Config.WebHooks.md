@@ -47,11 +47,11 @@ Aggregate Tree
 | [Body](Systems.Config.WebHooks.md#body) | string (max) __nullable__ | The body of the POST request (interpolated string). 
 | [Code](Systems.Config.WebHooks.md#code) | string (32) | The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD` 
 | [Headers](Systems.Config.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. 
-| [Name](Systems.Config.WebHooks.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Webhook name (multi-language). 
+| [Name](Systems.Config.WebHooks.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Webhook name (multi-language). `Required` `Filter(like)` 
 | [Notes](Systems.Config.WebHooks.md#notes) | string (max) __nullable__ | Notes for this WebHook. 
-| [RepositoryName](Systems.Config.WebHooks.md#repositoryname) | string (128) | The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. 
-| [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | 0=Don't retry (default); 3=Retry up to 3 times 
-| [URL](Systems.Config.WebHooks.md#url) | string (2000) | The destination URL, which should be called by the webhook (interpolated string). 
+| [RepositoryName](Systems.Config.WebHooks.md#repositoryname) | string (128) | The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)` 
+| [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | 0=Don't retry (default); 3=Retry up to 3 times. `Required` `Default("0")` 
+| [URL](Systems.Config.WebHooks.md#url) | string (2000) | The destination URL, which should be called by the webhook (interpolated string). `Required` 
 
 
 ## System Attributes
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Webhook name (multi-language).
+Webhook name (multi-language). `Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### RepositoryName
 
-The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.
+The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)`
 
 Type: **string (128)**  
 Category: **System**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### RetryLogic
 
-0=Don't retry (default); 3=Retry up to 3 times
+0=Don't retry (default); 3=Retry up to 3 times. `Required` `Default("0")`
 
 Type: **[RetryLogic](Systems.Config.WebHooks.md#retrylogic)**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### URL
 
-The destination URL, which should be called by the webhook (interpolated string).
+The destination URL, which should be called by the webhook (interpolated string). `Required`
 
 Type: **string (2000)**  
 Category: **System**  

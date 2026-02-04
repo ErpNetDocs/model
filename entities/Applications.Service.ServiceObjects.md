@@ -35,21 +35,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Service.ServiceObjects.md#isactive) | boolean | Indicates whether the current service object is active. 
+| [IsActive](Applications.Service.ServiceObjects.md#isactive) | boolean | Indicates whether the current service object is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53` 
 | [Name](Applications.Service.ServiceObjects.md#name) | string (254) | The name of this ServiceObject. `Required` `Filter(eq;like)` 
 | [Notes](Applications.Service.ServiceObjects.md#notes) | string (254) __nullable__ | Notes for this ServiceObject. 
-| [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string (32) __nullable__ | The serial number of the item, that is being serviced. 
+| [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string (32) __nullable__ | The serial number of the item, that is being serviced. `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](Applications.Service.ServiceObjects.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this ServiceObject applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
-| [ManagedAsset](Applications.Service.ServiceObjects.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. |
-| [Product](Applications.Service.ServiceObjects.md#product) | [Products](General.Products.Products.md) (nullable) | When not-NULL identifies the product, from which the service object was created |
-| [SerialNumberObj](Applications.Service.ServiceObjects.md#serialnumberobj) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. |
-| [ServicedProduct](Applications.Service.ServiceObjects.md#servicedproduct) | [Products](General.Products.Products.md) (nullable) | The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. |
-| [ServiceObjectType](Applications.Service.ServiceObjects.md#serviceobjecttype) | [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | When not NULL specifies the type of the service object |
+| [ManagedAsset](Applications.Service.ServiceObjects.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable) | Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. `Filter(multi eq)` `Introduced in version 24.1.4.74` |
+| [Product](Applications.Service.ServiceObjects.md#product) | [Products](General.Products.Products.md) (nullable) | When not-null identifies the product, from which the service object was created. `Filter(multi eq)` |
+| [SerialNumberObj](Applications.Service.ServiceObjects.md#serialnumberobj) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. `Filter(multi eq)` |
+| [ServicedProduct](Applications.Service.ServiceObjects.md#servicedproduct) | [Products](General.Products.Products.md) (nullable) | The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. `Filter(multi eq)` |
+| [ServiceObjectType](Applications.Service.ServiceObjects.md#serviceobjecttype) | [ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable) | When not null specifies the type of the service object. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current service object is active.
+Indicates whether the current service object is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53`
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-The serial number of the item, that is being serviced.
+The serial number of the item, that is being serviced. `Filter(like)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **HiddenByDefault**
 
 ### ManagedAsset
 
-Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.
+Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. `Filter(multi eq)` `Introduced in version 24.1.4.74`
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md) (nullable)**  
 Indexed: **True**  
@@ -197,7 +197,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-When not-NULL identifies the product, from which the service object was created
+When not-null identifies the product, from which the service object was created. `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumberObj
 
-Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data.
+Serial number for the product, that corresponds to this service object. If there is no product, then the other field for 'Serial number' is used to specify this data. `Filter(multi eq)`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -217,7 +217,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.SerialNumber != null), null, obj.SerialNumberObj)`
 ### ServicedProduct
 
-The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null.
+The product, which is used to physically store the service object, when it is serviced. Need to be specified, only when it is different from Product; otherwise, it is null. `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -226,7 +226,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceObjectType
 
-When not NULL specifies the type of the service object
+When not null specifies the type of the service object. `Filter(multi eq)`
 
 Type: **[ServiceObjectTypes](Applications.Service.ServiceObjectTypes.md) (nullable)**  
 Category: **System**  

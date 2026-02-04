@@ -35,21 +35,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullCost](Finance.Cost.CalculationResults.md#fullcost) | decimal (14, 2) | The full cost of the specified quantity 
-| [LineNo](Finance.Cost.CalculationResults.md#lineno) | int32 | Consecutive number of the line within the calculation 
+| [FullCost](Finance.Cost.CalculationResults.md#fullcost) | decimal (14, 2) | The full cost of the specified quantity. `Required` `Default(0)` 
+| [LineNo](Finance.Cost.CalculationResults.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
 | [ProjectId](Finance.Cost.CalculationResults.md#projectid) | guid __nullable__ | The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. `Filter(multi eq)` 
-| [Quantity](Finance.Cost.CalculationResults.md#quantity) | decimal (14, 3) | The quantity of the product 
+| [Quantity](Finance.Cost.CalculationResults.md#quantity) | decimal (14, 3) | The quantity of the product. `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Calculation](Finance.Cost.CalculationResults.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The <see cref="Calculation"/> to which this CalculationResult belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Lot](Finance.Cost.CalculationResults.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot to which the cost was allocated. When NULL, the cost was not allocated to any specific Lot. |
-| [Product](Finance.Cost.CalculationResults.md#product) | [Products](General.Products.Products.md) | The Product to which the cost was allocated. When NULL, the cost was not allocated to any specific Product. |
-| [ProfitCenter](Finance.Cost.CalculationResults.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center to which the cost was allocated. When NULL, the cost was not allocated to any specific Profit Center. |
-| [SalesOrder](Finance.Cost.CalculationResults.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order to which the cost was allocated. When NULL, the cost was not allocated to any specific Sales Order. |
-| [Workgroup](Finance.Cost.CalculationResults.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup to which the cost was allocated. When NULL, the cost was not allocated to any specific Workgroup. |
+| [Lot](Finance.Cost.CalculationResults.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. `Filter(multi eq)` |
+| [Product](Finance.Cost.CalculationResults.md#product) | [Products](General.Products.Products.md) | The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. `Required` `Filter(multi eq)` |
+| [ProfitCenter](Finance.Cost.CalculationResults.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. `Filter(multi eq)` |
+| [SalesOrder](Finance.Cost.CalculationResults.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. `Filter(multi eq)` |
+| [Workgroup](Finance.Cost.CalculationResults.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -65,7 +65,7 @@ Aggregate Root:
 
 ### FullCost
 
-The full cost of the specified quantity
+The full cost of the specified quantity. `Required` `Default(0)`
 
 Type: **decimal (14, 2)**  
 Category: **System**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the calculation
+Consecutive number of the line within the calculation. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-The quantity of the product
+The quantity of the product. `Required` `Default(0)`
 
 Type: **decimal (14, 3)**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-The Lot to which the cost was allocated. When NULL, the cost was not allocated to any specific Lot.
+The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. `Filter(multi eq)`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The Product to which the cost was allocated. When NULL, the cost was not allocated to any specific Product.
+The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -172,7 +172,7 @@ Show in UI: **ShownByDefault**
 
 ### ProfitCenter
 
-The Profit Center to which the cost was allocated. When NULL, the cost was not allocated to any specific Profit Center.
+The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. `Filter(multi eq)`
 
 Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesOrder
 
-The Sales Order to which the cost was allocated. When NULL, the cost was not allocated to any specific Sales Order.
+The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. `Filter(multi eq)`
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### Workgroup
 
-The Workgroup to which the cost was allocated. When NULL, the cost was not allocated to any specific Workgroup.
+The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. `Filter(multi eq)`
 
 Type: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 Category: **System**  

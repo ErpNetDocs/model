@@ -128,12 +128,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.Industries.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Industry is active.</td>
+<td>Indicates whether the current Industry is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.Industries.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Industry name (multi-language).</td>
+<td>Industry name (multi-language). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.Industries.html#notes">Notes</a></td>
@@ -195,7 +195,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Industry is active.</p>
+<p>Indicates whether the current Industry is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -203,7 +203,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Industry name (multi-language).</p>
+<p>Industry name (multi-language). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

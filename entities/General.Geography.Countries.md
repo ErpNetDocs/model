@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.Countries.md#code) | string (2) | Internet suffix code of the country 
-| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (2) __nullable__ | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. 
-| [Name](General.Geography.Countries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the country 
+| [Code](General.Geography.Countries.md#code) | string (2) | Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD` 
+| [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (2) __nullable__ | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` 
+| [Name](General.Geography.Countries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the country. `Required` `Filter(like)` 
 
 
 ## System Attributes
@@ -55,7 +55,7 @@ Aggregate Tree
 
 ### Code
 
-Internet suffix code of the country
+Internet suffix code of the country. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (2)**  
 Indexed: **True**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### IntrastatCode
 
-This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used.
+This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1`
 
 Type: **string (2) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the country
+Name of the country. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

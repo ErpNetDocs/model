@@ -36,15 +36,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Address](General.Geography.MapPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this map point. 
-| [Latitude](General.Geography.MapPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90]. 
-| [Longitude](General.Geography.MapPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180]. 
-| [Name](General.Geography.MapPoints.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Map point short name (Multilanguage) 
+| [Latitude](General.Geography.MapPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` 
+| [Longitude](General.Geography.MapPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` 
+| [Name](General.Geography.MapPoints.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Map point short name (Multilanguage). `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](General.Geography.MapPoints.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for within the name of the map point has meaning |
+| [EnterpriseCompany](General.Geography.MapPoints.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for within the name of the map point has meaning. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### Latitude
 
-Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].
+Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)`
 
 Type: **decimal (10, 7)**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Longitude
 
-Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].
+Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)`
 
 Type: **decimal (10, 7)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Map point short name (Multilanguage)
+Map point short name (Multilanguage). `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for within the name of the map point has meaning
+The enterprise company for within the name of the map point has meaning. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

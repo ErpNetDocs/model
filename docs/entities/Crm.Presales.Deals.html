@@ -170,7 +170,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#dealstatus">DealStatus</a></td>
 <td><a href="Crm.Presales.Deals.html#dealstatus">DealStatus</a></td>
-<td>Current status of this deal.</td>
+<td>Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. <code>Required</code> <code>Default(&quot;INP&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#documentdate">DocumentDate</a></td>
@@ -200,7 +200,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#expectedrevenue">ExpectedRevenue</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.</td>
+<td>Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. <code>Currency: ExpectedRevenueCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#fullstate">FullState</a></td>
@@ -210,12 +210,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -250,12 +250,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#revenueenddate">RevenueEndDate</a></td>
 <td>datetime</td>
-<td>Expected date on which the last revenue from this deal will occur.</td>
+<td>Expected date on which the last revenue from this deal will occur. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#revenuestartdate">RevenueStartDate</a></td>
 <td>datetime</td>
-<td>Expected date on which revenue from this deal will start.</td>
+<td>Expected date on which revenue from this deal will start. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#state">State</a></td>
@@ -270,7 +270,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#successprobability">SuccessProbability</a></td>
 <td>decimal (3, 2)</td>
-<td>Probability of success of that deal in percents.</td>
+<td>Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15). <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#void">Void</a></td>
@@ -322,7 +322,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#campaign">Campaign</a></td>
 <td><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</td>
-<td>The marketing campaign to which this opportunity belongs.</td>
+<td>The marketing campaign to which this opportunity belongs. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.0.67</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#currencydirectory">CurrencyDirectory</a></td>
@@ -332,7 +332,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#dealer">Dealer</a></td>
 <td><a href="Crm.Sales.Dealers.html">Dealers</a> (nullable)</td>
-<td>The external dealer, which provided the opportunity</td>
+<td>The external dealer, which provided the opportunity. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#documenttype">DocumentType</a></td>
@@ -352,7 +352,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#expectedrevenuecurrency">ExpectedRevenueCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency of Expected Revenue</td>
+<td>The currency of Expected Revenue. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#fromcompanydivision">FromCompanyDivision</a></td>
@@ -367,22 +367,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#leadingsalesperson">LeadingSalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></td>
-<td>The sales person, responsible for the opportunity</td>
+<td>The sales person, responsible for the opportunity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#losttocompetitor">LostToCompetitor</a></td>
 <td><a href="Crm.Marketing.Competitors.html">Competitors</a> (nullable)</td>
-<td>When not null, specifies the competitor to which we lost the deal.</td>
+<td>When not null, specifies the competitor to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#losttocompetitorsolution">LostToCompetitorSolution</a></td>
 <td><a href="Crm.Marketing.CompetitorSolutions.html">CompetitorSolutions</a> (nullable)</td>
-<td>When not null, specifies the competitor solution to which we lost the deal.</td>
+<td>When not null, specifies the competitor solution to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#marketingsolution">MarketingSolution</a></td>
 <td><a href="Crm.Marketing.MarketingSolutions.html">MarketingSolutions</a> (nullable)</td>
-<td>The marketing solution, in which the potential client is interested.</td>
+<td>The marketing solution, in which the potential client is interested. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.42</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#masterdocument">MasterDocument</a></td>
@@ -397,7 +397,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Deals.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The prospect customers party. The party might not yet have a customer record.</td>
+<td>The prospect customers party. The party might not yet have a customer record. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Deals.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -588,7 +588,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="dealstatus">DealStatus</h3>
-<p>Current status of this deal.</p>
+<p>Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. <code>Required</code> <code>Default(&quot;INP&quot;)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Presales.Deals.html#dealstatus">DealStatus</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DealStatus</code>(Crm.Presales.Deals.md#dealstatus) data attribute<br>
@@ -663,7 +663,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="expectedrevenue">ExpectedRevenue</h3>
-<p>Expected total revenue. For automatically renewed contracts it's the amount until the first renewal.</p>
+<p>Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. <code>Currency: ExpectedRevenueCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -678,7 +678,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -686,7 +686,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -764,7 +764,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="revenueenddate">RevenueEndDate</h3>
-<p>Expected date on which the last revenue from this deal will occur.</p>
+<p>Expected date on which the last revenue from this deal will occur. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -774,7 +774,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.RevenueStartDate &gt;= obj.RevenueEndDate), obj.RevenueStartDate, obj.RevenueEndDate)</code></p>
 <h3 id="revenuestartdate">RevenueStartDate</h3>
-<p>Expected date on which revenue from this deal will start.</p>
+<p>Expected date on which revenue from this deal will start. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -837,7 +837,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="successprobability">SuccessProbability</h3>
-<p>Probability of success of that deal in percents.</p>
+<p>Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15). <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -964,7 +964,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="campaign">Campaign</h3>
-<p>The marketing campaign to which this opportunity belongs.</p>
+<p>The marketing campaign to which this opportunity belongs. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.0.67</code></p>
 <p>Type: <strong><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -976,7 +976,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="dealer">Dealer</h3>
-<p>The external dealer, which provided the opportunity</p>
+<p>The external dealer, which provided the opportunity. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Dealers.html">Dealers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1002,7 +1002,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="expectedrevenuecurrency">ExpectedRevenueCurrency</h3>
-<p>The currency of Expected Revenue</p>
+<p>The currency of Expected Revenue. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1024,25 +1024,25 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="leadingsalesperson">LeadingSalesPerson</h3>
-<p>The sales person, responsible for the opportunity</p>
+<p>The sales person, responsible for the opportunity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="losttocompetitor">LostToCompetitor</h3>
-<p>When not null, specifies the competitor to which we lost the deal.</p>
+<p>When not null, specifies the competitor to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></p>
 <p>Type: <strong><a href="Crm.Marketing.Competitors.html">Competitors</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="losttocompetitorsolution">LostToCompetitorSolution</h3>
-<p>When not null, specifies the competitor solution to which we lost the deal.</p>
+<p>When not null, specifies the competitor solution to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></p>
 <p>Type: <strong><a href="Crm.Marketing.CompetitorSolutions.html">CompetitorSolutions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="marketingsolution">MarketingSolution</h3>
-<p>The marketing solution, in which the potential client is interested.</p>
+<p>The marketing solution, in which the potential client is interested. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.42</code></p>
 <p>Type: <strong><a href="Crm.Marketing.MarketingSolutions.html">MarketingSolutions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1062,7 +1062,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>The prospect customers party. The party might not yet have a customer record.</p>
+<p>The prospect customers party. The party might not yet have a customer record. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

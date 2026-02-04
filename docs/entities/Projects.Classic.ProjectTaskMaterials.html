@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#budgetedmaterialamount">BudgetedMaterialAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></td>
-<td>Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount</td>
+<td>Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. <code>Currency: ProjectTask.Project.BudgetingCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#linenumber">LineNumber</a></td>
 <td>int32</td>
-<td>Line number within the task, increased in steps of 10. Used for sorting purposes</td>
+<td>Line number within the task, increased in steps of 10. Used for sorting purposes. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>The required quantity of the material</td>
+<td>The required quantity of the material. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#quantitybase">QuantityBase</a></td>
 <td>decimal (9, 3)</td>
-<td>The equivalence of Quantity in the base measurement unit of the Material.</td>
+<td>The equivalence of Quantity in the base measurement unit of the Material. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,17 +153,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#materialproduct">MaterialProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product Id of the required material</td>
+<td>The product Id of the required material. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#projecttask">ProjectTask</a></td>
 <td><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></td>
-<td>The task for which is the material requirement</td>
+<td>The task for which is the material requirement. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTaskMaterials.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of the required quantity</td>
+<td>The measurement unit of the required quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="budgetedmaterialamount">BudgetedMaterialAmount</h3>
-<p>Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount</p>
+<p>Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. <code>Currency: ProjectTask.Project.BudgetingCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -205,7 +205,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount( obj.Quantity), new Amount( 0, obj.ProjectTask.Project.BudgetingCurrency))</code></p>
 <h3 id="linenumber">LineNumber</h3>
-<p>Line number within the task, increased in steps of 10. Used for sorting purposes</p>
+<p>Line number within the task, increased in steps of 10. Used for sorting purposes. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -217,7 +217,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ProjectTask.Materials.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>The required quantity of the material</p>
+<p>The required quantity of the material. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -225,7 +225,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement unit of the Material.</p>
+<p>The equivalence of Quantity in the base measurement unit of the Material. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,13 +257,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="materialproduct">MaterialProduct</h3>
-<p>The product Id of the required material</p>
+<p>The product Id of the required material. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projecttask">ProjectTask</h3>
-<p>The task for which is the material requirement</p>
+<p>The task for which is the material requirement. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTasks.html">ProjectTasks</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -271,7 +271,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of the required quantity</p>
+<p>The measurement unit of the required quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

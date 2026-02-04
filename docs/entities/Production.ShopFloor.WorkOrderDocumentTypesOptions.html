@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderDocumentTypesOptions.html#production%D0%BCode">ProductionМode</a></td>
 <td><a href="Production.ShopFloor.WorkOrderDocumentTypesOptions.html#production%D0%BCode">ProductionМode</a></td>
-<td>Specifies whether the document is for Production or Decomposition purposes.</td>
+<td>Specifies whether the document is for Production or Decomposition purposes. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.76</code></td>
 </tr>
 </tbody>
 </table>
@@ -143,12 +143,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderDocumentTypesOptions.html#completingoutputorderdocumenttype">CompletingOutput<br>OrderDocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>User-defined Completing Output Order document type</td>
+<td>User-defined Completing Output Order document type. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderDocumentTypesOptions.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>User-defined Work Order document type</td>
+<td>User-defined Work Order document type. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="productionмode">ProductionМode</h3>
-<p>Specifies whether the document is for Production or Decomposition purposes.</p>
+<p>Specifies whether the document is for Production or Decomposition purposes. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.76</code></p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderDocumentTypesOptions.html#production%D0%BCode">ProductionМode</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ProductionМode</code>(Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) data attribute<br>
@@ -235,13 +235,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="completingoutputorderdocumenttype">CompletingOutputOrderDocumentType</h3>
-<p>User-defined Completing Output Order document type</p>
+<p>User-defined Completing Output Order document type. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>User-defined Work Order document type</p>
+<p>User-defined Work Order document type. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

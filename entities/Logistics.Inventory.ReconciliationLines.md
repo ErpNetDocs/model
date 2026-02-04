@@ -34,30 +34,30 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#availablequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Available quantity (in base measurement unit) to the date of the reconciliation. 
+| [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#availablequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [CurrentBalanceBase](Logistics.Inventory.ReconciliationLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [LineOrd](Logistics.Inventory.ReconciliationLines.md#lineord) | int32 | The ordinal position of the line within the document. Duplicates are allowed, but not suggested 
+| [LineOrd](Logistics.Inventory.ReconciliationLines.md#lineord) | int32 | The ordinal position of the line within the document. Duplicates are allowed, but not suggested. `Required` 
 | [Notes](Logistics.Inventory.ReconciliationLines.md#notes) | string (254) __nullable__ | Notes for this ReconciliationLine. 
-| [Quantity](Logistics.Inventory.ReconciliationLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation,  
-| [QuantityBase](Logistics.Inventory.ReconciliationLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, expressed in base measurement units 
-| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
-| [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product. 
+| [Quantity](Logistics.Inventory.ReconciliationLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, . `Unit: QuantityUnit` `Required` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Inventory.ReconciliationLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, expressed in base measurement units. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
+| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction occurred. `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Inventory.ReconciliationLines.md#document) | [Reconciliations](Logistics.Inventory.Reconciliations.md) | The owner document. Parent reconciliation Id. `Required` `Filter(multi eq)` |
-| [Lot](Logistics.Inventory.ReconciliationLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was reconciled. |
-| [Product](Logistics.Inventory.ReconciliationLines.md#product) | [Products](General.Products.Products.md) | The id of the reconciled product |
-| [ProductCode](Logistics.Inventory.ReconciliationLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. |
-| [ProductVariant](Logistics.Inventory.ReconciliationLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which was reconciled. |
-| [QuantityUnit](Logistics.Inventory.ReconciliationLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity |
-| [Reconciliation](Logistics.Inventory.ReconciliationLines.md#reconciliation) | [Reconciliations](Logistics.Inventory.Reconciliations.md) | Parent reconciliation Id |
-| [SerialNumber](Logistics.Inventory.ReconciliationLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product. NULL means that the serial number is unknown or not applicable. |
-| [Store](Logistics.Inventory.ReconciliationLines.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, containing the reconciled product |
-| [StoreBin](Logistics.Inventory.ReconciliationLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin, that was counted |
-| [WarehouseTransaction](Logistics.Inventory.ReconciliationLines.md#warehousetransaction) | [WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md) (nullable) | The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. |
+| [Lot](Logistics.Inventory.ReconciliationLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was reconciled. `Filter(multi eq)` |
+| [Product](Logistics.Inventory.ReconciliationLines.md#product) | [Products](General.Products.Products.md) | The id of the reconciled product. `Required` `Filter(multi eq)` |
+| [ProductCode](Logistics.Inventory.ReconciliationLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
+| [ProductVariant](Logistics.Inventory.ReconciliationLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which was reconciled. `Filter(multi eq)` `Introduced in version 22.1.6.15` |
+| [QuantityUnit](Logistics.Inventory.ReconciliationLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
+| [Reconciliation](Logistics.Inventory.ReconciliationLines.md#reconciliation) | [Reconciliations](Logistics.Inventory.Reconciliations.md) | Parent reconciliation Id. `Required` `Filter(multi eq)` `Owner` |
+| [SerialNumber](Logistics.Inventory.ReconciliationLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serializable items. `Filter(multi eq)` |
+| [Store](Logistics.Inventory.ReconciliationLines.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, containing the reconciled product. `Required` `Filter(multi eq)` |
+| [StoreBin](Logistics.Inventory.ReconciliationLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin, that was counted. `Filter(multi eq)` |
+| [WarehouseTransaction](Logistics.Inventory.ReconciliationLines.md#warehousetransaction) | [WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md) (nullable) | The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. `Filter(multi eq)` `Introduced in version 22.1.6.13` |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### AvailableQuantityBase
 
-Available quantity (in base measurement unit) to the date of the reconciliation.
+Quantity found at the reconciliation, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineOrd
 
-The ordinal position of the line within the document. Duplicates are allowed, but not suggested
+The ordinal position of the line within the document. Duplicates are allowed, but not suggested. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-Quantity found at the reconciliation,
+Quantity found at the reconciliation, . `Unit: QuantityUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity found at the reconciliation, expressed in base measurement units
+Quantity found at the reconciliation, expressed in base measurement units. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -159,7 +159,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### TransactionTimestamp
 
-Exact time when the transaction changes the cost of the product.
+Exact time when the transaction occurred. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-The lot, which was reconciled.
+The lot, which was reconciled. `Filter(multi eq)`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -220,7 +220,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The id of the reconciled product
+The id of the reconciled product. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -231,7 +231,7 @@ Front-End Recalc Expressions:
 `obj.ProductCode.Product.IfNullThen( obj.Product)`
 ### ProductCode
 
-Selects the product thru some of the product codes.
+Selects the product thru some of the product codes. `Filter(multi eq)`
 
 Type: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 Category: **System**  
@@ -242,7 +242,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Product != null) AndAlso ( obj.ProductCode != null)) AndAlso ( obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)`
 ### ProductVariant
 
-The product variant, which was reconciled.
+The product variant, which was reconciled. `Filter(multi eq)` `Introduced in version 22.1.6.15`
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -251,7 +251,7 @@ Show in UI: **HiddenByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity
+The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -262,7 +262,7 @@ Front-End Recalc Expressions:
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit))`
 ### Reconciliation
 
-Parent reconciliation Id
+Parent reconciliation Id. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Reconciliations](Logistics.Inventory.Reconciliations.md)**  
 Indexed: **True**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Serial number of the product. NULL means that the serial number is unknown or not applicable.
+Item serial number for serialized items. null for non-serializable items. `Filter(multi eq)`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -284,7 +284,7 @@ Front-End Recalc Expressions:
 `IIF( ( Not( obj.Product.IsSerialized) OrElse ( ( obj.SerialNumber != null) AndAlso ( obj.Product != obj.SerialNumber.Product))), null, obj.SerialNumber)`
 ### Store
 
-The store, containing the reconciled product
+The store, containing the reconciled product. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  
@@ -295,7 +295,7 @@ Front-End Recalc Expressions:
 `obj.Reconciliation.DefaultStore.IfNullThen( obj.Store)`
 ### StoreBin
 
-The store bin, that was counted
+The store bin, that was counted. `Filter(multi eq)`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -306,7 +306,7 @@ Front-End Recalc Expressions:
 `obj.Reconciliation.DefaultStoreBin.IfNullThen( obj.StoreBin)`
 ### WarehouseTransaction
 
-The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module.
+The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. `Filter(multi eq)` `Introduced in version 22.1.6.13`
 
 Type: **[WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md) (nullable)**  
 Indexed: **True**  

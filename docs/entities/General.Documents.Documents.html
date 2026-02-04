@@ -131,34 +131,137 @@ Max level:  4 - Track object attribute and blob changes</p>
 </li>
 </ul>
 <h2 id="attributes">Attributes</h2>
-<p>| Name | Type | Description |
-| ---- | ---- | --- |
-| <a href="General.Documents.Documents.html#adjustmentnumber">AdjustmentNumber</a> | int32 | Consecutive number of the correction that this document is applying to the adjusted document.
-| <a href="General.Documents.Documents.html#adjustmenttime">AdjustmentTime</a> | datetime <strong>nullable</strong> | Date/time when the document last has been adjusted by corrective document
-| <a href="General.Documents.Documents.html#adjustmentuser">AdjustmentUser</a> | string (64) <strong>nullable</strong> | The user who adjusted the document
-| <a href="General.Documents.Documents.html#completetime">CompleteTime</a> | datetime <strong>nullable</strong> | Date and time when the document was completed (State set to Completed).
-| <a href="General.Documents.Documents.html#creationtime">CreationTime</a> | datetime | Date/Time when the document was created
-| <a href="General.Documents.Documents.html#creationuser">CreationUser</a> | string (64) | The login name of the user, who created the document
-| <a href="General.Documents.Documents.html#documentdate">DocumentDate</a> | date | The date on which the document was issued
-| <a href="General.Documents.Documents.html#documentno">DocumentNo</a> | string (20) | Document number, unique within Document_Type_Id
-| <a href="General.Documents.Documents.html#documentnotes">DocumentNotes</a> | string (max) <strong>nullable</strong> | Notes for this Document.
-| <a href="General.Documents.Documents.html#documentversion">DocumentVersion</a> | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document.
-| <a href="General.Documents.Documents.html#entityname">EntityName</a> | string (64) | The entity name of the document header.
-| <a href="General.Documents.Documents.html#fullstate">FullState</a> | string | Full state of the document based on its system and user state. [ReadOnly]
-| <a href="General.Documents.Documents.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> | <a href="General.Documents.Documents.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> <strong>nullable</strong> | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
-| <a href="General.Documents.Documents.html#planningonly">PlanningOnly</a> | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)
-| <a href="General.Documents.Documents.html#readonly">ReadOnly</a> | boolean | 1 - the document is read only; 0 - the document is not read only
-| <a href="General.Documents.Documents.html#referencedate">ReferenceDate</a> | datetime <strong>nullable</strong> | Indicates the date, when the event, described by the document, actually occurred.
-Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.
-So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime.
-| <a href="General.Documents.Documents.html#referencedocumentno">ReferenceDocumentNo</a> | string (20) <strong>nullable</strong> | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents
-| <a href="General.Documents.Documents.html#releasetime">ReleaseTime</a> | datetime <strong>nullable</strong> | Date and time when the document was released (State set to Released).
-| <a href="General.Documents.Documents.html#state">State</a> | <a href="General.Documents.Documents.html#state">DocumentState</a> | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.
-| <a href="General.Documents.Documents.html#statetagsattribute">StateTagsAttribute</a> | string | Specifies the state of the document.
-| <a href="General.Documents.Documents.html#void">Void</a> | boolean | 1 if the document is null and void
-| <a href="General.Documents.Documents.html#voidreason">VoidReason</a> | string (254) <strong>nullable</strong> | Reason for voiding the document, entered by the user
-| <a href="General.Documents.Documents.html#voidtime">VoidTime</a> | datetime <strong>nullable</strong> | Date/time when the document has become void
-| <a href="General.Documents.Documents.html#voiduser">VoidUser</a> | string (64) <strong>nullable</strong> | The user who voided the document</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="General.Documents.Documents.html#adjustmentnumber">AdjustmentNumber</a></td>
+<td>int32</td>
+<td>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#adjustmenttime">AdjustmentTime</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Date/time when the document last has been adjusted by corrective document. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#adjustmentuser">AdjustmentUser</a></td>
+<td>string (64) <strong>nullable</strong></td>
+<td>The user who adjusted the document. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#completetime">CompleteTime</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#creationtime">CreationTime</a></td>
+<td>datetime</td>
+<td>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#creationuser">CreationUser</a></td>
+<td>string (64)</td>
+<td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#documentdate">DocumentDate</a></td>
+<td>date</td>
+<td>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#documentno">DocumentNo</a></td>
+<td>string (20)</td>
+<td>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#documentnotes">DocumentNotes</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Notes for this Document.</td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#documentversion">DocumentVersion</a></td>
+<td>int32</td>
+<td>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#entityname">EntityName</a></td>
+<td>string (64)</td>
+<td>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#fullstate">FullState</a></td>
+<td>string</td>
+<td>Full state of the document based on its system and user state. [ReadOnly]</td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
+<td><a href="General.Documents.Documents.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> <strong>nullable</strong></td>
+<td>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#planningonly">PlanningOnly</a></td>
+<td>boolean</td>
+<td>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#readonly">ReadOnly</a></td>
+<td>boolean</td>
+<td>True - the document is read only; false - the document is not read only. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#referencedate">ReferenceDate</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#referencedocumentno">ReferenceDocumentNo</a></td>
+<td>string (20) <strong>nullable</strong></td>
+<td>The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#releasetime">ReleaseTime</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#state">State</a></td>
+<td><a href="General.Documents.Documents.html#state">DocumentState</a></td>
+<td>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#statetagsattribute">StateTagsAttribute</a></td>
+<td>string</td>
+<td>Specifies the state of the document.</td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#void">Void</a></td>
+<td>boolean</td>
+<td>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#voidreason">VoidReason</a></td>
+<td>string (254) <strong>nullable</strong></td>
+<td>Reason for voiding the document, entered by the user. <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#voidtime">VoidTime</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Date/time when the document has become void. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.Documents.Documents.html#voiduser">VoidUser</a></td>
+<td>string (64) <strong>nullable</strong></td>
+<td>The user who voided the document. <code>ReadOnly</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References</h2>
 <table>
 <thead>
@@ -172,52 +275,52 @@ So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime.
 <tr>
 <td><a href="General.Documents.Documents.html#accesskey">AccessKey</a></td>
 <td><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</td>
-<td>The access key, containing the user permissions for this document. NULL means that all users have unlimited permissions</td>
+<td>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#adjusteddocument">AdjustedDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The primary document, which the current document adjusts. NULL when this is not an adjustment document</td>
+<td>The primary document, which the current document adjusts. null when this is not an adjustment document. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user</td>
+<td>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.Currencies.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</td>
-<td>The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions</td>
+<td>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.</td>
+<td>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company which issued the document</td>
+<td>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used</td>
+<td>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#fromcompanydivision">FromCompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, issuing the document. NULL when the document is not issued by any specific division</td>
+<td>The division of the company, issuing the document. null when the document is not issued by any specific division. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#fromparty">FromParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party which issued the document</td>
+<td>The party which issued the document. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#masterdocument">MasterDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id</td>
+<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#parent">Parent</a></td>
@@ -227,37 +330,37 @@ So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime.
 <tr>
 <td><a href="General.Documents.Documents.html#primecausedocument">PrimeCauseDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document that is the prime cause for creation of the current document</td>
+<td>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
+<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#reverseofdocument">ReverseOfDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document which the current document is reverse of</td>
+<td>The document which the current document is reverse of. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#sequence">Sequence</a></td>
 <td><a href="Systems.Documents.Sequences.html">Sequences</a> (nullable)</td>
-<td>The sequence that will be used to give new numbers to the documents of this type</td>
+<td>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#tocompanydivision">ToCompanyDivision</a></td>
 <td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, receiving the document. NULL when the document is not received by any specific division</td>
+<td>The division of the company, receiving the document. null when the document is not received by any specific division. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#toparty">ToParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party which should receive the document</td>
+<td>The party which should receive the document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.Documents.html#userstatus">UserStatus</a></td>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of this document if applicable for this document type. NULL means unknown or not yet set</td>
+<td>The user status of this document if applicable for this document type. null means unknown or not yet set. <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -362,7 +465,7 @@ So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime.
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="adjustmentnumber">AdjustmentNumber</h3>
-<p>Consecutive number of the correction that this document is applying to the adjusted document.</p>
+<p>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -370,14 +473,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="adjustmenttime">AdjustmentTime</h3>
-<p>Date/time when the document last has been adjusted by corrective document</p>
+<p>Date/time when the document last has been adjusted by corrective document. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="adjustmentuser">AdjustmentUser</h3>
-<p>The user who adjusted the document</p>
+<p>The user who adjusted the document. <code>ReadOnly</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -385,14 +488,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="completetime">CompleteTime</h3>
-<p>Date and time when the document was completed (State set to Completed).</p>
+<p>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<p>Date/Time when the document was created</p>
+<p>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -400,7 +503,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creationuser">CreationUser</h3>
-<p>The login name of the user, who created the document</p>
+<p>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -408,7 +511,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentdate">DocumentDate</h3>
-<p>The date on which the document was issued</p>
+<p>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>date</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -417,7 +520,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentno">DocumentNo</h3>
-<p>Document number, unique within Document_Type_Id</p>
+<p>Document number, unique within Document_Type_Id. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (20)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -434,7 +537,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
-<p>Consecutive version number, starting with 1. Each update produces a new version of the document.</p>
+<p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -442,7 +545,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="entityname">EntityName</h3>
-<p>The entity name of the document header.</p>
+<p>The entity name of the document header. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -458,7 +561,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
-<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.</p>
+<p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Relationship between parent and child documents<br>
@@ -489,7 +592,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningonly">PlanningOnly</h3>
-<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)</p>
+<p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -497,7 +600,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="readonly">ReadOnly</h3>
-<p>1 - the document is read only; 0 - the document is not read only</p>
+<p>True - the document is read only; false - the document is not read only. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -505,9 +608,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="referencedate">ReferenceDate</h3>
-<p>Indicates the date, when the event, described by the document, actually occurred.
-Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.
-So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime.</p>
+<p>Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -515,7 +616,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="referencedocumentno">ReferenceDocumentNo</h3>
-<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents</p>
+<p>The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -523,14 +624,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
-<p>Date and time when the document was released (State set to Released).</p>
+<p>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.</p>
+<p>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html#state">DocumentState</a></strong><br>
 Category: <strong>System</strong><br>
 Enumeration of document system states<br>
@@ -585,7 +686,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="void">Void</h3>
-<p>1 if the document is null and void</p>
+<p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -594,7 +695,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="voidreason">VoidReason</h3>
-<p>Reason for voiding the document, entered by the user</p>
+<p>Reason for voiding the document, entered by the user. <code>ReadOnly</code></p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -602,14 +703,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="voidtime">VoidTime</h3>
-<p>Date/time when the document has become void</p>
+<p>Date/time when the document has become void. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="voiduser">VoidUser</h3>
-<p>The user who voided the document</p>
+<p>The user who voided the document. <code>ReadOnly</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -661,7 +762,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
-<p>The access key, containing the user permissions for this document. NULL means that all users have unlimited permissions</p>
+<p>The access key, containing the user permissions for this document. null means that all users have unlimited permissions. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -691,59 +792,59 @@ Supported permissions</p>
 </tbody>
 </table>
 <h3 id="adjusteddocument">AdjustedDocument</h3>
-<p>The primary document, which the current document adjusts. NULL when this is not an adjustment document</p>
+<p>The primary document, which the current document adjusts. null when this is not an adjustment document. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="assignedtouser">AssignedToUser</h3>
-<p>The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user</p>
+<p>The user to which this document is assigned for handling. null means that the document is not assigned to specific user. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions</p>
+<p>The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.CurrencyDirectories.html">CurrencyDirectories</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.</p>
+<p>The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company which issued the document</p>
+<p>The enterprise company which issued the document. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used</p>
+<p>The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fromcompanydivision">FromCompanyDivision</h3>
-<p>The division of the company, issuing the document. NULL when the document is not issued by any specific division</p>
+<p>The division of the company, issuing the document. null when the document is not issued by any specific division. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fromparty">FromParty</h3>
-<p>The party which issued the document</p>
+<p>The party which issued the document. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="masterdocument">MasterDocument</h3>
-<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id</p>
+<p>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -757,38 +858,38 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
-<p>The document that is the prime cause for creation of the current document</p>
+<p>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</p>
+<p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="reverseofdocument">ReverseOfDocument</h3>
-<p>The document which the current document is reverse of</p>
+<p>The document which the current document is reverse of. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="sequence">Sequence</h3>
-<p>The sequence that will be used to give new numbers to the documents of this type</p>
+<p>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Documents.Sequences.html">Sequences</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="tocompanydivision">ToCompanyDivision</h3>
-<p>The division of the company, receiving the document. NULL when the document is not received by any specific division</p>
+<p>The division of the company, receiving the document. null when the document is not received by any specific division. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="toparty">ToParty</h3>
-<p>The party which should receive the document</p>
+<p>The party which should receive the document. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -796,7 +897,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.ObtainToParty( )</code></p>
 <h3 id="userstatus">UserStatus</h3>
-<p>The user status of this document if applicable for this document type. NULL means unknown or not yet set</p>
+<p>The user status of this document if applicable for this document type. null means unknown or not yet set. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -126,37 +126,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.AI.Compilations.html#buildlog">BuildLog</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Detailed log of the build process of the compilation.</td>
+<td>Detailed log of the build process of the compilation. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#compiledmodelname">CompiledModelName</a></td>
 <td>string (256) <strong>nullable</strong></td>
-<td>The name of the model, which was created in the providers space, as a result of the compilation.</td>
+<td>The name of the model, which was created in the providers space, as a result of the compilation. <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#completiontimeutc">CompletionTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time, when the compilation has completed.</td>
+<td>The time, when the compilation has completed. <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#errormessage">ErrorMessage</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Human-readable error message indicating the problem, when a build is not successful.</td>
+<td>Human-readable error message indicating the problem, when a build is not successful. <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#issuccessful">IsSuccessful</a></td>
 <td>boolean</td>
-<td>Indicated whether the build process was successful and the compilation can be used for conversations.</td>
+<td>Indicated whether the build process was successful and the compilation can be used for conversations. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#starttimeutc">StartTimeUtc</a></td>
 <td>datetime</td>
-<td>The time, when the compilation was started.</td>
+<td>The time, when the compilation was started. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#status">Status</a></td>
 <td><a href="Projects.AI.Compilations.html#status">Status</a></td>
-<td>The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.</td>
+<td>The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,12 +173,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.AI.Compilations.html#model">Model</a></td>
 <td><a href="Projects.AI.Models.html">Models</a></td>
-<td>The model, on which the compilation is based.</td>
+<td>The model, on which the compilation is based. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Compilations.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who started the compilation.</td>
+<td>The user, who started the compilation. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -243,7 +243,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="buildlog">BuildLog</h3>
-<p>Detailed log of the build process of the compilation.</p>
+<p>Detailed log of the build process of the compilation. <code>ReadOnly</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -251,7 +251,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="compiledmodelname">CompiledModelName</h3>
-<p>The name of the model, which was created in the providers space, as a result of the compilation.</p>
+<p>The name of the model, which was created in the providers space, as a result of the compilation. <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -259,14 +259,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>256</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="completiontimeutc">CompletionTimeUtc</h3>
-<p>The time, when the compilation has completed.</p>
+<p>The time, when the compilation has completed. <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="errormessage">ErrorMessage</h3>
-<p>Human-readable error message indicating the problem, when a build is not successful.</p>
+<p>Human-readable error message indicating the problem, when a build is not successful. <code>ReadOnly</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -274,7 +274,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="issuccessful">IsSuccessful</h3>
-<p>Indicated whether the build process was successful and the compilation can be used for conversations.</p>
+<p>Indicated whether the build process was successful and the compilation can be used for conversations. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -282,7 +282,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttimeutc">StartTimeUtc</h3>
-<p>The time, when the compilation was started.</p>
+<p>The time, when the compilation was started. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -291,7 +291,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.</p>
+<p>The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Projects.AI.Compilations.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Projects.AI.Compilations.md#status) data attribute<br>
@@ -370,14 +370,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="model">Model</h3>
-<p>The model, on which the compilation is based.</p>
+<p>The model, on which the compilation is based. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Projects.AI.Models.html">Models</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who started the compilation.</p>
+<p>The user, who started the compilation. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Contents](Projects.AI.TrainingConversationMessages.md#contents) | string (max) | Contents of the message. Can be formatted using MarkDown. 
-| [MessageNo](Projects.AI.TrainingConversationMessages.md#messageno) | int32 | Message number within the conversation. 
-| [MessageTimeUtc](Projects.AI.TrainingConversationMessages.md#messagetimeutc) | datetime | Date and time, when the message was originally typed (or created). 
+| [Contents](Projects.AI.TrainingConversationMessages.md#contents) | string (max) | Contents of the message. Can be formatted using MarkDown. `Required` 
+| [MessageNo](Projects.AI.TrainingConversationMessages.md#messageno) | int32 | Message number within the conversation. `Required` `Filter(eq)` 
+| [MessageTimeUtc](Projects.AI.TrainingConversationMessages.md#messagetimeutc) | datetime | Date and time, when the message was originally typed (or created). `Required` `Default(NowUtc)` `Filter(ge;le)` 
 | [ParticipantName](Projects.AI.TrainingConversationMessages.md#participantname) | string (64) __nullable__ | Name of the participant, who created the message. Name is optional, but gives more context to the message. 
-| [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message. 
+| [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message. `Required` `Default("U")` `Filter(multi eq)` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### Contents
 
-Contents of the message. Can be formatted using MarkDown.
+Contents of the message. Can be formatted using MarkDown. `Required`
 
 Type: **string (max)**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### MessageNo
 
-Message number within the conversation.
+Message number within the conversation. `Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -88,7 +88,7 @@ Front-End Recalc Expressions:
 `( obj.TrainingConversation.Messages.Select( c => c.MessageNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### MessageTimeUtc
 
-Date and time, when the message was originally typed (or created).
+Date and time, when the message was originally typed (or created). `Required` `Default(NowUtc)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### ParticipantRole
 
-Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.
+Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message. `Required` `Default("U")` `Filter(multi eq)`
 
 Type: **[ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole)**  
 Category: **System**  

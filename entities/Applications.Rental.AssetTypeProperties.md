@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (254) __nullable__ | The value id of the default value of the property. 
+| [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (254) __nullable__ | The default value of the property. `Filter(like)` 
 | [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid __nullable__ | The value id of the default value of the property. `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Property](Applications.Rental.AssetTypeProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. |
+| [Property](Applications.Rental.AssetTypeProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. `Required` `Filter(multi eq)` |
 | [RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The <see cref="AssetType"/> to which this AssetTypeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### DefaultValue
 
-The value id of the default value of the property.
+The default value of the property. `Filter(like)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **HiddenByDefault**
 
 ### Property
 
-The user-defined property, which is required for assets of the specified type.
+The user-defined property, which is required for assets of the specified type. `Required` `Filter(multi eq)`
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  

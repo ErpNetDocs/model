@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.WebSiteLanguages.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the support for the language is activated and should be published on the web.</td>
+<td>Specifies whether the support for the language is activated and should be published on the web. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebSiteLanguages.html#languagecode">LanguageCode</a></td>
 <td>string (2)</td>
-<td>Two letter ISO language code. Sub-tags are currently not supported.</td>
+<td>Two letter ISO language code. Sub-tags are currently not supported. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebSiteLanguages.html#notes">Notes</a></td>
@@ -153,7 +153,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.WebSiteLanguages.html#website"><s>WebSite</s></a></td>
 <td><a href="Applications.Cms.WebSites.html">WebSites</a></td>
-<td><strong>OBSOLETE! Do not use!</strong> The web site, for which the language is specified.</td>
+<td><strong>OBSOLETE! Do not use!</strong> The web site, for which the language is specified. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -186,7 +186,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the support for the language is activated and should be published on the web.</p>
+<p>Specifies whether the support for the language is activated and should be published on the web. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -194,7 +194,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="languagecode">LanguageCode</h3>
-<p>Two letter ISO language code. Sub-tags are currently not supported.</p>
+<p>Two letter ISO language code. Sub-tags are currently not supported. <code>Required</code></p>
 <p>Type: <strong>string (2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -232,7 +232,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="website">WebSite</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The web site, for which the language is specified.</p>
+<p><strong>OBSOLETE! Do not use!</strong> The web site, for which the language is specified. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 26.2.1.2</code> <code>Obsolete</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.Cms.WebSites.html">WebSites</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

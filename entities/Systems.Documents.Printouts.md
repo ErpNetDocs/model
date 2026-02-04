@@ -44,28 +44,28 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | The minimal document state on wich is permited to print this printout 
-| [ApplicationName](Systems.Documents.Printouts.md#applicationname) | string (64) | The application which stored and uses the printout 
-| [BackwardCompatibility](Systems.Documents.Printouts.md#backwardcompatibility) | boolean | Supports the old data format. 
-| [Copies](Systems.Documents.Printouts.md#copies) | int32 | Number of copies that will be printed when the user choses 'Print multiple'. 
-| [Definition](Systems.Documents.Printouts.md#definition) | string (max) __nullable__ | The contents of the printout. 
-| [DefinitionFormat](Systems.Documents.Printouts.md#definitionformat) | string (16) __nullable__ | System format of the printout definition. 
-| [IsDefault](Systems.Documents.Printouts.md#isdefault) | boolean | If True this printout will be used in direct print or print preview. 
-| [Name](Systems.Documents.Printouts.md#name) | string (64) | Name of the printout. 
+| [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | The user can print documents only with state equal or greater than Allow_Printing_On_State. `Required` `Default(0)` 
+| [ApplicationName](Systems.Documents.Printouts.md#applicationname) | string (64) | The application which stored and uses the printout. `Required` 
+| [BackwardCompatibility](Systems.Documents.Printouts.md#backwardcompatibility) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Copies](Systems.Documents.Printouts.md#copies) | int32 | Number of copies that should be printed when using direct printing. `Required` `Default(1)` 
+| [Definition](Systems.Documents.Printouts.md#definition) | string (max) __nullable__ | Obsolete. Not used. 
+| [DefinitionFormat](Systems.Documents.Printouts.md#definitionformat) | string (16) __nullable__ | Obsolete. Not used. `Default("default")` 
+| [IsDefault](Systems.Documents.Printouts.md#isdefault) | boolean | True if this is the default printout for the application form. `Required` `Default(false)` `Filter(eq)` 
+| [Name](Systems.Documents.Printouts.md#name) | string (64) | The name of the printout. Unique within the application form. `Required` `Filter(like)` 
 | [Notes](Systems.Documents.Printouts.md#notes) | string (512) __nullable__ | Notes for this Printout. 
-| [Ord](Systems.Documents.Printouts.md#ord) | int32 | Order in the multiple print. 0 means that the printout does not participate. 
-| [OrdFilterXml](Systems.Documents.Printouts.md#ordfilterxml) | dataaccessfilter __nullable__ | The condition, required to be matched in order for the printout to be executed upon "Print All" command. 
-| [OrdPriority](Systems.Documents.Printouts.md#ordpriority) | int32 __nullable__ | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. 
+| [Ord](Systems.Documents.Printouts.md#ord) | int32 | Order in the list of printouts when using direct printing. `Required` `Default(0)` 
+| [OrdFilterXml](Systems.Documents.Printouts.md#ordfilterxml) | dataaccessfilter __nullable__ | The condition, required to be matched in order for the printout to be executed upon "Print All" command. `Unit: obj.DocumentType.EntityName` 
+| [OrdPriority](Systems.Documents.Printouts.md#ordpriority) | int32 __nullable__ | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Systems.Documents.Printouts.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type to which this printout layout is bound. |
+| [DocumentType](Systems.Documents.Printouts.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type to which this printout layout is bound. `Required` `Filter(multi eq)` `Owner` |
 | [EnterpriseCompany](Systems.Documents.Printouts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
-| [FiscalReceiptTemplate](Systems.Documents.Printouts.md#fiscalreceipttemplate) | [FiscalReceiptTemplates](Crm.Pos.FiscalReceiptTemplates.md) (nullable) | Template for customizing the fiscal receipt. |
-| [PrintoutLayout](Systems.Documents.Printouts.md#printoutlayout) | [PrintoutLayouts](Systems.Documents.PrintoutLayouts.md) (nullable) | The printout layout, that is bound to the document type. |
-| [Report](Systems.Documents.Printouts.md#report) | [DataSources](Systems.Documents.DataSources.md) (nullable) | A report that contains the set of data that will be loaded in the printout. |
+| [FiscalReceiptTemplate](Systems.Documents.Printouts.md#fiscalreceipttemplate) | [FiscalReceiptTemplates](Crm.Pos.FiscalReceiptTemplates.md) (nullable) | Template for customizing the fiscal receipt. `Filter(multi eq)` `Introduced in version 24.1.4.56` |
+| [PrintoutLayout](Systems.Documents.Printouts.md#printoutlayout) | [PrintoutLayouts](Systems.Documents.PrintoutLayouts.md) (nullable) | The printout layout, that is bound to the document type. `Filter(multi eq)` |
+| [Report](Systems.Documents.Printouts.md#report) | [DataSources](Systems.Documents.DataSources.md) (nullable) | If not null points to a custom report that indicates which data will be loaded in the printout. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -81,7 +81,7 @@ Aggregate Root:
 
 ### AllowPrintingOnState
 
-The minimal document state on wich is permited to print this printout
+The user can print documents only with state equal or greater than Allow_Printing_On_State. `Required` `Default(0)`
 
 Type: **[AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ApplicationName
 
-The application which stored and uses the printout
+The application which stored and uses the printout. `Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -118,7 +118,7 @@ Back-End Default Expression:
 
 ### BackwardCompatibility
 
-Supports the old data format.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **CannotBeShown**
 
 ### Copies
 
-Number of copies that will be printed when the user choses 'Print multiple'.
+Number of copies that should be printed when using direct printing. `Required` `Default(1)`
 
 Type: **int32**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### Definition
 
-The contents of the printout.
+Obsolete. Not used.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **CannotBeShown**
 
 ### DefinitionFormat
 
-System format of the printout definition.
+Obsolete. Not used. `Default("default")`
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **CannotBeShown**
 
 ### IsDefault
 
-If True this printout will be used in direct print or print preview.
+True if this is the default printout for the application form. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the printout.
+The name of the printout. Unique within the application form. `Required` `Filter(like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### Ord
 
-Order in the multiple print. 0 means that the printout does not participate.
+Order in the list of printouts when using direct printing. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -207,7 +207,7 @@ Show in UI: **ShownByDefault**
 
 ### OrdFilterXml
 
-The condition, required to be matched in order for the printout to be executed upon "Print All" command.
+The condition, required to be matched in order for the printout to be executed upon "Print All" command. `Unit: obj.DocumentType.EntityName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### OrdPriority
 
-Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command.
+Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. `Default(0)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -260,7 +260,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The document type to which this printout layout is bound.
+The document type to which this printout layout is bound. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  
@@ -280,7 +280,7 @@ Show in UI: **HiddenByDefault**
 
 ### FiscalReceiptTemplate
 
-Template for customizing the fiscal receipt.
+Template for customizing the fiscal receipt. `Filter(multi eq)` `Introduced in version 24.1.4.56`
 
 Type: **[FiscalReceiptTemplates](Crm.Pos.FiscalReceiptTemplates.md) (nullable)**  
 Category: **System**  
@@ -289,7 +289,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintoutLayout
 
-The printout layout, that is bound to the document type.
+The printout layout, that is bound to the document type. `Filter(multi eq)`
 
 Type: **[PrintoutLayouts](Systems.Documents.PrintoutLayouts.md) (nullable)**  
 Category: **System**  
@@ -298,7 +298,7 @@ Show in UI: **ShownByDefault**
 
 ### Report
 
-A report that contains the set of data that will be loaded in the printout.
+If not null points to a custom report that indicates which data will be loaded in the printout. `Filter(multi eq)`
 
 Type: **[DataSources](Systems.Documents.DataSources.md) (nullable)**  
 Category: **System**  

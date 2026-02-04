@@ -45,14 +45,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](General.Activities.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. 
-| [ResourceUsagePercent](General.Activities.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. 
+| [ResourceUsagePercent](General.Activities.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Activity](General.Activities.ActivityResources.md#activity) | [Activities](General.Activities.Activities.md) | The <see cref="Activity"/> to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Resource](General.Activities.ActivityResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, which is required by the activity. |
+| [Resource](General.Activities.ActivityResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, which is required by the activity. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceUsagePercent
 
-The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.
+The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)`
 
 Type: **decimal (18, 4)**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### Resource
 
-The resource, which is required by the activity.
+The resource, which is required by the activity. `Required` `Filter(multi eq)`
 
 Type: **[Resources](General.Resources.Resources.md)**  
 Category: **System**  

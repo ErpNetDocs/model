@@ -35,25 +35,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsiderWipLimit](Projects.Agile.Projects.md#considerwiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. 
-| [Description](Projects.Agile.Projects.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project. 
-| [InProgressWipLimit](Projects.Agile.Projects.md#inprogresswiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state. 
-| [IsActive](Projects.Agile.Projects.md#isactive) | boolean | Is the project active for new cases? 
-| [IsTemplate](Projects.Agile.Projects.md#istemplate) | boolean | Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project. 
-| [Name](Projects.Agile.Projects.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project 
-| [ReadyWipLimit](Projects.Agile.Projects.md#readywiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state. 
-| [<s>WipLimit</s>](Projects.Agile.Projects.md#wiplimit) | int32 __nullable__ | **OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state 
+| [ConsiderWipLimit](Projects.Agile.Projects.md#considerwiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. `Filter(eq;ge;le)` `Introduced in version 25.1.1.38` 
+| [Description](Projects.Agile.Projects.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project. `Filter(like)` `Introduced in version 25.1.1.48` 
+| [InProgressWipLimit](Projects.Agile.Projects.md#inprogresswiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state. `Filter(eq;ge;le)` `Introduced in version 25.1.1.38` 
+| [IsActive](Projects.Agile.Projects.md#isactive) | boolean | Is the project active for new cases?. `Required` `Default(true)` `Filter(eq)` 
+| [IsTemplate](Projects.Agile.Projects.md#istemplate) | boolean | Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project. `Required` `Default(false)` `Filter(eq)` 
+| [Name](Projects.Agile.Projects.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project. `Required` `Filter(like)` 
+| [ReadyWipLimit](Projects.Agile.Projects.md#readywiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state. `Filter(eq;ge;le)` `Introduced in version 25.1.1.38` 
+| [<s>WipLimit</s>](Projects.Agile.Projects.md#wiplimit) | int32 __nullable__ | **OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state. `Obsolete` `Filter(eq)` `Obsoleted in version 25.1.1.38` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccessKey](Projects.Agile.Projects.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this Project. An empty value means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 25.1.3.39` |
-| [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. |
-| [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. |
-| [ProjectGroup](Projects.Agile.Projects.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | The project group to which the project belongs. NULL means the project is not assigned to any group. |
-| [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. |
-| [SocialGroup](Projects.Agile.Projects.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | The working group responsible for discussing and collaborating on this project. |
+| [Customer](Projects.Agile.Projects.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | Specified, when the project is for a customer. `Filter(multi eq)` |
+| [PrimaryUser](Projects.Agile.Projects.md#primaryuser) | [Users](Systems.Security.Users.md) | The primary responsible user for the project. `Required` `Filter(multi eq)` |
+| [ProjectGroup](Projects.Agile.Projects.md#projectgroup) | [ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable) | The project group to which the project belongs. null means the project is not assigned to any group. `Filter(multi eq)` `Introduced in version 26.1.4.49` |
+| [ProjectType](Projects.Agile.Projects.md#projecttype) | [ProjectTypes](Projects.Agile.ProjectTypes.md) | Specifies what kind of project is this. `Required` `Filter(multi eq)` |
+| [SocialGroup](Projects.Agile.Projects.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | The working group responsible for discussing and collaborating on this project. `Filter(multi eq)` `Introduced in version 25.1.2.63` |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### ConsiderWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. `Filter(eq;ge;le)` `Introduced in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description of the project.
+Description of the project. `Filter(like)` `Introduced in version 25.1.1.48`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### InProgressWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state. `Filter(eq;ge;le)` `Introduced in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Is the project active for new cases?
+Is the project active for new cases?. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### IsTemplate
 
-Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project.
+Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the project
+Multi-language name of the project. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadyWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state. `Filter(eq;ge;le)` `Introduced in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **ShownByDefault**
 
 ### WipLimit
 
-**OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state
+**OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state. `Obsolete` `Filter(eq)` `Obsoleted in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -234,7 +234,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### Customer
 
-Specified, when the project is for a customer.
+Specified, when the project is for a customer. `Filter(multi eq)`
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Indexed: **True**  
@@ -244,7 +244,7 @@ Show in UI: **ShownByDefault**
 
 ### PrimaryUser
 
-The primary responsible user for the project.
+The primary responsible user for the project. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  
@@ -254,7 +254,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectGroup
 
-The project group to which the project belongs. NULL means the project is not assigned to any group.
+The project group to which the project belongs. null means the project is not assigned to any group. `Filter(multi eq)` `Introduced in version 26.1.4.49`
 
 Type: **[ProjectGroups](Projects.Agile.ProjectGroups.md) (nullable)**  
 Category: **System**  
@@ -263,7 +263,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectType
 
-Specifies what kind of project is this.
+Specifies what kind of project is this. `Required` `Filter(multi eq)`
 
 Type: **[ProjectTypes](Projects.Agile.ProjectTypes.md)**  
 Indexed: **True**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 ### SocialGroup
 
-The working group responsible for discussing and collaborating on this project.
+The working group responsible for discussing and collaborating on this project. `Filter(multi eq)` `Introduced in version 25.1.2.63`
 
 Type: **[Groups](Communities.Social.Groups.md) (nullable)**  
 Category: **System**  

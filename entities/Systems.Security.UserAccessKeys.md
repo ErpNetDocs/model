@@ -39,25 +39,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CanDelete](Systems.Security.UserAccessKeys.md#candelete) | boolean | Obsolete. Not used. 
-| [CanUpdate](Systems.Security.UserAccessKeys.md#canupdate) | boolean | Obsolete. Not used. 
-| [Permission1](Systems.Security.UserAccessKeys.md#permission1) | boolean | Obsolete. Not used. 
-| [Permission10](Systems.Security.UserAccessKeys.md#permission10) | boolean | Obsolete. Not used. 
-| [Permission2](Systems.Security.UserAccessKeys.md#permission2) | boolean | Obsolete. Not used. 
-| [Permission3](Systems.Security.UserAccessKeys.md#permission3) | boolean | Obsolete. Not used. 
-| [Permission4](Systems.Security.UserAccessKeys.md#permission4) | boolean | Obsolete. Not used. 
-| [Permission5](Systems.Security.UserAccessKeys.md#permission5) | boolean | Obsolete. Not used. 
-| [Permission6](Systems.Security.UserAccessKeys.md#permission6) | boolean | Obsolete. Not used. 
-| [Permission7](Systems.Security.UserAccessKeys.md#permission7) | boolean | Obsolete. Not used. 
-| [Permission8](Systems.Security.UserAccessKeys.md#permission8) | boolean | Obsolete. Not used. 
-| [Permission9](Systems.Security.UserAccessKeys.md#permission9) | boolean | Obsolete. Not used. 
+| [CanDelete](Systems.Security.UserAccessKeys.md#candelete) | boolean | Obsolete. Not used. `Required` 
+| [CanUpdate](Systems.Security.UserAccessKeys.md#canupdate) | boolean | Obsolete. Not used. `Required` 
+| [Permission1](Systems.Security.UserAccessKeys.md#permission1) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission10](Systems.Security.UserAccessKeys.md#permission10) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission2](Systems.Security.UserAccessKeys.md#permission2) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission3](Systems.Security.UserAccessKeys.md#permission3) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission4](Systems.Security.UserAccessKeys.md#permission4) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission5](Systems.Security.UserAccessKeys.md#permission5) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission6](Systems.Security.UserAccessKeys.md#permission6) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission7](Systems.Security.UserAccessKeys.md#permission7) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission8](Systems.Security.UserAccessKeys.md#permission8) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [Permission9](Systems.Security.UserAccessKeys.md#permission9) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccessKey](Systems.Security.UserAccessKeys.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the permissions for this UserAccessKey. An empty value means that all users have unlimited permissions. `Required` `Filter(multi eq)` |
-| [User](Systems.Security.UserAccessKeys.md#user) | [Users](Systems.Security.Users.md) | Obsolete. Not used. |
+| [User](Systems.Security.UserAccessKeys.md#user) | [Users](Systems.Security.Users.md) | Obsolete. Not used. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### CanDelete
 
-Obsolete. Not used.
+Obsolete. Not used. `Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### CanUpdate
 
-Obsolete. Not used.
+Obsolete. Not used. `Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission1
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission10
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission2
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission3
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission4
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission5
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission6
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission7
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission8
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -192,7 +192,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission9
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -253,7 +253,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### User
 
-Obsolete. Not used.
+Obsolete. Not used. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

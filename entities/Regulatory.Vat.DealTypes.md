@@ -35,17 +35,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Regulatory.Vat.DealTypes.md#code) | string (32) | Code of the deal type. 
-| [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. 
-| [IsSystem](Regulatory.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. 
-| [Name](Regulatory.Vat.DealTypes.md#name) | string (254) | Description of the deal type. 
-| [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax). 
+| [Code](Regulatory.Vat.DealTypes.md#code) | string (32) | Code of the deal type. `Required` `Filter(multi eq;like)` `ORD` `Introduced in version 23.1.0.32` 
+| [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)` 
+| [IsSystem](Regulatory.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [Name](Regulatory.Vat.DealTypes.md#name) | string (254) | Description of the deal type. `Required` `Filter(eq;like)` 
+| [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax). `Required` `Filter(multi eq)` `Introduced in version 23.1.0.33` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Country](Regulatory.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. |
+| [Country](Regulatory.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### Code
 
-Code of the deal type.
+Code of the deal type. `Required` `Filter(multi eq;like)` `ORD` `Introduced in version 23.1.0.32`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### EntryType
 
-Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.
+Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)`
 
 Type: **[EntryType](Regulatory.Vat.DealTypes.md#entrytype)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSystem
 
-Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.
+Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Description of the deal type.
+Description of the deal type. `Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxCode
 
-VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).
+VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax). `Required` `Filter(multi eq)` `Introduced in version 23.1.0.33`
 
 Type: **[TaxCode](Regulatory.Vat.DealTypes.md#taxcode)**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **HiddenByDefault**
 
 ### Country
 
-The country for which this deal type applies. The country is matched against the country of the enterprise company.
+The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)`
 
 Type: **[Countries](General.Geography.Countries.md)**  
 Category: **System**  

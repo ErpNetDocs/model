@@ -48,7 +48,7 @@ Aggregate Tree
 | [DocumentAmountTypeId](General.Documents.DocumentManualDistributedAmounts.md#documentamounttypeid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [DocumentId](General.Documents.DocumentManualDistributedAmounts.md#documentid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [DocumentLineId](General.Documents.DocumentManualDistributedAmounts.md#documentlineid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
-| [LinePercent](General.Documents.DocumentManualDistributedAmounts.md#linepercent) | decimal (7, 6) | Obsolete. Not used. 
+| [LinePercent](General.Documents.DocumentManualDistributedAmounts.md#linepercent) | decimal (7, 6) | Obsolete. Not used. `Required` 
 | [ProductId](General.Documents.DocumentManualDistributedAmounts.md#productid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 
 
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### LinePercent
 
-Obsolete. Not used.
+Obsolete. Not used. `Required`
 
 Type: **decimal (7, 6)**  
 Category: **System**  

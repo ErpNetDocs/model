@@ -36,17 +36,17 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](Applications.Mail.BoxFolders.md#active) | boolean | True when the mail box folder is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.76` 
-| [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language folder name 
-| [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string (256) __nullable__ | ID of the folder on the mail server in the format of the mail server 
+| [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language folder name. `Required` `Filter(eq;like)` 
+| [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string (256) __nullable__ | ID of the folder on the mail server in the format of the mail server. `Filter(eq)` 
 | [SyncState](Applications.Mail.BoxFolders.md#syncstate) | string (max) __nullable__ | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
-| [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) __nullable__ | When not NULL means that the folder has special system designation. Designations are: Mailbox, Inbox, Drafts, Outbox, Sent, Trash. 
+| [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) __nullable__ | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. `Filter(eq)` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Boxes](Applications.Mail.Boxes.md) | The <see cref="Box"/> to which this BoxFolder belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
-| [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. |
+| [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### FolderName
 
-Multi-language folder name
+Multi-language folder name. `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### ServerFolderID
 
-ID of the folder on the mail server in the format of the mail server
+ID of the folder on the mail server in the format of the mail server. `Filter(eq)`
 
 Type: **string (256) __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **CannotBeShown**
 
 ### SystemPurpose
 
-When not NULL means that the folder has special system designation. Designations are: Mailbox, Inbox, Drafts, Outbox, Sent, Trash.
+When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. `Filter(eq)` `ReadOnly`
 
 Type: **[SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) __nullable__**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentFolder
 
-The parent folder in the folder hierarchy. Null when the folder is a root folder.
+The parent folder in the folder hierarchy. Null when the folder is a root folder. `Filter(multi eq)`
 
 Type: **[BoxFolders](Applications.Mail.BoxFolders.md) (nullable)**  
 Category: **System**  

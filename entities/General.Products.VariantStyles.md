@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.VariantStyles.md#code) | string (8) | Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. 
+| [Code](General.Products.VariantStyles.md#code) | string (8) | Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD` 
 | [Name](General.Products.VariantStyles.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this VariantStyle. `Required` `Filter(eq;like)` 
 
 
@@ -54,7 +54,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the style. Used to generate parts of bar-codes and in other coding schemes.
+Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (8)**  
 Indexed: **True**  

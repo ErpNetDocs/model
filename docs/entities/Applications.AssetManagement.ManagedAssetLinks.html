@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#enddate">EndDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>End date of asset group management. NULL means that end date is not set or unknown.</td>
+<td>End date of asset group management. null means that end date is not set or unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#fromdate">FromDate</a></td>
 <td>datetime</td>
-<td>Start date of asset group management.</td>
+<td>Start date of asset group management. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#iscurrent">IsCurrent</a></td>
 <td>boolean</td>
-<td>Indicates that this group of assets is currently being managed.</td>
+<td>Indicates that this group of assets is currently being managed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -149,27 +149,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#fixedasset">FixedAsset</a></td>
 <td><a href="Finance.Assets.Assets.html">Assets</a> (nullable)</td>
-<td>The linked fixed asset that is managed. NULL means that no fixed asset is linked.</td>
+<td>The linked fixed asset that is managed. null means that no fixed asset is linked. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
-<td>The managed asset under which the assets are managed.</td>
+<td>The managed asset under which the assets are managed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#rentalasset">RentalAsset</a></td>
 <td><a href="Applications.Rental.Assets.html">Assets</a> (nullable)</td>
-<td>The linked rental asset that is managed. NULL means that no rental asset is linked.</td>
+<td>The linked rental asset that is managed. null means that no rental asset is linked. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#serviceobject">ServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</td>
-<td>The linked service object that is managed. NULL means that no service object is linked.</td>
+<td>The linked service object that is managed. null means that no service object is linked. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetLinks.html#vehicle">Vehicle</a></td>
 <td><a href="Applications.Fleet.Vehicles.html">Vehicles</a> (nullable)</td>
-<td>The linked vehicle that is managed. NULL means that no vehicle is linked.</td>
+<td>The linked vehicle that is managed. null means that no vehicle is linked. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,14 +202,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>End date of asset group management. NULL means that end date is not set or unknown.</p>
+<p>End date of asset group management. null means that end date is not set or unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Start date of asset group management.</p>
+<p>Start date of asset group management. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -217,7 +217,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="iscurrent">IsCurrent</h3>
-<p>Indicates that this group of assets is currently being managed.</p>
+<p>Indicates that this group of assets is currently being managed. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -247,13 +247,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="fixedasset">FixedAsset</h3>
-<p>The linked fixed asset that is managed. NULL means that no fixed asset is linked.</p>
+<p>The linked fixed asset that is managed. null means that no fixed asset is linked. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Assets.Assets.html">Assets</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The managed asset under which the assets are managed.</p>
+<p>The managed asset under which the assets are managed. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -261,19 +261,19 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="rentalasset">RentalAsset</h3>
-<p>The linked rental asset that is managed. NULL means that no rental asset is linked.</p>
+<p>The linked rental asset that is managed. null means that no rental asset is linked. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Rental.Assets.html">Assets</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
-<p>The linked service object that is managed. NULL means that no service object is linked.</p>
+<p>The linked service object that is managed. null means that no service object is linked. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehicle">Vehicle</h3>
-<p>The linked vehicle that is managed. NULL means that no vehicle is linked.</p>
+<p>The linked vehicle that is managed. null means that no vehicle is linked. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Applications.Fleet.Vehicles.html">Vehicles</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

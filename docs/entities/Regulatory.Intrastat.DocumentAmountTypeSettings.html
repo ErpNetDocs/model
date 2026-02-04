@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Intrastat.DocumentAmountTypeSettings.html#addtoinvoicedvalue">AddToInvoicedValue</a></td>
 <td>boolean</td>
-<td>1= to add the amount to the invoiced value, 0=otherwise</td>
+<td>True= to add the amount to the invoiced value, false=otherwise. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DocumentAmountTypeSettings.html#addtostatisticalvalue">AddToStatisticalValue</a></td>
 <td>boolean</td>
-<td>1= to add the amount to the statistical value, 0=otherwise</td>
+<td>True= to add the amount to the statistical value, false=otherwise. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -143,12 +143,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Intrastat.DocumentAmountTypeSettings.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
-<td>The amount type which will be added to the invoiced or the statistical value</td>
+<td>The amount type which will be added to the invoiced or the statistical value. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DocumentAmountTypeSettings.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for which the setting is valid</td>
+<td>The enterprise company for which the setting is valid. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="addtoinvoicedvalue">AddToInvoicedValue</h3>
-<p>1= to add the amount to the invoiced value, 0=otherwise</p>
+<p>True= to add the amount to the invoiced value, false=otherwise. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -189,7 +189,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="addtostatisticalvalue">AddToStatisticalValue</h3>
-<p>1= to add the amount to the statistical value, 0=otherwise</p>
+<p>True= to add the amount to the statistical value, false=otherwise. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,14 +219,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The amount type which will be added to the invoiced or the statistical value</p>
+<p>The amount type which will be added to the invoiced or the statistical value. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the setting is valid</p>
+<p>The enterprise company for which the setting is valid. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

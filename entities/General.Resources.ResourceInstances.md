@@ -36,17 +36,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Resources.ResourceInstances.md#code) | string (16) | Code of the instance, unique within the resource. 
-| [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name. 
+| [Code](General.Resources.ResourceInstances.md#code) | string (16) | Code of the instance, unique within the resource. `Required` `Filter(eq;like)` 
+| [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name. `Required` `Filter(eq;like)` 
 | [Notes](General.Resources.ResourceInstances.md#notes) | string (max) __nullable__ | Notes for this ResourceInstance. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](General.Resources.ResourceInstances.md#asset) | [Assets](Finance.Assets.Assets.md) (nullable) | The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset. |
-| [Party](General.Resources.ResourceInstances.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which is represented by this resource instance. NULL, when the resource instance is not a party. |
-| [Resource](General.Resources.ResourceInstances.md#resource) | [Resources](General.Resources.Resources.md) | The resource of which this is instance. |
+| [Asset](General.Resources.ResourceInstances.md#asset) | [Assets](Finance.Assets.Assets.md) (nullable) | The asset, which is represented by this resource instance. null, when the resource instance is not an asset. `Filter(multi eq)` |
+| [Party](General.Resources.ResourceInstances.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which is represented by this resource instance. null, when the resource instance is not a party. `Filter(multi eq)` |
+| [Resource](General.Resources.ResourceInstances.md#resource) | [Resources](General.Resources.Resources.md) | The resource of which this is instance. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### Code
 
-Code of the instance, unique within the resource.
+Code of the instance, unique within the resource. `Required` `Filter(eq;like)`
 
 Type: **string (16)**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage resource instance name.
+Multilanguage resource instance name. `Required` `Filter(eq;like)`
 
 Type: **string (max)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### Asset
 
-The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.
+The asset, which is represented by this resource instance. null, when the resource instance is not an asset. `Filter(multi eq)`
 
 Type: **[Assets](Finance.Assets.Assets.md) (nullable)**  
 Category: **System**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-The party, which is represented by this resource instance. NULL, when the resource instance is not a party.
+The party, which is represented by this resource instance. null, when the resource instance is not a party. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### Resource
 
-The resource of which this is instance.
+The resource of which this is instance. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Resources](General.Resources.Resources.md)**  
 Indexed: **True**  

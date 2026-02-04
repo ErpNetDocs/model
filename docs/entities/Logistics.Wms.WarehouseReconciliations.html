@@ -364,12 +364,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliations.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse where the reconciliation will be executed.</td>
+<td>The warehouse where the reconciliation will be executed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliations.html#warehousezone">WarehouseZone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</td>
-<td>Identifier of a warehouse zone, optionally entered in the reconciliation document.</td>
+<td>Identifier of a warehouse zone, optionally entered in the reconciliation document. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -922,14 +922,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse where the reconciliation will be executed.</p>
+<p>The warehouse where the reconciliation will be executed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousezone">WarehouseZone</h3>
-<p>Identifier of a warehouse zone, optionally entered in the reconciliation document.</p>
+<p>Identifier of a warehouse zone, optionally entered in the reconciliation document. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

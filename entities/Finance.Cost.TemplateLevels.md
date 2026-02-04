@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9) 
-| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string (254) | The name of the hierarchy level. 
+| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). `Required` `Default(0)` `Filter(ge;le)` 
+| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string (254) | The name of the hierarchy level. `Required` `Filter(like)` 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### HierarchyLevel
 
-The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9)
+The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9). `Required` `Default(0)` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### LevelName
 
-The name of the hierarchy level.
+The name of the hierarchy level. `Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  

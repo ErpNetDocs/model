@@ -160,12 +160,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#applydate">ApplyDate</a></td>
 <td>date</td>
-<td>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.</td>
+<td>When not null specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#automaticorderlinking">AutomaticOrderLinking</a></td>
 <td>boolean</td>
-<td>Specifies whether to automatically set invoice order line by searching invoice orders upon first release.</td>
+<td>Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release. <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#completetime">CompleteTime</a></td>
@@ -190,12 +190,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#deliverydate">DeliveryDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date, when the delivery was effected. When NULL = document date</td>
+<td>Date, when the delivery was effected. When null = document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#deliverytermscode">DeliveryTermsCode</a></td>
 <td><a href="Crm.Invoicing.Invoices.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></td>
-<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#documentdate">DocumentDate</a></td>
@@ -230,27 +230,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
 <td><a href="Crm.Invoicing.Invoices.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></td>
-<td>Transaction nature; used for Intrastat reporting</td>
+<td>Transaction nature; used for Intrastat reporting.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#intrastattransportmodecode">IntrastatTransportModeCode</a></td>
 <td><a href="Crm.Invoicing.Invoices.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></td>
-<td>Transport mode; used for Intrastat reporting</td>
+<td>Transport mode; used for Intrastat reporting.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#isvalidfield">IsValidField</a></td>
 <td>boolean</td>
-<td>Used for internal purposes. 1 when the invoice is valid (released and not void) for summing</td>
+<td>Used for internal purposes. true when the invoice is valid (released and not void) for summing. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#notes">Notes</a></td>
@@ -265,17 +265,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not NULL specifies due date for the payment</td>
+<td>When not null specifies due date for the payment. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#paymentduestartdate">PaymentDueStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date when the payment becomes due for documents with one installment.</td>
+<td>The date when the payment becomes due for documents with one installment. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#paymenttypedescription">PaymentTypeDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>Description of the payment type. Initially copied from the name of the Payment Type</td>
+<td>Description of the payment type. Initially copied from the name of the Payment Type.</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#planningonly">PlanningOnly</a></td>
@@ -320,7 +320,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#vatcashreportingmode">VATCashReportingMode</a></td>
 <td>boolean</td>
-<td>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</td>
+<td>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#vatnotes">VATNotes</a></td>
@@ -377,7 +377,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#creditnoteoriginalinvoice">CreditNoteOriginalInvoice</a></td>
 <td><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</td>
-<td>When this is credit note, may contain the original Invoice. NULL for normal invoices or when the original document is unknown.</td>
+<td>When this is credit note, may contain the original Invoice. null for normal invoices or when the original document is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#currencydirectory">CurrencyDirectory</a></td>
@@ -387,17 +387,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The customer to which the invoice is issued</td>
+<td>The customer to which the invoice is issued. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#dealtype">DealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type.</td>
+<td>VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency in which the document is issued. All amounts are in this currency</td>
+<td>The currency in which the document is issued. All amounts are in this currency. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#documenttype">DocumentType</a></td>
@@ -427,7 +427,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
-<td>Country of origin of the transport company; used for Intrastat reporting</td>
+<td>Country of origin of the transport company; used for Intrastat reporting. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#masterdocument">MasterDocument</a></td>
@@ -442,12 +442,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>When not NULL, specifies the default payment account for the payment order</td>
+<td>When not null, specifies the default payment account for the payment order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>When not NULL specifies the payment type for the invoice</td>
+<td>When not null specifies the payment type for the invoice. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.Invoices.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -622,7 +622,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="applydate">ApplyDate</h3>
-<p>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.</p>
+<p>When not null specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -633,7 +633,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate</code></p>
 <h3 id="automaticorderlinking">AutomaticOrderLinking</h3>
-<p>Specifies whether to automatically set invoice order line by searching invoice orders upon first release.</p>
+<p>Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release. <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -672,14 +672,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="deliverydate">DeliveryDate</h3>
-<p>Date, when the delivery was effected. When NULL = document date</p>
+<p>Date, when the delivery was effected. When null = document date. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deliverytermscode">DeliveryTermsCode</h3>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
+<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
 <p>Type: <strong><a href="Crm.Invoicing.Invoices.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for DeliveryTerms properties<br>
@@ -798,7 +798,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
-<p>Transaction nature; used for Intrastat reporting</p>
+<p>Transaction nature; used for Intrastat reporting.</p>
 <p>Type: <strong><a href="Crm.Invoicing.Invoices.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransactionNature properties<br>
@@ -895,7 +895,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; InvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
-<p>Transport mode; used for Intrastat reporting</p>
+<p>Transport mode; used for Intrastat reporting.</p>
 <p>Type: <strong><a href="Crm.Invoicing.Invoices.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransportMode properties<br>
@@ -948,7 +948,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; InvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -956,7 +956,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -964,7 +964,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isvalidfield">IsValidField</h3>
-<p>Used for internal purposes. 1 when the invoice is valid (released and not void) for summing</p>
+<p>Used for internal purposes. true when the invoice is valid (released and not void) for summing. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -1011,7 +1011,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>When not NULL specifies due date for the payment</p>
+<p>When not null specifies due date for the payment. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1020,7 +1020,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))</code></p>
 <h3 id="paymentduestartdate">PaymentDueStartDate</h3>
-<p>The date when the payment becomes due for documents with one installment.</p>
+<p>The date when the payment becomes due for documents with one installment. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1029,7 +1029,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))</code></p>
 <h3 id="paymenttypedescription">PaymentTypeDescription</h3>
-<p>Description of the payment type. Initially copied from the name of the Payment Type</p>
+<p>Description of the payment type. Initially copied from the name of the Payment Type.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -1139,7 +1139,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="vatcashreportingmode">VATCashReportingMode</h3>
-<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</p>
+<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1276,7 +1276,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creditnoteoriginalinvoice">CreditNoteOriginalInvoice</h3>
-<p>When this is credit note, may contain the original Invoice. NULL for normal invoices or when the original document is unknown.</p>
+<p>When this is credit note, may contain the original Invoice. null for normal invoices or when the original document is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1289,14 +1289,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>The customer to which the invoice is issued</p>
+<p>The customer to which the invoice is issued. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dealtype">DealType</h3>
-<p>VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type.</p>
+<p>VAT deal type for this invoice. If deal type in entered then VAT entry is created for this deal type. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1306,7 +1306,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; c.LineDealType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency in which the document is issued. All amounts are in this currency</p>
+<p>The currency in which the document is issued. All amounts are in this currency. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1344,7 +1344,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
-<p>Country of origin of the transport company; used for Intrastat reporting</p>
+<p>Country of origin of the transport company; used for Intrastat reporting. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1366,7 +1366,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>When not NULL, specifies the default payment account for the payment order</p>
+<p>When not null, specifies the default payment account for the payment order. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1374,7 +1374,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>When not NULL specifies the payment type for the invoice</p>
+<p>When not null specifies the payment type for the invoice. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

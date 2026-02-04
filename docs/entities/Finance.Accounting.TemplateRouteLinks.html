@@ -131,12 +131,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateRouteLinks.html#route">Route</a></td>
 <td><a href="Systems.Documents.Routes.html">Routes</a></td>
-<td>Route for which the specified template will be activated</td>
+<td>Route for which the specified template will be activated. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateRouteLinks.html#template">Template</a></td>
 <td><a href="Finance.Accounting.Templates.html">Templates</a></td>
-<td>Template that will be activated for the specified route</td>
+<td>Template that will be activated for the specified route. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="route">Route</h3>
-<p>Route for which the specified template will be activated</p>
+<p>Route for which the specified template will be activated. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html">Routes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -199,7 +199,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="template">Template</h3>
-<p>Template that will be activated for the specified route</p>
+<p>Template that will be activated for the specified route. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Accounting.Templates.html">Templates</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

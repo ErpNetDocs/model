@@ -44,17 +44,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](General.Activities.ActivityParticipants.md#email) | string (254) __nullable__ | Participant email. Used to identify the participant and is required when syncing with external services. 
+| [Email](General.Activities.ActivityParticipants.md#email) | string (254) __nullable__ | Participant email. Used to identify the participant and is required when syncing with external services. `Filter(multi eq;like)` `Introduced in version 24.1.4.87` 
 | [Notes](General.Activities.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. 
-| [WorkLoadPercent](General.Activities.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity. 
+| [WorkLoadPercent](General.Activities.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity. `Required` `Default(1)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Activity](General.Activities.ActivityParticipants.md#activity) | [Activities](General.Activities.Activities.md) | The <see cref="Activity"/> to which this ActivityParticipant belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ParticipantPerson](General.Activities.ActivityParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, participating in an activity |
-| [User](General.Activities.ActivityParticipants.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user associated with the Person participating in the activity. |
+| [ParticipantPerson](General.Activities.ActivityParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, participating in an activity. `Filter(multi eq)` |
+| [User](General.Activities.ActivityParticipants.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user associated with the Person participating in the activity. `Filter(multi eq)` `Introduced in version 24.1.5.15` |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### Email
 
-Participant email. Used to identify the participant and is required when syncing with external services.
+Participant email. Used to identify the participant and is required when syncing with external services. `Filter(multi eq;like)` `Introduced in version 24.1.4.87`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkLoadPercent
 
-The planned work load of the participant for this activity.
+The planned work load of the participant for this activity. `Required` `Default(1)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### ParticipantPerson
 
-The person, participating in an activity
+The person, participating in an activity. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Indexed: **True**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user associated with the Person participating in the activity.
+The user associated with the Person participating in the activity. `Filter(multi eq)` `Introduced in version 24.1.5.15`
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  

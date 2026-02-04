@@ -36,17 +36,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of solution 
+| [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of solution. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.CompetitorSolutions.md#notes) | string (max) __nullable__ | Notes for this CompetitorSolution. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompanySizeClass](Crm.Marketing.CompetitorSolutions.md#companysizeclass) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | When not null, specifies the company size, for which the solution is targeted. |
-| [Competitor](Crm.Marketing.CompetitorSolutions.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) | Competitor to our marketing solutions. |
-| [Industry](Crm.Marketing.CompetitorSolutions.md#industry) | [Industries](Crm.Marketing.Industries.md) (nullable) | When not null, specifies the industry, for which the solution is targeted. |
-| [OurMarketingSolution](Crm.Marketing.CompetitorSolutions.md#ourmarketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | Our marketing solution, which is competing with the competitor solution. |
+| [CompanySizeClass](Crm.Marketing.CompetitorSolutions.md#companysizeclass) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | When not null, specifies the company size, for which the solution is targeted. `Filter(multi eq)` |
+| [Competitor](Crm.Marketing.CompetitorSolutions.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) | Competitor to our marketing solutions. `Required` `Filter(multi eq)` `Owner` |
+| [Industry](Crm.Marketing.CompetitorSolutions.md#industry) | [Industries](Crm.Marketing.Industries.md) (nullable) | When not null, specifies the industry, for which the solution is targeted. `Filter(multi eq)` |
+| [OurMarketingSolution](Crm.Marketing.CompetitorSolutions.md#ourmarketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | Our marketing solution, which is competing with the competitor solution. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### Name
 
-Name of solution
+Name of solution. `Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompanySizeClass
 
-When not null, specifies the company size, for which the solution is targeted.
+When not null, specifies the company size, for which the solution is targeted. `Filter(multi eq)`
 
 Type: **[CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable)**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### Competitor
 
-Competitor to our marketing solutions.
+Competitor to our marketing solutions. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Competitors](Crm.Marketing.Competitors.md)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### Industry
 
-When not null, specifies the industry, for which the solution is targeted.
+When not null, specifies the industry, for which the solution is targeted. `Filter(multi eq)`
 
 Type: **[Industries](Crm.Marketing.Industries.md) (nullable)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### OurMarketingSolution
 
-Our marketing solution, which is competing with the competitor solution.
+Our marketing solution, which is competing with the competitor solution. `Filter(multi eq)`
 
 Type: **[MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable)**  
 Category: **System**  

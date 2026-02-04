@@ -161,7 +161,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#costsource">CostSource</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html#costsource">CostSource</a></td>
-<td>Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).</td>
+<td>Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document. <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#creationtime">CreationTime</a></td>
@@ -206,27 +206,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isscrap">IsScrap</a></td>
 <td>boolean</td>
-<td>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.</td>
+<td>False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isvalidfield">IsValidField</a></td>
 <td>boolean</td>
-<td>Managed by the system and used only for integrity purposes. Do not use.</td>
+<td>Managed by the system and used only for integrity purposes. Do not use. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#movementtype">MovementType</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html#movementtype">MovementType</a></td>
-<td>Transaction movement type. R=RECEIPT, I=ISSUE</td>
+<td>Transaction movement type. R=RECEIPT, I=ISSUE. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -323,7 +323,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency in which the document amounts are recorded.</td>
+<td>The currency in which the document amounts are recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#documenttype">DocumentType</a></td>
@@ -353,7 +353,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#issuingperson">IssuingPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person, responsible for the issuing of the document.</td>
+<td>The person, responsible for the issuing of the document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#masterdocument">MasterDocument</a></td>
@@ -368,7 +368,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#parentstoreorder">ParentStoreOrder</a></td>
 <td><a href="Logistics.Inventory.StoreOrders.html">StoreOrders</a> (nullable)</td>
-<td>The parent (generating) store order. Deprecated, use the Parent Document reference.</td>
+<td>The parent (generating) store order. Deprecated, use the Parent Document reference. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -378,7 +378,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#receivingperson">ReceivingPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person, to which the document was sent.</td>
+<td>The person, to which the document was sent. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#responsibleperson">ResponsiblePerson</a></td>
@@ -393,7 +393,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#scraptype">ScrapType</a></td>
 <td><a href="Logistics.Inventory.ScrapTypes.html">ScrapTypes</a> (nullable)</td>
-<td>Type of scrap (scrap reason). NULL if the transaction is not scrap</td>
+<td>Type of scrap (scrap reason). null if the transaction is not scrap. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#sequence">Sequence</a></td>
@@ -403,7 +403,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>The store from which the goods are received or issued.</td>
+<td>The store from which the goods are received or issued. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -558,7 +558,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="costsource">CostSource</h3>
-<p>Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).</p>
+<p>Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document. <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactions.html#costsource">CostSource</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>CostSource</code>(Logistics.Inventory.StoreTransactions.md#costsource) data attribute<br>
@@ -657,7 +657,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -665,7 +665,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isscrap">IsScrap</h3>
-<p>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.</p>
+<p>False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -673,7 +673,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -681,7 +681,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isvalidfield">IsValidField</h3>
-<p>Managed by the system and used only for integrity purposes. Do not use.</p>
+<p>Managed by the system and used only for integrity purposes. Do not use. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -689,7 +689,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="movementtype">MovementType</h3>
-<p>Transaction movement type. R=RECEIPT, I=ISSUE</p>
+<p>Transaction movement type. R=RECEIPT, I=ISSUE. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactions.html#movementtype">MovementType</a></strong><br>
 Category: <strong>System</strong><br>
 Specifies the movement type (direction) of a warehouse document.<br>
@@ -967,7 +967,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency in which the document amounts are recorded.</p>
+<p>The currency in which the document amounts are recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1005,7 +1005,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issuingperson">IssuingPerson</h3>
-<p>The person, responsible for the issuing of the document.</p>
+<p>The person, responsible for the issuing of the document. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1025,7 +1025,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentstoreorder">ParentStoreOrder</h3>
-<p>The parent (generating) store order. Deprecated, use the Parent Document reference.</p>
+<p>The parent (generating) store order. Deprecated, use the Parent Document reference. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreOrders.html">StoreOrders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1039,7 +1039,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="receivingperson">ReceivingPerson</h3>
-<p>The person, to which the document was sent.</p>
+<p>The person, to which the document was sent. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1057,7 +1057,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="scraptype">ScrapType</h3>
-<p>Type of scrap (scrap reason). NULL if the transaction is not scrap</p>
+<p>Type of scrap (scrap reason). null if the transaction is not scrap. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.ScrapTypes.html">ScrapTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1069,7 +1069,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The store from which the goods are received or issued.</p>
+<p>The store from which the goods are received or issued. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -37,13 +37,13 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTime](Logistics.Procurement.Suppliers.md#creationtime) | datetime __nullable__ | Date and time when the Supplier was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Logistics.Procurement.Suppliers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Supplier. `Filter(like)` `ReadOnly` 
-| [DefaultDeliveryTermDays](Logistics.Procurement.Suppliers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sending the purchase order 
-| [DefaultPaymentStartDays](Logistics.Procurement.Suppliers.md#defaultpaymentstartdays) | int32 | Number of days until the payment becomes executable. 0 means that the payment is executable at all times. 
-| [DefaultPaymentTermDays](Logistics.Procurement.Suppliers.md#defaultpaymenttermdays) | int32 | Default payment term in days, starting from the date of receiving the invoice 
-| [FromDate](Logistics.Procurement.Suppliers.md#fromdate) | datetime __nullable__ | The date on which this party became a supplier or the date, when the supplier contract was signed. 
-| [IsActive](Logistics.Procurement.Suppliers.md#isactive) | boolean | Indicates whether the current supplier is active. 
-| [Number](Logistics.Procurement.Suppliers.md#number) | string (16) __nullable__ | The unique supplier number. 
-| [ThruDate](Logistics.Procurement.Suppliers.md#thrudate) | datetime __nullable__ | The date (inclusive) on which this party ceased to be a supplier. 
+| [DefaultDeliveryTermDays](Logistics.Procurement.Suppliers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sending the purchase order. `Required` `Default(0)` 
+| [DefaultPaymentStartDays](Logistics.Procurement.Suppliers.md#defaultpaymentstartdays) | int32 | Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. `Required` `Default(0)` 
+| [DefaultPaymentTermDays](Logistics.Procurement.Suppliers.md#defaultpaymenttermdays) | int32 | Default payment term in days, starting from the date of receiving the invoice. `Required` `Default(0)` 
+| [FromDate](Logistics.Procurement.Suppliers.md#fromdate) | datetime __nullable__ | The date on which this party became a supplier or the date, when the supplier contract was signed. `Filter(ge;le)` 
+| [IsActive](Logistics.Procurement.Suppliers.md#isactive) | boolean | Indicates whether the current supplier is active. `Required` `Default(true)` `Filter(eq)` 
+| [Number](Logistics.Procurement.Suppliers.md#number) | string (16) __nullable__ | The unique supplier number. `Filter(eq;like)` `ORD` 
+| [ThruDate](Logistics.Procurement.Suppliers.md#thrudate) | datetime __nullable__ | The date (inclusive) on which this party ceased to be a supplier. `Filter(ge;le)` 
 | [UpdateTime](Logistics.Procurement.Suppliers.md#updatetime) | datetime __nullable__ | Date and time when the Supplier was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Logistics.Procurement.Suppliers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Supplier. `Filter(like)` `ReadOnly` 
 
@@ -51,13 +51,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultCurrency](Logistics.Procurement.Suppliers.md#defaultcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The default currency for purchases from this supplier. NULL means there is no default |
-| [DefaultPaymentAccount](Logistics.Procurement.Suppliers.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account which should be used for new purchase document for this supplier. |
-| [DefaultPaymentType](Logistics.Procurement.Suppliers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null, specifies the default payment type which should be used for new purchase document for this supplier. |
-| [DefaultPurchasePriceList](Logistics.Procurement.Suppliers.md#defaultpurchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The default purchase price list, which shall be used for new purchase documents for this supplier. |
+| [DefaultCurrency](Logistics.Procurement.Suppliers.md#defaultcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The default currency for purchases from this supplier. null means there is no default. `Filter(multi eq)` |
+| [DefaultPaymentAccount](Logistics.Procurement.Suppliers.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | When not null, specifies the default payment account which should be used for new purchase document for this supplier. `Filter(multi eq)` |
+| [DefaultPaymentType](Logistics.Procurement.Suppliers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | When not null, specifies the default payment type which should be used for new purchase document for this supplier. `Filter(multi eq)` |
+| [DefaultPurchasePriceList](Logistics.Procurement.Suppliers.md#defaultpurchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | The default purchase price list, which shall be used for new purchase documents for this supplier. `Filter(multi eq)` |
 | [EnterpriseCompany](Logistics.Procurement.Suppliers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
-| [Party](Logistics.Procurement.Suppliers.md#party) | [Parties](General.Contacts.Parties.md) | The party who is the supplier for the enterprise company. |
-| [SupplierType](Logistics.Procurement.Suppliers.md#suppliertype) | [SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable) | When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. |
+| [Party](Logistics.Procurement.Suppliers.md#party) | [Parties](General.Contacts.Parties.md) | The party who is the supplier for the enterprise company. `Required` `Filter(multi eq)` `FilterableReference` |
+| [SupplierType](Logistics.Procurement.Suppliers.md#suppliertype) | [SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable) | When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -97,7 +97,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultDeliveryTermDays
 
-Default term in days for goods delivery, starting at the day of sending the purchase order
+Default term in days for goods delivery, starting at the day of sending the purchase order. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentStartDays
 
-Number of days until the payment becomes executable. 0 means that the payment is executable at all times.
+Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentTermDays
 
-Default payment term in days, starting from the date of receiving the invoice
+Default payment term in days, starting from the date of receiving the invoice. `Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-The date on which this party became a supplier or the date, when the supplier contract was signed.
+The date on which this party became a supplier or the date, when the supplier contract was signed. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current supplier is active.
+Indicates whether the current supplier is active. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### Number
 
-The unique supplier number.
+The unique supplier number. `Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -166,7 +166,7 @@ Back-End Default Expression:
 
 ### ThruDate
 
-The date (inclusive) on which this party ceased to be a supplier.
+The date (inclusive) on which this party ceased to be a supplier. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -259,7 +259,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultCurrency
 
-The default currency for purchases from this supplier. NULL means there is no default
+The default currency for purchases from this supplier. null means there is no default. `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -268,7 +268,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentAccount
 
-When not null, specifies the default payment account which should be used for new purchase document for this supplier.
+When not null, specifies the default payment account which should be used for new purchase document for this supplier. `Filter(multi eq)`
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -277,7 +277,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentType
 
-When not null, specifies the default payment type which should be used for new purchase document for this supplier.
+When not null, specifies the default payment type which should be used for new purchase document for this supplier. `Filter(multi eq)`
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -286,7 +286,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPurchasePriceList
 
-The default purchase price list, which shall be used for new purchase documents for this supplier.
+The default purchase price list, which shall be used for new purchase documents for this supplier. `Filter(multi eq)`
 
 Type: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-The party who is the supplier for the enterprise company.
+The party who is the supplier for the enterprise company. `Required` `Filter(multi eq)` `FilterableReference`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -315,7 +315,7 @@ Show in UI: **ShownByDefault**
 
 ### SupplierType
 
-When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records.
+When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. `Filter(multi eq)`
 
 Type: **[SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable)**  
 Category: **System**  

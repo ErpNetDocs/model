@@ -125,47 +125,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#description">Description</a></td>
 <td>string (50) <strong>nullable</strong></td>
-<td>The description of the discount that is shown to the operator when they should choose between different discounts</td>
+<td>The description of the discount that is shown to the operator when they should choose between different discounts. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#discountlevel">DiscountLevel</a></td>
 <td><a href="Crm.Pricing.LineDiscounts.html#discountlevel">DiscountLevel</a></td>
-<td>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.</td>
+<td>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Introduced in version 23.1.2.8</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#discountpercent">DiscountPercent</a></td>
 <td>decimal (7, 6)</td>
-<td>The discount percent that should be applied if all the matching criteria are met.</td>
+<td>The discount percent that should be applied if all the matching criteria are met. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Starting date of validity of the discount. NULL means no from date restriction</td>
+<td>Starting date of validity of the discount. null means no from date restriction. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Line Discount is active.</td>
+<td>Indicates whether the current Line Discount is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.2.5</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#maxquantity">MaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Apply the discount only if the quantity sold is equal to or less than the specified here.</td>
+<td>Apply the discount only if the quantity sold is equal to or less than the specified here. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#minquantity">MinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Apply the discount only if the quantity sold is equal to or more than the specified here.</td>
+<td>Apply the discount only if the quantity sold is equal to or more than the specified here. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#priority">Priority</a></td>
 <td><a href="Crm.Pricing.LineDiscounts.html#priority">Priority</a></td>
-<td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.</td>
+<td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. <code>Required</code> <code>Default(3)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever</td>
+<td>Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -182,57 +182,57 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#campaign">Campaign</a></td>
 <td><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</td>
-<td>Тhe marketing campaign to which the current definition belongs.</td>
+<td>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#customer">Customer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>Apply the discount only if this is the customer</td>
+<td>Apply the discount only if this is the customer. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#customertype">CustomerType</a></td>
 <td><a href="Crm.Sales.CustomerTypes.html">CustomerTypes</a> (nullable)</td>
-<td>Apply the discount only if the customer is of this customer type</td>
+<td>Apply the discount only if the customer is of this customer type. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#distributionchannel">DistributionChannel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
-<td>Apply the discount only when the sales document is on the specified channel</td>
+<td>Apply the discount only when the sales document is on the specified channel. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
-<td>The document amount type that is used as category for this discount. When specified, triggers the recording of the applied discount amount in the Document Distributed Amounts panel in sales orders.</td>
+<td>The document amount type that is used as category for this discount. When specified, triggers the recording of the applied discount amount in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>When not NULL, the policy is applied only for documents of the specified enterprise company</td>
+<td>When not null, the policy is applied only for documents of the specified enterprise company . <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>When set, the policy is applied only for documents of the specified enterprise company location.</td>
+<td>When set, the policy is applied only for documents of the specified enterprise company location. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#pricelist">PriceList</a></td>
 <td><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</td>
-<td>Apply the discount only if this price list is used</td>
+<td>Apply the discount only if this price list is used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>Apply the discount only when this specific product is sold</td>
+<td>Apply the discount only when this specific product is sold. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#productgroup">ProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
-<td>Apply the discount only if the product sold is contained in this product group or any of its sub-groups</td>
+<td>Apply the discount only if the product sold is contained in this product group or any of its sub-groups. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#targetgroup">TargetGroup</a></td>
 <td><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</td>
-<td>Apply the discount only if the customer is included in this target group</td>
+<td>Apply the discount only if the customer is included in this target group. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -280,7 +280,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<p>The description of the discount that is shown to the operator when they should choose between different discounts</p>
+<p>The description of the discount that is shown to the operator when they should choose between different discounts. <code>Filter(like)</code></p>
 <p>Type: <strong>string (50) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -288,7 +288,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="discountlevel">DiscountLevel</h3>
-<p>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.</p>
+<p>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Introduced in version 23.1.2.8</code></p>
 <p>Type: <strong><a href="Crm.Pricing.LineDiscounts.html#discountlevel">DiscountLevel</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>One</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="discountpercent">DiscountPercent</h3>
-<p>The discount percent that should be applied if all the matching criteria are met.</p>
+<p>The discount percent that should be applied if all the matching criteria are met. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -329,14 +329,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date of validity of the discount. NULL means no from date restriction</p>
+<p>Starting date of validity of the discount. null means no from date restriction. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Line Discount is active.</p>
+<p>Indicates whether the current Line Discount is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.2.5</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -344,21 +344,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
-<p>Apply the discount only if the quantity sold is equal to or less than the specified here.</p>
+<p>Apply the discount only if the quantity sold is equal to or less than the specified here. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
-<p>Apply the discount only if the quantity sold is equal to or more than the specified here.</p>
+<p>Apply the discount only if the quantity sold is equal to or more than the specified here. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.</p>
+<p>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. <code>Required</code> <code>Default(3)</code></p>
 <p>Type: <strong><a href="Crm.Pricing.LineDiscounts.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for Priority properties<br>
@@ -398,7 +398,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>3</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever</p>
+<p>Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -448,45 +448,45 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="campaign">Campaign</h3>
-<p>Тhe marketing campaign to which the current definition belongs.</p>
+<p>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></p>
 <p>Type: <strong><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customer">Customer</h3>
-<p>Apply the discount only if this is the customer</p>
+<p>Apply the discount only if this is the customer. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customertype">CustomerType</h3>
-<p>Apply the discount only if the customer is of this customer type</p>
+<p>Apply the discount only if the customer is of this customer type. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.CustomerTypes.html">CustomerTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="distributionchannel">DistributionChannel</h3>
-<p>Apply the discount only when the sales document is on the specified channel</p>
+<p>Apply the discount only when the sales document is on the specified channel. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The document amount type that is used as category for this discount. When specified, triggers the recording of the applied discount amount in the Document Distributed Amounts panel in sales orders.</p>
+<p>The document amount type that is used as category for this discount. When specified, triggers the recording of the applied discount amount in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.26</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>When not NULL, the policy is applied only for documents of the specified enterprise company</p>
+<p>When not null, the policy is applied only for documents of the specified enterprise company . <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>When set, the policy is applied only for documents of the specified enterprise company location.</p>
+<p>When set, the policy is applied only for documents of the specified enterprise company location. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -494,26 +494,26 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)</code></p>
 <h3 id="pricelist">PriceList</h3>
-<p>Apply the discount only if this price list is used</p>
+<p>Apply the discount only if this price list is used. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>Apply the discount only when this specific product is sold</p>
+<p>Apply the discount only when this specific product is sold. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<p>Apply the discount only if the product sold is contained in this product group or any of its sub-groups</p>
+<p>Apply the discount only if the product sold is contained in this product group or any of its sub-groups. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetgroup">TargetGroup</h3>
-<p>Apply the discount only if the customer is included in this target group</p>
+<p>Apply the discount only if the customer is included in this target group. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

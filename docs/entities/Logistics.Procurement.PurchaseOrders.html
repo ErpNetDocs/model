@@ -200,17 +200,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#invoicedocumentno">InvoiceDocumentNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>Contains the purchase invoice number when it is known in advance, null otherwise.</td>
+<td>Contains the purchase invoice number when it is known in advance, null otherwise. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#notes">Notes</a></td>
@@ -225,17 +225,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Due date for paying the order. NULL means to use the default, which is the document date.</td>
+<td>Due date for paying the order. null means to use the default, which is the document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#planneddeliverydate">PlannedDeliveryDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not null, specifies the planned delivery date for all lines.</td>
+<td>When not null, specifies the planned delivery date for all lines. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#plannedreleasedate">PlannedReleaseDate</a></td>
 <td>datetime</td>
-<td>The date, when the document is planned to be realeased and send to the supplier.</td>
+<td>The date, when the document is planned to be realeased and send to the supplier. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#planningonly">PlanningOnly</a></td>
@@ -327,7 +327,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The currency of the unit prices and amounts in the document.</td>
+<td>The currency of the unit prices and amounts in the document. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#documenttype">DocumentType</a></td>
@@ -367,12 +367,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>Payment account that is used for the payments of the deliveries for this purchase orders.</td>
+<td>Payment account that is used for the payments of the deliveries for this purchase orders. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>When not NULL specifies the payment type for the sales order</td>
+<td>When not null specifies the payment type for the sales order. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -382,7 +382,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#purchasepricelist">PurchasePriceList</a></td>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</td>
-<td>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</td>
+<td>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#responsibleperson">ResponsiblePerson</a></td>
@@ -402,12 +402,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store in which the goods are expected to be received.</td>
+<td>The store in which the goods are expected to be received. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#supplier">Supplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></td>
-<td>The supplier of the products.</td>
+<td>The supplier of the products. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrders.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -628,7 +628,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="invoicedocumentno">InvoiceDocumentNo</h3>
-<p>Contains the purchase invoice number when it is known in advance, null otherwise.</p>
+<p>Contains the purchase invoice number when it is known in advance, null otherwise. <code>Filter(eq)</code></p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -636,7 +636,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -644,7 +644,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -691,7 +691,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>Due date for paying the order. NULL means to use the default, which is the document date.</p>
+<p>Due date for paying the order. null means to use the default, which is the document date. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -700,7 +700,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))</code></p>
 <h3 id="planneddeliverydate">PlannedDeliveryDate</h3>
-<p>When not null, specifies the planned delivery date for all lines.</p>
+<p>When not null, specifies the planned delivery date for all lines. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -710,7 +710,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <code>obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))</code>
 <code>obj.Lines.Select( c =&gt; PurchaseOrderLinesRepository.PlannedDeliveryDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="plannedreleasedate">PlannedReleaseDate</h3>
-<p>The date, when the document is planned to be realeased and send to the supplier.</p>
+<p>The date, when the document is planned to be realeased and send to the supplier. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -938,7 +938,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency of the unit prices and amounts in the document.</p>
+<p>The currency of the unit prices and amounts in the document. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -992,7 +992,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>Payment account that is used for the payments of the deliveries for this purchase orders.</p>
+<p>Payment account that is used for the payments of the deliveries for this purchase orders. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1002,7 +1002,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>When not NULL specifies the payment type for the sales order</p>
+<p>When not null specifies the payment type for the sales order. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1017,7 +1017,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="purchasepricelist">PurchasePriceList</h3>
-<p>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</p>
+<p>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1043,13 +1043,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The store in which the goods are expected to be received.</p>
+<p>The store in which the goods are expected to be received. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="supplier">Supplier</h3>
-<p>The supplier of the products.</p>
+<p>The supplier of the products. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

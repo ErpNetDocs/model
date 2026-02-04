@@ -144,17 +144,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentParties.html#document">Document</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>The document in which the party plays a role.</td>
+<td>The document in which the party plays a role. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentParties.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party, which plays a role in the document.</td>
+<td>The party, which plays a role in the document. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentParties.html#role">Role</a></td>
 <td><a href="Systems.Documents.DocumentPartyRoles.html">DocumentPartyRoles</a></td>
-<td>The role of the party in the document.</td>
+<td>The role of the party in the document. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -217,20 +217,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The document in which the party plays a role.</p>
+<p>The document in which the party plays a role. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="party">Party</h3>
-<p>The party, which plays a role in the document.</p>
+<p>The party, which plays a role in the document. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="role">Role</h3>
-<p>The role of the party in the document.</p>
+<p>The role of the party in the document. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentPartyRoles.html">DocumentPartyRoles</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

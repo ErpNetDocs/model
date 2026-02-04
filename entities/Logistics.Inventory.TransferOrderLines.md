@@ -35,29 +35,29 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrentBalanceBase](Logistics.Inventory.TransferOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [DueDateIn](Logistics.Inventory.TransferOrderLines.md#duedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header 
-| [DueDateOut](Logistics.Inventory.TransferOrderLines.md#duedateout) | datetime | When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header 
-| [LineOrd](Logistics.Inventory.TransferOrderLines.md#lineord) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised 
+| [DueDateIn](Logistics.Inventory.TransferOrderLines.md#duedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header. `Required` `Filter(ge;le)` 
+| [DueDateOut](Logistics.Inventory.TransferOrderLines.md#duedateout) | datetime | When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header. `Required` `Filter(ge;le)` 
+| [LineOrd](Logistics.Inventory.TransferOrderLines.md#lineord) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised. `Required` 
 | [Notes](Logistics.Inventory.TransferOrderLines.md#notes) | string (254) __nullable__ | Notes for this TransferOrderLine. 
-| [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for transfer 
-| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update 
-| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
-| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the transfer order line 
+| [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for transfer. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
+| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the transfer order line. `Currency: TransferOrder.DocumentCurrency` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Inventory.TransferOrderLines.md#document) | [TransferOrders](Logistics.Inventory.TransferOrders.md) | The owner document. The parent transfer order. `Required` `Filter(multi eq)` |
-| [FromStoreBin](Logistics.Inventory.TransferOrderLines.md#fromstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable |
-| [Lot](Logistics.Inventory.TransferOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement |
-| [Product](Logistics.Inventory.TransferOrderLines.md#product) | [Products](General.Products.Products.md) | The product which will be transferred |
-| [ProductCode](Logistics.Inventory.TransferOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product through some of the product codes. |
-| [ProductVariant](Logistics.Inventory.TransferOrderLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. |
-| [QuantityUnit](Logistics.Inventory.TransferOrderLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity |
-| [SerialNumber](Logistics.Inventory.TransferOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product. NULL means that the serial number is unknown or not applicable. |
-| [ToStoreBin](Logistics.Inventory.TransferOrderLines.md#tostorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable |
-| [TransferOrder](Logistics.Inventory.TransferOrderLines.md#transferorder) | [TransferOrders](Logistics.Inventory.TransferOrders.md) | The parent transfer order |
+| [FromStoreBin](Logistics.Inventory.TransferOrderLines.md#fromstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)` |
+| [Lot](Logistics.Inventory.TransferOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` |
+| [Product](Logistics.Inventory.TransferOrderLines.md#product) | [Products](General.Products.Products.md) | The product which will be transferred. `Required` `Filter(multi eq)` |
+| [ProductCode](Logistics.Inventory.TransferOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
+| [ProductVariant](Logistics.Inventory.TransferOrderLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` |
+| [QuantityUnit](Logistics.Inventory.TransferOrderLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
+| [SerialNumber](Logistics.Inventory.TransferOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` |
+| [ToStoreBin](Logistics.Inventory.TransferOrderLines.md#tostorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)` |
+| [TransferOrder](Logistics.Inventory.TransferOrderLines.md#transferorder) | [TransferOrders](Logistics.Inventory.TransferOrders.md) | The parent transfer order. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -83,7 +83,7 @@ Show in UI: **HiddenByDefault**
 
 ### DueDateIn
 
-The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header
+The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -98,7 +98,7 @@ Front-End Recalc Expressions:
 `obj.TransferOrder.DefaultDueDateIn`
 ### DueDateOut
 
-When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header
+When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -113,7 +113,7 @@ Front-End Recalc Expressions:
 `obj.TransferOrder.DefaultDueDateOut`
 ### LineOrd
 
-Line ordinal position within the transaction. Duplicates are allowed, but not advised
+Line ordinal position within the transaction. Duplicates are allowed, but not advised. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-Quantity ordered for transfer
+Quantity ordered for transfer. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update
+Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -180,7 +180,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardUnitPrice
 
-Standard unit price of the product during the creation of the transfer order line
+Standard unit price of the product during the creation of the transfer order line. `Currency: TransferOrder.DocumentCurrency`
 
 Type: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -234,7 +234,7 @@ Show in UI: **ShownByDefault**
 
 ### FromStoreBin
 
-From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable
+From which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -243,7 +243,7 @@ Show in UI: **HiddenByDefault**
 
 ### Lot
 
-If non-null, contains the specific lot to use for the movement
+If non-null, contains the specific lot to use for the movement. `Filter(multi eq)`
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -252,7 +252,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The product which will be transferred
+The product which will be transferred. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -264,7 +264,7 @@ Front-End Recalc Expressions:
 `obj.ProductCode.Product.IfNullThen( obj.Product)`
 ### ProductCode
 
-Selects the product through some of the product codes.
+Selects the product thru some of the product codes. `Filter(multi eq)`
 
 Type: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 Category: **System**  
@@ -275,7 +275,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Product != null) AndAlso ( obj.ProductCode != null)) AndAlso ( obj.Product != obj.ProductCode.Product)), null, obj.ProductCode)`
 ### ProductVariant
 
-If specified determines which product variant of the current product in this line is used.
+If specified determines which product variant of the current product in this line is used. `Filter(multi eq)`
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -284,7 +284,7 @@ Show in UI: **HiddenByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity
+The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -295,7 +295,7 @@ Front-End Recalc Expressions:
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit))`
 ### SerialNumber
 
-Serial number of the product. NULL means that the serial number is unknown or not applicable.
+Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)`
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToStoreBin
 
-To which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable
+To which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)`
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -313,7 +313,7 @@ Show in UI: **HiddenByDefault**
 
 ### TransferOrder
 
-The parent transfer order
+The parent transfer order. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[TransferOrders](Logistics.Inventory.TransferOrders.md)**  
 Indexed: **True**  

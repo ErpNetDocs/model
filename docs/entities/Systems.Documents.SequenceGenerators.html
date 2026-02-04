@@ -126,17 +126,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.SequenceGenerators.html#allowexplicitnumbering">AllowExplicitNumbering</a></td>
 <td>boolean</td>
-<td>Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.</td>
+<td>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). <code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.SequenceGenerators.html#nextvalue">NextValue</a></td>
 <td>string (16)</td>
-<td>The next number that will be issued by the sequence</td>
+<td>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.SequenceGenerators.html#sequencepriority">SequencePriority</a></td>
 <td>int32</td>
-<td>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True</td>
+<td>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.SequenceGenerators.html#responsibleperson">ResponsiblePerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>If this column is filled then the generator is designated for use only in documents with the specified responsible person.</td>
+<td>If specified then the generator is designated for use only in documents with that Responsible_Person_Id. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.SequenceGenerators.html#sequence">Sequence</a></td>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowexplicitnumbering">AllowExplicitNumbering</h3>
-<p>Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.</p>
+<p>Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). <code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="nextvalue">NextValue</h3>
-<p>The next number that will be issued by the sequence</p>
+<p>The next number that will be issued by the sequence. <code>Required</code> <code>Default(&quot;0000000001&quot;)</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -218,7 +218,7 @@ Maximum Length: <strong>16</strong><br>
 Default Value: <strong>0000000001</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sequencepriority">SequencePriority</h3>
-<p>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True</p>
+<p>The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -260,7 +260,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
-<p>If this column is filled then the generator is designated for use only in documents with the specified responsible person.</p>
+<p>If specified then the generator is designated for use only in documents with that Responsible_Person_Id. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

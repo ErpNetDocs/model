@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#dayno">DayNo</a></td>
 <td>int32</td>
-<td>Consequtive day in the work schedule recurrence, starting at 1</td>
+<td>Consequtive day in the work schedule recurrence, starting at 1. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#endtime">EndTime</a></td>
 <td>time</td>
-<td>End of working time period</td>
+<td>End of working time period. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#starttime">StartTime</a></td>
 <td>time</td>
-<td>Start of working time period on the day, specified by Day_No</td>
+<td>Start of working time period on the day, specified by Day_No. <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,21 +181,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dayno">DayNo</h3>
-<p>Consequtive day in the work schedule recurrence, starting at 1</p>
+<p>Consequtive day in the work schedule recurrence, starting at 1. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>End of working time period</p>
+<p>End of working time period. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>Start of working time period on the day, specified by Day_No</p>
+<p>Start of working time period on the day, specified by Day_No. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

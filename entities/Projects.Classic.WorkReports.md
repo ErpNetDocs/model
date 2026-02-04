@@ -59,8 +59,8 @@ Aggregate Tree
 | [DocumentVersion](Projects.Classic.WorkReports.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Projects.Classic.WorkReports.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Projects.Classic.WorkReports.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Projects.Classic.WorkReports.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Projects.Classic.WorkReports.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Projects.Classic.WorkReports.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Projects.Classic.WorkReports.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Projects.Classic.WorkReports.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Projects.Classic.WorkReports.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Projects.Classic.WorkReports.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Projects.Classic.WorkReports.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -90,8 +90,8 @@ Aggregate Tree
 | [MasterDocument](Projects.Classic.WorkReports.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Projects.Classic.WorkReports.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Projects.Classic.WorkReports.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Project](Projects.Classic.WorkReports.md#project) | [Projects](Projects.Classic.Projects.md) | The project for which the work report is recorded. |
-| [ProjectTask](Projects.Classic.WorkReports.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks. |
+| [Project](Projects.Classic.WorkReports.md#project) | [Projects](Projects.Classic.Projects.md) | The project for which the work report is recorded. `Required` `Filter(multi eq)` |
+| [ProjectTask](Projects.Classic.WorkReports.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work report is recorded. null means that the report contains entries for many project tasks. `Filter(multi eq)` |
 | [ResponsiblePerson](Projects.Classic.WorkReports.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Projects.Classic.WorkReports.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Projects.Classic.WorkReports.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -264,7 +264,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -623,7 +623,7 @@ Show in UI: **HiddenByDefault**
 
 ### Project
 
-The project for which the work report is recorded.
+The project for which the work report is recorded. `Required` `Filter(multi eq)`
 
 Type: **[Projects](Projects.Classic.Projects.md)**  
 Category: **System**  
@@ -632,7 +632,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTask
 
-The project task for which the work report is recorded. NULL means that the report contains entries for many project tasks.
+The project task for which the work report is recorded. null means that the report contains entries for many project tasks. `Filter(multi eq)`
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable)**  
 Category: **System**  

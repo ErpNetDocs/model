@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.</td>
+<td>Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#notes">Notes</a></td>
@@ -136,12 +136,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. <code>Introduced in version 22.1.6.32</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#quantity">Quantity</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of excise stamps that are processed with the current operation.</td>
+<td>The number of excise stamps that are processed with the current operation. <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#startnumber">StartNumber</a></td>
@@ -168,12 +168,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#exciseproducttype">ExciseProductType</a></td>
 <td><a href="Regulatory.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</td>
-<td>Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen.</td>
+<td>Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.46</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#excisestamplot">ExciseStampLot</a></td>
 <td><a href="Regulatory.Excise.ExciseStampLots.html">ExciseStampLots</a> (nullable)</td>
-<td>The lot of the excise stamps.</td>
+<td>The lot of the excise stamps. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#excisestampoperation">ExciseStampOperation</a></td>
@@ -183,12 +183,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.32</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The product for which the operation is applied. When is NULL then there is no product yet.</td>
+<td>The product for which the operation is applied. When is null then there is no product yet. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -231,7 +231,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>Format( &quot;{0}&quot;, Convert( ( ( Convert( Parse( obj.StartNumber), Nullable</code>1) + Convert( obj.Quantity, Nullable<code>1)) - Convert( Convert( 1, Int64), Nullable</code>1)), Object)).PadLeft( obj.StartNumber.Trim( ).Length, 0)`</p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.</p>
+<p>Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -250,14 +250,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. <code>Introduced in version 22.1.6.32</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The number of excise stamps that are processed with the current operation.</p>
+<p>The number of excise stamps that are processed with the current operation. <code>Default(0)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -306,7 +306,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="exciseproducttype">ExciseProductType</h3>
-<p>Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen.</p>
+<p>Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.46</code></p>
 <p>Type: <strong><a href="Regulatory.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -314,7 +314,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.Product != null), obj.Product.ExciseProductType, null)</code></p>
 <h3 id="excisestamplot">ExciseStampLot</h3>
-<p>The lot of the excise stamps.</p>
+<p>The lot of the excise stamps. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Regulatory.Excise.ExciseStampLots.html">ExciseStampLots</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -329,13 +329,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.32</code></p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product for which the operation is applied. When is NULL then there is no product yet.</p>
+<p>The product for which the operation is applied. When is null then there is no product yet. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

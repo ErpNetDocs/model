@@ -126,7 +126,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.TaskTypes.html#displayorder">DisplayOrder</a></td>
 <td>int32</td>
-<td>Display order position of the task. Lowest numbers are shown first (on top).</td>
+<td>Display order position of the task. Lowest numbers are shown first (on top). <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.TaskTypes.html#icon">Icon</a></td>
@@ -136,7 +136,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.TaskTypes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (max)</a></td>
-<td>The multilanguage task type name.</td>
+<td>The multilanguage task type name. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.TaskTypes.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.Classic.ProjectTypes.html">ProjectTypes</a> (nullable)</td>
-<td>When not NULL, specifies that this task type can be used only for projects of the specified type.</td>
+<td>When not null, specifies that this task type can be used only for projects of the specified type. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -208,7 +208,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="displayorder">DisplayOrder</h3>
-<p>Display order position of the task. Lowest numbers are shown first (on top).</p>
+<p>Display order position of the task. Lowest numbers are shown first (on top). <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -223,7 +223,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The multilanguage task type name.</p>
+<p>The multilanguage task type name. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (max)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -273,7 +273,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="projecttype">ProjectType</h3>
-<p>When not NULL, specifies that this task type can be used only for projects of the specified type.</p>
+<p>When not null, specifies that this task type can be used only for projects of the specified type. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTypes.html">ProjectTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -34,38 +34,38 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompanyName](Crm.Presales.Leads.md#companyname) | string (64) __nullable__ | The name of the company, which the person works for (in relation to the current lead). 
-| [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created. 
-| [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). 
-| [Notes](Crm.Presales.Leads.md#notes) | string (max) __nullable__ | Additional information or comments. 
-| [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person. 
-| [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead. 
-| [PersonLastName](Crm.Presales.Leads.md#personlastname) | string (64) __nullable__ | The last name of the person, representing the sales lead. 
-| [PersonMobilePhone](Crm.Presales.Leads.md#personmobilephone) | string (32) __nullable__ | The mobile phone of the sales lead person. 
-| [PersonSalutation](Crm.Presales.Leads.md#personsalutation) | string (16) __nullable__ | Salutation for the sales lead person. 
-| [PersonWebProfile](Crm.Presales.Leads.md#personwebprofile) | string (64) __nullable__ | Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. 
-| [PersonWorkPhone](Crm.Presales.Leads.md#personworkphone) | string (32) __nullable__ | The work phone of the sales lead person. 
-| [RoleInCompany](Crm.Presales.Leads.md#roleincompany) | string (32) __nullable__ | The role of the person in the company. 
-| [SQLTimestampUtc](Crm.Presales.Leads.md#sqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. 
-| [SystemStage](Crm.Presales.Leads.md#systemstage) | [SystemStage](Crm.Presales.Leads.md#systemstage) | The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO) 
+| [CompanyName](Crm.Presales.Leads.md#companyname) | string (64) __nullable__ | The name of the company, which the person works for (in relation to the current lead). `Filter(eq;like)` 
+| [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created. `Required` `Filter(ge;le)` `ReadOnly` 
+| [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly` 
+| [Notes](Crm.Presales.Leads.md#notes) | string (max) __nullable__ | Additional information or comments. `Filter(like)` `Introduced in version 25.1.2.6` 
+| [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person. `Filter(eq;like)` 
+| [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead. `Filter(eq;like)` 
+| [PersonLastName](Crm.Presales.Leads.md#personlastname) | string (64) __nullable__ | The last name of the person, representing the sales lead. `Filter(eq;like)` 
+| [PersonMobilePhone](Crm.Presales.Leads.md#personmobilephone) | string (32) __nullable__ | The mobile phone of the sales lead person. `Filter(like)` 
+| [PersonSalutation](Crm.Presales.Leads.md#personsalutation) | string (16) __nullable__ | Salutation for the sales lead person. `Filter(eq;like)` 
+| [PersonWebProfile](Crm.Presales.Leads.md#personwebprofile) | string (64) __nullable__ | Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. `Filter(like)` 
+| [PersonWorkPhone](Crm.Presales.Leads.md#personworkphone) | string (32) __nullable__ | The work phone of the sales lead person. `Filter(like)` 
+| [RoleInCompany](Crm.Presales.Leads.md#roleincompany) | string (32) __nullable__ | The role of the person in the company. `Filter(eq;like)` 
+| [SQLTimestampUtc](Crm.Presales.Leads.md#sqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. `Filter(ge;le)` `ReadOnly` 
+| [SystemStage](Crm.Presales.Leads.md#systemstage) | [SystemStage](Crm.Presales.Leads.md#systemstage) | The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). `Required` `Default("NEW")` `Filter(multi eq)` `ReadOnly` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignedToSalesPerson](Crm.Presales.Leads.md#assignedtosalesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Sales rep to whom this lead is assigned for further processing. NULL - not yet assigned. |
-| [Campaign](Crm.Presales.Leads.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) | The marketing campaign under which the lead was generated. |
-| [ConvertedToDeal](Crm.Presales.Leads.md#convertedtodeal) | [Deals](Crm.Presales.Deals.md) (nullable) | Filled when the lead is converted to opportunity (deal). |
-| [EnterpriseCompany](Crm.Presales.Leads.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this lead belongs. |
-| [EnterpriseCompanyLocation](Crm.Presales.Leads.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location to which this lead belongs. |
-| [IdentifiedCompany](Crm.Presales.Leads.md#identifiedcompany) | [Companies](General.Contacts.Companies.md) (nullable) | Filled when the company is identified within our database. |
-| [IdentifiedPerson](Crm.Presales.Leads.md#identifiedperson) | [Persons](General.Contacts.Persons.md) (nullable) | Filled when the person is identified and recorded in our master records. |
-| [LeadUserStage](Crm.Presales.Leads.md#leaduserstage) | [LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable) | The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. NULL when the user stage is undefined (the pure System Stage defines the stage). |
-| [MarketingCompanySize](Crm.Presales.Leads.md#marketingcompanysize) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | The size class of the company. |
-| [MarketingIndustry](Crm.Presales.Leads.md#marketingindustry) | [Industries](Crm.Marketing.Industries.md) (nullable) | The industry (for marketing purposes) of the lead. |
-| [MarketingSolution](Crm.Presales.Leads.md#marketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | The marketing solution, in which the lead is interested or which generated the lead. |
-| [OwnerUser](Crm.Presales.Leads.md#owneruser) | [Users](Systems.Security.Users.md) | The user, responsible for this record. |
-| [SalesArea](Crm.Presales.Leads.md#salesarea) | [Areas](General.Geography.Areas.md) (nullable) | The sales area, where the lead is located, when it is identified. This should also indicate the Time Zone. |
+| [AssignedToSalesPerson](Crm.Presales.Leads.md#assignedtosalesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | Sales rep to whom this lead is assigned for further processing. null - not yet assigned. `Filter(multi eq)` |
+| [Campaign](Crm.Presales.Leads.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) | The marketing campaign under which the lead was generated. `Required` `Filter(multi eq)` |
+| [ConvertedToDeal](Crm.Presales.Leads.md#convertedtodeal) | [Deals](Crm.Presales.Deals.md) (nullable) | Filled when the lead is converted to opportunity (deal). `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Presales.Leads.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this lead belongs. `Required` `Filter(multi eq)` `Introduced in version 22.1.5.23` |
+| [EnterpriseCompanyLocation](Crm.Presales.Leads.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location to which this lead belongs. `Filter(multi eq)` `Introduced in version 22.1.6.41` |
+| [IdentifiedCompany](Crm.Presales.Leads.md#identifiedcompany) | [Companies](General.Contacts.Companies.md) (nullable) | Filled when the company is identified within our database. `Filter(multi eq)` |
+| [IdentifiedPerson](Crm.Presales.Leads.md#identifiedperson) | [Persons](General.Contacts.Persons.md) (nullable) | Filled when the person is identified and recorded in our master records. `Filter(multi eq)` |
+| [LeadUserStage](Crm.Presales.Leads.md#leaduserstage) | [LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable) | The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)` `ReadOnly` |
+| [MarketingCompanySize](Crm.Presales.Leads.md#marketingcompanysize) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | The size class of the company. `Filter(multi eq)` |
+| [MarketingIndustry](Crm.Presales.Leads.md#marketingindustry) | [Industries](Crm.Marketing.Industries.md) (nullable) | The industry (for marketing purposes) of the lead. `Filter(multi eq)` |
+| [MarketingSolution](Crm.Presales.Leads.md#marketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | The marketing solution, in which the lead is interested or which generated the lead. `Filter(multi eq)` |
+| [OwnerUser](Crm.Presales.Leads.md#owneruser) | [Users](Systems.Security.Users.md) | The user, responsible for this record. `Required` `Filter(multi eq)` |
+| [SalesArea](Crm.Presales.Leads.md#salesarea) | [Areas](General.Geography.Areas.md) (nullable) | The sales area, where the lead is located, when it is identified. This should also indicate the Time Zone. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -84,7 +84,7 @@ Aggregate Tree
 
 ### CompanyName
 
-The name of the company, which the person works for (in relation to the current lead).
+The name of the company, which the person works for (in relation to the current lead). `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimestampUtc
 
-System assigned date and time (in UTC), when the lead was initially created.
+System assigned date and time (in UTC), when the lead was initially created. `Required` `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -108,7 +108,7 @@ Back-End Default Expression:
 
 ### MQLTimestampUtc
 
-System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).
+System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments.
+Additional information or comments. `Filter(like)` `Introduced in version 25.1.2.6`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonEmail
 
-The email address of the sales lead person.
+The email address of the sales lead person. `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonFirstName
 
-The first name of the person, representing the sales lead.
+The first name of the person, representing the sales lead. `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonLastName
 
-The last name of the person, representing the sales lead.
+The last name of the person, representing the sales lead. `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonMobilePhone
 
-The mobile phone of the sales lead person.
+The mobile phone of the sales lead person. `Filter(like)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonSalutation
 
-Salutation for the sales lead person.
+Salutation for the sales lead person. `Filter(eq;like)`
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonWebProfile
 
-Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.
+Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. `Filter(like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonWorkPhone
 
-The work phone of the sales lead person.
+The work phone of the sales lead person. `Filter(like)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### RoleInCompany
 
-The role of the person in the company.
+The role of the person in the company. `Filter(eq;like)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### SQLTimestampUtc
 
-System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.
+System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -227,7 +227,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemStage
 
-The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)
+The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). `Required` `Default("NEW")` `Filter(multi eq)` `ReadOnly`
 
 Type: **[SystemStage](Crm.Presales.Leads.md#systemstage)**  
 Category: **System**  
@@ -311,7 +311,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssignedToSalesPerson
 
-Sales rep to whom this lead is assigned for further processing. NULL - not yet assigned.
+Sales rep to whom this lead is assigned for further processing. null - not yet assigned. `Filter(multi eq)`
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable)**  
 Category: **System**  
@@ -320,7 +320,7 @@ Show in UI: **ShownByDefault**
 
 ### Campaign
 
-The marketing campaign under which the lead was generated.
+The marketing campaign under which the lead was generated. `Required` `Filter(multi eq)`
 
 Type: **[Campaigns](Crm.Marketing.Campaigns.md)**  
 Indexed: **True**  
@@ -330,7 +330,7 @@ Show in UI: **ShownByDefault**
 
 ### ConvertedToDeal
 
-Filled when the lead is converted to opportunity (deal).
+Filled when the lead is converted to opportunity (deal). `Filter(multi eq)`
 
 Type: **[Deals](Crm.Presales.Deals.md) (nullable)**  
 Category: **System**  
@@ -339,7 +339,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company to which this lead belongs.
+The enterprise company to which this lead belongs. `Required` `Filter(multi eq)` `Introduced in version 22.1.5.23`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -348,7 +348,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location to which this lead belongs.
+The enterprise company location to which this lead belongs. `Filter(multi eq)` `Introduced in version 22.1.6.41`
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
@@ -357,7 +357,7 @@ Show in UI: **ShownByDefault**
 
 ### IdentifiedCompany
 
-Filled when the company is identified within our database.
+Filled when the company is identified within our database. `Filter(multi eq)`
 
 Type: **[Companies](General.Contacts.Companies.md) (nullable)**  
 Category: **System**  
@@ -366,7 +366,7 @@ Show in UI: **ShownByDefault**
 
 ### IdentifiedPerson
 
-Filled when the person is identified and recorded in our master records.
+Filled when the person is identified and recorded in our master records. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -375,7 +375,7 @@ Show in UI: **ShownByDefault**
 
 ### LeadUserStage
 
-The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. NULL when the user stage is undefined (the pure System Stage defines the stage).
+The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)` `ReadOnly`
 
 Type: **[LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable)**  
 Indexed: **True**  
@@ -385,7 +385,7 @@ Show in UI: **ShownByDefault**
 
 ### MarketingCompanySize
 
-The size class of the company.
+The size class of the company. `Filter(multi eq)`
 
 Type: **[CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable)**  
 Category: **System**  
@@ -394,7 +394,7 @@ Show in UI: **ShownByDefault**
 
 ### MarketingIndustry
 
-The industry (for marketing purposes) of the lead.
+The industry (for marketing purposes) of the lead. `Filter(multi eq)`
 
 Type: **[Industries](Crm.Marketing.Industries.md) (nullable)**  
 Category: **System**  
@@ -403,7 +403,7 @@ Show in UI: **ShownByDefault**
 
 ### MarketingSolution
 
-The marketing solution, in which the lead is interested or which generated the lead.
+The marketing solution, in which the lead is interested or which generated the lead. `Filter(multi eq)`
 
 Type: **[MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable)**  
 Category: **System**  
@@ -412,7 +412,7 @@ Show in UI: **ShownByDefault**
 
 ### OwnerUser
 
-The user, responsible for this record.
+The user, responsible for this record. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  
@@ -421,7 +421,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesArea
 
-The sales area, where the lead is located, when it is identified. This should also indicate the Time Zone.
+The sales area, where the lead is located, when it is identified. This should also indicate the Time Zone. `Filter(multi eq)`
 
 Type: **[Areas](General.Geography.Areas.md) (nullable)**  
 Category: **System**  

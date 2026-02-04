@@ -128,12 +128,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#budgetlaboramount">BudgetLaborAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></td>
-<td>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated</td>
+<td>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. <code>Currency: Project.BudgetingCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#finishdatetime">FinishDateTime</a></td>
 <td>datetime</td>
-<td>The date and time when the task is planned to finish.</td>
+<td>The date and time when the task is planned to finish. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#notes">Notes</a></td>
@@ -143,22 +143,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#planneddurationhours">PlannedDurationHours</a></td>
 <td>decimal (8, 2)</td>
-<td>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.</td>
+<td>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#projecttaskno">ProjectTaskNo</a></td>
 <td>int32</td>
-<td>Consecutive task number, unique within the project.</td>
+<td>Consecutive task number, unique within the project. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#startdatetime">StartDateTime</a></td>
 <td>datetime</td>
-<td>The date and time when the task is planned to start.</td>
+<td>The date and time when the task is planned to start. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#taskname">TaskName</a></td>
 <td>string (254)</td>
-<td>The short name of the task. It is best practice to contain the target of the task.</td>
+<td>The short name of the task. It is best practice to contain the target of the task. <code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -175,37 +175,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#activity">Activity</a></td>
 <td><a href="General.Activities.Activities.html">Activities</a> (nullable)</td>
-<td>The Id of the Cm_Activity created for this task. NULL means that activity is still not created</td>
+<td>The Id of the Cm_Activity created for this task. null means that activity is still not created. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#project">Project</a></td>
 <td><a href="Projects.Classic.Projects.html">Projects</a></td>
-<td>The project, to which this task belongs.</td>
+<td>The project, to which this task belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#projectworkelement">ProjectWorkElement</a></td>
 <td><a href="Projects.Classic.ProjectWorkElements.html">ProjectWorkElements</a></td>
-<td>The work element under which the task is filed.</td>
+<td>The work element under which the task is filed. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#resource">Resource</a></td>
 <td><a href="Projects.Classic.Resources.html">Resources</a> (nullable)</td>
-<td>The resource, which is required for the task. NULL means - do not plan any resource</td>
+<td>The resource, which is required for the task. null means - do not plan any resource. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#responsibleparty">ResponsibleParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined</td>
+<td>The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#tasktype">TaskType</a></td>
 <td><a href="Projects.Classic.TaskTypes.html">TaskTypes</a></td>
-<td>The type of the task. Determines the work type of the tasks, default billing rules, etc.</td>
+<td>The type of the task. Determines the work type of the tasks, default billing rules, etc. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectTasks.html#worktype">WorkType</a></td>
 <td><a href="Projects.Classic.TypeWorkTypes.html">TypeWorkTypes</a> (nullable)</td>
-<td>Type of work to be done. NULL means that type of work is undetermined yet.</td>
+<td>Type of work to be done. null means that type of work is undetermined yet. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -285,7 +285,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="budgetlaboramount">BudgetLaborAmount</h3>
-<p>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated</p>
+<p>Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. <code>Currency: Project.BudgetingCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -294,7 +294,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( obj.PlannedDurationHours != 0) AndAlso ( obj.WorkType != null)), obj.CalculateBudgetLaborAmount( ), new Amount( 0, obj.Project.BudgetingCurrency))</code></p>
 <h3 id="finishdatetime">FinishDateTime</h3>
-<p>The date and time when the task is planned to finish.</p>
+<p>The date and time when the task is planned to finish. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -310,7 +310,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="planneddurationhours">PlannedDurationHours</h3>
-<p>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.</p>
+<p>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (8, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -318,14 +318,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projecttaskno">ProjectTaskNo</h3>
-<p>Consecutive task number, unique within the project.</p>
+<p>Consecutive task number, unique within the project. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startdatetime">StartDateTime</h3>
-<p>The date and time when the task is planned to start.</p>
+<p>The date and time when the task is planned to start. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -333,7 +333,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taskname">TaskName</h3>
-<p>The short name of the task. It is best practice to contain the target of the task.</p>
+<p>The short name of the task. It is best practice to contain the target of the task. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -384,44 +384,44 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="activity">Activity</h3>
-<p>The Id of the Cm_Activity created for this task. NULL means that activity is still not created</p>
+<p>The Id of the Cm_Activity created for this task. null means that activity is still not created. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Activities.Activities.html">Activities</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="project">Project</h3>
-<p>The project, to which this task belongs.</p>
+<p>The project, to which this task belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.Projects.html">Projects</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectworkelement">ProjectWorkElement</h3>
-<p>The work element under which the task is filed.</p>
+<p>The work element under which the task is filed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.ProjectWorkElements.html">ProjectWorkElements</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resource">Resource</h3>
-<p>The resource, which is required for the task. NULL means - do not plan any resource</p>
+<p>The resource, which is required for the task. null means - do not plan any resource. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.Resources.html">Resources</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="responsibleparty">ResponsibleParty</h3>
-<p>The responsible party. Usually a person and usually one of the project participants. NULL means that responsible is not yet determined</p>
+<p>The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tasktype">TaskType</h3>
-<p>The type of the task. Determines the work type of the tasks, default billing rules, etc.</p>
+<p>The type of the task. Determines the work type of the tasks, default billing rules, etc. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.TaskTypes.html">TaskTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="worktype">WorkType</h3>
-<p>Type of work to be done. NULL means that type of work is undetermined yet.</p>
+<p>Type of work to be done. null means that type of work is undetermined yet. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Classic.TypeWorkTypes.html">TypeWorkTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

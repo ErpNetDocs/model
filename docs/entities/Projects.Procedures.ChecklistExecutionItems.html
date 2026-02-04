@@ -122,27 +122,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#doneatutc">DoneAtUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When it was completed.</td>
+<td>When it was completed. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#isdone">IsDone</a></td>
 <td>boolean</td>
-<td>Completion flag.</td>
+<td>Completion flag. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Item order.</td>
+<td>Item order. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Optional comment/evidence.</td>
+<td>Optional comment/evidence. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#textsnapshot">TextSnapshot</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>Text copied from template at creation.</td>
+<td>Text copied from template at creation. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,17 +159,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#checklisttemplate">ChecklistTemplate</a></td>
 <td><a href="Projects.Procedures.ChecklistTemplates.html">ChecklistTemplates</a></td>
-<td>Source template.</td>
+<td>Source template. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#donebyuser">DoneByUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>Who completed it.</td>
+<td>Who completed it. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistExecutionItems.html#operationalprocedureexecution">OperationalProcedure<br>Execution</a></td>
 <td><a href="Projects.Procedures.OperationalProcedureExecutions.html">OperationalProcedureExecutions</a></td>
-<td>Parent procedure execution.</td>
+<td>Parent procedure execution. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,14 +202,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="doneatutc">DoneAtUtc</h3>
-<p>When it was completed.</p>
+<p>When it was completed. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdone">IsDone</h3>
-<p>Completion flag.</p>
+<p>Completion flag. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -217,7 +217,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Item order.</p>
+<p>Item order. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -228,7 +228,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.OperationalProcedureExecution.ChecklistExecutionItems.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
-<p>Optional comment/evidence.</p>
+<p>Optional comment/evidence. <code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="textsnapshot">TextSnapshot</h3>
-<p>Text copied from template at creation.</p>
+<p>Text copied from template at creation. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -265,20 +265,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="checklisttemplate">ChecklistTemplate</h3>
-<p>Source template.</p>
+<p>Source template. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Projects.Procedures.ChecklistTemplates.html">ChecklistTemplates</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="donebyuser">DoneByUser</h3>
-<p>Who completed it.</p>
+<p>Who completed it. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operationalprocedureexecution">OperationalProcedureExecution</h3>
-<p>Parent procedure execution.</p>
+<p>Parent procedure execution. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Projects.Procedures.OperationalProcedureExecutions.html">OperationalProcedureExecutions</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

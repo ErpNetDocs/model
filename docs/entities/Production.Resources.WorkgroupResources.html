@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#active">Active</a></td>
 <td>boolean</td>
-<td>Indicates whether the current workgroup resource is active.</td>
+<td>Indicates whether the current workgroup resource is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#availablequantity">AvailableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources</td>
+<td>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. <code>Unit: Resource.PrimaryUnit</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>User notes for the workgroup resource</td>
+<td>User notes for the workgroup resource.</td>
 </tr>
 </tbody>
 </table>
@@ -148,12 +148,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#resource">Resource</a></td>
 <td><a href="Production.Resources.Resources.html">Resources</a></td>
-<td>The contained resource type</td>
+<td>The contained resource type. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupResources.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Workgroups</a></td>
-<td>Id of the workgroup, containing the resource</td>
+<td>Id of the workgroup, containing the resource. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -203,7 +203,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Indicates whether the current workgroup resource is active.</p>
+<p>Indicates whether the current workgroup resource is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -211,7 +211,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="availablequantity">AvailableQuantity</h3>
-<p>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources</p>
+<p>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. <code>Unit: Resource.PrimaryUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>User notes for the workgroup resource</p>
+<p>User notes for the workgroup resource.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -249,13 +249,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="resource">Resource</h3>
-<p>The contained resource type</p>
+<p>The contained resource type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Production.Resources.Resources.html">Resources</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workgroup">Workgroup</h3>
-<p>Id of the workgroup, containing the resource</p>
+<p>Id of the workgroup, containing the resource. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

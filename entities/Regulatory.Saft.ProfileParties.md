@@ -36,17 +36,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsRelated](Regulatory.Saft.ProfileParties.md#isrelated) | boolean | Mark if the party is a related entity. 
-| [RelationEndDate](Regulatory.Saft.ProfileParties.md#relationenddate) | date __nullable__ | Date when the relation ends (if applicable). 
-| [RelationStartDate](Regulatory.Saft.ProfileParties.md#relationstartdate) | date __nullable__ | Date from which the relation starts. 
+| [IsRelated](Regulatory.Saft.ProfileParties.md#isrelated) | boolean | Mark if the party is a related entity. `Required` `Default(false)` `Filter(eq)` 
+| [RelationEndDate](Regulatory.Saft.ProfileParties.md#relationenddate) | date __nullable__ | Date when the relation ends (if applicable). `Filter(eq;ge;le)` 
+| [RelationStartDate](Regulatory.Saft.ProfileParties.md#relationstartdate) | date __nullable__ | Date from which the relation starts. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Regulatory.Saft.ProfileParties.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | If the party is an internal group company, select it (optional). |
-| [Party](Regulatory.Saft.ProfileParties.md#party) | [Parties](General.Contacts.Parties.md) | Business partner (customer, supplier, or person). |
-| [Profile](Regulatory.Saft.ProfileParties.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | SAF-T profile this party belongs to. |
+| [EnterpriseCompany](Regulatory.Saft.ProfileParties.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | If the party is an internal group company, select it (optional). `Filter(multi eq)` |
+| [Party](Regulatory.Saft.ProfileParties.md#party) | [Parties](General.Contacts.Parties.md) | Business partner (customer, supplier, or person). `Required` `Filter(multi eq)` |
+| [Profile](Regulatory.Saft.ProfileParties.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | SAF-T profile this party belongs to. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### IsRelated
 
-Mark if the party is a related entity.
+Mark if the party is a related entity. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### RelationEndDate
 
-Date when the relation ends (if applicable).
+Date when the relation ends (if applicable). `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### RelationStartDate
 
-Date from which the relation starts.
+Date from which the relation starts. `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-If the party is an internal group company, select it (optional).
+If the party is an internal group company, select it (optional). `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-Business partner (customer, supplier, or person).
+Business partner (customer, supplier, or person). `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -144,7 +144,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-SAF-T profile this party belongs to.
+SAF-T profile this party belongs to. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  

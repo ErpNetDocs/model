@@ -42,7 +42,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](Finance.Assets.AssetCategories.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. |
+| [ProductType](Finance.Assets.AssetCategories.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -152,7 +152,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProductType
 
-Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type.
+Product type that correspondes to this category. Depreciation plan templates specified for this category will be used for the products of this type. `Required` `Filter(multi eq)`
 
 Type: **[ProductTypes](General.Products.ProductTypes.md)**  
 Indexed: **True**  

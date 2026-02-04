@@ -33,18 +33,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.Marketing.Campaigns.md#description) | string (254) __nullable__ | Campaign description 
-| [EndDate](Crm.Marketing.Campaigns.md#enddate) | datetime __nullable__ | End date of the campaign. NULL means that the end date is still unknown 
-| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal (18, 0) | Forecasted total cost of the campaign 
-| [IsActive](Crm.Marketing.Campaigns.md#isactive) | boolean | Indicates whether the current Campaign is active. 
-| [Name](Crm.Marketing.Campaigns.md#name) | string (64) | Short name of the campaign 
-| [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign 
+| [Description](Crm.Marketing.Campaigns.md#description) | string (254) __nullable__ | Campaign description. 
+| [EndDate](Crm.Marketing.Campaigns.md#enddate) | datetime __nullable__ | End date of the campaign. null means that the end date is still unknown. `Filter(ge;le)` 
+| [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal (18, 0) | Forecasted total cost of the campaign. `Required` `Default(0)` 
+| [IsActive](Crm.Marketing.Campaigns.md#isactive) | boolean | Indicates whether the current Campaign is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.19` 
+| [Name](Crm.Marketing.Campaigns.md#name) | string (64) | Short name of the campaign. `Required` `Filter(like)` `ORD` 
+| [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign. `Required` `Default(Today)` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Crm.Marketing.Campaigns.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this Campaign. Null means that all users have unlimited permissions. |
+| [AccessKey](Crm.Marketing.Campaigns.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this Campaign. Null means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 24.1.5.30` |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Description
 
-Campaign description
+Campaign description.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### EndDate
 
-End date of the campaign. NULL means that the end date is still unknown
+End date of the campaign. null means that the end date is still unknown. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### ForecastedCost
 
-Forecasted total cost of the campaign
+Forecasted total cost of the campaign. `Required` `Default(0)`
 
 Type: **decimal (18, 0)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Campaign is active.
+Indicates whether the current Campaign is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.19`
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Short name of the campaign
+Short name of the campaign. `Required` `Filter(like)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDate
 
-Starting date of the campaign
+Starting date of the campaign. `Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -191,7 +191,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this Campaign. Null means that all users have unlimited permissions.
+The access key, containing the user permissions for this Campaign. Null means that all users have unlimited permissions. `Filter(multi eq)` `Introduced in version 24.1.5.30`
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  

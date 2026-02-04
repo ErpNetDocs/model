@@ -57,15 +57,15 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Inventory.StoreOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Inventory.StoreOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DriverName](Logistics.Inventory.StoreOrders.md#drivername) | string (64) __nullable__ | The name of the driver, who will deliver the stocks. 
-| [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur. 
+| [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur. `Required` `Default(Today)` `Filter(ge;le)` `ORD` 
 | [EntityName](Logistics.Inventory.StoreOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Inventory.StoreOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Logistics.Inventory.StoreOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
-| [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE 
+| [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Logistics.Inventory.StoreOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)` 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PlannedCompletionDate](Logistics.Inventory.StoreOrders.md#plannedcompletiondate) | datetime __nullable__ | Date, when the quantities are expected to be completely issued/received 
-| [PlannedReleaseDate](Logistics.Inventory.StoreOrders.md#plannedreleasedate) | datetime __nullable__ | Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur. 
+| [PlannedCompletionDate](Logistics.Inventory.StoreOrders.md#plannedcompletiondate) | datetime __nullable__ | Date, when the quantities are expected to be completely issued/received. `Filter(ge;le)` 
+| [PlannedReleaseDate](Logistics.Inventory.StoreOrders.md#plannedreleasedate) | datetime __nullable__ | Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur. `Filter(ge;le)` 
 | [PlanningOnly](Logistics.Inventory.StoreOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.StoreOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Logistics.Inventory.StoreOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -73,7 +73,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Inventory.StoreOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Inventory.StoreOrders.md#state) | [DocumentState](Logistics.Inventory.StoreOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Inventory.StoreOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Status](Logistics.Inventory.StoreOrders.md#status) | string (1) | P=Planned; F=Firm planned; R=Released; C=Completed 
+| [Status](Logistics.Inventory.StoreOrders.md#status) | string (1) | P=Planned; F=Firm planned; R=Released; C=Completed. `Required` `Default("P")` 
 | [TempTransportCompanyName](Logistics.Inventory.StoreOrders.md#temptransportcompanyname) | string (64) __nullable__ | Obsolete. Not used. 
 | [VehicleRegNumber](Logistics.Inventory.StoreOrders.md#vehicleregnumber) | string (32) __nullable__ | Obsolete. Not used. 
 | [Void](Logistics.Inventory.StoreOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -89,22 +89,22 @@ Aggregate Tree
 | [AdjustedDocument](Logistics.Inventory.StoreOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Inventory.StoreOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Logistics.Inventory.StoreOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentCurrency](Logistics.Inventory.StoreOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document amounts are expessed. |
+| [DocumentCurrency](Logistics.Inventory.StoreOrders.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document amounts are expessed. `Required` `Filter(multi eq)` |
 | [DocumentType](Logistics.Inventory.StoreOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Inventory.StoreOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Logistics.Inventory.StoreOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Inventory.StoreOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Inventory.StoreOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [IssuedByParty](Logistics.Inventory.StoreOrders.md#issuedbyparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which issued the goods. |
+| [IssuedByParty](Logistics.Inventory.StoreOrders.md#issuedbyparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which issued the goods. `Filter(multi eq)` |
 | [MasterDocument](Logistics.Inventory.StoreOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OrderingPerson](Logistics.Inventory.StoreOrders.md#orderingperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, which ordered the operation. |
+| [OrderingPerson](Logistics.Inventory.StoreOrders.md#orderingperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person, which ordered the operation. `Filter(multi eq)` |
 | [Parent](Logistics.Inventory.StoreOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Logistics.Inventory.StoreOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReceivedByParty](Logistics.Inventory.StoreOrders.md#receivedbyparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which received the goods. |
+| [ReceivedByParty](Logistics.Inventory.StoreOrders.md#receivedbyparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party, which received the goods. `Filter(multi eq)` |
 | [ResponsiblePerson](Logistics.Inventory.StoreOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Logistics.Inventory.StoreOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Logistics.Inventory.StoreOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Store](Logistics.Inventory.StoreOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) | The designated warehouse for the operation |
+| [Store](Logistics.Inventory.StoreOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) | The designated warehouse for the operation. `Required` `Filter(multi eq)` |
 | [ToCompanyDivision](Logistics.Inventory.StoreOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Inventory.StoreOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Inventory.StoreOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -262,7 +262,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDate
 
-The final date, when the store transaction should occur.
+The final date, when the store transaction should occur. `Required` `Default(Today)` `Filter(ge;le)` `ORD`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -296,7 +296,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -318,7 +318,7 @@ Show in UI: **HiddenByDefault**
 
 ### MovementType
 
-Store order movement type. R=RECEIPT, I=ISSUE
+Store order movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)`
 
 Type: **[MovementType](Logistics.Inventory.StoreOrders.md#movementtype)**  
 Category: **System**  
@@ -356,7 +356,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlannedCompletionDate
 
-Date, when the quantities are expected to be completely issued/received
+Date, when the quantities are expected to be completely issued/received. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -366,7 +366,7 @@ Show in UI: **ShownByDefault**
 
 ### PlannedReleaseDate
 
-Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.
+Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur. `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -464,7 +464,7 @@ Show in UI: **HiddenByDefault**
 
 ### Status
 
-P=Planned; F=Firm planned; R=Released; C=Completed
+P=Planned; F=Firm planned; R=Released; C=Completed. `Required` `Default("P")`
 
 Type: **string (1)**  
 Category: **System**  
@@ -651,7 +651,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentCurrency
 
-The currency in which the document amounts are expessed.
+The currency in which the document amounts are expessed. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -707,7 +707,7 @@ Show in UI: **HiddenByDefault**
 
 ### IssuedByParty
 
-The party, which issued the goods.
+The party, which issued the goods. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -726,7 +726,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderingPerson
 
-The person, which ordered the operation.
+The person, which ordered the operation. `Filter(multi eq)`
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -755,7 +755,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReceivedByParty
 
-The party, which received the goods.
+The party, which received the goods. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -791,7 +791,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-The designated warehouse for the operation
+The designated warehouse for the operation. `Required` `Filter(multi eq)`
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Indexed: **True**  

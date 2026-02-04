@@ -121,7 +121,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Starting validity of the price list. The purchase price list won't be available before the specified date.</td>
+<td>Starting validity of the price list. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html#name">Name</a></td>
@@ -131,7 +131,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Ending validity of the price list.</td>
+<td>Ending validity of the price list. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting validity of the price list. The purchase price list won't be available before the specified date.</p>
+<p>Starting validity of the price list. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -195,7 +195,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Ending validity of the price list.</p>
+<p>Ending validity of the price list. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

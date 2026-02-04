@@ -126,22 +126,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.AI.Models.html#autoupdatetolatestbuild">AutoUpdateToLatestBuild</a></td>
 <td>boolean</td>
-<td>Indicates whether to automatically update Conversation Build to the latest successful build.</td>
+<td>Indicates whether to automatically update Conversation Build to the latest successful build. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Models.html#buildassistant">BuildAssistant</a></td>
 <td>boolean</td>
-<td>Specifies whether the model should produce an AI assistant.</td>
+<td>Specifies whether the model should produce an AI assistant. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 24.1.5.31</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Models.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>Specifies whether this is the default model which will handle AI prompts.</td>
+<td>Specifies whether this is the default model which will handle AI prompts. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.3.23</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Models.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>Multi-language name of the model.</td>
+<td>Multi-language name of the model. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Models.html#notes">Notes</a></td>
@@ -151,7 +151,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.AI.Models.html#systemmessage">SystemMessage</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.</td>
+<td>Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot. <code>Introduced in version 24.1.3.7</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.AI.Models.html#conversationalcompilation">ConversationalCompilation</a></td>
 <td><a href="Projects.AI.Compilations.html">Compilations</a> (nullable)</td>
-<td>The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. NULL means the model cannot be used for conversations.</td>
+<td>The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. null means the model cannot be used for conversations. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.2.11</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Models.html#parent">Parent</a></td>
@@ -178,12 +178,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.AI.Models.html#provider">Provider</a></td>
 <td><a href="Projects.AI.Providers.html">Providers</a> (nullable)</td>
-<td>The provider and base model, which should be fine-tuned with the domain specific knowledge. NULL means that this model cannot by compiled and can only be used as a child for another model.</td>
+<td>The provider and base model, which should be fine-tuned with the domain specific knowledge. null means that this model cannot by compiled and can only be used as a child for another model. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.3.3</code></td>
 </tr>
 <tr>
 <td><a href="Projects.AI.Models.html#virtualuser">VirtualUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The virtual user, which will answer in chats on behalf of the model. NULL means the model cannot be used in chat. Each model should have different virtual user.</td>
+<td>The virtual user, which will answer in chats on behalf of the model. null means the model cannot be used in chat. Each model should have different virtual user. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -248,7 +248,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="autoupdatetolatestbuild">AutoUpdateToLatestBuild</h3>
-<p>Indicates whether to automatically update Conversation Build to the latest successful build.</p>
+<p>Indicates whether to automatically update Conversation Build to the latest successful build. <code>Required</code> <code>Default(true)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -256,7 +256,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="buildassistant">BuildAssistant</h3>
-<p>Specifies whether the model should produce an AI assistant.</p>
+<p>Specifies whether the model should produce an AI assistant. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 24.1.5.31</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -264,7 +264,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>Specifies whether this is the default model which will handle AI prompts.</p>
+<p>Specifies whether this is the default model which will handle AI prompts. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.3.23</code></p>
 <p>Type: <strong>boolean</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -273,7 +273,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multi-language name of the model.</p>
+<p>Multi-language name of the model. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -288,7 +288,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemmessage">SystemMessage</h3>
-<p>Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.</p>
+<p>Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot. <code>Introduced in version 24.1.3.7</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -339,7 +339,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conversationalcompilation">ConversationalCompilation</h3>
-<p>The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. NULL means the model cannot be used for conversations.</p>
+<p>The compilation which should be used when conversing with the model. Usually, updated to the latest successful compilation. null means the model cannot be used for conversations. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.2.11</code></p>
 <p>Type: <strong><a href="Projects.AI.Compilations.html">Compilations</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -353,14 +353,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="provider">Provider</h3>
-<p>The provider and base model, which should be fine-tuned with the domain specific knowledge. NULL means that this model cannot by compiled and can only be used as a child for another model.</p>
+<p>The provider and base model, which should be fine-tuned with the domain specific knowledge. null means that this model cannot by compiled and can only be used as a child for another model. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.3.3</code></p>
 <p>Type: <strong><a href="Projects.AI.Providers.html">Providers</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="virtualuser">VirtualUser</h3>
-<p>The virtual user, which will answer in chats on behalf of the model. NULL means the model cannot be used in chat. Each model should have different virtual user.</p>
+<p>The virtual user, which will answer in chats on behalf of the model. null means the model cannot be used in chat. Each model should have different virtual user. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -126,42 +126,42 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.Translations.html#active">Active</a></td>
 <td>boolean</td>
-<td>True when the translation is verified and activated.</td>
+<td>True when the translation is verified and activated. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#applicationname">ApplicationName</a></td>
 <td>string (50) <strong>nullable</strong></td>
-<td>The application, containing the resource. For base resource types (T,C,H), this is NULL</td>
+<td>The application, containing the resource. For base resource types (T,C,H), this is null. <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
-<td>Timestamp when the translation was first created</td>
+<td>Timestamp when the translation was first created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#language">Language</a></td>
 <td>string (8)</td>
-<td>The code of the language by the ISO639-1 two letter language coding: &quot;en&quot;=English, &quot;bg&quot;=Bulgarian.</td>
+<td>The code of the language by the ISO639-1 two letter language coding: &quot;en&quot;=English, &quot;bg&quot;=Bulgarian. <code>Required</code> <code>Default(&quot;en&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#resourceid">ResourceId</a></td>
 <td>string (800)</td>
-<td>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code</td>
+<td>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#resourcetype">ResourceType</a></td>
 <td><a href="Systems.Config.Translations.html#resourcetype">ResourceType</a></td>
-<td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String</td>
+<td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#translationfield">TranslationField</a></td>
 <td>string (max)</td>
-<td>The translated text</td>
+<td>The translated text. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Translations.html#updatetime">UpdateTime</a></td>
 <td>datetime</td>
-<td>When the translation was last updated</td>
+<td>When the translation was last updated. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>True when the translation is verified and activated.</p>
+<p>True when the translation is verified and activated. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -219,7 +219,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( Not( IsNullOrEmpty( obj.TranslationField)), True, obj.Active)</code></p>
 <h3 id="applicationname">ApplicationName</h3>
-<p>The application, containing the resource. For base resource types (T,C,H), this is NULL</p>
+<p>The application, containing the resource. For base resource types (T,C,H), this is null. <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>string (50) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -228,7 +228,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtime">CreationTime</h3>
-<p>Timestamp when the translation was first created</p>
+<p>Timestamp when the translation was first created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="language">Language</h3>
-<p>The code of the language by the ISO639-1 two letter language coding: &quot;en&quot;=English, &quot;bg&quot;=Bulgarian.</p>
+<p>The code of the language by the ISO639-1 two letter language coding: &quot;en&quot;=English, &quot;bg&quot;=Bulgarian. <code>Required</code> <code>Default(&quot;en&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (8)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -245,7 +245,7 @@ Maximum Length: <strong>8</strong><br>
 Default Value: <strong>en</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resourceid">ResourceId</h3>
-<p>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code</p>
+<p>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (800)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -253,7 +253,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>800</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resourcetype">ResourceType</h3>
-<p>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String</p>
+<p>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Config.Translations.html#resourcetype">ResourceType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ResourceType</code>(Systems.Config.Translations.md#resourcetype) data attribute<br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>OtherApplicationSpecific</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="translationfield">TranslationField</h3>
-<p>The translated text</p>
+<p>The translated text. <code>Required</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -309,7 +309,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>When the translation was last updated</p>
+<p>When the translation was last updated. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

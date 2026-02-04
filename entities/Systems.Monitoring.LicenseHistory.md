@@ -37,21 +37,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LicenseCode](Systems.Monitoring.LicenseHistory.md#licensecode) | string (64) | The code of the module or functionality, which is licensed. 
-| [LicenseCount](Systems.Monitoring.LicenseHistory.md#licensecount) | int32 | The number of licenses given (+) or taken (-). 
-| [LicenseDescription](Systems.Monitoring.LicenseHistory.md#licensedescription) | string (max) | Description of the license code. 
-| [LicenseEndDate](Systems.Monitoring.LicenseHistory.md#licenseenddate) | date | The date (inclusive), until the license is active. 
-| [LicenseScaleType](Systems.Monitoring.LicenseHistory.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1. 
-| [LicenseStartDate](Systems.Monitoring.LicenseHistory.md#licensestartdate) | date | The date (inclusive), from which the license is active. 
-| [LicensingDate](Systems.Monitoring.LicenseHistory.md#licensingdate) | date | The date, when the license was issued. 
-| [LicensingEvent](Systems.Monitoring.LicenseHistory.md#licensingevent) | string (128) | Unique licensing event key. Can be used to group all license codes given with a single licensing event. 
+| [LicenseCode](Systems.Monitoring.LicenseHistory.md#licensecode) | string (64) | The code of the module or functionality, which is licensed. `Required` `Filter(multi eq;like)` 
+| [LicenseCount](Systems.Monitoring.LicenseHistory.md#licensecount) | int32 | The number of licenses given (+) or taken (-). `Required` `Filter(eq;ge;le)` 
+| [LicenseDescription](Systems.Monitoring.LicenseHistory.md#licensedescription) | string (max) | Description of the license code. `Required` 
+| [LicenseEndDate](Systems.Monitoring.LicenseHistory.md#licenseenddate) | date | The date (inclusive), until the license is active. `Required` `Filter(eq;ge;le)` 
+| [LicenseScaleType](Systems.Monitoring.LicenseHistory.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1. `Required` 
+| [LicenseStartDate](Systems.Monitoring.LicenseHistory.md#licensestartdate) | date | The date (inclusive), from which the license is active. `Required` `Filter(eq;ge;le)` 
+| [LicensingDate](Systems.Monitoring.LicenseHistory.md#licensingdate) | date | The date, when the license was issued. `Required` `Filter(eq;ge;le)` 
+| [LicensingEvent](Systems.Monitoring.LicenseHistory.md#licensingevent) | string (128) | Unique licensing event key. Can be used to group all license codes given with a single licensing event. `Required` 
 
 
 ## Attribute Details
 
 ### LicenseCode
 
-The code of the module or functionality, which is licensed.
+The code of the module or functionality, which is licensed. `Required` `Filter(multi eq;like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -62,7 +62,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseCount
 
-The number of licenses given (+) or taken (-).
+The number of licenses given (+) or taken (-). `Required` `Filter(eq;ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseDescription
 
-Description of the license code.
+Description of the license code. `Required`
 
 Type: **string (max)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseEndDate
 
-The date (inclusive), until the license is active.
+The date (inclusive), until the license is active. `Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseScaleType
 
-Denotes whether the license supports counts, different from 0 and 1.
+Denotes whether the license supports counts, different from 0 and 1. `Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseStartDate
 
-The date (inclusive), from which the license is active.
+The date (inclusive), from which the license is active. `Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### LicensingDate
 
-The date, when the license was issued.
+The date, when the license was issued. `Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### LicensingEvent
 
-Unique licensing event key. Can be used to group all license codes given with a single licensing event.
+Unique licensing event key. Can be used to group all license codes given with a single licensing event. `Required`
 
 Type: **string (128)**  
 Category: **System**  

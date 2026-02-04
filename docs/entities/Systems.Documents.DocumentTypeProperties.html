@@ -141,22 +141,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the document type</td>
+<td>Line number, unique within the document type. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#required">Required</a></td>
 <td>boolean</td>
-<td>1 if the property is required when creating documents of this type</td>
+<td>True if the property is required when creating documents of this type. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#requiredfromdate">RequiredFromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.</td>
+<td>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#requiredthrudate">RequiredThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.</td>
+<td>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -173,17 +173,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type, for which to add user-defined properties.</td>
+<td>The document type, for which to add user-defined properties. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>When not null, specifies that the current rule is valid only for the specified company.</td>
+<td>When not null, specifies that the current rule is valid only for the specified company. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#property">Property</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></td>
-<td>The user-defined property, which should be added.</td>
+<td>The user-defined property, which should be added. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -237,7 +237,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the document type</p>
+<p>Line number, unique within the document type. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -248,7 +248,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="required">Required</h3>
-<p>1 if the property is required when creating documents of this type</p>
+<p>True if the property is required when creating documents of this type. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -256,14 +256,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
-<p>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.</p>
+<p>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredthrudate">RequiredThruDate</h3>
-<p>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.</p>
+<p>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -292,7 +292,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type, for which to add user-defined properties.</p>
+<p>The document type, for which to add user-defined properties. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -300,13 +300,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>When not null, specifies that the current rule is valid only for the specified company.</p>
+<p>When not null, specifies that the current rule is valid only for the specified company. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="property">Property</h3>
-<p>The user-defined property, which should be added.</p>
+<p>The user-defined property, which should be added. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

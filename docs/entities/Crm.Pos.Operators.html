@@ -122,27 +122,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Operators.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this operator is active and can be chosen for new records.</td>
+<td>Indicates whether this operator is active and can be chosen for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#pincode">PinCode</a></td>
 <td>string (4)</td>
-<td>4-character PIN used to authenticate the POS operator.</td>
+<td>4-character PIN used to authenticate the POS operator. <code>Required</code> <code>Default(&quot;0000&quot;)</code> <code>Introduced in version 26.2.1.26</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posoperatorcode">PosOperatorCode</a></td>
 <td>string (16)</td>
-<td>Operator code. Unique within the Pos Location.</td>
+<td>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#startingdate">StartingDate</a></td>
 <td>date</td>
-<td>The first date, when the operator has started working for this POS location.</td>
+<td>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#terminationdate">TerminationDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.</td>
+<td>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,22 +159,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Operators.html#defaultposterminal">DefaultPosTerminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</td>
-<td>The default POS terminal for this opertor. NULL when there is no default.</td>
+<td>The default POS terminal for this opertor. null when there is no default. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>The POS location where this operator works.</td>
+<td>The POS location where this operator works. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posrole">PosRole</a></td>
 <td><a href="Crm.Pos.Roles.html">Roles</a></td>
-<td>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location.</td>
+<td>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The login user for this POS operator.</td>
+<td>The login user for this POS operator. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -222,7 +222,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this operator is active and can be chosen for new records.</p>
+<p>Indicates whether this operator is active and can be chosen for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -230,7 +230,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pincode">PinCode</h3>
-<p>4-character PIN used to authenticate the POS operator.</p>
+<p>4-character PIN used to authenticate the POS operator. <code>Required</code> <code>Default(&quot;0000&quot;)</code> <code>Introduced in version 26.2.1.26</code></p>
 <p>Type: <strong>string (4)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -239,7 +239,7 @@ Maximum Length: <strong>4</strong><br>
 Default Value: <strong>0000</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posoperatorcode">PosOperatorCode</h3>
-<p>Operator code. Unique within the Pos Location.</p>
+<p>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -247,14 +247,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startingdate">StartingDate</h3>
-<p>The first date, when the operator has started working for this POS location.</p>
+<p>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="terminationdate">TerminationDate</h3>
-<p>The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.</p>
+<p>The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -304,26 +304,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultposterminal">DefaultPosTerminal</h3>
-<p>The default POS terminal for this opertor. NULL when there is no default.</p>
+<p>The default POS terminal for this opertor. null when there is no default. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<p>The POS location where this operator works.</p>
+<p>The POS location where this operator works. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posrole">PosRole</h3>
-<p>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location.</p>
+<p>The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pos.Roles.html">Roles</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The login user for this POS operator.</p>
+<p>The login user for this POS operator. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

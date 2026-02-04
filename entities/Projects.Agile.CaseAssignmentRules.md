@@ -33,26 +33,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. 
-| [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. NULL means no from date restriction. 
-| [IsActive](Projects.Agile.CaseAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. 
-| [Notes](Projects.Agile.CaseAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule. 
-| [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | Priority when multiple rules match the criteria. 
-| [RuleNo](Projects.Agile.CaseAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule. 
-| [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) | [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__ | The system state to which the rule applies. NULL means the rule applies to all user states. 
-| [ToDate](Projects.Agile.CaseAssignmentRules.md#todate) | date __nullable__ | Ending date (inclusive) of rule validity. NULL means that the rule is valid forever. 
+| [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29` 
+| [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)` 
+| [IsActive](Projects.Agile.CaseAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)` 
+| [Notes](Projects.Agile.CaseAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule. `Filter(like)` 
+| [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | Priority when multiple rules match the criteria. `Required` `Default("3")` `Filter(eq)` 
+| [RuleNo](Projects.Agile.CaseAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule. `Required` `Filter(eq)` `ORD` 
+| [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) | [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__ | The system state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)` 
+| [ToDate](Projects.Agile.CaseAssignmentRules.md#todate) | date __nullable__ | Ending date (inclusive) of rule validity. null means that the rule is valid forever. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignToUser](Projects.Agile.CaseAssignmentRules.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | The user who will be automatically assigned to the case when the rule conditions are matched. |
-| [CaseCategory](Projects.Agile.CaseAssignmentRules.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) (nullable) | The case category to which the rule applies. NULL means the rule applies to all categories. |
-| [Project](Projects.Agile.CaseAssignmentRules.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | The project to which the rule applies. NULL means the rule applies to all projects. |
-| [ProjectArea](Projects.Agile.CaseAssignmentRules.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The project area to which the rule applies. NULL means the rule applies to all project areas. |
-| [ProjectMilestone](Projects.Agile.CaseAssignmentRules.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | The project milestone to which the rule applies. NULL means the rule applies to all milestones. |
-| [StakeholderParty](Projects.Agile.CaseAssignmentRules.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder party to which the rule applies. NULL means the rule applies to all parties. |
-| [UserState](Projects.Agile.CaseAssignmentRules.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user state to which the rule applies. NULL means the rule applies to all user states. |
+| [AssignToUser](Projects.Agile.CaseAssignmentRules.md#assigntouser) | [Users](Systems.Security.Users.md) (nullable) | The user who will be automatically assigned to the case when the rule conditions are matched. `Filter(multi eq)` |
+| [CaseCategory](Projects.Agile.CaseAssignmentRules.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) (nullable) | The case category to which the rule applies. null means the rule applies to all categories. `Filter(multi eq)` |
+| [Project](Projects.Agile.CaseAssignmentRules.md#project) | [Projects](Projects.Agile.Projects.md) (nullable) | The project to which the rule applies. null means the rule applies to all projects. `Filter(multi eq)` |
+| [ProjectArea](Projects.Agile.CaseAssignmentRules.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The project area to which the rule applies. null means the rule applies to all project areas. `Filter(multi eq)` |
+| [ProjectMilestone](Projects.Agile.CaseAssignmentRules.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | The project milestone to which the rule applies. null means the rule applies to all milestones. `Filter(multi eq)` |
+| [StakeholderParty](Projects.Agile.CaseAssignmentRules.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder party to which the rule applies. null means the rule applies to all parties. `Filter(multi eq)` |
+| [UserState](Projects.Agile.CaseAssignmentRules.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Aggregate Tree
 
 ### AssignmentKind
 
-Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.
+Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others. `Required` `Default("SUS")` `Filter(multi eq;like)` `Introduced in version 25.1.3.29`
 
 Type: **[AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Starting date of rule validity. NULL means no from date restriction.
+Starting date of rule validity. null means no from date restriction. `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current rule is active.
+Indicates whether the current rule is active. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments related to the rule.
+Additional information or comments related to the rule. `Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority when multiple rules match the criteria.
+Priority when multiple rules match the criteria. `Required` `Default("3")` `Filter(eq)`
 
 Type: **[Priority](Projects.Agile.CaseAssignmentRules.md#priority)**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### RuleNo
 
-Consecutive number of the rule.
+Consecutive number of the rule. `Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Indexed: **True**  
@@ -163,7 +163,7 @@ Front-End Recalc Expressions:
 `obj.SetRuleNo( )`
 ### SystemState
 
-The system state to which the rule applies. NULL means the rule applies to all user states.
+The system state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)`
 
 Type: **[SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.
+Ending date (inclusive) of rule validity. null means that the rule is valid forever. `Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssignToUser
 
-The user who will be automatically assigned to the case when the rule conditions are matched.
+The user who will be automatically assigned to the case when the rule conditions are matched. `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
@@ -267,7 +267,7 @@ Show in UI: **ShownByDefault**
 
 ### CaseCategory
 
-The case category to which the rule applies. NULL means the rule applies to all categories.
+The case category to which the rule applies. null means the rule applies to all categories. `Filter(multi eq)`
 
 Type: **[CaseCategories](Projects.Agile.CaseCategories.md) (nullable)**  
 Category: **System**  
@@ -276,7 +276,7 @@ Show in UI: **ShownByDefault**
 
 ### Project
 
-The project to which the rule applies. NULL means the rule applies to all projects.
+The project to which the rule applies. null means the rule applies to all projects. `Filter(multi eq)`
 
 Type: **[Projects](Projects.Agile.Projects.md) (nullable)**  
 Category: **System**  
@@ -285,7 +285,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectArea
 
-The project area to which the rule applies. NULL means the rule applies to all project areas.
+The project area to which the rule applies. null means the rule applies to all project areas. `Filter(multi eq)`
 
 Type: **[ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable)**  
 Category: **System**  
@@ -294,7 +294,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectMilestone
 
-The project milestone to which the rule applies. NULL means the rule applies to all milestones.
+The project milestone to which the rule applies. null means the rule applies to all milestones. `Filter(multi eq)`
 
 Type: **[ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable)**  
 Category: **System**  
@@ -303,7 +303,7 @@ Show in UI: **ShownByDefault**
 
 ### StakeholderParty
 
-The stakeholder party to which the rule applies. NULL means the rule applies to all parties.
+The stakeholder party to which the rule applies. null means the rule applies to all parties. `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -312,7 +312,7 @@ Show in UI: **ShownByDefault**
 
 ### UserState
 
-The user state to which the rule applies. NULL means the rule applies to all user states.
+The user state to which the rule applies. null means the rule applies to all user states. `Filter(multi eq)`
 
 Type: **[UserStates](Projects.Agile.UserStates.md) (nullable)**  
 Category: **System**  

@@ -117,7 +117,7 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#attributename">AttributeName</a></td>
 <td>string (64)</td>
-<td>The name of the attribute.</td>
+<td>The name of the attribute. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Sys_Attribute_&lt;br /&gt;Changes_Table.Attribute_Name</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#entityitemid">EntityItemId</a></td>
@@ -127,22 +127,22 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#newvalue">NewValue</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The new value</td>
+<td>The new value. <code>Filter(eq;like)</code> <code>Inherited from Sys_Attribute_&lt;br /&gt;Changes_Table.New_Value</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#previousvalue">PreviousValue</a></td>
 <td>string (max)</td>
-<td>The previous value</td>
+<td>The previous value. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#repositoryname">RepositoryName</a></td>
 <td>string (64)</td>
-<td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</td>
+<td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code> <code>Inherited from Sys_Object_Changes_Table.Repository_Name</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#timeutc">TimeUtc</a></td>
 <td>datetime</td>
-<td>Date and time (in Utc) when the changeset was processed by the server.</td>
+<td>Date and time (in Utc) when the changeset was processed by the server. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>Inherited from Sys_Object_Changesets_&lt;br /&gt;Table.Time_Utc</code></td>
 </tr>
 </tbody>
 </table>
@@ -159,13 +159,13 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user which initiated the change. NULL when it is unknown.</td>
+<td>The user which initiated the change. null when it is unknown. <code>Filter(multi eq)</code> <code>Inherited from Sys_Object_Changesets_&lt;br /&gt;Table.User_Id</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="attributename">AttributeName</h3>
-<p>The name of the attribute.</p>
+<p>The name of the attribute. <code>Required</code> <code>Filter(eq)</code> <code>Inherited from Sys_Attribute_Changes_Table.Attribute_Name</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Attribute_Changes_Table.Attribute_Name</strong><br>
@@ -181,7 +181,7 @@ Inherited From: <strong>Sys_Object_Changes_Table.Entity_Item_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="newvalue">NewValue</h3>
-<p>The new value</p>
+<p>The new value. <code>Filter(eq;like)</code> <code>Inherited from Sys_Attribute_Changes_Table.New_Value</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Attribute_Changes_Table.New_Value</strong><br>
@@ -190,7 +190,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="previousvalue">PreviousValue</h3>
-<p>The previous value</p>
+<p>The previous value. <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -198,7 +198,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
-<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</p>
+<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code> <code>Inherited from Sys_Object_Changes_Table.Repository_Name</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Object_Changes_Table.Repository_Name</strong><br>
@@ -207,7 +207,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timeutc">TimeUtc</h3>
-<p>Date and time (in Utc) when the changeset was processed by the server.</p>
+<p>Date and time (in Utc) when the changeset was processed by the server. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>Inherited from Sys_Object_Changesets_Table.Time_Utc</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Object_Changesets_Table.Time_Utc</strong><br>
@@ -217,7 +217,7 @@ Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
-<p>The user which initiated the change. NULL when it is unknown.</p>
+<p>The user which initiated the change. null when it is unknown. <code>Filter(multi eq)</code> <code>Inherited from Sys_Object_Changesets_Table.User_Id</code></p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Object_Changesets_Table.User_Id</strong><br>

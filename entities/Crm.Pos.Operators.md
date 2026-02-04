@@ -34,20 +34,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. 
-| [PinCode](Crm.Pos.Operators.md#pincode) | string (4) | 4-character PIN used to authenticate the POS operator. 
-| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string (16) | Operator code. Unique within the Pos Location. 
-| [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location. 
-| [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date __nullable__ | The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown. 
+| [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. `Required` `Default(true)` `Filter(multi eq)` 
+| [PinCode](Crm.Pos.Operators.md#pincode) | string (4) | 4-character PIN used to authenticate the POS operator. `Required` `Default("0000")` `Introduced in version 26.2.1.26` 
+| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string (16) | Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD` 
+| [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location. `Required` `Filter(multi eq;ge;le)` 
+| [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date __nullable__ | The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. `Filter(multi eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPosTerminal](Crm.Pos.Operators.md#defaultposterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | The default POS terminal for this opertor. NULL when there is no default. |
-| [PosLocation](Crm.Pos.Operators.md#poslocation) | [Locations](Crm.Pos.Locations.md) | The POS location where this operator works. |
-| [PosRole](Crm.Pos.Operators.md#posrole) | [Roles](Crm.Pos.Roles.md) | The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. |
-| [User](Crm.Pos.Operators.md#user) | [Users](Systems.Security.Users.md) | The login user for this POS operator. |
+| [DefaultPosTerminal](Crm.Pos.Operators.md#defaultposterminal) | [Terminals](Crm.Pos.Terminals.md) (nullable) | The default POS terminal for this opertor. null when there is no default. `Filter(multi eq)` |
+| [PosLocation](Crm.Pos.Operators.md#poslocation) | [Locations](Crm.Pos.Locations.md) | The POS location where this operator works. `Required` `Filter(multi eq)` |
+| [PosRole](Crm.Pos.Operators.md#posrole) | [Roles](Crm.Pos.Roles.md) | The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. `Required` `Filter(multi eq)` |
+| [User](Crm.Pos.Operators.md#user) | [Users](Systems.Security.Users.md) | The login user for this POS operator. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether this operator is active and can be chosen for new records.
+Indicates whether this operator is active and can be chosen for new records. `Required` `Default(true)` `Filter(multi eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### PinCode
 
-4-character PIN used to authenticate the POS operator.
+4-character PIN used to authenticate the POS operator. `Required` `Default("0000")` `Introduced in version 26.2.1.26`
 
 Type: **string (4)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### PosOperatorCode
 
-Operator code. Unique within the Pos Location.
+Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD`
 
 Type: **string (16)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### StartingDate
 
-The first date, when the operator has started working for this POS location.
+The first date, when the operator has started working for this POS location. `Required` `Filter(multi eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### TerminationDate
 
-The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.
+The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. `Filter(multi eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -182,7 +182,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultPosTerminal
 
-The default POS terminal for this opertor. NULL when there is no default.
+The default POS terminal for this opertor. null when there is no default. `Filter(multi eq)`
 
 Type: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
 Category: **System**  
@@ -191,7 +191,7 @@ Show in UI: **ShownByDefault**
 
 ### PosLocation
 
-The POS location where this operator works.
+The POS location where this operator works. `Required` `Filter(multi eq)`
 
 Type: **[Locations](Crm.Pos.Locations.md)**  
 Indexed: **True**  
@@ -201,7 +201,7 @@ Show in UI: **ShownByDefault**
 
 ### PosRole
 
-The role, assigned to the operator. The role indicates the permissions of the operator for this POS location.
+The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. `Required` `Filter(multi eq)`
 
 Type: **[Roles](Crm.Pos.Roles.md)**  
 Category: **System**  
@@ -210,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The login user for this POS operator.
+The login user for this POS operator. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

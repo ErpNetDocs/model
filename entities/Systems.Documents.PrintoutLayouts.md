@@ -42,10 +42,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BinaryLayout](Systems.Documents.PrintoutLayouts.md#binarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Layout 
-| [DocumentEntityName](Systems.Documents.PrintoutLayouts.md#documententityname) | string (64) | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. 
-| [Layout](Systems.Documents.PrintoutLayouts.md#layout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout 
-| [LayoutFormat](Systems.Documents.PrintoutLayouts.md#layoutformat) | string (32) | Format specifier of the layout. Recognized by the application 
+| [BinaryLayout](Systems.Documents.PrintoutLayouts.md#binarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Layout. 
+| [DocumentEntityName](Systems.Documents.PrintoutLayouts.md#documententityname) | string (64) | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)` 
+| [Layout](Systems.Documents.PrintoutLayouts.md#layout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout. 
+| [LayoutFormat](Systems.Documents.PrintoutLayouts.md#layoutformat) | string (32) | Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)` 
 | [Name](Systems.Documents.PrintoutLayouts.md#name) | string (64) | The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Documents.PrintoutLayouts.md#notes) | string (254) __nullable__ | Notes for this PrintoutLayout. 
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](Systems.Documents.PrintoutLayouts.md#datasource) | [DataSources](Systems.Documents.DataSources.md) (nullable) | The data source for the printout |
+| [DataSource](Systems.Documents.PrintoutLayouts.md#datasource) | [DataSources](Systems.Documents.DataSources.md) (nullable) | The data source for the printout. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### BinaryLayout
 
-The printout layout, when the format requires binary storage. Alternative to Layout
+The printout layout, when the format requires binary storage. Alternative to Layout.
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **CannotBeShown**
 
 ### DocumentEntityName
 
-The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.
+The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Layout
 
-The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout
+The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### LayoutFormat
 
-Format specifier of the layout. Recognized by the application
+Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)`
 
 Type: **string (32)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataSource
 
-The data source for the printout
+The data source for the printout. `Filter(multi eq)`
 
 Type: **[DataSources](Systems.Documents.DataSources.md) (nullable)**  
 Category: **System**  

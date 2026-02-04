@@ -52,28 +52,28 @@ Aggregate Tree
 | [CompleteTime](Finance.Payments.PaymentTransactions.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Finance.Payments.PaymentTransactions.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Finance.Payments.PaymentTransactions.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Direction](Finance.Payments.PaymentTransactions.md#direction) | [Direction](Finance.Payments.PaymentTransactions.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). 
+| [Direction](Finance.Payments.PaymentTransactions.md#direction) | [Direction](Finance.Payments.PaymentTransactions.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("R")` `Filter(eq)` 
 | [DocumentDate](Finance.Payments.PaymentTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Finance.Payments.PaymentTransactions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Finance.Payments.PaymentTransactions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Finance.Payments.PaymentTransactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Payments.PaymentTransactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Finance.Payments.PaymentTransactions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Finance.Payments.PaymentTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Finance.Payments.PaymentTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Finance.Payments.PaymentTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Finance.Payments.PaymentTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Finance.Payments.PaymentTransactions.md#notes) | string (254) __nullable__ | Notes for this PaymentTransaction. 
 | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentTransactions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentTransactions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentSlipNo](Finance.Payments.PaymentTransactions.md#paymentslipno) | string (20) __nullable__ | The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips 
+| [PaymentSlipNo](Finance.Payments.PaymentTransactions.md#paymentslipno) | string (20) __nullable__ | The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips. `Filter(eq)` 
 | [PlanningOnly](Finance.Payments.PaymentTransactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Finance.Payments.PaymentTransactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Finance.Payments.PaymentTransactions.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Finance.Payments.PaymentTransactions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Finance.Payments.PaymentTransactions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | Checked when the total amount must be allocated among the payment orders 
-| [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment. 
+| [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | True=The total amount should be allocated to payment orders; false=Payment orders are not required. `Required` `Default(true)` `Filter(eq)` 
+| [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment. `Introduced in version 20.1` 
 | [State](Finance.Payments.PaymentTransactions.md#state) | [DocumentState](Finance.Payments.PaymentTransactions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Finance.Payments.PaymentTransactions.md#statetagsattribute) | string | Specifies the state of the document. 
-| [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines 
+| [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
 | [Void](Finance.Payments.PaymentTransactions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Finance.Payments.PaymentTransactions.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Finance.Payments.PaymentTransactions.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -90,27 +90,27 @@ Aggregate Tree
 | [DocumentType](Finance.Payments.PaymentTransactions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Finance.Payments.PaymentTransactions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Finance.Payments.PaymentTransactions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [FiscalPrinterPosDevice](Finance.Payments.PaymentTransactions.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order. |
+| [FiscalPrinterPosDevice](Finance.Payments.PaymentTransactions.md#fiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order. `Filter(multi eq)` `Introduced in version 19.1` |
 | [FromCompanyDivision](Finance.Payments.PaymentTransactions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Finance.Payments.PaymentTransactions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Finance.Payments.PaymentTransactions.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OriginalPaymentTransaction](Finance.Payments.PaymentTransactions.md#originalpaymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable) | The original payment transaction, which is reversed by the current payment transaction. |
+| [OriginalPaymentTransaction](Finance.Payments.PaymentTransactions.md#originalpaymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable) | Original Payment Transaction. `Filter(multi eq)` `Introduced in version 20.1` |
 | [Parent](Finance.Payments.PaymentTransactions.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ParentPaymentSlipAmount](Finance.Payments.PaymentTransactions.md#parentpaymentslipamount) | [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) (nullable) | The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount. |
-| [Party](Finance.Payments.PaymentTransactions.md#party) | [Parties](General.Contacts.Parties.md) | The party that is paying or receiving the money |
-| [PaymentAccount](Finance.Payments.PaymentTransactions.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The account towards which the payment was effected |
-| [PaymentReason](Finance.Payments.PaymentTransactions.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The payment reason, as defined in Payment Reasons. |
-| [PaymentSlip](Finance.Payments.PaymentTransactions.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) (nullable) | When not NULL specifies that this payment was part of a payment slip |
-| [PaymentType](Finance.Payments.PaymentTransactions.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified. |
-| [PosLocation](Finance.Payments.PaymentTransactions.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order. |
-| [PosOperator](Finance.Payments.PaymentTransactions.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order. |
+| [ParentPaymentSlipAmount](Finance.Payments.PaymentTransactions.md#parentpaymentslipamount) | [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) (nullable) | The Payment Slip Amount, which the current payment transaction fulfills . null when the current document does not execute any Payment Slip Amount. `Filter(multi eq)` `Introduced in version 19.1` |
+| [Party](Finance.Payments.PaymentTransactions.md#party) | [Parties](General.Contacts.Parties.md) | The party that is paying or receiving the money. `Required` `Filter(multi eq)` |
+| [PaymentAccount](Finance.Payments.PaymentTransactions.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The account towards which the payment was effected. `Filter(multi eq)` |
+| [PaymentReason](Finance.Payments.PaymentTransactions.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The payment reason, as defined in Payment Reasons. `Filter(multi eq)` |
+| [PaymentSlip](Finance.Payments.PaymentTransactions.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) (nullable) | When not null specifies that this payment was part of a payment slip. `Filter(multi eq)` |
+| [PaymentType](Finance.Payments.PaymentTransactions.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. `Filter(multi eq)` |
+| [PosLocation](Finance.Payments.PaymentTransactions.md#poslocation) | [Locations](Crm.Pos.Locations.md) (nullable) | For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order. `Filter(multi eq)` `Introduced in version 19.1` |
+| [PosOperator](Finance.Payments.PaymentTransactions.md#posoperator) | [Operators](Crm.Pos.Operators.md) (nullable) | For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order. `Filter(multi eq)` `Introduced in version 19.1` |
 | [PrimeCauseDocument](Finance.Payments.PaymentTransactions.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Finance.Payments.PaymentTransactions.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Finance.Payments.PaymentTransactions.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Finance.Payments.PaymentTransactions.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Finance.Payments.PaymentTransactions.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Finance.Payments.PaymentTransactions.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TotalAmountCurrency](Finance.Payments.PaymentTransactions.md#totalamountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the total amount |
+| [TotalAmountCurrency](Finance.Payments.PaymentTransactions.md#totalamountcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the total amount. `Required` `Filter(multi eq)` |
 | [UserStatus](Finance.Payments.PaymentTransactions.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 
 
@@ -209,7 +209,7 @@ Show in UI: **HiddenByDefault**
 
 ### Direction
 
-Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). `Required` `Default("R")` `Filter(eq)`
 
 Type: **[Direction](Finance.Payments.PaymentTransactions.md#direction)**  
 Category: **System**  
@@ -296,7 +296,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -348,7 +348,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentSlipNo
 
-The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips
+The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips. `Filter(eq)`
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -413,7 +413,7 @@ Show in UI: **HiddenByDefault**
 
 ### RequiresAllocation
 
-Checked when the total amount must be allocated among the payment orders
+True=The total amount should be allocated to payment orders; false=Payment orders are not required. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -424,7 +424,7 @@ Show in UI: **ShownByDefault**
 
 ### ReversalReason
 
-The reason for the reversal of the payment.
+The reason for the reversal of the payment. `Introduced in version 20.1`
 
 Type: **[ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__**  
 Category: **System**  
@@ -477,7 +477,7 @@ Show in UI: **HiddenByDefault**
 
 ### TotalAmount
 
-The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines
+The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. `Currency: TotalAmountCurrency` `Required` `Default(0)`
 
 Type: **[Amount (18, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -672,7 +672,7 @@ Show in UI: **HiddenByDefault**
 
 ### FiscalPrinterPosDevice
 
-For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order.
+For POS Sales Order payments. Specifies the POS Device from fiscal printer type on which the receipt is printed. Null when the payment transaction is not created for a POS Sale Order. `Filter(multi eq)` `Introduced in version 19.1`
 
 Type: **[Devices](Crm.Pos.Devices.md) (nullable)**  
 Category: **System**  
@@ -714,7 +714,7 @@ Show in UI: **HiddenByDefault**
 
 ### OriginalPaymentTransaction
 
-The original payment transaction, which is reversed by the current payment transaction.
+Original Payment Transaction. `Filter(multi eq)` `Introduced in version 20.1`
 
 Type: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable)**  
 Indexed: **True**  
@@ -734,7 +734,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentPaymentSlipAmount
 
-The Payment Slip Amount, which the current payment transaction fulfills . NULL when the current document does not execute any Payment Slip Amount.
+The Payment Slip Amount, which the current payment transaction fulfills . null when the current document does not execute any Payment Slip Amount. `Filter(multi eq)` `Introduced in version 19.1`
 
 Type: **[PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) (nullable)**  
 Indexed: **True**  
@@ -744,7 +744,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-The party that is paying or receiving the money
+The party that is paying or receiving the money. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -754,7 +754,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentAccount
 
-The account towards which the payment was effected
+The account towards which the payment was effected. `Filter(multi eq)`
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Indexed: **True**  
@@ -766,7 +766,7 @@ Front-End Recalc Expressions:
 `obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)`
 ### PaymentReason
 
-The payment reason, as defined in Payment Reasons.
+The payment reason, as defined in Payment Reasons. `Filter(multi eq)`
 
 Type: **[PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
 Category: **System**  
@@ -775,7 +775,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentSlip
 
-When not NULL specifies that this payment was part of a payment slip
+When not null specifies that this payment was part of a payment slip. `Filter(multi eq)`
 
 Type: **[PaymentSlips](Finance.Payments.PaymentSlips.md) (nullable)**  
 Indexed: **True**  
@@ -785,7 +785,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentType
 
-Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.
+Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. `Filter(multi eq)`
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -794,7 +794,7 @@ Show in UI: **ShownByDefault**
 
 ### PosLocation
 
-For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order.
+For POS Sales Order payments. Specifies the POS Location, in which the payment is performed. Null when the payment transaction is not created for a POS Sale Order. `Filter(multi eq)` `Introduced in version 19.1`
 
 Type: **[Locations](Crm.Pos.Locations.md) (nullable)**  
 Category: **System**  
@@ -808,7 +808,7 @@ Front-End Recalc Expressions:
 `obj.Transaction.Query( ).OnlyIfSingle( l => ( ( l.EnterpriseCompanyLocation == obj.EnterpriseCompanyLocation) AndAlso l.IsActive))`
 ### PosOperator
 
-For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order.
+For POS Sales Order payments. Specifies the POS Operator, who created the payment order. Null when the payment transaction is not created for a POS Sale Order. `Filter(multi eq)` `Introduced in version 19.1`
 
 Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 Category: **System**  
@@ -880,7 +880,7 @@ Back-End Default Expression:
 
 ### TotalAmountCurrency
 
-The currency of the total amount
+The currency of the total amount. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  

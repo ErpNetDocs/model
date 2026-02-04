@@ -43,21 +43,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Monitoring.AuditLogEntries.md#applicationname) | string (64) __nullable__ | The client application that triggered the events. Null when unknown or N/A. 
+| [ApplicationName](Systems.Monitoring.AuditLogEntries.md#applicationname) | string (64) __nullable__ | The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)` 
 | [Details](Systems.Monitoring.AuditLogEntries.md#details) | string (max) __nullable__ | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
 | [EntityItemId](Systems.Monitoring.AuditLogEntries.md#entityitemid) | guid __nullable__ | The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)` 
-| [EntityName](Systems.Monitoring.AuditLogEntries.md#entityname) | string (64) __nullable__ | The entity, which is being referenced by the events. Null when unknown or N/A. 
-| [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. 
-| [EventName](Systems.Monitoring.AuditLogEntries.md#eventname) | string (128) __nullable__ | Specific event or method name. Contents depend on the Event Type. Null when N/A. 
-| [EventTimeUtc](Systems.Monitoring.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. 
-| [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. 
+| [EntityName](Systems.Monitoring.AuditLogEntries.md#entityname) | string (64) __nullable__ | The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)` 
+| [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)` 
+| [EventName](Systems.Monitoring.AuditLogEntries.md#eventname) | string (128) __nullable__ | Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)` 
+| [EventTimeUtc](Systems.Monitoring.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` 
+| [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | [EventType](Systems.Monitoring.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PersonalDataProcess](Systems.Monitoring.AuditLogEntries.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. |
-| [User](Systems.Monitoring.AuditLogEntries.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. |
+| [PersonalDataProcess](Systems.Monitoring.AuditLogEntries.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. `Filter(multi eq)` |
+| [User](Systems.Monitoring.AuditLogEntries.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user account under which the event has occurred. Null only for events which are not user-specific. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### ApplicationName
 
-The client application that triggered the events. Null when unknown or N/A.
+The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityName
 
-The entity, which is being referenced by the events. Null when unknown or N/A.
+The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### EventClass
 
-The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes.
+The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes. `Required` `Filter(multi eq)`
 
 Type: **[EventClass](Systems.Monitoring.AuditLogEntries.md#eventclass)**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### EventName
 
-Specific event or method name. Contents depend on the Event Type. Null when N/A.
+Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### EventTimeUtc
 
-The exact date and time (in Utc) when the event occurred.
+The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### EventType
 
-Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline.
+Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline. `Required` `Filter(multi eq)`
 
 Type: **[EventType](Systems.Monitoring.AuditLogEntries.md#eventtype)**  
 Category: **System**  
@@ -259,7 +259,7 @@ Show in UI: **HiddenByDefault**
 
 ### PersonalDataProcess
 
-The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A.
+The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. `Filter(multi eq)`
 
 Type: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
 Category: **System**  
@@ -268,7 +268,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user account under which the event has occurred. Null only for events which are not user-specific.
+The user account under which the event has occurred. Null only for events which are not user-specific. `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  

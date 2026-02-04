@@ -33,16 +33,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommentText](Communities.Social.Comments.md#commenttext) | string (max) | The comment contents in clear text. 
-| [CreationTimeUtc](Communities.Social.Comments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. 
+| [CommentText](Communities.Social.Comments.md#commenttext) | string (max) | The comment contents in clear text. `Required` 
+| [CreationTimeUtc](Communities.Social.Comments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. `Required` `Filter(ge;le)` `ORD` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.Social.Comments.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the comment is made. |
-| [ReplyToComment](Communities.Social.Comments.md#replytocomment) | [Comments](Communities.Social.Comments.md) (nullable) | When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. |
-| [User](Communities.Social.Comments.md#user) | [Users](Systems.Security.Users.md) | The user, who made the comment. |
+| [DataObject](Communities.Social.Comments.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the comment is made. `Required` `Filter(multi eq)` |
+| [ReplyToComment](Communities.Social.Comments.md#replytocomment) | [Comments](Communities.Social.Comments.md) (nullable) | When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. `Filter(multi eq)` |
+| [User](Communities.Social.Comments.md#user) | [Users](Systems.Security.Users.md) | The user, who made the comment. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### CommentText
 
-The comment contents in clear text.
+The comment contents in clear text. `Required`
 
 Type: **string (max)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the comment was created.
+The exact server time (in UTC), when the comment was created. `Required` `Filter(ge;le)` `ORD`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -145,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataObject
 
-The root data object (post, marketplace product, document, etc), for which the comment is made.
+The root data object (post, marketplace product, document, etc), for which the comment is made. `Required` `Filter(multi eq)`
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Indexed: **True**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### ReplyToComment
 
-When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object.
+When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. `Filter(multi eq)`
 
 Type: **[Comments](Communities.Social.Comments.md) (nullable)**  
 Indexed: **True**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user, who made the comment.
+The user, who made the comment. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

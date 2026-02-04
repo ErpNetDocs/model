@@ -40,8 +40,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.AssetManagement.ServiceCenters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies. |
-| [Party](Applications.AssetManagement.ServiceCenters.md#party) | [Parties](General.Contacts.Parties.md) | The person or company, actually performing the maintenance. |
+| [EnterpriseCompany](Applications.AssetManagement.ServiceCenters.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. `Filter(multi eq)` |
+| [Party](Applications.AssetManagement.ServiceCenters.md#party) | [Parties](General.Contacts.Parties.md) | The person or company, actually performing the maintenance. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -133,7 +133,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company, whose assets will be maintained by the service center. When NULL, the service center can maintain assets for all enterprise companies.
+The enterprise company, whose assets will be maintained by the service center. When null, the service center can maintain assets for all enterprise companies. `Filter(multi eq)`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-The person or company, actually performing the maintenance.
+The person or company, actually performing the maintenance. `Required` `Filter(multi eq)`
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  

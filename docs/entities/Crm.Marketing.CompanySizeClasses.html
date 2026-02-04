@@ -128,22 +128,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#fromemployees">FromEmployees</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Minimal number of employees for this size class. NULL if this is not relevant to this size class.</td>
+<td>Minimal number of employees for this size class. null if this is not relevant to this size class. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#fromrevenue">FromRevenue</a></td>
 <td>decimal (15, 0) <strong>nullable</strong></td>
-<td>Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.</td>
+<td>Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Company size class is active.</td>
+<td>Indicates whether the current Company size class is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Company size class name (multi-language).</td>
+<td>Company size class name (multi-language). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#notes">Notes</a></td>
@@ -153,12 +153,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#toemployees">ToEmployees</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Maximum number of employees for this size class. NULL if this is not relevant to this size class.</td>
+<td>Maximum number of employees for this size class. null if this is not relevant to this size class. <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#torevenue">ToRevenue</a></td>
 <td>decimal (15, 0) <strong>nullable</strong></td>
-<td>Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.</td>
+<td>Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -175,7 +175,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Marketing.CompanySizeClasses.html#revenuecurrency">RevenueCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The currency in which the revenues are states. NULL if no revenues are specified.</td>
+<td>The currency in which the revenues are states. null if no revenues are specified. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -232,21 +232,21 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromemployees">FromEmployees</h3>
-<p>Minimal number of employees for this size class. NULL if this is not relevant to this size class.</p>
+<p>Minimal number of employees for this size class. null if this is not relevant to this size class. <code>Filter(eq)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromrevenue">FromRevenue</h3>
-<p>Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.</p>
+<p>Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. <code>Filter(eq)</code></p>
 <p>Type: <strong>decimal (15, 0) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Company size class is active.</p>
+<p>Indicates whether the current Company size class is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -254,7 +254,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Company size class name (multi-language).</p>
+<p>Company size class name (multi-language). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -269,14 +269,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="toemployees">ToEmployees</h3>
-<p>Maximum number of employees for this size class. NULL if this is not relevant to this size class.</p>
+<p>Maximum number of employees for this size class. null if this is not relevant to this size class. <code>Filter(eq)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="torevenue">ToRevenue</h3>
-<p>Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.</p>
+<p>Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. <code>Filter(eq)</code></p>
 <p>Type: <strong>decimal (15, 0) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -326,7 +326,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="revenuecurrency">RevenueCurrency</h3>
-<p>The currency in which the revenues are states. NULL if no revenues are specified.</p>
+<p>The currency in which the revenues are states. null if no revenues are specified. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

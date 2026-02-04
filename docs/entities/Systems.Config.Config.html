@@ -130,27 +130,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.Config.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this config entry is active. Inactive config entries are not taken into account.</td>
+<td>Indicates whether this config entry is active. Inactive config entries are not taken into account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Config.html#keypath">KeyPath</a></td>
 <td>string (128)</td>
-<td>Full path of the configuration option</td>
+<td>Full path of the configuration option. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Config.html#keyvalue">KeyValue</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The value of the configuration option</td>
+<td>The value of the configuration option. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Config.html#userlogin">UserLogin</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>If not NULL, the configuration option is specific to the user</td>
+<td>If not null, the configuration option is specific to the user. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.Config.html#usermachine">UserMachine</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>If not NULL, the configuration option is specific to the machine</td>
+<td>If not null, the configuration option is specific to the machine. <code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -206,7 +206,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this config entry is active. Inactive config entries are not taken into account.</p>
+<p>Indicates whether this config entry is active. Inactive config entries are not taken into account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -214,7 +214,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="keypath">KeyPath</h3>
-<p>Full path of the configuration option</p>
+<p>Full path of the configuration option. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -223,7 +223,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="keyvalue">KeyValue</h3>
-<p>The value of the configuration option</p>
+<p>The value of the configuration option. <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -231,7 +231,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userlogin">UserLogin</h3>
-<p>If not NULL, the configuration option is specific to the user</p>
+<p>If not null, the configuration option is specific to the user. <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usermachine">UserMachine</h3>
-<p>If not NULL, the configuration option is specific to the machine</p>
+<p>If not null, the configuration option is specific to the machine. <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

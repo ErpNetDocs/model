@@ -28,46 +28,46 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.AccountStatement.md#balance) | decimal (38, 2) | Balance is running sum of (Opening + Debit - Credit) calculated for each row of group. 
-| [BalanceBase](Finance.Accounting.AccountStatement.md#balancebase) | decimal (38, 2) | Calculated as Balance over Base currency. 
-| [BalanceReporting](Finance.Accounting.AccountStatement.md#balancereporting) | decimal (38, 2) | Calculated as Balance over Reporting currency. 
-| [Closing](Finance.Accounting.AccountStatement.md#closing) | decimal (38, 2) | Closing Balance(at the end of reporting period) 
-| [ClosingBase](Finance.Accounting.AccountStatement.md#closingbase) | decimal (38, 2) | Closing Balance(in Base currency) 
-| [ClosingReporting](Finance.Accounting.AccountStatement.md#closingreporting) | decimal (38, 2) | Closing Balance(in Reporting currency) 
-| [Credit](Finance.Accounting.AccountStatement.md#credit) | decimal (18, 2) | Credit 
-| [CreditBase](Finance.Accounting.AccountStatement.md#creditbase) | decimal (18, 2) | Credit Base 
-| [CreditReporting](Finance.Accounting.AccountStatement.md#creditreporting) | decimal (18, 2) | Credit Reporting 
-| [Debit](Finance.Accounting.AccountStatement.md#debit) | decimal (18, 2) | Debit 
-| [DebitBase](Finance.Accounting.AccountStatement.md#debitbase) | decimal (18, 2) | Debit Base 
-| [DebitReporting](Finance.Accounting.AccountStatement.md#debitreporting) | decimal (18, 2) | Debit Reporting 
-| [DocumentDate](Finance.Accounting.AccountStatement.md#documentdate) | date | Document Date 
-| [FromDate](Finance.Accounting.AccountStatement.md#fromdate) | date | Period Start Date - Should be filtered with exact date 
-| [ItemKey](Finance.Accounting.AccountStatement.md#itemkey) | string (64) | Item Key 
-| [MovementType](Finance.Accounting.AccountStatement.md#movementtype) | string (7) | Movement Type 
-| [Opening](Finance.Accounting.AccountStatement.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative) 
-| [OpeningBase](Finance.Accounting.AccountStatement.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative) 
-| [OpeningReporting](Finance.Accounting.AccountStatement.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency 
-| [ReleaseTime](Finance.Accounting.AccountStatement.md#releasetime) | datetime | Document Release Time 
-| [ToDate](Finance.Accounting.AccountStatement.md#todate) | date | Period End Date - Should be filtered with exact date 
+| [Balance](Finance.Accounting.AccountStatement.md#balance) | decimal (38, 2) | Balance is running sum of (Opening + Debit - Credit) calculated for each row of group. `Required` 
+| [BalanceBase](Finance.Accounting.AccountStatement.md#balancebase) | decimal (38, 2) | Calculated as Balance over Base currency. `Required` 
+| [BalanceReporting](Finance.Accounting.AccountStatement.md#balancereporting) | decimal (38, 2) | Calculated as Balance over Reporting currency. `Required` 
+| [Closing](Finance.Accounting.AccountStatement.md#closing) | decimal (38, 2) | Closing Balance(at the end of reporting period). `Required` 
+| [ClosingBase](Finance.Accounting.AccountStatement.md#closingbase) | decimal (38, 2) | Closing Balance(in Base currency). `Required` 
+| [ClosingReporting](Finance.Accounting.AccountStatement.md#closingreporting) | decimal (38, 2) | Closing Balance(in Reporting currency). `Required` 
+| [Credit](Finance.Accounting.AccountStatement.md#credit) | decimal (18, 2) | Credit. `Required` 
+| [CreditBase](Finance.Accounting.AccountStatement.md#creditbase) | decimal (18, 2) | Credit Base. `Required` 
+| [CreditReporting](Finance.Accounting.AccountStatement.md#creditreporting) | decimal (18, 2) | Credit Reporting. `Required` 
+| [Debit](Finance.Accounting.AccountStatement.md#debit) | decimal (18, 2) | Debit. `Required` 
+| [DebitBase](Finance.Accounting.AccountStatement.md#debitbase) | decimal (18, 2) | Debit Base. `Required` 
+| [DebitReporting](Finance.Accounting.AccountStatement.md#debitreporting) | decimal (18, 2) | Debit Reporting. `Required` 
+| [DocumentDate](Finance.Accounting.AccountStatement.md#documentdate) | date | Document Date. `Required` `Filter(ge;le)` 
+| [FromDate](Finance.Accounting.AccountStatement.md#fromdate) | date | Period Start Date - Should be filtered with exact date. `Required` `Filter(eq)` 
+| [ItemKey](Finance.Accounting.AccountStatement.md#itemkey) | string (64) | Item Key. `Required` 
+| [MovementType](Finance.Accounting.AccountStatement.md#movementtype) | string (7) | Movement Type. `Required` `Filter(multi eq)` 
+| [Opening](Finance.Accounting.AccountStatement.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative). `Required` 
+| [OpeningBase](Finance.Accounting.AccountStatement.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative). `Required` 
+| [OpeningReporting](Finance.Accounting.AccountStatement.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency. `Required` 
+| [ReleaseTime](Finance.Accounting.AccountStatement.md#releasetime) | datetime | Document Release Time. `Required` `Filter(ge;le)` 
+| [ToDate](Finance.Accounting.AccountStatement.md#todate) | date | Period End Date - Should be filtered with exact date. `Required` `Filter(eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.AccountStatement.md#account) | [Accounts](Finance.Accounting.Accounts.md) | General Ledger Account |
-| [CostCenter](Finance.Accounting.AccountStatement.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center |
-| [Currency](Finance.Accounting.AccountStatement.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
-| [EnterpriseCompany](Finance.Accounting.AccountStatement.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company |
-| [EnterpriseCompanyLocation](Finance.Accounting.AccountStatement.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Company Location / Branch |
-| [ProfitCenter](Finance.Accounting.AccountStatement.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center |
-| [VoucherLine](Finance.Accounting.AccountStatement.md#voucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) | Voucher Line reference |
+| [Account](Finance.Accounting.AccountStatement.md#account) | [Accounts](Finance.Accounting.Accounts.md) | General Ledger Account. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference` |
+| [CostCenter](Finance.Accounting.AccountStatement.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id` |
+| [Currency](Finance.Accounting.AccountStatement.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id` |
+| [EnterpriseCompany](Finance.Accounting.AccountStatement.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_<br />Companies_Table.Enterprise_Company_Id` `FilterableReference` |
+| [EnterpriseCompanyLocation](Finance.Accounting.AccountStatement.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Company Location / Branch. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id` `FilterableReference` |
+| [ProfitCenter](Finance.Accounting.AccountStatement.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id` |
+| [VoucherLine](Finance.Accounting.AccountStatement.md#voucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) | Voucher Line reference. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Voucher_Lines_Table.Voucher_Line_Id` |
 
 
 ## Attribute Details
 
 ### Balance
 
-Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.
+Balance is running sum of (Opening + Debit - Credit) calculated for each row of group. `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Calculated as Balance over Base currency.
+Calculated as Balance over Base currency. `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Calculated as Balance over Reporting currency.
+Calculated as Balance over Reporting currency. `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### Closing
 
-Closing Balance(at the end of reporting period)
+Closing Balance(at the end of reporting period). `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingBase
 
-Closing Balance(in Base currency)
+Closing Balance(in Base currency). `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingReporting
 
-Closing Balance(in Reporting currency)
+Closing Balance(in Reporting currency). `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### Credit
 
-Credit
+Credit. `Required`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditBase
 
-Credit Base
+Credit Base. `Required`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditReporting
 
-Credit Reporting
+Credit Reporting. `Required`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### Debit
 
-Debit
+Debit. `Required`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### DebitBase
 
-Debit Base
+Debit Base. `Required`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -177,7 +177,7 @@ Show in UI: **ShownByDefault**
 
 ### DebitReporting
 
-Debit Reporting
+Debit Reporting. `Required`
 
 Type: **decimal (18, 2)**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentDate
 
-Document Date
+Document Date. `Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -197,7 +197,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Period Start Date - Should be filtered with exact date
+Period Start Date - Should be filtered with exact date. `Required` `Filter(eq)`
 
 Type: **date**  
 Category: **System**  
@@ -207,7 +207,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key
+Item Key. `Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Show in UI: **ShownByDefault**
 
 ### MovementType
 
-Movement Type
+Movement Type. `Required` `Filter(multi eq)`
 
 Type: **string (7)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### Opening
 
-Opening balance (debit balance is positive, credit - negative)
+Opening balance (debit balance is positive, credit - negative). `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningBase
 
-Opening balance in base currency (debit balance is positive, credit - negative)
+Opening balance in base currency (debit balance is positive, credit - negative). `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -249,7 +249,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningReporting
 
-Opening balance in reporting currency
+Opening balance in reporting currency. `Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -259,7 +259,7 @@ Show in UI: **ShownByDefault**
 
 ### ReleaseTime
 
-Document Release Time
+Document Release Time. `Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -269,7 +269,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Period End Date - Should be filtered with exact date
+Period End Date - Should be filtered with exact date. `Required` `Filter(eq)`
 
 Type: **date**  
 Category: **System**  
@@ -282,7 +282,7 @@ Show in UI: **ShownByDefault**
 
 ### Account
 
-General Ledger Account
+General Ledger Account. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference`
 
 Type: **[Accounts](Finance.Accounting.Accounts.md)**  
 Category: **System**  
@@ -294,7 +294,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCenter
 
-Cost Center
+Cost Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id`
 
 Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
 Category: **System**  
@@ -305,7 +305,7 @@ Show in UI: **ShownByDefault**
 
 ### Currency
 
-Currency
+Currency. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -316,7 +316,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-Enterprise Company
+Enterprise Company. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id` `FilterableReference`
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -328,7 +328,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompanyLocation
 
-Company Location / Branch
+Company Location / Branch. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Company_Locations_Table.Company_Location_Id` `FilterableReference`
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
@@ -340,7 +340,7 @@ Show in UI: **ShownByDefault**
 
 ### ProfitCenter
 
-Profit Center
+Profit Center. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id`
 
 Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
 Category: **System**  
@@ -351,7 +351,7 @@ Show in UI: **ShownByDefault**
 
 ### VoucherLine
 
-Voucher Line reference
+Voucher Line reference. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Voucher_Lines_Table.Voucher_Line_Id`
 
 Type: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)**  
 Category: **System**  

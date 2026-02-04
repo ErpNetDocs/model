@@ -37,8 +37,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Wms.WarehouseZones.md#code) | string (32) | Zone code, unique within the warehouse. 
-| [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the zone. 
+| [Code](Logistics.Wms.WarehouseZones.md#code) | string (32) | Zone code, unique within the warehouse. `Required` `Filter(multi eq;like)` 
+| [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the zone. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseZones.md#notes) | string (max) __nullable__ | Notes for this WarehouseZone. 
 
 ## References
@@ -46,7 +46,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Parent](Logistics.Wms.WarehouseZones.md#parent) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | The parent Warehouse Zone of the current Warehouse Zone. `Filter(multi eq)` |
-| [Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the zone is located. |
+| [Warehouse](Logistics.Wms.WarehouseZones.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the zone is located. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### Code
 
-Zone code, unique within the warehouse.
+Zone code, unique within the warehouse. `Required` `Filter(multi eq;like)`
 
 Type: **string (32)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Front-End Recalc Expressions:
 `obj.GetNextCode( obj.Parent)`
 ### Name
 
-Multi-language name of the zone.
+Multi-language name of the zone. `Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### Warehouse
 
-The warehouse in which the zone is located.
+The warehouse in which the zone is located. `Required` `Filter(multi eq)` `Owner`
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Category: **System**  

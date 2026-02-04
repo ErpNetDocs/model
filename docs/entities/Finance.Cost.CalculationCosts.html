@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#amount">Amount</a></td>
 <td>decimal (14, 2)</td>
-<td>The allocated amount of costs in the currency of the calculation.</td>
+<td>The allocated amount of costs in the currency of the calculation. <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the calculation</td>
+<td>Consecutive number of the line within the calculation. <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#projectid">ProjectId</a></td>
@@ -153,32 +153,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#costcenter">CostCenter</a></td>
 <td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
-<td>The Cost Center, which absorbed the cost.</td>
+<td>The Cost Center, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
-<td>The Cost Type, which absorbed the cost.</td>
+<td>The Cost Type, which absorbed the cost. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The Lot, which absorbed the cost.</td>
+<td>The Lot, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The Product, which absorbed the cost.</td>
+<td>The Product, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#salesorder">SalesOrder</a></td>
 <td><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</td>
-<td>The Sales Order, which absorbed the cost.</td>
+<td>The Sales Order, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</td>
-<td>The Workgroup, which absorbed the cost.</td>
+<td>The Workgroup, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -211,7 +211,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>The allocated amount of costs in the currency of the calculation.</p>
+<p>The allocated amount of costs in the currency of the calculation. <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (14, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the calculation</p>
+<p>Consecutive number of the line within the calculation. <code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -266,37 +266,37 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costcenter">CostCenter</h3>
-<p>The Cost Center, which absorbed the cost.</p>
+<p>The Cost Center, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costtype">CostType</h3>
-<p>The Cost Type, which absorbed the cost.</p>
+<p>The Cost Type, which absorbed the cost. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>The Lot, which absorbed the cost.</p>
+<p>The Lot, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The Product, which absorbed the cost.</p>
+<p>The Product, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesorder">SalesOrder</h3>
-<p>The Sales Order, which absorbed the cost.</p>
+<p>The Sales Order, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workgroup">Workgroup</h3>
-<p>The Workgroup, which absorbed the cost.</p>
+<p>The Workgroup, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

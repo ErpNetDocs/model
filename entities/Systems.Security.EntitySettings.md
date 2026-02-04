@@ -42,20 +42,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayTextFormat](Systems.Security.EntitySettings.md#displaytextformat) | string (128) __nullable__ | Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default. 
-| [LogCreate](Systems.Security.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity. 
-| [LogDelete](Systems.Security.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity. 
-| [LogReadById](Systems.Security.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity. 
-| [LogReadMany](Systems.Security.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity. 
-| [LogUpdate](Systems.Security.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity. 
-| [Name](Systems.Security.EntitySettings.md#name) | string (64) | The system name of the entity, which is being secured. 
-| [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | The track changes level for the entity 
+| [DisplayTextFormat](Systems.Security.EntitySettings.md#displaytextformat) | string (128) __nullable__ | Interpolated string, containing the default format for displaying values of the entity. null means to use the system-wide default. `Introduced in version 22.1.4.18` 
+| [LogCreate](Systems.Security.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogDelete](Systems.Security.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogReadById](Systems.Security.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogReadMany](Systems.Security.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [LogUpdate](Systems.Security.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity. `Required` `Default(false)` `Introduced in version 18.2` 
+| [Name](Systems.Security.EntitySettings.md#name) | string (64) | The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD` 
+| [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | The track changes level for the entity. `Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.EntitySettings.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to access the secured entity. |
+| [AccessKey](Systems.Security.EntitySettings.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, required to access the secured entity. `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -74,7 +74,7 @@ Aggregate Tree
 
 ### DisplayTextFormat
 
-Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default.
+Interpolated string, containing the default format for displaying values of the entity. null means to use the system-wide default. `Introduced in version 22.1.4.18`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### LogCreate
 
-Specifies whether to log every insert for this entity.
+Specifies whether to log every insert for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### LogDelete
 
-Specifies whether to log every delete for this entity.
+Specifies whether to log every delete for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 Type: **boolean**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### LogReadById
 
-Specifies whether to log every load by Id for this entity.
+Specifies whether to log every load by Id for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 Type: **boolean**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### LogReadMany
 
-Specifies whether to log every load of many records for this entity.
+Specifies whether to log every load of many records for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 Type: **boolean**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### LogUpdate
 
-Specifies whether to log every update for this entity.
+Specifies whether to log every update for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 Type: **boolean**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The system name of the entity, which is being secured.
+The system name of the entity, which is being secured. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### TrackChangesLevel
 
-The track changes level for the entity
+The track changes level for the entity. `Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1`
 
 Type: **[TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel)**  
 Category: **System**  
@@ -236,7 +236,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, required to access the secured entity.
+The access key, required to access the secured entity. `Filter(multi eq)`
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  

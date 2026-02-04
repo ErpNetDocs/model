@@ -135,7 +135,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#active"><s>Active</s></a></td>
 <td>boolean <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active</td>
+<td><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active. <code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#code">Code</a></td>
@@ -170,12 +170,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the store</td>
+<td>Name of the store. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#numberofdimensions">NumberOfDimensions</a></td>
 <td>int32</td>
-<td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.</td>
+<td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partycode">PartyCode</a></td>
@@ -230,7 +230,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#unmanaged">Unmanaged</a></td>
 <td>boolean</td>
-<td>If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.</td>
+<td>If false the system will expect the user to process the store transactions. If true the system will auto-generate them. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#updatetime">UpdateTime</a></td>
@@ -272,7 +272,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#currency">Currency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used</td>
+<td>The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#defaultproductcodingsystem">DefaultProductCodingSystem</a></td>
@@ -282,7 +282,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#defaultstorebin">DefaultStoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>To be used when store bin is unknown</td>
+<td>To be used when store bin is unknown. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -307,22 +307,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#responsibleparty">ResponsibleParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>Primary responsible party (usually employee) for the stock in the store.</td>
+<td>Primary responsible party (usually employee) for the stock in the store. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#storegroup">StoreGroup</a></td>
 <td><a href="Logistics.Inventory.StoreGroups.html">StoreGroups</a></td>
-<td>The store group, to which this store belongs.</td>
+<td>The store group, to which this store belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#taxwarehouse">TaxWarehouse</a></td>
 <td><a href="Regulatory.Excise.TaxWarehouses.html">TaxWarehouses</a> (nullable)</td>
-<td>Excise Tax Warehouse for this Store. NULL means that the Store is not an Excise Tax Warehouse.</td>
+<td>Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.93</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a> (nullable)</td>
-<td>Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations.</td>
+<td>Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 </tbody>
 </table>
@@ -339,7 +339,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#id">Id</a></td>
 <td>guid</td>
-<td>Unique store Id</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#objectversion">ObjectVersion</a></td>
@@ -422,7 +422,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active</p>
+<p><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active. <code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -478,14 +478,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the store</p>
+<p>Name of the store. <code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="numberofdimensions">NumberOfDimensions</h3>
-<p>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.</p>
+<p>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -606,7 +606,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="unmanaged">Unmanaged</h3>
-<p>If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.</p>
+<p>If false the system will expect the user to process the store transactions. If true the system will auto-generate them. <code>Required</code> <code>Default(true)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -629,7 +629,6 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="id">Id</h3>
-<p>Unique store Id</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -723,7 +722,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currency">Currency</h3>
-<p>The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used</p>
+<p>The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -737,7 +736,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultstorebin">DefaultStoreBin</h3>
-<p>To be used when store bin is unknown</p>
+<p>To be used when store bin is unknown. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -768,25 +767,25 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="responsibleparty">ResponsibleParty</h3>
-<p>Primary responsible party (usually employee) for the stock in the store.</p>
+<p>Primary responsible party (usually employee) for the stock in the store. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storegroup">StoreGroup</h3>
-<p>The store group, to which this store belongs.</p>
+<p>The store group, to which this store belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreGroups.html">StoreGroups</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxwarehouse">TaxWarehouse</h3>
-<p>Excise Tax Warehouse for this Store. NULL means that the Store is not an Excise Tax Warehouse.</p>
+<p>Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.93</code></p>
 <p>Type: <strong><a href="Regulatory.Excise.TaxWarehouses.html">TaxWarehouses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations.</p>
+<p>Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

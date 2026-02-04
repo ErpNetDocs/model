@@ -36,7 +36,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Regulatory.Excise.ExcisePurposeCodes.md#code) | string (32) | The unique code of the ExcisePurposeCode. `Required` `Filter(eq;like)` `ORD` 
-| [IsDefault](Regulatory.Excise.ExcisePurposeCodes.md#isdefault) | boolean | Excise Purpose Codes which is the default for documents. 
+| [IsDefault](Regulatory.Excise.ExcisePurposeCodes.md#isdefault) | boolean | Excise Purpose Codes which is the default for documents. `Required` `Default(false)` `Filter(eq)` `Introduced in version 21.1.4.0` 
 | [Name](Regulatory.Excise.ExcisePurposeCodes.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | The name of this ExcisePurposeCode. `Required` `Filter(like)` 
 | [Notes](Regulatory.Excise.ExcisePurposeCodes.md#notes) | string (max) __nullable__ | Notes for this ExcisePurposeCode. 
 
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-Excise Purpose Codes which is the default for documents.
+Excise Purpose Codes which is the default for documents. `Required` `Default(false)` `Filter(eq)` `Introduced in version 21.1.4.0`
 
 Type: **boolean**  
 Indexed: **True**  

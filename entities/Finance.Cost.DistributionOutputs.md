@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Finance.Cost.DistributionOutputs.md#lineno) | int32 | Unique (within the document), consecutive line number of the output. 
-| [WeightCoefficient](Finance.Cost.DistributionOutputs.md#weightcoefficient) | decimal (12, 5) | The weight coefficient for prorate distribution of cost over the current line. 
+| [LineNo](Finance.Cost.DistributionOutputs.md#lineno) | int32 | Unique (within the document), consecutive line number of the output. `Required` 
+| [WeightCoefficient](Finance.Cost.DistributionOutputs.md#weightcoefficient) | decimal (12, 5) | The weight coefficient for prorate distribution of cost over the current line. `Required` `Default(1)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CostDistribution](Finance.Cost.DistributionOutputs.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The <see cref="Distribution"/> to which this DistributionOutput belongs. `Required` `Filter(multi eq)` `Owner` |
-| [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#storetransactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. |
+| [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#storetransactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### LineNo
 
-Unique (within the document), consecutive line number of the output.
+Unique (within the document), consecutive line number of the output. `Required`
 
 Type: **int32**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `( obj.CostDistribution.Outputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### WeightCoefficient
 
-The weight coefficient for prorate distribution of cost over the current line.
+The weight coefficient for prorate distribution of cost over the current line. `Required` `Default(1)`
 
 Type: **decimal (12, 5)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreTransactionLine
 
-The store transaction line, for which costs will be distributed.
+The store transaction line, for which costs will be distributed. `Required` `Filter(multi eq)`
 
 Type: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 Indexed: **True**  

@@ -37,20 +37,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentEntityName](Systems.Monitoring.PrintImages.md#documententityname) | string (64) | The entity name of the document type. 
-| [PrintoutLayoutName](Systems.Monitoring.PrintImages.md#printoutlayoutname) | string (64) | Printout layout name. 
-| [PrintsCount](Systems.Monitoring.PrintImages.md#printscount) | int32 | Total number of prints. 
-| [SizeMB](Systems.Monitoring.PrintImages.md#sizemb) | decimal (12, 3) | Total size of the print in megabytes. 
-| [TypeName](Systems.Monitoring.PrintImages.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the document type. 
-| [UnitSizeMB](Systems.Monitoring.PrintImages.md#unitsizemb) | decimal (12, 3) | Average print size in megabytes. 
-| [Year](Systems.Monitoring.PrintImages.md#year) | string (30) | The year to which the current data refers. 
+| [DocumentEntityName](Systems.Monitoring.PrintImages.md#documententityname) | string (64) | The entity name of the document type. `Required` `Filter(eq;like)` `ORD` 
+| [PrintoutLayoutName](Systems.Monitoring.PrintImages.md#printoutlayoutname) | string (64) | Printout layout name. `Required` `Filter(eq;like)` `ORD` 
+| [PrintsCount](Systems.Monitoring.PrintImages.md#printscount) | int32 | Total number of prints. `Required` `Filter(eq;ge;le)` `ORD` 
+| [SizeMB](Systems.Monitoring.PrintImages.md#sizemb) | decimal (12, 3) | Total size of the print in megabytes. `Required` `Filter(eq;ge;le)` `ORD` 
+| [TypeName](Systems.Monitoring.PrintImages.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the document type. `Required` `Filter(eq;like)` `ORD` 
+| [UnitSizeMB](Systems.Monitoring.PrintImages.md#unitsizemb) | decimal (12, 3) | Average print size in megabytes. `Required` `Filter(eq;ge;le)` `ORD` 
+| [Year](Systems.Monitoring.PrintImages.md#year) | string (30) | The year to which the current data refers. `Required` `Filter(eq;like)` `ORD` `Introduced in version 24.1.3.32` 
 
 
 ## Attribute Details
 
 ### DocumentEntityName
 
-The entity name of the document type.
+The entity name of the document type. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Category: **System**  
@@ -61,7 +61,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintoutLayoutName
 
-Printout layout name.
+Printout layout name. `Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintsCount
 
-Total number of prints.
+Total number of prints. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### SizeMB
 
-Total size of the print in megabytes.
+Total size of the print in megabytes. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### TypeName
 
-Name of the document type.
+Name of the document type. `Required` `Filter(eq;like)` `ORD`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### UnitSizeMB
 
-Average print size in megabytes.
+Average print size in megabytes. `Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### Year
 
-The year to which the current data refers.
+The year to which the current data refers. `Required` `Filter(eq;like)` `ORD` `Introduced in version 24.1.3.32`
 
 Type: **string (30)**  
 Category: **System**  

@@ -200,12 +200,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -250,7 +250,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#status"><s>Status</s></a></td>
 <td>string (1)</td>
-<td><strong>OBSOLETE! Do not use!</strong> N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed</td>
+<td><strong>OBSOLETE! Do not use!</strong> N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. <code>Obsolete</code> <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#void">Void</a></td>
@@ -307,7 +307,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#documentcurrency"><s>DocumentCurrency</s></a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td><strong>OBSOLETE! Do not use!</strong> Not used.</td>
+<td><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 22.1.6.61</code> <code>Obsolete</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#documenttype">DocumentType</a></td>
@@ -367,7 +367,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store, from which the request for materials is made. The value is applied to all lines. NULL when the lines contain more than 1 different stores.</td>
+<td>The store, from which the request for materials is made. The value is applied to all lines. null when the lines contain more than 1 different stores. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -387,7 +387,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html#workorder">WorkOrder</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></td>
-<td>The work order that will consume the materials</td>
+<td>The work order that will consume the materials. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -593,7 +593,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -601,7 +601,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -734,7 +734,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p><strong>OBSOLETE! Do not use!</strong> N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed</p>
+<p><strong>OBSOLETE! Do not use!</strong> N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. <code>Obsolete</code> <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>string (1)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -868,7 +868,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Not used.</p>
+<p><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 22.1.6.61</code> <code>Obsolete</code></p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -945,7 +945,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The store, from which the request for materials is made. The value is applied to all lines. NULL when the lines contain more than 1 different stores.</p>
+<p>The store, from which the request for materials is made. The value is applied to all lines. null when the lines contain more than 1 different stores. <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -974,7 +974,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="workorder">WorkOrder</h3>
-<p>The work order that will consume the materials</p>
+<p>The work order that will consume the materials. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

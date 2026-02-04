@@ -50,7 +50,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BonusProgram](Crm.Pricing.BonusProgramProducts.md#bonusprogram) | [BonusPrograms](Crm.Pricing.BonusPrograms.md) | The <see cref="BonusProgram"/> to which this BonusProgramProduct belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Product](Crm.Pricing.BonusProgramProducts.md#product) | [Products](General.Products.Products.md) | The product which is required to exist in the final sales document in order for the bonus program to be applied |
+| [Product](Crm.Pricing.BonusProgramProducts.md#product) | [Products](General.Products.Products.md) | The product which is required to exist in the final sales document in order for the bonus program to be applied. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product which is required to exist in the final sales document in order for the bonus program to be applied
+The product which is required to exist in the final sales document in order for the bonus program to be applied. `Required` `Filter(multi eq)`
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  

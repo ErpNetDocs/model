@@ -42,17 +42,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [NotificationClass](Systems.Core.NotificationSettings.md#notificationclass) | string (64) __nullable__ | The class of the notification, for which the user is specifying settings. When NULL, the setting is applied to all notification classes. 
-| [ReceiveDeviceNotification](Systems.Core.NotificationSettings.md#receivedevicenotification) | boolean | True if the user should receive device notification. 
-| [ReceiveMail](Systems.Core.NotificationSettings.md#receivemail) | boolean | True if the user should receive mail. 
-| [ReceiveNotification](Systems.Core.NotificationSettings.md#receivenotification) | boolean | True if the user should receive internal notification. 
-| [ReceiveSms](Systems.Core.NotificationSettings.md#receivesms) | boolean | True if the user should receive SMS. 
+| [NotificationClass](Systems.Core.NotificationSettings.md#notificationclass) | string (64) __nullable__ | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)` 
+| [ReceiveDeviceNotification](Systems.Core.NotificationSettings.md#receivedevicenotification) | boolean | True if the user should receive device notification. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.34` 
+| [ReceiveMail](Systems.Core.NotificationSettings.md#receivemail) | boolean | True if the user should receive mail. `Required` `Default(false)` `Filter(eq)` 
+| [ReceiveNotification](Systems.Core.NotificationSettings.md#receivenotification) | boolean | True if the user should receive internal notification. `Required` `Default(true)` `Filter(eq)` 
+| [ReceiveSms](Systems.Core.NotificationSettings.md#receivesms) | boolean | True if the user should receive SMS. `Required` `Default(false)` `Filter(eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [User](Systems.Core.NotificationSettings.md#user) | [Users](Systems.Security.Users.md) | The user for whom the notification setting is about. |
+| [User](Systems.Core.NotificationSettings.md#user) | [Users](Systems.Security.Users.md) | The user for whom the notification setting is about. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Aggregate Tree
 
 ### NotificationClass
 
-The class of the notification, for which the user is specifying settings. When NULL, the setting is applied to all notification classes.
+The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiveDeviceNotification
 
-True if the user should receive device notification.
+True if the user should receive device notification. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.34`
 
 Type: **boolean**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiveMail
 
-True if the user should receive mail.
+True if the user should receive mail. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiveNotification
 
-True if the user should receive internal notification.
+True if the user should receive internal notification. `Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiveSms
 
-True if the user should receive SMS.
+True if the user should receive SMS. `Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -188,7 +188,7 @@ Show in UI: **HiddenByDefault**
 
 ### User
 
-The user for whom the notification setting is about.
+The user for whom the notification setting is about. `Required` `Filter(multi eq)`
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

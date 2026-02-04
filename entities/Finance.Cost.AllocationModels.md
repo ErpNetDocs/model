@@ -33,13 +33,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string (254) | Multilanguage allocation model name 
+| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string (254) | Multilanguage allocation model name. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Cost.AllocationModels.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results |
+| [Currency](Finance.Cost.AllocationModels.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the calculation is done. This is applied to the production and the results. `Required` `Filter(multi eq)` |
 
 
 ## System Attributes
@@ -58,7 +58,7 @@ Aggregate Tree
 
 ### CostAllocationModelName
 
-Multilanguage allocation model name
+Multilanguage allocation model name. `Required`
 
 Type: **string (254)**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **HiddenByDefault**
 
 ### Currency
 
-The currency in which the calculation is done. This is applied to the production and the results
+The currency in which the calculation is done. This is applied to the production and the results. `Required` `Filter(multi eq)`
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
