@@ -34,16 +34,16 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message 
-| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses 
-| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created 
-| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address 
-| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | 1 when the message is stored in encrypted format 
-| [IsRead](Applications.Mail.Messages.md#isread) | boolean | 1 when the message was read by the user 
-| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received 
-| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent 
-| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server 
-| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject 
-| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses 
+| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses[Filter(like)] 
+| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created[Required] [Default(Now)] [Filter(ge;le)] 
+| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address[Required] [Filter(like)] 
+| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | 1 when the message is stored in encrypted format[Required] [Default(false)] [Filter(eq)] 
+| [IsRead](Applications.Mail.Messages.md#isread) | boolean | 1 when the message was read by the user[Required] [Default(false)] [Filter(eq)] 
+| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received[Filter(ge;le)] 
+| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent[Filter(ge;le)] 
+| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server[Filter(eq)] [ORD] 
+| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject[Filter(like)] 
+| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses[Filter(like)] 
 
 ## References
 
@@ -86,7 +86,7 @@ Show in UI: **HiddenByDefault**
 
 ### CcEmailAddressList
 
-Semicolon-separated list of Cc email addresses
+Semicolon-separated list of Cc email addresses[Filter(like)]
 
 Type: **string (2048) __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationDateTime
 
-Date and time when the message was created
+Date and time when the message was created[Required] [Default(Now)] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **HiddenByDefault**
 
 ### FromEmailAddress
 
-Sending email address
+Sending email address[Required] [Filter(like)]
 
 Type: **string (512)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### IsEncrypted
 
-1 when the message is stored in encrypted format
+1 when the message is stored in encrypted format[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### IsRead
 
-1 when the message was read by the user
+1 when the message was read by the user[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceivedDateTime
 
-Date and time when the message was received
+Date and time when the message was received[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### SentDateTime
 
-Date and time when the message was sent
+Date and time when the message was sent[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### ServerMessageID
 
-Message ID as it appears on the mail server
+Message ID as it appears on the mail server[Filter(eq)] [ORD]
 
 Type: **string (256) __nullable__**  
 Indexed: **True**  
@@ -173,7 +173,7 @@ Show in UI: **CannotBeShown**
 
 ### Subject
 
-The message subject
+The message subject[Filter(like)]
 
 Type: **string (1024) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### ToEmailAddressList
 
-Semicolon-separated list of receiving email addresses
+Semicolon-separated list of receiving email addresses[Filter(like)]
 
 Type: **string (2048) __nullable__**  
 Category: **System**  

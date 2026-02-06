@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal (14, 3) | The custom percent for the current product and amount type. 
+| [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal (14, 3) | The custom percent for the current product and amount type.[Required] [Default(0)] 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### LinePercent
 
-The custom percent for the current product and amount type.
+The custom percent for the current product and amount type.[Required] [Default(0)]
 
 Type: **decimal (14, 3)**  
 Category: **System**  

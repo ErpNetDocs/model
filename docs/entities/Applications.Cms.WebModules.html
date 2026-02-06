@@ -125,12 +125,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.WebModules.html#ispublished">IsPublished</a></td>
 <td>boolean</td>
-<td>Specifies whether the module is published and will be showed in the web site.</td>
+<td>Specifies whether the module is published and will be showed in the web site.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebModules.html#localurl">LocalUrl</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.</td>
+<td>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebModules.html#modulepicture">ModulePicture</a></td>
@@ -140,12 +140,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.WebModules.html#moduletype">ModuleType</a></td>
 <td><a href="Applications.Cms.WebModules.html#moduletype">ModuleType</a></td>
-<td>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.</td>
+<td>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.[Required] [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.WebModules.html#name">Name</a></td>
 <td>string (512)</td>
-<td>Multilanguage Module name. This is used as a title when displaying the web Module.</td>
+<td>Multilanguage Module name. This is used as a title when displaying the web Module.[Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -200,7 +200,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="ispublished">IsPublished</h3>
-<p>Specifies whether the module is published and will be showed in the web site.</p>
+<p>Specifies whether the module is published and will be showed in the web site.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -208,7 +208,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="localurl">LocalUrl</h3>
-<p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.</p>
+<p>The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path.[Filter(like)]</p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -223,7 +223,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="moduletype">ModuleType</h3>
-<p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.</p>
+<p>Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc.[Required] [Filter(like)]</p>
 <p>Type: <strong><a href="Applications.Cms.WebModules.html#moduletype">ModuleType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the ModuleType data attribute<br>
@@ -254,7 +254,7 @@ Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage Module name. This is used as a title when displaying the web Module.</p>
+<p>Multilanguage Module name. This is used as a title when displaying the web Module.[Required] [Filter(like)]</p>
 <p>Type: <strong>string (512)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

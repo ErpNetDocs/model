@@ -44,13 +44,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PeriodDate](Crm.SalesForce.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes) 
-| [PeriodMonth](Crm.SalesForce.SalesPersonTargetLines.md#periodmonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year) 
-| [PeriodYear](Crm.SalesForce.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year) 
-| [TargetAmount](Crm.SalesForce.SalesPersonTargetLines.md#targetamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value 
-| [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs 
-| [TargetValue](Crm.SalesForce.SalesPersonTargetLines.md#targetvalue) | decimal (9, 2) | Value of target. Meaning depends on target type 
-| [TargetWeight](Crm.SalesForce.SalesPersonTargetLines.md#targetweight) | decimal (5, 2) | Relative weight of target, comparatively to other targets 
+| [PeriodDate](Crm.SalesForce.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)[Required] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.43] 
+| [PeriodMonth](Crm.SalesForce.SalesPersonTargetLines.md#periodmonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)] 
+| [PeriodYear](Crm.SalesForce.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)] 
+| [TargetAmount](Crm.SalesForce.SalesPersonTargetLines.md#targetamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value[Currency: TargetAmountCurrency] 
+| [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs[Required] [Default(&quot;SALES&quot;)] [Filter(multi eq)] 
+| [TargetValue](Crm.SalesForce.SalesPersonTargetLines.md#targetvalue) | decimal (9, 2) | Value of target. Meaning depends on target type[Required] [Default(0)] 
+| [TargetWeight](Crm.SalesForce.SalesPersonTargetLines.md#targetweight) | decimal (5, 2) | Relative weight of target, comparatively to other targets[Required] [Default(1)] 
 
 ## References
 
@@ -78,7 +78,7 @@ Aggregate Root:
 
 ### PeriodDate
 
-Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)
+Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)[Required] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.43]
 
 Type: **datetime**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### PeriodMonth
 
-Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)
+Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)]
 
 Type: **byte**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### PeriodYear
 
-Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)
+Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)]
 
 Type: **int16**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetAmount
 
-Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value
+Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value[Currency: TargetAmountCurrency]
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **CannotBeShown**
 
 ### TargetType
 
-Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs
+Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs[Required] [Default(&quot;SALES&quot;)] [Filter(multi eq)]
 
 Type: **[TargetType](Crm.SalesForce.SalesPersonTargetLines.md#targettype)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetValue
 
-Value of target. Meaning depends on target type
+Value of target. Meaning depends on target type[Required] [Default(0)]
 
 Type: **decimal (9, 2)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetWeight
 
-Relative weight of target, comparatively to other targets
+Relative weight of target, comparatively to other targets[Required] [Default(1)]
 
 Type: **decimal (5, 2)**  
 Category: **System**  

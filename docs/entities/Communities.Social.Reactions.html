@@ -121,12 +121,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Communities.Social.Reactions.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the reaction was created.</td>
+<td>The exact server time (in UTC), when the reaction was created.[Required] [Default(NowUtc)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.Reactions.html#reactiontype">ReactionType</a></td>
 <td><a href="Communities.Social.Reactions.html#reactiontype">ReactionType</a></td>
-<td>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.</td>
+<td>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.[Required] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC), when the reaction was created.</p>
+<p>The exact server time (in UTC), when the reaction was created.[Required] [Default(NowUtc)] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reactiontype">ReactionType</h3>
-<p>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.</p>
+<p>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.[Required] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Communities.Social.Reactions.html#reactiontype">ReactionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ReactionType</code>(Communities.Social.Reactions.md#reactiontype) data attribute<br>

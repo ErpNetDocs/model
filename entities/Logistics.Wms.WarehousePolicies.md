@@ -37,13 +37,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Wms.WarehousePolicies.md#code) | string (16) | The unique code of the warehouse policy. 
-| [FromDate](Logistics.Wms.WarehousePolicies.md#fromdate) | date __nullable__ | When set, specifies the activation date of the policy. 
-| [Importance](Logistics.Wms.WarehousePolicies.md#importance) | int32 | The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. 
+| [Code](Logistics.Wms.WarehousePolicies.md#code) | string (16) | The unique code of the warehouse policy.[Required] [Introduced in version 22.1.6.60] 
+| [FromDate](Logistics.Wms.WarehousePolicies.md#fromdate) | date __nullable__ | When set, specifies the activation date of the policy.[Filter(eq;ge;le)] 
+| [Importance](Logistics.Wms.WarehousePolicies.md#importance) | int32 | The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.[Required] [Default(0)] [Filter(eq;ge;le)] 
 | [Note](Logistics.Wms.WarehousePolicies.md#note) | string (max) __nullable__ | Notes 
-| [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | The kind of policy, which is being applied. 
-| [ToDate](Logistics.Wms.WarehousePolicies.md#todate) | date __nullable__ | When set, specifies the de-activation date of the policy. 
-| [Value](Logistics.Wms.WarehousePolicies.md#value) | string (64) | The value specified for the policy. For boolean policies, allowed values are "true" and "false". 
+| [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | The kind of policy, which is being applied.[Required] [Filter(multi eq)] 
+| [ToDate](Logistics.Wms.WarehousePolicies.md#todate) | date __nullable__ | When set, specifies the de-activation date of the policy.[Filter(eq;ge;le)] 
+| [Value](Logistics.Wms.WarehousePolicies.md#value) | string (64) | The value specified for the policy. For boolean policies, allowed values are "true" and "false".[Required] [Filter(eq;ge;le)] 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### Code
 
-The unique code of the warehouse policy.
+The unique code of the warehouse policy.[Required] [Introduced in version 22.1.6.60]
 
 Type: **string (16)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Back-End Default Expression:
 
 ### FromDate
 
-When set, specifies the activation date of the policy.
+When set, specifies the activation date of the policy.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Importance
 
-The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.
+The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.[Required] [Default(0)] [Filter(eq;ge;le)]
 
 Type: **int32**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### PolicyKind
 
-The kind of policy, which is being applied.
+The kind of policy, which is being applied.[Required] [Filter(multi eq)]
 
 Type: **[PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-When set, specifies the de-activation date of the policy.
+When set, specifies the de-activation date of the policy.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-The value specified for the policy. For boolean policies, allowed values are "true" and "false".
+The value specified for the policy. For boolean policies, allowed values are "true" and "false".[Required] [Filter(eq;ge;le)]
 
 Type: **string (64)**  
 Category: **System**  

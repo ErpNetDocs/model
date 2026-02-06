@@ -36,10 +36,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Comments](General.Products.ProductPictures.md#comments) | string (254) __nullable__ | Comments for this ProductPicture. 
-| [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | 1=This is the default picture for the product and the size class; 0=otherwise 
-| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically. 
+| [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | 1=This is the default picture for the product and the size class; 0=otherwise[Required] [Default(false)] [Filter(eq)] 
+| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically.[Filter(ge;le)] [ReadOnly] 
 | [Picture](General.Products.ProductPictures.md#picture) | byte[] __nullable__ | The actual product picture. Can be NULL if we insert only some comments 
-| [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting 
+| [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting[Required] [Filter(eq;like)] 
 | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__ | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified. 
 
 ## References
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-1=This is the default picture for the product and the size class; 0=otherwise
+1=This is the default picture for the product and the size class; 0=otherwise[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -86,7 +86,7 @@ Front-End Recalc Expressions:
 `( obj.Product.Pictures.Take( 2).Count( ) == 1)`
 ### LastUpdateTime
 
-The exact server time, when the picture was last updated. Set automatically.
+The exact server time, when the picture was last updated. Set automatically.[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### PictureNo
 
-Unique picture number within the product. Also used for sorting
+Unique picture number within the product. Also used for sorting[Required] [Filter(eq;like)]
 
 Type: **int32**  
 Category: **System**  

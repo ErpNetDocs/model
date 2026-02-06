@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | 1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. 
+| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | 1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.[Required] [Default(true)] [Introduced in version 18.2] 
 | [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfilePlan. 
 
 ## References
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### IsActive
 
-1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.
+1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.[Required] [Default(true)] [Introduced in version 18.2]
 
 Type: **boolean**  
 Category: **System**  

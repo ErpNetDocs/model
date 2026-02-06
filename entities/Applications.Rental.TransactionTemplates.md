@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. 
+| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created.[Required] 
 
 ## References
 
@@ -57,7 +57,7 @@ Aggregate Root:
 
 ### TransactionType
 
-Transaction type for the rent transaction that is to be created.
+Transaction type for the rent transaction that is to be created.[Required]
 
 Type: **[TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype)**  
 Category: **System**  

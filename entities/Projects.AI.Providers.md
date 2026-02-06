@@ -34,11 +34,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseModelName](Projects.AI.Providers.md#basemodelname) | string (64) | Provider-specific base model (for example "gpt-3.5-turbo-0613"), to which we will add domain specific knowledge. 
-| [Name](Projects.AI.Providers.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the provider 
+| [BaseModelName](Projects.AI.Providers.md#basemodelname) | string (64) | Provider-specific base model (for example "gpt-3.5-turbo-0613"), to which we will add domain specific knowledge.[Required] [Filter(eq)] 
+| [Name](Projects.AI.Providers.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the provider[Required] [Filter(like)] 
 | [Notes](Projects.AI.Providers.md#notes) | string (max) __nullable__ | Notes for this Provider. 
 | [ProviderApiKey](Projects.AI.Providers.md#providerapikey) | string (256) __nullable__ | The API key (provided by the model provider), which should be used to access the provider API. 
-| [ProviderField](Projects.AI.Providers.md#providerfield) | [ProviderField](Projects.AI.Providers.md#providerfield) | The provider of the base model. Currently, only OpenAI is supported. 
+| [ProviderField](Projects.AI.Providers.md#providerfield) | [ProviderField](Projects.AI.Providers.md#providerfield) | The provider of the base model. Currently, only OpenAI is supported.[Required] [Default(&quot;OpenAI&quot;)] [Filter(eq)] 
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Tree
 
 ### BaseModelName
 
-Provider-specific base model (for example "gpt-3.5-turbo-0613"), to which we will add domain specific knowledge.
+Provider-specific base model (for example "gpt-3.5-turbo-0613"), to which we will add domain specific knowledge.[Required] [Filter(eq)]
 
 Type: **string (64)**  
 Category: **System**  
@@ -68,7 +68,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the provider
+Multi-language name of the provider[Required] [Filter(like)]
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ProviderField
 
-The provider of the base model. Currently, only OpenAI is supported.
+The provider of the base model. Currently, only OpenAI is supported.[Required] [Default(&quot;OpenAI&quot;)] [Filter(eq)]
 
 Type: **[ProviderField](Projects.AI.Providers.md#providerfield)**  
 Category: **System**  

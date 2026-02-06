@@ -121,17 +121,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#actualvalue">ActualValue</a></td>
 <td>decimal (17, 5)</td>
-<td>Accumulates actual value for the measure.</td>
+<td>Accumulates actual value for the measure.[Required] [Default(0)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#date">Date</a></td>
 <td>date</td>
-<td>The date for which the measure is recorded. All records with dates within each period are summed.</td>
+<td>The date for which the measure is recorded. All records with dates within each period are summed.[Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#targetvalue">TargetValue</a></td>
 <td>decimal (17, 5)</td>
-<td>Accumulates target value for the measure.</td>
+<td>Accumulates target value for the measure.[Required] [Default(0)] [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualvalue">ActualValue</h3>
-<p>Accumulates actual value for the measure.</p>
+<p>Accumulates actual value for the measure.[Required] [Default(0)] [Filter(eq)]</p>
 <p>Type: <strong>decimal (17, 5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -209,14 +209,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="date">Date</h3>
-<p>The date for which the measure is recorded. All records with dates within each period are summed.</p>
+<p>The date for which the measure is recorded. All records with dates within each period are summed.[Required] [Filter(eq;ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetvalue">TargetValue</h3>
-<p>Accumulates target value for the measure.</p>
+<p>Accumulates target value for the measure.[Required] [Default(0)] [Filter(eq)]</p>
 <p>Type: <strong>decimal (17, 5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

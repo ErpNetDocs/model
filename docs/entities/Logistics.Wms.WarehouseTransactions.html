@@ -121,42 +121,42 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#catchquantity">CatchQuantity</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.</td>
+<td>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The creation time in UTC.</td>
+<td>The creation time in UTC.[Required] [Default(NowUtc)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></td>
-<td>Direction of the transaction - I=IN, O=OUT.</td>
+<td>Direction of the transaction - I=IN, O=OUT.[Required] [Default(&quot;I&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#isautoaccepted">IsAutoAccepted</a></td>
 <td>boolean</td>
-<td>Auto-flag indicating that the product was accepted as correct without being physically counted.</td>
+<td>Auto-flag indicating that the product was accepted as correct without being physically counted.[Required] [Default(false)] [Filter(eq)] [ReadOnly] [Introduced in version 26.1.3.87]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#quantity">Quantity</a></td>
 <td>decimal (12, 3)</td>
-<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.</td>
+<td>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.[Required] [Default(0)] [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>Quantity in the base measurement unit of the product.</td>
+<td>Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#standardquantity">StandardQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.</td>
+<td>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
-<td>The type of the task (operation), which was transacted.</td>
+<td>The type of the task (operation), which was transacted.[Required] [Filter(multi eq)] [Introduced in version 22.1.6.15]</td>
 </tr>
 </tbody>
 </table>
@@ -276,14 +276,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="catchquantity">CatchQuantity</h3>
-<p>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.</p>
+<p>Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.[Filter(eq;ge;le)]</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The creation time in UTC.</p>
+<p>The creation time in UTC.[Required] [Default(NowUtc)] [Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -291,7 +291,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Direction of the transaction - I=IN, O=OUT.</p>
+<p>Direction of the transaction - I=IN, O=OUT.[Required] [Default(&quot;I&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Logistics.Wms.WarehouseTransactions.md#direction) data attribute<br>
@@ -319,7 +319,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>IN</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isautoaccepted">IsAutoAccepted</h3>
-<p>Auto-flag indicating that the product was accepted as correct without being physically counted.</p>
+<p>Auto-flag indicating that the product was accepted as correct without being physically counted.[Required] [Default(false)] [Filter(eq)] [ReadOnly] [Introduced in version 26.1.3.87]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -327,7 +327,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.</p>
+<p>The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.[Required] [Default(0)] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -335,21 +335,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base measurement unit of the product.</p>
+<p>Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
-<p>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.</p>
+<p>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tasktype">TaskType</h3>
-<p>The type of the task (operation), which was transacted.</p>
+<p>The type of the task (operation), which was transacted.[Required] [Filter(multi eq)] [Introduced in version 22.1.6.15]</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>

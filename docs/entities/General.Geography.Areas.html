@@ -122,17 +122,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Geography.Areas.html#code">Code</a></td>
 <td>string (16)</td>
-<td>The area code.</td>
+<td>The area code.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.Geography.Areas.html#fullpath">FullPath</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'</td>
+<td>Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'[Filter(eq;like)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="General.Geography.Areas.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The area name.</td>
+<td>The area name.[Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +197,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The area code.</p>
+<p>The area code.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -208,7 +208,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, o =&gt; ( o.Parent == obj.Parent), IIF( ( obj.Parent != null), ( obj.Parent.Code + &quot;00&quot;), &quot;00000&quot;))</code></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'</p>
+<p>Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'[Filter(eq;like)] [ReadOnly]</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -216,7 +216,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The area name.</p>
+<p>The area name.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

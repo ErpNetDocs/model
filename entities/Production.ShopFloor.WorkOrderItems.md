@@ -34,20 +34,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime __nullable__ | The date, when the item should be completed. NULL means that there is no constraint for completion date 
+| [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime __nullable__ | The date, when the item should be completed. NULL means that there is no constraint for completion date[Filter(ge;le)] 
 | [CurrentBalanceBase](Production.ShopFloor.WorkOrderItems.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order. 
-| [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity produced in one production run 
+| [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order.[Required] [Filter(eq;like)] 
+| [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity produced in one production run[Unit: ProducedQuantityUnit] [Required] [Default(1)] 
 | [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string (max) __nullable__ | Notes for this WorkOrderItem. 
 | [ParentLineId](Production.ShopFloor.WorkOrderItems.md#parentlineid) | guid __nullable__ | If not null contains the Id of the line of the parent document, that created the current row. `Filter(multi eq)` 
-| [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line. 
-| [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest 
-| [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity produced in the operation. 
-| [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement category of the product. 
-| [ProducedStandard<br />QuantityBase](Production.ShopFloor.WorkOrderItems.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base. 
-| [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#releasedate) | datetime __nullable__ | The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production 
-| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledenddatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to end 
-| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledstartdatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to begin 
+| [ParentLineNo](Production.ShopFloor.WorkOrderItems.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Filter(eq)] 
+| [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | [Priority](Production.ShopFloor.WorkOrderItems.md#priority) | Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest[Required] [Default(3)] 
+| [ProducedQuantity](Production.ShopFloor.WorkOrderItems.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity produced in the operation.[Unit: ProducedQuantityUnit] [Required] [Default(1)] 
+| [ProducedQuantityBase](Production.ShopFloor.WorkOrderItems.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [ProducedStandard<br />QuantityBase](Production.ShopFloor.WorkOrderItems.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
+| [ReleaseDate](Production.ShopFloor.WorkOrderItems.md#releasedate) | datetime __nullable__ | The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production[Filter(ge;le)] 
+| [ScheduledEndDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledenddatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to end[Filter(ge;le)] 
+| [ScheduledStartDateTime](Production.ShopFloor.WorkOrderItems.md#scheduledstartdatetime) | datetime __nullable__ | Date and time when the production of this item is scheduled to begin[Filter(ge;le)] 
 
 ## References
 
@@ -85,7 +85,7 @@ Aggregate Root:
 
 ### CompletionDate
 
-The date, when the item should be completed. NULL means that there is no constraint for completion date
+The date, when the item should be completed. NULL means that there is no constraint for completion date[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineOrd
 
-The order of the line within the work order.
+The order of the line within the work order.[Required] [Filter(eq;like)]
 
 Type: **int32**  
 Category: **System**  
@@ -125,7 +125,7 @@ Front-End Recalc Expressions:
 `( obj.WorkOrder.Items.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LotSize
 
-Quantity produced in one production run
+Quantity produced in one production run[Unit: ProducedQuantityUnit] [Required] [Default(1)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **CannotBeShown**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Filter(eq)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest
+Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest[Required] [Default(3)]
 
 Type: **[Priority](Production.ShopFloor.WorkOrderItems.md#priority)**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProducedQuantity
 
-The quantity produced in the operation.
+The quantity produced in the operation.[Unit: ProducedQuantityUnit] [Required] [Default(1)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -203,7 +203,7 @@ Front-End Recalc Expressions:
 `new Quantity( obj.Recipe.ProduceQuantity.Value, obj.ProducedQuantity.Unit)`
 ### ProducedQuantityBase
 
-The equivalence of Produced Quantity in the base measurement category of the product.
+The equivalence of Produced Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ProducedQuantity != null) AndAlso ( obj.ProducedQuantityUnit != null)) AndAlso ( obj.Product != null)), obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.ProducedQuantityBase)`
 ### ProducedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.
+The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -233,7 +233,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ProducedQuantity != null) AndAlso ( obj.ProducedQuantityUnit != null)) AndAlso ( obj.Product != null)), obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.ProducedStandardQuantityBase)`
 ### ReleaseDate
 
-The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production
+The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -248,7 +248,7 @@ Front-End Recalc Expressions:
 `obj.WorkOrder.ReleaseDate`
 ### ScheduledEndDateTime
 
-Date and time when the production of this item is scheduled to end
+Date and time when the production of this item is scheduled to end[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **HiddenByDefault**
 
 ### ScheduledStartDateTime
 
-Date and time when the production of this item is scheduled to begin
+Date and time when the production of this item is scheduled to begin[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

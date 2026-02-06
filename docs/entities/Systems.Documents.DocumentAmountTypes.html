@@ -133,37 +133,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#addtocustomer">AddToCustomer</a></td>
 <td>boolean</td>
-<td>1 means that the amount will be charged to the primary customer of the document</td>
+<td>1 means that the amount will be charged to the primary customer of the document[Required] [Default(true)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#addtoline">AddToLine</a></td>
 <td>boolean</td>
-<td>1 means that the resulting amount will be added to the amount of each respective line</td>
+<td>1 means that the resulting amount will be added to the amount of each respective line[Required] [Default(true)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> <strong>nullable</strong></td>
-<td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.</td>
+<td>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.[Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#amountinputallowed">AmountInputAllowed</a></td>
 <td>boolean</td>
-<td>1 when the user is allowed to input fixed amount for distribution</td>
+<td>1 when the user is allowed to input fixed amount for distribution[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#amounttypecode">AmountTypeCode</a></td>
 <td>string (16)</td>
-<td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes</td>
+<td>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes[Required] [Filter(multi eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#amounttypename">AmountTypeName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></td>
-<td>The name of the amount type.</td>
+<td>The name of the amount type.[Required] [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#baseonlines">BaseOnLines</a></td>
 <td>boolean</td>
-<td>1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts</td>
+<td>1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts[Required] [Default(true)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#defaultpercent">DefaultPercent</a></td>
@@ -178,17 +178,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#distributeby">DistributeBy</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#distributeby">DistributeBy</a></td>
-<td>Determines how the amount will be distributed among the document lines.</td>
+<td>Determines how the amount will be distributed among the document lines.[Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>1 when the amount type is active for new records; 0 - otherwise</td>
+<td>1 when the amount type is active for new records; 0 - otherwise[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#percentinputallowed">PercentInputAllowed</a></td>
 <td>boolean</td>
-<td>1 when the user is allowed to input percent of total for distribution</td>
+<td>1 when the user is allowed to input percent of total for distribution[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#roundscale">RoundScale</a></td>
@@ -198,7 +198,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DocumentAmountTypes.html#unitamountinputallowed">UnitAmountInputAllowed</a></td>
 <td>boolean</td>
-<td>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.</td>
+<td>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -290,7 +290,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="addtocustomer">AddToCustomer</h3>
-<p>1 means that the amount will be charged to the primary customer of the document</p>
+<p>1 means that the amount will be charged to the primary customer of the document[Required] [Default(true)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -298,7 +298,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="addtoline">AddToLine</h3>
-<p>1 means that the resulting amount will be added to the amount of each respective line</p>
+<p>1 means that the resulting amount will be added to the amount of each respective line[Required] [Default(true)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -306,7 +306,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="alloweddirections">AllowedDirections</h3>
-<p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.</p>
+<p>Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.[Default(0)]</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html#alloweddirections">AllowedDirections</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AllowedDirections</code>(Systems.Documents.DocumentAmountTypes.md#alloweddirections) data attribute<br>
@@ -338,7 +338,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="amountinputallowed">AmountInputAllowed</h3>
-<p>1 when the user is allowed to input fixed amount for distribution</p>
+<p>1 when the user is allowed to input fixed amount for distribution[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -346,7 +346,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="amounttypecode">AmountTypeCode</h3>
-<p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes</p>
+<p>A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes[Required] [Filter(multi eq;like)] [ORD]</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -357,7 +357,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.AmountTypeCode, null, &quot;000&quot;)</code></p>
 <h3 id="amounttypename">AmountTypeName</h3>
-<p>The name of the amount type.</p>
+<p>The name of the amount type.[Required] [Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -365,7 +365,7 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="baseonlines">BaseOnLines</h3>
-<p>1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts</p>
+<p>1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts[Required] [Default(true)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -390,7 +390,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="distributeby">DistributeBy</h3>
-<p>Determines how the amount will be distributed among the document lines.</p>
+<p>Determines how the amount will be distributed among the document lines.[Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html#distributeby">DistributeBy</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DistributeBy</code>(Systems.Documents.DocumentAmountTypes.md#distributeby) data attribute<br>
@@ -438,7 +438,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Amount</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>1 when the amount type is active for new records; 0 - otherwise</p>
+<p>1 when the amount type is active for new records; 0 - otherwise[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -446,7 +446,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="percentinputallowed">PercentInputAllowed</h3>
-<p>1 when the user is allowed to input percent of total for distribution</p>
+<p>1 when the user is allowed to input percent of total for distribution[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -461,7 +461,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="unitamountinputallowed">UnitAmountInputAllowed</h3>
-<p>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.</p>
+<p>Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

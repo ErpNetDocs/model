@@ -36,7 +36,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.Fleet.VehicleSetVehicles.md#notes) | string (254) __nullable__ | Notes for this VehicleSetVehicle. `Filter(like)` 
-| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 __nullable__ | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle 
+| [OrdinalPos](Applications.Fleet.VehicleSetVehicles.md#ordinalpos) | int32 __nullable__ | Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle[Filter(ge;le)] 
 
 ## References
 
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### OrdinalPos
 
-Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle
+Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle[Filter(ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  

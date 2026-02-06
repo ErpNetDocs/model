@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.TypeWorkElements.html#fullpath">FullPath</a></td>
 <td>string (25) <strong>nullable</strong></td>
-<td>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.</td>
+<td>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.[Filter(eq;like)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.TypeWorkElements.html#notes">Notes</a></td>
@@ -132,17 +132,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.TypeWorkElements.html#parentfullpath">ParentFullPath</a></td>
 <td>string (25) <strong>nullable</strong></td>
-<td>The full path of the parent work element in this project type. NULL when this is root element.</td>
+<td>The full path of the parent work element in this project type. NULL when this is root element.[Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.TypeWorkElements.html#workelementcode">WorkElementCode</a></td>
 <td>string (3)</td>
-<td>The code of the work element, unique among the sibling elements within the parent work element.</td>
+<td>The code of the work element, unique among the sibling elements within the parent work element.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.TypeWorkElements.html#workelementname">WorkElementName</a></td>
 <td>string (254)</td>
-<td>The name of the work element, unique among the sibling elements within the parent work element.</td>
+<td>The name of the work element, unique among the sibling elements within the parent work element.[Required] [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -192,7 +192,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fullpath">FullPath</h3>
-<p>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.</p>
+<p>The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.[Filter(eq;like)] [ReadOnly]</p>
 <p>Type: <strong>string (25) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -208,7 +208,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentfullpath">ParentFullPath</h3>
-<p>The full path of the parent work element in this project type. NULL when this is root element.</p>
+<p>The full path of the parent work element in this project type. NULL when this is root element.[Filter(eq;like)]</p>
 <p>Type: <strong>string (25) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -216,7 +216,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>25</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workelementcode">WorkElementCode</h3>
-<p>The code of the work element, unique among the sibling elements within the parent work element.</p>
+<p>The code of the work element, unique among the sibling elements within the parent work element.[Required] [Filter(eq)]</p>
 <p>Type: <strong>string (3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -224,7 +224,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>3</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workelementname">WorkElementName</h3>
-<p>The name of the work element, unique among the sibling elements within the parent work element.</p>
+<p>The name of the work element, unique among the sibling elements within the parent work element.[Required] [Filter(eq)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

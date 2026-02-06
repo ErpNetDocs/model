@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#contributiontime">ContributionTime</a></td>
 <td>datetime</td>
-<td>The time, when the message was contributed.</td>
+<td>The time, when the message was contributed.[Required] [Default(Now)] [Filter(eq;ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#lastedittime">LastEditTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Contains the last edit time of the message. NULL if the message was never edited</td>
+<td>Contains the last edit time of the message. NULL if the message was never edited[Filter(eq;ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.ProjectRiskDiscussion.html#message">Message</a></td>
 <td>string (max)</td>
-<td>The contents of the message.</td>
+<td>The contents of the message.[Required]</td>
 </tr>
 </tbody>
 </table>
@@ -186,7 +186,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contributiontime">ContributionTime</h3>
-<p>The time, when the message was contributed.</p>
+<p>The time, when the message was contributed.[Required] [Default(Now)] [Filter(eq;ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -194,14 +194,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastedittime">LastEditTime</h3>
-<p>Contains the last edit time of the message. NULL if the message was never edited</p>
+<p>Contains the last edit time of the message. NULL if the message was never edited[Filter(eq;ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="message">Message</h3>
-<p>The contents of the message.</p>
+<p>The contents of the message.[Required]</p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

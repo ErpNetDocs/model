@@ -117,22 +117,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#isfulfilled">IsFulfilled</a></td>
 <td>boolean</td>
-<td>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</td>
+<td>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#isquantityfulfilled">IsQuantityFulfilled</a></td>
 <td>boolean</td>
-<td>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</td>
+<td>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#orderremaininglineamount">OrderRemainingLineAmount</a></td>
 <td>decimal (38, 2)</td>
-<td>The uninvoiced (unfulfilled) line amount of the invoice order line.</td>
+<td>The uninvoiced (unfulfilled) line amount of the invoice order line.[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLinesUnfulfilledView.html#orderremainingstandardquantity">OrderRemaining<br>StandardQuantity</a></td>
 <td>decimal (38, 6)</td>
-<td>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.</td>
+<td>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -175,28 +175,28 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isfulfilled">IsFulfilled</h3>
-<p>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</p>
+<p>Returns true when both the Quantity and Amount are fulfilled or only negligible (less than 0.001 for qty and 0.01 for amount) sums remain. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.[Required] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isquantityfulfilled">IsQuantityFulfilled</h3>
-<p>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.</p>
+<p>Returns true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this field forces full scan and calculation of remaining quantities and amounts for all non-finished invoice orders. For best performance, the invoice orders should be finished after fulfilling.[Required] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremaininglineamount">OrderRemainingLineAmount</h3>
-<p>The uninvoiced (unfulfilled) line amount of the invoice order line.</p>
+<p>The uninvoiced (unfulfilled) line amount of the invoice order line.[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremainingstandardquantity">OrderRemainingStandardQuantity</h3>
-<p>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.</p>
+<p>The uninvoiced (unfulfilled) quantity of the invoice order line in base measurement unit.[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>decimal (38, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>

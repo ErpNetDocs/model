@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AddToInvoicedValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | 1= to add the amount to the invoiced value, 0=otherwise 
-| [AddToStatisticalValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | 1= to add the amount to the statistical value, 0=otherwise 
+| [AddToInvoicedValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | 1= to add the amount to the invoiced value, 0=otherwise[Required] [Default(false)] 
+| [AddToStatisticalValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | 1= to add the amount to the statistical value, 0=otherwise[Required] [Default(false)] 
 
 ## References
 
@@ -68,7 +68,7 @@ Aggregate Root:
 
 ### AddToInvoicedValue
 
-1= to add the amount to the invoiced value, 0=otherwise
+1= to add the amount to the invoiced value, 0=otherwise[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### AddToStatisticalValue
 
-1= to add the amount to the statistical value, 0=otherwise
+1= to add the amount to the statistical value, 0=otherwise[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  

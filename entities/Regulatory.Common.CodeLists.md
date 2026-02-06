@@ -36,16 +36,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Authority](Regulatory.Common.CodeLists.md#authority) | string (128) __nullable__ | Issuing or controlling authority (agency, institution). 
-| [Description](Regulatory.Common.CodeLists.md#description) | string (254) __nullable__ | Short description of the list’s purpose or scope. 
-| [EntityTypeName](Regulatory.Common.CodeLists.md#entitytypename) | string (128) __nullable__ | Internal system entity type mapped to entries in this list. 
-| [IsActive](Regulatory.Common.CodeLists.md#isactive) | boolean | Specifies whether the list version is currently active. 
-| [LegalReference](Regulatory.Common.CodeLists.md#legalreference) | string (254) __nullable__ | Reference to the legal basis (law, article, ordinance, URL, file). 
-| [ListCode](Regulatory.Common.CodeLists.md#listcode) | string (16) | Regulatory code of the list, unique within the jurisdiction 
-| [ListName](Regulatory.Common.CodeLists.md#listname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Official regulatory name of the list (multi-language). 
+| [Authority](Regulatory.Common.CodeLists.md#authority) | string (128) __nullable__ | Issuing or controlling authority (agency, institution).[Filter(eq;like)] 
+| [Description](Regulatory.Common.CodeLists.md#description) | string (254) __nullable__ | Short description of the list’s purpose or scope.[Filter(eq;like)] 
+| [EntityTypeName](Regulatory.Common.CodeLists.md#entitytypename) | string (128) __nullable__ | Internal system entity type mapped to entries in this list.[Filter(eq;like)] 
+| [IsActive](Regulatory.Common.CodeLists.md#isactive) | boolean | Specifies whether the list version is currently active.[Required] [Default(true)] [Filter(eq)] 
+| [LegalReference](Regulatory.Common.CodeLists.md#legalreference) | string (254) __nullable__ | Reference to the legal basis (law, article, ordinance, URL, file).[Filter(eq;like)] 
+| [ListCode](Regulatory.Common.CodeLists.md#listcode) | string (16) | Regulatory code of the list, unique within the jurisdiction[Required] [Filter(eq;like)] 
+| [ListName](Regulatory.Common.CodeLists.md#listname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Official regulatory name of the list (multi-language).[Required] [Filter(like)] 
 | [Notes](Regulatory.Common.CodeLists.md#notes) | string (max) __nullable__ | Additional notes or comments 
-| [ValidFrom](Regulatory.Common.CodeLists.md#validfrom) | date __nullable__ | When not null specifies the first date when the list is valid. 
-| [ValidTo](Regulatory.Common.CodeLists.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the list is valid. 
+| [ValidFrom](Regulatory.Common.CodeLists.md#validfrom) | date __nullable__ | When not null specifies the first date when the list is valid.[Filter(eq;ge;le)] 
+| [ValidTo](Regulatory.Common.CodeLists.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the list is valid.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### Authority
 
-Issuing or controlling authority (agency, institution).
+Issuing or controlling authority (agency, institution).[Filter(eq;like)]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Short description of the list’s purpose or scope.
+Short description of the list’s purpose or scope.[Filter(eq;like)]
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityTypeName
 
-Internal system entity type mapped to entries in this list.
+Internal system entity type mapped to entries in this list.[Filter(eq;like)]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the list version is currently active.
+Specifies whether the list version is currently active.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### LegalReference
 
-Reference to the legal basis (law, article, ordinance, URL, file).
+Reference to the legal basis (law, article, ordinance, URL, file).[Filter(eq;like)]
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### ListCode
 
-Regulatory code of the list, unique within the jurisdiction
+Regulatory code of the list, unique within the jurisdiction[Required] [Filter(eq;like)]
 
 Type: **string (16)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### ListName
 
-Official regulatory name of the list (multi-language).
+Official regulatory name of the list (multi-language).[Required] [Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-When not null specifies the first date when the list is valid.
+When not null specifies the first date when the list is valid.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-When not null specifies the last date (inclusive) when the list is valid.
+When not null specifies the last date (inclusive) when the list is valid.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

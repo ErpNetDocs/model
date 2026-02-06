@@ -36,9 +36,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EventParameter](Systems.Bpm.UserBusinessRuleEvents.md#eventparameter) | string (128) __nullable__ | Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc. 
-| [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | The event for which to register the business rule. 
-| [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | [RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. 
-| [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. 
+| [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | [EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype) | The event for which to register the business rule.[Required] 
+| [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | [RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.[Required] [Default(50)] 
+| [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.[Required] [Default(&quot;BKE&quot;)] 
 
 ## References
 
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### EventType
 
-The event for which to register the business rule.
+The event for which to register the business rule.[Required]
 
 Type: **[EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionPriority
 
-Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.
+Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late.[Required] [Default(50)]
 
 Type: **[RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### Layer
 
-Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.
+Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd.[Required] [Default(&quot;BKE&quot;)]
 
 Type: **[Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer)**  
 Category: **System**  

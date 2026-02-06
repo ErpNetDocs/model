@@ -32,14 +32,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Logistics.Procurement.PurchaseProductPrices.md#fromdate) | datetime __nullable__ | Starting date of validity of the price. Usually used for temporary promotions. 
-| [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which is valid this price (in the price quantity measurement unit). 
-| [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the price quantity measurement unit). 
+| [FromDate](Logistics.Procurement.PurchaseProductPrices.md#fromdate) | datetime __nullable__ | Starting date of validity of the price. Usually used for temporary promotions.[Filter(eq;ge;le)] 
+| [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which is valid this price (in the price quantity measurement unit).[Unit: PriceQuantityMeasurement<br />Unit] [Filter(eq)] 
+| [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the price quantity measurement unit).[Unit: PriceQuantityMeasurement<br />Unit] [Filter(eq)] 
 | [Notes](Logistics.Procurement.PurchaseProductPrices.md#notes) | string (254) __nullable__ | Notes for this PurchaseProductPrice. 
-| [Price](Logistics.Procurement.PurchaseProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied. 
-| [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. 
-| [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | Priority of the price comparative to other prices valid for current document. 
-| [ThruDate](Logistics.Procurement.PurchaseProductPrices.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of the validity of the price. Usually used for temporary promotions. 
+| [Price](Logistics.Procurement.PurchaseProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied.[Currency: Currency] [Required] [Default(0)] 
+| [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified.[Unit: PriceQuantityMeasurement<br />Unit] [Required] [Default(1)] 
+| [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | Priority of the price comparative to other prices valid for current document.[Required] [Default(2)] [Filter(multi eq)] 
+| [ThruDate](Logistics.Procurement.PurchaseProductPrices.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of the validity of the price. Usually used for temporary promotions.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### FromDate
 
-Starting date of validity of the price. Usually used for temporary promotions.
+Starting date of validity of the price. Usually used for temporary promotions.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaxQuantity
 
-Maximum quantity for which is valid this price (in the price quantity measurement unit).
+Maximum quantity for which is valid this price (in the price quantity measurement unit).[Unit: PriceQuantityMeasurementUnit] [Filter(eq)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **HiddenByDefault**
 
 ### MinQuantity
 
-Minimal quantity required to use this price (in the price quantity measurement unit).
+Minimal quantity required to use this price (in the price quantity measurement unit).[Unit: PriceQuantityMeasurementUnit] [Filter(eq)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **HiddenByDefault**
 
 ### Price
 
-Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied.
+Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied.[Currency: Currency] [Required] [Default(0)]
 
 Type: **[Amount (13, 5)](../data-types.md#amount)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceQuantity
 
-The quantity of the product for which the price is specified.
+The quantity of the product for which the price is specified.[Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)]
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority of the price comparative to other prices valid for current document.
+Priority of the price comparative to other prices valid for current document.[Required] [Default(2)] [Filter(multi eq)]
 
 Type: **[Priority](Logistics.Procurement.PurchaseProductPrices.md#priority)**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending date (inclusive) of the validity of the price. Usually used for temporary promotions.
+Ending date (inclusive) of the validity of the price. Usually used for temporary promotions.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

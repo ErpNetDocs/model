@@ -131,27 +131,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.DealTypes.html#code">Code</a></td>
 <td>string (32)</td>
-<td>Code of the deal type.</td>
+<td>Code of the deal type.[Required] [Filter(multi eq;like)] [ORD] [Introduced in version 23.1.0.32]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DealTypes.html#entrytype">EntryType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html#entrytype">EntryType</a></td>
-<td>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.</td>
+<td>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DealTypes.html#issystem">IsSystem</a></td>
 <td>boolean</td>
-<td>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.</td>
+<td>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DealTypes.html#name">Name</a></td>
 <td>string (254)</td>
-<td>Description of the deal type.</td>
+<td>Description of the deal type.[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DealTypes.html#taxcode">TaxCode</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html#taxcode">TaxCode</a></td>
-<td>VAT rate type for this deal type. Can be among &quot;STD&quot;(Standard rate), &quot;RED&quot;(Reduced rate), &quot;SPR&quot;(Super-reduced rates), &quot;INT&quot;(Intermediary (Parking) rates), &quot;EXM&quot;(Tax Exempt), &quot;NS&quot;(Non-subject to tax).</td>
+<td>VAT rate type for this deal type. Can be among &quot;STD&quot;(Standard rate), &quot;RED&quot;(Reduced rate), &quot;SPR&quot;(Super-reduced rates), &quot;INT&quot;(Intermediary (Parking) rates), &quot;EXM&quot;(Tax Exempt), &quot;NS&quot;(Non-subject to tax).[Required] [Filter(multi eq)] [Introduced in version 23.1.0.33]</td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Code of the deal type.</p>
+<p>Code of the deal type.[Required] [Filter(multi eq;like)] [ORD] [Introduced in version 23.1.0.32]</p>
 <p>Type: <strong>string (32)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -242,7 +242,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entrytype">EntryType</h3>
-<p>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.</p>
+<p>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.[Required] [Filter(eq)]</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html#entrytype">EntryType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>EntryType</code>(Regulatory.Vat.DealTypes.md#entrytype) data attribute<br>
@@ -269,7 +269,7 @@ Allowed Values (Regulatory.Vat.DealTypesRepository.EntryType Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="issystem">IsSystem</h3>
-<p>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.</p>
+<p>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -277,7 +277,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Description of the deal type.</p>
+<p>Description of the deal type.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -285,7 +285,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxcode">TaxCode</h3>
-<p>VAT rate type for this deal type. Can be among &quot;STD&quot;(Standard rate), &quot;RED&quot;(Reduced rate), &quot;SPR&quot;(Super-reduced rates), &quot;INT&quot;(Intermediary (Parking) rates), &quot;EXM&quot;(Tax Exempt), &quot;NS&quot;(Non-subject to tax).</p>
+<p>VAT rate type for this deal type. Can be among &quot;STD&quot;(Standard rate), &quot;RED&quot;(Reduced rate), &quot;SPR&quot;(Super-reduced rates), &quot;INT&quot;(Intermediary (Parking) rates), &quot;EXM&quot;(Tax Exempt), &quot;NS&quot;(Non-subject to tax).[Required] [Filter(multi eq)] [Introduced in version 23.1.0.33]</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html#taxcode">TaxCode</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TaxCode</code>(Regulatory.Vat.DealTypes.md#taxcode) data attribute<br>

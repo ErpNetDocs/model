@@ -36,9 +36,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. 
+| [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable.[Required] [Filter(multi eq)] 
 | [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (max) __nullable__ | Notes for this ProductTypeTaxGroup. `Filter(eq;like)` 
-| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation. 
+| [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | [TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup) | The tax group of the product type within the specified applicable legislation.[Required] [Filter(multi eq)] 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### ApplicableLegislation
 
-The legislation, for which the tax group is applicable.
+The legislation, for which the tax group is applicable.[Required] [Filter(multi eq)]
 
 Type: **[ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxGroup
 
-The tax group of the product type within the specified applicable legislation.
+The tax group of the product type within the specified applicable legislation.[Required] [Filter(multi eq)]
 
 Type: **[TaxGroup](Crm.Pos.ProductTypeTaxGroups.md#taxgroup)**  
 Category: **System**  

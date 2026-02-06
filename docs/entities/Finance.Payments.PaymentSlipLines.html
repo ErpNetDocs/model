@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 2)</a></td>
-<td>The part of the total amount in the payment slip amount, that is distributed to the specified payment order</td>
+<td>The part of the total amount in the payment slip amount, that is distributed to the specified payment order[Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipLines.html#coveredorderamount">CoveredOrderAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 2)</a></td>
-<td>The part of the original payment order amount, that is covered by this payment slip line</td>
+<td>The part of the original payment order amount, that is covered by this payment slip line[Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order</p>
+<p>The part of the total amount in the payment slip amount, that is distributed to the specified payment order[Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (10, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -191,7 +191,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.CoveredOrderAmount.ConvertTo( obj.PaymentSlipAmount.PaymentSlip.DocumentCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)</code></p>
 <h3 id="coveredorderamount">CoveredOrderAmount</h3>
-<p>The part of the original payment order amount, that is covered by this payment slip line</p>
+<p>The part of the original payment order amount, that is covered by this payment slip line[Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (10, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

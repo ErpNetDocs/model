@@ -44,11 +44,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification 
+| [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification[Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)] 
 | [FilterXML](Systems.Documents.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event 
-| [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event 
-| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*' 
-| [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of E-mail addresses to be notified 
+| [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event[Required] [Default(0)] 
+| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'[Required] [Default(&quot;*&quot;)] 
+| [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of E-mail addresses to be notified[Required] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### DocumentEvent
 
-The event which will trigger the notification
+The event which will trigger the notification[Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)]
 
 Type: **string (254)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### StateBitMask
 
-The document states that will trigger the event
+The document states that will trigger the event[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### StatusChangeDirection
 
-Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'
+Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'[Required] [Default(&quot;*&quot;)]
 
 Type: **[StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToEmailAddressList
 
-List of E-mail addresses to be notified
+List of E-mail addresses to be notified[Required]
 
 Type: **string (2048)**  
 Category: **System**  

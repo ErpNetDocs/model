@@ -34,8 +34,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Payments.PaymentTypes.md#code) | string (16) | The payment type unique code 
-| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. 
+| [Code](Finance.Payments.PaymentTypes.md#code) | string (16) | The payment type unique code[Required] [Filter(eq;like)] [ORD] 
+| [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents.[Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1] 
 | [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this PaymentType. `Required` `Filter(like)` 
 | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__ | Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer 
 
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Code
 
-The payment type unique code
+The payment type unique code[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -78,7 +78,7 @@ Back-End Default Expression:
 
 ### IsActive
 
-Indicates wheather the payment type is active and usable for choosing in new documents.
+Indicates wheather the payment type is active and usable for choosing in new documents.[Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1]
 
 Type: **boolean**  
 Category: **System**  

@@ -37,7 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent 
+| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent[Required] [Filter(eq;like)] 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### Name
 
-Resource group name. Unique within its parent
+Resource group name. Unique within its parent[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

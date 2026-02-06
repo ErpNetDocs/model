@@ -126,27 +126,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></td>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></td>
-<td>Delivery terms - classification according to Intrastat</td>
+<td>Delivery terms - classification according to Intrastat[Required]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#invoicedvalueamountbase">InvoicedValueAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 0)</a></td>
-<td>Invoiced value of the goods in the base currency</td>
+<td>Invoiced value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency] [Required]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#lineaction">LineAction</a></td>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#lineaction">LineAction</a></td>
-<td>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted</td>
+<td>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted[Required] [Default(&quot;NEW&quot;)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consequtive line number within the intrastat declaration</td>
+<td>Consequtive line number within the intrastat declaration[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#netmasskg">NetMassKg</a></td>
 <td>decimal (14, 3)</td>
-<td>Net mass of the goods in kg</td>
+<td>Net mass of the goods in kg[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#quantitysupplementaryunit">QuantitySupplementaryUnit</a></td>
@@ -156,17 +156,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#statisticalvalueamountbase">StatisticalValueAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 0)</a> <strong>nullable</strong></td>
-<td>Statistical value of the goods in the base currency</td>
+<td>Statistical value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></td>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></td>
-<td>Transaction nature, according to the Intrastat classification</td>
+<td>Transaction nature, according to the Intrastat classification[Required]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#transportmode">TransportMode</a></td>
 <td><a href="Regulatory.Intrastat.DeclarationLines.html#transportmode">TransportMode</a></td>
-<td>Transportation mode - type of transportation used</td>
+<td>Transportation mode - type of transportation used[Required]</td>
 </tr>
 </tbody>
 </table>
@@ -246,7 +246,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="deliveryterms">DeliveryTerms</h3>
-<p>Delivery terms - classification according to Intrastat</p>
+<p>Delivery terms - classification according to Intrastat[Required]</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for DeliveryTerms properties<br>
@@ -313,14 +313,14 @@ Allowed Values (Regulatory.Intrastat.DeliveryTerms Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="invoicedvalueamountbase">InvoicedValueAmountBase</h3>
-<p>Invoiced value of the goods in the base currency</p>
+<p>Invoiced value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency] [Required]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (10, 0)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineaction">LineAction</h3>
-<p>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted</p>
+<p>Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted[Required] [Default(&quot;NEW&quot;)]</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.DeclarationLines.html#lineaction">LineAction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>LineAction</code>(Regulatory.Intrastat.DeclarationLines.md#lineaction) data attribute<br>
@@ -356,7 +356,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>New</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consequtive line number within the intrastat declaration</p>
+<p>Consequtive line number within the intrastat declaration[Required] [Filter(eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -367,7 +367,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.IntrastatDeclaration.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="netmasskg">NetMassKg</h3>
-<p>Net mass of the goods in kg</p>
+<p>Net mass of the goods in kg[Required] [Filter(multi eq)]</p>
 <p>Type: <strong>decimal (14, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -381,14 +381,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statisticalvalueamountbase">StatisticalValueAmountBase</h3>
-<p>Statistical value of the goods in the base currency</p>
+<p>Statistical value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (10, 0)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactionnature">TransactionNature</h3>
-<p>Transaction nature, according to the Intrastat classification</p>
+<p>Transaction nature, according to the Intrastat classification[Required]</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.DeclarationLines.html#transactionnature">TransactionNature</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransactionNature properties<br>
@@ -483,7 +483,7 @@ Allowed Values (Regulatory.Intrastat.TransactionNature Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transportmode">TransportMode</h3>
-<p>Transportation mode - type of transportation used</p>
+<p>Transportation mode - type of transportation used[Required]</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.DeclarationLines.html#transportmode">TransportMode</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransportMode properties<br>

@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceInvoicing.html#quantityofproduct">QuantityOfProduct</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity to invoice</td>
+<td>The quantity to invoice[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceInvoicing.html#quantityofservice">QuantityOfService</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of service for which the invoicing is specified</td>
+<td>The quantity of service for which the invoicing is specified[Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="quantityofproduct">QuantityOfProduct</h3>
-<p>The quantity to invoice</p>
+<p>The quantity to invoice[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -189,7 +189,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityofservice">QuantityOfService</h3>
-<p>The quantity of service for which the invoicing is specified</p>
+<p>The quantity of service for which the invoicing is specified[Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

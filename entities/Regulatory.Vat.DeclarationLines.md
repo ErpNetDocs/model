@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Regulatory.Vat.DeclarationLines.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Declared value in base currency. 
-| [LineNo](Regulatory.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document. 
+| [AmountBase](Regulatory.Vat.DeclarationLines.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Declared value in base currency.[Currency: Declaration.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [LineNo](Regulatory.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document.[Required] 
 | [Notes](Regulatory.Vat.DeclarationLines.md#notes) | string (max) __nullable__ | Notes for this DeclarationLine. 
 
 ## References
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### AmountBase
 
-Declared value in base currency.
+Declared value in base currency.[Currency: Declaration.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number within the document.
+Consecutive line number within the document.[Required]
 
 Type: **int32**  
 Category: **System**  

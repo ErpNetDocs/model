@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#availablequantitybase">AvailableQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Available quantity (in base measurement unit) to the date of the reconciliation.</td>
+<td>Available quantity (in base measurement unit) to the date of the reconciliation.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>The ordinal position of the line within the document. Duplicates are allowed, but not suggested</td>
+<td>The ordinal position of the line within the document. Duplicates are allowed, but not suggested[Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#notes">Notes</a></td>
@@ -140,22 +140,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity found at the reconciliation,</td>
+<td>Quantity found at the reconciliation, [Unit: QuantityUnit] [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity found at the reconciliation, expressed in base measurement units</td>
+<td>Quantity found at the reconciliation, expressed in base measurement units[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Exact time when the transaction changes the cost of the product.</td>
+<td>Exact time when the transaction changes the cost of the product.[Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -255,7 +255,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="availablequantitybase">AvailableQuantityBase</h3>
-<p>Available quantity (in base measurement unit) to the date of the reconciliation.</p>
+<p>Available quantity (in base measurement unit) to the date of the reconciliation.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -269,7 +269,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>The ordinal position of the line within the document. Duplicates are allowed, but not suggested</p>
+<p>The ordinal position of the line within the document. Duplicates are allowed, but not suggested[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -288,14 +288,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity found at the reconciliation,</p>
+<p>Quantity found at the reconciliation, [Unit: QuantityUnit] [Required] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity found at the reconciliation, expressed in base measurement units</p>
+<p>Quantity found at the reconciliation, expressed in base measurement units[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -306,7 +306,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -317,7 +317,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Exact time when the transaction changes the cost of the product.</p>
+<p>Exact time when the transaction changes the cost of the product.[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

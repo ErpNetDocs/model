@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal (14, 2) | The allocated amount of costs in the currency of the calculation. 
-| [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation 
+| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal (14, 2) | The allocated amount of costs in the currency of the calculation.[Required] [Default(0)] 
+| [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation[Required] 
 | [ProjectId](Finance.Cost.CalculationCosts.md#projectid) | guid __nullable__ | The Project, which absorbed the cost. `Filter(multi eq)` 
 
 ## References
@@ -65,7 +65,7 @@ Aggregate Root:
 
 ### Amount
 
-The allocated amount of costs in the currency of the calculation.
+The allocated amount of costs in the currency of the calculation.[Required] [Default(0)]
 
 Type: **decimal (14, 2)**  
 Category: **System**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the calculation
+Consecutive number of the line within the calculation[Required]
 
 Type: **int32**  
 Category: **System**  

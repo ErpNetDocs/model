@@ -58,8 +58,8 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Wms.WarehouseRequisitions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Wms.WarehouseRequisitions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Wms.WarehouseRequisitions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ExpectedDate](Logistics.Wms.WarehouseRequisitions.md#expecteddate) | date | Date, when the requisition is expected to be fulfilled. 
-| [ExpectedTime](Logistics.Wms.WarehouseRequisitions.md#expectedtime) | time __nullable__ | Time, when the requisition is expected to be executed. NULL when the time is unknown. 
+| [ExpectedDate](Logistics.Wms.WarehouseRequisitions.md#expecteddate) | date | Date, when the requisition is expected to be fulfilled.[Required] [Default(Today)] [Filter(multi eq;ge;le)] 
+| [ExpectedTime](Logistics.Wms.WarehouseRequisitions.md#expectedtime) | time __nullable__ | Time, when the requisition is expected to be executed. NULL when the time is unknown.[Filter(eq;ge;le)] 
 | [FullState](Logistics.Wms.WarehouseRequisitions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Logistics.Wms.WarehouseRequisitions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Wms.WarehouseRequisitions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Wms.WarehouseRequisitions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -67,7 +67,7 @@ Aggregate Tree
 | [ReferenceDate](Logistics.Wms.WarehouseRequisitions.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Logistics.Wms.WarehouseRequisitions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Logistics.Wms.WarehouseRequisitions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype) | [RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype) | The type of the requisition. I=Inbound; O=Outbound. 
+| [RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype) | [RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype) | The type of the requisition. I=Inbound; O=Outbound.[Required] [Filter(multi eq)] 
 | [State](Logistics.Wms.WarehouseRequisitions.md#state) | [DocumentState](Logistics.Wms.WarehouseRequisitions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Wms.WarehouseRequisitions.md#statetagsattribute) | string | Specifies the state of the document. 
 | [Void](Logistics.Wms.WarehouseRequisitions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -253,7 +253,7 @@ Show in UI: **CannotBeShown**
 
 ### ExpectedDate
 
-Date, when the requisition is expected to be fulfilled.
+Date, when the requisition is expected to be fulfilled.[Required] [Default(Today)] [Filter(multi eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -264,7 +264,7 @@ Show in UI: **ShownByDefault**
 
 ### ExpectedTime
 
-Time, when the requisition is expected to be executed. NULL when the time is unknown.
+Time, when the requisition is expected to be executed. NULL when the time is unknown.[Filter(eq;ge;le)]
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -357,7 +357,7 @@ Show in UI: **HiddenByDefault**
 
 ### RequisitionType
 
-The type of the requisition. I=Inbound; O=Outbound.
+The type of the requisition. I=Inbound; O=Outbound.[Required] [Filter(multi eq)]
 
 Type: **[RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype)**  
 Category: **System**  

@@ -39,8 +39,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. 
-| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold 
+| [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document.[Required] [Filter(eq)] 
+| [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold[Required] [Default(0)] 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### LineNumber
 
-Consecutive line number of the package, unique within the document.
+Consecutive line number of the package, unique within the document.[Required] [Filter(eq)]
 
 Type: **int32**  
 Category: **System**  
@@ -79,7 +79,7 @@ Front-End Recalc Expressions:
 `( obj.SalesOrder.PromotionalPackages.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)`
 ### NumberOfPackages
 
-Number of packages sold
+Number of packages sold[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  

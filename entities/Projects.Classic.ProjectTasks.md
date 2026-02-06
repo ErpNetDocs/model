@@ -37,13 +37,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetLaborAmount](Projects.Classic.ProjectTasks.md#budgetlaboramount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated 
-| [FinishDateTime](Projects.Classic.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish. 
+| [BudgetLaborAmount](Projects.Classic.ProjectTasks.md#budgetlaboramount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated[Currency: Project.BudgetingCurrency] 
+| [FinishDateTime](Projects.Classic.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish.[Required] [Default(Now)] [Filter(eq;ge;le)] 
 | [Notes](Projects.Classic.ProjectTasks.md#notes) | string (max) __nullable__ | Notes for this ProjectTask. 
-| [PlannedDurationHours](Projects.Classic.ProjectTasks.md#planneddurationhours) | decimal (8, 2) | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. 
-| [ProjectTaskNo](Projects.Classic.ProjectTasks.md#projecttaskno) | int32 | Consecutive task number, unique within the project. 
-| [StartDateTime](Projects.Classic.ProjectTasks.md#startdatetime) | datetime | The date and time when the task is planned to start. 
-| [TaskName](Projects.Classic.ProjectTasks.md#taskname) | string (254) | The short name of the task. It is best practice to contain the target of the task. 
+| [PlannedDurationHours](Projects.Classic.ProjectTasks.md#planneddurationhours) | decimal (8, 2) | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.[Required] [Default(0)] 
+| [ProjectTaskNo](Projects.Classic.ProjectTasks.md#projecttaskno) | int32 | Consecutive task number, unique within the project.[Required] 
+| [StartDateTime](Projects.Classic.ProjectTasks.md#startdatetime) | datetime | The date and time when the task is planned to start.[Required] [Default(Now)] [Filter(eq;ge;le)] 
+| [TaskName](Projects.Classic.ProjectTasks.md#taskname) | string (254) | The short name of the task. It is best practice to contain the target of the task.[Required] [Filter(multi eq;like)] 
 
 ## References
 
@@ -83,7 +83,7 @@ Aggregate Tree
 
 ### BudgetLaborAmount
 
-Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated
+Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated[Currency: Project.BudgetingCurrency]
 
 Type: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( obj.PlannedDurationHours != 0) AndAlso ( obj.WorkType != null)), obj.CalculateBudgetLaborAmount( ), new Amount( 0, obj.Project.BudgetingCurrency))`
 ### FinishDateTime
 
-The date and time when the task is planned to finish.
+The date and time when the task is planned to finish.[Required] [Default(Now)] [Filter(eq;ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### PlannedDurationHours
 
-Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.
+Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time.[Required] [Default(0)]
 
 Type: **decimal (8, 2)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTaskNo
 
-Consecutive task number, unique within the project.
+Consecutive task number, unique within the project.[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDateTime
 
-The date and time when the task is planned to start.
+The date and time when the task is planned to start.[Required] [Default(Now)] [Filter(eq;ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### TaskName
 
-The short name of the task. It is best practice to contain the target of the task.
+The short name of the task. It is best practice to contain the target of the task.[Required] [Filter(multi eq;like)]
 
 Type: **string (254)**  
 Category: **System**  

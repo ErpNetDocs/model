@@ -33,9 +33,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal (17, 5) | Accumulates actual value for the measure. 
-| [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed. 
-| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal (17, 5) | Accumulates target value for the measure. 
+| [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal (17, 5) | Accumulates actual value for the measure.[Required] [Default(0)] [Filter(eq)] 
+| [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed.[Required] [Filter(eq;ge;le)] 
+| [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal (17, 5) | Accumulates target value for the measure.[Required] [Default(0)] [Filter(eq)] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### ActualValue
 
-Accumulates actual value for the measure.
+Accumulates actual value for the measure.[Required] [Default(0)] [Filter(eq)]
 
 Type: **decimal (17, 5)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### Date
 
-The date for which the measure is recorded. All records with dates within each period are summed.
+The date for which the measure is recorded. All records with dates within each period are summed.[Required] [Filter(eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetValue
 
-Accumulates target value for the measure.
+Accumulates target value for the measure.[Required] [Default(0)] [Filter(eq)]
 
 Type: **decimal (17, 5)**  
 Category: **System**  

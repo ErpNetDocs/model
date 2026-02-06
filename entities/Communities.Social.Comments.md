@@ -33,8 +33,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommentText](Communities.Social.Comments.md#commenttext) | string (max) | The comment contents in clear text. 
-| [CreationTimeUtc](Communities.Social.Comments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. 
+| [CommentText](Communities.Social.Comments.md#commenttext) | string (max) | The comment contents in clear text.[Required] 
+| [CreationTimeUtc](Communities.Social.Comments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created.[Required] [Filter(ge;le)] [ORD] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### CommentText
 
-The comment contents in clear text.
+The comment contents in clear text.[Required]
 
 Type: **string (max)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the comment was created.
+The exact server time (in UTC), when the comment was created.[Required] [Filter(ge;le)] [ORD]
 
 Type: **datetime**  
 Indexed: **True**  

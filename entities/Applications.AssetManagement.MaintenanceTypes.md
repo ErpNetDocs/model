@@ -35,12 +35,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type. 
+| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type.[Required] [Filter(eq;like)] [ORD] 
 | [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months. 
 | [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
-| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. 
+| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type.[Required] [Filter(eq;like)] 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the maintenance type.
+Unique code of the maintenance type.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the maintenance type.
+Multilanguage name of the maintenance type.[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

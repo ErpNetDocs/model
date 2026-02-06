@@ -44,11 +44,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNumber](Crm.Pricing.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number 
-| [Quantity](Crm.Pricing.PromotionalPackageLines.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. 
-| [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies the way in which to change the standard discount 
-| [StandardDiscount<br />PercentAdjust](Crm.Pricing.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal (7, 6) | Specifies the amount of change (in percent) for the standard discount 
-| [UnitPrice](Crm.Pricing.PromotionalPackageLines.md#unitprice) | [Amount (13, 5)](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When NULL, the package specifies only discount 
+| [LineNumber](Crm.Pricing.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number[Required] 
+| [Quantity](Crm.Pricing.PromotionalPackageLines.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies the way in which to change the standard discount[Required] [Default(&quot;R&quot;)] 
+| [StandardDiscount<br />PercentAdjust](Crm.Pricing.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal (7, 6) | Specifies the amount of change (in percent) for the standard discount[Required] [Default(0)] 
+| [UnitPrice](Crm.Pricing.PromotionalPackageLines.md#unitprice) | [Amount (13, 5)](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When NULL, the package specifies only discount[Currency: UnitPriceCurrency] 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### LineNumber
 
-Consecutive line number
+Consecutive line number[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -88,7 +88,7 @@ Front-End Recalc Expressions:
 `( obj.PromotionalPackage.Lines.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Quantity
 
-The quantity of the product in the package in the base measurement unit of the Product.
+The quantity of the product in the package in the base measurement unit of the Product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardDiscountAdjustOrReplace
 
-Specifies the way in which to change the standard discount
+Specifies the way in which to change the standard discount[Required] [Default(&quot;R&quot;)]
 
 Type: **[StandardDiscount<br />AdjustOrReplace](Crm.Pricing.PromotionalPackageLines.md#standarddiscountadjustorreplace)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardDiscountPercentAdjust
 
-Specifies the amount of change (in percent) for the standard discount
+Specifies the amount of change (in percent) for the standard discount[Required] [Default(0)]
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### UnitPrice
 
-When not null specifies directly unit price for the product. When NULL, the package specifies only discount
+When not null specifies directly unit price for the product. When NULL, the package specifies only discount[Currency: UnitPriceCurrency]
 
 Type: **[Amount (13, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  

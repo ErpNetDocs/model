@@ -128,22 +128,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyLocationNumbers.html#locationcodingsystem">LocationCodingSystem</a></td>
 <td><a href="General.Contacts.PartyLocationNumbers.html#locationcodingsystem">LocationCodingSystem</a></td>
-<td>The coding system for which we are defining the location number.</td>
+<td>The coding system for which we are defining the location number.[Required] [Default(&quot;GLN&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyLocationNumbers.html#locationnumber">LocationNumber</a></td>
 <td>string (16)</td>
-<td>The location number of Party.</td>
+<td>The location number of Party.[Required] [Filter(multi eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyLocationNumbers.html#partnerlocationnumber">PartnerLocationNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.</td>
+<td>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.[Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyLocationNumbers.html#significance">Significance</a></td>
 <td>int32</td>
-<td>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.</td>
+<td>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.[Required] [Default(0)] [Filter(multi eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -198,7 +198,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="locationcodingsystem">LocationCodingSystem</h3>
-<p>The coding system for which we are defining the location number.</p>
+<p>The coding system for which we are defining the location number.[Required] [Default(&quot;GLN&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="General.Contacts.PartyLocationNumbers.html#locationcodingsystem">LocationCodingSystem</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>LocationCodingSystem</code>(General.Contacts.PartyLocationNumbers.md#locationcodingsystem) data attribute<br>
@@ -226,7 +226,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>GLN</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="locationnumber">LocationNumber</h3>
-<p>The location number of Party.</p>
+<p>The location number of Party.[Required] [Filter(multi eq;like)] [ORD]</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -235,7 +235,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="partnerlocationnumber">PartnerLocationNumber</h3>
-<p>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.</p>
+<p>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.[Filter(multi eq)]</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -243,7 +243,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="significance">Significance</h3>
-<p>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.</p>
+<p>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.[Required] [Default(0)] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>

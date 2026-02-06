@@ -35,8 +35,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Logistics.Inventory.ProductValuationGroups.md#description) | string (254) __nullable__ | The description of this ProductValuationGroup. `Filter(like)` 
-| [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string (64) | The unique code of the product valuation group. 
-| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the product valuation group. 
+| [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string (64) | The unique code of the product valuation group.[Required] [Filter(eq;like)] [ORD] 
+| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the product valuation group.[Required] [Filter(eq;like)] 
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Show in UI: **ShownByDefault**
 
 ### ValuationGroupCode
 
-The unique code of the product valuation group.
+The unique code of the product valuation group.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -81,7 +81,7 @@ Back-End Default Expression:
 
 ### ValuationGroupName
 
-The name of the product valuation group.
+The name of the product valuation group.[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 Category: **System**  

@@ -33,18 +33,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessTokenKey](Systems.Security.AccessTokens.md#accesstokenkey) | string (256) | The unique key of the token 
-| [Actor](Systems.Security.AccessTokens.md#actor) | string (128) __nullable__ | For whom the token was issued (might be user email) 
-| [Client](Systems.Security.AccessTokens.md#client) | string (128) __nullable__ | The client application 
-| [ConsumedTimestamp](Systems.Security.AccessTokens.md#consumedtimestamp) | datetime __nullable__ | When it was used up (for one-time grants). 
-| [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created 
+| [AccessTokenKey](Systems.Security.AccessTokens.md#accesstokenkey) | string (256) | The unique key of the token[Required] [Filter(multi eq)] [ORD] 
+| [Actor](Systems.Security.AccessTokens.md#actor) | string (128) __nullable__ | For whom the token was issued (might be user email)[Filter(multi eq)] 
+| [Client](Systems.Security.AccessTokens.md#client) | string (128) __nullable__ | The client application[Filter(multi eq)] 
+| [ConsumedTimestamp](Systems.Security.AccessTokens.md#consumedtimestamp) | datetime __nullable__ | When it was used up (for one-time grants).[Filter(ge;le)] 
+| [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] 
 | [Data](Systems.Security.AccessTokens.md#data) | string (max) __nullable__ | Token contents 
 | [Description](Systems.Security.AccessTokens.md#description) | string (128) __nullable__ | The description of this AccessToken. 
-| [ExpireTimestamp](Systems.Security.AccessTokens.md#expiretimestamp) | datetime __nullable__ | When the token expires 
-| [LastUsedTimestamp](Systems.Security.AccessTokens.md#lastusedtimestamp) | datetime __nullable__ | Indicates when the token was last used. 
-| [Scopes](Systems.Security.AccessTokens.md#scopes) | string (256) __nullable__ | Space-separated list of permissions granted to this token. 
-| [Session](Systems.Security.AccessTokens.md#session) | string (128) __nullable__ | Session parameter 
-| [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc. 
+| [ExpireTimestamp](Systems.Security.AccessTokens.md#expiretimestamp) | datetime __nullable__ | When the token expires[Filter(ge;le)] 
+| [LastUsedTimestamp](Systems.Security.AccessTokens.md#lastusedtimestamp) | datetime __nullable__ | Indicates when the token was last used.[Filter(ge;le)] [Introduced in version 26.2.0.18] 
+| [Scopes](Systems.Security.AccessTokens.md#scopes) | string (256) __nullable__ | Space-separated list of permissions granted to this token.[Introduced in version 26.2.0.18] 
+| [Session](Systems.Security.AccessTokens.md#session) | string (128) __nullable__ | Session parameter[Filter(multi eq)] 
+| [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc.[Required] 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### AccessTokenKey
 
-The unique key of the token
+The unique key of the token[Required] [Filter(multi eq)] [ORD]
 
 Type: **string (256)**  
 Indexed: **True**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Actor
 
-For whom the token was issued (might be user email)
+For whom the token was issued (might be user email)[Filter(multi eq)]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Client
 
-The client application
+The client application[Filter(multi eq)]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedTimestamp
 
-When it was used up (for one-time grants).
+When it was used up (for one-time grants).[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimestamp
 
-When the token was created
+When the token was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD]
 
 Type: **datetime**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### ExpireTimestamp
 
-When the token expires
+When the token expires[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUsedTimestamp
 
-Indicates when the token was last used.
+Indicates when the token was last used.[Filter(ge;le)] [Introduced in version 26.2.0.18]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### Scopes
 
-Space-separated list of permissions granted to this token.
+Space-separated list of permissions granted to this token.[Introduced in version 26.2.0.18]
 
 Type: **string (256) __nullable__**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-Session parameter
+Session parameter[Filter(multi eq)]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### Type
 
-Type of the token - reference_token, refresh_token, etc.
+Type of the token - reference_token, refresh_token, etc.[Required]
 
 Type: **string (64)**  
 Category: **System**  

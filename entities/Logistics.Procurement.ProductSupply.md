@@ -42,30 +42,30 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BuyerName](Logistics.Procurement.ProductSupply.md#buyername) | string (64) __nullable__ | The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy 
-| [FixedOrderQuantityBase](Logistics.Procurement.ProductSupply.md#fixedorderquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Fixed order quantity under the FOQ & EOQ replenishment system 
-| [IsActive](Logistics.Procurement.ProductSupply.md#isactive) | boolean | 1 if this product supply is active 
-| [IsDefault](Logistics.Procurement.ProductSupply.md#isdefault) | boolean | Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information. 
-| [ManufacturingPolicy](Logistics.Procurement.ProductSupply.md#manufacturingpolicy) | [ManufacturingPolicy](Logistics.Procurement.ProductSupply.md#manufacturingpolicy) | MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order 
-| [OrderLotSizeQuantityBase](Logistics.Procurement.ProductSupply.md#orderlotsizequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit 
-| [OrderLotSizingMethod](Logistics.Procurement.ProductSupply.md#orderlotsizingmethod) | [OrderLotSizingMethod](Logistics.Procurement.ProductSupply.md#orderlotsizingmethod) | LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period; 
-| [OrderMaximum](Logistics.Procurement.ProductSupply.md#ordermaximum) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Order maximum when buying or making. NULL means no maximum 
-| [OrderMinimum](Logistics.Procurement.ProductSupply.md#orderminimum) | [Quantity (18, 3)](../data-types.md#quantity) | Minimum order quantity both for buying and making 
-| [OrderMultiple](Logistics.Procurement.ProductSupply.md#ordermultiple) | boolean | 1 if the order qty should be multiple of lot size when buying or making 
+| [FixedOrderQuantityBase](Logistics.Procurement.ProductSupply.md#fixedorderquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Fixed order quantity under the FOQ & EOQ replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [IsActive](Logistics.Procurement.ProductSupply.md#isactive) | boolean | 1 if this product supply is active[Required] [Default(true)] [Filter(eq)] 
+| [IsDefault](Logistics.Procurement.ProductSupply.md#isdefault) | boolean | Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.[Required] [Default(true)] [Filter(eq)] 
+| [ManufacturingPolicy](Logistics.Procurement.ProductSupply.md#manufacturingpolicy) | [ManufacturingPolicy](Logistics.Procurement.ProductSupply.md#manufacturingpolicy) | MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-<br />Order[Required] [Default(&quot;MTS&quot;)] [Filter(eq)] 
+| [OrderLotSizeQuantityBase](Logistics.Procurement.ProductSupply.md#orderlotsizequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
+| [OrderLotSizingMethod](Logistics.Procurement.ProductSupply.md#orderlotsizingmethod) | [OrderLotSizingMethod](Logistics.Procurement.ProductSupply.md#orderlotsizingmethod) | LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;[Required] [Default(&quot;ROP&quot;)] [Filter(eq)] 
+| [OrderMaximum](Logistics.Procurement.ProductSupply.md#ordermaximum) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Order maximum when buying or making. NULL means no maximum[Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [OrderMinimum](Logistics.Procurement.ProductSupply.md#orderminimum) | [Quantity (18, 3)](../data-types.md#quantity) | Minimum order quantity both for buying and making[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [OrderMultiple](Logistics.Procurement.ProductSupply.md#ordermultiple) | boolean | 1 if the order qty should be multiple of lot size when buying or making[Required] [Default(false)] 
 | [OrderPeriodPlanningDays](Logistics.Procurement.ProductSupply.md#orderperiodplanningdays) | int32 __nullable__ | For how many days in the future should be planned - for fixed period replenishment system. NULL - not yet specified 
-| [OrderPeriodStartDate](Logistics.Procurement.ProductSupply.md#orderperiodstartdate) | datetime __nullable__ | Start date of the first period under fixed period replenishment system. NULL - not yet specified 
-| [OrderPointQuantityBase](Logistics.Procurement.ProductSupply.md#orderpointquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Order point quantity under the OP replenishment system 
-| [OrderPolicy](Logistics.Procurement.ProductSupply.md#orderpolicy) | [OrderPolicy](Logistics.Procurement.ProductSupply.md#orderpolicy) | Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning 
+| [OrderPeriodStartDate](Logistics.Procurement.ProductSupply.md#orderperiodstartdate) | datetime __nullable__ | Start date of the first period under fixed period replenishment system. NULL - not yet specified[Filter(ge;le)] 
+| [OrderPointQuantityBase](Logistics.Procurement.ProductSupply.md#orderpointquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Order point quantity under the OP replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)] 
+| [OrderPolicy](Logistics.Procurement.ProductSupply.md#orderpolicy) | [OrderPolicy](Logistics.Procurement.ProductSupply.md#orderpolicy) | Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning[Required] [Default(&quot;OPS&quot;)] [Filter(eq)] 
 | [PlanningAnnual<br />CarryingCostPercent](Logistics.Procurement.ProductSupply.md#planningannualcarryingcostpercent) | decimal (5, 4) __nullable__ | The expected carrying cost as percentage of inventory cost. NULL means unknown 
-| [PlanningAnnual<br />UsageQuantityBase](Logistics.Procurement.ProductSupply.md#planningannualusagequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Average usage of the product for 1 year. NUL means unknown 
-| [PlanningHorizonDays](Logistics.Procurement.ProductSupply.md#planninghorizondays) | int32 | Number of days in the future for which to plan the demand and supply 
-| [PlanningLeadTimeDays](Logistics.Procurement.ProductSupply.md#planningleadtimedays) | int32 | The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components 
-| [PlanningMaximum<br />InventoryQuantity<br />Base](Logistics.Procurement.ProductSupply.md#planningmaximuminventoryquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum inventory. NULL if N/A 
-| [PlanningOrderCost<br />BaseCurrency](Logistics.Procurement.ProductSupply.md#planningordercostbasecurrency) | [Amount (18, 3)](../data-types.md#amount) __nullable__ | Projected cost to place an order and set-up equipment 
+| [PlanningAnnual<br />UsageQuantityBase](Logistics.Procurement.ProductSupply.md#planningannualusagequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Average usage of the product for 1 year. NUL means unknown[Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [PlanningHorizonDays](Logistics.Procurement.ProductSupply.md#planninghorizondays) | int32 | Number of days in the future for which to plan the demand and supply[Required] [Default(0)] 
+| [PlanningLeadTimeDays](Logistics.Procurement.ProductSupply.md#planningleadtimedays) | int32 | The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components[Required] [Default(0)] 
+| [PlanningMaximum<br />InventoryQuantity<br />Base](Logistics.Procurement.ProductSupply.md#planningmaximuminventoryquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum inventory. NULL if N/A[Unit: Product.BaseMeasurementCategory.BaseUnit] 
+| [PlanningOrderCost<br />BaseCurrency](Logistics.Procurement.ProductSupply.md#planningordercostbasecurrency) | [Amount (18, 3)](../data-types.md#amount) __nullable__ | Projected cost to place an order and set-up equipment[Currency: EnterpriseCompany.BaseCurrency] 
 | [PlanningOrderCycleDays](Logistics.Procurement.ProductSupply.md#planningordercycledays) | int32 __nullable__ | Number of days in one period under fixed period replenishment system. NULL - not yet specified 
-| [PlanningSafety<br />StockQuantityBase](Logistics.Procurement.ProductSupply.md#planningsafetystockquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product 
-| [PlanningTimeFenceDays](Logistics.Procurement.ProductSupply.md#planningtimefencedays) | int32 | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF 
-| [ProcurementType](Logistics.Procurement.ProductSupply.md#procurementtype) | [ProcurementType](Logistics.Procurement.ProductSupply.md#procurementtype) | M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought 
-| [StandardCostPerLot](Logistics.Procurement.ProductSupply.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one lot of the product 
+| [PlanningSafety<br />StockQuantityBase](Logistics.Procurement.ProductSupply.md#planningsafetystockquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] 
+| [PlanningTimeFenceDays](Logistics.Procurement.ProductSupply.md#planningtimefencedays) | int32 | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF[Required] [Default(1)] 
+| [ProcurementType](Logistics.Procurement.ProductSupply.md#procurementtype) | [ProcurementType](Logistics.Procurement.ProductSupply.md#procurementtype) | M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought[Required] [Default(&quot;B&quot;)] [Filter(eq)] 
+| [StandardCostPerLot](Logistics.Procurement.ProductSupply.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one lot of the product[Currency: Product.CostingCurrency] [Required] [Default(0)] 
 | [SupplySchemaId](Logistics.Procurement.ProductSupply.md#supplyschemaid) | guid __nullable__ | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
 
 ## References
@@ -109,7 +109,7 @@ Show in UI: **HiddenByDefault**
 
 ### FixedOrderQuantityBase
 
-Fixed order quantity under the FOQ & EOQ replenishment system
+Fixed order quantity under the FOQ & EOQ replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsActive
 
-1 if this product supply is active
+1 if this product supply is active[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsDefault
 
-Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.
+Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **HiddenByDefault**
 
 ### ManufacturingPolicy
 
-MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order
+MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order[Required] [Default(&quot;MTS&quot;)] [Filter(eq)]
 
 Type: **[ManufacturingPolicy](Logistics.Procurement.ProductSupply.md#manufacturingpolicy)**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderLotSizeQuantityBase
 
-The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit
+The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderLotSizingMethod
 
-LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;
+LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;[Required] [Default(&quot;ROP&quot;)] [Filter(eq)]
 
 Type: **[OrderLotSizingMethod](Logistics.Procurement.ProductSupply.md#orderlotsizingmethod)**  
 Category: **System**  
@@ -197,7 +197,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderMaximum
 
-Order maximum when buying or making. NULL means no maximum
+Order maximum when buying or making. NULL means no maximum[Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -207,7 +207,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderMinimum
 
-Minimum order quantity both for buying and making
+Minimum order quantity both for buying and making[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderMultiple
 
-1 if the order qty should be multiple of lot size when buying or making
+1 if the order qty should be multiple of lot size when buying or making[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderPeriodStartDate
 
-Start date of the first period under fixed period replenishment system. NULL - not yet specified
+Start date of the first period under fixed period replenishment system. NULL - not yet specified[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -249,7 +249,7 @@ Show in UI: **HiddenByDefault**
 
 ### OrderPointQuantityBase
 
-Order point quantity under the OP replenishment system
+Order point quantity under the OP replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -260,7 +260,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderPolicy
 
-Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning
+Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning[Required] [Default(&quot;OPS&quot;)] [Filter(eq)]
 
 Type: **[OrderPolicy](Logistics.Procurement.ProductSupply.md#orderpolicy)**  
 Category: **System**  
@@ -291,7 +291,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlanningAnnualUsageQuantityBase
 
-Average usage of the product for 1 year. NUL means unknown
+Average usage of the product for 1 year. NUL means unknown[Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -301,7 +301,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlanningHorizonDays
 
-Number of days in the future for which to plan the demand and supply
+Number of days in the future for which to plan the demand and supply[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -312,7 +312,7 @@ Show in UI: **CannotBeShown**
 
 ### PlanningLeadTimeDays
 
-The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components
+The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -325,7 +325,7 @@ Front-End Recalc Expressions:
 `obj.PreferredSupplier.DefaultDeliveryTermDays`
 ### PlanningMaximumInventoryQuantityBase
 
-Maximum inventory. NULL if N/A
+Maximum inventory. NULL if N/A[Unit: Product.BaseMeasurementCategory.BaseUnit]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -335,7 +335,7 @@ Show in UI: **ShownByDefault**
 
 ### PlanningOrderCostBaseCurrency
 
-Projected cost to place an order and set-up equipment
+Projected cost to place an order and set-up equipment[Currency: EnterpriseCompany.BaseCurrency]
 
 Type: **[Amount (18, 3)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -355,7 +355,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlanningSafetyStockQuantityBase
 
-Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product
+Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -366,7 +366,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlanningTimeFenceDays
 
-Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF
+Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF[Required] [Default(1)]
 
 Type: **int32**  
 Category: **System**  
@@ -377,7 +377,7 @@ Show in UI: **CannotBeShown**
 
 ### ProcurementType
 
-M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought
+M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought[Required] [Default(&quot;B&quot;)] [Filter(eq)]
 
 Type: **[ProcurementType](Logistics.Procurement.ProductSupply.md#procurementtype)**  
 Category: **System**  
@@ -397,7 +397,7 @@ Show in UI: **HiddenByDefault**
 
 ### StandardCostPerLot
 
-Standard cost for one lot of the product
+Standard cost for one lot of the product[Currency: Product.CostingCurrency] [Required] [Default(0)]
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  

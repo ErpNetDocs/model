@@ -127,22 +127,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact date and time (in UTC) when the development was created</td>
+<td>The exact date and time (in UTC) when the development was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#description">Description</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Detailed description of the development.</td>
+<td>Detailed description of the development.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#developmenttype">DevelopmentType</a></td>
 <td><a href="Projects.Agile.CaseDevelopments.html#developmenttype">DevelopmentType</a></td>
-<td>Type of the development - Edit, Assignment, Resolve, etc.</td>
+<td>Type of the development - Edit, Assignment, Resolve, etc.[Required] [Default(&quot;EDT&quot;)] [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">NewSystemState</a></td>
 <td><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></td>
-<td>When the development incurred changing the state of the case, contains the new state.</td>
+<td>When the development incurred changing the state of the case, contains the new state.[Filter(multi eq)] [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact date and time (in UTC) when the development was created</p>
+<p>The exact date and time (in UTC) when the development was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
 <p>Type: <strong>datetime</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -218,7 +218,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="description">Description</h3>
-<p>Detailed description of the development.</p>
+<p>Detailed description of the development.[Filter(like)]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -226,7 +226,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="developmenttype">DevelopmentType</h3>
-<p>Type of the development - Edit, Assignment, Resolve, etc.</p>
+<p>Type of the development - Edit, Assignment, Resolve, etc.[Required] [Default(&quot;EDT&quot;)] [Filter(multi eq)] [ReadOnly]</p>
 <p>Type: <strong><a href="Projects.Agile.CaseDevelopments.html#developmenttype">DevelopmentType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DevelopmentType</code>(Projects.Agile.CaseDevelopments.md#developmenttype) data attribute<br>
@@ -270,7 +270,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Edit</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="newsystemstate">NewSystemState</h3>
-<p>When the development incurred changing the state of the case, contains the new state.</p>
+<p>When the development incurred changing the state of the case, contains the new state.[Filter(multi eq)] [ReadOnly]</p>
 <p>Type: <strong><a href="Projects.Agile.CaseDevelopments.html#newsystemstate">SystemState</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>

@@ -35,9 +35,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Finance.Payments.PaymentAccounts.md#code) | string (16) | The unique code of the PaymentAccount. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates whether this payment account is currently used. 
+| [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates whether this payment account is currently used.[Required] [Default(true)] [Filter(eq)] 
 | [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString (50)](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
-| [UseBaseCurrency](Finance.Payments.PaymentAccounts.md#usebasecurrency) | boolean | When enabled, this setting restricts the payment account to use only the base currency. 
+| [UseBaseCurrency](Finance.Payments.PaymentAccounts.md#usebasecurrency) | boolean | When enabled, this setting restricts the payment account to use only the base currency.[Required] [Default(false)] [Introduced in version 26.1.4.36] 
 
 ## References
 
@@ -82,7 +82,7 @@ Back-End Default Expression:
 
 ### IsActive
 
-Indicates whether this payment account is currently used.
+Indicates whether this payment account is currently used.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### UseBaseCurrency
 
-When enabled, this setting restricts the payment account to use only the base currency.
+When enabled, this setting restricts the payment account to use only the base currency.[Required] [Default(false)] [Introduced in version 26.1.4.36]
 
 Type: **boolean**  
 Category: **System**  

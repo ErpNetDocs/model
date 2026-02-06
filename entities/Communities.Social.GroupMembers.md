@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HistoryVisibleSinceTimeUtc](Communities.Social.GroupMembers.md#historyvisiblesincetimeutc) | datetime __nullable__ | Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history. 
-| [JoinTimeUtc](Communities.Social.GroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group. 
-| [LastSeenTimeUtc](Communities.Social.GroupMembers.md#lastseentimeutc) | datetime __nullable__ | The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it. 
-| [Role](Communities.Social.GroupMembers.md#role) | [Role](Communities.Social.GroupMembers.md#role) | Member role in a group. Defaults to member. 
+| [HistoryVisibleSinceTimeUtc](Communities.Social.GroupMembers.md#historyvisiblesincetimeutc) | datetime __nullable__ | Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.[Filter(ge;le)] [Introduced in version 26.1.4.14] 
+| [JoinTimeUtc](Communities.Social.GroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group.[Required] [Default(NowUtc)] [Filter(ge;le)] 
+| [LastSeenTimeUtc](Communities.Social.GroupMembers.md#lastseentimeutc) | datetime __nullable__ | The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.[Filter(ge;le)] [Introduced in version 26.1.4.14] 
+| [Role](Communities.Social.GroupMembers.md#role) | [Role](Communities.Social.GroupMembers.md#role) | Member role in a group. Defaults to member.[Required] [Default(&quot;M&quot;)] [Filter(multi eq)] [Introduced in version 23.1.1.95] 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### HistoryVisibleSinceTimeUtc
 
-Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.
+Inclusive UTC timestamp that marks the earliest history item returned; records older than this moment are hidden. NULL removes the cutoff, exposing the full history.[Filter(ge;le)] [Introduced in version 26.1.4.14]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### JoinTimeUtc
 
-The exact server time (in UTC), when the user joined the group.
+The exact server time (in UTC), when the user joined the group.[Required] [Default(NowUtc)] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### LastSeenTimeUtc
 
-The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.
+The time (in UTC) until the group member caught up with the content in the corresponding group. NULL indicates that the group has no content or the member has never interacted with it.[Filter(ge;le)] [Introduced in version 26.1.4.14]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Role
 
-Member role in a group. Defaults to member.
+Member role in a group. Defaults to member.[Required] [Default(&quot;M&quot;)] [Filter(multi eq)] [Introduced in version 23.1.1.95]
 
 Type: **[Role](Communities.Social.GroupMembers.md#role)**  
 Category: **System**  

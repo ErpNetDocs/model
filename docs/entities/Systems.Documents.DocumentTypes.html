@@ -165,17 +165,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique descriptive code of the document type</td>
+<td>Unique descriptive code of the document type[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#createfulfillmentsoncompletion">CreateFulfillments<br>OnCompletion</a></td>
 <td>boolean</td>
-<td>When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.</td>
+<td>When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.[Required] [Default(false)] [Introduced in version 23.1.2.9]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#createmanully">CreateManully</a></td>
 <td>boolean</td>
-<td>0 if documents with this document type only can be generated; 1 - the user can create documents with this type</td>
+<td>0 if documents with this document type only can be generated; 1 - the user can create documents with this type[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#description">Description</a></td>
@@ -185,17 +185,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#disallowoppositevaluesgeneration">DisallowOpposite<br>ValuesGeneration</a></td>
 <td>boolean</td>
-<td>Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.</td>
+<td>Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#entityname">EntityName</a></td>
 <td>string (64)</td>
-<td>System entity, which contains the documents</td>
+<td>System entity, which contains the documents[Required] [Filter(multi eq)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#generatesingledocument">GenerateSingleDocument</a></td>
 <td>boolean</td>
-<td>Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).</td>
+<td>Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#notes">Notes</a></td>
@@ -210,22 +210,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#trackattributechanges">TrackAttributeChanges</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html#trackattributechanges">TrackAttributeChanges</a></td>
-<td>Enable/disable attributes change tracking for documents from this type. &quot;Default&quot; means that changes will be tracked for all documents, except transit and adjustment documents.</td>
+<td>Enable/disable attributes change tracking for documents from this type. &quot;Default&quot; means that changes will be tracked for all documents, except transit and adjustment documents.[Required] [Default(&quot;DEF&quot;)] [Filter(eq)] [Introduced in version 24.1.3.37]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#trackprintimages">TrackPrintImages</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html#trackprintimages">TrackPrintImages</a></td>
-<td>Enable/disable print images tracking for documents from this type.</td>
+<td>Enable/disable print images tracking for documents from this type.[Required] [Default(&quot;SDC&quot;)] [Filter(eq)] [Introduced in version 24.1.3.95]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#transitionaldocument">TransitionalDocument</a></td>
 <td>boolean</td>
-<td>If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.</td>
+<td>If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypes.html#typename">TypeName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Description of the document type</td>
+<td>Description of the document type[Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -397,7 +397,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Unique descriptive code of the document type</p>
+<p>Unique descriptive code of the document type[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -406,7 +406,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createfulfillmentsoncompletion">CreateFulfillmentsOnCompletion</h3>
-<p>When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.</p>
+<p>When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.[Required] [Default(false)] [Introduced in version 23.1.2.9]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -414,7 +414,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createmanully">CreateManully</h3>
-<p>0 if documents with this document type only can be generated; 1 - the user can create documents with this type</p>
+<p>0 if documents with this document type only can be generated; 1 - the user can create documents with this type[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -431,7 +431,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="disallowoppositevaluesgeneration">DisallowOppositeValuesGeneration</h3>
-<p>Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.</p>
+<p>Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -439,7 +439,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="entityname">EntityName</h3>
-<p>System entity, which contains the documents</p>
+<p>System entity, which contains the documents[Required] [Filter(multi eq)] [ORD]</p>
 <p>Type: <strong>string (64)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -448,7 +448,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="generatesingledocument">GenerateSingleDocument</h3>
-<p>Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).</p>
+<p>Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -472,7 +472,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="trackattributechanges">TrackAttributeChanges</h3>
-<p>Enable/disable attributes change tracking for documents from this type. &quot;Default&quot; means that changes will be tracked for all documents, except transit and adjustment documents.</p>
+<p>Enable/disable attributes change tracking for documents from this type. &quot;Default&quot; means that changes will be tracked for all documents, except transit and adjustment documents.[Required] [Default(&quot;DEF&quot;)] [Filter(eq)] [Introduced in version 24.1.3.37]</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html#trackattributechanges">TrackAttributeChanges</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TrackAttributeChanges</code>(Systems.Documents.DocumentTypes.md#trackattributechanges) data attribute<br>
@@ -504,7 +504,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Default</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trackprintimages">TrackPrintImages</h3>
-<p>Enable/disable print images tracking for documents from this type.</p>
+<p>Enable/disable print images tracking for documents from this type.[Required] [Default(&quot;SDC&quot;)] [Filter(eq)] [Introduced in version 24.1.3.95]</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html#trackprintimages">TrackPrintImages</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TrackPrintImages</code>(Systems.Documents.DocumentTypes.md#trackprintimages) data attribute<br>
@@ -532,7 +532,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>SaveSourceDataCompressed</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transitionaldocument">TransitionalDocument</h3>
-<p>If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.</p>
+<p>If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -542,7 +542,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.CreateManully, False, obj.TransitionalDocument)</code></p>
 <h3 id="typename">TypeName</h3>
-<p>Description of the document type</p>
+<p>Description of the document type[Required] [Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

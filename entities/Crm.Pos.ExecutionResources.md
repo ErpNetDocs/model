@@ -37,11 +37,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Capacity](Crm.Pos.ExecutionResources.md#capacity) | int32 __nullable__ | Optional: number of simultaneous uses (e.g., seating for 4) 
-| [Code](Crm.Pos.ExecutionResources.md#code) | string (16) | Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. 
-| [IsActive](Crm.Pos.ExecutionResources.md#isactive) | boolean | Indicates whether the POS execution resource is currently active. 
-| [Name](Crm.Pos.ExecutionResources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Human readable resource name, e.g. 'Table 5', 'Room 58'. 
-| [Notes](Crm.Pos.ExecutionResources.md#notes) | string (max) __nullable__ | Notes for the execution resource. 
+| [Capacity](Crm.Pos.ExecutionResources.md#capacity) | int32 __nullable__ | Optional: number of simultaneous uses (e.g., seating for 4)[Filter(eq;ge;le)] 
+| [Code](Crm.Pos.ExecutionResources.md#code) | string (16) | Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.[Required] [Filter(eq;like)] [ORD] 
+| [IsActive](Crm.Pos.ExecutionResources.md#isactive) | boolean | Indicates whether the POS execution resource is currently active.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Crm.Pos.ExecutionResources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Human readable resource name, e.g. 'Table 5', 'Room 58'.[Required] [Filter(like)] 
+| [Notes](Crm.Pos.ExecutionResources.md#notes) | string (max) __nullable__ | Notes for the execution resource.[Filter(like)] 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Capacity
 
-Optional: number of simultaneous uses (e.g., seating for 4)
+Optional: number of simultaneous uses (e.g., seating for 4)[Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.
+Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the POS execution resource is currently active.
+Indicates whether the POS execution resource is currently active.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Human readable resource name, e.g. 'Table 5', 'Room 58'.
+Human readable resource name, e.g. 'Table 5', 'Room 58'.[Required] [Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the execution resource.
+Notes for the execution resource.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  

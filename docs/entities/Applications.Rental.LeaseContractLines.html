@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#enddate">EndDate</a></td>
 <td>date</td>
-<td>Ending date of lease of this asset</td>
+<td>Ending date of lease of this asset[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#guaranteeamount">GuaranteeAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>Deposit amount in the currency of the document which is given for this asset during its period of lease.</td>
+<td>Deposit amount in the currency of the document which is given for this asset during its period of lease.[Currency: LeaseContract.Currency]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the lease contract.</td>
+<td>Consecutive number of the line within the lease contract.[Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#linenotes">LineNotes</a></td>
@@ -141,17 +141,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#numberofperiods">NumberOfPeriods</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.</td>
+<td>Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.[Filter(eq;ge;le)] [Introduced in version 24.1.5.21]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#startdate">StartDate</a></td>
 <td>date</td>
-<td>Starting date of lease for this asset</td>
+<td>Starting date of lease for this asset[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContractLines.html#timeperiodtype">TimePeriodType</a></td>
 <td><a href="Applications.Rental.LeaseContractLines.html#timeperiodtype">TimePeriodType</a> <strong>nullable</strong></td>
-<td>Specifies the unit by which the periods of renting of this asset are measured.</td>
+<td>Specifies the unit by which the periods of renting of this asset are measured.[Filter(multi eq)] [Introduced in version 24.1.5.31]</td>
 </tr>
 </tbody>
 </table>
@@ -223,7 +223,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>Ending date of lease of this asset</p>
+<p>Ending date of lease of this asset[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -234,14 +234,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.LeaseContract.EndDate</code></p>
 <h3 id="guaranteeamount">GuaranteeAmount</h3>
-<p>Deposit amount in the currency of the document which is given for this asset during its period of lease.</p>
+<p>Deposit amount in the currency of the document which is given for this asset during its period of lease.[Currency: LeaseContract.Currency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the lease contract.</p>
+<p>Consecutive number of the line within the lease contract.[Required] [Filter(eq;ge;le)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -260,7 +260,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="numberofperiods">NumberOfPeriods</h3>
-<p>Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.</p>
+<p>Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.[Filter(eq;ge;le)] [Introduced in version 24.1.5.21]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -269,7 +269,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.CalculateNumberOfPeriods( obj.RentalAsset, obj.StartDate, obj.EndDate, obj.TimePeriodType)</code></p>
 <h3 id="startdate">StartDate</h3>
-<p>Starting date of lease for this asset</p>
+<p>Starting date of lease for this asset[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -280,7 +280,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.LeaseContract.StartDate</code></p>
 <h3 id="timeperiodtype">TimePeriodType</h3>
-<p>Specifies the unit by which the periods of renting of this asset are measured.</p>
+<p>Specifies the unit by which the periods of renting of this asset are measured.[Filter(multi eq)] [Introduced in version 24.1.5.31]</p>
 <p>Type: <strong><a href="Applications.Rental.LeaseContractLines.html#timeperiodtype">TimePeriodType</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TimePeriodType</code>(Applications.Rental.LeaseContractLines.md#timeperiodtype) data attribute<br>

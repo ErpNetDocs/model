@@ -135,12 +135,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#filename">FileName</a></td>
 <td>string (128)</td>
-<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file</td>
+<td>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file[Required]</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#islinked">IsLinked</a></td>
 <td>boolean</td>
-<td>1 when the document is linked (ony file name is kept). 0 when the document is embedded</td>
+<td>1 when the document is linked (ony file name is kept). 0 when the document is embedded[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFileAttachments.html#linkedfilepath">LinkedFilePath</a></td>
@@ -207,7 +207,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="filename">FileName</h3>
-<p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file</p>
+<p>The display name of the file. Initially set to the file name (without path) of the linked or the embedded file[Required]</p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="islinked">IsLinked</h3>
-<p>1 when the document is linked (ony file name is kept). 0 when the document is embedded</p>
+<p>1 when the document is linked (ony file name is kept). 0 when the document is embedded[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

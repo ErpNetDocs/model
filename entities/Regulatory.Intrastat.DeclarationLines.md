@@ -44,15 +44,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat 
-| [InvoicedValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency 
-| [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted 
-| [LineNo](Regulatory.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration 
-| [NetMassKg](Regulatory.Intrastat.DeclarationLines.md#netmasskg) | decimal (14, 3) | Net mass of the goods in kg 
+| [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat[Required] 
+| [InvoicedValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency] [Required] 
+| [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted[Required] [Default(&quot;NEW&quot;)] 
+| [LineNo](Regulatory.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration[Required] [Filter(eq)] 
+| [NetMassKg](Regulatory.Intrastat.DeclarationLines.md#netmasskg) | decimal (14, 3) | Net mass of the goods in kg[Required] [Filter(multi eq)] 
 | [QuantitySupplementaryUnit](Regulatory.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal (10, 0) __nullable__ | Quantity of the goods in the supplementary unit 
-| [StatisticalValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) __nullable__ | Statistical value of the goods in the base currency 
-| [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification 
-| [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used 
+| [StatisticalValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) __nullable__ | Statistical value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency] 
+| [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification[Required] 
+| [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used[Required] 
 
 ## References
 
@@ -80,7 +80,7 @@ Aggregate Root:
 
 ### DeliveryTerms
 
-Delivery terms - classification according to Intrastat
+Delivery terms - classification according to Intrastat[Required]
 
 Type: **[DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoicedValueAmountBase
 
-Invoiced value of the goods in the base currency
+Invoiced value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency] [Required]
 
 Type: **[Amount (10, 0)](../data-types.md#amount)**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### LineAction
 
-Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted
+Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted[Required] [Default(&quot;NEW&quot;)]
 
 Type: **[LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consequtive line number within the intrastat declaration
+Consequtive line number within the intrastat declaration[Required] [Filter(eq)]
 
 Type: **int32**  
 Category: **System**  
@@ -154,7 +154,7 @@ Front-End Recalc Expressions:
 `( obj.IntrastatDeclaration.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### NetMassKg
 
-Net mass of the goods in kg
+Net mass of the goods in kg[Required] [Filter(multi eq)]
 
 Type: **decimal (14, 3)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### StatisticalValueAmountBase
 
-Statistical value of the goods in the base currency
+Statistical value of the goods in the base currency[Currency: IntrastatDeclaration.BaseCurrency]
 
 Type: **[Amount (10, 0)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionNature
 
-Transaction nature, according to the Intrastat classification
+Transaction nature, according to the Intrastat classification[Required]
 
 Type: **[TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature)**  
 Category: **System**  
@@ -219,7 +219,7 @@ Show in UI: **ShownByDefault**
 
 ### TransportMode
 
-Transportation mode - type of transportation used
+Transportation mode - type of transportation used[Required]
 
 Type: **[TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode)**  
 Category: **System**  

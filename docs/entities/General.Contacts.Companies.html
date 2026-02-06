@@ -134,12 +134,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Companies.html#branchnumber">BranchNumber</a></td>
 <td>int32</td>
-<td>Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.</td>
+<td>Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.[Required] [Default(0)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#city">City</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>The city in which the company is registered.</td>
+<td>The city in which the company is registered.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#creationtime">CreationTime</a></td>
@@ -164,12 +164,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Companies.html#isvatcashreportingregistered">IsVATCashReporting<br>Registered</a></td>
 <td>boolean</td>
-<td>When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.</td>
+<td>When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#isvatregistered">IsVATRegistered</a></td>
 <td>boolean</td>
-<td>Determines whether the company is included in VAT registers.</td>
+<td>Determines whether the company is included in VAT registers.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#name">Name</a></td>
@@ -224,27 +224,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationnumber">RegistrationNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Unique, government-assigned registration number. NULL means unknown</td>
+<td>Unique, government-assigned registration number. NULL means unknown[Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationprimaryaddress">RegistrationPrimaryAddress</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>The primary registration address of the company.</td>
+<td>The primary registration address of the company.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationtype">RegistrationType</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (16)</a> <strong>nullable</strong></td>
-<td>Legal registration type - like LTD., PLC, etc. NULL means unknown</td>
+<td>Legal registration type - like LTD., PLC, etc. NULL means unknown[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationvatnumber">RegistrationVATNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown</td>
+<td>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown[Filter(eq)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#responsiblepersonname">ResponsiblePersonName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>Name of the primary responsible person of the company.</td>
+<td>Name of the primary responsible person of the company.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#updatetime">UpdateTime</a></td>
@@ -391,7 +391,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="branchnumber">BranchNumber</h3>
-<p>Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.</p>
+<p>Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.[Required] [Default(0)] [Filter(eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -399,7 +399,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="city">City</h3>
-<p>The city in which the company is registered.</p>
+<p>The city in which the company is registered.[Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -438,7 +438,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isvatcashreportingregistered">IsVATCashReportingRegistered</h3>
-<p>When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.</p>
+<p>When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -446,7 +446,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isvatregistered">IsVATRegistered</h3>
-<p>Determines whether the company is included in VAT registers.</p>
+<p>Determines whether the company is included in VAT registers.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -567,7 +567,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="registrationnumber">RegistrationNumber</h3>
-<p>Unique, government-assigned registration number. NULL means unknown</p>
+<p>Unique, government-assigned registration number. NULL means unknown[Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -576,21 +576,21 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="registrationprimaryaddress">RegistrationPrimaryAddress</h3>
-<p>The primary registration address of the company.</p>
+<p>The primary registration address of the company.[Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="registrationtype">RegistrationType</h3>
-<p>Legal registration type - like LTD., PLC, etc. NULL means unknown</p>
+<p>Legal registration type - like LTD., PLC, etc. NULL means unknown[Filter(eq)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (16)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="registrationvatnumber">RegistrationVATNumber</h3>
-<p>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown</p>
+<p>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown[Filter(eq)] [ORD]</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -599,7 +599,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="responsiblepersonname">ResponsiblePersonName</h3>
-<p>Name of the primary responsible person of the company.</p>
+<p>Name of the primary responsible person of the company.[Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

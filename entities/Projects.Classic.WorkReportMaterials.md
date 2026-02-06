@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Quantity](Projects.Classic.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material. 
-| [QuantityBase](Projects.Classic.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material. 
+| [Quantity](Projects.Classic.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material.[Required] [Default(0)] [Filter(eq;like)] 
+| [QuantityBase](Projects.Classic.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.[Required] [Default(0)] [Filter(eq;like)] [ReadOnly] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### Quantity
 
-The consumed quantity of the material.
+The consumed quantity of the material.[Required] [Default(0)] [Filter(eq;like)]
 
 Type: **decimal (9, 3)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalence of Quantity in the base measurement unit of the Material.
+The equivalence of Quantity in the base measurement unit of the Material.[Required] [Default(0)] [Filter(eq;like)] [ReadOnly]
 
 Type: **decimal (9, 3)**  
 Category: **System**  

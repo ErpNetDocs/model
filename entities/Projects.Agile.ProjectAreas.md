@@ -34,12 +34,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsiderWipLimit](Projects.Agile.ProjectAreas.md#considerwiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. 
-| [Description](Projects.Agile.ProjectAreas.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project area. 
-| [InProgressWipLimit](Projects.Agile.ProjectAreas.md#inprogresswiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state. 
-| [IsActive](Projects.Agile.ProjectAreas.md#isactive) | boolean | Specifies whether the project area is active for new projects 
-| [Name](Projects.Agile.ProjectAreas.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project area 
-| [ReadyWipLimit](Projects.Agile.ProjectAreas.md#readywiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state. 
+| [ConsiderWipLimit](Projects.Agile.ProjectAreas.md#considerwiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38] 
+| [Description](Projects.Agile.ProjectAreas.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project area.[Filter(like)] [Introduced in version 25.1.1.48] 
+| [InProgressWipLimit](Projects.Agile.ProjectAreas.md#inprogresswiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38] 
+| [IsActive](Projects.Agile.ProjectAreas.md#isactive) | boolean | Specifies whether the project area is active for new projects[Required] [Default(true)] [Filter(eq)] 
+| [Name](Projects.Agile.ProjectAreas.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project area[Required] [Filter(like)] 
+| [ReadyWipLimit](Projects.Agile.ProjectAreas.md#readywiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38] 
 
 ## References
 
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### ConsiderWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description of the project area.
+Description of the project area.[Filter(like)] [Introduced in version 25.1.1.48]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### InProgressWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the project area is active for new projects
+Specifies whether the project area is active for new projects[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the project area
+Multi-language name of the project area[Required] [Filter(like)]
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadyWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38]
 
 Type: **int32 __nullable__**  
 Category: **System**  

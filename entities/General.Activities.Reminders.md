@@ -44,10 +44,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsDefault](General.Activities.Reminders.md#isdefault) | boolean | 1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form 
-| [IsDismissed](General.Activities.Reminders.md#isdismissed) | boolean | When 1 the reminder was dismissed by the user; the initial value is 0 
+| [IsDefault](General.Activities.Reminders.md#isdefault) | boolean | 1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form[Required] [Default(false)] [Filter(eq)] 
+| [IsDismissed](General.Activities.Reminders.md#isdismissed) | boolean | When 1 the reminder was dismissed by the user; the initial value is 0[Required] [Default(false)] [Filter(eq)] 
 | [Notes](General.Activities.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task 
-| [ReminderTime](General.Activities.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user 
+| [ReminderTime](General.Activities.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user[Required] [Filter(ge;le)] 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### IsDefault
 
-1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form
+1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDismissed
 
-When 1 the reminder was dismissed by the user; the initial value is 0
+When 1 the reminder was dismissed by the user; the initial value is 0[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### ReminderTime
 
-The time when the alarm should snooze to the user
+The time when the alarm should snooze to the user[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  

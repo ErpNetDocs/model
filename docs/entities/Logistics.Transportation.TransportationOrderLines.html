@@ -125,7 +125,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrderLines.html#contentsdescription">ContentsDescription</a></td>
 <td>string (128)</td>
-<td>Textual description of the cargo contents.</td>
+<td>Textual description of the cargo contents.[Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrderLines.html#lineno">LineNo</a></td>
@@ -145,7 +145,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.</td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrderLines.html#volumecbm">VolumeCbm</a></td>
@@ -220,7 +220,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contentsdescription">ContentsDescription</h3>
-<p>Textual description of the cargo contents.</p>
+<p>Textual description of the cargo contents.[Required]</p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -254,7 +254,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.</p>
+<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

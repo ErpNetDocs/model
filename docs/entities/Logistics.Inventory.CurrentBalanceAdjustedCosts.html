@@ -117,22 +117,22 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalanceAdjustedCosts.html#basecost">BaseCost</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The cost of the inventory in base currency of the enterprise company.</td>
+<td>The cost of the inventory in base currency of the enterprise company.[Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalanceAdjustedCosts.html#productcost">ProductCost</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The cost of the inventory in the products currency.</td>
+<td>The cost of the inventory in the products currency.[Currency: Product.CostingCurrency] [Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalanceAdjustedCosts.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (38, 3)</a></td>
-<td>The quantity of the stock received/issued in base measurement unit</td>
+<td>The quantity of the stock received/issued in base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CurrentBalanceAdjustedCosts.html#storecost">StoreCost</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The cost of the inventory in the stores currency.</td>
+<td>The cost of the inventory in the stores currency.[Currency: Store.Currency] [Required]</td>
 </tr>
 </tbody>
 </table>
@@ -185,28 +185,28 @@ Show in UI:  HiddenByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="basecost">BaseCost</h3>
-<p>The cost of the inventory in base currency of the enterprise company.</p>
+<p>The cost of the inventory in base currency of the enterprise company.[Currency: EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productcost">ProductCost</h3>
-<p>The cost of the inventory in the products currency.</p>
+<p>The cost of the inventory in the products currency.[Currency: Product.CostingCurrency] [Required]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity of the stock received/issued in base measurement unit</p>
+<p>The quantity of the stock received/issued in base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (38, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storecost">StoreCost</h3>
-<p>The cost of the inventory in the stores currency.</p>
+<p>The cost of the inventory in the stores currency.[Currency: Store.Currency] [Required]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -133,37 +133,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultdeliverytermdays">DefaultDeliveryTermDays</a></td>
 <td>int32</td>
-<td>Default term in days for goods delivery, starting at the day of sending the purchase order</td>
+<td>Default term in days for goods delivery, starting at the day of sending the purchase order[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymentstartdays">DefaultPaymentStartDays</a></td>
 <td>int32</td>
-<td>Number of days until the payment becomes executable. 0 means that the payment is executable at all times.</td>
+<td>Number of days until the payment becomes executable. 0 means that the payment is executable at all times.[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#defaultpaymenttermdays">DefaultPaymentTermDays</a></td>
 <td>int32</td>
-<td>Default payment term in days, starting from the date of receiving the invoice</td>
+<td>Default payment term in days, starting from the date of receiving the invoice[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date on which this party became a supplier or the date, when the supplier contract was signed.</td>
+<td>The date on which this party became a supplier or the date, when the supplier contract was signed.[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current supplier is active.</td>
+<td>Indicates whether the current supplier is active.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#number">Number</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>The unique supplier number.</td>
+<td>The unique supplier number.[Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date (inclusive) on which this party ceased to be a supplier.</td>
+<td>The date (inclusive) on which this party ceased to be a supplier.[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.Suppliers.html#updatetime">UpdateTime</a></td>
@@ -283,7 +283,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="defaultdeliverytermdays">DefaultDeliveryTermDays</h3>
-<p>Default term in days for goods delivery, starting at the day of sending the purchase order</p>
+<p>Default term in days for goods delivery, starting at the day of sending the purchase order[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -291,7 +291,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymentstartdays">DefaultPaymentStartDays</h3>
-<p>Number of days until the payment becomes executable. 0 means that the payment is executable at all times.</p>
+<p>Number of days until the payment becomes executable. 0 means that the payment is executable at all times.[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -299,7 +299,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultpaymenttermdays">DefaultPaymentTermDays</h3>
-<p>Default payment term in days, starting from the date of receiving the invoice</p>
+<p>Default payment term in days, starting from the date of receiving the invoice[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -307,14 +307,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>The date on which this party became a supplier or the date, when the supplier contract was signed.</p>
+<p>The date on which this party became a supplier or the date, when the supplier contract was signed.[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current supplier is active.</p>
+<p>Indicates whether the current supplier is active.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -322,7 +322,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="number">Number</h3>
-<p>The unique supplier number.</p>
+<p>The unique supplier number.[Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -333,7 +333,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Number, null, &quot;00000&quot;)</code></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>The date (inclusive) on which this party ceased to be a supplier.</p>
+<p>The date (inclusive) on which this party ceased to be a supplier.[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

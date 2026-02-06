@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Logistics.Inventory.ReconciliationCounts.md#creationtimeutc) | datetime | The exact time (UTC) the product was counted 
-| [Notes](Logistics.Inventory.ReconciliationCounts.md#notes) | string (max) __nullable__ | Additional information for the Count. 
-| [Quantity](Logistics.Inventory.ReconciliationCounts.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The counted quantity in the default measurement unit of the product 
-| [QuantityBase](Logistics.Inventory.ReconciliationCounts.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. 
-| [StandardQuantityBase](Logistics.Inventory.ReconciliationCounts.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
+| [CreationTimeUtc](Logistics.Inventory.ReconciliationCounts.md#creationtimeutc) | datetime | The exact time (UTC) the product was counted[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] 
+| [Notes](Logistics.Inventory.ReconciliationCounts.md#notes) | string (max) __nullable__ | Additional information for the Count.[Introduced in version 24.1.5.37] 
+| [Quantity](Logistics.Inventory.ReconciliationCounts.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The counted quantity in the default measurement unit of the product[Unit: QuantityUnit] [Required] [Filter(ge;le)] 
+| [QuantityBase](Logistics.Inventory.ReconciliationCounts.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42] 
+| [StandardQuantityBase](Logistics.Inventory.ReconciliationCounts.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42] 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### CreationTimeUtc
 
-The exact time (UTC) the product was counted
+The exact time (UTC) the product was counted[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information for the Count.
+Additional information for the Count.[Introduced in version 24.1.5.37]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The counted quantity in the default measurement unit of the product
+The counted quantity in the default measurement unit of the product[Unit: QuantityUnit] [Required] [Filter(ge;le)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity in the base measurement unit of the product.
+Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

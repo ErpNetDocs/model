@@ -117,22 +117,22 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.AppsPerformance.html#application">Application</a></td>
 <td>string (64)</td>
-<td>The name of the application that executes the operation</td>
+<td>The name of the application that executes the operation[Required] [Filter(eq;ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AppsPerformance.html#busytimehoursperday">BusyTimeHoursPerDay</a></td>
 <td>double</td>
-<td>Busy time in percentage per day</td>
+<td>Busy time in percentage per day[Required] [Filter(ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AppsPerformance.html#busytimepercentage">BusyTimePercentage</a></td>
 <td>double</td>
-<td>Busy time in percentage</td>
+<td>Busy time in percentage[Required] [Filter(ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AppsPerformance.html#requests">Requests</a></td>
 <td>double</td>
-<td>The total number of requests the application has made to the server</td>
+<td>The total number of requests the application has made to the server[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AppsPerformance.html#statisticssince">StatisticsSince</a></td>
@@ -143,7 +143,7 @@ Show in UI:  ShownByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="application">Application</h3>
-<p>The name of the application that executes the operation</p>
+<p>The name of the application that executes the operation[Required] [Filter(eq;ge;le)] [ORD]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -151,21 +151,21 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="busytimehoursperday">BusyTimeHoursPerDay</h3>
-<p>Busy time in percentage per day</p>
+<p>Busy time in percentage per day[Required] [Filter(ge;le)] [ORD]</p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="busytimepercentage">BusyTimePercentage</h3>
-<p>Busy time in percentage</p>
+<p>Busy time in percentage[Required] [Filter(ge;le)] [ORD]</p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requests">Requests</h3>
-<p>The total number of requests the application has made to the server</p>
+<p>The total number of requests the application has made to the server[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>double</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

@@ -32,11 +32,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlertType](Applications.Fleet.VehicleAlerts.md#alerttype) | string (3) | The type of the alert. The type is specfic to the Source. 
-| [Description](Applications.Fleet.VehicleAlerts.md#description) | string (254) | Description of the alert (Multilanguage). 
-| [IsHidden](Applications.Fleet.VehicleAlerts.md#ishidden) | boolean | Specifies, whether the alert is hidden (e.g. managed by the responsible person). 
-| [Source](Applications.Fleet.VehicleAlerts.md#source) | string (1) | The source of the alert. G=GPS, O=OBD, M=Maintenance. 
-| [Time](Applications.Fleet.VehicleAlerts.md#time) | datetime | The time of the alert. 
+| [AlertType](Applications.Fleet.VehicleAlerts.md#alerttype) | string (3) | The type of the alert. The type is specfic to the Source.[Required] 
+| [Description](Applications.Fleet.VehicleAlerts.md#description) | string (254) | Description of the alert (Multilanguage).[Required] 
+| [IsHidden](Applications.Fleet.VehicleAlerts.md#ishidden) | boolean | Specifies, whether the alert is hidden (e.g. managed by the responsible person).[Required] [Default(false)] 
+| [Source](Applications.Fleet.VehicleAlerts.md#source) | string (1) | The source of the alert. G=GPS, O=OBD, M=Maintenance.[Required] 
+| [Time](Applications.Fleet.VehicleAlerts.md#time) | datetime | The time of the alert.[Required] [Filter(ge;le)] [ORD] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### AlertType
 
-The type of the alert. The type is specfic to the Source.
+The type of the alert. The type is specfic to the Source.[Required]
 
 Type: **string (3)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description of the alert (Multilanguage).
+Description of the alert (Multilanguage).[Required]
 
 Type: **string (254)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### IsHidden
 
-Specifies, whether the alert is hidden (e.g. managed by the responsible person).
+Specifies, whether the alert is hidden (e.g. managed by the responsible person).[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### Source
 
-The source of the alert. G=GPS, O=OBD, M=Maintenance.
+The source of the alert. G=GPS, O=OBD, M=Maintenance.[Required]
 
 Type: **string (1)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### Time
 
-The time of the alert.
+The time of the alert.[Required] [Filter(ge;le)] [ORD]
 
 Type: **datetime**  
 Indexed: **True**  

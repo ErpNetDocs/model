@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Operations.html#active">Active</a></td>
 <td>boolean</td>
-<td>Indicates whether the current operation is active.</td>
+<td>Indicates whether the current operation is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#description">Description</a></td>
@@ -136,7 +136,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Operations.html#movetimeminutes">MoveTimeMinutes</a></td>
 <td>int32</td>
-<td>The time required for the product to move to the next operation. During this time no resource is allocated.</td>
+<td>The time required for the product to move to the next operation. During this time no resource is allocated.[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#name">Name</a></td>
@@ -146,7 +146,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Operations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
-<td>The time required to process one product lot. The run time is calculated for each produced lot.</td>
+<td>The time required to process one product lot. The run time is calculated for each produced lot.[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#scraprate">ScrapRate</a></td>
@@ -156,12 +156,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Operations.html#setuptimeminutes">SetupTimeMinutes</a></td>
 <td>int32</td>
-<td>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.</td>
+<td>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#standardpriceperhour">StandardPricePerHour</a></td>
 <td>decimal (18, 6)</td>
-<td>Standard price for 1 hour work for this operation.</td>
+<td>Standard price for 1 hour work for this operation.[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#tooling">Tooling</a></td>
@@ -171,12 +171,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Operations.html#usequantitybase">UseQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource</td>
+<td>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#waittimeminutes">WaitTimeMinutes</a></td>
 <td>int32</td>
-<td>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.</td>
+<td>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.[Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -236,7 +236,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Indicates whether the current operation is active.</p>
+<p>Indicates whether the current operation is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -259,7 +259,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
-<p>The time required for the product to move to the next operation. During this time no resource is allocated.</p>
+<p>The time required for the product to move to the next operation. During this time no resource is allocated.[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -275,7 +275,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
-<p>The time required to process one product lot. The run time is calculated for each produced lot.</p>
+<p>The time required to process one product lot. The run time is calculated for each produced lot.[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -290,7 +290,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
-<p>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.</p>
+<p>The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity.[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -298,7 +298,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
-<p>Standard price for 1 hour work for this operation.</p>
+<p>Standard price for 1 hour work for this operation.[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (18, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -314,7 +314,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usequantitybase">UseQuantityBase</h3>
-<p>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource</p>
+<p>Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -322,7 +322,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waittimeminutes">WaitTimeMinutes</h3>
-<p>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.</p>
+<p>The time required to wait after completing the operation. During this time, the resource is still allocated to the operation.[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

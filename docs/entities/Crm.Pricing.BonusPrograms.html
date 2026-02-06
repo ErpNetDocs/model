@@ -130,12 +130,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#active">Active</a></td>
 <td>boolean <strong>nullable</strong></td>
-<td>General condition if the bonus is active. The other conditions are verified only for active bonus programs</td>
+<td>General condition if the bonus is active. The other conditions are verified only for active bonus programs[Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></td>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></td>
-<td>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.</td>
+<td>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.[Required] [Default(&quot;D&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusdocumentamountpercent">BonusDocumentAmountPercent</a></td>
@@ -145,72 +145,72 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonuslinediscountpercent">BonusLineDiscountPercent</a></td>
 <td>decimal (7, 6)</td>
-<td>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)</td>
+<td>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusproductquantity">BonusProductQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></td>
-<td>The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL</td>
+<td>The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL[Unit: BonusProductQuantityUnit]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#bonusproductquantitymultiplierforeachlotsize">BonusProductQuantity<br>MultiplierForEach<br>LotSize</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></td>
-<td>When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified</td>
+<td>When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditioncustomerfilterxml">ConditionCustomerFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties</td>
+<td>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties[Unit: Crm.Sales.CustomersRepository.TableName]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditiondistributionchannelfilterxml">ConditionDistribution<br>ChannelFilterX<br>ML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics</td>
+<td>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics[Unit: Marketing.DistributionChannels<br>Repository.TableName]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionfromdate">ConditionFromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Starting date of the bonus. NULL means that there is no starting date restriction</td>
+<td>Starting date of the bonus. NULL means that there is no starting date restriction[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionmaxamount">ConditionMaxAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></td>
-<td>If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus</td>
+<td>If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionmaxquantity">ConditionMaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></td>
-<td>When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified</td>
+<td>When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionminamount">ConditionMinAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></td>
-<td>If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus</td>
+<td>If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionminquantity">ConditionMinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></td>
-<td>When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified</td>
+<td>When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditionshiptocustomerfilterxml">ConditionShipTo<br>CustomerFilter<br>XML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics</td>
+<td>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics[Unit: Crm.Sales.CustomersRepository.TableName]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#conditiontodate">ConditionToDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction</td>
+<td>Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The name of the bonus program</td>
+<td>The name of the bonus program[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.BonusPrograms.html#priority">Priority</a></td>
 <td><a href="Crm.Pricing.BonusPrograms.html#priority">Priority</a></td>
-<td>Priority of the bonus program comparative to the other bonus programs.</td>
+<td>Priority of the bonus program comparative to the other bonus programs.[Required] [Default(2)] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -362,7 +362,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>General condition if the bonus is active. The other conditions are verified only for active bonus programs</p>
+<p>General condition if the bonus is active. The other conditions are verified only for active bonus programs[Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -370,7 +370,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusaction">BonusAction</h3>
-<p>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.</p>
+<p>If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.[Required] [Default(&quot;D&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Crm.Pricing.BonusPrograms.html#bonusaction">BonusAction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>BonusAction</code>(Crm.Pricing.BonusPrograms.md#bonusaction) data attribute<br>
@@ -409,7 +409,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="bonuslinediscountpercent">BonusLineDiscountPercent</h3>
-<p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)</p>
+<p>The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -417,91 +417,91 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusproductquantity">BonusProductQuantity</h3>
-<p>The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL</p>
+<p>The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL[Unit: BonusProductQuantityUnit]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="bonusproductquantitymultiplierforeachlotsize">BonusProductQuantityMultiplierForEachLotSize</h3>
-<p>When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified</p>
+<p>When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditioncustomerfilterxml">ConditionCustomerFilterXML</h3>
-<p>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties</p>
+<p>When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties[Unit: Crm.Sales.CustomersRepository.TableName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiondistributionchannelfilterxml">ConditionDistributionChannelFilterXML</h3>
-<p>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics</p>
+<p>When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics[Unit: Marketing.DistributionChannelsRepository.TableName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionfromdate">ConditionFromDate</h3>
-<p>Starting date of the bonus. NULL means that there is no starting date restriction</p>
+<p>Starting date of the bonus. NULL means that there is no starting date restriction[Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionmaxamount">ConditionMaxAmount</h3>
-<p>If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus</p>
+<p>If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionmaxquantity">ConditionMaxQuantity</h3>
-<p>When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified</p>
+<p>When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionminamount">ConditionMinAmount</h3>
-<p>If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus</p>
+<p>If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionminquantity">ConditionMinQuantity</h3>
-<p>When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified</p>
+<p>When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionshiptocustomerfilterxml">ConditionShipToCustomerFilterXML</h3>
-<p>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics</p>
+<p>When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics[Unit: Crm.Sales.CustomersRepository.TableName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditiontodate">ConditionToDate</h3>
-<p>Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction</p>
+<p>Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction[Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the bonus program</p>
+<p>The name of the bonus program[Required] [Filter(eq;like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the bonus program comparative to the other bonus programs.</p>
+<p>Priority of the bonus program comparative to the other bonus programs.[Required] [Default(2)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Crm.Pricing.BonusPrograms.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Crm.Pricing.BonusPrograms.md#priority) data attribute<br>

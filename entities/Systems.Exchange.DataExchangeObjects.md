@@ -36,12 +36,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedOn](Systems.Exchange.DataExchangeObjects.md#createdon) | datetime | The time (in UTC) when the object is created. 
-| [ExchangeMessage](Systems.Exchange.DataExchangeObjects.md#exchangemessage) | string (max) __nullable__ | Status message for this object after the last exchange attempt. 
-| [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status. 
-| [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring. 
-| [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes for the exchanged object 
-| [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | Reason for adding the object. 
+| [CreatedOn](Systems.Exchange.DataExchangeObjects.md#createdon) | datetime | The time (in UTC) when the object is created.[Required] [Filter(ge;le)] [ReadOnly] 
+| [ExchangeMessage](Systems.Exchange.DataExchangeObjects.md#exchangemessage) | string (max) __nullable__ | Status message for this object after the last exchange attempt.[Filter(like)] 
+| [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status.[Required] [Default(&quot;N&quot;)] [Filter(eq)] 
+| [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring.[Required] [Default(&quot;MER&quot;)] [Filter(eq)] 
+| [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes for the exchanged object[Filter(like)] 
+| [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | Reason for adding the object.[Required] [Default(&quot;C&quot;)] [Filter(eq)] 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### CreatedOn
 
-The time (in UTC) when the object is created.
+The time (in UTC) when the object is created.[Required] [Filter(ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -77,7 +77,7 @@ Back-End Default Expression:
 
 ### ExchangeMessage
 
-Status message for this object after the last exchange attempt.
+Status message for this object after the last exchange attempt.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangeResult
 
-Transfer status.
+Transfer status.[Required] [Default(&quot;N&quot;)] [Filter(eq)]
 
 Type: **[ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Mode
 
-Operation mode for the object when transferring.
+Operation mode for the object when transferring.[Required] [Default(&quot;MER&quot;)] [Filter(eq)]
 
 Type: **[Mode](Systems.Exchange.DataExchangeObjects.md#mode)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the exchanged object
+Notes for the exchanged object[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### Reason
 
-Reason for adding the object.
+Reason for adding the object.[Required] [Default(&quot;C&quot;)] [Filter(eq)]
 
 Type: **[Reason](Systems.Exchange.DataExchangeObjects.md#reason)**  
 Category: **System**  

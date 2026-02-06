@@ -36,9 +36,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. 
-| [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string (16) | Unique (within the location) code of the POS terminal. 
-| [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. 
+| [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records.[Required] [Default(true)] [Filter(multi eq)] 
+| [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string (16) | Unique (within the location) code of the POS terminal.[Required] [Filter(eq;like)] 
+| [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.[Required] [Filter(multi eq;like)] 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### IsActive
 
-Represents whether the POS terminal is active and can be chosen from drop-downs for new records.
+Represents whether the POS terminal is active and can be chosen from drop-downs for new records.[Required] [Default(true)] [Filter(multi eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### PosTerminalCode
 
-Unique (within the location) code of the POS terminal.
+Unique (within the location) code of the POS terminal.[Required] [Filter(eq;like)]
 
 Type: **string (16)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### PosTerminalName
 
-The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
+The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.[Required] [Filter(multi eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

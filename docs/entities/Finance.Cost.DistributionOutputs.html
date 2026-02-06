@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Unique (within the document), consecutive line number of the output.</td>
+<td>Unique (within the document), consecutive line number of the output.[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionOutputs.html#weightcoefficient">WeightCoefficient</a></td>
 <td>decimal (12, 5)</td>
-<td>The weight coefficient for prorate distribution of cost over the current line.</td>
+<td>The weight coefficient for prorate distribution of cost over the current line.[Required] [Default(1)]</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Unique (within the document), consecutive line number of the output.</p>
+<p>Unique (within the document), consecutive line number of the output.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.CostDistribution.Outputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="weightcoefficient">WeightCoefficient</h3>
-<p>The weight coefficient for prorate distribution of cost over the current line.</p>
+<p>The weight coefficient for prorate distribution of cost over the current line.[Required] [Default(1)]</p>
 <p>Type: <strong>decimal (12, 5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

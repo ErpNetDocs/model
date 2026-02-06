@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#businessreason">BusinessReason</a></td>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#businessreason">InvoicingBusinessReason</a></td>
-<td>Business reason for invoicing of this product or service. S=Shipment, P=Payment</td>
+<td>Business reason for invoicing of this product or service. S=Shipment, P=Payment[Required] [Default(&quot;S&quot;)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,12 +130,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#lineamount">LineAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</td>
+<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.[Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
 <td>decimal (7, 6)</td>
-<td>User-defined discount for the line</td>
+<td>User-defined discount for the line[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#lineno">LineNo</a></td>
@@ -145,32 +145,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
 <td>decimal (7, 6)</td>
-<td>Standard discount for the line. This is automatically computed according to discount conditions</td>
+<td>Standard discount for the line. This is automatically computed according to discount conditions[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#productdescription">ProductDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The description of Product. Initially copied from the name of the Product or from the generating document.</td>
+<td>The description of Product. Initially copied from the name of the Product or from the generating document.[Required]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity of the product to invoice</td>
+<td>The quantity of the product to invoice[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The equivalent of Quantity in the base measurement unit of the Product</td>
+<td>The equivalent of Quantity in the base measurement unit of the Product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceOrderLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
-<td>Unit selling price in the unit of measure, specified in Quantity Unit</td>
+<td>Unit selling price in the unit of measure, specified in Quantity Unit[Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -270,7 +270,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="businessreason">BusinessReason</h3>
-<p>Business reason for invoicing of this product or service. S=Shipment, P=Payment</p>
+<p>Business reason for invoicing of this product or service. S=Shipment, P=Payment[Required] [Default(&quot;S&quot;)]</p>
 <p>Type: <strong><a href="Crm.Invoicing.InvoiceOrderLines.html#businessreason">InvoicingBusinessReason</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for InvoicingBusinessReason properties<br>
@@ -305,7 +305,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</p>
+<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.[Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -315,7 +315,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.CalculateLineAmount( obj.Quantity, obj.UnitPrice, Convert( obj.LineCustomDiscountPercent, Nullable</code>1), Convert( obj.LineStandardDiscountPercent, Nullable<code>1), obj.InvoiceOrder.DocumentCurrency)</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
-<p>User-defined discount for the line</p>
+<p>User-defined discount for the line[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -334,7 +334,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.InvoiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
-<p>Standard discount for the line. This is automatically computed according to discount conditions</p>
+<p>Standard discount for the line. This is automatically computed according to discount conditions[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -344,7 +344,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.LineDiscount != null), obj.LineDiscount.DiscountPercent, 0)</code></p>
 <h3 id="productdescription">ProductDescription</h3>
-<p>The description of Product. Initially copied from the name of the Product or from the generating document.</p>
+<p>The description of Product. Initially copied from the name of the Product or from the generating document.[Required]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -353,7 +353,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.Name</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the product to invoice</p>
+<p>The quantity of the product to invoice[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -361,7 +361,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalent of Quantity in the base measurement unit of the Product</p>
+<p>The equivalent of Quantity in the base measurement unit of the Product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -372,7 +372,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -383,7 +383,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
-<p>Unit selling price in the unit of measure, specified in Quantity Unit</p>
+<p>Unit selling price in the unit of measure, specified in Quantity Unit[Currency: InvoiceOrder.DocumentCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

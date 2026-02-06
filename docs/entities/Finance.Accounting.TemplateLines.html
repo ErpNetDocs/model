@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountcolumnname">AmountColumnName</a></td>
 <td>string (64)</td>
-<td>The name of the column within the amount rowset where the amount is located</td>
+<td>The name of the column within the amount rowset where the amount is located[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountcondition">AmountCondition</a></td>
@@ -141,27 +141,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountsourcefilter">AmountSourceFilter</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>Filter that further specifies which rows from the amount rowset determine the amount</td>
+<td>Filter that further specifies which rows from the amount rowset determine the amount[Unit: obj.GetAmountSource<br>FilterEntityName()]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#amountsourcename">AmountSourceName</a></td>
 <td>string (64)</td>
-<td>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.</td>
+<td>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#filterxml">FilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>The line is accounted only when the filter is satisfied compared with the source document header</td>
+<td>The line is accounted only when the filter is satisfied compared with the source document header[Unit: obj.Template.Route.DocumentType.EntityName]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the template. Determines the order of execution of the template lines.</td>
+<td>Consecutive number of the line within the template. Determines the order of execution of the template lines.[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#multiplier">Multiplier</a></td>
 <td>decimal (18, 6)</td>
-<td>Factor by which the amount from the source will be multiplied.</td>
+<td>Factor by which the amount from the source will be multiplied.[Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#notes">Notes</a></td>
@@ -171,12 +171,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#validfromdate">ValidFromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date from which the accounting template line is valid</td>
+<td>Start date from which the accounting template line is valid[Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#validtodate">ValidToDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>End date to which the accounting template line is valid</td>
+<td>End date to which the accounting template line is valid[Filter(multi eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -253,7 +253,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountcolumnname">AmountColumnName</h3>
-<p>The name of the column within the amount rowset where the amount is located</p>
+<p>The name of the column within the amount rowset where the amount is located[Required]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -302,14 +302,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="amountsourcefilter">AmountSourceFilter</h3>
-<p>Filter that further specifies which rows from the amount rowset determine the amount</p>
+<p>Filter that further specifies which rows from the amount rowset determine the amount[Unit: obj.GetAmountSourceFilterEntityName()]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="amountsourcename">AmountSourceName</h3>
-<p>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.</p>
+<p>The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.[Required]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -317,14 +317,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="filterxml">FilterXML</h3>
-<p>The line is accounted only when the filter is satisfied compared with the source document header</p>
+<p>The line is accounted only when the filter is satisfied compared with the source document header[Unit: obj.Template.Route.DocumentType.EntityName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the template. Determines the order of execution of the template lines.</p>
+<p>Consecutive number of the line within the template. Determines the order of execution of the template lines.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -335,7 +335,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Template.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="multiplier">Multiplier</h3>
-<p>Factor by which the amount from the source will be multiplied.</p>
+<p>Factor by which the amount from the source will be multiplied.[Required] [Default(1)]</p>
 <p>Type: <strong>decimal (18, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -351,14 +351,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfromdate">ValidFromDate</h3>
-<p>Start date from which the accounting template line is valid</p>
+<p>Start date from which the accounting template line is valid[Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validtodate">ValidToDate</h3>
-<p>End date to which the accounting template line is valid</p>
+<p>End date to which the accounting template line is valid[Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>

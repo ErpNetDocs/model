@@ -33,9 +33,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Logistics.Procurement.PurchasePriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list. The purchase price list won't be available before the specified date. 
+| [FromDate](Logistics.Procurement.PurchasePriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list. The purchase price list won't be available before the specified date.[Filter(eq;ge;le)] 
 | [Name](Logistics.Procurement.PurchasePriceLists.md#name) | string (50) | The name of this PurchasePriceList. `Required` `Filter(eq;like)` `ORD` 
-| [ThruDate](Logistics.Procurement.PurchasePriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list. 
+| [ThruDate](Logistics.Procurement.PurchasePriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list.[Filter(eq;ge;le)] 
 
 
 ## System Attributes
@@ -54,7 +54,7 @@ Aggregate Tree
 
 ### FromDate
 
-Starting validity of the price list. The purchase price list won't be available before the specified date.
+Starting validity of the price list. The purchase price list won't be available before the specified date.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending validity of the price list.
+Ending validity of the price list.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

@@ -142,22 +142,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.FiscalReceiptTemplates.html#printsystemheader">PrintSystemHeader</a></td>
 <td>boolean</td>
-<td>Denotes whether to print the system-defined header for the document.</td>
+<td>Denotes whether to print the system-defined header for the document.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.FiscalReceiptTemplates.html#printsystemrowheader">PrintSystemRowHeader</a></td>
 <td>boolean</td>
-<td>Denotes whether to print the system-defined header for each row.</td>
+<td>Denotes whether to print the system-defined header for each row.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.FiscalReceiptTemplates.html#templatekind">TemplateKind</a></td>
 <td><a href="Crm.Pos.FiscalReceiptTemplates.html#templatekind">TemplateKind</a></td>
-<td>Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.</td>
+<td>Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.[Required] [Default(&quot;S&quot;)] [Filter(multi eq)] [Introduced in version 24.1.5.7]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.FiscalReceiptTemplates.html#templatename">TemplateName</a></td>
 <td>string (64)</td>
-<td>The unique name of the printing template.</td>
+<td>The unique name of the printing template.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 </tbody>
 </table>
@@ -237,7 +237,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>256</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printsystemheader">PrintSystemHeader</h3>
-<p>Denotes whether to print the system-defined header for the document.</p>
+<p>Denotes whether to print the system-defined header for the document.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -245,7 +245,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printsystemrowheader">PrintSystemRowHeader</h3>
-<p>Denotes whether to print the system-defined header for each row.</p>
+<p>Denotes whether to print the system-defined header for each row.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -253,7 +253,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="templatekind">TemplateKind</h3>
-<p>Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.</p>
+<p>Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.[Required] [Default(&quot;S&quot;)] [Filter(multi eq)] [Introduced in version 24.1.5.7]</p>
 <p>Type: <strong><a href="Crm.Pos.FiscalReceiptTemplates.html#templatekind">TemplateKind</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TemplateKind</code>(Crm.Pos.FiscalReceiptTemplates.md#templatekind) data attribute<br>
@@ -285,7 +285,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>SalesOrders</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="templatename">TemplateName</h3>
-<p>The unique name of the printing template.</p>
+<p>The unique name of the printing template.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (64)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

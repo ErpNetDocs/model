@@ -141,22 +141,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the document type</td>
+<td>Line number, unique within the document type[Required] [Filter(ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#required">Required</a></td>
 <td>boolean</td>
-<td>1 if the property is required when creating documents of this type</td>
+<td>1 if the property is required when creating documents of this type[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#requiredfromdate">RequiredFromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.</td>
+<td>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeProperties.html#requiredthrudate">RequiredThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.</td>
+<td>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.[Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -237,7 +237,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the document type</p>
+<p>Line number, unique within the document type[Required] [Filter(ge;le)] [ORD]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -248,7 +248,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="required">Required</h3>
-<p>1 if the property is required when creating documents of this type</p>
+<p>1 if the property is required when creating documents of this type[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -256,14 +256,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
-<p>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.</p>
+<p>When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredthrudate">RequiredThruDate</h3>
-<p>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.</p>
+<p>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

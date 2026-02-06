@@ -67,8 +67,8 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Transportation.TransportationExecutions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Transportation.TransportationExecutions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Transportation.TransportationExecutions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ExecutionDate](Logistics.Transportation.TransportationExecutions.md#executiondate) | date __nullable__ | Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates. 
-| [ExecutionTime](Logistics.Transportation.TransportationExecutions.md#executiontime) | time __nullable__ | Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times. 
+| [ExecutionDate](Logistics.Transportation.TransportationExecutions.md#executiondate) | date __nullable__ | Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.[Filter(ge;le)] 
+| [ExecutionTime](Logistics.Transportation.TransportationExecutions.md#executiontime) | time __nullable__ | Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.[Filter(ge;le)] 
 | [FullState](Logistics.Transportation.TransportationExecutions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Logistics.Transportation.TransportationExecutions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Transportation.TransportationExecutions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Transportation.TransportationExecutions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -261,7 +261,7 @@ Show in UI: **CannotBeShown**
 
 ### ExecutionDate
 
-Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.
+Specifies the execution date, if it is the same for all lines. NULL means that the lines have different execution dates.[Filter(ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -273,7 +273,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => TransportationExecutionLinesRepository.ExecutionDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### ExecutionTime
 
-Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.
+Specifies the execution time, if it is the same for all lines. NULL means that the lines have different execution times.[Filter(ge;le)]
 
 Type: **time __nullable__**  
 Category: **System**  

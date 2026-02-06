@@ -46,14 +46,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseQuantity](Logistics.Common.LogisticUnitContents.md#basequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expressed in the base measurement category of the product. 
-| [ExpirationDate](Logistics.Common.LogisticUnitContents.md#expirationdate) | date __nullable__ | Expiration date of the goods. NULL means unknown or N/A. 
-| [GrossWeight](Logistics.Common.LogisticUnitContents.md#grossweight) | decimal (12, 3) __nullable__ | Gross weight in kilograms (kg). NULL means unknown. 
-| [LineNo](Logistics.Common.LogisticUnitContents.md#lineno) | int32 | Consecutive position within the logistic unit. 
-| [LotNumber](Logistics.Common.LogisticUnitContents.md#lotnumber) | string (32) __nullable__ | The production lot number. NULL means unknown. 
+| [BaseQuantity](Logistics.Common.LogisticUnitContents.md#basequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expressed in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)] 
+| [ExpirationDate](Logistics.Common.LogisticUnitContents.md#expirationdate) | date __nullable__ | Expiration date of the goods. NULL means unknown or N/A.[Filter(multi eq;ge;le)] 
+| [GrossWeight](Logistics.Common.LogisticUnitContents.md#grossweight) | decimal (12, 3) __nullable__ | Gross weight in kilograms (kg). NULL means unknown.[Filter(eq;ge;le)] 
+| [LineNo](Logistics.Common.LogisticUnitContents.md#lineno) | int32 | Consecutive position within the logistic unit.[Required] [Filter(multi eq)] 
+| [LotNumber](Logistics.Common.LogisticUnitContents.md#lotnumber) | string (32) __nullable__ | The production lot number. NULL means unknown.[Filter(multi eq;like)] 
 | [Notes](Logistics.Common.LogisticUnitContents.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitContent. 
-| [Quantity](Logistics.Common.LogisticUnitContents.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity of the product in the logistic unit. Expressed in the specified measurement unit. 
-| [StandardQuantity](Logistics.Common.LogisticUnitContents.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expessed in the standard measurement unit of the product. 
+| [Quantity](Logistics.Common.LogisticUnitContents.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity of the product in the logistic unit. Expressed in the specified measurement unit.[Unit: QuantityUnit] [Required] [Filter(multi eq;ge;le)] 
+| [StandardQuantity](Logistics.Common.LogisticUnitContents.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expessed in the standard measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)] 
 
 ## References
 
@@ -80,7 +80,7 @@ Aggregate Root:
 
 ### BaseQuantity
 
-The quantity, expressed in the base measurement category of the product.
+The quantity, expressed in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)]
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.BaseQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ExpirationDate
 
-Expiration date of the goods. NULL means unknown or N/A.
+Expiration date of the goods. NULL means unknown or N/A.[Filter(multi eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### GrossWeight
 
-Gross weight in kilograms (kg). NULL means unknown.
+Gross weight in kilograms (kg). NULL means unknown.[Filter(eq;ge;le)]
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive position within the logistic unit.
+Consecutive position within the logistic unit.[Required] [Filter(multi eq)]
 
 Type: **int32**  
 Category: **System**  
@@ -127,7 +127,7 @@ Front-End Recalc Expressions:
 `( obj.LogisticUnit.Contents.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### LotNumber
 
-The production lot number. NULL means unknown.
+The production lot number. NULL means unknown.[Filter(multi eq;like)]
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-Quantity of the product in the logistic unit. Expressed in the specified measurement unit.
+Quantity of the product in the logistic unit. Expressed in the specified measurement unit.[Unit: QuantityUnit] [Required] [Filter(multi eq;ge;le)]
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantity
 
-The quantity, expessed in the standard measurement unit of the product.
+The quantity, expessed in the standard measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)]
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  

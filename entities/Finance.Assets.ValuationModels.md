@@ -33,7 +33,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. 
+| [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Name](Finance.Assets.ValuationModels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ValuationModel. `Required` `Filter(like)` 
 
 ## References
@@ -59,7 +59,7 @@ Aggregate Tree
 
 ### IsSystem
 
-Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user.
+Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  

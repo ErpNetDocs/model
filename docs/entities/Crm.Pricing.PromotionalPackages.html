@@ -131,12 +131,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#active">Active</a></td>
 <td>boolean</td>
-<td>Package status: 1 = the offer is available for new documents; 0 = otherwise</td>
+<td>Package status: 1 = the offer is available for new documents; 0 = otherwise[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#code">Code</a></td>
 <td>string (20)</td>
-<td>Unique code of the promotional package</td>
+<td>Unique code of the promotional package[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#name">Name</a></td>
@@ -146,27 +146,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforcustomerfilterxml">ValidForCustomerFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>Customer filter for clients. The package is valid only for the customers, that match the filter</td>
+<td>Customer filter for clients. The package is valid only for the customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfordistributionchannelfilterxml">ValidForDistribution<br>ChannelFilterX<br>ML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.</td>
+<td>When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.[Unit: Marketing.DistributionChannels<br>Repository.TableName]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforshiptocustomerfilterxml">ValidForShipTo<br>CustomerFilter<br>XML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>The package is valid only for the ship to customers, that match the filter</td>
+<td>The package is valid only for the ship to customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfromdate">ValidFromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date from which the promotional pakage is valid</td>
+<td>The date from which the promotional pakage is valid[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validtodate">ValidToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date to which(inclusive) the promotional pakage is valid</td>
+<td>The date to which(inclusive) the promotional pakage is valid[Filter(eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -288,7 +288,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Package status: 1 = the offer is available for new documents; 0 = otherwise</p>
+<p>Package status: 1 = the offer is available for new documents; 0 = otherwise[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -296,7 +296,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique code of the promotional package</p>
+<p>Unique code of the promotional package[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (20)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -316,35 +316,35 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforcustomerfilterxml">ValidForCustomerFilterXML</h3>
-<p>Customer filter for clients. The package is valid only for the customers, that match the filter</p>
+<p>Customer filter for clients. The package is valid only for the customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfordistributionchannelfilterxml">ValidForDistributionChannelFilterXML</h3>
-<p>When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.</p>
+<p>When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.[Unit: Marketing.DistributionChannelsRepository.TableName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforshiptocustomerfilterxml">ValidForShipToCustomerFilterXML</h3>
-<p>The package is valid only for the ship to customers, that match the filter</p>
+<p>The package is valid only for the ship to customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfromdate">ValidFromDate</h3>
-<p>The date from which the promotional pakage is valid</p>
+<p>The date from which the promotional pakage is valid[Filter(eq;ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validtodate">ValidToDate</h3>
-<p>The date to which(inclusive) the promotional pakage is valid</p>
+<p>The date to which(inclusive) the promotional pakage is valid[Filter(eq;ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

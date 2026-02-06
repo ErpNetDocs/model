@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription. 
+| [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] 
 | [Notes](Crm.Subscriptions.Subscriptions.md#notes) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Notes for this Subscription. `Filter(like)` 
-| [ToDate](Crm.Subscriptions.Subscriptions.md#todate) | date __nullable__ | The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended. 
+| [ToDate](Crm.Subscriptions.Subscriptions.md#todate) | date __nullable__ | The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### FromDate
 
-The starting date of the subscription.
+The starting date of the subscription.[Required] [Default(NowUtc)] [Filter(eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended.
+The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

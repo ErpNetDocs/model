@@ -131,7 +131,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.PrintoutLayouts.html#documententityname">DocumentEntityName</a></td>
 <td>string (64)</td>
-<td>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.</td>
+<td>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.PrintoutLayouts.html#layout">Layout</a></td>
@@ -141,7 +141,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Documents.PrintoutLayouts.html#layoutformat">LayoutFormat</a></td>
 <td>string (32)</td>
-<td>Format specifier of the layout. Recognized by the application</td>
+<td>Format specifier of the layout. Recognized by the application[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.PrintoutLayouts.html#name">Name</a></td>
@@ -223,7 +223,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="documententityname">DocumentEntityName</h3>
-<p>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.</p>
+<p>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.[Required] [Filter(eq)]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="layoutformat">LayoutFormat</h3>
-<p>Format specifier of the layout. Recognized by the application</p>
+<p>Format specifier of the layout. Recognized by the application[Required] [Filter(multi eq)]</p>
 <p>Type: <strong>string (32)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

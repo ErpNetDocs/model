@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.WorkReportMaterials.html#quantity">Quantity</a></td>
 <td>decimal (9, 3)</td>
-<td>The consumed quantity of the material.</td>
+<td>The consumed quantity of the material.[Required] [Default(0)] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportMaterials.html#quantitybase">QuantityBase</a></td>
 <td>decimal (9, 3)</td>
-<td>The equivalence of Quantity in the base measurement unit of the Material.</td>
+<td>The equivalence of Quantity in the base measurement unit of the Material.[Required] [Default(0)] [Filter(eq;like)] [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="quantity">Quantity</h3>
-<p>The consumed quantity of the material.</p>
+<p>The consumed quantity of the material.[Required] [Default(0)] [Filter(eq;like)]</p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -199,7 +199,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement unit of the Material.</p>
+<p>The equivalence of Quantity in the base measurement unit of the Material.[Required] [Default(0)] [Filter(eq;like)] [ReadOnly]</p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

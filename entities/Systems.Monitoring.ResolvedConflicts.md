@@ -42,14 +42,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConflictDescription](Systems.Monitoring.ResolvedConflicts.md#conflictdescription) | [MultilanguageString (400)](../data-types.md#multilanguagestring) | Description of the conflict. 
-| [ResolveConfirmedByUser](Systems.Monitoring.ResolvedConflicts.md#resolveconfirmedbyuser) | boolean | True, when the conflict resolution was manually confirmed by user. 
-| [ResolveConfirmedTime](Systems.Monitoring.ResolvedConflicts.md#resolveconfirmedtime) | datetime __nullable__ | Time when the conflict resolution was confirmed by the user. 
-| [ResolveDescription](Systems.Monitoring.ResolvedConflicts.md#resolvedescription) | [MultilanguageString (400)](../data-types.md#multilanguagestring) | Description of the resolution of the conflict. 
-| [ResolvedTime](Systems.Monitoring.ResolvedConflicts.md#resolvedtime) | datetime | Time when the resolution of the conflict was made. 
-| [RevisedByUser](Systems.Monitoring.ResolvedConflicts.md#revisedbyuser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user. 
-| [TableName](Systems.Monitoring.ResolvedConflicts.md#tablename) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | Name of the table in which the conflict has occurred. 
-| [URL](Systems.Monitoring.ResolvedConflicts.md#url) | string (254) | URL of the item (the row) for which the conflict occurred. 
+| [ConflictDescription](Systems.Monitoring.ResolvedConflicts.md#conflictdescription) | [MultilanguageString (400)](../data-types.md#multilanguagestring) | Description of the conflict.[Required] [ReadOnly] 
+| [ResolveConfirmedByUser](Systems.Monitoring.ResolvedConflicts.md#resolveconfirmedbyuser) | boolean | True, when the conflict resolution was manually confirmed by user.[Required] [Default(false)] [Filter(eq)] 
+| [ResolveConfirmedTime](Systems.Monitoring.ResolvedConflicts.md#resolveconfirmedtime) | datetime __nullable__ | Time when the conflict resolution was confirmed by the user.[Filter(ge;le)] [ReadOnly] 
+| [ResolveDescription](Systems.Monitoring.ResolvedConflicts.md#resolvedescription) | [MultilanguageString (400)](../data-types.md#multilanguagestring) | Description of the resolution of the conflict.[Required] [ReadOnly] 
+| [ResolvedTime](Systems.Monitoring.ResolvedConflicts.md#resolvedtime) | datetime | Time when the resolution of the conflict was made.[Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] 
+| [RevisedByUser](Systems.Monitoring.ResolvedConflicts.md#revisedbyuser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [TableName](Systems.Monitoring.ResolvedConflicts.md#tablename) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | Name of the table in which the conflict has occurred.[Required] [Filter(like)] [ReadOnly] 
+| [URL](Systems.Monitoring.ResolvedConflicts.md#url) | string (254) | URL of the item (the row) for which the conflict occurred.[Required] [ReadOnly] 
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### ConflictDescription
 
-Description of the conflict.
+Description of the conflict.[Required] [ReadOnly]
 
 Type: **[MultilanguageString (400)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### ResolveConfirmedByUser
 
-True, when the conflict resolution was manually confirmed by user.
+True, when the conflict resolution was manually confirmed by user.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ResolveConfirmedTime
 
-Time when the conflict resolution was confirmed by the user.
+Time when the conflict resolution was confirmed by the user.[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Back-End Default Expression:
 
 ### ResolveDescription
 
-Description of the resolution of the conflict.
+Description of the resolution of the conflict.[Required] [ReadOnly]
 
 Type: **[MultilanguageString (400)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### ResolvedTime
 
-Time when the resolution of the conflict was made.
+Time when the resolution of the conflict was made.[Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### RevisedByUser
 
-True, when the conflict resolution was revised (reviewed) manually by user.
+True, when the conflict resolution was revised (reviewed) manually by user.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### TableName
 
-Name of the table in which the conflict has occurred.
+Name of the table in which the conflict has occurred.[Required] [Filter(like)] [ReadOnly]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **ShownByDefault**
 
 ### URL
 
-URL of the item (the row) for which the conflict occurred.
+URL of the item (the row) for which the conflict occurred.[Required] [ReadOnly]
 
 Type: **string (254)**  
 Category: **System**  

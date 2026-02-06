@@ -52,28 +52,28 @@ Aggregate Tree
 | [CompleteTime](Finance.Payments.PaymentTransactions.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Finance.Payments.PaymentTransactions.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Finance.Payments.PaymentTransactions.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Direction](Finance.Payments.PaymentTransactions.md#direction) | [Direction](Finance.Payments.PaymentTransactions.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). 
+| [Direction](Finance.Payments.PaymentTransactions.md#direction) | [Direction](Finance.Payments.PaymentTransactions.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;R&quot;)] [Filter(eq)] 
 | [DocumentDate](Finance.Payments.PaymentTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Finance.Payments.PaymentTransactions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Finance.Payments.PaymentTransactions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Finance.Payments.PaymentTransactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Finance.Payments.PaymentTransactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Finance.Payments.PaymentTransactions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Finance.Payments.PaymentTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Finance.Payments.PaymentTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Finance.Payments.PaymentTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Finance.Payments.PaymentTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Finance.Payments.PaymentTransactions.md#notes) | string (254) __nullable__ | Notes for this PaymentTransaction. 
 | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentTransactions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentTransactions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentSlipNo](Finance.Payments.PaymentTransactions.md#paymentslipno) | string (20) __nullable__ | The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips 
+| [PaymentSlipNo](Finance.Payments.PaymentTransactions.md#paymentslipno) | string (20) __nullable__ | The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips[Filter(eq)] 
 | [PlanningOnly](Finance.Payments.PaymentTransactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Finance.Payments.PaymentTransactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Finance.Payments.PaymentTransactions.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Finance.Payments.PaymentTransactions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Finance.Payments.PaymentTransactions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | Checked when the total amount must be allocated among the payment orders 
-| [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment. 
+| [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | Checked when the total amount must be allocated among the payment orders[Required] [Default(true)] [Filter(eq)] 
+| [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment.[Introduced in version 20.1] 
 | [State](Finance.Payments.PaymentTransactions.md#state) | [DocumentState](Finance.Payments.PaymentTransactions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Finance.Payments.PaymentTransactions.md#statetagsattribute) | string | Specifies the state of the document. 
-| [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines 
+| [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines[Currency: TotalAmountCurrency] [Required] [Default(0)] 
 | [Void](Finance.Payments.PaymentTransactions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Finance.Payments.PaymentTransactions.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Finance.Payments.PaymentTransactions.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -209,7 +209,7 @@ Show in UI: **HiddenByDefault**
 
 ### Direction
 
-Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;R&quot;)] [Filter(eq)]
 
 Type: **[Direction](Finance.Payments.PaymentTransactions.md#direction)**  
 Category: **System**  
@@ -296,7 +296,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -348,7 +348,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentSlipNo
 
-The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips
+The number of the payment slip. Can be used to directly indicate the number without referring to Payment_Slips[Filter(eq)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -413,7 +413,7 @@ Show in UI: **HiddenByDefault**
 
 ### RequiresAllocation
 
-Checked when the total amount must be allocated among the payment orders
+Checked when the total amount must be allocated among the payment orders[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -424,7 +424,7 @@ Show in UI: **ShownByDefault**
 
 ### ReversalReason
 
-The reason for the reversal of the payment.
+The reason for the reversal of the payment.[Introduced in version 20.1]
 
 Type: **[ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__**  
 Category: **System**  
@@ -477,7 +477,7 @@ Show in UI: **HiddenByDefault**
 
 ### TotalAmount
 
-The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines
+The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines[Currency: TotalAmountCurrency] [Required] [Default(0)]
 
 Type: **[Amount (18, 2)](../data-types.md#amount)**  
 Category: **System**  

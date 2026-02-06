@@ -33,8 +33,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone 
-| [Name](General.Contacts.ContactMechanisms.md#name) | string (254) | Contact mechanism description 
+| [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone[Required] [Default(&quot;A&quot;)] [Filter(multi eq)] 
+| [Name](General.Contacts.ContactMechanisms.md#name) | string (254) | Contact mechanism description[Required] [Filter(eq;like)] 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### ContactMechanismType
 
-A=Address; E=e-mail; T=Telephone
+A=Address; E=e-mail; T=Telephone[Required] [Default(&quot;A&quot;)] [Filter(multi eq)]
 
 Type: **[ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype)**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Contact mechanism description
+Contact mechanism description[Required] [Filter(eq;like)]
 
 Type: **string (254)**  
 Category: **System**  

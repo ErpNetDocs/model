@@ -41,19 +41,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime __nullable__ | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". 
-| [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost 
-| [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. 
-| [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). 
-| [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited 
-| [EndDateOfClosed<br />AccountingPeriod](General.EnterpriseCompanies.md#enddateofclosedaccountingperiod) | date __nullable__ | Indicates the date before which all accounting vouchers are permanently closed. 
-| [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. 
-| [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. 
-| [ReportingCurrencyEndDate](General.EnterpriseCompanies.md#reportingcurrencyenddate) | date __nullable__ | Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated. 
-| [ReportingCurrency<br />ProcessedDate](General.EnterpriseCompanies.md#reportingcurrencyprocesseddate) | date __nullable__ | Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date. 
-| [ReportingCurrencyRate](General.EnterpriseCompanies.md#reportingcurrencyrate) | decimal (18, 6) __nullable__ | Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date). 
-| [ReportingCurrencyStartDate](General.EnterpriseCompanies.md#reportingcurrencystartdate) | date __nullable__ | Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data. 
-| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | Base color of the current theme 
+| [BIStartDate](General.EnterpriseCompanies.md#bistartdate) | datetime __nullable__ | Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date".[Filter(eq;ge;le)] [Introduced in version 18.2] 
+| [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | [DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod) | Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost[Required] [Default(&quot;AVG&quot;)] 
+| [DefaultCustomer<br />CreditLimitBase](General.EnterpriseCompanies.md#defaultcustomercreditlimitbase) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.[Currency: BaseCurrency] [Filter(eq;like)] 
+| [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) | [DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__ | The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).[Default(&quot;en&quot;)] 
+| [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited[Filter(ge;le)] 
+| [EndDateOfClosed<br />AccountingPeriod](General.EnterpriseCompanies.md#enddateofclosedaccountingperiod) | date __nullable__ | Indicates the date before which all accounting vouchers are permanently closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 26.2.1.0] 
+| [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active.[Required] [Default(true)] [Filter(multi eq)] [Introduced in version 20.1] 
+| [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept.[Required] [Default(60)] [Filter(multi eq;ge;le)] [Introduced in version 20.1] 
+| [ReportingCurrencyEndDate](General.EnterpriseCompanies.md#reportingcurrencyenddate) | date __nullable__ | Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.[Filter(eq;ge;le)] [Introduced in version 26.1.3.79] 
+| [ReportingCurrency<br />ProcessedDate](General.EnterpriseCompanies.md#reportingcurrencyprocesseddate) | date __nullable__ | Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.[Filter(eq;ge;le)] [ReadOnly] [Introduced in version 25.1.3.24] 
+| [ReportingCurrencyRate](General.EnterpriseCompanies.md#reportingcurrencyrate) | decimal (18, 6) __nullable__ | Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).[Filter(eq)] [Introduced in version 25.1.3.7] 
+| [ReportingCurrencyStartDate](General.EnterpriseCompanies.md#reportingcurrencystartdate) | date __nullable__ | Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.[Filter(eq;ge;le)] [Introduced in version 25.1.3.2] 
+| [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | Base color of the current theme[Introduced in version 18.2] 
 
 ## References
 
@@ -95,7 +95,7 @@ Aggregate Tree
 
 ### BIStartDate
 
-Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date".
+Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date".[Filter(eq;ge;le)] [Introduced in version 18.2]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultCostingMethod
 
-Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost
+Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost[Required] [Default(&quot;AVG&quot;)]
 
 Type: **[DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultCustomerCreditLimitBase
 
-Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.
+Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.[Currency: BaseCurrency] [Filter(eq;like)]
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultLanguage
 
-The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).
+The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).[Default(&quot;en&quot;)]
 
 Type: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **CannotBeShown**
 
 ### EditPeriodStartDate
 
-Start date of the priod when the documents can be edited
+Start date of the priod when the documents can be edited[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### EndDateOfClosedAccountingPeriod
 
-Indicates the date before which all accounting vouchers are permanently closed.
+Indicates the date before which all accounting vouchers are permanently closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 26.2.1.0]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Enterprise company  is active.
+Indicates whether the current Enterprise company  is active.[Required] [Default(true)] [Filter(multi eq)] [Introduced in version 20.1]
 
 Type: **boolean**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintImagesRetentionMonths
 
-A period of months for which the printed images of the documents will be kept.
+A period of months for which the printed images of the documents will be kept.[Required] [Default(60)] [Filter(multi eq;ge;le)] [Introduced in version 20.1]
 
 Type: **int32**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyEndDate
 
-Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.
+Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.[Filter(eq;ge;le)] [Introduced in version 26.1.3.79]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyProcessedDate
 
-Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.
+Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.[Filter(eq;ge;le)] [ReadOnly] [Introduced in version 25.1.3.24]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -216,7 +216,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyRate
 
-Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).
+Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).[Filter(eq)] [Introduced in version 25.1.3.7]
 
 Type: **decimal (18, 6) __nullable__**  
 Category: **System**  
@@ -226,7 +226,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportingCurrencyStartDate
 
-Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.
+Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.[Filter(eq;ge;le)] [Introduced in version 25.1.3.2]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -236,7 +236,7 @@ Show in UI: **ShownByDefault**
 
 ### UIBaseColor
 
-Base color of the current theme
+Base color of the current theme[Introduced in version 18.2]
 
 Type: **int32 __nullable__**  
 Category: **System**  

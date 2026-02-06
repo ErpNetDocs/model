@@ -36,9 +36,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.AssetManagement.ManagedAssetLinks.md#enddate) | datetime __nullable__ | End date of asset group management. NULL means that end date is not set or unknown. 
-| [FromDate](Applications.AssetManagement.ManagedAssetLinks.md#fromdate) | datetime | Start date of asset group management. 
-| [IsCurrent](Applications.AssetManagement.ManagedAssetLinks.md#iscurrent) | boolean | Indicates that this group of assets is currently being managed. 
+| [EndDate](Applications.AssetManagement.ManagedAssetLinks.md#enddate) | datetime __nullable__ | End date of asset group management. NULL means that end date is not set or unknown.[Filter(eq;ge;le)] 
+| [FromDate](Applications.AssetManagement.ManagedAssetLinks.md#fromdate) | datetime | Start date of asset group management.[Required] [Default(Today)] [Filter(eq;ge;le)] 
+| [IsCurrent](Applications.AssetManagement.ManagedAssetLinks.md#iscurrent) | boolean | Indicates that this group of assets is currently being managed.[Required] [Default(true)] [Filter(eq)] 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### EndDate
 
-End date of asset group management. NULL means that end date is not set or unknown.
+End date of asset group management. NULL means that end date is not set or unknown.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Start date of asset group management.
+Start date of asset group management.[Required] [Default(Today)] [Filter(eq;ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### IsCurrent
 
-Indicates that this group of assets is currently being managed.
+Indicates that this group of assets is currently being managed.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  

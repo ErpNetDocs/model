@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#endingtimestamp">EndingTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The ending date and time of the travel on the segment</td>
+<td>The ending date and time of the travel on the segment[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#mileage">Mileage</a></td>
@@ -136,7 +136,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.TripSegments.html#startingtimestamp">StartingTimestamp</a></td>
 <td>datetime</td>
-<td>The starting date and time of the travel on the segment</td>
+<td>The starting date and time of the travel on the segment[Required] [Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="endingtimestamp">EndingTimestamp</h3>
-<p>The ending date and time of the travel on the segment</p>
+<p>The ending date and time of the travel on the segment[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -218,7 +218,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startingtimestamp">StartingTimestamp</h3>
-<p>The starting date and time of the travel on the segment</p>
+<p>The starting date and time of the travel on the segment[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

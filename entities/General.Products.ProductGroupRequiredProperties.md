@@ -38,8 +38,8 @@ Aggregate Root:
 | [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string (254) __nullable__ | When not null, specifies the default value of the property, for new products in the group. 
 | [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string (254) __nullable__ | When not null, specifies the default description value of the property, for new products in the group. 
 | [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid __nullable__ | When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)` 
-| [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. 
-| [Required](General.Products.ProductGroupRequiredProperties.md#required) | boolean | Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested. 
+| [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.[Required] [Default(0)] 
+| [Required](General.Products.ProductGroupRequiredProperties.md#required) | boolean | Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.[Required] [Default(false)] 
 
 ## References
 
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyNo
 
-The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.
+The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers.[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -109,7 +109,7 @@ Front-End Recalc Expressions:
 `( obj.ProductGroup.RequiredProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Required
 
-Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.
+Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. 1=Required, 0=Suggested.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  

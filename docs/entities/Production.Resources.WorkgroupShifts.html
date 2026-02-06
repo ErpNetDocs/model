@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#efficiencyfactorpercent">EfficiencyFactorPercent</a></td>
 <td>decimal (3, 2)</td>
-<td>Efficiency factor of the routing steps for this shift, expressed as percentage</td>
+<td>Efficiency factor of the routing steps for this shift, expressed as percentage[Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#establishmentdate">EstablishmentDate</a></td>
 <td>datetime</td>
-<td>When the workgroup shift was established. Used as minimum date when generating calendar</td>
+<td>When the workgroup shift was established. Used as minimum date when generating calendar[Required] [Default(Today)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#shiftname">ShiftName</a></td>
 <td>string (254)</td>
-<td>The name of the workgroup shift.</td>
+<td>The name of the workgroup shift.[Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -186,7 +186,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="efficiencyfactorpercent">EfficiencyFactorPercent</h3>
-<p>Efficiency factor of the routing steps for this shift, expressed as percentage</p>
+<p>Efficiency factor of the routing steps for this shift, expressed as percentage[Required] [Default(1)]</p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -194,7 +194,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="establishmentdate">EstablishmentDate</h3>
-<p>When the workgroup shift was established. Used as minimum date when generating calendar</p>
+<p>When the workgroup shift was established. Used as minimum date when generating calendar[Required] [Default(Today)] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -202,7 +202,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shiftname">ShiftName</h3>
-<p>The name of the workgroup shift.</p>
+<p>The name of the workgroup shift.[Required] [Filter(like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

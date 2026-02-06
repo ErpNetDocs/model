@@ -37,17 +37,17 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertydescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The desired description of the Conditional Property.  
 | [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertyvalue) | string (254) __nullable__ | The desired value of the Conditional Property.  
-| [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#lineord) | int32 | Consecutive line number within the principal recipe. 
+| [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#lineord) | int32 | Consecutive line number within the principal recipe.[Required] 
 | [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of the previous operation can this operation start. NULL means that this operation should wait the previous operation to finish before starting 
-| [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes 
+| [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes[Required] [Default(0)] [Filter(ge;le)] 
 | [Notes](Production.Technologies.PrincipalRecipeOperations.md#notes) | string (254) __nullable__ | Notes for this PrincipalRecipeOperation. 
 | [OperationDescription](Production.Technologies.PrincipalRecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. Initially copied from the generic operation definition. 
-| [RunTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for one piece in the standard measurement unit of the product 
-| [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation 
-| [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment 
+| [RunTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for one piece in the standard measurement unit of the product[Required] [Default(0)] [Filter(ge;le)] 
+| [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation[Required] [Default(0)] 
+| [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment[Required] [Default(0)] [Filter(ge;le)] 
 | [Tooling](Production.Technologies.PrincipalRecipeOperations.md#tooling) | string (254) __nullable__ | The tools needed for the routing step 
-| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation 
-| [WaitTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes 
+| [UseQuantity](Production.Technologies.PrincipalRecipeOperations.md#usequantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity of the workgroup resource that should be allocated for the operation[Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [WaitTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#waittimeminutes) | int32 | Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)] [Filter(ge;le)] 
 
 ## References
 
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-Consecutive line number within the principal recipe.
+Consecutive line number within the principal recipe.[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### MoveTimeMinutes
 
-Time to move the lot to the next operation in minutes
+Time to move the lot to the next operation in minutes[Required] [Default(0)] [Filter(ge;le)]
 
 Type: **int32**  
 Category: **System**  
@@ -157,7 +157,7 @@ Front-End Recalc Expressions:
 `obj.Operation.Description`
 ### RunTimeMinutes
 
-Duration of the operation for one piece in the standard measurement unit of the product
+Duration of the operation for one piece in the standard measurement unit of the product[Required] [Default(0)] [Filter(ge;le)]
 
 Type: **int32**  
 Category: **System**  
@@ -170,7 +170,7 @@ Front-End Recalc Expressions:
 `obj.Operation.RunTimeMinutes`
 ### ScrapRate
 
-Standard rate of scrap during the operation
+Standard rate of scrap during the operation[Required] [Default(0)]
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupTimeMinutes
 
-Time needed to setup the equipment
+Time needed to setup the equipment[Required] [Default(0)] [Filter(ge;le)]
 
 Type: **int32**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### UseQuantity
 
-Quantity of the workgroup resource that should be allocated for the operation
+Quantity of the workgroup resource that should be allocated for the operation[Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Front-End Recalc Expressions:
 `obj.Operation.UseQuantityBase`
 ### WaitTimeMinutes
 
-Wait time (drying, cooling, etc.) after the operation in minutes
+Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)] [Filter(ge;le)]
 
 Type: **int32**  
 Category: **System**  

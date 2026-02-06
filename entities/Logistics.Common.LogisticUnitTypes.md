@@ -44,8 +44,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Common.LogisticUnitTypes.md#code) | string (16) | Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers. 
-| [Name](Logistics.Common.LogisticUnitTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the logistic unit type. 
+| [Code](Logistics.Common.LogisticUnitTypes.md#code) | string (16) | Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers.[Required] [Filter(multi eq;like)] 
+| [Name](Logistics.Common.LogisticUnitTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the logistic unit type.[Required] [Filter(eq;like)] 
 | [Notes](Logistics.Common.LogisticUnitTypes.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitType. `Filter(like)` 
 
 
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers.
+Unique code of the logistic unit type. Used for display and selection purposes. Can contain only EN letters and numbers.[Required] [Filter(multi eq;like)]
 
 Type: **string (16)**  
 Category: **System**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the logistic unit type.
+Multi-language name of the logistic unit type.[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

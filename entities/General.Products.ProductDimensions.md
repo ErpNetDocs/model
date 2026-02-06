@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConvertToBaseDivisor](General.Products.ProductDimensions.md#converttobasedivisor) | decimal (9, 3) | This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. 
-| [ConvertToBaseMultiplier](General.Products.ProductDimensions.md#converttobasemultiplier) | decimal (9, 3) | This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. 
-| [DestQuantity](General.Products.ProductDimensions.md#destquantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity in some of the base units, that equals Source_Quantity 
-| [SourceQuantity](General.Products.ProductDimensions.md#sourcequantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity in the non-base unit 
+| [ConvertToBaseDivisor](General.Products.ProductDimensions.md#converttobasedivisor) | decimal (9, 3) | This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required] 
+| [ConvertToBaseMultiplier](General.Products.ProductDimensions.md#converttobasemultiplier) | decimal (9, 3) | This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required] 
+| [DestQuantity](General.Products.ProductDimensions.md#destquantity) | [Quantity (9, 3)](../data-types.md#quantity) | Quantity in some of the base units, that equals Source_Quantity[Unit: DestQuantityUnit] [Required] [Default(1)] 
+| [SourceQuantity](General.Products.ProductDimensions.md#sourcequantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity in the non-base unit[Unit: SourceQuantityUnit] [Required] [Default(1)] 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### ConvertToBaseDivisor
 
-This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.
+This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required]
 
 Type: **decimal (9, 3)**  
 Category: **System**  
@@ -76,7 +76,7 @@ Back-End Default Expression:
 
 ### ConvertToBaseMultiplier
 
-This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.
+This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required]
 
 Type: **decimal (9, 3)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Back-End Default Expression:
 
 ### DestQuantity
 
-Quantity in some of the base units, that equals Source_Quantity
+Quantity in some of the base units, that equals Source_Quantity[Unit: DestQuantityUnit] [Required] [Default(1)]
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### SourceQuantity
 
-The quantity in the non-base unit
+The quantity in the non-base unit[Unit: SourceQuantityUnit] [Required] [Default(1)]
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  

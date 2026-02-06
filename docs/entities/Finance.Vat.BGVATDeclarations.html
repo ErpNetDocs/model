@@ -154,7 +154,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#coefficientvatlarticle73">CoefficientVATLArticle73</a></td>
 <td>decimal (3, 2)</td>
-<td>Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.</td>
+<td>Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#completetime">CompleteTime</a></td>
@@ -174,12 +174,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#deductedvatamountarticle92paragraph1">DeductedVATAmount<br>Article92Paragraph1</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.</td>
+<td>Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#depositedvatamount">DepositedVATAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00.</td>
+<td>Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#documentdate">DocumentDate</a></td>
@@ -214,12 +214,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -264,17 +264,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatamounttorecouparticle92paragraph1">VATAmountToRecoup<br>Article92Paragraph1</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00.</td>
+<td>Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatamounttorecouparticle92paragraph3">VATAmountToRecoup<br>Article92Paragraph3</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00.</td>
+<td>Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatamounttorecouparticle92paragraph4">VATAmountToRecoup<br>Article92Paragraph4</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00.</td>
+<td>Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatdeclarationrepresentingpersonposition">VATDeclaration<br>RepresentingPerson<br>Position</a></td>
@@ -284,12 +284,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatperiodend">VATPeriodEnd</a></td>
 <td>date</td>
-<td>End date of the period fot which the VAT declaration is made.</td>
+<td>End date of the period fot which the VAT declaration is made.[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#vatperiodstart">VATPeriodStart</a></td>
 <td>date</td>
-<td>Start date of the period fot which the VAT declaration is made.</td>
+<td>Start date of the period fot which the VAT declaration is made.[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclarations.html#void">Void</a></td>
@@ -554,7 +554,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="coefficientvatlarticle73">CoefficientVATLArticle73</h3>
-<p>Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.</p>
+<p>Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -585,7 +585,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="deductedvatamountarticle92paragraph1">DeductedVATAmountArticle92Paragraph1</h3>
-<p>Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.</p>
+<p>Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -593,7 +593,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="depositedvatamount">DepositedVATAmount</h3>
-<p>Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00.</p>
+<p>Field 01 - 71 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -651,7 +651,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -659,7 +659,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -792,7 +792,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="vatamounttorecouparticle92paragraph1">VATAmountToRecoupArticle92Paragraph1</h3>
-<p>Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00.</p>
+<p>Field 01 - 80 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -800,7 +800,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatamounttorecouparticle92paragraph3">VATAmountToRecoupArticle92Paragraph3</h3>
-<p>Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00.</p>
+<p>Field 01 - 81 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -808,7 +808,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatamounttorecouparticle92paragraph4">VATAmountToRecoupArticle92Paragraph4</h3>
-<p>Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00.</p>
+<p>Field 01 - 82 from the declaration. Amounts are in base currency. Must be greater than 0.00.[Currency: BaseCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -824,14 +824,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatperiodend">VATPeriodEnd</h3>
-<p>End date of the period fot which the VAT declaration is made.</p>
+<p>End date of the period fot which the VAT declaration is made.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vatperiodstart">VATPeriodStart</h3>
-<p>Start date of the period fot which the VAT declaration is made.</p>
+<p>Start date of the period fot which the VAT declaration is made.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

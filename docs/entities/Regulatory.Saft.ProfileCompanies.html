@@ -127,37 +127,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#contactperson">ContactPerson</a></td>
 <td>string (254)</td>
-<td>Contact person for SAF-T-related matters.</td>
+<td>Contact person for SAF-T-related matters.[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#contactpersonemail">ContactPersonEmail</a></td>
 <td>string (254)</td>
-<td>Email address for SAF-T correspondence.</td>
+<td>Email address for SAF-T correspondence.[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#contactpersonjobtitle">ContactPersonJobTitle</a></td>
 <td>string (254)</td>
-<td>Official job title of the contact person.</td>
+<td>Official job title of the contact person.[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#contactpersonphone">ContactPersonPhone</a></td>
 <td>string (254)</td>
-<td>Phone number for inquiries.</td>
+<td>Phone number for inquiries.[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#ispartofgroup">IsPartOfGroup</a></td>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#ispartofgroup">IsPartOfGroup</a></td>
-<td>Indicate whether the company is part of a group.</td>
+<td>Indicate whether the company is part of a group.[Required] [Default(5)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Internal notes, not included in the SAF-T file.</td>
+<td>Internal notes, not included in the SAF-T file.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#taxaccountingbasis">TaxAccountingBasis</a></td>
 <td><a href="Regulatory.Saft.ProfileCompanies.html#taxaccountingbasis">TaxAccountingBasis</a></td>
-<td>Accounting basis: accrual, cash, or mixed.</td>
+<td>Accounting basis: accrual, cash, or mixed.[Required] [Default(&quot;COM&quot;)] [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -227,7 +227,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contactperson">ContactPerson</h3>
-<p>Contact person for SAF-T-related matters.</p>
+<p>Contact person for SAF-T-related matters.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -235,7 +235,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contactpersonemail">ContactPersonEmail</h3>
-<p>Email address for SAF-T correspondence.</p>
+<p>Email address for SAF-T correspondence.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -243,7 +243,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contactpersonjobtitle">ContactPersonJobTitle</h3>
-<p>Official job title of the contact person.</p>
+<p>Official job title of the contact person.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -251,7 +251,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contactpersonphone">ContactPersonPhone</h3>
-<p>Phone number for inquiries.</p>
+<p>Phone number for inquiries.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -259,7 +259,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ispartofgroup">IsPartOfGroup</h3>
-<p>Indicate whether the company is part of a group.</p>
+<p>Indicate whether the company is part of a group.[Required] [Default(5)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfileCompanies.html#ispartofgroup">IsPartOfGroup</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>IsPartOfGroup</code>(Regulatory.Saft.ProfileCompanies.md#ispartofgroup) data attribute<br>
@@ -299,7 +299,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>5</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Internal notes, not included in the SAF-T file.</p>
+<p>Internal notes, not included in the SAF-T file.[Filter(like)]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -307,7 +307,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxaccountingbasis">TaxAccountingBasis</h3>
-<p>Accounting basis: accrual, cash, or mixed.</p>
+<p>Accounting basis: accrual, cash, or mixed.[Required] [Default(&quot;COM&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfileCompanies.html#taxaccountingbasis">TaxAccountingBasis</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TaxAccountingBasis</code>(Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) data attribute<br>

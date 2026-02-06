@@ -37,11 +37,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pos.LocationAreas.md#code) | string (16) | Unique (within the location) short code, e.g., DINING, ZONE-A. 
-| [IsActive](Crm.Pos.LocationAreas.md#isactive) | boolean | Indicates whether the POS location area  is currently active. 
-| [Name](Crm.Pos.LocationAreas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-friendly name (e.g., 'Main Dining Hall'). 
-| [Notes](Crm.Pos.LocationAreas.md#notes) | string (max) __nullable__ | Notes for the location area. 
-| [Ord](Crm.Pos.LocationAreas.md#ord) | int32 | Sort order within the location. Controls display order in UI components. 
+| [Code](Crm.Pos.LocationAreas.md#code) | string (16) | Unique (within the location) short code, e.g., DINING, ZONE-A.[Required] [Filter(eq;like)] [ORD] 
+| [IsActive](Crm.Pos.LocationAreas.md#isactive) | boolean | Indicates whether the POS location area  is currently active.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Crm.Pos.LocationAreas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-friendly name (e.g., 'Main Dining Hall').[Required] [Filter(like)] 
+| [Notes](Crm.Pos.LocationAreas.md#notes) | string (max) __nullable__ | Notes for the location area.[Filter(like)] 
+| [Ord](Crm.Pos.LocationAreas.md#ord) | int32 | Sort order within the location. Controls display order in UI components.[Required] [Filter(eq;ge;le)] [ORD] 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### Code
 
-Unique (within the location) short code, e.g., DINING, ZONE-A.
+Unique (within the location) short code, e.g., DINING, ZONE-A.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the POS location area  is currently active.
+Indicates whether the POS location area  is currently active.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-User-friendly name (e.g., 'Main Dining Hall').
+User-friendly name (e.g., 'Main Dining Hall').[Required] [Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the location area.
+Notes for the location area.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### Ord
 
-Sort order within the location. Controls display order in UI components.
+Sort order within the location. Controls display order in UI components.[Required] [Filter(eq;ge;le)] [ORD]
 
 Type: **int32**  
 Category: **System**  

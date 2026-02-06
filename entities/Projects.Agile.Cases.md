@@ -37,24 +37,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed. 
-| [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state. 
-| [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created. 
-| [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work. 
-| [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date. 
-| [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time. 
+| [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93] 
+| [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.39] 
+| [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93] 
+| [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work.[Filter(like)] 
+| [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date.[Filter(ge;le)] 
+| [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time.[Filter(ge;le)] 
 | [EstimatedTimeHours](Projects.Agile.Cases.md#estimatedtimehours) | decimal (8, 2) __nullable__ | Estimation of the required work effort in hours. 
 | [FullState](Projects.Agile.Cases.md#fullstate) | int32 | Full state of the case based on its system and user state. [ReadOnly] 
-| [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state. 
+| [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93] 
 | [LoggedTime](Projects.Agile.Cases.md#loggedtime) | decimal (0, 0) | Total duration of the logged time for the case (in hours). [ReadOnly] 
 | [Number](Projects.Agile.Cases.md#number) | int32 | The unique number of the Case. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` `Introduced in version 24.1.3.86` 
-| [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest). 
-| [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution. 
-| [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved. 
-| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. 
-| [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case. 
-| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title. 
-| [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state. 
+| [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest).[Required] [Default(7)] [Filter(eq)] 
+| [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93] 
+| [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93] 
+| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.[Filter(eq;ge;le)] [Introduced in version 26.1.4.53] 
+| [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ReadOnly] 
+| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title.[Required] [Filter(like)] 
+| [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93] 
 
 ## References
 
@@ -96,7 +96,7 @@ Aggregate Tree
 
 ### ClosedTimeUTC
 
-Indicates the time (in UTC) when the case was closed.
+Indicates the time (in UTC) when the case was closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsiderTimeUTC
 
-Indicates the time (in UTC) when the case has changed to consider state.
+Indicates the time (in UTC) when the case has changed to consider state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.39]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationTimeUtc
 
-The exact date and time (in UTC) when the case was created.
+The exact date and time (in UTC) when the case was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]
 
 Type: **datetime**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### Description
 
-Description of the required work.
+Description of the required work.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDate
 
-Specified when the case has specific due date.
+Specified when the case has specific due date.[Filter(ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### DueTime
 
-Specified when the case has specific due time.
+Specified when the case has specific due time.[Filter(ge;le)]
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **HiddenByDefault**
 
 ### InProgressTimeUTC
 
-Indicates the time (in UTC) when the case has changed to in-progress state.
+Indicates the time (in UTC) when the case has changed to in-progress state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -209,7 +209,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority of the case, on a scale from 1 (highest) to 7 (lowest).
+Priority of the case, on a scale from 1 (highest) to 7 (lowest).[Required] [Default(7)] [Filter(eq)]
 
 Type: **[Priority](Projects.Agile.Cases.md#priority)**  
 Category: **System**  
@@ -233,7 +233,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadyTimeUTC
 
-Indicates the time (in UTC) when the case has become ready for execution.
+Indicates the time (in UTC) when the case has become ready for execution.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -243,7 +243,7 @@ Show in UI: **HiddenByDefault**
 
 ### ResolvedTimeUTC
 
-Indicates the time (in UTC) when the case was resolved.
+Indicates the time (in UTC) when the case was resolved.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -253,7 +253,7 @@ Show in UI: **HiddenByDefault**
 
 ### StoryPoints
 
-When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.
+When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.[Filter(eq;ge;le)] [Introduced in version 26.1.4.53]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -263,7 +263,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemState
 
-The base state of the case.
+The base state of the case.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ReadOnly]
 
 Type: **[SystemState](Projects.Agile.Cases.md#systemstate)**  
 Category: **System**  
@@ -287,7 +287,7 @@ Show in UI: **HiddenByDefault**
 
 ### Title
 
-Case short title.
+Case short title.[Required] [Filter(like)]
 
 Type: **string (128)**  
 Category: **System**  
@@ -298,7 +298,7 @@ Show in UI: **ShownByDefault**
 
 ### WaitingTimeUTC
 
-Indicates the time (in UTC) when the case has changed to waiting state.
+Indicates the time (in UTC) when the case has changed to waiting state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]
 
 Type: **datetime __nullable__**  
 Category: **System**  

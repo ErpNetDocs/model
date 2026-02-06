@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#actualendtime">ActualEndTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Optionally, specifies the actual date and time when the resource usage ended.</td>
+<td>Optionally, specifies the actual date and time when the resource usage ended.[Filter(eq;ge;le;like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#actualstarttime">ActualStartTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Optionally, specifies the actual date and time when the resource usage began.</td>
+<td>Optionally, specifies the actual date and time when the resource usage began.[Filter(eq;ge;le;like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.WorkReportResources.html#totalresourceusagehours">TotalResourceUsageHours</a></td>
 <td>decimal (18, 2)</td>
-<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</td>
+<td>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.[Required] [Default(0)] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -196,21 +196,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualendtime">ActualEndTime</h3>
-<p>Optionally, specifies the actual date and time when the resource usage ended.</p>
+<p>Optionally, specifies the actual date and time when the resource usage ended.[Filter(eq;ge;le;like)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="actualstarttime">ActualStartTime</h3>
-<p>Optionally, specifies the actual date and time when the resource usage began.</p>
+<p>Optionally, specifies the actual date and time when the resource usage began.[Filter(eq;ge;le;like)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalresourceusagehours">TotalResourceUsageHours</h3>
-<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.</p>
+<p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage.[Required] [Default(0)] [Filter(eq;like)]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

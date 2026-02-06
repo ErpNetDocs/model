@@ -154,12 +154,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#allowclosenotpaid">AllowCloseNotPaid</a></td>
 <td>boolean</td>
-<td>Allow closing of payment orders, that are not fully paid.</td>
+<td>Allow closing of payment orders, that are not fully paid.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#billto">BillTo</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html#billto">BillTo</a> <strong>nullable</strong></td>
-<td>If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).</td>
+<td>If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#completetime">CompleteTime</a></td>
@@ -179,7 +179,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html#direction">Direction</a></td>
-<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).</td>
+<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#documentdate">DocumentDate</a></td>
@@ -204,12 +204,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#duedate">DueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>End date on which the payment is executable. NULL means that the payment is executable at all times.</td>
+<td>End date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#duestartdate">DueStartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Initial date on which the payment is executable. NULL means that the payment is executable at all times.</td>
+<td>Initial date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#entityname">EntityName</a></td>
@@ -224,27 +224,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#installmentnumber">InstallmentNumber</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.</td>
+<td>Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#invoiceamount">InvoiceAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)</td>
+<td>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)[Currency: InvoiceAmountCurrency]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#isamountwithvat">IsAmountWithVAT</a></td>
 <td>boolean</td>
-<td>Checked if the requested amount includes VAT.</td>
+<td>Checked if the requested amount includes VAT.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.</td>
+<td>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#notes">Notes</a></td>
@@ -269,12 +269,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#refdocumentdate">RefDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the original document. NULL means that it is unknown</td>
+<td>The date of the original document. NULL means that it is unknown[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#refdocumentno">RefDocumentNo</a></td>
 <td>string (20)</td>
-<td>The number of the document which has created the payment order and is the basis for the payment</td>
+<td>The number of the document which has created the payment order and is the basis for the payment[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#referencedate">ReferenceDate</a></td>
@@ -289,17 +289,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#refinvoiceapplydate">RefInvoiceApplyDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.</td>
+<td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#refinvoicedocumentdate">RefInvoiceDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.</td>
+<td>The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.</td>
+<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#releasetime">ReleaseTime</a></td>
@@ -319,7 +319,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>Total amount that should be paid</td>
+<td>Total amount that should be paid[Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#void">Void</a></td>
@@ -624,7 +624,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="allowclosenotpaid">AllowCloseNotPaid</h3>
-<p>Allow closing of payment orders, that are not fully paid.</p>
+<p>Allow closing of payment orders, that are not fully paid.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -632,7 +632,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="billto">BillTo</h3>
-<p>If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).</p>
+<p>If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).[Filter(eq)]</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentOrders.html#billto">BillTo</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>BillTo</code>(Finance.Payments.PaymentOrders.md#billto) data attribute<br>
@@ -682,7 +682,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).</p>
+<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentOrders.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#direction) data attribute<br>
@@ -744,14 +744,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>End date on which the payment is executable. NULL means that the payment is executable at all times.</p>
+<p>End date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duestartdate">DueStartDate</h3>
-<p>Initial date on which the payment is executable. NULL means that the payment is executable at all times.</p>
+<p>Initial date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)] [ORD]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -775,21 +775,21 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
-<p>Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.</p>
+<p>Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.[Filter(eq)]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="invoiceamount">InvoiceAmount</h3>
-<p>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)</p>
+<p>The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)[Currency: InvoiceAmountCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
-<p>Checked if the requested amount includes VAT.</p>
+<p>Checked if the requested amount includes VAT.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -797,7 +797,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -805,7 +805,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.</p>
+<p>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -868,7 +868,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
-<p>The date of the original document. NULL means that it is unknown</p>
+<p>The date of the original document. NULL means that it is unknown[Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -879,7 +879,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.RefDocument.DocumentDate</code></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
-<p>The number of the document which has created the payment order and is the basis for the payment</p>
+<p>The number of the document which has created the payment order and is the basis for the payment[Required] [Filter(eq)]</p>
 <p>Type: <strong>string (20)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -907,7 +907,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="refinvoiceapplydate">RefInvoiceApplyDate</h3>
-<p>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.</p>
+<p>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.[Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -918,7 +918,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>Convert( obj.RefInvoiceDocument, IInvoiceDocument).ApplyDate</code></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
-<p>The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.</p>
+<p>The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.[Filter(eq;ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -929,7 +929,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
-<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.</p>
+<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.[Filter(eq)]</p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1003,7 +1003,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
-<p>Total amount that should be paid</p>
+<p>Total amount that should be paid[Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

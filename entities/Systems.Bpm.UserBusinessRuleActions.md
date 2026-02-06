@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule. 
-| [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform. 
+| [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule.[Required] 
+| [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform.[Required] 
 | [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
 | [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string (256) __nullable__ | The actual value of the parameter. 
 | [Parameter2Type](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### ActionNo
 
-Consecutive number of the action, unique within the business rule.
+Consecutive number of the action, unique within the business rule.[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -79,7 +79,7 @@ Front-End Recalc Expressions:
 `( obj.UserBusinessRule.Actions.Select( c => c.ActionNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### ActionType
 
-Specifies the type of action to perform.
+Specifies the type of action to perform.[Required]
 
 Type: **[ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype)**  
 Category: **System**  

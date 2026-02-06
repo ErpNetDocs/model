@@ -135,7 +135,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#active"><s>Active</s></a></td>
 <td>boolean <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active</td>
+<td><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active[Obsolete] [Obsoleted in version 22.1.6.61]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#code">Code</a></td>
@@ -170,12 +170,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the store</td>
+<td>Name of the store[Required] [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#numberofdimensions">NumberOfDimensions</a></td>
 <td>int32</td>
-<td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.</td>
+<td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.[Required] [Default(0)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#partycode">PartyCode</a></td>
@@ -230,7 +230,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#unmanaged">Unmanaged</a></td>
 <td>boolean</td>
-<td>If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.</td>
+<td>If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.[Required] [Default(true)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#updatetime">UpdateTime</a></td>
@@ -422,7 +422,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active</p>
+<p><strong>OBSOLETE! Do not use!</strong> Obsolete - Use Gen_Parties.Is_Active[Obsolete] [Obsoleted in version 22.1.6.61]</p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -478,14 +478,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the store</p>
+<p>Name of the store[Required] [Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="numberofdimensions">NumberOfDimensions</h3>
-<p>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.</p>
+<p>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.[Required] [Default(0)] [Filter(eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -606,7 +606,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="unmanaged">Unmanaged</h3>
-<p>If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.</p>
+<p>If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.[Required] [Default(true)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

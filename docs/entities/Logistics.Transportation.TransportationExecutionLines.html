@@ -126,17 +126,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#executiondate">ExecutionDate</a></td>
 <td>date</td>
-<td>The date when the operation was executed.</td>
+<td>The date when the operation was executed.[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#executiontime">ExecutionTime</a></td>
 <td>time</td>
-<td>The time when the operation was executed.</td>
+<td>The time when the operation was executed.[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number within this execution.</td>
+<td>Consecutive line number within this execution.[Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#notes">Notes</a></td>
@@ -146,7 +146,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#operationtype">OperationType</a></td>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#operationtype">OperationType</a></td>
-<td>The type of operation being executed. L=Loading; U=Unloading; O=Other.</td>
+<td>The type of operation being executed. L=Loading; U=Unloading; O=Other.[Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationExecutionLines.html#palletnumber">PalletNumber</a></td>
@@ -231,7 +231,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="executiondate">ExecutionDate</h3>
-<p>The date when the operation was executed.</p>
+<p>The date when the operation was executed.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -242,7 +242,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.TransportationExecution.ExecutionDate</code></p>
 <h3 id="executiontime">ExecutionTime</h3>
-<p>The time when the operation was executed.</p>
+<p>The time when the operation was executed.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -253,7 +253,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.TransportationExecution.ExecutionTime</code></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number within this execution.</p>
+<p>Consecutive line number within this execution.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -272,7 +272,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operationtype">OperationType</h3>
-<p>The type of operation being executed. L=Loading; U=Unloading; O=Other.</p>
+<p>The type of operation being executed. L=Loading; U=Unloading; O=Other.[Required]</p>
 <p>Type: <strong><a href="Logistics.Transportation.TransportationExecutionLines.html#operationtype">OperationType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>OperationType</code>(Logistics.Transportation.TransportationExecutionLines.md#operationtype) data attribute<br>

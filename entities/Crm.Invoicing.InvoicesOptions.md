@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatesVATEntries](Crm.Invoicing.InvoicesOptions.md#createsvatentries) | boolean | Specifies whether voiding the invoice should create automatically voiding VAT entry. 
-| [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | Restricts the sign of the line amounts of the invoices - positive, negative or all amounts. 
-| [TotalAmountSignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts 
+| [CreatesVATEntries](Crm.Invoicing.InvoicesOptions.md#createsvatentries) | boolean | Specifies whether voiding the invoice should create automatically voiding VAT entry.[Required] [Default(true)] 
+| [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | Restricts the sign of the line amounts of the invoices - positive, negative or all amounts.[Required] [Default(0)] 
+| [TotalAmountSignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts[Required] [Default(0)] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### CreatesVATEntries
 
-Specifies whether voiding the invoice should create automatically voiding VAT entry.
+Specifies whether voiding the invoice should create automatically voiding VAT entry.[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### SignRestriction
 
-Restricts the sign of the line amounts of the invoices - positive, negative or all amounts.
+Restricts the sign of the line amounts of the invoices - positive, negative or all amounts.[Required] [Default(0)]
 
 Type: **[SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountSignRestriction
 
-Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts
+Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts[Required] [Default(0)]
 
 Type: **[SignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction)**  
 Category: **System**  

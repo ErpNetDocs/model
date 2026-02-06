@@ -36,14 +36,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DescriptionTemplate](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Description field when creating new cases of this category. 
-| [HideUnusedSystemStates](Projects.Agile.CaseCategories.md#hideunusedsystemstates) | boolean | If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown. 
+| [DescriptionTemplate](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Description field when creating new cases of this category.[Filter(like)] [Introduced in version 25.1.2.76] 
+| [HideUnusedSystemStates](Projects.Agile.CaseCategories.md#hideunusedsystemstates) | boolean | If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown.[Required] [Default(false)] [Filter(eq)] [Introduced in version 25.1.3.32] 
 | [Icon](Projects.Agile.CaseCategories.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
-| [IsActive](Projects.Agile.CaseCategories.md#isactive) | boolean | Specifies whether the category is active for new cases. 
-| [Name](Projects.Agile.CaseCategories.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Use short, singular phrase to describe a category of cases 
+| [IsActive](Projects.Agile.CaseCategories.md#isactive) | boolean | Specifies whether the category is active for new cases.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Projects.Agile.CaseCategories.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Use short, singular phrase to describe a category of cases[Required] [Filter(like)] 
 | [Notes](Projects.Agile.CaseCategories.md#notes) | string (max) __nullable__ | Notes for this CaseCategory. 
-| [Ord](Projects.Agile.CaseCategories.md#ord) | int32 | Display order of the category relative to other categories within the project type. 
-| [RequiresParent](Projects.Agile.CaseCategories.md#requiresparent) | boolean | Specifies whether a parent case is required for cases of this category. 
+| [Ord](Projects.Agile.CaseCategories.md#ord) | int32 | Display order of the category relative to other categories within the project type.[Required] [Default(1)] [Filter(eq)] 
+| [RequiresParent](Projects.Agile.CaseCategories.md#requiresparent) | boolean | Specifies whether a parent case is required for cases of this category.[Required] [Default(false)] [Filter(eq)] [Introduced in version 25.1.3.39] 
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### DescriptionTemplate
 
-Interpolated string that sets a value for the Description field when creating new cases of this category.
+Interpolated string that sets a value for the Description field when creating new cases of this category.[Filter(like)] [Introduced in version 25.1.2.76]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### HideUnusedSystemStates
 
-If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown.
+If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown.[Required] [Default(false)] [Filter(eq)] [Introduced in version 25.1.3.32]
 
 Type: **boolean**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the category is active for new cases.
+Specifies whether the category is active for new cases.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Use short, singular phrase to describe a category of cases
+Use short, singular phrase to describe a category of cases[Required] [Filter(like)]
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### Ord
 
-Display order of the category relative to other categories within the project type.
+Display order of the category relative to other categories within the project type.[Required] [Default(1)] [Filter(eq)]
 
 Type: **int32**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiresParent
 
-Specifies whether a parent case is required for cases of this category.
+Specifies whether a parent case is required for cases of this category.[Required] [Default(false)] [Filter(eq)] [Introduced in version 25.1.3.39]
 
 Type: **boolean**  
 Category: **System**  

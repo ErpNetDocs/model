@@ -48,8 +48,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comment](General.Documents.DocumentComments.md#comment) | string (254) | The user comment. 
-| [CommentTimestamp](General.Documents.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment 
+| [Comment](General.Documents.DocumentComments.md#comment) | string (254) | The user comment.[Required] 
+| [CommentTimestamp](General.Documents.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment[Required] [Default(Now)] [Filter(ge;le)] 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### Comment
 
-The user comment.
+The user comment.[Required]
 
 Type: **string (254)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### CommentTimestamp
 
-The exact timestamp of the comment
+The exact timestamp of the comment[Required] [Default(Now)] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  

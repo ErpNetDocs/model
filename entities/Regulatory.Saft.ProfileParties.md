@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsRelated](Regulatory.Saft.ProfileParties.md#isrelated) | boolean | Mark if the party is a related entity. 
-| [RelationEndDate](Regulatory.Saft.ProfileParties.md#relationenddate) | date __nullable__ | Date when the relation ends (if applicable). 
-| [RelationStartDate](Regulatory.Saft.ProfileParties.md#relationstartdate) | date __nullable__ | Date from which the relation starts. 
+| [IsRelated](Regulatory.Saft.ProfileParties.md#isrelated) | boolean | Mark if the party is a related entity.[Required] [Default(false)] [Filter(eq)] 
+| [RelationEndDate](Regulatory.Saft.ProfileParties.md#relationenddate) | date __nullable__ | Date when the relation ends (if applicable).[Filter(eq;ge;le)] 
+| [RelationStartDate](Regulatory.Saft.ProfileParties.md#relationstartdate) | date __nullable__ | Date from which the relation starts.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### IsRelated
 
-Mark if the party is a related entity.
+Mark if the party is a related entity.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### RelationEndDate
 
-Date when the relation ends (if applicable).
+Date when the relation ends (if applicable).[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### RelationStartDate
 
-Date from which the relation starts.
+Date from which the relation starts.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

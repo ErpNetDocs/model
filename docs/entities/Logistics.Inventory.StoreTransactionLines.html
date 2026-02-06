@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#allowoverexecution">AllowOverExecution</a></td>
 <td>boolean</td>
-<td>If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line</td>
+<td>If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#finished">Finished</a></td>
 <td>boolean <strong>nullable</strong></td>
-<td>1 if this transaction entry completes the operation. 0 if there might be more entries</td>
+<td>1 if this transaction entry completes the operation. 0 if there might be more entries[Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
@@ -140,32 +140,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linebasecost">LineBaseCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the enterprise company</td>
+<td>The cost of the transaction in the currency of the enterprise company[Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linecost">LineCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.</td>
+<td>Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.[Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linedocumentcost">LineDocumentCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the document</td>
+<td>The cost of the transaction in the currency of the document[Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique within the store transaction.</td>
+<td>Line number, unique within the store transaction.[Required]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#lineproductcost">LineProductCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the product</td>
+<td>The cost of the transaction in the currency of the product[Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#linestorecost">LineStoreCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The cost of the transaction in the currency of the warehouse</td>
+<td>The cost of the transaction in the currency of the warehouse[Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#notes">Notes</a></td>
@@ -185,32 +185,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit</td>
+<td>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit[Unit: QuantityUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of the stock received/issued in base measurement unit</td>
+<td>The quantity of the stock received/issued in base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#temporderno">TempOrderNo</a></td>
 <td>string (50) <strong>nullable</strong></td>
-<td>Obsolete. Not used.</td>
+<td>Obsolete. Not used.[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Exact time when the transaction changes the cost of the product.</td>
+<td>Exact time when the transaction changes the cost of the product.[Filter(ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html#unitcost">UnitCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
-<td>Cost for 1 of the specified quantity</td>
+<td>Cost for 1 of the specified quantity[Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -315,7 +315,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowoverexecution">AllowOverExecution</h3>
-<p>If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line</p>
+<p>If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -330,7 +330,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>1 if this transaction entry completes the operation. 0 if there might be more entries</p>
+<p>1 if this transaction entry completes the operation. 0 if there might be more entries[Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -347,7 +347,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.GuaranteePeriodDays</code></p>
 <h3 id="linebasecost">LineBaseCost</h3>
-<p>The cost of the transaction in the currency of the enterprise company</p>
+<p>The cost of the transaction in the currency of the enterprise company[Currency: TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -355,7 +355,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="linecost">LineCost</h3>
-<p>Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.</p>
+<p>Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.[Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -363,7 +363,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linedocumentcost">LineDocumentCost</h3>
-<p>The cost of the transaction in the currency of the document</p>
+<p>The cost of the transaction in the currency of the document[Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)] [ReadOnly]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -371,7 +371,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique within the store transaction.</p>
+<p>Line number, unique within the store transaction.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -382,7 +382,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.TransactionObj.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lineproductcost">LineProductCost</h3>
-<p>The cost of the transaction in the currency of the product</p>
+<p>The cost of the transaction in the currency of the product[Currency: Product.CostingCurrency] [Required] [Default(0)] [ReadOnly]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -390,7 +390,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="linestorecost">LineStoreCost</h3>
-<p>The cost of the transaction in the currency of the warehouse</p>
+<p>The cost of the transaction in the currency of the warehouse[Currency: TransactionObj.Store.Currency] [Required] [Default(0)] [ReadOnly]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -420,7 +420,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit</p>
+<p>The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit[Unit: QuantityUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -428,7 +428,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity of the stock received/issued in base measurement unit</p>
+<p>The quantity of the stock received/issued in base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -440,7 +440,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -451,7 +451,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="temporderno">TempOrderNo</h3>
-<p>Obsolete. Not used.</p>
+<p>Obsolete. Not used.[Filter(eq)]</p>
 <p>Type: <strong>string (50) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -459,7 +459,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Exact time when the transaction changes the cost of the product.</p>
+<p>Exact time when the transaction changes the cost of the product.[Filter(ge;le)] [ORD]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -467,7 +467,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="unitcost">UnitCost</h3>
-<p>Cost for 1 of the specified quantity</p>
+<p>Cost for 1 of the specified quantity[Currency: TransactionObj.DocumentCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

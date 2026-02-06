@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.AI.TrainingConversationMessages.html#contents">Contents</a></td>
 <td>string (max)</td>
-<td>Contents of the message. Can be formatted using MarkDown.</td>
+<td>Contents of the message. Can be formatted using MarkDown.[Required]</td>
 </tr>
 <tr>
 <td><a href="Projects.AI.TrainingConversationMessages.html#messageno">MessageNo</a></td>
 <td>int32</td>
-<td>Message number within the conversation.</td>
+<td>Message number within the conversation.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.AI.TrainingConversationMessages.html#messagetimeutc">MessageTimeUtc</a></td>
 <td>datetime</td>
-<td>Date and time, when the message was originally typed (or created).</td>
+<td>Date and time, when the message was originally typed (or created).[Required] [Default(NowUtc)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Projects.AI.TrainingConversationMessages.html#participantname">ParticipantName</a></td>
@@ -142,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.AI.TrainingConversationMessages.html#participantrole">ParticipantRole</a></td>
 <td><a href="Projects.AI.TrainingConversationMessages.html#participantrole">ParticipantRole</a></td>
-<td>Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.</td>
+<td>Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.[Required] [Default(&quot;U&quot;)] [Filter(multi eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -192,7 +192,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contents">Contents</h3>
-<p>Contents of the message. Can be formatted using MarkDown.</p>
+<p>Contents of the message. Can be formatted using MarkDown.[Required]</p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -200,7 +200,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="messageno">MessageNo</h3>
-<p>Message number within the conversation.</p>
+<p>Message number within the conversation.[Required] [Filter(eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -211,7 +211,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.TrainingConversation.Messages.Select( c =&gt; c.MessageNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="messagetimeutc">MessageTimeUtc</h3>
-<p>Date and time, when the message was originally typed (or created).</p>
+<p>Date and time, when the message was originally typed (or created).[Required] [Default(NowUtc)] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -227,7 +227,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="participantrole">ParticipantRole</h3>
-<p>Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.</p>
+<p>Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.[Required] [Default(&quot;U&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Projects.AI.TrainingConversationMessages.html#participantrole">ParticipantRole</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ParticipantRole</code>(Projects.AI.TrainingConversationMessages.md#participantrole) data attribute<br>

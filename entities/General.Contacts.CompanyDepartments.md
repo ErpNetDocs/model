@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department. 
+| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department.[Required] [Filter(like)] 
 | [Notes](General.Contacts.CompanyDepartments.md#notes) | string (max) __nullable__ | Notes for this CompanyDepartment. 
 
 ## References
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### DepartmentName
 
-The name of the department.
+The name of the department.[Required] [Filter(like)]
 
 Type: **string (254)**  
 Category: **System**  

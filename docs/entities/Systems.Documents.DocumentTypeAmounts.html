@@ -131,17 +131,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#requiredfromdate">RequiredFromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.</td>
+<td>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#requiredthrudate">RequiredThruDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.</td>
+<td>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#usercanchangeinput">UserCanChangeInput</a></td>
 <td>boolean</td>
-<td>1 if the user, entering the document is allowed to change the default input percent</td>
+<td>1 if the user, entering the document is allowed to change the default input percent[Required] [Default(true)]</td>
 </tr>
 </tbody>
 </table>
@@ -203,21 +203,21 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
-<p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.</p>
+<p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredthrudate">RequiredThruDate</h3>
-<p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.</p>
+<p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.[Filter(ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usercanchangeinput">UserCanChangeInput</h3>
-<p>1 if the user, entering the document is allowed to change the default input percent</p>
+<p>1 if the user, entering the document is allowed to change the default input percent[Required] [Default(true)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

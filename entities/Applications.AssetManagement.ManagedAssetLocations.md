@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location. 
+| [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location.[Required] [Default(Now)] [Filter(ge;le)] 
 | [Notes](Applications.AssetManagement.ManagedAssetLocations.md#notes) | string (max) __nullable__ | Might contain additional notes for the exact location of the asset within the enterprise company location. 
 
 ## References
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### FromDate
 
-The date on which the asset is assigned to the location.
+The date on which the asset is assigned to the location.[Required] [Default(Now)] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  

@@ -34,11 +34,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. 
+| [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.[ORD] [ReadOnly] 
 | [Notes](Applications.Rental.AssetGroups.md#notes) | string (max) __nullable__ | Notes for this AssetGroup. 
-| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (25) __nullable__ | The full path of the parent node. 
-| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string (3) | Asset group code, unique within the parent node. 
-| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string (254) | Asset group name, unique within the parent node. 
+| [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (25) __nullable__ | The full path of the parent node.[Filter(eq)] 
+| [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string (3) | Asset group code, unique within the parent node.[Required] [Filter(eq;like)] [ORD] 
+| [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string (254) | Asset group name, unique within the parent node.[Required] [Filter(eq;like)] 
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Tree
 
 ### FullPath
 
-The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.
+The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.[ORD] [ReadOnly]
 
 Type: **string (25) __nullable__**  
 Indexed: **True**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentFullPath
 
-The full path of the parent node.
+The full path of the parent node.[Filter(eq)]
 
 Type: **string (25) __nullable__**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAssetGroupCode
 
-Asset group code, unique within the parent node.
+Asset group code, unique within the parent node.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (3)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Back-End Default Expression:
 
 ### RentalAssetGroupName
 
-Asset group name, unique within the parent node.
+Asset group name, unique within the parent node.[Required] [Filter(eq;like)]
 
 Type: **string (254)**  
 Category: **System**  

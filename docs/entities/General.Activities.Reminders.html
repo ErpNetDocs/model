@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.Reminders.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form</td>
+<td>1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Activities.Reminders.html#isdismissed">IsDismissed</a></td>
 <td>boolean</td>
-<td>When 1 the reminder was dismissed by the user; the initial value is 0</td>
+<td>When 1 the reminder was dismissed by the user; the initial value is 0[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Activities.Reminders.html#notes">Notes</a></td>
@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.Reminders.html#remindertime">ReminderTime</a></td>
 <td>datetime</td>
-<td>The time when the alarm should snooze to the user</td>
+<td>The time when the alarm should snooze to the user[Required] [Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isdefault">IsDefault</h3>
-<p>1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form</p>
+<p>1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -199,7 +199,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdismissed">IsDismissed</h3>
-<p>When 1 the reminder was dismissed by the user; the initial value is 0</p>
+<p>When 1 the reminder was dismissed by the user; the initial value is 0[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="remindertime">ReminderTime</h3>
-<p>The time when the alarm should snooze to the user</p>
+<p>The time when the alarm should snooze to the user[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

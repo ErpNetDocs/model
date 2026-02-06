@@ -36,8 +36,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Applications.Fleet.MaintenanceProfiles.md#code) | string (16) | The unique code of the MaintenanceProfile. `Required` 
-| [IsActive](Applications.Fleet.MaintenanceProfiles.md#isactive) | boolean | 1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated. 
-| [Name](Applications.Fleet.MaintenanceProfiles.md#name) | string (254) | Name of the maintenance profile (Multilanguage). 
+| [IsActive](Applications.Fleet.MaintenanceProfiles.md#isactive) | boolean | 1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.[Required] [Default(true)] [Filter(eq)] [Introduced in version 18.2] 
+| [Name](Applications.Fleet.MaintenanceProfiles.md#name) | string (254) | Name of the maintenance profile (Multilanguage).[Required] 
 | [Notes](Applications.Fleet.MaintenanceProfiles.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfile. 
 
 
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.
+1 if the profile is active and can be assigned to vehicles. However, if a profile is already assigned to a vehicle, it will still work even if it is de-activated.[Required] [Default(true)] [Filter(eq)] [Introduced in version 18.2]
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the maintenance profile (Multilanguage).
+Name of the maintenance profile (Multilanguage).[Required]
 
 Type: **string (254)**  
 Category: **System**  

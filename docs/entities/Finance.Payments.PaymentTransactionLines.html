@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#allowoverpayment">AllowOverpayment</a></td>
 <td>boolean</td>
-<td>If checked specifies that overpayment is allowed for the payment order in the line.</td>
+<td>If checked specifies that overpayment is allowed for the payment order in the line.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 2)</a></td>
-<td>Paid amount  in the payment currency</td>
+<td>Paid amount  in the payment currency [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#coveredorderamount">CoveredOrderAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 2)</a></td>
-<td>Covered amount in the currency of payment order</td>
+<td>Covered amount in the currency of payment order[Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#notes">Notes</a></td>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowoverpayment">AllowOverpayment</h3>
-<p>If checked specifies that overpayment is allowed for the payment order in the line.</p>
+<p>If checked specifies that overpayment is allowed for the payment order in the line.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="amount">Amount</h3>
-<p>Paid amount  in the payment currency</p>
+<p>Paid amount  in the payment currency [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (10, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -214,7 +214,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.CoveredOrderAmount.ConvertTo( obj.PaymentTransaction.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)</code></p>
 <h3 id="coveredorderamount">CoveredOrderAmount</h3>
-<p>Covered amount in the currency of payment order</p>
+<p>Covered amount in the currency of payment order[Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (10, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

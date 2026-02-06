@@ -45,7 +45,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DocumentLineId](General.Documents.DocumentLineAmounts.md#documentlineid) | guid | The line for which the distribution pattern is specified. `Required` `Filter(multi eq)` 
-| [LinePercent](General.Documents.DocumentLineAmounts.md#linepercent) | decimal (14, 6) | The percent of the additional amount which should be distributed over the current line. 
+| [LinePercent](General.Documents.DocumentLineAmounts.md#linepercent) | decimal (14, 6) | The percent of the additional amount which should be distributed over the current line.[Required] [Default(0)] 
 
 ## References
 
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### LinePercent
 
-The percent of the additional amount which should be distributed over the current line.
+The percent of the additional amount which should be distributed over the current line.[Required] [Default(0)]
 
 Type: **decimal (14, 6)**  
 Category: **System**  

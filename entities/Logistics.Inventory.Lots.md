@@ -33,19 +33,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholicStrength](Logistics.Inventory.Lots.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting. 
+| [AlcoholicStrength](Logistics.Inventory.Lots.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.[Required] [Default(0)] [Introduced in version 22.1.6.66] 
 | [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this Lot. 
-| [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot. 
+| [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot.[Filter(ge;le)] 
 | [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string (50) __nullable__ | The license number for this lot. Null when license number is N/A or unknown. 
 | [Number](Logistics.Inventory.Lots.md#number) | string (30) | The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)` `ORD` 
 | [ProductionBatchId](Logistics.Inventory.Lots.md#productionbatchid) | guid __nullable__ | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. `Filter(multi eq)` 
-| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (30) __nullable__ | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. 
-| [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date __nullable__ | The date of the first receipt of products in this lot. 
+| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (30) __nullable__ | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.[Filter(like)] 
+| [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date __nullable__ | The date of the first receipt of products in this lot.[Filter(ge;le)] [ReadOnly] 
 | [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions.
 -3 blocked for document (sales or service order)
 -2 blocked for party
 -1 blocked for inspection
-0 free to use 
+0 free to use[Required] [Default(0)] [Filter(multi eq)] 
 
 ## References
 
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### AlcoholicStrength
 
-Percentage of pure alcohol used in excise duty reporting.
+Percentage of pure alcohol used in excise duty reporting.[Required] [Default(0)] [Introduced in version 22.1.6.66]
 
 Type: **decimal (5, 2)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExpiryDate
 
-Expiry date for this lot.
+Expiry date for this lot.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **CannotBeShown**
 
 ### PurchaseLotNumber
 
-Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.
+Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.[Filter(like)]
 
 Type: **string (30) __nullable__**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiptDate
 
-The date of the first receipt of products in this lot.
+The date of the first receipt of products in this lot.[Filter(ge;le)] [ReadOnly]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -166,7 +166,7 @@ Status of the warehouse lot. Minus statuses describe blocked conditions.
 -3 blocked for document (sales or service order)
 -2 blocked for party
 -1 blocked for inspection
-0 free to use
+0 free to use[Required] [Default(0)] [Filter(multi eq)]
 
 Type: **[Status](Logistics.Inventory.Lots.md#status)**  
 Category: **System**  

@@ -45,9 +45,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DefaultPercent](Systems.Documents.DocumentTypeAmounts.md#defaultpercent) | decimal (7, 6) __nullable__ | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type 
-| [RequiredFromDate](Systems.Documents.DocumentTypeAmounts.md#requiredfromdate) | date __nullable__ | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. 
-| [RequiredThruDate](Systems.Documents.DocumentTypeAmounts.md#requiredthrudate) | date __nullable__ | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. 
-| [UserCanChangeInput](Systems.Documents.DocumentTypeAmounts.md#usercanchangeinput) | boolean | 1 if the user, entering the document is allowed to change the default input percent 
+| [RequiredFromDate](Systems.Documents.DocumentTypeAmounts.md#requiredfromdate) | date __nullable__ | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)] 
+| [RequiredThruDate](Systems.Documents.DocumentTypeAmounts.md#requiredthrudate) | date __nullable__ | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.[Filter(ge;le)] 
+| [UserCanChangeInput](Systems.Documents.DocumentTypeAmounts.md#usercanchangeinput) | boolean | 1 if the user, entering the document is allowed to change the default input percent[Required] [Default(true)] 
 
 ## References
 
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiredFromDate
 
-When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.
+When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiredThruDate
 
-When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.
+When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.[Filter(ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### UserCanChangeInput
 
-1 if the user, entering the document is allowed to change the default input percent
+1 if the user, entering the document is allowed to change the default input percent[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  

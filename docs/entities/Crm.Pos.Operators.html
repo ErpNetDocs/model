@@ -122,27 +122,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Operators.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this operator is active and can be chosen for new records.</td>
+<td>Indicates whether this operator is active and can be chosen for new records.[Required] [Default(true)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#pincode">PinCode</a></td>
 <td>string (4)</td>
-<td>4-character PIN used to authenticate the POS operator.</td>
+<td>4-character PIN used to authenticate the POS operator.[Required] [Default(&quot;0000&quot;)] [Introduced in version 26.2.1.26]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#posoperatorcode">PosOperatorCode</a></td>
 <td>string (16)</td>
-<td>Operator code. Unique within the Pos Location.</td>
+<td>Operator code. Unique within the Pos Location.[Required] [Filter(multi eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#startingdate">StartingDate</a></td>
 <td>date</td>
-<td>The first date, when the operator has started working for this POS location.</td>
+<td>The first date, when the operator has started working for this POS location.[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Operators.html#terminationdate">TerminationDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.</td>
+<td>The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.[Filter(multi eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -222,7 +222,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this operator is active and can be chosen for new records.</p>
+<p>Indicates whether this operator is active and can be chosen for new records.[Required] [Default(true)] [Filter(multi eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -230,7 +230,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pincode">PinCode</h3>
-<p>4-character PIN used to authenticate the POS operator.</p>
+<p>4-character PIN used to authenticate the POS operator.[Required] [Default(&quot;0000&quot;)] [Introduced in version 26.2.1.26]</p>
 <p>Type: <strong>string (4)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -239,7 +239,7 @@ Maximum Length: <strong>4</strong><br>
 Default Value: <strong>0000</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posoperatorcode">PosOperatorCode</h3>
-<p>Operator code. Unique within the Pos Location.</p>
+<p>Operator code. Unique within the Pos Location.[Required] [Filter(multi eq;like)] [ORD]</p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -247,14 +247,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startingdate">StartingDate</h3>
-<p>The first date, when the operator has started working for this POS location.</p>
+<p>The first date, when the operator has started working for this POS location.[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="terminationdate">TerminationDate</h3>
-<p>The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.</p>
+<p>The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.[Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>

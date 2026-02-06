@@ -33,8 +33,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.Follows.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. 
-| [FollowLevel](Communities.Social.Follows.md#followlevel) | [FollowLevel](Communities.Social.Follows.md#followlevel) | Indicates the level of user’s interest for this object. 
+| [CreationTimeUtc](Communities.Social.Follows.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created.[Required] [Default(NowUtc)] [Filter(ge;le)] 
+| [FollowLevel](Communities.Social.Follows.md#followlevel) | [FollowLevel](Communities.Social.Follows.md#followlevel) | Indicates the level of user’s interest for this object.[Required] [Default(&quot;TAG&quot;)] [Filter(multi eq)] [Introduced in version 26.2.0.70] 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the follow was created.
+The exact server time (in UTC), when the follow was created.[Required] [Default(NowUtc)] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### FollowLevel
 
-Indicates the level of user’s interest for this object.
+Indicates the level of user’s interest for this object.[Required] [Default(&quot;TAG&quot;)] [Filter(multi eq)] [Introduced in version 26.2.0.70]
 
 Type: **[FollowLevel](Communities.Social.Follows.md#followlevel)**  
 Category: **System**  

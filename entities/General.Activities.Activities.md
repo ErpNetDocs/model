@@ -63,32 +63,32 @@ Aggregate Tree
 | [CompleteTime](General.Activities.Activities.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](General.Activities.Activities.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](General.Activities.Activities.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DeadlineTime](General.Activities.Activities.md#deadlinetime) | datetime __nullable__ | The deadline for the task. NULL if there is no deadline 
+| [DeadlineTime](General.Activities.Activities.md#deadlinetime) | datetime __nullable__ | The deadline for the task. NULL if there is no deadline[Filter(ge;le)] 
 | [DocumentDate](General.Activities.Activities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](General.Activities.Activities.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](General.Activities.Activities.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](General.Activities.Activities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [EndTime](General.Activities.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task 
+| [EndTime](General.Activities.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task[Filter(ge;le)] 
 | [EntityName](General.Activities.Activities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](General.Activities.Activities.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](General.Activities.Activities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](General.Activities.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](General.Activities.Activities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](General.Activities.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](General.Activities.Activities.md#notes) | string (max) __nullable__ | Notes for this Activity. 
 | [ParentDocument<br />RelationshipType](General.Activities.Activities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Activities.Activities.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PlannedDurationMinutes](General.Activities.Activities.md#planneddurationminutes) | int32 __nullable__ | Total planned duration of the activity 
+| [PlannedDurationMinutes](General.Activities.Activities.md#planneddurationminutes) | int32 __nullable__ | Total planned duration of the activity[Filter(ge;le)] 
 | [PlanningOnly](General.Activities.Activities.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Priority](General.Activities.Activities.md#priority) | [Priority](General.Activities.Activities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important) 
-| [Private](General.Activities.Activities.md#private) | boolean | 1 if the task is visible only to its owner; 0 if this is publicly visible task 
+| [Priority](General.Activities.Activities.md#priority) | [Priority](General.Activities.Activities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important)[Required] [Default(3)] 
+| [Private](General.Activities.Activities.md#private) | boolean | 1 if the task is visible only to its owner; 0 if this is publicly visible task[Required] [Default(false)] 
 | [ReadOnly](General.Activities.Activities.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](General.Activities.Activities.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](General.Activities.Activities.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](General.Activities.Activities.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReminderTime](General.Activities.Activities.md#remindertime) | datetime __nullable__ | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. 
-| [StartTime](General.Activities.Activities.md#starttime) | datetime | Currently planned starting time of the task 
+| [ReminderTime](General.Activities.Activities.md#remindertime) | datetime __nullable__ | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.[Filter(ge;le)] 
+| [StartTime](General.Activities.Activities.md#starttime) | datetime | Currently planned starting time of the task[Required] [Default(Now)] [Filter(ge;le)] 
 | [State](General.Activities.Activities.md#state) | [DocumentState](General.Activities.Activities.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](General.Activities.Activities.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Subject](General.Activities.Activities.md#subject) | string (254) | Task primary subject (required) 
-| [SystemType](General.Activities.Activities.md#systemtype) | [SystemType](General.Activities.Activities.md#systemtype) | T=Task; C=Communication; M=Meeting 
+| [Subject](General.Activities.Activities.md#subject) | string (254) | Task primary subject (required)[Required] [Filter(eq;like)] 
+| [SystemType](General.Activities.Activities.md#systemtype) | [SystemType](General.Activities.Activities.md#systemtype) | T=Task; C=Communication; M=Meeting[Required] 
 | [Void](General.Activities.Activities.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](General.Activities.Activities.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](General.Activities.Activities.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -221,7 +221,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeadlineTime
 
-The deadline for the task. NULL if there is no deadline
+The deadline for the task. NULL if there is no deadline[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -277,7 +277,7 @@ Show in UI: **HiddenByDefault**
 
 ### EndTime
 
-Currently planned ending time of the task
+Currently planned ending time of the task[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -309,7 +309,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -320,7 +320,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -361,7 +361,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlannedDurationMinutes
 
-Total planned duration of the activity
+Total planned duration of the activity[Filter(ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -382,7 +382,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority on the scale from 1 (least important) to 5 (very important)
+Priority on the scale from 1 (least important) to 5 (very important)[Required] [Default(3)]
 
 Type: **[Priority](General.Activities.Activities.md#priority)**  
 Category: **System**  
@@ -404,7 +404,7 @@ Show in UI: **ShownByDefault**
 
 ### Private
 
-1 if the task is visible only to its owner; 0 if this is publicly visible task
+1 if the task is visible only to its owner; 0 if this is publicly visible task[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -458,7 +458,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReminderTime
 
-When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.
+When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -468,7 +468,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-Currently planned starting time of the task
+Currently planned starting time of the task[Required] [Default(Now)] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -513,7 +513,7 @@ Show in UI: **HiddenByDefault**
 
 ### Subject
 
-Task primary subject (required)
+Task primary subject (required)[Required] [Filter(eq;like)]
 
 Type: **string (254)**  
 Category: **System**  
@@ -527,7 +527,7 @@ Back-End Default Expression:
 
 ### SystemType
 
-T=Task; C=Communication; M=Meeting
+T=Task; C=Communication; M=Meeting[Required]
 
 Type: **[SystemType](General.Activities.Activities.md#systemtype)**  
 Category: **System**  

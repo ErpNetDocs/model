@@ -67,11 +67,11 @@ Aggregate Tree
 | [DocumentVersion](General.Currencies.CurrencyDirectories.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](General.Currencies.CurrencyDirectories.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](General.Currencies.CurrencyDirectories.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [IsDefault](General.Currencies.CurrencyDirectories.md#isdefault) | boolean | Specifies that this currency directory is set by default in new documents. When there are more than one default directory, the last default directory is used. 
-| [<s>IsReleased</s>](General.Currencies.CurrencyDirectories.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](General.Currencies.CurrencyDirectories.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
-| [IsValidField](General.Currencies.CurrencyDirectories.md#isvalidfield) | boolean | Shows if the current currency directory is valid to be used in documents. This column can be adjusted with corrective documents for released currency directories. 
-| [Name](General.Currencies.CurrencyDirectories.md#name) | string (64) | The name of the currency directory, used to distinguish it from the other directories on the same date 
+| [IsDefault](General.Currencies.CurrencyDirectories.md#isdefault) | boolean | Specifies that this currency directory is set by default in new documents. When there are more than one default directory, the last default directory is used.[Required] [Default(true)] [Filter(eq)] 
+| [<s>IsReleased</s>](General.Currencies.CurrencyDirectories.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](General.Currencies.CurrencyDirectories.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [IsValidField](General.Currencies.CurrencyDirectories.md#isvalidfield) | boolean | Shows if the current currency directory is valid to be used in documents. This column can be adjusted with corrective documents for released currency directories.[Required] [Default(true)] [Filter(eq)] 
+| [Name](General.Currencies.CurrencyDirectories.md#name) | string (64) | The name of the currency directory, used to distinguish it from the other directories on the same date[Required] [Filter(like)] 
 | [ParentDocument<br />RelationshipType](General.Currencies.CurrencyDirectories.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Currencies.CurrencyDirectories.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](General.Currencies.CurrencyDirectories.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](General.Currencies.CurrencyDirectories.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -273,7 +273,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsDefault
 
-Specifies that this currency directory is set by default in new documents. When there are more than one default directory, the last default directory is used.
+Specifies that this currency directory is set by default in new documents. When there are more than one default directory, the last default directory is used.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -284,7 +284,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -295,7 +295,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -306,7 +306,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsValidField
 
-Shows if the current currency directory is valid to be used in documents. This column can be adjusted with corrective documents for released currency directories.
+Shows if the current currency directory is valid to be used in documents. This column can be adjusted with corrective documents for released currency directories.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -317,7 +317,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the currency directory, used to distinguish it from the other directories on the same date
+The name of the currency directory, used to distinguish it from the other directories on the same date[Required] [Filter(like)]
 
 Type: **string (64)**  
 Category: **System**  

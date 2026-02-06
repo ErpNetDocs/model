@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Fixed depreciation value for the period specified by 'Fixed value period month' and 'Fixed value period year'. 
-| [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is determined. 
-| [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is determined. 
+| [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Fixed depreciation value for the period specified by 'Fixed value period month' and 'Fixed value period year'.[Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)] 
+| [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is determined.[Required] 
+| [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is determined.[Required] 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### DepreciationValue
 
-Fixed depreciation value for the period specified by 'Fixed value period month' and 'Fixed value period year'.
+Fixed depreciation value for the period specified by 'Fixed value period month' and 'Fixed value period year'.[Currency: DepreciationPlanLine.Asset.ValuationCurrency] [Required] [Default(0)]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### FixedValuePeriodMonth
 
-Month of the period for which the depreciation value is determined.
+Month of the period for which the depreciation value is determined.[Required]
 
 Type: **byte**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### FixedValuePeriodYear
 
-Year of the period for which the depreciation value is determined.
+Year of the period for which the depreciation value is determined.[Required]
 
 Type: **int16**  
 Category: **System**  

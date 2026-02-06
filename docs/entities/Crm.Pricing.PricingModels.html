@@ -126,17 +126,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PricingModels.html#defaultmarginpercent">DefaultMarginPercent</a></td>
 <td>decimal (6, 5)</td>
-<td>Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price</td>
+<td>Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModels.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Pricing model is active.</td>
+<td>Indicates whether the current Pricing model is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PricingModels.html#name">Name</a></td>
 <td>string (254)</td>
-<td>The name of the pricing model</td>
+<td>The name of the pricing model[Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -228,7 +228,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultmarginpercent">DefaultMarginPercent</h3>
-<p>Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price</p>
+<p>Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (6, 5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Pricing model is active.</p>
+<p>Indicates whether the current Pricing model is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -244,7 +244,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the pricing model</p>
+<p>The name of the pricing model[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

@@ -42,12 +42,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Anchor](Systems.Core.Notifications.md#anchor) | string (128) __nullable__ | A custom reference (most commonly a relative URL) pointing to an additional resource related to the DataObject. 
-| [CreationTimeUtc](Systems.Core.Notifications.md#creationtimeutc) | datetime | The exact server time (in UTC), when the notification was created. 
-| [IsRead](Systems.Core.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. 
-| [NotificationClass](Systems.Core.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes. 
-| [Priority](Systems.Core.Notifications.md#priority) | [Priority](Systems.Core.Notifications.md#priority) | Indicates the importance level of the notification, helping determine its order of attention or urgency. 
-| [Subject](Systems.Core.Notifications.md#subject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user). 
+| [Anchor](Systems.Core.Notifications.md#anchor) | string (128) __nullable__ | A custom reference (most commonly a relative URL) pointing to an additional resource related to the DataObject.[Introduced in version 25.1.1.3] 
+| [CreationTimeUtc](Systems.Core.Notifications.md#creationtimeutc) | datetime | The exact server time (in UTC), when the notification was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly] 
+| [IsRead](Systems.Core.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.[Required] [Default(false)] [Filter(eq)] 
+| [NotificationClass](Systems.Core.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes.[Required] [Filter(multi eq)] 
+| [Priority](Systems.Core.Notifications.md#priority) | [Priority](Systems.Core.Notifications.md#priority) | Indicates the importance level of the notification, helping determine its order of attention or urgency.[Required] [Default(3)] [Filter(eq;ge;le)] [Introduced in version 25.1.2.63] 
+| [Subject](Systems.Core.Notifications.md#subject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user).[Filter(eq;like)] 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### Anchor
 
-A custom reference (most commonly a relative URL) pointing to an additional resource related to the DataObject.
+A custom reference (most commonly a relative URL) pointing to an additional resource related to the DataObject.[Introduced in version 25.1.1.3]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the notification was created.
+The exact server time (in UTC), when the notification was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### IsRead
 
-Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.
+Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### NotificationClass
 
-The class of the notification from a predefined list of system classes.
+The class of the notification from a predefined list of system classes.[Required] [Filter(multi eq)]
 
 Type: **string (64)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Indicates the importance level of the notification, helping determine its order of attention or urgency.
+Indicates the importance level of the notification, helping determine its order of attention or urgency.[Required] [Default(3)] [Filter(eq;ge;le)] [Introduced in version 25.1.2.63]
 
 Type: **[Priority](Systems.Core.Notifications.md#priority)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### Subject
 
-The short subject of the notification (in the Default Culture of the user).
+The short subject of the notification (in the Default Culture of the user).[Filter(eq;like)]
 
 Type: **string (256) __nullable__**  
 Category: **System**  

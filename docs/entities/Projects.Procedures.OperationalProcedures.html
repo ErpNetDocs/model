@@ -126,47 +126,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#code">Code</a></td>
 <td>string (32)</td>
-<td>Short unique code for search/reference.</td>
+<td>Short unique code for search/reference.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#contentformat">ContentFormat</a></td>
 <td><a href="Projects.Procedures.OperationalProcedures.html#contentformat">ContentFormat</a></td>
-<td>Storage format of the content.</td>
+<td>Storage format of the content.[Required] [Default(&quot;MKD&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact date and time (in UTC) when the procedure was created.</td>
+<td>The exact date and time (in UTC) when the procedure was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#entitytype">EntityType</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>Name of entity to which the procedure applies</td>
+<td>Name of entity to which the procedure applies[Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact date and time (in UTC) when the procedure was last updated.</td>
+<td>The exact date and time (in UTC) when the procedure was last updated.[Required] [Filter(eq;ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the procedure.</td>
+<td>Notes for the procedure.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#procedurecontent">ProcedureContent</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The content of the procedure.</td>
+<td>The content of the procedure.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#status">Status</a></td>
 <td><a href="Projects.Procedures.OperationalProcedures.html#status">Status</a></td>
-<td>Lifecycle state (Draft/Active/Obsolete).</td>
+<td>Lifecycle state (Draft/Active/Obsolete).[Required] [Default(&quot;DRF&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.OperationalProcedures.html#title">Title</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>Procedure name.</td>
+<td>Procedure name.[Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -253,7 +253,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Short unique code for search/reference.</p>
+<p>Short unique code for search/reference.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (32)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="contentformat">ContentFormat</h3>
-<p>Storage format of the content.</p>
+<p>Storage format of the content.[Required] [Default(&quot;MKD&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Projects.Procedures.OperationalProcedures.html#contentformat">ContentFormat</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ContentFormat</code>(Projects.Procedures.OperationalProcedures.md#contentformat) data attribute<br>
@@ -286,7 +286,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>MarkDown</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact date and time (in UTC) when the procedure was created.</p>
+<p>The exact date and time (in UTC) when the procedure was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -294,7 +294,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entitytype">EntityType</h3>
-<p>Name of entity to which the procedure applies</p>
+<p>Name of entity to which the procedure applies[Filter(eq)]</p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -302,14 +302,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
-<p>The exact date and time (in UTC) when the procedure was last updated.</p>
+<p>The exact date and time (in UTC) when the procedure was last updated.[Required] [Filter(eq;ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the procedure.</p>
+<p>Notes for the procedure.[Filter(like)]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -317,7 +317,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="procedurecontent">ProcedureContent</h3>
-<p>The content of the procedure.</p>
+<p>The content of the procedure.[Filter(like)]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -325,7 +325,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>Lifecycle state (Draft/Active/Obsolete).</p>
+<p>Lifecycle state (Draft/Active/Obsolete).[Required] [Default(&quot;DRF&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Projects.Procedures.OperationalProcedures.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Projects.Procedures.OperationalProcedures.md#status) data attribute<br>
@@ -357,7 +357,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>DRAFT</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="title">Title</h3>
-<p>Procedure name.</p>
+<p>Procedure name.[Required] [Filter(like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

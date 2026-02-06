@@ -34,15 +34,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Caption](Systems.Bpm.CalculatedAttributes.md#caption) | [MultilanguageString (512)](../data-types.md#multilanguagestring) | The multi-language caption, used to display the attribute. 
-| [Hint](Systems.Bpm.CalculatedAttributes.md#hint) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the attribute. 
-| [IsActive](Systems.Bpm.CalculatedAttributes.md#isactive) | boolean | True if the attribute is activated and added to the repository. 
-| [Name](Systems.Bpm.CalculatedAttributes.md#name) | string (128) | The unique name of the attribute within the repository. 
+| [Caption](Systems.Bpm.CalculatedAttributes.md#caption) | [MultilanguageString (512)](../data-types.md#multilanguagestring) | The multi-language caption, used to display the attribute.[Required] 
+| [Hint](Systems.Bpm.CalculatedAttributes.md#hint) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the attribute.[Filter(multi eq;like)] [Introduced in version 21.1.3.53] 
+| [IsActive](Systems.Bpm.CalculatedAttributes.md#isactive) | boolean | True if the attribute is activated and added to the repository.[Required] [Default(false)] [Filter(eq)] 
+| [Name](Systems.Bpm.CalculatedAttributes.md#name) | string (128) | The unique name of the attribute within the repository.[Required] [Filter(eq;like)] 
 | [Notes](Systems.Bpm.CalculatedAttributes.md#notes) | string (max) __nullable__ | Notes for this CalculatedAttribute. 
-| [RepositoryName](Systems.Bpm.CalculatedAttributes.md#repositoryname) | string (128) | The repository, for which the attribute is defined. 
+| [RepositoryName](Systems.Bpm.CalculatedAttributes.md#repositoryname) | string (128) | The repository, for which the attribute is defined.[Required] [Filter(multi eq)] [ORD] 
 | [ScriptLanguage](Systems.Bpm.CalculatedAttributes.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.CalculatedAttributes.md#scriptlanguage) | The programming language used to evaluate the attribute. `Required` `Default("Integrated")` `Introduced in version 26.2.1.16` 
 | [ScriptText](Systems.Bpm.CalculatedAttributes.md#scripttext) | string (max) __nullable__ | The program code that defines how the attribute is evaluated. `Introduced in version 26.2.1.16` 
-| [StartingExpressionNo](Systems.Bpm.CalculatedAttributes.md#startingexpressionno) | int32 | The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. 
+| [StartingExpressionNo](Systems.Bpm.CalculatedAttributes.md#startingexpressionno) | int32 | The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.[Required] [Default(10)] 
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### Caption
 
-The multi-language caption, used to display the attribute.
+The multi-language caption, used to display the attribute.[Required]
 
 Type: **[MultilanguageString (512)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### Hint
 
-The hint, which is displayed alongside the attribute.
+The hint, which is displayed alongside the attribute.[Filter(multi eq;like)] [Introduced in version 21.1.3.53]
 
 Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True if the attribute is activated and added to the repository.
+True if the attribute is activated and added to the repository.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The unique name of the attribute within the repository.
+The unique name of the attribute within the repository.[Required] [Filter(eq;like)]
 
 Type: **string (128)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### RepositoryName
 
-The repository, for which the attribute is defined.
+The repository, for which the attribute is defined.[Required] [Filter(multi eq)] [ORD]
 
 Type: **string (128)**  
 Indexed: **True**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### StartingExpressionNo
 
-The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.
+The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.[Required] [Default(10)]
 
 Type: **int32**  
 Category: **System**  

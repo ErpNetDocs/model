@@ -120,12 +120,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityServices.html#coveredbyguarantee">CoveredByGuarantee</a></td>
 <td>boolean</td>
-<td>True when the performed service is covered by the guarantee.</td>
+<td>True when the performed service is covered by the guarantee.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityServices.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityServices.html#notes">Notes</a></td>
@@ -135,12 +135,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityServices.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 2)</a></td>
-<td>The quantity of the service in the measurement unit of the service</td>
+<td>The quantity of the service in the measurement unit of the service[Unit: Service.MeasurementUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityServices.html#servicename">ServiceName</a></td>
 <td>string (254)</td>
-<td>Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.</td>
+<td>Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.[Required] [Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -227,7 +227,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="coveredbyguarantee">CoveredByGuarantee</h3>
-<p>True when the performed service is covered by the guarantee.</p>
+<p>True when the performed service is covered by the guarantee.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -235,7 +235,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -254,7 +254,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the service in the measurement unit of the service</p>
+<p>The quantity of the service in the measurement unit of the service[Unit: Service.MeasurementUnit] [Required] [Default(1)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="servicename">ServiceName</h3>
-<p>Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.</p>
+<p>Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.[Required] [Filter(like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

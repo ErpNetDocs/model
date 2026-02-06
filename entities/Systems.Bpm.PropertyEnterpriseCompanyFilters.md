@@ -44,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
+| [FilterXml](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company.[Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomProperty<br />AllowedValuesRepository.TableName)] 
 
 ## References
 
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### FilterXml
 
-When not null, specifies a filter for the allowed values of the property for the specified enterprise company.
+When not null, specifies a filter for the allowed values of the property for the specified enterprise company.[Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomPropertyAllowedValuesRepository.TableName)]
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  

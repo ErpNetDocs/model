@@ -37,9 +37,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssetTypes.md#code) | string (16) | Unique code of the asset type. 
-| [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. 
-| [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. 
+| [Code](Applications.AssetManagement.ManagedAssetTypes.md#code) | string (16) | Unique code of the asset type.[Required] [Filter(multi eq;like)] [ORD] 
+| [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the asset type.[Required] [Filter(multi eq;like)] 
 | [Notes](Applications.AssetManagement.ManagedAssetTypes.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType. 
 
 
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the asset type.
+Unique code of the asset type.[Required] [Filter(multi eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the asset type is active for choosing in drop-down choices.
+Specifies whether the asset type is active for choosing in drop-down choices.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the asset type.
+Multilanguage name of the asset type.[Required] [Filter(multi eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

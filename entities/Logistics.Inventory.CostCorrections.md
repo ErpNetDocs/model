@@ -57,10 +57,10 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Inventory.CostCorrections.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Inventory.CostCorrections.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.CostCorrections.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified. 
+| [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.[Required] [Filter(ge;le)] 
 | [FullState](Logistics.Inventory.CostCorrections.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.CostCorrections.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Logistics.Inventory.CostCorrections.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Logistics.Inventory.CostCorrections.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Logistics.Inventory.CostCorrections.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.CostCorrections.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.CostCorrections.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -69,7 +69,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Inventory.CostCorrections.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Inventory.CostCorrections.md#state) | [DocumentState](Logistics.Inventory.CostCorrections.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Inventory.CostCorrections.md#statetagsattribute) | string | Specifies the state of the document. 
-| [ThruDate](Logistics.Inventory.CostCorrections.md#thrudate) | datetime | The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction isn't specified. 
+| [ThruDate](Logistics.Inventory.CostCorrections.md#thrudate) | datetime | The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.[Required] [Filter(ge;le)] 
 | [Void](Logistics.Inventory.CostCorrections.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Logistics.Inventory.CostCorrections.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Logistics.Inventory.CostCorrections.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -254,7 +254,7 @@ Show in UI: **CannotBeShown**
 
 ### FromDate
 
-The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.
+The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -274,7 +274,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -285,7 +285,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -403,7 +403,7 @@ Show in UI: **HiddenByDefault**
 
 ### ThruDate
 
-The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.
+The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  

@@ -36,13 +36,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.CompanySizeClasses.md#code) | string (32) | The unique code of the CompanySizeClass. `Required` `Filter(eq;like)` `ORD` 
-| [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. NULL if this is not relevant to this size class. 
-| [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class. 
-| [IsActive](Crm.Marketing.CompanySizeClasses.md#isactive) | boolean | Indicates whether the current Company size class is active. 
-| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Company size class name (multi-language). 
+| [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. NULL if this is not relevant to this size class.[Filter(eq)] 
+| [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.[Filter(eq)] 
+| [IsActive](Crm.Marketing.CompanySizeClasses.md#isactive) | boolean | Indicates whether the current Company size class is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
+| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Company size class name (multi-language).[Required] [Filter(eq;like)] 
 | [Notes](Crm.Marketing.CompanySizeClasses.md#notes) | string (max) __nullable__ | Notes for this CompanySizeClass. 
-| [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. NULL if this is not relevant to this size class. 
-| [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class. 
+| [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. NULL if this is not relevant to this size class.[Filter(eq)] 
+| [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.[Filter(eq)] 
 
 ## References
 
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### FromEmployees
 
-Minimal number of employees for this size class. NULL if this is not relevant to this size class.
+Minimal number of employees for this size class. NULL if this is not relevant to this size class.[Filter(eq)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### FromRevenue
 
-Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.
+Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.[Filter(eq)]
 
 Type: **decimal (15, 0) __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Company size class is active.
+Indicates whether the current Company size class is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
 
 Type: **boolean**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Company size class name (multi-language).
+Company size class name (multi-language).[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### ToEmployees
 
-Maximum number of employees for this size class. NULL if this is not relevant to this size class.
+Maximum number of employees for this size class. NULL if this is not relevant to this size class.[Filter(eq)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### ToRevenue
 
-Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.
+Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.[Filter(eq)]
 
 Type: **decimal (15, 0) __nullable__**  
 Category: **System**  

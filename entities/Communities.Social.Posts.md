@@ -33,9 +33,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.Posts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. 
-| [LastInteractionTimeUtc](Communities.Social.Posts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. 
-| [PostText](Communities.Social.Posts.md#posttext) | string (max) | The post contents in clear text. 
+| [CreationTimeUtc](Communities.Social.Posts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created.[Required] [Filter(ge;le)] 
+| [LastInteractionTimeUtc](Communities.Social.Posts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.[Required] [Filter(ge;le)] 
+| [PostText](Communities.Social.Posts.md#posttext) | string (max) | The post contents in clear text.[Required] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the post was created.
+The exact server time (in UTC), when the post was created.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### LastInteractionTimeUtc
 
-The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.
+The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### PostText
 
-The post contents in clear text.
+The post contents in clear text.[Required]
 
 Type: **string (max)**  
 Category: **System**  

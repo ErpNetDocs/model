@@ -37,7 +37,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AttachmentContent](Applications.Mail.MessageAttachments.md#attachmentcontent) | byte[] __nullable__ | The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason 
 | [ContentDescriptors](Applications.Mail.MessageAttachments.md#contentdescriptors) | string (4000) __nullable__ | Content flags, like "Content-Type: text/plain; charset=utf-8" 
-| [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | 1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail 
+| [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | 1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail[Required] [Default(false)] [Filter(eq)] 
 | [Name](Applications.Mail.MessageAttachments.md#name) | string (128) __nullable__ | The name of this MessageAttachment. `Filter(eq;like)` 
 
 ## References
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### ContentDownloaded
 
-1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail
+1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  

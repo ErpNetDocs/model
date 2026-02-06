@@ -126,17 +126,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></td>
-<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).</td>
+<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#ispartypayment">IsPartyPayment</a></td>
 <td>boolean</td>
-<td>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).</td>
+<td>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).[Required] [Default(true)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>The number of the line within the payment</td>
+<td>The number of the line within the payment[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#partyname">PartyName</a></td>
@@ -146,12 +146,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#paymentdate">PaymentDate</a></td>
 <td>datetime</td>
-<td>The date on which the payment is done.</td>
+<td>The date on which the payment is done.[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipAmounts.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.</td>
+<td>The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.[Currency: PaymentSlip.DocumentCurrency]</td>
 </tr>
 </tbody>
 </table>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).</p>
+<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Filter(eq)]</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentSlipAmounts.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#direction) data attribute<br>
@@ -263,7 +263,7 @@ Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ispartypayment">IsPartyPayment</h3>
-<p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).</p>
+<p>Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.).[Required] [Default(true)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>The number of the line within the payment</p>
+<p>The number of the line within the payment[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -291,7 +291,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Party.ObtainPartyName( )</code></p>
 <h3 id="paymentdate">PaymentDate</h3>
-<p>The date on which the payment is done.</p>
+<p>The date on which the payment is done.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -300,7 +300,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PaymentSlip.DocumentDate</code></p>
 <h3 id="totalamount">TotalAmount</h3>
-<p>The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.</p>
+<p>The total amount payed. If the total amount isn't specified then it is calculated as the sum of the amounts in the payment slip lines.[Currency: PaymentSlip.DocumentCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

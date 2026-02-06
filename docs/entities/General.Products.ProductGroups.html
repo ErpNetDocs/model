@@ -133,7 +133,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductGroups.html#active">Active</a></td>
 <td>boolean</td>
-<td>1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents</td>
+<td>1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#code">Code</a></td>
@@ -143,22 +143,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductGroups.html#configuratorcreatesrecipe">ConfiguratorCreatesRecipe</a></td>
 <td>boolean</td>
-<td>Whether the product configurator should create one default recipe. 1=yes;0=no</td>
+<td>Whether the product configurator should create one default recipe. 1=yes;0=no[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a></td>
 <td><a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a></td>
-<td>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly</td>
+<td>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#fullpath">FullPath</a></td>
 <td>string (254)</td>
-<td>Full tree path in the form /parent/.../leaf/. Contains the group codes.</td>
+<td>Full tree path in the form /parent/.../leaf/. Contains the group codes.[Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (180)</a></td>
-<td>Group name should be unique among the other groups within the same parent</td>
+<td>Group name should be unique among the other groups within the same parent[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#nextpartnumber">NextPartNumber</a></td>
@@ -168,7 +168,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductGroups.html#nextserialnumber">NextSerialNumber</a></td>
 <td>string (40) <strong>nullable</strong></td>
-<td>Next serial number, that should be assigned to new produced items from this group or its subgroups.</td>
+<td>Next serial number, that should be assigned to new produced items from this group or its subgroups.[Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#notes">Notes</a></td>
@@ -178,7 +178,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductGroups.html#parent"><s>Parent</s></a></td>
 <td>string (254)</td>
-<td><strong>OBSOLETE! Do not use!</strong> Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.</td>
+<td><strong>OBSOLETE! Do not use!</strong> Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.[Obsolete] [Required] [Default(&quot;/&quot;)] [Filter(eq)] [Obsoleted in version 22.1.6.92]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#picture">Picture</a></td>
@@ -188,7 +188,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductGroups.html#picturelastupdatetime">PictureLastUpdateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Last update time of the Picture</td>
+<td>Last update time of the Picture[Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#productdescriptionmask">ProductDescriptionMask</a></td>
@@ -315,7 +315,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents</p>
+<p>1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -334,7 +334,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, o =&gt; ( o.ParentGroup == obj.ParentGroup), IIF( ( obj.ParentGroup == null), &quot;000&quot;, ( obj.ParentGroup.Code + &quot;00&quot;)))</code></p>
 <h3 id="configuratorcreatesrecipe">ConfiguratorCreatesRecipe</h3>
-<p>Whether the product configurator should create one default recipe. 1=yes;0=no</p>
+<p>Whether the product configurator should create one default recipe. 1=yes;0=no[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -342,7 +342,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="configuratorstatus">ConfiguratorStatus</h3>
-<p>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly</p>
+<p>Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly[Required] [Default(0)]</p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html#configuratorstatus">ConfiguratorStatus</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductGroups.md#configuratorstatus) data attribute<br>
@@ -374,7 +374,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full tree path in the form /parent/.../leaf/. Contains the group codes.</p>
+<p>Full tree path in the form /parent/.../leaf/. Contains the group codes.[Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (254)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -386,7 +386,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>Format( &quot;{0}{1}/&quot;, IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, &quot;/&quot;), obj.Code)</code></p>
 <h3 id="name">Name</h3>
-<p>Group name should be unique among the other groups within the same parent</p>
+<p>Group name should be unique among the other groups within the same parent[Required] [Filter(eq;like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (180)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -401,7 +401,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="nextserialnumber">NextSerialNumber</h3>
-<p>Next serial number, that should be assigned to new produced items from this group or its subgroups.</p>
+<p>Next serial number, that should be assigned to new produced items from this group or its subgroups.[Filter(eq;like)]</p>
 <p>Type: <strong>string (40) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -417,7 +417,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parent">Parent</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.</p>
+<p><strong>OBSOLETE! Do not use!</strong> Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.[Obsolete] [Required] [Default(&quot;/&quot;)] [Filter(eq)] [Obsoleted in version 22.1.6.92]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -437,7 +437,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="picturelastupdatetime">PictureLastUpdateTime</h3>
-<p>Last update time of the Picture</p>
+<p>Last update time of the Picture[Filter(ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

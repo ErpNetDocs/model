@@ -37,15 +37,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ParameterName](Systems.Monitoring.InstanceParameters.md#parametername) | string (256) | Name of parameter 
-| [ParameterValue](Systems.Monitoring.InstanceParameters.md#parametervalue) | string (256) | Value of parameter 
+| [ParameterName](Systems.Monitoring.InstanceParameters.md#parametername) | string (256) | Name of parameter[Required] [Filter(multi eq)] 
+| [ParameterValue](Systems.Monitoring.InstanceParameters.md#parametervalue) | string (256) | Value of parameter[Required] 
 
 
 ## Attribute Details
 
 ### ParameterName
 
-Name of parameter
+Name of parameter[Required] [Filter(multi eq)]
 
 Type: **string (256)**  
 Category: **System**  
@@ -56,7 +56,7 @@ Show in UI: **ShownByDefault**
 
 ### ParameterValue
 
-Value of parameter
+Value of parameter[Required]
 
 Type: **string (256)**  
 Category: **System**  

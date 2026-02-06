@@ -58,7 +58,7 @@ Aggregate Tree
 | [CompleteTime](Applications.Service.ServiceActivities.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Applications.Service.ServiceActivities.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Applications.Service.ServiceActivities.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CreditLimitOverride](Applications.Service.ServiceActivities.md#creditlimitoverride) | boolean | Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder. 
+| [CreditLimitOverride](Applications.Service.ServiceActivities.md#creditlimitoverride) | boolean | Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.[Required] [Default(false)] [Filter(eq)] 
 | [DeadlineTime](Applications.Service.ServiceActivities.md#deadlinetime) | datetime __nullable__ | The deadline for the task. null if there is no deadline. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [DocumentDate](Applications.Service.ServiceActivities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Applications.Service.ServiceActivities.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -76,7 +76,7 @@ Aggregate Tree
 | [Priority](Applications.Service.ServiceActivities.md#priority) | [Priority](Applications.Service.ServiceActivities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important). `Required` `Default(3)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [Private](Applications.Service.ServiceActivities.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [ReadOnly](Applications.Service.ServiceActivities.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReceiverPersonName](Applications.Service.ServiceActivities.md#receiverpersonname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Copy of the name of the receiver at the time the activity was signed 
+| [ReceiverPersonName](Applications.Service.ServiceActivities.md#receiverpersonname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Copy of the name of the receiver at the time the activity was signed[Filter(like)] 
 | [ReferenceDate](Applications.Service.ServiceActivities.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Applications.Service.ServiceActivities.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Applications.Service.ServiceActivities.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -227,7 +227,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditLimitOverride
 
-Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.
+Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -443,7 +443,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReceiverPersonName
 
-Copy of the name of the receiver at the time the activity was signed
+Copy of the name of the receiver at the time the activity was signed[Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  

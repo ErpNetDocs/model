@@ -117,12 +117,12 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime</td>
-<td>Timestamp (UTC) of the last status update.</td>
+<td>Timestamp (UTC) of the last status update.[Required] [Filter(ge;le)] [ORD] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#status">Status</a></td>
 <td><a href="Systems.Monitoring.UserPresence.html#status">Status</a></td>
-<td>The user's current presence status.</td>
+<td>The user's current presence status.[Required] [Filter(multi eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#userid">UserId</a></td>
@@ -132,20 +132,20 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.UserPresence.html#userlogin">UserLogin</a></td>
 <td>string (64)</td>
-<td>The username used to log in.</td>
+<td>The username used to log in.[Required] [Filter(multi eq;like)] [ReadOnly]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
-<p>Timestamp (UTC) of the last status update.</p>
+<p>Timestamp (UTC) of the last status update.[Required] [Filter(ge;le)] [ORD] [ReadOnly]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>The user's current presence status.</p>
+<p>The user's current presence status.[Required] [Filter(multi eq)] [ReadOnly]</p>
 <p>Type: <strong><a href="Systems.Monitoring.UserPresence.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Systems.Monitoring.UserPresence.md#status) data attribute<br>
@@ -190,7 +190,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userlogin">UserLogin</h3>
-<p>The username used to log in.</p>
+<p>The username used to log in.[Required] [Filter(multi eq;like)] [ReadOnly]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>

@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductPictures.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1=This is the default picture for the product and the size class; 0=otherwise</td>
+<td>1=This is the default picture for the product and the size class; 0=otherwise[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#lastupdatetime">LastUpdateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The exact server time, when the picture was last updated. Set automatically.</td>
+<td>The exact server time, when the picture was last updated. Set automatically.[Filter(ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picture">Picture</a></td>
@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductPictures.html#pictureno">PictureNo</a></td>
 <td>int32</td>
-<td>Unique picture number within the product. Also used for sorting</td>
+<td>Unique picture number within the product. Also used for sorting[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a></td>
@@ -204,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>1=This is the default picture for the product and the size class; 0=otherwise</p>
+<p>1=This is the default picture for the product and the size class; 0=otherwise[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -214,7 +214,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Product.Pictures.Take( 2).Count( ) == 1)</code></p>
 <h3 id="lastupdatetime">LastUpdateTime</h3>
-<p>The exact server time, when the picture was last updated. Set automatically.</p>
+<p>The exact server time, when the picture was last updated. Set automatically.[Filter(ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -228,7 +228,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pictureno">PictureNo</h3>
-<p>Unique picture number within the product. Also used for sorting</p>
+<p>Unique picture number within the product. Also used for sorting[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

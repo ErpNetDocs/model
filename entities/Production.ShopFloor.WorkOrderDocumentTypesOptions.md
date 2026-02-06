@@ -44,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | Specifies whether the document is for Production or Decomposition purposes. 
+| [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | Specifies whether the document is for Production or Decomposition purposes.[Required] [Default(&quot;P&quot;)] [Filter(eq)] [Introduced in version 25.1.0.76] 
 
 ## References
 
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### ProductionМode
 
-Specifies whether the document is for Production or Decomposition purposes.
+Specifies whether the document is for Production or Decomposition purposes.[Required] [Default(&quot;P&quot;)] [Filter(eq)] [Introduced in version 25.1.0.76]
 
 Type: **[ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode)**  
 Category: **System**  

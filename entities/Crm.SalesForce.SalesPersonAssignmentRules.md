@@ -42,13 +42,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | Determines whether the rule is applied to customers' definitions (customers and leads) or to documents. 
-| [FromDate](Crm.SalesForce.SalesPersonAssignmentRules.md#fromdate) | datetime __nullable__ | Starting date of rule validity. NULL means no from date restriction. 
-| [IsActive](Crm.SalesForce.SalesPersonAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active. 
-| [Notes](Crm.SalesForce.SalesPersonAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule. 
-| [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | Priority when multiple rules match the criteria. 
-| [RuleNo](Crm.SalesForce.SalesPersonAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule within the selected enterprise company. 
-| [ToDate](Crm.SalesForce.SalesPersonAssignmentRules.md#todate) | datetime __nullable__ | Ending date (inclusive) of rule validity. NULL means that the rule is valid forever. 
+| [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | [ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto) | Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.[Required] [Default(&quot;C&quot;)] [Filter(eq)] 
+| [FromDate](Crm.SalesForce.SalesPersonAssignmentRules.md#fromdate) | datetime __nullable__ | Starting date of rule validity. NULL means no from date restriction.[Filter(eq;ge;le)] 
+| [IsActive](Crm.SalesForce.SalesPersonAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active.[Required] [Default(true)] [Filter(eq)] 
+| [Notes](Crm.SalesForce.SalesPersonAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule.[Filter(like)] 
+| [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | [Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority) | Priority when multiple rules match the criteria.[Required] [Default(&quot;3&quot;)] [Filter(eq)] [Introduced in version 25.1.0.23] 
+| [RuleNo](Crm.SalesForce.SalesPersonAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule within the selected enterprise company.[Required] [Filter(eq)] [ORD] 
+| [ToDate](Crm.SalesForce.SalesPersonAssignmentRules.md#todate) | datetime __nullable__ | Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -77,7 +77,7 @@ Aggregate Tree
 
 ### ApplyTo
 
-Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.
+Determines whether the rule is applied to customers' definitions (customers and leads) or to documents.[Required] [Default(&quot;C&quot;)] [Filter(eq)]
 
 Type: **[ApplyTo](Crm.SalesForce.SalesPersonAssignmentRules.md#applyto)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Starting date of rule validity. NULL means no from date restriction.
+Starting date of rule validity. NULL means no from date restriction.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current rule is active.
+Indicates whether the current rule is active.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments related to the rule.
+Additional information or comments related to the rule.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority when multiple rules match the criteria.
+Priority when multiple rules match the criteria.[Required] [Default(&quot;3&quot;)] [Filter(eq)] [Introduced in version 25.1.0.23]
 
 Type: **[Priority](Crm.SalesForce.SalesPersonAssignmentRules.md#priority)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### RuleNo
 
-Consecutive number of the rule within the selected enterprise company.
+Consecutive number of the rule within the selected enterprise company.[Required] [Filter(eq)] [ORD]
 
 Type: **int32**  
 Category: **System**  
@@ -165,7 +165,7 @@ Front-End Recalc Expressions:
 `obj.SetRuleNo( obj.EnterpriseCompany)`
 ### ToDate
 
-Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.
+Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

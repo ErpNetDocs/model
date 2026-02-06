@@ -36,12 +36,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation. 
-| [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line. 
-| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow. 
-| [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded. 
-| [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created. 
-| [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit. 
+| [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.[Filter(eq;ge;le)] 
+| [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line.[Filter(eq;ge;le)] [ReadOnly] 
+| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.[Required] [Default(&quot;CRT&quot;)] [Filter(multi eq)] 
+| [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded.[Required] [Filter(eq)] [ReadOnly] 
+| [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created.[Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.[Required] [Filter(eq;ge;le)] [ReadOnly] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### CountedQuantityBase
 
-The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.
+The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.[Filter(eq;ge;le)]
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LastAggregatedAt
 
-The date and time when the counted quantities were last aggregated into this line.
+The date and time when the counted quantities were last aggregated into this line.[Filter(eq;ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### ReviewStatus
 
-Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.
+Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.[Required] [Default(&quot;CRT&quot;)] [Filter(multi eq)]
 
 Type: **[ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-The counting session in which this result was recorded.
+The counting session in which this result was recorded.[Required] [Filter(eq)] [ReadOnly]
 
 Type: **int32**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### SnapshotDateTime
 
-The date and time when the availability snapshot for this line was created.
+The date and time when the availability snapshot for this line was created.[Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### SnapshotQuantityBase
 
-The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.
+The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.[Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **decimal (12, 3)**  
 Category: **System**  

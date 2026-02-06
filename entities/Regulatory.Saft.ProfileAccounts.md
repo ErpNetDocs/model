@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | Account classification in SAF-T. 
-| [Notes](Regulatory.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping. 
-| [SignificantPropertyOrder](Regulatory.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. 
+| [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | Account classification in SAF-T.[Required] [Filter(eq)] 
+| [Notes](Regulatory.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping.[Filter(like)] 
+| [SignificantPropertyOrder](Regulatory.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### AccountType
 
-Account classification in SAF-T.
+Account classification in SAF-T.[Required] [Filter(eq)]
 
 Type: **[AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype)**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional details about the mapping.
+Additional details about the mapping.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### SignificantPropertyOrder
 
-Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.
+Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.[Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  

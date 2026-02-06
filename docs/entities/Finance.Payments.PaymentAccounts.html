@@ -127,7 +127,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this payment account is currently used.</td>
+<td>Indicates whether this payment account is currently used.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#name">Name</a></td>
@@ -137,7 +137,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Payments.PaymentAccounts.html#usebasecurrency">UseBaseCurrency</a></td>
 <td>boolean</td>
-<td>When enabled, this setting restricts the payment account to use only the base currency.</td>
+<td>When enabled, this setting restricts the payment account to use only the base currency.[Required] [Default(false)] [Introduced in version 26.1.4.36]</td>
 </tr>
 </tbody>
 </table>
@@ -238,7 +238,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, null, &quot;00000&quot;)</code></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this payment account is currently used.</p>
+<p>Indicates whether this payment account is currently used.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -253,7 +253,7 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usebasecurrency">UseBaseCurrency</h3>
-<p>When enabled, this setting restricts the payment account to use only the base currency.</p>
+<p>When enabled, this setting restricts the payment account to use only the base currency.[Required] [Default(false)] [Introduced in version 26.1.4.36]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

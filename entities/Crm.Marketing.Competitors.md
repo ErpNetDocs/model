@@ -35,11 +35,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Marketing.Competitors.md#fromdate) | datetime __nullable__ | Start date when this company became a competitor. 
-| [IsActive](Crm.Marketing.Competitors.md#isactive) | boolean | Indicates whether the current Competitor is active. 
+| [FromDate](Crm.Marketing.Competitors.md#fromdate) | datetime __nullable__ | Start date when this company became a competitor.[Default(Today)] [Filter(ge;le)] [Introduced in version 25.1.0.62] 
+| [IsActive](Crm.Marketing.Competitors.md#isactive) | boolean | Indicates whether the current Competitor is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
 | [Name](Crm.Marketing.Competitors.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Competitor. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.Competitors.md#notes) | string (max) __nullable__ | Notes for this Competitor. 
-| [ToDate](Crm.Marketing.Competitors.md#todate) | datetime __nullable__ | Date until which this company was considered a competitor. The field is blank if the company is still a competitor. 
+| [ToDate](Crm.Marketing.Competitors.md#todate) | datetime __nullable__ | Date until which this company was considered a competitor. The field is blank if the company is still a competitor.[Filter(ge;le)] [Introduced in version 25.1.0.62] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Tree
 
 ### FromDate
 
-Start date when this company became a competitor.
+Start date when this company became a competitor.[Default(Today)] [Filter(ge;le)] [Introduced in version 25.1.0.62]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Competitor is active.
+Indicates whether the current Competitor is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
 
 Type: **boolean**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Date until which this company was considered a competitor. The field is blank if the company is still a competitor.
+Date until which this company was considered a competitor. The field is blank if the company is still a competitor.[Filter(ge;le)] [Introduced in version 25.1.0.62]
 
 Type: **datetime __nullable__**  
 Category: **System**  

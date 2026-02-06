@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](General.Contacts.PartyRelationships.md#fromdate) | datetime __nullable__ | The starting date of the relationship. NULL means the date is the begining of the time 
+| [FromDate](General.Contacts.PartyRelationships.md#fromdate) | datetime __nullable__ | The starting date of the relationship. NULL means the date is the begining of the time[Filter(ge;le)] 
 | [Notes](General.Contacts.PartyRelationships.md#notes) | string (254) __nullable__ | Notes for this PartyRelationship. 
-| [ToDate](General.Contacts.PartyRelationships.md#todate) | datetime __nullable__ | The ending date of the relationship. NULL means the relationship is still active 
+| [ToDate](General.Contacts.PartyRelationships.md#todate) | datetime __nullable__ | The ending date of the relationship. NULL means the relationship is still active[Filter(ge;le)] 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### FromDate
 
-The starting date of the relationship. NULL means the date is the begining of the time
+The starting date of the relationship. NULL means the date is the begining of the time[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-The ending date of the relationship. NULL means the relationship is still active
+The ending date of the relationship. NULL means the relationship is still active[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

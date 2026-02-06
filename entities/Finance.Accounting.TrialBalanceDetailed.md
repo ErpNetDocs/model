@@ -28,39 +28,39 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Closing](Finance.Accounting.TrialBalanceDetailed.md#closing) | decimal (38, 2) | Closing Balance (debit balance is positive, credit - negative) 
-| [ClosingBase](Finance.Accounting.TrialBalanceDetailed.md#closingbase) | decimal (38, 2) | Closing balance in base currency (debit balance is positive, credit - negative) 
-| [ClosingCredit](Finance.Accounting.TrialBalanceDetailed.md#closingcredit) | decimal (38, 2) | Closing balance when it is credit 
-| [ClosingCreditBase](Finance.Accounting.TrialBalanceDetailed.md#closingcreditbase) | decimal (38, 2) | Closing balance in base currency when it is credit 
-| [ClosingDebit](Finance.Accounting.TrialBalanceDetailed.md#closingdebit) | decimal (38, 2) | Closing balance when it is debit 
-| [ClosingDebitBase](Finance.Accounting.TrialBalanceDetailed.md#closingdebitbase) | decimal (38, 2) | Closing balance in base currency when it is debit 
-| [ClosingReporting](Finance.Accounting.TrialBalanceDetailed.md#closingreporting) | decimal (38, 2) | Closing balance in reporting currency 
-| [Credit](Finance.Accounting.TrialBalanceDetailed.md#credit) | decimal (38, 2) | Credit 
-| [CreditBase](Finance.Accounting.TrialBalanceDetailed.md#creditbase) | decimal (38, 2) | Credit Base 
-| [CreditReporting](Finance.Accounting.TrialBalanceDetailed.md#creditreporting) | decimal (38, 2) | Credit Reporting 
-| [Debit](Finance.Accounting.TrialBalanceDetailed.md#debit) | decimal (38, 2) | Debit 
-| [DebitBase](Finance.Accounting.TrialBalanceDetailed.md#debitbase) | decimal (38, 2) | Debit Base 
-| [DebitReporting](Finance.Accounting.TrialBalanceDetailed.md#debitreporting) | decimal (38, 2) | Debit Reporting 
-| [FromDate](Finance.Accounting.TrialBalanceDetailed.md#fromdate) | date | Period Start Date - Should be filtered with exact date 
-| [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) | Item Key 
-| [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) | Item Key Level 1 Code 
-| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 1 Name 
-| [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) | Item Key Level 2 Code 
-| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 2 Name 
-| [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) | Item Key Level 3 Code 
-| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 3 Name 
-| [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) | Item Key Level 4 Code 
-| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 4 Name 
-| [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) | Item Key Level 5 Code 
-| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 5 Name 
-| [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative) 
-| [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative) 
-| [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (38, 2) | Opening balance when it is credit 
-| [OpeningCreditBase](Finance.Accounting.TrialBalanceDetailed.md#openingcreditbase) | decimal (38, 2) | Opening balance in base currency when it is credit 
-| [OpeningDebit](Finance.Accounting.TrialBalanceDetailed.md#openingdebit) | decimal (38, 2) | Opening balance when it is debit 
-| [OpeningDebitBase](Finance.Accounting.TrialBalanceDetailed.md#openingdebitbase) | decimal (38, 2) | Opening balance in base currency when it is debit 
-| [OpeningReporting](Finance.Accounting.TrialBalanceDetailed.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency 
-| [ToDate](Finance.Accounting.TrialBalanceDetailed.md#todate) | date | Period End Date - Should be filtered with exact date 
+| [Closing](Finance.Accounting.TrialBalanceDetailed.md#closing) | decimal (38, 2) | Closing Balance (debit balance is positive, credit - negative)[Required] 
+| [ClosingBase](Finance.Accounting.TrialBalanceDetailed.md#closingbase) | decimal (38, 2) | Closing balance in base currency (debit balance is positive, credit - negative)[Required] 
+| [ClosingCredit](Finance.Accounting.TrialBalanceDetailed.md#closingcredit) | decimal (38, 2) | Closing balance when it is credit[Required] 
+| [ClosingCreditBase](Finance.Accounting.TrialBalanceDetailed.md#closingcreditbase) | decimal (38, 2) | Closing balance in base currency when it is credit[Required] 
+| [ClosingDebit](Finance.Accounting.TrialBalanceDetailed.md#closingdebit) | decimal (38, 2) | Closing balance when it is debit[Required] 
+| [ClosingDebitBase](Finance.Accounting.TrialBalanceDetailed.md#closingdebitbase) | decimal (38, 2) | Closing balance in base currency when it is debit[Required] 
+| [ClosingReporting](Finance.Accounting.TrialBalanceDetailed.md#closingreporting) | decimal (38, 2) | Closing balance in reporting currency[Required] 
+| [Credit](Finance.Accounting.TrialBalanceDetailed.md#credit) | decimal (38, 2) | Credit[Required] 
+| [CreditBase](Finance.Accounting.TrialBalanceDetailed.md#creditbase) | decimal (38, 2) | Credit Base[Required] 
+| [CreditReporting](Finance.Accounting.TrialBalanceDetailed.md#creditreporting) | decimal (38, 2) | Credit Reporting[Required] 
+| [Debit](Finance.Accounting.TrialBalanceDetailed.md#debit) | decimal (38, 2) | Debit[Required] 
+| [DebitBase](Finance.Accounting.TrialBalanceDetailed.md#debitbase) | decimal (38, 2) | Debit Base[Required] 
+| [DebitReporting](Finance.Accounting.TrialBalanceDetailed.md#debitreporting) | decimal (38, 2) | Debit Reporting[Required] 
+| [FromDate](Finance.Accounting.TrialBalanceDetailed.md#fromdate) | date | Period Start Date - Should be filtered with exact date[Required] [Filter(eq)] 
+| [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) | Item Key[Required] [Filter(eq;like)] 
+| [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) | Item Key Level 1 Code[Required] 
+| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 1 Name[Required] 
+| [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) | Item Key Level 2 Code[Required] 
+| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 2 Name[Required] 
+| [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) | Item Key Level 3 Code[Required] 
+| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 3 Name[Required] 
+| [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) | Item Key Level 4 Code[Required] 
+| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 4 Name[Required] 
+| [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) | Item Key Level 5 Code[Required] 
+| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 5 Name[Required] 
+| [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative)[Required] 
+| [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative)[Required] 
+| [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (38, 2) | Opening balance when it is credit[Required] 
+| [OpeningCreditBase](Finance.Accounting.TrialBalanceDetailed.md#openingcreditbase) | decimal (38, 2) | Opening balance in base currency when it is credit[Required] 
+| [OpeningDebit](Finance.Accounting.TrialBalanceDetailed.md#openingdebit) | decimal (38, 2) | Opening balance when it is debit[Required] 
+| [OpeningDebitBase](Finance.Accounting.TrialBalanceDetailed.md#openingdebitbase) | decimal (38, 2) | Opening balance in base currency when it is debit[Required] 
+| [OpeningReporting](Finance.Accounting.TrialBalanceDetailed.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency[Required] [Introduced in version 25.1.3.29] 
+| [ToDate](Finance.Accounting.TrialBalanceDetailed.md#todate) | date | Period End Date - Should be filtered with exact date[Required] [Filter(eq)] 
 
 ## References
 
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### Closing
 
-Closing Balance (debit balance is positive, credit - negative)
+Closing Balance (debit balance is positive, credit - negative)[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingBase
 
-Closing balance in base currency (debit balance is positive, credit - negative)
+Closing balance in base currency (debit balance is positive, credit - negative)[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingCredit
 
-Closing balance when it is credit
+Closing balance when it is credit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingCreditBase
 
-Closing balance in base currency when it is credit
+Closing balance in base currency when it is credit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingDebit
 
-Closing balance when it is debit
+Closing balance when it is debit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingDebitBase
 
-Closing balance in base currency when it is debit
+Closing balance in base currency when it is debit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### ClosingReporting
 
-Closing balance in reporting currency
+Closing balance in reporting currency[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -160,7 +160,7 @@ Show in UI: **ShownByDefault**
 
 ### Credit
 
-Credit
+Credit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditBase
 
-Credit Base
+Credit Base[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -180,7 +180,7 @@ Show in UI: **ShownByDefault**
 
 ### CreditReporting
 
-Credit Reporting
+Credit Reporting[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### Debit
 
-Debit
+Debit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### DebitBase
 
-Debit Base
+Debit Base[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -210,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### DebitReporting
 
-Debit Reporting
+Debit Reporting[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -220,7 +220,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Period Start Date - Should be filtered with exact date
+Period Start Date - Should be filtered with exact date[Required] [Filter(eq)]
 
 Type: **date**  
 Category: **System**  
@@ -230,7 +230,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key
+Item Key[Required] [Filter(eq;like)]
 
 Type: **string (64)**  
 Category: **System**  
@@ -241,7 +241,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel1Code
 
-Item Key Level 1 Code
+Item Key Level 1 Code[Required]
 
 Type: **string (40)**  
 Category: **System**  
@@ -252,7 +252,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel1Name
 
-Item Key Level 1 Name
+Item Key Level 1 Name[Required]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -262,7 +262,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel2Code
 
-Item Key Level 2 Code
+Item Key Level 2 Code[Required]
 
 Type: **string (40)**  
 Category: **System**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel2Name
 
-Item Key Level 2 Name
+Item Key Level 2 Name[Required]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -283,7 +283,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel3Code
 
-Item Key Level 3 Code
+Item Key Level 3 Code[Required]
 
 Type: **string (40)**  
 Category: **System**  
@@ -294,7 +294,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel3Name
 
-Item Key Level 3 Name
+Item Key Level 3 Name[Required]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel4Code
 
-Item Key Level 4 Code
+Item Key Level 4 Code[Required]
 
 Type: **string (40)**  
 Category: **System**  
@@ -315,7 +315,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel4Name
 
-Item Key Level 4 Name
+Item Key Level 4 Name[Required]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -325,7 +325,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel5Code
 
-Item Key Level 5 Code
+Item Key Level 5 Code[Required]
 
 Type: **string (40)**  
 Category: **System**  
@@ -336,7 +336,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel5Name
 
-Item Key Level 5 Name
+Item Key Level 5 Name[Required]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -346,7 +346,7 @@ Show in UI: **ShownByDefault**
 
 ### Opening
 
-Opening balance (debit balance is positive, credit - negative)
+Opening balance (debit balance is positive, credit - negative)[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -356,7 +356,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningBase
 
-Opening balance in base currency (debit balance is positive, credit - negative)
+Opening balance in base currency (debit balance is positive, credit - negative)[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -366,7 +366,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningCredit
 
-Opening balance when it is credit
+Opening balance when it is credit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -376,7 +376,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningCreditBase
 
-Opening balance in base currency when it is credit
+Opening balance in base currency when it is credit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -386,7 +386,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningDebit
 
-Opening balance when it is debit
+Opening balance when it is debit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -396,7 +396,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningDebitBase
 
-Opening balance in base currency when it is debit
+Opening balance in base currency when it is debit[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -406,7 +406,7 @@ Show in UI: **ShownByDefault**
 
 ### OpeningReporting
 
-Opening balance in reporting currency
+Opening balance in reporting currency[Required] [Introduced in version 25.1.3.29]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -416,7 +416,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Period End Date - Should be filtered with exact date
+Period End Date - Should be filtered with exact date[Required] [Filter(eq)]
 
 Type: **date**  
 Category: **System**  

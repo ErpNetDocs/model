@@ -34,11 +34,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. 
-| [PinCode](Crm.Pos.Operators.md#pincode) | string (4) | 4-character PIN used to authenticate the POS operator. 
-| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string (16) | Operator code. Unique within the Pos Location. 
-| [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location. 
-| [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date __nullable__ | The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown. 
+| [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records.[Required] [Default(true)] [Filter(multi eq)] 
+| [PinCode](Crm.Pos.Operators.md#pincode) | string (4) | 4-character PIN used to authenticate the POS operator.[Required] [Default(&quot;0000&quot;)] [Introduced in version 26.2.1.26] 
+| [PosOperatorCode](Crm.Pos.Operators.md#posoperatorcode) | string (16) | Operator code. Unique within the Pos Location.[Required] [Filter(multi eq;like)] [ORD] 
+| [StartingDate](Crm.Pos.Operators.md#startingdate) | date | The first date, when the operator has started working for this POS location.[Required] [Filter(multi eq;ge;le)] 
+| [TerminationDate](Crm.Pos.Operators.md#terminationdate) | date __nullable__ | The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.[Filter(multi eq;ge;le)] 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether this operator is active and can be chosen for new records.
+Indicates whether this operator is active and can be chosen for new records.[Required] [Default(true)] [Filter(multi eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### PinCode
 
-4-character PIN used to authenticate the POS operator.
+4-character PIN used to authenticate the POS operator.[Required] [Default(&quot;0000&quot;)] [Introduced in version 26.2.1.26]
 
 Type: **string (4)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### PosOperatorCode
 
-Operator code. Unique within the Pos Location.
+Operator code. Unique within the Pos Location.[Required] [Filter(multi eq;like)] [ORD]
 
 Type: **string (16)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### StartingDate
 
-The first date, when the operator has started working for this POS location.
+The first date, when the operator has started working for this POS location.[Required] [Filter(multi eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### TerminationDate
 
-The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.
+The date, when the operator has ceased working in this POS location. NULL means, that the operator is still working or the termination date is still unknown.[Filter(multi eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

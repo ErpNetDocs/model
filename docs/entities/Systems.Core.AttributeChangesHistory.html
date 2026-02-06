@@ -117,7 +117,7 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#attributename">AttributeName</a></td>
 <td>string (64)</td>
-<td>The name of the attribute.</td>
+<td>The name of the attribute.[Required] [Filter(eq)] [Inherited from Sys_Attribute_<br>Changes_Table.Attribute_Name]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#entityitemid">EntityItemId</a></td>
@@ -127,22 +127,22 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#newvalue">NewValue</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The new value</td>
+<td>The new value[Filter(eq;like)] [Inherited from Sys_Attribute_<br>Changes_Table.New_Value]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#previousvalue">PreviousValue</a></td>
 <td>string (max)</td>
-<td>The previous value</td>
+<td>The previous value[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#repositoryname">RepositoryName</a></td>
 <td>string (64)</td>
-<td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</td>
+<td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.[Required] [Filter(multi eq;like)] [Inherited from Sys_Object_Changes_Table.Repository_Name]</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.AttributeChangesHistory.html#timeutc">TimeUtc</a></td>
 <td>datetime</td>
-<td>Date and time (in Utc) when the changeset was processed by the server.</td>
+<td>Date and time (in Utc) when the changeset was processed by the server.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD] [Inherited from Sys_Object_Changesets_<br>Table.Time_Utc]</td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +165,7 @@ Show in UI:  ShownByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="attributename">AttributeName</h3>
-<p>The name of the attribute.</p>
+<p>The name of the attribute.[Required] [Filter(eq)] [Inherited from Sys_Attribute_Changes_Table.Attribute_Name]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Attribute_Changes_Table.Attribute_Name</strong><br>
@@ -181,7 +181,7 @@ Inherited From: <strong>Sys_Object_Changes_Table.Entity_Item_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="newvalue">NewValue</h3>
-<p>The new value</p>
+<p>The new value[Filter(eq;like)] [Inherited from Sys_Attribute_Changes_Table.New_Value]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Attribute_Changes_Table.New_Value</strong><br>
@@ -190,7 +190,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="previousvalue">PreviousValue</h3>
-<p>The previous value</p>
+<p>The previous value[Required] [Filter(eq)]</p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -198,7 +198,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
-<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.</p>
+<p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.[Required] [Filter(multi eq;like)] [Inherited from Sys_Object_Changes_Table.Repository_Name]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Object_Changes_Table.Repository_Name</strong><br>
@@ -207,7 +207,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timeutc">TimeUtc</h3>
-<p>Date and time (in Utc) when the changeset was processed by the server.</p>
+<p>Date and time (in Utc) when the changeset was processed by the server.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD] [Inherited from Sys_Object_Changesets_Table.Time_Utc]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Sys_Object_Changesets_Table.Time_Utc</strong><br>

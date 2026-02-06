@@ -43,10 +43,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentsDescription](Logistics.Transportation.TransportationRequisitionLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. 
+| [ContentsDescription](Logistics.Transportation.TransportationRequisitionLines.md#contentsdescription) | string (128) | Textual description of the cargo contents.[Required] 
 | [LineNo](Logistics.Transportation.TransportationRequisitionLines.md#lineno) | int32 | Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
 | [PalletsCount](Logistics.Transportation.TransportationRequisitionLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. NULL when it is unknown. 
-| [ParentLineNo](Logistics.Transportation.TransportationRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line. 
+| [ParentLineNo](Logistics.Transportation.TransportationRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Filter(eq)] 
 | [VolumeCbm](Logistics.Transportation.TransportationRequisitionLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). NULL when it is unknown. 
 | [WeightKg](Logistics.Transportation.TransportationRequisitionLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). NULL when it is unknown. 
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### ContentsDescription
 
-Textual description of the cargo contents.
+Textual description of the cargo contents.[Required]
 
 Type: **string (128)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Filter(eq)]
 
 Type: **int32 __nullable__**  
 Category: **System**  

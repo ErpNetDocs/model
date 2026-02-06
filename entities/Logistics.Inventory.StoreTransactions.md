@@ -51,7 +51,7 @@ Aggregate Tree
 | [AdjustmentTime](Logistics.Inventory.StoreTransactions.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Logistics.Inventory.StoreTransactions.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CompleteTime](Logistics.Inventory.StoreTransactions.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). 
+| [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).[Required] [ReadOnly] 
 | [CreationTime](Logistics.Inventory.StoreTransactions.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Inventory.StoreTransactions.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentDate](Logistics.Inventory.StoreTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -60,11 +60,11 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Inventory.StoreTransactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.StoreTransactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Inventory.StoreTransactions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.StoreTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsScrap](Logistics.Inventory.StoreTransactions.md#isscrap) | boolean | 0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap. 
-| [IsSingleExecution](Logistics.Inventory.StoreTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
-| [IsValidField](Logistics.Inventory.StoreTransactions.md#isvalidfield) | boolean | Managed by the system and used only for integrity purposes. Do not use. 
-| [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | Transaction movement type. R=RECEIPT, I=ISSUE 
+| [<s>IsReleased</s>](Logistics.Inventory.StoreTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsScrap](Logistics.Inventory.StoreTransactions.md#isscrap) | boolean | 0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.[Required] [Default(false)] [Filter(eq)] 
+| [IsSingleExecution](Logistics.Inventory.StoreTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [IsValidField](Logistics.Inventory.StoreTransactions.md#isvalidfield) | boolean | Managed by the system and used only for integrity purposes. Do not use.[Required] [Default(false)] [ReadOnly] 
+| [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | Transaction movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)] 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreTransactions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreTransactions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.StoreTransactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.StoreTransactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### CostSource
 
-Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).
+Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).[Required] [ReadOnly]
 
 Type: **[CostSource](Logistics.Inventory.StoreTransactions.md#costsource)**  
 Category: **System**  
@@ -293,7 +293,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -304,7 +304,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsScrap
 
-0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.
+0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -315,7 +315,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -326,7 +326,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsValidField
 
-Managed by the system and used only for integrity purposes. Do not use.
+Managed by the system and used only for integrity purposes. Do not use.[Required] [Default(false)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -337,7 +337,7 @@ Show in UI: **CannotBeShown**
 
 ### MovementType
 
-Transaction movement type. R=RECEIPT, I=ISSUE
+Transaction movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)]
 
 Type: **[MovementType](Logistics.Inventory.StoreTransactions.md#movementtype)**  
 Category: **System**  

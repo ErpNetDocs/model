@@ -35,32 +35,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActiveFrom](Applications.Fleet.Vehicles.md#activefrom) | datetime __nullable__ | The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. 
-| [ActiveTill](Applications.Fleet.Vehicles.md#activetill) | datetime __nullable__ | The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. 
+| [ActiveFrom](Applications.Fleet.Vehicles.md#activefrom) | datetime __nullable__ | The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.[Filter(ge;le)] [Introduced in version 18.2] 
+| [ActiveTill](Applications.Fleet.Vehicles.md#activetill) | datetime __nullable__ | The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.[Filter(ge;le)] [Introduced in version 18.2] 
 | [AuthorityMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#authoritymaximumladenmasskg) | int32 __nullable__ | Maximum permissible laden mass, as determined by the registration authority 
-| [CrewCount](Applications.Fleet.Vehicles.md#crewcount) | int32 __nullable__ | Crew members count. For road vehicles = 1; for trailers, coaches and wagons = 0; air and water vehicles may have higher counts 
-| [EngineIdentificationNumber](Applications.Fleet.Vehicles.md#engineidentificationnumber) | string (20) __nullable__ | Serial number of the engine 
-| [EnginePowerhp](Applications.Fleet.Vehicles.md#enginepowerhp) | int32 __nullable__ | Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine 
-| [EngineSizecc](Applications.Fleet.Vehicles.md#enginesizecc) | int32 __nullable__ | Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors) 
+| [CrewCount](Applications.Fleet.Vehicles.md#crewcount) | int32 __nullable__ | Crew members count. For road vehicles = 1; for trailers, coaches and wagons = 0; air and water vehicles may have higher counts[Default(1)] [Filter(eq;ge;le)] 
+| [EngineIdentificationNumber](Applications.Fleet.Vehicles.md#engineidentificationnumber) | string (20) __nullable__ | Serial number of the engine[Filter(eq;like)] 
+| [EnginePowerhp](Applications.Fleet.Vehicles.md#enginepowerhp) | int32 __nullable__ | Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine[Filter(eq;ge;le)] 
+| [EngineSizecc](Applications.Fleet.Vehicles.md#enginesizecc) | int32 __nullable__ | Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)[Filter(eq;ge;le)] 
 | [FuelCapacity](Applications.Fleet.Vehicles.md#fuelcapacity) | int32 __nullable__ | Maximum fuel capacity of the engine or the battery in the fuel measurement unit 
 | [FuelCompsumption](Applications.Fleet.Vehicles.md#fuelcompsumption) | decimal (7, 1) __nullable__ | Average fuel consumption in the fuel measurement unit for 1 operational unit 
-| [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string (64) __nullable__ | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. 
-| [IsActive](Applications.Fleet.Vehicles.md#isactive) | boolean | True if the vehicle is still owned and managed by the enterprise. 
-| [IssuingAuthority](Applications.Fleet.Vehicles.md#issuingauthority) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable 
-| [Make](Applications.Fleet.Vehicles.md#make) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The name of the manufacturer of the vehicle. NULL means that the value is unknown 
-| [ManufactureYear](Applications.Fleet.Vehicles.md#manufactureyear) | int32 __nullable__ | The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown 
+| [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string (64) __nullable__ | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.[Filter(eq;like)] 
+| [IsActive](Applications.Fleet.Vehicles.md#isactive) | boolean | True if the vehicle is still owned and managed by the enterprise.[Required] [Default(true)] [Filter(eq)] [Introduced in version 18.2] 
+| [IssuingAuthority](Applications.Fleet.Vehicles.md#issuingauthority) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable[Filter(eq;like)] 
+| [Make](Applications.Fleet.Vehicles.md#make) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The name of the manufacturer of the vehicle. NULL means that the value is unknown[Filter(eq;like)] 
+| [ManufactureYear](Applications.Fleet.Vehicles.md#manufactureyear) | int32 __nullable__ | The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown[Filter(eq;ge;le)] 
 | [MaximumSpeedKmH](Applications.Fleet.Vehicles.md#maximumspeedkmh) | int32 __nullable__ | Maximum speed in km/h 
-| [Model](Applications.Fleet.Vehicles.md#model) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The model of the vehicle 
+| [Model](Applications.Fleet.Vehicles.md#model) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The model of the vehicle[Filter(eq;like)] 
 | [Notes](Applications.Fleet.Vehicles.md#notes) | string (max) __nullable__ | Notes for this Vehicle. 
-| [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The primary color of the vehicle. NULL means that the value is unknown or not applicable 
-| [SeatingPlacesCount](Applications.Fleet.Vehicles.md#seatingplacescount) | int32 __nullable__ | Number of seating places, excluding driver 
+| [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The primary color of the vehicle. NULL means that the value is unknown or not applicable[Filter(eq;like)] 
+| [SeatingPlacesCount](Applications.Fleet.Vehicles.md#seatingplacescount) | int32 __nullable__ | Number of seating places, excluding driver[Filter(eq;ge;le)] 
 | [StandingPlacesCount](Applications.Fleet.Vehicles.md#standingplacescount) | int32 __nullable__ | Number of standing places, if applicable 
 | [TechnicalMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#technicalmaximumladenmasskg) | int32 __nullable__ | Maximum technically permissible laden mass in kg 
 | [TrainsetMaximumLadenMassKg](Applications.Fleet.Vehicles.md#trainsetmaximumladenmasskg) | int32 __nullable__ | Maximum permissible laden mass of a whole trainset, including the vehicle 
-| [VehicleIdentification<br />Number](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string (20) __nullable__ | Serial number of the vehicle's chassis 
+| [VehicleIdentification<br />Number](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string (20) __nullable__ | Serial number of the vehicle's chassis[Filter(eq;like)] 
 | [VehicleMassKg](Applications.Fleet.Vehicles.md#vehiclemasskg) | int32 __nullable__ | Vehicle own mass in kg 
-| [VehicleRegistrationNumber](Applications.Fleet.Vehicles.md#vehicleregistrationnumber) | string (16) | The registration plate number. Can be numeric or alphanumeric code. It should be unique value. 
-| [VehicleType](Applications.Fleet.Vehicles.md#vehicletype) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown 
+| [VehicleRegistrationNumber](Applications.Fleet.Vehicles.md#vehicleregistrationnumber) | string (16) | The registration plate number. Can be numeric or alphanumeric code. It should be unique value.[Required] [Filter(eq;like)] 
+| [VehicleType](Applications.Fleet.Vehicles.md#vehicletype) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown[Filter(eq;like)] 
 
 ## References
 
@@ -97,7 +97,7 @@ Aggregate Tree
 
 ### ActiveFrom
 
-The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.
+The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.[Filter(ge;le)] [Introduced in version 18.2]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### ActiveTill
 
-The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.
+The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.[Filter(ge;le)] [Introduced in version 18.2]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### CrewCount
 
-Crew members count. For road vehicles = 1; for trailers, coaches and wagons = 0; air and water vehicles may have higher counts
+Crew members count. For road vehicles = 1; for trailers, coaches and wagons = 0; air and water vehicles may have higher counts[Default(1)] [Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### EngineIdentificationNumber
 
-Serial number of the engine
+Serial number of the engine[Filter(eq;like)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### EnginePowerhp
 
-Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine
+Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine[Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **ShownByDefault**
 
 ### EngineSizecc
 
-Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)
+Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)[Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### FuelType
 
-Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.
+Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True if the vehicle is still owned and managed by the enterprise.
+True if the vehicle is still owned and managed by the enterprise.[Required] [Default(true)] [Filter(eq)] [Introduced in version 18.2]
 
 Type: **boolean**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### IssuingAuthority
 
-The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable
+The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable[Filter(eq;like)]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -221,7 +221,7 @@ Show in UI: **ShownByDefault**
 
 ### Make
 
-The name of the manufacturer of the vehicle. NULL means that the value is unknown
+The name of the manufacturer of the vehicle. NULL means that the value is unknown[Filter(eq;like)]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -231,7 +231,7 @@ Show in UI: **ShownByDefault**
 
 ### ManufactureYear
 
-The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown
+The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown[Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -251,7 +251,7 @@ Show in UI: **ShownByDefault**
 
 ### Model
 
-The model of the vehicle
+The model of the vehicle[Filter(eq;like)]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### PrimaryColor
 
-The primary color of the vehicle. NULL means that the value is unknown or not applicable
+The primary color of the vehicle. NULL means that the value is unknown or not applicable[Filter(eq;like)]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -282,7 +282,7 @@ Show in UI: **ShownByDefault**
 
 ### SeatingPlacesCount
 
-Number of seating places, excluding driver
+Number of seating places, excluding driver[Filter(eq;ge;le)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -322,7 +322,7 @@ Show in UI: **ShownByDefault**
 
 ### VehicleIdentificationNumber
 
-Serial number of the vehicle's chassis
+Serial number of the vehicle's chassis[Filter(eq;like)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -343,7 +343,7 @@ Show in UI: **ShownByDefault**
 
 ### VehicleRegistrationNumber
 
-The registration plate number. Can be numeric or alphanumeric code. It should be unique value.
+The registration plate number. Can be numeric or alphanumeric code. It should be unique value.[Required] [Filter(eq;like)]
 
 Type: **string (16)**  
 Category: **System**  
@@ -354,7 +354,7 @@ Show in UI: **ShownByDefault**
 
 ### VehicleType
 
-Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown
+Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown[Filter(eq;like)]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  

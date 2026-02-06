@@ -28,12 +28,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime | The date on which the document was issued. 
-| [IsFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. 
-| [IsQuantityFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling. 
-| [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE 
-| [OrderRemainingLineCost](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremaininglinecost) | decimal (38, 2) | The remaining (unfulfilled) line cost of the order line. 
-| [OrderRemainingQuantityBase](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremainingquantitybase) | decimal (38, 3) | The remaining (unfulfilled) quantity of the order line in base measurement unit. 
+| [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime | The date on which the document was issued.[Required] [Default(Today)] [Filter(eq;ge;le)] [Inherited from Gen_Documents_Table.Document_Date] 
+| [IsFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)] 
+| [IsQuantityFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)] 
+| [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Movement_Type] 
+| [OrderRemainingLineCost](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremaininglinecost) | decimal (38, 2) | The remaining (unfulfilled) line cost of the order line.[Required] [Filter(multi eq;ge;le)] 
+| [OrderRemainingQuantityBase](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#orderremainingquantitybase) | decimal (38, 3) | The remaining (unfulfilled) quantity of the order line in base measurement unit.[Required] [Filter(multi eq;ge;le)] 
 
 ## References
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 ### DocumentDate
 
-The date on which the document was issued.
+The date on which the document was issued.[Required] [Default(Today)] [Filter(eq;ge;le)] [Inherited from Gen_Documents_Table.Document_Date]
 
 Type: **datetime**  
 Category: **System**  
@@ -65,7 +65,7 @@ Show in UI: **ShownByDefault**
 
 ### IsFulfilled
 
-Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.
+Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### IsQuantityFulfilled
 
-Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.
+Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### MovementType
 
-Store order movement type. R=RECEIPT, I=ISSUE
+Store order movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Movement_Type]
 
 Type: **[MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderRemainingLineCost
 
-The remaining (unfulfilled) line cost of the order line.
+The remaining (unfulfilled) line cost of the order line.[Required] [Filter(multi eq;ge;le)]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderRemainingQuantityBase
 
-The remaining (unfulfilled) quantity of the order line in base measurement unit.
+The remaining (unfulfilled) quantity of the order line in base measurement unit.[Required] [Filter(multi eq;ge;le)]
 
 Type: **decimal (38, 3)**  
 Category: **System**  

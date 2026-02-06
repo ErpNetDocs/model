@@ -69,19 +69,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Documents.DocumentTypes.md#code) | string (16) | Unique descriptive code of the document type 
-| [CreateFulfillments<br />OnCompletion](Systems.Documents.DocumentTypes.md#createfulfillmentsoncompletion) | boolean | When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents. 
-| [CreateManully](Systems.Documents.DocumentTypes.md#createmanully) | boolean | 0 if documents with this document type only can be generated; 1 - the user can create documents with this type 
+| [Code](Systems.Documents.DocumentTypes.md#code) | string (16) | Unique descriptive code of the document type[Required] [Filter(eq;like)] [ORD] 
+| [CreateFulfillments<br />OnCompletion](Systems.Documents.DocumentTypes.md#createfulfillmentsoncompletion) | boolean | When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.[Required] [Default(false)] [Introduced in version 23.1.2.9] 
+| [CreateManully](Systems.Documents.DocumentTypes.md#createmanully) | boolean | 0 if documents with this document type only can be generated; 1 - the user can create documents with this type[Required] [Default(true)] [Filter(eq)] 
 | [Description](Systems.Documents.DocumentTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of this DocumentType. 
-| [DisallowOpposite<br />ValuesGeneration](Systems.Documents.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type. 
-| [EntityName](Systems.Documents.DocumentTypes.md#entityname) | string (64) | System entity, which contains the documents 
-| [GenerateSingleDocument](Systems.Documents.DocumentTypes.md#generatesingledocument) | boolean | Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1). 
+| [DisallowOpposite<br />ValuesGeneration](Systems.Documents.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.[Required] [Default(false)] 
+| [EntityName](Systems.Documents.DocumentTypes.md#entityname) | string (64) | System entity, which contains the documents[Required] [Filter(multi eq)] [ORD] 
+| [GenerateSingleDocument](Systems.Documents.DocumentTypes.md#generatesingledocument) | boolean | Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).[Required] [Default(false)] 
 | [Notes](Systems.Documents.DocumentTypes.md#notes) | string (254) __nullable__ | Notes for this DocumentType. 
 | [SchemaXML](Systems.Documents.DocumentTypes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. 
-| [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents. 
-| [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | Enable/disable print images tracking for documents from this type. 
-| [TransitionalDocument](Systems.Documents.DocumentTypes.md#transitionaldocument) | boolean | If checked determines that the documents from this type are automatically managed by the system and don't require management from the users. 
-| [TypeName](Systems.Documents.DocumentTypes.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the document type 
+| [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.[Required] [Default(&quot;DEF&quot;)] [Filter(eq)] [Introduced in version 24.1.3.37] 
+| [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | Enable/disable print images tracking for documents from this type.[Required] [Default(&quot;SDC&quot;)] [Filter(eq)] [Introduced in version 24.1.3.95] 
+| [TransitionalDocument](Systems.Documents.DocumentTypes.md#transitionaldocument) | boolean | If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.[Required] [Default(false)] 
+| [TypeName](Systems.Documents.DocumentTypes.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the document type[Required] [Filter(like)] 
 
 ## References
 
@@ -130,7 +130,7 @@ Aggregate Tree
 
 ### Code
 
-Unique descriptive code of the document type
+Unique descriptive code of the document type[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### CreateFulfillmentsOnCompletion
 
-When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.
+When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.[Required] [Default(false)] [Introduced in version 23.1.2.9]
 
 Type: **boolean**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### CreateManully
 
-0 if documents with this document type only can be generated; 1 - the user can create documents with this type
+0 if documents with this document type only can be generated; 1 - the user can create documents with this type[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### DisallowOppositeValuesGeneration
 
-Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.
+Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **HiddenByDefault**
 
 ### EntityName
 
-System entity, which contains the documents
+System entity, which contains the documents[Required] [Filter(multi eq)] [ORD]
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -199,7 +199,7 @@ Show in UI: **ShownByDefault**
 
 ### GenerateSingleDocument
 
-Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).
+Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -232,7 +232,7 @@ Show in UI: **CannotBeShown**
 
 ### TrackAttributeChanges
 
-Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.
+Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.[Required] [Default(&quot;DEF&quot;)] [Filter(eq)] [Introduced in version 24.1.3.37]
 
 Type: **[TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges)**  
 Category: **System**  
@@ -252,7 +252,7 @@ Show in UI: **ShownByDefault**
 
 ### TrackPrintImages
 
-Enable/disable print images tracking for documents from this type.
+Enable/disable print images tracking for documents from this type.[Required] [Default(&quot;SDC&quot;)] [Filter(eq)] [Introduced in version 24.1.3.95]
 
 Type: **[TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages)**  
 Category: **System**  
@@ -271,7 +271,7 @@ Show in UI: **ShownByDefault**
 
 ### TransitionalDocument
 
-If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.
+If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -284,7 +284,7 @@ Front-End Recalc Expressions:
 `IIF( obj.CreateManully, False, obj.TransitionalDocument)`
 ### TypeName
 
-Description of the document type
+Description of the document type[Required] [Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  

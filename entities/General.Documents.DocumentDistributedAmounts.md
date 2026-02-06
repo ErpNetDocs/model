@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](General.Documents.DocumentDistributedAmounts.md#amount) | [Amount (14, 2)](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. 
-| [BaseAmount](General.Documents.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system).  
+| [Amount](General.Documents.DocumentDistributedAmounts.md#amount) | [Amount (14, 2)](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document.[Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)] 
+| [BaseAmount](General.Documents.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). [Currency: GetDocumentCurrency()] [Introduced in version 22.1.4.44] 
 | [DocumentLineId](General.Documents.DocumentDistributedAmounts.md#documentlineid) | guid __nullable__ | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 
 ## References
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### Amount
 
-The amount which has beed distributed over the current line. The amount is in the currency of the document.
+The amount which has beed distributed over the current line. The amount is in the currency of the document.[Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseAmount
 
-The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system).
+The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). [Currency: GetDocumentCurrency()] [Introduced in version 22.1.4.44]
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  

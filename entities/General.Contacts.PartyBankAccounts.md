@@ -36,12 +36,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string (50) | The code of the account, usually the IBAN code 
+| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string (50) | The code of the account, usually the IBAN code[Required] [Filter(eq;like)] 
 | [BankAddress](General.Contacts.PartyBankAccounts.md#bankaddress) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments 
 | [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments 
-| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (30) __nullable__ | The code of the bank, usually the BIC code 
-| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The full name of the bank 
-| [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | 1 if the this is the default account for the party. Only one default per party is allowed 
+| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (30) __nullable__ | The code of the bank, usually the BIC code[Filter(eq)] 
+| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The full name of the bank[Filter(like)] 
+| [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | 1 if the this is the default account for the party. Only one default per party is allowed[Required] [Default(false)] [Filter(eq)] 
 | [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. 
 
 ## References
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### BankAccountCode
 
-The code of the account, usually the IBAN code
+The code of the account, usually the IBAN code[Required] [Filter(eq;like)]
 
 Type: **string (50)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### BankCode
 
-The code of the bank, usually the BIC code
+The code of the bank, usually the BIC code[Filter(eq)]
 
 Type: **string (30) __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### BankName
 
-The full name of the bank
+The full name of the bank[Filter(like)]
 
 Type: **[MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-1 if the this is the default account for the party. Only one default per party is allowed
+1 if the this is the default account for the party. Only one default per party is allowed[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  

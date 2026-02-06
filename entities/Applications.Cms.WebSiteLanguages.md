@@ -40,8 +40,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. 
-| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string (2) | Two letter ISO language code. Sub-tags are currently not supported. 
+| [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web.[Required] [Default(false)] 
+| [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string (2) | Two letter ISO language code. Sub-tags are currently not supported.[Required] 
 | [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string (max) __nullable__ | Notes for this WebSiteLanguage. 
 
 ## References
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### IsActive
 
-Specifies whether the support for the language is activated and should be published on the web.
+Specifies whether the support for the language is activated and should be published on the web.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### LanguageCode
 
-Two letter ISO language code. Sub-tags are currently not supported.
+Two letter ISO language code. Sub-tags are currently not supported.[Required]
 
 Type: **string (2)**  
 Category: **System**  

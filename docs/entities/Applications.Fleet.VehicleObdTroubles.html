@@ -126,7 +126,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#diagnostictroublecode">DiagnosticTroubleCode</a></td>
 <td>string (5)</td>
-<td>Standartized OBD-II diagnostic trouble code.</td>
+<td>Standartized OBD-II diagnostic trouble code.[Required]</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#manufacturertroublecode">ManufacturerTroubleCode</a></td>
@@ -136,7 +136,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.VehicleObdTroubles.html#occurencedatetime">OccurenceDateTime</a></td>
 <td>datetime</td>
-<td>Date and time (UTC) when the trouble was detected.</td>
+<td>Date and time (UTC) when the trouble was detected.[Required] [Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="diagnostictroublecode">DiagnosticTroubleCode</h3>
-<p>Standartized OBD-II diagnostic trouble code.</p>
+<p>Standartized OBD-II diagnostic trouble code.[Required]</p>
 <p>Type: <strong>string (5)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -225,7 +225,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="occurencedatetime">OccurenceDateTime</h3>
-<p>Date and time (UTC) when the trouble was detected.</p>
+<p>Date and time (UTC) when the trouble was detected.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

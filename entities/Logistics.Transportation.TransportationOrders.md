@@ -58,13 +58,13 @@ Aggregate Tree
 | [AdjustmentNumber](Logistics.Transportation.TransportationOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Logistics.Transportation.TransportationOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Logistics.Transportation.TransportationOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ArrivalDate](Logistics.Transportation.TransportationOrders.md#arrivaldate) | date | Planned arrival date. 
-| [ArrivalTime](Logistics.Transportation.TransportationOrders.md#arrivaltime) | time | Planned arrival time. 
+| [ArrivalDate](Logistics.Transportation.TransportationOrders.md#arrivaldate) | date | Planned arrival date.[Required] [Filter(ge;le)] 
+| [ArrivalTime](Logistics.Transportation.TransportationOrders.md#arrivaltime) | time | Planned arrival time.[Required] [Filter(ge;le)] 
 | [CompleteTime](Logistics.Transportation.TransportationOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Logistics.Transportation.TransportationOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Transportation.TransportationOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DepartureDate](Logistics.Transportation.TransportationOrders.md#departuredate) | date | Planned departure date. 
-| [DepartureTime](Logistics.Transportation.TransportationOrders.md#departuretime) | time | Planned departure time. 
+| [DepartureDate](Logistics.Transportation.TransportationOrders.md#departuredate) | date | Planned departure date.[Required] [Filter(ge;le)] 
+| [DepartureTime](Logistics.Transportation.TransportationOrders.md#departuretime) | time | Planned departure time.[Required] [Filter(ge;le)] 
 | [DocumentDate](Logistics.Transportation.TransportationOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Logistics.Transportation.TransportationOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Logistics.Transportation.TransportationOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -177,7 +177,7 @@ Show in UI: **HiddenByDefault**
 
 ### ArrivalDate
 
-Planned arrival date.
+Planned arrival date.[Required] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### ArrivalTime
 
-Planned arrival time.
+Planned arrival time.[Required] [Filter(ge;le)]
 
 Type: **time**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **HiddenByDefault**
 
 ### DepartureDate
 
-Planned departure date.
+Planned departure date.[Required] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **ShownByDefault**
 
 ### DepartureTime
 
-Planned departure time.
+Planned departure time.[Required] [Filter(ge;le)]
 
 Type: **time**  
 Category: **System**  

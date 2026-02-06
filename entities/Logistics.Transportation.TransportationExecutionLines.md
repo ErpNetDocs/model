@@ -44,11 +44,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExecutionDate](Logistics.Transportation.TransportationExecutionLines.md#executiondate) | date | The date when the operation was executed. 
-| [ExecutionTime](Logistics.Transportation.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed. 
-| [LineNo](Logistics.Transportation.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution. 
+| [ExecutionDate](Logistics.Transportation.TransportationExecutionLines.md#executiondate) | date | The date when the operation was executed.[Required] [Filter(ge;le)] 
+| [ExecutionTime](Logistics.Transportation.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed.[Required] [Filter(ge;le)] 
+| [LineNo](Logistics.Transportation.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution.[Required] 
 | [Notes](Logistics.Transportation.TransportationExecutionLines.md#notes) | string (max) __nullable__ | Notes for this Transportation<br />ExecutionLine. 
-| [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other. 
+| [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other.[Required] 
 | [PalletNumber](Logistics.Transportation.TransportationExecutionLines.md#palletnumber) | string (32) __nullable__ | Pallet number, when applicable. NULL when unknown or not applicable. 
 | [PalletsCount](Logistics.Transportation.TransportationExecutionLines.md#palletscount) | int32 __nullable__ | Number of pallets affected by this operation. NULL when unknown or N/A. 
 | [VolumeCbm](Logistics.Transportation.TransportationExecutionLines.md#volumecbm) | int32 __nullable__ | Cargo volume in cubic meters, affected by this operation. NULL when unknown or N/A. 
@@ -77,7 +77,7 @@ Aggregate Root:
 
 ### ExecutionDate
 
-The date when the operation was executed.
+The date when the operation was executed.[Required] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -92,7 +92,7 @@ Front-End Recalc Expressions:
 `obj.TransportationExecution.ExecutionDate`
 ### ExecutionTime
 
-The time when the operation was executed.
+The time when the operation was executed.[Required] [Filter(ge;le)]
 
 Type: **time**  
 Category: **System**  
@@ -107,7 +107,7 @@ Front-End Recalc Expressions:
 `obj.TransportationExecution.ExecutionTime`
 ### LineNo
 
-Consecutive line number within this execution.
+Consecutive line number within this execution.[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationType
 
-The type of operation being executed. L=Loading; U=Unloading; O=Other.
+The type of operation being executed. L=Loading; U=Unloading; O=Other.[Required]
 
 Type: **[OperationType](Logistics.Transportation.TransportationExecutionLines.md#operationtype)**  
 Category: **System**  

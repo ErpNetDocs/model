@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines. 
-| [EntityKind](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. 
-| [Notes](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping. 
+| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines.[Required] [Default(&quot;D&quot;)] [Filter(eq)] 
+| [EntityKind](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.[Required] [Default(&quot;S&quot;)] [Filter(eq)] 
+| [Notes](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.[Filter(like)] 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### DebitCreditIndicator
 
-Debit/credit indicator for SAF-T invoice lines.
+Debit/credit indicator for SAF-T invoice lines.[Required] [Default(&quot;D&quot;)] [Filter(eq)]
 
 Type: **[DebitCreditIndicator](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#debitcreditindicator)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityKind
 
-Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.
+Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.[Required] [Default(&quot;S&quot;)] [Filter(eq)]
 
 Type: **[EntityKind](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md#entitykind)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments about the mapping.
+Additional information or comments about the mapping.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  

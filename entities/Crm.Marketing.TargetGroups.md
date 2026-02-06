@@ -35,9 +35,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.TargetGroups.md#code) | string (16) | Short code for identification of target groups. 
+| [Code](Crm.Marketing.TargetGroups.md#code) | string (16) | Short code for identification of target groups.[Required] [Filter(eq;like)] [ORD] 
 | [Description](Crm.Marketing.TargetGroups.md#description) | string (254) __nullable__ | The description of this TargetGroup. 
-| [IsActive](Crm.Marketing.TargetGroups.md#isactive) | boolean | Indicates whether the current Target group is active. 
+| [IsActive](Crm.Marketing.TargetGroups.md#isactive) | boolean | Indicates whether the current Target group is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
 | [Name](Crm.Marketing.TargetGroups.md#name) | string (64) | The name of this TargetGroup. `Required` `Filter(like)` 
 
 
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Code
 
-Short code for identification of target groups.
+Short code for identification of target groups.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Target group is active.
+Indicates whether the current Target group is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
 
 Type: **boolean**  
 Category: **System**  

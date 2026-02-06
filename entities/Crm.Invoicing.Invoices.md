@@ -50,13 +50,13 @@ Aggregate Tree
 | [AdjustmentTime](Crm.Invoicing.Invoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Invoicing.Invoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AmountToPay](Crm.Invoicing.Invoices.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. 
-| [ApplyDate](Crm.Invoicing.Invoices.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period. 
-| [AutomaticOrderLinking](Crm.Invoicing.Invoices.md#automaticorderlinking) | boolean | Specifies whether to automatically set invoice order line by searching invoice orders upon first release. 
+| [ApplyDate](Crm.Invoicing.Invoices.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)] 
+| [AutomaticOrderLinking](Crm.Invoicing.Invoices.md#automaticorderlinking) | boolean | Specifies whether to automatically set invoice order line by searching invoice orders upon first release.[Required] [Default(false)] 
 | [CompleteTime](Crm.Invoicing.Invoices.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Invoicing.Invoices.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Invoicing.Invoices.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreditNoteDescription](Crm.Invoicing.Invoices.md#creditnotedescription) | string (254) __nullable__ | Descriptions/reason for the credit note. 
-| [DeliveryDate](Crm.Invoicing.Invoices.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When NULL = document date 
+| [DeliveryDate](Crm.Invoicing.Invoices.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When NULL = document date[Filter(ge;le)] 
 | [DeliveryTermsCode](Crm.Invoicing.Invoices.md#deliverytermscode) | [DeliveryTerms](Crm.Invoicing.Invoices.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting 
 | [DocumentDate](Crm.Invoicing.Invoices.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Invoicing.Invoices.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -66,13 +66,13 @@ Aggregate Tree
 | [FullState](Crm.Invoicing.Invoices.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [IntrastatTransaction<br />NatureCode](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
 | [IntrastatTransportModeCode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) | [TransportMode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
-| [<s>IsReleased</s>](Crm.Invoicing.Invoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Crm.Invoicing.Invoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
-| [IsValidField](Crm.Invoicing.Invoices.md#isvalidfield) | boolean | Used for internal purposes. 1 when the invoice is valid (released and not void) for summing 
+| [<s>IsReleased</s>](Crm.Invoicing.Invoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Crm.Invoicing.Invoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [IsValidField](Crm.Invoicing.Invoices.md#isvalidfield) | boolean | Used for internal purposes. 1 when the invoice is valid (released and not void) for summing[Required] [Default(false)] [ReadOnly] 
 | [Notes](Crm.Invoicing.Invoices.md#notes) | string (254) __nullable__ | Notes for this Invoice. 
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Crm.Invoicing.Invoices.md#paymentduedate) | datetime __nullable__ | When not NULL specifies due date for the payment 
-| [PaymentDueStartDate](Crm.Invoicing.Invoices.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. 
+| [PaymentDueDate](Crm.Invoicing.Invoices.md#paymentduedate) | datetime __nullable__ | When not NULL specifies due date for the payment[Filter(ge;le)] 
+| [PaymentDueStartDate](Crm.Invoicing.Invoices.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment.[Filter(ge;le)] 
 | [PaymentTypeDescription](Crm.Invoicing.Invoices.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the payment type. Initially copied from the name of the Payment Type 
 | [PlanningOnly](Crm.Invoicing.Invoices.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Invoicing.Invoices.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -82,7 +82,7 @@ Aggregate Tree
 | [State](Crm.Invoicing.Invoices.md#state) | [DocumentState](Crm.Invoicing.Invoices.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Crm.Invoicing.Invoices.md#statetagsattribute) | string | Specifies the state of the document. 
 | [TotalLineAmount](Crm.Invoicing.Invoices.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. 
-| [VATCashReportingMode](Crm.Invoicing.Invoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. 
+| [VATCashReportingMode](Crm.Invoicing.Invoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)] [Filter(eq)] 
 | [VATNotes](Crm.Invoicing.Invoices.md#vatnotes) | string (254) __nullable__ | Description of the operation that will be entered in the VAT ledgers. 
 | [Void](Crm.Invoicing.Invoices.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Crm.Invoicing.Invoices.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -193,7 +193,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyDate
 
-Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.
+Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -208,7 +208,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate`
 ### AutomaticOrderLinking
 
-Specifies whether to automatically set invoice order line by searching invoice orders upon first release.
+Specifies whether to automatically set invoice order line by searching invoice orders upon first release.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -262,7 +262,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeliveryDate
 
-Date, when the delivery was effected. When NULL = document date
+Date, when the delivery was effected. When NULL = document date[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -433,7 +433,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => InvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -444,7 +444,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -455,7 +455,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsValidField
 
-Used for internal purposes. 1 when the invoice is valid (released and not void) for summing
+Used for internal purposes. 1 when the invoice is valid (released and not void) for summing[Required] [Default(false)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -496,7 +496,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-When not NULL specifies due date for the payment
+When not NULL specifies due date for the payment[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -508,7 +508,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))`
 ### PaymentDueStartDate
 
-The date when the payment becomes due for documents with one installment.
+The date when the payment becomes due for documents with one installment.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -630,7 +630,7 @@ Show in UI: **HiddenByDefault**
 
 ### VATCashReportingMode
 
-When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
+When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  

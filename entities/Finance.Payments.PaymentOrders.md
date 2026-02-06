@@ -48,40 +48,40 @@ Aggregate Tree
 | [AdjustmentNumber](Finance.Payments.PaymentOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Finance.Payments.PaymentOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Finance.Payments.PaymentOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [AllowCloseNotPaid](Finance.Payments.PaymentOrders.md#allowclosenotpaid) | boolean | Allow closing of payment orders, that are not fully paid. 
-| [BillTo](Finance.Payments.PaymentOrders.md#billto) | [BillTo](Finance.Payments.PaymentOrders.md#billto) __nullable__ | If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order). 
+| [AllowCloseNotPaid](Finance.Payments.PaymentOrders.md#allowclosenotpaid) | boolean | Allow closing of payment orders, that are not fully paid.[Required] [Default(false)] [Filter(eq)] 
+| [BillTo](Finance.Payments.PaymentOrders.md#billto) | [BillTo](Finance.Payments.PaymentOrders.md#billto) __nullable__ | If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).[Filter(eq)] 
 | [CompleteTime](Finance.Payments.PaymentOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Finance.Payments.PaymentOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Finance.Payments.PaymentOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Direction](Finance.Payments.PaymentOrders.md#direction) | [Direction](Finance.Payments.PaymentOrders.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid). 
+| [Direction](Finance.Payments.PaymentOrders.md#direction) | [Direction](Finance.Payments.PaymentOrders.md#direction) | Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)] 
 | [DocumentDate](Finance.Payments.PaymentOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Finance.Payments.PaymentOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Finance.Payments.PaymentOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Finance.Payments.PaymentOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DueDate](Finance.Payments.PaymentOrders.md#duedate) | datetime __nullable__ | End date on which the payment is executable. NULL means that the payment is executable at all times. 
-| [DueStartDate](Finance.Payments.PaymentOrders.md#duestartdate) | date __nullable__ | Initial date on which the payment is executable. NULL means that the payment is executable at all times. 
+| [DueDate](Finance.Payments.PaymentOrders.md#duedate) | datetime __nullable__ | End date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)] 
+| [DueStartDate](Finance.Payments.PaymentOrders.md#duestartdate) | date __nullable__ | Initial date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)] [ORD] 
 | [EntityName](Finance.Payments.PaymentOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Finance.Payments.PaymentOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [InstallmentNumber](Finance.Payments.PaymentOrders.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan. 
-| [InvoiceAmount](Finance.Payments.PaymentOrders.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount) 
-| [IsAmountWithVAT](Finance.Payments.PaymentOrders.md#isamountwithvat) | boolean | Checked if the requested amount includes VAT. 
-| [<s>IsReleased</s>](Finance.Payments.PaymentOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Finance.Payments.PaymentOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [InstallmentNumber](Finance.Payments.PaymentOrders.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.[Filter(eq)] 
+| [InvoiceAmount](Finance.Payments.PaymentOrders.md#invoiceamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)[Currency: InvoiceAmountCurrency] 
+| [IsAmountWithVAT](Finance.Payments.PaymentOrders.md#isamountwithvat) | boolean | Checked if the requested amount includes VAT.[Required] [Default(true)] [Filter(eq)] 
+| [<s>IsReleased</s>](Finance.Payments.PaymentOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Finance.Payments.PaymentOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Finance.Payments.PaymentOrders.md#notes) | string (254) __nullable__ | Notes for this PaymentOrder. 
 | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Payments.PaymentOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Finance.Payments.PaymentOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Finance.Payments.PaymentOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RefDocumentDate](Finance.Payments.PaymentOrders.md#refdocumentdate) | datetime __nullable__ | The date of the original document. NULL means that it is unknown 
-| [RefDocumentNo](Finance.Payments.PaymentOrders.md#refdocumentno) | string (20) | The number of the document which has created the payment order and is the basis for the payment 
+| [RefDocumentDate](Finance.Payments.PaymentOrders.md#refdocumentdate) | datetime __nullable__ | The date of the original document. NULL means that it is unknown[Filter(eq;ge;le)] 
+| [RefDocumentNo](Finance.Payments.PaymentOrders.md#refdocumentno) | string (20) | The number of the document which has created the payment order and is the basis for the payment[Required] [Filter(eq)] 
 | [ReferenceDate](Finance.Payments.PaymentOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Finance.Payments.PaymentOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RefInvoiceApplyDate](Finance.Payments.PaymentOrders.md#refinvoiceapplydate) | datetime __nullable__ | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. 
-| [RefInvoiceDocumentDate](Finance.Payments.PaymentOrders.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown. 
-| [RefInvoiceDocumentNo](Finance.Payments.PaymentOrders.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. 
+| [RefInvoiceApplyDate](Finance.Payments.PaymentOrders.md#refinvoiceapplydate) | datetime __nullable__ | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.[Filter(eq;ge;le)] 
+| [RefInvoiceDocumentDate](Finance.Payments.PaymentOrders.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.[Filter(eq;ge;le)] 
+| [RefInvoiceDocumentNo](Finance.Payments.PaymentOrders.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.[Filter(eq)] 
 | [ReleaseTime](Finance.Payments.PaymentOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Finance.Payments.PaymentOrders.md#state) | [DocumentState](Finance.Payments.PaymentOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Finance.Payments.PaymentOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [TotalAmount](Finance.Payments.PaymentOrders.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be paid 
+| [TotalAmount](Finance.Payments.PaymentOrders.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be paid[Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] 
 | [Void](Finance.Payments.PaymentOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Finance.Payments.PaymentOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Finance.Payments.PaymentOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -184,7 +184,7 @@ Show in UI: **HiddenByDefault**
 
 ### AllowCloseNotPaid
 
-Allow closing of payment orders, that are not fully paid.
+Allow closing of payment orders, that are not fully paid.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### BillTo
 
-If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).
+If filled indicates which party is billed for the total amount. Possible values are 'Company' (i.e. the party from the order) or 'Company location' (i.e. the company location from the order).[Filter(eq)]
 
 Type: **[BillTo](Finance.Payments.PaymentOrders.md#billto) __nullable__**  
 Category: **System**  
@@ -245,7 +245,7 @@ Show in UI: **HiddenByDefault**
 
 ### Direction
 
-Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).
+Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)]
 
 Type: **[Direction](Finance.Payments.PaymentOrders.md#direction)**  
 Category: **System**  
@@ -310,7 +310,7 @@ Show in UI: **HiddenByDefault**
 
 ### DueDate
 
-End date on which the payment is executable. NULL means that the payment is executable at all times.
+End date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -320,7 +320,7 @@ Show in UI: **ShownByDefault**
 
 ### DueStartDate
 
-Initial date on which the payment is executable. NULL means that the payment is executable at all times.
+Initial date on which the payment is executable. NULL means that the payment is executable at all times.[Filter(eq;ge;le)] [ORD]
 
 Type: **date __nullable__**  
 Indexed: **True**  
@@ -353,7 +353,7 @@ Show in UI: **HiddenByDefault**
 
 ### InstallmentNumber
 
-Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.
+Consequtive installment number. Used for identifying the payment when using payment plans. Not specified when the payment is not part of a payment plan.[Filter(eq)]
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -363,7 +363,7 @@ Show in UI: **ShownByDefault**
 
 ### InvoiceAmount
 
-The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)
+The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)[Currency: InvoiceAmountCurrency]
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -373,7 +373,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsAmountWithVAT
 
-Checked if the requested amount includes VAT.
+Checked if the requested amount includes VAT.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -384,7 +384,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -395,7 +395,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -458,7 +458,7 @@ Show in UI: **HiddenByDefault**
 
 ### RefDocumentDate
 
-The date of the original document. NULL means that it is unknown
+The date of the original document. NULL means that it is unknown[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -473,7 +473,7 @@ Front-End Recalc Expressions:
 `obj.RefDocument.DocumentDate`
 ### RefDocumentNo
 
-The number of the document which has created the payment order and is the basis for the payment
+The number of the document which has created the payment order and is the basis for the payment[Required] [Filter(eq)]
 
 Type: **string (20)**  
 Category: **System**  
@@ -511,7 +511,7 @@ Show in UI: **HiddenByDefault**
 
 ### RefInvoiceApplyDate
 
-The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
+The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -526,7 +526,7 @@ Front-End Recalc Expressions:
 `Convert( obj.RefInvoiceDocument, IInvoiceDocument).ApplyDate`
 ### RefInvoiceDocumentDate
 
-The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.
+The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -541,7 +541,7 @@ Front-End Recalc Expressions:
 `obj.RefInvoiceDocument.DocumentDate`
 ### RefInvoiceDocumentNo
 
-The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.
+The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice.[Filter(eq)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -601,7 +601,7 @@ Show in UI: **HiddenByDefault**
 
 ### TotalAmount
 
-Total amount that should be paid
+Total amount that should be paid[Currency: TotalAmountCurrency] [Required] [Default(0)] [Filter(eq;ge;le)]
 
 Type: **[Amount (18, 2)](../data-types.md#amount)**  
 Category: **System**  

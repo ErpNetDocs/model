@@ -132,12 +132,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebHosts.html#certificateexpirydate">CertificateExpiryDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</td>
+<td>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.[Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebHosts.html#certificateoriginalfilename">CertificateOriginal<br>Filename</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</td>
+<td>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.[Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebHosts.html#certificatepassword">CertificatePassword</a></td>
@@ -147,12 +147,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebHosts.html#certificatetype">CertificateType</a></td>
 <td>string (3)</td>
-<td>The type of certificate uploaded. Currently, only PFX is supported.</td>
+<td>The type of certificate uploaded. Currently, only PFX is supported.[Required] [Default(&quot;PFX&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebHosts.html#name">Name</a></td>
 <td>string (max)</td>
-<td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</td>
+<td>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.[Required] [Filter(multi eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebHosts.html#notes">Notes</a></td>
@@ -212,14 +212,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="certificateexpirydate">CertificateExpiryDate</h3>
-<p>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.</p>
+<p>The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.[Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="certificateoriginalfilename">CertificateOriginalFilename</h3>
-<p>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.</p>
+<p>The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.[Filter(eq;like)]</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -235,7 +235,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="certificatetype">CertificateType</h3>
-<p>The type of certificate uploaded. Currently, only PFX is supported.</p>
+<p>The type of certificate uploaded. Currently, only PFX is supported.[Required] [Default(&quot;PFX&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong>string (3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -244,7 +244,7 @@ Maximum Length: <strong>3</strong><br>
 Default Value: <strong>PFX</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.</p>
+<p>The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.[Required] [Filter(multi eq;like)]</p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>

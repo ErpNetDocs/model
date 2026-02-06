@@ -36,7 +36,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Projects.Classic.ProjectTypes.md#name) | string (254) | The name of the project type. 
+| [Name](Projects.Classic.ProjectTypes.md#name) | string (254) | The name of the project type.[Required] [Filter(eq;like)] 
 | [Notes](Projects.Classic.ProjectTypes.md#notes) | string (max) __nullable__ | Notes for this ProjectType. 
 
 ## References
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### Name
 
-The name of the project type.
+The name of the project type.[Required] [Filter(eq;like)]
 
 Type: **string (254)**  
 Category: **System**  

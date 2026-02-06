@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9) 
+| [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9)[Required] [Filter(ge;le)] 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### HierarchyLevel
 
-The level in the hierarchy on which this cost is incurred (0..9)
+The level in the hierarchy on which this cost is incurred (0..9)[Required] [Filter(ge;le)]
 
 Type: **int32**  
 Category: **System**  

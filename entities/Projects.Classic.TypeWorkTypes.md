@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Projects.Classic.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents. 
-| [WorkTypeName](Projects.Classic.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type. 
+| [IsActive](Projects.Classic.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents.[Required] [Default(true)] [Filter(eq)] 
+| [WorkTypeName](Projects.Classic.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type.[Required] [Filter(eq;like)] 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### IsActive
 
-True when the work type is currently active and selectable in new documents.
+True when the work type is currently active and selectable in new documents.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkTypeName
 
-The name of the work type.
+The name of the work type.[Required] [Filter(eq;like)]
 
 Type: **string (254)**  
 Category: **System**  

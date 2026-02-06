@@ -36,8 +36,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (6, 5) __nullable__ | Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way 
-| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount (9, 2)](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way 
-| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model 
+| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount (9, 2)](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way[Currency: PricingModel.Currency] 
+| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model[Required] 
 
 ## References
 
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountPerUnit
 
-Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way
+Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way[Currency: PricingModel.Currency]
 
 Type: **[Amount (9, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-The consequtive number of the cost within the pricing model
+The consequtive number of the cost within the pricing model[Required]
 
 Type: **int32**  
 Category: **System**  

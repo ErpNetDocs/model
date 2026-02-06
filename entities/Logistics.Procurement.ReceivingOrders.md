@@ -58,14 +58,14 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Procurement.ReceivingOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Procurement.ReceivingOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Procurement.ReceivingOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [InvoiceDocumentNo](Logistics.Procurement.ReceivingOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. 
-| [<s>IsReleased</s>](Logistics.Procurement.ReceivingOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [InvoiceDocumentNo](Logistics.Procurement.ReceivingOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise.[Filter(eq)] 
+| [<s>IsReleased</s>](Logistics.Procurement.ReceivingOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Logistics.Procurement.ReceivingOrders.md#notes) | string (254) __nullable__ | Notes for this ReceivingOrder. 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Logistics.Procurement.ReceivingOrders.md#paymentduedate) | datetime __nullable__ | Due date for the payment. When null, the payment due date is the documents date. 
-| [PlannedDeliveryDate](Logistics.Procurement.ReceivingOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines. 
-| [PlannedReleaseDate](Logistics.Procurement.ReceivingOrders.md#plannedreleasedate) | datetime __nullable__ | The date, when the document is planned to be realeased. 
+| [PaymentDueDate](Logistics.Procurement.ReceivingOrders.md#paymentduedate) | datetime __nullable__ | Due date for the payment. When null, the payment due date is the documents date.[Filter(ge;le)] 
+| [PlannedDeliveryDate](Logistics.Procurement.ReceivingOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines.[Filter(ge;le)] 
+| [PlannedReleaseDate](Logistics.Procurement.ReceivingOrders.md#plannedreleasedate) | datetime __nullable__ | The date, when the document is planned to be realeased.[Filter(ge;le)] 
 | [PlanningOnly](Logistics.Procurement.ReceivingOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PurchaseLotDescription](Logistics.Procurement.ReceivingOrders.md#purchaselotdescription) | string (254) __nullable__ | Description of the purchase lot for the whole document. It is set for the lots created by this receiving order. 
 | [ReadOnly](Logistics.Procurement.ReceivingOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -273,7 +273,7 @@ Show in UI: **HiddenByDefault**
 
 ### InvoiceDocumentNo
 
-Contains the purchase invoice number when it is known in advance, null otherwise.
+Contains the purchase invoice number when it is known in advance, null otherwise.[Filter(eq)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -284,7 +284,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -295,7 +295,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -336,7 +336,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-Due date for the payment. When null, the payment due date is the documents date.
+Due date for the payment. When null, the payment due date is the documents date.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -351,7 +351,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 ### PlannedDeliveryDate
 
-When not null, specifies the planned delivery date for all lines.
+When not null, specifies the planned delivery date for all lines.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -366,7 +366,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultDeliveryTermDays, Double))`
 ### PlannedReleaseDate
 
-The date, when the document is planned to be realeased.
+The date, when the document is planned to be realeased.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

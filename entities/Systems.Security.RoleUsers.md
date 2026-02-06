@@ -44,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsLayoutAdmin](Systems.Security.RoleUsers.md#islayoutadmin) | boolean | Specifies whether the user can manage the layouts for the role. 
+| [IsLayoutAdmin](Systems.Security.RoleUsers.md#islayoutadmin) | boolean | Specifies whether the user can manage the layouts for the role.[Required] [Default(false)] [Filter(eq)] [Introduced in version 23.1.2.58] 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### IsLayoutAdmin
 
-Specifies whether the user can manage the layouts for the role.
+Specifies whether the user can manage the layouts for the role.[Required] [Default(false)] [Filter(eq)] [Introduced in version 23.1.2.58]
 
 Type: **boolean**  
 Category: **System**  

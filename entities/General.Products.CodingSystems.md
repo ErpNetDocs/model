@@ -34,7 +34,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](General.Products.CodingSystems.md#description) | string (max) __nullable__ | The description of this CodingSystem. 
-| [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. False - duplicated product codes are allowed. 
+| [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. False - duplicated product codes are allowed.[Required] [Default(true)] [Filter(eq)] 
 | [Name](General.Products.CodingSystems.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CodingSystem. `Required` `Filter(eq;like)` 
 
 ## References
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### IsUnique
 
-True when the coding system can contain only unique product codes. False - duplicated product codes are allowed.
+True when the coding system can contain only unique product codes. False - duplicated product codes are allowed.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  

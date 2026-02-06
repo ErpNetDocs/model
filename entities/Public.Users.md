@@ -28,11 +28,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails. 
-| [IsAdmin](Public.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0. 
-| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email 
-| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user 
-| [PhoneNumber](Public.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used. 
+| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails.[Filter(multi eq;like)] [Inherited from Sec_Users_Table.Email] 
+| [IsAdmin](Public.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0.[Required] [Default(false)] [Filter(eq)] [Inherited from Sec_Users_Table.Is_Admin] 
+| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email[Required] [Filter(multi eq;like)] [Inherited from Sec_Users_Table.Login] 
+| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user[Required] [Filter(like)] [Inherited from Sec_Users_Table.User_Name] 
+| [PhoneNumber](Public.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used.[Filter(eq;like)] [Inherited from Sec_Users_Table.Phone_Number] 
 | [UserId](Public.Users.md#userid) | guid | The Id of the security user. `Required` `Filter(multi eq)` 
 
 ## References
@@ -47,7 +47,7 @@ Aggregate Tree
 
 ### Email
 
-Unique email of the user. Can be NULL because there may be login providers that don't use emails.
+Unique email of the user. Can be NULL because there may be login providers that don't use emails.[Filter(multi eq;like)] [Inherited from Sec_Users_Table.Email]
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### IsAdmin
 
-1 if the user is administrator, otherwise 0.
+1 if the user is administrator, otherwise 0.[Required] [Default(false)] [Filter(eq)] [Inherited from Sec_Users_Table.Is_Admin]
 
 Type: **boolean**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### Login
 
-The login name of the user, which is usually the email
+The login name of the user, which is usually the email[Required] [Filter(multi eq;like)] [Inherited from Sec_Users_Table.Login]
 
 Type: **string (64)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The full name of the user
+The full name of the user[Required] [Filter(like)] [Inherited from Sec_Users_Table.User_Name]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### PhoneNumber
 
-Used only for two-factor authentication. NULL when phone-based two-factor is not used.
+Used only for two-factor authentication. NULL when phone-based two-factor is not used.[Filter(eq;like)] [Inherited from Sec_Users_Table.Phone_Number]
 
 Type: **string (64) __nullable__**  
 Category: **System**  

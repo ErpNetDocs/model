@@ -35,8 +35,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LastInteractionTimeUtc](Communities.Social.Groups.md#lastinteractiontimeutc) | datetime __nullable__ | The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. NULL means the group did not have any interactions yet. 
-| [Name](Communities.Social.Groups.md#name) | string (256) | Multilanguage name of the group. 
+| [LastInteractionTimeUtc](Communities.Social.Groups.md#lastinteractiontimeutc) | datetime __nullable__ | The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. NULL means the group did not have any interactions yet.[Filter(ge;le)] [ORD] [ReadOnly] [Introduced in version 22.1.6.61] 
+| [Name](Communities.Social.Groups.md#name) | string (256) | Multilanguage name of the group.[Required] [Filter(like)] 
 | [Notes](Communities.Social.Groups.md#notes) | string (max) __nullable__ | Notes for this Group. 
 
 
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### LastInteractionTimeUtc
 
-The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. NULL means the group did not have any interactions yet.
+The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. NULL means the group did not have any interactions yet.[Filter(ge;le)] [ORD] [ReadOnly] [Introduced in version 22.1.6.61]
 
 Type: **datetime __nullable__**  
 Indexed: **True**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the group.
+Multilanguage name of the group.[Required] [Filter(like)]
 
 Type: **string (256)**  
 Category: **System**  

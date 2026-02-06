@@ -42,10 +42,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Contacts.CompanyDivisions.md#code) | string (10) | The unique code of the division in the company  
+| [Code](General.Contacts.CompanyDivisions.md#code) | string (10) | The unique code of the division in the company [Required] [Filter(eq;like)] 
 | [GLN](General.Contacts.CompanyDivisions.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](General.Contacts.CompanyDivisions.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [Name](General.Contacts.CompanyDivisions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language company divsion name 
+| [Name](General.Contacts.CompanyDivisions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language company divsion name[Required] [Filter(eq;like)] 
 | [PartyCode](General.Contacts.CompanyDivisions.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyDivisions.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.CompanyDivisions.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -94,7 +94,7 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the division in the company
+The unique code of the division in the company [Required] [Filter(eq;like)]
 
 Type: **string (10)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language company divsion name
+Multi-language company divsion name[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

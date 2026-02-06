@@ -33,11 +33,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC). 
-| [Quantity](Logistics.Wms.WarehouseCounts.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity entered during the counting process, in the entered measurement unit. 
-| [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit. 
-| [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 | The counting session number to which this entry belongs. 
-| [StandardQuantityBase](Logistics.Wms.WarehouseCounts.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio. 
+| [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC).[Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [Quantity](Logistics.Wms.WarehouseCounts.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity entered during the counting process, in the entered measurement unit.[Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 | The counting session number to which this entry belongs.[Required] [Filter(eq;ge;le)] [ReadOnly] 
+| [StandardQuantityBase](Logistics.Wms.WarehouseCounts.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)] [ReadOnly] 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### CreationTimeUTC
 
-The timestamp when the counting entry was recorded (UTC).
+The timestamp when the counting entry was recorded (UTC).[Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity entered during the counting process, in the entered measurement unit.
+The quantity entered during the counting process, in the entered measurement unit.[Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The converted quantity in the product’s base measurement unit.
+The converted quantity in the product’s base measurement unit.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-The counting session number to which this entry belongs.
+The counting session number to which this entry belongs.[Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **int32**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantityBase
 
-The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.
+The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  

@@ -37,7 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Regulatory.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) | The amount of the operation according to the category. 
+| [Amount](Regulatory.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) | The amount of the operation according to the category.[Currency: BaseCurrency] [Required] 
 
 ## References
 
@@ -53,7 +53,7 @@ Aggregate Tree
 
 ### Amount
 
-The amount of the operation according to the category.
+The amount of the operation according to the category.[Currency: BaseCurrency] [Required]
 
 Type: **[Amount (15, 2)](../data-types.md#amount)**  
 Category: **System**  

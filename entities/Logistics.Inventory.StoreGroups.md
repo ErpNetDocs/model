@@ -35,9 +35,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Logistics.Inventory.StoreGroups.md#code) | string (16) | The unique code of the StoreGroup. `Required` `Filter(eq;like)` `ORD` 
-| [<s>FullPath</s>](Logistics.Inventory.StoreGroups.md#fullpath) | string (25) __nullable__ | **OBSOLETE! Do not use!** The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. 
+| [<s>FullPath</s>](Logistics.Inventory.StoreGroups.md#fullpath) | string (25) __nullable__ | **OBSOLETE! Do not use!** The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.[Obsolete] [Filter(eq;like)] [ORD] [ReadOnly] [Obsoleted in version 23.1.2.3] 
 | [Name](Logistics.Inventory.StoreGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this StoreGroup. `Required` `Filter(like)` 
-| [<s>ParentFullPath</s>](Logistics.Inventory.StoreGroups.md#parentfullpath) | string (25) __nullable__ | **OBSOLETE! Do not use!** The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. 
+| [<s>ParentFullPath</s>](Logistics.Inventory.StoreGroups.md#parentfullpath) | string (25) __nullable__ | **OBSOLETE! Do not use!** The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.[Obsolete] [Filter(eq;like)] [ReadOnly] [Obsoleted in version 23.1.2.3] 
 
 ## References
 
@@ -78,7 +78,7 @@ Back-End Default Expression:
 
 ### FullPath
 
-**OBSOLETE! Do not use!** The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.
+**OBSOLETE! Do not use!** The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.[Obsolete] [Filter(eq;like)] [ORD] [ReadOnly] [Obsoleted in version 23.1.2.3]
 
 Type: **string (25) __nullable__**  
 Indexed: **True**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentFullPath
 
-**OBSOLETE! Do not use!** The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.
+**OBSOLETE! Do not use!** The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.[Obsolete] [Filter(eq;like)] [ReadOnly] [Obsoleted in version 23.1.2.3]
 
 Type: **string (25) __nullable__**  
 Category: **System**  

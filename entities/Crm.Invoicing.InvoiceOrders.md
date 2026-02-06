@@ -50,25 +50,25 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Invoicing.InvoiceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Invoicing.InvoiceOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Invoicing.InvoiceOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime __nullable__ | Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date. 
+| [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime __nullable__ | Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.[Filter(ge;le)] 
 | [CompleteTime](Crm.Invoicing.InvoiceOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Invoicing.InvoiceOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreditNoteDescription](Crm.Invoicing.InvoiceOrders.md#creditnotedescription) | string (254) __nullable__ | Descriptions/reason for the credit note. 
-| [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When NULL = document date 
+| [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When NULL = document date[Filter(ge;le)] 
 | [DocumentDate](Crm.Invoicing.InvoiceOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Crm.Invoicing.InvoiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Invoicing.InvoiceOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Crm.Invoicing.InvoiceOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Crm.Invoicing.InvoiceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Crm.Invoicing.InvoiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Crm.Invoicing.InvoiceOrders.md#notes) | string (254) __nullable__ | Notes for this InvoiceOrder. 
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.InvoiceOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Crm.Invoicing.InvoiceOrders.md#paymentduedate) | datetime __nullable__ | When not NULL specifies due date for the payment 
-| [PaymentDueStartDate](Crm.Invoicing.InvoiceOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. 
-| [PaymentTypeDescription](Crm.Invoicing.InvoiceOrders.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type 
+| [PaymentDueDate](Crm.Invoicing.InvoiceOrders.md#paymentduedate) | datetime __nullable__ | When not NULL specifies due date for the payment[Filter(ge;le)] 
+| [PaymentDueStartDate](Crm.Invoicing.InvoiceOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment.[Filter(ge;le)] 
+| [PaymentTypeDescription](Crm.Invoicing.InvoiceOrders.md#paymenttypedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type[Required] 
 | [PlanningOnly](Crm.Invoicing.InvoiceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Invoicing.InvoiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Crm.Invoicing.InvoiceOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -176,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyDate
 
-Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.
+Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeliveryDate
 
-Date, when the delivery was effected. When NULL = document date
+Date, when the delivery was effected. When NULL = document date[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -318,7 +318,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -359,7 +359,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-When not NULL specifies due date for the payment
+When not NULL specifies due date for the payment[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -371,7 +371,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentTermDays, Double))`
 ### PaymentDueStartDate
 
-The date when the payment becomes due for documents with one installment.
+The date when the payment becomes due for documents with one installment.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -383,7 +383,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Customer.DefaultPaymentStartDays, Double))`
 ### PaymentTypeDescription
 
-Description of the payment type. Initially copied from the name of the Payment Type
+Description of the payment type. Initially copied from the name of the Payment Type[Required]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

@@ -35,8 +35,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string (16) | Unique (within all groups) code of the asset group. 
-| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). 
+| [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string (16) | Unique (within all groups) code of the asset group.[Required] [Filter(multi eq;like)] [ORD] 
+| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the asset group (multi-language).[Required] [Filter(eq;like)] 
 | [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetGroup. 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### Code
 
-Unique (within all groups) code of the asset group.
+Unique (within all groups) code of the asset group.[Required] [Filter(multi eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the asset group (multi-language).
+Name of the asset group (multi-language).[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

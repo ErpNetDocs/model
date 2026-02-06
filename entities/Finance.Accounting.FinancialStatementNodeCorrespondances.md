@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. 
+| [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied.[Required] [Default(1)] 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Multiplier
 
-Factor by which the correspondence balance will be multiplied.
+Factor by which the correspondence balance will be multiplied.[Required] [Default(1)]
 
 Type: **decimal (18, 0)**  
 Category: **System**  

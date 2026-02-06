@@ -34,7 +34,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Crm.Pos.SequenceSelectors.md#notes) | string (max) __nullable__ | Stores optional descriptive notes; null means no additional information is provided. 
-| [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | Specifies the type of sale that determines which sequence is selected. 
+| [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | [SaleKind](Crm.Pos.SequenceSelectors.md#salekind) | Specifies the type of sale that determines which sequence is selected.[Required] [Default(&quot;SAL&quot;)] [Filter(multi eq)] 
 
 ## References
 
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleKind
 
-Specifies the type of sale that determines which sequence is selected.
+Specifies the type of sale that determines which sequence is selected.[Required] [Default(&quot;SAL&quot;)] [Filter(multi eq)]
 
 Type: **[SaleKind](Crm.Pos.SequenceSelectors.md#salekind)**  
 Category: **System**  

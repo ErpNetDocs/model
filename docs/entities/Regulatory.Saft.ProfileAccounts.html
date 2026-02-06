@@ -127,17 +127,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccounts.html#accounttype">AccountType</a></td>
 <td><a href="Regulatory.Saft.ProfileAccounts.html#accounttype">AccountType</a></td>
-<td>Account classification in SAF-T.</td>
+<td>Account classification in SAF-T.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccounts.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional details about the mapping.</td>
+<td>Additional details about the mapping.[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccounts.html#significantpropertyorder">SignificantPropertyOrder</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.</td>
+<td>Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.[Filter(eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accounttype">AccountType</h3>
-<p>Account classification in SAF-T.</p>
+<p>Account classification in SAF-T.[Required] [Filter(eq)]</p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfileAccounts.html#accounttype">AccountType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AccountType</code>(Regulatory.Saft.ProfileAccounts.md#accounttype) data attribute<br>
@@ -228,7 +228,7 @@ Allowed Values (Regulatory.Saft.ProfileAccountsRepository.AccountType Enum Membe
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional details about the mapping.</p>
+<p>Additional details about the mapping.[Filter(like)]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="significantpropertyorder">SignificantPropertyOrder</h3>
-<p>Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.</p>
+<p>Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.[Filter(eq;ge;le)]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

@@ -36,19 +36,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed). 
-| [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number. 
-| [FiscalSalesNumber](Crm.Pos.Sales.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown. 
-| [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided. 
-| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale. 
-| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system. 
-| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened. 
-| [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale". 
-| [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines. 
-| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency. 
-| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in base currency. 
-| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total gross amount in reporting currency (if applicable). 
-| [VoidedAt](Crm.Pos.Sales.md#voidedat) | datetime __nullable__ | Date and time when the document was voided. 
+| [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed).[Filter(eq;ge;le)] 
+| [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number.[Required] [Filter(eq;like)] 
+| [FiscalSalesNumber](Crm.Pos.Sales.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.[Filter(multi eq)] [Introduced in version 26.2.1.33] 
+| [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided.[Required] [Default(false)] [Filter(eq)] 
+| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale.[Required] [Default(Now)] [Filter(eq;ge;le)] 
+| [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.[Filter(eq;like)] 
+| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.[Required] [Default(Now)] [Filter(eq;ge;le)] 
+| [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale".[Required] [Default(&quot;SAL&quot;)] [Filter(eq)] 
+| [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines.[Required] [Default(&quot;NEW&quot;)] [Filter(eq)] 
+| [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency.[Currency: SaleCurrency] [Required] [Filter(eq)] [Introduced in version 25.1.3.47] 
+| [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in base currency.[Currency: Location.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)] 
+| [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total gross amount in reporting currency (if applicable).[Currency: Location.EnterpriseCompany.ReportingCurrency] [Filter(eq;ge;le)] 
+| [VoidedAt](Crm.Pos.Sales.md#voidedat) | datetime __nullable__ | Date and time when the document was voided.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -89,7 +89,7 @@ Aggregate Tree
 
 ### ClosedAt
 
-When the sale was finalized (paid, voided, or completed).
+When the sale was finalized (paid, voided, or completed).[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentNumber
 
-Receipt document number.
+Receipt document number.[Required] [Filter(eq;like)]
 
 Type: **string (25)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### FiscalSalesNumber
 
-Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.[Filter(multi eq)] [Introduced in version 26.2.1.33]
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### IsVoided
 
-Marked true if sale is canceled/voided.
+Marked true if sale is canceled/voided.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### OpenedAt
 
-Time of the opening of the POS sale.
+Time of the opening of the POS sale.[Required] [Default(Now)] [Filter(eq;ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### OriginalSaleNumber
 
-Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.
+Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.[Filter(eq;like)]
 
 Type: **string (25) __nullable__**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleDate
 
-Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.
+Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.[Required] [Default(Now)] [Filter(eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleKind
 
-Kind of POS sale event. Typically it is "Normal sale".
+Kind of POS sale event. Typically it is "Normal sale".[Required] [Default(&quot;SAL&quot;)] [Filter(eq)]
 
 Type: **[SaleKind](Crm.Pos.Sales.md#salekind)**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **ShownByDefault**
 
 ### SaleStage
 
-General stage of the sale. Finalized sales must have matching amounts between header and detail lines.
+General stage of the sale. Finalized sales must have matching amounts between header and detail lines.[Required] [Default(&quot;NEW&quot;)] [Filter(eq)]
 
 Type: **[SaleStage](Crm.Pos.Sales.md#salestage)**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmount
 
-Total gross amount in the sale currency.
+Total gross amount in the sale currency.[Currency: SaleCurrency] [Required] [Filter(eq)] [Introduced in version 25.1.3.47]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -215,7 +215,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountBase
 
-Total gross amount in base currency.
+Total gross amount in base currency.[Currency: Location.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq;ge;le)]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -225,7 +225,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalAmountReporting
 
-Total gross amount in reporting currency (if applicable).
+Total gross amount in reporting currency (if applicable).[Currency: Location.EnterpriseCompany.ReportingCurrency] [Filter(eq;ge;le)]
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -235,7 +235,7 @@ Show in UI: **ShownByDefault**
 
 ### VoidedAt
 
-Date and time when the document was voided.
+Date and time when the document was voided.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

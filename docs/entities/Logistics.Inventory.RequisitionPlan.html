@@ -120,17 +120,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#calendardate">CalendarDate</a></td>
 <td>datetime</td>
-<td>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.</td>
+<td>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#completiondate">CompletionDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated</td>
+<td>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#confirmaction">ConfirmAction</a></td>
 <td>boolean</td>
-<td>1 - generate firm planned orders for the current row; 0- do not generate;</td>
+<td>1 - generate firm planned orders for the current row; 0- do not generate;[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#explanationmessage">ExplanationMessage</a></td>
@@ -140,57 +140,57 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#firmplannedorderreceipts">FirmPlannedOrderReceipts</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.</td>
+<td>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#firmplannedorderreleases">FirmPlannedOrderReleases</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The order releases which were manually confirmed for release on the specified calendar date.</td>
+<td>The order releases which were manually confirmed for release on the specified calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#generationdate">GenerationDate</a></td>
 <td>datetime</td>
-<td>Indicates the date on which the plan is generated</td>
+<td>Indicates the date on which the plan is generated[Required] [Default(Now)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#grossrequirements">GrossRequirements</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.</td>
+<td>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#netrequirements">NetRequirements</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The net requirements for the date, which are in shortage for the calendar date.</td>
+<td>The net requirements for the date, which are in shortage for the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#plannedorderreceipts">PlannedOrderReceipts</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.</td>
+<td>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#plannedorderreleases">PlannedOrderReleases</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.</td>
+<td>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#projectedavailablebalance">ProjectedAvailableBalance</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.</td>
+<td>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;</td>
+<td>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#releasedate">ReleaseDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated</td>
+<td>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#scheduledreceipts">ScheduledReceipts</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.</td>
+<td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -275,21 +275,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="calendardate">CalendarDate</h3>
-<p>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.</p>
+<p>The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="completiondate">CompletionDate</h3>
-<p>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated</p>
+<p>The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="confirmaction">ConfirmAction</h3>
-<p>1 - generate firm planned orders for the current row; 0- do not generate;</p>
+<p>1 - generate firm planned orders for the current row; 0- do not generate;[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -305,7 +305,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="firmplannedorderreceipts">FirmPlannedOrderReceipts</h3>
-<p>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.</p>
+<p>The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -313,7 +313,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="firmplannedorderreleases">FirmPlannedOrderReleases</h3>
-<p>The order releases which were manually confirmed for release on the specified calendar date.</p>
+<p>The order releases which were manually confirmed for release on the specified calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="generationdate">GenerationDate</h3>
-<p>Indicates the date on which the plan is generated</p>
+<p>Indicates the date on which the plan is generated[Required] [Default(Now)] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -329,7 +329,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="grossrequirements">GrossRequirements</h3>
-<p>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.</p>
+<p>The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -337,7 +337,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="netrequirements">NetRequirements</h3>
-<p>The net requirements for the date, which are in shortage for the calendar date.</p>
+<p>The net requirements for the date, which are in shortage for the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -345,7 +345,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="plannedorderreceipts">PlannedOrderReceipts</h3>
-<p>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.</p>
+<p>The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -353,7 +353,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="plannedorderreleases">PlannedOrderReleases</h3>
-<p>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.</p>
+<p>The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -361,7 +361,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectedavailablebalance">ProjectedAvailableBalance</h3>
-<p>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.</p>
+<p>Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -369,7 +369,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;</p>
+<p>The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -377,14 +377,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="releasedate">ReleaseDate</h3>
-<p>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated</p>
+<p>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scheduledreceipts">ScheduledReceipts</h3>
-<p>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.</p>
+<p>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -36,13 +36,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationUri](Systems.Core.Extensions.md#applicationuri) | string (128) | The URI of the internal application being extended. 
+| [ApplicationUri](Systems.Core.Extensions.md#applicationuri) | string (128) | The URI of the internal application being extended.[Required] [Filter(eq)] 
 | [ExtensionData](Systems.Core.Extensions.md#extensiondata) | string (max) __nullable__ | JSON object, containg extension-specific additional data. 
-| [ExtensionPath](Systems.Core.Extensions.md#extensionpath) | string (128) __nullable__ | The path to the element in Main App, which is being extended. 
-| [ExtensionUri](Systems.Core.Extensions.md#extensionuri) | string (128) | The URI of extension app. 
+| [ExtensionPath](Systems.Core.Extensions.md#extensionpath) | string (128) __nullable__ | The path to the element in Main App, which is being extended.[Filter(eq;like)] 
+| [ExtensionUri](Systems.Core.Extensions.md#extensionuri) | string (128) | The URI of extension app.[Required] [Filter(eq;like)] 
 | [Hint](Systems.Core.Extensions.md#hint) | string (max) __nullable__ | Multi-language display hint of the extension. Used for UI display purposes. 
-| [IsActive](Systems.Core.Extensions.md#isactive) | boolean | Specifies whether the extension is active. 
-| [Name](Systems.Core.Extensions.md#name) | string (128) | Name of the extension (English preferred). Not displayed in UI. Used for identification. 
+| [IsActive](Systems.Core.Extensions.md#isactive) | boolean | Specifies whether the extension is active.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Systems.Core.Extensions.md#name) | string (128) | Name of the extension (English preferred). Not displayed in UI. Used for identification.[Required] [Filter(eq;like)] 
 | [Title](Systems.Core.Extensions.md#title) | string (254) __nullable__ | Multi-language title of the extension. Used for UI display purposes. 
 
 
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### ApplicationUri
 
-The URI of the internal application being extended.
+The URI of the internal application being extended.[Required] [Filter(eq)]
 
 Type: **string (128)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### ExtensionPath
 
-The path to the element in Main App, which is being extended.
+The path to the element in Main App, which is being extended.[Filter(eq;like)]
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### ExtensionUri
 
-The URI of extension app.
+The URI of extension app.[Required] [Filter(eq;like)]
 
 Type: **string (128)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the extension is active.
+Specifies whether the extension is active.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the extension (English preferred). Not displayed in UI. Used for identification.
+Name of the extension (English preferred). Not displayed in UI. Used for identification.[Required] [Filter(eq;like)]
 
 Type: **string (128)**  
 Category: **System**  

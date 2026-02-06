@@ -38,9 +38,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string (max) __nullable__ | The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code. 
-| [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. 
-| [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string (8) | The language code of the article text. 
-| [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. 
+| [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web.[Required] [Default(false)] 
+| [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string (8) | The language code of the article text.[Required] 
+| [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published.[Required] [Default(Now)] [Filter(ge;le)] 
 
 ## References
 
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPublished
 
-Specifies whether the article is published for display on web.
+Specifies whether the article is published for display on web.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### LanguageCode
 
-The language code of the article text.
+The language code of the article text.[Required]
 
 Type: **string (8)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### PublishDate
 
-The date and time when the news article should appear to be published.
+The date and time when the news article should appear to be published.[Required] [Default(Now)] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  

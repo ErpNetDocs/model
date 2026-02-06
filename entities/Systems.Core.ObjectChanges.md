@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChangesJsonCompressed](Systems.Core.ObjectChanges.md#changesjsoncompressed) | byte[] __nullable__ | Contains JSON formatted attribute values. GZip compressed. 
-| [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. 
+| [ChangesJsonCompressed](Systems.Core.ObjectChanges.md#changesjsoncompressed) | byte[] __nullable__ | Contains JSON formatted attribute values. GZip compressed.[Introduced in version 24.1.4.29] 
+| [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete.[Required] 
 | [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)` 
-| [<s>OldValuesJson</s>](Systems.Core.ObjectChanges.md#oldvaluesjson) | string (max) __nullable__ | **OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. 
-| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. 
+| [<s>OldValuesJson</s>](Systems.Core.ObjectChanges.md#oldvaluesjson) | string (max) __nullable__ | **OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.[Obsolete] [Obsoleted in version 22.1.6.61] 
+| [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.[Required] [Filter(multi eq;like)] 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### ChangesJsonCompressed
 
-Contains JSON formatted attribute values. GZip compressed.
+Contains JSON formatted attribute values. GZip compressed.[Introduced in version 24.1.4.29]
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### ChangeType
 
-Type of change - Create, Update or Delete.
+Type of change - Create, Update or Delete.[Required]
 
 Type: **[ChangeType](Systems.Core.ObjectChanges.md#changetype)**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### OldValuesJson
 
-**OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.
+**OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete.[Obsolete] [Obsoleted in version 22.1.6.61]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **HiddenByDefault**
 
 ### RepositoryName
 
-The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.
+The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.[Required] [Filter(multi eq;like)]
 
 Type: **string (64)**  
 Category: **System**  

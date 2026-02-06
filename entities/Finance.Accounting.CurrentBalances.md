@@ -28,10 +28,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit) 
-| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency 
-| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency 
-| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key 
+| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit)[Required] 
+| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency[Required] 
+| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency[Required] 
+| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key[Required] 
 
 ## References
 
@@ -49,7 +49,7 @@ Aggregate Tree
 
 ### Balance
 
-Net current balance (Debit - Credit)
+Net current balance (Debit - Credit)[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Current balance in base currency
+Current balance in base currency[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Current balance in reporting currency
+Current balance in reporting currency[Required]
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key
+Item Key[Required]
 
 Type: **string (64)**  
 Category: **System**  

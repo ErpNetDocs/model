@@ -34,20 +34,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompanyName](Crm.Presales.Leads.md#companyname) | string (64) __nullable__ | The name of the company, which the person works for (in relation to the current lead). 
-| [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created. 
-| [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). 
-| [Notes](Crm.Presales.Leads.md#notes) | string (max) __nullable__ | Additional information or comments. 
-| [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person. 
-| [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead. 
-| [PersonLastName](Crm.Presales.Leads.md#personlastname) | string (64) __nullable__ | The last name of the person, representing the sales lead. 
-| [PersonMobilePhone](Crm.Presales.Leads.md#personmobilephone) | string (32) __nullable__ | The mobile phone of the sales lead person. 
-| [PersonSalutation](Crm.Presales.Leads.md#personsalutation) | string (16) __nullable__ | Salutation for the sales lead person. 
-| [PersonWebProfile](Crm.Presales.Leads.md#personwebprofile) | string (64) __nullable__ | Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. 
-| [PersonWorkPhone](Crm.Presales.Leads.md#personworkphone) | string (32) __nullable__ | The work phone of the sales lead person. 
-| [RoleInCompany](Crm.Presales.Leads.md#roleincompany) | string (32) __nullable__ | The role of the person in the company. 
-| [SQLTimestampUtc](Crm.Presales.Leads.md#sqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. 
-| [SystemStage](Crm.Presales.Leads.md#systemstage) | [SystemStage](Crm.Presales.Leads.md#systemstage) | The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO) 
+| [CompanyName](Crm.Presales.Leads.md#companyname) | string (64) __nullable__ | The name of the company, which the person works for (in relation to the current lead).[Filter(eq;like)] 
+| [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created.[Required] [Filter(ge;le)] [ReadOnly] 
+| [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).[Filter(ge;le)] [ReadOnly] 
+| [Notes](Crm.Presales.Leads.md#notes) | string (max) __nullable__ | Additional information or comments.[Filter(like)] [Introduced in version 25.1.2.6] 
+| [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person.[Filter(eq;like)] 
+| [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead.[Filter(eq;like)] 
+| [PersonLastName](Crm.Presales.Leads.md#personlastname) | string (64) __nullable__ | The last name of the person, representing the sales lead.[Filter(eq;like)] 
+| [PersonMobilePhone](Crm.Presales.Leads.md#personmobilephone) | string (32) __nullable__ | The mobile phone of the sales lead person.[Filter(like)] 
+| [PersonSalutation](Crm.Presales.Leads.md#personsalutation) | string (16) __nullable__ | Salutation for the sales lead person.[Filter(eq;like)] 
+| [PersonWebProfile](Crm.Presales.Leads.md#personwebprofile) | string (64) __nullable__ | Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.[Filter(like)] 
+| [PersonWorkPhone](Crm.Presales.Leads.md#personworkphone) | string (32) __nullable__ | The work phone of the sales lead person.[Filter(like)] 
+| [RoleInCompany](Crm.Presales.Leads.md#roleincompany) | string (32) __nullable__ | The role of the person in the company.[Filter(eq;like)] 
+| [SQLTimestampUtc](Crm.Presales.Leads.md#sqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.[Filter(ge;le)] [ReadOnly] 
+| [SystemStage](Crm.Presales.Leads.md#systemstage) | [SystemStage](Crm.Presales.Leads.md#systemstage) | The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)[Required] [Default(&quot;NEW&quot;)] [Filter(multi eq)] [ReadOnly] 
 
 ## References
 
@@ -84,7 +84,7 @@ Aggregate Tree
 
 ### CompanyName
 
-The name of the company, which the person works for (in relation to the current lead).
+The name of the company, which the person works for (in relation to the current lead).[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimestampUtc
 
-System assigned date and time (in UTC), when the lead was initially created.
+System assigned date and time (in UTC), when the lead was initially created.[Required] [Filter(ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -108,7 +108,7 @@ Back-End Default Expression:
 
 ### MQLTimestampUtc
 
-System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).
+System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments.
+Additional information or comments.[Filter(like)] [Introduced in version 25.1.2.6]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonEmail
 
-The email address of the sales lead person.
+The email address of the sales lead person.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonFirstName
 
-The first name of the person, representing the sales lead.
+The first name of the person, representing the sales lead.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonLastName
 
-The last name of the person, representing the sales lead.
+The last name of the person, representing the sales lead.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonMobilePhone
 
-The mobile phone of the sales lead person.
+The mobile phone of the sales lead person.[Filter(like)]
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonSalutation
 
-Salutation for the sales lead person.
+Salutation for the sales lead person.[Filter(eq;like)]
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonWebProfile
 
-Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.
+Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.[Filter(like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### PersonWorkPhone
 
-The work phone of the sales lead person.
+The work phone of the sales lead person.[Filter(like)]
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### RoleInCompany
 
-The role of the person in the company.
+The role of the person in the company.[Filter(eq;like)]
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### SQLTimestampUtc
 
-System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.
+System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -227,7 +227,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemStage
 
-The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)
+The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)[Required] [Default(&quot;NEW&quot;)] [Filter(multi eq)] [ReadOnly]
 
 Type: **[SystemStage](Crm.Presales.Leads.md#systemstage)**  
 Category: **System**  

@@ -32,7 +32,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Production.Resources.OperationInstructions.md#description) | string (254) __nullable__ | Short description or notes for the instructions. 
+| [Description](Production.Resources.OperationInstructions.md#description) | string (254) __nullable__ | Short description or notes for the instructions.[Filter(like)] 
 | [Instructions](Production.Resources.OperationInstructions.md#instructions) | byte[] __nullable__ | The operation instructions in OLE format 
 
 
@@ -52,7 +52,7 @@ Aggregate Tree
 
 ### Description
 
-Short description or notes for the instructions.
+Short description or notes for the instructions.[Filter(like)]
 
 Type: **string (254) __nullable__**  
 Category: **System**  

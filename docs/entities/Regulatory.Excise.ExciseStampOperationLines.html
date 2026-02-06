@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.</td>
+<td>Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.[Required]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#notes">Notes</a></td>
@@ -141,12 +141,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 22.1.6.32]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#quantity">Quantity</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of excise stamps that are processed with the current operation.</td>
+<td>The number of excise stamps that are processed with the current operation.[Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseStampOperationLines.html#startnumber">StartNumber</a></td>
@@ -236,7 +236,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>Format( &quot;{0}&quot;, Convert( ( ( Convert( Parse( obj.StartNumber), Nullable</code>1) + Convert( obj.Quantity, Nullable<code>1)) - Convert( Convert( 1, Int64), Nullable</code>1)), Object)).PadLeft( obj.StartNumber.Trim( ).Length, 0)`</p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.</p>
+<p>Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -255,14 +255,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.</p>
+<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 22.1.6.32]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The number of excise stamps that are processed with the current operation.</p>
+<p>The number of excise stamps that are processed with the current operation.[Default(0)]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

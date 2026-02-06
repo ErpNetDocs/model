@@ -35,10 +35,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Procedures.ChecklistTemplates.md#code) | string (32) | Short code (optional). 
-| [Description](Projects.Procedures.ChecklistTemplates.md#description) | string (max) __nullable__ | Purpose/usage notes. 
-| [Status](Projects.Procedures.ChecklistTemplates.md#status) | [Status](Projects.Procedures.ChecklistTemplates.md#status) | State (Draft/Active/Obsolete). 
-| [Title](Projects.Procedures.ChecklistTemplates.md#title) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Template name (multilanguage). 
+| [Code](Projects.Procedures.ChecklistTemplates.md#code) | string (32) | Short code (optional).[Required] [Filter(eq;like)] 
+| [Description](Projects.Procedures.ChecklistTemplates.md#description) | string (max) __nullable__ | Purpose/usage notes.[Filter(like)] 
+| [Status](Projects.Procedures.ChecklistTemplates.md#status) | [Status](Projects.Procedures.ChecklistTemplates.md#status) | State (Draft/Active/Obsolete).[Required] [Default(&quot;DRF&quot;)] [Filter(eq)] 
+| [Title](Projects.Procedures.ChecklistTemplates.md#title) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Template name (multilanguage).[Required] [Filter(like)] 
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Code
 
-Short code (optional).
+Short code (optional).[Required] [Filter(eq;like)]
 
 Type: **string (32)**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Purpose/usage notes.
+Purpose/usage notes.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-State (Draft/Active/Obsolete).
+State (Draft/Active/Obsolete).[Required] [Default(&quot;DRF&quot;)] [Filter(eq)]
 
 Type: **[Status](Projects.Procedures.ChecklistTemplates.md#status)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### Title
 
-Template name (multilanguage).
+Template name (multilanguage).[Required] [Filter(like)]
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  

@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Resources.Resources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group 
+| [Name](General.Resources.Resources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group[Required] [Filter(eq;like)] 
 | [Notes](General.Resources.Resources.md#notes) | string (max) __nullable__ | Notes for this Resource. 
 
 ## References
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### Name
 
-Resource name. Unique within the resource group
+Resource name. Unique within the resource group[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DoneAtUtc](Projects.Procedures.ChecklistExecutionItems.md#doneatutc) | datetime __nullable__ | When it was completed. 
-| [IsDone](Projects.Procedures.ChecklistExecutionItems.md#isdone) | boolean | Completion flag. 
-| [LineNo](Projects.Procedures.ChecklistExecutionItems.md#lineno) | int32 | Item order. 
-| [Notes](Projects.Procedures.ChecklistExecutionItems.md#notes) | string (max) __nullable__ | Optional comment/evidence. 
-| [TextSnapshot](Projects.Procedures.ChecklistExecutionItems.md#textsnapshot) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Text copied from template at creation. 
+| [DoneAtUtc](Projects.Procedures.ChecklistExecutionItems.md#doneatutc) | datetime __nullable__ | When it was completed.[Filter(eq;ge;le)] 
+| [IsDone](Projects.Procedures.ChecklistExecutionItems.md#isdone) | boolean | Completion flag.[Required] [Default(false)] [Filter(eq)] 
+| [LineNo](Projects.Procedures.ChecklistExecutionItems.md#lineno) | int32 | Item order.[Required] [Filter(eq)] 
+| [Notes](Projects.Procedures.ChecklistExecutionItems.md#notes) | string (max) __nullable__ | Optional comment/evidence.[Filter(like)] 
+| [TextSnapshot](Projects.Procedures.ChecklistExecutionItems.md#textsnapshot) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Text copied from template at creation.[Required] [Filter(like)] 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### DoneAtUtc
 
-When it was completed.
+When it was completed.[Filter(eq;ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDone
 
-Completion flag.
+Completion flag.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Item order.
+Item order.[Required] [Filter(eq)]
 
 Type: **int32**  
 Category: **System**  
@@ -100,7 +100,7 @@ Front-End Recalc Expressions:
 `( obj.OperationalProcedureExecution.ChecklistExecutionItems.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-Optional comment/evidence.
+Optional comment/evidence.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### TextSnapshot
 
-Text copied from template at creation.
+Text copied from template at creation.[Required] [Filter(like)]
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  

@@ -28,11 +28,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company. 
-| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances. 
-| [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency. 
-| [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit 
-| [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency. 
+| [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company.[Currency: EnterpriseCompany.BaseCurrency] [Required] 
+| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances.[Required] [Filter(eq)] 
+| [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency.[Currency: Product.CostingCurrency] [Required] 
+| [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency.[Currency: Store.Currency] [Required] 
 
 ## References
 
@@ -51,7 +51,7 @@ Aggregate Tree
 
 ### BaseCost
 
-The cost of the inventory in base currency of the enterprise company.
+The cost of the inventory in base currency of the enterprise company.[Currency: EnterpriseCompany.BaseCurrency] [Required]
 
 Type: **[Amount (38, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -61,7 +61,7 @@ Show in UI: **ShownByDefault**
 
 ### Date
 
-The date parameter used to compute the balances.
+The date parameter used to compute the balances.[Required] [Filter(eq)]
 
 Type: **date**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCost
 
-The cost of the inventory in the products currency.
+The cost of the inventory in the products currency.[Currency: Product.CostingCurrency] [Required]
 
 Type: **[Amount (38, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The quantity of the stock received/issued in base measurement unit
+The quantity of the stock received/issued in base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
 
 Type: **[Quantity (38, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreCost
 
-The cost of the inventory in the stores currency.
+The cost of the inventory in the stores currency.[Currency: Store.Currency] [Required]
 
 Type: **[Amount (38, 2)](../data-types.md#amount)**  
 Category: **System**  

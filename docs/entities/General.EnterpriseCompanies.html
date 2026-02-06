@@ -138,67 +138,67 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#bistartdate">BIStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;.</td>
+<td>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;.[Filter(eq;ge;le)] [Introduced in version 18.2]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></td>
 <td><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></td>
-<td>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost</td>
+<td>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost[Required] [Default(&quot;AVG&quot;)]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#defaultcustomercreditlimitbase">DefaultCustomer<br>CreditLimitBase</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.</td>
+<td>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.[Currency: BaseCurrency] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a></td>
 <td><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> <strong>nullable</strong></td>
-<td>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).</td>
+<td>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).[Default(&quot;en&quot;)]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#editperiodstartdate">EditPeriodStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date of the priod when the documents can be edited</td>
+<td>Start date of the priod when the documents can be edited[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#enddateofclosedaccountingperiod">EndDateOfClosed<br>AccountingPeriod</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Indicates the date before which all accounting vouchers are permanently closed.</td>
+<td>Indicates the date before which all accounting vouchers are permanently closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 26.2.1.0]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Enterprise company  is active.</td>
+<td>Indicates whether the current Enterprise company  is active.[Required] [Default(true)] [Filter(multi eq)] [Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#printimagesretentionmonths">PrintImagesRetentionMonths</a></td>
 <td>int32</td>
-<td>A period of months for which the printed images of the documents will be kept.</td>
+<td>A period of months for which the printed images of the documents will be kept.[Required] [Default(60)] [Filter(multi eq;ge;le)] [Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#reportingcurrencyenddate">ReportingCurrencyEndDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.</td>
+<td>Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.[Filter(eq;ge;le)] [Introduced in version 26.1.3.79]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#reportingcurrencyprocesseddate">ReportingCurrency<br>ProcessedDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.</td>
+<td>Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.[Filter(eq;ge;le)] [ReadOnly] [Introduced in version 25.1.3.24]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#reportingcurrencyrate">ReportingCurrencyRate</a></td>
 <td>decimal (18, 6) <strong>nullable</strong></td>
-<td>Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).</td>
+<td>Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).[Filter(eq)] [Introduced in version 25.1.3.7]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#reportingcurrencystartdate">ReportingCurrencyStartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.</td>
+<td>Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.[Filter(eq;ge;le)] [Introduced in version 25.1.3.2]</td>
 </tr>
 <tr>
 <td><a href="General.EnterpriseCompanies.html#uibasecolor">UIBaseColor</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Base color of the current theme</td>
+<td>Base color of the current theme[Introduced in version 18.2]</td>
 </tr>
 </tbody>
 </table>
@@ -335,14 +335,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="bistartdate">BIStartDate</h3>
-<p>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;.</p>
+<p>Defines the period for which BI extracts data. BI includes documents with &quot;Document Date&quot; greater than or equal to &quot;BI Start Date&quot;.[Filter(eq;ge;le)] [Introduced in version 18.2]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultcostingmethod">DefaultCostingMethod</h3>
-<p>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost</p>
+<p>Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost[Required] [Default(&quot;AVG&quot;)]</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html#defaultcostingmethod">DefaultCostingMethod</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DefaultCostingMethod</code>(General.EnterpriseCompanies.md#defaultcostingmethod) data attribute<br>
@@ -374,14 +374,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>AverageCost</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultcustomercreditlimitbase">DefaultCustomerCreditLimitBase</h3>
-<p>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.</p>
+<p>Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company.[Currency: BaseCurrency] [Filter(eq;like)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultlanguage">DefaultLanguage</h3>
-<p>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).</p>
+<p>The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...).[Default(&quot;en&quot;)]</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html#defaultlanguage">DefaultLanguage</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DefaultLanguage</code>(General.EnterpriseCompanies.md#defaultlanguage) data attribute<br>
@@ -409,21 +409,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>English</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="editperiodstartdate">EditPeriodStartDate</h3>
-<p>Start date of the priod when the documents can be edited</p>
+<p>Start date of the priod when the documents can be edited[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enddateofclosedaccountingperiod">EndDateOfClosedAccountingPeriod</h3>
-<p>Indicates the date before which all accounting vouchers are permanently closed.</p>
+<p>Indicates the date before which all accounting vouchers are permanently closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 26.2.1.0]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Enterprise company  is active.</p>
+<p>Indicates whether the current Enterprise company  is active.[Required] [Default(true)] [Filter(multi eq)] [Introduced in version 20.1]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -431,7 +431,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printimagesretentionmonths">PrintImagesRetentionMonths</h3>
-<p>A period of months for which the printed images of the documents will be kept.</p>
+<p>A period of months for which the printed images of the documents will be kept.[Required] [Default(60)] [Filter(multi eq;ge;le)] [Introduced in version 20.1]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -439,35 +439,35 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>60</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reportingcurrencyenddate">ReportingCurrencyEndDate</h3>
-<p>Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.</p>
+<p>Defines the cutoff date up to which the equivalent amount in the reporting currency is calculated.[Filter(eq;ge;le)] [Introduced in version 26.1.3.79]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reportingcurrencyprocesseddate">ReportingCurrencyProcessedDate</h3>
-<p>Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.</p>
+<p>Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.[Filter(eq;ge;le)] [ReadOnly] [Introduced in version 25.1.3.24]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reportingcurrencyrate">ReportingCurrencyRate</h3>
-<p>Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).</p>
+<p>Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).[Filter(eq)] [Introduced in version 25.1.3.7]</p>
 <p>Type: <strong>decimal (18, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reportingcurrencystartdate">ReportingCurrencyStartDate</h3>
-<p>Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.</p>
+<p>Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.[Filter(eq;ge;le)] [Introduced in version 25.1.3.2]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="uibasecolor">UIBaseColor</h3>
-<p>Base color of the current theme</p>
+<p>Base color of the current theme[Introduced in version 18.2]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

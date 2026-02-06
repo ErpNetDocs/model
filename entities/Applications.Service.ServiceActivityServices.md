@@ -34,11 +34,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#coveredbyguarantee) | boolean | True when the performed service is covered by the guarantee. 
-| [LineNo](Applications.Service.ServiceActivityServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. 
+| [CoveredByGuarantee](Applications.Service.ServiceActivityServices.md#coveredbyguarantee) | boolean | True when the performed service is covered by the guarantee.[Required] [Default(false)] 
+| [LineNo](Applications.Service.ServiceActivityServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] 
 | [Notes](Applications.Service.ServiceActivityServices.md#notes) | string (254) __nullable__ | Short notes for the service 
-| [Quantity](Applications.Service.ServiceActivityServices.md#quantity) | [Quantity (9, 2)](../data-types.md#quantity) | The quantity of the service in the measurement unit of the service 
-| [ServiceName](Applications.Service.ServiceActivityServices.md#servicename) | string (254) | Description of the conducted service. The description may vary (contains additional information) from the standard name of the service. 
+| [Quantity](Applications.Service.ServiceActivityServices.md#quantity) | [Quantity (9, 2)](../data-types.md#quantity) | The quantity of the service in the measurement unit of the service[Unit: Service.MeasurementUnit] [Required] [Default(1)] 
+| [ServiceName](Applications.Service.ServiceActivityServices.md#servicename) | string (254) | Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.[Required] [Filter(like)] 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### CoveredByGuarantee
 
-True when the performed service is covered by the guarantee.
+True when the performed service is covered by the guarantee.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity of the service in the measurement unit of the service
+The quantity of the service in the measurement unit of the service[Unit: Service.MeasurementUnit] [Required] [Default(1)]
 
 Type: **[Quantity (9, 2)](../data-types.md#quantity)**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### ServiceName
 
-Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.
+Description of the conducted service. The description may vary (contains additional information) from the standard name of the service.[Required] [Filter(like)]
 
 Type: **string (254)**  
 Category: **System**  

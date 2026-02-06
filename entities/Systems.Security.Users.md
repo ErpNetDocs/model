@@ -40,26 +40,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessFailedCount](Systems.Security.Users.md#accessfailedcount) | int32 | Indicates how many times the user has failed to login. May be used for locking out the user. 
-| [Active](Systems.Security.Users.md#active) | boolean | True when the login is currently active and the user can log in. 
-| [BasicAuthenticationAllowed](Systems.Security.Users.md#basicauthenticationallowed) | boolean | If true, this user is allowed to use basic authentication. Use with caution, because basic authentication is less secure than oauth! 
-| [CompanyName](Systems.Security.Users.md#companyname) | string (64) __nullable__ | Name of the company in which the user claims they are working. 
-| [CreationTimeUtc](Systems.Security.Users.md#creationtimeutc) | datetime | The date and time (in UTC), when the user was created. 
-| [DefaultLanguage](Systems.Security.Users.md#defaultlanguage) | string (15) __nullable__ | The preferred default language of the user for UI, notifications, etc. Null means "en=English" 
-| [Email](Systems.Security.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails. 
-| [EmailConfirmed](Systems.Security.Users.md#emailconfirmed) | boolean | Indicates whether the email address for the specified user has been verified. 
-| [IsAdmin](Systems.Security.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0. 
-| [LockoutEndUtc](Systems.Security.Users.md#lockoutendutc) | datetime __nullable__ | Contains the date and time (in UTC) until the user is locked. NULL when the user is not locked. 
-| [Login](Systems.Security.Users.md#login) | string (64) | The login name of the user, which is usually the email 
-| [Name](Systems.Security.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user 
+| [AccessFailedCount](Systems.Security.Users.md#accessfailedcount) | int32 | Indicates how many times the user has failed to login. May be used for locking out the user.[Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 18.2] 
+| [Active](Systems.Security.Users.md#active) | boolean | True when the login is currently active and the user can log in.[Required] [Default(true)] [Filter(eq)] 
+| [BasicAuthenticationAllowed](Systems.Security.Users.md#basicauthenticationallowed) | boolean | If true, this user is allowed to use basic authentication. Use with caution, because basic authentication is less secure than oauth![Required] [Default(false)] [Filter(eq)] [Introduced in version 23.1.1.35] 
+| [CompanyName](Systems.Security.Users.md#companyname) | string (64) __nullable__ | Name of the company in which the user claims they are working.[Introduced in version 22.1.6.61] 
+| [CreationTimeUtc](Systems.Security.Users.md#creationtimeutc) | datetime | The date and time (in UTC), when the user was created.[Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] [Introduced in version 18.2] 
+| [DefaultLanguage](Systems.Security.Users.md#defaultlanguage) | string (15) __nullable__ | The preferred default language of the user for UI, notifications, etc. Null means "en=English"[Filter(eq)] [Introduced in version 25.1.0.34] 
+| [Email](Systems.Security.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails.[Filter(multi eq;like)] [ORD] [Introduced in version 18.2] 
+| [EmailConfirmed](Systems.Security.Users.md#emailconfirmed) | boolean | Indicates whether the email address for the specified user has been verified.[Required] [Default(false)] [Filter(eq)] [ReadOnly] [Introduced in version 18.2] 
+| [IsAdmin](Systems.Security.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0.[Required] [Default(false)] [Filter(eq)] 
+| [LockoutEndUtc](Systems.Security.Users.md#lockoutendutc) | datetime __nullable__ | Contains the date and time (in UTC) until the user is locked. NULL when the user is not locked.[Filter(eq;ge;le;like)] [Introduced in version 18.2] 
+| [Login](Systems.Security.Users.md#login) | string (64) | The login name of the user, which is usually the email[Required] [Filter(multi eq;like)] [ORD] 
+| [Name](Systems.Security.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user[Required] [Filter(like)] 
 | [Notes](Systems.Security.Users.md#notes) | string (254) __nullable__ | Notes for this User. 
-| [Password](Systems.Security.Users.md#password) | string (64) __nullable__ | The password hash of the user, stored in the format, specified in Password Format. 
-| [PasswordFormat](Systems.Security.Users.md#passwordformat) | [PasswordFormat](Systems.Security.Users.md#passwordformat) | The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. 
-| [PhoneNumber](Systems.Security.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used. 
-| [PhoneNumberConfirmed](Systems.Security.Users.md#phonenumberconfirmed) | boolean | Indicates whether the Phone Number has been verified. 
-| [RegistrationMessage](Systems.Security.Users.md#registrationmessage) | string (254) __nullable__ | Message from the user to the registration operator, regarding the desired permissions and assignment. 
-| [TwoFactorEnabled](Systems.Security.Users.md#twofactorenabled) | boolean | Indicates whether two-factor authentication has been enabled. 
-| [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login). 
+| [Password](Systems.Security.Users.md#password) | string (64) __nullable__ | The password hash of the user, stored in the format, specified in Password Format.[Unit: PasswordFormat] [ReadOnly] 
+| [PasswordFormat](Systems.Security.Users.md#passwordformat) | [PasswordFormat](Systems.Security.Users.md#passwordformat) | The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.[Required] [Default(&quot;MD5&quot;)] [Filter(eq)] [Introduced in version 18.2] 
+| [PhoneNumber](Systems.Security.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used.[Filter(eq;like)] [Introduced in version 18.2] 
+| [PhoneNumberConfirmed](Systems.Security.Users.md#phonenumberconfirmed) | boolean | Indicates whether the Phone Number has been verified.[Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2] 
+| [RegistrationMessage](Systems.Security.Users.md#registrationmessage) | string (254) __nullable__ | Message from the user to the registration operator, regarding the desired permissions and assignment.[Introduced in version 22.1.6.61] 
+| [TwoFactorEnabled](Systems.Security.Users.md#twofactorenabled) | boolean | Indicates whether two-factor authentication has been enabled.[Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2] 
+| [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login).[Required] [Default(&quot;INT&quot;)] [Filter(multi eq;like)] [Introduced in version 18.2] 
 | [VoiceExtensionNumbers](Systems.Security.Users.md#voiceextensionnumbers) | string (254) __nullable__ | Comma separated list of internal extension numbers and contexts of the voice telephones of the user in form 'Number@Context'. Used for VOIP integration 
 | [WindowsUserName](Systems.Security.Users.md#windowsusername) | string (128) __nullable__ | The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user. 
 
@@ -99,7 +99,7 @@ Aggregate Tree
 
 ### AccessFailedCount
 
-Indicates how many times the user has failed to login. May be used for locking out the user.
+Indicates how many times the user has failed to login. May be used for locking out the user.[Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 18.2]
 
 Type: **int32**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### Active
 
-True when the login is currently active and the user can log in.
+True when the login is currently active and the user can log in.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### BasicAuthenticationAllowed
 
-If true, this user is allowed to use basic authentication. Use with caution, because basic authentication is less secure than oauth!
+If true, this user is allowed to use basic authentication. Use with caution, because basic authentication is less secure than oauth![Required] [Default(false)] [Filter(eq)] [Introduced in version 23.1.1.35]
 
 Type: **boolean**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### CompanyName
 
-Name of the company in which the user claims they are working.
+Name of the company in which the user claims they are working.[Introduced in version 22.1.6.61]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The date and time (in UTC), when the user was created.
+The date and time (in UTC), when the user was created.[Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] [Introduced in version 18.2]
 
 Type: **datetime**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultLanguage
 
-The preferred default language of the user for UI, notifications, etc. Null means "en=English"
+The preferred default language of the user for UI, notifications, etc. Null means "en=English"[Filter(eq)] [Introduced in version 25.1.0.34]
 
 Type: **string (15) __nullable__**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### Email
 
-Unique email of the user. Can be NULL because there may be login providers that don't use emails.
+Unique email of the user. Can be NULL because there may be login providers that don't use emails.[Filter(multi eq;like)] [ORD] [Introduced in version 18.2]
 
 Type: **string (254) __nullable__**  
 Indexed: **True**  
@@ -177,7 +177,7 @@ Show in UI: **ShownByDefault**
 
 ### EmailConfirmed
 
-Indicates whether the email address for the specified user has been verified.
+Indicates whether the email address for the specified user has been verified.[Required] [Default(false)] [Filter(eq)] [ReadOnly] [Introduced in version 18.2]
 
 Type: **boolean**  
 Category: **System**  
@@ -188,7 +188,7 @@ Show in UI: **ShownByDefault**
 
 ### IsAdmin
 
-1 if the user is administrator, otherwise 0.
+1 if the user is administrator, otherwise 0.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -199,7 +199,7 @@ Show in UI: **ShownByDefault**
 
 ### LockoutEndUtc
 
-Contains the date and time (in UTC) until the user is locked. NULL when the user is not locked.
+Contains the date and time (in UTC) until the user is locked. NULL when the user is not locked.[Filter(eq;ge;le;like)] [Introduced in version 18.2]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -209,7 +209,7 @@ Show in UI: **ShownByDefault**
 
 ### Login
 
-The login name of the user, which is usually the email
+The login name of the user, which is usually the email[Required] [Filter(multi eq;like)] [ORD]
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -221,7 +221,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The full name of the user
+The full name of the user[Required] [Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -242,7 +242,7 @@ Show in UI: **ShownByDefault**
 
 ### Password
 
-The password hash of the user, stored in the format, specified in Password Format.
+The password hash of the user, stored in the format, specified in Password Format.[Unit: PasswordFormat] [ReadOnly]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -253,7 +253,7 @@ Show in UI: **ShownByDefault**
 
 ### PasswordFormat
 
-The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.
+The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3.[Required] [Default(&quot;MD5&quot;)] [Filter(eq)] [Introduced in version 18.2]
 
 Type: **[PasswordFormat](Systems.Security.Users.md#passwordformat)**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### PhoneNumber
 
-Used only for two-factor authentication. NULL when phone-based two-factor is not used.
+Used only for two-factor authentication. NULL when phone-based two-factor is not used.[Filter(eq;like)] [Introduced in version 18.2]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -283,7 +283,7 @@ Show in UI: **ShownByDefault**
 
 ### PhoneNumberConfirmed
 
-Indicates whether the Phone Number has been verified.
+Indicates whether the Phone Number has been verified.[Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]
 
 Type: **boolean**  
 Category: **System**  
@@ -294,7 +294,7 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationMessage
 
-Message from the user to the registration operator, regarding the desired permissions and assignment.
+Message from the user to the registration operator, regarding the desired permissions and assignment.[Introduced in version 22.1.6.61]
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -305,7 +305,7 @@ Show in UI: **ShownByDefault**
 
 ### TwoFactorEnabled
 
-Indicates whether two-factor authentication has been enabled.
+Indicates whether two-factor authentication has been enabled.[Required] [Default(false)] [Filter(eq)] [Introduced in version 18.2]
 
 Type: **boolean**  
 Category: **System**  
@@ -316,7 +316,7 @@ Show in UI: **ShownByDefault**
 
 ### UserType
 
-Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login).
+Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login).[Required] [Default(&quot;INT&quot;)] [Filter(multi eq;like)] [Introduced in version 18.2]
 
 Type: **[UserType](Systems.Security.Users.md#usertype)**  
 Category: **System**  

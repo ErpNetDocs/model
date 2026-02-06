@@ -36,8 +36,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Resources.ResourceInstances.md#code) | string (16) | Code of the instance, unique within the resource. 
-| [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name. 
+| [Code](General.Resources.ResourceInstances.md#code) | string (16) | Code of the instance, unique within the resource.[Required] [Filter(eq;like)] 
+| [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name.[Required] [Filter(eq;like)] 
 | [Notes](General.Resources.ResourceInstances.md#notes) | string (max) __nullable__ | Notes for this ResourceInstance. 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### Code
 
-Code of the instance, unique within the resource.
+Code of the instance, unique within the resource.[Required] [Filter(eq;like)]
 
 Type: **string (16)**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage resource instance name.
+Multilanguage resource instance name.[Required] [Filter(eq;like)]
 
 Type: **string (max)**  
 Category: **System**  

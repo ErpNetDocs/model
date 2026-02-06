@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LinePercent](Regulatory.Vat.DealTypeDocumentAmounts.md#linepercent) | decimal (14, 3) | Percent by which additional amount is calculated. 
+| [LinePercent](Regulatory.Vat.DealTypeDocumentAmounts.md#linepercent) | decimal (14, 3) | Percent by which additional amount is calculated.[Required] [Default(0)] 
 | [Notes](Regulatory.Vat.DealTypeDocumentAmounts.md#notes) | string (max) __nullable__ | Notes for this DealTypeDocumentAmount. 
 
 ## References
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### LinePercent
 
-Percent by which additional amount is calculated.
+Percent by which additional amount is calculated.[Required] [Default(0)]
 
 Type: **decimal (14, 3)**  
 Category: **System**  

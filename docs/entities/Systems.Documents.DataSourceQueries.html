@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
 <td><a href="Systems.Documents.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
-<td>Determines the visibility of rows in this table depending on the rows in the sub-tables</td>
+<td>Determines the visibility of rows in this table depending on the rows in the sub-tables[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#extensionslist">ExtensionsList</a></td>
@@ -136,17 +136,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#filterxml">FilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>Filter for the data from the current table.</td>
+<td>Filter for the data from the current table.[Unit: obj.GetTableName()]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#firstrow">FirstRow</a></td>
 <td>boolean</td>
-<td>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.</td>
+<td>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#referencepath">ReferencePath</a></td>
 <td>string (max)</td>
-<td>A sequence of tables ordered by their references.</td>
+<td>A sequence of tables ordered by their references.[Required]</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DataSourceQueries.html#tablename">TableName</a></td>
@@ -206,7 +206,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="dependsonchildrows">DependsOnChildRows</h3>
-<p>Determines the visibility of rows in this table depending on the rows in the sub-tables</p>
+<p>Determines the visibility of rows in this table depending on the rows in the sub-tables[Required] [Default(0)]</p>
 <p>Type: <strong><a href="Systems.Documents.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DependsOnChildRows</code>(Systems.Documents.DataSourceQueries.md#dependsonchildrows) data attribute<br>
@@ -246,14 +246,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="filterxml">FilterXml</h3>
-<p>Filter for the data from the current table.</p>
+<p>Filter for the data from the current table.[Unit: obj.GetTableName()]</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="firstrow">FirstRow</h3>
-<p>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.</p>
+<p>Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -261,7 +261,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referencepath">ReferencePath</h3>
-<p>A sequence of tables ordered by their references.</p>
+<p>A sequence of tables ordered by their references.[Required]</p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

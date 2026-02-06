@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default) 
-| [AvailableQuantityOnly](Crm.Sales.SalesOrdersOptions.md#availablequantityonly) | boolean | When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP) 
-| [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#minimumamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not NULL, specifies minimal total amount of the sales order, which is required for order releasing. 
-| [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | Terms on which the shipment of the products in the sales order is allowed. 
+| [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | [AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections) | Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)[Required] [Default(&quot;A&quot;)] [Filter(multi eq)] 
+| [AvailableQuantityOnly](Crm.Sales.SalesOrdersOptions.md#availablequantityonly) | boolean | When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)[Required] [Default(false)] [Filter(eq)] 
+| [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#minimumamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.[Currency: MinimumAmountCurrency] 
+| [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | Terms on which the shipment of the products in the sales order is allowed.[Required] [Default(&quot;A&quot;)] 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### AllowedDirections
 
-Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)
+Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default)[Required] [Default(&quot;A&quot;)] [Filter(multi eq)]
 
 Type: **[AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableQuantityOnly
 
-When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)
+When 1 indicates that the sales order can be released only if there is sufficient available quantity (by ATP)[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### MinimumAmount
 
-When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.
+When not NULL, specifies minimal total amount of the sales order, which is required for order releasing.[Currency: MinimumAmountCurrency]
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### ShipmentAllowance
 
-Terms on which the shipment of the products in the sales order is allowed.
+Terms on which the shipment of the products in the sales order is allowed.[Required] [Default(&quot;A&quot;)]
 
 Type: **[ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance)**  
 Category: **System**  

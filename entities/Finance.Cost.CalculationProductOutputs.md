@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Finance.Cost.CalculationProductOutputs.md#lineno) | int32 | Consecutive number of the line within the calculation 
+| [LineNo](Finance.Cost.CalculationProductOutputs.md#lineno) | int32 | Consecutive number of the line within the calculation[Required] 
 | [ProjectId](Finance.Cost.CalculationProductOutputs.md#projectid) | guid __nullable__ | The Project, which absorbed the cost. `Filter(multi eq)` 
-| [Quantity](Finance.Cost.CalculationProductOutputs.md#quantity) | decimal (18, 3) | The quantity produced 
+| [Quantity](Finance.Cost.CalculationProductOutputs.md#quantity) | decimal (18, 3) | The quantity produced[Required] [Default(0)] 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line within the calculation
+Consecutive number of the line within the calculation[Required]
 
 Type: **int32**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-The quantity produced
+The quantity produced[Required] [Default(0)]
 
 Type: **decimal (18, 3)**  
 Category: **System**  

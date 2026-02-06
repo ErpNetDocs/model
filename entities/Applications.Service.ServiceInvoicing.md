@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice 
-| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of service for which the invoicing is specified 
+| [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of service for which the invoicing is specified[Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)] 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### QuantityOfProduct
 
-The quantity to invoice
+The quantity to invoice[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityOfService
 
-The quantity of service for which the invoicing is specified
+The quantity of service for which the invoicing is specified[Unit: Service.MeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

@@ -42,10 +42,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseDutyRateField](Regulatory.Excise.ExciseDutyRates.md#excisedutyratefield) | decimal (10, 6) | The rate which should be applied for the specified product and purpose. 
+| [ExciseDutyRateField](Regulatory.Excise.ExciseDutyRates.md#excisedutyratefield) | decimal (10, 6) | The rate which should be applied for the specified product and purpose.[Required] [Default(0)] [Filter(eq;ge;le)] 
 | [Notes](Regulatory.Excise.ExciseDutyRates.md#notes) | string (max) __nullable__ | Notes for this ExciseDutyRate. 
-| [ValidFrom](Regulatory.Excise.ExciseDutyRates.md#validfrom) | date __nullable__ | The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended. 
-| [ValidTo](Regulatory.Excise.ExciseDutyRates.md#validto) | date __nullable__ | Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed. 
+| [ValidFrom](Regulatory.Excise.ExciseDutyRates.md#validfrom) | date __nullable__ | The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended.[Filter(eq;ge;le)] [Introduced in version 25.1.3.7] 
+| [ValidTo](Regulatory.Excise.ExciseDutyRates.md#validto) | date __nullable__ | Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed.[Filter(eq;ge;le)] [Introduced in version 25.1.3.7] 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### ExciseDutyRateField
 
-The rate which should be applied for the specified product and purpose.
+The rate which should be applied for the specified product and purpose.[Required] [Default(0)] [Filter(eq;ge;le)]
 
 Type: **decimal (10, 6)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended.
+The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended.[Filter(eq;ge;le)] [Introduced in version 25.1.3.7]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed.
+Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed.[Filter(eq;ge;le)] [Introduced in version 25.1.3.7]
 
 Type: **date __nullable__**  
 Category: **System**  

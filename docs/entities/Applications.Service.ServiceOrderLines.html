@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#symptomdescription">SymptomDescription</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Description or synopsis of the symptoms of the failed object.</td>
+<td>Description or synopsis of the symptoms of the failed object.[Filter(like)]</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="symptomdescription">SymptomDescription</h3>
-<p>Description or synopsis of the symptoms of the failed object.</p>
+<p>Description or synopsis of the symptoms of the failed object.[Filter(like)]</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

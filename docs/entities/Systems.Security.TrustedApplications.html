@@ -126,42 +126,42 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></td>
 <td><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></td>
-<td>Defines who is allowed to issue reference access tokens for this trusted application.</td>
+<td>Defines who is allowed to issue reference access tokens for this trusted application.[Required] [Default(&quot;NON&quot;)] [Filter(multi eq)] [Introduced in version 26.2.0.16]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationsecrethash">ApplicationSecretHash</a></td>
 <td>string (250) <strong>nullable</strong></td>
-<td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.</td>
+<td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.[Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#applicationuri">ApplicationUri</a></td>
 <td>string (254)</td>
-<td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;.</td>
+<td>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;.[Required] [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#basicauthenticationallowed">BasicAuthenticationAllowed</a></td>
 <td>boolean</td>
-<td>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.</td>
+<td>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
-<td>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).</td>
+<td>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).[Required] [Default(&quot;C&quot;)] [Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>Date and time (in UTC) when the application was registered.</td>
+<td>Date and time (in UTC) when the application was registered.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateascommunityuserallowed">ImpersonateAsCommunity<br>UserAllowed</a></td>
 <td>boolean</td>
-<td>Allows the application to request login from external users and operate on their behalf.</td>
+<td>Allows the application to request login from external users and operate on their behalf.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateasinternaluserallowed">ImpersonateAsInternal<br>UserAllowed</a></td>
 <td>boolean</td>
-<td>Allows the application to request login from internal users and operate on their behalf.</td>
+<td>Allows the application to request login from internal users and operate on their behalf.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#impersonateloginurl">ImpersonateLoginUrl</a></td>
@@ -176,12 +176,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#isenabled">IsEnabled</a></td>
 <td>boolean</td>
-<td>Specifies whether the application is enabled for login.</td>
+<td>Specifies whether the application is enabled for login.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#name">Name</a></td>
 <td>string (254)</td>
-<td>The multi-language name of the application.</td>
+<td>The multi-language name of the application.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#notes">Notes</a></td>
@@ -191,12 +191,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#scope">Scope</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).</td>
+<td>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).[Introduced in version 20.1]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuserallowed">SystemUserAllowed</a></td>
 <td>boolean</td>
-<td>Allows this application to logon as a service.</td>
+<td>Allows this application to logon as a service.[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#systemuserloginurl">SystemUserLoginUrl</a></td>
@@ -283,7 +283,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accesstokens">AccessTokens</h3>
-<p>Defines who is allowed to issue reference access tokens for this trusted application.</p>
+<p>Defines who is allowed to issue reference access tokens for this trusted application.[Required] [Default(&quot;NON&quot;)] [Filter(multi eq)] [Introduced in version 26.2.0.16]</p>
 <p>Type: <strong><a href="Systems.Security.TrustedApplications.html#accesstokens">AccessTokens</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AccessTokens</code>(Systems.Security.TrustedApplications.md#accesstokens) data attribute<br>
@@ -315,7 +315,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>None</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applicationsecrethash">ApplicationSecretHash</h3>
-<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.</p>
+<p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.[Introduced in version 20.1]</p>
 <p>Type: <strong>string (250) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -323,7 +323,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>250</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applicationuri">ApplicationUri</h3>
-<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;.</p>
+<p>Application globally unique Uri in reverse host name format. For example: &quot;com.manufacturer/app&quot;.[Required] [Filter(eq)] [ORD]</p>
 <p>Type: <strong>string (254)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -332,7 +332,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="basicauthenticationallowed">BasicAuthenticationAllowed</h3>
-<p>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.</p>
+<p>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -340,7 +340,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="clienttype">ClientType</h3>
-<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).</p>
+<p>Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).[Required] [Default(&quot;C&quot;)] [Introduced in version 20.1]</p>
 <p>Type: <strong><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ClientType</code>(Systems.Security.TrustedApplications.md#clienttype) data attribute<br>
@@ -368,7 +368,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Confidential</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>Date and time (in UTC) when the application was registered.</p>
+<p>Date and time (in UTC) when the application was registered.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -376,7 +376,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impersonateascommunityuserallowed">ImpersonateAsCommunityUserAllowed</h3>
-<p>Allows the application to request login from external users and operate on their behalf.</p>
+<p>Allows the application to request login from external users and operate on their behalf.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -384,7 +384,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="impersonateasinternaluserallowed">ImpersonateAsInternalUserAllowed</h3>
-<p>Allows the application to request login from internal users and operate on their behalf.</p>
+<p>Allows the application to request login from internal users and operate on their behalf.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -408,7 +408,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isenabled">IsEnabled</h3>
-<p>Specifies whether the application is enabled for login.</p>
+<p>Specifies whether the application is enabled for login.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -416,7 +416,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The multi-language name of the application.</p>
+<p>The multi-language name of the application.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -432,7 +432,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scope">Scope</h3>
-<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).</p>
+<p>The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).[Introduced in version 20.1]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -440,7 +440,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemuserallowed">SystemUserAllowed</h3>
-<p>Allows this application to logon as a service.</p>
+<p>Allows this application to logon as a service.[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

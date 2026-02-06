@@ -122,22 +122,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.Devices.html#deviceregistrationno">DeviceRegistrationNo</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</td>
+<td>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.[Filter(multi eq;like)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
 <td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
-<td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</td>
+<td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.[Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#electronicaddress">ElectronicAddress</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.</addr></td>
+<td>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.[Filter(multi eq;like)]</addr></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</td>
+<td>Indicates whether the device is currently active and can be choosen from drop-downs in new records.[Required] [Default(true)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a></td>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="deviceregistrationno">DeviceRegistrationNo</h3>
-<p>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.</p>
+<p>The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.[Filter(multi eq;like)]</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -205,7 +205,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="devicetype">DeviceType</h3>
-<p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.</p>
+<p>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.[Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DeviceType</code>(Crm.Pos.Devices.md#devicetype) data attribute<br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Other</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="electronicaddress">ElectronicAddress</h3>
-<p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.</addr></p>
+<p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://<addr>&quot;, etc.[Filter(multi eq;like)]</addr></p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -249,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the device is currently active and can be choosen from drop-downs in new records.</p>
+<p>Indicates whether the device is currently active and can be choosen from drop-downs in new records.[Required] [Default(true)] [Filter(multi eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

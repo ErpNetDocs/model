@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](General.Products.ProductRelations.md#fromdate) | date __nullable__ | Start date from which the product relation is valid 
-| [Notes](General.Products.ProductRelations.md#notes) | string (max) __nullable__ | Notes 
-| [QtyFactor](General.Products.ProductRelations.md#qtyfactor) | decimal (18, 6) __nullable__ | Used to calculate replacement quantity. 
-| [ToDate](General.Products.ProductRelations.md#todate) | date __nullable__ | End date to which the product relation is valid. 
+| [FromDate](General.Products.ProductRelations.md#fromdate) | date __nullable__ | Start date from which the product relation is valid[Filter(eq;ge;le)] 
+| [Notes](General.Products.ProductRelations.md#notes) | string (max) __nullable__ | Notes[Filter(like)] 
+| [QtyFactor](General.Products.ProductRelations.md#qtyfactor) | decimal (18, 6) __nullable__ | Used to calculate replacement quantity.[Default(1)] [Filter(eq;ge;le)] 
+| [ToDate](General.Products.ProductRelations.md#todate) | date __nullable__ | End date to which the product relation is valid.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### FromDate
 
-Start date from which the product relation is valid
+Start date from which the product relation is valid[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes
+Notes[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### QtyFactor
 
-Used to calculate replacement quantity.
+Used to calculate replacement quantity.[Default(1)] [Filter(eq;ge;le)]
 
 Type: **decimal (18, 6) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-End date to which the product relation is valid.
+End date to which the product relation is valid.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

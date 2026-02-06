@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Files.Folders.md#name) | string (128) | Name of the folder. Unique within its parent folder. 
+| [Name](General.Files.Folders.md#name) | string (128) | Name of the folder. Unique within its parent folder.[Required] [Filter(multi eq;like)] 
 | [Notes](General.Files.Folders.md#notes) | string (max) __nullable__ | Notes for this Folder. 
 
 ## References
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### Name
 
-Name of the folder. Unique within its parent folder.
+Name of the folder. Unique within its parent folder.[Required] [Filter(multi eq;like)]
 
 Type: **string (128)**  
 Category: **System**  

@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreateDate](Projects.Classic.ProjectRisks.md#createdate) | date | The creation date of the project risk. 
+| [CreateDate](Projects.Classic.ProjectRisks.md#createdate) | date | The creation date of the project risk.[Required] [Default(Now)] [Filter(eq;ge;le)] 
 | [Description](Projects.Classic.ProjectRisks.md#description) | string (max) __nullable__ | The description of this ProjectRisk. `Filter(like)` 
-| [ImpactPercent](Projects.Classic.ProjectRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. 
-| [ProbabilityPercent](Projects.Classic.ProjectRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring. 
-| [ResolutionStrategy](Projects.Classic.ProjectRisks.md#resolutionstrategy) | string (max) __nullable__ | The strategy chosen to handle the risk 
-| [Resolved](Projects.Classic.ProjectRisks.md#resolved) | boolean | 1 if the risk is resolved 
-| [ResolveDate](Projects.Classic.ProjectRisks.md#resolvedate) | date __nullable__ | The date on which the risk is resolved 
-| [RiskName](Projects.Classic.ProjectRisks.md#riskname) | string (254) | The short name of the risk. 
+| [ImpactPercent](Projects.Classic.ProjectRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value.[Required] [Default(0)] 
+| [ProbabilityPercent](Projects.Classic.ProjectRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring.[Required] [Default(0)] 
+| [ResolutionStrategy](Projects.Classic.ProjectRisks.md#resolutionstrategy) | string (max) __nullable__ | The strategy chosen to handle the risk[Filter(eq)] 
+| [Resolved](Projects.Classic.ProjectRisks.md#resolved) | boolean | 1 if the risk is resolved[Required] [Default(false)] [Filter(eq)] 
+| [ResolveDate](Projects.Classic.ProjectRisks.md#resolvedate) | date __nullable__ | The date on which the risk is resolved[Filter(eq;ge;le)] 
+| [RiskName](Projects.Classic.ProjectRisks.md#riskname) | string (254) | The short name of the risk.[Required] [Filter(multi eq)] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### CreateDate
 
-The creation date of the project risk.
+The creation date of the project risk.[Required] [Default(Now)] [Filter(eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ImpactPercent
 
-The impact of the risk to the project, expressed as percentage of the total project value.
+The impact of the risk to the project, expressed as percentage of the total project value.[Required] [Default(0)]
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ProbabilityPercent
 
-The probability of the risk occurring.
+The probability of the risk occurring.[Required] [Default(0)]
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### ResolutionStrategy
 
-The strategy chosen to handle the risk
+The strategy chosen to handle the risk[Filter(eq)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### Resolved
 
-1 if the risk is resolved
+1 if the risk is resolved[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### ResolveDate
 
-The date on which the risk is resolved
+The date on which the risk is resolved[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### RiskName
 
-The short name of the risk.
+The short name of the risk.[Required] [Filter(multi eq)]
 
 Type: **string (254)**  
 Category: **System**  

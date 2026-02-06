@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.VehicleSets.html#active">Active</a></td>
 <td>boolean</td>
-<td>1 if the vehicle set is active for choosing; 0 - otherwise</td>
+<td>1 if the vehicle set is active for choosing; 0 - otherwise[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleSets.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></td>
-<td>Name of the vehicle set</td>
+<td>Name of the vehicle set[Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -193,7 +193,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>1 if the vehicle set is active for choosing; 0 - otherwise</p>
+<p>1 if the vehicle set is active for choosing; 0 - otherwise[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -201,7 +201,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the vehicle set</p>
+<p>Name of the vehicle set[Required] [Filter(eq;like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

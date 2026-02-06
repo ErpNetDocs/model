@@ -128,12 +128,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start of the dealer relationship</td>
+<td>Start of the dealer relationship[Default(Today)] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Dealer is active.</td>
+<td>Indicates whether the current Dealer is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.5.22]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#notes">Notes</a></td>
@@ -143,7 +143,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.Dealers.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Termination date of the dealership. NULL for active dealers</td>
+<td>Termination date of the dealership. NULL for active dealers[Filter(ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -213,7 +213,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Start of the dealer relationship</p>
+<p>Start of the dealer relationship[Default(Today)] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -221,7 +221,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Dealer is active.</p>
+<p>Indicates whether the current Dealer is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.5.22]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -237,7 +237,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Termination date of the dealership. NULL for active dealers</p>
+<p>Termination date of the dealership. NULL for active dealers[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

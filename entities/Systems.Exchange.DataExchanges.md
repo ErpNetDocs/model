@@ -35,16 +35,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedOn](Systems.Exchange.DataExchanges.md#createdon) | datetime | The time when the exchange is created. 
-| [DriverName](Systems.Exchange.DataExchanges.md#drivername) | string (64) __nullable__ | The name of the exchange program/procedure, which actuates the exchange operation. 
-| [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time (in UTC) of the exchange. 
-| [ExchangeLog](Systems.Exchange.DataExchanges.md#exchangelog) | string (max) __nullable__ | General log of the last transfer attempt. Messages for the individual objects are kept with the objects. 
-| [ExternalAddress](Systems.Exchange.DataExchanges.md#externaladdress) | string (254) __nullable__ | Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver. 
-| [KeepUntil](Systems.Exchange.DataExchanges.md#keepuntil) | date | Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted). 
-| [Mode](Systems.Exchange.DataExchanges.md#mode) | [Mode](Systems.Exchange.DataExchanges.md#mode) | Operation mode of the exchange. 
-| [Name](Systems.Exchange.DataExchanges.md#name) | string (64) __nullable__ | The name of the package. Can be empty if naming is not important. 
-| [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes for the exchange. 
-| [State](Systems.Exchange.DataExchanges.md#state) | [State](Systems.Exchange.DataExchanges.md#state) | State of the exchange. 
+| [CreatedOn](Systems.Exchange.DataExchanges.md#createdon) | datetime | The time when the exchange is created.[Required] [Filter(ge;le)] [ReadOnly] 
+| [DriverName](Systems.Exchange.DataExchanges.md#drivername) | string (64) __nullable__ | The name of the exchange program/procedure, which actuates the exchange operation.[Default(&quot;JSON_FILE&quot;)] [Filter(eq)] 
+| [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time (in UTC) of the exchange.[Filter(ge;le)] 
+| [ExchangeLog](Systems.Exchange.DataExchanges.md#exchangelog) | string (max) __nullable__ | General log of the last transfer attempt. Messages for the individual objects are kept with the objects.[Filter(like)] 
+| [ExternalAddress](Systems.Exchange.DataExchanges.md#externaladdress) | string (254) __nullable__ | Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.[Filter(like)] 
+| [KeepUntil](Systems.Exchange.DataExchanges.md#keepuntil) | date | Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).[Required] [Filter(ge;le)] 
+| [Mode](Systems.Exchange.DataExchanges.md#mode) | [Mode](Systems.Exchange.DataExchanges.md#mode) | Operation mode of the exchange.[Required] [Default(&quot;E&quot;)] [Filter(eq)] 
+| [Name](Systems.Exchange.DataExchanges.md#name) | string (64) __nullable__ | The name of the package. Can be empty if naming is not important.[Filter(eq;like)] 
+| [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes for the exchange.[Filter(like)] 
+| [State](Systems.Exchange.DataExchanges.md#state) | [State](Systems.Exchange.DataExchanges.md#state) | State of the exchange.[Required] [Default(&quot;PRE&quot;)] [Filter(eq)] 
 
 ## References
 
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### CreatedOn
 
-The time when the exchange is created.
+The time when the exchange is created.[Required] [Filter(ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -89,7 +89,7 @@ Back-End Default Expression:
 
 ### DriverName
 
-The name of the exchange program/procedure, which actuates the exchange operation.
+The name of the exchange program/procedure, which actuates the exchange operation.[Default(&quot;JSON_FILE&quot;)] [Filter(eq)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangedOn
 
-The time (in UTC) of the exchange.
+The time (in UTC) of the exchange.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangeLog
 
-General log of the last transfer attempt. Messages for the individual objects are kept with the objects.
+General log of the last transfer attempt. Messages for the individual objects are kept with the objects.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### ExternalAddress
 
-Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.
+Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.[Filter(like)]
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 ### KeepUntil
 
-Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).
+Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).[Required] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -146,7 +146,7 @@ Back-End Default Expression:
 
 ### Mode
 
-Operation mode of the exchange.
+Operation mode of the exchange.[Required] [Default(&quot;E&quot;)] [Filter(eq)]
 
 Type: **[Mode](Systems.Exchange.DataExchanges.md#mode)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the package. Can be empty if naming is not important.
+The name of the package. Can be empty if naming is not important.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the exchange.
+Notes for the exchange.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-State of the exchange.
+State of the exchange.[Required] [Default(&quot;PRE&quot;)] [Filter(eq)]
 
 Type: **[State](Systems.Exchange.DataExchanges.md#state)**  
 Category: **System**  

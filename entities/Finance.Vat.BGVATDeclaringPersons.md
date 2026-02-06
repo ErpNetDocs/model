@@ -35,12 +35,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | Type of the declaring person. A=Attorney, R=Representative. 
-| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string (150) | Address for correspondence of the declaring person. 
-| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string (50) | City from the address for correspondence of the declaring person. 
+| [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | Type of the declaring person. A=Attorney, R=Representative.[Required] [Filter(eq)] 
+| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string (150) | Address for correspondence of the declaring person.[Required] 
+| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string (50) | City from the address for correspondence of the declaring person.[Required] 
 | [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonposition) | string (50) __nullable__ | Position of the declaring person in the enterprise company. 
-| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondence of the declaring person. 
-| [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. 
+| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondence of the declaring person.[Required] 
+| [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company.[Required] [Default(true)] 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### DeclarerType
 
-Type of the declaring person. A=Attorney, R=Representative.
+Type of the declaring person. A=Attorney, R=Representative.[Required] [Filter(eq)]
 
 Type: **[DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### DeclaringPersonAddress
 
-Address for correspondence of the declaring person.
+Address for correspondence of the declaring person.[Required]
 
 Type: **string (150)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Front-End Recalc Expressions:
 `obj.Person.GetValidAddress( ).Name`
 ### DeclaringPersonCity
 
-City from the address for correspondence of the declaring person.
+City from the address for correspondence of the declaring person.[Required]
 
 Type: **string (50)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### DeclaringPersonPostcode
 
-Postcode from the address for correspondence of the declaring person.
+Postcode from the address for correspondence of the declaring person.[Required]
 
 Type: **string (4)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-True if this is the default person, which issues VAT declarations for this Enterprise Company.
+True if this is the default person, which issues VAT declarations for this Enterprise Company.[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  

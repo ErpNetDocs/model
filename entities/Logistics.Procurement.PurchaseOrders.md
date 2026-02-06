@@ -58,14 +58,14 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Procurement.PurchaseOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Procurement.PurchaseOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Procurement.PurchaseOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [InvoiceDocumentNo](Logistics.Procurement.PurchaseOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. 
-| [<s>IsReleased</s>](Logistics.Procurement.PurchaseOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Logistics.Procurement.PurchaseOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [InvoiceDocumentNo](Logistics.Procurement.PurchaseOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise.[Filter(eq)] 
+| [<s>IsReleased</s>](Logistics.Procurement.PurchaseOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Logistics.Procurement.PurchaseOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [Notes](Logistics.Procurement.PurchaseOrders.md#notes) | string (max) __nullable__ | Notes for this PurchaseOrder. 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Logistics.Procurement.PurchaseOrders.md#paymentduedate) | datetime __nullable__ | Due date for paying the order. NULL means to use the default, which is the document date. 
-| [PlannedDeliveryDate](Logistics.Procurement.PurchaseOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines. 
-| [PlannedReleaseDate](Logistics.Procurement.PurchaseOrders.md#plannedreleasedate) | datetime | The date, when the document is planned to be realeased and send to the supplier. 
+| [PaymentDueDate](Logistics.Procurement.PurchaseOrders.md#paymentduedate) | datetime __nullable__ | Due date for paying the order. NULL means to use the default, which is the document date.[Filter(ge;le)] 
+| [PlannedDeliveryDate](Logistics.Procurement.PurchaseOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines.[Filter(ge;le)] 
+| [PlannedReleaseDate](Logistics.Procurement.PurchaseOrders.md#plannedreleasedate) | datetime | The date, when the document is planned to be realeased and send to the supplier.[Required] [Filter(ge;le)] 
 | [PlanningOnly](Logistics.Procurement.PurchaseOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Procurement.PurchaseOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Logistics.Procurement.PurchaseOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -271,7 +271,7 @@ Show in UI: **HiddenByDefault**
 
 ### InvoiceDocumentNo
 
-Contains the purchase invoice number when it is known in advance, null otherwise.
+Contains the purchase invoice number when it is known in advance, null otherwise.[Filter(eq)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -282,7 +282,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -293,7 +293,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -334,7 +334,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-Due date for paying the order. NULL means to use the default, which is the document date.
+Due date for paying the order. NULL means to use the default, which is the document date.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -346,7 +346,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( obj.Supplier.DefaultPaymentTermDays, Double))`
 ### PlannedDeliveryDate
 
-When not null, specifies the planned delivery date for all lines.
+When not null, specifies the planned delivery date for all lines.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -359,7 +359,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => PurchaseOrderLinesRepository.PlannedDeliveryDateAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### PlannedReleaseDate
 
-The date, when the document is planned to be realeased and send to the supplier.
+The date, when the document is planned to be realeased and send to the supplier.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  

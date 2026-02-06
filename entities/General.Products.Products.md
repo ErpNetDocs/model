@@ -45,38 +45,38 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. 
-| [Active](General.Products.Products.md#active) | boolean | 1 if the product is active, 0 - not to list in combo boxes for choosing in new documents 
-| [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit. 
+| [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.[Required] [Default(&quot;B &quot;)] [Filter(eq)] 
+| [Active](General.Products.Products.md#active) | boolean | 1 if the product is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)] 
+| [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.[Required] [Default(false)] [Filter(eq)] 
 | [CatalogDescriptionHtml](General.Products.Products.md#catalogdescriptionhtml) | string (max) __nullable__ | Full HTML description of the product. Usually used for display on product catalogs, web pages, etc. 
 | [CostingMethod](General.Products.Products.md#costingmethod) | [CostingMethod](General.Products.Products.md#costingmethod) __nullable__ | Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost 
 | [CreationTime](General.Products.Products.md#creationtime) | datetime __nullable__ | Date and time when the Product was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Products.Products.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Product. `Filter(like)` `ReadOnly` 
 | [Description](General.Products.Products.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of the product 
 | [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 __nullable__ | Total default expiry period for the product (in days) from the date of production to the date of expiry 
-| [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish) 
+| [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)[Required] [Default(&quot;M&quot;)] 
 | [GuaranteePeriodDays](General.Products.Products.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. 
-| [IsFeatured](General.Products.Products.md#isfeatured) | boolean | Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. 
-| [IsSerialized](General.Products.Products.md#isserialized) | boolean | 1 if the parts use/require serial numbers 
+| [IsFeatured](General.Products.Products.md#isfeatured) | boolean | Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.[Required] [Default(false)] [Filter(eq)] 
+| [IsSerialized](General.Products.Products.md#isserialized) | boolean | 1 if the parts use/require serial numbers[Required] [Default(false)] [Filter(eq)] 
 | [LotsIssue](General.Products.Products.md#lotsissue) | [LotsIssue](General.Products.Products.md#lotsissue) __nullable__ | Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO). 
-| [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string (3) | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order 
-| [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement. 
+| [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string (3) | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-<br />Order[Required] [Default(&quot;MTS&quot;)] 
+| [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.[Currency: CostingCurrency] 
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of this product that has to be specified in any sale. 
-| [Name](General.Products.Products.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the item 
-| [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product 
+| [Name](General.Products.Products.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the item[Required] [Filter(eq;like)] 
+| [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product[Required] [Filter(multi eq;like)] [ORD] 
 | [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 __nullable__ | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days) 
 | [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 __nullable__ | Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days) 
 | [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 __nullable__ | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days) 
-| [ScrapRate](General.Products.Products.md#scraprate) | decimal (7, 6) | Default scrap rate for the recipe, when this product is used as ingredient 
-| [ShortName](General.Products.Products.md#shortname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__ | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. 
-| [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show. 
-| [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id 
-| [StandardLotSizeBase](General.Products.Products.md#standardlotsizebase) | [Quantity (18, 3)](../data-types.md#quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price 
-| [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id 
+| [ScrapRate](General.Products.Products.md#scraprate) | decimal (7, 6) | Default scrap rate for the recipe, when this product is used as ingredient[Required] [Default(0)] 
+| [ShortName](General.Products.Products.md#shortname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__ | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.[Filter(eq;like)] 
+| [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.[Required] [Default(false)] [Filter(multi eq)] 
+| [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_<br />Id[Currency: ProductCurrency] [Required] [Default(0)] 
+| [StandardLotSizeBase](General.Products.Products.md#standardlotsizebase) | [Quantity (18, 3)](../data-types.md#quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price[Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
+| [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_<br />Id[Currency: ProductCurrency] [Required] [Default(0)] 
 | [SupplySchemaId](General.Products.Products.md#supplyschemaid) | guid __nullable__ | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
 | [UpdateTime](General.Products.Products.md#updatetime) | datetime __nullable__ | Date and time when the Product was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Products.Products.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly` 
-| [UseLots](General.Products.Products.md#uselots) | [UseLots](General.Products.Products.md#uselots) | Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. 
+| [UseLots](General.Products.Products.md#uselots) | [UseLots](General.Products.Products.md#uselots) | Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.[Required] [Default(&quot;A&quot;)] 
 
 ## References
 
@@ -132,7 +132,7 @@ Aggregate Tree
 
 ### ABCClass
 
-Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.
+Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.[Required] [Default(&quot;B &quot;)] [Filter(eq)]
 
 Type: **[ABCClass](General.Products.Products.md#abcclass)**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### Active
 
-1 if the product is active, 0 - not to list in combo boxes for choosing in new documents
+1 if the product is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowVariableMeasurementRatios
 
-Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.
+Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -245,7 +245,7 @@ Show in UI: **ShownByDefault**
 
 ### FlushingMethod
 
-Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)
+Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)[Required] [Default(&quot;M&quot;)]
 
 Type: **[FlushingMethod](General.Products.Products.md#flushingmethod)**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **ShownByDefault**
 
 ### IsFeatured
 
-Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.
+Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -286,7 +286,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSerialized
 
-1 if the parts use/require serial numbers
+1 if the parts use/require serial numbers[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -316,7 +316,7 @@ Show in UI: **ShownByDefault**
 
 ### ManufacturingPolicy
 
-Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order
+Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order[Required] [Default(&quot;MTS&quot;)]
 
 Type: **string (3)**  
 Category: **System**  
@@ -328,7 +328,7 @@ Show in UI: **CannotBeShown**
 
 ### MinimalSalesPricePerLot
 
-Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.
+Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.[Currency: CostingCurrency]
 
 Type: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -348,7 +348,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the item
+Name of the item[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  
@@ -359,7 +359,7 @@ Show in UI: **ShownByDefault**
 
 ### PartNumber
 
-Unique part number of the product
+Unique part number of the product[Required] [Filter(multi eq;like)] [ORD]
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -401,7 +401,7 @@ Show in UI: **CannotBeShown**
 
 ### ScrapRate
 
-Default scrap rate for the recipe, when this product is used as ingredient
+Default scrap rate for the recipe, when this product is used as ingredient[Required] [Default(0)]
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -412,7 +412,7 @@ Show in UI: **ShownByDefault**
 
 ### ShortName
 
-Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.
+Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.[Filter(eq;like)]
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -422,7 +422,7 @@ Show in UI: **ShownByDefault**
 
 ### ShowInCatalog
 
-Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.
+Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.[Required] [Default(false)] [Filter(multi eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -433,7 +433,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardCostPerLot
 
-Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id
+Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id[Currency: ProductCurrency] [Required] [Default(0)]
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -444,7 +444,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardLotSizeBase
 
-The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price
+The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price[Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -455,7 +455,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardPricePerLot
 
-Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id
+Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id[Currency: ProductCurrency] [Required] [Default(0)]
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -496,7 +496,7 @@ Show in UI: **HiddenByDefault**
 
 ### UseLots
 
-Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.
+Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.[Required] [Default(&quot;A&quot;)]
 
 Type: **[UseLots](General.Products.Products.md#uselots)**  
 Category: **System**  

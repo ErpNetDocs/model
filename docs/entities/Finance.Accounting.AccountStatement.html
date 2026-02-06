@@ -117,107 +117,107 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#balance">Balance</a></td>
 <td>decimal (38, 2)</td>
-<td>Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.</td>
+<td>Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#balancebase">BalanceBase</a></td>
 <td>decimal (38, 2)</td>
-<td>Calculated as Balance over Base currency.</td>
+<td>Calculated as Balance over Base currency.[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#balancereporting">BalanceReporting</a></td>
 <td>decimal (38, 2)</td>
-<td>Calculated as Balance over Reporting currency.</td>
+<td>Calculated as Balance over Reporting currency.[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#closing">Closing</a></td>
 <td>decimal (38, 2)</td>
-<td>Closing Balance(at the end of reporting period)</td>
+<td>Closing Balance(at the end of reporting period)[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#closingbase">ClosingBase</a></td>
 <td>decimal (38, 2)</td>
-<td>Closing Balance(in Base currency)</td>
+<td>Closing Balance(in Base currency)[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#closingreporting">ClosingReporting</a></td>
 <td>decimal (38, 2)</td>
-<td>Closing Balance(in Reporting currency)</td>
+<td>Closing Balance(in Reporting currency)[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#credit">Credit</a></td>
 <td>decimal (18, 2)</td>
-<td>Credit</td>
+<td>Credit[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#creditbase">CreditBase</a></td>
 <td>decimal (18, 2)</td>
-<td>Credit Base</td>
+<td>Credit Base[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#creditreporting">CreditReporting</a></td>
 <td>decimal (18, 2)</td>
-<td>Credit Reporting</td>
+<td>Credit Reporting[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#debit">Debit</a></td>
 <td>decimal (18, 2)</td>
-<td>Debit</td>
+<td>Debit[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#debitbase">DebitBase</a></td>
 <td>decimal (18, 2)</td>
-<td>Debit Base</td>
+<td>Debit Base[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#debitreporting">DebitReporting</a></td>
 <td>decimal (18, 2)</td>
-<td>Debit Reporting</td>
+<td>Debit Reporting[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#documentdate">DocumentDate</a></td>
 <td>date</td>
-<td>Document Date</td>
+<td>Document Date[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#fromdate">FromDate</a></td>
 <td>date</td>
-<td>Period Start Date - Should be filtered with exact date</td>
+<td>Period Start Date - Should be filtered with exact date[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#itemkey">ItemKey</a></td>
 <td>string (64)</td>
-<td>Item Key</td>
+<td>Item Key[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#movementtype">MovementType</a></td>
 <td>string (7)</td>
-<td>Movement Type</td>
+<td>Movement Type[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#opening">Opening</a></td>
 <td>decimal (38, 2)</td>
-<td>Opening balance (debit balance is positive, credit - negative)</td>
+<td>Opening balance (debit balance is positive, credit - negative)[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#openingbase">OpeningBase</a></td>
 <td>decimal (38, 2)</td>
-<td>Opening balance in base currency (debit balance is positive, credit - negative)</td>
+<td>Opening balance in base currency (debit balance is positive, credit - negative)[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#openingreporting">OpeningReporting</a></td>
 <td>decimal (38, 2)</td>
-<td>Opening balance in reporting currency</td>
+<td>Opening balance in reporting currency[Required]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#releasetime">ReleaseTime</a></td>
 <td>datetime</td>
-<td>Document Release Time</td>
+<td>Document Release Time[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountStatement.html#todate">ToDate</a></td>
 <td>date</td>
-<td>Period End Date - Should be filtered with exact date</td>
+<td>Period End Date - Should be filtered with exact date[Required] [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -270,105 +270,105 @@ Show in UI:  ShownByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="balance">Balance</h3>
-<p>Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.</p>
+<p>Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="balancebase">BalanceBase</h3>
-<p>Calculated as Balance over Base currency.</p>
+<p>Calculated as Balance over Base currency.[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="balancereporting">BalanceReporting</h3>
-<p>Calculated as Balance over Reporting currency.</p>
+<p>Calculated as Balance over Reporting currency.[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="closing">Closing</h3>
-<p>Closing Balance(at the end of reporting period)</p>
+<p>Closing Balance(at the end of reporting period)[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="closingbase">ClosingBase</h3>
-<p>Closing Balance(in Base currency)</p>
+<p>Closing Balance(in Base currency)[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="closingreporting">ClosingReporting</h3>
-<p>Closing Balance(in Reporting currency)</p>
+<p>Closing Balance(in Reporting currency)[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="credit">Credit</h3>
-<p>Credit</p>
+<p>Credit[Required]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creditbase">CreditBase</h3>
-<p>Credit Base</p>
+<p>Credit Base[Required]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creditreporting">CreditReporting</h3>
-<p>Credit Reporting</p>
+<p>Credit Reporting[Required]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="debit">Debit</h3>
-<p>Debit</p>
+<p>Debit[Required]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="debitbase">DebitBase</h3>
-<p>Debit Base</p>
+<p>Debit Base[Required]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="debitreporting">DebitReporting</h3>
-<p>Debit Reporting</p>
+<p>Debit Reporting[Required]</p>
 <p>Type: <strong>decimal (18, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentdate">DocumentDate</h3>
-<p>Document Date</p>
+<p>Document Date[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Period Start Date - Should be filtered with exact date</p>
+<p>Period Start Date - Should be filtered with exact date[Required] [Filter(eq)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="itemkey">ItemKey</h3>
-<p>Item Key</p>
+<p>Item Key[Required]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -376,7 +376,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movementtype">MovementType</h3>
-<p>Movement Type</p>
+<p>Movement Type[Required] [Filter(multi eq)]</p>
 <p>Type: <strong>string (7)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -384,35 +384,35 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>7</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="opening">Opening</h3>
-<p>Opening balance (debit balance is positive, credit - negative)</p>
+<p>Opening balance (debit balance is positive, credit - negative)[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="openingbase">OpeningBase</h3>
-<p>Opening balance in base currency (debit balance is positive, credit - negative)</p>
+<p>Opening balance in base currency (debit balance is positive, credit - negative)[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="openingreporting">OpeningReporting</h3>
-<p>Opening balance in reporting currency</p>
+<p>Opening balance in reporting currency[Required]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="releasetime">ReleaseTime</h3>
-<p>Document Release Time</p>
+<p>Document Release Time[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>Period End Date - Should be filtered with exact date</p>
+<p>Period End Date - Should be filtered with exact date[Required] [Filter(eq)]</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
-<td>The consecutive number (position) of the property within the current product type.</td>
+<td>The consecutive number (position) of the property within the current product type.[Required]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#required">Required</a></td>
 <td>boolean</td>
-<td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.</td>
+<td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.[Required] [Default(false)]</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="propertyno">PropertyNo</h3>
-<p>The consecutive number (position) of the property within the current product type.</p>
+<p>The consecutive number (position) of the property within the current product type.[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ProductType.PurchaseInvoiceLineProperties.Select( c =&gt; c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="required">Required</h3>
-<p>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.</p>
+<p>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

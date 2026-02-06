@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActiveFrom](Logistics.Wms.WarehouseWorkers.md#activefrom) | date | The date, from which the worker record has become active in the warehouse. 
-| [ActiveTo](Logistics.Wms.WarehouseWorkers.md#activeto) | date __nullable__ | The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations. 
-| [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks. 
-| [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the worker (multi-language). 
+| [ActiveFrom](Logistics.Wms.WarehouseWorkers.md#activefrom) | date | The date, from which the worker record has become active in the warehouse.[Required] [Default(Today)] [Filter(eq;ge;le)] 
+| [ActiveTo](Logistics.Wms.WarehouseWorkers.md#activeto) | date __nullable__ | The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.[Filter(eq;ge;le)] 
+| [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the worker (multi-language).[Required] [Filter(multi eq;like)] 
 | [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string (max) __nullable__ | Notes for this WarehouseWorker. 
 
 ## References
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### ActiveFrom
 
-The date, from which the worker record has become active in the warehouse.
+The date, from which the worker record has become active in the warehouse.[Required] [Default(Today)] [Filter(eq;ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### ActiveTo
 
-The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.
+The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the worker is active and can execute new warehouse tasks.
+Specifies whether the worker is active and can execute new warehouse tasks.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the worker (multi-language).
+Name of the worker (multi-language).[Required] [Filter(multi eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

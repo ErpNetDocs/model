@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Order of the operation within the recipe</td>
+<td>Order of the operation within the recipe[Required]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#movetimeminutes">MoveTimeMinutes</a></td>
 <td>int32</td>
-<td>Time to move the lot to the next operation in minutes</td>
+<td>Time to move the lot to the next operation in minutes[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#notes">Notes</a></td>
@@ -151,27 +151,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
-<td>Duration of the operation for standard lot of the product</td>
+<td>Duration of the operation for standard lot of the product[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
-<td>Standard rate of scrap during the operation</td>
+<td>Standard rate of scrap during the operation[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#setuptimeminutes">SetupTimeMinutes</a></td>
 <td>int32</td>
-<td>Time needed to setup the equipment</td>
+<td>Time needed to setup the equipment[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#standardcostperhour">StandardCostPerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></td>
-<td>Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe.</td>
+<td>Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe.[Currency: Recipe.Product.CostingCurrency]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#standardpriceperhour">StandardPricePerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 6)</a></td>
-<td>Standard price for 1 hour work</td>
+<td>Standard price for 1 hour work[Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#tooling">Tooling</a></td>
@@ -181,12 +181,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#usequantity">UseQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>Quantity of the workgroup resource that should be allocated for the operation</td>
+<td>Quantity of the workgroup resource that should be allocated for the operation[Unit: UseQuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeOperations.html#waittimeminutes">WaitTimeMinutes</a></td>
 <td>int32</td>
-<td>Wait time (drying, cooling, etc.) after the operation in minutes</td>
+<td>Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +256,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineord">LineOrd</h3>
-<p>Order of the operation within the recipe</p>
+<p>Order of the operation within the recipe[Required]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -274,7 +274,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
-<p>Time to move the lot to the next operation in minutes</p>
+<p>Time to move the lot to the next operation in minutes[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -304,7 +304,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
-<p>Duration of the operation for standard lot of the product</p>
+<p>Duration of the operation for standard lot of the product[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -312,7 +312,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>Standard rate of scrap during the operation</p>
+<p>Standard rate of scrap during the operation[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -320,7 +320,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
-<p>Time needed to setup the equipment</p>
+<p>Time needed to setup the equipment[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -328,14 +328,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardcostperhour">StandardCostPerHour</h3>
-<p>Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe.</p>
+<p>Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe.[Currency: Recipe.Product.CostingCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
-<p>Standard price for 1 hour work</p>
+<p>Standard price for 1 hour work[Currency: Recipe.Product.CostingCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 6)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -351,7 +351,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
-<p>Quantity of the workgroup resource that should be allocated for the operation</p>
+<p>Quantity of the workgroup resource that should be allocated for the operation[Unit: UseQuantityUnit] [Required] [Default(1)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -359,7 +359,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waittimeminutes">WaitTimeMinutes</h3>
-<p>Wait time (drying, cooling, etc.) after the operation in minutes</p>
+<p>Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

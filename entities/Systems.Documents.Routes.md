@@ -44,22 +44,22 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivationDate](Systems.Documents.Routes.md#activationdate) | date | The date from which (including) the route is active. The date is matched against the document date of the generating document. 
-| [Active](Systems.Documents.Routes.md#active) | boolean | 1 if the route is active, otherwise 0. 
-| [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both. 
-| [AllowObsoleteGeneration](Systems.Documents.Routes.md#allowobsoletegeneration) | boolean | Allows the usage of unsupported generation procedures (marked as obsolete) 
-| [ConditionFilterXML](Systems.Documents.Routes.md#conditionfilterxml) | dataaccessfilter __nullable__ | Contains filter condition, which the document must match in order to execute the route. 
-| [ConditionStatesBitMask](Systems.Documents.Routes.md#conditionstatesbitmask) | [DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask) | The system states for which to execute the specified route. 
-| [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company; 
-| [DeactivationDate](Systems.Documents.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. 
-| [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed 
-| [NegativeConditionFilterXml](Systems.Documents.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route. 
+| [ActivationDate](Systems.Documents.Routes.md#activationdate) | date | The date from which (including) the route is active. The date is matched against the document date of the generating document.[Required] [Default(Today)] [Filter(ge;le)] 
+| [Active](Systems.Documents.Routes.md#active) | boolean | 1 if the route is active, otherwise 0.[Required] [Default(true)] [Filter(eq)] 
+| [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.[Required] [Default(&quot;B&quot;)] [Filter(multi eq)] 
+| [AllowObsoleteGeneration](Systems.Documents.Routes.md#allowobsoletegeneration) | boolean | Allows the usage of unsupported generation procedures (marked as obsolete)[Required] [Default(false)] 
+| [ConditionFilterXML](Systems.Documents.Routes.md#conditionfilterxml) | dataaccessfilter __nullable__ | Contains filter condition, which the document must match in order to execute the route.[Unit: obj.DocumentType.EntityName] 
+| [ConditionStatesBitMask](Systems.Documents.Routes.md#conditionstatesbitmask) | [DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask) | The system states for which to execute the specified route.[Required] [Default(0)] [Filter(like)] 
+| [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;[Required] [Default(&quot;A&quot;)] 
+| [DeactivationDate](Systems.Documents.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.[Filter(ge;le)] 
+| [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed[Required] 
+| [NegativeConditionFilterXml](Systems.Documents.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route.[Unit: obj.DocumentType.EntityName] 
 | [Notes](Systems.Documents.Routes.md#notes) | string (254) __nullable__ | Notes for this Route. 
-| [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document. 
-| [ProcedureName](Systems.Documents.Routes.md#procedurename) | string (254) | The system code of the generation procedure, which must be executed by the route. 
-| [ProcessEvent](Systems.Documents.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well. 
-| [ReadOnly](Systems.Documents.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. 1 - the destination document is read only 
-| [<s>SchemaXML</s>](Systems.Documents.Routes.md#schemaxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Not used. 
+| [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document.[Required] [Default(&quot;S&quot;)] 
+| [ProcedureName](Systems.Documents.Routes.md#procedurename) | string (254) | The system code of the generation procedure, which must be executed by the route.[Required] 
+| [ProcessEvent](Systems.Documents.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.[Required] [Filter(eq)] 
+| [ReadOnly](Systems.Documents.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. 1 - the destination document is read only[Required] [Default(false)] 
+| [<s>SchemaXML</s>](Systems.Documents.Routes.md#schemaxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Not used.[Obsolete] [Obsoleted in version 22.1.6.61] 
 
 ## References
 
@@ -97,7 +97,7 @@ Aggregate Root:
 
 ### ActivationDate
 
-The date from which (including) the route is active. The date is matched against the document date of the generating document.
+The date from which (including) the route is active. The date is matched against the document date of the generating document.[Required] [Default(Today)] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Active
 
-1 if the route is active, otherwise 0.
+1 if the route is active, otherwise 0.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowedGenerationTypes
 
-Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.
+Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.[Required] [Default(&quot;B&quot;)] [Filter(multi eq)]
 
 Type: **[AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowObsoleteGeneration
 
-Allows the usage of unsupported generation procedures (marked as obsolete)
+Allows the usage of unsupported generation procedures (marked as obsolete)[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionFilterXML
 
-Contains filter condition, which the document must match in order to execute the route.
+Contains filter condition, which the document must match in order to execute the route.[Unit: obj.DocumentType.EntityName]
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -160,7 +160,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionStatesBitMask
 
-The system states for which to execute the specified route.
+The system states for which to execute the specified route.[Required] [Default(0)] [Filter(like)]
 
 Type: **[DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask)**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### ConnectedPartyCondition
 
-A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;
+A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;[Required] [Default(&quot;A&quot;)]
 
 Type: **[ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **ShownByDefault**
 
 ### DeactivationDate
 
-The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.
+The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.[Filter(ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -214,7 +214,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationState
 
-0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed
+0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed[Required]
 
 Type: **[DocumentState](Systems.Documents.Routes.md#destinationstate)**  
 Category: **System**  
@@ -237,7 +237,7 @@ Show in UI: **ShownByDefault**
 
 ### NegativeConditionFilterXml
 
-The negative condition should NOT be matched by the document in order to execute the route.
+The negative condition should NOT be matched by the document in order to execute the route.[Unit: obj.DocumentType.EntityName]
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocumentRelationshipType
 
-Determines the default relationship type between the generated document and the parent document.
+Determines the default relationship type between the generated document and the parent document.[Required] [Default(&quot;S&quot;)]
 
 Type: **[ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype)**  
 Category: **System**  
@@ -278,7 +278,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcedureName
 
-The system code of the generation procedure, which must be executed by the route.
+The system code of the generation procedure, which must be executed by the route.[Required]
 
 Type: **string (254)**  
 Category: **System**  
@@ -289,7 +289,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessEvent
 
-Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.
+Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.[Required] [Filter(eq)]
 
 Type: **string (254)**  
 Category: **System**  
@@ -300,7 +300,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadOnly
 
-Indicates wheather the destination document shoul be read only. 1 - the destination document is read only
+Indicates wheather the destination document shoul be read only. 1 - the destination document is read only[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -311,7 +311,7 @@ Show in UI: **ShownByDefault**
 
 ### SchemaXML
 
-**OBSOLETE! Do not use!** Not used.
+**OBSOLETE! Do not use!** Not used.[Obsolete] [Obsoleted in version 22.1.6.61]
 
 Type: **string (max) __nullable__**  
 Category: **System**  

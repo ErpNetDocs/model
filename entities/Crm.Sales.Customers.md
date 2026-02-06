@@ -52,20 +52,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Sales.Customers.md#active) | boolean | 1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents 
-| [AllowUseAsPrimaryCustomer](Crm.Sales.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal. 
-| [AllowUseAsShipToCustomer](Crm.Sales.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal. 
+| [Active](Crm.Sales.Customers.md#active) | boolean | 1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)] 
+| [AllowUseAsPrimaryCustomer](Crm.Sales.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal.[Required] [Default(false)] [Filter(eq)] 
+| [AllowUseAsShipToCustomer](Crm.Sales.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal.[Required] [Default(false)] [Filter(eq)] 
 | [CreationTime](Crm.Sales.Customers.md#creationtime) | datetime __nullable__ | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Crm.Sales.Customers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` 
-| [CreditLimit](Crm.Sales.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the enterprise company base currency. null means there is no limit. 
-| [DefaultDeliveryTermDays](Crm.Sales.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale 
-| [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. 
-| [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer 
-| [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship 
-| [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer. 
-| [Number](Crm.Sales.Customers.md#number) | string (16) __nullable__ | Unique customer number 
-| [PersistSalesOrdersLots](Crm.Sales.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. 
-| [ThruDate](Crm.Sales.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. NULL for active customers. 
+| [CreditLimit](Crm.Sales.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the enterprise company base currency. null means there is no limit.[Currency: EnterpriseCompany?.BaseCurrency] 
+| [DefaultDeliveryTermDays](Crm.Sales.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale[Required] [Default(0)] 
+| [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.[Required] [Default(0)] 
+| [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer[Required] [Default(0)] 
+| [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship[Default(Today)] [Filter(ge;le)] 
+| [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer.[Required] [Default(0)] 
+| [Number](Crm.Sales.Customers.md#number) | string (16) __nullable__ | Unique customer number[Filter(eq;like)] [ORD] 
+| [PersistSalesOrdersLots](Crm.Sales.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.[Required] [Default(false)] [Filter(eq)] 
+| [ThruDate](Crm.Sales.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. NULL for active customers.[Filter(ge;le)] 
 | [UpdateTime](Crm.Sales.Customers.md#updatetime) | datetime __nullable__ | Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Crm.Sales.Customers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly` 
 
@@ -109,7 +109,7 @@ Aggregate Tree
 
 ### Active
 
-1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents
+1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowUseAsPrimaryCustomer
 
-Specifies whether to allow the customer to be used as primary customer in a sales deal.
+Specifies whether to allow the customer to be used as primary customer in a sales deal.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowUseAsShipToCustomer
 
-True to allow the customer to be used as ship to customer in a sales deal.
+True to allow the customer to be used as ship to customer in a sales deal.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditLimit
 
-Total credit limit for the customer in the enterprise company base currency. null means there is no limit.
+Total credit limit for the customer in the enterprise company base currency. null means there is no limit.[Currency: EnterpriseCompany?.BaseCurrency]
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -178,7 +178,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)`
 ### DefaultDeliveryTermDays
 
-Default term in days for goods delivery, starting at the day of sale
+Default term in days for goods delivery, starting at the day of sale[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentStartDays
 
-Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.
+Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentTermDays
 
-Default payment term in days when issuing documents for this customer
+Default payment term in days when issuing documents for this customer[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Start date of the customer relationship
+Start date of the customer relationship[Default(Today)] [Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -222,7 +222,7 @@ Show in UI: **ShownByDefault**
 
 ### GracePeriodDays
 
-Number of days after the payment deadline, during which the system still allows new sales orders for the customer.
+Number of days after the payment deadline, during which the system still allows new sales orders for the customer.[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  
@@ -233,7 +233,7 @@ Show in UI: **ShownByDefault**
 
 ### Number
 
-Unique customer number
+Unique customer number[Filter(eq;like)] [ORD]
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -248,7 +248,7 @@ Back-End Default Expression:
 
 ### PersistSalesOrdersLots
 
-If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.
+If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -259,7 +259,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-The date of customer relationship termination. NULL for active customers.
+The date of customer relationship termination. NULL for active customers.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

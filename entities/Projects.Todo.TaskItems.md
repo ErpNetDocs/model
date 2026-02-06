@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedDateTimeUtc](Projects.Todo.TaskItems.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task item was completed. 
-| [CreatedDateTimeUtc](Projects.Todo.TaskItems.md#createddatetimeutc) | datetime | Indicates (in UTC) when the task item was created. 
-| [IsCompleted](Projects.Todo.TaskItems.md#iscompleted) | boolean | Indicates whether the task item is completed. 
+| [CompletedDateTimeUtc](Projects.Todo.TaskItems.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task item was completed.[Filter(eq;ge;le)] [ReadOnly] 
+| [CreatedDateTimeUtc](Projects.Todo.TaskItems.md#createddatetimeutc) | datetime | Indicates (in UTC) when the task item was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly] 
+| [IsCompleted](Projects.Todo.TaskItems.md#iscompleted) | boolean | Indicates whether the task item is completed.[Required] [Default(false)] [Filter(eq)] 
 | [Notes](Projects.Todo.TaskItems.md#notes) | string (max) __nullable__ | Notes for this TaskItem. `Introduced in version 23.1.1.48` 
-| [Title](Projects.Todo.TaskItems.md#title) | string (254) | A brief description of the task item. 
+| [Title](Projects.Todo.TaskItems.md#title) | string (254) | A brief description of the task item.[Required] [Filter(like)] 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### CompletedDateTimeUtc
 
-Indicates (in UTC) when the task item was completed.
+Indicates (in UTC) when the task item was completed.[Filter(eq;ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### CreatedDateTimeUtc
 
-Indicates (in UTC) when the task item was created.
+Indicates (in UTC) when the task item was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### IsCompleted
 
-Indicates whether the task item is completed.
+Indicates whether the task item is completed.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Title
 
-A brief description of the task item.
+A brief description of the task item.[Required] [Filter(like)]
 
 Type: **string (254)**  
 Category: **System**  

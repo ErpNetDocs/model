@@ -122,38 +122,38 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#applicationname">ApplicationName</a></td>
 <td>string (64)</td>
-<td>The client application that triggered the events. Null when unknown or N/A.</td>
+<td>The client application that triggered the events. Null when unknown or N/A.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#entityname">EntityName</a></td>
 <td>string (64)</td>
-<td>The entity, which is being referenced by the events. Null when unknown or N/A.</td>
+<td>The entity, which is being referenced by the events. Null when unknown or N/A.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#entriescount">EntriesCount</a></td>
 <td>int32</td>
-<td>Total number of audit log entries.</td>
+<td>Total number of audit log entries.[Required] [Filter(eq;ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#eventclass">EventClass</a></td>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#eventclass">EventClass</a></td>
-<td>The event primary classification, which shows the source of the events.</td>
+<td>The event primary classification, which shows the source of the events.[Required] [Filter(multi eq;like)] [ORD] [Inherited from Sys_Audit_Log_<br>Entries_Table.Event_Class]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#totalsizemb">TotalSizeMB</a></td>
 <td>decimal (12, 3)</td>
-<td>Total size of the audit log entries in megabytes.</td>
+<td>Total size of the audit log entries in megabytes.[Required] [Filter(eq;ge;le)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogSummary.html#year">Year</a></td>
 <td>string (30)</td>
-<td>Year when the events occurred.</td>
+<td>Year when the events occurred.[Required] [Filter(eq;like)] [ORD]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
-<p>The client application that triggered the events. Null when unknown or N/A.</p>
+<p>The client application that triggered the events. Null when unknown or N/A.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -161,7 +161,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entityname">EntityName</h3>
-<p>The entity, which is being referenced by the events. Null when unknown or N/A.</p>
+<p>The entity, which is being referenced by the events. Null when unknown or N/A.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -169,14 +169,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entriescount">EntriesCount</h3>
-<p>Total number of audit log entries.</p>
+<p>Total number of audit log entries.[Required] [Filter(eq;ge;le)] [ORD]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="eventclass">EventClass</h3>
-<p>The event primary classification, which shows the source of the events.</p>
+<p>The event primary classification, which shows the source of the events.[Required] [Filter(multi eq;like)] [ORD] [Inherited from Sys_Audit_Log_Entries_Table.Event_Class]</p>
 <p>Type: <strong><a href="Systems.Monitoring.AuditLogSummary.html#eventclass">EventClass</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>EventClass</code>(Systems.Monitoring.AuditLogSummary.md#eventclass) data attribute<br>
@@ -208,14 +208,14 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalsizemb">TotalSizeMB</h3>
-<p>Total size of the audit log entries in megabytes.</p>
+<p>Total size of the audit log entries in megabytes.[Required] [Filter(eq;ge;le)] [ORD]</p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="year">Year</h3>
-<p>Year when the events occurred.</p>
+<p>Year when the events occurred.[Required] [Filter(eq;like)] [ORD]</p>
 <p>Type: <strong>string (30)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

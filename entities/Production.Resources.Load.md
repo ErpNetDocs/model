@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalendarDate](Production.Resources.Load.md#calendardate) | datetime | Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day 
-| [Priority](Production.Resources.Load.md#priority) | [Priority](Production.Resources.Load.md#priority) | Priority of the allocation. 1=Lowest ... 5=Highest 
-| [TimeType](Production.Resources.Load.md#timetype) | [TimeType](Production.Resources.Load.md#timetype) | S=Setup; R=Run; W=Wait; M=Move 
-| [UsageEndTime](Production.Resources.Load.md#usageendtime) | datetime | The ending time of the planned usage. 
-| [UsageQuantity](Production.Resources.Load.md#usagequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, which will be used for production 
-| [UsageStartTime](Production.Resources.Load.md#usagestarttime) | datetime | The starting time of the planned usage. 
-| [UsageTimeMinutes](Production.Resources.Load.md#usagetimeminutes) | int32 | Time allocated for the operation in minutes 
+| [CalendarDate](Production.Resources.Load.md#calendardate) | datetime | Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day[Required] [Filter(ge;le)] 
+| [Priority](Production.Resources.Load.md#priority) | [Priority](Production.Resources.Load.md#priority) | Priority of the allocation. 1=Lowest ... 5=Highest[Required] [Default(3)] 
+| [TimeType](Production.Resources.Load.md#timetype) | [TimeType](Production.Resources.Load.md#timetype) | S=Setup; R=Run; W=Wait; M=Move[Required] [Default(&quot;R&quot;)] 
+| [UsageEndTime](Production.Resources.Load.md#usageendtime) | datetime | The ending time of the planned usage.[Required] [Filter(ge;le)] 
+| [UsageQuantity](Production.Resources.Load.md#usagequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, which will be used for production[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)] 
+| [UsageStartTime](Production.Resources.Load.md#usagestarttime) | datetime | The starting time of the planned usage.[Required] [Filter(ge;le)] 
+| [UsageTimeMinutes](Production.Resources.Load.md#usagetimeminutes) | int32 | Time allocated for the operation in minutes[Required] [Default(0)] [Filter(ge;le)] 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### CalendarDate
 
-Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day
+Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority of the allocation. 1=Lowest ... 5=Highest
+Priority of the allocation. 1=Lowest ... 5=Highest[Required] [Default(3)]
 
 Type: **[Priority](Production.Resources.Load.md#priority)**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### TimeType
 
-S=Setup; R=Run; W=Wait; M=Move
+S=Setup; R=Run; W=Wait; M=Move[Required] [Default(&quot;R&quot;)]
 
 Type: **[TimeType](Production.Resources.Load.md#timetype)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### UsageEndTime
 
-The ending time of the planned usage.
+The ending time of the planned usage.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### UsageQuantity
 
-Quantity of the resource, which will be used for production
+Quantity of the resource, which will be used for production[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)] [Filter(ge;le)]
 
 Type: **[Quantity (9, 0)](../data-types.md#quantity)**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### UsageStartTime
 
-The starting time of the planned usage.
+The starting time of the planned usage.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### UsageTimeMinutes
 
-Time allocated for the operation in minutes
+Time allocated for the operation in minutes[Required] [Default(0)] [Filter(ge;le)]
 
 Type: **int32**  
 Category: **System**  

@@ -36,10 +36,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Comments](General.Contacts.PartyPictures.md#comments) | string (254) __nullable__ | Notes for this party picture. 
-| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | If checked specifies that this picture is used by default for this party in reports. 
-| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. 
+| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | If checked specifies that this picture is used by default for this party in reports.[Required] [Default(false)] [Filter(eq)] 
+| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system.[Required] [Default(false)] [Filter(eq)] 
 | [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be NULL if we insert only some comments. 
-| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting 
+| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting[Required] [Filter(eq)] 
 
 ## References
 
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-If checked specifies that this picture is used by default for this party in reports.
+If checked specifies that this picture is used by default for this party in reports.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Front-End Recalc Expressions:
 `( obj.Party.Pictures.Take( 1).Count( ) == 0)`
 ### IsLogo
 
-If checked specifies that this picture is used to visualize the logo of this party in the system.
+If checked specifies that this picture is used to visualize the logo of this party in the system.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### PictureNo
 
-Unique picture number within the party. Also used for sorting
+Unique picture number within the party. Also used for sorting[Required] [Filter(eq)]
 
 Type: **int32**  
 Category: **System**  

@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.LocationProducts.html#grossprice">GrossPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></td>
-<td>Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.</td>
+<td>Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.[Currency: Product.ProductCurrency] [Introduced in version 26.2.1.26]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationProducts.html#maxquantity">MaxQuantity</a></td>
@@ -142,17 +142,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.LocationProducts.html#status">Status</a></td>
 <td><a href="Crm.Pos.LocationProducts.html#status">Status</a></td>
-<td>Listing state</td>
+<td>Listing state[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationProducts.html#validfrom">ValidFrom</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Begining of validity</td>
+<td>Begining of validity[Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationProducts.html#validto">ValidTo</a></td>
 <td>date <strong>nullable</strong></td>
-<td>End of validity</td>
+<td>End of validity[Filter(eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="grossprice">GrossPrice</h3>
-<p>Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.</p>
+<p>Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.[Currency: Product.ProductCurrency] [Introduced in version 26.2.1.26]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -236,7 +236,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>Listing state</p>
+<p>Listing state[Required] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Crm.Pos.LocationProducts.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Crm.Pos.LocationProducts.md#status) data attribute<br>
@@ -267,14 +267,14 @@ Allowed Values (Crm.Pos.LocationProductsRepository.Status Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
-<p>Begining of validity</p>
+<p>Begining of validity[Filter(eq;ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validto">ValidTo</h3>
-<p>End of validity</p>
+<p>End of validity[Filter(eq;ge;le)]</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

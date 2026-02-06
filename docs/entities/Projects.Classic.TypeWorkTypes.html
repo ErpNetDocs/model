@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Classic.TypeWorkTypes.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True when the work type is currently active and selectable in new documents.</td>
+<td>True when the work type is currently active and selectable in new documents.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.TypeWorkTypes.html#worktypename">WorkTypeName</a></td>
 <td>string (254)</td>
-<td>The name of the work type.</td>
+<td>The name of the work type.[Required] [Filter(eq;like)]</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>True when the work type is currently active and selectable in new documents.</p>
+<p>True when the work type is currently active and selectable in new documents.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -189,7 +189,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="worktypename">WorkTypeName</h3>
-<p>The name of the work type.</p>
+<p>The name of the work type.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

@@ -53,32 +53,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdjustmentNumber](General.Documents.Documents.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. 
-| [AdjustmentTime](General.Documents.Documents.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document 
-| [AdjustmentUser](General.Documents.Documents.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document 
-| [CompleteTime](General.Documents.Documents.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). 
-| [CreationTime](General.Documents.Documents.md#creationtime) | datetime | Date/Time when the document was created 
-| [CreationUser](General.Documents.Documents.md#creationuser) | string (64) | The login name of the user, who created the document 
-| [DocumentDate](General.Documents.Documents.md#documentdate) | date | The date on which the document was issued 
-| [DocumentNo](General.Documents.Documents.md#documentno) | string (20) | Document number, unique within Document_Type_Id 
+| [AdjustmentNumber](General.Documents.Documents.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document.[Required] [Default(0)] [ReadOnly] 
+| [AdjustmentTime](General.Documents.Documents.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document[Filter(ge;le)] [ReadOnly] 
+| [AdjustmentUser](General.Documents.Documents.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document[ReadOnly] 
+| [CompleteTime](General.Documents.Documents.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed).[Filter(ge;le)] [ReadOnly] 
+| [CreationTime](General.Documents.Documents.md#creationtime) | datetime | Date/Time when the document was created[Required] [Default(Now)] [Filter(ge;le)] [ReadOnly] 
+| [CreationUser](General.Documents.Documents.md#creationuser) | string (64) | The login name of the user, who created the document[Required] [Filter(like)] [ReadOnly] 
+| [DocumentDate](General.Documents.Documents.md#documentdate) | date | The date on which the document was issued[Required] [Default(Today)] [Filter(eq;ge;le)] [ORD] 
+| [DocumentNo](General.Documents.Documents.md#documentno) | string (20) | Document number, unique within Document_Type_Id[Required] [Filter(eq;like)] [ORD] 
 | [DocumentNotes](General.Documents.Documents.md#documentnotes) | string (max) __nullable__ | Notes for this Document. 
-| [DocumentVersion](General.Documents.Documents.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. 
-| [EntityName](General.Documents.Documents.md#entityname) | string (64) | The entity name of the document header. 
+| [DocumentVersion](General.Documents.Documents.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document.[Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly] 
+| [EntityName](General.Documents.Documents.md#entityname) | string (64) | The entity name of the document header.[Required] [Filter(eq)] [ORD] [ReadOnly] 
 | [FullState](General.Documents.Documents.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
-| [PlanningOnly](General.Documents.Documents.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) 
-| [ReadOnly](General.Documents.Documents.md#readonly) | boolean | 1 - the document is read only; 0 - the document is not read only 
+| [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.[ReadOnly] 
+| [PlanningOnly](General.Documents.Documents.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)[Required] [Default(false)] [ReadOnly] 
+| [ReadOnly](General.Documents.Documents.md#readonly) | boolean | 1 - the document is read only; 0 - the document is not read only[Required] [Default(false)] [ReadOnly] 
 | [ReferenceDate](General.Documents.Documents.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred.
 Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.
-So, generally: Reference Date <= DocumentDate <= CreationTime. 
-| [ReferenceDocumentNo](General.Documents.Documents.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents 
-| [ReleaseTime](General.Documents.Documents.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). 
-| [State](General.Documents.Documents.md#state) | [DocumentState](General.Documents.Documents.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. 
+So, generally: Reference Date <= DocumentDate <= CreationTime.[Default(Today)] [Filter(ge;le)] 
+| [ReferenceDocumentNo](General.Documents.Documents.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents[Filter(eq;like)] 
+| [ReleaseTime](General.Documents.Documents.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released).[Filter(ge;le)] [ReadOnly] 
+| [State](General.Documents.Documents.md#state) | [DocumentState](General.Documents.Documents.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.[Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly] 
 | [StateTagsAttribute](General.Documents.Documents.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Void](General.Documents.Documents.md#void) | boolean | 1 if the document is null and void 
-| [VoidReason](General.Documents.Documents.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user 
-| [VoidTime](General.Documents.Documents.md#voidtime) | datetime __nullable__ | Date/time when the document has become void 
-| [VoidUser](General.Documents.Documents.md#voiduser) | string (64) __nullable__ | The user who voided the document 
+| [Void](General.Documents.Documents.md#void) | boolean | 1 if the document is null and void[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [VoidReason](General.Documents.Documents.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user[ReadOnly] 
+| [VoidTime](General.Documents.Documents.md#voidtime) | datetime __nullable__ | Date/time when the document has become void[Filter(ge;le)] [ReadOnly] 
+| [VoidUser](General.Documents.Documents.md#voiduser) | string (64) __nullable__ | The user who voided the document[ReadOnly] 
 
 ## References
 
@@ -134,7 +134,7 @@ So, generally: Reference Date <= DocumentDate <= CreationTime.
 
 ### AdjustmentNumber
 
-Consecutive number of the correction that this document is applying to the adjusted document.
+Consecutive number of the correction that this document is applying to the adjusted document.[Required] [Default(0)] [ReadOnly]
 
 Type: **int32**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdjustmentTime
 
-Date/time when the document last has been adjusted by corrective document
+Date/time when the document last has been adjusted by corrective document[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdjustmentUser
 
-The user who adjusted the document
+The user who adjusted the document[ReadOnly]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompleteTime
 
-Date and time when the document was completed (State set to Completed).
+Date and time when the document was completed (State set to Completed).[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationTime
 
-Date/Time when the document was created
+Date/Time when the document was created[Required] [Default(Now)] [Filter(ge;le)] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationUser
 
-The login name of the user, who created the document
+The login name of the user, who created the document[Required] [Filter(like)] [ReadOnly]
 
 Type: **string (64)**  
 Category: **System**  
@@ -198,7 +198,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentDate
 
-The date on which the document was issued
+The date on which the document was issued[Required] [Default(Today)] [Filter(eq;ge;le)] [ORD]
 
 Type: **date**  
 Indexed: **True**  
@@ -210,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id
+Document number, unique within Document_Type_Id[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (20)**  
 Indexed: **True**  
@@ -233,7 +233,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document.
+Consecutive version number, starting with 1. Each update produces a new version of the document.[Required] [Default(1)] [Filter(eq;ge;le)] [ReadOnly]
 
 Type: **int32**  
 Category: **System**  
@@ -244,7 +244,7 @@ Show in UI: **HiddenByDefault**
 
 ### EntityName
 
-The entity name of the document header.
+The entity name of the document header.[Required] [Filter(eq)] [ORD] [ReadOnly]
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -266,7 +266,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.[ReadOnly]
 
 Type: **[ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__**  
 Category: **System**  
@@ -285,7 +285,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)[Required] [Default(false)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -296,7 +296,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReadOnly
 
-1 - the document is read only; 0 - the document is not read only
+1 - the document is read only; 0 - the document is not read only[Required] [Default(false)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -309,7 +309,7 @@ Show in UI: **HiddenByDefault**
 
 Indicates the date, when the event, described by the document, actually occurred.
 Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.
-So, generally: Reference Date <= DocumentDate <= CreationTime.
+So, generally: Reference Date <= DocumentDate <= CreationTime.[Default(Today)] [Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -320,7 +320,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents[Filter(eq;like)]
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -331,7 +331,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReleaseTime
 
-Date and time when the document was released (State set to Released).
+Date and time when the document was released (State set to Released).[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -341,7 +341,7 @@ Show in UI: **HiddenByDefault**
 
 ### State
 
-The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.[Required] [Default(0)] [Filter(multi eq;ge;le)] [ReadOnly]
 
 Type: **[DocumentState](General.Documents.Documents.md#state)**  
 Category: **System**  
@@ -375,7 +375,7 @@ Show in UI: **HiddenByDefault**
 
 ### Void
 
-1 if the document is null and void
+1 if the document is null and void[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Indexed: **True**  
@@ -387,7 +387,7 @@ Show in UI: **HiddenByDefault**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user
+Reason for voiding the document, entered by the user[ReadOnly]
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -398,7 +398,7 @@ Show in UI: **HiddenByDefault**
 
 ### VoidTime
 
-Date/time when the document has become void
+Date/time when the document has become void[Filter(ge;le)] [ReadOnly]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -408,7 +408,7 @@ Show in UI: **HiddenByDefault**
 
 ### VoidUser
 
-The user who voided the document
+The user who voided the document[ReadOnly]
 
 Type: **string (64) __nullable__**  
 Category: **System**  

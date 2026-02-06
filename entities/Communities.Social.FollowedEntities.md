@@ -28,9 +28,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.FollowedEntities.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created. 
+| [CreationTimeUtc](Communities.Social.FollowedEntities.md#creationtimeutc) | datetime | The exact server time (in UTC), when the follow was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc] [Introduced in version 22.1.6.73] 
 | [EntityItemId](Communities.Social.FollowedEntities.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Entity_Item_Id` 
-| [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound 
+| [EntityType](Communities.Social.FollowedEntities.md#entitytype) | string (64) | The entity type of the row to which the object is bound[Required] [Default(&quot; &quot;)] [Filter(multi eq)] [Inherited from Sys_Objects_Table.Entity_Type] 
 | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | [FollowLevel](Communities.Social.FollowedEntities.md#followlevel) | Indicates the level of user’s interest for this object. `Required` `Default("TAG")` `Filter(multi eq)` `Inherited from Cmm_Social_Follows_Table.Follow_Level` `Introduced in version 26.2.0.70` 
 
 ## References
@@ -45,7 +45,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the follow was created.
+The exact server time (in UTC), when the follow was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [Inherited from Cmm_Social_Follows_Table.Creation_Time_Utc] [Introduced in version 22.1.6.73]
 
 Type: **datetime**  
 Category: **System**  
@@ -67,7 +67,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-The entity type of the row to which the object is bound
+The entity type of the row to which the object is bound[Required] [Default(&quot; &quot;)] [Filter(multi eq)] [Inherited from Sys_Objects_Table.Entity_Type]
 
 Type: **string (64)**  
 Category: **System**  

@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Resources.html#active">Active</a></td>
 <td>boolean</td>
-<td>Indicates whether the current resource is active.</td>
+<td>Indicates whether the current resource is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#name">Name</a></td>
 <td>string (64)</td>
-<td>Name of the resource</td>
+<td>Name of the resource[Required] [Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#notes">Notes</a></td>
@@ -136,22 +136,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Resources.html#setupdurationhours">SetupDurationHours</a></td>
 <td>decimal (6, 2)</td>
-<td>The usual duration of setup when changing production</td>
+<td>The usual duration of setup when changing production[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#setupscrapquantity">SetupScrapQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The usual quantity of fixed scrap occurring when changing production.</td>
+<td>The usual quantity of fixed scrap occurring when changing production. [Unit: SetupScrapUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#standardcostperhour">StandardCostPerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></td>
-<td>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.</td>
+<td>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.[Currency: ResourceCurrency]</td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Resources.html#standardpriceperhour">StandardPricePerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></td>
-<td>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.</td>
+<td>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.[Currency: ResourceCurrency]</td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Indicates whether the current resource is active.</p>
+<p>Indicates whether the current resource is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the resource</p>
+<p>Name of the resource[Required] [Filter(like)]</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -257,7 +257,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setupdurationhours">SetupDurationHours</h3>
-<p>The usual duration of setup when changing production</p>
+<p>The usual duration of setup when changing production[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (6, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -265,7 +265,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setupscrapquantity">SetupScrapQuantity</h3>
-<p>The usual quantity of fixed scrap occurring when changing production.</p>
+<p>The usual quantity of fixed scrap occurring when changing production. [Unit: SetupScrapUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -273,14 +273,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardcostperhour">StandardCostPerHour</h3>
-<p>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.</p>
+<p>Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.[Currency: ResourceCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardpriceperhour">StandardPricePerHour</h3>
-<p>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.</p>
+<p>Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.[Currency: ResourceCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 6)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

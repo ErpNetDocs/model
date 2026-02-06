@@ -117,32 +117,32 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#documentdate">DocumentDate</a></td>
 <td>datetime</td>
-<td>The date on which the document was issued.</td>
+<td>The date on which the document was issued.[Required] [Default(Today)] [Filter(eq;ge;le)] [Inherited from Gen_Documents_Table.Document_Date]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#isfulfilled">IsFulfilled</a></td>
 <td>boolean</td>
-<td>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</td>
+<td>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#isquantityfulfilled">IsQuantityFulfilled</a></td>
 <td>boolean</td>
-<td>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</td>
+<td>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#movementtype">MovementType</a></td>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#movementtype">MovementType</a></td>
-<td>Store order movement type. R=RECEIPT, I=ISSUE</td>
+<td>Store order movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Movement_Type]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#orderremaininglinecost">OrderRemainingLineCost</a></td>
 <td>decimal (38, 2)</td>
-<td>The remaining (unfulfilled) line cost of the order line.</td>
+<td>The remaining (unfulfilled) line cost of the order line.[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#orderremainingquantitybase">OrderRemainingQuantityBase</a></td>
 <td>decimal (38, 3)</td>
-<td>The remaining (unfulfilled) quantity of the order line in base measurement unit.</td>
+<td>The remaining (unfulfilled) quantity of the order line in base measurement unit.[Required] [Filter(multi eq;ge;le)]</td>
 </tr>
 </tbody>
 </table>
@@ -200,7 +200,7 @@ Show in UI:  HiddenByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdate">DocumentDate</h3>
-<p>The date on which the document was issued.</p>
+<p>The date on which the document was issued.[Required] [Default(Today)] [Filter(eq;ge;le)] [Inherited from Gen_Documents_Table.Document_Date]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Gen_Documents_Table.Document_Date</strong><br>
@@ -209,21 +209,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isfulfilled">IsFulfilled</h3>
-<p>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</p>
+<p>Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isquantityfulfilled">IsQuantityFulfilled</h3>
-<p>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.</p>
+<p>Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.[Required] [Filter(multi eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movementtype">MovementType</h3>
-<p>Store order movement type. R=RECEIPT, I=ISSUE</p>
+<p>Store order movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)] [Inherited from Inv_Store_Orders_Table.Movement_Type]</p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreOrderLinesUnfulfilledView.html#movementtype">MovementType</a></strong><br>
 Category: <strong>System</strong><br>
 Specifies the movement type (direction) of a warehouse document.<br>
@@ -252,14 +252,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Receipt</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremaininglinecost">OrderRemainingLineCost</h3>
-<p>The remaining (unfulfilled) line cost of the order line.</p>
+<p>The remaining (unfulfilled) line cost of the order line.[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>decimal (38, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderremainingquantitybase">OrderRemainingQuantityBase</h3>
-<p>The remaining (unfulfilled) quantity of the order line in base measurement unit.</p>
+<p>The remaining (unfulfilled) quantity of the order line in base measurement unit.[Required] [Filter(multi eq;ge;le)]</p>
 <p>Type: <strong>decimal (38, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>

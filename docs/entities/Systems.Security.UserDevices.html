@@ -122,42 +122,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the device was registered.</td>
+<td>The exact server time (in UTC), when the device was registered.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.2.30]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#devicefingerprint">DeviceFingerprint</a></td>
 <td>string (2048) <strong>nullable</strong></td>
-<td>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.</td>
+<td>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.[Filter(eq)] [ReadOnly] [Introduced in version 25.1.2.30]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#deviceinfo">DeviceInfo</a></td>
 <td>string (4092) <strong>nullable</strong></td>
-<td>Shows basic information about your device.</td>
+<td>Shows basic information about your device.[ReadOnly] [Introduced in version 25.1.2.34]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#devicename">DeviceName</a></td>
 <td>string (256)</td>
-<td>The name of the device, such as the model or a custom name given by the user.</td>
+<td>The name of the device, such as the model or a custom name given by the user.[Required] [Introduced in version 25.1.2.30]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#lastlogintimeutc">LastLoginTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC) when the device was last used to sign in.</td>
+<td>The exact server time (in UTC) when the device was last used to sign in.[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly] [Introduced in version 25.1.2.30]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationsallowed">NotificationsAllowed</a></td>
 <td>boolean</td>
-<td>Тhe device is allowed to receive notifications from the system.</td>
+<td>Тhe device is allowed to receive notifications from the system.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.2.30]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationssystem">NotificationsSystem</a></td>
 <td><a href="Systems.Security.UserDevices.html#notificationssystem">NotificationsSystem</a></td>
-<td>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.).</td>
+<td>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.).[Required] [Filter(multi eq)] [ReadOnly] [Introduced in version 25.1.2.30]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.UserDevices.html#notificationstoken">NotificationsToken</a></td>
 <td>string (2048) <strong>nullable</strong></td>
-<td>A token used for sending notifications to the device, such as a push notification token. NULL if not applicable.</td>
+<td>A token used for sending notifications to the device, such as a push notification token. NULL if not applicable.[ReadOnly] [Introduced in version 25.1.2.30]</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC), when the device was registered.</p>
+<p>The exact server time (in UTC), when the device was registered.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -215,7 +215,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="devicefingerprint">DeviceFingerprint</h3>
-<p>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.</p>
+<p>A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.[Filter(eq)] [ReadOnly] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong>string (2048) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -223,7 +223,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2048</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deviceinfo">DeviceInfo</h3>
-<p>Shows basic information about your device.</p>
+<p>Shows basic information about your device.[ReadOnly] [Introduced in version 25.1.2.34]</p>
 <p>Type: <strong>string (4092) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -231,7 +231,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>4092</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="devicename">DeviceName</h3>
-<p>The name of the device, such as the model or a custom name given by the user.</p>
+<p>The name of the device, such as the model or a custom name given by the user.[Required] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong>string (256)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>256</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastlogintimeutc">LastLoginTimeUtc</h3>
-<p>The exact server time (in UTC) when the device was last used to sign in.</p>
+<p>The exact server time (in UTC) when the device was last used to sign in.[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -247,7 +247,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notificationsallowed">NotificationsAllowed</h3>
-<p>Тhe device is allowed to receive notifications from the system.</p>
+<p>Тhe device is allowed to receive notifications from the system.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notificationssystem">NotificationsSystem</h3>
-<p>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.).</p>
+<p>The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.).[Required] [Filter(multi eq)] [ReadOnly] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong><a href="Systems.Security.UserDevices.html#notificationssystem">NotificationsSystem</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>NotificationsSystem</code>(Systems.Security.UserDevices.md#notificationssystem) data attribute<br>
@@ -286,7 +286,7 @@ Allowed Values (Systems.Security.UserDevicesRepository.NotificationsSystem Enum 
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notificationstoken">NotificationsToken</h3>
-<p>A token used for sending notifications to the device, such as a push notification token. NULL if not applicable.</p>
+<p>A token used for sending notifications to the device, such as a push notification token. NULL if not applicable.[ReadOnly] [Introduced in version 25.1.2.30]</p>
 <p>Type: <strong>string (2048) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

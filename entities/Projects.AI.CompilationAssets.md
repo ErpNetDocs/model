@@ -36,8 +36,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetKey](Projects.AI.CompilationAssets.md#assetkey) | string (128) | The key of the data asset. 
-| [Value](Projects.AI.CompilationAssets.md#value) | string (max) __nullable__ | The value of the data asset. 
+| [AssetKey](Projects.AI.CompilationAssets.md#assetkey) | string (128) | The key of the data asset.[Required] [Filter(eq;like)] [ReadOnly] 
+| [Value](Projects.AI.CompilationAssets.md#value) | string (max) __nullable__ | The value of the data asset.[Filter(eq;like)] [ReadOnly] 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### AssetKey
 
-The key of the data asset.
+The key of the data asset.[Required] [Filter(eq;like)] [ReadOnly]
 
 Type: **string (128)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-The value of the data asset.
+The value of the data asset.[Filter(eq;like)] [ReadOnly]
 
 Type: **string (max) __nullable__**  
 Category: **System**  

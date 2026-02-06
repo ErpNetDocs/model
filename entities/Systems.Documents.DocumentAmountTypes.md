@@ -46,20 +46,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AddToCustomer](Systems.Documents.DocumentAmountTypes.md#addtocustomer) | boolean | 1 means that the amount will be charged to the primary customer of the document 
-| [AddToLine](Systems.Documents.DocumentAmountTypes.md#addtoline) | boolean | 1 means that the resulting amount will be added to the amount of each respective line 
-| [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__ | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. 
-| [AmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#amountinputallowed) | boolean | 1 when the user is allowed to input fixed amount for distribution 
-| [AmountTypeCode](Systems.Documents.DocumentAmountTypes.md#amounttypecode) | string (16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes 
-| [AmountTypeName](Systems.Documents.DocumentAmountTypes.md#amounttypename) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the amount type. 
-| [BaseOnLines](Systems.Documents.DocumentAmountTypes.md#baseonlines) | boolean | 1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts 
+| [AddToCustomer](Systems.Documents.DocumentAmountTypes.md#addtocustomer) | boolean | 1 means that the amount will be charged to the primary customer of the document[Required] [Default(true)] 
+| [AddToLine](Systems.Documents.DocumentAmountTypes.md#addtoline) | boolean | 1 means that the resulting amount will be added to the amount of each respective line[Required] [Default(true)] 
+| [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__ | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.[Default(0)] 
+| [AmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#amountinputallowed) | boolean | 1 when the user is allowed to input fixed amount for distribution[Required] [Default(false)] [Filter(eq)] 
+| [AmountTypeCode](Systems.Documents.DocumentAmountTypes.md#amounttypecode) | string (16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes[Required] [Filter(multi eq;like)] [ORD] 
+| [AmountTypeName](Systems.Documents.DocumentAmountTypes.md#amounttypename) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the amount type.[Required] [Filter(like)] 
+| [BaseOnLines](Systems.Documents.DocumentAmountTypes.md#baseonlines) | boolean | 1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts[Required] [Default(true)] 
 | [DefaultPercent](Systems.Documents.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; NULL otherwise 
 | [Description](Systems.Documents.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
-| [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | Determines how the amount will be distributed among the document lines. 
-| [IsActive](Systems.Documents.DocumentAmountTypes.md#isactive) | boolean | 1 when the amount type is active for new records; 0 - otherwise 
-| [PercentInputAllowed](Systems.Documents.DocumentAmountTypes.md#percentinputallowed) | boolean | 1 when the user is allowed to input percent of total for distribution 
+| [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | Determines how the amount will be distributed among the document lines.[Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)] 
+| [IsActive](Systems.Documents.DocumentAmountTypes.md#isactive) | boolean | 1 when the amount type is active for new records; 0 - otherwise[Required] [Default(true)] [Filter(eq)] 
+| [PercentInputAllowed](Systems.Documents.DocumentAmountTypes.md#percentinputallowed) | boolean | 1 when the user is allowed to input percent of total for distribution[Required] [Default(true)] [Filter(eq)] 
 | [RoundScale](Systems.Documents.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. NULL means to use the currency default 
-| [UnitAmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. 
+| [UnitAmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.[Required] [Default(false)] [Filter(eq)] 
 
 ## References
 
@@ -92,7 +92,7 @@ Aggregate Tree
 
 ### AddToCustomer
 
-1 means that the amount will be charged to the primary customer of the document
+1 means that the amount will be charged to the primary customer of the document[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### AddToLine
 
-1 means that the resulting amount will be added to the amount of each respective line
+1 means that the resulting amount will be added to the amount of each respective line[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowedDirections
 
-Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.
+Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.[Default(0)]
 
 Type: **[AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountInputAllowed
 
-1 when the user is allowed to input fixed amount for distribution
+1 when the user is allowed to input fixed amount for distribution[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountTypeCode
 
-A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes
+A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes[Required] [Filter(multi eq;like)] [ORD]
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -160,7 +160,7 @@ Back-End Default Expression:
 
 ### AmountTypeName
 
-The name of the amount type.
+The name of the amount type.[Required] [Filter(like)]
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  
@@ -171,7 +171,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseOnLines
 
-1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts
+1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### DistributeBy
 
-Determines how the amount will be distributed among the document lines.
+Determines how the amount will be distributed among the document lines.[Required] [Default(&quot;AMOUNT&quot;)] [Filter(eq)]
 
 Type: **[DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-1 when the amount type is active for new records; 0 - otherwise
+1 when the amount type is active for new records; 0 - otherwise[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -240,7 +240,7 @@ Show in UI: **ShownByDefault**
 
 ### PercentInputAllowed
 
-1 when the user is allowed to input percent of total for distribution
+1 when the user is allowed to input percent of total for distribution[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -261,7 +261,7 @@ Show in UI: **ShownByDefault**
 
 ### UnitAmountInputAllowed
 
-Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.
+Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  

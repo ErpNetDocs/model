@@ -44,14 +44,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: 1 = the offer is available for new documents; 0 = otherwise 
-| [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package 
+| [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: 1 = the offer is available for new documents; 0 = otherwise[Required] [Default(true)] [Filter(eq)] 
+| [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package[Required] [Filter(eq;like)] [ORD] 
 | [Name](Crm.Pricing.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
-| [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | Customer filter for clients. The package is valid only for the customers, that match the filter 
-| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter. 
-| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | The package is valid only for the ship to customers, that match the filter 
-| [ValidFromDate](Crm.Pricing.PromotionalPackages.md#validfromdate) | date __nullable__ | The date from which the promotional pakage is valid 
-| [ValidToDate](Crm.Pricing.PromotionalPackages.md#validtodate) | date __nullable__ | The date to which(inclusive) the promotional pakage is valid 
+| [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | Customer filter for clients. The package is valid only for the customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName] 
+| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.[Unit: Marketing.DistributionChannels<br />Repository.TableName] 
+| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | The package is valid only for the ship to customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName] 
+| [ValidFromDate](Crm.Pricing.PromotionalPackages.md#validfromdate) | date __nullable__ | The date from which the promotional pakage is valid[Filter(eq;ge;le)] 
+| [ValidToDate](Crm.Pricing.PromotionalPackages.md#validtodate) | date __nullable__ | The date to which(inclusive) the promotional pakage is valid[Filter(eq;ge;le)] 
 
 ## References
 
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### Active
 
-Package status: 1 = the offer is available for new documents; 0 = otherwise
+Package status: 1 = the offer is available for new documents; 0 = otherwise[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique code of the promotional package
+Unique code of the promotional package[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (20)**  
 Indexed: **True**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForCustomerFilterXML
 
-Customer filter for clients. The package is valid only for the customers, that match the filter
+Customer filter for clients. The package is valid only for the customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName]
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForDistributionChannelFilterXML
 
-When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.
+When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.[Unit: Marketing.DistributionChannelsRepository.TableName]
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForShipToCustomerFilterXML
 
-The package is valid only for the ship to customers, that match the filter
+The package is valid only for the ship to customers, that match the filter[Unit: Crm.Sales.CustomersRepository.TableName]
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFromDate
 
-The date from which the promotional pakage is valid
+The date from which the promotional pakage is valid[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidToDate
 
-The date to which(inclusive) the promotional pakage is valid
+The date to which(inclusive) the promotional pakage is valid[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | The cost (in base currency) which should be distributed. 
+| [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | The cost (in base currency) which should be distributed.[Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
 | [Notes](Finance.Cost.DistributionCosts.md#notes) | string (max) __nullable__ | Notes for this DistributionCost. 
 
 ## References
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### AmountBase
 
-The cost (in base currency) which should be distributed.
+The cost (in base currency) which should be distributed.[Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
 
 Type: **[Amount (12, 2)](../data-types.md#amount)**  
 Category: **System**  

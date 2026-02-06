@@ -57,9 +57,9 @@ Aggregate Tree
 | [AdjustmentNumber](Regulatory.Vat.Entries.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Regulatory.Vat.Entries.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Regulatory.Vat.Entries.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [AmountBase](Regulatory.Vat.Entries.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Amount of the operation without the tax in base currency. 
-| [ApplyDate](Regulatory.Vat.Entries.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period. 
-| [CashReportingMode](Regulatory.Vat.Entries.md#cashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used. 
+| [AmountBase](Regulatory.Vat.Entries.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Amount of the operation without the tax in base currency.[Currency: BaseCurrency] [Required] 
+| [ApplyDate](Regulatory.Vat.Entries.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)] 
+| [CashReportingMode](Regulatory.Vat.Entries.md#cashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)] 
 | [CompleteTime](Regulatory.Vat.Entries.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Regulatory.Vat.Entries.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Regulatory.Vat.Entries.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -68,22 +68,22 @@ Aggregate Tree
 | [DocumentNotes](Regulatory.Vat.Entries.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Vat.Entries.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Vat.Entries.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [EntryType](Regulatory.Vat.Entries.md#entrytype) | [EntryType](Regulatory.Vat.Entries.md#entrytype) | Type of the VAT entry. S=Sales, P=Purchases. 
+| [EntryType](Regulatory.Vat.Entries.md#entrytype) | [EntryType](Regulatory.Vat.Entries.md#entrytype) | Type of the VAT entry. S=Sales, P=Purchases.[Required] [Filter(eq)] [ORD] 
 | [FullState](Regulatory.Vat.Entries.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Regulatory.Vat.Entries.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
-| [IsSingleExecution](Regulatory.Vat.Entries.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
+| [<s>IsReleased</s>](Regulatory.Vat.Entries.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
+| [IsSingleExecution](Regulatory.Vat.Entries.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Regulatory.Vat.Entries.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Vat.Entries.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Vat.Entries.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Regulatory.Vat.Entries.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Regulatory.Vat.Entries.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReferencedDocumentNo](Regulatory.Vat.Entries.md#referenceddocumentno) | string (20) | Number of the document that represents the operation that caused this entry. 
+| [ReferencedDocumentNo](Regulatory.Vat.Entries.md#referenceddocumentno) | string (20) | Number of the document that represents the operation that caused this entry.[Required] [Filter(eq)] 
 | [ReferenceDocumentNo](Regulatory.Vat.Entries.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [RegistrationNumber](Regulatory.Vat.Entries.md#registrationnumber) | string (16) __nullable__ | Identification code (IC) for the party specified by Party_Id. 
-| [RegistrationVATNumber](Regulatory.Vat.Entries.md#registrationvatnumber) | string (16) | VAT number by registration (or national number) for the party specified by Party_Id. 
+| [RegistrationVATNumber](Regulatory.Vat.Entries.md#registrationvatnumber) | string (16) | VAT number by registration (or national number) for the party specified by Party_Id.[Required] [Filter(eq)] 
 | [ReleaseTime](Regulatory.Vat.Entries.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Regulatory.Vat.Entries.md#state) | [DocumentState](Regulatory.Vat.Entries.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Regulatory.Vat.Entries.md#statetagsattribute) | string | Specifies the state of the document. 
-| [VATAmountBase](Regulatory.Vat.Entries.md#vatamountbase) | [Amount (14, 2)](../data-types.md#amount) | The amount of the tax for the operation in base currency. 
+| [VATAmountBase](Regulatory.Vat.Entries.md#vatamountbase) | [Amount (14, 2)](../data-types.md#amount) | The amount of the tax for the operation in base currency.[Currency: BaseCurrency] [Required] 
 | [Void](Regulatory.Vat.Entries.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Regulatory.Vat.Entries.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Regulatory.Vat.Entries.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -179,7 +179,7 @@ Show in UI: **HiddenByDefault**
 
 ### AmountBase
 
-Amount of the operation without the tax in base currency.
+Amount of the operation without the tax in base currency.[Currency: BaseCurrency] [Required]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### ApplyDate
 
-Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.
+Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)]
 
 Type: **date**  
 Category: **System**  
@@ -204,7 +204,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate`
 ### CashReportingMode
 
-When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.
+When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)]
 
 Type: **boolean**  
 Category: **System**  
@@ -305,7 +305,7 @@ Show in UI: **CannotBeShown**
 
 ### EntryType
 
-Type of the VAT entry. S=Sales, P=Purchases.
+Type of the VAT entry. S=Sales, P=Purchases.[Required] [Filter(eq)] [ORD]
 
 Type: **[EntryType](Regulatory.Vat.Entries.md#entrytype)**  
 Indexed: **True**  
@@ -336,7 +336,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
 
 Type: **boolean**  
 Category: **System**  
@@ -347,7 +347,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.
+Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -410,7 +410,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReferencedDocumentNo
 
-Number of the document that represents the operation that caused this entry.
+Number of the document that represents the operation that caused this entry.[Required] [Filter(eq)]
 
 Type: **string (20)**  
 Category: **System**  
@@ -445,7 +445,7 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationVATNumber
 
-VAT number by registration (or national number) for the party specified by Party_Id.
+VAT number by registration (or national number) for the party specified by Party_Id.[Required] [Filter(eq)]
 
 Type: **string (16)**  
 Category: **System**  
@@ -502,7 +502,7 @@ Show in UI: **HiddenByDefault**
 
 ### VATAmountBase
 
-The amount of the tax for the operation in base currency.
+The amount of the tax for the operation in base currency.[Currency: BaseCurrency] [Required]
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  

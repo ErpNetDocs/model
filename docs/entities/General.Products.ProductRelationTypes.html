@@ -123,22 +123,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.ProductRelationTypes.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Code of the relation type.</td>
+<td>Code of the relation type.[Required] [Filter(like)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductRelationTypes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the relation type.</td>
+<td>Name of the relation type.[Required] [Filter(eq;like)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductRelationTypes.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes</td>
+<td>Notes[Filter(like)]</td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductRelationTypes.html#systemtype">SystemType</a></td>
 <td><a href="General.Products.ProductRelationTypes.html#systemtype">SystemType</a></td>
-<td>System type of the relation type.</td>
+<td>System type of the relation type.[Required] [Default(&quot;GEN&quot;)] [Filter(eq)]</td>
 </tr>
 </tbody>
 </table>
@@ -186,7 +186,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Code of the relation type.</p>
+<p>Code of the relation type.[Required] [Filter(like)] [ORD]</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -195,14 +195,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the relation type.</p>
+<p>Name of the relation type.[Required] [Filter(eq;like)]</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes</p>
+<p>Notes[Filter(like)]</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -210,7 +210,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemtype">SystemType</h3>
-<p>System type of the relation type.</p>
+<p>System type of the relation type.[Required] [Default(&quot;GEN&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="General.Products.ProductRelationTypes.html#systemtype">SystemType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemType</code>(General.Products.ProductRelationTypes.md#systemtype) data attribute<br>

@@ -37,17 +37,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsSystemSite](Systems.Monitoring.WebSites.md#issystemsite) | boolean | Indicates whether this website is a system website 
-| [RootUrl](Systems.Monitoring.WebSites.md#rooturl) | string (256) | The root URL of the web site. 
-| [Status](Systems.Monitoring.WebSites.md#status) | string (10) | The current status of the web site. 
-| [Type](Systems.Monitoring.WebSites.md#type) | string (64) | The site type. 
+| [IsSystemSite](Systems.Monitoring.WebSites.md#issystemsite) | boolean | Indicates whether this website is a system website[Required] [Introduced in version 24.1.0.3] 
+| [RootUrl](Systems.Monitoring.WebSites.md#rooturl) | string (256) | The root URL of the web site.[Required] [Filter(eq;like)] [ORD] 
+| [Status](Systems.Monitoring.WebSites.md#status) | string (10) | The current status of the web site.[Required] [Filter(like)] [ORD] 
+| [Type](Systems.Monitoring.WebSites.md#type) | string (64) | The site type.[Required] [Filter(eq;like)] [ORD] 
 
 
 ## Attribute Details
 
 ### IsSystemSite
 
-Indicates whether this website is a system website
+Indicates whether this website is a system website[Required] [Introduced in version 24.1.0.3]
 
 Type: **boolean**  
 Category: **System**  
@@ -57,7 +57,7 @@ Show in UI: **ShownByDefault**
 
 ### RootUrl
 
-The root URL of the web site.
+The root URL of the web site.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (256)**  
 Category: **System**  
@@ -68,7 +68,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-The current status of the web site.
+The current status of the web site.[Required] [Filter(like)] [ORD]
 
 Type: **string (10)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### Type
 
-The site type.
+The site type.[Required] [Filter(eq;like)] [ORD]
 
 Type: **string (64)**  
 Category: **System**  

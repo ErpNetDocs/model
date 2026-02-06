@@ -130,47 +130,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#fixedorderquantitybase">FixedOrderQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Fixed order quantity under the FOQ &amp; EOQ replenishment system</td>
+<td>Fixed order quantity under the FOQ &amp; EOQ replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>1 if this product supply is active</td>
+<td>1 if this product supply is active[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information.</td>
+<td>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></td>
 <td><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></td>
-<td>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order</td>
+<td>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-<br>Order[Required] [Default(&quot;MTS&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderlotsizequantitybase">OrderLotSizeQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit</td>
+<td>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a></td>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a></td>
-<td>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;</td>
+<td>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;[Required] [Default(&quot;ROP&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#ordermaximum">OrderMaximum</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Order maximum when buying or making. NULL means no maximum</td>
+<td>Order maximum when buying or making. NULL means no maximum[Unit: Product.BaseMeasurementCategory.BaseUnit]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderminimum">OrderMinimum</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Minimum order quantity both for buying and making</td>
+<td>Minimum order quantity both for buying and making[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#ordermultiple">OrderMultiple</a></td>
 <td>boolean</td>
-<td>1 if the order qty should be multiple of lot size when buying or making</td>
+<td>1 if the order qty should be multiple of lot size when buying or making[Required] [Default(false)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderperiodplanningdays">OrderPeriodPlanningDays</a></td>
@@ -180,17 +180,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderperiodstartdate">OrderPeriodStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date of the first period under fixed period replenishment system. NULL - not yet specified</td>
+<td>Start date of the first period under fixed period replenishment system. NULL - not yet specified[Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderpointquantitybase">OrderPointQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Order point quantity under the OP replenishment system</td>
+<td>Order point quantity under the OP replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderpolicy">OrderPolicy</a></td>
 <td><a href="Logistics.Procurement.ProductSupply.html#orderpolicy">OrderPolicy</a></td>
-<td>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning</td>
+<td>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning[Required] [Default(&quot;OPS&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningannualcarryingcostpercent">PlanningAnnual<br>CarryingCostPercent</a></td>
@@ -200,27 +200,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningannualusagequantitybase">PlanningAnnual<br>UsageQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Average usage of the product for 1 year. NUL means unknown</td>
+<td>Average usage of the product for 1 year. NUL means unknown[Unit: Product.BaseMeasurementCategory.BaseUnit]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planninghorizondays">PlanningHorizonDays</a></td>
 <td>int32</td>
-<td>Number of days in the future for which to plan the demand and supply</td>
+<td>Number of days in the future for which to plan the demand and supply[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningleadtimedays">PlanningLeadTimeDays</a></td>
 <td>int32</td>
-<td>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components</td>
+<td>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningmaximuminventoryquantitybase">PlanningMaximum<br>InventoryQuantity<br>Base</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Maximum inventory. NULL if N/A</td>
+<td>Maximum inventory. NULL if N/A[Unit: Product.BaseMeasurementCategory.BaseUnit]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningordercostbasecurrency">PlanningOrderCost<br>BaseCurrency</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 3)</a> <strong>nullable</strong></td>
-<td>Projected cost to place an order and set-up equipment</td>
+<td>Projected cost to place an order and set-up equipment[Currency: EnterpriseCompany.BaseCurrency]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningordercycledays">PlanningOrderCycleDays</a></td>
@@ -230,22 +230,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningsafetystockquantitybase">PlanningSafety<br>StockQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product</td>
+<td>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#planningtimefencedays">PlanningTimeFenceDays</a></td>
 <td>int32</td>
-<td>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF</td>
+<td>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF[Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#procurementtype">ProcurementType</a></td>
 <td><a href="Logistics.Procurement.ProductSupply.html#procurementtype">ProcurementType</a></td>
-<td>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought</td>
+<td>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought[Required] [Default(&quot;B&quot;)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#standardcostperlot">StandardCostPerLot</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
-<td>Standard cost for one lot of the product</td>
+<td>Standard cost for one lot of the product[Currency: Product.CostingCurrency] [Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ProductSupply.html#supplyschemaid">SupplySchemaId</a></td>
@@ -358,7 +358,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fixedorderquantitybase">FixedOrderQuantityBase</h3>
-<p>Fixed order quantity under the FOQ &amp; EOQ replenishment system</p>
+<p>Fixed order quantity under the FOQ &amp; EOQ replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -366,7 +366,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>1 if this product supply is active</p>
+<p>1 if this product supply is active[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -374,7 +374,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information.</p>
+<p>Specifies whether this is the default supply rule. The planning system works using <em>only</em> the default supply rules. The other rules are for reference and user information.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -382,7 +382,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="manufacturingpolicy">ManufacturingPolicy</h3>
-<p>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order</p>
+<p>MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order[Required] [Default(&quot;MTS&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#manufacturingpolicy">ManufacturingPolicy</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ManufacturingPolicy</code>(Logistics.Procurement.ProductSupply.md#manufacturingpolicy) data attribute<br>
@@ -418,7 +418,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>MakeToStock</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderlotsizequantitybase">OrderLotSizeQuantityBase</h3>
-<p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit</p>
+<p>The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -426,7 +426,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderlotsizingmethod">OrderLotSizingMethod</h3>
-<p>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;</p>
+<p>LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;[Required] [Default(&quot;ROP&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#orderlotsizingmethod">OrderLotSizingMethod</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>OrderLotSizingMethod</code>(Logistics.Procurement.ProductSupply.md#orderlotsizingmethod) data attribute<br>
@@ -470,14 +470,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>ReorderPoint</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ordermaximum">OrderMaximum</h3>
-<p>Order maximum when buying or making. NULL means no maximum</p>
+<p>Order maximum when buying or making. NULL means no maximum[Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderminimum">OrderMinimum</h3>
-<p>Minimum order quantity both for buying and making</p>
+<p>Minimum order quantity both for buying and making[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -485,7 +485,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ordermultiple">OrderMultiple</h3>
-<p>1 if the order qty should be multiple of lot size when buying or making</p>
+<p>1 if the order qty should be multiple of lot size when buying or making[Required] [Default(false)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -500,14 +500,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderperiodstartdate">OrderPeriodStartDate</h3>
-<p>Start date of the first period under fixed period replenishment system. NULL - not yet specified</p>
+<p>Start date of the first period under fixed period replenishment system. NULL - not yet specified[Filter(ge;le)]</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderpointquantitybase">OrderPointQuantityBase</h3>
-<p>Order point quantity under the OP replenishment system</p>
+<p>Order point quantity under the OP replenishment system[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -515,7 +515,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderpolicy">OrderPolicy</h3>
-<p>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning</p>
+<p>Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning[Required] [Default(&quot;OPS&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#orderpolicy">OrderPolicy</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>OrderPolicy</code>(Logistics.Procurement.ProductSupply.md#orderpolicy) data attribute<br>
@@ -558,14 +558,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningannualusagequantitybase">PlanningAnnualUsageQuantityBase</h3>
-<p>Average usage of the product for 1 year. NUL means unknown</p>
+<p>Average usage of the product for 1 year. NUL means unknown[Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planninghorizondays">PlanningHorizonDays</h3>
-<p>Number of days in the future for which to plan the demand and supply</p>
+<p>Number of days in the future for which to plan the demand and supply[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -573,7 +573,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="planningleadtimedays">PlanningLeadTimeDays</h3>
-<p>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components</p>
+<p>The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -583,14 +583,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PreferredSupplier.DefaultDeliveryTermDays</code></p>
 <h3 id="planningmaximuminventoryquantitybase">PlanningMaximumInventoryQuantityBase</h3>
-<p>Maximum inventory. NULL if N/A</p>
+<p>Maximum inventory. NULL if N/A[Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="planningordercostbasecurrency">PlanningOrderCostBaseCurrency</h3>
-<p>Projected cost to place an order and set-up equipment</p>
+<p>Projected cost to place an order and set-up equipment[Currency: EnterpriseCompany.BaseCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -604,7 +604,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningsafetystockquantitybase">PlanningSafetyStockQuantityBase</h3>
-<p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product</p>
+<p>Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -612,7 +612,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="planningtimefencedays">PlanningTimeFenceDays</h3>
-<p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF</p>
+<p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF[Required] [Default(1)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -620,7 +620,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="procurementtype">ProcurementType</h3>
-<p>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought</p>
+<p>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought[Required] [Default(&quot;B&quot;)] [Filter(eq)]</p>
 <p>Type: <strong><a href="Logistics.Procurement.ProductSupply.html#procurementtype">ProcurementType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ProcurementType</code>(Logistics.Procurement.ProductSupply.md#procurementtype) data attribute<br>
@@ -652,7 +652,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Buy</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
-<p>Standard cost for one lot of the product</p>
+<p>Standard cost for one lot of the product[Currency: Product.CostingCurrency] [Required] [Default(0)]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

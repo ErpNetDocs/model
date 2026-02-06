@@ -28,17 +28,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LastUpdateTimeUtc](Systems.Monitoring.UserPresence.md#lastupdatetimeutc) | datetime | Timestamp (UTC) of the last status update. 
-| [Status](Systems.Monitoring.UserPresence.md#status) | [Status](Systems.Monitoring.UserPresence.md#status) | The user's current presence status. 
+| [LastUpdateTimeUtc](Systems.Monitoring.UserPresence.md#lastupdatetimeutc) | datetime | Timestamp (UTC) of the last status update.[Required] [Filter(ge;le)] [ORD] [ReadOnly] 
+| [Status](Systems.Monitoring.UserPresence.md#status) | [Status](Systems.Monitoring.UserPresence.md#status) | The user's current presence status.[Required] [Filter(multi eq)] [ReadOnly] 
 | [UserId](Systems.Monitoring.UserPresence.md#userid) | guid | Unique identifier for the user. `Required` `Filter(multi eq)` `ReadOnly` 
-| [UserLogin](Systems.Monitoring.UserPresence.md#userlogin) | string (64) | The username used to log in. 
+| [UserLogin](Systems.Monitoring.UserPresence.md#userlogin) | string (64) | The username used to log in.[Required] [Filter(multi eq;like)] [ReadOnly] 
 
 
 ## Attribute Details
 
 ### LastUpdateTimeUtc
 
-Timestamp (UTC) of the last status update.
+Timestamp (UTC) of the last status update.[Required] [Filter(ge;le)] [ORD] [ReadOnly]
 
 Type: **datetime**  
 Category: **System**  
@@ -48,7 +48,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-The user's current presence status.
+The user's current presence status.[Required] [Filter(multi eq)] [ReadOnly]
 
 Type: **[Status](Systems.Monitoring.UserPresence.md#status)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### UserLogin
 
-The username used to log in.
+The username used to log in.[Required] [Filter(multi eq;like)] [ReadOnly]
 
 Type: **string (64)**  
 Category: **System**  

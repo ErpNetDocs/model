@@ -41,7 +41,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (254) __nullable__ | Notes for this SupplySchemaRoute. 
 | [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. (Used by the schematic control) 
-| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route) 
+| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route)[Required] [Default(0)] 
 
 ## References
 
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### TransitTimeDays
 
-Obsolete. Not used. (Time needed for the delivery of the goods using this route)
+Obsolete. Not used. (Time needed for the delivery of the goods using this route)[Required] [Default(0)]
 
 Type: **int32**  
 Category: **System**  

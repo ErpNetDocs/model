@@ -123,12 +123,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#linenumber">LineNumber</a></td>
 <td>int32</td>
-<td>Consecutive line number of the package, unique within the document.</td>
+<td>Consecutive line number of the package, unique within the document.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPromotionalPackages.html#numberofpackages">NumberOfPackages</a></td>
 <td>int32</td>
-<td>Number of packages sold</td>
+<td>Number of packages sold[Required] [Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -188,7 +188,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="linenumber">LineNumber</h3>
-<p>Consecutive line number of the package, unique within the document.</p>
+<p>Consecutive line number of the package, unique within the document.[Required] [Filter(eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -199,7 +199,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="numberofpackages">NumberOfPackages</h3>
-<p>Number of packages sold</p>
+<p>Number of packages sold[Required] [Default(0)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

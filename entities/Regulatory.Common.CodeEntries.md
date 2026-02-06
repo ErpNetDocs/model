@@ -37,18 +37,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdditionalDataJson](Regulatory.Common.CodeEntries.md#additionaldatajson) | string (max) __nullable__ | Flexible JSON field for extended regulatory attributes. 
-| [AltCode](Regulatory.Common.CodeEntries.md#altcode) | string (64) __nullable__ | Optional alternative/legacy code used for backward compatibility. 
-| [Code](Regulatory.Common.CodeEntries.md#code) | string (64) | Official statutory code of the entry; may repeat across different validity periods. 
-| [Data1](Regulatory.Common.CodeEntries.md#data1) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data. 
-| [Data2](Regulatory.Common.CodeEntries.md#data2) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data. 
-| [Data3](Regulatory.Common.CodeEntries.md#data3) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data. 
-| [IsActive](Regulatory.Common.CodeEntries.md#isactive) | boolean | Specifies whether the code entry is currently active. 
-| [Name](Regulatory.Common.CodeEntries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Official regulatory name of the entry (multi-language). 
-| [Notes](Regulatory.Common.CodeEntries.md#notes) | string (max) __nullable__ | Free text notes or comments 
-| [ShortName](Regulatory.Common.CodeEntries.md#shortname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Abbreviated or short name of the entry, if such exists. 
-| [ValidFrom](Regulatory.Common.CodeEntries.md#validfrom) | date __nullable__ | Date from which this entry is valid. 
-| [ValidTo](Regulatory.Common.CodeEntries.md#validto) | date __nullable__ | Date until which this entry is valid. 
+| [AdditionalDataJson](Regulatory.Common.CodeEntries.md#additionaldatajson) | string (max) __nullable__ | Flexible JSON field for extended regulatory attributes.[Filter(eq;like)] 
+| [AltCode](Regulatory.Common.CodeEntries.md#altcode) | string (64) __nullable__ | Optional alternative/legacy code used for backward compatibility.[Filter(eq;like)] 
+| [Code](Regulatory.Common.CodeEntries.md#code) | string (64) | Official statutory code of the entry; may repeat across different validity periods.[Required] [Filter(eq;like)] 
+| [Data1](Regulatory.Common.CodeEntries.md#data1) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data.[Filter(eq;like)] 
+| [Data2](Regulatory.Common.CodeEntries.md#data2) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data.[Filter(eq;like)] 
+| [Data3](Regulatory.Common.CodeEntries.md#data3) | string (64) __nullable__ | Additional structured attribute for regulatory-specific data.[Filter(eq;like)] 
+| [IsActive](Regulatory.Common.CodeEntries.md#isactive) | boolean | Specifies whether the code entry is currently active.[Required] [Default(true)] [Filter(eq)] 
+| [Name](Regulatory.Common.CodeEntries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Official regulatory name of the entry (multi-language).[Filter(like)] 
+| [Notes](Regulatory.Common.CodeEntries.md#notes) | string (max) __nullable__ | Free text notes or comments[Filter(eq;like)] 
+| [ShortName](Regulatory.Common.CodeEntries.md#shortname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Abbreviated or short name of the entry, if such exists.[Filter(like)] 
+| [ValidFrom](Regulatory.Common.CodeEntries.md#validfrom) | date __nullable__ | Date from which this entry is valid.[Filter(eq;ge;le)] 
+| [ValidTo](Regulatory.Common.CodeEntries.md#validto) | date __nullable__ | Date until which this entry is valid.[Filter(eq;ge;le)] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### AdditionalDataJson
 
-Flexible JSON field for extended regulatory attributes.
+Flexible JSON field for extended regulatory attributes.[Filter(eq;like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### AltCode
 
-Optional alternative/legacy code used for backward compatibility.
+Optional alternative/legacy code used for backward compatibility.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Official statutory code of the entry; may repeat across different validity periods.
+Official statutory code of the entry; may repeat across different validity periods.[Required] [Filter(eq;like)]
 
 Type: **string (64)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### Data1
 
-Additional structured attribute for regulatory-specific data.
+Additional structured attribute for regulatory-specific data.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### Data2
 
-Additional structured attribute for regulatory-specific data.
+Additional structured attribute for regulatory-specific data.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### Data3
 
-Additional structured attribute for regulatory-specific data.
+Additional structured attribute for regulatory-specific data.[Filter(eq;like)]
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the code entry is currently active.
+Specifies whether the code entry is currently active.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Official regulatory name of the entry (multi-language).
+Official regulatory name of the entry (multi-language).[Filter(like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Free text notes or comments
+Free text notes or comments[Filter(eq;like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **ShownByDefault**
 
 ### ShortName
 
-Abbreviated or short name of the entry, if such exists.
+Abbreviated or short name of the entry, if such exists.[Filter(like)]
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-Date from which this entry is valid.
+Date from which this entry is valid.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-Date until which this entry is valid.
+Date until which this entry is valid.[Filter(eq;ge;le)]
 
 Type: **date __nullable__**  
 Category: **System**  

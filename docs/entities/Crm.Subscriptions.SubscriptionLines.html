@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Subscriptions.SubscriptionLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the subscription.</td>
+<td>Consecutive number of the line within the subscription.[Required] [Filter(eq)] [ORD]</td>
 </tr>
 <tr>
 <td><a href="Crm.Subscriptions.SubscriptionLines.html#notes">Notes</a></td>
@@ -132,12 +132,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Subscriptions.SubscriptionLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity, which should be billed.</td>
+<td>The quantity, which should be billed.[Unit: QuantityUnit] [Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.Subscriptions.SubscriptionLines.html#specificdiscountpercent">SpecificDiscountPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>The specific discount to apply for this line.</td>
+<td>The specific discount to apply for this line.[Default(0)]</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +197,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the subscription.</p>
+<p>Consecutive number of the line within the subscription.[Required] [Filter(eq)] [ORD]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -216,14 +216,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity, which should be billed.</p>
+<p>The quantity, which should be billed.[Unit: QuantityUnit] [Required] [Filter(ge;le)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="specificdiscountpercent">SpecificDiscountPercent</h3>
-<p>The specific discount to apply for this line.</p>
+<p>The specific discount to apply for this line.[Default(0)]</p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -34,22 +34,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowAddress](Applications.PersonalData.ProcessingConsents.md#allowaddress) | boolean | Allows the processing of the physical address. 
-| [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#allowbasicdata) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. 
-| [AllowEmail](Applications.PersonalData.ProcessingConsents.md#allowemail) | boolean | Allows the processing of the email address. 
-| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string (max) __nullable__ | Comma-separated list of other types of data, which was allowed for processing with this consent. 
-| [AllowPhone](Applications.PersonalData.ProcessingConsents.md#allowphone) | boolean | Allows the processing of the telephone number. 
+| [AllowAddress](Applications.PersonalData.ProcessingConsents.md#allowaddress) | boolean | Allows the processing of the physical address.[Required] [Default(false)] [Filter(eq)] 
+| [AllowBasicData](Applications.PersonalData.ProcessingConsents.md#allowbasicdata) | boolean | Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.[Required] [Default(false)] [Filter(eq)] 
+| [AllowEmail](Applications.PersonalData.ProcessingConsents.md#allowemail) | boolean | Allows the processing of the email address.[Required] [Default(false)] [Filter(eq)] 
+| [AllowOtherData](Applications.PersonalData.ProcessingConsents.md#allowotherdata) | string (max) __nullable__ | Comma-separated list of other types of data, which was allowed for processing with this consent.[Filter(eq)] 
+| [AllowPhone](Applications.PersonalData.ProcessingConsents.md#allowphone) | boolean | Allows the processing of the telephone number.[Required] [Default(false)] [Filter(eq)] 
 | [ConsentImage](Applications.PersonalData.ProcessingConsents.md#consentimage) | byte[] __nullable__ | If not null, it is a graphical image, containing additional information for the consent. 
-| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (max) __nullable__ | The actual text of the consent. 
-| [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). 
-| [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given. 
-| [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. 
-| [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. 
+| [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (max) __nullable__ | The actual text of the consent.[Filter(like)] 
+| [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).[Required] [Filter(eq)] 
+| [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given.[Required] [Filter(ge;le)] 
+| [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.[Required] [Default(true)] [Filter(eq)] 
+| [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.[Required] [Default(false)] [Filter(eq)] 
 | [Notes](Applications.PersonalData.ProcessingConsents.md#notes) | string (max) __nullable__ | Notes for this ProcessingConsent. 
-| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the email of the parent. 
-| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the name of the parent. 
-| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the phone number of the parent. 
-| [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime __nullable__ | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. 
+| [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the email of the parent.[Filter(like)] 
+| [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the name of the parent.[Filter(eq;like)] 
+| [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the phone number of the parent.[Filter(like)] 
+| [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime __nullable__ | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.[Filter(ge;le)] 
 
 ## References
 
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### AllowAddress
 
-Allows the processing of the physical address.
+Allows the processing of the physical address.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowBasicData
 
-Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.
+Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowEmail
 
-Allows the processing of the email address.
+Allows the processing of the email address.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowOtherData
 
-Comma-separated list of other types of data, which was allowed for processing with this consent.
+Comma-separated list of other types of data, which was allowed for processing with this consent.[Filter(eq)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowPhone
 
-Allows the processing of the telephone number.
+Allows the processing of the telephone number.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsentText
 
-The actual text of the consent.
+The actual text of the consent.[Filter(like)]
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsentType
 
-The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).
+The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes).[Required] [Filter(eq)]
 
 Type: **[ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### GivenOnUtc
 
-The date and time (in Utc), when the consent was given.
+The date and time (in Utc), when the consent was given.[Required] [Filter(ge;le)]
 
 Type: **datetime**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.
+Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### IsChild
 
-Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.
+Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child.[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -217,7 +217,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentEmail
 
-When a parental rights holder gives a consent for a child, contains the email of the parent.
+When a parental rights holder gives a consent for a child, contains the email of the parent.[Filter(like)]
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -228,7 +228,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentName
 
-When a parental rights holder gives a consent for a child, contains the name of the parent.
+When a parental rights holder gives a consent for a child, contains the name of the parent.[Filter(eq;like)]
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -239,7 +239,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentPhone
 
-When a parental rights holder gives a consent for a child, contains the phone number of the parent.
+When a parental rights holder gives a consent for a child, contains the phone number of the parent.[Filter(like)]
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -250,7 +250,7 @@ Show in UI: **ShownByDefault**
 
 ### RetractedOnUtc
 
-The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.
+The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

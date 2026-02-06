@@ -30,8 +30,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string (64) | The attribute name 
-| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (max) __nullable__ | The new value 
+| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string (64) | The attribute name[Required] [Filter(eq)] [Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name] 
+| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (max) __nullable__ | The new value[Filter(eq;like)] [Inherited from Sys_Attribute_<br />Changes_Table.New_Value] 
 
 ## References
 
@@ -44,7 +44,7 @@ Aggregate Root:
 
 ### AttributeName
 
-The attribute name
+The attribute name[Required] [Filter(eq)] [Inherited from Sys_Attribute_Changes_Table.Attribute_Name]
 
 Type: **string (64)**  
 Category: **System**  
@@ -56,7 +56,7 @@ Show in UI: **ShownByDefault**
 
 ### NewValue
 
-The new value
+The new value[Filter(eq;like)] [Inherited from Sys_Attribute_Changes_Table.New_Value]
 
 Type: **string (max) __nullable__**  
 Category: **System**  

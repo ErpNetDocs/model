@@ -44,11 +44,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [NewState](General.Documents.DocumentStateChanges.md#newstate) | [NewState](General.Documents.DocumentStateChanges.md#newstate) | The new state after the change. 
-| [SystemInitiated](General.Documents.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. 
-| [UpdateTime](General.Documents.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. 
-| [UpdateUser](General.Documents.DocumentStateChanges.md#updateuser) | string (64) | The login name of the user, who made the status change 
-| [Void](General.Documents.DocumentStateChanges.md#void) | boolean | 1 if the document is voided with this change 
+| [NewState](General.Documents.DocumentStateChanges.md#newstate) | [NewState](General.Documents.DocumentStateChanges.md#newstate) | The new state after the change.[Required] [Filter(eq)] 
+| [SystemInitiated](General.Documents.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action.[Required] [Default(false)] [ReadOnly] 
+| [UpdateTime](General.Documents.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect.[Required] [Filter(ge;le)] [ORD] 
+| [UpdateUser](General.Documents.DocumentStateChanges.md#updateuser) | string (64) | The login name of the user, who made the status change[Required] [Filter(eq)] 
+| [Void](General.Documents.DocumentStateChanges.md#void) | boolean | 1 if the document is voided with this change[Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1] 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### NewState
 
-The new state after the change.
+The new state after the change.[Required] [Filter(eq)]
 
 Type: **[NewState](General.Documents.DocumentStateChanges.md#newstate)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemInitiated
 
-Specifies whether the state change was caused by system process or from user action.
+Specifies whether the state change was caused by system process or from user action.[Required] [Default(false)] [ReadOnly]
 
 Type: **boolean**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### UpdateTime
 
-The time when the change took effect.
+The time when the change took effect.[Required] [Filter(ge;le)] [ORD]
 
 Type: **datetime**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### UpdateUser
 
-The login name of the user, who made the status change
+The login name of the user, who made the status change[Required] [Filter(eq)]
 
 Type: **string (64)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### Void
 
-1 if the document is voided with this change
+1 if the document is voided with this change[Required] [Default(false)] [Filter(eq)] [Introduced in version 19.1]
 
 Type: **boolean**  
 Category: **System**  

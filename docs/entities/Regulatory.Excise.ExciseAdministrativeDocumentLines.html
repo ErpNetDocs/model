@@ -131,32 +131,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#excisealcoholicstrength">ExciseAlcoholicStrength</a></td>
 <td>decimal (5, 2) <strong>nullable</strong></td>
-<td>The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.</td>
+<td>The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.[Introduced in version 21.1.3.97]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#exciseamount">ExciseAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The excise amount</td>
+<td>The excise amount [Currency: ExciseAdministrative<br>Document.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#exciseamountbase">ExciseAmountBase</a></td>
 <td>decimal (14, 4)</td>
-<td>The excise amount in base currency</td>
+<td>The excise amount in base currency[Unit: ExciseAdministrative<br>Document.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#excisedutyratevalue">ExciseDutyRateValue</a></td>
 <td>decimal (10, 6) <strong>nullable</strong></td>
-<td>The rate which should be applied for the specified product and purpose. NULL means not assigned yet.</td>
+<td>The rate which should be applied for the specified product and purpose. NULL means not assigned yet.[Introduced in version 21.1.3.97]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#excisequantity">ExciseQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.</td>
+<td>The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.[Unit: ExciseQuantityUnit] [Required] [Introduced in version 22.1.6.58]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number within the document.</td>
+<td>Consecutive line number within the document.[Required] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#notes">Notes</a></td>
@@ -166,17 +166,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.</td>
+<td>The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.[Filter(multi eq)] [Introduced in version 22.1.4.9]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity being sold, in the measurement unit, specified in Quantity Unit.</td>
+<td>The quantity being sold, in the measurement unit, specified in Quantity Unit.[Unit: QuantityUnit] [Required] [Default(1)]</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocumentLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity in base measurement category for the product.</td>
+<td>The quantity in base measurement category for the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
 </tr>
 </tbody>
 </table>
@@ -283,7 +283,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="excisealcoholicstrength">ExciseAlcoholicStrength</h3>
-<p>The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.</p>
+<p>The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.[Introduced in version 21.1.3.97]</p>
 <p>Type: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -292,7 +292,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.GetNewAlcoholicStrength( obj.MeasuringTransaction, obj.Product)</code></p>
 <h3 id="exciseamount">ExciseAmount</h3>
-<p>The excise amount</p>
+<p>The excise amount [Currency: ExciseAdministrativeDocument.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -302,7 +302,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.ExciseAdministrativeDocument.BaseCurrency)</code></p>
 <h3 id="exciseamountbase">ExciseAmountBase</h3>
-<p>The excise amount in base currency</p>
+<p>The excise amount in base currency[Unit: ExciseAdministrativeDocument.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94]</p>
 <p>Type: <strong>decimal (14, 4)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -312,7 +312,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.ExciseQuantity, obj.ExciseAlcoholicStrength).IfNullThen( obj.ExciseAmountBase)</code></p>
 <h3 id="excisedutyratevalue">ExciseDutyRateValue</h3>
-<p>The rate which should be applied for the specified product and purpose. NULL means not assigned yet.</p>
+<p>The rate which should be applied for the specified product and purpose. NULL means not assigned yet.[Introduced in version 21.1.3.97]</p>
 <p>Type: <strong>decimal (10, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -321,7 +321,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ExciseDutyRate.ExciseDutyRateField</code></p>
 <h3 id="excisequantity">ExciseQuantity</h3>
-<p>The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.</p>
+<p>The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.[Unit: ExciseQuantityUnit] [Required] [Introduced in version 22.1.6.58]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -330,7 +330,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.QuantityBase.ConvertTo( obj.ExciseQuantityUnit, obj.Product)</code></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number within the document.</p>
+<p>Consecutive line number within the document.[Required] [Filter(multi eq)]</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -349,14 +349,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.</p>
+<p>The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.[Filter(multi eq)] [Introduced in version 22.1.4.9]</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity being sold, in the measurement unit, specified in Quantity Unit.</p>
+<p>The quantity being sold, in the measurement unit, specified in Quantity Unit.[Unit: QuantityUnit] [Required] [Default(1)]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -364,7 +364,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity in base measurement category for the product.</p>
+<p>The quantity in base measurement category for the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

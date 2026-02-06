@@ -125,27 +125,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#active">Active</a></td>
 <td>boolean</td>
-<td>True when the mail box is active for mail sinchronization, sending and receiving</td>
+<td>True when the mail box is active for mail sinchronization, sending and receiving[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#emailaddress">EmailAddress</a></td>
 <td>string (254)</td>
-<td>The email address associated with this mail box</td>
+<td>The email address associated with this mail box[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1 when this is the default mailbox for the user.</td>
+<td>1 when this is the default mailbox for the user.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#isencrypted">IsEncrypted</a></td>
 <td>boolean</td>
-<td>1 when the mailbox messages are stored in encrypted format</td>
+<td>1 when the mailbox messages are stored in encrypted format[Required] [Default(false)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#resetonnextsync">ResetOnNextSync</a></td>
 <td>boolean</td>
-<td>Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset</td>
+<td>Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#sendserveraddress">SendServerAddress</a></td>
@@ -262,7 +262,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>True when the mail box is active for mail sinchronization, sending and receiving</p>
+<p>True when the mail box is active for mail sinchronization, sending and receiving[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -270,7 +270,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="emailaddress">EmailAddress</h3>
-<p>The email address associated with this mail box</p>
+<p>The email address associated with this mail box[Required] [Filter(eq)]</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -278,7 +278,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>1 when this is the default mailbox for the user.</p>
+<p>1 when this is the default mailbox for the user.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -286,7 +286,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isencrypted">IsEncrypted</h3>
-<p>1 when the mailbox messages are stored in encrypted format</p>
+<p>1 when the mailbox messages are stored in encrypted format[Required] [Default(false)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -294,7 +294,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="resetonnextsync">ResetOnNextSync</h3>
-<p>Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset</p>
+<p>Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

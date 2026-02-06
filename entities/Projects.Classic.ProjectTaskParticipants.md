@@ -36,8 +36,8 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Projects.Classic.ProjectTaskParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskParticipant. 
-| [NotifyOnStatusChange](Projects.Classic.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes. 
-| [WorkLoadPercent](Projects.Classic.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task. 
+| [NotifyOnStatusChange](Projects.Classic.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes.[Required] [Default(true)] 
+| [WorkLoadPercent](Projects.Classic.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task.[Required] [Default(1)] [Filter(eq)] 
 
 ## References
 
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### NotifyOnStatusChange
 
-Specifies whether the participant should be notified on task status changes.
+Specifies whether the participant should be notified on task status changes.[Required] [Default(true)]
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkLoadPercent
 
-The planned work load (in percents) of the participant for this task.
+The planned work load (in percents) of the participant for this task.[Required] [Default(1)] [Filter(eq)]
 
 Type: **decimal (3, 2)**  
 Category: **System**  

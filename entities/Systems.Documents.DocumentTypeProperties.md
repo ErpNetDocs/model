@@ -47,10 +47,10 @@ Aggregate Root:
 | [DefaultPropertyValue](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvalue) | string (254) __nullable__ | The default value of the property when creating new documents. 
 | [DefaultProperty<br />ValueDescription](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. 
 | [DefaultValueId](Systems.Documents.DocumentTypeProperties.md#defaultvalueid) | guid __nullable__ | Internal Id of the default value of the property. `Filter(multi eq)` 
-| [LineNo](Systems.Documents.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type 
-| [Required](Systems.Documents.DocumentTypeProperties.md#required) | boolean | 1 if the property is required when creating documents of this type 
-| [RequiredFromDate](Systems.Documents.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. 
-| [RequiredThruDate](Systems.Documents.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. 
+| [LineNo](Systems.Documents.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type[Required] [Filter(ge;le)] [ORD] 
+| [Required](Systems.Documents.DocumentTypeProperties.md#required) | boolean | 1 if the property is required when creating documents of this type[Required] [Default(false)] [Filter(eq)] 
+| [RequiredFromDate](Systems.Documents.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)] 
+| [RequiredThruDate](Systems.Documents.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.[Filter(ge;le)] 
 
 ## References
 
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Line number, unique within the document type
+Line number, unique within the document type[Required] [Filter(ge;le)] [ORD]
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Front-End Recalc Expressions:
 `( obj.DocumentType.DocumentTypeProperties.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Required
 
-1 if the property is required when creating documents of this type
+1 if the property is required when creating documents of this type[Required] [Default(false)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiredFromDate
 
-When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.
+When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### RequiredThruDate
 
-When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.
+When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.[Filter(ge;le)]
 
 Type: **datetime __nullable__**  
 Category: **System**  

@@ -137,7 +137,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the provider is currently active for the domain.</td>
+<td>Specifies whether the provider is currently active for the domain.[Required] [Default(true)] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#notes">Notes</a></td>
@@ -147,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#providername">ProviderName</a></td>
 <td><a href="Systems.Security.DomainProviders.html#providername">ProviderName</a></td>
-<td>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.</td>
+<td>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.[Required] [Filter(eq)]</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.DomainProviders.html#tenantid">TenantID</a></td>
@@ -225,7 +225,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the provider is currently active for the domain.</p>
+<p>Specifies whether the provider is currently active for the domain.[Required] [Default(true)] [Filter(eq)]</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="providername">ProviderName</h3>
-<p>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.</p>
+<p>The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.[Required] [Filter(eq)]</p>
 <p>Type: <strong><a href="Systems.Security.DomainProviders.html#providername">ProviderName</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ProviderName</code>(Systems.Security.DomainProviders.md#providername) data attribute<br>

@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse. 
+| [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse.[Required] [Filter(eq;like)] 
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. 
 
 ## References
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### LocationAddress
 
-The address of the location. Should be unique within the warehouse.
+The address of the location. Should be unique within the warehouse.[Required] [Filter(eq;like)]
 
 Type: **string (32)**  
 Category: **System**  

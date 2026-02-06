@@ -126,37 +126,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#perioddate">PeriodDate</a></td>
 <td>datetime</td>
-<td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)</td>
+<td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)[Required] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.43]</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#periodmonth">PeriodMonth</a></td>
 <td>byte</td>
-<td>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</td>
+<td>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#periodyear">PeriodYear</a></td>
 <td>int16</td>
-<td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</td>
+<td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)]</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetamount">TargetAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value</td>
+<td>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value[Currency: TargetAmountCurrency]</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targettype">TargetType</a></td>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targettype">TargetType</a></td>
-<td>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs</td>
+<td>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs[Required] [Default(&quot;SALES&quot;)] [Filter(multi eq)]</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetvalue">TargetValue</a></td>
 <td>decimal (9, 2)</td>
-<td>Value of target. Meaning depends on target type</td>
+<td>Value of target. Meaning depends on target type[Required] [Default(0)]</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetweight">TargetWeight</a></td>
 <td>decimal (5, 2)</td>
-<td>Relative weight of target, comparatively to other targets</td>
+<td>Relative weight of target, comparatively to other targets[Required] [Default(1)]</td>
 </tr>
 </tbody>
 </table>
@@ -236,35 +236,35 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="perioddate">PeriodDate</h3>
-<p>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)</p>
+<p>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)[Required] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.43]</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="periodmonth">PeriodMonth</h3>
-<p>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</p>
+<p>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>byte</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="periodyear">PeriodYear</h3>
-<p>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</p>
+<p>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)[Required] [Filter(ge;le)]</p>
 <p>Type: <strong>int16</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetamount">TargetAmount</h3>
-<p>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value</p>
+<p>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value[Currency: TargetAmountCurrency]</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="targettype">TargetType</h3>
-<p>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs</p>
+<p>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs[Required] [Default(&quot;SALES&quot;)] [Filter(multi eq)]</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersonTargetLines.html#targettype">TargetType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TargetType</code>(Crm.SalesForce.SalesPersonTargetLines.md#targettype) data attribute<br>
@@ -300,7 +300,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>SalesAmount</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetvalue">TargetValue</h3>
-<p>Value of target. Meaning depends on target type</p>
+<p>Value of target. Meaning depends on target type[Required] [Default(0)]</p>
 <p>Type: <strong>decimal (9, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -308,7 +308,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetweight">TargetWeight</h3>
-<p>Relative weight of target, comparatively to other targets</p>
+<p>Relative weight of target, comparatively to other targets[Required] [Default(1)]</p>
 <p>Type: <strong>decimal (5, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

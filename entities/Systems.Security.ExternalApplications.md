@@ -42,16 +42,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](Systems.Security.ExternalApplications.md#address) | string (max) | The address (path) to the application. The address is platform-dependant. 
-| [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. 
-| [EntityName](Systems.Security.ExternalApplications.md#entityname) | string (64) | The entity, for which the application is defined. 
-| [ExecuteForAllObjects](Systems.Security.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. 
-| [IsActive](Systems.Security.ExternalApplications.md#isactive) | boolean __nullable__ | Specifies whether the external application is currently used. 
-| [Name](Systems.Security.ExternalApplications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the external application. 
+| [Address](Systems.Security.ExternalApplications.md#address) | string (max) | The address (path) to the application. The address is platform-dependant.[Required] 
+| [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.[Required] [Default(&quot;SINGLE&quot;)] [Filter(eq)] 
+| [EntityName](Systems.Security.ExternalApplications.md#entityname) | string (64) | The entity, for which the application is defined.[Required] [Filter(eq)] [ORD] 
+| [ExecuteForAllObjects](Systems.Security.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.[Required] [Default(true)] [Filter(eq)] 
+| [IsActive](Systems.Security.ExternalApplications.md#isactive) | boolean __nullable__ | Specifies whether the external application is currently used.[Default(true)] [Filter(eq)] 
+| [Name](Systems.Security.ExternalApplications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the external application.[Required] [Filter(eq;like)] 
 | [Notes](Systems.Security.ExternalApplications.md#notes) | string (max) __nullable__ | Notes for this ExternalApplication. 
-| [Platform](Systems.Security.ExternalApplications.md#platform) | [Platform](Systems.Security.ExternalApplications.md#platform) | The execution platform of the application. 
-| [RefreshAfterFinish](Systems.Security.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. 
-| [SaveBeforeStart](Systems.Security.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application. 
+| [Platform](Systems.Security.ExternalApplications.md#platform) | [Platform](Systems.Security.ExternalApplications.md#platform) | The execution platform of the application.[Required] [Filter(eq)] 
+| [RefreshAfterFinish](Systems.Security.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.[Required] [Default(true)] [Filter(eq)] 
+| [SaveBeforeStart](Systems.Security.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application.[Required] [Default(true)] [Filter(eq)] 
 
 ## References
 
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### Address
 
-The address (path) to the application. The address is platform-dependant.
+The address (path) to the application. The address is platform-dependant.[Required]
 
 Type: **string (max)**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableInMode
 
-Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.
+Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.[Required] [Default(&quot;SINGLE&quot;)] [Filter(eq)]
 
 Type: **[AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode)**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityName
 
-The entity, for which the application is defined.
+The entity, for which the application is defined.[Required] [Filter(eq)] [ORD]
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecuteForAllObjects
 
-Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.
+Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the external application is currently used.
+Specifies whether the external application is currently used.[Default(true)] [Filter(eq)]
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the external application.
+The name of the external application.[Required] [Filter(eq;like)]
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### Platform
 
-The execution platform of the application.
+The execution platform of the application.[Required] [Filter(eq)]
 
 Type: **[Platform](Systems.Security.ExternalApplications.md#platform)**  
 Category: **System**  
@@ -183,7 +183,7 @@ Show in UI: **ShownByDefault**
 
 ### RefreshAfterFinish
 
-Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.
+Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### SaveBeforeStart
 
-Whether to save the form data to the server before starting the application.
+Whether to save the form data to the server before starting the application.[Required] [Default(true)] [Filter(eq)]
 
 Type: **boolean**  
 Category: **System**  
