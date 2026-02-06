@@ -34,7 +34,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](General.Contacts.PartyRelationshipTypes.md#notes) | string (254) __nullable__ | Notes for this PartyRelationshipType. 
-| [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#relationshiptypename) | string (50) | The name of the relationship type. `Required` `Filter(like)` 
+| [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#relationshiptypename) | string (50) | The name of the relationship type 
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Show in UI: **ShownByDefault**
 
 ### RelationshipTypeName
 
-The name of the relationship type. `Required` `Filter(like)`
+The name of the relationship type
 
 Type: **string (50)**  
 Category: **System**  

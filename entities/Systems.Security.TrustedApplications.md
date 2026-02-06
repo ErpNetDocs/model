@@ -35,28 +35,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | Defines who is allowed to issue reference access tokens for this trusted application. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.2.0.16` 
-| [ApplicationSecretHash](Systems.Security.TrustedApplications.md#applicationsecrethash) | string (250) __nullable__ | Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. `Introduced in version 20.1` 
-| [ApplicationUri](Systems.Security.TrustedApplications.md#applicationuri) | string (254) | Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". `Required` `Filter(eq)` `ORD` 
-| [BasicAuthenticationAllowed](Systems.Security.TrustedApplications.md#basicauthenticationallowed) | boolean | If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. `Required` `Default(false)` `Filter(eq)` 
-| [ClientType](Systems.Security.TrustedApplications.md#clienttype) | [ClientType](Systems.Security.TrustedApplications.md#clienttype) | Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). `Required` `Default("C")` `Introduced in version 20.1` 
-| [CreationTimeUtc](Systems.Security.TrustedApplications.md#creationtimeutc) | datetime | Date and time (in UTC) when the application was registered. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
-| [ImpersonateAsCommunity<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateascommunityuserallowed) | boolean | Allows the application to request login from external users and operate on their behalf. `Required` `Default(false)` `Filter(eq)` 
-| [ImpersonateAsInternal<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateasinternaluserallowed) | boolean | Allows the application to request login from internal users and operate on their behalf. `Required` `Default(false)` `Filter(eq)` 
+| [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | Defines who is allowed to issue reference access tokens for this trusted application. 
+| [ApplicationSecretHash](Systems.Security.TrustedApplications.md#applicationsecrethash) | string (250) __nullable__ | Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. 
+| [ApplicationUri](Systems.Security.TrustedApplications.md#applicationuri) | string (254) | Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". 
+| [BasicAuthenticationAllowed](Systems.Security.TrustedApplications.md#basicauthenticationallowed) | boolean | If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. 
+| [ClientType](Systems.Security.TrustedApplications.md#clienttype) | [ClientType](Systems.Security.TrustedApplications.md#clienttype) | Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). 
+| [CreationTimeUtc](Systems.Security.TrustedApplications.md#creationtimeutc) | datetime | Date and time (in UTC) when the application was registered. 
+| [ImpersonateAsCommunity<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateascommunityuserallowed) | boolean | Allows the application to request login from external users and operate on their behalf. 
+| [ImpersonateAsInternal<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateasinternaluserallowed) | boolean | Allows the application to request login from internal users and operate on their behalf. 
 | [ImpersonateLoginUrl](Systems.Security.TrustedApplications.md#impersonateloginurl) | string (254) __nullable__ | The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
 | [ImpersonateLogoutUrl](Systems.Security.TrustedApplications.md#impersonatelogouturl) | string (254) __nullable__ | The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
-| [IsEnabled](Systems.Security.TrustedApplications.md#isenabled) | boolean | Specifies whether the application is enabled for login. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Systems.Security.TrustedApplications.md#name) | string (254) | The multi-language name of the application. `Required` `Filter(eq;like)` `ORD` 
+| [IsEnabled](Systems.Security.TrustedApplications.md#isenabled) | boolean | Specifies whether the application is enabled for login. 
+| [Name](Systems.Security.TrustedApplications.md#name) | string (254) | The multi-language name of the application. 
 | [Notes](Systems.Security.TrustedApplications.md#notes) | string (max) __nullable__ | Notes for this TrustedApplication. 
-| [Scope](Systems.Security.TrustedApplications.md#scope) | string (max) __nullable__ | The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). `Introduced in version 20.1` 
-| [SystemUserAllowed](Systems.Security.TrustedApplications.md#systemuserallowed) | boolean | Allows this application to logon as a service. `Required` `Default(false)` `Filter(eq)` 
+| [Scope](Systems.Security.TrustedApplications.md#scope) | string (max) __nullable__ | The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). 
+| [SystemUserAllowed](Systems.Security.TrustedApplications.md#systemuserallowed) | boolean | Allows this application to logon as a service. 
 | [SystemUserLoginUrl](Systems.Security.TrustedApplications.md#systemuserloginurl) | string (254) __nullable__ | The URL, which will be used by the login process, when the application logs in as a service. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SystemUser](Systems.Security.TrustedApplications.md#systemuser) | [Users](Systems.Security.Users.md) (nullable) | The user, which will be used when the application logins as a service. `Filter(multi eq)` |
+| [SystemUser](Systems.Security.TrustedApplications.md#systemuser) | [Users](Systems.Security.Users.md) (nullable) | The user, which will be used when the application logins as a service. |
 
 
 ## System Attributes
@@ -81,7 +81,7 @@ Aggregate Tree
 
 ### AccessTokens
 
-Defines who is allowed to issue reference access tokens for this trusted application. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.2.0.16`
+Defines who is allowed to issue reference access tokens for this trusted application.
 
 Type: **[AccessTokens](Systems.Security.TrustedApplications.md#accesstokens)**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### ApplicationSecretHash
 
-Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. `Introduced in version 20.1`
+Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.
 
 Type: **string (250) __nullable__**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### ApplicationUri
 
-Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". `Required` `Filter(eq)` `ORD`
+Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".
 
 Type: **string (254)**  
 Indexed: **True**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### BasicAuthenticationAllowed
 
-If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. `Required` `Default(false)` `Filter(eq)`
+If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.
 
 Type: **boolean**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### ClientType
 
-Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). `Required` `Default("C")` `Introduced in version 20.1`
+Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app).
 
 Type: **[ClientType](Systems.Security.TrustedApplications.md#clienttype)**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-Date and time (in UTC) when the application was registered. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
+Date and time (in UTC) when the application was registered.
 
 Type: **datetime**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### ImpersonateAsCommunityUserAllowed
 
-Allows the application to request login from external users and operate on their behalf. `Required` `Default(false)` `Filter(eq)`
+Allows the application to request login from external users and operate on their behalf.
 
 Type: **boolean**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### ImpersonateAsInternalUserAllowed
 
-Allows the application to request login from internal users and operate on their behalf. `Required` `Default(false)` `Filter(eq)`
+Allows the application to request login from internal users and operate on their behalf.
 
 Type: **boolean**  
 Category: **System**  
@@ -209,7 +209,7 @@ Show in UI: **ShownByDefault**
 
 ### IsEnabled
 
-Specifies whether the application is enabled for login. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the application is enabled for login.
 
 Type: **boolean**  
 Category: **System**  
@@ -220,7 +220,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The multi-language name of the application. `Required` `Filter(eq;like)` `ORD`
+The multi-language name of the application.
 
 Type: **string (254)**  
 Category: **System**  
@@ -242,7 +242,7 @@ Show in UI: **ShownByDefault**
 
 ### Scope
 
-The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). `Introduced in version 20.1`
+The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -253,7 +253,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemUserAllowed
 
-Allows this application to logon as a service. `Required` `Default(false)` `Filter(eq)`
+Allows this application to logon as a service.
 
 Type: **boolean**  
 Category: **System**  
@@ -337,7 +337,7 @@ Show in UI: **HiddenByDefault**
 
 ### SystemUser
 
-The user, which will be used when the application logins as a service. `Filter(multi eq)`
+The user, which will be used when the application logins as a service.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  

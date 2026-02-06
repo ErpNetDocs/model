@@ -1294,6 +1294,8 @@
       href: Systems.Core.DocumentVersions.md
     - name: ExtensibleDataObjects
       href: Systems.Core.ExtensibleDataObjects.md
+    - name: Extensions
+      href: Systems.Core.Extensions.md
     - name: FormLayouts
       href: Systems.Core.FormLayouts.md
     - name: InstanceChangeRequests

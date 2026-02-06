@@ -35,20 +35,20 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Finance.Payments.PaymentAccounts.md#code) | string (16) | The unique code of the PaymentAccount. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)` 
+| [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates whether this payment account is currently used. 
 | [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString (50)](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
-| [UseBaseCurrency](Finance.Payments.PaymentAccounts.md#usebasecurrency) | boolean | When enabled, this setting restricts the payment account to use only the base currency. `Required` `Default(false)` `Introduced in version 26.1.4.36` 
+| [UseBaseCurrency](Finance.Payments.PaymentAccounts.md#usebasecurrency) | boolean | When enabled, this setting restricts the payment account to use only the base currency. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccessKey](Finance.Payments.PaymentAccounts.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this PaymentAccount. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
-| [BankAccount](Finance.Payments.PaymentAccounts.md#bankaccount) | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) (nullable) | The bank account, which is represented by this payment account. `Filter(multi eq)` |
-| [Currency](Finance.Payments.PaymentAccounts.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the movements for this payment account will be recorded. `Required` `Filter(multi eq)` |
+| [BankAccount](Finance.Payments.PaymentAccounts.md#bankaccount) | [PartyBankAccounts](General.Contacts.PartyBankAccounts.md) (nullable) | The bank account, which is represented by this payment account. |
+| [Currency](Finance.Payments.PaymentAccounts.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the movements for this payment account will be recorded. |
 | [EnterpriseCompany](Finance.Payments.PaymentAccounts.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this PaymentAccount applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](Finance.Payments.PaymentAccounts.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this PaymentAccount applies, or null if it is for all enterprise company locations. `Filter(multi eq)` |
-| [PaymentType](Finance.Payments.PaymentAccounts.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. `Filter(multi eq)` |
+| [PaymentType](Finance.Payments.PaymentAccounts.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified. |
 
 
 ## System Attributes
@@ -82,7 +82,7 @@ Back-End Default Expression:
 
 ### IsActive
 
-Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)`
+Indicates whether this payment account is currently used.
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### UseBaseCurrency
 
-When enabled, this setting restricts the payment account to use only the base currency. `Required` `Default(false)` `Introduced in version 26.1.4.36`
+When enabled, this setting restricts the payment account to use only the base currency.
 
 Type: **boolean**  
 Category: **System**  
@@ -195,7 +195,7 @@ Supported permissions
 | Release Payment Transactions | Permission1 |
 ### BankAccount
 
-The bank account, which is represented by this payment account. `Filter(multi eq)`
+The bank account, which is represented by this payment account.
 
 Type: **[PartyBankAccounts](General.Contacts.PartyBankAccounts.md) (nullable)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **ShownByDefault**
 
 ### Currency
 
-The currency in which the movements for this payment account will be recorded. `Required` `Filter(multi eq)`
+The currency in which the movements for this payment account will be recorded.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -231,7 +231,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentType
 
-Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. `Filter(multi eq)`
+Specifies the payment type used to pay, when using this payment account. NULL when the payment type is unknown or unspecified.
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  

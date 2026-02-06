@@ -44,34 +44,34 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivationDate](Systems.Documents.Routes.md#activationdate) | date | The date from which (including) the route is active. The date is matched against the document date of the generating document. `Required` `Default(Today)` `Filter(ge;le)` 
-| [Active](Systems.Documents.Routes.md#active) | boolean | True if the route is active, otherwise 0. `Required` `Default(true)` `Filter(eq)` 
-| [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). `Required` `Default("B")` `Filter(multi eq)` 
-| [AllowObsoleteGeneration](Systems.Documents.Routes.md#allowobsoletegeneration) | boolean | Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. `Required` `Default(false)` 
-| [ConditionFilterXML](Systems.Documents.Routes.md#conditionfilterxml) | dataaccessfilter __nullable__ | Contains filter condition, which the document must match in order to execute the route. `Unit: obj.DocumentType.EntityName` 
-| [ConditionStatesBitMask](Systems.Documents.Routes.md#conditionstatesbitmask) | [DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask) | The system states for which to execute the specified route. `Required` `Default(0)` `Filter(like)` 
-| [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. `Required` `Default("A")` 
-| [DeactivationDate](Systems.Documents.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. `Filter(ge;le)` 
-| [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` 
-| [NegativeConditionFilterXml](Systems.Documents.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route. `Unit: obj.DocumentType.EntityName` 
+| [ActivationDate](Systems.Documents.Routes.md#activationdate) | date | The date from which (including) the route is active. The date is matched against the document date of the generating document. 
+| [Active](Systems.Documents.Routes.md#active) | boolean | 1 if the route is active, otherwise 0. 
+| [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | [AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes) | Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both. 
+| [AllowObsoleteGeneration](Systems.Documents.Routes.md#allowobsoletegeneration) | boolean | Allows the usage of unsupported generation procedures (marked as obsolete) 
+| [ConditionFilterXML](Systems.Documents.Routes.md#conditionfilterxml) | dataaccessfilter __nullable__ | Contains filter condition, which the document must match in order to execute the route. 
+| [ConditionStatesBitMask](Systems.Documents.Routes.md#conditionstatesbitmask) | [DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask) | The system states for which to execute the specified route. 
+| [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company; 
+| [DeactivationDate](Systems.Documents.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. 
+| [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed 
+| [NegativeConditionFilterXml](Systems.Documents.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route. 
 | [Notes](Systems.Documents.Routes.md#notes) | string (254) __nullable__ | Notes for this Route. 
-| [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")` 
-| [ProcedureName](Systems.Documents.Routes.md#procedurename) | string (254) | The system name of the generation procedure, which must be executed by the route. `Required` 
-| [ProcessEvent](Systems.Documents.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` `Filter(eq)` 
-| [ReadOnly](Systems.Documents.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. true - the destination document is read only. `Required` `Default(false)` 
-| [<s>SchemaXML</s>](Systems.Documents.Routes.md#schemaxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61` 
+| [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document. 
+| [ProcedureName](Systems.Documents.Routes.md#procedurename) | string (254) | The system code of the generation procedure, which must be executed by the route. 
+| [ProcessEvent](Systems.Documents.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well. 
+| [ReadOnly](Systems.Documents.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. 1 - the destination document is read only 
+| [<s>SchemaXML</s>](Systems.Documents.Routes.md#schemaxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Not used. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionEnterpriseCompany](Systems.Documents.Routes.md#conditionenterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this route is activated. `Filter(multi eq)` |
-| [ConditionUserStatus](Systems.Documents.Routes.md#conditionuserstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user-defined status, for which the document route is activated. `Filter(multi eq)` |
-| [DestinationDocumentType](Systems.Documents.Routes.md#destinationdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The type of the document, that will be generated by executing the route. `Filter(multi eq)` |
-| [DestinationEnterprise<br />Company](Systems.Documents.Routes.md#destinationenterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company in which to generate the target document. `Filter(multi eq)` |
-| [DestinationEnterprise<br />CompanyLocation](Systems.Documents.Routes.md#destinationenterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location in which to generate the target document. `Filter(multi eq)` |
-| [DestinationUserStatus](Systems.Documents.Routes.md#destinationuserstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user defined status to set to the generated document. `Filter(multi eq)` |
-| [DocumentType](Systems.Documents.Routes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type from which this route originates. Documents from this type generate sub-documents using this route. `Required` `Filter(multi eq)` `Owner` |
+| [ConditionEnterpriseCompany](Systems.Documents.Routes.md#conditionenterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company for which this route is activated. |
+| [ConditionUserStatus](Systems.Documents.Routes.md#conditionuserstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user-defined status, for which the document route is activated. |
+| [DestinationDocumentType](Systems.Documents.Routes.md#destinationdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The type of the document, that will be generated by executing the route. |
+| [DestinationEnterprise<br />Company](Systems.Documents.Routes.md#destinationenterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The enterprise company in which to generate the target document. |
+| [DestinationEnterprise<br />CompanyLocation](Systems.Documents.Routes.md#destinationenterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location in which to generate the target document. |
+| [DestinationUserStatus](Systems.Documents.Routes.md#destinationuserstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user defined status to set to the generated document. |
+| [DocumentType](Systems.Documents.Routes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type from which this route originates. Documents from this type generate sub-documents using this route. |
 
 
 ## System Attributes
@@ -97,7 +97,7 @@ Aggregate Root:
 
 ### ActivationDate
 
-The date from which (including) the route is active. The date is matched against the document date of the generating document. `Required` `Default(Today)` `Filter(ge;le)`
+The date from which (including) the route is active. The date is matched against the document date of the generating document.
 
 Type: **date**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Active
 
-True if the route is active, otherwise 0. `Required` `Default(true)` `Filter(eq)`
+1 if the route is active, otherwise 0.
 
 Type: **boolean**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowedGenerationTypes
 
-Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual). `Required` `Default("B")` `Filter(multi eq)`
+Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.
 
 Type: **[AllowedGenerationTypes](Systems.Documents.Routes.md#allowedgenerationtypes)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowObsoleteGeneration
 
-Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures. `Required` `Default(false)`
+Allows the usage of unsupported generation procedures (marked as obsolete)
 
 Type: **boolean**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionFilterXML
 
-Contains filter condition, which the document must match in order to execute the route. `Unit: obj.DocumentType.EntityName`
+Contains filter condition, which the document must match in order to execute the route.
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -160,7 +160,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionStatesBitMask
 
-The system states for which to execute the specified route. `Required` `Default(0)` `Filter(like)`
+The system states for which to execute the specified route.
 
 Type: **[DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask)**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### ConnectedPartyCondition
 
-A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. `Required` `Default("A")`
+A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;
 
 Type: **[ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **ShownByDefault**
 
 ### DeactivationDate
 
-The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. `Filter(ge;le)`
+The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -214,7 +214,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationState
 
-0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required`
+0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed
 
 Type: **[DocumentState](Systems.Documents.Routes.md#destinationstate)**  
 Category: **System**  
@@ -237,7 +237,7 @@ Show in UI: **ShownByDefault**
 
 ### NegativeConditionFilterXml
 
-The negative condition should NOT be matched by the document in order to execute the route. `Unit: obj.DocumentType.EntityName`
+The negative condition should NOT be matched by the document in order to execute the route.
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocumentRelationshipType
 
-Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")`
+Determines the default relationship type between the generated document and the parent document.
 
 Type: **[ParentDocument<br />RelationshipType](Systems.Documents.Routes.md#parentdocumentrelationshiptype)**  
 Category: **System**  
@@ -278,7 +278,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcedureName
 
-The system name of the generation procedure, which must be executed by the route. `Required`
+The system code of the generation procedure, which must be executed by the route.
 
 Type: **string (254)**  
 Category: **System**  
@@ -289,7 +289,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessEvent
 
-Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` `Filter(eq)`
+Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.
 
 Type: **string (254)**  
 Category: **System**  
@@ -300,7 +300,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadOnly
 
-Indicates wheather the destination document shoul be read only. true - the destination document is read only. `Required` `Default(false)`
+Indicates wheather the destination document shoul be read only. 1 - the destination document is read only
 
 Type: **boolean**  
 Category: **System**  
@@ -311,7 +311,7 @@ Show in UI: **ShownByDefault**
 
 ### SchemaXML
 
-**OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** Not used.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -354,7 +354,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConditionEnterpriseCompany
 
-The enterprise company for which this route is activated. `Filter(multi eq)`
+The enterprise company for which this route is activated.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -363,7 +363,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionUserStatus
 
-The user-defined status, for which the document route is activated. `Filter(multi eq)`
+The user-defined status, for which the document route is activated.
 
 Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
 Category: **System**  
@@ -372,7 +372,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationDocumentType
 
-The type of the document, that will be generated by executing the route. `Filter(multi eq)`
+The type of the document, that will be generated by executing the route.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -381,7 +381,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationEnterpriseCompany
 
-The enterprise company in which to generate the target document. `Filter(multi eq)`
+The enterprise company in which to generate the target document.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -390,7 +390,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationEnterpriseCompanyLocation
 
-The enterprise company location in which to generate the target document. `Filter(multi eq)`
+The enterprise company location in which to generate the target document.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
@@ -399,7 +399,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationUserStatus
 
-The user defined status to set to the generated document. `Filter(multi eq)`
+The user defined status to set to the generated document.
 
 Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
 Category: **System**  
@@ -408,7 +408,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The document type from which this route originates. Documents from this type generate sub-documents using this route. `Required` `Filter(multi eq)` `Owner`
+The document type from which this route originates. Documents from this type generate sub-documents using this route.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  

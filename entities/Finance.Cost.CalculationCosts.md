@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal (14, 2) | The allocated amount of costs in the currency of the calculation. `Required` `Default(0)` 
-| [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
+| [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal (14, 2) | The allocated amount of costs in the currency of the calculation. 
+| [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation 
 | [ProjectId](Finance.Cost.CalculationCosts.md#projectid) | guid __nullable__ | The Project, which absorbed the cost. `Filter(multi eq)` 
 
 ## References
@@ -44,12 +44,12 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Calculation](Finance.Cost.CalculationCosts.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The <see cref="Calculation"/> to which this CalculationCost belongs. `Required` `Filter(multi eq)` `Owner` |
-| [CostCenter](Finance.Cost.CalculationCosts.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The Cost Center, which absorbed the cost. `Filter(multi eq)` |
-| [CostType](Finance.Cost.CalculationCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type, which absorbed the cost. `Required` `Filter(multi eq)` |
-| [Lot](Finance.Cost.CalculationCosts.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. `Filter(multi eq)` |
-| [Product](Finance.Cost.CalculationCosts.md#product) | [Products](General.Products.Products.md) (nullable) | The Product, which absorbed the cost. `Filter(multi eq)` |
-| [SalesOrder](Finance.Cost.CalculationCosts.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order, which absorbed the cost. `Filter(multi eq)` |
-| [Workgroup](Finance.Cost.CalculationCosts.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup, which absorbed the cost. `Filter(multi eq)` |
+| [CostCenter](Finance.Cost.CalculationCosts.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The Cost Center, which absorbed the cost. |
+| [CostType](Finance.Cost.CalculationCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type, which absorbed the cost. |
+| [Lot](Finance.Cost.CalculationCosts.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. |
+| [Product](Finance.Cost.CalculationCosts.md#product) | [Products](General.Products.Products.md) (nullable) | The Product, which absorbed the cost. |
+| [SalesOrder](Finance.Cost.CalculationCosts.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | The Sales Order, which absorbed the cost. |
+| [Workgroup](Finance.Cost.CalculationCosts.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) (nullable) | The Workgroup, which absorbed the cost. |
 
 
 ## System Attributes
@@ -65,7 +65,7 @@ Aggregate Root:
 
 ### Amount
 
-The allocated amount of costs in the currency of the calculation. `Required` `Default(0)`
+The allocated amount of costs in the currency of the calculation.
 
 Type: **decimal (14, 2)**  
 Category: **System**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the calculation. `Required`
+Consecutive number of the line within the calculation
 
 Type: **int32**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCenter
 
-The Cost Center, which absorbed the cost. `Filter(multi eq)`
+The Cost Center, which absorbed the cost.
 
 Type: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### CostType
 
-The Cost Type, which absorbed the cost. `Required` `Filter(multi eq)`
+The Cost Type, which absorbed the cost.
 
 Type: **[CostTypes](Finance.Cost.CostTypes.md)**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-The Lot, which absorbed the cost. `Filter(multi eq)`
+The Lot, which absorbed the cost.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The Product, which absorbed the cost. `Filter(multi eq)`
+The Product, which absorbed the cost.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesOrder
 
-The Sales Order, which absorbed the cost. `Filter(multi eq)`
+The Sales Order, which absorbed the cost.
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Category: **System**  
@@ -188,7 +188,7 @@ Show in UI: **ShownByDefault**
 
 ### Workgroup
 
-The Workgroup, which absorbed the cost. `Filter(multi eq)`
+The Workgroup, which absorbed the cost.
 
 Type: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
 Category: **System**  

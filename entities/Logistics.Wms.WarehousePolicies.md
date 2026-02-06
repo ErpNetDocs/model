@@ -37,23 +37,23 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Wms.WarehousePolicies.md#code) | string (16) | The unique code of the warehouse policy. `Required` `Introduced in version 22.1.6.60` 
-| [FromDate](Logistics.Wms.WarehousePolicies.md#fromdate) | date __nullable__ | When set, specifies the activation date of the policy. `Filter(eq;ge;le)` 
-| [Importance](Logistics.Wms.WarehousePolicies.md#importance) | int32 | The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [Note](Logistics.Wms.WarehousePolicies.md#note) | string (max) __nullable__ | Notes. 
-| [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | The kind of policy, which is being applied. `Required` `Filter(multi eq)` 
-| [ToDate](Logistics.Wms.WarehousePolicies.md#todate) | date __nullable__ | When set, specifies the de-activation date of the policy. `Filter(eq;ge;le)` 
-| [Value](Logistics.Wms.WarehousePolicies.md#value) | string (64) | The value specified for the policy. For boolean policies, allowed values are "true" and "false". `Required` `Filter(eq;ge;le)` 
+| [Code](Logistics.Wms.WarehousePolicies.md#code) | string (16) | The unique code of the warehouse policy. 
+| [FromDate](Logistics.Wms.WarehousePolicies.md#fromdate) | date __nullable__ | When set, specifies the activation date of the policy. 
+| [Importance](Logistics.Wms.WarehousePolicies.md#importance) | int32 | The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. 
+| [Note](Logistics.Wms.WarehousePolicies.md#note) | string (max) __nullable__ | Notes 
+| [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | [PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind) | The kind of policy, which is being applied. 
+| [ToDate](Logistics.Wms.WarehousePolicies.md#todate) | date __nullable__ | When set, specifies the de-activation date of the policy. 
+| [Value](Logistics.Wms.WarehousePolicies.md#value) | string (64) | The value specified for the policy. For boolean policies, allowed values are "true" and "false". 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](Logistics.Wms.WarehousePolicies.md#product) | [Products](General.Products.Products.md) (nullable) | When set, specifies that the policy will apply to the specified product only. `Filter(multi eq)` |
-| [ProductGroup](Logistics.Wms.WarehousePolicies.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | When set, specifies that the policy will apply to the specified product group only. `Filter(multi eq)` `Introduced in version 22.1.4.36` |
-| [ProductType](Logistics.Wms.WarehousePolicies.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | When set, specifies that the policy will apply to the specified product type only. `Filter(multi eq)` |
-| [Warehouse](Logistics.Wms.WarehousePolicies.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse for which the policy is defined. . `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
-| [Zone](Logistics.Wms.WarehousePolicies.md#zone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | When set, specifies that the policy will apply to the specified zone and its sub-zones. `Filter(multi eq)` |
+| [Product](Logistics.Wms.WarehousePolicies.md#product) | [Products](General.Products.Products.md) (nullable) | When set, specifies that the policy will apply to the specified product only. |
+| [ProductGroup](Logistics.Wms.WarehousePolicies.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | When set, specifies that the policy will apply to the specified product group only. |
+| [ProductType](Logistics.Wms.WarehousePolicies.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | When set, specifies that the policy will apply to the specified product type only. |
+| [Warehouse](Logistics.Wms.WarehousePolicies.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse for which the policy is defined. |
+| [Zone](Logistics.Wms.WarehousePolicies.md#zone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | When set, specifies that the policy will apply to the specified zone and its sub-zones. |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### Code
 
-The unique code of the warehouse policy. `Required` `Introduced in version 22.1.6.60`
+The unique code of the warehouse policy.
 
 Type: **string (16)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Back-End Default Expression:
 
 ### FromDate
 
-When set, specifies the activation date of the policy. `Filter(eq;ge;le)`
+When set, specifies the activation date of the policy.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Importance
 
-The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. `Required` `Default(0)` `Filter(eq;ge;le)`
+The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.
 
 Type: **int32**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### Note
 
-Notes.
+Notes
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### PolicyKind
 
-The kind of policy, which is being applied. `Required` `Filter(multi eq)`
+The kind of policy, which is being applied.
 
 Type: **[PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-When set, specifies the de-activation date of the policy. `Filter(eq;ge;le)`
+When set, specifies the de-activation date of the policy.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-The value specified for the policy. For boolean policies, allowed values are "true" and "false". `Required` `Filter(eq;ge;le)`
+The value specified for the policy. For boolean policies, allowed values are "true" and "false".
 
 Type: **string (64)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-When set, specifies that the policy will apply to the specified product only. `Filter(multi eq)`
+When set, specifies that the policy will apply to the specified product only.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -213,7 +213,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductGroup
 
-When set, specifies that the policy will apply to the specified product group only. `Filter(multi eq)` `Introduced in version 22.1.4.36`
+When set, specifies that the policy will apply to the specified product group only.
 
 Type: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 Category: **System**  
@@ -222,7 +222,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductType
 
-When set, specifies that the policy will apply to the specified product type only. `Filter(multi eq)`
+When set, specifies that the policy will apply to the specified product type only.
 
 Type: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
 Category: **System**  
@@ -231,7 +231,7 @@ Show in UI: **ShownByDefault**
 
 ### Warehouse
 
-The warehouse for which the policy is defined. . `Required` `Filter(multi eq)` `ReadOnly` `Owner`
+The warehouse for which the policy is defined.
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Indexed: **True**  
@@ -242,7 +242,7 @@ Show in UI: **ShownByDefault**
 
 ### Zone
 
-When set, specifies that the policy will apply to the specified zone and its sub-zones. `Filter(multi eq)`
+When set, specifies that the policy will apply to the specified zone and its sub-zones.
 
 Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 Category: **System**  

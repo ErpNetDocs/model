@@ -35,26 +35,26 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#amount) | [Amount (14, 2)](../data-types.md#amount) | Amount to be payed. `Currency: SalesOrder.DocumentCurrency` `Required` 
+| [Amount](Crm.Sales.SalesOrderPaymentPlans.md#amount) | [Amount (14, 2)](../data-types.md#amount) | Amount to be payed. 
 | [AmountPercent](Crm.Sales.SalesOrderPaymentPlans.md#amountpercent) | decimal (7, 6) __nullable__ | Percent of the sales order amount to be payed. 
-| [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. `Required` 
-| [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduedate) | datetime __nullable__ | Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. `Filter(ge;le)` 
-| [ExplicitPayment<br />DueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduestartdate) | date __nullable__ | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. `Filter(ge;le)` 
-| [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. `Required` 
+| [DueDateFormMethod](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | [PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod) | Method to determine the payment due date. 
+| [ExplicitPaymentDueDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduedate) | datetime __nullable__ | Explicitly specified payment due date. Must be filled if and only if explicitly setting the date is chosen in due date form method. 
+| [ExplicitPayment<br />DueStartDate](Crm.Sales.SalesOrderPaymentPlans.md#explicitpaymentduestartdate) | date __nullable__ | Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. 
+| [InstallmentNumber](Crm.Sales.SalesOrderPaymentPlans.md#installmentnumber) | int32 | Consequtive installment number. Used for identifying different payments generated according this payment plan. 
 | [Notes](Crm.Sales.SalesOrderPaymentPlans.md#notes) | string (254) __nullable__ | Notes for this SalesOrderPaymentPlan. 
-| [PaymentAmount](Crm.Sales.SalesOrderPaymentPlans.md#paymentamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The amount the customer is expected to pay in that specific payment currency. `Currency: PaymentCurrency` `Filter(eq;ge;le)` `Introduced in version 26.2.0.53` 
-| [PaymentStartDays](Crm.Sales.SalesOrderPaymentPlans.md#paymentstartdays) | int32 | Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. `Required` `Default(0)` 
-| [PaymentTermDays](Crm.Sales.SalesOrderPaymentPlans.md#paymenttermdays) | int32 | Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. `Required` `Default(0)` 
-| [Remainder](Crm.Sales.SalesOrderPaymentPlans.md#remainder) | boolean | Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). `Required` `Default(false)` 
+| [PaymentAmount](Crm.Sales.SalesOrderPaymentPlans.md#paymentamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The amount the customer is expected to pay in that specific payment currency. 
+| [PaymentStartDays](Crm.Sales.SalesOrderPaymentPlans.md#paymentstartdays) | int32 | Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. 
+| [PaymentTermDays](Crm.Sales.SalesOrderPaymentPlans.md#paymenttermdays) | int32 | Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date. 
+| [Remainder](Crm.Sales.SalesOrderPaymentPlans.md#remainder) | boolean | Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' or 'Amount' columns amounts in the payment plan. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Crm.Sales.SalesOrderPaymentPlans.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The owner document. The <see cref="SalesOrder"/> to which this SalesOrderPaymentPlan belongs. `Required` `Filter(multi eq)` |
-| [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. `Filter(multi eq)` |
-| [PaymentCurrency](Crm.Sales.SalesOrderPaymentPlans.md#paymentcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Defines the currency of the PaymentAmount. `Filter(multi eq)` `Introduced in version 26.2.0.53` |
-| [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. `Filter(multi eq)` |
+| [PaymentAccount](Crm.Sales.SalesOrderPaymentPlans.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. |
+| [PaymentCurrency](Crm.Sales.SalesOrderPaymentPlans.md#paymentcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Defines the currency of the PaymentAmount. |
+| [PaymentType](Crm.Sales.SalesOrderPaymentPlans.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. |
 | [SalesOrder](Crm.Sales.SalesOrderPaymentPlans.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPaymentPlan belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### Amount
 
-Amount to be payed. `Currency: SalesOrder.DocumentCurrency` `Required`
+Amount to be payed.
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDateFormMethod
 
-Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. `Required`
+Method to determine the payment due date.
 
 Type: **[PaymentPlanDueDateSource](Crm.Sales.SalesOrderPaymentPlans.md#duedateformmethod)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### ExplicitPaymentDueDate
 
-Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'. `Filter(ge;le)`
+Explicitly specified payment due date. Must be filled if and only if explicitly setting the date is chosen in due date form method.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -126,7 +126,7 @@ Front-End Recalc Expressions:
 `IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)`
 ### ExplicitPaymentDueStartDate
 
-Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'. `Filter(ge;le)`
+Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Front-End Recalc Expressions:
 `IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)`
 ### InstallmentNumber
 
-Consequtive installment number. Used for identifying different payments generated according this payment plan. `Required`
+Consequtive installment number. Used for identifying different payments generated according this payment plan.
 
 Type: **int32**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentAmount
 
-The amount the customer is expected to pay in that specific payment currency. `Currency: PaymentCurrency` `Filter(eq;ge;le)` `Introduced in version 26.2.0.53`
+The amount the customer is expected to pay in that specific payment currency.
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -176,7 +176,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.PaymentCurrency == null), null, IIF( ( ( obj.Amount != null) OrElse True), obj.SetPaymentAmount( ), obj.PaymentAmount))`
 ### PaymentStartDays
 
-Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. `Required` `Default(0)`
+Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.
 
 Type: **int32**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentTermDays
 
-Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. `Required` `Default(0)`
+Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.
 
 Type: **int32**  
 Category: **System**  
@@ -203,7 +203,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)`
 ### Remainder
 
-Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). `Required` `Default(false)`
+Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' or 'Amount' columns amounts in the payment plan.
 
 Type: **boolean**  
 Category: **System**  
@@ -261,7 +261,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentAccount
 
-Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. `Filter(multi eq)`
+Specifies the payment account towards which the payment is expected. NULL means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred.
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -276,7 +276,7 @@ Front-End Recalc Expressions:
 `obj.SalesOrder.PaymentAccount`
 ### PaymentCurrency
 
-Defines the currency of the PaymentAmount. `Filter(multi eq)` `Introduced in version 26.2.0.53`
+Defines the currency of the PaymentAmount.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -287,7 +287,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.PaymentAccount != null), obj.PaymentAccount.Currency, null)`
 ### PaymentType
 
-Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. `Filter(multi eq)`
+Specifies the expected payment type. NULL means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred.
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  

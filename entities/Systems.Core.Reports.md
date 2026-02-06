@@ -42,21 +42,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LayoutFormat](Systems.Core.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application. `Filter(multi eq)` 
-| [Name](Systems.Core.Reports.md#name) | string (254) | Multi-language report name. `Required` `Filter(eq;like)` 
+| [LayoutFormat](Systems.Core.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application 
+| [Name](Systems.Core.Reports.md#name) | string (254) | The name of the report 
 | [Notes](Systems.Core.Reports.md#notes) | string (512) __nullable__ | Notes for this Report. 
-| [OneRow](Systems.Core.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. `Required` `Default(false)` `Filter(eq)` 
-| [QueryName](Systems.Core.Reports.md#queryname) | string (128) | The query on which the report is based. `Required` `Filter(eq)` 
-| [ReportBinaryLayout](Systems.Core.Reports.md#reportbinarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Report_Layout. 
-| [ReportLayout](Systems.Core.Reports.md#reportlayout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout. 
-| [TemplateFilterXml](Systems.Core.Reports.md#templatefilterxml) | string (max) __nullable__ | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report. 
-| [TemplatePriority](Systems.Core.Reports.md#templatepriority) | int32 __nullable__ | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise. 
+| [OneRow](Systems.Core.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only. 
+| [QueryName](Systems.Core.Reports.md#queryname) | string (128) | The primary query for the report. This is the base query for the custom data source. 
+| [ReportBinaryLayout](Systems.Core.Reports.md#reportbinarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Report_Layout 
+| [ReportLayout](Systems.Core.Reports.md#reportlayout) | string (max) __nullable__ | The way that the report will appear on the screen or on paper. 
+| [TemplateFilterXml](Systems.Core.Reports.md#templatefilterxml) | string (max) __nullable__ | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report. 
+| [TemplatePriority](Systems.Core.Reports.md#templatepriority) | int32 __nullable__ | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataSource](Systems.Core.Reports.md#datasource) | [DataSources](Systems.Documents.DataSources.md) (nullable) | Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. `Filter(multi eq)` |
+| [DataSource](Systems.Core.Reports.md#datasource) | [DataSources](Systems.Documents.DataSources.md) (nullable) | The custom data source for the report. If empty only the primary query participates in the report. |
 
 
 ## System Attributes
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### LayoutFormat
 
-Format specifier of the layout. Recognized by the application. `Filter(multi eq)`
+Format specifier of the layout. Recognized by the application
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **CannotBeShown**
 
 ### Name
 
-Multi-language report name. `Required` `Filter(eq;like)`
+The name of the report
 
 Type: **string (254)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### OneRow
 
-True means that report can be used for one-row forms only. False means that the report can be used for navigators only. `Required` `Default(false)` `Filter(eq)`
+True means that report can be used for one-row forms only. False means that the report can be used for navigators only.
 
 Type: **boolean**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### QueryName
 
-The query on which the report is based. `Required` `Filter(eq)`
+The primary query for the report. This is the base query for the custom data source.
 
 Type: **string (128)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### ReportBinaryLayout
 
-The printout layout, when the format requires binary storage. Alternative to Report_Layout.
+The printout layout, when the format requires binary storage. Alternative to Report_Layout
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **CannotBeShown**
 
 ### ReportLayout
 
-The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.
+The way that the report will appear on the screen or on paper.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### TemplateFilterXml
 
-Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.
+Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### TemplatePriority
 
-Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.
+Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -234,7 +234,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataSource
 
-Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. `Filter(multi eq)`
+The custom data source for the report. If empty only the primary query participates in the report.
 
 Type: **[DataSources](Systems.Documents.DataSources.md) (nullable)**  
 Category: **System**  

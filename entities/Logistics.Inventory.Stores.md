@@ -44,15 +44,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` `Obsoleted in version 22.1.6.61` 
+| [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active 
 | [Code](Logistics.Inventory.Stores.md#code) | string (16) | The unique code of the Store. `Required` `Filter(eq;like)` `ORD` 
 | [CreationTime](Logistics.Inventory.Stores.md#creationtime) | datetime __nullable__ | Date and time when the Store was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Store. `Filter(like)` `ReadOnly` 
 | [DefaultSupplyStoreId](Logistics.Inventory.Stores.md#defaultsupplystoreid) | guid __nullable__ | The store from which goods are usually supplied to this store. `Filter(multi eq)` 
 | [GLN](Logistics.Inventory.Stores.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](Logistics.Inventory.Stores.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [Name](Logistics.Inventory.Stores.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the store. `Required` `Filter(like)` 
-| [NumberOfDimensions](Logistics.Inventory.Stores.md#numberofdimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. `Required` `Default(0)` `Filter(eq)` 
+| [Name](Logistics.Inventory.Stores.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the store 
+| [NumberOfDimensions](Logistics.Inventory.Stores.md#numberofdimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. 
 | [PartyCode](Logistics.Inventory.Stores.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](Logistics.Inventory.Stores.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](Logistics.Inventory.Stores.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -63,7 +63,7 @@ Aggregate Tree
 | [PartyUpdateTime](Logistics.Inventory.Stores.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](Logistics.Inventory.Stores.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. 
-| [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If false the system will expect the user to process the store transactions. If true the system will auto-generate them. `Required` `Default(true)` 
+| [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually. 
 | [UpdateTime](Logistics.Inventory.Stores.md#updatetime) | datetime __nullable__ | Date and time when the Store was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Logistics.Inventory.Stores.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly` 
 
@@ -74,24 +74,24 @@ Aggregate Tree
 | [AccessKey](Logistics.Inventory.Stores.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the permissions for this Store. An empty value means that all users have unlimited permissions. `Filter(multi eq)` |
 | [AdministrativeRegion](Logistics.Inventory.Stores.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Area](Logistics.Inventory.Stores.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
-| [Currency](Logistics.Inventory.Stores.md#currency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. `Filter(multi eq)` |
+| [Currency](Logistics.Inventory.Stores.md#currency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used |
 | [DefaultProductCodingSystem](Logistics.Inventory.Stores.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
-| [DefaultStoreBin](Logistics.Inventory.Stores.md#defaultstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To be used when store bin is unknown. `Filter(multi eq)` |
+| [DefaultStoreBin](Logistics.Inventory.Stores.md#defaultstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | To be used when store bin is unknown |
 | [EnterpriseCompany](Logistics.Inventory.Stores.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Store applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](Logistics.Inventory.Stores.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this Store applies, or null if it is for all enterprise company locations. `Filter(multi eq)` |
 | [Parent](Logistics.Inventory.Stores.md#parent) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Obsolete. Not used. (Hierarchy of the stores is now represented by the Store Groups entity). `Filter(multi eq)` |
 | [ParentParty](Logistics.Inventory.Stores.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
-| [ResponsibleParty](Logistics.Inventory.Stores.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | Primary responsible party (usually employee) for the stock in the store. `Filter(multi eq)` |
-| [StoreGroup](Logistics.Inventory.Stores.md#storegroup) | [StoreGroups](Logistics.Inventory.StoreGroups.md) | The store group, to which this store belongs. `Required` `Filter(multi eq)` |
-| [TaxWarehouse](Logistics.Inventory.Stores.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable) | Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93` |
-| [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. `Filter(multi eq)` `Introduced in version 20.1` |
+| [ResponsibleParty](Logistics.Inventory.Stores.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | Primary responsible party (usually employee) for the stock in the store. |
+| [StoreGroup](Logistics.Inventory.Stores.md#storegroup) | [StoreGroups](Logistics.Inventory.StoreGroups.md) | The store group, to which this store belongs. |
+| [TaxWarehouse](Logistics.Inventory.Stores.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable) | Excise Tax Warehouse for this Store. NULL means that the Store is not an Excise Tax Warehouse. |
+| [Warehouse](Logistics.Inventory.Stores.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.Stores.md#id) | guid |  
+| [Id](Logistics.Inventory.Stores.md#id) | guid | Unique store Id 
 | [ObjectVersion](Logistics.Inventory.Stores.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](Logistics.Inventory.Stores.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Logistics.Inventory.Stores.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -116,7 +116,7 @@ Aggregate Tree
 
 ### Active
 
-**OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the store. `Required` `Filter(like)`
+Name of the store
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfDimensions
 
-Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. `Required` `Default(0)` `Filter(eq)`
+Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.
 
 Type: **int32**  
 Category: **System**  
@@ -338,7 +338,7 @@ Show in UI: **CannotBeShown**
 
 ### Unmanaged
 
-If false the system will expect the user to process the store transactions. If true the system will auto-generate them. `Required` `Default(true)`
+If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.
 
 Type: **boolean**  
 Category: **System**  
@@ -369,6 +369,8 @@ Maximum Length: **64**
 Show in UI: **HiddenByDefault**  
 
 ### Id
+
+Unique store Id
 
 Type: **guid**  
 Indexed: **True**  
@@ -470,7 +472,7 @@ Show in UI: **ShownByDefault**
 
 ### Currency
 
-The currency for the warehouse cost calculations. When null, the base currency for the enterprise company will be used. `Filter(multi eq)`
+The currency for the warehouse cost calculations. When NULL, the base currency for the enterprise company will be used
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -490,7 +492,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultStoreBin
 
-To be used when store bin is unknown. `Filter(multi eq)`
+To be used when store bin is unknown
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -536,7 +538,7 @@ Show in UI: **ShownByDefault**
 
 ### ResponsibleParty
 
-Primary responsible party (usually employee) for the stock in the store. `Filter(multi eq)`
+Primary responsible party (usually employee) for the stock in the store.
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -545,7 +547,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreGroup
 
-The store group, to which this store belongs. `Required` `Filter(multi eq)`
+The store group, to which this store belongs.
 
 Type: **[StoreGroups](Logistics.Inventory.StoreGroups.md)**  
 Category: **System**  
@@ -554,7 +556,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxWarehouse
 
-Excise Tax Warehouse for this Store. null means that the Store is not an Excise Tax Warehouse. `Filter(multi eq)` `Introduced in version 21.1.3.93`
+Excise Tax Warehouse for this Store. NULL means that the Store is not an Excise Tax Warehouse.
 
 Type: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) (nullable)**  
 Category: **System**  
@@ -563,7 +565,7 @@ Show in UI: **ShownByDefault**
 
 ### Warehouse
 
-Specifies, the warehouse, which manages the warehouse operations for the store. null for stores, which do not have managed operations. `Filter(multi eq)` `Introduced in version 20.1`
+Specifies, the warehouse, which manages the warehouse operations for the store. NULL for stores, which do not have managed operations.
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
 Category: **System**  

@@ -13,6 +13,15 @@ Base Table: Saft_Profile_Account_By_Products
 Introduced In Version: 26.2.0.73  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Saft.ProfileAccountByProducts  
+New name: Regulatory.Saft.ProfileAccountByProducts  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Profile.Name}  
 Search Members: Profile.Name  
@@ -36,18 +45,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines. `Required` `Default("D")` `Filter(eq)` `Introduced in version 26.2.1.9` 
-| [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. `Required` `Default("S")` `Filter(eq)` `Introduced in version 26.2.1.9` 
-| [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping. `Filter(like)` 
+| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines. 
+| [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. 
+| [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountCodeEntry](Regulatory.Saft.ProfileAccountByProducts.md#accountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T account used during SAF-T generation for the selected product type. `Required` `Filter(multi eq)` |
-| [DocumentType](Regulatory.Saft.ProfileAccountByProducts.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)` |
-| [ProductType](Regulatory.Saft.ProfileAccountByProducts.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The ERP.net product type for which the SAF-T account is defined. `Required` `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfileAccountByProducts.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner` |
+| [AccountCodeEntry](Regulatory.Saft.ProfileAccountByProducts.md#accountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T account used during SAF-T generation for the selected product type. |
+| [DocumentType](Regulatory.Saft.ProfileAccountByProducts.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. |
+| [ProductType](Regulatory.Saft.ProfileAccountByProducts.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The ERP.net product type for which the SAF-T account is defined. |
+| [Profile](Regulatory.Saft.ProfileAccountByProducts.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. |
 
 
 ## System Attributes
@@ -63,7 +72,7 @@ Aggregate Root:
 
 ### DebitCreditIndicator
 
-Debit/credit indicator for SAF-T invoice lines. `Required` `Default("D")` `Filter(eq)` `Introduced in version 26.2.1.9`
+Debit/credit indicator for SAF-T invoice lines.
 
 Type: **[DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator)**  
 Category: **System**  
@@ -82,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityKind
 
-Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. `Required` `Default("S")` `Filter(eq)` `Introduced in version 26.2.1.9`
+Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.
 
 Type: **[EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind)**  
 Category: **System**  
@@ -101,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments about the mapping. `Filter(like)`
+Additional information or comments about the mapping.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -144,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccountCodeEntry
 
-The SAF-T account used during SAF-T generation for the selected product type. `Required` `Filter(multi eq)`
+The SAF-T account used during SAF-T generation for the selected product type.
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Indexed: **True**  
@@ -154,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)`
+The ERP.net document type under which this mapping rule should be applied.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Indexed: **True**  
@@ -164,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductType
 
-The ERP.net product type for which the SAF-T account is defined. `Required` `Filter(multi eq)`
+The ERP.net product type for which the SAF-T account is defined.
 
 Type: **[ProductTypes](General.Products.ProductTypes.md)**  
 Indexed: **True**  
@@ -174,7 +183,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner`
+The SAF-T profile this mapping belongs to.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  

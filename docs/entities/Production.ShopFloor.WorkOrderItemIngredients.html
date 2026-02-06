@@ -120,17 +120,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributeby">DistributeBy</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributeby">DistributeBy</a> <strong>nullable</strong></td>
-<td>Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price.</td>
+<td>Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#fixedscrapquantity">FixedScrapQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of the material, which will be used for setup. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(0)</code></td>
+<td>The quantity of the material, which will be used for setup.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>The order of the line within the item. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The order of the line within the item.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#notes">Notes</a></td>
@@ -140,17 +140,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantity">UsedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity of the material consumed in the operation. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
+<td>The quantity of the material consumed in the operation.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantitybase">UsedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The equivalence of Used Quantity in the base measurement category of the material. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
+<td>The equivalence of Used Quantity in the base measurement category of the material.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedstandardquantitybase">UsedStandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.</td>
 </tr>
 </tbody>
 </table>
@@ -167,7 +167,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributebymeasurementcategory">DistributeByMeasurement<br>Category</a></td>
 <td><a href="General.Products.MeasurementCategories.html">MeasurementCategories</a> (nullable)</td>
-<td>Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. <code>Filter(multi eq)</code></td>
+<td>Measurement category by which the materials from the line are distributed amongst all work order items in case 'Distribute by' determines that the distribution is made by measurement.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#document">Document</a></td>
@@ -177,47 +177,47 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>Lot from which to get the material. When null, any lot can be used. <code>Filter(multi eq)</code></td>
+<td>Lot from which to get the material. If not specified (default) - Any lot can be used.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#material">Material</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The Id of the consumed material (Gen_Products_Table). <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The Id of the consumed material (Gen_Products_Table)</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#operation">Operation</a></td>
 <td><a href="Production.Resources.Operations.html">Operations</a> (nullable)</td>
-<td>Specifies for which operation this ingredient is used. <code>Filter(multi eq)</code></td>
+<td>Specifies for which operation this ingredient is used.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#principalrecipeingredient">PrincipalRecipeIngredient</a></td>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html">PrincipalRecipeIngredients</a> (nullable)</td>
-<td>The principal recipe ingredient on which this record is based. <code>Filter(multi eq)</code></td>
+<td>The principal recipe ingredient on which this record is based.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#productcode">ProductCode</a></td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
-<td>Selects the product thru some of the product codes. <code>Filter(multi eq)</code></td>
+<td>Selects the product thru some of the product codes.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>If not null, specifies the serial number of the ingredient. <code>Filter(multi eq)</code></td>
+<td>Serial number of the ingredient. NULL means that the serial number is unknown or not applicable.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>The store from which to retrieve the material. <code>Filter(multi eq)</code></td>
+<td>The store from which to retrieve the material.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>The store bin from which to take the ingredients. <code>Filter(multi eq)</code></td>
+<td>The store bin from which to take the ingredients</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#usedquantityunit">UsedQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of the quantity of the material consumed in the operation. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of the quantity of the material consumed in the operation.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorder">WorkOrder</a></td>
@@ -227,7 +227,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#workorderitem">WorkOrderItem</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a> (nullable)</td>
-<td>The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. <code>Filter(multi eq)</code></td>
+<td>The work order item for which the materials in this line are used. If not specified means that the materials are distributed amongst all work order items in the document.</td>
 </tr>
 </tbody>
 </table>
@@ -244,7 +244,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#id">Id</a></td>
 <td>guid</td>
-<td></td>
+<td>The Id of the production order operation</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemIngredients.html#objectversion">ObjectVersion</a></td>
@@ -260,7 +260,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="distributeby">DistributeBy</h3>
-<p>Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price.</p>
+<p>Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified.</p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderItemIngredients.html#distributeby">DistributeBy</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) data attribute<br>
@@ -293,7 +293,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.WorkOrderItem != null), null, obj.DistributeBy)</code></p>
 <h3 id="fixedscrapquantity">FixedScrapQuantity</h3>
-<p>The quantity of the material, which will be used for setup. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(0)</code></p>
+<p>The quantity of the material, which will be used for setup.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>The order of the line within the item. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The order of the line within the item.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -320,7 +320,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="usedquantity">UsedQuantity</h3>
-<p>The quantity of the material consumed in the operation. <code>Unit: UsedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
+<p>The quantity of the material consumed in the operation.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -328,7 +328,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usedquantitybase">UsedQuantityBase</h3>
-<p>The equivalence of Used Quantity in the base measurement category of the material. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
+<p>The equivalence of Used Quantity in the base measurement category of the material.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -339,7 +339,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Material != null) AndAlso ( obj.UsedQuantity != null)) AndAlso ( obj.UsedQuantityUnit != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedQuantityBase)</code></p>
 <h3 id="usedstandardquantitybase">UsedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. <code>Unit: Material.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -350,6 +350,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.UsedQuantity != null) AndAlso ( obj.UsedQuantityUnit != null)) AndAlso ( obj.Material != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedStandardQuantityBase)</code></p>
 <h3 id="id">Id</h3>
+<p>The Id of the production order operation</p>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -372,7 +373,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="distributebymeasurementcategory">DistributeByMeasurementCategory</h3>
-<p>Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. <code>Filter(multi eq)</code></p>
+<p>Measurement category by which the materials from the line are distributed amongst all work order items in case 'Distribute by' determines that the distribution is made by measurement.</p>
 <p>Type: <strong><a href="General.Products.MeasurementCategories.html">MeasurementCategories</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -387,13 +388,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lot">Lot</h3>
-<p>Lot from which to get the material. When null, any lot can be used. <code>Filter(multi eq)</code></p>
+<p>Lot from which to get the material. If not specified (default) - Any lot can be used.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="material">Material</h3>
-<p>The Id of the consumed material (Gen_Products_Table). <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The Id of the consumed material (Gen_Products_Table)</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -403,19 +404,19 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ProductCode.Product.IfNullThen( obj.Material)</code></p>
 <h3 id="operation">Operation</h3>
-<p>Specifies for which operation this ingredient is used. <code>Filter(multi eq)</code></p>
+<p>Specifies for which operation this ingredient is used.</p>
 <p>Type: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="principalrecipeingredient">PrincipalRecipeIngredient</h3>
-<p>The principal recipe ingredient on which this record is based. <code>Filter(multi eq)</code></p>
+<p>The principal recipe ingredient on which this record is based.</p>
 <p>Type: <strong><a href="Production.Technologies.PrincipalRecipeIngredients.html">PrincipalRecipeIngredients</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productcode">ProductCode</h3>
-<p>Selects the product thru some of the product codes. <code>Filter(multi eq)</code></p>
+<p>Selects the product thru some of the product codes.</p>
 <p>Type: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -423,13 +424,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.ProductCode.Product != obj.Material), null, obj.ProductCode)</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>If not null, specifies the serial number of the ingredient. <code>Filter(multi eq)</code></p>
+<p>Serial number of the ingredient. NULL means that the serial number is unknown or not applicable.</p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The store from which to retrieve the material. <code>Filter(multi eq)</code></p>
+<p>The store from which to retrieve the material.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -439,13 +440,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.WorkOrder.DefaultMaterialsStore</code></p>
 <h3 id="storebin">StoreBin</h3>
-<p>The store bin from which to take the ingredients. <code>Filter(multi eq)</code></p>
+<p>The store bin from which to take the ingredients</p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usedquantityunit">UsedQuantityUnit</h3>
-<p>The measurement unit of the quantity of the material consumed in the operation. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of the quantity of the material consumed in the operation.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -463,7 +464,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
-<p>The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. <code>Filter(multi eq)</code></p>
+<p>The work order item for which the materials in this line are used. If not specified means that the materials are distributed amongst all work order items in the document.</p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

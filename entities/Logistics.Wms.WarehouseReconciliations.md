@@ -95,8 +95,8 @@ Aggregate Tree
 | [ToCompanyDivision](Logistics.Wms.WarehouseReconciliations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Wms.WarehouseReconciliations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Wms.WarehouseReconciliations.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Warehouse](Logistics.Wms.WarehouseReconciliations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse where the reconciliation will be executed. `Required` `Filter(multi eq)` |
-| [WarehouseZone](Logistics.Wms.WarehouseReconciliations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Identifier of a warehouse zone, optionally entered in the reconciliation document. `Filter(multi eq)` |
+| [Warehouse](Logistics.Wms.WarehouseReconciliations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse where the reconciliation will be executed. |
+| [WarehouseZone](Logistics.Wms.WarehouseReconciliations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Identifier of a warehouse zone, optionally entered in the reconciliation document. |
 
 
 ## System Attributes
@@ -658,7 +658,7 @@ Show in UI: **HiddenByDefault**
 
 ### Warehouse
 
-The warehouse where the reconciliation will be executed. `Required` `Filter(multi eq)`
+The warehouse where the reconciliation will be executed.
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Indexed: **True**  
@@ -668,7 +668,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseZone
 
-Identifier of a warehouse zone, optionally entered in the reconciliation document. `Filter(multi eq)`
+Identifier of a warehouse zone, optionally entered in the reconciliation document.
 
 Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
 Indexed: **True**  

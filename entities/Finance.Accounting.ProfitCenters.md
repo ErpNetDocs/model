@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Finance.Accounting.ProfitCenters.md#isactive) | boolean | Indicates whether the current Profit Center is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.0.4` 
+| [IsActive](Finance.Accounting.ProfitCenters.md#isactive) | boolean | Indicates whether the current Profit Center is active. 
 | [Name](Finance.Accounting.ProfitCenters.md#name) | string (254) | The name of this ProfitCenter. `Required` `Filter(like)` 
 | [Notes](Finance.Accounting.ProfitCenters.md#notes) | string (254) __nullable__ | Notes for this ProfitCenter. 
-| [RelativeWeight](Finance.Accounting.ProfitCenters.md#relativeweight) | decimal (18, 4) | The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)` 
+| [RelativeWeight](Finance.Accounting.ProfitCenters.md#relativeweight) | decimal (18, 4) | The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Profit Center is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.0.4`
+Indicates whether the current Profit Center is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### RelativeWeight
 
-The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)`
+The weight of this profit center, relative to the other profit centers within the same parent. The weight is used during profit distribution calculations. The sum of weights of all profit centers within a parent does not need to be 100, the ratio of total weight over weight is used.
 
 Type: **decimal (18, 4)**  
 Category: **System**  

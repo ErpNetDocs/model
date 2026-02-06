@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#assetlife) | int32 __nullable__ | Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
+| [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#assetlife) | int32 __nullable__ | Asset life in months by default for the depreciation plans created by this template. If not entered then the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | Asset category for which this template is defined. `Required` `Filter(multi eq)` `Owner` |
-| [DepreciationMethod](Finance.Assets.DepreciationPlanTemplates.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by default for the depreciation plans created by this template. `Required` `Filter(multi eq)` |
-| [ValuationModel](Finance.Assets.DepreciationPlanTemplates.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model for which this template is defined. `Required` `Filter(multi eq)` |
+| [AssetCategory](Finance.Assets.DepreciationPlanTemplates.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | Asset category for which this template is defined. |
+| [DepreciationMethod](Finance.Assets.DepreciationPlanTemplates.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by default for the depreciation plans created by this template. |
+| [ValuationModel](Finance.Assets.DepreciationPlanTemplates.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model for which this template is defined. |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### AssetLife
 
-Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
+Asset life in months by default for the depreciation plans created by this template. If not entered then the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssetCategory
 
-Asset category for which this template is defined. `Required` `Filter(multi eq)` `Owner`
+Asset category for which this template is defined.
 
 Type: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 Indexed: **True**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### DepreciationMethod
 
-Depreciation method by default for the depreciation plans created by this template. `Required` `Filter(multi eq)`
+Depreciation method by default for the depreciation plans created by this template.
 
 Type: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### ValuationModel
 
-Valuation model for which this template is defined. `Required` `Filter(multi eq)`
+Valuation model for which this template is defined.
 
 Type: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
 Category: **System**  

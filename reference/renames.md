@@ -5,8 +5,138 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Finance.Saft.ProfileTaxCodeByDealTypes**  
+New name: **Regulatory.Saft.ProfileTaxCodeByDealTypes**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileTaxCodeByAccounts**  
+New name: **Regulatory.Saft.ProfileTaxCodeByAccounts**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.Profiles**  
+New name: **Regulatory.Saft.Profiles**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfilePaymentTypes**  
+New name: **Regulatory.Saft.ProfilePaymentTypes**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfilePayments**  
+New name: **Regulatory.Saft.ProfilePayments**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileParties**  
+New name: **Regulatory.Saft.ProfileParties**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileMeasurementUnits**  
+New name: **Regulatory.Saft.ProfileMeasurementUnits**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileCompanies**  
+New name: **Regulatory.Saft.ProfileCompanies**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileAccounts**  
+New name: **Regulatory.Saft.ProfileAccounts**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileAccountByProducts**  
+New name: **Regulatory.Saft.ProfileAccountByProducts**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Saft.ProfileAccountByAdditionalAmounts**  
+New name: **Regulatory.Saft.ProfileAccountByAdditionalAmounts**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
 Old name: **Finance.Saft**  
 New name: **Regulatory.Saft**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.TaxWarehouses**  
+New name: **Regulatory.Excise.TaxWarehouses**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.MeasuringTransactions**  
+New name: **Regulatory.Excise.MeasuringTransactions**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseStampOperationTypes**  
+New name: **Regulatory.Excise.ExciseStampOperationTypes**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseStampOperations**  
+New name: **Regulatory.Excise.ExciseStampOperations**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseStampOperationLines**  
+New name: **Regulatory.Excise.ExciseStampOperationLines**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseStampLots**  
+New name: **Regulatory.Excise.ExciseStampLots**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExcisePurposeCodes**  
+New name: **Regulatory.Excise.ExcisePurposeCodes**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseProductTypes**  
+New name: **Regulatory.Excise.ExciseProductTypes**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseProducts**  
+New name: **Regulatory.Excise.ExciseProducts**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseProductCategories**  
+New name: **Regulatory.Excise.ExciseProductCategories**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseOperationTypes**  
+New name: **Regulatory.Excise.ExciseOperationTypes**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseDutyRates**  
+New name: **Regulatory.Excise.ExciseDutyRates**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseDeclarations**  
+New name: **Regulatory.Excise.ExciseDeclarations**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseAdministrativeDocuments**  
+New name: **Regulatory.Excise.ExciseAdministrativeDocuments**  
+Version: **26.2.1.17**  
+Case: **39297**  
+
+Old name: **Finance.Excise.ExciseAdministrativeDocumentLines**  
+New name: **Regulatory.Excise.ExciseAdministrativeDocumentLines**  
 Version: **26.2.1.17**  
 Case: **39297**  
 
@@ -15,9 +145,69 @@ New name: **Regulatory.Excise**
 Version: **26.2.1.17**  
 Case: **39297**  
 
+Old name: **Finance.Intrastat.DocumentAmountTypeSettings**  
+New name: **Regulatory.Intrastat.DocumentAmountTypeSettings**  
+Version: **26.2.1.4**  
+Case: **39297**  
+
+Old name: **Finance.Intrastat.Declarations**  
+New name: **Regulatory.Intrastat.Declarations**  
+Version: **26.2.1.4**  
+Case: **39297**  
+
+Old name: **Finance.Intrastat.DeclarationLines**  
+New name: **Regulatory.Intrastat.DeclarationLines**  
+Version: **26.2.1.4**  
+Case: **39297**  
+
+Old name: **Finance.Intrastat.CommodityCodes**  
+New name: **Regulatory.Intrastat.CommodityCodes**  
+Version: **26.2.1.4**  
+Case: **39297**  
+
 Old name: **Finance.Intrastat**  
 New name: **Regulatory.Intrastat**  
 Version: **26.2.1.4**  
+Case: **39297**  
+
+Old name: **Finance.Vat.Entries**  
+New name: **Regulatory.Vat.Entries**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.Declarations**  
+New name: **Regulatory.Vat.Declarations**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.DeclarationLines**  
+New name: **Regulatory.Vat.DeclarationLines**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.DeclarationAmountDetails**  
+New name: **Regulatory.Vat.DeclarationAmountDetails**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.DealTypes**  
+New name: **Regulatory.Vat.DealTypes**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.DealTypeDocumentAmounts**  
+New name: **Regulatory.Vat.DealTypeDocumentAmounts**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.BoxTypes**  
+New name: **Regulatory.Vat.BoxTypes**  
+Version: **26.2.0.99**  
+Case: **39297**  
+
+Old name: **Finance.Vat.BoxTypeDealTypes**  
+New name: **Regulatory.Vat.BoxTypeDealTypes**  
+Version: **26.2.0.99**  
 Case: **39297**  
 
 Old name: **Finance.Vat**  

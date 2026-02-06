@@ -35,15 +35,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model. `Required` 
-| [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#marginpercent) | decimal (6, 5) __nullable__ | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way. 
+| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model 
+| [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#marginpercent) | decimal (6, 5) __nullable__ | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) | The price list, which is included in the pricing model. `Required` `Filter(multi eq)` |
-| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed. `Required` `Filter(multi eq)` `Owner` |
+| [PriceList](Crm.Pricing.PricingModelPriceLists.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) | The price list, which is included in the pricing model |
+| [PricingModel](Crm.Pricing.PricingModelPriceLists.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | The pricing model, for which the price list is listed |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### LineNo
 
-The consecutive number of this price list within the pricing model. `Required`
+The consecutive number of this price list within the pricing model
 
 Type: **int32**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### MarginPercent
 
-Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.
+Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way
 
 Type: **decimal (6, 5) __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **HiddenByDefault**
 
 ### PriceList
 
-The price list, which is included in the pricing model. `Required` `Filter(multi eq)`
+The price list, which is included in the pricing model
 
 Type: **[PriceLists](Crm.Pricing.PriceLists.md)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### PricingModel
 
-The pricing model, for which the price list is listed. `Required` `Filter(multi eq)` `Owner`
+The pricing model, for which the price list is listed
 
 Type: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 Indexed: **True**  

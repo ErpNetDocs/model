@@ -126,32 +126,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#active">Active</a></td>
 <td>boolean</td>
-<td>Is the user status active for applying to documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Is the user status active for applying to documents</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#displayorder">DisplayOrder</a></td>
 <td>int32</td>
-<td>Consecutive display order of the status, with regard to other statuses within the same document type. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Consecutive display order of the status, with regard to other statuses within the same document type</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#instructions">Instructions</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (max)</a> <strong>nullable</strong></td>
-<td>Instructions what should be done when this user status is active (Rich Text).</td>
+<td>Instructions what should be done when this user status is active (Rich Text)</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#isexitstatus">IsExitStatus</a></td>
 <td>boolean</td>
-<td>True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#state">State</a></td>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#state">DocumentState</a></td>
-<td>The system state to which this user status is bound. <code>Required</code> <code>Filter(eq)</code></td>
+<td>The system state to which this user status is bound</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#userstatusname">UserStatusName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></td>
-<td>Multi-language name of the user status. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Multi-language name of the user status</td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type, to which this user status is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type, to which this user status is bound</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Is the user status active for applying to documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Is the user status active for applying to documents</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="displayorder">DisplayOrder</h3>
-<p>Consecutive display order of the status, with regard to other statuses within the same document type. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Consecutive display order of the status, with regard to other statuses within the same document type</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -220,14 +220,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.DocumentType.UserStatuses.Select( c =&gt; c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="instructions">Instructions</h3>
-<p>Instructions what should be done when this user status is active (Rich Text).</p>
+<p>Instructions what should be done when this user status is active (Rich Text)</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (max)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isexitstatus">IsExitStatus</h3>
-<p>True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -235,7 +235,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>The system state to which this user status is bound. <code>Required</code> <code>Filter(eq)</code></p>
+<p>The system state to which this user status is bound</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html#state">DocumentState</a></strong><br>
 Category: <strong>System</strong><br>
 Enumeration of document system states<br>
@@ -282,7 +282,7 @@ Allowed Values (General.Documents.DocumentState Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userstatusname">UserStatusName</h3>
-<p>Multi-language name of the user status. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Multi-language name of the user status</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -311,7 +311,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type, to which this user status is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type, to which this user status is bound</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

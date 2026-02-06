@@ -28,22 +28,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Cnt](Communities.Social.ReactionsSummary.md#cnt) | int64 | Count of social reactions. `Required` 
-| [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required` 
+| [Cnt](Communities.Social.ReactionsSummary.md#cnt) | int64 | Count of social reactions. 
+| [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.Social.ReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The extensible data object. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id` |
-| [SocialComment](Communities.Social.ReactionsSummary.md#socialcomment) | [Comments](Communities.Social.Comments.md) | The social comment. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cmm_Social_Comments_Table.Social_Comment_Id` |
+| [DataObject](Communities.Social.ReactionsSummary.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The extensible data object. |
+| [SocialComment](Communities.Social.ReactionsSummary.md#socialcomment) | [Comments](Communities.Social.Comments.md) | The social comment. |
 
 
 ## Attribute Details
 
 ### Cnt
 
-Count of social reactions. `Required`
+Count of social reactions.
 
 Type: **int64**  
 Category: **System**  
@@ -53,7 +53,7 @@ Show in UI: **ShownByDefault**
 
 ### ReactionType
 
-The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required`
+The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.
 
 Type: **[ReactionType](Communities.Social.ReactionsSummary.md#reactiontype)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### DataObject
 
-The extensible data object. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id`
+The extensible data object.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### SocialComment
 
-The social comment. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cmm_Social_Comments_Table.Social_Comment_Id`
+The social comment.
 
 Type: **[Comments](Communities.Social.Comments.md)**  
 Category: **System**  

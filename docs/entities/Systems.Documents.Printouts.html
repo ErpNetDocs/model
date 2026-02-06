@@ -126,42 +126,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></td>
 <td><a href="Systems.Documents.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></td>
-<td>The user can print documents only with state equal or greater than Allow_Printing_On_State. <code>Required</code> <code>Default(0)</code></td>
+<td>The minimal document state on wich is permited to print this printout</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#applicationname">ApplicationName</a></td>
 <td>string (64)</td>
-<td>The application which stored and uses the printout. <code>Required</code></td>
+<td>The application which stored and uses the printout</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#backwardcompatibility">BackwardCompatibility</a></td>
 <td>boolean</td>
-<td>Obsolete. Not used. <code>Required</code> <code>Default(false)</code></td>
+<td>Supports the old data format.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#copies">Copies</a></td>
 <td>int32</td>
-<td>Number of copies that should be printed when using direct printing. <code>Required</code> <code>Default(1)</code></td>
+<td>Number of copies that will be printed when the user choses 'Print multiple'.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#definition">Definition</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Obsolete. Not used.</td>
+<td>The contents of the printout.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#definitionformat">DefinitionFormat</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Obsolete. Not used. <code>Default(&quot;default&quot;)</code></td>
+<td>System format of the printout definition.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True if this is the default printout for the application form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>If True this printout will be used in direct print or print preview.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#name">Name</a></td>
 <td>string (64)</td>
-<td>The name of the printout. Unique within the application form. <code>Required</code> <code>Filter(like)</code></td>
+<td>Name of the printout.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#notes">Notes</a></td>
@@ -171,17 +171,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#ord">Ord</a></td>
 <td>int32</td>
-<td>Order in the list of printouts when using direct printing. <code>Required</code> <code>Default(0)</code></td>
+<td>Order in the multiple print. 0 means that the printout does not participate.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#ordfilterxml">OrdFilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command. <code>Unit: obj.DocumentType.EntityName</code></td>
+<td>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#ordpriority">OrdPriority</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. <code>Default(0)</code></td>
+<td>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command.</td>
 </tr>
 </tbody>
 </table>
@@ -198,7 +198,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type to which this printout layout is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type to which this printout layout is bound.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -208,17 +208,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#fiscalreceipttemplate">FiscalReceiptTemplate</a></td>
 <td><a href="Crm.Pos.FiscalReceiptTemplates.html">FiscalReceiptTemplates</a> (nullable)</td>
-<td>Template for customizing the fiscal receipt. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.56</code></td>
+<td>Template for customizing the fiscal receipt.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#printoutlayout">PrintoutLayout</a></td>
 <td><a href="Systems.Documents.PrintoutLayouts.html">PrintoutLayouts</a> (nullable)</td>
-<td>The printout layout, that is bound to the document type. <code>Filter(multi eq)</code></td>
+<td>The printout layout, that is bound to the document type.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Printouts.html#report">Report</a></td>
 <td><a href="Systems.Documents.DataSources.html">DataSources</a> (nullable)</td>
-<td>If not null points to a custom report that indicates which data will be loaded in the printout. <code>Filter(multi eq)</code></td>
+<td>A report that contains the set of data that will be loaded in the printout.</td>
 </tr>
 </tbody>
 </table>
@@ -251,7 +251,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="allowprintingonstate">AllowPrintingOnState</h3>
-<p>The user can print documents only with state equal or greater than Allow_Printing_On_State. <code>Required</code> <code>Default(0)</code></p>
+<p>The minimal document state on wich is permited to print this printout</p>
 <p>Type: <strong><a href="Systems.Documents.Printouts.html#allowprintingonstate">AllowPrintingOnState</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AllowPrintingOnState</code>(Systems.Documents.Printouts.md#allowprintingonstate) data attribute<br>
@@ -295,7 +295,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applicationname">ApplicationName</h3>
-<p>The application which stored and uses the printout. <code>Required</code></p>
+<p>The application which stored and uses the printout</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -305,7 +305,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.Transaction.ApplicationName</code></p>
 <h3 id="backwardcompatibility">BackwardCompatibility</h3>
-<p>Obsolete. Not used. <code>Required</code> <code>Default(false)</code></p>
+<p>Supports the old data format.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -313,7 +313,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="copies">Copies</h3>
-<p>Number of copies that should be printed when using direct printing. <code>Required</code> <code>Default(1)</code></p>
+<p>Number of copies that will be printed when the user choses 'Print multiple'.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="definition">Definition</h3>
-<p>Obsolete. Not used.</p>
+<p>The contents of the printout.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -329,7 +329,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="definitionformat">DefinitionFormat</h3>
-<p>Obsolete. Not used. <code>Default(&quot;default&quot;)</code></p>
+<p>System format of the printout definition.</p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -338,7 +338,7 @@ Maximum Length: <strong>16</strong><br>
 Default Value: <strong>default</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True if this is the default printout for the application form. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>If True this printout will be used in direct print or print preview.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -346,7 +346,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the printout. Unique within the application form. <code>Required</code> <code>Filter(like)</code></p>
+<p>Name of the printout.</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -362,7 +362,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>512</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ord">Ord</h3>
-<p>Order in the list of printouts when using direct printing. <code>Required</code> <code>Default(0)</code></p>
+<p>Order in the multiple print. 0 means that the printout does not participate.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -370,14 +370,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ordfilterxml">OrdFilterXml</h3>
-<p>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command. <code>Unit: obj.DocumentType.EntityName</code></p>
+<p>The condition, required to be matched in order for the printout to be executed upon &quot;Print All&quot; command.</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ordpriority">OrdPriority</h3>
-<p>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. <code>Default(0)</code></p>
+<p>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -407,7 +407,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type to which this printout layout is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type to which this printout layout is bound.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -421,19 +421,19 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fiscalreceipttemplate">FiscalReceiptTemplate</h3>
-<p>Template for customizing the fiscal receipt. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.56</code></p>
+<p>Template for customizing the fiscal receipt.</p>
 <p>Type: <strong><a href="Crm.Pos.FiscalReceiptTemplates.html">FiscalReceiptTemplates</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="printoutlayout">PrintoutLayout</h3>
-<p>The printout layout, that is bound to the document type. <code>Filter(multi eq)</code></p>
+<p>The printout layout, that is bound to the document type.</p>
 <p>Type: <strong><a href="Systems.Documents.PrintoutLayouts.html">PrintoutLayouts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="report">Report</h3>
-<p>If not null points to a custom report that indicates which data will be loaded in the printout. <code>Filter(multi eq)</code></p>
+<p>A report that contains the set of data that will be loaded in the printout.</p>
 <p>Type: <strong><a href="Systems.Documents.DataSources.html">DataSources</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#lineenddatetime">LineEndDateTime</a></td>
 <td>datetime</td>
-<td>The ending date and time of the agreement coverage for the current line. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The ending date and time of the agreement coverage for the current line.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#linestartdatetime">LineStartDateTime</a></td>
 <td>datetime</td>
-<td>The starting date and time of the agreement coverage for the current line. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The starting date and time of the agreement coverage for the current line.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#notes">Notes</a></td>
@@ -141,12 +141,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Introduced in version 22.1.5.18</code></td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#quantity">Quantity</a></td>
 <td>decimal (14, 3)</td>
-<td>The quantity of the service object that is included in the agreement. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
+<td>The quantity of the service object that is included in the agreement</td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></td>
+<td>The document, which the current line executes. NULL when the current line does not execute another line.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#serviceagreement">ServiceAgreement</a></td>
@@ -178,12 +178,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#serviceobject">ServiceObject</a></td>
 <td><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></td>
-<td>The service object, which is covered by the current agreement. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The service object, which is covered by the current agreement.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#servicetype">ServiceType</a></td>
 <td><a href="Applications.Service.ServiceTypes.html">ServiceTypes</a></td>
-<td>The type (level) of service that is agreed. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type (level) of service that is agreed</td>
 </tr>
 </tbody>
 </table>
@@ -216,7 +216,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineenddatetime">LineEndDateTime</h3>
-<p>The ending date and time of the agreement coverage for the current line. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The ending date and time of the agreement coverage for the current line.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -227,7 +227,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ServiceAgreement.EndDateTime</code></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -238,7 +238,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ServiceAgreement.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestartdatetime">LineStartDateTime</h3>
-<p>The starting date and time of the agreement coverage for the current line. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The starting date and time of the agreement coverage for the current line.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -257,14 +257,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Introduced in version 22.1.5.18</code></p>
+<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the service object that is included in the agreement. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
+<p>The quantity of the service object that is included in the agreement</p>
 <p>Type: <strong>decimal (14, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -301,7 +301,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code></p>
+<p>The document, which the current line executes. NULL when the current line does not execute another line.</p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -315,13 +315,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serviceobject">ServiceObject</h3>
-<p>The service object, which is covered by the current agreement. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The service object, which is covered by the current agreement.</p>
 <p>Type: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="servicetype">ServiceType</h3>
-<p>The type (level) of service that is agreed. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type (level) of service that is agreed</p>
 <p>Type: <strong><a href="Applications.Service.ServiceTypes.html">ServiceTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

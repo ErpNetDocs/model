@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#begindatetime"><s>BeginDateTime</s></a></td>
 <td>datetime <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Filter(ge;le)</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> Not used.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,17 +130,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#endtime">EndTime</a></td>
 <td>datetime</td>
-<td>Date and time when the operation has ended. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
+<td>Date and time when the operation has ended</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>True if this output entry completes the operation. false if there might be more entries. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>1 if this output entry completes the operation. 0 if there might be more entries</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Line number within the order. <code>Required</code></td>
+<td>Line number within the order</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#notes">Notes</a></td>
@@ -150,27 +150,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantity">ProducedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The processed quantity of the end product. <code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+<td>The processed quantity of the end product.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantitybase">ProducedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The equivalence of Produced Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
+<td>The equivalence of Produced Quantity in the base measurement unit of the product.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedstandardquantitybase">ProducedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>Date and time when the operation has began. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
+<td>Date and time when the operation has began</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.</td>
 </tr>
 </tbody>
 </table>
@@ -192,12 +192,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lineworkorder">LineWorkOrder</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></td>
-<td>The work order for which work is being accounted. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The work order for which work is being accounted</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lot">Lot</a></td>
 <td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The lot of the produced product. <code>Filter(multi eq)</code></td>
+<td>The lot of the produced product.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#outputorder">OutputOrder</a></td>
@@ -207,52 +207,52 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantityunit">ProducedQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Produced Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Produced Quantity.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The actually produced product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The actually produced product</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#productcode">ProductCode</a></td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
-<td>Selects the product thru some of the product codes. <code>Filter(multi eq)</code></td>
+<td>Selects the product thru some of the product codes.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#serialnumber">SerialNumber</a></td>
 <td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>If not null, specifies that the product was (has to be) stored with specific serial number. <code>Filter(multi eq)</code></td>
+<td>If not NULL, specifies that the product was (has to be) stored with specific serial number</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>Where to output the produced quantity. Can be null only if Produced_Quantity = 0. <code>Filter(multi eq)</code></td>
+<td>Where to output the produced quantity. Can be NULL only if Produced_Quantity = 0</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#storebin">StoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>If not null, specifies that the product was (has to be) stored to specific store bin. <code>Filter(multi eq)</code></td>
+<td>If not NULL, specifies that the product was (has to be) stored to specific store bin</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workdonebyparty">WorkDoneByParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party (usually employee worker) who has accomplished the work. null if unknown or N/A. <code>Filter(multi eq)</code></td>
+<td>Indicates who has done the work. Usualy this is an employee, but also can be an outside person or company</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workgroupresource">WorkgroupResource</a></td>
 <td><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</td>
-<td>The resource, which was used to perform the operation. <code>Filter(multi eq)</code></td>
+<td>The actual resource used in the production</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workorderitem">WorkOrderItem</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></td>
-<td>The work order item for which this output is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The work order item for which this output is recorded.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#workorderitemoperation">WorkOrderItemOperation</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a> (nullable)</td>
-<td>The operation for which this output is recorded. <code>Filter(multi eq)</code></td>
+<td>The operation for which this output is recorded.</td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +302,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="begindatetime">BeginDateTime</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Not used. <code>Obsolete</code> <code>Filter(ge;le)</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> Not used.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -316,7 +316,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>Date and time when the operation has ended. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
+<p>Date and time when the operation has ended</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -324,7 +324,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>True if this output entry completes the operation. false if there might be more entries. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>1 if this output entry completes the operation. 0 if there might be more entries</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -332,7 +332,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Line number within the order. <code>Required</code></p>
+<p>Line number within the order</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -351,7 +351,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="producedquantity">ProducedQuantity</h3>
-<p>The processed quantity of the end product. <code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
+<p>The processed quantity of the end product.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -359,7 +359,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="producedquantitybase">ProducedQuantityBase</h3>
-<p>The equivalence of Produced Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
+<p>The equivalence of Produced Quantity in the base measurement unit of the product.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -371,7 +371,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="producedstandardquantitybase">ProducedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -382,7 +382,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedStandardQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="starttime">StartTime</h3>
-<p>Date and time when the operation has began. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
+<p>Date and time when the operation has began</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -390,7 +390,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
+<p>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -426,7 +426,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineworkorder">LineWorkOrder</h3>
-<p>The work order for which work is being accounted. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The work order for which work is being accounted</p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -437,7 +437,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.OutputOrder.WorkOrder</code></p>
 <h3 id="lot">Lot</h3>
-<p>The lot of the produced product. <code>Filter(multi eq)</code></p>
+<p>The lot of the produced product.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -451,7 +451,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="producedquantityunit">ProducedQuantityUnit</h3>
-<p>The measurement unit of Produced Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Produced Quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -459,7 +459,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( obj.ProductCode != null) AndAlso ( obj.ProductCode.CodingSystem.DefaultMeasurementUnit != null)), obj.ProductCode.CodingSystem.DefaultMeasurementUnit, obj.Product.MeasurementUnit)</code></p>
 <h3 id="product">Product</h3>
-<p>The actually produced product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The actually produced product</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -468,7 +468,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ProductCode.Product</code></p>
 <h3 id="productcode">ProductCode</h3>
-<p>Selects the product thru some of the product codes. <code>Filter(multi eq)</code></p>
+<p>Selects the product thru some of the product codes.</p>
 <p>Type: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -476,31 +476,31 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.ProductCode.Product != obj.Product), null, obj.ProductCode)</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
-<p>If not null, specifies that the product was (has to be) stored with specific serial number. <code>Filter(multi eq)</code></p>
+<p>If not NULL, specifies that the product was (has to be) stored with specific serial number</p>
 <p>Type: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>Where to output the produced quantity. Can be null only if Produced_Quantity = 0. <code>Filter(multi eq)</code></p>
+<p>Where to output the produced quantity. Can be NULL only if Produced_Quantity = 0</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="storebin">StoreBin</h3>
-<p>If not null, specifies that the product was (has to be) stored to specific store bin. <code>Filter(multi eq)</code></p>
+<p>If not NULL, specifies that the product was (has to be) stored to specific store bin</p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="workdonebyparty">WorkDoneByParty</h3>
-<p>The party (usually employee worker) who has accomplished the work. null if unknown or N/A. <code>Filter(multi eq)</code></p>
+<p>Indicates who has done the work. Usualy this is an employee, but also can be an outside person or company</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="workgroupresource">WorkgroupResource</h3>
-<p>The resource, which was used to perform the operation. <code>Filter(multi eq)</code></p>
+<p>The actual resource used in the production</p>
 <p>Type: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -508,14 +508,14 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.WorkOrderItemOperation.WorkgroupResource</code></p>
 <h3 id="workorderitem">WorkOrderItem</h3>
-<p>The work order item for which this output is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The work order item for which this output is recorded.</p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderItems.html">WorkOrderItems</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="workorderitemoperation">WorkOrderItemOperation</h3>
-<p>The operation for which this output is recorded. <code>Filter(multi eq)</code></p>
+<p>The operation for which this output is recorded.</p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

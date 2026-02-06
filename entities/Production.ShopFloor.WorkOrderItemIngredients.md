@@ -34,38 +34,38 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__ | Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price. 
-| [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material, which will be used for setup. `Unit: UsedQuantityUnit` `Required` `Default(0)` 
-| [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item. `Required` `Filter(eq;like)` 
+| [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__ | Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified. 
+| [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material, which will be used for setup. 
+| [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item. 
 | [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemIngredient. 
-| [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)` 
-| [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
-| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material consumed in the operation. 
+| [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material. 
+| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributeByMeasurement<br />Category](Production.ShopFloor.WorkOrderItemIngredients.md#distributebymeasurementcategory) | [MeasurementCategories](General.Products.MeasurementCategories.md) (nullable) | Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. `Filter(multi eq)` |
+| [DistributeByMeasurement<br />Category](Production.ShopFloor.WorkOrderItemIngredients.md#distributebymeasurementcategory) | [MeasurementCategories](General.Products.MeasurementCategories.md) (nullable) | Measurement category by which the materials from the line are distributed amongst all work order items in case 'Distribute by' determines that the distribution is made by measurement. |
 | [Document](Production.ShopFloor.WorkOrderItemIngredients.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The owner document. The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` |
-| [Lot](Production.ShopFloor.WorkOrderItemIngredients.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Lot from which to get the material. When null, any lot can be used. `Filter(multi eq)` |
-| [Material](Production.ShopFloor.WorkOrderItemIngredients.md#material) | [Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table). `Required` `Filter(multi eq)` |
-| [Operation](Production.ShopFloor.WorkOrderItemIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient is used. `Filter(multi eq)` |
-| [PrincipalRecipeIngredient](Production.ShopFloor.WorkOrderItemIngredients.md#principalrecipeingredient) | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable) | The principal recipe ingredient on which this record is based. `Filter(multi eq)` |
-| [ProductCode](Production.ShopFloor.WorkOrderItemIngredients.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
-| [SerialNumber](Production.ShopFloor.WorkOrderItemIngredients.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not null, specifies the serial number of the ingredient. `Filter(multi eq)` |
-| [Store](Production.ShopFloor.WorkOrderItemIngredients.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to retrieve the material. `Filter(multi eq)` |
-| [StoreBin](Production.ShopFloor.WorkOrderItemIngredients.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin from which to take the ingredients. `Filter(multi eq)` |
-| [UsedQuantityUnit](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of the quantity of the material consumed in the operation. `Required` `Filter(multi eq)` |
+| [Lot](Production.ShopFloor.WorkOrderItemIngredients.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Lot from which to get the material. If not specified (default) - Any lot can be used. |
+| [Material](Production.ShopFloor.WorkOrderItemIngredients.md#material) | [Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table) |
+| [Operation](Production.ShopFloor.WorkOrderItemIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient is used. |
+| [PrincipalRecipeIngredient](Production.ShopFloor.WorkOrderItemIngredients.md#principalrecipeingredient) | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable) | The principal recipe ingredient on which this record is based. |
+| [ProductCode](Production.ShopFloor.WorkOrderItemIngredients.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. |
+| [SerialNumber](Production.ShopFloor.WorkOrderItemIngredients.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the ingredient. NULL means that the serial number is unknown or not applicable. |
+| [Store](Production.ShopFloor.WorkOrderItemIngredients.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to retrieve the material. |
+| [StoreBin](Production.ShopFloor.WorkOrderItemIngredients.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin from which to take the ingredients |
+| [UsedQuantityUnit](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of the quantity of the material consumed in the operation. |
 | [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` `Owner` |
-| [WorkOrderItem](Production.ShopFloor.WorkOrderItemIngredients.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) (nullable) | The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. `Filter(multi eq)` |
+| [WorkOrderItem](Production.ShopFloor.WorkOrderItemIngredients.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) (nullable) | The work order item for which the materials in this line are used. If not specified means that the materials are distributed amongst all work order items in the document. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.ShopFloor.WorkOrderItemIngredients.md#id) | guid |  
+| [Id](Production.ShopFloor.WorkOrderItemIngredients.md#id) | guid | The Id of the production order operation 
 | [ObjectVersion](Production.ShopFloor.WorkOrderItemIngredients.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](Production.ShopFloor.WorkOrderItemIngredients.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### DistributeBy
 
-Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price.
+Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified.
 
 Type: **[DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.WorkOrderItem != null), null, obj.DistributeBy)`
 ### FixedScrapQuantity
 
-The quantity of the material, which will be used for setup. `Unit: UsedQuantityUnit` `Required` `Default(0)`
+The quantity of the material, which will be used for setup.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-The order of the line within the item. `Required` `Filter(eq;like)`
+The order of the line within the item.
 
 Type: **int32**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **HiddenByDefault**
 
 ### UsedQuantity
 
-The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)`
+The quantity of the material consumed in the operation.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### UsedQuantityBase
 
-The equivalence of Used Quantity in the base measurement category of the material. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
+The equivalence of Used Quantity in the base measurement category of the material.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Material != null) AndAlso ( obj.UsedQuantity != null)) AndAlso ( obj.UsedQuantityUnit != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedQuantityBase)`
 ### UsedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
+The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -172,6 +172,8 @@ Back-End Default Expression:
 Front-End Recalc Expressions:  
 `IIF( ( ( ( obj.UsedQuantity != null) AndAlso ( obj.UsedQuantityUnit != null)) AndAlso ( obj.Material != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedStandardQuantityBase)`
 ### Id
+
+The Id of the production order operation
 
 Type: **guid**  
 Indexed: **True**  
@@ -205,7 +207,7 @@ Show in UI: **HiddenByDefault**
 
 ### DistributeByMeasurementCategory
 
-Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. `Filter(multi eq)`
+Measurement category by which the materials from the line are distributed amongst all work order items in case 'Distribute by' determines that the distribution is made by measurement.
 
 Type: **[MeasurementCategories](General.Products.MeasurementCategories.md) (nullable)**  
 Category: **System**  
@@ -226,7 +228,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-Lot from which to get the material. When null, any lot can be used. `Filter(multi eq)`
+Lot from which to get the material. If not specified (default) - Any lot can be used.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -235,7 +237,7 @@ Show in UI: **HiddenByDefault**
 
 ### Material
 
-The Id of the consumed material (Gen_Products_Table). `Required` `Filter(multi eq)`
+The Id of the consumed material (Gen_Products_Table)
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -249,7 +251,7 @@ Front-End Recalc Expressions:
 `obj.ProductCode.Product.IfNullThen( obj.Material)`
 ### Operation
 
-Specifies for which operation this ingredient is used. `Filter(multi eq)`
+Specifies for which operation this ingredient is used.
 
 Type: **[Operations](Production.Resources.Operations.md) (nullable)**  
 Category: **System**  
@@ -258,7 +260,7 @@ Show in UI: **ShownByDefault**
 
 ### PrincipalRecipeIngredient
 
-The principal recipe ingredient on which this record is based. `Filter(multi eq)`
+The principal recipe ingredient on which this record is based.
 
 Type: **[PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable)**  
 Category: **System**  
@@ -267,7 +269,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCode
 
-Selects the product thru some of the product codes. `Filter(multi eq)`
+Selects the product thru some of the product codes.
 
 Type: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 Category: **System**  
@@ -278,7 +280,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ProductCode.Product != obj.Material), null, obj.ProductCode)`
 ### SerialNumber
 
-If not null, specifies the serial number of the ingredient. `Filter(multi eq)`
+Serial number of the ingredient. NULL means that the serial number is unknown or not applicable.
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -287,7 +289,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The store from which to retrieve the material. `Filter(multi eq)`
+The store from which to retrieve the material.
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -301,7 +303,7 @@ Front-End Recalc Expressions:
 `obj.WorkOrder.DefaultMaterialsStore`
 ### StoreBin
 
-The store bin from which to take the ingredients. `Filter(multi eq)`
+The store bin from which to take the ingredients
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -310,7 +312,7 @@ Show in UI: **ShownByDefault**
 
 ### UsedQuantityUnit
 
-The measurement unit of the quantity of the material consumed in the operation. `Required` `Filter(multi eq)`
+The measurement unit of the quantity of the material consumed in the operation.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -335,7 +337,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkOrderItem
 
-The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. `Filter(multi eq)`
+The work order item for which the materials in this line are used. If not specified means that the materials are distributed amongst all work order items in the document.
 
 Type: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) (nullable)**  
 Indexed: **True**  

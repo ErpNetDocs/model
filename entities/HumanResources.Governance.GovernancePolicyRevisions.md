@@ -36,16 +36,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PolicyContent](HumanResources.Governance.GovernancePolicyRevisions.md#policycontent) | string (max) | Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI. `Required` `Filter(like)` 
-| [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | Lifecycle state of the revision. `Required` `Default("DRF")` 
-| [ValidFrom](HumanResources.Governance.GovernancePolicyRevisions.md#validfrom) | date __nullable__ | Date from which this revision is intended to apply. Required when State = Published or Retired. `Filter(eq;ge;le)` 
-| [ValidTo](HumanResources.Governance.GovernancePolicyRevisions.md#validto) | date __nullable__ | Date until which this revision applies (null = open-ended). Typically set automatically when a newer revision becomes effective. `Filter(eq;ge;le)` 
+| [PolicyContent](HumanResources.Governance.GovernancePolicyRevisions.md#policycontent) | string (max) | Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI. 
+| [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | Lifecycle state of the revision. 
+| [ValidFrom](HumanResources.Governance.GovernancePolicyRevisions.md#validfrom) | date __nullable__ | Date from which this revision is intended to apply. Required when State = Published or Retired. 
+| [ValidTo](HumanResources.Governance.GovernancePolicyRevisions.md#validto) | date __nullable__ | Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Policy](HumanResources.Governance.GovernancePolicyRevisions.md#policy) | [GovernancePolicies](HumanResources.Governance.GovernancePolicies.md) | Reference to the policy this revision belongs to. `Required` `Filter(multi eq)` `Owner` |
+| [Policy](HumanResources.Governance.GovernancePolicyRevisions.md#policy) | [GovernancePolicies](HumanResources.Governance.GovernancePolicies.md) | Reference to the policy this revision belongs to. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### PolicyContent
 
-Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI. `Required` `Filter(like)`
+Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.
 
 Type: **string (max)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-Lifecycle state of the revision. `Required` `Default("DRF")`
+Lifecycle state of the revision.
 
 Type: **[State](HumanResources.Governance.GovernancePolicyRevisions.md#state)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-Date from which this revision is intended to apply. Required when State = Published or Retired. `Filter(eq;ge;le)`
+Date from which this revision is intended to apply. Required when State = Published or Retired.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-Date until which this revision applies (null = open-ended). Typically set automatically when a newer revision becomes effective. `Filter(eq;ge;le)`
+Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **HiddenByDefault**
 
 ### Policy
 
-Reference to the policy this revision belongs to. `Required` `Filter(multi eq)` `Owner`
+Reference to the policy this revision belongs to.
 
 Type: **[GovernancePolicies](HumanResources.Governance.GovernancePolicies.md)**  
 Indexed: **True**  

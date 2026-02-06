@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.ActivityParticipants.html#email">Email</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Participant email. Used to identify the participant and is required when syncing with external services. <code>Filter(multi eq;like)</code> <code>Introduced in version 24.1.4.87</code></td>
+<td>Participant email. Used to identify the participant and is required when syncing with external services.</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityParticipants.html#notes">Notes</a></td>
@@ -136,7 +136,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.ActivityParticipants.html#workloadpercent">WorkLoadPercent</a></td>
 <td>decimal (3, 2)</td>
-<td>The planned work load of the participant for this activity. <code>Required</code> <code>Default(1)</code></td>
+<td>The planned work load of the participant for this activity.</td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Activities.ActivityParticipants.html#participantperson">ParticipantPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person, participating in an activity. <code>Filter(multi eq)</code></td>
+<td>The person, participating in an activity</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityParticipants.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user associated with the Person participating in the activity. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.5.15</code></td>
+<td>The user associated with the Person participating in the activity.</td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="email">Email</h3>
-<p>Participant email. Used to identify the participant and is required when syncing with external services. <code>Filter(multi eq;like)</code> <code>Introduced in version 24.1.4.87</code></p>
+<p>Participant email. Used to identify the participant and is required when syncing with external services.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -216,7 +216,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>255</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="workloadpercent">WorkLoadPercent</h3>
-<p>The planned work load of the participant for this activity. <code>Required</code> <code>Default(1)</code></p>
+<p>The planned work load of the participant for this activity.</p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -254,14 +254,14 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="participantperson">ParticipantPerson</h3>
-<p>The person, participating in an activity. <code>Filter(multi eq)</code></p>
+<p>The person, participating in an activity</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user associated with the Person participating in the activity. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.5.15</code></p>
+<p>The user associated with the Person participating in the activity.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -32,14 +32,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__ | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
+| [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__ | VAT code, which will be used when Cash Reporting mode is used for the entry 
 | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) __nullable__ | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | Document type that generates VAT entries. `Required` `Filter(multi eq)` |
+| [DocumentType](Finance.Vat.BGVATDocumentTypeVATCodes.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | Document type that generates VAT entries. |
 
 
 ## System Attributes
@@ -58,7 +58,7 @@ Aggregate Tree
 
 ### CashReportingVATCode
 
-VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code.
+VAT code, which will be used when Cash Reporting mode is used for the entry
 
 Type: **[CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-Document type that generates VAT entries. `Required` `Filter(multi eq)`
+Document type that generates VAT entries.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  

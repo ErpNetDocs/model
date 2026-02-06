@@ -94,6 +94,11 @@ Repository: Regulatory.Saft.ProfileAccountByProducts<br>
 Base Table: Saft_Profile_Account_By_Products<br>
 Introduced In Version: 26.2.0.73<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Saft.ProfileAccountByProducts<br>
+New name: Regulatory.Saft.ProfileAccountByProducts<br>
+Version: 26.2.1.17<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {Profile.Name}<br>
 Search Members: Profile.Name<br>
@@ -122,17 +127,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></td>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></td>
-<td>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
+<td>Debit/credit indicator for SAF-T invoice lines.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></td>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></td>
-<td>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></td>
+<td>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information or comments about the mapping. <code>Filter(like)</code></td>
+<td>Additional information or comments about the mapping.</td>
 </tr>
 </tbody>
 </table>
@@ -149,22 +154,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#accountcodeentry">AccountCodeEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
-<td>The SAF-T account used during SAF-T generation for the selected product type. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The SAF-T account used during SAF-T generation for the selected product type.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></td>
+<td>The ERP.net document type under which this mapping rule should be applied.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">ProductTypes</a></td>
-<td>The ERP.net product type for which the SAF-T account is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The ERP.net product type for which the SAF-T account is defined.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileAccountByProducts.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The SAF-T profile this mapping belongs to.</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="debitcreditindicator">DebitCreditIndicator</h3>
-<p>Debit/credit indicator for SAF-T invoice lines. <code>Required</code> <code>Default(&quot;D&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
+<p>Debit/credit indicator for SAF-T invoice lines.</p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfileAccountByProducts.html#debitcreditindicator">DebitCreditIndicator</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DebitCreditIndicator</code>(Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) data attribute<br>
@@ -225,7 +230,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Debit</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entitykind">EntityKind</h3>
-<p>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.9</code></p>
+<p>Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.</p>
 <p>Type: <strong><a href="Regulatory.Saft.ProfileAccountByProducts.html#entitykind">EntityKind</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>EntityKind</code>(Regulatory.Saft.ProfileAccountByProducts.md#entitykind) data attribute<br>
@@ -253,7 +258,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Sales</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional information or comments about the mapping. <code>Filter(like)</code></p>
+<p>Additional information or comments about the mapping.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -283,28 +288,28 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accountcodeentry">AccountCodeEntry</h3>
-<p>The SAF-T account used during SAF-T generation for the selected product type. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The SAF-T account used during SAF-T generation for the selected product type.</p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></p>
+<p>The ERP.net document type under which this mapping rule should be applied.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="producttype">ProductType</h3>
-<p>The ERP.net product type for which the SAF-T account is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The ERP.net product type for which the SAF-T account is defined.</p>
 <p>Type: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The SAF-T profile this mapping belongs to.</p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

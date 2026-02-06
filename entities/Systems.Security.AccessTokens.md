@@ -33,25 +33,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessTokenKey](Systems.Security.AccessTokens.md#accesstokenkey) | string (256) | The unique key of the token. `Required` `Filter(multi eq)` `ORD` 
-| [Actor](Systems.Security.AccessTokens.md#actor) | string (128) __nullable__ | For whom the token was issued (might be user email). `Filter(multi eq)` 
-| [Client](Systems.Security.AccessTokens.md#client) | string (128) __nullable__ | The client application. `Filter(multi eq)` 
-| [ConsumedTimestamp](Systems.Security.AccessTokens.md#consumedtimestamp) | datetime __nullable__ | When it was used up (for one-time grants). `Filter(ge;le)` 
-| [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` 
-| [Data](Systems.Security.AccessTokens.md#data) | string (max) __nullable__ | Token contents. 
+| [AccessTokenKey](Systems.Security.AccessTokens.md#accesstokenkey) | string (256) | The unique key of the token 
+| [Actor](Systems.Security.AccessTokens.md#actor) | string (128) __nullable__ | For whom the token was issued (might be user email) 
+| [Client](Systems.Security.AccessTokens.md#client) | string (128) __nullable__ | The client application 
+| [ConsumedTimestamp](Systems.Security.AccessTokens.md#consumedtimestamp) | datetime __nullable__ | When it was used up (for one-time grants). 
+| [CreationTimestamp](Systems.Security.AccessTokens.md#creationtimestamp) | datetime | When the token was created 
+| [Data](Systems.Security.AccessTokens.md#data) | string (max) __nullable__ | Token contents 
 | [Description](Systems.Security.AccessTokens.md#description) | string (128) __nullable__ | The description of this AccessToken. 
-| [ExpireTimestamp](Systems.Security.AccessTokens.md#expiretimestamp) | datetime __nullable__ | When the token expires. `Filter(ge;le)` 
-| [LastUsedTimestamp](Systems.Security.AccessTokens.md#lastusedtimestamp) | datetime __nullable__ | Indicates when the token was last used. `Filter(ge;le)` `Introduced in version 26.2.0.18` 
-| [Scopes](Systems.Security.AccessTokens.md#scopes) | string (256) __nullable__ | Space-separated list of permissions granted to this token. `Introduced in version 26.2.0.18` 
-| [Session](Systems.Security.AccessTokens.md#session) | string (128) __nullable__ | Session parameter. `Filter(multi eq)` 
-| [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc. `Required` 
+| [ExpireTimestamp](Systems.Security.AccessTokens.md#expiretimestamp) | datetime __nullable__ | When the token expires 
+| [LastUsedTimestamp](Systems.Security.AccessTokens.md#lastusedtimestamp) | datetime __nullable__ | Indicates when the token was last used. 
+| [Scopes](Systems.Security.AccessTokens.md#scopes) | string (256) __nullable__ | Space-separated list of permissions granted to this token. 
+| [Session](Systems.Security.AccessTokens.md#session) | string (128) __nullable__ | Session parameter 
+| [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TrustedApplication](Systems.Security.AccessTokens.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | Sec_Trusted_Applications // Matched trusted application (from Client). `Filter(multi eq)` |
-| [User](Systems.Security.AccessTokens.md#user) | [Users](Systems.Security.Users.md) (nullable) | Matched user (from the actor). `Filter(multi eq)` |
+| [TrustedApplication](Systems.Security.AccessTokens.md#trustedapplication) | [TrustedApplications](Systems.Security.TrustedApplications.md) (nullable) | Sec_Trusted_Applications // Matched trusted application (from Client) |
+| [User](Systems.Security.AccessTokens.md#user) | [Users](Systems.Security.Users.md) (nullable) | Matched user (from the actor) |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### AccessTokenKey
 
-The unique key of the token. `Required` `Filter(multi eq)` `ORD`
+The unique key of the token
 
 Type: **string (256)**  
 Indexed: **True**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Actor
 
-For whom the token was issued (might be user email). `Filter(multi eq)`
+For whom the token was issued (might be user email)
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Client
 
-The client application. `Filter(multi eq)`
+The client application
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedTimestamp
 
-When it was used up (for one-time grants). `Filter(ge;le)`
+When it was used up (for one-time grants).
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimestamp
 
-When the token was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD`
+When the token was created
 
 Type: **datetime**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### Data
 
-Token contents.
+Token contents
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### ExpireTimestamp
 
-When the token expires. `Filter(ge;le)`
+When the token expires
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUsedTimestamp
 
-Indicates when the token was last used. `Filter(ge;le)` `Introduced in version 26.2.0.18`
+Indicates when the token was last used.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### Scopes
 
-Space-separated list of permissions granted to this token. `Introduced in version 26.2.0.18`
+Space-separated list of permissions granted to this token.
 
 Type: **string (256) __nullable__**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-Session parameter. `Filter(multi eq)`
+Session parameter
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### Type
 
-Type of the token - reference_token, refresh_token, etc. `Required`
+Type of the token - reference_token, refresh_token, etc.
 
 Type: **string (64)**  
 Category: **System**  
@@ -262,7 +262,7 @@ Show in UI: **HiddenByDefault**
 
 ### TrustedApplication
 
-Sec_Trusted_Applications // Matched trusted application (from Client). `Filter(multi eq)`
+Sec_Trusted_Applications // Matched trusted application (from Client)
 
 Type: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
 Indexed: **True**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-Matched user (from the actor). `Filter(multi eq)`
+Matched user (from the actor)
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  

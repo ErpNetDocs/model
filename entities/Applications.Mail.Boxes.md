@@ -34,24 +34,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Mail.Boxes.md#active) | boolean | True when the mail box is active for mail sinchronization, sending and receiving. `Required` `Default(true)` `Filter(eq)` 
-| [EmailAddress](Applications.Mail.Boxes.md#emailaddress) | string (254) | The email address associated with this mail box. `Required` `Filter(eq)` 
-| [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | True when this is the default mailbox for the user. `Required` `Default(true)` `Filter(eq)` 
-| [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | True when the mailbox messages are stored in encrypted format. `Required` `Default(false)` `Filter(eq)` 
-| [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [SendServerAddress](Applications.Mail.Boxes.md#sendserveraddress) | string (254) __nullable__ | The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server. 
+| [Active](Applications.Mail.Boxes.md#active) | boolean | True when the mail box is active for mail sinchronization, sending and receiving 
+| [EmailAddress](Applications.Mail.Boxes.md#emailaddress) | string (254) | The email address associated with this mail box 
+| [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | 1 when this is the default mailbox for the user. 
+| [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | 1 when the mailbox messages are stored in encrypted format 
+| [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset 
+| [SendServerAddress](Applications.Mail.Boxes.md#sendserveraddress) | string (254) __nullable__ | The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server 
 | [SentItemsFolderName](Applications.Mail.Boxes.md#sentitemsfoldername) | string (254) __nullable__ | The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne). 
-| [SignatureHtml](Applications.Mail.Boxes.md#signaturehtml) | string (max) __nullable__ | Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached. 
-| [SyncPassword](Applications.Mail.Boxes.md#syncpassword) | string (512) __nullable__ | The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name. 
-| [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) | [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) __nullable__ | Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup. 
-| [SyncServerAddress](Applications.Mail.Boxes.md#syncserveraddress) | string (254) __nullable__ | Incoming and outgoing mail server internet address. null when synchronization is not setup. 
-| [SyncUserName](Applications.Mail.Boxes.md#syncusername) | string (64) __nullable__ | User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name. 
+| [SignatureHtml](Applications.Mail.Boxes.md#signaturehtml) | string (max) __nullable__ | Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached 
+| [SyncPassword](Applications.Mail.Boxes.md#syncpassword) | string (512) __nullable__ | The password to supply to the server when retrieving email. NULL when the connection is not set up or the server does not require user name 
+| [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) | [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) __nullable__ | Synchronization protocol, 'POP3', 'IMAP' or 'Microsoft Exchange'. NULL means that syncrhonization is not setup 
+| [SyncServerAddress](Applications.Mail.Boxes.md#syncserveraddress) | string (254) __nullable__ | Incoming and outgoing mail server internet address. NULL when synchronization is not set up 
+| [SyncUserName](Applications.Mail.Boxes.md#syncusername) | string (64) __nullable__ | User name to supply to the server, when retrieving email. NULL when the connection is not set up or the server does not require user name 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [OwnerUser](Applications.Mail.Boxes.md#owneruser) | [Users](Systems.Security.Users.md) | The user, who owns the mailbox. `Required` `Filter(multi eq)` |
+| [OwnerUser](Applications.Mail.Boxes.md#owneruser) | [Users](Systems.Security.Users.md) | The user, who owns the mailbox |
 
 
 ## System Attributes
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### Active
 
-True when the mail box is active for mail sinchronization, sending and receiving. `Required` `Default(true)` `Filter(eq)`
+True when the mail box is active for mail sinchronization, sending and receiving
 
 Type: **boolean**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### EmailAddress
 
-The email address associated with this mail box. `Required` `Filter(eq)`
+The email address associated with this mail box
 
 Type: **string (254)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-True when this is the default mailbox for the user. `Required` `Default(true)` `Filter(eq)`
+1 when this is the default mailbox for the user.
 
 Type: **boolean**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### IsEncrypted
 
-True when the mailbox messages are stored in encrypted format. `Required` `Default(false)` `Filter(eq)`
+1 when the mailbox messages are stored in encrypted format
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### ResetOnNextSync
 
-Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset
 
 Type: **boolean**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### SendServerAddress
 
-The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.
+The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### SignatureHtml
 
-Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.
+Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### SyncPassword
 
-The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.
+The password to supply to the server when retrieving email. NULL when the connection is not set up or the server does not require user name
 
 Type: **string (512) __nullable__**  
 Category: **System**  
@@ -175,7 +175,7 @@ Show in UI: **ShownByDefault**
 
 ### SyncProtocol
 
-Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.
+Synchronization protocol, 'POP3', 'IMAP' or 'Microsoft Exchange'. NULL means that syncrhonization is not setup
 
 Type: **[SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) __nullable__**  
 Category: **System**  
@@ -195,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### SyncServerAddress
 
-Incoming and outgoing mail server internet address. null when synchronization is not setup.
+Incoming and outgoing mail server internet address. NULL when synchronization is not set up
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### SyncUserName
 
-User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.
+User name to supply to the server, when retrieving email. NULL when the connection is not set up or the server does not require user name
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -279,7 +279,7 @@ Show in UI: **HiddenByDefault**
 
 ### OwnerUser
 
-The user, who owns the mailbox. `Required` `Filter(multi eq)`
+The user, who owns the mailbox
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

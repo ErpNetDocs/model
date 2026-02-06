@@ -37,15 +37,15 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTime](Production.Technologies.Recipes.md#creationtime) | datetime __nullable__ | Date and time when the Recipe was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Production.Technologies.Recipes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Recipe. `Filter(like)` `ReadOnly` 
-| [ExpiryDate](Production.Technologies.Recipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. null means that the recipe might still be in use. `Filter(ge;le)` 
-| [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date. `Required` `Default(false)` `Filter(eq)` 
-| [Name](Production.Technologies.Recipes.md#name) | string (64) | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. `Required` `Filter(like)` 
-| [Notes](Production.Technologies.Recipes.md#notes) | string (254) __nullable__ | User comments for the recipe. 
-| [Price](Production.Technologies.Recipes.md#price) | [Amount (18, 4)](../data-types.md#amount) | The price for the specified Produce_Quantity. `Currency: Product.CostingCurrency` `Required` `Default(0)` 
-| [PricePerLot](Production.Technologies.Recipes.md#priceperlot) | [Amount (18, 4)](../data-types.md#amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base). `Currency: Product.CostingCurrency` `Required` `Default(0)` 
-| [ProduceQuantity](Production.Technologies.Recipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
-| [ReleaseDate](Production.Technologies.Recipes.md#releasedate) | datetime | The date, when the recipe was released to production. `Required` `Default(Today)` `Filter(ge;le)` 
-| [ScrapRate](Production.Technologies.Recipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. `Required` `Default(0)` 
+| [ExpiryDate](Production.Technologies.Recipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. NULL means that the recipe might still be in use 
+| [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date 
+| [Name](Production.Technologies.Recipes.md#name) | string (64) | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. 
+| [Notes](Production.Technologies.Recipes.md#notes) | string (254) __nullable__ | User comments for the recipe 
+| [Price](Production.Technologies.Recipes.md#price) | [Amount (18, 4)](../data-types.md#amount) | The price for the specified Produce_Quantity 
+| [PricePerLot](Production.Technologies.Recipes.md#priceperlot) | [Amount (18, 4)](../data-types.md#amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base) 
+| [ProduceQuantity](Production.Technologies.Recipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id 
+| [ReleaseDate](Production.Technologies.Recipes.md#releasedate) | datetime | The date, when the recipe was released to production 
+| [ScrapRate](Production.Technologies.Recipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe 
 | [UpdateTime](Production.Technologies.Recipes.md#updatetime) | datetime __nullable__ | Date and time when the Recipe was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Production.Technologies.Recipes.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Recipe. `Filter(like)` `ReadOnly` 
 
@@ -53,17 +53,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencyDirectory](Production.Technologies.Recipes.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. `Filter(multi eq)` |
-| [PrincipalRecipe](Production.Technologies.Recipes.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable) | The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. `Filter(multi eq)` |
-| [Product](Production.Technologies.Recipes.md#product) | [Products](General.Products.Products.md) (nullable) | The Id of the produced product. `Filter(multi eq)` |
-| [Store](Production.Technologies.Recipes.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. `Filter(multi eq)` |
+| [CurrencyDirectory](Production.Technologies.Recipes.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. |
+| [PrincipalRecipe](Production.Technologies.Recipes.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable) | The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe |
+| [Product](Production.Technologies.Recipes.md#product) | [Products](General.Products.Products.md) (nullable) | The Id of the produced product |
+| [Store](Production.Technologies.Recipes.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store for which this technology is valid. The store is matched with the output store specified in the production order. When NULL, the technology is valid for all stores. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Technologies.Recipes.md#id) | guid |  
+| [Id](Production.Technologies.Recipes.md#id) | guid | Unique recipe Id 
 | [ObjectVersion](Production.Technologies.Recipes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](Production.Technologies.Recipes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](Production.Technologies.Recipes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -103,7 +103,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExpiryDate
 
-The last date, when the recipe should be used. null means that the recipe might still be in use. `Filter(ge;le)`
+The last date, when the recipe should be used. NULL means that the recipe might still be in use
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-Default for period: Release_Date - Expiry_Date. `Required` `Default(false)` `Filter(eq)`
+Default for period: Release_Date - Expiry_Date
 
 Type: **boolean**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. `Required` `Filter(like)`
+The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.
 
 Type: **string (64)**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-User comments for the recipe.
+User comments for the recipe
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **ShownByDefault**
 
 ### Price
 
-The price for the specified Produce_Quantity. `Currency: Product.CostingCurrency` `Required` `Default(0)`
+The price for the specified Produce_Quantity
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### PricePerLot
 
-Price for one lot of the product (according to Lot_Size_Quantity_Base). `Currency: Product.CostingCurrency` `Required` `Default(0)`
+Price for one lot of the product (according to Lot_Size_Quantity_Base)
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### ProduceQuantity
 
-Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
+Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### ReleaseDate
 
-The date, when the recipe was released to production. `Required` `Default(Today)` `Filter(ge;le)`
+The date, when the recipe was released to production
 
 Type: **datetime**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### ScrapRate
 
-The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. `Required` `Default(0)`
+The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -221,6 +221,8 @@ Maximum Length: **64**
 Show in UI: **HiddenByDefault**  
 
 ### Id
+
+Unique recipe Id
 
 Type: **guid**  
 Indexed: **True**  
@@ -284,7 +286,7 @@ Show in UI: **HiddenByDefault**
 
 ### CurrencyDirectory
 
-Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. `Filter(multi eq)`
+Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product.
 
 Type: **[CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable)**  
 Category: **System**  
@@ -293,7 +295,7 @@ Show in UI: **ShownByDefault**
 
 ### PrincipalRecipe
 
-The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. `Filter(multi eq)`
+The prinicipal recipe, used to create this recipe. NULL means that this recipe was created without the help of principal recipe
 
 Type: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable)**  
 Category: **System**  
@@ -302,7 +304,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The Id of the produced product. `Filter(multi eq)`
+The Id of the produced product
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Indexed: **True**  
@@ -312,7 +314,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. `Filter(multi eq)`
+The store for which this technology is valid. The store is matched with the output store specified in the production order. When NULL, the technology is valid for all stores.
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  

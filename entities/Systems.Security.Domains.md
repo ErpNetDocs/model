@@ -35,10 +35,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). `Required` `Default(true)` 
+| [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). 
 | [Description](Systems.Security.Domains.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Multi-language description of the domain. 
-| [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Systems.Security.Domains.md#name) | string (64) | The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD` 
+| [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. 
+| [Name](Systems.Security.Domains.md#name) | string (64) | The name of the domain (restricted for URL usage). 
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### AllowLocalAccounts
 
-Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). `Required` `Default(true)`
+Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended).
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)`
+Specifies whether this is the default domain for the database.
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD`
+The name of the domain (restricted for URL usage).
 
 Type: **string (64)**  
 Indexed: **True**  

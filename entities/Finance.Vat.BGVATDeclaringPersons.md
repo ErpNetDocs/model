@@ -35,19 +35,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | Type of the declaring person. A=Attorney, R=Representative. `Required` `Filter(eq)` 
-| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string (150) | Address for correspondence of the declaring person. `Required` 
-| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string (50) | City from the address for correspondence of the declaring person. `Required` 
+| [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | [DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype) | Type of the declaring person. A=Attorney, R=Representative. 
+| [DeclaringPersonAddress](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonaddress) | string (150) | Address for correspondence of the declaring person. 
+| [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string (50) | City from the address for correspondence of the declaring person. 
 | [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonposition) | string (50) __nullable__ | Position of the declaring person in the enterprise company. 
-| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondence of the declaring person. `Required` 
-| [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. `Required` `Default(true)` 
+| [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondence of the declaring person. 
+| [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the person is presenting the declaration. `Required` `Filter(multi eq)` `Owner` |
-| [Person](Finance.Vat.BGVATDeclaringPersons.md#person) | [Persons](General.Contacts.Persons.md) | The person that is presenting the declaration. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Finance.Vat.BGVATDeclaringPersons.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the person is presenting the declaration. |
+| [Person](Finance.Vat.BGVATDeclaringPersons.md#person) | [Persons](General.Contacts.Persons.md) | The person that is presenting the declaration. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### DeclarerType
 
-Type of the declaring person. A=Attorney, R=Representative. `Required` `Filter(eq)`
+Type of the declaring person. A=Attorney, R=Representative.
 
 Type: **[DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### DeclaringPersonAddress
 
-Address for correspondence of the declaring person. `Required`
+Address for correspondence of the declaring person.
 
 Type: **string (150)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Front-End Recalc Expressions:
 `obj.Person.GetValidAddress( ).Name`
 ### DeclaringPersonCity
 
-City from the address for correspondence of the declaring person. `Required`
+City from the address for correspondence of the declaring person.
 
 Type: **string (50)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### DeclaringPersonPostcode
 
-Postcode from the address for correspondence of the declaring person. `Required`
+Postcode from the address for correspondence of the declaring person.
 
 Type: **string (4)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-True if this is the default person, which issues VAT declarations for this Enterprise Company. `Required` `Default(true)`
+True if this is the default person, which issues VAT declarations for this Enterprise Company.
 
 Type: **boolean**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company for which the person is presenting the declaration. `Required` `Filter(multi eq)` `Owner`
+The enterprise company for which the person is presenting the declaration.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### Person
 
-The person that is presenting the declaration. `Required` `Filter(multi eq)`
+The person that is presenting the declaration.
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  

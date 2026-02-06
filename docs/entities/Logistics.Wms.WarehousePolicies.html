@@ -123,37 +123,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#code">Code</a></td>
 <td>string (16)</td>
-<td>The unique code of the warehouse policy. <code>Required</code> <code>Introduced in version 22.1.6.60</code></td>
+<td>The unique code of the warehouse policy.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When set, specifies the activation date of the policy. <code>Filter(eq;ge;le)</code></td>
+<td>When set, specifies the activation date of the policy.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#importance">Importance</a></td>
 <td>int32</td>
-<td>The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
+<td>The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#note">Note</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes.</td>
+<td>Notes</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></td>
 <td><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></td>
-<td>The kind of policy, which is being applied. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The kind of policy, which is being applied.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When set, specifies the de-activation date of the policy. <code>Filter(eq;ge;le)</code></td>
+<td>When set, specifies the de-activation date of the policy.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#value">Value</a></td>
 <td>string (64)</td>
-<td>The value specified for the policy. For boolean policies, allowed values are &quot;true&quot; and &quot;false&quot;. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The value specified for the policy. For boolean policies, allowed values are &quot;true&quot; and &quot;false&quot;.</td>
 </tr>
 </tbody>
 </table>
@@ -170,27 +170,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>When set, specifies that the policy will apply to the specified product only. <code>Filter(multi eq)</code></td>
+<td>When set, specifies that the policy will apply to the specified product only.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#productgroup">ProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
-<td>When set, specifies that the policy will apply to the specified product group only. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.36</code></td>
+<td>When set, specifies that the policy will apply to the specified product group only.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</td>
-<td>When set, specifies that the policy will apply to the specified product type only. <code>Filter(multi eq)</code></td>
+<td>When set, specifies that the policy will apply to the specified product type only.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse for which the policy is defined. . <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
+<td>The warehouse for which the policy is defined.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#zone">Zone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</td>
-<td>When set, specifies that the policy will apply to the specified zone and its sub-zones. <code>Filter(multi eq)</code></td>
+<td>When set, specifies that the policy will apply to the specified zone and its sub-zones.</td>
 </tr>
 </tbody>
 </table>
@@ -223,7 +223,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code of the warehouse policy. <code>Required</code> <code>Introduced in version 22.1.6.60</code></p>
+<p>The unique code of the warehouse policy.</p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -233,14 +233,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.GetNextDefaultCode( )</code></p>
 <h3 id="fromdate">FromDate</h3>
-<p>When set, specifies the activation date of the policy. <code>Filter(eq;ge;le)</code></p>
+<p>When set, specifies the activation date of the policy.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="importance">Importance</h3>
-<p>The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
+<p>The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -248,7 +248,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="note">Note</h3>
-<p>Notes.</p>
+<p>Notes</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -256,7 +256,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="policykind">PolicyKind</h3>
-<p>The kind of policy, which is being applied. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The kind of policy, which is being applied.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>PolicyKind</code>(Logistics.Wms.WarehousePolicies.md#policykind) data attribute<br>
@@ -355,14 +355,14 @@ Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Member
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>When set, specifies the de-activation date of the policy. <code>Filter(eq;ge;le)</code></p>
+<p>When set, specifies the de-activation date of the policy.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="value">Value</h3>
-<p>The value specified for the policy. For boolean policies, allowed values are &quot;true&quot; and &quot;false&quot;. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The value specified for the policy. For boolean policies, allowed values are &quot;true&quot; and &quot;false&quot;.</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -392,25 +392,25 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<p>When set, specifies that the policy will apply to the specified product only. <code>Filter(multi eq)</code></p>
+<p>When set, specifies that the policy will apply to the specified product only.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<p>When set, specifies that the policy will apply to the specified product group only. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.36</code></p>
+<p>When set, specifies that the policy will apply to the specified product group only.</p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="producttype">ProductType</h3>
-<p>When set, specifies that the policy will apply to the specified product type only. <code>Filter(multi eq)</code></p>
+<p>When set, specifies that the policy will apply to the specified product type only.</p>
 <p>Type: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse for which the policy is defined. . <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
+<p>The warehouse for which the policy is defined.</p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -418,7 +418,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="zone">Zone</h3>
-<p>When set, specifies that the policy will apply to the specified zone and its sub-zones. <code>Filter(multi eq)</code></p>
+<p>When set, specifies that the policy will apply to the specified zone and its sub-zones.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

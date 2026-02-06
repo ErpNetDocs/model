@@ -14,6 +14,15 @@ Base Table: Exc_Excise_Stamp_Operations
 Introduced In Version: 22.1.6.15  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseStampOperations  
+New name: Regulatory.Excise.ExciseStampOperations  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {DocumentType.TypeName:T} {DocumentNo}{StateTagsAttribute}  
 Search Members: DocumentNo  
@@ -83,7 +92,7 @@ Aggregate Tree
 | [DocumentType](Regulatory.Excise.ExciseStampOperations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Regulatory.Excise.ExciseStampOperations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Regulatory.Excise.ExciseStampOperations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ExciseStampOperationType](Regulatory.Excise.ExciseStampOperations.md#excisestampoperationtype) | [ExciseStampOperationTypes](Regulatory.Excise.ExciseStampOperationTypes.md) (nullable) | Specifies the type of the excise stamp operation. `Filter(multi eq)` |
+| [ExciseStampOperationType](Regulatory.Excise.ExciseStampOperations.md#excisestampoperationtype) | [ExciseStampOperationTypes](Regulatory.Excise.ExciseStampOperationTypes.md) (nullable) | Specifies the type of the excise stamp operation |
 | [FromCompanyDivision](Regulatory.Excise.ExciseStampOperations.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Regulatory.Excise.ExciseStampOperations.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Regulatory.Excise.ExciseStampOperations.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -92,7 +101,7 @@ Aggregate Tree
 | [ResponsiblePerson](Regulatory.Excise.ExciseStampOperations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Regulatory.Excise.ExciseStampOperations.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Regulatory.Excise.ExciseStampOperations.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [TaxWarehouse](Regulatory.Excise.ExciseStampOperations.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) | Specifies the reported Tax Warehouse. `Required` `Filter(multi eq)` |
+| [TaxWarehouse](Regulatory.Excise.ExciseStampOperations.md#taxwarehouse) | [TaxWarehouses](Regulatory.Excise.TaxWarehouses.md) | Specifies the reported Tax Warehouse |
 | [ToCompanyDivision](Regulatory.Excise.ExciseStampOperations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Regulatory.Excise.ExciseStampOperations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Regulatory.Excise.ExciseStampOperations.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -550,7 +559,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseStampOperationType
 
-Specifies the type of the excise stamp operation. `Filter(multi eq)`
+Specifies the type of the excise stamp operation
 
 Type: **[ExciseStampOperationTypes](Regulatory.Excise.ExciseStampOperationTypes.md) (nullable)**  
 Category: **System**  
@@ -634,7 +643,7 @@ Show in UI: **HiddenByDefault**
 
 ### TaxWarehouse
 
-Specifies the reported Tax Warehouse. `Required` `Filter(multi eq)`
+Specifies the reported Tax Warehouse
 
 Type: **[TaxWarehouses](Regulatory.Excise.TaxWarehouses.md)**  
 Category: **System**  

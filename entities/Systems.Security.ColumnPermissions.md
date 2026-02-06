@@ -33,14 +33,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column. `Required` `Filter(eq)` 
-| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
+| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column. 
+| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. `Filter(multi eq)` `ReadOnly` |
+| [AccessKey](Systems.Security.ColumnPermissions.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The required access key for accessing the column. |
 
 
 ## System Attributes
@@ -59,7 +59,7 @@ Aggregate Tree
 
 ### ColumnName
 
-The name of the secured column. `Required` `Filter(eq)`
+The name of the secured column.
 
 Type: **string (128)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### TableName
 
-The table in which is the secured column. `Required` `Filter(eq)` `ORD`
+The table in which is the secured column.
 
 Type: **string (128)**  
 Indexed: **True**  
@@ -144,7 +144,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The required access key for accessing the column. `Filter(multi eq)` `ReadOnly`
+The required access key for accessing the column.
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  

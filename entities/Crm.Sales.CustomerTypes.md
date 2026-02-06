@@ -46,7 +46,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Sales.CustomerTypes.md#isactive) | boolean | Indicates whether the current Customer type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [IsActive](Crm.Sales.CustomerTypes.md#isactive) | boolean | Indicates whether the current Customer type is active. 
 | [Name](Crm.Sales.CustomerTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CustomerType. `Required` `Filter(eq;like)` 
 
 ## References
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Customer type is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Customer type is active.
 
 Type: **boolean**  
 Category: **System**  

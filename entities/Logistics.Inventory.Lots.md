@@ -33,26 +33,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholicStrength](Logistics.Inventory.Lots.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting. `Required` `Default(0)` `Introduced in version 22.1.6.66` 
+| [AlcoholicStrength](Logistics.Inventory.Lots.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting. 
 | [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this Lot. 
-| [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot. `Filter(ge;le)` 
+| [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot. 
 | [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string (50) __nullable__ | The license number for this lot. Null when license number is N/A or unknown. 
 | [Number](Logistics.Inventory.Lots.md#number) | string (30) | The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)` `ORD` 
 | [ProductionBatchId](Logistics.Inventory.Lots.md#productionbatchid) | guid __nullable__ | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. `Filter(multi eq)` 
-| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (30) __nullable__ | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. `Filter(like)` 
-| [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date __nullable__ | The date of the first receipt of products in this lot. `Filter(ge;le)` `ReadOnly` 
-| [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. `Required` `Default(0)` `Filter(multi eq)` 
+| [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (30) __nullable__ | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. 
+| [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date __nullable__ | The date of the first receipt of products in this lot. 
+| [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions.
+-3 blocked for document (sales or service order)
+-2 blocked for party
+-1 blocked for inspection
+0 free to use 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BlockedForDocument](Logistics.Inventory.Lots.md#blockedfordocument) | [Documents](General.Documents.Documents.md) (nullable) | If non-null, contains the document for which the lot is blocked. `Filter(multi eq)` |
-| [BlockedForParty](Logistics.Inventory.Lots.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | Non-null when the warehouse lot is blocked specifically for some party. `Filter(multi eq)` |
-| [CertificateDocument](Logistics.Inventory.Lots.md#certificatedocument) | [Documents](General.Documents.Documents.md) (nullable) | Document, containing the certificate for this lot. `Filter(multi eq)` |
-| [ExciseMeasuringTransaction](Logistics.Inventory.Lots.md#excisemeasuringtransaction) | [MeasuringTransactions](Regulatory.Excise.MeasuringTransactions.md) (nullable) | When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. `Filter(multi eq)` `Introduced in version 21.1.1.59` |
-| [Product](Logistics.Inventory.Lots.md#product) | [Products](General.Products.Products.md) | The product to which the lot is bound. `Required` `Filter(multi eq)` |
-| [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#receiptstoretransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. null if the lot is manually created. `Filter(multi eq)` |
+| [BlockedForDocument](Logistics.Inventory.Lots.md#blockedfordocument) | [Documents](General.Documents.Documents.md) (nullable) | If non-null, contains the document for which the lot is blocked |
+| [BlockedForParty](Logistics.Inventory.Lots.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | Non-NULL when the warehouse lot is blocked specifically for some party |
+| [CertificateDocument](Logistics.Inventory.Lots.md#certificatedocument) | [Documents](General.Documents.Documents.md) (nullable) | Document, containing the certificate for this lot. |
+| [ExciseMeasuringTransaction](Logistics.Inventory.Lots.md#excisemeasuringtransaction) | [MeasuringTransactions](Regulatory.Excise.MeasuringTransactions.md) (nullable) | When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. |
+| [Product](Logistics.Inventory.Lots.md#product) | [Products](General.Products.Products.md) | The product to which the lot is bound |
+| [ReceiptStoreTransaction](Logistics.Inventory.Lots.md#receiptstoretransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | The store receipt transaction, which created the lot. NULL if the lot is manually created |
 
 
 ## System Attributes
@@ -71,7 +75,7 @@ Aggregate Tree
 
 ### AlcoholicStrength
 
-Percentage of pure alcohol used in excise duty reporting. `Required` `Default(0)` `Introduced in version 22.1.6.66`
+Percentage of pure alcohol used in excise duty reporting.
 
 Type: **decimal (5, 2)**  
 Category: **System**  
@@ -92,7 +96,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExpiryDate
 
-Expiry date for this lot. `Filter(ge;le)`
+Expiry date for this lot.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -137,7 +141,7 @@ Show in UI: **CannotBeShown**
 
 ### PurchaseLotNumber
 
-Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. `Filter(like)`
+Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.
 
 Type: **string (30) __nullable__**  
 Category: **System**  
@@ -148,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiptDate
 
-The date of the first receipt of products in this lot. `Filter(ge;le)` `ReadOnly`
+The date of the first receipt of products in this lot.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -158,7 +162,11 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. `Required` `Default(0)` `Filter(multi eq)`
+Status of the warehouse lot. Minus statuses describe blocked conditions.
+-3 blocked for document (sales or service order)
+-2 blocked for party
+-1 blocked for inspection
+0 free to use
 
 Type: **[Status](Logistics.Inventory.Lots.md#status)**  
 Category: **System**  
@@ -241,7 +249,7 @@ Show in UI: **HiddenByDefault**
 
 ### BlockedForDocument
 
-If non-null, contains the document for which the lot is blocked. `Filter(multi eq)`
+If non-null, contains the document for which the lot is blocked
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
@@ -250,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### BlockedForParty
 
-Non-null when the warehouse lot is blocked specifically for some party. `Filter(multi eq)`
+Non-NULL when the warehouse lot is blocked specifically for some party
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -259,7 +267,7 @@ Show in UI: **ShownByDefault**
 
 ### CertificateDocument
 
-Document, containing the certificate for this lot. `Filter(multi eq)`
+Document, containing the certificate for this lot.
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
@@ -268,7 +276,7 @@ Show in UI: **ShownByDefault**
 
 ### ExciseMeasuringTransaction
 
-When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. `Filter(multi eq)` `Introduced in version 21.1.1.59`
+When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot.
 
 Type: **[MeasuringTransactions](Regulatory.Excise.MeasuringTransactions.md) (nullable)**  
 Category: **System**  
@@ -277,7 +285,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product to which the lot is bound. `Required` `Filter(multi eq)`
+The product to which the lot is bound
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -287,7 +295,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceiptStoreTransaction
 
-The store receipt transaction, which created the lot. null if the lot is manually created. `Filter(multi eq)`
+The store receipt transaction, which created the lot. NULL if the lot is manually created
 
 Type: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
 Category: **System**  

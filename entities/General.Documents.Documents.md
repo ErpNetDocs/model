@@ -53,53 +53,55 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AdjustmentNumber](General.Documents.Documents.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` 
-| [AdjustmentTime](General.Documents.Documents.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` 
-| [AdjustmentUser](General.Documents.Documents.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` 
-| [CompleteTime](General.Documents.Documents.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` 
-| [CreationTime](General.Documents.Documents.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](General.Documents.Documents.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` 
-| [DocumentDate](General.Documents.Documents.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` 
-| [DocumentNo](General.Documents.Documents.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` 
+| [AdjustmentNumber](General.Documents.Documents.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. 
+| [AdjustmentTime](General.Documents.Documents.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document 
+| [AdjustmentUser](General.Documents.Documents.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document 
+| [CompleteTime](General.Documents.Documents.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). 
+| [CreationTime](General.Documents.Documents.md#creationtime) | datetime | Date/Time when the document was created 
+| [CreationUser](General.Documents.Documents.md#creationuser) | string (64) | The login name of the user, who created the document 
+| [DocumentDate](General.Documents.Documents.md#documentdate) | date | The date on which the document was issued 
+| [DocumentNo](General.Documents.Documents.md#documentno) | string (20) | Document number, unique within Document_Type_Id 
 | [DocumentNotes](General.Documents.Documents.md#documentnotes) | string (max) __nullable__ | Notes for this Document. 
-| [DocumentVersion](General.Documents.Documents.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` 
-| [EntityName](General.Documents.Documents.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` 
+| [DocumentVersion](General.Documents.Documents.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. 
+| [EntityName](General.Documents.Documents.md#entityname) | string (64) | The entity name of the document header. 
 | [FullState](General.Documents.Documents.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` 
-| [PlanningOnly](General.Documents.Documents.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` 
-| [ReadOnly](General.Documents.Documents.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` 
-| [ReferenceDate](General.Documents.Documents.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` 
-| [ReferenceDocumentNo](General.Documents.Documents.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` 
-| [ReleaseTime](General.Documents.Documents.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` 
-| [State](General.Documents.Documents.md#state) | [DocumentState](General.Documents.Documents.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` 
+| [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. 
+| [PlanningOnly](General.Documents.Documents.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned) 
+| [ReadOnly](General.Documents.Documents.md#readonly) | boolean | 1 - the document is read only; 0 - the document is not read only 
+| [ReferenceDate](General.Documents.Documents.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred.
+Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.
+So, generally: Reference Date <= DocumentDate <= CreationTime. 
+| [ReferenceDocumentNo](General.Documents.Documents.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents 
+| [ReleaseTime](General.Documents.Documents.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). 
+| [State](General.Documents.Documents.md#state) | [DocumentState](General.Documents.Documents.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. 
 | [StateTagsAttribute](General.Documents.Documents.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Void](General.Documents.Documents.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [VoidReason](General.Documents.Documents.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` 
-| [VoidTime](General.Documents.Documents.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` 
-| [VoidUser](General.Documents.Documents.md#voiduser) | string (64) __nullable__ | The user who voided the document. `ReadOnly` 
+| [Void](General.Documents.Documents.md#void) | boolean | 1 if the document is null and void 
+| [VoidReason](General.Documents.Documents.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user 
+| [VoidTime](General.Documents.Documents.md#voidtime) | datetime __nullable__ | Date/time when the document has become void 
+| [VoidUser](General.Documents.Documents.md#voiduser) | string (64) __nullable__ | The user who voided the document 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](General.Documents.Documents.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` |
-| [AdjustedDocument](General.Documents.Documents.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` |
-| [AssignedToUser](General.Documents.Documents.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` |
-| [CurrencyDirectory](General.Documents.Documents.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` |
-| [DocumentType](General.Documents.Documents.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` |
-| [EnterpriseCompany](General.Documents.Documents.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` |
-| [EnterpriseCompanyLocation](General.Documents.Documents.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` |
-| [FromCompanyDivision](General.Documents.Documents.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` |
-| [FromParty](General.Documents.Documents.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` |
-| [MasterDocument](General.Documents.Documents.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` |
+| [AccessKey](General.Documents.Documents.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. NULL means that all users have unlimited permissions |
+| [AdjustedDocument](General.Documents.Documents.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. NULL when this is not an adjustment document |
+| [AssignedToUser](General.Documents.Documents.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user |
+| [CurrencyDirectory](General.Documents.Documents.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions |
+| [DocumentType](General.Documents.Documents.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. |
+| [EnterpriseCompany](General.Documents.Documents.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document |
+| [EnterpriseCompanyLocation](General.Documents.Documents.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used |
+| [FromCompanyDivision](General.Documents.Documents.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. NULL when the document is not issued by any specific division |
+| [FromParty](General.Documents.Documents.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document |
+| [MasterDocument](General.Documents.Documents.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id |
 | [Parent](General.Documents.Documents.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` |
-| [PrimeCauseDocument](General.Documents.Documents.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` |
-| [ResponsiblePerson](General.Documents.Documents.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` |
-| [ReverseOfDocument](General.Documents.Documents.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` |
-| [Sequence](General.Documents.Documents.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` |
-| [ToCompanyDivision](General.Documents.Documents.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` |
-| [ToParty](General.Documents.Documents.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` |
-| [UserStatus](General.Documents.Documents.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` |
+| [PrimeCauseDocument](General.Documents.Documents.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document |
+| [ResponsiblePerson](General.Documents.Documents.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| [ReverseOfDocument](General.Documents.Documents.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of |
+| [Sequence](General.Documents.Documents.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| [ToCompanyDivision](General.Documents.Documents.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. NULL when the document is not received by any specific division |
+| [ToParty](General.Documents.Documents.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document |
+| [UserStatus](General.Documents.Documents.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. NULL means unknown or not yet set |
 
 
 ## System Attributes
@@ -132,7 +134,7 @@ Aggregate Tree
 
 ### AdjustmentNumber
 
-Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly`
+Consecutive number of the correction that this document is applying to the adjusted document.
 
 Type: **int32**  
 Category: **System**  
@@ -143,7 +145,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdjustmentTime
 
-Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly`
+Date/time when the document last has been adjusted by corrective document
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -153,7 +155,7 @@ Show in UI: **HiddenByDefault**
 
 ### AdjustmentUser
 
-The user who adjusted the document. `ReadOnly`
+The user who adjusted the document
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -164,7 +166,7 @@ Show in UI: **HiddenByDefault**
 
 ### CompleteTime
 
-Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly`
+Date and time when the document was completed (State set to Completed).
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -174,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationTime
 
-Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly`
+Date/Time when the document was created
 
 Type: **datetime**  
 Category: **System**  
@@ -185,7 +187,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationUser
 
-The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly`
+The login name of the user, who created the document
 
 Type: **string (64)**  
 Category: **System**  
@@ -196,7 +198,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentDate
 
-The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD`
+The date on which the document was issued
 
 Type: **date**  
 Indexed: **True**  
@@ -208,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentNo
 
-Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD`
+Document number, unique within Document_Type_Id
 
 Type: **string (20)**  
 Indexed: **True**  
@@ -231,7 +233,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly`
+Consecutive version number, starting with 1. Each update produces a new version of the document.
 
 Type: **int32**  
 Category: **System**  
@@ -242,7 +244,7 @@ Show in UI: **HiddenByDefault**
 
 ### EntityName
 
-The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly`
+The entity name of the document header.
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -264,7 +266,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentDocumentRelationshipType
 
-Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly`
+Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.
 
 Type: **[ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__**  
 Category: **System**  
@@ -283,7 +285,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlanningOnly
 
-Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly`
+Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned)
 
 Type: **boolean**  
 Category: **System**  
@@ -294,7 +296,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReadOnly
 
-True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly`
+1 - the document is read only; 0 - the document is not read only
 
 Type: **boolean**  
 Category: **System**  
@@ -305,7 +307,9 @@ Show in UI: **HiddenByDefault**
 
 ### ReferenceDate
 
-Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)`
+Indicates the date, when the event, described by the document, actually occurred.
+Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system.
+So, generally: Reference Date <= DocumentDate <= CreationTime.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -316,7 +320,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReferenceDocumentNo
 
-The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)`
+The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents
 
 Type: **string (20) __nullable__**  
 Category: **System**  
@@ -327,7 +331,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReleaseTime
 
-Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly`
+Date and time when the document was released (State set to Released).
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -337,7 +341,7 @@ Show in UI: **HiddenByDefault**
 
 ### State
 
-The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly`
+The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed.
 
 Type: **[DocumentState](General.Documents.Documents.md#state)**  
 Category: **System**  
@@ -371,7 +375,7 @@ Show in UI: **HiddenByDefault**
 
 ### Void
 
-True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+1 if the document is null and void
 
 Type: **boolean**  
 Indexed: **True**  
@@ -383,7 +387,7 @@ Show in UI: **HiddenByDefault**
 
 ### VoidReason
 
-Reason for voiding the document, entered by the user. `ReadOnly`
+Reason for voiding the document, entered by the user
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -394,7 +398,7 @@ Show in UI: **HiddenByDefault**
 
 ### VoidTime
 
-Date/time when the document has become void. `Filter(ge;le)` `ReadOnly`
+Date/time when the document has become void
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -404,7 +408,7 @@ Show in UI: **HiddenByDefault**
 
 ### VoidUser
 
-The user who voided the document. `ReadOnly`
+The user who voided the document
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -479,7 +483,7 @@ Show in UI: **HiddenByDefault**
 
 ### AccessKey
 
-The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)`
+The access key, containing the user permissions for this document. NULL means that all users have unlimited permissions
 
 Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  
@@ -497,7 +501,7 @@ Supported permissions
 | Administer (manage security)| - |
 ### AdjustedDocument
 
-The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly`
+The primary document, which the current document adjusts. NULL when this is not an adjustment document
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Indexed: **True**  
@@ -507,7 +511,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssignedToUser
 
-The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)`
+The user to which this document is assigned for handling. NULL means that the document is not assigned to specific user
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  
@@ -517,7 +521,7 @@ Show in UI: **ShownByDefault**
 
 ### CurrencyDirectory
 
-The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)`
+The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions
 
 Type: **[CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable)**  
 Category: **System**  
@@ -526,7 +530,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)`
+The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Indexed: **True**  
@@ -536,7 +540,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company which issued the document. `Required` `Filter(multi eq)`
+The enterprise company which issued the document
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
@@ -546,7 +550,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)`
+The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
@@ -555,7 +559,7 @@ Show in UI: **HiddenByDefault**
 
 ### FromCompanyDivision
 
-The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)`
+The division of the company, issuing the document. NULL when the document is not issued by any specific division
 
 Type: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 Category: **System**  
@@ -564,7 +568,7 @@ Show in UI: **HiddenByDefault**
 
 ### FromParty
 
-The party which issued the document. `Required` `Filter(multi eq)`
+The party which issued the document
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -573,7 +577,7 @@ Show in UI: **HiddenByDefault**
 
 ### MasterDocument
 
-In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)`
+In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Indexed: **True**  
@@ -593,7 +597,7 @@ Show in UI: **HiddenByDefault**
 
 ### PrimeCauseDocument
 
-The document that is the prime cause for creation of the current document. `Filter(multi eq)`
+The document that is the prime cause for creation of the current document
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Indexed: **True**  
@@ -603,7 +607,7 @@ Show in UI: **HiddenByDefault**
 
 ### ResponsiblePerson
 
-The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)`
+The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -612,7 +616,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReverseOfDocument
 
-The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly`
+The document which the current document is reverse of
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
@@ -621,7 +625,7 @@ Show in UI: **HiddenByDefault**
 
 ### Sequence
 
-The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly`
+The sequence that will be used to give new numbers to the documents of this type
 
 Type: **[Sequences](Systems.Documents.Sequences.md) (nullable)**  
 Category: **System**  
@@ -630,7 +634,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToCompanyDivision
 
-The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)`
+The division of the company, receiving the document. NULL when the document is not received by any specific division
 
 Type: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
 Category: **System**  
@@ -639,7 +643,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToParty
 
-The party which should receive the document. `Filter(multi eq)`
+The party which should receive the document
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -651,7 +655,7 @@ Back-End Default Expression:
 
 ### UserStatus
 
-The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly`
+The user status of this document if applicable for this document type. NULL means unknown or not yet set
 
 Type: **[DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable)**  
 Indexed: **True**  

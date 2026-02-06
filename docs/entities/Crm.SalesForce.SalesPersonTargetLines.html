@@ -126,37 +126,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#perioddate">PeriodDate</a></td>
 <td>datetime</td>
-<td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.43</code></td>
+<td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#periodmonth">PeriodMonth</a></td>
 <td>byte</td>
-<td>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#periodyear">PeriodYear</a></td>
 <td>int16</td>
-<td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetamount">TargetAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. <code>Currency: TargetAmountCurrency</code></td>
+<td>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targettype">TargetType</a></td>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targettype">TargetType</a></td>
-<td>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. <code>Required</code> <code>Default(&quot;SALES&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetvalue">TargetValue</a></td>
 <td>decimal (9, 2)</td>
-<td>Value of target. Meaning depends on target type. <code>Required</code> <code>Default(0)</code></td>
+<td>Value of target. Meaning depends on target type</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetweight">TargetWeight</a></td>
 <td>decimal (5, 2)</td>
-<td>Relative weight of target, comparatively to other targets. <code>Required</code> <code>Default(1)</code></td>
+<td>Relative weight of target, comparatively to other targets</td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#bonusprogram">BonusProgram</a></td>
 <td><a href="Crm.Pricing.BonusPrograms.html">BonusPrograms</a> (nullable)</td>
-<td>Bonus program Id when the target type is BONUS, null otherwise. <code>Filter(multi eq)</code></td>
+<td>Bonus program Id when the target type is BONUS, NULL otherwise</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#document">Document</a></td>
@@ -183,17 +183,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#productgroup">ProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
-<td>Product group for which the target is defined. <code>Filter(multi eq)</code></td>
+<td>Product group for which the target is defined</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#promotionalpackage">PromotionalPackage</a></td>
 <td><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a> (nullable)</td>
-<td>Promotional Package Id when the target type is PROMO, null otherwise. <code>Filter(multi eq)</code></td>
+<td>Promotional Package Id when the target type is PROMO, NULL otherwise</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#salesperson">SalesPerson</a></td>
 <td><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></td>
-<td>Sales person to whom the target is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Sales person to whom the target is assigned</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#salespersontarget">SalesPersonTarget</a></td>
@@ -203,7 +203,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonTargetLines.html#targetamountcurrency">TargetAmountCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>Deprecated - use currency in document header. <code>Filter(multi eq)</code></td>
+<td>Deprecated - use currency in document header</td>
 </tr>
 </tbody>
 </table>
@@ -236,35 +236,35 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="perioddate">PeriodDate</h3>
-<p>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.43</code></p>
+<p>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="periodmonth">PeriodMonth</h3>
-<p>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</p>
 <p>Type: <strong>byte</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="periodyear">PeriodYear</h3>
-<p>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)</p>
 <p>Type: <strong>int16</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetamount">TargetAmount</h3>
-<p>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. <code>Currency: TargetAmountCurrency</code></p>
+<p>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="targettype">TargetType</h3>
-<p>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. <code>Required</code> <code>Default(&quot;SALES&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersonTargetLines.html#targettype">TargetType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TargetType</code>(Crm.SalesForce.SalesPersonTargetLines.md#targettype) data attribute<br>
@@ -300,7 +300,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>SalesAmount</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetvalue">TargetValue</h3>
-<p>Value of target. Meaning depends on target type. <code>Required</code> <code>Default(0)</code></p>
+<p>Value of target. Meaning depends on target type</p>
 <p>Type: <strong>decimal (9, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -308,7 +308,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetweight">TargetWeight</h3>
-<p>Relative weight of target, comparatively to other targets. <code>Required</code> <code>Default(1)</code></p>
+<p>Relative weight of target, comparatively to other targets</p>
 <p>Type: <strong>decimal (5, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -338,7 +338,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="bonusprogram">BonusProgram</h3>
-<p>Bonus program Id when the target type is BONUS, null otherwise. <code>Filter(multi eq)</code></p>
+<p>Bonus program Id when the target type is BONUS, NULL otherwise</p>
 <p>Type: <strong><a href="Crm.Pricing.BonusPrograms.html">BonusPrograms</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -350,7 +350,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="productgroup">ProductGroup</h3>
-<p>Product group for which the target is defined. <code>Filter(multi eq)</code></p>
+<p>Product group for which the target is defined</p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -360,13 +360,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.SalesPersonTarget.ProductGroup</code></p>
 <h3 id="promotionalpackage">PromotionalPackage</h3>
-<p>Promotional Package Id when the target type is PROMO, null otherwise. <code>Filter(multi eq)</code></p>
+<p>Promotional Package Id when the target type is PROMO, NULL otherwise</p>
 <p>Type: <strong><a href="Crm.Pricing.PromotionalPackages.html">PromotionalPackages</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salesperson">SalesPerson</h3>
-<p>Sales person to whom the target is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Sales person to whom the target is assigned</p>
 <p>Type: <strong><a href="Crm.SalesForce.SalesPersons.html">SalesPersons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -383,7 +383,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="targetamountcurrency">TargetAmountCurrency</h3>
-<p>Deprecated - use currency in document header. <code>Filter(multi eq)</code></p>
+<p>Deprecated - use currency in document header</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

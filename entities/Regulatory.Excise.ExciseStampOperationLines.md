@@ -13,6 +13,15 @@ Base Table: Exc_Excise_Stamp_Operation_Lines
 Introduced In Version: 22.1.6.17  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseStampOperationLines  
+New name: Regulatory.Excise.ExciseStampOperationLines  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {LineNo}. {ExciseStampOperation.DocumentNo} {ExciseStampOperation.DocumentType.TypeName:T}  
 Search Members: ExciseStampOperation.DocumentNo  
@@ -36,10 +45,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EndNumber](Regulatory.Excise.ExciseStampOperationLines.md#endnumber) | string (30) __nullable__ | The end number of the sequence of excise stamps that are processed with the current operation. 
-| [LineNo](Regulatory.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines. `Required` 
+| [LineNo](Regulatory.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines. 
 | [Notes](Regulatory.Excise.ExciseStampOperationLines.md#notes) | string (max) __nullable__ | Notes for this ExciseStampOperationLine. 
-| [ParentLineNo](Regulatory.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 22.1.6.32` 
-| [Quantity](Regulatory.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation. `Default(0)` 
+| [ParentLineNo](Regulatory.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line. 
+| [Quantity](Regulatory.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation. 
 | [StartNumber](Regulatory.Excise.ExciseStampOperationLines.md#startnumber) | string (30) __nullable__ | The start number of the sequence of excise stamps that are processed with the current operation. 
 
 ## References
@@ -47,11 +56,11 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Regulatory.Excise.ExciseStampOperationLines.md#document) | [ExciseStampOperations](Regulatory.Excise.ExciseStampOperations.md) | The owner document. The <see cref="ExciseStamp<br />Operation"/> to which this ExciseStampOperationLine belongs. `Required` `Filter(multi eq)` |
-| [ExciseProductType](Regulatory.Excise.ExciseStampOperationLines.md#exciseproducttype) | [ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable) | Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)` `Introduced in version 22.1.6.46` |
-| [ExciseStampLot](Regulatory.Excise.ExciseStampOperationLines.md#excisestamplot) | [ExciseStampLots](Regulatory.Excise.ExciseStampLots.md) (nullable) | The lot of the excise stamps. `Filter(multi eq)` |
+| [ExciseProductType](Regulatory.Excise.ExciseStampOperationLines.md#exciseproducttype) | [ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable) | Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. |
+| [ExciseStampLot](Regulatory.Excise.ExciseStampOperationLines.md#excisestamplot) | [ExciseStampLots](Regulatory.Excise.ExciseStampLots.md) (nullable) | The lot of the excise stamps. |
 | [ExciseStampOperation](Regulatory.Excise.ExciseStampOperationLines.md#excisestampoperation) | [ExciseStampOperations](Regulatory.Excise.ExciseStampOperations.md) | The <see cref="ExciseStamp<br />Operation"/> to which this ExciseStampOperationLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ParentDocument](Regulatory.Excise.ExciseStampOperationLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.6.32` |
-| [Product](Regulatory.Excise.ExciseStampOperationLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product for which the operation is applied. When is null then there is no product yet. `Filter(multi eq)` |
+| [ParentDocument](Regulatory.Excise.ExciseStampOperationLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. NULL when the current line does not execute another line. |
+| [Product](Regulatory.Excise.ExciseStampOperationLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product for which the operation is applied. When is NULL then there is no product yet. |
 
 
 ## System Attributes
@@ -80,7 +89,7 @@ Front-End Recalc Expressions:
 `Format( "{0}", Convert( ( ( Convert( Parse( obj.StartNumber), Nullable`1) + Convert( obj.Quantity, Nullable`1)) - Convert( Convert( 1, Int64), Nullable`1)), Object)).PadLeft( obj.StartNumber.Trim( ).Length, 0)`
 ### LineNo
 
-Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines. `Required`
+Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.
 
 Type: **int32**  
 Category: **System**  
@@ -106,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 22.1.6.32`
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -116,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The number of excise stamps that are processed with the current operation. `Default(0)`
+The number of excise stamps that are processed with the current operation.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -184,7 +193,7 @@ Show in UI: **ShownByDefault**
 
 ### ExciseProductType
 
-Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)` `Introduced in version 22.1.6.46`
+Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen.
 
 Type: **[ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable)**  
 Category: **System**  
@@ -195,7 +204,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.Product != null), obj.Product.ExciseProductType, null)`
 ### ExciseStampLot
 
-The lot of the excise stamps. `Filter(multi eq)`
+The lot of the excise stamps.
 
 Type: **[ExciseStampLots](Regulatory.Excise.ExciseStampLots.md) (nullable)**  
 Indexed: **True**  
@@ -216,7 +225,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocument
 
-The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.6.32`
+The document, which the current line executes. NULL when the current line does not execute another line.
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
@@ -225,7 +234,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product for which the operation is applied. When is null then there is no product yet. `Filter(multi eq)`
+The product for which the operation is applied. When is NULL then there is no product yet.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  

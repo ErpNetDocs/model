@@ -122,27 +122,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact time (UTC) the product was counted. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+<td>The exact time (UTC) the product was counted</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information for the Count. <code>Introduced in version 24.1.5.37</code></td>
+<td>Additional information for the Count.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The counted quantity in the default measurement unit of the product. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The counted quantity in the default measurement unit of the product</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></td>
+<td>Quantity in the base measurement unit of the product.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
 </tr>
 </tbody>
 </table>
@@ -159,27 +159,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user who performed the count. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The user who performed the count</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product which is currently counted. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product which is currently counted</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit from the definition of the product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit from the definition of the product</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#reconciliation">Reconciliation</a></td>
 <td><a href="Logistics.Inventory.Reconciliations.html">Reconciliations</a></td>
-<td>The planned reconciliation for which to execute the current counting. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.51</code> <code>Owner</code></td>
+<td>The planned reconciliation for which to execute the current counting</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#warehousetransaction">WarehouseTransaction</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html">WarehouseTransactions</a> (nullable)</td>
-<td>The warehouse transaction with which the count has been recorded. Filled if the count information is loaded from the WMS module. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 24.1.5.37</code></td>
+<td>The warehouse transaction with which the count has been recorded. Filled if the count information is loaded from the WMS module.</td>
 </tr>
 </tbody>
 </table>
@@ -212,7 +212,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact time (UTC) the product was counted. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
+<p>The exact time (UTC) the product was counted</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -220,7 +220,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional information for the Count. <code>Introduced in version 24.1.5.37</code></p>
+<p>Additional information for the Count.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -228,14 +228,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The counted quantity in the default measurement unit of the product. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The counted quantity in the default measurement unit of the product</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></p>
+<p>Quantity in the base measurement unit of the product.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -247,7 +247,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -281,32 +281,32 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user who performed the count. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The user who performed the count</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The product which is currently counted. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product which is currently counted</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit from the definition of the product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit from the definition of the product</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reconciliation">Reconciliation</h3>
-<p>The planned reconciliation for which to execute the current counting. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.51</code> <code>Owner</code></p>
+<p>The planned reconciliation for which to execute the current counting</p>
 <p>Type: <strong><a href="Logistics.Inventory.Reconciliations.html">Reconciliations</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousetransaction">WarehouseTransaction</h3>
-<p>The warehouse transaction with which the count has been recorded. Filled if the count information is loaded from the WMS module. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 24.1.5.37</code></p>
+<p>The warehouse transaction with which the count has been recorded. Filled if the count information is loaded from the WMS module.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseTransactions.html">WarehouseTransactions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

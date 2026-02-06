@@ -39,7 +39,7 @@ Aggregate Root:
 | [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#confirmedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items. 
 | [InvoicedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#invoicedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items. 
 | [InvoicedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#invoicedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items. 
-| [LineNo](Logistics.Procurement.PurchaseControlDocumentLines.md#lineno) | int32 | The consecutive line number within the control document. `Required` 
+| [LineNo](Logistics.Procurement.PurchaseControlDocumentLines.md#lineno) | int32 | The consecutive line number within the control document. 
 | [Notes](Logistics.Procurement.PurchaseControlDocumentLines.md#notes) | string (max) __nullable__ | Notes for this PurchaseControl<br />DocumentLine. 
 | [OrderedAmountBase](Logistics.Procurement.PurchaseControlDocumentLines.md#orderedamountbase) | decimal (14, 2) __nullable__ | The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items. 
 | [OrderedStandard<br />QuantityBase](Logistics.Procurement.PurchaseControlDocumentLines.md#orderedstandardquantitybase) | decimal (12, 3) __nullable__ | The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items. 
@@ -54,15 +54,15 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [<s>Document</s>](Logistics.Procurement.PurchaseControlDocumentLines.md#document) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | **OBSOLETE! Do not use!** The owner document. The <see cref="Purchase<br />ControlDocument"/> to which this PurchaseControl<br />DocumentLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` |
 | [<s>PurchaseControlDocument</s>](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | **OBSOLETE! Do not use!** The <see cref="Purchase<br />ControlDocument"/> to which this PurchaseControl<br />DocumentLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` |
-| [PurchaseInvoice](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The purchase invoice which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [PurchaseInvoiceLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoiceline) | [PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable) | The purchase invoice line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [<s>PurchaseOperationType</s>](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseoperationtype) | [PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md) (nullable) | **OBSOLETE! Do not use!** The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` |
-| [PurchaseOrder](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [PurchaseOrderLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseorderline) | [PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable) | The purchase order line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [PurchaseRequisition](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaserequisition) | [Requisitions](Logistics.Procurement.Requisitions.md) (nullable) | The purchase requisition which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [PurchaseRequisitionLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaserequisitionline) | [RequisitionLines](Logistics.Procurement.RequisitionLines.md) (nullable) | The purchase requisition line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [ReceivingOrder](Logistics.Procurement.PurchaseControlDocumentLines.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable) | The receiving order which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
-| [ReceivingOrderLine](Logistics.Procurement.PurchaseControlDocumentLines.md#receivingorderline) | [ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable) | The receiving order line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
+| [PurchaseInvoice](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The purchase invoice which is to be or was executed. Null when the data is unknown. |
+| [PurchaseInvoiceLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoiceline) | [PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable) | The purchase invoice line which is to be or was executed. Null when the data is unknown. |
+| [<s>PurchaseOperationType</s>](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseoperationtype) | [PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md) (nullable) | **OBSOLETE! Do not use!** The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user. |
+| [PurchaseOrder](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseorder) | [PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable) | The purchase order which is to be or was executed. Null when the data is unknown. |
+| [PurchaseOrderLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseorderline) | [PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable) | The purchase order line which is to be or was executed. Null when the data is unknown. |
+| [PurchaseRequisition](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaserequisition) | [Requisitions](Logistics.Procurement.Requisitions.md) (nullable) | The purchase requisition which is to be or was executed. Null when the data is unknown. |
+| [PurchaseRequisitionLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaserequisitionline) | [RequisitionLines](Logistics.Procurement.RequisitionLines.md) (nullable) | The purchase requisition line which is to be or was executed. Null when the data is unknown. |
+| [ReceivingOrder](Logistics.Procurement.PurchaseControlDocumentLines.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable) | The receiving order which is to be or was executed. Null when the data is unknown. |
+| [ReceivingOrderLine](Logistics.Procurement.PurchaseControlDocumentLines.md#receivingorderline) | [ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable) | The receiving order line which is to be or was executed. Null when the data is unknown. |
 
 
 ## System Attributes
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-The consecutive line number within the control document. `Required`
+The consecutive line number within the control document.
 
 Type: **int32**  
 Category: **System**  
@@ -252,7 +252,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseInvoice
 
-The purchase invoice which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The purchase invoice which is to be or was executed. Null when the data is unknown.
 
 Type: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable)**  
 Category: **System**  
@@ -261,7 +261,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseInvoiceLine
 
-The purchase invoice line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The purchase invoice line which is to be or was executed. Null when the data is unknown.
 
 Type: **[PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable)**  
 Category: **System**  
@@ -270,7 +270,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseOperationType
 
-**OBSOLETE! Do not use!** The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete`
+**OBSOLETE! Do not use!** The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. NULL when the operation type was not specified by the user.
 
 Type: **[PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md) (nullable)**  
 Category: **System**  
@@ -279,7 +279,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseOrder
 
-The purchase order which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The purchase order which is to be or was executed. Null when the data is unknown.
 
 Type: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
 Category: **System**  
@@ -288,7 +288,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseOrderLine
 
-The purchase order line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The purchase order line which is to be or was executed. Null when the data is unknown.
 
 Type: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
 Category: **System**  
@@ -297,7 +297,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseRequisition
 
-The purchase requisition which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The purchase requisition which is to be or was executed. Null when the data is unknown.
 
 Type: **[Requisitions](Logistics.Procurement.Requisitions.md) (nullable)**  
 Category: **System**  
@@ -306,7 +306,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseRequisitionLine
 
-The purchase requisition line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The purchase requisition line which is to be or was executed. Null when the data is unknown.
 
 Type: **[RequisitionLines](Logistics.Procurement.RequisitionLines.md) (nullable)**  
 Category: **System**  
@@ -315,7 +315,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceivingOrder
 
-The receiving order which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The receiving order which is to be or was executed. Null when the data is unknown.
 
 Type: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable)**  
 Category: **System**  
@@ -324,7 +324,7 @@ Show in UI: **ShownByDefault**
 
 ### ReceivingOrderLine
 
-The receiving order line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
+The receiving order line which is to be or was executed. Null when the data is unknown.
 
 Type: **[ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable)**  
 Category: **System**  

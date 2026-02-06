@@ -126,27 +126,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#newstate">NewState</a></td>
 <td><a href="General.Documents.DocumentStateChanges.html#newstate">NewState</a></td>
-<td>The new state after the change. <code>Required</code> <code>Filter(eq)</code></td>
+<td>The new state after the change.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#systeminitiated">SystemInitiated</a></td>
 <td>boolean</td>
-<td>Specifies whether the state change was caused by system process or from user action. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the state change was caused by system process or from user action.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#updatetime">UpdateTime</a></td>
 <td>datetime</td>
-<td>The time when the change took effect. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+<td>The time when the change took effect.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#updateuser">UpdateUser</a></td>
 <td>string (64)</td>
-<td>The login name of the user, who made the status change. <code>Required</code> <code>Filter(eq)</code></td>
+<td>The login name of the user, who made the status change</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#void">Void</a></td>
 <td>boolean</td>
-<td>True if the document is voided with this change. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
+<td>1 if the document is voided with this change</td>
 </tr>
 </tbody>
 </table>
@@ -163,12 +163,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#document">Document</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>The document which has changed state. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document which has changed state.</td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentStateChanges.html#userstatus">UserStatus</a></td>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The new user status after the change. <code>Filter(multi eq)</code></td>
+<td>The new user status after the change.</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="newstate">NewState</h3>
-<p>The new state after the change. <code>Required</code> <code>Filter(eq)</code></p>
+<p>The new state after the change.</p>
 <p>Type: <strong><a href="General.Documents.DocumentStateChanges.html#newstate">NewState</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>NewState</code>(General.Documents.DocumentStateChanges.md#newstate) data attribute<br>
@@ -248,7 +248,7 @@ Allowed Values (General.Documents.DocumentStateChangesRepository.NewState Enum M
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systeminitiated">SystemInitiated</h3>
-<p>Specifies whether the state change was caused by system process or from user action. <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the state change was caused by system process or from user action.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -256,14 +256,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>The time when the change took effect. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
+<p>The time when the change took effect.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>The login name of the user, who made the status change. <code>Required</code> <code>Filter(eq)</code></p>
+<p>The login name of the user, who made the status change</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="void">Void</h3>
-<p>True if the document is voided with this change. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></p>
+<p>1 if the document is voided with this change</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The document which has changed state. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document which has changed state.</p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -309,7 +309,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<p>The new user status after the change. <code>Filter(multi eq)</code></p>
+<p>The new user status after the change.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

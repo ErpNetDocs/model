@@ -174,7 +174,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#creditlimitoverride">CreditLimitOverride</a></td>
 <td>boolean</td>
-<td>Specifies whether the sales orders for rent and consumables that are created by this contract are allowed to be released even in the case of violations of credit limit or presence of overdue receivables. <code>Required</code> <code>Default(false)</code></td>
+<td>Specifies whether the sales orders for rent and consumables that are created by this contract are allowed to be released even in the case of violations of credit limit or presence of overdue receivables.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#documentdate">DocumentDate</a></td>
@@ -199,7 +199,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#enddate">EndDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Ending date (inclusive) of the lease contract. <code>Filter(multi eq;ge;le)</code></td>
+<td>Ending date (inclusive) of the lease contract</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#entityname">EntityName</a></td>
@@ -214,12 +214,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -254,7 +254,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#startdate">StartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Starting date of the lease contract. <code>Filter(multi eq;ge;le)</code></td>
+<td>Starting date of the lease contract</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#state">State</a></td>
@@ -316,7 +316,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#currency">Currency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency of the lease contract amounts. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency of the lease contract amounts</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#currencydirectory">CurrencyDirectory</a></td>
@@ -351,7 +351,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#lesseecustomer">LesseeCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a></td>
-<td>The customer record of the lessee. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The customer record of the lessee</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#masterdocument">MasterDocument</a></td>
@@ -366,7 +366,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>Payment account that is to be used for the receiving and returning guarantee payments. <code>Filter(multi eq)</code></td>
+<td>Payment account that is to be used for the receiving and returning guarantee payments.</td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.LeaseContracts.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -557,7 +557,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditlimitoverride">CreditLimitOverride</h3>
-<p>Specifies whether the sales orders for rent and consumables that are created by this contract are allowed to be released even in the case of violations of credit limit or presence of overdue receivables. <code>Required</code> <code>Default(false)</code></p>
+<p>Specifies whether the sales orders for rent and consumables that are created by this contract are allowed to be released even in the case of violations of credit limit or presence of overdue receivables.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -599,7 +599,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enddate">EndDate</h3>
-<p>Ending date (inclusive) of the lease contract. <code>Filter(multi eq;ge;le)</code></p>
+<p>Ending date (inclusive) of the lease contract</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -624,7 +624,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -632,7 +632,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -710,7 +710,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>Starting date of the lease contract. <code>Filter(multi eq;ge;le)</code></p>
+<p>Starting date of the lease contract</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -893,7 +893,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currency">Currency</h3>
-<p>The currency of the lease contract amounts. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency of the lease contract amounts</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -937,7 +937,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lesseecustomer">LesseeCustomer</h3>
-<p>The customer record of the lessee. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The customer record of the lessee</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -957,7 +957,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>Payment account that is to be used for the receiving and returning guarantee payments. <code>Filter(multi eq)</code></p>
+<p>Payment account that is to be used for the receiving and returning guarantee payments.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

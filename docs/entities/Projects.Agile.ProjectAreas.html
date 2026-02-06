@@ -122,32 +122,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#considerwiplimit">ConsiderWipLimit</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></td>
+<td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#description">Description</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>Description of the project area. <code>Filter(like)</code> <code>Introduced in version 25.1.1.48</code></td>
+<td>Description of the project area.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#inprogresswiplimit">InProgressWipLimit</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></td>
+<td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the project area is active for new projects. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Specifies whether the project area is active for new projects</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>Multi-language name of the project area. <code>Required</code> <code>Filter(like)</code></td>
+<td>Multi-language name of the project area</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#readywiplimit">ReadyWipLimit</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></td>
+<td>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.</td>
 </tr>
 </tbody>
 </table>
@@ -164,22 +164,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#primaryuser">PrimaryUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>Specified, when there is a primary user for the area. <code>Filter(multi eq)</code></td>
+<td>Specified, when there is a primary user for the area</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#project">Project</a></td>
 <td><a href="Projects.Agile.Projects.html">Projects</a> (nullable)</td>
-<td>Specified for local project areas. null means that the area is global and assignable for all projects. <code>Filter(multi eq)</code></td>
+<td>Specified for local project areas. NULL means that the area is global and assignable for all projects.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#projectgroup">ProjectGroup</a></td>
 <td><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</td>
-<td>Specified for areas that are applicable to all projects within the project group. null means the area is global, unless it is linked to a specific project. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></td>
+<td>Specified for areas that are applicable to all projects within the project group. NULL means the area is global, unless it is linked to a specific project.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.ProjectAreas.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.Social.Groups.html">Groups</a> (nullable)</td>
-<td>The working group responsible for discussing and collaborating on this project area. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.32</code></td>
+<td>The working group responsible for discussing and collaborating on this project area.</td>
 </tr>
 </tbody>
 </table>
@@ -227,28 +227,28 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="considerwiplimit">ConsiderWipLimit</h3>
-<p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></p>
+<p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="description">Description</h3>
-<p>Description of the project area. <code>Filter(like)</code> <code>Introduced in version 25.1.1.48</code></p>
+<p>Description of the project area.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="inprogresswiplimit">InProgressWipLimit</h3>
-<p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></p>
+<p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the project area is active for new projects. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Specifies whether the project area is active for new projects</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -256,14 +256,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multi-language name of the project area. <code>Required</code> <code>Filter(like)</code></p>
+<p>Multi-language name of the project area</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="readywiplimit">ReadyWipLimit</h3>
-<p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state. <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.1.38</code></p>
+<p>When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -313,27 +313,27 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="primaryuser">PrimaryUser</h3>
-<p>Specified, when there is a primary user for the area. <code>Filter(multi eq)</code></p>
+<p>Specified, when there is a primary user for the area</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="project">Project</h3>
-<p>Specified for local project areas. null means that the area is global and assignable for all projects. <code>Filter(multi eq)</code></p>
+<p>Specified for local project areas. NULL means that the area is global and assignable for all projects.</p>
 <p>Type: <strong><a href="Projects.Agile.Projects.html">Projects</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectgroup">ProjectGroup</h3>
-<p>Specified for areas that are applicable to all projects within the project group. null means the area is global, unless it is linked to a specific project. <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.49</code></p>
+<p>Specified for areas that are applicable to all projects within the project group. NULL means the area is global, unless it is linked to a specific project.</p>
 <p>Type: <strong><a href="Projects.Agile.ProjectGroups.html">ProjectGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>The working group responsible for discussing and collaborating on this project area. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.32</code></p>
+<p>The working group responsible for discussing and collaborating on this project area.</p>
 <p>Type: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

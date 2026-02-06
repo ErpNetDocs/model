@@ -1325,6 +1325,8 @@
     href: Sys_Domains.md
   - name: Sys_Entities
     href: Sys_Entities.md
+  - name: Sys_Extensions
+    href: Sys_Extensions.md
   - name: Sys_External_Applications
     href: Sys_External_Applications.md
   - name: Sys_Filter

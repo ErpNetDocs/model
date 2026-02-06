@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (16) __nullable__ | Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq;like)` `ORD` 
-| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime __nullable__ | End date of the employee contract, null if the contract is still valid. `Filter(ge;le)` 
-| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown. `Filter(ge;le)` 
-| [IsActive](General.Contacts.CompanyEmployees.md#isactive) | boolean | Indicates whether the current Employee is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22` 
+| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (16) __nullable__ | Number or code of this company employee's contract. One employee can have more than one contract with particular company. 
+| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime __nullable__ | End date of the employee contract, null if the contract is still valid. 
+| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown. 
+| [IsActive](General.Contacts.CompanyEmployees.md#isactive) | boolean | Indicates whether the current Employee is active. 
 | [Notes](General.Contacts.CompanyEmployees.md#notes) | string (254) __nullable__ | Notes for this CompanyEmployee. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyEmployees.md#company) | [Companies](General.Contacts.Companies.md) | The company for which this employee works. `Required` `Filter(multi eq)` |
-| [CompanyDepartment](General.Contacts.CompanyEmployees.md#companydepartment) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The department in which this employee is working. null means this information is unknown. `Filter(multi eq)` |
-| [Person](General.Contacts.CompanyEmployees.md#person) | [Persons](General.Contacts.Persons.md) | The personal data of the employee. `Required` `Filter(multi eq)` `Owner` |
+| [Company](General.Contacts.CompanyEmployees.md#company) | [Companies](General.Contacts.Companies.md) | The company for which this employee works. |
+| [CompanyDepartment](General.Contacts.CompanyEmployees.md#companydepartment) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The department in which this employee is working. NULL means this information is unknown |
+| [Person](General.Contacts.CompanyEmployees.md#person) | [Persons](General.Contacts.Persons.md) | The personal data of the employee. |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### ContractCode
 
-Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq;like)` `ORD`
+Number or code of this company employee's contract. One employee can have more than one contract with particular company.
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Back-End Default Expression:
 
 ### ContractEndDate
 
-End date of the employee contract, null if the contract is still valid. `Filter(ge;le)`
+End date of the employee contract, null if the contract is still valid.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ContractStartDate
 
-Start date of the employee contract. Null if it is unkown. `Filter(ge;le)`
+Start date of the employee contract. Null if it is unkown.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Employee is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22`
+Indicates whether the current Employee is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **HiddenByDefault**
 
 ### Company
 
-The company for which this employee works. `Required` `Filter(multi eq)`
+The company for which this employee works.
 
 Type: **[Companies](General.Contacts.Companies.md)**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### CompanyDepartment
 
-The department in which this employee is working. null means this information is unknown. `Filter(multi eq)`
+The department in which this employee is working. NULL means this information is unknown
 
 Type: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### Person
 
-The personal data of the employee. `Required` `Filter(multi eq)` `Owner`
+The personal data of the employee.
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  

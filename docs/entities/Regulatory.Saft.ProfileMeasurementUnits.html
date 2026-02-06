@@ -94,6 +94,11 @@ Repository: Regulatory.Saft.ProfileMeasurementUnits<br>
 Base Table: Saft_Profile_Measurement_Units<br>
 Introduced In Version: 26.2.0.74<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Saft.ProfileMeasurementUnits<br>
+New name: Regulatory.Saft.ProfileMeasurementUnits<br>
+Version: 26.2.1.17<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {Profile.Name}<br>
 Search Members: Profile.Name<br>
@@ -122,7 +127,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileMeasurementUnits.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information or comments for this entry. <code>Filter(like)</code></td>
+<td>Additional information or comments for this entry.</td>
 </tr>
 </tbody>
 </table>
@@ -139,17 +144,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileMeasurementUnits.html#measurementunit">MeasurementUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>Measurement unit used for this SAFT profile. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Measurement unit used for this SAFT profile.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileMeasurementUnits.html#measurementunitcodeentry">MeasurementUnitCodeEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
-<td>Measurement unit code used when generating the SAFT file. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Measurement unit code used when generating the SAFT file.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileMeasurementUnits.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>Identifier of the SAFT profile associated with this measurement unit. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Identifier of the SAFT profile associated with this measurement unit.</td>
 </tr>
 </tbody>
 </table>
@@ -182,7 +187,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="notes">Notes</h3>
-<p>Additional information or comments for this entry. <code>Filter(like)</code></p>
+<p>Additional information or comments for this entry.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -212,21 +217,21 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="measurementunit">MeasurementUnit</h3>
-<p>Measurement unit used for this SAFT profile. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Measurement unit used for this SAFT profile.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="measurementunitcodeentry">MeasurementUnitCodeEntry</h3>
-<p>Measurement unit code used when generating the SAFT file. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Measurement unit code used when generating the SAFT file.</p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>Identifier of the SAFT profile associated with this measurement unit. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Identifier of the SAFT profile associated with this measurement unit.</p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

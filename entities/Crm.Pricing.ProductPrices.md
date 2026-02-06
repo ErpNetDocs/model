@@ -41,32 +41,32 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Pricing.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price. `Filter(eq;ge;le)` 
-| [IsActive](Crm.Pricing.ProductPrices.md#isactive) | boolean | Indicates whether the current Product price is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [MaxQuantity](Crm.Pricing.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [MinQuantity](Crm.Pricing.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
+| [FromDate](Crm.Pricing.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price 
+| [IsActive](Crm.Pricing.ProductPrices.md#isactive) | boolean | Indicates whether the current Product price is active. 
+| [MaxQuantity](Crm.Pricing.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit 
+| [MinQuantity](Crm.Pricing.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit) 
 | [Notes](Crm.Pricing.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. `Filter(like)` 
-| [Price](Crm.Pricing.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [PriceQuantity](Crm.Pricing.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
-| [Priority](Crm.Pricing.ProductPrices.md#priority) | [Priority](Crm.Pricing.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied. `Required` `Default(2)` `Filter(multi eq)` 
-| [ThruDate](Crm.Pricing.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)` 
+| [Price](Crm.Pricing.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity 
+| [PriceQuantity](Crm.Pricing.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified 
+| [Priority](Crm.Pricing.ProductPrices.md#priority) | [Priority](Crm.Pricing.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied. 
+| [ThruDate](Crm.Pricing.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Campaign](Crm.Pricing.ProductPrices.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
-| [Currency](Crm.Pricing.ProductPrices.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the price. `Required` `Filter(multi eq)` |
-| [Customer](Crm.Pricing.ProductPrices.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)` |
-| [DistributionChannel](Crm.Pricing.ProductPrices.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Use the price only when selling through the specified channel. `Filter(multi eq)` |
-| [EnterpriseCompany](Crm.Pricing.ProductPrices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the sales document must be in the specified enterprise company. `Filter(multi eq)` |
-| [EnterpriseCompanyLocation](Crm.Pricing.ProductPrices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)` |
-| [PriceList](Crm.Pricing.ProductPrices.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | When not null, specifies that the sales document must have the specified price list. `Filter(multi eq)` |
-| [PriceQuantityMeasurement<br />Unit](Crm.Pricing.ProductPrices.md#pricequantitymeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Price_Quantity. `Required` `Filter(multi eq)` |
-| [PriceType](Crm.Pricing.ProductPrices.md#pricetype) | [PriceTypes](Crm.Pricing.PriceTypes.md) (nullable) | Price type of the current product price. The price types are used to set additional priority condition for the prices. `Filter(multi eq)` |
-| [Product](Crm.Pricing.ProductPrices.md#product) | [Products](General.Products.Products.md) | The product for which a price will be defined. `Required` `Filter(multi eq)` `FilterableReference` |
-| [ShipToCustomer](Crm.Pricing.ProductPrices.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. `Filter(multi eq)` |
-| [TargetGroup](Crm.Pricing.ProductPrices.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. `Filter(multi eq)` |
+| [Campaign](Crm.Pricing.ProductPrices.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. |
+| [Currency](Crm.Pricing.ProductPrices.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the price |
+| [Customer](Crm.Pricing.ProductPrices.md#customer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not NULL, specifies that the customer of the sales document must be the specified customer. |
+| [DistributionChannel](Crm.Pricing.ProductPrices.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Use the price only when selling through the specified channel |
+| [EnterpriseCompany](Crm.Pricing.ProductPrices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not NULL, specifies that the sales document must be in the specified enterprise company. |
+| [EnterpriseCompanyLocation](Crm.Pricing.ProductPrices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, specifies that the sales document must be of the specified enterprise company location. |
+| [PriceList](Crm.Pricing.ProductPrices.md#pricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | When not NULL, specifies that the sales document must have the specified price list. |
+| [PriceQuantityMeasurement<br />Unit](Crm.Pricing.ProductPrices.md#pricequantitymeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Price_Quantity |
+| [PriceType](Crm.Pricing.ProductPrices.md#pricetype) | [PriceTypes](Crm.Pricing.PriceTypes.md) (nullable) | Price type of the current product price. The price types are used to set additional priority condition for the prices. |
+| [Product](Crm.Pricing.ProductPrices.md#product) | [Products](General.Products.Products.md) | The product for which a price will be defined |
+| [ShipToCustomer](Crm.Pricing.ProductPrices.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. |
+| [TargetGroup](Crm.Pricing.ProductPrices.md#targetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group. |
 
 
 ## System Attributes
@@ -85,7 +85,7 @@ Aggregate Tree
 
 ### FromDate
 
-Starting date of validity of the price. `Filter(eq;ge;le)`
+Starting date of validity of the price
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsActive
 
-Indicates whether the current Product price is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Product price is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### MaxQuantity
 
-Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
+Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **HiddenByDefault**
 
 ### MinQuantity
 
-Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
+Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **HiddenByDefault**
 
 ### Price
 
-Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)`
+Price in the specified currency and for the specified quantity
 
 Type: **[Amount (13, 5)](../data-types.md#amount)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceQuantity
 
-The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)` `Filter(ge;le)`
+The quantity of the product for which the price is specified
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority of the price comparative to other prices. Only the highest priority price is applied. `Required` `Default(2)` `Filter(multi eq)`
+Priority of the price comparative to other prices. Only the highest priority price is applied.
 
 Type: **[Priority](Crm.Pricing.ProductPrices.md#priority)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)`
+Ending date (inclusive) of the validity of the price
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -253,7 +253,7 @@ Show in UI: **HiddenByDefault**
 
 ### Campaign
 
-Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
+Тhe marketing campaign to which the current definition belongs.
 
 Type: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
 Category: **System**  
@@ -262,7 +262,7 @@ Show in UI: **ShownByDefault**
 
 ### Currency
 
-The currency of the price. `Required` `Filter(multi eq)`
+The currency of the price
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -271,7 +271,7 @@ Show in UI: **ShownByDefault**
 
 ### Customer
 
-When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)`
+When not NULL, specifies that the customer of the sales document must be the specified customer.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Indexed: **True**  
@@ -281,7 +281,7 @@ Show in UI: **ShownByDefault**
 
 ### DistributionChannel
 
-Use the price only when selling through the specified channel. `Filter(multi eq)`
+Use the price only when selling through the specified channel
 
 Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 Category: **System**  
@@ -290,7 +290,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-When not null, specifies that the sales document must be in the specified enterprise company. `Filter(multi eq)`
+When not NULL, specifies that the sales document must be in the specified enterprise company.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -299,7 +299,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)`
+When set, specifies that the sales document must be of the specified enterprise company location.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
@@ -310,7 +310,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( obj.EnterpriseCompanyLocation != null) AndAlso ( obj.EnterpriseCompanyLocation.Company != obj.EnterpriseCompany)), null, obj.EnterpriseCompanyLocation.Company)`
 ### PriceList
 
-When not null, specifies that the sales document must have the specified price list. `Filter(multi eq)`
+When not NULL, specifies that the sales document must have the specified price list.
 
 Type: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
 Indexed: **True**  
@@ -320,7 +320,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceQuantityMeasurementUnit
 
-The measurement unit of Price_Quantity. `Required` `Filter(multi eq)`
+The measurement unit of Price_Quantity
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -331,7 +331,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.Product != null), obj.Product.MeasurementUnit, obj.PriceQuantityMeasurementUnit)`
 ### PriceType
 
-Price type of the current product price. The price types are used to set additional priority condition for the prices. `Filter(multi eq)`
+Price type of the current product price. The price types are used to set additional priority condition for the prices.
 
 Type: **[PriceTypes](Crm.Pricing.PriceTypes.md) (nullable)**  
 Category: **System**  
@@ -340,7 +340,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product for which a price will be defined. `Required` `Filter(multi eq)` `FilterableReference`
+The product for which a price will be defined
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -351,7 +351,7 @@ Show in UI: **ShownByDefault**
 
 ### ShipToCustomer
 
-When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. `Filter(multi eq)`
+When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -362,7 +362,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ShipToCustomer.Party.ParentParty != obj.Customer), null, obj.ShipToCustomer)`
 ### TargetGroup
 
-When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. `Filter(multi eq)`
+When not NULL, specifies a criteria, which is matched only when the customer of the sales document is included in the group.
 
 Type: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 Category: **System**  

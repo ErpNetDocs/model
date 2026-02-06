@@ -196,12 +196,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#expecteddate">ExpectedDate</a></td>
 <td>date</td>
-<td>Date, when the requisition is expected to be fulfilled. <code>Required</code> <code>Default(Today)</code> <code>Filter(multi eq;ge;le)</code></td>
+<td>Date, when the requisition is expected to be fulfilled.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#expectedtime">ExpectedTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>Time, when the requisition is expected to be executed. null when the time is unknown. <code>Filter(eq;ge;le)</code></td>
+<td>Time, when the requisition is expected to be executed. NULL when the time is unknown.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#fullstate">FullState</a></td>
@@ -241,7 +241,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#requisitiontype">RequisitionType</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#requisitiontype">RequisitionType</a></td>
-<td>The type of the requisition. I=Inbound; O=Outbound. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of the requisition. I=Inbound; O=Outbound.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#state">State</a></td>
@@ -378,7 +378,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse, for which the operation is requested. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The warehouse, for which the operation is requested.</td>
 </tr>
 </tbody>
 </table>
@@ -577,7 +577,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="expecteddate">ExpectedDate</h3>
-<p>Date, when the requisition is expected to be fulfilled. <code>Required</code> <code>Default(Today)</code> <code>Filter(multi eq;ge;le)</code></p>
+<p>Date, when the requisition is expected to be fulfilled.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -585,7 +585,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="expectedtime">ExpectedTime</h3>
-<p>Time, when the requisition is expected to be executed. null when the time is unknown. <code>Filter(eq;ge;le)</code></p>
+<p>Time, when the requisition is expected to be executed. NULL when the time is unknown.</p>
 <p>Type: <strong>time <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -669,7 +669,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="requisitiontype">RequisitionType</h3>
-<p>The type of the requisition. I=Inbound; O=Outbound. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of the requisition. I=Inbound; O=Outbound.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseRequisitions.html#requisitiontype">RequisitionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>RequisitionType</code>(Logistics.Wms.WarehouseRequisitions.md#requisitiontype) data attribute<br>
@@ -968,7 +968,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse, for which the operation is requested. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The warehouse, for which the operation is requested.</p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

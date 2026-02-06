@@ -94,6 +94,11 @@ Repository: Regulatory.Intrastat.Declarations<br>
 Inherited From: <a href="General.Documents.Documents.html">General.Documents.Documents</a><br>
 Base Table: Its_Declarations<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Intrastat.Declarations<br>
+New name: Regulatory.Intrastat.Declarations<br>
+Version: 26.2.1.4<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {DocumentType.TypeName:T} {DocumentNo}{StateTagsAttribute}<br>
 Search Members: DocumentNo<br>
@@ -170,12 +175,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a></td>
 <td><a href="Regulatory.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a></td>
-<td>Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(eq)</code></td>
+<td>Specifies whether this is a regular or corrective declaration</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#declarestatisticalvalues">DeclareStatisticalValues</a></td>
 <td>boolean</td>
-<td>Does the declaration contain statistical values? true=Yes; false=No. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+<td>Does the declaration contain statistical values? 1=Yes; 0=No</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#documentdate">DocumentDate</a></td>
@@ -210,17 +215,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a></td>
 <td><a href="Regulatory.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a></td>
-<td>The flow direction of the goods. A=Arrival, D=Dispatch. <code>Required</code> <code>Filter(eq)</code></td>
+<td>The flow direction of the goods</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -235,7 +240,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#postalcode">PostalCode</a></td>
 <td>string (64)</td>
-<td>This field contains the postal code part of the submitter’s address. <code>Required</code></td>
+<td>Тhe postal code part of the submitter’s addres</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#readonly">ReadOnly</a></td>
@@ -255,12 +260,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a></td>
 <td><a href="Regulatory.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a></td>
-<td>Month, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Month, for which the declaration is prepared</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#referenceyear">ReferenceYear</a></td>
 <td>int16</td>
-<td>Year, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Year, for which the declaration is prepared</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#releasetime">ReleaseTime</a></td>
@@ -327,12 +332,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#authorizedperson">AuthorizedPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The authorized person who submits the intrastat declaration. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
+<td>The authorized person who submits the intrastat declaration.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#basecurrency">BaseCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.55</code></td>
+<td>The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#currencydirectory">CurrencyDirectory</a></td>
@@ -397,7 +402,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#thirddeclaringparty">ThirdDeclaringParty</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a></td>
-<td>Third declaring party, which holds the electronic signature. This is the company which submits the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
+<td>Third declaring party, which holds the electronic signature. This is the company which submits the declaration.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Intrastat.Declarations.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -568,7 +573,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="declarationfunction">DeclarationFunction</h3>
-<p>Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(eq)</code></p>
+<p>Specifies whether this is a regular or corrective declaration</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.Declarations.html#declarationfunction">DeclarationFunction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DeclarationFunction</code>(Regulatory.Intrastat.Declarations.md#declarationfunction) data attribute<br>
@@ -596,7 +601,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Regular</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="declarestatisticalvalues">DeclareStatisticalValues</h3>
-<p>Does the declaration contain statistical values? true=Yes; false=No. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
+<p>Does the declaration contain statistical values? 1=Yes; 0=No</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -654,7 +659,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="goodsflowdirection">GoodsFlowDirection</h3>
-<p>The flow direction of the goods. A=Arrival, D=Dispatch. <code>Required</code> <code>Filter(eq)</code></p>
+<p>The flow direction of the goods</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.Declarations.html#goodsflowdirection">GoodsFlowDirection</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>GoodsFlowDirection</code>(Regulatory.Intrastat.Declarations.md#goodsflowdirection) data attribute<br>
@@ -681,7 +686,7 @@ Allowed Values (Regulatory.Intrastat.DeclarationsRepository.GoodsFlowDirection E
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -689,7 +694,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -736,7 +741,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="postalcode">PostalCode</h3>
-<p>This field contains the postal code part of the submitter’s address. <code>Required</code></p>
+<p>Тhe postal code part of the submitter’s addres</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -768,7 +773,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="referencemonth">ReferenceMonth</h3>
-<p>Month, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Month, for which the declaration is prepared</p>
 <p>Type: <strong><a href="Regulatory.Intrastat.Declarations.html#referencemonth">ReferenceMonth</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ReferenceMonth</code>(Regulatory.Intrastat.Declarations.md#referencemonth) data attribute<br>
@@ -835,7 +840,7 @@ Allowed Values (Regulatory.Intrastat.DeclarationsRepository.ReferenceMonth Enum 
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referenceyear">ReferenceYear</h3>
-<p>Year, for which the declaration is prepared. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Year, for which the declaration is prepared</p>
 <p>Type: <strong>int16</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1023,13 +1028,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="authorizedperson">AuthorizedPerson</h3>
-<p>The authorized person who submits the intrastat declaration. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
+<p>The authorized person who submits the intrastat declaration.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="basecurrency">BaseCurrency</h3>
-<p>The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.55</code></p>
+<p>The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1116,7 +1121,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="thirddeclaringparty">ThirdDeclaringParty</h3>
-<p>Third declaring party, which holds the electronic signature. This is the company which submits the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
+<p>Third declaring party, which holds the electronic signature. This is the company which submits the declaration.</p>
 <p>Type: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

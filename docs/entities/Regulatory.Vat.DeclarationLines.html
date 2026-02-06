@@ -94,6 +94,11 @@ Repository: Regulatory.Vat.DeclarationLines<br>
 Base Table: VAT_Declaration_Lines<br>
 Introduced In Version: 22.1.4.22<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Vat.DeclarationLines<br>
+New name: Regulatory.Vat.DeclarationLines<br>
+Version: 26.2.0.99<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {LineNo}. {Declaration.DocumentNo} {Declaration.DocumentType.TypeName:T}<br>
 Search Members: Declaration.DocumentNo<br>
@@ -121,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationLines.html#amountbase">AmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Declared value in base currency. <code>Currency: Declaration.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Declared value in base currency.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number within the document. <code>Required</code></td>
+<td>Consecutive line number within the document.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationLines.html#notes">Notes</a></td>
@@ -148,7 +153,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationLines.html#boxtype">BoxType</a></td>
 <td><a href="Regulatory.Vat.BoxTypes.html">BoxTypes</a></td>
-<td>Type of box in VAT declaration. . <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Type of box in VAT declaration.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.DeclarationLines.html#declaration">Declaration</a></td>
@@ -191,7 +196,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amountbase">AmountBase</h3>
-<p>Declared value in base currency. <code>Currency: Declaration.BaseCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Declared value in base currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -199,7 +204,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number within the document. <code>Required</code></p>
+<p>Consecutive line number within the document.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -240,7 +245,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="boxtype">BoxType</h3>
-<p>Type of box in VAT declaration. . <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Type of box in VAT declaration.</p>
 <p>Type: <strong><a href="Regulatory.Vat.BoxTypes.html">BoxTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

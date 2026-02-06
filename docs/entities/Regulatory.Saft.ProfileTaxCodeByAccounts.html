@@ -94,6 +94,11 @@ Repository: Regulatory.Saft.ProfileTaxCodeByAccounts<br>
 Base Table: Saft_Profile_Tax_Code_By_Accounts<br>
 Introduced In Version: 26.2.0.85<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Saft.ProfileTaxCodeByAccounts<br>
+New name: Regulatory.Saft.ProfileTaxCodeByAccounts<br>
+Version: 26.2.1.17<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {Profile.Name}<br>
 Search Members: Profile.Name<br>
@@ -122,12 +127,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#custompropertyvalue">CustomPropertyValue</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The specific value of the selected analytic custom property for which this mapping applies. <code>Filter(like)</code></td>
+<td>The specific value of the selected analytic custom property for which this mapping applies.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). <code>Filter(like)</code></td>
+<td>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).</td>
 </tr>
 </tbody>
 </table>
@@ -144,27 +149,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#account">Account</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Accounts</a></td>
-<td>The ERP.net general ledger account for which the SAF-T tax code is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The ERP.net general ledger account for which the SAF-T tax code is defined.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#customproperty">CustomProperty</a></td>
 <td><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</td>
-<td>The account analytic custom property used to differentiate the applicable SAF-T tax code. <code>Filter(multi eq)</code></td>
+<td>The account analytic custom property used to differentiate the applicable SAF-T tax code.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></td>
+<td>The ERP.net document type under which this mapping rule should be applied.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The SAF-T profile this mapping belongs to.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByAccounts.html#taxcodeentry">TaxCodeEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
-<td>The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met.</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="custompropertyvalue">CustomPropertyValue</h3>
-<p>The specific value of the selected analytic custom property for which this mapping applies. <code>Filter(like)</code></p>
+<p>The specific value of the selected analytic custom property for which this mapping applies.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -205,7 +210,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). <code>Filter(like)</code></p>
+<p>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -235,26 +240,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>
-<p>The ERP.net general ledger account for which the SAF-T tax code is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The ERP.net general ledger account for which the SAF-T tax code is defined.</p>
 <p>Type: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customproperty">CustomProperty</h3>
-<p>The account analytic custom property used to differentiate the applicable SAF-T tax code. <code>Filter(multi eq)</code></p>
+<p>The account analytic custom property used to differentiate the applicable SAF-T tax code.</p>
 <p>Type: <strong><a href="Systems.Bpm.CustomProperties.html">CustomProperties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></p>
+<p>The ERP.net document type under which this mapping rule should be applied.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The SAF-T profile this mapping belongs to.</p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -262,7 +267,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxcodeentry">TaxCodeEntry</h3>
-<p>The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met.</p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

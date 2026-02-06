@@ -126,82 +126,82 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#activefrom">ActiveFrom</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. <code>Filter(ge;le)</code> <code>Introduced in version 18.2</code></td>
+<td>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#activetill">ActiveTill</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. <code>Filter(ge;le)</code> <code>Introduced in version 18.2</code></td>
+<td>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#authoritymaximumladenmasskg">AuthorityMaximum<br>LadenMassKg</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Maximum permissible laden mass, as determined by the registration authority.</td>
+<td>Maximum permissible laden mass, as determined by the registration authority</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#crewcount">CrewCount</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. <code>Default(1)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Crew members count. For road vehicles = 1; for trailers, coaches and wagons = 0; air and water vehicles may have higher counts</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#engineidentificationnumber">EngineIdentificationNumber</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>Engine identification number. <code>Filter(eq;like)</code></td>
+<td>Serial number of the engine</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#enginepowerhp">EnginePowerhp</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. <code>Filter(eq;ge;le)</code></td>
+<td>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#enginesizecc">EngineSizecc</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). <code>Filter(eq;ge;le)</code></td>
+<td>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#fuelcapacity">FuelCapacity</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Maximum fuel capacity of the engine or the battery in the fuel measurement unit.</td>
+<td>Maximum fuel capacity of the engine or the battery in the fuel measurement unit</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#fuelcompsumption">FuelCompsumption</a></td>
 <td>decimal (7, 1) <strong>nullable</strong></td>
-<td>Average fuel consumption in the fuel measurement unit for 1 operational unit.</td>
+<td>Average fuel consumption in the fuel measurement unit for 1 operational unit</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#fueltype">FuelType</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. <code>Filter(eq;like)</code></td>
+<td>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True if the vehicle is still owned and managed by the enterprise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+<td>True if the vehicle is still owned and managed by the enterprise.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#issuingauthority">IssuingAuthority</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. <code>Filter(eq;like)</code></td>
+<td>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#make">Make</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>The name of the manufacturer of the vehicle. null means that the value is unknown. <code>Filter(eq;like)</code></td>
+<td>The name of the manufacturer of the vehicle. NULL means that the value is unknown</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#manufactureyear">ManufactureYear</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. <code>Filter(eq;ge;le)</code></td>
+<td>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#maximumspeedkmh">MaximumSpeedKmH</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Maximum speed in km/h.</td>
+<td>Maximum speed in km/h</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#model">Model</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>The model of the vehicle. <code>Filter(eq;like)</code></td>
+<td>The model of the vehicle</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#notes">Notes</a></td>
@@ -211,47 +211,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#primarycolor">PrimaryColor</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>The primary color of the vehicle. null means that the value is unknown or not applicable. <code>Filter(eq;like)</code></td>
+<td>The primary color of the vehicle. NULL means that the value is unknown or not applicable</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#seatingplacescount">SeatingPlacesCount</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of seating places, excluding driver. <code>Filter(eq;ge;le)</code></td>
+<td>Number of seating places, excluding driver</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#standingplacescount">StandingPlacesCount</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of standing places, if applicable.</td>
+<td>Number of standing places, if applicable</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#technicalmaximumladenmasskg">TechnicalMaximum<br>LadenMassKg</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Maximum technically permissible laden mass in kg.</td>
+<td>Maximum technically permissible laden mass in kg</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#trainsetmaximumladenmasskg">TrainsetMaximumLadenMassKg</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Maximum permissible laden mass of a whole trainset, including the vehicle.</td>
+<td>Maximum permissible laden mass of a whole trainset, including the vehicle</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#vehicleidentificationnumber">VehicleIdentification<br>Number</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>VIN, aka Chassis number. <code>Filter(eq;like)</code></td>
+<td>Serial number of the vehicle's chassis</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#vehiclemasskg">VehicleMassKg</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Vehicle own mass in kg.</td>
+<td>Vehicle own mass in kg</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#vehicleregistrationnumber">VehicleRegistrationNumber</a></td>
 <td>string (16)</td>
-<td>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The registration plate number. Can be numeric or alphanumeric code. It should be unique value.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#vehicletype">VehicleType</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. <code>Filter(eq;like)</code></td>
+<td>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</td>
 </tr>
 </tbody>
 </table>
@@ -268,32 +268,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The Enterprise Company that manages thе Vehicle. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.79</code></td>
+<td>The Enterprise Company that manages thе Vehicle.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#fuelmeasurementunit">FuelMeasurementUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. <code>Filter(multi eq)</code></td>
+<td>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#maintenanceprofile">MaintenanceProfile</a></td>
 <td><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a> (nullable)</td>
-<td>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</td>
-<td>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.74</code></td>
+<td>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#operationalmeasurementunit">OperationalMeasurementUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. <code>Filter(multi eq)</code></td>
+<td>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#ownerparty">OwnerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>Vehicle owner. <code>Filter(multi eq)</code></td>
+<td>Vehicle owner</td>
 </tr>
 </tbody>
 </table>
@@ -363,28 +363,28 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activefrom">ActiveFrom</h3>
-<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. <code>Filter(ge;le)</code> <code>Introduced in version 18.2</code></p>
+<p>The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="activetill">ActiveTill</h3>
-<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. <code>Filter(ge;le)</code> <code>Introduced in version 18.2</code></p>
+<p>The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="authoritymaximumladenmasskg">AuthorityMaximumLadenMassKg</h3>
-<p>Maximum permissible laden mass, as determined by the registration authority.</p>
+<p>Maximum permissible laden mass, as determined by the registration authority</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="crewcount">CrewCount</h3>
-<p>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. <code>Default(1)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Crew members count. For road vehicles = 1; for trailers, coaches and wagons = 0; air and water vehicles may have higher counts</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -392,7 +392,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="engineidentificationnumber">EngineIdentificationNumber</h3>
-<p>Engine identification number. <code>Filter(eq;like)</code></p>
+<p>Serial number of the engine</p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -400,35 +400,35 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enginepowerhp">EnginePowerhp</h3>
-<p>Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. <code>Filter(eq;ge;le)</code></p>
+<p>Engine output power in horse power. NULL means that the value is unknown or not applicable for this type of engine</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enginesizecc">EngineSizecc</h3>
-<p>Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). <code>Filter(eq;ge;le)</code></p>
+<p>Engine size in cubic centimeters (cm3). NULL means that the value is unknown or not applicable for this type of engine (e.g. electric motors)</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fuelcapacity">FuelCapacity</h3>
-<p>Maximum fuel capacity of the engine or the battery in the fuel measurement unit.</p>
+<p>Maximum fuel capacity of the engine or the battery in the fuel measurement unit</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fuelcompsumption">FuelCompsumption</h3>
-<p>Average fuel consumption in the fuel measurement unit for 1 operational unit.</p>
+<p>Average fuel consumption in the fuel measurement unit for 1 operational unit</p>
 <p>Type: <strong>decimal (7, 1) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fueltype">FuelType</h3>
-<p>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. <code>Filter(eq;like)</code></p>
+<p>Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -436,7 +436,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>True if the vehicle is still owned and managed by the enterprise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
+<p>True if the vehicle is still owned and managed by the enterprise.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -444,35 +444,35 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="issuingauthority">IssuingAuthority</h3>
-<p>The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. <code>Filter(eq;like)</code></p>
+<p>The country or state issuing the registration number. NULL (not recommended) means that the authority is unknown or not applicable</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="make">Make</h3>
-<p>The name of the manufacturer of the vehicle. null means that the value is unknown. <code>Filter(eq;like)</code></p>
+<p>The name of the manufacturer of the vehicle. NULL means that the value is unknown</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="manufactureyear">ManufactureYear</h3>
-<p>The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. <code>Filter(eq;ge;le)</code></p>
+<p>The year when the vehicle was manufactured or first registered - whichever is known. NULL means that the value is unknown</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maximumspeedkmh">MaximumSpeedKmH</h3>
-<p>Maximum speed in km/h.</p>
+<p>Maximum speed in km/h</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="model">Model</h3>
-<p>The model of the vehicle. <code>Filter(eq;like)</code></p>
+<p>The model of the vehicle</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -487,42 +487,42 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="primarycolor">PrimaryColor</h3>
-<p>The primary color of the vehicle. null means that the value is unknown or not applicable. <code>Filter(eq;like)</code></p>
+<p>The primary color of the vehicle. NULL means that the value is unknown or not applicable</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="seatingplacescount">SeatingPlacesCount</h3>
-<p>Number of seating places, excluding driver. <code>Filter(eq;ge;le)</code></p>
+<p>Number of seating places, excluding driver</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standingplacescount">StandingPlacesCount</h3>
-<p>Number of standing places, if applicable.</p>
+<p>Number of standing places, if applicable</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="technicalmaximumladenmasskg">TechnicalMaximumLadenMassKg</h3>
-<p>Maximum technically permissible laden mass in kg.</p>
+<p>Maximum technically permissible laden mass in kg</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trainsetmaximumladenmasskg">TrainsetMaximumLadenMassKg</h3>
-<p>Maximum permissible laden mass of a whole trainset, including the vehicle.</p>
+<p>Maximum permissible laden mass of a whole trainset, including the vehicle</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehicleidentificationnumber">VehicleIdentificationNumber</h3>
-<p>VIN, aka Chassis number. <code>Filter(eq;like)</code></p>
+<p>Serial number of the vehicle's chassis</p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -530,14 +530,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehiclemasskg">VehicleMassKg</h3>
-<p>Vehicle own mass in kg.</p>
+<p>Vehicle own mass in kg</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehicleregistrationnumber">VehicleRegistrationNumber</h3>
-<p>The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The registration plate number. Can be numeric or alphanumeric code. It should be unique value.</p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -545,7 +545,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="vehicletype">VehicleType</h3>
-<p>Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. <code>Filter(eq;like)</code></p>
+<p>Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -595,38 +595,38 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company that manages thе Vehicle. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.79</code></p>
+<p>The Enterprise Company that manages thе Vehicle.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fuelmeasurementunit">FuelMeasurementUnit</h3>
-<p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. <code>Filter(multi eq)</code></p>
+<p>The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. NULL means unknown</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maintenanceprofile">MaintenanceProfile</h3>
-<p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans.</p>
 <p>Type: <strong><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.74</code></p>
+<p>Link to a managed asset definition from the asset management module. It is used to manage, track and maintain the asset.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operationalmeasurementunit">OperationalMeasurementUnit</h3>
-<p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. <code>Filter(multi eq)</code></p>
+<p>The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ownerparty">OwnerParty</h3>
-<p>Vehicle owner. <code>Filter(multi eq)</code></p>
+<p>Vehicle owner</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

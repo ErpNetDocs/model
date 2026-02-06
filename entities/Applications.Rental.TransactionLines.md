@@ -35,18 +35,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes. 
-| [NumberOfPeriods](Applications.Rental.TransactionLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset. `Filter(eq;ge;le)` `Introduced in version 24.1.5.21` 
-| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Transaction Timestamp. `Required` `Filter(multi eq;ge;le)` 
-| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction Type. `Required` `Filter(multi eq;like)` 
+| [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes 
+| [NumberOfPeriods](Applications.Rental.TransactionLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset. 
+| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Exact time at which the transaction for the current asset occurs. 
+| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction type for the current asset. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. `Required` `Filter(multi eq)` |
-| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) | Lessee Customer. `Required` `Filter(multi eq)` |
-| [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | Rental asset. `Required` `Filter(multi eq)` |
+| [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | Rent contract for the current asset. |
+| [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) | Lessee for the current asset. |
+| [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | Rent asset for which the current transaction is performed. |
 | [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Transactions](Applications.Rental.Transactions.md) | The <see cref="Transaction"/> to which this TransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### Notes
 
-Notes.
+Notes
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfPeriods
 
-Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset. `Filter(eq;ge;le)` `Introduced in version 24.1.5.21`
+Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Front-End Recalc Expressions:
 `obj.CalculateNumberOfPeriods( obj.RentalAsset, obj.TransactionTimestamp, obj.TransactionType, obj.LeaseContract)`
 ### TransactionTimestamp
 
-Transaction Timestamp. `Required` `Filter(multi eq;ge;le)`
+Exact time at which the transaction for the current asset occurs.
 
 Type: **datetime**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionType
 
-Transaction Type. `Required` `Filter(multi eq;like)`
+Transaction type for the current asset.
 
 Type: **[TransactionType](Applications.Rental.TransactionLines.md#transactiontype)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **HiddenByDefault**
 
 ### LeaseContract
 
-Lease Contract. `Required` `Filter(multi eq)`
+Rent contract for the current asset.
 
 Type: **[LeaseContracts](Applications.Rental.LeaseContracts.md)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### LesseeCustomer
 
-Lessee Customer. `Required` `Filter(multi eq)`
+Lessee for the current asset.
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAsset
 
-Rental asset. `Required` `Filter(multi eq)`
+Rent asset for which the current transaction is performed.
 
 Type: **[Assets](Applications.Rental.Assets.md)**  
 Category: **System**  

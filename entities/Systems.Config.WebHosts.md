@@ -43,12 +43,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CertificateContents](Systems.Config.WebHosts.md#certificatecontents) | byte[] __nullable__ | The contents of the web host certificate. null means to use the server system certificate. 
-| [CertificateExpiryDate](Systems.Config.WebHosts.md#certificateexpirydate) | date __nullable__ | The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When null, the expiry date was not provided by the user, when uploading the certificate. `Filter(multi eq;ge;le)` 
-| [CertificateOriginal<br />Filename](Systems.Config.WebHosts.md#certificateoriginalfilename) | string (254) __nullable__ | The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. `Filter(eq;like)` 
-| [CertificatePassword](Systems.Config.WebHosts.md#certificatepassword) | string (max) __nullable__ | The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used. 
-| [CertificateType](Systems.Config.WebHosts.md#certificatetype) | string (3) | The type of certificate uploaded. Currently, only PFX is supported. `Required` `Default("PFX")` `Filter(multi eq)` 
-| [Name](Systems.Config.WebHosts.md#name) | string (max) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)` 
+| [CertificateContents](Systems.Config.WebHosts.md#certificatecontents) | byte[] __nullable__ | The contents of the web host certificate. NULL means to use the server system certificate. 
+| [CertificateExpiryDate](Systems.Config.WebHosts.md#certificateexpirydate) | date __nullable__ | The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate. 
+| [CertificateOriginal<br />Filename](Systems.Config.WebHosts.md#certificateoriginalfilename) | string (254) __nullable__ | The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate. 
+| [CertificatePassword](Systems.Config.WebHosts.md#certificatepassword) | string (max) __nullable__ | The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used. 
+| [CertificateType](Systems.Config.WebHosts.md#certificatetype) | string (3) | The type of certificate uploaded. Currently, only PFX is supported. 
+| [Name](Systems.Config.WebHosts.md#name) | string (max) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. 
 | [Notes](Systems.Config.WebHosts.md#notes) | string (max) __nullable__ | Notes for this WebHost. 
 
 
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### CertificateContents
 
-The contents of the web host certificate. null means to use the server system certificate.
+The contents of the web host certificate. NULL means to use the server system certificate.
 
 Type: **byte[] __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### CertificateExpiryDate
 
-The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When null, the expiry date was not provided by the user, when uploading the certificate. `Filter(multi eq;ge;le)`
+The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### CertificateOriginalFilename
 
-The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. `Filter(eq;like)`
+The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### CertificatePassword
 
-The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used.
+The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### CertificateType
 
-The type of certificate uploaded. Currently, only PFX is supported. `Required` `Default("PFX")` `Filter(multi eq)`
+The type of certificate uploaded. Currently, only PFX is supported.
 
 Type: **string (3)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)`
+The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.
 
 Type: **string (max)**  
 Category: **System**  

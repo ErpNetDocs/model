@@ -34,11 +34,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Security.AccessKeys.md#code) | string (16) __nullable__ | Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. `Filter(eq;like)` `ORD` 
+| [Code](Systems.Security.AccessKeys.md#code) | string (16) __nullable__ | Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries 
 | [EntityId](Systems.Security.AccessKeys.md#entityid) | guid __nullable__ | The field stores the Id of the entity that the key was created from. `Filter(multi eq)` `Introduced in version 25.1.1.32` 
-| [EntityName](Systems.Security.AccessKeys.md#entityname) | string (64) __nullable__ | What entitity the key secures. Can be null for private, legacy keys. `Filter(eq;like)` `ORD` 
-| [Name](Systems.Security.AccessKeys.md#name) | [MultilanguageString (1024)](../data-types.md#multilanguagestring) __nullable__ | Multilanguage descriptive name of the security key. Can be null for legacy keys. `Filter(eq;like)` 
-| [ShareLevel](Systems.Security.AccessKeys.md#sharelevel) | [ShareLevel](Systems.Security.AccessKeys.md#sharelevel) | Specifies the extent to which the key can be shared among multiple entities. `Required` `Default("PRI")` `Filter(eq)` `Introduced in version 25.1.1.32` 
+| [EntityName](Systems.Security.AccessKeys.md#entityname) | string (64) __nullable__ | What entitity the key secures. Can be null for private, legacy keys 
+| [Name](Systems.Security.AccessKeys.md#name) | [MultilanguageString (1024)](../data-types.md#multilanguagestring) __nullable__ | Multilanguage descriptive name of the security key. Can be null for legacy keys 
+| [ShareLevel](Systems.Security.AccessKeys.md#sharelevel) | [ShareLevel](Systems.Security.AccessKeys.md#sharelevel) | Specifies the extent to which the key can be shared among multiple entities. 
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. `Filter(eq;like)` `ORD`
+Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **HiddenByDefault**
 
 ### EntityName
 
-What entitity the key secures. Can be null for private, legacy keys. `Filter(eq;like)` `ORD`
+What entitity the key secures. Can be null for private, legacy keys
 
 Type: **string (64) __nullable__**  
 Indexed: **True**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage descriptive name of the security key. Can be null for legacy keys. `Filter(eq;like)`
+Multilanguage descriptive name of the security key. Can be null for legacy keys
 
 Type: **[MultilanguageString (1024)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### ShareLevel
 
-Specifies the extent to which the key can be shared among multiple entities. `Required` `Default("PRI")` `Filter(eq)` `Introduced in version 25.1.1.32`
+Specifies the extent to which the key can be shared among multiple entities.
 
 Type: **[ShareLevel](Systems.Security.AccessKeys.md#sharelevel)**  
 Category: **System**  

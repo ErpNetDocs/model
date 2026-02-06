@@ -123,27 +123,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#capacity">Capacity</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Optional: number of simultaneous uses (e.g., seating for 4). <code>Filter(eq;ge;le)</code></td>
+<td>Optional: number of simultaneous uses (e.g., seating for 4)</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the POS execution resource  is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Indicates whether the POS execution resource is currently active.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Human readable resource name, e.g. &quot;Table 5&quot;, &quot;Room 58&quot;. <code>Required</code> <code>Filter(like)</code></td>
+<td>Human readable resource name, e.g. 'Table 5', 'Room 58'.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the execution resource. <code>Filter(like)</code></td>
+<td>Notes for the execution resource.</td>
 </tr>
 </tbody>
 </table>
@@ -160,12 +160,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#area">Area</a></td>
 <td><a href="Crm.Pos.LocationAreas.html">LocationAreas</a> (nullable)</td>
-<td>Area (zone) within the POS location, where the resource is located. <code>Filter(multi eq)</code></td>
+<td>Area (zone) within the POS location, where the resource is located.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#location">Location</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a></td>
-<td>The POS location where the resource is situated. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The POS location where the resource is situated.</td>
 </tr>
 </tbody>
 </table>
@@ -198,14 +198,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="capacity">Capacity</h3>
-<p>Optional: number of simultaneous uses (e.g., seating for 4). <code>Filter(eq;ge;le)</code></p>
+<p>Optional: number of simultaneous uses (e.g., seating for 4)</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -214,7 +214,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the POS execution resource  is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Indicates whether the POS execution resource is currently active.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -222,14 +222,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Human readable resource name, e.g. &quot;Table 5&quot;, &quot;Room 58&quot;. <code>Required</code> <code>Filter(like)</code></p>
+<p>Human readable resource name, e.g. 'Table 5', 'Room 58'.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the execution resource. <code>Filter(like)</code></p>
+<p>Notes for the execution resource.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -259,14 +259,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="area">Area</h3>
-<p>Area (zone) within the POS location, where the resource is located. <code>Filter(multi eq)</code></p>
+<p>Area (zone) within the POS location, where the resource is located.</p>
 <p>Type: <strong><a href="Crm.Pos.LocationAreas.html">LocationAreas</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="location">Location</h3>
-<p>The POS location where the resource is situated. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The POS location where the resource is situated.</p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

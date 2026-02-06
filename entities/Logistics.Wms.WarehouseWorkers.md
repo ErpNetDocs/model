@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActiveFrom](Logistics.Wms.WarehouseWorkers.md#activefrom) | date | The date, from which the worker record has become active in the warehouse. `Required` `Default(Today)` `Filter(eq;ge;le)` 
-| [ActiveTo](Logistics.Wms.WarehouseWorkers.md#activeto) | date __nullable__ | The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. `Filter(eq;ge;le)` 
-| [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the worker (multi-language). `Required` `Filter(multi eq;like)` 
+| [ActiveFrom](Logistics.Wms.WarehouseWorkers.md#activefrom) | date | The date, from which the worker record has become active in the warehouse. 
+| [ActiveTo](Logistics.Wms.WarehouseWorkers.md#activeto) | date __nullable__ | The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations. 
+| [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks. 
+| [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the worker (multi-language). 
 | [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string (max) __nullable__ | Notes for this WarehouseWorker. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Logistics.Wms.WarehouseWorkers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. `Filter(multi eq)` `ReadOnly` |
-| [User](Logistics.Wms.WarehouseWorkers.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user who is going to work in the selected warehouse. `Filter(multi eq)` `Introduced in version 24.1.5.0` |
-| [Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the worker works. `Required` `Filter(multi eq)` `Owner` |
+| [Person](Logistics.Wms.WarehouseWorkers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person. |
+| [User](Logistics.Wms.WarehouseWorkers.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user who is going to work in the selected warehouse |
+| [Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the worker works. |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### ActiveFrom
 
-The date, from which the worker record has become active in the warehouse. `Required` `Default(Today)` `Filter(eq;ge;le)`
+The date, from which the worker record has become active in the warehouse.
 
 Type: **date**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### ActiveTo
 
-The date of termination of the activity of the worker in the warehouse. Can be null for workers, which are still active and do not have previous terminations. `Filter(eq;ge;le)`
+The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the worker is active and can execute new warehouse tasks. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the worker is active and can execute new warehouse tasks.
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the worker (multi-language). `Required` `Filter(multi eq;like)`
+Name of the worker (multi-language).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **HiddenByDefault**
 
 ### Person
 
-The definition of the person, when the worker is human worker. null means that the person is unknown or the worker is non-person. `Filter(multi eq)` `ReadOnly`
+The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user who is going to work in the selected warehouse. `Filter(multi eq)` `Introduced in version 24.1.5.0`
+The user who is going to work in the selected warehouse
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### Warehouse
 
-The warehouse, where the worker works. `Required` `Filter(multi eq)` `Owner`
+The warehouse, where the worker works.
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Indexed: **True**  

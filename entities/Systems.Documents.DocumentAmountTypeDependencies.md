@@ -49,8 +49,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnDocument<br />AmountType](Systems.Documents.DocumentAmountTypeDependencies.md#dependsondocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The base amount type on which the current amount depends. `Required` `Filter(multi eq)` |
-| [DocumentAmountType](Systems.Documents.DocumentAmountTypeDependencies.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The amount for which the base amount is specified. `Required` `Filter(multi eq)` `Owner` |
+| [DependsOnDocument<br />AmountType](Systems.Documents.DocumentAmountTypeDependencies.md#dependsondocumentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The base amount type on which the current amount depends. |
+| [DocumentAmountType](Systems.Documents.DocumentAmountTypeDependencies.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The amount for which the base amount is specified. |
 
 
 ## System Attributes
@@ -98,7 +98,7 @@ Show in UI: **HiddenByDefault**
 
 ### DependsOnDocumentAmountType
 
-The base amount type on which the current amount depends. `Required` `Filter(multi eq)`
+The base amount type on which the current amount depends.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentAmountType
 
-The amount for which the base amount is specified. `Required` `Filter(multi eq)` `Owner`
+The amount for which the base amount is specified.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Indexed: **True**  

@@ -126,22 +126,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#duedateformmethod">DueDateFormMethod</a></td>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></td>
-<td>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. <code>Required</code></td>
+<td>Method to determine the payment due date.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#installmentnumber">InstallmentNumber</a></td>
 <td>int32</td>
-<td>Consequtive installment number. Used for identifying different payments generated according this payment plan. <code>Required</code></td>
+<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#paymenttermdays">PaymentTermDays</a></td>
 <td>int32</td>
-<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. <code>Required</code> <code>Default(0)</code></td>
+<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#remainder">Remainder</a></td>
 <td>boolean</td>
-<td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). <code>Required</code> <code>Default(false)</code></td>
+<td>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' amounts in the payment plan.</td>
 </tr>
 </tbody>
 </table>
@@ -163,22 +163,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. <code>Filter(multi eq)</code></td>
+<td>Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. <code>Filter(multi eq)</code></td>
+<td>Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>Default payment account for the current installment. null means that there is no default account. <code>Filter(multi eq)</code></td>
+<td>Default payment account for the current installment.</td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>Default payment type for the current installment. null means that there is no default payment type. <code>Filter(multi eq)</code></td>
+<td>Default payment type for the current installment.</td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.Remainder, null, obj.AmountPercent)</code></p>
 <h3 id="duedateformmethod">DueDateFormMethod</h3>
-<p>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. <code>Required</code></p>
+<p>Method to determine the payment due date.</p>
 <p>Type: <strong><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for PaymentPlanDueDateSource properties<br>
@@ -259,7 +259,7 @@ Allowed Values (Crm.Sales.PaymentPlanDueDateSource Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
-<p>Consequtive installment number. Used for identifying different payments generated according this payment plan. <code>Required</code></p>
+<p>Consequtive installment number. Used for identifying different payments generated according this payment plan.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -270,7 +270,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.DocumentType.DefaultSalesOrderPaymentPlans.Select( c =&gt; c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="paymenttermdays">PaymentTermDays</h3>
-<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. <code>Required</code> <code>Default(0)</code></p>
+<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -282,7 +282,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
 <h3 id="remainder">Remainder</h3>
-<p>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). <code>Required</code> <code>Default(false)</code></p>
+<p>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' amounts in the payment plan.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -321,13 +321,13 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies. <code>Filter(multi eq)</code></p>
+<p>Enterprise company for which the current default installment template is valid. If enterprise company is not set then the installment template is valid for all enterprise companies.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations. <code>Filter(multi eq)</code></p>
+<p>Enterprise company location (within the chosen enterprise company) for which the current default installment template is valid. If enterprise company location is not set then the installment template is valid for all enterprise company locations.</p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -335,7 +335,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.EnterpriseCompany.Company != obj.EnterpriseCompanyLocation.Company), null, obj.EnterpriseCompanyLocation)</code></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>Default payment account for the current installment. null means that there is no default account. <code>Filter(multi eq)</code></p>
+<p>Default payment account for the current installment.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -343,7 +343,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.PaymentAccount)</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>Default payment type for the current installment. null means that there is no default payment type. <code>Filter(multi eq)</code></p>
+<p>Default payment type for the current installment.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

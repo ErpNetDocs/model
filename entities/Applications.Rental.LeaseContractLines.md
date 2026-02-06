@@ -35,20 +35,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Rental.LeaseContractLines.md#enddate) | date | Ending date of lease of this asset. `Required` `Filter(multi eq;ge;le)` 
-| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency` 
-| [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract. `Required` `Filter(eq;ge;le)` 
+| [EndDate](Applications.Rental.LeaseContractLines.md#enddate) | date | Ending date of lease of this asset 
+| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease. 
+| [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract. 
 | [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (max) __nullable__ | Notes for this line. 
-| [NumberOfPeriods](Applications.Rental.LeaseContractLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset. `Filter(eq;ge;le)` `Introduced in version 24.1.5.21` 
-| [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset. `Required` `Filter(multi eq;ge;le)` 
-| [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) | [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured. `Filter(multi eq)` `Introduced in version 24.1.5.31` 
+| [NumberOfPeriods](Applications.Rental.LeaseContractLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset. 
+| [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset 
+| [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) | [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [LeaseContract](Applications.Rental.LeaseContractLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | The <see cref="LeaseContract"/> to which this LeaseContractLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [RentalAsset](Applications.Rental.LeaseContractLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | The asset which is rented with the current contract. `Required` `Filter(multi eq)` |
+| [RentalAsset](Applications.Rental.LeaseContractLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | The asset which is rented with the current contract. |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### EndDate
 
-Ending date of lease of this asset. `Required` `Filter(multi eq;ge;le)`
+Ending date of lease of this asset
 
 Type: **date**  
 Category: **System**  
@@ -85,7 +85,7 @@ Front-End Recalc Expressions:
 `obj.LeaseContract.EndDate`
 ### GuaranteeAmount
 
-Deposit amount in the currency of the document which is given for this asset during its period of lease. `Currency: LeaseContract.Currency`
+Deposit amount in the currency of the document which is given for this asset during its period of lease.
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the lease contract. `Required` `Filter(eq;ge;le)`
+Consecutive number of the line within the lease contract.
 
 Type: **int32**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfPeriods
 
-Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset. `Filter(eq;ge;le)` `Introduced in version 24.1.5.21`
+Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -133,7 +133,7 @@ Front-End Recalc Expressions:
 `obj.CalculateNumberOfPeriods( obj.RentalAsset, obj.StartDate, obj.EndDate, obj.TimePeriodType)`
 ### StartDate
 
-Starting date of lease for this asset. `Required` `Filter(multi eq;ge;le)`
+Starting date of lease for this asset
 
 Type: **date**  
 Category: **System**  
@@ -148,7 +148,7 @@ Front-End Recalc Expressions:
 `obj.LeaseContract.StartDate`
 ### TimePeriodType
 
-Specifies the unit by which the periods of renting of this asset are measured. `Filter(multi eq)` `Introduced in version 24.1.5.31`
+Specifies the unit by which the periods of renting of this asset are measured.
 
 Type: **[TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) __nullable__**  
 Category: **System**  
@@ -213,7 +213,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAsset
 
-The asset which is rented with the current contract. `Required` `Filter(multi eq)`
+The asset which is rented with the current contract.
 
 Type: **[Assets](Applications.Rental.Assets.md)**  
 Category: **System**  

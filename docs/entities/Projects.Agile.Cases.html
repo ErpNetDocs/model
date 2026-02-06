@@ -128,32 +128,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#closedtimeutc">ClosedTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case was closed. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
+<td>Indicates the time (in UTC) when the case was closed.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#considertimeutc">ConsiderTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has changed to consider state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.39</code></td>
+<td>Indicates the time (in UTC) when the case has changed to consider state.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact date and time (in UTC) when the case was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
+<td>The exact date and time (in UTC) when the case was created.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#description">Description</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Description of the required work. <code>Filter(like)</code></td>
+<td>Description of the required work.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#duedate">DueDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Specified when the case has specific due date. <code>Filter(ge;le)</code></td>
+<td>Specified when the case has specific due date.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#duetime">DueTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>Specified when the case has specific due time. <code>Filter(ge;le)</code></td>
+<td>Specified when the case has specific due time.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#estimatedtimehours">EstimatedTimeHours</a></td>
@@ -168,7 +168,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#inprogresstimeutc">InProgressTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has changed to in-progress state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
+<td>Indicates the time (in UTC) when the case has changed to in-progress state.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#loggedtime">LoggedTime</a></td>
@@ -183,37 +183,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#priority">Priority</a></td>
 <td><a href="Projects.Agile.Cases.html#priority">Priority</a></td>
-<td>Priority of the case, on a scale from 1 (highest) to 7 (lowest). <code>Required</code> <code>Default(7)</code> <code>Filter(eq)</code></td>
+<td>Priority of the case, on a scale from 1 (highest) to 7 (lowest).</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#readytimeutc">ReadyTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has become ready for execution. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
+<td>Indicates the time (in UTC) when the case has become ready for execution.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#resolvedtimeutc">ResolvedTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case was resolved. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
+<td>Indicates the time (in UTC) when the case was resolved.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#storypoints">StoryPoints</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></td>
+<td>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
-<td>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The base state of the case.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#title">Title</a></td>
 <td>string (128)</td>
-<td>Case short title. <code>Required</code> <code>Filter(like)</code></td>
+<td>Case short title.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#waitingtimeutc">WaitingTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has changed to waiting state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
+<td>Indicates the time (in UTC) when the case has changed to waiting state.</td>
 </tr>
 </tbody>
 </table>
@@ -230,22 +230,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The internal user to which the case is assigned. <code>Filter(multi eq)</code></td>
+<td>The internal user to which the case is assigned.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#casecategory">CaseCategory</a></td>
 <td><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></td>
-<td>The category of the case. This also determines the workflow for the case. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The category of the case. This also determines the workflow for the case.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#duplicateofcase">DuplicateOfCase</a></td>
 <td><a href="Projects.Agile.Cases.html">Cases</a> (nullable)</td>
-<td>References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.24</code></td>
+<td>References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#owneruser">OwnerUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user responsible for managing and overseeing the case. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></td>
+<td>The user responsible for managing and overseeing the case.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#parent">Parent</a></td>
@@ -255,37 +255,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#project">Project</a></td>
 <td><a href="Projects.Agile.Projects.html">Projects</a></td>
-<td>The project to which the case is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The project to which the case is assigned.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#projectarea">ProjectArea</a></td>
 <td><a href="Projects.Agile.ProjectAreas.html">ProjectAreas</a> (nullable)</td>
-<td>The are to which the case is assigned. <code>Filter(multi eq)</code></td>
+<td>The area to which the case is assigned.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#projectmilestone">ProjectMilestone</a></td>
 <td><a href="Projects.Agile.ProjectMilestones.html">ProjectMilestones</a> (nullable)</td>
-<td>Determines the milestone for which the case must be resolved. <code>Filter(multi eq)</code></td>
+<td>Determines the milestone for which the case must be resolved.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.Social.Groups.html">Groups</a> (nullable)</td>
-<td>Specified, when the case is assigned to a group of users. <code>Filter(multi eq)</code></td>
+<td>Specified, when the case is assigned to a group of users.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#sprint">Sprint</a></td>
 <td><a href="Projects.Agile.Sprints.html">Sprints</a> (nullable)</td>
-<td>The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.33</code></td>
+<td>The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work).</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#stakeholderparty">StakeholderParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.70</code></td>
+<td>The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#userstate">UserState</a></td>
 <td><a href="Projects.Agile.UserStates.html">UserStates</a> (nullable)</td>
-<td>The user-defined sub-state of the case. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.97</code></td>
+<td>The user-defined sub-state of the case.</td>
 </tr>
 </tbody>
 </table>
@@ -350,21 +350,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="closedtimeutc">ClosedTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case was closed. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
+<p>Indicates the time (in UTC) when the case was closed.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="considertimeutc">ConsiderTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has changed to consider state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.39</code></p>
+<p>Indicates the time (in UTC) when the case has changed to consider state.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact date and time (in UTC) when the case was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
+<p>The exact date and time (in UTC) when the case was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -372,7 +372,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="description">Description</h3>
-<p>Description of the required work. <code>Filter(like)</code></p>
+<p>Description of the required work.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -380,14 +380,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>Specified when the case has specific due date. <code>Filter(ge;le)</code></p>
+<p>Specified when the case has specific due date.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duetime">DueTime</h3>
-<p>Specified when the case has specific due time. <code>Filter(ge;le)</code></p>
+<p>Specified when the case has specific due time.</p>
 <p>Type: <strong>time <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -408,7 +408,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="inprogresstimeutc">InProgressTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has changed to in-progress state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
+<p>Indicates the time (in UTC) when the case has changed to in-progress state.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -430,7 +430,7 @@ Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the case, on a scale from 1 (highest) to 7 (lowest). <code>Required</code> <code>Default(7)</code> <code>Filter(eq)</code></p>
+<p>Priority of the case, on a scale from 1 (highest) to 7 (lowest).</p>
 <p>Type: <strong><a href="Projects.Agile.Cases.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Projects.Agile.Cases.md#priority) data attribute<br>
@@ -478,28 +478,28 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>7</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="readytimeutc">ReadyTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has become ready for execution. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
+<p>Indicates the time (in UTC) when the case has become ready for execution.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="resolvedtimeutc">ResolvedTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case was resolved. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
+<p>Indicates the time (in UTC) when the case was resolved.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="storypoints">StoryPoints</h3>
-<p>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload. <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></p>
+<p>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemstate">SystemState</h3>
-<p>The base state of the case. <code>Required</code> <code>Default(&quot;1&quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The base state of the case.</p>
 <p>Type: <strong><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
@@ -547,7 +547,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>BACKLOG</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="title">Title</h3>
-<p>Case short title. <code>Required</code> <code>Filter(like)</code></p>
+<p>Case short title.</p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -555,7 +555,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waitingtimeutc">WaitingTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has changed to waiting state. <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
+<p>Indicates the time (in UTC) when the case has changed to waiting state.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -605,7 +605,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assignedtouser">AssignedToUser</h3>
-<p>The internal user to which the case is assigned. <code>Filter(multi eq)</code></p>
+<p>The internal user to which the case is assigned.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -614,20 +614,20 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DetermineAssignToUser( obj.SystemState, obj.Project, obj.CaseCategory, obj.ProjectArea, obj.ProjectMilestone, obj.StakeholderParty, obj.UserState).IfNullThen( obj.AssignedToUser)</code></p>
 <h3 id="casecategory">CaseCategory</h3>
-<p>The category of the case. This also determines the workflow for the case. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The category of the case. This also determines the workflow for the case.</p>
 <p>Type: <strong><a href="Projects.Agile.CaseCategories.html">CaseCategories</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duplicateofcase">DuplicateOfCase</h3>
-<p>References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.3.24</code></p>
+<p>References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.</p>
 <p>Type: <strong><a href="Projects.Agile.Cases.html">Cases</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="owneruser">OwnerUser</h3>
-<p>The user responsible for managing and overseeing the case. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></p>
+<p>The user responsible for managing and overseeing the case.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -640,47 +640,47 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="project">Project</h3>
-<p>The project to which the case is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The project to which the case is assigned.</p>
 <p>Type: <strong><a href="Projects.Agile.Projects.html">Projects</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectarea">ProjectArea</h3>
-<p>The are to which the case is assigned. <code>Filter(multi eq)</code></p>
+<p>The area to which the case is assigned.</p>
 <p>Type: <strong><a href="Projects.Agile.ProjectAreas.html">ProjectAreas</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectmilestone">ProjectMilestone</h3>
-<p>Determines the milestone for which the case must be resolved. <code>Filter(multi eq)</code></p>
+<p>Determines the milestone for which the case must be resolved.</p>
 <p>Type: <strong><a href="Projects.Agile.ProjectMilestones.html">ProjectMilestones</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>Specified, when the case is assigned to a group of users. <code>Filter(multi eq)</code></p>
+<p>Specified, when the case is assigned to a group of users.</p>
 <p>Type: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sprint">Sprint</h3>
-<p>The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is null, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). <code>Filter(multi eq)</code> <code>Introduced in version 26.1.4.33</code></p>
+<p>The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work).</p>
 <p>Type: <strong><a href="Projects.Agile.Sprints.html">Sprints</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="stakeholderparty">StakeholderParty</h3>
-<p>The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.70</code></p>
+<p>The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userstate">UserState</h3>
-<p>The user-defined sub-state of the case. <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.97</code></p>
+<p>The user-defined sub-state of the case.</p>
 <p>Type: <strong><a href="Projects.Agile.UserStates.html">UserStates</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

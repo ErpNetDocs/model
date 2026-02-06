@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line in the document. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td>Consecutive number of the line in the document.</td>
 </tr>
 </tbody>
 </table>
@@ -143,22 +143,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationLines.html#warehouselocation">WarehouseLocation</a></td>
 <td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></td>
-<td>Warehouse location to be counted. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Warehouse location to be counted.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationLines.html#warehousereconciliation">WarehouseReconciliation</a></td>
 <td><a href="Logistics.Wms.WarehouseReconciliations.html">WarehouseReconciliations</a></td>
-<td>Reconciliation document this line belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Reconciliation document this line belongs to.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationLines.html#warehouseworker">WarehouseWorker</a></td>
 <td><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</td>
-<td>Worker (human or robot) assigned to perform the counting. <code>Filter(multi eq)</code></td>
+<td>Worker (human or robot) assigned to perform the counting.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationLines.html#warehousezone">WarehouseZone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</td>
-<td>Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.16</code></td>
+<td>Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders.</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line in the document. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
+<p>Consecutive number of the line in the document.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -231,14 +231,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouselocation">WarehouseLocation</h3>
-<p>Warehouse location to be counted. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Warehouse location to be counted.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousereconciliation">WarehouseReconciliation</h3>
-<p>Reconciliation document this line belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Reconciliation document this line belongs to.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseReconciliations.html">WarehouseReconciliations</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -246,14 +246,14 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehouseworker">WarehouseWorker</h3>
-<p>Worker (human or robot) assigned to perform the counting. <code>Filter(multi eq)</code></p>
+<p>Worker (human or robot) assigned to perform the counting.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousezone">WarehouseZone</h3>
-<p>Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.16</code></p>
+<p>Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

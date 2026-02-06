@@ -44,14 +44,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.SalesForce.SalesPersonGroups.md#code) | string (64) | The unique code of the SalesPersonGroup. `Required` `Filter(eq;like)` `ORD` 
-| [FullPath](Crm.SalesForce.SalesPersonGroups.md#fullpath) | string (4000) __nullable__ | Full path to this item in the form /root/child1/../leaf/. `Filter(eq;like)` `ReadOnly` 
+| [FullPath](Crm.SalesForce.SalesPersonGroups.md#fullpath) | string (4000) __nullable__ | Full path to this item in the form /root/child1/../leaf/ 
 | [Name](Crm.SalesForce.SalesPersonGroups.md#name) | string (128) | The name of this SalesPersonGroup. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagerPerson](Crm.SalesForce.SalesPersonGroups.md#managerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The manager of the group. null when there is no manager. `Filter(multi eq)` |
+| [ManagerPerson](Crm.SalesForce.SalesPersonGroups.md#managerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The manager of the group. NULL when there is no manager. |
 | [Parent](Crm.SalesForce.SalesPersonGroups.md#parent) | [SalesPersonGroups](Crm.SalesForce.SalesPersonGroups.md) (nullable) | The parent sales person group in the hierarchy. `Filter(multi eq)` |
 
 
@@ -86,7 +86,7 @@ Back-End Default Expression:
 
 ### FullPath
 
-Full path to this item in the form /root/child1/../leaf/. `Filter(eq;like)` `ReadOnly`
+Full path to this item in the form /root/child1/../leaf/
 
 Type: **string (4000) __nullable__**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **HiddenByDefault**
 
 ### ManagerPerson
 
-The manager of the group. null when there is no manager. `Filter(multi eq)`
+The manager of the group. NULL when there is no manager.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  

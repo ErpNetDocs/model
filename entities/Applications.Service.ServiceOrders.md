@@ -58,8 +58,8 @@ Aggregate Tree
 | [DocumentVersion](Applications.Service.ServiceOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Applications.Service.ServiceOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Applications.Service.ServiceOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Applications.Service.ServiceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Applications.Service.ServiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Applications.Service.ServiceOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Applications.Service.ServiceOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Service.ServiceOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Applications.Service.ServiceOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Applications.Service.ServiceOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -81,7 +81,7 @@ Aggregate Tree
 | [AdjustedDocument](Applications.Service.ServiceOrders.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Applications.Service.ServiceOrders.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CurrencyDirectory](Applications.Service.ServiceOrders.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Customer](Applications.Service.ServiceOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The client, requesting servicing. `Required` `Filter(multi eq)` |
+| [Customer](Applications.Service.ServiceOrders.md#customer) | [Customers](Crm.Sales.Customers.md) | The client, requesting servicing. |
 | [DocumentType](Applications.Service.ServiceOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Applications.Service.ServiceOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompanyLocation](Applications.Service.ServiceOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -93,9 +93,9 @@ Aggregate Tree
 | [ResponsiblePerson](Applications.Service.ServiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Applications.Service.ServiceOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Applications.Service.ServiceOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ServiceAgreement](Applications.Service.ServiceOrders.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | When not null denotes that the order will be bound to the terms in the specified agreement. `Filter(multi eq)` |
-| [ShipToCustomer](Applications.Service.ServiceOrders.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Customer location of the main customer from which the service object is taken. `Filter(multi eq)` |
-| [Store](Applications.Service.ServiceOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. `Filter(multi eq)` |
+| [ServiceAgreement](Applications.Service.ServiceOrders.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | When not NULL denotes that the order will be bound to the terms in the specified agreement. |
+| [ShipToCustomer](Applications.Service.ServiceOrders.md#shiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Customer location of the main customer from which the service object is taken. |
+| [Store](Applications.Service.ServiceOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. |
 | [ToCompanyDivision](Applications.Service.ServiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Applications.Service.ServiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Applications.Service.ServiceOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -264,7 +264,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -546,7 +546,7 @@ Show in UI: **HiddenByDefault**
 
 ### Customer
 
-The client, requesting servicing. `Required` `Filter(multi eq)`
+The client, requesting servicing.
 
 Type: **[Customers](Crm.Sales.Customers.md)**  
 Category: **System**  
@@ -661,7 +661,7 @@ Show in UI: **HiddenByDefault**
 
 ### ServiceAgreement
 
-When not null denotes that the order will be bound to the terms in the specified agreement. `Filter(multi eq)`
+When not NULL denotes that the order will be bound to the terms in the specified agreement.
 
 Type: **[ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable)**  
 Category: **System**  
@@ -670,7 +670,7 @@ Show in UI: **ShownByDefault**
 
 ### ShipToCustomer
 
-Customer location of the main customer from which the service object is taken. `Filter(multi eq)`
+Customer location of the main customer from which the service object is taken.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -681,7 +681,7 @@ Front-End Recalc Expressions:
 `obj.Customer.DetermineShipToCustomer( obj.EnterpriseCompany, obj.EnterpriseCompanyLocation, obj.ShipToCustomer)`
 ### Store
 
-The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. `Filter(multi eq)`
+The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null.
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  

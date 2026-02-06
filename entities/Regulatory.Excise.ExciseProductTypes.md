@@ -13,6 +13,15 @@ Base Table: Exc_Excise_Product_Types
 Introduced In Version: 22.1.6.44  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseProductTypes  
+New name: Regulatory.Excise.ExciseProductTypes  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Code}: {Name}  
 Search Members: Code; Name  
@@ -35,12 +44,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholicStrength](Regulatory.Excise.ExciseProductTypes.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting. `Required` `Default(0)` 
-| [Capacity](Regulatory.Excise.ExciseProductTypes.md#capacity) | decimal (6, 4) __nullable__ | Package capacity - number of cigarettes or volume of alcohol in liters. `Default(0)` 
-| [Category](Regulatory.Excise.ExciseProductTypes.md#category) | [Category](Regulatory.Excise.ExciseProductTypes.md#category) | Specifies the excise product category of the excise stamp - alcohol, tobacco, and others. `Required` 
+| [AlcoholicStrength](Regulatory.Excise.ExciseProductTypes.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting. 
+| [Capacity](Regulatory.Excise.ExciseProductTypes.md#capacity) | decimal (6, 4) __nullable__ | Package capacity - number of cigarettes or volume of alcohol in liters. 
+| [Category](Regulatory.Excise.ExciseProductTypes.md#category) | [Category](Regulatory.Excise.ExciseProductTypes.md#category) | Specifies the excise product category of the excise stamp - alcohol, tobacco, and others. 
 | [Code](Regulatory.Excise.ExciseProductTypes.md#code) | string (32) | The unique code of the ExciseProductType. `Required` `Filter(multi eq;like)` `ORD` 
-| [ExciseAmountPerStamp](Regulatory.Excise.ExciseProductTypes.md#exciseamountperstamp) | decimal (10, 6) | The excise duty, which is charged with one excise label. `Required` `Default(0)` 
-| [IsActive](Regulatory.Excise.ExciseProductTypes.md#isactive) | boolean | Indicates whether this excise poduct type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
+| [ExciseAmountPerStamp](Regulatory.Excise.ExciseProductTypes.md#exciseamountperstamp) | decimal (10, 6) | The excise duty, which is charged with one excise label. 
+| [IsActive](Regulatory.Excise.ExciseProductTypes.md#isactive) | boolean | Indicates whether this excise poduct type is active and usable for choosing in new documents. 
 | [Name](Regulatory.Excise.ExciseProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ExciseProductType. `Required` `Filter(like)` 
 | [Notes](Regulatory.Excise.ExciseProductTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseProductType. 
 
@@ -48,9 +57,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommodityCode](Regulatory.Excise.ExciseProductTypes.md#commoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) | Code from The Combined Nomenclature used within the European Union countries. `Required` `Filter(multi eq)` |
-| [ExciseProduct](Regulatory.Excise.ExciseProductTypes.md#exciseproduct) | [ExciseProducts](Regulatory.Excise.ExciseProducts.md) | Excise product according to the EU nomenclature for products subject to excise duty. `Required` `Filter(multi eq)` |
-| [MeasurementUnit](Regulatory.Excise.ExciseProductTypes.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The unit of measure in which the product is reported. `Filter(multi eq)` |
+| [CommodityCode](Regulatory.Excise.ExciseProductTypes.md#commoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) | Code from The Combined Nomenclature used within the European Union countries. |
+| [ExciseProduct](Regulatory.Excise.ExciseProductTypes.md#exciseproduct) | [ExciseProducts](Regulatory.Excise.ExciseProducts.md) | Excise product according to the EU nomenclature for products subject to excise duty. |
+| [MeasurementUnit](Regulatory.Excise.ExciseProductTypes.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The unit of measure in which the product is reported. |
 
 
 ## System Attributes
@@ -69,7 +78,7 @@ Aggregate Tree
 
 ### AlcoholicStrength
 
-Percentage of pure alcohol used in excise duty reporting. `Required` `Default(0)`
+Percentage of pure alcohol used in excise duty reporting.
 
 Type: **decimal (5, 2)**  
 Category: **System**  
@@ -80,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Capacity
 
-Package capacity - number of cigarettes or volume of alcohol in liters. `Default(0)`
+Package capacity - number of cigarettes or volume of alcohol in liters.
 
 Type: **decimal (6, 4) __nullable__**  
 Category: **System**  
@@ -91,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### Category
 
-Specifies the excise product category of the excise stamp - alcohol, tobacco, and others. `Required`
+Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.
 
 Type: **[Category](Regulatory.Excise.ExciseProductTypes.md#category)**  
 Category: **System**  
@@ -125,7 +134,7 @@ Back-End Default Expression:
 
 ### ExciseAmountPerStamp
 
-The excise duty, which is charged with one excise label. `Required` `Default(0)`
+The excise duty, which is charged with one excise label.
 
 Type: **decimal (10, 6)**  
 Category: **System**  
@@ -136,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether this excise poduct type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
+Indicates whether this excise poduct type is active and usable for choosing in new documents.
 
 Type: **boolean**  
 Category: **System**  
@@ -230,7 +239,7 @@ Show in UI: **HiddenByDefault**
 
 ### CommodityCode
 
-Code from The Combined Nomenclature used within the European Union countries. `Required` `Filter(multi eq)`
+Code from The Combined Nomenclature used within the European Union countries.
 
 Type: **[CommodityCodes](Regulatory.Intrastat.CommodityCodes.md)**  
 Category: **System**  
@@ -239,7 +248,7 @@ Show in UI: **ShownByDefault**
 
 ### ExciseProduct
 
-Excise product according to the EU nomenclature for products subject to excise duty. `Required` `Filter(multi eq)`
+Excise product according to the EU nomenclature for products subject to excise duty.
 
 Type: **[ExciseProducts](Regulatory.Excise.ExciseProducts.md)**  
 Category: **System**  
@@ -248,7 +257,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasurementUnit
 
-The unit of measure in which the product is reported. `Filter(multi eq)`
+The unit of measure in which the product is reported.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  

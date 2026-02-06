@@ -132,7 +132,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html#fullpath">FullPath</a></td>
 <td>string (4000) <strong>nullable</strong></td>
-<td>Full path to this item in the form /root/child1/../leaf/. <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
+<td>Full path to this item in the form /root/child1/../leaf/</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html#name">Name</a></td>
@@ -154,7 +154,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html#managerperson">ManagerPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The manager of the group. null when there is no manager. <code>Filter(multi eq)</code></td>
+<td>The manager of the group. NULL when there is no manager.</td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html#parent">Parent</a></td>
@@ -218,7 +218,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, o =&gt; ( o.Parent == obj.Parent), IIF( ( obj.Parent != null), ( obj.Parent.Code + &quot;00&quot;), &quot;00000&quot;))</code></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full path to this item in the form /root/child1/../leaf/. <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
+<p>Full path to this item in the form /root/child1/../leaf/</p>
 <p>Type: <strong>string (4000) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -277,7 +277,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="managerperson">ManagerPerson</h3>
-<p>The manager of the group. null when there is no manager. <code>Filter(multi eq)</code></p>
+<p>The manager of the group. NULL when there is no manager.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

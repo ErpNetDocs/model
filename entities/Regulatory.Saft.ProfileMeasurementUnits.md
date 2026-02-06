@@ -13,6 +13,15 @@ Base Table: Saft_Profile_Measurement_Units
 Introduced In Version: 26.2.0.74  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Saft.ProfileMeasurementUnits  
+New name: Regulatory.Saft.ProfileMeasurementUnits  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Profile.Name}  
 Search Members: Profile.Name  
@@ -36,15 +45,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfileMeasurementUnits.md#notes) | string (max) __nullable__ | Additional information or comments for this entry. `Filter(like)` 
+| [Notes](Regulatory.Saft.ProfileMeasurementUnits.md#notes) | string (max) __nullable__ | Additional information or comments for this entry. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MeasurementUnit](Regulatory.Saft.ProfileMeasurementUnits.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit used for this SAFT profile. `Required` `Filter(multi eq)` |
-| [MeasurementUnitCodeEntry](Regulatory.Saft.ProfileMeasurementUnits.md#measurementunitcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Measurement unit code used when generating the SAFT file. `Required` `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfileMeasurementUnits.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | Identifier of the SAFT profile associated with this measurement unit. `Required` `Filter(multi eq)` `Owner` |
+| [MeasurementUnit](Regulatory.Saft.ProfileMeasurementUnits.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit used for this SAFT profile. |
+| [MeasurementUnitCodeEntry](Regulatory.Saft.ProfileMeasurementUnits.md#measurementunitcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Measurement unit code used when generating the SAFT file. |
+| [Profile](Regulatory.Saft.ProfileMeasurementUnits.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | Identifier of the SAFT profile associated with this measurement unit. |
 
 
 ## System Attributes
@@ -60,7 +69,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional information or comments for this entry. `Filter(like)`
+Additional information or comments for this entry.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -103,7 +112,7 @@ Show in UI: **HiddenByDefault**
 
 ### MeasurementUnit
 
-Measurement unit used for this SAFT profile. `Required` `Filter(multi eq)`
+Measurement unit used for this SAFT profile.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Indexed: **True**  
@@ -113,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasurementUnitCodeEntry
 
-Measurement unit code used when generating the SAFT file. `Required` `Filter(multi eq)`
+Measurement unit code used when generating the SAFT file.
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Indexed: **True**  
@@ -123,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-Identifier of the SAFT profile associated with this measurement unit. `Required` `Filter(multi eq)` `Owner`
+Identifier of the SAFT profile associated with this measurement unit.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  

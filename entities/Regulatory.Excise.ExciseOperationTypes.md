@@ -17,6 +17,15 @@ API access:  ReadWrite
 > **OBSOLETE! Do not use!**   
 
 
+## Renames
+
+Old name: Finance.Excise.ExciseOperationTypes  
+New name: Regulatory.Excise.ExciseOperationTypes  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Name}  
 Search Members: Code; Name  

@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.MaintenanceProfilePlans.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 18.2</code></td>
+<td>1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.MaintenanceProfilePlans.html#notes">Notes</a></td>
@@ -143,12 +143,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Fleet.MaintenanceProfilePlans.html#maintenanceplan">MaintenancePlan</a></td>
 <td><a href="Applications.Fleet.MaintenancePlans.html">MaintenancePlans</a></td>
-<td>The maintenance plan, which is included in the profile. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The maintenance plan, which is included in the profile.</td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.MaintenanceProfilePlans.html#maintenanceprofile">MaintenanceProfile</a></td>
 <td><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a></td>
-<td>The maintenance profile, which includes the plan. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The maintenance profile, which includes the plan.</td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 18.2</code></p>
+<p>1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,13 +219,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="maintenanceplan">MaintenancePlan</h3>
-<p>The maintenance plan, which is included in the profile. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The maintenance plan, which is included in the profile.</p>
 <p>Type: <strong><a href="Applications.Fleet.MaintenancePlans.html">MaintenancePlans</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maintenanceprofile">MaintenanceProfile</h3>
-<p>The maintenance profile, which includes the plan. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The maintenance profile, which includes the plan.</p>
 <p>Type: <strong><a href="Applications.Fleet.MaintenanceProfiles.html">MaintenanceProfiles</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -130,27 +130,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#deliverytermdays">DeliveryTermDays</a></td>
 <td>int32</td>
-<td>Delivery term in days. When Required Delivery Date is specified (not null), it takes precedence and this is ignored. <code>Required</code> <code>Default(0)</code></td>
+<td>Delivery term in days. When required delivery date is specified it takes precedence.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Guarantee period in days for the offered product. null for non-serviced products.</td>
+<td>standard guarantee period in days. Can be set only if the product type is serviced.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#isselected">IsSelected</a></td>
 <td>boolean</td>
-<td>True when the line is selected for further processing (ordering), false otherwise. <code>Required</code> <code>Default(true)</code></td>
+<td>1 when the line is selected for further processing (ordering), 0 otherwise.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#lineamount">LineAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. <code>Currency: Offer.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
 <td>decimal (7, 6)</td>
-<td>Operator defined discount percentage, specified for this line. <code>Required</code> <code>Default(0)</code></td>
+<td>Operator defined discount percentage, specified for this line.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#lineno">LineNo</a></td>
@@ -160,7 +160,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
 <td>decimal (7, 6)</td>
-<td>The discount percentage, applied through the standard discount policy. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
+<td>The discount percentage, applied through the standard discount policy.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#notes">Notes</a></td>
@@ -170,32 +170,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#productdescription">ProductDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The description of the offered product. Initially copied from the name of the offered product. <code>Required</code> <code>Filter(like)</code></td>
+<td>The description of the offered product. Initially copied from the name of the offered product.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>Quantity offered. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
+<td>Quantity offered.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The equivalent of Quantity in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
+<td>The equivalent of Quantity in the base measurement unit of the Product</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. <code>Filter(ge;le)</code></td>
+<td>Date, when the delivery is required. Alternative to Delivery Term Days. When NULL, Delivery Term Days is used.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
-<td>The unit price of the offered product. It is specified in the measurement unit of Quantity. <code>Currency: Offer.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>The unit price of the offered product. It is specified in the measurement unit of Quantity.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#variant">Variant</a></td>
@@ -222,12 +222,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#linediscount">LineDiscount</a></td>
 <td><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a> (nullable)</td>
-<td>When not null, contains the discount policy selected for this line. <code>Filter(multi eq)</code></td>
+<td>When not NULL, contains the discount policy selected for this line.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#lineendcustomerparty">LineEndCustomerParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></td>
+<td>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#offer">Offer</a></td>
@@ -237,22 +237,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The offered product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The offered product.</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#productcode">ProductCode</a></td>
 <td><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</td>
-<td>Not null, when the product is selected using a coding system code. <code>Filter(multi eq)</code></td>
+<td>Selects the product through some of the product codes</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#productprice">ProductPrice</a></td>
 <td><a href="Crm.Pricing.ProductPrices.html">ProductPrices</a> (nullable)</td>
-<td>Not null when the price has been selected from the list of valid standard prices. <code>Filter(multi eq)</code></td>
+<td>Not NULL when the price has been selected from the list of valid standard prices</td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Quantity.</td>
 </tr>
 </tbody>
 </table>
@@ -300,7 +300,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="deliverytermdays">DeliveryTermDays</h3>
-<p>Delivery term in days. When Required Delivery Date is specified (not null), it takes precedence and this is ignored. <code>Required</code> <code>Default(0)</code></p>
+<p>Delivery term in days. When required delivery date is specified it takes precedence.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -308,7 +308,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="guaranteeperioddays">GuaranteePeriodDays</h3>
-<p>Guarantee period in days for the offered product. null for non-serviced products.</p>
+<p>standard guarantee period in days. Can be set only if the product type is serviced.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -317,7 +317,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.GuaranteePeriodDays</code></p>
 <h3 id="isselected">IsSelected</h3>
-<p>True when the line is selected for further processing (ordering), false otherwise. <code>Required</code> <code>Default(true)</code></p>
+<p>1 when the line is selected for further processing (ordering), 0 otherwise.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -325,7 +325,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. <code>Currency: Offer.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -337,7 +337,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
-<p>Operator defined discount percentage, specified for this line. <code>Required</code> <code>Default(0)</code></p>
+<p>Operator defined discount percentage, specified for this line.</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -356,7 +356,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Offer.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
-<p>The discount percentage, applied through the standard discount policy. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
+<p>The discount percentage, applied through the standard discount policy.</p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -376,7 +376,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
-<p>The description of the offered product. Initially copied from the name of the offered product. <code>Required</code> <code>Filter(like)</code></p>
+<p>The description of the offered product. Initially copied from the name of the offered product.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -387,7 +387,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.Name</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity offered. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
+<p>Quantity offered.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -395,7 +395,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalent of Quantity in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
+<p>The equivalent of Quantity in the base measurement unit of the Product</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -406,7 +406,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<p>Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. <code>Filter(ge;le)</code></p>
+<p>Date, when the delivery is required. Alternative to Delivery Term Days. When NULL, Delivery Term Days is used.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -418,7 +418,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <code>IIF( ( obj.DeliveryTermDays == 0), obj.RequiredDeliveryDate, null)</code>
 <code>obj.Offer.RequiredDeliveryDate</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -429,7 +429,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="unitprice">UnitPrice</h3>
-<p>The unit price of the offered product. It is specified in the measurement unit of Quantity. <code>Currency: Offer.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>The unit price of the offered product. It is specified in the measurement unit of Quantity.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -478,7 +478,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linediscount">LineDiscount</h3>
-<p>When not null, contains the discount policy selected for this line. <code>Filter(multi eq)</code></p>
+<p>When not NULL, contains the discount policy selected for this line.</p>
 <p>Type: <strong><a href="Crm.Pricing.LineDiscounts.html">LineDiscounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -486,7 +486,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DetermineLineDiscount( obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Product, obj.Quantity, obj.QuantityUnit, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, obj.Offer.PriceList, obj.LineDiscount)</code></p>
 <h3 id="lineendcustomerparty">LineEndCustomerParty</h3>
-<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.2.96</code></p>
+<p>The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -504,7 +504,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
-<p>The offered product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The offered product.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -514,13 +514,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.ProductCode.Product == null), obj.Product, obj.ProductCode.Product)</code></p>
 <h3 id="productcode">ProductCode</h3>
-<p>Not null, when the product is selected using a coding system code. <code>Filter(multi eq)</code></p>
+<p>Selects the product through some of the product codes</p>
 <p>Type: <strong><a href="General.Products.ProductCodes.html">ProductCodes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="productprice">ProductPrice</h3>
-<p>Not null when the price has been selected from the list of valid standard prices. <code>Filter(multi eq)</code></p>
+<p>Not NULL when the price has been selected from the list of valid standard prices</p>
 <p>Type: <strong><a href="Crm.Pricing.ProductPrices.html">ProductPrices</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -528,7 +528,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>DetermineProductPrice( obj.Product, obj.Quantity, obj.QuantityUnit, obj.RequiredDeliveryDate, obj.Offer.Customer, obj.Offer.ShipToCustomer, obj.Offer.EnterpriseCompany, obj.Offer.EnterpriseCompanyLocation, null, obj.Offer.PriceList, obj.ProductPrice)</code></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

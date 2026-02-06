@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Production.Resources.ResourceFunctions.md#notes) | string (254) __nullable__ | User notes on the resource function. 
+| [Notes](Production.Resources.ResourceFunctions.md#notes) | string (254) __nullable__ | User notes on the resource function 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Function](Production.Resources.ResourceFunctions.md#function) | [Functions](Production.Resources.Functions.md) | Function, which the resource can perform. `Required` `Filter(multi eq)` |
+| [Function](Production.Resources.ResourceFunctions.md#function) | [Functions](Production.Resources.Functions.md) | Function, which the resource can perform. |
 | [Resource](Production.Resources.ResourceFunctions.md#resource) | [Resources](Production.Resources.Resources.md) | The <see cref="Resource"/> to which this ResourceFunction belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### Notes
 
-User notes on the resource function.
+User notes on the resource function
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **HiddenByDefault**
 
 ### Function
 
-Function, which the resource can perform. `Required` `Filter(multi eq)`
+Function, which the resource can perform.
 
 Type: **[Functions](Production.Resources.Functions.md)**  
 Category: **System**  

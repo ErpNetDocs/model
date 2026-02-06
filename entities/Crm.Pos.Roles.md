@@ -35,11 +35,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)` 
-| [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)` 
-| [IsActive](Crm.Pos.Roles.md#isactive) | boolean | Indicates whether the current Pos role is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
-| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
+| [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. 
+| [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. 
+| [IsActive](Crm.Pos.Roles.md#isactive) | boolean | Indicates whether the current Pos role is active. 
+| [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. 
+| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the POS role. 
 
 
 ## System Attributes
@@ -58,7 +58,7 @@ Aggregate Tree
 
 ### CanProcessMinusSales
 
-Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)`
+Indicates whether the role is allowed to process minus (qty and/or value) sales.
 
 Type: **boolean**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### CanVoidSales
 
-Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)`
+Indicates whether this role can void sales orders.
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Pos role is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Pos role is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### PosRoleCode
 
-Unique role code. `Required` `Filter(multi eq;like)` `ORD`
+Unique role code.
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### PosRoleName
 
-Multi-language name of the POS role. `Required` `Filter(multi eq;like)`
+Multi-language name of the POS role.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

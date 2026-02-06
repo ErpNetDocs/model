@@ -122,17 +122,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Procedures.ChecklistTemplateItems.html#isrequired">IsRequired</a></td>
 <td>boolean</td>
-<td>Required item. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Required item.</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistTemplateItems.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Item order. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Item order.</td>
 </tr>
 <tr>
 <td><a href="Projects.Procedures.ChecklistTemplateItems.html#text">Text</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>What must be done/checked. <code>Required</code> <code>Filter(like)</code></td>
+<td>What must be done/checked.</td>
 </tr>
 </tbody>
 </table>
@@ -149,7 +149,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.Procedures.ChecklistTemplateItems.html#checklisttemplate">ChecklistTemplate</a></td>
 <td><a href="Projects.Procedures.ChecklistTemplates.html">ChecklistTemplates</a></td>
-<td>Parent template. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Parent template.</td>
 </tr>
 </tbody>
 </table>
@@ -182,7 +182,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isrequired">IsRequired</h3>
-<p>Required item. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Required item.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -190,7 +190,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Item order. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Item order.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -201,7 +201,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ChecklistTemplate.Items.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="text">Text</h3>
-<p>What must be done/checked. <code>Required</code> <code>Filter(like)</code></p>
+<p>What must be done/checked.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -229,7 +229,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="checklisttemplate">ChecklistTemplate</h3>
-<p>Parent template. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Parent template.</p>
 <p>Type: <strong><a href="Projects.Procedures.ChecklistTemplates.html">ChecklistTemplates</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

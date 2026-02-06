@@ -94,6 +94,11 @@ Repository: Regulatory.Excise.TaxWarehouses<br>
 Base Table: Exc_Tax_Warehouses<br>
 Introduced In Version: 21.1.1.1<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Excise.TaxWarehouses<br>
+New name: Regulatory.Excise.TaxWarehouses<br>
+Version: 26.2.1.17<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {Name:T}<br>
 Search Members: TaxWarehouseExciseNumber; Name<br>
@@ -123,22 +128,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.TaxWarehouses.html#customsoffice">CustomsOffice</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The customs office to which the warehouse is headed. <code>Filter(like)</code> <code>Introduced in version 22.1.4.93</code></td>
+<td>The customs office to which the warehouse is headed.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.TaxWarehouses.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Tax Warehouse Name (Multilanguage). <code>Required</code> <code>Filter(like)</code> <code>Introduced in version 21.1.3.93</code></td>
+<td>Tax Warehouse Name (Multilanguage)</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.TaxWarehouses.html#taxwarehouseexcisenumber">TaxWarehouseExciseNumber</a></td>
 <td>string (32)</td>
-<td>The excise identification number of the tax warehouse, issued by the competent authorities. <code>Required</code> <code>Default(&quot;-&quot;)</code> <code>Introduced in version 21.1.3.87</code></td>
+<td>The excise identification number of the tax warehouse, issued by the competent authorities.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.TaxWarehouses.html#traderexcisenumber">TraderExciseNumber</a></td>
 <td>string (32)</td>
-<td>The excise identification number of the owner of the Tax Warehouse. <code>Required</code> <code>Default(&quot;-&quot;)</code> <code>Introduced in version 21.1.3.87</code></td>
+<td>The excise identification number of the owner of the Tax Warehouse.</td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +160,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.TaxWarehouses.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The Enterprise company to which the tax warehouse belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.91</code></td>
+<td>The Enterprise company to which the tax warehouse belongs.</td>
 </tr>
 </tbody>
 </table>
@@ -203,7 +208,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="customsoffice">CustomsOffice</h3>
-<p>The customs office to which the warehouse is headed. <code>Filter(like)</code> <code>Introduced in version 22.1.4.93</code></p>
+<p>The customs office to which the warehouse is headed.</p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -211,14 +216,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Tax Warehouse Name (Multilanguage). <code>Required</code> <code>Filter(like)</code> <code>Introduced in version 21.1.3.93</code></p>
+<p>Tax Warehouse Name (Multilanguage)</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxwarehouseexcisenumber">TaxWarehouseExciseNumber</h3>
-<p>The excise identification number of the tax warehouse, issued by the competent authorities. <code>Required</code> <code>Default(&quot;-&quot;)</code> <code>Introduced in version 21.1.3.87</code></p>
+<p>The excise identification number of the tax warehouse, issued by the competent authorities.</p>
 <p>Type: <strong>string (32)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -227,7 +232,7 @@ Maximum Length: <strong>32</strong><br>
 Default Value: <strong>-</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="traderexcisenumber">TraderExciseNumber</h3>
-<p>The excise identification number of the owner of the Tax Warehouse. <code>Required</code> <code>Default(&quot;-&quot;)</code> <code>Introduced in version 21.1.3.87</code></p>
+<p>The excise identification number of the owner of the Tax Warehouse.</p>
 <p>Type: <strong>string (32)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -279,7 +284,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise company to which the tax warehouse belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.91</code></p>
+<p>The Enterprise company to which the tax warehouse belongs.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

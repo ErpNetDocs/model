@@ -57,10 +57,10 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Inventory.CostCorrections.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Inventory.CostCorrections.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.CostCorrections.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` `Filter(ge;le)` 
+| [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified. 
 | [FullState](Logistics.Inventory.CostCorrections.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.CostCorrections.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Logistics.Inventory.CostCorrections.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Logistics.Inventory.CostCorrections.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Logistics.Inventory.CostCorrections.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.CostCorrections.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.CostCorrections.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.CostCorrections.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -69,7 +69,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Inventory.CostCorrections.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Inventory.CostCorrections.md#state) | [DocumentState](Logistics.Inventory.CostCorrections.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Inventory.CostCorrections.md#statetagsattribute) | string | Specifies the state of the document. 
-| [ThruDate](Logistics.Inventory.CostCorrections.md#thrudate) | datetime | The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` `Filter(ge;le)` 
+| [ThruDate](Logistics.Inventory.CostCorrections.md#thrudate) | datetime | The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction isn't specified. 
 | [Void](Logistics.Inventory.CostCorrections.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Logistics.Inventory.CostCorrections.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Logistics.Inventory.CostCorrections.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -82,7 +82,7 @@ Aggregate Tree
 | [AccessKey](Logistics.Inventory.CostCorrections.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Logistics.Inventory.CostCorrections.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Logistics.Inventory.CostCorrections.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [CorrectedTransaction](Logistics.Inventory.CostCorrections.md#correctedtransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | Transaction that is corrected with this cost correction. `Filter(multi eq)` `ReadOnly` |
+| [CorrectedTransaction](Logistics.Inventory.CostCorrections.md#correctedtransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | Transaction that is corrected with this cost correction. |
 | [CurrencyDirectory](Logistics.Inventory.CostCorrections.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Logistics.Inventory.CostCorrections.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Inventory.CostCorrections.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -95,7 +95,7 @@ Aggregate Tree
 | [ResponsiblePerson](Logistics.Inventory.CostCorrections.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Logistics.Inventory.CostCorrections.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Logistics.Inventory.CostCorrections.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SourceTransaction](Logistics.Inventory.CostCorrections.md#sourcetransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction. `Filter(multi eq)` `ReadOnly` |
+| [SourceTransaction](Logistics.Inventory.CostCorrections.md#sourcetransaction) | [StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable) | Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the cost specified in the source transaction. |
 | [ToCompanyDivision](Logistics.Inventory.CostCorrections.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Inventory.CostCorrections.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Inventory.CostCorrections.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -254,7 +254,7 @@ Show in UI: **CannotBeShown**
 
 ### FromDate
 
-The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` `Filter(ge;le)`
+The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.
 
 Type: **datetime**  
 Category: **System**  
@@ -274,7 +274,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -285,7 +285,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -403,7 +403,7 @@ Show in UI: **HiddenByDefault**
 
 ### ThruDate
 
-The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is null. `Required` `Filter(ge;le)`
+The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.
 
 Type: **datetime**  
 Category: **System**  
@@ -557,7 +557,7 @@ Show in UI: **ShownByDefault**
 
 ### CorrectedTransaction
 
-Transaction that is corrected with this cost correction. `Filter(multi eq)` `ReadOnly`
+Transaction that is corrected with this cost correction.
 
 Type: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
 Category: **System**  
@@ -679,7 +679,7 @@ Show in UI: **HiddenByDefault**
 
 ### SourceTransaction
 
-Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the specified cost in the source transaction. `Filter(multi eq)` `ReadOnly`
+Transaction that determines which transactions need cost correction. The corrected transactions are those that depend on the cost specified in the source transaction.
 
 Type: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
 Indexed: **True**  

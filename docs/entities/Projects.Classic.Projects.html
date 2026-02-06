@@ -132,12 +132,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.Projects.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Short code for identification of projects. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Short code for identification of projects.</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.Projects.html#finishdate">FinishDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. <code>Filter(eq;ge;le)</code></td>
+<td>The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown.</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.Projects.html#name">Name</a></td>
@@ -152,12 +152,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.Projects.html#projectstatus">ProjectStatus</a></td>
 <td><a href="Projects.Classic.Projects.html#projectstatus">ProjectStatus</a></td>
-<td>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></td>
+<td>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled)</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.Projects.html#startdate">StartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Expected date, when the execution of the tasks will start. null means that the start date is still unknown. <code>Filter(eq;ge;le)</code></td>
+<td>Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown</td>
 </tr>
 </tbody>
 </table>
@@ -174,12 +174,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.Projects.html#budgetingcurrency">BudgetingCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</td>
-<td>The currency in which the project budget is calculated. <code>Filter(multi eq)</code></td>
+<td>The currency in which the project budget is calculated</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.Projects.html#clientparty">ClientParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The external or internal client of the project. <code>Filter(multi eq)</code></td>
+<td>The external or internal client of the project</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.Projects.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -189,12 +189,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Classic.Projects.html#projectmanagerperson">ProjectManagerPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The project manager. <code>Filter(multi eq)</code></td>
+<td>The project manager</td>
 </tr>
 <tr>
 <td><a href="Projects.Classic.Projects.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.Classic.ProjectTypes.html">ProjectTypes</a></td>
-<td>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects</td>
 </tr>
 </tbody>
 </table>
@@ -269,7 +269,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Short code for identification of projects. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Short code for identification of projects.</p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -278,7 +278,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="finishdate">FinishDate</h3>
-<p>The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. <code>Filter(eq;ge;le)</code></p>
+<p>The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projectstatus">ProjectStatus</h3>
-<p>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></p>
+<p>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled)</p>
 <p>Type: <strong><a href="Projects.Classic.Projects.html#projectstatus">ProjectStatus</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ProjectStatus</code>(Projects.Classic.Projects.md#projectstatus) data attribute<br>
@@ -353,7 +353,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>Expected date, when the execution of the tasks will start. null means that the start date is still unknown. <code>Filter(eq;ge;le)</code></p>
+<p>Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -403,13 +403,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="budgetingcurrency">BudgetingCurrency</h3>
-<p>The currency in which the project budget is calculated. <code>Filter(multi eq)</code></p>
+<p>The currency in which the project budget is calculated</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="clientparty">ClientParty</h3>
-<p>The external or internal client of the project. <code>Filter(multi eq)</code></p>
+<p>The external or internal client of the project</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -421,13 +421,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="projectmanagerperson">ProjectManagerPerson</h3>
-<p>The project manager. <code>Filter(multi eq)</code></p>
+<p>The project manager</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="projecttype">ProjectType</h3>
-<p>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects</p>
 <p>Type: <strong><a href="Projects.Classic.ProjectTypes.html">ProjectTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

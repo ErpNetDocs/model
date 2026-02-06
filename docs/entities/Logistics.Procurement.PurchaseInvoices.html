@@ -155,7 +155,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#applydate">ApplyDate</a></td>
 <td>date</td>
-<td>Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#completetime">CompleteTime</a></td>
@@ -175,12 +175,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#creditnotereason">CreditNoteReason</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Reason for the debit/credit note.</td>
+<td>Reason for the debit/credit note</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#deliverytermscode">DeliveryTermsCode</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></td>
-<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</td>
+<td>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#documentdate">DocumentDate</a></td>
@@ -215,22 +215,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></td>
-<td>Transaction nature; used for Intrastat reporting.</td>
+<td>Transaction nature; used for Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransportmodecode">IntrastatTransportModeCode</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></td>
-<td>Transport mode; used for Intrastat reporting.</td>
+<td>Transport mode; used for Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -240,7 +240,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Due date for paying the invoice. null means to use the default . <code>Filter(ge;le)</code></td>
+<td>Due date for paying the invoice. NULL means to use the default</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#planningonly">PlanningOnly</a></td>
@@ -280,7 +280,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#vatcashreportingmode">VATCashReportingMode</a></td>
 <td>boolean</td>
-<td>When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+<td>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#vatnotes">VATNotes</a></td>
@@ -337,12 +337,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#costcenter">CostCenter</a></td>
 <td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
-<td>Cost center for which the amount from this document will be accounted. <code>Filter(multi eq)</code></td>
+<td>Cost center for which the amount from this document will be accounted.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#creditnoteoriginalpurchaseinvoice">CreditNoteOriginal<br>PurchaseInvoice</a></td>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a> (nullable)</td>
-<td>The original invoice, which is debited/credited with this note. <code>Filter(multi eq)</code></td>
+<td>The original invoice, which is debited/credited with this note</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#currencydirectory">CurrencyDirectory</a></td>
@@ -352,12 +352,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#dealtype">DealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. <code>Filter(multi eq)</code></td>
+<td>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency of the unit prices and amounts in the document. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency of the unit prices and amounts in the document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#documenttype">DocumentType</a></td>
@@ -387,12 +387,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastatdestinationregion">IntrastatDestinationRegion</a></td>
 <td><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</td>
-<td>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. <code>Filter(multi eq)</code></td>
+<td>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a> (nullable)</td>
-<td>Country of origin of the transport company; used for Intrastat reporting. <code>Filter(multi eq)</code></td>
+<td>Country of origin of the transport company; used for Intrastat reporting</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#masterdocument">MasterDocument</a></td>
@@ -407,12 +407,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#paymentaccount">PaymentAccount</a></td>
 <td><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</td>
-<td>When not null, specifies the default payment account for the payment order. <code>Filter(multi eq)</code></td>
+<td>When not NULL, specifies the default payment account for the payment order</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#paymenttype">PaymentType</a></td>
 <td><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</td>
-<td>The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. <code>Filter(multi eq)</code></td>
+<td>The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#primecausedocument">PrimeCauseDocument</a></td>
@@ -422,17 +422,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#purchaseorder">PurchaseOrder</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a> (nullable)</td>
-<td>The purchase order that was sent to the supplier and is the base for the invoice. null means there is no linked PO and 3 way check won't be performed. <code>Filter(multi eq)</code></td>
+<td>The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#purchasepricelist">PurchasePriceList</a></td>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</td>
-<td>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. <code>Filter(multi eq)</code></td>
+<td>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#receivingorder">ReceivingOrder</a></td>
 <td><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a> (nullable)</td>
-<td>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. <code>Filter(multi eq)</code></td>
+<td>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#responsibleperson">ResponsiblePerson</a></td>
@@ -447,7 +447,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#saledealtype">SaleDealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</td>
-<td>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. <code>Filter(multi eq)</code></td>
+<td>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#sequence">Sequence</a></td>
@@ -457,7 +457,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#supplier">Supplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></td>
-<td>The supplier of the purchase, who is issuing the document. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The supplier of the purchase, who is issuing the document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseInvoices.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -605,7 +605,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="applydate">ApplyDate</h3>
-<p>Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -639,7 +639,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditnotereason">CreditNoteReason</h3>
-<p>Reason for the debit/credit note.</p>
+<p>Reason for the debit/credit note</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -647,7 +647,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deliverytermscode">DeliveryTermsCode</h3>
-<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.</p>
+<p>Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseInvoices.html#deliverytermscode">DeliveryTerms</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for DeliveryTerms properties<br>
@@ -766,7 +766,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastattransactionnaturecode">IntrastatTransactionNatureCode</h3>
-<p>Transaction nature; used for Intrastat reporting.</p>
+<p>Transaction nature; used for Intrastat reporting</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransactionnaturecode">TransactionNature</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransactionNature properties<br>
@@ -863,7 +863,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; PurchaseInvoiceLinesRepository.IntrastatTransactionNatureCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportmodecode">IntrastatTransportModeCode</h3>
-<p>Transport mode; used for Intrastat reporting.</p>
+<p>Transport mode; used for Intrastat reporting</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseInvoices.html#intrastattransportmodecode">TransportMode</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for TransportMode properties<br>
@@ -916,7 +916,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; PurchaseInvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -924,7 +924,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -963,7 +963,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>Due date for paying the invoice. null means to use the default . <code>Filter(ge;le)</code></p>
+<p>Due date for paying the invoice. NULL means to use the default</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1066,7 +1066,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="vatcashreportingmode">VATCashReportingMode</h3>
-<p>When True, indicates, that this invoice uses the special 'Cash reporting mode' when creating VAT ledger entries. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
+<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1203,13 +1203,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costcenter">CostCenter</h3>
-<p>Cost center for which the amount from this document will be accounted. <code>Filter(multi eq)</code></p>
+<p>Cost center for which the amount from this document will be accounted.</p>
 <p>Type: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditnoteoriginalpurchaseinvoice">CreditNoteOriginalPurchaseInvoice</h3>
-<p>The original invoice, which is debited/credited with this note. <code>Filter(multi eq)</code></p>
+<p>The original invoice, which is debited/credited with this note</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseInvoices.html">PurchaseInvoices</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1222,7 +1222,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="dealtype">DealType</h3>
-<p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type. <code>Filter(multi eq)</code></p>
+<p>Deal type for this purchase invoice. If deal type in entered then VAT entry is created for this deal type.</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1230,7 +1230,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; c.LineDealType).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency of the unit prices and amounts in the document. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency of the unit prices and amounts in the document.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1270,7 +1270,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastatdestinationregion">IntrastatDestinationRegion</h3>
-<p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-null, it applies to the whole document. <code>Filter(multi eq)</code></p>
+<p>Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document.</p>
 <p>Type: <strong><a href="General.Geography.AdministrativeRegions.html">AdministrativeRegions</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1279,7 +1279,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <code>obj.EnterpriseCompany.Company.AdministrativeRegion</code>
 <code>obj.Lines.Select( c =&gt; c.IntrastatDestinationRegion).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="intrastattransportcountry">IntrastatTransportCountry</h3>
-<p>Country of origin of the transport company; used for Intrastat reporting. <code>Filter(multi eq)</code></p>
+<p>Country of origin of the transport company; used for Intrastat reporting</p>
 <p>Type: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1301,7 +1301,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentaccount">PaymentAccount</h3>
-<p>When not null, specifies the default payment account for the payment order. <code>Filter(multi eq)</code></p>
+<p>When not NULL, specifies the default payment account for the payment order</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1309,7 +1309,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Supplier.DefaultPaymentAccount.IfNullThen( obj.PaymentType.GetDefaultPaymentAccount( ))</code></p>
 <h3 id="paymenttype">PaymentType</h3>
-<p>The payment type to be used. null is allowed only temporary and should be specified if payment order is to be generated. <code>Filter(multi eq)</code></p>
+<p>The payment type to be used. NULL is allowed only temporary and should be specified if payment order is to be generated</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1324,20 +1324,20 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
-<p>The purchase order that was sent to the supplier and is the base for the invoice. null means there is no linked PO and 3 way check won't be performed. <code>Filter(multi eq)</code></p>
+<p>The purchase order that was sent to the supplier and is the base for the invoice. NULL means there is no linked PO and 3 way check won't be performed</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchasepricelist">PurchasePriceList</h3>
-<p>The price list, which, when non-null, is used to automatically load unit prices of the products, when entering the invoice manually. <code>Filter(multi eq)</code></p>
+<p>The price list, which, when non-NULL, is used to automatically load unit prices of the products, when entering the invoice manually.</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receivingorder">ReceivingOrder</h3>
-<p>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. null means that there is no linked RO and the 2 or 3 way check will not include the RO. <code>Filter(multi eq)</code></p>
+<p>The receiving order for the goods that were invoiced. The id is used for 2 or 3 way quantity check. NULL means that there is no linked RO and the 2 or 3 way check will not include the RO</p>
 <p>Type: <strong><a href="Logistics.Procurement.ReceivingOrders.html">ReceivingOrders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -1356,7 +1356,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="saledealtype">SaleDealType</h3>
-<p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type. <code>Filter(multi eq)</code></p>
+<p>Sale deal type for this purchase invoice. If sale deal type in entered then Sales VAT entry is created for this deal type.</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1370,7 +1370,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="supplier">Supplier</h3>
-<p>The supplier of the purchase, who is issuing the document. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The supplier of the purchase, who is issuing the document.</p>
 <p>Type: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

@@ -195,7 +195,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#duedate">DueDate</a></td>
 <td>datetime</td>
-<td>The final date, when the store transaction should occur. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+<td>The final date, when the store transaction should occur.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#entityname">EntityName</a></td>
@@ -210,17 +210,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#movementtype">MovementType</a></td>
 <td><a href="Logistics.Inventory.StoreOrders.html#movementtype">MovementType</a></td>
-<td>Store order movement type. R=RECEIPT, I=ISSUE. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Store order movement type. R=RECEIPT, I=ISSUE</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -230,12 +230,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#plannedcompletiondate">PlannedCompletionDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date, when the quantities are expected to be completely issued/received. <code>Filter(ge;le)</code></td>
+<td>Date, when the quantities are expected to be completely issued/received</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#plannedreleasedate">PlannedReleaseDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur. <code>Filter(ge;le)</code></td>
+<td>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#planningonly">PlanningOnly</a></td>
@@ -275,7 +275,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#status">Status</a></td>
 <td>string (1)</td>
-<td>P=Planned; F=Firm planned; R=Released; C=Completed. <code>Required</code> <code>Default(&quot;P&quot;)</code></td>
+<td>P=Planned; F=Firm planned; R=Released; C=Completed</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#temptransportcompanyname">TempTransportCompanyName</a></td>
@@ -342,7 +342,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#documentcurrency">DocumentCurrency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency in which the document amounts are expessed. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency in which the document amounts are expessed.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#documenttype">DocumentType</a></td>
@@ -372,7 +372,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#issuedbyparty">IssuedByParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party, which issued the goods. <code>Filter(multi eq)</code></td>
+<td>The party, which issued the goods.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#masterdocument">MasterDocument</a></td>
@@ -382,7 +382,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#orderingperson">OrderingPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person, which ordered the operation. <code>Filter(multi eq)</code></td>
+<td>The person, which ordered the operation.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#parent">Parent</a></td>
@@ -397,7 +397,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#receivedbyparty">ReceivedByParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party, which received the goods. <code>Filter(multi eq)</code></td>
+<td>The party, which received the goods.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#responsibleperson">ResponsiblePerson</a></td>
@@ -417,7 +417,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#store">Store</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a></td>
-<td>The designated warehouse for the operation. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The designated warehouse for the operation</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreOrders.html#tocompanydivision">ToCompanyDivision</a></td>
@@ -630,7 +630,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>The final date, when the store transaction should occur. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
+<p>The final date, when the store transaction should occur.</p>
 <p>Type: <strong>datetime</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -655,7 +655,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -663,7 +663,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -671,7 +671,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="movementtype">MovementType</h3>
-<p>Store order movement type. R=RECEIPT, I=ISSUE. <code>Required</code> <code>Default(&quot;R&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Store order movement type. R=RECEIPT, I=ISSUE</p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreOrders.html#movementtype">MovementType</a></strong><br>
 Category: <strong>System</strong><br>
 Specifies the movement type (direction) of a warehouse document.<br>
@@ -730,14 +730,14 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="plannedcompletiondate">PlannedCompletionDate</h3>
-<p>Date, when the quantities are expected to be completely issued/received. <code>Filter(ge;le)</code></p>
+<p>Date, when the quantities are expected to be completely issued/received</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="plannedreleasedate">PlannedReleaseDate</h3>
-<p>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur. <code>Filter(ge;le)</code></p>
+<p>Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -838,7 +838,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="status">Status</h3>
-<p>P=Planned; F=Firm planned; R=Released; C=Completed. <code>Required</code> <code>Default(&quot;P&quot;)</code></p>
+<p>P=Planned; F=Firm planned; R=Released; C=Completed</p>
 <p>Type: <strong>string (1)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -988,7 +988,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentcurrency">DocumentCurrency</h3>
-<p>The currency in which the document amounts are expessed. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency in which the document amounts are expessed.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1026,7 +1026,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issuedbyparty">IssuedByParty</h3>
-<p>The party, which issued the goods. <code>Filter(multi eq)</code></p>
+<p>The party, which issued the goods.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1039,7 +1039,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="orderingperson">OrderingPerson</h3>
-<p>The person, which ordered the operation. <code>Filter(multi eq)</code></p>
+<p>The person, which ordered the operation.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1059,7 +1059,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="receivedbyparty">ReceivedByParty</h3>
-<p>The party, which received the goods. <code>Filter(multi eq)</code></p>
+<p>The party, which received the goods.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1083,7 +1083,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="store">Store</h3>
-<p>The designated warehouse for the operation. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The designated warehouse for the operation</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

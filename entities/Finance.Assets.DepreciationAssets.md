@@ -40,7 +40,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Asset](Finance.Assets.DepreciationAssets.md#asset) | [Assets](Finance.Assets.Assets.md) | Specifies the asset, whose depreciation should be calculated with the current document. `Required` `Filter(multi eq)` |
+| [Asset](Finance.Assets.DepreciationAssets.md#asset) | [Assets](Finance.Assets.Assets.md) | Specifies the asset, whose depreciation should be calculated with the current document. |
 | [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) | [Depreciations](Finance.Assets.Depreciations.md) | The <see cref="Depreciation"/> to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### Asset
 
-Specifies the asset, whose depreciation should be calculated with the current document. `Required` `Filter(multi eq)`
+Specifies the asset, whose depreciation should be calculated with the current document.
 
 Type: **[Assets](Finance.Assets.Assets.md)**  
 Category: **System**  

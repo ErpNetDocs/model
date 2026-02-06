@@ -40,15 +40,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (254) __nullable__ | Notes for this SupplySchemaRoute. 
-| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. (Used by the schematic control). 
-| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)` 
+| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. (Used by the schematic control) 
+| [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
-| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. |
+| [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. |
 | [<s>SupplySchema</s>](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | **OBSOLETE! Do not use!** The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` |
 
 
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### SchemaXML
 
-Obsolete. Not used. (Used by the schematic control).
+Obsolete. Not used. (Used by the schematic control)
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### TransitTimeDays
 
-Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)`
+Obsolete. Not used. (Time needed for the delivery of the goods using this route)
 
 Type: **int32**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **HiddenByDefault**
 
 ### DestinationStore
 
-Obsolete. Not used. `Required` `Filter(multi eq)`
+Obsolete. Not used.
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### SourceStore
 
-Obsolete. Not used. `Required` `Filter(multi eq)`
+Obsolete. Not used.
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Category: **System**  

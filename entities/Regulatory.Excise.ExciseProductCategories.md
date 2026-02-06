@@ -13,6 +13,15 @@ Base Table: Exc_Excise_Product_Categories
 Introduced In Version: 21.1.3.87  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseProductCategories  
+New name: Regulatory.Excise.ExciseProductCategories  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Name:T}  
 Search Members: Code; Name  
@@ -35,9 +44,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculationAlgorithm](Regulatory.Excise.ExciseProductCategories.md#calculationalgorithm) | [CalculationAlgorithm](Regulatory.Excise.ExciseProductCategories.md#calculationalgorithm) | The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100. `Required` 
-| [Code](Regulatory.Excise.ExciseProductCategories.md#code) | string (32) | For EU, the product category code is a single character - B,E,I,S,T or W. `Required` `Filter(multi eq;like)` 
-| [Name](Regulatory.Excise.ExciseProductCategories.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage String. `Required` `Filter(like)` 
+| [CalculationAlgorithm](Regulatory.Excise.ExciseProductCategories.md#calculationalgorithm) | [CalculationAlgorithm](Regulatory.Excise.ExciseProductCategories.md#calculationalgorithm) | The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100. 
+| [Code](Regulatory.Excise.ExciseProductCategories.md#code) | string (32) | For EU, the product category code is a single character - B,E,I,S,T or W. 
+| [Name](Regulatory.Excise.ExciseProductCategories.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage String 
 
 
 ## System Attributes
@@ -56,7 +65,7 @@ Aggregate Tree
 
 ### CalculationAlgorithm
 
-The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100. `Required`
+The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100.
 
 Type: **[CalculationAlgorithm](Regulatory.Excise.ExciseProductCategories.md#calculationalgorithm)**  
 Category: **System**  
@@ -76,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-For EU, the product category code is a single character - B,E,I,S,T or W. `Required` `Filter(multi eq;like)`
+For EU, the product category code is a single character - B,E,I,S,T or W.
 
 Type: **string (32)**  
 Category: **System**  
@@ -87,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage String. `Required` `Filter(like)`
+Multilanguage String
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

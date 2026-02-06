@@ -13,6 +13,15 @@ Base Table: Exc_Excise_Duty_Rates
 Introduced In Version: 21.1.3.87  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseDutyRates  
+New name: Regulatory.Excise.ExciseDutyRates  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Id}: {ExciseProductId}  
 Search Members:   
@@ -33,18 +42,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseDutyRateField](Regulatory.Excise.ExciseDutyRates.md#excisedutyratefield) | decimal (10, 6) | The rate which should be applied for the specified product and purpose. `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [ExciseDutyRateField](Regulatory.Excise.ExciseDutyRates.md#excisedutyratefield) | decimal (10, 6) | The rate which should be applied for the specified product and purpose. 
 | [Notes](Regulatory.Excise.ExciseDutyRates.md#notes) | string (max) __nullable__ | Notes for this ExciseDutyRate. 
-| [ValidFrom](Regulatory.Excise.ExciseDutyRates.md#validfrom) | date __nullable__ | The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7` 
-| [ValidTo](Regulatory.Excise.ExciseDutyRates.md#validto) | date __nullable__ | Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7` 
+| [ValidFrom](Regulatory.Excise.ExciseDutyRates.md#validfrom) | date __nullable__ | The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended. 
+| [ValidTo](Regulatory.Excise.ExciseDutyRates.md#validto) | date __nullable__ | Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseMeasurementUnit](Regulatory.Excise.ExciseDutyRates.md#excisemeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit which should be used in the excise calculation. This is only for verification purposes. `Required` `Filter(multi eq)` |
-| [ExciseProduct](Regulatory.Excise.ExciseDutyRates.md#exciseproduct) | [ExciseProducts](Regulatory.Excise.ExciseProducts.md) | The excise product for which the rate is applied. `Required` `Filter(multi eq)` |
-| [ExcisePurposeCode](Regulatory.Excise.ExciseDutyRates.md#excisepurposecode) | [ExcisePurposeCodes](Regulatory.Excise.ExcisePurposeCodes.md) | The purpose for which the rate is applied. `Required` `Filter(multi eq)` |
+| [ExciseMeasurementUnit](Regulatory.Excise.ExciseDutyRates.md#excisemeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit which should be used in the excise calculation. This is only for verification purposes. |
+| [ExciseProduct](Regulatory.Excise.ExciseDutyRates.md#exciseproduct) | [ExciseProducts](Regulatory.Excise.ExciseProducts.md) | The excise product for which the rate is applied. |
+| [ExcisePurposeCode](Regulatory.Excise.ExciseDutyRates.md#excisepurposecode) | [ExcisePurposeCodes](Regulatory.Excise.ExcisePurposeCodes.md) | The purpose for which the rate is applied. |
 
 
 ## System Attributes
@@ -63,7 +72,7 @@ Aggregate Tree
 
 ### ExciseDutyRateField
 
-The rate which should be applied for the specified product and purpose. `Required` `Default(0)` `Filter(eq;ge;le)`
+The rate which should be applied for the specified product and purpose.
 
 Type: **decimal (10, 6)**  
 Category: **System**  
@@ -85,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7`
+The date from which the excise duty rate becomes effective. If a newer rate with a later start date exists for the same product, the previous one is considered automatically ended.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -95,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed. `Filter(eq;ge;le)` `Introduced in version 25.1.3.7`
+Optional. If entered, it limits the validity period of the rate. If left empty, the rate remains valid until a new one with a later start date is defined or it is manually closed.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -167,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseMeasurementUnit
 
-The measurement unit which should be used in the excise calculation. This is only for verification purposes. `Required` `Filter(multi eq)`
+The measurement unit which should be used in the excise calculation. This is only for verification purposes.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -176,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### ExciseProduct
 
-The excise product for which the rate is applied. `Required` `Filter(multi eq)`
+The excise product for which the rate is applied.
 
 Type: **[ExciseProducts](Regulatory.Excise.ExciseProducts.md)**  
 Indexed: **True**  
@@ -186,7 +195,7 @@ Show in UI: **ShownByDefault**
 
 ### ExcisePurposeCode
 
-The purpose for which the rate is applied. `Required` `Filter(multi eq)`
+The purpose for which the rate is applied.
 
 Type: **[ExcisePurposeCodes](Regulatory.Excise.ExcisePurposeCodes.md)**  
 Category: **System**  

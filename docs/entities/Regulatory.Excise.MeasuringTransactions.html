@@ -94,6 +94,11 @@ Repository: Regulatory.Excise.MeasuringTransactions<br>
 Base Table: Exc_Measuring_Transactions<br>
 Introduced In Version: 21.1.1.9<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Excise.MeasuringTransactions<br>
+New name: Regulatory.Excise.MeasuringTransactions<br>
+Version: 26.2.1.17<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {TransactionNumber}: {MeasuringDeviceCode}<br>
 Search Members: MeasuringDeviceCode<br>
@@ -122,32 +127,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#alcoholdegree">AlcoholDegree</a></td>
 <td>decimal (5, 2) <strong>nullable</strong></td>
-<td>For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. <code>Filter(multi eq;ge;le)</code></td>
+<td>For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#alcoholdensity">AlcoholDensity</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></td>
+<td>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#alcoholtemperature">AlcoholTemperature</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></td>
+<td>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#direction">Direction</a></td>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#direction">Direction</a></td>
-<td>The direction of the transaction - IN/OUT. <code>Required</code></td>
+<td>The direction of the transaction - IN/OUT.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#endtimeutc">EndTimeUtc</a></td>
 <td>datetime</td>
-<td>Ending time of the transaction (in UTC time). <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Ending time of the transaction (in UTC time).</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#measuringdevicecode">MeasuringDeviceCode</a></td>
 <td>string (32)</td>
-<td>The code of the measuring device, used to measure the transaction. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+<td>The code of the measuring device, used to measure the transaction.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#notes">Notes</a></td>
@@ -157,27 +162,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity of the product, measured with this transaction. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The quantity of the product, measured with this transaction.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#starttimeutc">StartTimeUtc</a></td>
 <td>datetime</td>
-<td>Starting time of the transaction (in UTC time). <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Starting time of the transaction (in UTC time).</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#totalcounterend">TotalCounterEnd</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Total counter value at the end of the transaction. <code>Introduced in version 23.1.1.42</code></td>
+<td>Total counter value at the end of the transaction</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#totalcounterstart">TotalCounterStart</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Total counter value at the start of the transaction. <code>Introduced in version 23.1.1.42</code></td>
+<td>Total counter value at the start of the transaction</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#transactionnumber">TransactionNumber</a></td>
 <td>string (32)</td>
-<td>Transaction number, unique for the measuring device. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+<td>Transaction number, unique for the measuring device.</td>
 </tr>
 </tbody>
 </table>
@@ -194,17 +199,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which was being measured. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product, which was being measured.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Quantity.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.MeasuringTransactions.html#taxwarehouse">TaxWarehouse</a></td>
 <td><a href="Regulatory.Excise.TaxWarehouses.html">TaxWarehouses</a></td>
-<td>The tax warehouse, where the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The tax warehouse, where the transaction occurred.</td>
 </tr>
 </tbody>
 </table>
@@ -252,28 +257,28 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alcoholdegree">AlcoholDegree</h3>
-<p>For alcoholic products, contains the percentage of pure alcohol. null when the transaction is not for alcoholic products. <code>Filter(multi eq;ge;le)</code></p>
+<p>For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.</p>
 <p>Type: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="alcoholdensity">AlcoholDensity</h3>
-<p>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></p>
+<p>For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="alcoholtemperature">AlcoholTemperature</h3>
-<p>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). null for non-alcoholic products. <code>Filter(multi eq;ge;le)</code></p>
+<p>For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.</p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>The direction of the transaction - IN/OUT. <code>Required</code></p>
+<p>The direction of the transaction - IN/OUT.</p>
 <p>Type: <strong><a href="Regulatory.Excise.MeasuringTransactions.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Regulatory.Excise.MeasuringTransactions.md#direction) data attribute<br>
@@ -300,14 +305,14 @@ Allowed Values (Regulatory.Excise.MeasuringTransactionsRepository.Direction Enum
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endtimeutc">EndTimeUtc</h3>
-<p>Ending time of the transaction (in UTC time). <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Ending time of the transaction (in UTC time).</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="measuringdevicecode">MeasuringDeviceCode</h3>
-<p>The code of the measuring device, used to measure the transaction. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
+<p>The code of the measuring device, used to measure the transaction.</p>
 <p>Type: <strong>string (32)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -324,35 +329,35 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity of the product, measured with this transaction. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The quantity of the product, measured with this transaction.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttimeutc">StartTimeUtc</h3>
-<p>Starting time of the transaction (in UTC time). <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Starting time of the transaction (in UTC time).</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalcounterend">TotalCounterEnd</h3>
-<p>Total counter value at the end of the transaction. <code>Introduced in version 23.1.1.42</code></p>
+<p>Total counter value at the end of the transaction</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalcounterstart">TotalCounterStart</h3>
-<p>Total counter value at the start of the transaction. <code>Introduced in version 23.1.1.42</code></p>
+<p>Total counter value at the start of the transaction</p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactionnumber">TransactionNumber</h3>
-<p>Transaction number, unique for the measuring device. <code>Required</code> <code>Filter(multi eq;like)</code></p>
+<p>Transaction number, unique for the measuring device.</p>
 <p>Type: <strong>string (32)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -403,20 +408,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
-<p>The product, which was being measured. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product, which was being measured.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxwarehouse">TaxWarehouse</h3>
-<p>The tax warehouse, where the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The tax warehouse, where the transaction occurred.</p>
 <p>Type: <strong><a href="Regulatory.Excise.TaxWarehouses.html">TaxWarehouses</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

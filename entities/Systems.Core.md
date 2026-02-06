@@ -11,6 +11,7 @@ uid: Systems.Core
 - [DocumentPrintImages](Systems.Core.DocumentPrintImages.md)  
 - [DocumentVersions](Systems.Core.DocumentVersions.md)  
 - [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
+- [Extensions](Systems.Core.Extensions.md)  
 - [FormLayouts](Systems.Core.FormLayouts.md)  
 - [InstanceChangeRequests](Systems.Core.InstanceChangeRequests.md)  
 - [Notifications](Systems.Core.Notifications.md)  

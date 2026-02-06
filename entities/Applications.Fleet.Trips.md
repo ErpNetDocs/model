@@ -58,12 +58,12 @@ Aggregate Tree
 | [DocumentVersion](Applications.Fleet.Trips.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Applications.Fleet.Trips.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Applications.Fleet.Trips.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Applications.Fleet.Trips.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Applications.Fleet.Trips.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Applications.Fleet.Trips.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Applications.Fleet.Trips.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Applications.Fleet.Trips.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Fleet.Trips.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Applications.Fleet.Trips.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PrimaryVehicle<br />EndingMileage](Applications.Fleet.Trips.md#primaryvehicleendingmileage) | decimal (9, 0) __nullable__ | Mileage of the primary vehicle in the vehicle set at the ending of the trip. null means unknown. 
-| [PrimaryVehicle<br />StartingMileage](Applications.Fleet.Trips.md#primaryvehiclestartingmileage) | decimal (9, 0) __nullable__ | Mileage of the primary vehicle in the vehicle set at the begining of the trip. null means unknown. 
+| [PrimaryVehicle<br />EndingMileage](Applications.Fleet.Trips.md#primaryvehicleendingmileage) | decimal (9, 0) __nullable__ | Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown 
+| [PrimaryVehicle<br />StartingMileage](Applications.Fleet.Trips.md#primaryvehiclestartingmileage) | decimal (9, 0) __nullable__ | Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown 
 | [ReadOnly](Applications.Fleet.Trips.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Applications.Fleet.Trips.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Applications.Fleet.Trips.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -82,7 +82,7 @@ Aggregate Tree
 | [AccessKey](Applications.Fleet.Trips.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Applications.Fleet.Trips.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Applications.Fleet.Trips.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Crew](Applications.Fleet.Trips.md#crew) | [Crews](Applications.Fleet.Crews.md) | The crew, which operated the vehicle set. `Required` `Filter(multi eq)` |
+| [Crew](Applications.Fleet.Trips.md#crew) | [Crews](Applications.Fleet.Crews.md) | The crew, which operated the vehicle set |
 | [CurrencyDirectory](Applications.Fleet.Trips.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Applications.Fleet.Trips.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Applications.Fleet.Trips.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -98,7 +98,7 @@ Aggregate Tree
 | [ToCompanyDivision](Applications.Fleet.Trips.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Applications.Fleet.Trips.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Applications.Fleet.Trips.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [VehicleSet](Applications.Fleet.Trips.md#vehicleset) | [VehicleSets](Applications.Fleet.VehicleSets.md) | The vehicle set for which the trip is reported. `Required` `Filter(multi eq)` |
+| [VehicleSet](Applications.Fleet.Trips.md#vehicleset) | [VehicleSets](Applications.Fleet.VehicleSets.md) | The vehicle set for which the trip is reported |
 
 
 ## System Attributes
@@ -264,7 +264,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -316,7 +316,7 @@ Show in UI: **HiddenByDefault**
 
 ### PrimaryVehicleEndingMileage
 
-Mileage of the primary vehicle in the vehicle set at the ending of the trip. null means unknown.
+Mileage of the primary vehicle in the vehicle set at the ending of the trip. NULL means unknown
 
 Type: **decimal (9, 0) __nullable__**  
 Category: **System**  
@@ -326,7 +326,7 @@ Show in UI: **ShownByDefault**
 
 ### PrimaryVehicleStartingMileage
 
-Mileage of the primary vehicle in the vehicle set at the begining of the trip. null means unknown.
+Mileage of the primary vehicle in the vehicle set at the begining of the trip. NULL means unknown
 
 Type: **decimal (9, 0) __nullable__**  
 Category: **System**  
@@ -557,7 +557,7 @@ Show in UI: **ShownByDefault**
 
 ### Crew
 
-The crew, which operated the vehicle set. `Required` `Filter(multi eq)`
+The crew, which operated the vehicle set
 
 Type: **[Crews](Applications.Fleet.Crews.md)**  
 Category: **System**  
@@ -710,7 +710,7 @@ Show in UI: **HiddenByDefault**
 
 ### VehicleSet
 
-The vehicle set for which the trip is reported. `Required` `Filter(multi eq)`
+The vehicle set for which the trip is reported
 
 Type: **[VehicleSets](Applications.Fleet.VehicleSets.md)**  
 Category: **System**  

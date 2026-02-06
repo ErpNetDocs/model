@@ -46,17 +46,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LocationCodingSystem](General.Contacts.PartyLocationNumbers.md#locationcodingsystem) | [LocationCodingSystem](General.Contacts.PartyLocationNumbers.md#locationcodingsystem) | The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)` 
-| [LocationNumber](General.Contacts.PartyLocationNumbers.md#locationnumber) | string (16) | The location number of Party. `Required` `Filter(multi eq;like)` `ORD` 
-| [PartnerLocationNumber](General.Contacts.PartyLocationNumbers.md#partnerlocationnumber) | string (16) __nullable__ | The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)` 
-| [Significance](General.Contacts.PartyLocationNumbers.md#significance) | int32 | Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
+| [LocationCodingSystem](General.Contacts.PartyLocationNumbers.md#locationcodingsystem) | [LocationCodingSystem](General.Contacts.PartyLocationNumbers.md#locationcodingsystem) | The coding system for which we are defining the location number. 
+| [LocationNumber](General.Contacts.PartyLocationNumbers.md#locationnumber) | string (16) | The location number of Party. 
+| [PartnerLocationNumber](General.Contacts.PartyLocationNumbers.md#partnerlocationnumber) | string (16) __nullable__ | The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number. 
+| [Significance](General.Contacts.PartyLocationNumbers.md#significance) | int32 | Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PartnerParty](General.Contacts.PartyLocationNumbers.md#partnerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. `Filter(multi eq)` |
-| [Party](General.Contacts.PartyLocationNumbers.md#party) | [Parties](General.Contacts.Parties.md) | The party for which we are defining the location number. `Required` `Filter(multi eq)` `Owner` |
+| [PartnerParty](General.Contacts.PartyLocationNumbers.md#partnerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party. |
+| [Party](General.Contacts.PartyLocationNumbers.md#party) | [Parties](General.Contacts.Parties.md) | The party for which we are defining the location number. |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### LocationCodingSystem
 
-The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)`
+The coding system for which we are defining the location number.
 
 Type: **[LocationCodingSystem](General.Contacts.PartyLocationNumbers.md#locationcodingsystem)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### LocationNumber
 
-The location number of Party. `Required` `Filter(multi eq;like)` `ORD`
+The location number of Party.
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### PartnerLocationNumber
 
-The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)`
+The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### Significance
 
-Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. `Required` `Default(0)` `Filter(multi eq;ge;le)`
+Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.
 
 Type: **int32**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **HiddenByDefault**
 
 ### PartnerParty
 
-The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. `Filter(multi eq)`
+The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. NULL means that the location number is not dependent on the Partner Party.
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-The party for which we are defining the location number. `Required` `Filter(multi eq)` `Owner`
+The party for which we are defining the location number.
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  

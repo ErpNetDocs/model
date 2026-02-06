@@ -58,8 +58,8 @@ Aggregate Tree
 | [DocumentVersion](Applications.Rental.Transactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Applications.Rental.Transactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Applications.Rental.Transactions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Applications.Rental.Transactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Applications.Rental.Transactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Applications.Rental.Transactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Applications.Rental.Transactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Applications.Rental.Transactions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Applications.Rental.Transactions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Applications.Rental.Transactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Applications.Rental.Transactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -68,8 +68,8 @@ Aggregate Tree
 | [ReleaseTime](Applications.Rental.Transactions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Applications.Rental.Transactions.md#state) | [DocumentState](Applications.Rental.Transactions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Applications.Rental.Transactions.md#statetagsattribute) | string | Specifies the state of the document. 
-| [TransactionTimestamp](Applications.Rental.Transactions.md#transactiontimestamp) | datetime __nullable__ | Transaction Timestamp. `Filter(multi eq;ge;le)` 
-| [TransactionType](Applications.Rental.Transactions.md#transactiontype) | [TransactionType](Applications.Rental.Transactions.md#transactiontype) __nullable__ | Transaction Type. `Filter(eq;like)` 
+| [TransactionTimestamp](Applications.Rental.Transactions.md#transactiontimestamp) | datetime __nullable__ | Exact time at which the actions from rent transaction are performed. If the transaction contains actions at different times then this fields should by empty. 
+| [TransactionType](Applications.Rental.Transactions.md#transactiontype) | [TransactionType](Applications.Rental.Transactions.md#transactiontype) __nullable__ | Transaction type for the entire rent transaction. If the transaction contains actions of different type then this fields should by empty. 
 | [Void](Applications.Rental.Transactions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Applications.Rental.Transactions.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Applications.Rental.Transactions.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -88,8 +88,8 @@ Aggregate Tree
 | [EnterpriseCompanyLocation](Applications.Rental.Transactions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Applications.Rental.Transactions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Applications.Rental.Transactions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [LeaseContract](Applications.Rental.Transactions.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) (nullable) | Lease Contract. `Filter(multi eq)` |
-| [LesseeCustomer](Applications.Rental.Transactions.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Lessee Customer. `Filter(multi eq)` |
+| [LeaseContract](Applications.Rental.Transactions.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) (nullable) | Rent contract for which this rent transaction contains actions. If the transaction contains actions from different contracts then this fields should by empty. |
+| [LesseeCustomer](Applications.Rental.Transactions.md#lesseecustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Lessee for which this rent transaction contains actions. If the transaction contains actions for different lessees then this fields should by empty. |
 | [MasterDocument](Applications.Rental.Transactions.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Applications.Rental.Transactions.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Applications.Rental.Transactions.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -264,7 +264,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -393,7 +393,7 @@ Show in UI: **HiddenByDefault**
 
 ### TransactionTimestamp
 
-Transaction Timestamp. `Filter(multi eq;ge;le)`
+Exact time at which the actions from rent transaction are performed. If the transaction contains actions at different times then this fields should by empty.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -403,7 +403,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionType
 
-Transaction Type. `Filter(eq;like)`
+Transaction type for the entire rent transaction. If the transaction contains actions of different type then this fields should by empty.
 
 Type: **[TransactionType](Applications.Rental.Transactions.md#transactiontype) __nullable__**  
 Category: **System**  
@@ -623,7 +623,7 @@ Show in UI: **HiddenByDefault**
 
 ### LeaseContract
 
-Lease Contract. `Filter(multi eq)`
+Rent contract for which this rent transaction contains actions. If the transaction contains actions from different contracts then this fields should by empty.
 
 Type: **[LeaseContracts](Applications.Rental.LeaseContracts.md) (nullable)**  
 Category: **System**  
@@ -632,7 +632,7 @@ Show in UI: **ShownByDefault**
 
 ### LesseeCustomer
 
-Lessee Customer. `Filter(multi eq)`
+Lessee for which this rent transaction contains actions. If the transaction contains actions for different lessees then this fields should by empty.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  

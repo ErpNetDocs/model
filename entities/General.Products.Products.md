@@ -45,63 +45,63 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. `Required` `Default("B ")` `Filter(eq)` 
-| [Active](General.Products.Products.md#active) | boolean | True if the product is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
-| [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. `Required` `Default(false)` `Filter(eq)` 
+| [ABCClass](General.Products.Products.md#abcclass) | [ABCClass](General.Products.Products.md#abcclass) | Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. 
+| [Active](General.Products.Products.md#active) | boolean | 1 if the product is active, 0 - not to list in combo boxes for choosing in new documents 
+| [AllowVariableMeasurement<br />Ratios](General.Products.Products.md#allowvariablemeasurementratios) | boolean | Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit. 
 | [CatalogDescriptionHtml](General.Products.Products.md#catalogdescriptionhtml) | string (max) __nullable__ | Full HTML description of the product. Usually used for display on product catalogs, web pages, etc. 
-| [CostingMethod](General.Products.Products.md#costingmethod) | [CostingMethod](General.Products.Products.md#costingmethod) __nullable__ | Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost. 
+| [CostingMethod](General.Products.Products.md#costingmethod) | [CostingMethod](General.Products.Products.md#costingmethod) __nullable__ | Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost 
 | [CreationTime](General.Products.Products.md#creationtime) | datetime __nullable__ | Date and time when the Product was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Products.Products.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Product. `Filter(like)` `ReadOnly` 
-| [Description](General.Products.Products.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of the product. 
-| [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 __nullable__ | Total default expiry period for the product (in days) from the date of production to the date of expiry. 
-| [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")` 
-| [GuaranteePeriodDays](General.Products.Products.md#guaranteeperioddays) | int32 __nullable__ | Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others. 
-| [IsFeatured](General.Products.Products.md#isfeatured) | boolean | Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. `Required` `Default(false)` `Filter(eq)` 
-| [IsSerialized](General.Products.Products.md#isserialized) | boolean | True if the parts use/require serial numbers. `Required` `Default(false)` `Filter(eq)` 
+| [Description](General.Products.Products.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of the product 
+| [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 __nullable__ | Total default expiry period for the product (in days) from the date of production to the date of expiry 
+| [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish) 
+| [GuaranteePeriodDays](General.Products.Products.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. 
+| [IsFeatured](General.Products.Products.md#isfeatured) | boolean | Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. 
+| [IsSerialized](General.Products.Products.md#isserialized) | boolean | 1 if the parts use/require serial numbers 
 | [LotsIssue](General.Products.Products.md#lotsissue) | [LotsIssue](General.Products.Products.md#lotsissue) __nullable__ | Determines the method by which the lots are automatically issued. The method determines the sequence of the lots: in the order of receipt (FIFO), in the order inverse of receipt (LIFO) or in the order of expiration (FEFO). 
-| [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string (3) | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")` 
-| [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency` 
+| [ManufacturingPolicy](General.Products.Products.md#manufacturingpolicy) | string (3) | Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order 
+| [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement. 
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of this product that has to be specified in any sale. 
-| [Name](General.Products.Products.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the item. `Required` `Filter(eq;like)` 
-| [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD` 
-| [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 __nullable__ | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
-| [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 __nullable__ | Number of days in the future for which to plan the demand and supply (null = Default of 180 days). 
-| [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 __nullable__ | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days). 
-| [ScrapRate](General.Products.Products.md#scraprate) | decimal (7, 6) | Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)` 
-| [ShortName](General.Products.Products.md#shortname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__ | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. `Filter(eq;like)` 
-| [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. `Required` `Default(false)` `Filter(multi eq)` 
-| [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
-| [StandardLotSizeBase](General.Products.Products.md#standardlotsizebase) | [Quantity (18, 3)](../data-types.md#quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. `Unit: BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
-| [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)` 
+| [Name](General.Products.Products.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the item 
+| [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product 
+| [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 __nullable__ | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days) 
+| [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 __nullable__ | Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days) 
+| [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 __nullable__ | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days) 
+| [ScrapRate](General.Products.Products.md#scraprate) | decimal (7, 6) | Default scrap rate for the recipe, when this product is used as ingredient 
+| [ShortName](General.Products.Products.md#shortname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__ | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. 
+| [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show. 
+| [StandardCostPerLot](General.Products.Products.md#standardcostperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id 
+| [StandardLotSizeBase](General.Products.Products.md#standardlotsizebase) | [Quantity (18, 3)](../data-types.md#quantity) | The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price 
+| [StandardPricePerLot](General.Products.Products.md#standardpriceperlot) | [Amount (18, 4)](../data-types.md#amount) | Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id 
 | [SupplySchemaId](General.Products.Products.md#supplyschemaid) | guid __nullable__ | The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)` 
 | [UpdateTime](General.Products.Products.md#updatetime) | datetime __nullable__ | Date and time when the Product was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Products.Products.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Product. `Filter(like)` `ReadOnly` 
-| [UseLots](General.Products.Products.md#uselots) | [UseLots](General.Products.Products.md#uselots) | Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. `Required` `Default("A")` 
+| [UseLots](General.Products.Products.md#uselots) | [UseLots](General.Products.Products.md#uselots) | Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseMeasurementCategory](General.Products.Products.md#basemeasurementcategory) | [MeasurementCategories](General.Products.MeasurementCategories.md) | The base measurement category for quantities of this product. `Required` `Filter(multi eq)` |
-| [CargoType](General.Products.Products.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. `Filter(multi eq)` |
-| [CostingCurrency](General.Products.Products.md#costingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. `Filter(multi eq)` |
-| [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)` |
-| [ExciseProductType](General.Products.Products.md#exciseproducttype) | [ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45` |
-| [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) (nullable) | Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)` |
-| [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
-| [MeasurementUnit](General.Products.Products.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. `Required` `Filter(multi eq)` |
-| [OriginCountry](General.Products.Products.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. `Filter(multi eq)` |
-| [ProductGroup](General.Products.Products.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The product group, under which the product is categorized. `Required` `Filter(multi eq)` |
-| [ProductType](General.Products.Products.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. `Required` `Filter(multi eq)` |
-| [PurchaseMeasurementUnit](General.Products.Products.md#purchasemeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Default measurement unit to use, when creating new purchase documents with this product. `Filter(multi eq)` |
-| [ValuationGroup](General.Products.Products.md#valuationgroup) | [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. `Filter(multi eq)` |
+| [BaseMeasurementCategory](General.Products.Products.md#basemeasurementcategory) | [MeasurementCategories](General.Products.MeasurementCategories.md) | The base measurement category for quantities of this product. |
+| [CargoType](General.Products.Products.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | Specifies what type of cargo this product is. Required when generating transportation requisitions. NULL means unspecified. |
+| [CostingCurrency](General.Products.Products.md#costingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When NULL, the base currency for the enterprise company should be used |
+| [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Specifies if the product is specific to a given enterprise company and may be used only in documents from this enterprise company. |
+| [ExciseProductType](General.Products.Products.md#exciseproducttype) | [ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable) | Specifies the basic excise attributes of the product. |
+| [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) (nullable) | Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. |
+| [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. |
+| [MeasurementUnit](General.Products.Products.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. |
+| [OriginCountry](General.Products.Products.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | Country from which the product originates (in which the product is produced/cultivated ...) |
+| [ProductGroup](General.Products.Products.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The product group, under which the product is categorized. |
+| [ProductType](General.Products.Products.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The type of the product. This also defines whether the product is stocked. NULL=no specific product type and the product is stocked |
+| [PurchaseMeasurementUnit](General.Products.Products.md#purchasemeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Default measurement unit to use, when creating new purchase documents with this product. |
+| [ValuationGroup](General.Products.Products.md#valuationgroup) | [ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable) | Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.Products.md#id) | guid |  
+| [Id](General.Products.Products.md#id) | guid | Unique id of the item 
 | [ObjectVersion](General.Products.Products.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ExternalId](General.Products.Products.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
 | [ExternalSystem](General.Products.Products.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
@@ -132,7 +132,7 @@ Aggregate Tree
 
 ### ABCClass
 
-Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process. `Required` `Default("B ")` `Filter(eq)`
+Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.
 
 Type: **[ABCClass](General.Products.Products.md#abcclass)**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### Active
 
-True if the product is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
+1 if the product is active, 0 - not to list in combo boxes for choosing in new documents
 
 Type: **boolean**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowVariableMeasurementRatios
 
-Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify different measurement ratio between the used measurement unit and the base measurement unit. `Required` `Default(false)` `Filter(eq)`
+Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.
 
 Type: **boolean**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **CannotBeShown**
 
 ### CostingMethod
 
-Specifies the costing method for the product. null means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost.
+Specifies the costing method for the product. NULL means to use the Enterprise Company default. Currently supported methods are: EXP - Explicitly specify lot; AVG - Average cost
 
 Type: **[CostingMethod](General.Products.Products.md#costingmethod) __nullable__**  
 Category: **System**  
@@ -225,7 +225,7 @@ Show in UI: **HiddenByDefault**
 
 ### Description
 
-The description of the product.
+The description of the product
 
 Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -235,7 +235,7 @@ Show in UI: **ShownByDefault**
 
 ### ExpiryPeriodDays
 
-Total default expiry period for the product (in days) from the date of production to the date of expiry.
+Total default expiry period for the product (in days) from the date of production to the date of expiry
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -245,7 +245,7 @@ Show in UI: **ShownByDefault**
 
 ### FlushingMethod
 
-Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")`
+Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)
 
 Type: **[FlushingMethod](General.Products.Products.md#flushingmethod)**  
 Category: **System**  
@@ -265,7 +265,7 @@ Show in UI: **ShownByDefault**
 
 ### GuaranteePeriodDays
 
-Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others.
+standard guarantee period in days. Can be set only if the product type is serviced.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -275,7 +275,7 @@ Show in UI: **ShownByDefault**
 
 ### IsFeatured
 
-Specifies whether the product should be presented at the title space in promotional materials, web pages, etc. `Required` `Default(false)` `Filter(eq)`
+Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.
 
 Type: **boolean**  
 Category: **System**  
@@ -286,7 +286,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSerialized
 
-True if the parts use/require serial numbers. `Required` `Default(false)` `Filter(eq)`
+1 if the parts use/require serial numbers
 
 Type: **boolean**  
 Category: **System**  
@@ -316,7 +316,7 @@ Show in UI: **ShownByDefault**
 
 ### ManufacturingPolicy
 
-Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order. `Required` `Default("MTS")`
+Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order
 
 Type: **string (3)**  
 Category: **System**  
@@ -328,7 +328,7 @@ Show in UI: **CannotBeShown**
 
 ### MinimalSalesPricePerLot
 
-Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency`
+Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.
 
 Type: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -348,7 +348,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the item. `Required` `Filter(eq;like)`
+Name of the item
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  
@@ -359,7 +359,7 @@ Show in UI: **ShownByDefault**
 
 ### PartNumber
 
-Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD`
+Unique part number of the product
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -371,7 +371,7 @@ Show in UI: **ShownByDefault**
 
 ### PlanningDemandTimeFenceDays
 
-Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days).
+Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -381,7 +381,7 @@ Show in UI: **ShownByDefault**
 
 ### PlanningHorizonDays
 
-Number of days in the future for which to plan the demand and supply (null = Default of 180 days).
+Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days)
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -391,7 +391,7 @@ Show in UI: **CannotBeShown**
 
 ### PlanningTimeFenceDays
 
-Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).
+Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days)
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -401,7 +401,7 @@ Show in UI: **CannotBeShown**
 
 ### ScrapRate
 
-Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)`
+Default scrap rate for the recipe, when this product is used as ingredient
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -412,7 +412,7 @@ Show in UI: **ShownByDefault**
 
 ### ShortName
 
-Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. `Filter(eq;like)`
+Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -422,7 +422,7 @@ Show in UI: **ShownByDefault**
 
 ### ShowInCatalog
 
-Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. `Required` `Default(false)` `Filter(multi eq)`
+Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.
 
 Type: **boolean**  
 Category: **System**  
@@ -433,7 +433,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardCostPerLot
 
-Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)`
+Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -444,7 +444,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardLotSizeBase
 
-The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price. `Unit: BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
+The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -455,7 +455,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardPricePerLot
 
-Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id. `Currency: ProductCurrency` `Required` `Default(0)`
+Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -496,7 +496,7 @@ Show in UI: **HiddenByDefault**
 
 ### UseLots
 
-Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required. `Required` `Default("A")`
+Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.
 
 Type: **[UseLots](General.Products.Products.md#uselots)**  
 Category: **System**  
@@ -515,6 +515,8 @@ Default Value: **Allowed**
 Show in UI: **ShownByDefault**  
 
 ### Id
+
+Unique id of the item
 
 Type: **guid**  
 Indexed: **True**  
@@ -578,7 +580,7 @@ Show in UI: **HiddenByDefault**
 
 ### BaseMeasurementCategory
 
-The base measurement category for quantities of this product. `Required` `Filter(multi eq)`
+The base measurement category for quantities of this product.
 
 Type: **[MeasurementCategories](General.Products.MeasurementCategories.md)**  
 Category: **System**  
@@ -589,7 +591,7 @@ Front-End Recalc Expressions:
 `obj.ProductGroup.DefaultMeasurementUnit.MeasurementCategory`
 ### CargoType
 
-Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. `Filter(multi eq)`
+Specifies what type of cargo this product is. Required when generating transportation requisitions. NULL means unspecified.
 
 Type: **[CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable)**  
 Category: **System**  
@@ -598,7 +600,7 @@ Show in UI: **ShownByDefault**
 
 ### CostingCurrency
 
-Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. `Filter(multi eq)`
+Specifies the currency to use for cost calculations for the product. When NULL, the base currency for the enterprise company should be used
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -607,7 +609,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)`
+Specifies if the product is specific to a given enterprise company and may be used only in documents from this enterprise company.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -618,7 +620,7 @@ Front-End Recalc Expressions:
 `obj.ProductGroup.EnterpriseCompany`
 ### ExciseProductType
 
-Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45`
+Specifies the basic excise attributes of the product.
 
 Type: **[ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable)**  
 Category: **System**  
@@ -627,7 +629,7 @@ Show in UI: **ShownByDefault**
 
 ### IntrastatCommodityCode
 
-Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)`
+Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise.
 
 Type: **[CommodityCodes](Regulatory.Intrastat.CommodityCodes.md) (nullable)**  
 Category: **System**  
@@ -636,7 +638,7 @@ Show in UI: **ShownByDefault**
 
 ### IntrastatSupplementaryUnit
 
-Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)`
+Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
@@ -645,7 +647,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasurementUnit
 
-Default measurement unit, when creating new documents with this product. `Required` `Filter(multi eq)`
+Default measurement unit, when creating new documents with this product.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -656,7 +658,7 @@ Front-End Recalc Expressions:
 `obj.ProductGroup.DefaultMeasurementUnit`
 ### OriginCountry
 
-Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. `Filter(multi eq)`
+Country from which the product originates (in which the product is produced/cultivated ...)
 
 Type: **[Countries](General.Geography.Countries.md) (nullable)**  
 Category: **System**  
@@ -665,7 +667,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductGroup
 
-The product group, under which the product is categorized. `Required` `Filter(multi eq)`
+The product group, under which the product is categorized.
 
 Type: **[ProductGroups](General.Products.ProductGroups.md)**  
 Indexed: **True**  
@@ -675,7 +677,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductType
 
-The type of the product. This also defines whether the product is stocked. null=no specific product type and the product is stocked. `Required` `Filter(multi eq)`
+The type of the product. This also defines whether the product is stocked. NULL=no specific product type and the product is stocked
 
 Type: **[ProductTypes](General.Products.ProductTypes.md)**  
 Indexed: **True**  
@@ -690,7 +692,7 @@ Front-End Recalc Expressions:
 `obj.ProductGroup.GetDefaultProductTypeForNewProduct( )`
 ### PurchaseMeasurementUnit
 
-Default measurement unit to use, when creating new purchase documents with this product. `Filter(multi eq)`
+Default measurement unit to use, when creating new purchase documents with this product.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
@@ -699,7 +701,7 @@ Show in UI: **ShownByDefault**
 
 ### ValuationGroup
 
-Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect. `Filter(multi eq)`
+Valuation group of the product. Used in reconciliations when compensating pluses and minuses. Equal plus and minus amounts within a valuation group are allowed to be compensated with each other for zero net fiscal effect.
 
 Type: **[ProductValuationGroups](Logistics.Inventory.ProductValuationGroups.md) (nullable)**  
 Category: **System**  

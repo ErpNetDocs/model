@@ -126,22 +126,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#defaultpercent">DefaultPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.</td>
+<td>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#requiredfromdate">RequiredFromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
+<td>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#requiredthrudate">RequiredThruDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
+<td>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#usercanchangeinput">UserCanChangeInput</a></td>
 <td>boolean</td>
-<td>True if the user, entering the document is allowed to change the default input percent. <code>Required</code> <code>Default(true)</code></td>
+<td>1 if the user, entering the document is allowed to change the default input percent</td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></td>
-<td>The amount type that should be automatically added to the documents of the specified type. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The amount type that should be automatically added to the documents of the specified type</td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeAmounts.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type for which the amount type is specified. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The document type for which the amount type is specified</td>
 </tr>
 </tbody>
 </table>
@@ -196,28 +196,28 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="defaultpercent">DefaultPercent</h3>
-<p>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type.</p>
+<p>Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type</p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredfromdate">RequiredFromDate</h3>
-<p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
+<p>When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requiredthrudate">RequiredThruDate</h3>
-<p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
+<p>When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usercanchangeinput">UserCanChangeInput</h3>
-<p>True if the user, entering the document is allowed to change the default input percent. <code>Required</code> <code>Default(true)</code></p>
+<p>1 if the user, entering the document is allowed to change the default input percent</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -247,13 +247,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The amount type that should be automatically added to the documents of the specified type. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The amount type that should be automatically added to the documents of the specified type</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type for which the amount type is specified. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The document type for which the amount type is specified</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

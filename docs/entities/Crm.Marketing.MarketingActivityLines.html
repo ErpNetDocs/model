@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#competitorprice">CompetitorPrice</a></td>
 <td>decimal (15, 5) <strong>nullable</strong></td>
-<td>Price of the competitor.</td>
+<td>Price of the competitor</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instoreavailablequantity">InStoreAvailableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></td>
-<td>The quantity found in store (in Quantity Unit). null means that count was not performed. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
+<td>The quantity found in store (in Quantity Unit). NULL means that count was not performed.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instorelocation">InStoreLocation</a></td>
@@ -136,12 +136,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instoreprice">InStorePrice</a></td>
 <td>decimal (15, 5) <strong>nullable</strong></td>
-<td>Price displayed in store. <code>Filter(eq;ge;le)</code></td>
+<td>Price displayed in store.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#notes">Notes</a></td>
@@ -151,7 +151,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#orderquantity">OrderQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (15, 3)</a> <strong>nullable</strong></td>
-<td>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
+<td>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.</td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#competitor">Competitor</a></td>
 <td><a href="Crm.Marketing.Competitors.html">Competitors</a> (nullable)</td>
-<td>Competitor where marketing activity was held. <code>Filter(multi eq)</code></td>
+<td>Competitor where marketing activity was held.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#document">Document</a></td>
@@ -178,22 +178,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#marketingactivity">MarketingActivity</a></td>
 <td><a href="Crm.Marketing.MarketingActivities.html">MarketingActivities</a></td>
-<td>Marketing activity. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>Marketing activity</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#marketingactivitylinetype">MarketingActivityLineType</a></td>
 <td><a href="Crm.Marketing.MarketingActivityLineTypes.html">MarketingActivityLineTypes</a></td>
-<td>Describes what the purpose of the marketing activity is. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Describes what the purpose of the marketing activity is.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#orderquantityunit">OrderQuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
-<td>The measurement unit of In_Store_Available_<br>Quantity and Order_Quantity. <code>Filter(multi eq)</code></td>
+<td>The measurement unit of In_Store_Available_<br>Quantity and Order_Quantity.</td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The specific product that was target of the marketing activity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The specific product that was target of the marketing activity.</td>
 </tr>
 </tbody>
 </table>
@@ -226,14 +226,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="competitorprice">CompetitorPrice</h3>
-<p>Price of the competitor.</p>
+<p>Price of the competitor</p>
 <p>Type: <strong>decimal (15, 5) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instoreavailablequantity">InStoreAvailableQuantity</h3>
-<p>The quantity found in store (in Quantity Unit). null means that count was not performed. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
+<p>The quantity found in store (in Quantity Unit). NULL means that count was not performed.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -248,14 +248,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instoreprice">InStorePrice</h3>
-<p>Price displayed in store. <code>Filter(eq;ge;le)</code></p>
+<p>Price displayed in store.</p>
 <p>Type: <strong>decimal (15, 5) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -274,7 +274,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderquantity">OrderQuantity</h3>
-<p>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
+<p>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (15, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -303,7 +303,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="competitor">Competitor</h3>
-<p>Competitor where marketing activity was held. <code>Filter(multi eq)</code></p>
+<p>Competitor where marketing activity was held.</p>
 <p>Type: <strong><a href="Crm.Marketing.Competitors.html">Competitors</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -315,20 +315,20 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="marketingactivity">MarketingActivity</h3>
-<p>Marketing activity. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>Marketing activity</p>
 <p>Type: <strong><a href="Crm.Marketing.MarketingActivities.html">MarketingActivities</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="marketingactivitylinetype">MarketingActivityLineType</h3>
-<p>Describes what the purpose of the marketing activity is. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Describes what the purpose of the marketing activity is.</p>
 <p>Type: <strong><a href="Crm.Marketing.MarketingActivityLineTypes.html">MarketingActivityLineTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderquantityunit">OrderQuantityUnit</h3>
-<p>The measurement unit of In_Store_Available_Quantity and Order_Quantity. <code>Filter(multi eq)</code></p>
+<p>The measurement unit of In_Store_Available_Quantity and Order_Quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -336,7 +336,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="product">Product</h3>
-<p>The specific product that was target of the marketing activity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The specific product that was target of the marketing activity.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

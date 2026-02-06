@@ -38,21 +38,21 @@ Aggregate Root:
 | [LineNo](Logistics.Procurement.RequisitionLines.md#lineno) | int32 | Line number, unique within the Requisition. Usually is increasing number like 10, 20, 30, ... when initially entering the Requisition (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Logistics.Procurement.RequisitionLines.md#notes) | string (254) __nullable__ | Notes for this RequisitionLine. 
 | [ProductDescription](Logistics.Procurement.RequisitionLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of the required product. When Product is set, this is copied initially from the product name. When Product is null, this contains the manually entered description of the desired product. 
-| [Quantity](Logistics.Procurement.RequisitionLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The required quantity of the product. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
-| [QuantityBase](Logistics.Procurement.RequisitionLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
-| [RequiredDeliveryDate](Logistics.Procurement.RequisitionLines.md#requireddeliverydate) | datetime | The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. `Required` `Filter(ge;le)` 
-| [StandardQuantityBase](Logistics.Procurement.RequisitionLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [Quantity](Logistics.Procurement.RequisitionLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The required quantity of the product. 
+| [QuantityBase](Logistics.Procurement.RequisitionLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. 
+| [RequiredDeliveryDate](Logistics.Procurement.RequisitionLines.md#requireddeliverydate) | datetime | The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. 
+| [StandardQuantityBase](Logistics.Procurement.RequisitionLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Procurement.RequisitionLines.md#document) | [Requisitions](Logistics.Procurement.Requisitions.md) | The owner document. The <see cref="Requisition"/> to which this RequisitionLine belongs. `Required` `Filter(multi eq)` |
-| [Lot](Logistics.Procurement.RequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | When not null, indicates a specific lot should be purchased. `Filter(multi eq)` |
-| [Product](Logistics.Procurement.RequisitionLines.md#product) | [Products](General.Products.Products.md) (nullable) | The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. `Filter(multi eq)` |
-| [QuantityUnit](Logistics.Procurement.RequisitionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
+| [Lot](Logistics.Procurement.RequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | When not null, indicates a specific lot should be purchased. |
+| [Product](Logistics.Procurement.RequisitionLines.md#product) | [Products](General.Products.Products.md) (nullable) | The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. |
+| [QuantityUnit](Logistics.Procurement.RequisitionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. |
 | [Requisition](Logistics.Procurement.RequisitionLines.md#requisition) | [Requisitions](Logistics.Procurement.Requisitions.md) | The <see cref="Requisition"/> to which this RequisitionLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [SuggestedSupplier](Logistics.Procurement.RequisitionLines.md#suggestedsupplier) | [Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | When the requisitor knows the supplier or has a supplier preference it is denoted in this field. `Filter(multi eq)` |
+| [SuggestedSupplier](Logistics.Procurement.RequisitionLines.md#suggestedsupplier) | [Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | When the requisitor knows the supplier or has a supplier preference it is denoted in this field. |
 
 
 ## System Attributes
@@ -116,7 +116,7 @@ Front-End Recalc Expressions:
 `obj.Product.Name`
 ### Quantity
 
-The required quantity of the product. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)`
+The required quantity of the product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly`
+The equivalence of Quantity in the base measurement category of the product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### RequiredDeliveryDate
 
-The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time. `Required` `Filter(ge;le)`
+The desired delivery date. Initially set to the required delivery date in the requisition header or if it is empty - to the document date plus the products lead time.
 
 Type: **datetime**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -210,7 +210,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-When not null, indicates a specific lot should be purchased. `Filter(multi eq)`
+When not null, indicates a specific lot should be purchased.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -219,7 +219,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. `Filter(multi eq)`
+The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Category: **System**  
@@ -228,7 +228,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity. `Required` `Filter(multi eq)`
+The measurement unit of Quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -248,7 +248,7 @@ Show in UI: **ShownByDefault**
 
 ### SuggestedSupplier
 
-When the requisitor knows the supplier or has a supplier preference it is denoted in this field. `Filter(multi eq)`
+When the requisitor knows the supplier or has a supplier preference it is denoted in this field.
 
 Type: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
 Category: **System**  

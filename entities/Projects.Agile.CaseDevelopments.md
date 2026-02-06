@@ -37,18 +37,18 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ActionDescription](Projects.Agile.CaseDevelopments.md#actiondescription) | string | Specifies the latest action, dependent on DevelopmentType. 
-| [CreationTimeUtc](Projects.Agile.CaseDevelopments.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the development was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` 
-| [Description](Projects.Agile.CaseDevelopments.md#description) | string (max) __nullable__ | Detailed description of the development. `Filter(like)` 
-| [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | Type of the development - Edit, Assignment, Resolve, etc. `Required` `Default("EDT")` `Filter(multi eq)` `ReadOnly` 
-| [NewSystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) | [SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__ | When the development incurred changing the state of the case, contains the new state. `Filter(multi eq)` `ReadOnly` 
+| [CreationTimeUtc](Projects.Agile.CaseDevelopments.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the development was created 
+| [Description](Projects.Agile.CaseDevelopments.md#description) | string (max) __nullable__ | Detailed description of the development. 
+| [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | Type of the development - Edit, Assignment, Resolve, etc. 
+| [NewSystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) | [SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__ | When the development incurred changing the state of the case, contains the new state. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignedToUser](Projects.Agile.CaseDevelopments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)` `ReadOnly` |
-| [Case](Projects.Agile.CaseDevelopments.md#case) | [Cases](Projects.Agile.Cases.md) | The case of the case development. `Required` `Filter(multi eq)` `Owner` |
-| [CreationUser](Projects.Agile.CaseDevelopments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the development. `Required` `Filter(multi eq)` `ReadOnly` |
+| [AssignedToUser](Projects.Agile.CaseDevelopments.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | When the development incurred re-assignment, specifies the new user, to which the case is assigned. |
+| [Case](Projects.Agile.CaseDevelopments.md#case) | [Cases](Projects.Agile.Cases.md) | The case of the case development |
+| [CreationUser](Projects.Agile.CaseDevelopments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the development. |
 
 
 ## System Attributes
@@ -74,7 +74,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationTimeUtc
 
-The exact date and time (in UTC) when the development was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly`
+The exact date and time (in UTC) when the development was created
 
 Type: **datetime**  
 Indexed: **True**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Detailed description of the development. `Filter(like)`
+Detailed description of the development.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### DevelopmentType
 
-Type of the development - Edit, Assignment, Resolve, etc. `Required` `Default("EDT")` `Filter(multi eq)` `ReadOnly`
+Type of the development - Edit, Assignment, Resolve, etc.
 
 Type: **[DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### NewSystemState
 
-When the development incurred changing the state of the case, contains the new state. `Filter(multi eq)` `ReadOnly`
+When the development incurred changing the state of the case, contains the new state.
 
 Type: **[SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__**  
 Category: **System**  
@@ -175,7 +175,7 @@ Show in UI: **HiddenByDefault**
 
 ### AssignedToUser
 
-When the development incurred re-assignment, specifies the new user, to which the case is assigned. `Filter(multi eq)` `ReadOnly`
+When the development incurred re-assignment, specifies the new user, to which the case is assigned.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### Case
 
-The case of the case development. `Required` `Filter(multi eq)` `Owner`
+The case of the case development
 
 Type: **[Cases](Projects.Agile.Cases.md)**  
 Indexed: **True**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationUser
 
-The user, who created the development. `Required` `Filter(multi eq)` `ReadOnly`
+The user, who created the development.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

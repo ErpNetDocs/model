@@ -28,26 +28,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Email` 
-| [IsAdmin](Public.Users.md#isadmin) | boolean | True if the user is administrator, otherwise 0. `Required` `Default(false)` `Filter(eq)` `Inherited from Sec_Users_Table.Is_Admin` 
-| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Login` 
-| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user. `Required` `Filter(like)` `Inherited from Sec_Users_Table.User_Name` 
-| [PhoneNumber](Public.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. null when phone-based two-factor is not used. `Filter(eq;like)` `Inherited from Sec_Users_Table.Phone_Number` 
+| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails. 
+| [IsAdmin](Public.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0. 
+| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email 
+| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user 
+| [PhoneNumber](Public.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used. 
 | [UserId](Public.Users.md#userid) | guid | The Id of the security user. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Domain](Public.Users.md#domain) | [Domains](Systems.Security.Domains.md) (nullable) | The domain, to which the user belongs. `Filter(multi eq)` `Inherited from Sec_Users_Table.Domain_Id` |
-| [Person](Public.Users.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Filter(multi eq)` `Inherited from Sec_Users_Table.Person_Id` |
+| [Domain](Public.Users.md#domain) | [Domains](Systems.Security.Domains.md) (nullable) | The domain, to which the user belongs. |
+| [Person](Public.Users.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database. |
 
 
 ## Attribute Details
 
 ### Email
 
-Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Email`
+Unique email of the user. Can be NULL because there may be login providers that don't use emails.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### IsAdmin
 
-True if the user is administrator, otherwise 0. `Required` `Default(false)` `Filter(eq)` `Inherited from Sec_Users_Table.Is_Admin`
+1 if the user is administrator, otherwise 0.
 
 Type: **boolean**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### Login
 
-The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Login`
+The login name of the user, which is usually the email
 
 Type: **string (64)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The full name of the user. `Required` `Filter(like)` `Inherited from Sec_Users_Table.User_Name`
+The full name of the user
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### PhoneNumber
 
-Used only for two-factor authentication. null when phone-based two-factor is not used. `Filter(eq;like)` `Inherited from Sec_Users_Table.Phone_Number`
+Used only for two-factor authentication. NULL when phone-based two-factor is not used.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### Domain
 
-The domain, to which the user belongs. `Filter(multi eq)` `Inherited from Sec_Users_Table.Domain_Id`
+The domain, to which the user belongs.
 
 Type: **[Domains](Systems.Security.Domains.md) (nullable)**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### Person
 
-The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Filter(multi eq)` `Inherited from Sec_Users_Table.Person_Id`
+The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  

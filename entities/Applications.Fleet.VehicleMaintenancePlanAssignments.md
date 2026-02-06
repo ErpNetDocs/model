@@ -32,18 +32,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Fleet.VehicleMaintenancePlanAssignments.md#isactive) | boolean | Specifies whether the plan is active. `Required` `Default(true)` `Filter(eq)` 
+| [IsActive](Applications.Fleet.VehicleMaintenancePlanAssignments.md#isactive) | boolean | Specifies whether the plan is active. 
 | [LastMaintenanceMileageKm](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancemileagekm) | int32 __nullable__ | The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check. 
 | [LastMaintenanceTripCount](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancetripcount) | int32 __nullable__ | The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check. 
 | [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string (max) __nullable__ | Notes for this VehicleMaintenance<br />PlanAssignment. 
-| [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#startingdate) | date | The date on which the periodic maintenance should start. `Required` `Filter(ge;le)` 
+| [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#startingdate) | date | The date on which the periodic maintenance should start. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MaintenancePlan](Applications.Fleet.VehicleMaintenancePlanAssignments.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The assigned periodic maintenance type. `Required` `Filter(multi eq)` |
-| [Vehicle](Applications.Fleet.VehicleMaintenancePlanAssignments.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, to which a periodic maintenance plan is assigned. `Required` `Filter(multi eq)` |
+| [MaintenancePlan](Applications.Fleet.VehicleMaintenancePlanAssignments.md#maintenanceplan) | [MaintenancePlans](Applications.Fleet.MaintenancePlans.md) | The assigned periodic maintenance type. |
+| [Vehicle](Applications.Fleet.VehicleMaintenancePlanAssignments.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The vehicle, to which a periodic maintenance plan is assigned. |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### IsActive
 
-Specifies whether the plan is active. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the plan is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### StartingDate
 
-The date on which the periodic maintenance should start. `Required` `Filter(ge;le)`
+The date on which the periodic maintenance should start.
 
 Type: **date**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaintenancePlan
 
-The assigned periodic maintenance type. `Required` `Filter(multi eq)`
+The assigned periodic maintenance type.
 
 Type: **[MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### Vehicle
 
-The vehicle, to which a periodic maintenance plan is assigned. `Required` `Filter(multi eq)`
+The vehicle, to which a periodic maintenance plan is assigned.
 
 Type: **[Vehicles](Applications.Fleet.Vehicles.md)**  
 Category: **System**  

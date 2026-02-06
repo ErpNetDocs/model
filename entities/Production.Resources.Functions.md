@@ -36,14 +36,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function. 
+| [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [FunctionGroups](Production.Resources.FunctionGroups.md) | The <see cref="FunctionGroup"/> to which this Function belongs. `Required` `Filter(multi eq)` `Owner` |
-| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. `Required` `Filter(multi eq)` |
+| [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-User comments on the function.
+User comments on the function
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### PrimaryUnit
 
-Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. `Required` `Filter(multi eq)`
+Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  

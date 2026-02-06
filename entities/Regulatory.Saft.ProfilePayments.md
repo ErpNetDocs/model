@@ -13,6 +13,15 @@ Base Table: Saft_Profile_Payments
 Introduced In Version: 26.2.0.80  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Saft.ProfilePayments  
+New name: Regulatory.Saft.ProfilePayments  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Profile.Name}  
 Search Members: Profile.Name  
@@ -36,19 +45,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | Debit/credit indicator for SAF-T payment lines. `Required` `Filter(eq)` 
-| [Direction](Regulatory.Saft.ProfilePayments.md#direction) | [Direction](Regulatory.Saft.ProfilePayments.md#direction) | Payment direction. `Required` `Filter(eq)` 
-| [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | Counterparty type to be populated in SAF-T: Supplier, Customer, None. `Required` `Filter(eq)` 
+| [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | Debit/credit indicator for SAF-T payment lines. 
+| [Direction](Regulatory.Saft.ProfilePayments.md#direction) | [Direction](Regulatory.Saft.ProfilePayments.md#direction) | Payment direction. 
+| [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | Counterparty type to be populated in SAF-T: Supplier, Customer, None. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Regulatory.Saft.ProfilePayments.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | ERP.net document type that is the source of the payment. `Filter(multi eq)` |
-| [PaymentAccount](Regulatory.Saft.ProfilePayments.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) | Description: Payment account – cash desk/bank account used for the payment. `Required` `Filter(multi eq)` |
-| [PaymentReason](Regulatory.Saft.ProfilePayments.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | Payment reason/classification. `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfilePayments.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | Identifier of the SAFT profile associated with this settings. `Required` `Filter(multi eq)` `Owner` |
-| [SaftAccountCodeEntry](Regulatory.Saft.ProfilePayments.md#saftaccountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine). `Required` `Filter(multi eq)` |
+| [DocumentType](Regulatory.Saft.ProfilePayments.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | ERP.net document type that is the source of the payment. |
+| [PaymentAccount](Regulatory.Saft.ProfilePayments.md#paymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) | description: Payment account – cash desk/bank account used for the payment. |
+| [PaymentReason](Regulatory.Saft.ProfilePayments.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | Payment reason/classification. |
+| [Profile](Regulatory.Saft.ProfilePayments.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | Identifier of the SAFT profile associated with this settings. |
+| [SaftAccountCodeEntry](Regulatory.Saft.ProfilePayments.md#saftaccountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine). |
 
 
 ## System Attributes
@@ -64,7 +73,7 @@ Aggregate Root:
 
 ### DebitCreditIndicator
 
-Debit/credit indicator for SAF-T payment lines. `Required` `Filter(eq)`
+Debit/credit indicator for SAF-T payment lines.
 
 Type: **[DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator)**  
 Category: **System**  
@@ -82,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Direction
 
-Payment direction. `Required` `Filter(eq)`
+Payment direction.
 
 Type: **[Direction](Regulatory.Saft.ProfilePayments.md#direction)**  
 Category: **System**  
@@ -100,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### PartyType
 
-Counterparty type to be populated in SAF-T: Supplier, Customer, None. `Required` `Filter(eq)`
+Counterparty type to be populated in SAF-T: Supplier, Customer, None.
 
 Type: **[PartyType](Regulatory.Saft.ProfilePayments.md#partytype)**  
 Category: **System**  
@@ -151,7 +160,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-ERP.net document type that is the source of the payment. `Filter(multi eq)`
+ERP.net document type that is the source of the payment.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -160,7 +169,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentAccount
 
-Description: Payment account – cash desk/bank account used for the payment. `Required` `Filter(multi eq)`
+description: Payment account – cash desk/bank account used for the payment.
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md)**  
 Indexed: **True**  
@@ -170,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentReason
 
-Payment reason/classification. `Filter(multi eq)`
+Payment reason/classification.
 
 Type: **[PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
 Category: **System**  
@@ -179,7 +188,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-Identifier of the SAFT profile associated with this settings. `Required` `Filter(multi eq)` `Owner`
+Identifier of the SAFT profile associated with this settings.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  
@@ -190,7 +199,7 @@ Show in UI: **ShownByDefault**
 
 ### SaftAccountCodeEntry
 
-Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine). `Required` `Filter(multi eq)`
+Selected SAF-T mapping entry to the NRA nomenclature (value for AccountID in PaymentLine).
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Indexed: **True**  

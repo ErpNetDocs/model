@@ -13,6 +13,15 @@ Base Table: Saft_Profile_Tax_Code_By_Accounts
 Introduced In Version: 26.2.0.85  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Saft.ProfileTaxCodeByAccounts  
+New name: Regulatory.Saft.ProfileTaxCodeByAccounts  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Profile.Name}  
 Search Members: Profile.Name  
@@ -36,18 +45,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CustomPropertyValue](Regulatory.Saft.ProfileTaxCodeByAccounts.md#custompropertyvalue) | string (254) __nullable__ | The specific value of the selected analytic custom property for which this mapping applies. `Filter(like)` 
-| [Notes](Regulatory.Saft.ProfileTaxCodeByAccounts.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). `Filter(like)` 
+| [CustomPropertyValue](Regulatory.Saft.ProfileTaxCodeByAccounts.md#custompropertyvalue) | string (254) __nullable__ | The specific value of the selected analytic custom property for which this mapping applies. 
+| [Notes](Regulatory.Saft.ProfileTaxCodeByAccounts.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Regulatory.Saft.ProfileTaxCodeByAccounts.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The ERP.net general ledger account for which the SAF-T tax code is defined. `Required` `Filter(multi eq)` |
-| [CustomProperty](Regulatory.Saft.ProfileTaxCodeByAccounts.md#customproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | The account analytic custom property used to differentiate the applicable SAF-T tax code. `Filter(multi eq)` |
-| [DocumentType](Regulatory.Saft.ProfileTaxCodeByAccounts.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfileTaxCodeByAccounts.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner` |
-| [TaxCodeEntry](Regulatory.Saft.ProfileTaxCodeByAccounts.md#taxcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met. `Required` `Filter(multi eq)` |
+| [Account](Regulatory.Saft.ProfileTaxCodeByAccounts.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The ERP.net general ledger account for which the SAF-T tax code is defined. |
+| [CustomProperty](Regulatory.Saft.ProfileTaxCodeByAccounts.md#customproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | The account analytic custom property used to differentiate the applicable SAF-T tax code. |
+| [DocumentType](Regulatory.Saft.ProfileTaxCodeByAccounts.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The ERP.net document type under which this mapping rule should be applied. |
+| [Profile](Regulatory.Saft.ProfileTaxCodeByAccounts.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this mapping belongs to. |
+| [TaxCodeEntry](Regulatory.Saft.ProfileTaxCodeByAccounts.md#taxcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met. |
 
 
 ## System Attributes
@@ -63,7 +72,7 @@ Aggregate Root:
 
 ### CustomPropertyValue
 
-The specific value of the selected analytic custom property for which this mapping applies. `Filter(like)`
+The specific value of the selected analytic custom property for which this mapping applies.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -74,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). `Filter(like)`
+Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -117,7 +126,7 @@ Show in UI: **HiddenByDefault**
 
 ### Account
 
-The ERP.net general ledger account for which the SAF-T tax code is defined. `Required` `Filter(multi eq)`
+The ERP.net general ledger account for which the SAF-T tax code is defined.
 
 Type: **[Accounts](Finance.Accounting.Accounts.md)**  
 Indexed: **True**  
@@ -127,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### CustomProperty
 
-The account analytic custom property used to differentiate the applicable SAF-T tax code. `Filter(multi eq)`
+The account analytic custom property used to differentiate the applicable SAF-T tax code.
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
@@ -136,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentType
 
-The ERP.net document type under which this mapping rule should be applied. `Filter(multi eq)`
+The ERP.net document type under which this mapping rule should be applied.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
@@ -145,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-The SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner`
+The SAF-T profile this mapping belongs to.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  
@@ -156,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxCodeEntry
 
-The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met. `Required` `Filter(multi eq)`
+The SAF-T Tax Code to output when the criteria (account + analytic + document type) are met.
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Indexed: **True**  

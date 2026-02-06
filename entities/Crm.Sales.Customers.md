@@ -52,20 +52,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Sales.Customers.md#active) | boolean | True if the customer is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
-| [AllowUseAsPrimaryCustomer](Crm.Sales.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal. `Required` `Default(false)` `Filter(eq)` 
-| [AllowUseAsShipToCustomer](Crm.Sales.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal. `Required` `Default(false)` `Filter(eq)` 
+| [Active](Crm.Sales.Customers.md#active) | boolean | 1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents 
+| [AllowUseAsPrimaryCustomer](Crm.Sales.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal. 
+| [AllowUseAsShipToCustomer](Crm.Sales.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal. 
 | [CreationTime](Crm.Sales.Customers.md#creationtime) | datetime __nullable__ | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Crm.Sales.Customers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` 
-| [CreditLimit](Crm.Sales.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the enterprise company base currency. null means there is no limit. `Currency: EnterpriseCompany?.BaseCurrency` 
-| [DefaultDeliveryTermDays](Crm.Sales.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale. `Required` `Default(0)` 
-| [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. `Required` `Default(0)` 
-| [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer. `Required` `Default(0)` 
-| [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship. `Default(Today)` `Filter(ge;le)` 
-| [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer. `Required` `Default(0)` 
-| [Number](Crm.Sales.Customers.md#number) | string (16) __nullable__ | Unique customer number. `Filter(eq;like)` `ORD` 
-| [PersistSalesOrdersLots](Crm.Sales.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. `Required` `Default(false)` `Filter(eq)` 
-| [ThruDate](Crm.Sales.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. null for active customers. `Filter(ge;le)` 
+| [CreditLimit](Crm.Sales.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the enterprise company base currency. null means there is no limit. 
+| [DefaultDeliveryTermDays](Crm.Sales.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale 
+| [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. 
+| [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer 
+| [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship 
+| [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer. 
+| [Number](Crm.Sales.Customers.md#number) | string (16) __nullable__ | Unique customer number 
+| [PersistSalesOrdersLots](Crm.Sales.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. 
+| [ThruDate](Crm.Sales.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. NULL for active customers. 
 | [UpdateTime](Crm.Sales.Customers.md#updatetime) | datetime __nullable__ | Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Crm.Sales.Customers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly` 
 
@@ -73,17 +73,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CollectionsResponsible<br />Employee](Crm.Sales.Customers.md#collectionsresponsibleemployee) | [CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable) | The employee, who is responsible for the collections from the customer. `Filter(multi eq)` |
-| [CustomerType](Crm.Sales.Customers.md#customertype) | [CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable) | The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. `Filter(multi eq)` |
-| [DefaultCurrency](Crm.Sales.Customers.md#defaultcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The default currency to use when creating new documents for this customer. `Filter(multi eq)` |
-| [DefaultDistributionChannel](Crm.Sales.Customers.md#defaultdistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The default distribution channel used when selling to the customer. `Filter(multi eq)` |
-| [DefaultPaymentAccount](Crm.Sales.Customers.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The default payment account to use when creating new documents for this customer. `Filter(multi eq)` |
-| [DefaultPaymentType](Crm.Sales.Customers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | If not null, specifies default payment type for the sales, offers and invoices for this customer. `Filter(multi eq)` |
-| [DefaultPriceList](Crm.Sales.Customers.md#defaultpricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | If not null, specifies default price list when selling to this customer. `Filter(multi eq)` |
-| [EnterpriseCompany](Crm.Sales.Customers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. `Filter(multi eq)` |
-| [Party](Crm.Sales.Customers.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. `Required` `Filter(multi eq)` `FilterableReference` |
-| [SalesPerson](Crm.Sales.Customers.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | The default sales person for new sales documents for this customer. `Filter(multi eq)` |
-| [ServicedByEnterprise<br />CompanyLocation](Crm.Sales.Customers.md#servicedbyenterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, which sells to this client by default. `Filter(multi eq)` |
+| [CollectionsResponsible<br />Employee](Crm.Sales.Customers.md#collectionsresponsibleemployee) | [CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable) | The employee, who is responsible for the collections from the customer |
+| [CustomerType](Crm.Sales.Customers.md#customertype) | [CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable) | The user-defined type of this customer. NULL when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes |
+| [DefaultCurrency](Crm.Sales.Customers.md#defaultcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The default currency to use when creating new documents for this customer. |
+| [DefaultDistributionChannel](Crm.Sales.Customers.md#defaultdistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | The default distribution channel used when selling to the customer |
+| [DefaultPaymentAccount](Crm.Sales.Customers.md#defaultpaymentaccount) | [PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable) | The default payment account to use when creating new documents for this customer |
+| [DefaultPaymentType](Crm.Sales.Customers.md#defaultpaymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Specifies default payment type for the sales, offers and invoices for this customer. |
+| [DefaultPriceList](Crm.Sales.Customers.md#defaultpricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | If not NULL, specifies default price list when selling to this customer |
+| [EnterpriseCompany](Crm.Sales.Customers.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. |
+| [Party](Crm.Sales.Customers.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id |
+| [SalesPerson](Crm.Sales.Customers.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable) | The default sales person for new sales documents for this customer |
+| [ServicedByEnterprise<br />CompanyLocation](Crm.Sales.Customers.md#servicedbyenterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location, which sells to this client by default. |
 
 
 ## System Attributes
@@ -109,7 +109,7 @@ Aggregate Tree
 
 ### Active
 
-True if the customer is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
+1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowUseAsPrimaryCustomer
 
-Specifies whether to allow the customer to be used as primary customer in a sales deal. `Required` `Default(false)` `Filter(eq)`
+Specifies whether to allow the customer to be used as primary customer in a sales deal.
 
 Type: **boolean**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowUseAsShipToCustomer
 
-True to allow the customer to be used as ship to customer in a sales deal. `Required` `Default(false)` `Filter(eq)`
+True to allow the customer to be used as ship to customer in a sales deal.
 
 Type: **boolean**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditLimit
 
-Total credit limit for the customer in the enterprise company base currency. null means there is no limit. `Currency: EnterpriseCompany?.BaseCurrency`
+Total credit limit for the customer in the enterprise company base currency. null means there is no limit.
 
 Type: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -178,7 +178,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.DefaultCurrency != null), obj.EnterpriseCompany.DefaultCustomerCreditLimitBase, obj.CreditLimit)`
 ### DefaultDeliveryTermDays
 
-Default term in days for goods delivery, starting at the day of sale. `Required` `Default(0)`
+Default term in days for goods delivery, starting at the day of sale
 
 Type: **int32**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentStartDays
 
-Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. `Required` `Default(0)`
+Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.
 
 Type: **int32**  
 Category: **System**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentTermDays
 
-Default payment term in days when issuing documents for this customer. `Required` `Default(0)`
+Default payment term in days when issuing documents for this customer
 
 Type: **int32**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Start date of the customer relationship. `Default(Today)` `Filter(ge;le)`
+Start date of the customer relationship
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -222,7 +222,7 @@ Show in UI: **ShownByDefault**
 
 ### GracePeriodDays
 
-Number of days after the payment deadline, during which the system still allows new sales orders for the customer. `Required` `Default(0)`
+Number of days after the payment deadline, during which the system still allows new sales orders for the customer.
 
 Type: **int32**  
 Category: **System**  
@@ -233,7 +233,7 @@ Show in UI: **ShownByDefault**
 
 ### Number
 
-Unique customer number. `Filter(eq;like)` `ORD`
+Unique customer number
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -248,7 +248,7 @@ Back-End Default Expression:
 
 ### PersistSalesOrdersLots
 
-If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. `Required` `Default(false)` `Filter(eq)`
+If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.
 
 Type: **boolean**  
 Category: **System**  
@@ -259,7 +259,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-The date of customer relationship termination. null for active customers. `Filter(ge;le)`
+The date of customer relationship termination. NULL for active customers.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -352,7 +352,7 @@ Show in UI: **HiddenByDefault**
 
 ### CollectionsResponsibleEmployee
 
-The employee, who is responsible for the collections from the customer. `Filter(multi eq)`
+The employee, who is responsible for the collections from the customer
 
 Type: **[CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable)**  
 Category: **System**  
@@ -361,7 +361,7 @@ Show in UI: **ShownByDefault**
 
 ### CustomerType
 
-The user-defined type of this customer. null when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes. `Filter(multi eq)`
+The user-defined type of this customer. NULL when there is no specific type. Record-level security from the customer type is applied to the individual customers and can be used for security purposes
 
 Type: **[CustomerTypes](Crm.Sales.CustomerTypes.md) (nullable)**  
 Indexed: **True**  
@@ -371,7 +371,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultCurrency
 
-The default currency to use when creating new documents for this customer. `Filter(multi eq)`
+The default currency to use when creating new documents for this customer.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -382,7 +382,7 @@ Front-End Recalc Expressions:
 `obj.EnterpriseCompany.BaseCurrency`
 ### DefaultDistributionChannel
 
-The default distribution channel used when selling to the customer. `Filter(multi eq)`
+The default distribution channel used when selling to the customer
 
 Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 Category: **System**  
@@ -391,7 +391,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentAccount
 
-The default payment account to use when creating new documents for this customer. `Filter(multi eq)`
+The default payment account to use when creating new documents for this customer
 
 Type: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
 Category: **System**  
@@ -402,7 +402,7 @@ Front-End Recalc Expressions:
 `obj.DefaultPaymentType.GetDefaultPaymentAccount( ).IfNullThen( obj.DefaultPaymentAccount)`
 ### DefaultPaymentType
 
-If not null, specifies default payment type for the sales, offers and invoices for this customer. `Filter(multi eq)`
+Specifies default payment type for the sales, offers and invoices for this customer.
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
 Category: **System**  
@@ -411,7 +411,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPriceList
 
-If not null, specifies default price list when selling to this customer. `Filter(multi eq)`
+If not NULL, specifies default price list when selling to this customer
 
 Type: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
 Category: **System**  
@@ -420,7 +420,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies. `Filter(multi eq)`
+The Enterprise Company for which this customer is recorded. The same external party can be listed with different conditions for the different enterprise companies.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Indexed: **True**  
@@ -432,7 +432,7 @@ Front-End Recalc Expressions:
 `obj.Transaction.CurrentEnterpriseCompany`
 ### Party
 
-Base party Id. `Required` `Filter(multi eq)` `FilterableReference`
+Base party Id
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -443,7 +443,7 @@ Show in UI: **ShownByDefault**
 
 ### SalesPerson
 
-The default sales person for new sales documents for this customer. `Filter(multi eq)`
+The default sales person for new sales documents for this customer
 
 Type: **[SalesPersons](Crm.SalesForce.SalesPersons.md) (nullable)**  
 Indexed: **True**  
@@ -453,7 +453,7 @@ Show in UI: **ShownByDefault**
 
 ### ServicedByEnterpriseCompanyLocation
 
-The enterprise company location, which sells to this client by default. `Filter(multi eq)`
+The enterprise company location, which sells to this client by default.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  

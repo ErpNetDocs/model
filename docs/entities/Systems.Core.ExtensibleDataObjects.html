@@ -124,7 +124,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. <code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 19.1</code></td>
+<td>The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#entityitemid">EntityItemId</a></td>
@@ -134,32 +134,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#entitytype">EntityType</a></td>
 <td>string (64)</td>
-<td>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(eq)</code></td>
+<td>The entity type of the row to which the object is bound</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#externalid">ExternalId</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. <code>Filter(multi eq)</code> <code>ORD</code> <code>Introduced in version 24.1.0.89</code></td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#externalsystem">ExternalSystem</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the external system from which the object is imported/synchronized. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.0.89</code></td>
+<td>The name of the external system from which the object is imported/synchronized.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#isdeleted">IsDeleted</a></td>
 <td>boolean</td>
-<td>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></td>
+<td>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#lastupdatetimeutc">LastUpdateTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. <code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 19.1</code></td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#latestversion">LatestVersion</a></td>
 <td>int32</td>
-<td>The latest saved version of the object. Starts from 1 and increments with 1 for each new version. <code>Required</code> <code>Default(1)</code></td>
+<td>The latest saved version of the object. Starts from 1 and increments with 1 for each new version.</td>
 </tr>
 </tbody>
 </table>
@@ -176,17 +176,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#creationuser">CreationUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, who created the object represented by this system object . null means that it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>The user, who created the object represented by this system object . NULL means that it is unknown.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#folder">Folder</a></td>
 <td><a href="General.Files.Folders.html">Folders</a> (nullable)</td>
-<td>The owner folder of the object. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.13</code></td>
+<td>The owner folder of the object.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#lastupdateuser">LastUpdateUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a> (nullable)</td>
-<td>The user, who made the last modification of the object represented by this system object . null means that it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></td>
+<td>The user, who made the last modification of the object represented by this system object . NULL means that it is unknown.</td>
 </tr>
 </tbody>
 </table>
@@ -236,7 +236,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. <code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 19.1</code></p>
+<p>The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -251,7 +251,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entitytype">EntityType</h3>
-<p>The entity type of the row to which the object is bound. <code>Required</code> <code>Default(&quot; &quot;)</code> <code>Filter(eq)</code></p>
+<p>The entity type of the row to which the object is bound</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -260,7 +260,7 @@ Maximum Length: <strong>64</strong><br>
 Default Value: ** **<br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="externalid">ExternalId</h3>
-<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. <code>Filter(multi eq)</code> <code>ORD</code> <code>Introduced in version 24.1.0.89</code></p>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -269,7 +269,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="externalsystem">ExternalSystem</h3>
-<p>The name of the external system from which the object is imported/synchronized. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.0.89</code></p>
+<p>The name of the external system from which the object is imported/synchronized.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -277,7 +277,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdeleted">IsDeleted</h3>
-<p>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 19.1</code></p>
+<p>Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -285,7 +285,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastupdatetimeutc">LastUpdateTimeUtc</h3>
-<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. <code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 19.1</code></p>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. NULL means that it is unknown.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -293,7 +293,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="latestversion">LatestVersion</h3>
-<p>The latest saved version of the object. Starts from 1 and increments with 1 for each new version. <code>Required</code> <code>Default(1)</code></p>
+<p>The latest saved version of the object. Starts from 1 and increments with 1 for each new version.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -323,20 +323,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
-<p>The user, who created the object represented by this system object . null means that it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>The user, who created the object represented by this system object . NULL means that it is unknown.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="folder">Folder</h3>
-<p>The owner folder of the object. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.0.13</code></p>
+<p>The owner folder of the object.</p>
 <p>Type: <strong><a href="General.Files.Folders.html">Folders</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastupdateuser">LastUpdateUser</h3>
-<p>The user, who made the last modification of the object represented by this system object . null means that it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
+<p>The user, who made the last modification of the object represented by this system object . NULL means that it is unknown.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

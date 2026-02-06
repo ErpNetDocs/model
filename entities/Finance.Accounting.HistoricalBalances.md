@@ -28,28 +28,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the original accounting currency as of the selected date. `Currency: Currency` `Required` 
-| [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the company’s base currency as of the selected date. `Currency: EnterpriseCompany.BaseCurrency` `Required` 
-| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the reporting currency as of the selected date. `Currency: EnterpriseCompany.ReportingCurrency` `Required` 
-| [Date](Finance.Accounting.HistoricalBalances.md#date) | date | The report shows balances as of this date. This is a required filter; if not set, the view returns no data. `Required` `Filter(eq)` 
-| [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) | Combined analytical dimensions key used for grouping and filtering account balances. `Required` `Filter(eq;like)` 
+| [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the original accounting currency as of the selected date. 
+| [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the company’s base currency as of the selected date. 
+| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the reporting currency as of the selected date. 
+| [Date](Finance.Accounting.HistoricalBalances.md#date) | date | The report shows balances as of this date. This is a required filter; if not set, the view returns no data. 
+| [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) | Combined analytical dimensions key used for grouping and filtering account balances. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.HistoricalBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The general ledger account for which the balance is calculated. Required field. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference` |
-| [CostCenter](Finance.Accounting.HistoricalBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | The cost center associated with the account balance for analytical and reporting purposes. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id` |
-| [Currency](Finance.Accounting.HistoricalBalances.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency in which the account balance is shown. Required field. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id` `FilterableReference` |
-| [EnterpriseCompany](Finance.Accounting.HistoricalBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company whose accounts are being analyzed. Required for filtering accounting data. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_<br />Companies_Table.Enterprise_Company_Id` `FilterableReference` |
-| [ProfitCenter](Finance.Accounting.HistoricalBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | The profit center associated with the account balance for profit analysis and segment reporting. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id` |
+| [Account](Finance.Accounting.HistoricalBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The general ledger account for which the balance is calculated. Required field. |
+| [CostCenter](Finance.Accounting.HistoricalBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | The cost center associated with the account balance for analytical and reporting purposes. |
+| [Currency](Finance.Accounting.HistoricalBalances.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency in which the account balance is shown. Required field. |
+| [EnterpriseCompany](Finance.Accounting.HistoricalBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company whose accounts are being analyzed. Required for filtering accounting data. |
+| [ProfitCenter](Finance.Accounting.HistoricalBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | The profit center associated with the account balance for profit analysis and segment reporting. |
 
 
 ## Attribute Details
 
 ### Balance
 
-Account balance in the original accounting currency as of the selected date. `Currency: Currency` `Required`
+Account balance in the original accounting currency as of the selected date.
 
 Type: **[Amount (19, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Account balance in the company’s base currency as of the selected date. `Currency: EnterpriseCompany.BaseCurrency` `Required`
+Account balance in the company’s base currency as of the selected date.
 
 Type: **[Amount (19, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Account balance in the reporting currency as of the selected date. `Currency: EnterpriseCompany.ReportingCurrency` `Required`
+Account balance in the reporting currency as of the selected date.
 
 Type: **[Amount (19, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### Date
 
-The report shows balances as of this date. This is a required filter; if not set, the view returns no data. `Required` `Filter(eq)`
+The report shows balances as of this date. This is a required filter; if not set, the view returns no data.
 
 Type: **date**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Combined analytical dimensions key used for grouping and filtering account balances. `Required` `Filter(eq;like)`
+Combined analytical dimensions key used for grouping and filtering account balances.
 
 Type: **string (64)**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### Account
 
-The general ledger account for which the balance is calculated. Required field. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Accounts_Table.Account_Id` `FilterableReference`
+The general ledger account for which the balance is calculated. Required field.
 
 Type: **[Accounts](Finance.Accounting.Accounts.md)**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCenter
 
-The cost center associated with the account balance for analytical and reporting purposes. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Cost_Centers_Table.Cost_Center_Id`
+The cost center associated with the account balance for analytical and reporting purposes.
 
 Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### Currency
 
-Currency in which the account balance is shown. Required field. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Currencies_Table.Currency_Id` `FilterableReference`
+Currency in which the account balance is shown. Required field.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company whose accounts are being analyzed. Required for filtering accounting data. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Enterprise_Companies_Table.Enterprise_Company_Id` `FilterableReference`
+The enterprise company whose accounts are being analyzed. Required for filtering accounting data.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### ProfitCenter
 
-The profit center associated with the account balance for profit analysis and segment reporting. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Acc_Profit_Centers_Table.Profit_Center_Id`
+The profit center associated with the account balance for profit analysis and segment reporting.
 
 Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
 Category: **System**  

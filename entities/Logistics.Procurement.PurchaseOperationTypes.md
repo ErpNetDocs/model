@@ -39,8 +39,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Procurement.PurchaseOperationTypes.md#code) | string (16) | Unique code of the purchase operation type. `Required` `Filter(multi eq;like)` 
-| [Name](Logistics.Procurement.PurchaseOperationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)` 
+| [Code](Logistics.Procurement.PurchaseOperationTypes.md#code) | string (16) | Unique code of the purchase operation type. 
+| [Name](Logistics.Procurement.PurchaseOperationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the purchase operation type (multilanguage). 
 | [Notes](Logistics.Procurement.PurchaseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this PurchaseOperationType. `Filter(eq;like)` 
 
 
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the purchase operation type. `Required` `Filter(multi eq;like)`
+Unique code of the purchase operation type.
 
 Type: **string (16)**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)`
+Name of the purchase operation type (multilanguage).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

@@ -36,15 +36,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Procedures.OperationalProcedureChecklistTemplates.md#notes) | string (max) __nullable__ | Notes for the template. `Filter(like)` 
-| [SeqNo](Projects.Procedures.OperationalProcedureChecklistTemplates.md#seqno) | int32 | Order of inclusion. `Required` `Filter(eq)` `ORD` 
+| [Notes](Projects.Procedures.OperationalProcedureChecklistTemplates.md#notes) | string (max) __nullable__ | Notes for the template. 
+| [SeqNo](Projects.Procedures.OperationalProcedureChecklistTemplates.md#seqno) | int32 | Order of inclusion. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChecklistTemplate](Projects.Procedures.OperationalProcedureChecklistTemplates.md#checklisttemplate) | [ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md) | Checklist template which to include in the procedure. `Required` `Filter(multi eq)` |
-| [OperationalProcedure](Projects.Procedures.OperationalProcedureChecklistTemplates.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) | Owner procedure. `Required` `Filter(multi eq)` `Owner` |
+| [ChecklistTemplate](Projects.Procedures.OperationalProcedureChecklistTemplates.md#checklisttemplate) | [ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md) | Checklist template which to include in the procedure. |
+| [OperationalProcedure](Projects.Procedures.OperationalProcedureChecklistTemplates.md#operationalprocedure) | [OperationalProcedures](Projects.Procedures.OperationalProcedures.md) | Owner procedure. |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### Notes
 
-Notes for the template. `Filter(like)`
+Notes for the template.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### SeqNo
 
-Order of inclusion. `Required` `Filter(eq)` `ORD`
+Order of inclusion.
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **HiddenByDefault**
 
 ### ChecklistTemplate
 
-Checklist template which to include in the procedure. `Required` `Filter(multi eq)`
+Checklist template which to include in the procedure.
 
 Type: **[ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md)**  
 Indexed: **True**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationalProcedure
 
-Owner procedure. `Required` `Filter(multi eq)` `Owner`
+Owner procedure.
 
 Type: **[OperationalProcedures](Projects.Procedures.OperationalProcedures.md)**  
 Indexed: **True**  

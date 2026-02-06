@@ -45,13 +45,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)` 
-| [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)` 
+| [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. 
+| [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. 
 | [Code](Crm.Sales.DiscountTypes.md#code) | string (32) | The unique code of the DiscountType. `Required` `Filter(eq)` 
-| [IsSystem](Crm.Sales.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)` 
+| [IsSystem](Crm.Sales.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. 
 | [Name](Crm.Sales.DiscountTypes.md#name) | string (254) | The name of this DiscountType. `Required` `Filter(like)` 
 | [Notes](Crm.Sales.DiscountTypes.md#notes) | string (max) __nullable__ | Notes for this DiscountType. 
-| [Ord](Crm.Sales.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)` 
+| [Ord](Crm.Sales.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. 
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### ActionType
 
-Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)`
+Specifies the way the discount is applied over the previous discounts.
 
 Type: **[ActionType](Crm.Sales.DiscountTypes.md#actiontype)**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### CalculationMethod
 
-Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)`
+Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.
 
 Type: **[CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### IsSystem
 
-Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)`
+Specifies whether this discount type is created and managed by the system.
 
 Type: **boolean**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### Ord
 
-Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)`
+Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.
 
 Type: **int32**  
 Category: **System**  

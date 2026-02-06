@@ -39,15 +39,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CoveredInvoiceAmount](Finance.Payments.InvoiceReconciliationLines.md#coveredinvoiceamount) | decimal (14, 2) | Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice. `Required` `Default(0)` 
+| [CoveredInvoiceAmount](Finance.Payments.InvoiceReconciliationLines.md#coveredinvoiceamount) | decimal (14, 2) | Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [InvoiceDocument](Finance.Payments.InvoiceReconciliationLines.md#invoicedocument) | [Documents](General.Documents.Documents.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [InvoiceDocument](Finance.Payments.InvoiceReconciliationLines.md#invoicedocument) | [Documents](General.Documents.Documents.md) | Obsolete. Not used. |
 | [<s>InvoiceReconciliation</s>](Finance.Payments.InvoiceReconciliationLines.md#invoicereconciliation) | [InvoiceReconciliations](Finance.Payments.InvoiceReconciliations.md) | **OBSOLETE! Do not use!** The <see cref="InvoiceReconciliatio<br />n"/> to which this InvoiceReconciliationLine belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` |
-| [PaymentTransactionDocument](Finance.Payments.InvoiceReconciliationLines.md#paymenttransactiondocument) | [Documents](General.Documents.Documents.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
+| [PaymentTransactionDocument](Finance.Payments.InvoiceReconciliationLines.md#paymenttransactiondocument) | [Documents](General.Documents.Documents.md) | Obsolete. Not used. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### CoveredInvoiceAmount
 
-Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice. `Required` `Default(0)`
+Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.
 
 Type: **decimal (14, 2)**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **HiddenByDefault**
 
 ### InvoiceDocument
 
-Obsolete. Not used. `Required` `Filter(multi eq)`
+Obsolete. Not used.
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Indexed: **True**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### PaymentTransactionDocument
 
-Obsolete. Not used. `Required` `Filter(multi eq)`
+Obsolete. Not used.
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Indexed: **True**  

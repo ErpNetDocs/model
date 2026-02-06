@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. `Required` 
+| [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | The route for which the transaction template is defined. `Required` `Filter(multi eq)` `Owner` |
+| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | The route for which the transaction template is defined. |
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Root:
 
 ### TransactionType
 
-Transaction type for the rent transaction that is to be created. `Required`
+Transaction type for the rent transaction that is to be created.
 
 Type: **[TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **HiddenByDefault**
 
 ### Route
 
-The route for which the transaction template is defined. `Required` `Filter(multi eq)` `Owner`
+The route for which the transaction template is defined.
 
 Type: **[Routes](Systems.Documents.Routes.md)**  
 Category: **System**  

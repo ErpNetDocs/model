@@ -45,13 +45,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FlatCommisionPercentage](Crm.Sales.Distributors.md#flatcommisionpercentage) | decimal (7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. `Required` `Default(0)` 
+| [FlatCommisionPercentage](Crm.Sales.Distributors.md#flatcommisionpercentage) | decimal (7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Crm.Sales.Distributors.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id. `Required` `Filter(multi eq)` |
+| [Party](Crm.Sales.Distributors.md#party) | [Parties](General.Contacts.Parties.md) | Base party Id |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### FlatCommisionPercentage
 
-Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations. `Required` `Default(0)`
+Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **HiddenByDefault**
 
 ### Party
 
-Base party Id. `Required` `Filter(multi eq)`
+Base party Id
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  

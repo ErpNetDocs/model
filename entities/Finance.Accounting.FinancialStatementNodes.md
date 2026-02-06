@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Accounting.FinancialStatementNodes.md#code) | string (3) | Identifying code of the financial statement node. Unique within the parent financial statement node. `Required` `Filter(eq;like)` 
-| [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (25) __nullable__ | Full identification path of the financial statement node. `Filter(eq;like)` `ReadOnly` 
-| [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement node. `Required` `Filter(like)` 
-| [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path. `Filter(eq;like)` 
+| [Code](Finance.Accounting.FinancialStatementNodes.md#code) | string (3) | Identifying code of the financial statement node. Unique within the parent financial statement node. 
+| [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (25) __nullable__ | Full identification path of the financial statement node. 
+| [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement node. 
+| [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path. 
 
 ## References
 
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### Code
 
-Identifying code of the financial statement node. Unique within the parent financial statement node. `Required` `Filter(eq;like)`
+Identifying code of the financial statement node. Unique within the parent financial statement node.
 
 Type: **string (3)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### FullPath
 
-Full identification path of the financial statement node. `Filter(eq;like)` `ReadOnly`
+Full identification path of the financial statement node.
 
 Type: **string (25) __nullable__**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### Name
 
-Name of the financial statement node. `Required` `Filter(like)`
+Name of the financial statement node.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentFullPath
 
-Parent financial statement node specified through its full identification path. `Filter(eq;like)`
+Parent financial statement node specified through its full identification path.
 
 Type: **string (25) __nullable__**  
 Category: **System**  

@@ -126,12 +126,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebSites.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the web site is active and will be instantiated upon next web server restart. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Indicates whether the web site is active and will be instantiated upon next web server restart.</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#isprivate">IsPrivate</a></td>
 <td>boolean</td>
-<td>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.0.8</code></td>
+<td>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#notes">Notes</a></td>
@@ -141,22 +141,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebSites.html#relativeurl">RelativeUrl</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. <code>Filter(eq)</code></td>
+<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#settingsjson">SettingsJson</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The field specifies the JSON settings for this website. null means that there are no specific settings for this website. <code>Introduced in version 23.1.0.37</code></td>
+<td>The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#uin">Uin</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . <code>Introduced in version 24.1.5.42</code></td>
+<td>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance.</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#websitetype">WebSiteType</a></td>
 <td><a href="Systems.Config.WebSites.html#websitetype">WebSiteType</a></td>
-<td>The type of web site - Api, Client Center, Id, etc. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of web site - Api, Client Center, Id, etc.</td>
 </tr>
 </tbody>
 </table>
@@ -173,17 +173,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebSites.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. <code>Filter(multi eq)</code></td>
+<td>The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#trustedapplication">TrustedApplication</a></td>
 <td><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a> (nullable)</td>
-<td>The trusted application related to this web site. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></td>
+<td>The trusted application related to this web site</td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#webhost">WebHost</a></td>
 <td><a href="Systems.Config.WebHosts.html">WebHosts</a> (nullable)</td>
-<td>The web host in which to host the site. <code>Filter(multi eq)</code></td>
+<td>The web host in which to host the site.</td>
 </tr>
 </tbody>
 </table>
@@ -231,7 +231,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the web site is active and will be instantiated upon next web server restart. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Indicates whether the web site is active and will be instantiated upon next web server restart.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isprivate">IsPrivate</h3>
-<p>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.0.8</code></p>
+<p>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="relativeurl">RelativeUrl</h3>
-<p>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. <code>Filter(eq)</code></p>
+<p>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -263,7 +263,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
-<p>The field specifies the JSON settings for this website. null means that there are no specific settings for this website. <code>Introduced in version 23.1.0.37</code></p>
+<p>The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="uin">Uin</h3>
-<p>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When null (which is the default and suggested value), the site will be started on the primary instance. . <code>Introduced in version 24.1.5.42</code></p>
+<p>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -279,7 +279,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="websitetype">WebSiteType</h3>
-<p>The type of web site - Api, Client Center, Id, etc. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of web site - Api, Client Center, Id, etc.</p>
 <p>Type: <strong><a href="Systems.Config.WebSites.html#websitetype">WebSiteType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>WebSiteType</code>(Systems.Config.WebSites.md#websitetype) data attribute<br>
@@ -397,19 +397,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. <code>Filter(multi eq)</code></p>
+<p>The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trustedapplication">TrustedApplication</h3>
-<p>The trusted application related to this web site. <code>Filter(multi eq)</code> <code>Introduced in version 20.1</code></p>
+<p>The trusted application related to this web site</p>
 <p>Type: <strong><a href="Systems.Security.TrustedApplications.html">TrustedApplications</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="webhost">WebHost</h3>
-<p>The web host in which to host the site. <code>Filter(multi eq)</code></p>
+<p>The web host in which to host the site.</p>
 <p>Type: <strong><a href="Systems.Config.WebHosts.html">WebHosts</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

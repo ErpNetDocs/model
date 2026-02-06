@@ -94,6 +94,11 @@ Repository: Regulatory.Vat.BoxTypes<br>
 Base Table: VAT_Box_Types<br>
 Introduced In Version: 22.1.4.18<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Vat.BoxTypes<br>
+New name: Regulatory.Vat.BoxTypes<br>
+Version: 26.2.0.99<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {Name:T}<br>
 Search Members: Code; Name<br>
@@ -123,7 +128,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.BoxTypes.html#calculationtype">CalculationType</a></td>
 <td><a href="Regulatory.Vat.BoxTypes.html#calculationtype">CalculationType</a></td>
-<td>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. <code>Required</code> <code>Default(&quot;DT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></td>
+<td>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.BoxTypes.html#code">Code</a></td>
@@ -133,7 +138,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.BoxTypes.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The name for this box type. (Miltilanguage string). <code>Required</code> <code>Filter(like)</code></td>
+<td>The name for this box type. (Miltilanguage string)</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.BoxTypes.html#notes">Notes</a></td>
@@ -155,12 +160,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.BoxTypes.html#calculatedattribute">CalculatedAttribute</a></td>
 <td><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a> (nullable)</td>
-<td>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.97</code></td>
+<td>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.BoxTypes.html#country">Country</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a></td>
-<td>The Country for which this type of box is declared. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The Country for which this type of box is declared.</td>
 </tr>
 </tbody>
 </table>
@@ -208,7 +213,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="calculationtype">CalculationType</h3>
-<p>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. <code>Required</code> <code>Default(&quot;DT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></p>
+<p>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field.</p>
 <p>Type: <strong><a href="Regulatory.Vat.BoxTypes.html#calculationtype">CalculationType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>CalculationType</code>(Regulatory.Vat.BoxTypes.md#calculationtype) data attribute<br>
@@ -244,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name for this box type. (Miltilanguage string). <code>Required</code> <code>Filter(like)</code></p>
+<p>The name for this box type. (Miltilanguage string)</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -302,13 +307,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculatedattribute">CalculatedAttribute</h3>
-<p>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.97</code></p>
+<p>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;.</p>
 <p>Type: <strong><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="country">Country</h3>
-<p>The Country for which this type of box is declared. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The Country for which this type of box is declared.</p>
 <p>Type: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

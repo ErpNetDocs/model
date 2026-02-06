@@ -778,72 +778,15 @@ references:
 - uid: Finance.Excise
   name: Finance.Excise Namespace
   href: entities/Finance.Excise.html
-- uid: Finance.Excise.ExciseAdministrativeDocumentLines
-  name: Finance.Excise.ExciseAdministrativeDocumentLines Entity
-  href: entities/Finance.Excise.ExciseAdministrativeDocumentLines.html
-- uid: Finance.Excise.ExciseAdministrativeDocuments
-  name: Finance.Excise.ExciseAdministrativeDocuments Entity
-  href: entities/Finance.Excise.ExciseAdministrativeDocuments.html
-- uid: Finance.Excise.ExciseDeclarations
-  name: Finance.Excise.ExciseDeclarations Entity
-  href: entities/Finance.Excise.ExciseDeclarations.html
-- uid: Finance.Excise.ExciseDutyRates
-  name: Finance.Excise.ExciseDutyRates Entity
-  href: entities/Finance.Excise.ExciseDutyRates.html
-- uid: Finance.Excise.ExciseOperationTypes
-  name: Finance.Excise.ExciseOperationTypes Entity
-  href: entities/Finance.Excise.ExciseOperationTypes.html
-- uid: Finance.Excise.ExciseProductCategories
-  name: Finance.Excise.ExciseProductCategories Entity
-  href: entities/Finance.Excise.ExciseProductCategories.html
-- uid: Finance.Excise.ExciseProductTypes
-  name: Finance.Excise.ExciseProductTypes Entity
-  href: entities/Finance.Excise.ExciseProductTypes.html
-- uid: Finance.Excise.ExciseProducts
-  name: Finance.Excise.ExciseProducts Entity
-  href: entities/Finance.Excise.ExciseProducts.html
-- uid: Finance.Excise.ExcisePurposeCodes
-  name: Finance.Excise.ExcisePurposeCodes Entity
-  href: entities/Finance.Excise.ExcisePurposeCodes.html
-- uid: Finance.Excise.ExciseStampLots
-  name: Finance.Excise.ExciseStampLots Entity
-  href: entities/Finance.Excise.ExciseStampLots.html
-- uid: Finance.Excise.ExciseStampOperationLines
-  name: Finance.Excise.ExciseStampOperationLines Entity
-  href: entities/Finance.Excise.ExciseStampOperationLines.html
-- uid: Finance.Excise.ExciseStampOperationTypes
-  name: Finance.Excise.ExciseStampOperationTypes Entity
-  href: entities/Finance.Excise.ExciseStampOperationTypes.html
-- uid: Finance.Excise.ExciseStampOperations
-  name: Finance.Excise.ExciseStampOperations Entity
-  href: entities/Finance.Excise.ExciseStampOperations.html
 - uid: Finance.Excise.ExciseStampTypes
   name: Finance.Excise.ExciseStampTypes Entity
   href: entities/Finance.Excise.ExciseStampTypes.html
-- uid: Finance.Excise.MeasuringTransactions
-  name: Finance.Excise.MeasuringTransactions Entity
-  href: entities/Finance.Excise.MeasuringTransactions.html
 - uid: Finance.Excise.TaxWarehouseMeasuringTransactions
   name: Finance.Excise.TaxWarehouseMeasuringTransactions Entity
   href: entities/Finance.Excise.TaxWarehouseMeasuringTransactions.html
-- uid: Finance.Excise.TaxWarehouses
-  name: Finance.Excise.TaxWarehouses Entity
-  href: entities/Finance.Excise.TaxWarehouses.html
 - uid: Finance.Intrastat
   name: Finance.Intrastat Namespace
   href: entities/Finance.Intrastat.html
-- uid: Finance.Intrastat.CommodityCodes
-  name: Finance.Intrastat.CommodityCodes Entity
-  href: entities/Finance.Intrastat.CommodityCodes.html
-- uid: Finance.Intrastat.DeclarationLines
-  name: Finance.Intrastat.DeclarationLines Entity
-  href: entities/Finance.Intrastat.DeclarationLines.html
-- uid: Finance.Intrastat.Declarations
-  name: Finance.Intrastat.Declarations Entity
-  href: entities/Finance.Intrastat.Declarations.html
-- uid: Finance.Intrastat.DocumentAmountTypeSettings
-  name: Finance.Intrastat.DocumentAmountTypeSettings Entity
-  href: entities/Finance.Intrastat.DocumentAmountTypeSettings.html
 - uid: Finance.Payments
   name: Finance.Payments Namespace
   href: entities/Finance.Payments.html
@@ -898,39 +841,9 @@ references:
 - uid: Finance.Saft
   name: Finance.Saft Namespace
   href: entities/Finance.Saft.html
-- uid: Finance.Saft.ProfileAccountByProducts
-  name: Finance.Saft.ProfileAccountByProducts Entity
-  href: entities/Finance.Saft.ProfileAccountByProducts.html
-- uid: Finance.Saft.ProfileAccounts
-  name: Finance.Saft.ProfileAccounts Entity
-  href: entities/Finance.Saft.ProfileAccounts.html
-- uid: Finance.Saft.ProfileCompanies
-  name: Finance.Saft.ProfileCompanies Entity
-  href: entities/Finance.Saft.ProfileCompanies.html
-- uid: Finance.Saft.ProfileMeasurementUnits
-  name: Finance.Saft.ProfileMeasurementUnits Entity
-  href: entities/Finance.Saft.ProfileMeasurementUnits.html
-- uid: Finance.Saft.ProfileParties
-  name: Finance.Saft.ProfileParties Entity
-  href: entities/Finance.Saft.ProfileParties.html
-- uid: Finance.Saft.ProfilePaymentTypes
-  name: Finance.Saft.ProfilePaymentTypes Entity
-  href: entities/Finance.Saft.ProfilePaymentTypes.html
-- uid: Finance.Saft.ProfilePayments
-  name: Finance.Saft.ProfilePayments Entity
-  href: entities/Finance.Saft.ProfilePayments.html
 - uid: Finance.Saft.ProfileProductAccounts
   name: Finance.Saft.ProfileProductAccounts Entity
   href: entities/Finance.Saft.ProfileProductAccounts.html
-- uid: Finance.Saft.ProfileTaxCodeByAccounts
-  name: Finance.Saft.ProfileTaxCodeByAccounts Entity
-  href: entities/Finance.Saft.ProfileTaxCodeByAccounts.html
-- uid: Finance.Saft.ProfileTaxCodeByDealTypes
-  name: Finance.Saft.ProfileTaxCodeByDealTypes Entity
-  href: entities/Finance.Saft.ProfileTaxCodeByDealTypes.html
-- uid: Finance.Saft.Profiles
-  name: Finance.Saft.Profiles Entity
-  href: entities/Finance.Saft.Profiles.html
 - uid: Finance.Vat
   name: Finance.Vat Namespace
   href: entities/Finance.Vat.html
@@ -943,30 +856,6 @@ references:
 - uid: Finance.Vat.BGVATDocumentTypeVATCodes
   name: Finance.Vat.BGVATDocumentTypeVATCodes
   href: entities/Finance.Vat.BGVATDocumentTypeVATCodes.html
-- uid: Finance.Vat.BoxTypeDealTypes
-  name: Finance.Vat.BoxTypeDealTypes Entity
-  href: entities/Finance.Vat.BoxTypeDealTypes.html
-- uid: Finance.Vat.BoxTypes
-  name: Finance.Vat.BoxTypes Entity
-  href: entities/Finance.Vat.BoxTypes.html
-- uid: Finance.Vat.DealTypeDocumentAmounts
-  name: Finance.Vat.DealTypeDocumentAmounts Entity
-  href: entities/Finance.Vat.DealTypeDocumentAmounts.html
-- uid: Finance.Vat.DealTypes
-  name: Finance.Vat.DealTypes Entity
-  href: entities/Finance.Vat.DealTypes.html
-- uid: Finance.Vat.DeclarationAmountDetails
-  name: Finance.Vat.DeclarationAmountDetails View
-  href: entities/Finance.Vat.DeclarationAmountDetails.html
-- uid: Finance.Vat.DeclarationLines
-  name: Finance.Vat.DeclarationLines Entity
-  href: entities/Finance.Vat.DeclarationLines.html
-- uid: Finance.Vat.Declarations
-  name: Finance.Vat.Declarations Entity
-  href: entities/Finance.Vat.Declarations.html
-- uid: Finance.Vat.Entries
-  name: Finance.Vat.Entries Entity
-  href: entities/Finance.Vat.Entries.html
 - uid: General
   name: General Namespace
   href: entities/General.html
@@ -2191,6 +2080,9 @@ references:
 - uid: Systems.Core.ExtensibleDataObjects
   name: Systems.Core.ExtensibleDataObjects
   href: entities/Systems.Core.ExtensibleDataObjects.html
+- uid: Systems.Core.Extensions
+  name: Systems.Core.Extensions
+  href: entities/Systems.Core.Extensions.html
 - uid: Systems.Core.FormLayouts
   name: Systems.Core.FormLayouts
   href: entities/Systems.Core.FormLayouts.html

@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseLocations.html#locationaddress">LocationAddress</a></td>
 <td>string (32)</td>
-<td>The address of the location. Should be unique within the warehouse. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The address of the location. Should be unique within the warehouse.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseLocations.html#notes">Notes</a></td>
@@ -144,12 +144,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseLocations.html#warehouse">Warehouse</a></td>
 <td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse containing the location. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The warehouse containing the location.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseLocations.html#warehousezone">WarehouseZone</a></td>
 <td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a></td>
-<td>The zone, which contains the location. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The zone, which contains the location.</td>
 </tr>
 </tbody>
 </table>
@@ -182,7 +182,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="locationaddress">LocationAddress</h3>
-<p>The address of the location. Should be unique within the warehouse. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The address of the location. Should be unique within the warehouse.</p>
 <p>Type: <strong>string (32)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -220,14 +220,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="warehouse">Warehouse</h3>
-<p>The warehouse containing the location. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The warehouse containing the location.</p>
 <p>Type: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="warehousezone">WarehouseZone</h3>
-<p>The zone, which contains the location. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The zone, which contains the location.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

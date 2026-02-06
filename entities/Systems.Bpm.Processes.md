@@ -44,12 +44,12 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTime](Systems.Bpm.Processes.md#creationtime) | datetime __nullable__ | Date and time when the Process was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Systems.Bpm.Processes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Process. `ReadOnly` 
-| [IsLandscape](Systems.Bpm.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)` 
+| [IsLandscape](Systems.Bpm.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. 
 | [Name](Systems.Bpm.Processes.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Bpm.Processes.md#notes) | string (2000) __nullable__ | Notes for this Process. 
-| [SchemaFormat](Systems.Bpm.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout. `Required` `Default("D")` 
-| [SchemaLayout](Systems.Bpm.Processes.md#schemalayout) | string (max) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required` 
-| [StartEvent](Systems.Bpm.Processes.md#startevent) | string (3) __nullable__ | USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process. 
+| [SchemaFormat](Systems.Bpm.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout. 
+| [SchemaLayout](Systems.Bpm.Processes.md#schemalayout) | string (max) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. 
+| [StartEvent](Systems.Bpm.Processes.md#startevent) | string (3) __nullable__ | USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process 
 | [StartRoleId](Systems.Bpm.Processes.md#startroleid) | guid __nullable__ | When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. `Filter(multi eq)` 
 | [Thumbnail](Systems.Bpm.Processes.md#thumbnail) | byte[] __nullable__ | Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format. 
 | [UpdateTime](Systems.Bpm.Processes.md#updatetime) | datetime __nullable__ | Date and time when the Process was last updated. `Filter(ge;le)` `ReadOnly` 
@@ -93,7 +93,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsLandscape
 
-Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)`
+Specifies whether the process diagram is intended to be viewed in landscape mode.
 
 Type: **boolean**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### SchemaFormat
 
-Application specific format of the Schema Layout. `Required` `Default("D")`
+Application specific format of the Schema Layout.
 
 Type: **string (1)**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### SchemaLayout
 
-Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required`
+Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.
 
 Type: **string (max)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### StartEvent
 
-USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.
+USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process
 
 Type: **string (3) __nullable__**  
 Category: **System**  

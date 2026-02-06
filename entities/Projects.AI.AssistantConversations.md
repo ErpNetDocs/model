@@ -33,17 +33,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Projects.AI.AssistantConversations.md#creationtimeutc) | datetime | The time when the assistant conversation was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` 
-| [IsActive](Projects.AI.AssistantConversations.md#isactive) | boolean | Indicates whether the conversation is active. `Required` `Default(false)` `Filter(eq)` 
+| [CreationTimeUtc](Projects.AI.AssistantConversations.md#creationtimeutc) | datetime | The time when the assistant conversation was created. 
+| [IsActive](Projects.AI.AssistantConversations.md#isactive) | boolean | Indicates whether the conversation is active. 
 | [Notes](Projects.AI.AssistantConversations.md#notes) | string (max) __nullable__ | Notes for this AssistantConversation. 
-| [Title](Projects.AI.AssistantConversations.md#title) | string (256) | The title of the conversation (derived from the first message, but can be changed). `Required` 
+| [Title](Projects.AI.AssistantConversations.md#title) | string (256) | The title of the conversation (derived from the first message, but can be changed). 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Model](Projects.AI.AssistantConversations.md#model) | [Models](Projects.AI.Models.md) | The model used for the chat. `Required` `Filter(multi eq)` |
-| [User](Projects.AI.AssistantConversations.md#user) | [Users](Systems.Security.Users.md) | The user which is being assisted by the AI model. `Required` `Filter(multi eq)` |
+| [Model](Projects.AI.AssistantConversations.md#model) | [Models](Projects.AI.Models.md) | The model used for the chat. |
+| [User](Projects.AI.AssistantConversations.md#user) | [Users](Systems.Security.Users.md) | The user which is being assisted by the AI model. |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The time when the assistant conversation was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly`
+The time when the assistant conversation was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the conversation is active. `Required` `Default(false)` `Filter(eq)`
+Indicates whether the conversation is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### Title
 
-The title of the conversation (derived from the first message, but can be changed). `Required`
+The title of the conversation (derived from the first message, but can be changed).
 
 Type: **string (256)**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **HiddenByDefault**
 
 ### Model
 
-The model used for the chat. `Required` `Filter(multi eq)`
+The model used for the chat.
 
 Type: **[Models](Projects.AI.Models.md)**  
 Indexed: **True**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user which is being assisted by the AI model. `Required` `Filter(multi eq)`
+The user which is being assisted by the AI model.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  

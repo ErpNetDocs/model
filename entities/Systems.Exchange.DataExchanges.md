@@ -35,23 +35,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedOn](Systems.Exchange.DataExchanges.md#createdon) | datetime | The time (in UTC) when the exchange is created. `Required` `Filter(ge;le)` `ReadOnly` 
-| [DriverName](Systems.Exchange.DataExchanges.md#drivername) | string (64) __nullable__ | The name of the exchange program/procedure, which actuates the exchange operation. `Default("JSON_FILE")` `Filter(eq)` 
-| [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time (in UTC) of the exchange. `Filter(ge;le)` 
-| [ExchangeLog](Systems.Exchange.DataExchanges.md#exchangelog) | string (max) __nullable__ | General log of the last transfer attempt. Messages for the individual objects are kept with the objects. `Filter(like)` 
-| [ExternalAddress](Systems.Exchange.DataExchanges.md#externaladdress) | string (254) __nullable__ | Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver. `Filter(like)` 
-| [KeepUntil](Systems.Exchange.DataExchanges.md#keepuntil) | date | Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted). `Required` `Filter(ge;le)` 
-| [Mode](Systems.Exchange.DataExchanges.md#mode) | [Mode](Systems.Exchange.DataExchanges.md#mode) | Operation mode of the exchange. `Required` `Default("E")` `Filter(eq)` 
-| [Name](Systems.Exchange.DataExchanges.md#name) | string (64) __nullable__ | The name of the package. Can be empty if naming is not important. `Filter(eq;like)` 
-| [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes for the exchange. `Filter(like)` 
-| [State](Systems.Exchange.DataExchanges.md#state) | [State](Systems.Exchange.DataExchanges.md#state) | State of the exchange. `Required` `Default("PRE")` `Filter(eq)` 
+| [CreatedOn](Systems.Exchange.DataExchanges.md#createdon) | datetime | The time when the exchange is created. 
+| [DriverName](Systems.Exchange.DataExchanges.md#drivername) | string (64) __nullable__ | The name of the exchange program/procedure, which actuates the exchange operation. 
+| [ExchangedOn](Systems.Exchange.DataExchanges.md#exchangedon) | datetime __nullable__ | The time (in UTC) of the exchange. 
+| [ExchangeLog](Systems.Exchange.DataExchanges.md#exchangelog) | string (max) __nullable__ | General log of the last transfer attempt. Messages for the individual objects are kept with the objects. 
+| [ExternalAddress](Systems.Exchange.DataExchanges.md#externaladdress) | string (254) __nullable__ | Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver. 
+| [KeepUntil](Systems.Exchange.DataExchanges.md#keepuntil) | date | Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted). 
+| [Mode](Systems.Exchange.DataExchanges.md#mode) | [Mode](Systems.Exchange.DataExchanges.md#mode) | Operation mode of the exchange. 
+| [Name](Systems.Exchange.DataExchanges.md#name) | string (64) __nullable__ | The name of the package. Can be empty if naming is not important. 
+| [Notes](Systems.Exchange.DataExchanges.md#notes) | string (max) __nullable__ | Notes for the exchange. 
+| [State](Systems.Exchange.DataExchanges.md#state) | [State](Systems.Exchange.DataExchanges.md#state) | State of the exchange. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedByUser](Systems.Exchange.DataExchanges.md#createdbyuser) | [Users](Systems.Security.Users.md) | The user who created the exchange. `Required` `Filter(multi eq)` `ReadOnly` |
-| [ExchangedByUser](Systems.Exchange.DataExchanges.md#exchangedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who made the exchange. `Filter(multi eq)` |
+| [CreatedByUser](Systems.Exchange.DataExchanges.md#createdbyuser) | [Users](Systems.Security.Users.md) | The user who created the exchange. |
+| [ExchangedByUser](Systems.Exchange.DataExchanges.md#exchangedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who made the exchange. |
 
 
 ## System Attributes
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### CreatedOn
 
-The time (in UTC) when the exchange is created. `Required` `Filter(ge;le)` `ReadOnly`
+The time when the exchange is created.
 
 Type: **datetime**  
 Category: **System**  
@@ -89,7 +89,7 @@ Back-End Default Expression:
 
 ### DriverName
 
-The name of the exchange program/procedure, which actuates the exchange operation. `Default("JSON_FILE")` `Filter(eq)`
+The name of the exchange program/procedure, which actuates the exchange operation.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangedOn
 
-The time (in UTC) of the exchange. `Filter(ge;le)`
+The time (in UTC) of the exchange.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangeLog
 
-General log of the last transfer attempt. Messages for the individual objects are kept with the objects. `Filter(like)`
+General log of the last transfer attempt. Messages for the individual objects are kept with the objects.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### ExternalAddress
 
-Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver. `Filter(like)`
+Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 ### KeepUntil
 
-Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted). `Required` `Filter(ge;le)`
+Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).
 
 Type: **date**  
 Category: **System**  
@@ -146,7 +146,7 @@ Back-End Default Expression:
 
 ### Mode
 
-Operation mode of the exchange. `Required` `Default("E")` `Filter(eq)`
+Operation mode of the exchange.
 
 Type: **[Mode](Systems.Exchange.DataExchanges.md#mode)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the package. Can be empty if naming is not important. `Filter(eq;like)`
+The name of the package. Can be empty if naming is not important.
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the exchange. `Filter(like)`
+Notes for the exchange.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-State of the exchange. `Required` `Default("PRE")` `Filter(eq)`
+State of the exchange.
 
 Type: **[State](Systems.Exchange.DataExchanges.md#state)**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreatedByUser
 
-The user who created the exchange. `Required` `Filter(multi eq)` `ReadOnly`
+The user who created the exchange.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Indexed: **True**  
@@ -285,7 +285,7 @@ Back-End Default Expression:
 
 ### ExchangedByUser
 
-The user who made the exchange. `Filter(multi eq)`
+The user who made the exchange.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Indexed: **True**  

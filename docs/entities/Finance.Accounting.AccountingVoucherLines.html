@@ -120,72 +120,72 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#correspondanceno">CorrespondanceNo</a></td>
 <td>int32</td>
-<td>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. <code>Required</code> <code>Default(0)</code></td>
+<td>The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#correspondantamount">CorrespondantAmount</a></td>
 <td>decimal (18, 2) <strong>nullable</strong></td>
-<td>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). <code>ReadOnly</code></td>
+<td>The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#credit">Credit</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The amount of the credit in the currency of the account. 0 means that the account is not credited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>The amount of the credit in the currency of the account. 0 means that the account is not credited</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#creditbase">CreditBase</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The amount of credit in base currency. <code>Currency: Voucher.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>The amount of credit in base currency</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#creditreporting">CreditReporting</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>The amount of credit in reporting currency. <code>Currency: Voucher.EnterpriseCompany.ReportingCurrency</code> <code>Introduced in version 25.1.2.88</code></td>
+<td>The amount of credit in reporting currency.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#debit">Debit</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The amount of the debit in the currency of the account. 0 means that the account is not debited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>The amount of the debit in the currency of the account. 0 means that the account is not debited</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#debitbase">DebitBase</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The amount of debit in base currency. <code>Currency: Voucher.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>The amount of debit in base currency</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#debitreporting">DebitReporting</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>The amount of debit in reporting currency. <code>Currency: Voucher.EnterpriseCompany.ReportingCurrency</code> <code>Introduced in version 25.1.2.88</code></td>
+<td>The amount of debit in reporting currency.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#itemkey">ItemKey</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. <code>Filter(eq;like)</code></td>
+<td>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the voucher. <code>Required</code></td>
+<td>Consecutive number of the line within the voucher</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratedivisor">RateDivisor</a></td>
 <td>decimal (18, 6)</td>
-<td>The divisor for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
+<td>The divisor for conversion from Debit/Credit to base currency</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratedivisorrc">RateDivisorRC</a></td>
 <td>decimal (18, 6) <strong>nullable</strong></td>
-<td>The divisor for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></td>
+<td>The divisor for conversion from Debit/Credit to Reporting currency.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratemultiplier">RateMultiplier</a></td>
 <td>decimal (18, 6)</td>
-<td>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></td>
+<td>The multiplier for conversion from Debit/Credit to base currency</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#ratemultiplierrc">RateMultiplierRC</a></td>
 <td>decimal (18, 6) <strong>nullable</strong></td>
-<td>The multiplier for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></td>
+<td>The multiplier for conversion from Debit/Credit to Reporting currency.</td>
 </tr>
 </tbody>
 </table>
@@ -202,17 +202,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#account">Account</a></td>
 <td><a href="Finance.Accounting.Accounts.html">Accounts</a></td>
-<td>The account being debited or credited. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The account being debited or credited</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#costcenter">CostCenter</a></td>
 <td><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</td>
-<td>The cost center to which this cost is related. <code>Filter(multi eq)</code></td>
+<td>The cost center to which this cost is related</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#currency">Currency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#document">Document</a></td>
@@ -222,17 +222,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#profitcenter">ProfitCenter</a></td>
 <td><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</td>
-<td>The profit center to which this revenue is related. <code>Filter(multi eq)</code></td>
+<td>The profit center to which this revenue is related</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#referenceddocument">ReferencedDocument</a></td>
 <td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>The document which is referenced by the line. By default, this is the document of the voucher. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The document which is referenced by the line. By default, this is the document of the voucher</td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#voucher">Voucher</a></td>
 <td><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></td>
-<td>The voucher to which this line is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The voucher to which this line is attached</td>
 </tr>
 </tbody>
 </table>
@@ -265,7 +265,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="correspondanceno">CorrespondanceNo</h3>
-<p>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits. <code>Required</code> <code>Default(0)</code></p>
+<p>The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -273,14 +273,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="correspondantamount">CorrespondantAmount</h3>
-<p>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. null means that the current line is corresponding to many lines). <code>ReadOnly</code></p>
+<p>The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.</p>
 <p>Type: <strong>decimal (18, 2) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="credit">Credit</h3>
-<p>The amount of the credit in the currency of the account. 0 means that the account is not credited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>The amount of the credit in the currency of the account. 0 means that the account is not credited</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -288,7 +288,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creditbase">CreditBase</h3>
-<p>The amount of credit in base currency. <code>Currency: Voucher.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>The amount of credit in base currency</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -296,7 +296,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditreporting">CreditReporting</h3>
-<p>The amount of credit in reporting currency. <code>Currency: Voucher.EnterpriseCompany.ReportingCurrency</code> <code>Introduced in version 25.1.2.88</code></p>
+<p>The amount of credit in reporting currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -305,7 +305,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.SetDefaultsToRCattributes( obj.CreditReporting, &quot;CreditReporting&quot;)</code></p>
 <h3 id="debit">Debit</h3>
-<p>The amount of the debit in the currency of the account. 0 means that the account is not debited. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>The amount of the debit in the currency of the account. 0 means that the account is not debited</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -313,7 +313,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="debitbase">DebitBase</h3>
-<p>The amount of debit in base currency. <code>Currency: Voucher.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>The amount of debit in base currency</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="debitreporting">DebitReporting</h3>
-<p>The amount of debit in reporting currency. <code>Currency: Voucher.EnterpriseCompany.ReportingCurrency</code> <code>Introduced in version 25.1.2.88</code></p>
+<p>The amount of debit in reporting currency.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -330,7 +330,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.SetDefaultsToRCattributes( obj.DebitReporting, &quot;DebitReporting&quot;)</code></p>
 <h3 id="itemkey">ItemKey</h3>
-<p>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. <code>Filter(eq;like)</code></p>
+<p>The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -338,7 +338,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the voucher. <code>Required</code></p>
+<p>Consecutive number of the line within the voucher</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -349,7 +349,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Voucher.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="ratedivisor">RateDivisor</h3>
-<p>The divisor for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
+<p>The divisor for conversion from Debit/Credit to base currency</p>
 <p>Type: <strong>decimal (18, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -357,7 +357,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ratedivisorrc">RateDivisorRC</h3>
-<p>The divisor for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></p>
+<p>The divisor for conversion from Debit/Credit to Reporting currency.</p>
 <p>Type: <strong>decimal (18, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -368,7 +368,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( ( ( ( ( ( obj.Account != null) AndAlso ( obj.Currency != null)) AndAlso ( obj.Voucher.EnterpriseCompany.ReportingCurrency != null)) AndAlso Not( obj.Voucher.EnterpriseCompany.ReportingCurrency.IsGhost)) AndAlso ( ( obj.ItemKey != null) OrElse True)) AndAlso ( ( obj.ReferencedDocument == null) OrElse True)) AndAlso ( ( obj.Debit.Value != 0) OrElse True)) AndAlso ( ( obj.Credit.Value != 0) OrElse True)), obj.SetMultiplierAndDivisorRC( ).Item2, obj.RateDivisorRC)</code></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
-<p>The multiplier for conversion from Debit/Credit to base currency. <code>Required</code> <code>Default(1)</code></p>
+<p>The multiplier for conversion from Debit/Credit to base currency</p>
 <p>Type: <strong>decimal (18, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -376,7 +376,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="ratemultiplierrc">RateMultiplierRC</h3>
-<p>The multiplier for conversion from Debit/Credit to Reporting currency. <code>Introduced in version 26.1.3.74</code></p>
+<p>The multiplier for conversion from Debit/Credit to Reporting currency.</p>
 <p>Type: <strong>decimal (18, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -409,20 +409,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="account">Account</h3>
-<p>The account being debited or credited. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The account being debited or credited</p>
 <p>Type: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costcenter">CostCenter</h3>
-<p>The cost center to which this cost is related. <code>Filter(multi eq)</code></p>
+<p>The cost center to which this cost is related</p>
 <p>Type: <strong><a href="Finance.Accounting.CostCenters.html">CostCenters</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currency">Currency</h3>
-<p>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency of the movement in this line. If there is defined currency for the account in the line that it should be equal to the value in this field.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -435,13 +435,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profitcenter">ProfitCenter</h3>
-<p>The profit center to which this revenue is related. <code>Filter(multi eq)</code></p>
+<p>The profit center to which this revenue is related</p>
 <p>Type: <strong><a href="Finance.Accounting.ProfitCenters.html">ProfitCenters</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referenceddocument">ReferencedDocument</h3>
-<p>The document which is referenced by the line. By default, this is the document of the voucher. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The document which is referenced by the line. By default, this is the document of the voucher</p>
 <p>Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -450,7 +450,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>IIF( ( obj.Voucher.DefaultReferencedDocument != null), obj.Voucher.DefaultReferencedDocument, Convert( obj.Voucher, Document))</code></p>
 <h3 id="voucher">Voucher</h3>
-<p>The voucher to which this line is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The voucher to which this line is attached</p>
 <p>Type: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

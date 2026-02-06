@@ -40,7 +40,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Group](Systems.Security.UserGroups.md#group) | [Groups](Systems.Security.Groups.md) | The group, in which the user is included. `Required` `Filter(multi eq)` |
+| [Group](Systems.Security.UserGroups.md#group) | [Groups](Systems.Security.Groups.md) | The group, in which the user is included. |
 | [User](Systems.Security.UserGroups.md#user) | [Users](Systems.Security.Users.md) | The <see cref="User"/> to which this UserGroup belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### Group
 
-The group, in which the user is included. `Required` `Filter(multi eq)`
+The group, in which the user is included.
 
 Type: **[Groups](Systems.Security.Groups.md)**  
 Category: **System**  

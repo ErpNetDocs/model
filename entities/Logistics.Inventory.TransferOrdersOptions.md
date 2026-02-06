@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableQuantityOnly](Logistics.Inventory.TransferOrdersOptions.md#availablequantityonly) | boolean | Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. `Required` `Default(false)` `Filter(eq)` 
+| [AvailableQuantityOnly](Logistics.Inventory.TransferOrdersOptions.md#availablequantityonly) | boolean | Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, for which these options apply. `Required` `Filter(multi eq)` `Owner` |
+| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type, for which these options apply. |
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Root:
 
 ### AvailableQuantityOnly
 
-Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. `Required` `Default(false)` `Filter(eq)`
+Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity.
 
 Type: **boolean**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The document type, for which these options apply. `Required` `Filter(multi eq)` `Owner`
+The document type, for which these options apply.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  

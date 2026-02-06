@@ -44,18 +44,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BirthDate](General.Contacts.Persons.md#birthdate) | datetime __nullable__ | Birth date. null means unknown. `Filter(ge;le)` 
-| [City](General.Contacts.Persons.md#city) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | City from the legal registration address for the person. `Filter(like)` 
+| [BirthDate](General.Contacts.Persons.md#birthdate) | datetime __nullable__ | Birth date. NULL means unknown 
+| [City](General.Contacts.Persons.md#city) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | City from the legal registration address for the person 
 | [CreationTime](General.Contacts.Persons.md#creationtime) | datetime __nullable__ | Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Contacts.Persons.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
-| [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | First name of the person. `Filter(eq;like)` 
-| [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;null=not known/not provided. `Filter(eq)` 
+| [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | First name of the person. 
+| [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided 
 | [GLN](General.Contacts.Persons.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](General.Contacts.Persons.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [LastName](General.Contacts.Persons.md#lastname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Last name of the person. `Filter(eq;like)` 
-| [MiddleName](General.Contacts.Persons.md#middlename) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Middle name of the person. `Filter(eq;like)` 
-| [NationalNumber](General.Contacts.Persons.md#nationalnumber) | string (16) __nullable__ | Government assigned unique personal number. null means unknown. `Filter(eq;like)` 
-| [Notes](General.Contacts.Persons.md#notes) | string (254) __nullable__ | Internal notes for the person. 
+| [LastName](General.Contacts.Persons.md#lastname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Last name of the person. 
+| [MiddleName](General.Contacts.Persons.md#middlename) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Middle name of the person. 
+| [NationalNumber](General.Contacts.Persons.md#nationalnumber) | string (16) __nullable__ | Government assigned unique personal number. NULL means unknown 
+| [Notes](General.Contacts.Persons.md#notes) | string (254) __nullable__ | Internal notes for the person 
 | [PartyCode](General.Contacts.Persons.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.Persons.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.Persons.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -65,8 +65,8 @@ Aggregate Tree
 | [PartyUniqueNumber](General.Contacts.Persons.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](General.Contacts.Persons.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](General.Contacts.Persons.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PassportIssuingDate](General.Contacts.Persons.md#passportissuingdate) | datetime __nullable__ | Date of issuing the passport. null means unknown. `Filter(ge;le)` 
-| [PassportNumber](General.Contacts.Persons.md#passportnumber) | string (14) __nullable__ | Current passport number. null means unknown. `Filter(eq)` 
+| [PassportIssuingDate](General.Contacts.Persons.md#passportissuingdate) | datetime __nullable__ | Date of issuing the passport. NULL means unknown 
+| [PassportNumber](General.Contacts.Persons.md#passportnumber) | string (14) __nullable__ | Current passport number. NULL means unknown 
 | [Title](General.Contacts.Persons.md#title) | [MultilanguageString (32)](../data-types.md#multilanguagestring) __nullable__ | The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification. 
 | [UpdateTime](General.Contacts.Persons.md#updatetime) | datetime __nullable__ | Date and time when the Person was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Contacts.Persons.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Person. `Filter(like)` `ReadOnly` 
@@ -78,7 +78,7 @@ Aggregate Tree
 | [AdministrativeRegion](General.Contacts.Persons.md#administrativeregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | The administrative region in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [Area](General.Contacts.Persons.md#area) | [Areas](General.Geography.Areas.md) (nullable) | The area in which the party is situated. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 | [DefaultProductCodingSystem](General.Contacts.Persons.md#defaultproductcodingsystem) | [CodingSystems](General.Products.CodingSystems.md) (nullable) | When not null, specifies coding system for products, which is required by the party. The coding system is used primarily for document printouts and document import/exports. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
-| [Nationality](General.Contacts.Persons.md#nationality) | [Countries](General.Geography.Countries.md) (nullable) | Person's nationality. null means the default (same as enterprise) nationality. `Filter(multi eq)` |
+| [Nationality](General.Contacts.Persons.md#nationality) | [Countries](General.Geography.Countries.md) (nullable) | Person's nationality. NULL means the default (same as enterprise) nationality |
 | [ParentParty](General.Contacts.Persons.md#parentparty) | [Parties](General.Contacts.Parties.md) (nullable) | Organizational unit (branch from the hierarchy of all parties) to which this party is referred to. `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) |
 
 
@@ -110,7 +110,7 @@ Aggregate Tree
 
 ### BirthDate
 
-Birth date. null means unknown. `Filter(ge;le)`
+Birth date. NULL means unknown
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### City
 
-City from the legal registration address for the person. `Filter(like)`
+City from the legal registration address for the person
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **HiddenByDefault**
 
 ### FirstName
 
-First name of the person. `Filter(eq;like)`
+First name of the person.
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### Gender
 
-Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;null=not known/not provided. `Filter(eq)`
+Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided
 
 Type: **[Gender](General.Contacts.Persons.md#gender) __nullable__**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **ShownByDefault**
 
 ### LastName
 
-Last name of the person. `Filter(eq;like)`
+Last name of the person.
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -214,7 +214,7 @@ Show in UI: **ShownByDefault**
 
 ### MiddleName
 
-Middle name of the person. `Filter(eq;like)`
+Middle name of the person.
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -224,7 +224,7 @@ Show in UI: **ShownByDefault**
 
 ### NationalNumber
 
-Government assigned unique personal number. null means unknown. `Filter(eq;like)`
+Government assigned unique personal number. NULL means unknown
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -235,7 +235,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Internal notes for the person.
+Internal notes for the person
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -358,7 +358,7 @@ Show in UI: **HiddenByDefault**
 
 ### PassportIssuingDate
 
-Date of issuing the passport. null means unknown. `Filter(ge;le)`
+Date of issuing the passport. NULL means unknown
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -368,7 +368,7 @@ Show in UI: **ShownByDefault**
 
 ### PassportNumber
 
-Current passport number. null means unknown. `Filter(eq)`
+Current passport number. NULL means unknown
 
 Type: **string (14) __nullable__**  
 Category: **System**  
@@ -499,7 +499,7 @@ Show in UI: **ShownByDefault**
 
 ### Nationality
 
-Person's nationality. null means the default (same as enterprise) nationality. `Filter(multi eq)`
+Person's nationality. NULL means the default (same as enterprise) nationality
 
 Type: **[Countries](General.Geography.Countries.md) (nullable)**  
 Category: **System**  

@@ -37,31 +37,31 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.PersonalData.PersonalDataProcesses.md#code) | string (16) | Unique process code. `Required` `Filter(eq;like)` 
-| [ContainsSensitiveData](Applications.PersonalData.PersonalDataProcesses.md#containssensitivedata) | boolean | True if sensitive personal data is processed (racial, political, criminal, biometric, etc). `Required` `Filter(eq)` 
-| [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) | [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) | The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. `Required` 
+| [Code](Applications.PersonalData.PersonalDataProcesses.md#code) | string (16) | Unique process code. 
+| [ContainsSensitiveData](Applications.PersonalData.PersonalDataProcesses.md#containssensitivedata) | boolean | True if sensitive personal data is processed (racial, political, criminal, biometric, etc). 
+| [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) | [DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) | The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. 
 | [Description](Applications.PersonalData.PersonalDataProcesses.md#description) | string (max) __nullable__ | Description of the process. 
-| [DiscontinuationDate](Applications.PersonalData.PersonalDataProcesses.md#discontinuationdate) | date __nullable__ | The date on which the process was discontinued. Null if the process is still active. `Filter(eq;ge;le)` 
-| [EstablishDate](Applications.PersonalData.PersonalDataProcesses.md#establishdate) | date | The data on which the process was established and started functioning. `Required` `Default(Now)` `Filter(eq;ge;le)` 
-| [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) | [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) | The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. `Required` `Filter(eq)` 
-| [ListOfDataCategories](Applications.PersonalData.PersonalDataProcesses.md#listofdatacategories) | string (254) | Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. `Required` `Filter(eq)` 
-| [ListOfDataRecipient<br />Categories](Applications.PersonalData.PersonalDataProcesses.md#listofdatarecipientcategories) | string (254) __nullable__ | Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. `Filter(eq;like)` 
-| [ListOfProcessingPurposes](Applications.PersonalData.PersonalDataProcesses.md#listofprocessingpurposes) | string (254) __nullable__ | Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. `Filter(eq;like)` 
-| [ListOfTechnicalMeasures](Applications.PersonalData.PersonalDataProcesses.md#listoftechnicalmeasures) | string (254) __nullable__ | Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. `Filter(eq)` 
-| [ListOfTransfers<br />ToThirdCountries](Applications.PersonalData.PersonalDataProcesses.md#listoftransferstothirdcountries) | string (254) __nullable__ | Comma-separated list of third countries, to which data is sent. `Filter(eq;like)` 
-| [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#listofusedsoftware) | string (254) __nullable__ | Comma-separated list of the names of the software products used to process the data. `Filter(eq;like)` 
-| [Name](Applications.PersonalData.PersonalDataProcesses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the process (Multilanguage). `Required` `Filter(eq;like)` 
+| [DiscontinuationDate](Applications.PersonalData.PersonalDataProcesses.md#discontinuationdate) | date __nullable__ | The date on which the process was discontinued. Null if the process is still active. 
+| [EstablishDate](Applications.PersonalData.PersonalDataProcesses.md#establishdate) | date | The data on which the process was established and started functioning. 
+| [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) | [LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) | The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest; 
+| [ListOfDataCategories](Applications.PersonalData.PersonalDataProcesses.md#listofdatacategories) | string (254) | Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. 
+| [ListOfDataRecipient<br />Categories](Applications.PersonalData.PersonalDataProcesses.md#listofdatarecipientcategories) | string (254) __nullable__ | Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. 
+| [ListOfProcessingPurposes](Applications.PersonalData.PersonalDataProcesses.md#listofprocessingpurposes) | string (254) __nullable__ | Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. 
+| [ListOfTechnicalMeasures](Applications.PersonalData.PersonalDataProcesses.md#listoftechnicalmeasures) | string (254) __nullable__ | Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. 
+| [ListOfTransfers<br />ToThirdCountries](Applications.PersonalData.PersonalDataProcesses.md#listoftransferstothirdcountries) | string (254) __nullable__ | Comma-separated list of third countries, to which data is sent. 
+| [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#listofusedsoftware) | string (254) __nullable__ | Comma-separated list of the names of the software products used to process the data. 
+| [Name](Applications.PersonalData.PersonalDataProcesses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the process (Multilanguage). 
 | [Notes](Applications.PersonalData.PersonalDataProcesses.md#notes) | string (max) __nullable__ | Notes for this PersonalDataProcess. 
-| [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . `Required` `Default("C")` `Filter(eq)` 
-| [RetentionPeriodMonths](Applications.PersonalData.PersonalDataProcesses.md#retentionperiodmonths) | int32 __nullable__ | The period in months, for which the data is kept. Null when the period is unknown or N/A. `Filter(eq)` 
-| [ThirdCountryTransfers<br />Safeguards](Applications.PersonalData.PersonalDataProcesses.md#thirdcountrytransferssafeguards) | string (254) __nullable__ | Description of safeguards, taken to protect personal data in case of third country transfers. `Filter(eq;like)` 
+| [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor.  
+| [RetentionPeriodMonths](Applications.PersonalData.PersonalDataProcesses.md#retentionperiodmonths) | int32 __nullable__ | The period in months, for which the data is kept. Null when the period is unknown or N/A. 
+| [ThirdCountryTransfers<br />Safeguards](Applications.PersonalData.PersonalDataProcesses.md#thirdcountrytransferssafeguards) | string (254) __nullable__ | Description of safeguards, taken to protect personal data in case of third country transfers. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Applications.PersonalData.PersonalDataProcesses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which owns the process. `Required` `Filter(multi eq)` |
-| [ProcessOwnerPerson](Applications.PersonalData.PersonalDataProcesses.md#processownerperson) | [Persons](General.Contacts.Persons.md) | The owner and responsible person for the process. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Applications.PersonalData.PersonalDataProcesses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company, which owns the process. |
+| [ProcessOwnerPerson](Applications.PersonalData.PersonalDataProcesses.md#processownerperson) | [Persons](General.Contacts.Persons.md) | The owner and responsible person for the process. |
 
 
 ## System Attributes
@@ -87,7 +87,7 @@ Aggregate Tree
 
 ### Code
 
-Unique process code. `Required` `Filter(eq;like)`
+Unique process code.
 
 Type: **string (16)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### ContainsSensitiveData
 
-True if sensitive personal data is processed (racial, political, criminal, biometric, etc). `Required` `Filter(eq)`
+True if sensitive personal data is processed (racial, political, criminal, biometric, etc).
 
 Type: **boolean**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### DataSubjectCategory
 
-The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. `Required`
+The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other.
 
 Type: **[DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory)**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### DiscontinuationDate
 
-The date on which the process was discontinued. Null if the process is still active. `Filter(eq;ge;le)`
+The date on which the process was discontinued. Null if the process is still active.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### EstablishDate
 
-The data on which the process was established and started functioning. `Required` `Default(Now)` `Filter(eq;ge;le)`
+The data on which the process was established and started functioning.
 
 Type: **date**  
 Category: **System**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### LegalBasisForProcessing
 
-The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. `Required` `Filter(eq)`
+The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;
 
 Type: **[LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing)**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### ListOfDataCategories
 
-Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. `Required` `Filter(eq)`
+Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc.
 
 Type: **string (254)**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### ListOfDataRecipientCategories
 
-Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. `Filter(eq;like)`
+Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -207,7 +207,7 @@ Show in UI: **ShownByDefault**
 
 ### ListOfProcessingPurposes
 
-Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. `Filter(eq;like)`
+Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -218,7 +218,7 @@ Show in UI: **ShownByDefault**
 
 ### ListOfTechnicalMeasures
 
-Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. `Filter(eq)`
+Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### ListOfTransfersToThirdCountries
 
-Comma-separated list of third countries, to which data is sent. `Filter(eq;like)`
+Comma-separated list of third countries, to which data is sent.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -240,7 +240,7 @@ Show in UI: **ShownByDefault**
 
 ### ListOfUsedSoftware
 
-Comma-separated list of the names of the software products used to process the data. `Filter(eq;like)`
+Comma-separated list of the names of the software products used to process the data.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -251,7 +251,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the process (Multilanguage). `Required` `Filter(eq;like)`
+Name of the process (Multilanguage).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessingRole
 
-The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . `Required` `Default("C")` `Filter(eq)`
+The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor.
 
 Type: **[ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole)**  
 Category: **System**  
@@ -291,7 +291,7 @@ Show in UI: **ShownByDefault**
 
 ### RetentionPeriodMonths
 
-The period in months, for which the data is kept. Null when the period is unknown or N/A. `Filter(eq)`
+The period in months, for which the data is kept. Null when the period is unknown or N/A.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -301,7 +301,7 @@ Show in UI: **ShownByDefault**
 
 ### ThirdCountryTransfersSafeguards
 
-Description of safeguards, taken to protect personal data in case of third country transfers. `Filter(eq;like)`
+Description of safeguards, taken to protect personal data in case of third country transfers.
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -374,7 +374,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The enterprise company, which owns the process. `Required` `Filter(multi eq)`
+The enterprise company, which owns the process.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
@@ -383,7 +383,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcessOwnerPerson
 
-The owner and responsible person for the process. `Required` `Filter(multi eq)`
+The owner and responsible person for the process.
 
 Type: **[Persons](General.Contacts.Persons.md)**  
 Category: **System**  

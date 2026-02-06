@@ -37,17 +37,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LicenseCode](Systems.Monitoring.Licenses.md#licensecode) | string (64) | The code of the module or functionality, which is licensed. `Required` `Filter(multi eq;like)` `Introduced in version 24.1.3.88` 
-| [LicenseCount](Systems.Monitoring.Licenses.md#licensecount) | int32 | The current count (as of now) of active licenses. `Required` `Filter(eq;ge;le)` `Introduced in version 24.1.3.88` 
-| [LicenseDescription](Systems.Monitoring.Licenses.md#licensedescription) | string (max) | Description of the license code. `Required` `Introduced in version 24.1.3.88` 
-| [LicenseScaleType](Systems.Monitoring.Licenses.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1. `Required` `Introduced in version 24.1.3.88` 
+| [LicenseCode](Systems.Monitoring.Licenses.md#licensecode) | string (64) | The code of the module or functionality, which is licensed. 
+| [LicenseCount](Systems.Monitoring.Licenses.md#licensecount) | int32 | The current count (as of now) of active licenses. 
+| [LicenseDescription](Systems.Monitoring.Licenses.md#licensedescription) | string (max) | Description of the license code. 
+| [LicenseScaleType](Systems.Monitoring.Licenses.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1. 
 
 
 ## Attribute Details
 
 ### LicenseCode
 
-The code of the module or functionality, which is licensed. `Required` `Filter(multi eq;like)` `Introduced in version 24.1.3.88`
+The code of the module or functionality, which is licensed.
 
 Type: **string (64)**  
 Category: **System**  
@@ -58,7 +58,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseCount
 
-The current count (as of now) of active licenses. `Required` `Filter(eq;ge;le)` `Introduced in version 24.1.3.88`
+The current count (as of now) of active licenses.
 
 Type: **int32**  
 Category: **System**  
@@ -68,7 +68,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseDescription
 
-Description of the license code. `Required` `Introduced in version 24.1.3.88`
+Description of the license code.
 
 Type: **string (max)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### LicenseScaleType
 
-Denotes whether the license supports counts, different from 0 and 1. `Required` `Introduced in version 24.1.3.88`
+Denotes whether the license supports counts, different from 0 and 1.
 
 Type: **string (64)**  
 Category: **System**  

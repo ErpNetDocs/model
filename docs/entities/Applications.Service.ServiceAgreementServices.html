@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#enddate">EndDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. <code>Filter(ge;le)</code></td>
+<td>End date to which the agreedment for the service or product holds.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity of the agreed servcice or product. <code>Unit: QuantityUnit</code> <code>Required</code></td>
+<td>Quantity of the agreed servcice or product</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#startdate">StartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. <code>Filter(ge;le)</code></td>
+<td>Start date from which the agreedment for the service or product holds.</td>
 </tr>
 </tbody>
 </table>
@@ -153,12 +153,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of Quantity.</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#service">Service</a></td>
 <td><a href="Applications.Service.Services.html">Services</a> (nullable)</td>
-<td>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). <code>Filter(multi eq)</code></td>
+<td>Paid or agreed in advance service that won't be invoiced after service activities (if 'Service' is filled then 'Service product' must be blank).</td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#serviceagreement">ServiceAgreement</a></td>
@@ -168,7 +168,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#serviceproduct">ServiceProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). <code>Filter(multi eq)</code></td>
+<td>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if 'Service product' is filled then 'Service' must be blank).</td>
 </tr>
 </tbody>
 </table>
@@ -201,14 +201,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>End date to which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. <code>Filter(ge;le)</code></p>
+<p>End date to which the agreedment for the service or product holds.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code></p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,14 +219,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ServiceAgreement.Services.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the agreed servcice or product. <code>Unit: QuantityUnit</code> <code>Required</code></p>
+<p>Quantity of the agreed servcice or product</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. <code>Filter(ge;le)</code></p>
+<p>Start date from which the agreedment for the service or product holds.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="quantityunit">QuantityUnit</h3>
-<p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of Quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -263,7 +263,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Service.MeasurementUnit.IfNullThen( obj.ServiceProduct.MeasurementUnit).IfNullThen( obj.QuantityUnit)</code></p>
 <h3 id="service">Service</h3>
-<p>Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). <code>Filter(multi eq)</code></p>
+<p>Paid or agreed in advance service that won't be invoiced after service activities (if 'Service' is filled then 'Service product' must be blank).</p>
 <p>Type: <strong><a href="Applications.Service.Services.html">Services</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -279,7 +279,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serviceproduct">ServiceProduct</h3>
-<p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). <code>Filter(multi eq)</code></p>
+<p>Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if 'Service product' is filled then 'Service' must be blank).</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

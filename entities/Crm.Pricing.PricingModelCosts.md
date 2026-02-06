@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (6, 5) __nullable__ | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
-| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount (9, 2)](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency` 
-| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. `Required` 
+| [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (6, 5) __nullable__ | Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way 
+| [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount (9, 2)](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way 
+| [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model. `Required` `Filter(multi eq)` |
-| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. `Filter(multi eq)` |
-| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined. `Required` `Filter(multi eq)` `Owner` |
+| [CostType](Crm.Pricing.PricingModelCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type, which is listed for the pricing model |
+| [MeasurementUnit](Crm.Pricing.PricingModelCosts.md#measurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way |
+| [PricingModel](Crm.Pricing.PricingModelCosts.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) | Pricing model, for which the cost is defined |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### AmountPercent
 
-Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way.
+Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way
 
 Type: **decimal (6, 5) __nullable__**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountPerUnit
 
-Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency`
+Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement Unit. NULL when the cost is calculated in a different way
 
 Type: **[Amount (9, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-The consequtive number of the cost within the pricing model. `Required`
+The consequtive number of the cost within the pricing model
 
 Type: **int32**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **HiddenByDefault**
 
 ### CostType
 
-The cost type, which is listed for the pricing model. `Required` `Filter(multi eq)`
+The cost type, which is listed for the pricing model
 
 Type: **[CostTypes](Finance.Cost.CostTypes.md)**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasurementUnit
 
-The measurement unit for which the Amount_Per_Unit is defined. null when the cost is calculated in a different way. `Filter(multi eq)`
+The measurement unit for which the Amount_Per_Unit is defined. NULL when the cost is calculated in a different way
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **ShownByDefault**
 
 ### PricingModel
 
-Pricing model, for which the cost is defined. `Required` `Filter(multi eq)` `Owner`
+Pricing model, for which the cost is defined
 
 Type: **[PricingModels](Crm.Pricing.PricingModels.md)**  
 Indexed: **True**  

@@ -35,23 +35,23 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13` 
-| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store. `Required` `Default(false)` 
-| [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin. `Required` `Filter(like)` 
+| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active. 
+| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store. 
+| [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BlockedForParty](Logistics.Inventory.StoreBins.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | If not null, the goods can only be used by the specified party. `Filter(multi eq)` |
-| [Store](Logistics.Inventory.StoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The id of the containing store. `Required` `Filter(multi eq)` `Owner` |
+| [BlockedForParty](Logistics.Inventory.StoreBins.md#blockedforparty) | [Parties](General.Contacts.Parties.md) (nullable) | If not NULL, the goods can only be used by the specified party |
+| [Store](Logistics.Inventory.StoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The id of the containing store |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.StoreBins.md#id) | guid |  
+| [Id](Logistics.Inventory.StoreBins.md#id) | guid | Unique store bin id 
 | [ObjectVersion](Logistics.Inventory.StoreBins.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [DisplayText](Logistics.Inventory.StoreBins.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current store bin is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13`
+Indicates whether the current store bin is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-True, when this is the default storage bin for the specified store. `Required` `Default(false)`
+True, when this is the default storage bin for the specified store.
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the store bin. `Required` `Filter(like)`
+Name of the store bin
 
 Type: **string (254)**  
 Category: **System**  
@@ -92,6 +92,8 @@ Maximum Length: **254**
 Show in UI: **ShownByDefault**  
 
 ### Id
+
+Unique store bin id
 
 Type: **guid**  
 Indexed: **True**  
@@ -125,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### BlockedForParty
 
-If not null, the goods can only be used by the specified party. `Filter(multi eq)`
+If not NULL, the goods can only be used by the specified party
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -134,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### Store
 
-The id of the containing store. `Required` `Filter(multi eq)` `Owner`
+The id of the containing store
 
 Type: **[Stores](Logistics.Inventory.Stores.md)**  
 Indexed: **True**  

@@ -13,6 +13,15 @@ Inherited From: [General.Documents.Documents](General.Documents.Documents.md)
 Base Table: Its_Declarations  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Intrastat.Declarations  
+New name: Regulatory.Intrastat.Declarations  
+Version: 26.2.1.4  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {DocumentType.TypeName:T} {DocumentNo}{StateTagsAttribute}  
 Search Members: DocumentNo  
@@ -52,25 +61,25 @@ Aggregate Tree
 | [CompleteTime](Regulatory.Intrastat.Declarations.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Regulatory.Intrastat.Declarations.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Regulatory.Intrastat.Declarations.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. `Required` `Default("R")` `Filter(eq)` 
-| [DeclareStatisticalValues](Regulatory.Intrastat.Declarations.md#declarestatisticalvalues) | boolean | Does the declaration contain statistical values? true=Yes; false=No. `Required` `Default(false)` `Filter(multi eq)` 
+| [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | Specifies whether this is a regular or corrective declaration 
+| [DeclareStatisticalValues](Regulatory.Intrastat.Declarations.md#declarestatisticalvalues) | boolean | Does the declaration contain statistical values? 1=Yes; 0=No 
 | [DocumentDate](Regulatory.Intrastat.Declarations.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Regulatory.Intrastat.Declarations.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Regulatory.Intrastat.Declarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Intrastat.Declarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Intrastat.Declarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Regulatory.Intrastat.Declarations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | The flow direction of the goods. A=Arrival, D=Dispatch. `Required` `Filter(eq)` 
-| [<s>IsReleased</s>](Regulatory.Intrastat.Declarations.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](Regulatory.Intrastat.Declarations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | The flow direction of the goods 
+| [<s>IsReleased</s>](Regulatory.Intrastat.Declarations.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](Regulatory.Intrastat.Declarations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [ParentDocument<br />RelationshipType](Regulatory.Intrastat.Declarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Intrastat.Declarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Intrastat.Declarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PostalCode](Regulatory.Intrastat.Declarations.md#postalcode) | string (64) | This field contains the postal code part of the submitter’s address. `Required` 
+| [PostalCode](Regulatory.Intrastat.Declarations.md#postalcode) | string (64) | Тhe postal code part of the submitter’s addres 
 | [ReadOnly](Regulatory.Intrastat.Declarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Regulatory.Intrastat.Declarations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Regulatory.Intrastat.Declarations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | Month, for which the declaration is prepared. `Required` `Filter(eq)` 
-| [ReferenceYear](Regulatory.Intrastat.Declarations.md#referenceyear) | int16 | Year, for which the declaration is prepared. `Required` `Filter(eq)` 
+| [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | Month, for which the declaration is prepared 
+| [ReferenceYear](Regulatory.Intrastat.Declarations.md#referenceyear) | int16 | Year, for which the declaration is prepared 
 | [ReleaseTime](Regulatory.Intrastat.Declarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Regulatory.Intrastat.Declarations.md#state) | [DocumentState](Regulatory.Intrastat.Declarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Regulatory.Intrastat.Declarations.md#statetagsattribute) | string | Specifies the state of the document. 
@@ -86,8 +95,8 @@ Aggregate Tree
 | [AccessKey](Regulatory.Intrastat.Declarations.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](Regulatory.Intrastat.Declarations.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](Regulatory.Intrastat.Declarations.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [AuthorizedPerson](Regulatory.Intrastat.Declarations.md#authorizedperson) | [Persons](General.Contacts.Persons.md) (nullable) | The authorized person who submits the intrastat declaration. `Filter(multi eq)` `Introduced in version 18.2` |
-| [BaseCurrency](Regulatory.Intrastat.Declarations.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.55` |
+| [AuthorizedPerson](Regulatory.Intrastat.Declarations.md#authorizedperson) | [Persons](General.Contacts.Persons.md) (nullable) | The authorized person who submits the intrastat declaration. |
+| [BaseCurrency](Regulatory.Intrastat.Declarations.md#basecurrency) | [Currencies](General.Currencies.Currencies.md) | The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. |
 | [CurrencyDirectory](Regulatory.Intrastat.Declarations.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Regulatory.Intrastat.Declarations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Regulatory.Intrastat.Declarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -100,7 +109,7 @@ Aggregate Tree
 | [ResponsiblePerson](Regulatory.Intrastat.Declarations.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Regulatory.Intrastat.Declarations.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](Regulatory.Intrastat.Declarations.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ThirdDeclaringParty](Regulatory.Intrastat.Declarations.md#thirddeclaringparty) | [Companies](General.Contacts.Companies.md) | Third declaring party, which holds the electronic signature. This is the company which submits the declaration. `Required` `Filter(multi eq)` `Introduced in version 18.2` |
+| [ThirdDeclaringParty](Regulatory.Intrastat.Declarations.md#thirddeclaringparty) | [Companies](General.Contacts.Companies.md) | Third declaring party, which holds the electronic signature. This is the company which submits the declaration. |
 | [ToCompanyDivision](Regulatory.Intrastat.Declarations.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Regulatory.Intrastat.Declarations.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Regulatory.Intrastat.Declarations.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -201,7 +210,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeclarationFunction
 
-Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. `Required` `Default("R")` `Filter(eq)`
+Specifies whether this is a regular or corrective declaration
 
 Type: **[DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction)**  
 Category: **System**  
@@ -220,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### DeclareStatisticalValues
 
-Does the declaration contain statistical values? true=Yes; false=No. `Required` `Default(false)` `Filter(multi eq)`
+Does the declaration contain statistical values? 1=Yes; 0=No
 
 Type: **boolean**  
 Category: **System**  
@@ -299,7 +308,7 @@ Show in UI: **HiddenByDefault**
 
 ### GoodsFlowDirection
 
-The flow direction of the goods. A=Arrival, D=Dispatch. `Required` `Filter(eq)`
+The flow direction of the goods
 
 Type: **[GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection)**  
 Category: **System**  
@@ -317,7 +326,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -328,7 +337,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -369,7 +378,7 @@ Show in UI: **HiddenByDefault**
 
 ### PostalCode
 
-This field contains the postal code part of the submitter’s address. `Required`
+Тhe postal code part of the submitter’s addres
 
 Type: **string (64)**  
 Category: **System**  
@@ -413,7 +422,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReferenceMonth
 
-Month, for which the declaration is prepared. `Required` `Filter(eq)`
+Month, for which the declaration is prepared
 
 Type: **[ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth)**  
 Category: **System**  
@@ -441,7 +450,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferenceYear
 
-Year, for which the declaration is prepared. `Required` `Filter(eq)`
+Year, for which the declaration is prepared
 
 Type: **int16**  
 Category: **System**  
@@ -639,7 +648,7 @@ Show in UI: **ShownByDefault**
 
 ### AuthorizedPerson
 
-The authorized person who submits the intrastat declaration. `Filter(multi eq)` `Introduced in version 18.2`
+The authorized person who submits the intrastat declaration.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -648,7 +657,7 @@ Show in UI: **ShownByDefault**
 
 ### BaseCurrency
 
-The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation. `Required` `Filter(multi eq)` `Introduced in version 25.1.3.55`
+The base currency for summary reporting for Enterprise Company at the moment of Intrastat Declaration creation.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -775,7 +784,7 @@ Show in UI: **HiddenByDefault**
 
 ### ThirdDeclaringParty
 
-Third declaring party, which holds the electronic signature. This is the company which submits the declaration. `Required` `Filter(multi eq)` `Introduced in version 18.2`
+Third declaring party, which holds the electronic signature. This is the company which submits the declaration.
 
 Type: **[Companies](General.Contacts.Companies.md)**  
 Category: **System**  

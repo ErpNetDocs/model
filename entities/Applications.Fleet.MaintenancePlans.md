@@ -37,9 +37,9 @@ Aggregate Tree
 | [CheckDays](Applications.Fleet.MaintenancePlans.md#checkdays) | int32 __nullable__ | When not null, specifies the number of days between maintenances. 
 | [CheckMonths](Applications.Fleet.MaintenancePlans.md#checkmonths) | int32 __nullable__ | When not null, specifies the number of months between maintenances. 
 | [Code](Applications.Fleet.MaintenancePlans.md#code) | string (16) | The unique code of the MaintenancePlan. `Required` 
-| [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. `Required` `Default(true)` `Filter(eq)` `Introduced in version 18.2` 
+| [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. 
 | [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 __nullable__ | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
-| [Name](Applications.Fleet.MaintenancePlans.md#name) | string (254) | Maintenance plan name (Multilanguage). `Required` 
+| [Name](Applications.Fleet.MaintenancePlans.md#name) | string (254) | Maintenance plan name (Multilanguage). 
 | [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenancePlan. 
 | [TripCount](Applications.Fleet.MaintenancePlans.md#tripcount) | int32 __nullable__ | When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur. 
 
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True if the plan is active and can be selected from drop-downs. `Required` `Default(true)` `Filter(eq)` `Introduced in version 18.2`
+True if the plan is active and can be selected from drop-downs.
 
 Type: **boolean**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Maintenance plan name (Multilanguage). `Required`
+Maintenance plan name (Multilanguage).
 
 Type: **string (254)**  
 Category: **System**  

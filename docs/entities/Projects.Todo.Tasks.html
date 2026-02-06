@@ -125,22 +125,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#completeddatetimeutc">CompletedDateTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates (in UTC) when the task was completed. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+<td>Indicates (in UTC) when the task was completed.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>Indicates (in UTC) when the task was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 26.1.4.61</code></td>
+<td>Indicates (in UTC) when the task was created.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#duedate">DueDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Indicates when the task should be finished. <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>Indicates when the task should be finished.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#importance">Importance</a></td>
 <td><a href="Projects.Todo.Tasks.html#importance">Importance</a></td>
-<td>The importance of the task. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code></td>
+<td>The importance of the task.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#notes">Notes</a></td>
@@ -150,17 +150,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#remindtimeutc">RemindTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When to remind the assigned user for the task (in UTC). <code>Filter(eq;ge;le)</code> <code>Introduced in version 23.1.1.51</code></td>
+<td>When to remind the assigned user for the task (in UTC).</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#state">State</a></td>
 <td><a href="Projects.Todo.Tasks.html#state">State</a></td>
-<td>Indicates the current task state. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Indicates the current task state.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#title">Title</a></td>
 <td>string (254)</td>
-<td>A brief description of the task. <code>Required</code> <code>Filter(like)</code></td>
+<td>A brief description of the task.</td>
 </tr>
 </tbody>
 </table>
@@ -177,22 +177,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#assignedtouser">AssignedToUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, to whom the todo is assigned. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user, to whom the todo is assigned.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</td>
-<td>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code> <code>FilterableReference</code></td>
+<td>The object for which this is a to-do item.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#owneruser">OwnerUser</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who created the todo and owns it. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user, who created the todo and owns it.</td>
 </tr>
 <tr>
 <td><a href="Projects.Todo.Tasks.html#socialgroup">SocialGroup</a></td>
 <td><a href="Communities.Social.Groups.html">Groups</a> (nullable)</td>
-<td>When not null, indicates that the todo is contained in and managed by the specified social group. <code>Filter(multi eq)</code></td>
+<td>When not null, indicates that the todo is contained in and managed by the specified social group.</td>
 </tr>
 </tbody>
 </table>
@@ -257,14 +257,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completeddatetimeutc">CompletedDateTimeUtc</h3>
-<p>Indicates (in UTC) when the task was completed. <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
+<p>Indicates (in UTC) when the task was completed.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>Indicates (in UTC) when the task was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> <code>ReadOnly</code> <code>Introduced in version 26.1.4.61</code></p>
+<p>Indicates (in UTC) when the task was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -273,7 +273,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>Indicates when the task should be finished. <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>Indicates when the task should be finished.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -281,7 +281,7 @@ Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="importance">Importance</h3>
-<p>The importance of the task. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(eq)</code></p>
+<p>The importance of the task.</p>
 <p>Type: <strong><a href="Projects.Todo.Tasks.html#importance">Importance</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Importance</code>(Projects.Todo.Tasks.md#importance) data attribute<br>
@@ -321,14 +321,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="remindtimeutc">RemindTimeUtc</h3>
-<p>When to remind the assigned user for the task (in UTC). <code>Filter(eq;ge;le)</code> <code>Introduced in version 23.1.1.51</code></p>
+<p>When to remind the assigned user for the task (in UTC).</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>Indicates the current task state. <code>Required</code> <code>Default(&quot;N&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Indicates the current task state.</p>
 <p>Type: <strong><a href="Projects.Todo.Tasks.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(Projects.Todo.Tasks.md#state) data attribute<br>
@@ -364,7 +364,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>New</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="title">Title</h3>
-<p>A brief description of the task. <code>Required</code> <code>Filter(like)</code></p>
+<p>A brief description of the task.</p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -413,14 +413,14 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assignedtouser">AssignedToUser</h3>
-<p>The user, to whom the todo is assigned. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user, to whom the todo is assigned.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dataobject">DataObject</h3>
-<p>The object for which this is a to-do item. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.60</code> <code>FilterableReference</code></p>
+<p>The object for which this is a to-do item.</p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -428,14 +428,14 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="owneruser">OwnerUser</h3>
-<p>The user, who created the todo and owns it. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user, who created the todo and owns it.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="socialgroup">SocialGroup</h3>
-<p>When not null, indicates that the todo is contained in and managed by the specified social group. <code>Filter(multi eq)</code></p>
+<p>When not null, indicates that the todo is contained in and managed by the specified social group.</p>
 <p>Type: <strong><a href="Communities.Social.Groups.html">Groups</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

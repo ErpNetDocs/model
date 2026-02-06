@@ -123,62 +123,62 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#additionaldatajson">AdditionalDataJson</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Flexible JSON field for extended regulatory attributes. <code>Filter(eq;like)</code></td>
+<td>Flexible JSON field for extended regulatory attributes.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#altcode">AltCode</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Optional alternative/legacy code used for backward compatibility. <code>Filter(eq;like)</code></td>
+<td>Optional alternative/legacy code used for backward compatibility.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#code">Code</a></td>
 <td>string (64)</td>
-<td>Official statutory code of the entry; may repeat across different validity periods. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Official statutory code of the entry; may repeat across different validity periods.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#data1">Data1</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Additional structured attribute for regulatory-specific data. <code>Filter(eq;like)</code></td>
+<td>Additional structured attribute for regulatory-specific data.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#data2">Data2</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Additional structured attribute for regulatory-specific data. <code>Filter(eq;like)</code></td>
+<td>Additional structured attribute for regulatory-specific data.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#data3">Data3</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Additional structured attribute for regulatory-specific data. <code>Filter(eq;like)</code></td>
+<td>Additional structured attribute for regulatory-specific data.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the code entry is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Specifies whether the code entry is currently active.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
-<td>Official regulatory name of the entry (multi-language). <code>Filter(like)</code></td>
+<td>Official regulatory name of the entry (multi-language).</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Free text notes or comments. <code>Filter(eq;like)</code></td>
+<td>Free text notes or comments</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#shortname">ShortName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>Abbreviated or short name of the entry, if such exists. <code>Filter(like)</code></td>
+<td>Abbreviated or short name of the entry, if such exists.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#validfrom">ValidFrom</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date from which this entry is valid. <code>Filter(eq;ge;le)</code></td>
+<td>Date from which this entry is valid.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#validto">ValidTo</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date until which this entry is valid. <code>Filter(eq;ge;le)</code></td>
+<td>Date until which this entry is valid.</td>
 </tr>
 </tbody>
 </table>
@@ -195,12 +195,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#codelist">CodeList</a></td>
 <td><a href="Regulatory.Common.CodeLists.html">CodeLists</a></td>
-<td>Reference to the regulatory code list containing this entry. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code> <code>FilterableReference</code></td>
+<td>Reference to the regulatory code list containing this entry.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Common.CodeEntries.html#parententry">ParentEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a> (nullable)</td>
-<td>Reference to a parent entry for hierarchical lists (regions / subregions / groups). <code>Filter(multi eq)</code></td>
+<td>Reference to a parent entry for hierarchical lists (regions / subregions / groups).</td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="additionaldatajson">AdditionalDataJson</h3>
-<p>Flexible JSON field for extended regulatory attributes. <code>Filter(eq;like)</code></p>
+<p>Flexible JSON field for extended regulatory attributes.</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="altcode">AltCode</h3>
-<p>Optional alternative/legacy code used for backward compatibility. <code>Filter(eq;like)</code></p>
+<p>Optional alternative/legacy code used for backward compatibility.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -249,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Official statutory code of the entry; may repeat across different validity periods. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Official statutory code of the entry; may repeat across different validity periods.</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -257,7 +257,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="data1">Data1</h3>
-<p>Additional structured attribute for regulatory-specific data. <code>Filter(eq;like)</code></p>
+<p>Additional structured attribute for regulatory-specific data.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -265,7 +265,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="data2">Data2</h3>
-<p>Additional structured attribute for regulatory-specific data. <code>Filter(eq;like)</code></p>
+<p>Additional structured attribute for regulatory-specific data.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -273,7 +273,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="data3">Data3</h3>
-<p>Additional structured attribute for regulatory-specific data. <code>Filter(eq;like)</code></p>
+<p>Additional structured attribute for regulatory-specific data.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -281,7 +281,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the code entry is currently active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Specifies whether the code entry is currently active.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -289,14 +289,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Official regulatory name of the entry (multi-language). <code>Filter(like)</code></p>
+<p>Official regulatory name of the entry (multi-language).</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Free text notes or comments. <code>Filter(eq;like)</code></p>
+<p>Free text notes or comments</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -304,21 +304,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shortname">ShortName</h3>
-<p>Abbreviated or short name of the entry, if such exists. <code>Filter(like)</code></p>
+<p>Abbreviated or short name of the entry, if such exists.</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
-<p>Date from which this entry is valid. <code>Filter(eq;ge;le)</code></p>
+<p>Date from which this entry is valid.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validto">ValidTo</h3>
-<p>Date until which this entry is valid. <code>Filter(eq;ge;le)</code></p>
+<p>Date until which this entry is valid.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -347,7 +347,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="codelist">CodeList</h3>
-<p>Reference to the regulatory code list containing this entry. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code> <code>FilterableReference</code></p>
+<p>Reference to the regulatory code list containing this entry.</p>
 <p>Type: <strong><a href="Regulatory.Common.CodeLists.html">CodeLists</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -355,7 +355,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parententry">ParentEntry</h3>
-<p>Reference to a parent entry for hierarchical lists (regions / subregions / groups). <code>Filter(multi eq)</code></p>
+<p>Reference to a parent entry for hierarchical lists (regions / subregions / groups).</p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

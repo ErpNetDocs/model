@@ -34,36 +34,36 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>BeginDateTime</s>](Production.ShopFloor.OutputOrderLines.md#begindatetime) | datetime __nullable__ | **OBSOLETE! Do not use!** Not used. `Obsolete` `Filter(ge;le)` `Obsoleted in version 22.1.6.61` 
+| [<s>BeginDateTime</s>](Production.ShopFloor.OutputOrderLines.md#begindatetime) | datetime __nullable__ | **OBSOLETE! Do not use!** Not used. 
 | [CurrentBalanceBase](Production.ShopFloor.OutputOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [EndTime](Production.ShopFloor.OutputOrderLines.md#endtime) | datetime | Date and time when the operation has ended. `Required` `Default(Now)` `Filter(ge;le)` 
-| [Finished](Production.ShopFloor.OutputOrderLines.md#finished) | boolean | True if this output entry completes the operation. false if there might be more entries. `Required` `Default(false)` `Filter(eq)` 
-| [LineOrd](Production.ShopFloor.OutputOrderLines.md#lineord) | int32 | Line number within the order. `Required` 
+| [EndTime](Production.ShopFloor.OutputOrderLines.md#endtime) | datetime | Date and time when the operation has ended 
+| [Finished](Production.ShopFloor.OutputOrderLines.md#finished) | boolean | 1 if this output entry completes the operation. 0 if there might be more entries 
+| [LineOrd](Production.ShopFloor.OutputOrderLines.md#lineord) | int32 | Line number within the order 
 | [Notes](Production.ShopFloor.OutputOrderLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderLine. 
-| [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
-| [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
-| [ProducedStandard<br />QuantityBase](Production.ShopFloor.OutputOrderLines.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [StartTime](Production.ShopFloor.OutputOrderLines.md#starttime) | datetime | Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)` 
-| [TransactionTimestamp](Production.ShopFloor.OutputOrderLines.md#transactiontimestamp) | datetime __nullable__ | Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. `Filter(ge;le)` `ReadOnly` 
+| [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The processed quantity of the end product. 
+| [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement unit of the product. 
+| [ProducedStandard<br />QuantityBase](Production.ShopFloor.OutputOrderLines.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios. 
+| [StartTime](Production.ShopFloor.OutputOrderLines.md#starttime) | datetime | Date and time when the operation has began 
+| [TransactionTimestamp](Production.ShopFloor.OutputOrderLines.md#transactiontimestamp) | datetime __nullable__ | Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The owner document. The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` |
-| [LineWorkOrder](Production.ShopFloor.OutputOrderLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The work order for which work is being accounted. `Required` `Filter(multi eq)` |
-| [Lot](Production.ShopFloor.OutputOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. `Filter(multi eq)` |
+| [LineWorkOrder](Production.ShopFloor.OutputOrderLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The work order for which work is being accounted |
+| [Lot](Production.ShopFloor.OutputOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. |
 | [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [ProducedQuantityUnit](Production.ShopFloor.OutputOrderLines.md#producedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Produced Quantity. `Required` `Filter(multi eq)` |
-| [Product](Production.ShopFloor.OutputOrderLines.md#product) | [Products](General.Products.Products.md) | The actually produced product. `Required` `Filter(multi eq)` |
-| [ProductCode](Production.ShopFloor.OutputOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
-| [SerialNumber](Production.ShopFloor.OutputOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not null, specifies that the product was (has to be) stored with specific serial number. `Filter(multi eq)` |
-| [Store](Production.ShopFloor.OutputOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Where to output the produced quantity. Can be null only if Produced_Quantity = 0. `Filter(multi eq)` |
-| [StoreBin](Production.ShopFloor.OutputOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | If not null, specifies that the product was (has to be) stored to specific store bin. `Filter(multi eq)` |
-| [WorkDoneByParty](Production.ShopFloor.OutputOrderLines.md#workdonebyparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party (usually employee worker) who has accomplished the work. null if unknown or N/A. `Filter(multi eq)` |
-| [WorkgroupResource](Production.ShopFloor.OutputOrderLines.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | The resource, which was used to perform the operation. `Filter(multi eq)` |
-| [WorkOrderItem](Production.ShopFloor.OutputOrderLines.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item for which this output is recorded. `Required` `Filter(multi eq)` |
-| [WorkOrderItemOperation](Production.ShopFloor.OutputOrderLines.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable) | The operation for which this output is recorded. `Filter(multi eq)` |
+| [ProducedQuantityUnit](Production.ShopFloor.OutputOrderLines.md#producedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Produced Quantity. |
+| [Product](Production.ShopFloor.OutputOrderLines.md#product) | [Products](General.Products.Products.md) | The actually produced product |
+| [ProductCode](Production.ShopFloor.OutputOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. |
+| [SerialNumber](Production.ShopFloor.OutputOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not NULL, specifies that the product was (has to be) stored with specific serial number |
+| [Store](Production.ShopFloor.OutputOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Where to output the produced quantity. Can be NULL only if Produced_Quantity = 0 |
+| [StoreBin](Production.ShopFloor.OutputOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | If not NULL, specifies that the product was (has to be) stored to specific store bin |
+| [WorkDoneByParty](Production.ShopFloor.OutputOrderLines.md#workdonebyparty) | [Parties](General.Contacts.Parties.md) (nullable) | Indicates who has done the work. Usualy this is an employee, but also can be an outside person or company |
+| [WorkgroupResource](Production.ShopFloor.OutputOrderLines.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | The actual resource used in the production |
+| [WorkOrderItem](Production.ShopFloor.OutputOrderLines.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item for which this output is recorded. |
+| [WorkOrderItemOperation](Production.ShopFloor.OutputOrderLines.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable) | The operation for which this output is recorded. |
 
 
 ## System Attributes
@@ -85,7 +85,7 @@ Aggregate Root:
 
 ### BeginDateTime
 
-**OBSOLETE! Do not use!** Not used. `Obsolete` `Filter(ge;le)` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** Not used.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **HiddenByDefault**
 
 ### EndTime
 
-Date and time when the operation has ended. `Required` `Default(Now)` `Filter(ge;le)`
+Date and time when the operation has ended
 
 Type: **datetime**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **HiddenByDefault**
 
 ### Finished
 
-True if this output entry completes the operation. false if there might be more entries. `Required` `Default(false)` `Filter(eq)`
+1 if this output entry completes the operation. 0 if there might be more entries
 
 Type: **boolean**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineOrd
 
-Line number within the order. `Required`
+Line number within the order
 
 Type: **int32**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProducedQuantity
 
-The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)`
+The processed quantity of the end product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### ProducedQuantityBase
 
-The equivalence of Produced Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly`
+The equivalence of Produced Quantity in the base measurement unit of the product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -180,7 +180,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ProducedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -195,7 +195,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedStandardQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StartTime
 
-Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)`
+Date and time when the operation has began
 
 Type: **datetime**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **HiddenByDefault**
 
 ### TransactionTimestamp
 
-Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. `Filter(ge;le)` `ReadOnly`
+Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### LineWorkOrder
 
-The work order for which work is being accounted. `Required` `Filter(multi eq)`
+The work order for which work is being accounted
 
 Type: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 Indexed: **True**  
@@ -273,7 +273,7 @@ Front-End Recalc Expressions:
 `obj.OutputOrder.WorkOrder`
 ### Lot
 
-The lot of the produced product. `Filter(multi eq)`
+The lot of the produced product.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -293,7 +293,7 @@ Show in UI: **ShownByDefault**
 
 ### ProducedQuantityUnit
 
-The measurement unit of Produced Quantity. `Required` `Filter(multi eq)`
+The measurement unit of Produced Quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -304,7 +304,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( obj.ProductCode != null) AndAlso ( obj.ProductCode.CodingSystem.DefaultMeasurementUnit != null)), obj.ProductCode.CodingSystem.DefaultMeasurementUnit, obj.Product.MeasurementUnit)`
 ### Product
 
-The actually produced product. `Required` `Filter(multi eq)`
+The actually produced product
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -316,7 +316,7 @@ Front-End Recalc Expressions:
 `obj.ProductCode.Product`
 ### ProductCode
 
-Selects the product thru some of the product codes. `Filter(multi eq)`
+Selects the product thru some of the product codes.
 
 Type: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 Category: **System**  
@@ -327,7 +327,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ProductCode.Product != obj.Product), null, obj.ProductCode)`
 ### SerialNumber
 
-If not null, specifies that the product was (has to be) stored with specific serial number. `Filter(multi eq)`
+If not NULL, specifies that the product was (has to be) stored with specific serial number
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -336,7 +336,7 @@ Show in UI: **HiddenByDefault**
 
 ### Store
 
-Where to output the produced quantity. Can be null only if Produced_Quantity = 0. `Filter(multi eq)`
+Where to output the produced quantity. Can be NULL only if Produced_Quantity = 0
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -345,7 +345,7 @@ Show in UI: **HiddenByDefault**
 
 ### StoreBin
 
-If not null, specifies that the product was (has to be) stored to specific store bin. `Filter(multi eq)`
+If not NULL, specifies that the product was (has to be) stored to specific store bin
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  
@@ -354,7 +354,7 @@ Show in UI: **HiddenByDefault**
 
 ### WorkDoneByParty
 
-The party (usually employee worker) who has accomplished the work. null if unknown or N/A. `Filter(multi eq)`
+Indicates who has done the work. Usualy this is an employee, but also can be an outside person or company
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -363,7 +363,7 @@ Show in UI: **HiddenByDefault**
 
 ### WorkgroupResource
 
-The resource, which was used to perform the operation. `Filter(multi eq)`
+The actual resource used in the production
 
 Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
 Category: **System**  
@@ -374,7 +374,7 @@ Front-End Recalc Expressions:
 `obj.WorkOrderItemOperation.WorkgroupResource`
 ### WorkOrderItem
 
-The work order item for which this output is recorded. `Required` `Filter(multi eq)`
+The work order item for which this output is recorded.
 
 Type: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 Indexed: **True**  
@@ -384,7 +384,7 @@ Show in UI: **HiddenByDefault**
 
 ### WorkOrderItemOperation
 
-The operation for which this output is recorded. `Filter(multi eq)`
+The operation for which this output is recorded.
 
 Type: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable)**  
 Indexed: **True**  

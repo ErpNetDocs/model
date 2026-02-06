@@ -13,6 +13,15 @@ Base Table: Exc_Excise_Stamp_Lots
 Introduced In Version: 22.1.6.13  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseStampLots  
+New name: Regulatory.Excise.ExciseStampLots  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {BatchNumber} {StartNumber}  
 Search Members: BatchNumber  
@@ -34,19 +43,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BatchNumber](Regulatory.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps. `Required` `Filter(multi eq;like)` `ORD` 
-| [EndNumber](Regulatory.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot. `Required` 
-| [IsActive](Regulatory.Excise.ExciseStampLots.md#isactive) | boolean | Is Active. `Required` `Default(true)` `Filter(eq)` 
-| [Prefix](Regulatory.Excise.ExciseStampLots.md#prefix) | string (30) __nullable__ | Specifies the prefix that is used in forming the value of the "BatchNumber" field. `Filter(eq;like)` `Introduced in version 24.1.2.1` 
-| [PurchaseLotNumber](Regulatory.Excise.ExciseStampLots.md#purchaselotnumber) | string (30) | Type and number of the document with which the excise stamps were received from the customs administration. `Required` `Filter(eq;like)` 
-| [Quantity](Regulatory.Excise.ExciseStampLots.md#quantity) | int32 | Number of excise stamps in the lot. `Required` `Default(0)` 
-| [StartNumber](Regulatory.Excise.ExciseStampLots.md#startnumber) | string (30) | Start number of the lot. `Required` 
+| [BatchNumber](Regulatory.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps 
+| [EndNumber](Regulatory.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot 
+| [IsActive](Regulatory.Excise.ExciseStampLots.md#isactive) | boolean | Is Active 
+| [Prefix](Regulatory.Excise.ExciseStampLots.md#prefix) | string (30) __nullable__ | Specifies the prefix that is used in forming the value of the "BatchNumber" field. 
+| [PurchaseLotNumber](Regulatory.Excise.ExciseStampLots.md#purchaselotnumber) | string (30) | Type and number of the document with which the excise stamps were received from the customs administration. 
+| [Quantity](Regulatory.Excise.ExciseStampLots.md#quantity) | int32 | Number of excise stamps in the lot 
+| [StartNumber](Regulatory.Excise.ExciseStampLots.md#startnumber) | string (30) | Start number of the lot 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseProductType](Regulatory.Excise.ExciseStampLots.md#exciseproducttype) | [ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable) | Specifies the Excise Product Type of the Excise Stamps in the lot. `Filter(multi eq)` `Introduced in version 22.1.6.53` |
+| [ExciseProductType](Regulatory.Excise.ExciseStampLots.md#exciseproducttype) | [ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable) | Specifies the Excise Product Type of the Excise Stamps in the lot. |
 
 
 ## System Attributes
@@ -65,7 +74,7 @@ Aggregate Tree
 
 ### BatchNumber
 
-Production batch of the Excise Stamps. `Required` `Filter(multi eq;like)` `ORD`
+Production batch of the Excise Stamps
 
 Type: **string (30)**  
 Indexed: **True**  
@@ -79,7 +88,7 @@ Front-End Recalc Expressions:
 `IIF( IsNullOrEmpty( obj.Prefix), Concat( obj.StartNumber, "-", obj.Quantity.ToString( )), Concat( new [] {obj.Prefix, "-", obj.StartNumber, "-", obj.Quantity.ToString( )}))`
 ### EndNumber
 
-End number of the lot. `Required`
+End number of the lot
 
 Type: **string (30)**  
 Category: **System**  
@@ -92,7 +101,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.Quantity > 0), obj.StartNumber, null).AddToNumberInString( Convert( ( obj.Quantity - 1), BigInteger), null)`
 ### IsActive
 
-Is Active. `Required` `Default(true)` `Filter(eq)`
+Is Active
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### Prefix
 
-Specifies the prefix that is used in forming the value of the "BatchNumber" field. `Filter(eq;like)` `Introduced in version 24.1.2.1`
+Specifies the prefix that is used in forming the value of the "BatchNumber" field.
 
 Type: **string (30) __nullable__**  
 Category: **System**  
@@ -114,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseLotNumber
 
-Type and number of the document with which the excise stamps were received from the customs administration. `Required` `Filter(eq;like)`
+Type and number of the document with which the excise stamps were received from the customs administration.
 
 Type: **string (30)**  
 Category: **System**  
@@ -125,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-Number of excise stamps in the lot. `Required` `Default(0)`
+Number of excise stamps in the lot
 
 Type: **int32**  
 Category: **System**  
@@ -136,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### StartNumber
 
-Start number of the lot. `Required`
+Start number of the lot
 
 Type: **string (30)**  
 Category: **System**  
@@ -209,7 +218,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseProductType
 
-Specifies the Excise Product Type of the Excise Stamps in the lot. `Filter(multi eq)` `Introduced in version 22.1.6.53`
+Specifies the Excise Product Type of the Excise Stamps in the lot.
 
 Type: **[ExciseProductTypes](Regulatory.Excise.ExciseProductTypes.md) (nullable)**  
 Category: **System**  

@@ -33,27 +33,27 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC). `Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [Quantity](Logistics.Wms.WarehouseCounts.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity entered during the counting process, in the entered measurement unit. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 | The counting session number to which this entry belongs. `Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [StandardQuantityBase](Logistics.Wms.WarehouseCounts.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC). 
+| [Quantity](Logistics.Wms.WarehouseCounts.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity entered during the counting process, in the entered measurement unit. 
+| [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit. 
+| [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 | The counting session number to which this entry belongs. 
+| [StandardQuantityBase](Logistics.Wms.WarehouseCounts.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](Logistics.Wms.WarehouseCounts.md#creationuser) | [Users](Systems.Security.Users.md) | The user who recorded the counting entry. `Required` `Filter(multi eq)` `ReadOnly` |
-| [LogisticUnit](Logistics.Wms.WarehouseCounts.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | The logistic unit involved in the counting, when applicable. `Filter(multi eq)` `ReadOnly` |
-| [Lot](Logistics.Wms.WarehouseCounts.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Batch/lot of the product, when applicable. `Filter(multi eq)` `ReadOnly` |
-| [Product](Logistics.Wms.WarehouseCounts.md#product) | [Products](General.Products.Products.md) | The product that was counted. `Required` `Filter(multi eq)` `ReadOnly` |
-| [QuantityUnit](Logistics.Wms.WarehouseCounts.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit used when entering the quantity. `Required` `Filter(multi eq)` `ReadOnly` |
-| [SerialNumber](Logistics.Wms.WarehouseCounts.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number, when serialized tracking is enabled. `Filter(multi eq)` `ReadOnly` |
-| [SourceDocument](Logistics.Wms.WarehouseCounts.md#sourcedocument) | [Documents](General.Documents.Documents.md) (nullable) | Requisition, reconciliation, or other document which initiated the counting. `Filter(multi eq)` `ReadOnly` |
-| [Variant](Logistics.Wms.WarehouseCounts.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. `Filter(multi eq)` `ReadOnly` |
-| [WarehouseLocation](Logistics.Wms.WarehouseCounts.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location where the counting occurred. `Required` `Filter(multi eq)` `ReadOnly` |
-| [WarehouseOrder](Logistics.Wms.WarehouseCounts.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | Warehouse order which initiated the counting. `Required` `Filter(multi eq)` `ReadOnly` |
-| [WarehouseOrderLine](Logistics.Wms.WarehouseCounts.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable) | Indicates for which Warehouse Order line this count entry was recorded. `Filter(multi eq)` `ReadOnly` `Introduced in version 26.2.1.16` |
+| [CreationUser](Logistics.Wms.WarehouseCounts.md#creationuser) | [Users](Systems.Security.Users.md) | The user who recorded the counting entry. |
+| [LogisticUnit](Logistics.Wms.WarehouseCounts.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | The logistic unit involved in the counting, when applicable. |
+| [Lot](Logistics.Wms.WarehouseCounts.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Batch/lot of the product, when applicable. |
+| [Product](Logistics.Wms.WarehouseCounts.md#product) | [Products](General.Products.Products.md) | The product that was counted. |
+| [QuantityUnit](Logistics.Wms.WarehouseCounts.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit used when entering the quantity. |
+| [SerialNumber](Logistics.Wms.WarehouseCounts.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number, when serialized tracking is enabled. |
+| [SourceDocument](Logistics.Wms.WarehouseCounts.md#sourcedocument) | [Documents](General.Documents.Documents.md) (nullable) | Requisition, reconciliation, or other document which initiated the counting. |
+| [Variant](Logistics.Wms.WarehouseCounts.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. |
+| [WarehouseLocation](Logistics.Wms.WarehouseCounts.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location where the counting occurred. |
+| [WarehouseOrder](Logistics.Wms.WarehouseCounts.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | Warehouse order which initiated the counting. |
+| [WarehouseOrderLine](Logistics.Wms.WarehouseCounts.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable) | Indicates for which Warehouse Order line this count entry was recorded. |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### CreationTimeUTC
 
-The timestamp when the counting entry was recorded (UTC). `Required` `Filter(eq;ge;le)` `ReadOnly`
+The timestamp when the counting entry was recorded (UTC).
 
 Type: **datetime**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity entered during the counting process, in the entered measurement unit. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` `ReadOnly`
+The quantity entered during the counting process, in the entered measurement unit.
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The converted quantity in the product’s base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly`
+The converted quantity in the product’s base measurement unit.
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-The counting session number to which this entry belongs. `Required` `Filter(eq;ge;le)` `ReadOnly`
+The counting session number to which this entry belongs.
 
 Type: **int32**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantityBase
 
-The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly`
+The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationUser
 
-The user who recorded the counting entry. `Required` `Filter(multi eq)` `ReadOnly`
+The user who recorded the counting entry.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  
@@ -193,7 +193,7 @@ Show in UI: **ShownByDefault**
 
 ### LogisticUnit
 
-The logistic unit involved in the counting, when applicable. `Filter(multi eq)` `ReadOnly`
+The logistic unit involved in the counting, when applicable.
 
 Type: **[LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 ### Lot
 
-Batch/lot of the product, when applicable. `Filter(multi eq)` `ReadOnly`
+Batch/lot of the product, when applicable.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product that was counted. `Required` `Filter(multi eq)` `ReadOnly`
+The product that was counted.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -220,7 +220,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityUnit
 
-The measurement unit used when entering the quantity. `Required` `Filter(multi eq)` `ReadOnly`
+The measurement unit used when entering the quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Serial number, when serialized tracking is enabled. `Filter(multi eq)` `ReadOnly`
+Serial number, when serialized tracking is enabled.
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -238,7 +238,7 @@ Show in UI: **ShownByDefault**
 
 ### SourceDocument
 
-Requisition, reconciliation, or other document which initiated the counting. `Filter(multi eq)` `ReadOnly`
+Requisition, reconciliation, or other document which initiated the counting.
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
@@ -247,7 +247,7 @@ Show in UI: **ShownByDefault**
 
 ### Variant
 
-Product variant (e.g. size, color, configuration), when tracked. `Filter(multi eq)` `ReadOnly`
+Product variant (e.g. size, color, configuration), when tracked.
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -256,7 +256,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseLocation
 
-The warehouse location where the counting occurred. `Required` `Filter(multi eq)` `ReadOnly`
+The warehouse location where the counting occurred.
 
 Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
 Indexed: **True**  
@@ -266,7 +266,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseOrder
 
-Warehouse order which initiated the counting. `Required` `Filter(multi eq)` `ReadOnly`
+Warehouse order which initiated the counting.
 
 Type: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 Indexed: **True**  
@@ -276,7 +276,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseOrderLine
 
-Indicates for which Warehouse Order line this count entry was recorded. `Filter(multi eq)` `ReadOnly` `Introduced in version 26.2.1.16`
+Indicates for which Warehouse Order line this count entry was recorded.
 
 Type: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
 Category: **System**  

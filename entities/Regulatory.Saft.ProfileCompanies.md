@@ -13,6 +13,15 @@ Base Table: Saft_Profile_Companies
 Introduced In Version: 26.2.0.42  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Saft.ProfileCompanies  
+New name: Regulatory.Saft.ProfileCompanies  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Profile.Name}  
 Search Members: Profile.Name  
@@ -36,23 +45,23 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContactPerson](Regulatory.Saft.ProfileCompanies.md#contactperson) | string (254) | Contact person for SAF-T-related matters. `Required` `Filter(eq;like)` 
-| [ContactPersonEmail](Regulatory.Saft.ProfileCompanies.md#contactpersonemail) | string (254) | Email address for SAF-T correspondence. `Required` `Filter(eq;like)` 
-| [ContactPersonJobTitle](Regulatory.Saft.ProfileCompanies.md#contactpersonjobtitle) | string (254) | Official job title of the contact person. `Required` `Filter(eq;like)` 
-| [ContactPersonPhone](Regulatory.Saft.ProfileCompanies.md#contactpersonphone) | string (254) | Phone number for inquiries. `Required` `Filter(eq;like)` 
-| [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group. `Required` `Default(5)` `Filter(eq)` 
-| [Notes](Regulatory.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file. `Filter(like)` 
-| [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed. `Required` `Default("COM")` `Filter(eq)` 
+| [ContactPerson](Regulatory.Saft.ProfileCompanies.md#contactperson) | string (254) | Contact person for SAF-T-related matters. 
+| [ContactPersonEmail](Regulatory.Saft.ProfileCompanies.md#contactpersonemail) | string (254) | Email address for SAF-T correspondence. 
+| [ContactPersonJobTitle](Regulatory.Saft.ProfileCompanies.md#contactpersonjobtitle) | string (254) | Official job title of the contact person. 
+| [ContactPersonPhone](Regulatory.Saft.ProfileCompanies.md#contactpersonphone) | string (254) | Phone number for inquiries. 
+| [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group. 
+| [Notes](Regulatory.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file. 
+| [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BeneficialOwnerCompany](Regulatory.Saft.ProfileCompanies.md#beneficialownercompany) | [Companies](General.Contacts.Companies.md) (nullable) | Legal entity that is the beneficial owner (if applicable). `Filter(multi eq)` |
-| [BeneficialOwnerPerson](Regulatory.Saft.ProfileCompanies.md#beneficialownerperson) | [Persons](General.Contacts.Persons.md) (nullable) | Natural person who is the beneficial owner (if applicable). `Filter(multi eq)` |
-| [EnterpriseCompany](Regulatory.Saft.ProfileCompanies.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Legal entity whose data will be exported to SAF-T. `Required` `Filter(multi eq)` |
-| [Profile](Regulatory.Saft.ProfileCompanies.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this company belongs to. `Required` `Filter(multi eq)` `Owner` |
-| [UltimateOwnerCompany](Regulatory.Saft.ProfileCompanies.md#ultimateownercompany) | [Companies](General.Contacts.Companies.md) (nullable) | Legal entity that is the ultimate owner (if applicable). `Filter(multi eq)` `Introduced in version 26.2.1.19` |
+| [BeneficialOwnerCompany](Regulatory.Saft.ProfileCompanies.md#beneficialownercompany) | [Companies](General.Contacts.Companies.md) (nullable) | Legal entity that is the beneficial owner (if applicable). |
+| [BeneficialOwnerPerson](Regulatory.Saft.ProfileCompanies.md#beneficialownerperson) | [Persons](General.Contacts.Persons.md) (nullable) | Natural person who is the beneficial owner (if applicable). |
+| [EnterpriseCompany](Regulatory.Saft.ProfileCompanies.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Legal entity whose data will be exported to SAF-T. |
+| [Profile](Regulatory.Saft.ProfileCompanies.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | The SAF-T profile this company belongs to. |
+| [UltimateOwnerCompany](Regulatory.Saft.ProfileCompanies.md#ultimateownercompany) | [Companies](General.Contacts.Companies.md) (nullable) | Legal entity that is the ultimate owner (if applicable). |
 
 
 ## System Attributes
@@ -68,7 +77,7 @@ Aggregate Root:
 
 ### ContactPerson
 
-Contact person for SAF-T-related matters. `Required` `Filter(eq;like)`
+Contact person for SAF-T-related matters.
 
 Type: **string (254)**  
 Category: **System**  
@@ -79,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPersonEmail
 
-Email address for SAF-T correspondence. `Required` `Filter(eq;like)`
+Email address for SAF-T correspondence.
 
 Type: **string (254)**  
 Category: **System**  
@@ -90,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPersonJobTitle
 
-Official job title of the contact person. `Required` `Filter(eq;like)`
+Official job title of the contact person.
 
 Type: **string (254)**  
 Category: **System**  
@@ -101,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPersonPhone
 
-Phone number for inquiries. `Required` `Filter(eq;like)`
+Phone number for inquiries.
 
 Type: **string (254)**  
 Category: **System**  
@@ -112,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPartOfGroup
 
-Indicate whether the company is part of a group. `Required` `Default(5)` `Filter(eq)`
+Indicate whether the company is part of a group.
 
 Type: **[IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup)**  
 Category: **System**  
@@ -134,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Internal notes, not included in the SAF-T file. `Filter(like)`
+Internal notes, not included in the SAF-T file.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -145,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxAccountingBasis
 
-Accounting basis: accrual, cash, or mixed. `Required` `Default("COM")` `Filter(eq)`
+Accounting basis: accrual, cash, or mixed.
 
 Type: **[TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis)**  
 Category: **System**  
@@ -198,7 +207,7 @@ Show in UI: **HiddenByDefault**
 
 ### BeneficialOwnerCompany
 
-Legal entity that is the beneficial owner (if applicable). `Filter(multi eq)`
+Legal entity that is the beneficial owner (if applicable).
 
 Type: **[Companies](General.Contacts.Companies.md) (nullable)**  
 Category: **System**  
@@ -207,7 +216,7 @@ Show in UI: **ShownByDefault**
 
 ### BeneficialOwnerPerson
 
-Natural person who is the beneficial owner (if applicable). `Filter(multi eq)`
+Natural person who is the beneficial owner (if applicable).
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -216,7 +225,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-Legal entity whose data will be exported to SAF-T. `Required` `Filter(multi eq)`
+Legal entity whose data will be exported to SAF-T.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Indexed: **True**  
@@ -226,7 +235,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-The SAF-T profile this company belongs to. `Required` `Filter(multi eq)` `Owner`
+The SAF-T profile this company belongs to.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  
@@ -237,7 +246,7 @@ Show in UI: **ShownByDefault**
 
 ### UltimateOwnerCompany
 
-Legal entity that is the ultimate owner (if applicable). `Filter(multi eq)` `Introduced in version 26.2.1.19`
+Legal entity that is the ultimate owner (if applicable).
 
 Type: **[Companies](General.Contacts.Companies.md) (nullable)**  
 Category: **System**  

@@ -33,16 +33,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Communities.Social.Reactions.md#creationtimeutc) | datetime | The exact server time (in UTC), when the reaction was created. `Required` `Default(NowUtc)` `Filter(ge;le)` 
-| [ReactionType](Communities.Social.Reactions.md#reactiontype) | [ReactionType](Communities.Social.Reactions.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required` `Filter(multi eq)` 
+| [CreationTimeUtc](Communities.Social.Reactions.md#creationtimeutc) | datetime | The exact server time (in UTC), when the reaction was created. 
+| [ReactionType](Communities.Social.Reactions.md#reactiontype) | [ReactionType](Communities.Social.Reactions.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](Communities.Social.Reactions.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the reaction is. `Required` `Filter(multi eq)` |
-| [SocialComment](Communities.Social.Reactions.md#socialcomment) | [Comments](Communities.Social.Comments.md) (nullable) | When not null, specifies that the reaction is for the specified comment within the data object. `Filter(multi eq)` |
-| [User](Communities.Social.Reactions.md#user) | [Users](Systems.Security.Users.md) | The user, who reacted. `Required` `Filter(multi eq)` |
+| [DataObject](Communities.Social.Reactions.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The root data object (post, marketplace product, document, etc), for which the reaction is. |
+| [SocialComment](Communities.Social.Reactions.md#socialcomment) | [Comments](Communities.Social.Comments.md) (nullable) | When not null, specifies that the reaction is for the specified comment within the data object. |
+| [User](Communities.Social.Reactions.md#user) | [Users](Systems.Security.Users.md) | The user, who reacted. |
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The exact server time (in UTC), when the reaction was created. `Required` `Default(NowUtc)` `Filter(ge;le)`
+The exact server time (in UTC), when the reaction was created.
 
 Type: **datetime**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### ReactionType
 
-The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required` `Filter(multi eq)`
+The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.
 
 Type: **[ReactionType](Communities.Social.Reactions.md#reactiontype)**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataObject
 
-The root data object (post, marketplace product, document, etc), for which the reaction is. `Required` `Filter(multi eq)`
+The root data object (post, marketplace product, document, etc), for which the reaction is.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### SocialComment
 
-When not null, specifies that the reaction is for the specified comment within the data object. `Filter(multi eq)`
+When not null, specifies that the reaction is for the specified comment within the data object.
 
 Type: **[Comments](Communities.Social.Comments.md) (nullable)**  
 Indexed: **True**  
@@ -175,7 +175,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user, who reacted. `Required` `Filter(multi eq)`
+The user, who reacted.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

@@ -127,17 +127,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#componentno">ComponentNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the component within this composite product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Consecutive number of the component within this composite product.</td>
 </tr>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date. <code>Filter(eq;ge;le)</code></td>
+<td>When set, specifies the activation date of the component for this product.</td>
 </tr>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the component is currently active for this composite product. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Indicates whether the component is currently active for this composite product.</td>
 </tr>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#notes">Notes</a></td>
@@ -147,12 +147,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#quantity">Quantity</a></td>
 <td>decimal (12, 3)</td>
-<td>The number of packages of this component that are needed to compose the product. <code>Required</code> <code>Default(1)</code> <code>Filter(multi eq;ge;le)</code></td>
+<td>The number of packages of this component that are needed to compose the product.</td>
 </tr>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date. <code>Filter(eq;ge;le)</code></td>
+<td>When set, specifies the de-activation date of the component for this product.</td>
 </tr>
 </tbody>
 </table>
@@ -169,12 +169,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#componentproduct">ComponentProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product which is a component of the composite product. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product which is a component of the composite product.</td>
 </tr>
 <tr>
 <td><a href="General.Products.CompositeProductComponents.html#compositeproduct">CompositeProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product of which the current component is a part. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The product of which the current component is a part.</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="componentno">ComponentNo</h3>
-<p>Consecutive number of the component within this composite product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Consecutive number of the component within this composite product.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -218,14 +218,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.CompositeProduct.CompositeProductComponents.Select( c =&gt; c.ComponentNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date. <code>Filter(eq;ge;le)</code></p>
+<p>When set, specifies the activation date of the component for this product.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the component is currently active for this composite product. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Indicates whether the component is currently active for this composite product.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The number of packages of this component that are needed to compose the product. <code>Required</code> <code>Default(1)</code> <code>Filter(multi eq;ge;le)</code></p>
+<p>The number of packages of this component that are needed to compose the product.</p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -249,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date. <code>Filter(eq;ge;le)</code></p>
+<p>When set, specifies the de-activation date of the component for this product.</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -278,13 +278,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="componentproduct">ComponentProduct</h3>
-<p>The product which is a component of the composite product. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product which is a component of the composite product.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="compositeproduct">CompositeProduct</h3>
-<p>The product of which the current component is a part. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The product of which the current component is a part.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

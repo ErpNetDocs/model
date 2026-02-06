@@ -45,27 +45,27 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](General.Documents.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
-| [DestinationEntityName](General.Documents.DocumentFulfillments.md#destinationentityname) | string (64) | The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. `Required` `Default("")` `Filter(eq)` `Introduced in version 22.1.4.7` 
+| [CreationTimeUtc](General.Documents.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. 
+| [DestinationEntityName](General.Documents.DocumentFulfillments.md#destinationentityname) | string (64) | The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. 
 | [DocumentLineId](General.Documents.DocumentFulfillments.md#documentlineid) | guid | The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. `Required` `Filter(multi eq)` 
-| [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
-| [IsFinal](General.Documents.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. `Required` `Filter(eq)` 
-| [LineNo](General.Documents.DocumentFulfillments.md#lineno) | int32 __nullable__ | Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26` 
-| [LineType](General.Documents.DocumentFulfillments.md#linetype) | string (1) | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
-| [QuantityBase](General.Documents.DocumentFulfillments.md#quantitybase) | decimal (12, 3) | Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
-| [StandardQuantity](General.Documents.DocumentFulfillments.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. `Required` `Introduced in version 22.1.4.52` 
+| [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed. 
+| [IsFinal](General.Documents.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. 
+| [LineNo](General.Documents.DocumentFulfillments.md#lineno) | int32 __nullable__ | Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown. 
+| [LineType](General.Documents.DocumentFulfillments.md#linetype) | string (1) | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. 
+| [QuantityBase](General.Documents.DocumentFulfillments.md#quantitybase) | decimal (12, 3) | Fulfilled quantity in the base measurement unit of the product. 
+| [StandardQuantity](General.Documents.DocumentFulfillments.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationUser](General.Documents.DocumentFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. `Required` `Filter(multi eq)` |
-| [Document](General.Documents.DocumentFulfillments.md#document) | [Documents](General.Documents.Documents.md) | The Document, which is fulfilled. `Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 21.1.1.26` `Owner` |
-| [Lot](General.Documents.DocumentFulfillments.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was fulfilled. null when the fulfillment was not for a specific lot. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
-| [ParentFulfillment](General.Documents.DocumentFulfillments.md#parentfulfillment) | [DocumentFulfillments](General.Documents.DocumentFulfillments.md) (nullable) | The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module. `Filter(multi eq)` `Introduced in version 22.1.5.85` |
-| [Product](General.Documents.DocumentFulfillments.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which is fulfilled. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
-| [ProductVariant](General.Documents.DocumentFulfillments.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which was fulfilled. null when the fulfillment was not for a product variant. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
-| [SerialNumber](General.Documents.DocumentFulfillments.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
+| [CreationUser](General.Documents.DocumentFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. |
+| [Document](General.Documents.DocumentFulfillments.md#document) | [Documents](General.Documents.Documents.md) | The Document, which is fulfilled. |
+| [Lot](General.Documents.DocumentFulfillments.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was fulfilled. NULL when the fulfillment was not for a specific lot. |
+| [ParentFulfillment](General.Documents.DocumentFulfillments.md#parentfulfillment) | [DocumentFulfillments](General.Documents.DocumentFulfillments.md) (nullable) | The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module. |
+| [Product](General.Documents.DocumentFulfillments.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which is fulfilled. |
+| [ProductVariant](General.Documents.DocumentFulfillments.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which was fulfilled. NULL when the fulfillment was not for a product variant. |
+| [SerialNumber](General.Documents.DocumentFulfillments.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number, which was fulfilled. NULL when the fulfillment was not for a specific serial number. |
 
 
 ## System Attributes
@@ -81,7 +81,7 @@ Aggregate Root:
 
 ### CreationTimeUtc
 
-The exact time in UTC, when the fulfillment was created in the system. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)`
+The exact time in UTC, when the fulfillment was created in the system.
 
 Type: **datetime**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationEntityName
 
-The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. `Required` `Default("")` `Filter(eq)` `Introduced in version 22.1.4.7`
+The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.
 
 Type: **string (64)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### FulfillmentType
 
-Type of fulfillment: P=Planned; C=Completed. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26`
+Type of fulfillment: P=Planned; C=Completed.
 
 Type: **[FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype)**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### IsFinal
 
-Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. `Required` `Filter(eq)`
+Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.
 
 Type: **boolean**  
 Category: **System**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26`
+Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### LineType
 
-Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26`
+Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.
 
 Type: **string (1)**  
 Category: **System**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
+Fulfilled quantity in the base measurement unit of the product.
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantity
 
-The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. `Required` `Introduced in version 22.1.4.52`
+The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -216,7 +216,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationUser
 
-The user, who created the record. `Required` `Filter(multi eq)`
+The user, who created the record.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  
@@ -225,7 +225,7 @@ Show in UI: **ShownByDefault**
 
 ### Document
 
-The Document, which is fulfilled. `Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 21.1.1.26` `Owner`
+The Document, which is fulfilled.
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Indexed: **True**  
@@ -236,7 +236,7 @@ Show in UI: **CannotBeShown**
 
 ### Lot
 
-The lot, which was fulfilled. null when the fulfillment was not for a specific lot. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+The lot, which was fulfilled. NULL when the fulfillment was not for a specific lot.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -245,7 +245,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentFulfillment
 
-The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module. `Filter(multi eq)` `Introduced in version 22.1.5.85`
+The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module.
 
 Type: **[DocumentFulfillments](General.Documents.DocumentFulfillments.md) (nullable)**  
 Category: **System**  
@@ -254,7 +254,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product, which is fulfilled. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+The product, which is fulfilled.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Indexed: **True**  
@@ -264,7 +264,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductVariant
 
-The product variant, which was fulfilled. null when the fulfillment was not for a product variant. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+The product variant, which was fulfilled. NULL when the fulfillment was not for a product variant.
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+The serial number, which was fulfilled. NULL when the fulfillment was not for a specific serial number.
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  

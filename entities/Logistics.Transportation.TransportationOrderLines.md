@@ -43,21 +43,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentsDescription](Logistics.Transportation.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. `Required` 
+| [ContentsDescription](Logistics.Transportation.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. 
 | [LineNo](Logistics.Transportation.TransportationOrderLines.md#lineno) | int32 | Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
 | [Notes](Logistics.Transportation.TransportationOrderLines.md#notes) | string (max) __nullable__ | Notes for this TransportationOrderLine. `Introduced in version 18.2` 
-| [PalletsCount](Logistics.Transportation.TransportationOrderLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. null when it is unknown. 
-| [ParentLineNo](Logistics.Transportation.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
-| [VolumeCbm](Logistics.Transportation.TransportationOrderLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). null when it is unknown. 
-| [WeightKg](Logistics.Transportation.TransportationOrderLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). null when it is unknown. 
+| [PalletsCount](Logistics.Transportation.TransportationOrderLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. NULL when it is unknown. 
+| [ParentLineNo](Logistics.Transportation.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line. 
+| [VolumeCbm](Logistics.Transportation.TransportationOrderLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). NULL when it is unknown. 
+| [WeightKg](Logistics.Transportation.TransportationOrderLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). NULL when it is unknown. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CargoType](Logistics.Transportation.TransportationOrderLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. `Required` `Filter(multi eq)` |
+| [CargoType](Logistics.Transportation.TransportationOrderLines.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The type of the transported cargo. |
 | [Document](Logistics.Transportation.TransportationOrderLines.md#document) | [TransportationOrders](Logistics.Transportation.TransportationOrders.md) | The owner document. The <see cref="Transportation<br />Order"/> to which this TransportationOrderLine belongs. `Required` `Filter(multi eq)` |
-| [ParentDocument](Logistics.Transportation.TransportationOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
+| [ParentDocument](Logistics.Transportation.TransportationOrderLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. NULL when the current line does not execute another line. |
 | [TransportationOrder](Logistics.Transportation.TransportationOrderLines.md#transportationorder) | [TransportationOrders](Logistics.Transportation.TransportationOrders.md) | The <see cref="Transportation<br />Order"/> to which this TransportationOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### ContentsDescription
 
-Textual description of the cargo contents. `Required`
+Textual description of the cargo contents.
 
 Type: **string (128)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### PalletsCount
 
-Number of palettes comprising the cargo. null when it is unknown.
+Number of palettes comprising the cargo. NULL when it is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)`
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### VolumeCbm
 
-The volume of the cargo, in CBM (cubic meters). null when it is unknown.
+The volume of the cargo, in CBM (cubic meters). NULL when it is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### WeightKg
 
-The weight of the cargo, in KG (kilogramms). null when it is unknown.
+The weight of the cargo, in KG (kilogramms). NULL when it is unknown.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -183,7 +183,7 @@ Show in UI: **HiddenByDefault**
 
 ### CargoType
 
-The type of the transported cargo. `Required` `Filter(multi eq)`
+The type of the transported cargo.
 
 Type: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentDocument
 
-The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
+The document, which the current line executes. NULL when the current line does not execute another line.
 
 Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  

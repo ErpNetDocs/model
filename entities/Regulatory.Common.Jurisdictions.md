@@ -35,14 +35,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Regulatory.Common.Jurisdictions.md#code) | string (50) | Short code of the jurisdiction (ISO-style preferrable). `Required` `Filter(eq;like)` `ORD` 
-| [CountryCode](Regulatory.Common.Jurisdictions.md#countrycode) | string (10) | ISO country code (if applicable). `Required` `Filter(eq;like)` 
-| [CurrencySign](Regulatory.Common.Jurisdictions.md#currencysign) | string (10) | Primary currency sign (if applicable). `Required` `Filter(eq;like)` 
-| [IsActive](Regulatory.Common.Jurisdictions.md#isactive) | boolean | Specifies whether the jurisdiction is active. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Regulatory.Common.Jurisdictions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the jurisdiction. `Required` `Filter(like)` 
-| [Notes](Regulatory.Common.Jurisdictions.md#notes) | string (max) __nullable__ | Notes for the jurisdiction. `Filter(like)` 
-| [ValidFrom](Regulatory.Common.Jurisdictions.md#validfrom) | date __nullable__ | When not null specifies the first date when the jurisdiction is valid. `Filter(eq;ge;le)` 
-| [ValidTo](Regulatory.Common.Jurisdictions.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the jurisdiction is valid. `Filter(eq;ge;le)` 
+| [Code](Regulatory.Common.Jurisdictions.md#code) | string (50) | Short code of the jurisdiction (ISO-style preferrable). 
+| [CountryCode](Regulatory.Common.Jurisdictions.md#countrycode) | string (10) | ISO country code (if applicable). 
+| [CurrencySign](Regulatory.Common.Jurisdictions.md#currencysign) | string (10) | Primary currency sign (if applicable). 
+| [IsActive](Regulatory.Common.Jurisdictions.md#isactive) | boolean | Specifies whether the jurisdiction is active. 
+| [Name](Regulatory.Common.Jurisdictions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the jurisdiction. 
+| [Notes](Regulatory.Common.Jurisdictions.md#notes) | string (max) __nullable__ | Notes for the jurisdiction. 
+| [ValidFrom](Regulatory.Common.Jurisdictions.md#validfrom) | date __nullable__ | When not null specifies the first date when the jurisdiction is valid. 
+| [ValidTo](Regulatory.Common.Jurisdictions.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the jurisdiction is valid. 
 
 
 ## System Attributes
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### Code
 
-Short code of the jurisdiction (ISO-style preferrable). `Required` `Filter(eq;like)` `ORD`
+Short code of the jurisdiction (ISO-style preferrable).
 
 Type: **string (50)**  
 Indexed: **True**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### CountryCode
 
-ISO country code (if applicable). `Required` `Filter(eq;like)`
+ISO country code (if applicable).
 
 Type: **string (10)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### CurrencySign
 
-Primary currency sign (if applicable). `Required` `Filter(eq;like)`
+Primary currency sign (if applicable).
 
 Type: **string (10)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the jurisdiction is active. `Required` `Default(true)` `Filter(eq)`
+Specifies whether the jurisdiction is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the jurisdiction. `Required` `Filter(like)`
+Name of the jurisdiction.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the jurisdiction. `Filter(like)`
+Notes for the jurisdiction.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-When not null specifies the first date when the jurisdiction is valid. `Filter(eq;ge;le)`
+When not null specifies the first date when the jurisdiction is valid.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-When not null specifies the last date (inclusive) when the jurisdiction is valid. `Filter(eq;ge;le)`
+When not null specifies the last date (inclusive) when the jurisdiction is valid.
 
 Type: **date __nullable__**  
 Category: **System**  

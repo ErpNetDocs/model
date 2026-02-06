@@ -35,18 +35,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectContents](Systems.Core.ObjectVersions.md#objectcontents) | byte[] | The compressed contents of the object. `Required` 
-| [ServerVersion](Systems.Core.ObjectVersions.md#serverversion) | string (15) __nullable__ | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown. 
-| [Version](Systems.Core.ObjectVersions.md#version) | int32 | The version number of the version, stored in the current row, starting from 1. `Required` `Filter(multi eq;ge;le)` 
-| [VersionTime](Systems.Core.ObjectVersions.md#versiontime) | datetime | The timestamp when the version was saved. `Required` `Filter(ge;le)` 
-| [VersionType](Systems.Core.ObjectVersions.md#versiontype) | [VersionType](Systems.Core.ObjectVersions.md#versiontype) | Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. `Required` 
+| [ObjectContents](Systems.Core.ObjectVersions.md#objectcontents) | byte[] | The compressed contents of the object. 
+| [ServerVersion](Systems.Core.ObjectVersions.md#serverversion) | string (15) __nullable__ | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). NULL means the version is unknown. 
+| [Version](Systems.Core.ObjectVersions.md#version) | int32 | The version number of the version, stored in the current row, starting from 1. 
+| [VersionTime](Systems.Core.ObjectVersions.md#versiontime) | datetime | The timestamp when the version was saved. 
+| [VersionType](Systems.Core.ObjectVersions.md#versiontype) | [VersionType](Systems.Core.ObjectVersions.md#versiontype) | Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Object](Systems.Core.ObjectVersions.md#object) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which a version is stored. `Required` `Filter(multi eq)` `Owner` |
-| [User](Systems.Core.ObjectVersions.md#user) | [Users](Systems.Security.Users.md) | The user, which saved the version. `Required` `Filter(multi eq)` |
+| [Object](Systems.Core.ObjectVersions.md#object) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The object, for which a version is stored. |
+| [User](Systems.Core.ObjectVersions.md#user) | [Users](Systems.Security.Users.md) | The user, which saved the version. |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### ObjectContents
 
-The compressed contents of the object. `Required`
+The compressed contents of the object.
 
 Type: **byte[]**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **CannotBeShown**
 
 ### ServerVersion
 
-The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.
+The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). NULL means the version is unknown.
 
 Type: **string (15) __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Version
 
-The version number of the version, stored in the current row, starting from 1. `Required` `Filter(multi eq;ge;le)`
+The version number of the version, stored in the current row, starting from 1.
 
 Type: **int32**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### VersionTime
 
-The timestamp when the version was saved. `Required` `Filter(ge;le)`
+The timestamp when the version was saved.
 
 Type: **datetime**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### VersionType
 
-Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. `Required`
+Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.
 
 Type: **[VersionType](Systems.Core.ObjectVersions.md#versiontype)**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### Object
 
-The object, for which a version is stored. `Required` `Filter(multi eq)` `Owner`
+The object, for which a version is stored.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Indexed: **True**  
@@ -164,7 +164,7 @@ Show in UI: **ShownByDefault**
 
 ### User
 
-The user, which saved the version. `Required` `Filter(multi eq)`
+The user, which saved the version.
 
 Type: **[Users](Systems.Security.Users.md)**  
 Category: **System**  

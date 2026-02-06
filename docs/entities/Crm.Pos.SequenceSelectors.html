@@ -126,7 +126,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.SequenceSelectors.html#salekind">SaleKind</a></td>
 <td><a href="Crm.Pos.SequenceSelectors.html#salekind">SaleKind</a></td>
-<td>Specifies the type of sale that determines which sequence is selected. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Filter(multi eq)</code></td>
+<td>Specifies the type of sale that determines which sequence is selected.</td>
 </tr>
 </tbody>
 </table>
@@ -143,27 +143,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.SequenceSelectors.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>Identifies the company for which the sequence selection applies; null means the rule applies to all companies. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>Identifies the company for which the sequence selection applies; null means the rule applies to all companies.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SequenceSelectors.html#posdevice">PosDevice</a></td>
 <td><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</td>
-<td>Identifies the POS device used to determine the sequence; null means all devices are applicable. <code>Filter(multi eq)</code></td>
+<td>Identifies the POS device used to determine the sequence; null means all devices are applicable.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SequenceSelectors.html#poslocation">PosLocation</a></td>
 <td><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</td>
-<td>Identifies the POS location used in sequence selection; null means all locations are applicable. <code>Filter(multi eq)</code></td>
+<td>Identifies the POS location used in sequence selection; null means all locations are applicable.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SequenceSelectors.html#posterminal">PosTerminal</a></td>
 <td><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</td>
-<td>Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.37</code></td>
+<td>Identifies the POS terminal used to determine the sequence; null means all terminals are applicable.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SequenceSelectors.html#sequence">Sequence</a></td>
 <td><a href="Systems.Core.Sequences.html">Sequences</a></td>
-<td>References the sequence definition selected for the given POS context. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>References the sequence definition selected for the given POS context.</td>
 </tr>
 </tbody>
 </table>
@@ -219,7 +219,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salekind">SaleKind</h3>
-<p>Specifies the type of sale that determines which sequence is selected. <code>Required</code> <code>Default(&quot;SAL&quot;)</code> <code>Filter(multi eq)</code></p>
+<p>Specifies the type of sale that determines which sequence is selected.</p>
 <p>Type: <strong><a href="Crm.Pos.SequenceSelectors.html#salekind">SaleKind</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SaleKind</code>(Crm.Pos.Sales.md#salekind) data attribute<br>
@@ -298,32 +298,32 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Identifies the company for which the sequence selection applies; null means the rule applies to all companies. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>Identifies the company for which the sequence selection applies; null means the rule applies to all companies.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posdevice">PosDevice</h3>
-<p>Identifies the POS device used to determine the sequence; null means all devices are applicable. <code>Filter(multi eq)</code></p>
+<p>Identifies the POS device used to determine the sequence; null means all devices are applicable.</p>
 <p>Type: <strong><a href="Crm.Pos.Devices.html">Devices</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="poslocation">PosLocation</h3>
-<p>Identifies the POS location used in sequence selection; null means all locations are applicable. <code>Filter(multi eq)</code></p>
+<p>Identifies the POS location used in sequence selection; null means all locations are applicable.</p>
 <p>Type: <strong><a href="Crm.Pos.Locations.html">Locations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="posterminal">PosTerminal</h3>
-<p>Identifies the POS terminal used to determine the sequence; null means all terminals are applicable. <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.37</code></p>
+<p>Identifies the POS terminal used to determine the sequence; null means all terminals are applicable.</p>
 <p>Type: <strong><a href="Crm.Pos.Terminals.html">Terminals</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sequence">Sequence</h3>
-<p>References the sequence definition selected for the given POS context. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>References the sequence definition selected for the given POS context.</p>
 <p>Type: <strong><a href="Systems.Core.Sequences.html">Sequences</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

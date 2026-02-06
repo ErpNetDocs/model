@@ -44,28 +44,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)` 
-| [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
+| [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: 1 = the offer is available for new documents; 0 = otherwise 
+| [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package 
 | [Name](Crm.Pricing.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
-| [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only for the customers, that match the filter. `Unit: Crm.Sales.CustomersRepository.TableName` 
-| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. `Unit: Marketing.DistributionChannels<br />Repository.TableName` 
-| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies validity condition for the Ship To Customer of the sales document. `Unit: Crm.Sales.CustomersRepository.TableName` 
-| [ValidFromDate](Crm.Pricing.PromotionalPackages.md#validfromdate) | date __nullable__ | When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)` 
-| [ValidToDate](Crm.Pricing.PromotionalPackages.md#validtodate) | date __nullable__ | When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)` 
+| [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | Customer filter for clients. The package is valid only for the customers, that match the filter 
+| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter. 
+| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | The package is valid only for the ship to customers, that match the filter 
+| [ValidFromDate](Crm.Pricing.PromotionalPackages.md#validfromdate) | date __nullable__ | The date from which the promotional pakage is valid 
+| [ValidToDate](Crm.Pricing.PromotionalPackages.md#validtodate) | date __nullable__ | The date to which(inclusive) the promotional pakage is valid 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Campaign](Crm.Pricing.PromotionalPackages.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
-| [DocumentAmountType](Crm.Pricing.PromotionalPackages.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders. `Filter(multi eq)` `Introduced in version 25.1.1.66` |
-| [EnterpriseCompany](Crm.Pricing.PromotionalPackages.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, indicates that the package is valid only for the specified enterprise company. `Filter(multi eq)` |
+| [Campaign](Crm.Pricing.PromotionalPackages.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. |
+| [DocumentAmountType](Crm.Pricing.PromotionalPackages.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable) | The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders. |
+| [EnterpriseCompany](Crm.Pricing.PromotionalPackages.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not NULL, indicates that the package is valid only for the specified enterprise company. |
 | [EnterpriseCompanyLocation](Crm.Pricing.PromotionalPackages.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. `Filter(multi eq)` |
-| [ValidForCustomer](Crm.Pricing.PromotionalPackages.md#validforcustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, the package is valid only for the specified customer. `Filter(multi eq)` |
-| [ValidForDistribution<br />Channel](Crm.Pricing.PromotionalPackages.md#validfordistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | When not null, the package is valid only for the specified distribution channel of the sales order. `Filter(multi eq)` |
-| [ValidForPriceList](Crm.Pricing.PromotionalPackages.md#validforpricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | When not null, the package is valid only for the specified price list. `Filter(multi eq)` |
-| [ValidForShipToCustomer](Crm.Pricing.PromotionalPackages.md#validforshiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. `Filter(multi eq)` |
-| [ValidForTargetGroup](Crm.Pricing.PromotionalPackages.md#validfortargetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | When not null, the package is valid only for the specified customer target group. `Filter(multi eq)` |
+| [ValidForCustomer](Crm.Pricing.PromotionalPackages.md#validforcustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | Client for which the promotional pakage is valid |
+| [ValidForDistribution<br />Channel](Crm.Pricing.PromotionalPackages.md#validfordistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | When not NULL, the package is valid only for the specified distribution channel of the sales order |
+| [ValidForPriceList](Crm.Pricing.PromotionalPackages.md#validforpricelist) | [PriceLists](Crm.Pricing.PriceLists.md) (nullable) | Price list for which the promotional pakage is valid |
+| [ValidForShipToCustomer](Crm.Pricing.PromotionalPackages.md#validforshiptocustomer) | [Customers](Crm.Sales.Customers.md) (nullable) | When not NULL, specifies that the package is valid only when the sales document is for the specified Ship To Customer. |
+| [ValidForTargetGroup](Crm.Pricing.PromotionalPackages.md#validfortargetgroup) | [TargetGroups](Crm.Marketing.TargetGroups.md) (nullable) | Target group for which the promotional pakage is valid |
 
 
 ## System Attributes
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### Active
 
-Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)`
+Package status: 1 = the offer is available for new documents; 0 = otherwise
 
 Type: **boolean**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD`
+Unique code of the promotional package
 
 Type: **string (20)**  
 Indexed: **True**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForCustomerFilterXML
 
-When not null, the package is valid only for the customers, that match the filter. `Unit: Crm.Sales.CustomersRepository.TableName`
+Customer filter for clients. The package is valid only for the customers, that match the filter
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForDistributionChannelFilterXML
 
-When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. `Unit: Marketing.DistributionChannelsRepository.TableName`
+When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForShipToCustomerFilterXML
 
-When not null, specifies validity condition for the Ship To Customer of the sales document. `Unit: Crm.Sales.CustomersRepository.TableName`
+The package is valid only for the ship to customers, that match the filter
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFromDate
 
-When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)`
+The date from which the promotional pakage is valid
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidToDate
 
-When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)`
+The date to which(inclusive) the promotional pakage is valid
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -240,7 +240,7 @@ Show in UI: **HiddenByDefault**
 
 ### Campaign
 
-Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
+Тhe marketing campaign to which the current definition belongs.
 
 Type: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
 Category: **System**  
@@ -249,7 +249,7 @@ Show in UI: **ShownByDefault**
 
 ### DocumentAmountType
 
-The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders. `Filter(multi eq)` `Introduced in version 25.1.1.66`
+The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) (nullable)**  
 Category: **System**  
@@ -258,7 +258,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-When not null, indicates that the package is valid only for the specified enterprise company. `Filter(multi eq)`
+When not NULL, indicates that the package is valid only for the specified enterprise company.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -276,7 +276,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForCustomer
 
-When not null, the package is valid only for the specified customer. `Filter(multi eq)`
+Client for which the promotional pakage is valid
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -285,7 +285,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForDistributionChannel
 
-When not null, the package is valid only for the specified distribution channel of the sales order. `Filter(multi eq)`
+When not NULL, the package is valid only for the specified distribution channel of the sales order
 
 Type: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 Category: **System**  
@@ -294,7 +294,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForPriceList
 
-When not null, the package is valid only for the specified price list. `Filter(multi eq)`
+Price list for which the promotional pakage is valid
 
 Type: **[PriceLists](Crm.Pricing.PriceLists.md) (nullable)**  
 Category: **System**  
@@ -303,7 +303,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForShipToCustomer
 
-When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. `Filter(multi eq)`
+When not NULL, specifies that the package is valid only when the sales document is for the specified Ship To Customer.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
 Category: **System**  
@@ -312,7 +312,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidForTargetGroup
 
-When not null, the package is valid only for the specified customer target group. `Filter(multi eq)`
+Target group for which the promotional pakage is valid
 
 Type: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
 Category: **System**  

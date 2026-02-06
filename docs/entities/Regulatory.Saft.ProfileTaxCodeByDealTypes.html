@@ -94,6 +94,11 @@ Repository: Regulatory.Saft.ProfileTaxCodeByDealTypes<br>
 Base Table: Saft_Profile_Tax_Code_By_Deal_Types<br>
 Introduced In Version: 26.2.0.84<br>
 API access:  ReadWrite</p>
+<h2 id="renames">Renames</h2>
+<p>Old name: Finance.Saft.ProfileTaxCodeByDealTypes<br>
+New name: Regulatory.Saft.ProfileTaxCodeByDealTypes<br>
+Version: 26.2.1.17<br>
+Case: 39297</p>
 <h2 id="visualization">Visualization</h2>
 <p>Display Format: {Profile.Name}<br>
 Search Members: Profile.Name<br>
@@ -122,7 +127,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByDealTypes.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). <code>Filter(like)</code></td>
+<td>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).</td>
 </tr>
 </tbody>
 </table>
@@ -139,22 +144,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByDealTypes.html#dealtype">DealType</a></td>
 <td><a href="Regulatory.Vat.DealTypes.html">DealTypes</a></td>
-<td>The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByDealTypes.html#documenttype">DocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></td>
+<td>The ERP.net document type under which this mapping rule should be applied.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByDealTypes.html#profile">Profile</a></td>
 <td><a href="Regulatory.Saft.Profiles.html">Profiles</a></td>
-<td>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The SAF-T profile this mapping belongs to.</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.ProfileTaxCodeByDealTypes.html#taxcodeentry">TaxCodeEntry</a></td>
 <td><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></td>
-<td>The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met.</td>
 </tr>
 </tbody>
 </table>
@@ -187,7 +192,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="notes">Notes</h3>
-<p>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference). <code>Filter(like)</code></p>
+<p>Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -217,20 +222,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dealtype">DealType</h3>
-<p>The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The ERP.net deal type the mapping applies to and for which the SAF-T TaxCode is determined.</p>
 <p>Type: <strong><a href="Regulatory.Vat.DealTypes.html">DealTypes</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The ERP.net document type under which this mapping rule should be applied. <code>Filter(multi eq)</code></p>
+<p>The ERP.net document type under which this mapping rule should be applied.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="profile">Profile</h3>
-<p>The SAF-T profile this mapping belongs to. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The SAF-T profile this mapping belongs to.</p>
 <p>Type: <strong><a href="Regulatory.Saft.Profiles.html">Profiles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -238,7 +243,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="taxcodeentry">TaxCodeEntry</h3>
-<p>The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The SAF-T TaxCode that the system outputs/uses during SAF-T generation when the mapping criteria are met.</p>
 <p>Type: <strong><a href="Regulatory.Common.CodeEntries.html">CodeEntries</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

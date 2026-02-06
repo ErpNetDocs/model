@@ -133,7 +133,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.CompanyDivisions.html#code">Code</a></td>
 <td>string (10)</td>
-<td>Company division code, unique within the company. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>The unique code of the division in the company</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyDivisions.html#gln">GLN</a></td>
@@ -148,7 +148,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.CompanyDivisions.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Multi-language company divsion name. <code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Multi-language company divsion name</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyDivisions.html#partycode">PartyCode</a></td>
@@ -220,7 +220,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.CompanyDivisions.html#company">Company</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a></td>
-<td>The company to which this company division belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The owner company of the division</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyDivisions.html#defaultproductcodingsystem">DefaultProductCodingSystem</a></td>
@@ -320,7 +320,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>Company division code, unique within the company. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>The unique code of the division in the company</p>
 <p>Type: <strong>string (10)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -345,7 +345,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multi-language company divsion name. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Multi-language company divsion name</p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -512,7 +512,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="company">Company</h3>
-<p>The company to which this company division belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The owner company of the division</p>
 <p>Type: <strong><a href="General.Contacts.Companies.html">Companies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

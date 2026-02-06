@@ -14912,6 +14912,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Saft.ProfileAccountByAdditionalAmounts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Saft.ProfileAccountByAdditionalAmounts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Saft.ProfileAccountByProducts.md",
       "output": {
         ".html": {
@@ -19806,6 +19816,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Core.ExtensibleDataObjects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Core.Extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Core.Extensions.html"
         }
       },
       "version": ""
@@ -28245,6 +28265,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sys_Entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Sys_Extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Sys_Extensions.html"
         }
       },
       "version": ""

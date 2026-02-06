@@ -41,20 +41,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Cancelled](Systems.Monitoring.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)` 
+| [Cancelled](Systems.Monitoring.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. 
 | [CreationTime](Systems.Monitoring.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
-| [DocumentEvent](Systems.Monitoring.ScheduledDocumentEvents.md#documentevent) | string (254) | The type of the document event that is scheduled to be processed. `Required` `ReadOnly` 
-| [LastProcessStatus](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocessstatus) | string (max) __nullable__ | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly` 
-| [LastProcessTime](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocesstime) | datetime __nullable__ | The time of the last attempt to process the event. `Filter(ge;le)` `ReadOnly` 
-| [Processed](Systems.Monitoring.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed. `Required` `ReadOnly` 
+| [DocumentEvent](Systems.Monitoring.ScheduledDocumentEvents.md#documentevent) | string (254) | The type of the document event that is scheduled to be processed 
+| [LastProcessStatus](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocessstatus) | string (max) __nullable__ | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. 
+| [LastProcessTime](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocesstime) | datetime __nullable__ | The time of the last attempt to process the event 
+| [Processed](Systems.Monitoring.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not 
+| [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Systems.Monitoring.ScheduledDocumentEvents.md#document) | [Documents](General.Documents.Documents.md) | The document for which the event will be processed. `Required` `Filter(multi eq)` `ReadOnly` |
-| [SourceDocument](Systems.Monitoring.ScheduledDocumentEvents.md#sourcedocument) | [Documents](General.Documents.Documents.md) | The document that has caused this event to be scheduled. `Required` `Filter(multi eq)` `ReadOnly` |
+| [Document](Systems.Monitoring.ScheduledDocumentEvents.md#document) | [Documents](General.Documents.Documents.md) | The document for which the event will be processed |
+| [SourceDocument](Systems.Monitoring.ScheduledDocumentEvents.md#sourcedocument) | [Documents](General.Documents.Documents.md) | The document that has caused this event to be scheduled |
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### Cancelled
 
-When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)`
+When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentEvent
 
-The type of the document event that is scheduled to be processed. `Required` `ReadOnly`
+The type of the document event that is scheduled to be processed
 
 Type: **string (254)**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### LastProcessStatus
 
-Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly`
+Status/information of the last attemp to process the event. Usually shows the cause in case of failure.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### LastProcessTime
 
-The time of the last attempt to process the event. `Filter(ge;le)` `ReadOnly`
+The time of the last attempt to process the event
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### Processed
 
-Indicates wheather the event is already processed or not. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Indicates wheather the event is already processed or not
 
 Type: **boolean**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-The state of the document for which the event will be processed. `Required` `ReadOnly`
+The state of the document for which the event will be processed
 
 Type: **[State](Systems.Monitoring.ScheduledDocumentEvents.md#state)**  
 Category: **System**  
@@ -223,7 +223,7 @@ Show in UI: **HiddenByDefault**
 
 ### Document
 
-The document for which the event will be processed. `Required` `Filter(multi eq)` `ReadOnly`
+The document for which the event will be processed
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Category: **System**  
@@ -232,7 +232,7 @@ Show in UI: **ShownByDefault**
 
 ### SourceDocument
 
-The document that has caused this event to be scheduled. `Required` `Filter(multi eq)` `ReadOnly`
+The document that has caused this event to be scheduled
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Indexed: **True**  

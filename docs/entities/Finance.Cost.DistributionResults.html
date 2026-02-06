@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionResults.html#distributedamountbase">DistributedAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
-<td>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. <code>Currency: CostDistribution.EnterpriseCompany.BaseCurrency</code> <code>Required</code></td>
+<td>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionResults.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number (within the cost distribution document) of the result. <code>Required</code></td>
+<td>Consecutive line number (within the cost distribution document) of the result.</td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.DistributionResults.html#outputlineno">OutputLineNo</a></td>
 <td>int32</td>
-<td>The line number (within the document) of the output over which the cost is distributed. <code>Required</code></td>
+<td>The line number (within the document) of the output over which the cost is distributed.</td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.DistributionResults.html#costtype">CostType</a></td>
 <td><a href="Finance.Cost.CostTypes.html">CostTypes</a></td>
-<td>The cost type for which the current distribution is calculated. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The cost type for which the current distribution is calculated.</td>
 </tr>
 </tbody>
 </table>
@@ -186,14 +186,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="distributedamountbase">DistributedAmountBase</h3>
-<p>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. <code>Currency: CostDistribution.EnterpriseCompany.BaseCurrency</code> <code>Required</code></p>
+<p>The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number (within the cost distribution document) of the result. <code>Required</code></p>
+<p>Consecutive line number (within the cost distribution document) of the result.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -204,7 +204,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.CostDistribution.Results.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="outputlineno">OutputLineNo</h3>
-<p>The line number (within the document) of the output over which the cost is distributed. <code>Required</code></p>
+<p>The line number (within the document) of the output over which the cost is distributed.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -240,7 +240,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="costtype">CostType</h3>
-<p>The cost type for which the current distribution is calculated. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The cost type for which the current distribution is calculated.</p>
 <p>Type: <strong><a href="Finance.Cost.CostTypes.html">CostTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

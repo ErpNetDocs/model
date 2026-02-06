@@ -201,12 +201,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -226,7 +226,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#reconciliationtype">ReconciliationType</a></td>
 <td><a href="Logistics.Inventory.Reconciliations.html#reconciliationtype">ReconciliationType</a> <strong>nullable</strong></td>
-<td>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.3.67</code></td>
+<td>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#referencedate">ReferenceDate</a></td>
@@ -308,22 +308,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#defaultproductgroup">DefaultProductGroup</a></td>
 <td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
-<td>When not null is used to filter the product chooser for the lines. <code>Filter(multi eq)</code></td>
+<td>When not null is used to filter the product chooser for the lines.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#defaultstore">DefaultStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>Default (but not mandatory) store for the lines. null means that the store should be choosed for each line. <code>Filter(multi eq)</code></td>
+<td>Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#defaultstorebin">DefaultStoreBin</a></td>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
-<td>The default store bin for the lines. When null, lines can specify different bins. <code>Filter(multi eq)</code></td>
+<td>The default store bin for the lines. When null, lines can specify different bins.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#defaultvaluationgroup">DefaultValuationGroup</a></td>
 <td><a href="Logistics.Inventory.ProductValuationGroups.html">ProductValuationGroups</a> (nullable)</td>
-<td>Valuation group by default for which available products are loaded. <code>Filter(multi eq)</code></td>
+<td>Valuation group by default for which available products are loaded.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Reconciliations.html#documenttype">DocumentType</a></td>
@@ -604,7 +604,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -612,7 +612,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -667,7 +667,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="reconciliationtype">ReconciliationType</h3>
-<p>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.3.67</code></p>
+<p>Specifies how to treat the data in the Counted table, when creating the reconciliation lines. Under Full reconciliation, products which are not counted are considered missing. Under partial, products that are not counted are not reconciled.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Reconciliations.html#reconciliationtype">ReconciliationType</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ReconciliationType</code>(Logistics.Inventory.Reconciliations.md#reconciliationtype) data attribute<br>
@@ -897,25 +897,25 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="defaultproductgroup">DefaultProductGroup</h3>
-<p>When not null is used to filter the product chooser for the lines. <code>Filter(multi eq)</code></p>
+<p>When not null is used to filter the product chooser for the lines.</p>
 <p>Type: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultstore">DefaultStore</h3>
-<p>Default (but not mandatory) store for the lines. null means that the store should be choosed for each line. <code>Filter(multi eq)</code></p>
+<p>Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultstorebin">DefaultStoreBin</h3>
-<p>The default store bin for the lines. When null, lines can specify different bins. <code>Filter(multi eq)</code></p>
+<p>The default store bin for the lines. When null, lines can specify different bins.</p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultvaluationgroup">DefaultValuationGroup</h3>
-<p>Valuation group by default for which available products are loaded. <code>Filter(multi eq)</code></p>
+<p>Valuation group by default for which available products are loaded.</p>
 <p>Type: <strong><a href="Logistics.Inventory.ProductValuationGroups.html">ProductValuationGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -169,7 +169,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#completiondate">CompletionDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Scheduled date of completion. Specifies the date when the workorder was completed. null means that the order is not yet completed. <code>Filter(ge;le)</code></td>
+<td>Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#creationtime">CreationTime</a></td>
@@ -204,12 +204,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#duedate">DueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The final due date, when the production should be ready. <code>Filter(ge;le)</code></td>
+<td>The final due date, when the production should be ready.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#durationhour">DurationHour</a></td>
 <td>decimal (10, 0)</td>
-<td>The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders). <code>Required</code> <code>Default(0)</code></td>
+<td>The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#entityname">EntityName</a></td>
@@ -224,17 +224,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+<td>Specifies whether the document is a single execution of its order document.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>User notes for the production order.</td>
+<td>User notes for the production order</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -249,7 +249,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#priority">Priority</a></td>
 <td><a href="Production.ShopFloor.WorkOrders.html#priority">Priority</a></td>
-<td>Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></td>
+<td>Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#readonly">ReadOnly</a></td>
@@ -269,7 +269,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#releasedate">ReleaseDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Scheduled release date. Specifies the date when the order is planned/released to production. null means that still there is no plan for releasing the order. <code>Filter(ge;le)</code></td>
+<td>Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#releasetime">ReleaseTime</a></td>
@@ -341,12 +341,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#defaultmaterialsstore">DefaultMaterialsStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>Default materials store for the ingredients. <code>Filter(multi eq)</code></td>
+<td>Default materials store for the ingredients</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#defaultoutputstore">DefaultOutputStore</a></td>
 <td><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</td>
-<td>Default output store for the finished products. <code>Filter(multi eq)</code></td>
+<td>Default output store for the finished products</td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#documenttype">DocumentType</a></td>
@@ -421,7 +421,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrders.html#workgroup">Workgroup</a></td>
 <td><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</td>
-<td>The workgroup which performs the operations. <code>Filter(multi eq)</code></td>
+<td>The workgroup which performs the operations</td>
 </tr>
 </tbody>
 </table>
@@ -566,7 +566,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="completiondate">CompletionDate</h3>
-<p>Scheduled date of completion. Specifies the date when the workorder was completed. null means that the order is not yet completed. <code>Filter(ge;le)</code></p>
+<p>Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -625,14 +625,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>The final due date, when the production should be ready. <code>Filter(ge;le)</code></p>
+<p>The final due date, when the production should be ready.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="durationhour">DurationHour</h3>
-<p>The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders). <code>Required</code> <code>Default(0)</code></p>
+<p>The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)</p>
 <p>Type: <strong>decimal (10, 0)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -656,7 +656,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -664,7 +664,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p>Specifies whether the document is a single execution of its order document.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -672,7 +672,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>User notes for the production order.</p>
+<p>User notes for the production order</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -719,7 +719,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></p>
+<p>Priority of the work order. Higher priority orders might seize resources from lower priority orders. 1=Lowest priority ... 5=Highest</p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrders.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrders.md#priority) data attribute<br>
@@ -783,7 +783,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="releasedate">ReleaseDate</h3>
-<p>Scheduled release date. Specifies the date when the order is planned/released to production. null means that still there is no plan for releasing the order. <code>Filter(ge;le)</code></p>
+<p>Scheduled release date. Specifies the date when the order is planned/released to production. NULL means that still there is no plan for releasing the order.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -979,7 +979,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="defaultmaterialsstore">DefaultMaterialsStore</h3>
-<p>Default materials store for the ingredients. <code>Filter(multi eq)</code></p>
+<p>Default materials store for the ingredients</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -987,7 +987,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.ItemIngredients.Select( c =&gt; c.Store).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="defaultoutputstore">DefaultOutputStore</h3>
-<p>Default output store for the finished products. <code>Filter(multi eq)</code></p>
+<p>Default output store for the finished products</p>
 <p>Type: <strong><a href="Logistics.Inventory.Stores.html">Stores</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1087,7 +1087,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="workgroup">Workgroup</h3>
-<p>The workgroup which performs the operations. <code>Filter(multi eq)</code></p>
+<p>The workgroup which performs the operations</p>
 <p>Type: <strong><a href="Production.Resources.Workgroups.html">Workgroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

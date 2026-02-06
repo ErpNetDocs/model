@@ -121,37 +121,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#columnname">ColumnName</a></td>
 <td>string (64)</td>
-<td>The column for which the default is specified. <code>Required</code> <code>Filter(eq)</code></td>
+<td>The column for which the default is specified</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#conditionformname">ConditionFormName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>If not null specifies that the default should be applied only if Form_Name equals the specified value. <code>Filter(eq)</code> <code>ORD</code></td>
+<td>If not NULL specifies that the default should be applied only if Form_Name equals the specified value</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#conditionuserlogin">ConditionUserLogin</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>If not null specifies that the default should be applied only if User_Login equals this value. <code>Filter(eq)</code></td>
+<td>If not NULL specifies that the default should be applied only if User_Login equals this value</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#conditionusermachine">ConditionUserMachine</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>If not null specifies that the default should be applied only if User_Machine equals this value. <code>Filter(eq)</code></td>
+<td>If not NULL specifies that the default should be applied only if User_Machine equals this value</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#defaultvaluefield">DefaultValueField</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.</td>
+<td>The default value for Column_Name. Should be applied only if the other conditions are met. NULL specifies NULL default</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#panelname">PanelName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>When not null, specifies the panel for which the default value applies. <code>Filter(eq;like)</code></td>
+<td>When not null, specifies the panel for which the default value applies.</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#tablename">TableName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The table, containing the column for which the default value is specified. <code>Filter(eq)</code></td>
+<td>The table, containing the column for which the default value is specified.</td>
 </tr>
 </tbody>
 </table>
@@ -168,17 +168,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#conditiondocumenttype">ConditionDocumentType</a></td>
 <td><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>If not null specifies that the default should be applied only if Document_Type_Id equals this value. <code>Filter(multi eq)</code></td>
+<td>If not NULL specifies that the default should be applied only if Document_Type_Id equals this value</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#conditionenterprisecompany">ConditionEnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. <code>Filter(multi eq)</code></td>
+<td>If not NULL specifies that the default should be applied only if Enterprise_Company_Id equals this value</td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DataEntryDefaultValues.html#conditionrole">ConditionRole</a></td>
 <td><a href="Systems.Security.Roles.html">Roles</a> (nullable)</td>
-<td>When not null, specifies that the default value should be applied only when the user plays the specified role. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies that the default value should be applied only when the user plays the specified role.</td>
 </tr>
 </tbody>
 </table>
@@ -226,7 +226,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="columnname">ColumnName</h3>
-<p>The column for which the default is specified. <code>Required</code> <code>Filter(eq)</code></p>
+<p>The column for which the default is specified</p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -234,7 +234,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionformname">ConditionFormName</h3>
-<p>If not null specifies that the default should be applied only if Form_Name equals the specified value. <code>Filter(eq)</code> <code>ORD</code></p>
+<p>If not NULL specifies that the default should be applied only if Form_Name equals the specified value</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -243,7 +243,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionuserlogin">ConditionUserLogin</h3>
-<p>If not null specifies that the default should be applied only if User_Login equals this value. <code>Filter(eq)</code></p>
+<p>If not NULL specifies that the default should be applied only if User_Login equals this value</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -251,7 +251,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionusermachine">ConditionUserMachine</h3>
-<p>If not null specifies that the default should be applied only if User_Machine equals this value. <code>Filter(eq)</code></p>
+<p>If not NULL specifies that the default should be applied only if User_Machine equals this value</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -259,7 +259,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="defaultvaluefield">DefaultValueField</h3>
-<p>The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.</p>
+<p>The default value for Column_Name. Should be applied only if the other conditions are met. NULL specifies NULL default</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -267,7 +267,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="panelname">PanelName</h3>
-<p>When not null, specifies the panel for which the default value applies. <code>Filter(eq;like)</code></p>
+<p>When not null, specifies the panel for which the default value applies.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -275,7 +275,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="tablename">TableName</h3>
-<p>The table, containing the column for which the default value is specified. <code>Filter(eq)</code></p>
+<p>The table, containing the column for which the default value is specified.</p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -326,19 +326,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conditiondocumenttype">ConditionDocumentType</h3>
-<p>If not null specifies that the default should be applied only if Document_Type_Id equals this value. <code>Filter(multi eq)</code></p>
+<p>If not NULL specifies that the default should be applied only if Document_Type_Id equals this value</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionenterprisecompany">ConditionEnterpriseCompany</h3>
-<p>If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. <code>Filter(multi eq)</code></p>
+<p>If not NULL specifies that the default should be applied only if Enterprise_Company_Id equals this value</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionrole">ConditionRole</h3>
-<p>When not null, specifies that the default value should be applied only when the user plays the specified role. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies that the default value should be applied only when the user plays the specified role.</p>
 <p>Type: <strong><a href="Systems.Security.Roles.html">Roles</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

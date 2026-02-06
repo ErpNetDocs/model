@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.RoleUsers.html#islayoutadmin">IsLayoutAdmin</a></td>
 <td>boolean</td>
-<td>Specifies whether the user can manage the layouts for the role. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.2.58</code></td>
+<td>Specifies whether the user can manage the layouts for the role.</td>
 </tr>
 </tbody>
 </table>
@@ -143,22 +143,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.RoleUsers.html#companylocation">CompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>Specifies the Enterprise Company Location of the selected role. Null means that role is valid for all locations belonging to the Enterprise Company. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.11</code></td>
+<td>Specifies the Enterprise Company Location of the selected role. Null means that role is valid for all locations belonging to the Enterprise Company.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.RoleUsers.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>Specifies the Enterprise Company of the selected role. Null means that the role is valid for all Enterprise Companiеs. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.11</code></td>
+<td>Specifies the Enterprise Company of the selected role. Null means that the role is valid for all Enterprise Companiеs.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.RoleUsers.html#role">Role</a></td>
 <td><a href="Systems.Security.Roles.html">Roles</a></td>
-<td>The role, played by the user. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The role, played by the user.</td>
 </tr>
 <tr>
 <td><a href="Systems.Security.RoleUsers.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, which plays the role. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The user, which plays the role.</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="islayoutadmin">IsLayoutAdmin</h3>
-<p>Specifies whether the user can manage the layouts for the role. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.2.58</code></p>
+<p>Specifies whether the user can manage the layouts for the role.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -221,26 +221,26 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="companylocation">CompanyLocation</h3>
-<p>Specifies the Enterprise Company Location of the selected role. Null means that role is valid for all locations belonging to the Enterprise Company. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.11</code></p>
+<p>Specifies the Enterprise Company Location of the selected role. Null means that role is valid for all locations belonging to the Enterprise Company.</p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Specifies the Enterprise Company of the selected role. Null means that the role is valid for all Enterprise Companiеs. <code>Filter(multi eq)</code> <code>Introduced in version 23.1.2.11</code></p>
+<p>Specifies the Enterprise Company of the selected role. Null means that the role is valid for all Enterprise Companiеs.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="role">Role</h3>
-<p>The role, played by the user. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The role, played by the user.</p>
 <p>Type: <strong><a href="Systems.Security.Roles.html">Roles</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user, which plays the role. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The user, which plays the role.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

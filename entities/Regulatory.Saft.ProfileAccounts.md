@@ -13,6 +13,15 @@ Base Table: Saft_Profile_Accounts
 Introduced In Version: 26.2.0.42  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Saft.ProfileAccounts  
+New name: Regulatory.Saft.ProfileAccounts  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Profile.Name}  
 Search Members: Profile.Name  
@@ -36,17 +45,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | Account classification in SAF-T. `Required` `Filter(eq)` 
-| [Notes](Regulatory.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping. `Filter(like)` 
-| [SignificantPropertyOrder](Regulatory.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. `Filter(eq;ge;le)` 
+| [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | Account classification in SAF-T. 
+| [Notes](Regulatory.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping. 
+| [SignificantPropertyOrder](Regulatory.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Regulatory.Saft.ProfileAccounts.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Internal general ledger account. `Required` `Filter(multi eq)` |
-| [AccountCodeEntry](Regulatory.Saft.ProfileAccounts.md#accountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. `Required` `Filter(multi eq)` `Introduced in version 26.2.0.69` |
-| [Profile](Regulatory.Saft.ProfileAccounts.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner` |
+| [Account](Regulatory.Saft.ProfileAccounts.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Internal general ledger account. |
+| [AccountCodeEntry](Regulatory.Saft.ProfileAccounts.md#accountcodeentry) | [CodeEntries](Regulatory.Common.CodeEntries.md) | The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. |
+| [Profile](Regulatory.Saft.ProfileAccounts.md#profile) | [Profiles](Regulatory.Saft.Profiles.md) | SAF-T profile this mapping belongs to. |
 
 
 ## System Attributes
@@ -62,7 +71,7 @@ Aggregate Root:
 
 ### AccountType
 
-Account classification in SAF-T. `Required` `Filter(eq)`
+Account classification in SAF-T.
 
 Type: **[AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype)**  
 Category: **System**  
@@ -81,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional details about the mapping. `Filter(like)`
+Additional details about the mapping.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -92,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### SignificantPropertyOrder
 
-Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner. `Filter(eq;ge;le)`
+Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -134,7 +143,7 @@ Show in UI: **HiddenByDefault**
 
 ### Account
 
-Internal general ledger account. `Required` `Filter(multi eq)`
+Internal general ledger account.
 
 Type: **[Accounts](Finance.Accounting.Accounts.md)**  
 Indexed: **True**  
@@ -144,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 ### AccountCodeEntry
 
-The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation. `Required` `Filter(multi eq)` `Introduced in version 26.2.0.69`
+The SAF-T account (account code) linked to the selected ERP.net account and used during SAF-T generation.
 
 Type: **[CodeEntries](Regulatory.Common.CodeEntries.md)**  
 Category: **System**  
@@ -153,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### Profile
 
-SAF-T profile this mapping belongs to. `Required` `Filter(multi eq)` `Owner`
+SAF-T profile this mapping belongs to.
 
 Type: **[Profiles](Regulatory.Saft.Profiles.md)**  
 Indexed: **True**  

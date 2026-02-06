@@ -63,32 +63,32 @@ Aggregate Tree
 | [CompleteTime](General.Activities.Activities.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](General.Activities.Activities.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](General.Activities.Activities.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DeadlineTime](General.Activities.Activities.md#deadlinetime) | datetime __nullable__ | The deadline for the task. null if there is no deadline. `Filter(ge;le)` 
+| [DeadlineTime](General.Activities.Activities.md#deadlinetime) | datetime __nullable__ | The deadline for the task. NULL if there is no deadline 
 | [DocumentDate](General.Activities.Activities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](General.Activities.Activities.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](General.Activities.Activities.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](General.Activities.Activities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [EndTime](General.Activities.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` 
+| [EndTime](General.Activities.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task 
 | [EntityName](General.Activities.Activities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](General.Activities.Activities.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](General.Activities.Activities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
-| [IsSingleExecution](General.Activities.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](General.Activities.Activities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated 
+| [IsSingleExecution](General.Activities.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. 
 | [Notes](General.Activities.Activities.md#notes) | string (max) __nullable__ | Notes for this Activity. 
 | [ParentDocument<br />RelationshipType](General.Activities.Activities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Activities.Activities.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PlannedDurationMinutes](General.Activities.Activities.md#planneddurationminutes) | int32 __nullable__ | Total planned duration of the activity, regardless of the current execution status. `Filter(ge;le)` 
+| [PlannedDurationMinutes](General.Activities.Activities.md#planneddurationminutes) | int32 __nullable__ | Total planned duration of the activity 
 | [PlanningOnly](General.Activities.Activities.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Priority](General.Activities.Activities.md#priority) | [Priority](General.Activities.Activities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important). `Required` `Default(3)` 
-| [Private](General.Activities.Activities.md#private) | boolean | True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)` 
+| [Priority](General.Activities.Activities.md#priority) | [Priority](General.Activities.Activities.md#priority) | Priority on the scale from 1 (least important) to 5 (very important) 
+| [Private](General.Activities.Activities.md#private) | boolean | 1 if the task is visible only to its owner; 0 if this is publicly visible task 
 | [ReadOnly](General.Activities.Activities.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](General.Activities.Activities.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](General.Activities.Activities.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](General.Activities.Activities.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReminderTime](General.Activities.Activities.md#remindertime) | datetime __nullable__ | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. `Filter(ge;le)` 
-| [StartTime](General.Activities.Activities.md#starttime) | datetime | Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)` 
+| [ReminderTime](General.Activities.Activities.md#remindertime) | datetime __nullable__ | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. 
+| [StartTime](General.Activities.Activities.md#starttime) | datetime | Currently planned starting time of the task 
 | [State](General.Activities.Activities.md#state) | [DocumentState](General.Activities.Activities.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](General.Activities.Activities.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Subject](General.Activities.Activities.md#subject) | string (254) | Task primary subject (required). `Required` `Filter(eq;like)` 
-| [SystemType](General.Activities.Activities.md#systemtype) | [SystemType](General.Activities.Activities.md#systemtype) | T=Task; C=Communication; M=Meeting. `Required` 
+| [Subject](General.Activities.Activities.md#subject) | string (254) | Task primary subject (required) 
+| [SystemType](General.Activities.Activities.md#systemtype) | [SystemType](General.Activities.Activities.md#systemtype) | T=Task; C=Communication; M=Meeting 
 | [Void](General.Activities.Activities.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](General.Activities.Activities.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](General.Activities.Activities.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -101,7 +101,7 @@ Aggregate Tree
 | [AccessKey](General.Activities.Activities.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustedDocument](General.Activities.Activities.md#adjusteddocument) | [Documents](General.Documents.Documents.md) (nullable) | The primary document, which the current document adjusts. null when this is not an adjustment document. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AssignedToUser](General.Activities.Activities.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ContactPerson](General.Activities.Activities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. `Filter(multi eq)` |
+| [ContactPerson](General.Activities.Activities.md#contactperson) | [Persons](General.Contacts.Persons.md) (nullable) | The contact person, from the side of the Target Party. |
 | [CurrencyDirectory](General.Activities.Activities.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](General.Activities.Activities.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](General.Activities.Activities.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -109,16 +109,16 @@ Aggregate Tree
 | [FromCompanyDivision](General.Activities.Activities.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](General.Activities.Activities.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](General.Activities.Activities.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [OwnerParty](General.Activities.Activities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)` |
+| [OwnerParty](General.Activities.Activities.md#ownerparty) | [Parties](General.Contacts.Parties.md) | The party that owns the task. Initially this is the party that has created the task |
 | [Parent](General.Activities.Activities.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](General.Activities.Activities.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ProjectTask](General.Activities.Activities.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)` |
-| [ResponsibleParty](General.Activities.Activities.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)` |
+| [ProjectTask](General.Activities.Activities.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable) | The project task for which the work is performed. NULL when the activity is not related to a project task. |
+| [ResponsibleParty](General.Activities.Activities.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task |
 | [ResponsiblePerson](General.Activities.Activities.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](General.Activities.Activities.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Sequence](General.Activities.Activities.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SocialGroup](General.Activities.Activities.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). `Filter(multi eq)` `Introduced in version 23.1.1.3` |
-| [TargetParty](General.Activities.Activities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` |
+| [SocialGroup](General.Activities.Activities.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Associates the activity with the specified social group. NULL means that this event is not related to a social group and might be publicly visible (can still be marked as private). |
+| [TargetParty](General.Activities.Activities.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task |
 | [ToCompanyDivision](General.Activities.Activities.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](General.Activities.Activities.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](General.Activities.Activities.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -221,7 +221,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeadlineTime
 
-The deadline for the task. null if there is no deadline. `Filter(ge;le)`
+The deadline for the task. NULL if there is no deadline
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -277,7 +277,7 @@ Show in UI: **HiddenByDefault**
 
 ### EndTime
 
-Currently planned ending time of the task. `Filter(ge;le)`
+Currently planned ending time of the task
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -309,7 +309,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated
 
 Type: **boolean**  
 Category: **System**  
@@ -320,7 +320,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+Specifies whether the document is a single execution of its order document.
 
 Type: **boolean**  
 Category: **System**  
@@ -361,7 +361,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlannedDurationMinutes
 
-Total planned duration of the activity, regardless of the current execution status. `Filter(ge;le)`
+Total planned duration of the activity
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -382,7 +382,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority on the scale from 1 (least important) to 5 (very important). `Required` `Default(3)`
+Priority on the scale from 1 (least important) to 5 (very important)
 
 Type: **[Priority](General.Activities.Activities.md#priority)**  
 Category: **System**  
@@ -404,7 +404,7 @@ Show in UI: **ShownByDefault**
 
 ### Private
 
-True if the task is visible only to its owner; false if this is publicly visible task. `Required` `Default(false)`
+1 if the task is visible only to its owner; 0 if this is publicly visible task
 
 Type: **boolean**  
 Category: **System**  
@@ -458,7 +458,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReminderTime
 
-When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. `Filter(ge;le)`
+When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -468,7 +468,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)`
+Currently planned starting time of the task
 
 Type: **datetime**  
 Category: **System**  
@@ -513,7 +513,7 @@ Show in UI: **HiddenByDefault**
 
 ### Subject
 
-Task primary subject (required). `Required` `Filter(eq;like)`
+Task primary subject (required)
 
 Type: **string (254)**  
 Category: **System**  
@@ -527,7 +527,7 @@ Back-End Default Expression:
 
 ### SystemType
 
-T=Task; C=Communication; M=Meeting. `Required`
+T=Task; C=Communication; M=Meeting
 
 Type: **[SystemType](General.Activities.Activities.md#systemtype)**  
 Category: **System**  
@@ -690,7 +690,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPerson
 
-The contact person, from the side of the Target Party. `Filter(multi eq)`
+The contact person, from the side of the Target Party.
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -765,7 +765,7 @@ Show in UI: **HiddenByDefault**
 
 ### OwnerParty
 
-The party that owns the task. Initially this is the party that has created the task. `Required` `Filter(multi eq)`
+The party that owns the task. Initially this is the party that has created the task
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Category: **System**  
@@ -794,7 +794,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProjectTask
 
-The project task for which the work is performed. null when the activity is not related to a project task. `Filter(multi eq)`
+The project task for which the work is performed. NULL when the activity is not related to a project task.
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md) (nullable)**  
 Category: **System**  
@@ -803,7 +803,7 @@ Show in UI: **ShownByDefault**
 
 ### ResponsibleParty
 
-Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)`
+Who is responsible for executing the task. Initially this is the owner of the task
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  
@@ -840,7 +840,7 @@ Show in UI: **HiddenByDefault**
 
 ### SocialGroup
 
-Associates the activity with the specified social group. null means that this event is not related to a social group and might be publicly visible (can still be marked as private). `Filter(multi eq)` `Introduced in version 23.1.1.3`
+Associates the activity with the specified social group. NULL means that this event is not related to a social group and might be publicly visible (can still be marked as private).
 
 Type: **[Groups](Communities.Social.Groups.md) (nullable)**  
 Category: **System**  
@@ -849,7 +849,7 @@ Show in UI: **ShownByDefault**
 
 ### TargetParty
 
-External participant or target of the task. `Filter(multi eq)`
+External participant or target of the task
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  

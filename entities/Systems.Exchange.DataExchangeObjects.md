@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreatedOn](Systems.Exchange.DataExchangeObjects.md#createdon) | datetime | The time (in UTC) when the object is created. `Required` `Filter(ge;le)` `ReadOnly` 
-| [ExchangeMessage](Systems.Exchange.DataExchangeObjects.md#exchangemessage) | string (max) __nullable__ | Status message for this object after the last exchange attempt. `Filter(like)` 
-| [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status. `Required` `Default("N")` `Filter(eq)` 
-| [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring. `Required` `Default("MER")` `Filter(eq)` 
-| [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes for the exchanged object. `Filter(like)` 
-| [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | Reason for adding the object. `Required` `Default("C")` `Filter(eq)` 
+| [CreatedOn](Systems.Exchange.DataExchangeObjects.md#createdon) | datetime | The time (in UTC) when the object is created. 
+| [ExchangeMessage](Systems.Exchange.DataExchangeObjects.md#exchangemessage) | string (max) __nullable__ | Status message for this object after the last exchange attempt. 
+| [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status. 
+| [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring. 
+| [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes for the exchanged object 
+| [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | Reason for adding the object. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataExchange](Systems.Exchange.DataExchangeObjects.md#dataexchange) | [DataExchanges](Systems.Exchange.DataExchanges.md) | The exchange of the object. `Required` `Filter(multi eq)` `Owner` |
-| [DataObject](Systems.Exchange.DataExchangeObjects.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The data object which will be transferred. `Required` `Filter(multi eq)` |
+| [DataExchange](Systems.Exchange.DataExchangeObjects.md#dataexchange) | [DataExchanges](Systems.Exchange.DataExchanges.md) | The exchange of the object. |
+| [DataObject](Systems.Exchange.DataExchangeObjects.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The data object which will be transferred. |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### CreatedOn
 
-The time (in UTC) when the object is created. `Required` `Filter(ge;le)` `ReadOnly`
+The time (in UTC) when the object is created.
 
 Type: **datetime**  
 Category: **System**  
@@ -77,7 +77,7 @@ Back-End Default Expression:
 
 ### ExchangeMessage
 
-Status message for this object after the last exchange attempt. `Filter(like)`
+Status message for this object after the last exchange attempt.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ExchangeResult
 
-Transfer status. `Required` `Default("N")` `Filter(eq)`
+Transfer status.
 
 Type: **[ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Mode
 
-Operation mode for the object when transferring. `Required` `Default("MER")` `Filter(eq)`
+Operation mode for the object when transferring.
 
 Type: **[Mode](Systems.Exchange.DataExchangeObjects.md#mode)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the exchanged object. `Filter(like)`
+Notes for the exchanged object
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### Reason
 
-Reason for adding the object. `Required` `Default("C")` `Filter(eq)`
+Reason for adding the object.
 
 Type: **[Reason](Systems.Exchange.DataExchangeObjects.md#reason)**  
 Category: **System**  
@@ -191,7 +191,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataExchange
 
-The exchange of the object. `Required` `Filter(multi eq)` `Owner`
+The exchange of the object.
 
 Type: **[DataExchanges](Systems.Exchange.DataExchanges.md)**  
 Indexed: **True**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 ### DataObject
 
-The data object which will be transferred. `Required` `Filter(multi eq)`
+The data object which will be transferred.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Indexed: **True**  

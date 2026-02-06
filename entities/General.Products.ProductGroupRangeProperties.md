@@ -37,7 +37,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FromPropertyValue](General.Products.ProductGroupRangeProperties.md#frompropertyvalue) | string (254) __nullable__ | Starting value of the range of alternative values. Used only when Rage Type = R (range). 
 | [PropertyValuesList](General.Products.ProductGroupRangeProperties.md#propertyvalueslist) | string (max) __nullable__ | Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio). 
-| [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")` 
+| [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values; 
 | [ToPropertyValue](General.Products.ProductGroupRangeProperties.md#topropertyvalue) | string (254) __nullable__ | Ending value of the range of alternative values. Used only when Rage Type = R (range). 
 
 ## References
@@ -45,7 +45,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The <see cref="ProductGroup"/> to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The property whose values will be altered. `Required` `Filter(multi eq)` |
+| [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](Systems.Bpm.CustomProperties.md) | The property whose values will be altered. |
 
 
 ## System Attributes
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### RangeType
 
-Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")`
+Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;
 
 Type: **[RangeType](General.Products.ProductGroupRangeProperties.md#rangetype)**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### Property
 
-The property whose values will be altered. `Required` `Filter(multi eq)`
+The property whose values will be altered.
 
 Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
 Category: **System**  

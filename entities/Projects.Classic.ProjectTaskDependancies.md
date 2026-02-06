@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). `Required` `Default("FS")` 
+| [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnTask](Projects.Classic.ProjectTaskDependancies.md#dependsontask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The task on which Project_Task depends. `Required` `Filter(multi eq)` |
-| [ProjectTask](Projects.Classic.ProjectTaskDependancies.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The task which depends on another task. `Required` `Filter(multi eq)` `Owner` |
+| [DependsOnTask](Projects.Classic.ProjectTaskDependancies.md#dependsontask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The task on which Project_Task depends |
+| [ProjectTask](Projects.Classic.ProjectTaskDependancies.md#projecttask) | [ProjectTasks](Projects.Classic.ProjectTasks.md) | The task which depends on another task |
 
 
 ## System Attributes
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### DependancyType
 
-FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). `Required` `Default("FS")`
+FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)
 
 Type: **[DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype)**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **HiddenByDefault**
 
 ### DependsOnTask
 
-The task on which Project_Task depends. `Required` `Filter(multi eq)`
+The task on which Project_Task depends
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectTask
 
-The task which depends on another task. `Required` `Filter(multi eq)` `Owner`
+The task which depends on another task
 
 Type: **[ProjectTasks](Projects.Classic.ProjectTasks.md)**  
 Category: **System**  

@@ -34,36 +34,36 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConfirmedQuantity](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. `Unit: QuantityUnit` 
-| [ConfirmedQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` 
-| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2` 
+| [ConfirmedQuantity](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. 
+| [ConfirmedQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. 
+| [ConfirmedStandard<br />QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#confirmedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios. 
 | [CurrentBalanceBase](Logistics.Procurement.ReceivingOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [Finished](Logistics.Procurement.ReceivingOrderLines.md#finished) | boolean | When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. `Required` `Default(false)` 
-| [LineAmount](Logistics.Procurement.ReceivingOrderLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)` 
+| [Finished](Logistics.Procurement.ReceivingOrderLines.md#finished) | boolean | Checked if this receiving order should prohibit further receiving order for the purchase order line. 
+| [LineAmount](Logistics.Procurement.ReceivingOrderLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | The total amount for the line. Equals to Quantity * Price_Per_Unit 
 | [LineNo](Logistics.Procurement.ReceivingOrderLines.md#lineno) | int32 | Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Logistics.Procurement.ReceivingOrderLines.md#notes) | string (254) __nullable__ | Notes for this ReceivingOrderLine. 
-| [PricePerUnit](Logistics.Procurement.ReceivingOrderLines.md#priceperunit) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Default(0)` 
-| [ProductDescription](Logistics.Procurement.ReceivingOrderLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. `Required` 
-| [Quantity](Logistics.Procurement.ReceivingOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
-| [QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [StandardQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [PricePerUnit](Logistics.Procurement.ReceivingOrderLines.md#priceperunit) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | The unit price of the received products, in the documents currency. 
+| [ProductDescription](Logistics.Procurement.ReceivingOrderLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. 
+| [Quantity](Logistics.Procurement.ReceivingOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The received quantity. 
+| [QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. 
+| [StandardQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Procurement.ReceivingOrderLines.md#document) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The owner document. The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` |
-| [LineStore](Logistics.Procurement.ReceivingOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods are received. `Filter(multi eq)` |
-| [Lot](Logistics.Procurement.ReceivingOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the received goods. `Filter(multi eq)` |
-| [Product](Logistics.Procurement.ReceivingOrderLines.md#product) | [Products](General.Products.Products.md) | The received product. `Required` `Filter(multi eq)` |
-| [ProductCode](Logistics.Procurement.ReceivingOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | When not null, specifies that the product was selected using the specified product code record. `Filter(multi eq)` |
-| [ProductVariant](Logistics.Procurement.ReceivingOrderLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. `Filter(multi eq)` |
-| [PurchaseOrderLine](Logistics.Procurement.ReceivingOrderLines.md#purchaseorderline) | [PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable) | The purchase order line for which we are receiving quantity. `Filter(multi eq)` |
-| [PurchaseProductPrice](Logistics.Procurement.ReceivingOrderLines.md#purchaseproductprice) | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable) | When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. `Filter(multi eq)` |
-| [QuantityUnit](Logistics.Procurement.ReceivingOrderLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. `Required` `Filter(multi eq)` |
+| [LineStore](Logistics.Procurement.ReceivingOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Store which will receive the product from this line. |
+| [Lot](Logistics.Procurement.ReceivingOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the received goods. |
+| [Product](Logistics.Procurement.ReceivingOrderLines.md#product) | [Products](General.Products.Products.md) | The received product. |
+| [ProductCode](Logistics.Procurement.ReceivingOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product through some of the product codes |
+| [ProductVariant](Logistics.Procurement.ReceivingOrderLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | If specified determines which product variant of the current product in this line is used. |
+| [PurchaseOrderLine](Logistics.Procurement.ReceivingOrderLines.md#purchaseorderline) | [PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable) | The purchase order line for which we are receiving quantity. |
+| [PurchaseProductPrice](Logistics.Procurement.ReceivingOrderLines.md#purchaseproductprice) | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable) | When not NULL, specifies that the purchase unit price is loaded automatically from the specified purchase price record. |
+| [QuantityUnit](Logistics.Procurement.ReceivingOrderLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. |
 | [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [SerialNumber](Logistics.Procurement.ReceivingOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` |
-| [StoreBin](Logistics.Procurement.ReceivingOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin in which to receive the goods. `Filter(multi eq)` |
+| [SerialNumber](Logistics.Procurement.ReceivingOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product. NULL means that the serial number is unknown or not applicable. |
+| [StoreBin](Logistics.Procurement.ReceivingOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin in which to receive the goods. |
 
 
 ## System Attributes
@@ -79,7 +79,7 @@ Aggregate Root:
 
 ### ConfirmedQuantity
 
-The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. `Unit: QuantityUnit`
+The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConfirmedQuantityBase
 
-The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit`
+The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConfirmedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2`
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **HiddenByDefault**
 
 ### Finished
 
-When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. `Required` `Default(false)`
+Checked if this receiving order should prohibit further receiving order for the purchase order line.
 
 Type: **boolean**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineAmount
 
-The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)`
+The total amount for the line. Equals to Quantity * Price_Per_Unit
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **HiddenByDefault**
 
 ### PricePerUnit
 
-The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Default(0)`
+The unit price of the received products, in the documents currency.
 
 Type: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -189,7 +189,7 @@ Front-End Recalc Expressions:
 `obj.PurchaseProductPrice.GetPurchasePrice( obj.QuantityUnit, obj.ReceivingOrder.CurrencyDirectory, obj.ReceivingOrder.DocumentCurrency)`
 ### ProductDescription
 
-The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. `Required`
+The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Front-End Recalc Expressions:
 `obj.Product.Name`
 ### Quantity
 
-The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
+The received quantity.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -215,7 +215,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
+The equivalence of Quantity, in the base measurement category of the product.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -230,7 +230,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -287,7 +287,7 @@ Show in UI: **ShownByDefault**
 
 ### LineStore
 
-The store in which the goods are received. `Filter(multi eq)`
+Store which will receive the product from this line.
 
 Type: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
 Category: **System**  
@@ -301,7 +301,7 @@ Front-End Recalc Expressions:
 `obj.ReceivingOrder.Store`
 ### Lot
 
-The lot of the received goods. `Filter(multi eq)`
+The lot of the received goods.
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Indexed: **True**  
@@ -311,7 +311,7 @@ Show in UI: **HiddenByDefault**
 
 ### Product
 
-The received product. `Required` `Filter(multi eq)`
+The received product.
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -321,7 +321,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCode
 
-When not null, specifies that the product was selected using the specified product code record. `Filter(multi eq)`
+Selects the product through some of the product codes
 
 Type: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
 Category: **System**  
@@ -330,7 +330,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProductVariant
 
-If specified determines which product variant of the current product in this line is used. `Filter(multi eq)`
+If specified determines which product variant of the current product in this line is used.
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 Category: **System**  
@@ -339,7 +339,7 @@ Show in UI: **HiddenByDefault**
 
 ### PurchaseOrderLine
 
-The purchase order line for which we are receiving quantity. `Filter(multi eq)`
+The purchase order line for which we are receiving quantity.
 
 Type: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
 Indexed: **True**  
@@ -349,7 +349,7 @@ Show in UI: **HiddenByDefault**
 
 ### PurchaseProductPrice
 
-When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. `Filter(multi eq)`
+When not NULL, specifies that the purchase unit price is loaded automatically from the specified purchase price record.
 
 Type: **[PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable)**  
 Category: **System**  
@@ -360,7 +360,7 @@ Front-End Recalc Expressions:
 `obj.DeterminePurchaseProductPrice( Convert( obj.ReceivingOrder.DocumentDate, Nullable`1), obj.ReceivingOrder.Supplier, obj.Product, ( obj.ConfirmedQuantity ?? obj.Quantity), obj.ReceivingOrder.EnterpriseCompany, obj.ReceivingOrder.PurchasePriceList)`
 ### QuantityUnit
 
-The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. `Required` `Filter(multi eq)`
+The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -385,7 +385,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)`
+Serial number of the product. NULL means that the serial number is unknown or not applicable.
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  
@@ -394,7 +394,7 @@ Show in UI: **HiddenByDefault**
 
 ### StoreBin
 
-The store bin in which to receive the goods. `Filter(multi eq)`
+The store bin in which to receive the goods.
 
 Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
 Category: **System**  

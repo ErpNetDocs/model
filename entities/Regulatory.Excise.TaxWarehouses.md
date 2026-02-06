@@ -13,6 +13,15 @@ Base Table: Exc_Tax_Warehouses
 Introduced In Version: 21.1.1.1  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.TaxWarehouses  
+New name: Regulatory.Excise.TaxWarehouses  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Name:T}  
 Search Members: TaxWarehouseExciseNumber; Name  
@@ -35,16 +44,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CustomsOffice](Regulatory.Excise.TaxWarehouses.md#customsoffice) | string (32) __nullable__ | The customs office to which the warehouse is headed. `Filter(like)` `Introduced in version 22.1.4.93` 
-| [Name](Regulatory.Excise.TaxWarehouses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93` 
-| [TaxWarehouseExciseNumber](Regulatory.Excise.TaxWarehouses.md#taxwarehouseexcisenumber) | string (32) | The excise identification number of the tax warehouse, issued by the competent authorities. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
-| [TraderExciseNumber](Regulatory.Excise.TaxWarehouses.md#traderexcisenumber) | string (32) | The excise identification number of the owner of the Tax Warehouse. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
+| [CustomsOffice](Regulatory.Excise.TaxWarehouses.md#customsoffice) | string (32) __nullable__ | The customs office to which the warehouse is headed. 
+| [Name](Regulatory.Excise.TaxWarehouses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage) 
+| [TaxWarehouseExciseNumber](Regulatory.Excise.TaxWarehouses.md#taxwarehouseexcisenumber) | string (32) | The excise identification number of the tax warehouse, issued by the competent authorities. 
+| [TraderExciseNumber](Regulatory.Excise.TaxWarehouses.md#traderexcisenumber) | string (32) | The excise identification number of the owner of the Tax Warehouse. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EnterpriseCompany](Regulatory.Excise.TaxWarehouses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise company to which the tax warehouse belongs. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.91` |
+| [EnterpriseCompany](Regulatory.Excise.TaxWarehouses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise company to which the tax warehouse belongs. |
 
 
 ## System Attributes
@@ -63,7 +72,7 @@ Aggregate Tree
 
 ### CustomsOffice
 
-The customs office to which the warehouse is headed. `Filter(like)` `Introduced in version 22.1.4.93`
+The customs office to which the warehouse is headed.
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -74,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93`
+Tax Warehouse Name (Multilanguage)
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -84,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxWarehouseExciseNumber
 
-The excise identification number of the tax warehouse, issued by the competent authorities. `Required` `Default("-")` `Introduced in version 21.1.3.87`
+The excise identification number of the tax warehouse, issued by the competent authorities.
 
 Type: **string (32)**  
 Category: **System**  
@@ -96,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### TraderExciseNumber
 
-The excise identification number of the owner of the Tax Warehouse. `Required` `Default("-")` `Introduced in version 21.1.3.87`
+The excise identification number of the owner of the Tax Warehouse.
 
 Type: **string (32)**  
 Category: **System**  
@@ -170,7 +179,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompany
 
-The Enterprise company to which the tax warehouse belongs. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.91`
+The Enterprise company to which the tax warehouse belongs.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  

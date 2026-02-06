@@ -160,12 +160,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#arrivaldate">ArrivalDate</a></td>
 <td>date</td>
-<td>Planned arrival date. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Planned arrival date.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#arrivaltime">ArrivalTime</a></td>
 <td>time</td>
-<td>Planned arrival time. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Planned arrival time.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#completetime">CompleteTime</a></td>
@@ -185,12 +185,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#departuredate">DepartureDate</a></td>
 <td>date</td>
-<td>Planned departure date. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Planned departure date.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#departuretime">DepartureTime</a></td>
 <td>time</td>
-<td>Planned departure time. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Planned departure time.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#documentdate">DocumentDate</a></td>
@@ -312,12 +312,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#carrier">Carrier</a></td>
 <td><a href="Logistics.Shipment.Carriers.html">Carriers</a> (nullable)</td>
-<td>The carrier chosen for this transportation. null when the transportation is done with own transport. <code>Filter(multi eq)</code></td>
+<td>The carrier chosen for this transportation. NULL when the transportation is done with own transport.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#crew">Crew</a></td>
 <td><a href="Applications.Fleet.Crews.html">Crews</a> (nullable)</td>
-<td>The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></td>
+<td>The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#currencydirectory">CurrencyDirectory</a></td>
@@ -347,7 +347,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#fromgeopoint">FromGeoPoint</a></td>
 <td><a href="General.Geography.GeoPoints.html">GeoPoints</a></td>
-<td>The geographic point from which the route begins. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The geographic point from which the route begins.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#fromparty">FromParty</a></td>
@@ -392,7 +392,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#togeopoint">ToGeoPoint</a></td>
 <td><a href="General.Geography.GeoPoints.html">GeoPoints</a></td>
-<td>The geographic point at which the route ends. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The geographic point at which the route ends.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#toparty">ToParty</a></td>
@@ -402,12 +402,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#transportationmode">TransportationMode</a></td>
 <td><a href="Logistics.Transportation.TransportationModes.html">TransportationModes</a> (nullable)</td>
-<td>The mode of transportation which should be used for this order. null when it is unknown or doesn't matter. <code>Filter(multi eq)</code></td>
+<td>The mode of transportation which should be used for this order. NULL when it is unknown or doesn't matter.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#transportationvehicle">TransportationVehicle</a></td>
 <td><a href="Logistics.Transportation.TransportationVehicles.html">TransportationVehicles</a> (nullable)</td>
-<td>The own transportation vehicle, which will be used for the transportation. <code>Filter(multi eq)</code></td>
+<td>The own transportation vehicle, which will be used for the transportation.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Transportation.TransportationOrders.html#userstatus">UserStatus</a></td>
@@ -545,14 +545,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="arrivaldate">ArrivalDate</h3>
-<p>Planned arrival date. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Planned arrival date.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="arrivaltime">ArrivalTime</h3>
-<p>Planned arrival time. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Planned arrival time.</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -582,14 +582,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="departuredate">DepartureDate</h3>
-<p>Planned departure date. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Planned departure date.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="departuretime">DepartureTime</h3>
-<p>Planned departure time. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Planned departure time.</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -890,13 +890,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="carrier">Carrier</h3>
-<p>The carrier chosen for this transportation. null when the transportation is done with own transport. <code>Filter(multi eq)</code></p>
+<p>The carrier chosen for this transportation. NULL when the transportation is done with own transport.</p>
 <p>Type: <strong><a href="Logistics.Shipment.Carriers.html">Carriers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="crew">Crew</h3>
-<p>The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
+<p>The crew which is assigned to operate the vehicle of the current Transportation Order. If null means the crew is yet unknown or the order is executed by external carrier.</p>
 <p>Type: <strong><a href="Applications.Fleet.Crews.html">Crews</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -934,7 +934,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="fromgeopoint">FromGeoPoint</h3>
-<p>The geographic point from which the route begins. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The geographic point from which the route begins.</p>
 <p>Type: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -991,7 +991,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="togeopoint">ToGeoPoint</h3>
-<p>The geographic point at which the route ends. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The geographic point at which the route ends.</p>
 <p>Type: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -1005,13 +1005,13 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.ObtainToParty( )</code></p>
 <h3 id="transportationmode">TransportationMode</h3>
-<p>The mode of transportation which should be used for this order. null when it is unknown or doesn't matter. <code>Filter(multi eq)</code></p>
+<p>The mode of transportation which should be used for this order. NULL when it is unknown or doesn't matter.</p>
 <p>Type: <strong><a href="Logistics.Transportation.TransportationModes.html">TransportationModes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transportationvehicle">TransportationVehicle</h3>
-<p>The own transportation vehicle, which will be used for the transportation. <code>Filter(multi eq)</code></p>
+<p>The own transportation vehicle, which will be used for the transportation.</p>
 <p>Type: <strong><a href="Logistics.Transportation.TransportationVehicles.html">TransportationVehicles</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

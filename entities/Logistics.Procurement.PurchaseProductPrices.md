@@ -32,26 +32,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Logistics.Procurement.PurchaseProductPrices.md#fromdate) | datetime __nullable__ | Starting date of validity of the price. `Filter(eq;ge;le)` 
-| [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
-| [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
+| [FromDate](Logistics.Procurement.PurchaseProductPrices.md#fromdate) | datetime __nullable__ | Starting date of validity of the price. Usually used for temporary promotions. 
+| [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which is valid this price (in the price quantity measurement unit). 
+| [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the price quantity measurement unit). 
 | [Notes](Logistics.Procurement.PurchaseProductPrices.md#notes) | string (254) __nullable__ | Notes for this PurchaseProductPrice. 
-| [Price](Logistics.Procurement.PurchaseProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` 
-| [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` 
-| [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | Priority of the price comparative to other prices. `Required` `Default(2)` `Filter(multi eq)` 
-| [ThruDate](Logistics.Procurement.PurchaseProductPrices.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)` 
+| [Price](Logistics.Procurement.PurchaseProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied. 
+| [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. 
+| [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | Priority of the price comparative to other prices valid for current document. 
+| [ThruDate](Logistics.Procurement.PurchaseProductPrices.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of the validity of the price. Usually used for temporary promotions. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Logistics.Procurement.PurchaseProductPrices.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the price. `Required` `Filter(multi eq)` |
-| [EnterpriseCompany](Logistics.Procurement.PurchaseProductPrices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. `Filter(multi eq)` |
-| [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseProductPrices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations. `Filter(multi eq)` `Introduced in version 24.1.4.35` |
-| [PriceQuantityMeasurement<br />Unit](Logistics.Procurement.PurchaseProductPrices.md#pricequantitymeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Price_Quantity. `Required` `Filter(multi eq)` |
-| [Product](Logistics.Procurement.PurchaseProductPrices.md#product) | [Products](General.Products.Products.md) | The product for which a purchase price will be defined. `Required` `Filter(multi eq)` |
-| [PurchasePriceList](Logistics.Procurement.PurchaseProductPrices.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. `Filter(multi eq)` |
-| [Supplier](Logistics.Procurement.PurchaseProductPrices.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | When not null, specifies that the price is valid only for the specified supplier. `Filter(multi eq)` |
+| [Currency](Logistics.Procurement.PurchaseProductPrices.md#currency) | [Currencies](General.Currencies.Currencies.md) | The currency of the specified price. |
+| [EnterpriseCompany](Logistics.Procurement.PurchaseProductPrices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. |
+| [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseProductPrices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations. |
+| [PriceQuantityMeasurement<br />Unit](Logistics.Procurement.PurchaseProductPrices.md#pricequantitymeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of the price quantity. |
+| [Product](Logistics.Procurement.PurchaseProductPrices.md#product) | [Products](General.Products.Products.md) | The product for which a purchase price will be defined. |
+| [PurchasePriceList](Logistics.Procurement.PurchaseProductPrices.md#purchasepricelist) | [PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable) | Specifies in which purchase price list this price is included. This price is used only when the purchase price list is specified in the current document. |
+| [Supplier](Logistics.Procurement.PurchaseProductPrices.md#supplier) | [Suppliers](Logistics.Procurement.Suppliers.md) (nullable) | The price is used only for this supplier if specified. |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### FromDate
 
-Starting date of validity of the price. `Filter(eq;ge;le)`
+Starting date of validity of the price. Usually used for temporary promotions.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **HiddenByDefault**
 
 ### MaxQuantity
 
-Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. `Unit: PriceQuantityMeasurementUnit` `Filter(eq)`
+Maximum quantity for which is valid this price (in the price quantity measurement unit).
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **HiddenByDefault**
 
 ### MinQuantity
 
-Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurementUnit` `Filter(eq)`
+Minimal quantity required to use this price (in the price quantity measurement unit).
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **HiddenByDefault**
 
 ### Price
 
-Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)`
+Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied.
 
 Type: **[Amount (13, 5)](../data-types.md#amount)**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceQuantity
 
-The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)`
+The quantity of the product for which the price is specified.
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority of the price comparative to other prices. `Required` `Default(2)` `Filter(multi eq)`
+Priority of the price comparative to other prices valid for current document.
 
 Type: **[Priority](Logistics.Procurement.PurchaseProductPrices.md#priority)**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)`
+Ending date (inclusive) of the validity of the price. Usually used for temporary promotions.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -227,7 +227,7 @@ Show in UI: **HiddenByDefault**
 
 ### Currency
 
-The currency of the price. `Required` `Filter(multi eq)`
+The currency of the specified price.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
 Category: **System**  
@@ -236,7 +236,7 @@ Show in UI: **ShownByDefault**
 
 ### EnterpriseCompany
 
-Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. `Filter(multi eq)`
+Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies.
 
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 Category: **System**  
@@ -245,7 +245,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations. `Filter(multi eq)` `Introduced in version 24.1.4.35`
+Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
@@ -254,7 +254,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceQuantityMeasurementUnit
 
-The measurement unit of Price_Quantity. `Required` `Filter(multi eq)`
+The measurement unit of the price quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -265,7 +265,7 @@ Front-End Recalc Expressions:
 `obj.Product.BaseUnit.IfNullThen( obj.PriceQuantityMeasurementUnit)`
 ### Product
 
-The product for which a purchase price will be defined. `Required` `Filter(multi eq)`
+The product for which a purchase price will be defined.
 
 Type: **[Products](General.Products.Products.md)**  
 Indexed: **True**  
@@ -275,7 +275,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchasePriceList
 
-When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. `Filter(multi eq)`
+Specifies in which purchase price list this price is included. This price is used only when the purchase price list is specified in the current document.
 
 Type: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
 Category: **System**  
@@ -284,7 +284,7 @@ Show in UI: **ShownByDefault**
 
 ### Supplier
 
-When not null, specifies that the price is valid only for the specified supplier. `Filter(multi eq)`
+The price is used only for this supplier if specified.
 
 Type: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
 Category: **System**  

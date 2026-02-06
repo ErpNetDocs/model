@@ -120,17 +120,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Starting date of validity of the price. <code>Filter(eq;ge;le)</code></td>
+<td>Starting date of validity of the price. Usually used for temporary promotions.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#maxquantity">MaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Maximum quantity for which this price is valid in the Price_Quantity_<br>Measurement_Unit. <code>Unit: PriceQuantityMeasurement&lt;br /&gt;Unit</code> <code>Filter(eq)</code></td>
+<td>Maximum quantity for which is valid this price (in the price quantity measurement unit).</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#minquantity">MinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). <code>Unit: PriceQuantityMeasurement&lt;br /&gt;Unit</code> <code>Filter(eq)</code></td>
+<td>Minimal quantity required to use this price (in the price quantity measurement unit).</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#notes">Notes</a></td>
@@ -140,22 +140,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#price">Price</a></td>
 <td><a href="../data-types.html#amount">Amount (13, 5)</a></td>
-<td>Price in the specified currency and for the specified quantity. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></td>
+<td>Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#pricequantity">PriceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a></td>
-<td>The quantity of the product for which the price is specified. <code>Unit: PriceQuantityMeasurement&lt;br /&gt;Unit</code> <code>Required</code> <code>Default(1)</code></td>
+<td>The quantity of the product for which the price is specified.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a></td>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a></td>
-<td>Priority of the price comparative to other prices. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
+<td>Priority of the price comparative to other prices valid for current document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></td>
+<td>Ending date (inclusive) of the validity of the price. Usually used for temporary promotions.</td>
 </tr>
 </tbody>
 </table>
@@ -172,37 +172,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#currency">Currency</a></td>
 <td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The currency of the price. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The currency of the specified price.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. <code>Filter(multi eq)</code></td>
+<td>Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.35</code></td>
+<td>Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#pricequantitymeasurementunit">PriceQuantityMeasurement<br>Unit</a></td>
 <td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></td>
-<td>The measurement unit of Price_Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The measurement unit of the price quantity.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td>The product for which a purchase price will be defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The product for which a purchase price will be defined.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#purchasepricelist">PurchasePriceList</a></td>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</td>
-<td>When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. <code>Filter(multi eq)</code></td>
+<td>Specifies in which purchase price list this price is included. This price is used only when the purchase price list is specified in the current document.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#supplier">Supplier</a></td>
 <td><a href="Logistics.Procurement.Suppliers.html">Suppliers</a> (nullable)</td>
-<td>When not null, specifies that the price is valid only for the specified supplier. <code>Filter(multi eq)</code></td>
+<td>The price is used only for this supplier if specified.</td>
 </tr>
 </tbody>
 </table>
@@ -250,21 +250,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date of validity of the price. <code>Filter(eq;ge;le)</code></p>
+<p>Starting date of validity of the price. Usually used for temporary promotions.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
-<p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. <code>Unit: PriceQuantityMeasurementUnit</code> <code>Filter(eq)</code></p>
+<p>Maximum quantity for which is valid this price (in the price quantity measurement unit).</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
-<p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). <code>Unit: PriceQuantityMeasurementUnit</code> <code>Filter(eq)</code></p>
+<p>Minimal quantity required to use this price (in the price quantity measurement unit).</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -279,7 +279,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="price">Price</h3>
-<p>Price in the specified currency and for the specified quantity. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code></p>
+<p>Price in the specified currency and for the specified quantity. This price is used only when the other conditions in this record are satisfied.</p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (13, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -287,7 +287,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pricequantity">PriceQuantity</h3>
-<p>The quantity of the product for which the price is specified. <code>Unit: PriceQuantityMeasurementUnit</code> <code>Required</code> <code>Default(1)</code></p>
+<p>The quantity of the product for which the price is specified.</p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -295,7 +295,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the price comparative to other prices. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></p>
+<p>Priority of the price comparative to other prices valid for current document.</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchaseProductPrices.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Logistics.Procurement.PurchaseProductPrices.md#priority) data attribute<br>
@@ -335,7 +335,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>2</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></p>
+<p>Ending date (inclusive) of the validity of the price. Usually used for temporary promotions.</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -385,25 +385,25 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currency">Currency</h3>
-<p>The currency of the price. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The currency of the specified price.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. <code>Filter(multi eq)</code></p>
+<p>Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations. <code>Filter(multi eq)</code> <code>Introduced in version 24.1.4.35</code></p>
+<p>Specifies the Enterprise Company Location for which the price is valid for. If the field is blank, the price is valid for all Enterprise Company Locations.</p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pricequantitymeasurementunit">PriceQuantityMeasurementUnit</h3>
-<p>The measurement unit of Price_Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The measurement unit of the price quantity.</p>
 <p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -411,20 +411,20 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.BaseUnit.IfNullThen( obj.PriceQuantityMeasurementUnit)</code></p>
 <h3 id="product">Product</h3>
-<p>The product for which a purchase price will be defined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The product for which a purchase price will be defined.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="purchasepricelist">PurchasePriceList</h3>
-<p>When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. <code>Filter(multi eq)</code></p>
+<p>Specifies in which purchase price list this price is included. This price is used only when the purchase price list is specified in the current document.</p>
 <p>Type: <strong><a href="Logistics.Procurement.PurchasePriceLists.html">PurchasePriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="supplier">Supplier</h3>
-<p>When not null, specifies that the price is valid only for the specified supplier. <code>Filter(multi eq)</code></p>
+<p>The price is used only for this supplier if specified.</p>
 <p>Type: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

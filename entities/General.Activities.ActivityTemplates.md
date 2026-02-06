@@ -42,17 +42,17 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ActivitySubjectMask](General.Activities.ActivityTemplates.md#activitysubjectmask) | string (max) __nullable__ | A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity. 
-| [AdditionalDays](General.Activities.ActivityTemplates.md#additionaldays) | int32 | The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. `Required` `Default(0)` 
-| [ReminderTime](General.Activities.ActivityTemplates.md#remindertime) | time __nullable__ | The time of the day for the reminder. `Filter(ge;le)` 
-| [SourceDateField](General.Activities.ActivityTemplates.md#sourcedatefield) | string (64) | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required` 
-| [StartTime](General.Activities.ActivityTemplates.md#starttime) | time | The time of the day when the activity starts. `Required` `Filter(ge;le)` 
+| [AdditionalDays](General.Activities.ActivityTemplates.md#additionaldays) | int32 | The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. 
+| [ReminderTime](General.Activities.ActivityTemplates.md#remindertime) | time __nullable__ | The time of the day for the reminder 
+| [SourceDateField](General.Activities.ActivityTemplates.md#sourcedatefield) | string (64) | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. 
+| [StartTime](General.Activities.ActivityTemplates.md#starttime) | time | The time of the day when the activity starts 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ResponsibleParty](General.Activities.ActivityTemplates.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | If Null the user that starts the generation route is responsible party of the activity. `Filter(multi eq)` |
-| [Route](General.Activities.ActivityTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | The route that uses this template. `Required` `Filter(multi eq)` |
+| [ResponsibleParty](General.Activities.ActivityTemplates.md#responsibleparty) | [Parties](General.Contacts.Parties.md) (nullable) | If Null the user that starts the generation route is responsible party of the activity. |
+| [Route](General.Activities.ActivityTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | The route that uses this template |
 
 
 ## System Attributes
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### AdditionalDays
 
-The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. `Required` `Default(0)`
+The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.
 
 Type: **int32**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ReminderTime
 
-The time of the day for the reminder. `Filter(ge;le)`
+The time of the day for the reminder
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.StartTime > FromMinutes( 30)), ( obj.StartTime - FromMinutes( 30)), obj.StartTime)`
 ### SourceDateField
 
-A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required`
+A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.
 
 Type: **string (64)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The time of the day when the activity starts. `Required` `Filter(ge;le)`
+The time of the day when the activity starts
 
 Type: **time**  
 Category: **System**  
@@ -188,7 +188,7 @@ Show in UI: **HiddenByDefault**
 
 ### ResponsibleParty
 
-If Null the user that starts the generation route is responsible party of the activity. `Filter(multi eq)`
+If Null the user that starts the generation route is responsible party of the activity.
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -197,7 +197,7 @@ Show in UI: **ShownByDefault**
 
 ### Route
 
-The route that uses this template. `Required` `Filter(multi eq)`
+The route that uses this template
 
 Type: **[Routes](Systems.Documents.Routes.md)**  
 Category: **System**  

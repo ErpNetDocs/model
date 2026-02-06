@@ -38,22 +38,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Classic.Projects.md#code) | string (16) | Short code for identification of projects. `Required` `Filter(eq;like)` `ORD` 
-| [FinishDate](Projects.Classic.Projects.md#finishdate) | date __nullable__ | The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq;ge;le)` 
+| [Code](Projects.Classic.Projects.md#code) | string (16) | Short code for identification of projects. 
+| [FinishDate](Projects.Classic.Projects.md#finishdate) | date __nullable__ | The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown. 
 | [Name](Projects.Classic.Projects.md#name) | string (254) | The name of this Project. `Required` `Filter(eq;like)` 
 | [Notes](Projects.Classic.Projects.md#notes) | string (max) __nullable__ | Notes for this Project. 
-| [ProjectStatus](Projects.Classic.Projects.md#projectstatus) | [ProjectStatus](Projects.Classic.Projects.md#projectstatus) | Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). `Required` `Default(0)` `Filter(multi eq)` 
-| [StartDate](Projects.Classic.Projects.md#startdate) | date __nullable__ | Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq;ge;le)` 
+| [ProjectStatus](Projects.Classic.Projects.md#projectstatus) | [ProjectStatus](Projects.Classic.Projects.md#projectstatus) | Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled) 
+| [StartDate](Projects.Classic.Projects.md#startdate) | date __nullable__ | Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetingCurrency](Projects.Classic.Projects.md#budgetingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency in which the project budget is calculated. `Filter(multi eq)` |
-| [ClientParty](Projects.Classic.Projects.md#clientparty) | [Parties](General.Contacts.Parties.md) (nullable) | The external or internal client of the project. `Filter(multi eq)` |
+| [BudgetingCurrency](Projects.Classic.Projects.md#budgetingcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | The currency in which the project budget is calculated |
+| [ClientParty](Projects.Classic.Projects.md#clientparty) | [Parties](General.Contacts.Parties.md) (nullable) | The external or internal client of the project |
 | [EnterpriseCompany](Projects.Classic.Projects.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this Project applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
-| [ProjectManagerPerson](Projects.Classic.Projects.md#projectmanagerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The project manager. `Filter(multi eq)` |
-| [ProjectType](Projects.Classic.Projects.md#projecttype) | [ProjectTypes](Projects.Classic.ProjectTypes.md) | The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. `Required` `Filter(multi eq)` |
+| [ProjectManagerPerson](Projects.Classic.Projects.md#projectmanagerperson) | [Persons](General.Contacts.Persons.md) (nullable) | The project manager |
+| [ProjectType](Projects.Classic.Projects.md#projecttype) | [ProjectTypes](Projects.Classic.ProjectTypes.md) | The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects |
 
 
 ## System Attributes
@@ -80,7 +80,7 @@ Aggregate Tree
 
 ### Code
 
-Short code for identification of projects. `Required` `Filter(eq;like)` `ORD`
+Short code for identification of projects.
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### FinishDate
 
-The drop dead date of the project, e.g. the date when the project should be finished. null means that the finish date is unknown. `Filter(eq;ge;le)`
+The drop dead date of the project, e.g. the date when the project should be finished. NULL means that the finish date is unknown.
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectStatus
 
-Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). `Required` `Default(0)` `Filter(multi eq)`
+Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled)
 
 Type: **[ProjectStatus](Projects.Classic.Projects.md#projectstatus)**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDate
 
-Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq;ge;le)`
+Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -221,7 +221,7 @@ Show in UI: **HiddenByDefault**
 
 ### BudgetingCurrency
 
-The currency in which the project budget is calculated. `Filter(multi eq)`
+The currency in which the project budget is calculated
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -230,7 +230,7 @@ Show in UI: **ShownByDefault**
 
 ### ClientParty
 
-The external or internal client of the project. `Filter(multi eq)`
+The external or internal client of the project
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -248,7 +248,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProjectManagerPerson
 
-The project manager. `Filter(multi eq)`
+The project manager
 
 Type: **[Persons](General.Contacts.Persons.md) (nullable)**  
 Category: **System**  
@@ -257,7 +257,7 @@ Show in UI: **ShownByDefault**
 
 ### ProjectType
 
-The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects. `Required` `Filter(multi eq)`
+The project type defines the basic WBS and default tasks, etc. It is also used as baseline WBS, when combining reports for many projects
 
 Type: **[ProjectTypes](Projects.Classic.ProjectTypes.md)**  
 Category: **System**  

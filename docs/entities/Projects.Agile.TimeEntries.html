@@ -121,7 +121,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#date">Date</a></td>
 <td>date</td>
-<td>The date for which the time entry is created. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>The date for which the time entry is created.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#durationhours">DurationHours</a></td>
@@ -131,17 +131,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#endtime">EndTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(eq;ge;le)</code></td>
+<td>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes. <code>Filter(like)</code></td>
+<td>Notes</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#starttime">StartTime</a></td>
 <td>time</td>
-<td>The start time of the logged work. Stored in the local time zone of the user. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>The start time of the logged work. Stored in the local time zone of the user.</td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#case">Case</a></td>
 <td><a href="Projects.Agile.Cases.html">Cases</a></td>
-<td>The case for which the time is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The case for which the time is recorded.</td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.TimeEntries.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user for whom the time is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
+<td>The user for whom the time is recorded.</td>
 </tr>
 </tbody>
 </table>
@@ -211,7 +211,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="date">Date</h3>
-<p>The date for which the time entry is created. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>The date for which the time entry is created.</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -225,14 +225,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress. <code>Filter(eq;ge;le)</code></p>
+<p>The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.</p>
 <p>Type: <strong>time <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes. <code>Filter(like)</code></p>
+<p>Notes</p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -240,7 +240,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>The start time of the logged work. Stored in the local time zone of the user. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>The start time of the logged work. Stored in the local time zone of the user.</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -289,13 +289,13 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="case">Case</h3>
-<p>The case for which the time is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The case for which the time is recorded.</p>
 <p>Type: <strong><a href="Projects.Agile.Cases.html">Cases</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user for whom the time is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
+<p>The user for whom the time is recorded.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

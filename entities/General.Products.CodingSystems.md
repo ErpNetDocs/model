@@ -34,14 +34,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](General.Products.CodingSystems.md#description) | string (max) __nullable__ | The description of this CodingSystem. 
-| [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. `Required` `Default(true)` `Filter(eq)` 
+| [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. False - duplicated product codes are allowed. 
 | [Name](General.Products.CodingSystems.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CodingSystem. `Required` `Filter(eq;like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMeasurementUnit](General.Products.CodingSystems.md#defaultmeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | When not null, specifies a measurement unit to be used as default, instead of the products default unit. `Filter(multi eq)` |
+| [DefaultMeasurementUnit](General.Products.CodingSystems.md#defaultmeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | When not empty, specifies a measurement unit to be used as default, instead of the products default unit |
 
 
 ## System Attributes
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### IsUnique
 
-True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. `Required` `Default(true)` `Filter(eq)`
+True when the coding system can contain only unique product codes. False - duplicated product codes are allowed.
 
 Type: **boolean**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultMeasurementUnit
 
-When not null, specifies a measurement unit to be used as default, instead of the products default unit. `Filter(multi eq)`
+When not empty, specifies a measurement unit to be used as default, instead of the products default unit
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  

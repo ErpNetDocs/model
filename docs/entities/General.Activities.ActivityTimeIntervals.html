@@ -125,32 +125,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#date">Date</a></td>
 <td>date</td>
-<td>The date on which the work was performed. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>The date on which the work was performed</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#endtime">EndTime</a></td>
 <td>time</td>
-<td>The ending time of the time interval within 'Date'. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The ending time of the time interval within 'Date'</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#executioncompletepercent">ExecutionCompletePercent</a></td>
 <td>decimal (3, 2)</td>
-<td>Percent of task completed. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+<td>Percent of task completed</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Notes for the time interval.</td>
+<td>Notes for the time interval</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#starttime">StartTime</a></td>
 <td>time</td>
-<td>The starting time of the time interval within 'Date'. <code>Required</code> <code>Filter(ge;le)</code></td>
+<td>The starting time of the time interval within 'Date'</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#state">State</a></td>
 <td><a href="General.Activities.ActivityTimeIntervals.html#state">DocumentState</a> <strong>nullable</strong></td>
-<td>The state of the primary activity in the moment the time interval was created. null when the state is unknown.</td>
+<td>The state of the primary activity in the moment the time interval was created. NULL when the state is unknown.</td>
 </tr>
 </tbody>
 </table>
@@ -167,17 +167,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#activity">Activity</a></td>
 <td><a href="General.Activities.Activities.html">Activities</a></td>
-<td>The activity for which the time interval is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The activity for which the time interval is recorded</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party for which the time interval is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The party for which the time interval is recorded</td>
 </tr>
 <tr>
 <td><a href="General.Activities.ActivityTimeIntervals.html#userstatus">UserStatus</a></td>
 <td><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. <code>Filter(multi eq)</code></td>
+<td>The user status of the primary activity in the moment the time interval was created. NULL when the user status is unknown.</td>
 </tr>
 </tbody>
 </table>
@@ -225,21 +225,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="date">Date</h3>
-<p>The date on which the work was performed. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>The date on which the work was performed</p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>The ending time of the time interval within 'Date'. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The ending time of the time interval within 'Date'</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="executioncompletepercent">ExecutionCompletePercent</h3>
-<p>Percent of task completed. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
+<p>Percent of task completed</p>
 <p>Type: <strong>decimal (3, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -249,7 +249,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( obj.Activity.PlannedDurationMinutes ?? 0) == 0), 0, Min( 0.9, Round( Max( 0, ( obj.Transaction.Clone( ).Query( ).Where( ti =&gt; ( ti.Activity == obj.Activity)).ToList( ).Where( ti =&gt; ( ( ti != obj) AndAlso ( ti.Date.Add( ti.EndTime) &lt;= obj.Date.Add( obj.EndTime)))).OrderBy( ti =&gt; ti.Date.Add( ti.EndTime)).Select( ti =&gt; ti.ExecutionCompletePercent).LastOrDefault( ) + Convert( ( Convert( ( obj.EndTime - obj.StartTime).TotalMinutes, Nullable</code>1) / Convert( obj.Activity.PlannedDurationMinutes, Nullable<code>1)), Decimal))), 2)))</code></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the time interval.</p>
+<p>Notes for the time interval</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,14 +257,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>The starting time of the time interval within 'Date'. <code>Required</code> <code>Filter(ge;le)</code></p>
+<p>The starting time of the time interval within 'Date'</p>
 <p>Type: <strong>time</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>The state of the primary activity in the moment the time interval was created. null when the state is unknown.</p>
+<p>The state of the primary activity in the moment the time interval was created. NULL when the state is unknown.</p>
 <p>Type: <strong><a href="General.Activities.ActivityTimeIntervals.html#state">DocumentState</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Enumeration of document system states<br>
@@ -354,20 +354,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="activity">Activity</h3>
-<p>The activity for which the time interval is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The activity for which the time interval is recorded</p>
 <p>Type: <strong><a href="General.Activities.Activities.html">Activities</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>The party for which the time interval is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The party for which the time interval is recorded</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userstatus">UserStatus</h3>
-<p>The user status of the primary activity in the moment the time interval was created. null when the user status is unknown. <code>Filter(multi eq)</code></p>
+<p>The user status of the primary activity in the moment the time interval was created. NULL when the user status is unknown.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Finance.Vat.DeclarationAmountDetails View | ERP.net Domain Model </title>
+      <title>Finance.Vat.DeclarationAmountDetails | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Finance.Vat.DeclarationAmountDetails View | ERP.net Domain Model ">
+      <meta name="title" content="Finance.Vat.DeclarationAmountDetails | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,123 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Finance.Vat.DeclarationAmountDetails">
-<h1 id="financevatdeclarationamountdetails-view">Finance.Vat.DeclarationAmountDetails View</h1>
+        <article data-uid="">
+<h1 id="financevatdeclarationamountdetails">Finance.Vat.DeclarationAmountDetails</h1>
 
-<p><strong>Namespace:</strong> <a href="Finance.Vat.html">Finance.Vat</a></p>
-<p>Base data for calculation of Vat Box amounts. Entity: VAT_Declaration_Box_Deal_Type_Amounts (Introduced in version 23.1.2.31)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{AmountValue}: {BoxId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em><br>
-API access:  <em>ReadWrite</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Finance.Vat.DeclarationAmountDetails.html">Finance.Vat.DeclarationAmountDetails</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Finance.Vat.DeclarationAmountDetails.html#amount">Amount</a></td>
-<td><a href="../data-types.html#amount">Amount (15, 2)</a></td>
-<td>The amount of the operation according to the category. <code>Currency: BaseCurrency</code> <code>Required</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="references">References</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Finance.Vat.DeclarationAmountDetails.html#basecurrency">BaseCurrency</a></td>
-<td><a href="General.Currencies.Currencies.html">Currencies</a></td>
-<td>The base currency for summary reporting for Enterprise Company at the moment of entry generation. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Entries_Table.Base_Currency_Id</code> <code>Introduced in version 25.1.3.53</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.DeclarationAmountDetails.html#box">Box</a></td>
-<td><a href="Finance.Vat.BoxTypes.html">BoxTypes</a></td>
-<td>The type of box in a VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Box_Types_Table.Box_Type_Id</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.DeclarationAmountDetails.html#declaration">Declaration</a></td>
-<td><a href="Finance.Vat.Declarations.html">Declarations</a></td>
-<td>The VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Declarations_Table.Declaration_Id</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.DeclarationAmountDetails.html#vatentry">VATEntry</a></td>
-<td><a href="Finance.Vat.Entries.html">Entries</a></td>
-<td>Unique identification number of this VAT entry. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Entries_Table.Entry_Id</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="amount">Amount</h3>
-<p>The amount of the operation according to the category. <code>Currency: BaseCurrency</code> <code>Required</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (15, 2)</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="reference-details">Reference Details</h2>
-<h3 id="basecurrency">BaseCurrency</h3>
-<p>The base currency for summary reporting for Enterprise Company at the moment of entry generation. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Entries_Table.Base_Currency_Id</code> <code>Introduced in version 25.1.3.53</code></p>
-<p><em>Type</em>: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>VAT_Entries_Table.Base_Currency_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="box">Box</h3>
-<p>The type of box in a VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Box_Types_Table.Box_Type_Id</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Vat.BoxTypes.html">BoxTypes</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>VAT_Box_Types_Table.Box_Type_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="declaration">Declaration</h3>
-<p>The VAT declaration. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Declarations_Table.Declaration_Id</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Vat.Declarations.html">Declarations</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>VAT_Declarations_Table.Declaration_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="vatentry">VATEntry</h3>
-<p>Unique identification number of this VAT entry. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from VAT_Entries_Table.Entry_Id</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html">Entries</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>VAT_Entries_Table.Entry_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Entity Set:
-Finance_Vat_DeclarationAmountDetails</p>
-<p>Domain API Entity Type:
-Finance_Vat_DeclarationAmountDetail</p>
-<p>Domain API Query:
-<a href="https://testdb.my.erp.net/api/domain/odata/Finance_Vat_DeclarationAmountDetails?$top=10">https://testdb.my.erp.net/api/domain/odata/Finance_Vat_DeclarationAmountDetails?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://testdb.my.erp.net/api/domain/querybuilder#Finance_Vat_DeclarationAmountDetails?$top=10">https://testdb.my.erp.net/api/domain/querybuilder#Finance_Vat_DeclarationAmountDetails?$top=10</a></p>
+<h2 id="renamed-entity-type">Renamed entity type</h2>
+<p>This entity type was renamed (in v.26).</p>
+<p>New name: <a href="Regulatory.Vat.DeclarationAmountDetails.html">Regulatory.Vat.DeclarationAmountDetails</a></p>
 
 </article>
 

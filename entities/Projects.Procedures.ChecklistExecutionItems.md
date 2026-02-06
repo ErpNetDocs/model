@@ -36,19 +36,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DoneAtUtc](Projects.Procedures.ChecklistExecutionItems.md#doneatutc) | datetime __nullable__ | When it was completed. `Filter(eq;ge;le)` 
-| [IsDone](Projects.Procedures.ChecklistExecutionItems.md#isdone) | boolean | Completion flag. `Required` `Default(false)` `Filter(eq)` 
-| [LineNo](Projects.Procedures.ChecklistExecutionItems.md#lineno) | int32 | Item order. `Required` `Filter(eq)` 
-| [Notes](Projects.Procedures.ChecklistExecutionItems.md#notes) | string (max) __nullable__ | Optional comment/evidence. `Filter(like)` 
-| [TextSnapshot](Projects.Procedures.ChecklistExecutionItems.md#textsnapshot) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Text copied from template at creation. `Required` `Filter(like)` 
+| [DoneAtUtc](Projects.Procedures.ChecklistExecutionItems.md#doneatutc) | datetime __nullable__ | When it was completed. 
+| [IsDone](Projects.Procedures.ChecklistExecutionItems.md#isdone) | boolean | Completion flag. 
+| [LineNo](Projects.Procedures.ChecklistExecutionItems.md#lineno) | int32 | Item order. 
+| [Notes](Projects.Procedures.ChecklistExecutionItems.md#notes) | string (max) __nullable__ | Optional comment/evidence. 
+| [TextSnapshot](Projects.Procedures.ChecklistExecutionItems.md#textsnapshot) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Text copied from template at creation. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChecklistTemplate](Projects.Procedures.ChecklistExecutionItems.md#checklisttemplate) | [ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md) | Source template. `Required` `Filter(multi eq)` |
-| [DoneByUser](Projects.Procedures.ChecklistExecutionItems.md#donebyuser) | [Users](Systems.Security.Users.md) (nullable) | Who completed it. `Filter(multi eq)` |
-| [OperationalProcedure<br />Execution](Projects.Procedures.ChecklistExecutionItems.md#operationalprocedureexecution) | [OperationalProcedureExecutions](Projects.Procedures.OperationalProcedureExecutions.md) | Parent procedure execution. `Required` `Filter(multi eq)` `Owner` |
+| [ChecklistTemplate](Projects.Procedures.ChecklistExecutionItems.md#checklisttemplate) | [ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md) | Source template. |
+| [DoneByUser](Projects.Procedures.ChecklistExecutionItems.md#donebyuser) | [Users](Systems.Security.Users.md) (nullable) | Who completed it. |
+| [OperationalProcedure<br />Execution](Projects.Procedures.ChecklistExecutionItems.md#operationalprocedureexecution) | [OperationalProcedureExecutions](Projects.Procedures.OperationalProcedureExecutions.md) | Parent procedure execution. |
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### DoneAtUtc
 
-When it was completed. `Filter(eq;ge;le)`
+When it was completed.
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDone
 
-Completion flag. `Required` `Default(false)` `Filter(eq)`
+Completion flag.
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Item order. `Required` `Filter(eq)`
+Item order.
 
 Type: **int32**  
 Category: **System**  
@@ -100,7 +100,7 @@ Front-End Recalc Expressions:
 `( obj.OperationalProcedureExecution.ChecklistExecutionItems.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-Optional comment/evidence. `Filter(like)`
+Optional comment/evidence.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### TextSnapshot
 
-Text copied from template at creation. `Required` `Filter(like)`
+Text copied from template at creation.
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -153,7 +153,7 @@ Show in UI: **HiddenByDefault**
 
 ### ChecklistTemplate
 
-Source template. `Required` `Filter(multi eq)`
+Source template.
 
 Type: **[ChecklistTemplates](Projects.Procedures.ChecklistTemplates.md)**  
 Indexed: **True**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 ### DoneByUser
 
-Who completed it. `Filter(multi eq)`
+Who completed it.
 
 Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
@@ -172,7 +172,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationalProcedureExecution
 
-Parent procedure execution. `Required` `Filter(multi eq)` `Owner`
+Parent procedure execution.
 
 Type: **[OperationalProcedureExecutions](Projects.Procedures.OperationalProcedureExecutions.md)**  
 Indexed: **True**  

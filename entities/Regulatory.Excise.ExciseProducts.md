@@ -13,6 +13,15 @@ Base Table: Exc_Excise_Products
 Introduced In Version: 21.1.3.87  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Finance.Excise.ExciseProducts  
+New name: Regulatory.Excise.ExciseProducts  
+Version: 26.2.1.17  
+Case: 39297  
+
+
+
 ## Visualization
 Display Format: {Name:T}  
 Search Members: Code; Name  
@@ -36,13 +45,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Regulatory.Excise.ExciseProducts.md#code) | string (32) | The unique code of the ExciseProduct. `Required` `Filter(multi eq;like)` `ORD` 
-| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string. `Required` `Filter(like)` 
+| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExciseProductCategory](Regulatory.Excise.ExciseProducts.md#exciseproductcategory) | [ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md) | The category of the excise product. `Required` `Filter(multi eq)` |
+| [ExciseProductCategory](Regulatory.Excise.ExciseProducts.md#exciseproductcategory) | [ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md) | The category of the excise product. |
 
 
 ## System Attributes
@@ -73,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage string. `Required` `Filter(like)`
+Multilanguage string
 
 Type: **[MultilanguageString (500)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -145,7 +154,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseProductCategory
 
-The category of the excise product. `Required` `Filter(multi eq)`
+The category of the excise product.
 
 Type: **[ExciseProductCategories](Regulatory.Excise.ExciseProductCategories.md)**  
 Category: **System**  

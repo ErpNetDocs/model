@@ -36,8 +36,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.Industries.md#code) | string (32) | The unique code of the Industry. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Crm.Marketing.Industries.md#isactive) | boolean | Indicates whether the current Industry is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [Name](Crm.Marketing.Industries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Industry name (multi-language). `Required` `Filter(eq;like)` 
+| [IsActive](Crm.Marketing.Industries.md#isactive) | boolean | Indicates whether the current Industry is active. 
+| [Name](Crm.Marketing.Industries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Industry name (multi-language). 
 | [Notes](Crm.Marketing.Industries.md#notes) | string (max) __nullable__ | Notes for this Industry. 
 
 
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Industry is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
+Indicates whether the current Industry is active.
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Industry name (multi-language). `Required` `Filter(eq;like)`
+Industry name (multi-language).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

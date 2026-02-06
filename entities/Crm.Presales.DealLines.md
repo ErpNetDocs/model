@@ -35,18 +35,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Presales.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal. `Required` `Filter(eq)` 
-| [Notes](Crm.Presales.DealLines.md#notes) | string (max) __nullable__ | Notes. 
-| [Quantity](Crm.Presales.DealLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). `Unit: QuantityUnit` 
+| [LineNo](Crm.Presales.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal 
+| [Notes](Crm.Presales.DealLines.md#notes) | string (max) __nullable__ | Notes 
+| [Quantity](Crm.Presales.DealLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit) 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Deal](Crm.Presales.DealLines.md#deal) | [Deals](Crm.Presales.Deals.md) | Deal. `Required` `Filter(multi eq)` `Owner` |
+| [Deal](Crm.Presales.DealLines.md#deal) | [Deals](Crm.Presales.Deals.md) | Deal |
 | [Document](Crm.Presales.DealLines.md#document) | [Deals](Crm.Presales.Deals.md) | The owner document. Deal. `Required` `Filter(multi eq)` |
-| [Product](Crm.Presales.DealLines.md#product) | [Products](General.Products.Products.md) | The product, to which the client has interest. `Required` `Filter(multi eq)` |
-| [QuantityUnit](Crm.Presales.DealLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
+| [Product](Crm.Presales.DealLines.md#product) | [Products](General.Products.Products.md) | The product, to which the client has interest. |
+| [QuantityUnit](Crm.Presales.DealLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. |
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line within the deal. `Required` `Filter(eq)`
+Consecutive number of the line within the deal
 
 Type: **int32**  
 Category: **System**  
@@ -77,7 +77,7 @@ Front-End Recalc Expressions:
 `( obj.Deal.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
-Notes.
+Notes
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). `Unit: QuantityUnit`
+When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **HiddenByDefault**
 
 ### Deal
 
-Deal. `Required` `Filter(multi eq)` `Owner`
+Deal
 
 Type: **[Deals](Crm.Presales.Deals.md)**  
 Indexed: **True**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### Product
 
-The product, to which the client has interest. `Required` `Filter(multi eq)`
+The product, to which the client has interest.
 
 Type: **[Products](General.Products.Products.md)**  
 Category: **System**  
@@ -160,7 +160,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityUnit
 
-The measurement unit of Quantity. `Required` `Filter(multi eq)`
+The measurement unit of Quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  

@@ -67,7 +67,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Wms.WarehouseOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Wms.WarehouseOrders.md#state) | [DocumentState](Logistics.Wms.WarehouseOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Wms.WarehouseOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [TaskType](Logistics.Wms.WarehouseOrders.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrders.md#tasktype) __nullable__ | The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. `Filter(multi eq)` `Introduced in version 26.2.0.28` 
+| [TaskType](Logistics.Wms.WarehouseOrders.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrders.md#tasktype) __nullable__ | The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. 
 | [Void](Logistics.Wms.WarehouseOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Logistics.Wms.WarehouseOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Logistics.Wms.WarehouseOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -95,8 +95,8 @@ Aggregate Tree
 | [ToCompanyDivision](Logistics.Wms.WarehouseOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Wms.WarehouseOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [UserStatus](Logistics.Wms.WarehouseOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [Warehouse](Logistics.Wms.WarehouseOrders.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. `Required` `Filter(multi eq)` |
-| [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. `Filter(multi eq)` `Introduced in version 21.1.1.18` |
+| [Warehouse](Logistics.Wms.WarehouseOrders.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. |
+| [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. |
 
 
 ## System Attributes
@@ -369,7 +369,7 @@ Show in UI: **HiddenByDefault**
 
 ### TaskType
 
-The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble. `Filter(multi eq)` `Introduced in version 26.2.0.28`
+The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.
 
 Type: **[TaskType](Logistics.Wms.WarehouseOrders.md#tasktype) __nullable__**  
 Category: **System**  
@@ -690,7 +690,7 @@ Show in UI: **HiddenByDefault**
 
 ### Warehouse
 
-The warehouse, where the order will be executed. `Required` `Filter(multi eq)`
+The warehouse, where the order will be executed.
 
 Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Category: **System**  
@@ -699,7 +699,7 @@ Show in UI: **ShownByDefault**
 
 ### WarehouseWorker
 
-When set, denotes that the whole order is assigned to the specified worker. `Filter(multi eq)` `Introduced in version 21.1.1.18`
+When set, denotes that the whole order is assigned to the specified worker.
 
 Type: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 Category: **System**  

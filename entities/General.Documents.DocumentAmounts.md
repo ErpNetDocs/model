@@ -44,21 +44,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseAmount](General.Documents.DocumentAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly` 
-| [InputAmount](General.Documents.DocumentAmounts.md#inputamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not null, specifies directly the amount of the additional amount. `Currency: GetInputAmountCurrency()` `Filter(ge;le)` 
-| [InputPercent](General.Documents.DocumentAmounts.md#inputpercent) | decimal (7, 6) __nullable__ | When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). `Filter(ge;le)` 
-| [InputUnitAmount](General.Documents.DocumentAmounts.md#inputunitamount) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Input unit amount for the calculation of the current amount. `Currency: GetInputAmountCurrency()` `Filter(eq;ge;le)` 
-| [TotalDistributedAmount](General.Documents.DocumentAmounts.md#totaldistributedamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly` 
-| [UserCanChangeInput](General.Documents.DocumentAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)` 
+| [BaseAmount](General.Documents.DocumentAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. 
+| [InputAmount](General.Documents.DocumentAmounts.md#inputamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not null, specifies directly the amount of the additional amount. 
+| [InputPercent](General.Documents.DocumentAmounts.md#inputpercent) | decimal (7, 6) __nullable__ | When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). 
+| [InputUnitAmount](General.Documents.DocumentAmounts.md#inputunitamount) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Input unit amount for the calculation of the current amount. 
+| [TotalDistributedAmount](General.Documents.DocumentAmounts.md#totaldistributedamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. 
+| [UserCanChangeInput](General.Documents.DocumentAmounts.md#usercanchangeinput) | boolean | 1 if the user, entering the document is allowed to change the default input percent 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](General.Documents.DocumentAmounts.md#document) | [Documents](General.Documents.Documents.md) | The <see cref="Document"/> to which this DocumentAmount belongs. `Required` `Filter(multi eq)` `Owner` |
-| [DocumentAmountType](General.Documents.DocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The type of the amount. `Required` `Filter(multi eq)` |
-| [InputAmountCurrency](General.Documents.DocumentAmounts.md#inputamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. `Filter(multi eq)` |
-| [InputUnit](General.Documents.DocumentAmounts.md#inputunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Measurement unit of the input unit amount. `Filter(multi eq)` |
+| [DocumentAmountType](General.Documents.DocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md) | The type of the amount. |
+| [InputAmountCurrency](General.Documents.DocumentAmounts.md#inputamountcurrency) | [Currencies](General.Currencies.Currencies.md) (nullable) | When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. |
+| [InputUnit](General.Documents.DocumentAmounts.md#inputunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | Measurement unit of the input unit amount. |
 
 
 ## System Attributes
@@ -80,7 +80,7 @@ Aggregate Root:
 
 ### BaseAmount
 
-The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly`
+The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### InputAmount
 
-When not null, specifies directly the amount of the additional amount. `Currency: GetInputAmountCurrency()` `Filter(ge;le)`
+When not null, specifies directly the amount of the additional amount.
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Front-End Recalc Expressions:
 `IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmount, null)`
 ### InputPercent
 
-When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). `Filter(ge;le)`
+When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type).
 
 Type: **decimal (7, 6) __nullable__**  
 Category: **System**  
@@ -117,7 +117,7 @@ Front-End Recalc Expressions:
 `obj.DocumentAmountType.DefaultPercent`
 ### InputUnitAmount
 
-Input unit amount for the calculation of the current amount. `Currency: GetInputAmountCurrency()` `Filter(eq;ge;le)`
+Input unit amount for the calculation of the current amount.
 
 Type: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -129,7 +129,7 @@ Front-End Recalc Expressions:
 `IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)`
 ### TotalDistributedAmount
 
-The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly`
+The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet.
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### UserCanChangeInput
 
-True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)`
+1 if the user, entering the document is allowed to change the default input percent
 
 Type: **boolean**  
 Category: **System**  
@@ -193,7 +193,7 @@ Show in UI: **CannotBeShown**
 
 ### DocumentAmountType
 
-The type of the amount. `Required` `Filter(multi eq)`
+The type of the amount.
 
 Type: **[DocumentAmountTypes](Systems.Documents.DocumentAmountTypes.md)**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 ### InputAmountCurrency
 
-When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. `Filter(multi eq)`
+When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null.
 
 Type: **[Currencies](General.Currencies.Currencies.md) (nullable)**  
 Category: **System**  
@@ -213,7 +213,7 @@ Front-End Recalc Expressions:
 `IIF( obj.DocumentAmountType.AmountInputAllowed, obj.InputAmountCurrency, null)`
 ### InputUnit
 
-Measurement unit of the input unit amount. `Filter(multi eq)`
+Measurement unit of the input unit amount.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  

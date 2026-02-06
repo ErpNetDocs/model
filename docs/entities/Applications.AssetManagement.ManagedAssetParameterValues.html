@@ -127,12 +127,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetParameterValues.html#timeutc">TimeUtc</a></td>
 <td>datetime</td>
-<td>The date and time for which the parameter value is recorded. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(multi eq;ge;le)</code></td>
+<td>The date and time for which the parameter value is recorded.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetParameterValues.html#value">Value</a></td>
 <td>int32</td>
-<td>The value of the parameter for the specified time. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
+<td>The value of the parameter for the specified time.</td>
 </tr>
 </tbody>
 </table>
@@ -149,12 +149,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetParameterValues.html#managedasset">ManagedAsset</a></td>
 <td><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></td>
-<td>The managed asset for which the parameter value is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The managed asset for which the parameter value is recorded.</td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.ManagedAssetParameterValues.html#trackedparameter">TrackedParameter</a></td>
 <td><a href="Applications.AssetManagement.TrackedParameters.html">TrackedParameters</a></td>
-<td>The paramater, whose value is recorded. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The paramater, whose value is recorded.</td>
 </tr>
 </tbody>
 </table>
@@ -195,7 +195,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timeutc">TimeUtc</h3>
-<p>The date and time for which the parameter value is recorded. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(multi eq;ge;le)</code></p>
+<p>The date and time for which the parameter value is recorded.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -203,7 +203,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="value">Value</h3>
-<p>The value of the parameter for the specified time. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
+<p>The value of the parameter for the specified time.</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -232,7 +232,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="managedasset">ManagedAsset</h3>
-<p>The managed asset for which the parameter value is recorded. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The managed asset for which the parameter value is recorded.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.ManagedAssets.html">ManagedAssets</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -240,7 +240,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="trackedparameter">TrackedParameter</h3>
-<p>The paramater, whose value is recorded. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The paramater, whose value is recorded.</p>
 <p>Type: <strong><a href="Applications.AssetManagement.TrackedParameters.html">TrackedParameters</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

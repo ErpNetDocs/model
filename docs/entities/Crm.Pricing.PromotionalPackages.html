@@ -131,12 +131,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#active">Active</a></td>
 <td>boolean</td>
-<td>Package status: true = the offer is available for new documents; false = otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+<td>Package status: 1 = the offer is available for new documents; 0 = otherwise</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#code">Code</a></td>
 <td>string (20)</td>
-<td>Unique code of the promotional package. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Unique code of the promotional package</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#name">Name</a></td>
@@ -146,27 +146,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforcustomerfilterxml">ValidForCustomerFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, the package is valid only for the customers, that match the filter. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></td>
+<td>Customer filter for clients. The package is valid only for the customers, that match the filter</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfordistributionchannelfilterxml">ValidForDistribution<br>ChannelFilterX<br>ML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. <code>Unit: Marketing.DistributionChannels&lt;br /&gt;Repository.TableName</code></td>
+<td>When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforshiptocustomerfilterxml">ValidForShipTo<br>CustomerFilter<br>XML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>When not null, specifies validity condition for the Ship To Customer of the sales document. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></td>
+<td>The package is valid only for the ship to customers, that match the filter</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfromdate">ValidFromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null specifies the first date when the package is valid for offering. The date is compared against the document date. <code>Filter(eq;ge;le)</code></td>
+<td>The date from which the promotional pakage is valid</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validtodate">ValidToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. <code>Filter(eq;ge;le)</code></td>
+<td>The date to which(inclusive) the promotional pakage is valid</td>
 </tr>
 </tbody>
 </table>
@@ -183,17 +183,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#campaign">Campaign</a></td>
 <td><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</td>
-<td>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></td>
+<td>Тhe marketing campaign to which the current definition belongs.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#documentamounttype">DocumentAmountType</a></td>
 <td><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</td>
-<td>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.66</code></td>
+<td>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
-<td>When not null, indicates that the package is valid only for the specified enterprise company. <code>Filter(multi eq)</code></td>
+<td>When not NULL, indicates that the package is valid only for the specified enterprise company.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
@@ -203,27 +203,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforcustomer">ValidForCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>When not null, the package is valid only for the specified customer. <code>Filter(multi eq)</code></td>
+<td>Client for which the promotional pakage is valid</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfordistributionchannel">ValidForDistribution<br>Channel</a></td>
 <td><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</td>
-<td>When not null, the package is valid only for the specified distribution channel of the sales order. <code>Filter(multi eq)</code></td>
+<td>When not NULL, the package is valid only for the specified distribution channel of the sales order</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforpricelist">ValidForPriceList</a></td>
 <td><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</td>
-<td>When not null, the package is valid only for the specified price list. <code>Filter(multi eq)</code></td>
+<td>Price list for which the promotional pakage is valid</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validforshiptocustomer">ValidForShipToCustomer</a></td>
 <td><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</td>
-<td>When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. <code>Filter(multi eq)</code></td>
+<td>When not NULL, specifies that the package is valid only when the sales document is for the specified Ship To Customer.</td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.PromotionalPackages.html#validfortargetgroup">ValidForTargetGroup</a></td>
 <td><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</td>
-<td>When not null, the package is valid only for the specified customer target group. <code>Filter(multi eq)</code></td>
+<td>Target group for which the promotional pakage is valid</td>
 </tr>
 </tbody>
 </table>
@@ -288,7 +288,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="active">Active</h3>
-<p>Package status: true = the offer is available for new documents; false = otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
+<p>Package status: 1 = the offer is available for new documents; 0 = otherwise</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -296,7 +296,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique code of the promotional package. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Unique code of the promotional package</p>
 <p>Type: <strong>string (20)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -316,35 +316,35 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforcustomerfilterxml">ValidForCustomerFilterXML</h3>
-<p>When not null, the package is valid only for the customers, that match the filter. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
+<p>Customer filter for clients. The package is valid only for the customers, that match the filter</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfordistributionchannelfilterxml">ValidForDistributionChannelFilterXML</h3>
-<p>When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. <code>Unit: Marketing.DistributionChannelsRepository.TableName</code></p>
+<p>When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforshiptocustomerfilterxml">ValidForShipToCustomerFilterXML</h3>
-<p>When not null, specifies validity condition for the Ship To Customer of the sales document. <code>Unit: Crm.Sales.CustomersRepository.TableName</code></p>
+<p>The package is valid only for the ship to customers, that match the filter</p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfromdate">ValidFromDate</h3>
-<p>When not null specifies the first date when the package is valid for offering. The date is compared against the document date. <code>Filter(eq;ge;le)</code></p>
+<p>The date from which the promotional pakage is valid</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validtodate">ValidToDate</h3>
-<p>When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. <code>Filter(eq;ge;le)</code></p>
+<p>The date to which(inclusive) the promotional pakage is valid</p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -394,19 +394,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="campaign">Campaign</h3>
-<p>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></p>
+<p>Тhe marketing campaign to which the current definition belongs.</p>
 <p>Type: <strong><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentamounttype">DocumentAmountType</h3>
-<p>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders. <code>Filter(multi eq)</code> <code>Introduced in version 25.1.1.66</code></p>
+<p>The document amount type that is used as а category. When specified, triggers the recording of the applied discount amount from the promotional package in the Document Distributed Amounts panel in sales orders.</p>
 <p>Type: <strong><a href="Systems.Documents.DocumentAmountTypes.html">DocumentAmountTypes</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>When not null, indicates that the package is valid only for the specified enterprise company. <code>Filter(multi eq)</code></p>
+<p>When not NULL, indicates that the package is valid only for the specified enterprise company.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -418,31 +418,31 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforcustomer">ValidForCustomer</h3>
-<p>When not null, the package is valid only for the specified customer. <code>Filter(multi eq)</code></p>
+<p>Client for which the promotional pakage is valid</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfordistributionchannel">ValidForDistributionChannel</h3>
-<p>When not null, the package is valid only for the specified distribution channel of the sales order. <code>Filter(multi eq)</code></p>
+<p>When not NULL, the package is valid only for the specified distribution channel of the sales order</p>
 <p>Type: <strong><a href="Crm.Marketing.DistributionChannels.html">DistributionChannels</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforpricelist">ValidForPriceList</h3>
-<p>When not null, the package is valid only for the specified price list. <code>Filter(multi eq)</code></p>
+<p>Price list for which the promotional pakage is valid</p>
 <p>Type: <strong><a href="Crm.Pricing.PriceLists.html">PriceLists</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validforshiptocustomer">ValidForShipToCustomer</h3>
-<p>When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. <code>Filter(multi eq)</code></p>
+<p>When not NULL, specifies that the package is valid only when the sales document is for the specified Ship To Customer.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfortargetgroup">ValidForTargetGroup</h3>
-<p>When not null, the package is valid only for the specified customer target group. <code>Filter(multi eq)</code></p>
+<p>Target group for which the promotional pakage is valid</p>
 <p>Type: <strong><a href="Crm.Marketing.TargetGroups.html">TargetGroups</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

@@ -121,12 +121,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Communities.Social.Reactions.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact server time (in UTC), when the reaction was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></td>
+<td>The exact server time (in UTC), when the reaction was created.</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.Reactions.html#reactiontype">ReactionType</a></td>
 <td><a href="Communities.Social.Reactions.html#reactiontype">ReactionType</a></td>
-<td>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.</td>
 </tr>
 </tbody>
 </table>
@@ -143,17 +143,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Communities.Social.Reactions.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>The root data object (post, marketplace product, document, etc), for which the reaction is. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The root data object (post, marketplace product, document, etc), for which the reaction is.</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.Reactions.html#socialcomment">SocialComment</a></td>
 <td><a href="Communities.Social.Comments.html">Comments</a> (nullable)</td>
-<td>When not null, specifies that the reaction is for the specified comment within the data object. <code>Filter(multi eq)</code></td>
+<td>When not null, specifies that the reaction is for the specified comment within the data object.</td>
 </tr>
 <tr>
 <td><a href="Communities.Social.Reactions.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td>The user, who reacted. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The user, who reacted.</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact server time (in UTC), when the reaction was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></p>
+<p>The exact server time (in UTC), when the reaction was created.</p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reactiontype">ReactionType</h3>
-<p>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.</p>
 <p>Type: <strong><a href="Communities.Social.Reactions.html#reactiontype">ReactionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ReactionType</code>(Communities.Social.Reactions.md#reactiontype) data attribute<br>
@@ -295,20 +295,20 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
-<p>The root data object (post, marketplace product, document, etc), for which the reaction is. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The root data object (post, marketplace product, document, etc), for which the reaction is.</p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="socialcomment">SocialComment</h3>
-<p>When not null, specifies that the reaction is for the specified comment within the data object. <code>Filter(multi eq)</code></p>
+<p>When not null, specifies that the reaction is for the specified comment within the data object.</p>
 <p>Type: <strong><a href="Communities.Social.Comments.html">Comments</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="user">User</h3>
-<p>The user, who reacted. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The user, who reacted.</p>
 <p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

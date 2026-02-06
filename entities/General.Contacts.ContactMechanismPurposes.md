@@ -36,9 +36,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](General.Contacts.ContactMechanismPurposes.md#code) | string (16) | The unique code of the ContactMechanismPurpose. `Required` `Filter(eq;like)` `ORD` 
-| [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) __nullable__ | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. `Filter(multi eq)` 
+| [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) __nullable__ | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. 
 | [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (max) __nullable__ | The description of this ContactMechanismPurpose. `Filter(like)` 
-| [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
+| [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). 
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactMechanismType
 
-When specified, allows the purpose to be specified only for contact mechanisms of the specified type. `Filter(multi eq)`
+When specified, allows the purpose to be specified only for contact mechanisms of the specified type.
 
 Type: **[ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) __nullable__**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)`
+Name of the contact mechanism purpose (Multilanguage).
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

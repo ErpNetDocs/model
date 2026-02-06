@@ -37,15 +37,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.AssetManagement.ManagedAssetParameterValues.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetParameterValue. 
-| [TimeUtc](Applications.AssetManagement.ManagedAssetParameterValues.md#timeutc) | datetime | The date and time for which the parameter value is recorded. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
-| [Value](Applications.AssetManagement.ManagedAssetParameterValues.md#value) | int32 | The value of the parameter for the specified time. `Required` `Filter(multi eq;ge;le)` 
+| [TimeUtc](Applications.AssetManagement.ManagedAssetParameterValues.md#timeutc) | datetime | The date and time for which the parameter value is recorded. 
+| [Value](Applications.AssetManagement.ManagedAssetParameterValues.md#value) | int32 | The value of the parameter for the specified time. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ManagedAsset](Applications.AssetManagement.ManagedAssetParameterValues.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset for which the parameter value is recorded. `Required` `Filter(multi eq)` `Owner` |
-| [TrackedParameter](Applications.AssetManagement.ManagedAssetParameterValues.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The paramater, whose value is recorded. `Required` `Filter(multi eq)` |
+| [ManagedAsset](Applications.AssetManagement.ManagedAssetParameterValues.md#managedasset) | [ManagedAssets](Applications.AssetManagement.ManagedAssets.md) | The managed asset for which the parameter value is recorded. |
+| [TrackedParameter](Applications.AssetManagement.ManagedAssetParameterValues.md#trackedparameter) | [TrackedParameters](Applications.AssetManagement.TrackedParameters.md) | The paramater, whose value is recorded. |
 
 
 ## System Attributes
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### TimeUtc
 
-The date and time for which the parameter value is recorded. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)`
+The date and time for which the parameter value is recorded.
 
 Type: **datetime**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-The value of the parameter for the specified time. `Required` `Filter(multi eq;ge;le)`
+The value of the parameter for the specified time.
 
 Type: **int32**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **HiddenByDefault**
 
 ### ManagedAsset
 
-The managed asset for which the parameter value is recorded. `Required` `Filter(multi eq)` `Owner`
+The managed asset for which the parameter value is recorded.
 
 Type: **[ManagedAssets](Applications.AssetManagement.ManagedAssets.md)**  
 Indexed: **True**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### TrackedParameter
 
-The paramater, whose value is recorded. `Required` `Filter(multi eq)`
+The paramater, whose value is recorded.
 
 Type: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md)**  
 Category: **System**  

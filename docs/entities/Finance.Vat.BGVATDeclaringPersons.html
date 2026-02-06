@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a></td>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a></td>
-<td>Type of the declaring person. A=Attorney, R=Representative. <code>Required</code> <code>Filter(eq)</code></td>
+<td>Type of the declaring person. A=Attorney, R=Representative.</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersonaddress">DeclaringPersonAddress</a></td>
 <td>string (150)</td>
-<td>Address for correspondence of the declaring person. <code>Required</code></td>
+<td>Address for correspondence of the declaring person.</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersoncity">DeclaringPersonCity</a></td>
 <td>string (50)</td>
-<td>City from the address for correspondence of the declaring person. <code>Required</code></td>
+<td>City from the address for correspondence of the declaring person.</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersonposition">DeclaringPersonPosition</a></td>
@@ -141,12 +141,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#declaringpersonpostcode">DeclaringPersonPostcode</a></td>
 <td>string (4)</td>
-<td>Postcode from the address for correspondence of the declaring person. <code>Required</code></td>
+<td>Postcode from the address for correspondence of the declaring person.</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>True if this is the default person, which issues VAT declarations for this Enterprise Company. <code>Required</code> <code>Default(true)</code></td>
+<td>True if this is the default person, which issues VAT declarations for this Enterprise Company.</td>
 </tr>
 </tbody>
 </table>
@@ -163,12 +163,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The enterprise company for which the person is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The enterprise company for which the person is presenting the declaration.</td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.BGVATDeclaringPersons.html#person">Person</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td>The person that is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The person that is presenting the declaration.</td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="declarertype">DeclarerType</h3>
-<p>Type of the declaring person. A=Attorney, R=Representative. <code>Required</code> <code>Filter(eq)</code></p>
+<p>Type of the declaring person. A=Attorney, R=Representative.</p>
 <p>Type: <strong><a href="Finance.Vat.BGVATDeclaringPersons.html#declarertype">DeclarerType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DeclarerType</code>(Finance.Vat.BGVATDeclaringPersons.md#declarertype) data attribute<br>
@@ -228,7 +228,7 @@ Allowed Values (Finance.Vat.BGVATDeclaringPersonsRepository.DeclarerType Enum Me
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="declaringpersonaddress">DeclaringPersonAddress</h3>
-<p>Address for correspondence of the declaring person. <code>Required</code></p>
+<p>Address for correspondence of the declaring person.</p>
 <p>Type: <strong>string (150)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -238,7 +238,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Person.GetValidAddress( ).Name</code></p>
 <h3 id="declaringpersoncity">DeclaringPersonCity</h3>
-<p>City from the address for correspondence of the declaring person. <code>Required</code></p>
+<p>City from the address for correspondence of the declaring person.</p>
 <p>Type: <strong>string (50)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -254,7 +254,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="declaringpersonpostcode">DeclaringPersonPostcode</h3>
-<p>Postcode from the address for correspondence of the declaring person. <code>Required</code></p>
+<p>Postcode from the address for correspondence of the declaring person.</p>
 <p>Type: <strong>string (4)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>4</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>True if this is the default person, which issues VAT declarations for this Enterprise Company. <code>Required</code> <code>Default(true)</code></p>
+<p>True if this is the default person, which issues VAT declarations for this Enterprise Company.</p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -292,7 +292,7 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The enterprise company for which the person is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The enterprise company for which the person is presenting the declaration.</p>
 <p>Type: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -300,7 +300,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="person">Person</h3>
-<p>The person that is presenting the declaration. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The person that is presenting the declaration.</p>
 <p>Type: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

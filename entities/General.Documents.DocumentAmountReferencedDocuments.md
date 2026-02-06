@@ -40,8 +40,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentAmount](General.Documents.DocumentAmountReferencedDocuments.md#documentamount) | [DocumentAmounts](General.Documents.DocumentAmounts.md) | The document amount for which the referenced document is specified. `Required` `Filter(multi eq)` `Owner` |
-| [ReferencedDocument](General.Documents.DocumentAmountReferencedDocuments.md#referenceddocument) | [Documents](General.Documents.Documents.md) | The document which is referenced by the document amount. `Required` `Filter(multi eq)` |
+| [DocumentAmount](General.Documents.DocumentAmountReferencedDocuments.md#documentamount) | [DocumentAmounts](General.Documents.DocumentAmounts.md) | The document amount for which the referenced document is specified. |
+| [ReferencedDocument](General.Documents.DocumentAmountReferencedDocuments.md#referenceddocument) | [Documents](General.Documents.Documents.md) | The document which is referenced by the document amount. |
 
 
 ## System Attributes
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentAmount
 
-The document amount for which the referenced document is specified. `Required` `Filter(multi eq)` `Owner`
+The document amount for which the referenced document is specified.
 
 Type: **[DocumentAmounts](General.Documents.DocumentAmounts.md)**  
 Indexed: **True**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferencedDocument
 
-The document which is referenced by the document amount. `Required` `Filter(multi eq)`
+The document which is referenced by the document amount.
 
 Type: **[Documents](General.Documents.Documents.md)**  
 Indexed: **True**  

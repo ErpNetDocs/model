@@ -35,16 +35,16 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreateForInvoicedAmounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createforinvoicedamounts) | boolean | True to add to the payment order, the part of the amount of the sales order, which is invoiced. `Required` 
-| [CreateForNotInvoiced<br />Amounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createfornotinvoicedamounts) | boolean | True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. `Required` 
-| [IsAmountWithVAT](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#isamountwithvat) | boolean | True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. `Required` 
-| [UpdateForInvoices](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#updateforinvoices) | boolean | Update the payment order when invoices are issued for any of the sales orders lines. `Required` 
+| [CreateForInvoicedAmounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createforinvoicedamounts) | boolean | 1 to add to the payment order, the part of the amount of the sales order, which is invoiced. 
+| [CreateForNotInvoiced<br />Amounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createfornotinvoicedamounts) | boolean | 1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. 
+| [IsAmountWithVAT](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#isamountwithvat) | boolean | 1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. 
+| [UpdateForInvoices](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#updateforinvoices) | boolean | Update the payment order when invoices are issued for any of the sales orders lines. 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | The route to which the current option set is assigned. `Required` `Filter(multi eq)` `Owner` |
+| [Route](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#route) | [Routes](Systems.Documents.Routes.md) | The route to which the current option set is assigned. |
 
 
 ## System Attributes
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### CreateForInvoicedAmounts
 
-True to add to the payment order, the part of the amount of the sales order, which is invoiced. `Required`
+1 to add to the payment order, the part of the amount of the sales order, which is invoiced.
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### CreateForNotInvoicedAmounts
 
-True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. `Required`
+1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### IsAmountWithVAT
 
-True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. `Required`
+1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.
 
 Type: **boolean**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### UpdateForInvoices
 
-Update the payment order when invoices are issued for any of the sales orders lines. `Required`
+Update the payment order when invoices are issued for any of the sales orders lines.
 
 Type: **boolean**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **HiddenByDefault**
 
 ### Route
 
-The route to which the current option set is assigned. `Required` `Filter(multi eq)` `Owner`
+The route to which the current option set is assigned.
 
 Type: **[Routes](Systems.Documents.Routes.md)**  
 Category: **System**  
